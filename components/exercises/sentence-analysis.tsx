@@ -93,14 +93,14 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
         </button>
       </div>
 
-      {/* Horizontal Row Layout for Chunks (matching reference photo) */}
-      <div className="flex flex-row flex-wrap items-stretch justify-center gap-3 sm:gap-4 overflow-x-auto py-2">
+      {/* Horizontal Row Layout for Chunks (single row matching reference photo) */}
+      <div className="flex flex-row flex-nowrap items-stretch gap-3 overflow-x-auto py-3 px-1 scrollbar-thin">
         {data.chunks.map((chunk, cIdx) => {
           const styling = CHUNK_COLORS[chunk.chunkLabel] || { badgeBg: "bg-gray-700 text-white", border: "border-gray-300" };
           return (
             <div
               key={cIdx}
-              className={`relative flex flex-col bg-white border-2 ${styling.border} rounded-2xl px-4 pt-5 pb-4 shadow-sm min-w-[130px] flex-1`}
+              className={`relative flex flex-col flex-shrink-0 bg-white border-2 ${styling.border} rounded-2xl px-4 pt-5 pb-4 shadow-sm min-w-[120px]`}
             >
               {/* Chunk Badge at Top Center */}
               <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -109,26 +109,26 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
                 </span>
               </div>
 
-              {/* Words inside chunk in a horizontal row */}
-              <div className="flex flex-row flex-wrap items-end justify-center gap-4 mt-2">
+              {/* Words inside chunk in a single horizontal row */}
+              <div className="flex flex-row flex-nowrap items-end justify-center gap-3 mt-2">
                 {chunk.words.map((w, wIdx) => (
-                  <div key={wIdx} className="flex flex-col items-center text-center group">
+                  <div key={wIdx} className="flex flex-col items-center text-center group flex-shrink-0">
                     {/* IPA */}
-                    <span className="text-[11px] font-mono text-gray-400 mb-1">
+                    <span className="text-[11px] font-mono text-gray-400 mb-1 whitespace-nowrap">
                       {w.ipa || ""}
                     </span>
                     {/* Word (English) */}
-                    <span className="text-xl sm:text-2xl font-extrabold text-gray-900 tracking-tight">
+                    <span className="text-lg sm:text-xl font-extrabold text-gray-900 tracking-tight whitespace-nowrap">
                       {w.word}
                     </span>
                     {/* Underline bar */}
                     <div className="w-full h-1 bg-lingo-blue my-1.5 rounded-full"></div>
                     {/* Meaning (Chinese) */}
-                    <span className="text-xs font-medium text-gray-700 max-w-[100px] truncate">
+                    <span className="text-xs font-medium text-gray-700 max-w-[90px] truncate whitespace-nowrap">
                       {w.meaning}
                     </span>
                     {/* POS */}
-                    <span className="text-[10px] text-gray-500 bg-gray-100 rounded px-1.5 py-0.5 mt-1 font-medium">
+                    <span className="text-[10px] text-gray-500 bg-gray-100 rounded px-1 py-0.5 mt-1 font-medium whitespace-nowrap">
                       {w.pos}
                     </span>
                   </div>
