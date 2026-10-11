@@ -124,29 +124,26 @@ export function ExerciseShell({
                     ? `All Possible Answers (Max ${Math.min(3, allAnswers.length)}):`
                     : "Correct Answer:"}
                 </span>
-                <div className="space-y-1">
+                <div className="space-y-1.5">
                   {allAnswers.slice(0, 3).map((ans, idx) => (
                     <div key={idx} className="flex items-start gap-2 text-sm font-semibold text-lingo-text">
                       <span className="text-lingo-red font-bold select-none">{idx + 1}.</span>
-                      <div>{language ? <HoverableText text={ans} language={language} /> : ans}</div>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span>{language ? <HoverableText text={ans} language={language} /> : ans}</span>
+                        {idx === 0 && (
+                          <span className="text-xs font-medium text-lingo-red bg-lingo-red/10 px-1.5 py-0.5 rounded">
+                            (best match)
+                          </span>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
-                {correctedMarkdown && (
-                  <div className="mt-2.5 text-xs text-lingo-text-light bg-white/70 rounded-lg p-2 border border-lingo-red/10">
-                    <span className="font-semibold text-lingo-text">Best match comparison:</span>{" "}
-                    <Markdown>{correctedMarkdown}</Markdown>
-                  </div>
-                )}
               </div>
             ) : correctAnswer && (
-              <div className="mt-1 text-sm text-lingo-text">
-                Correct answer:{" "}
-                {correctedMarkdown ? (
-                  <Markdown>{correctedMarkdown}</Markdown>
-                ) : (
-                  <strong>{language ? <HoverableText text={correctAnswer} language={language} /> : correctAnswer}</strong>
-                )}
+              <div className="mt-1 text-sm text-lingo-text flex items-center gap-2 flex-wrap">
+                <span>Correct answer: <strong>{language ? <HoverableText text={correctAnswer} language={language} /> : correctAnswer}</strong></span>
+                <span className="text-xs font-medium text-lingo-red bg-lingo-red/10 px-1.5 py-0.5 rounded">(best match)</span>
               </div>
             )}
           </div>
