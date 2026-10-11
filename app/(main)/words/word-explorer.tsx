@@ -1031,13 +1031,13 @@ function WordLookupCard({
           </div>
         </div>
 
-        {/* ── Middle: English Meaning Preview at Top Line ── */}
+        {/* ── Middle: Simplest Chinese Translation Preview at Top Line ── */}
         <div className="flex-1 min-w-0 px-1.5 sm:px-3 text-left">
           <p
             className="text-xs sm:text-sm font-semibold text-lingo-text/85 dark:text-lingo-text/80 truncate"
-            title={engDef || zhDef || "Click to expand details"}
+            title={zhDef || engDef || "Click to expand details"}
           >
-            {cleanZhSummary(engDef || zhDef) || (
+            {cleanZhSummary(zhDef || engDef) || (
               <span className="text-lingo-text-light/40 italic text-[10px] sm:text-[11px]">
                 Click for details
               </span>
