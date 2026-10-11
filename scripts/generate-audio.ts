@@ -1,0 +1,130 @@
+/**
+ * Batch pre-generate TTS audio for all exercises in the database.
+ *
+ * Usage:
+ *   bun run scripts/generate-audio.ts
+ */
+
+import { db } from "../lib/db";
+import { unit } from "../lib/db/schema";
+import { generateSpeech } from "../lib/tts";
+import { getUnitLessons } from "../lib/content/loader";
+import type { Exercise } from "../lib/content/types";
+
+function extractTexts(
+  exercise: Exercise,
+  language: string
+): { text: string; language: string }[] {
+  const items: { text: string; language: string }[] = [];
+
+  const na = exercise.noAudio ?? [];
+
+  switch (exercise.type) {
+    case "multiple-choice":
+      if (!na.includes("text")) items.push({ text: exercise.text, language });
+      exercise.choices.forEach((choice, i) => {
+        if (!na.includes(`choice:${i}`)) items.push({ text: choice, language });
+      });
+      break;
+    case "translation":
+      if (!na.includes("sentence")) {
+        items.push({ text: exercise.sentence, language });
+        for (const word of exercise.sentence.split(/\s+/)) {
+          const clean = word.replace(/[^\p{L}\p{M}'-]/gu, "");
+          if (clean) items.push({ text: clean, language });
+        }
+      }
+      break;
+    case "fill-in-the-blank":
+      if (!na.includes("sentence")) {
+        items.push({
+          text: exercise.sentence.replace("___", exercise.blank),
+          language,
+        });
+      }
+      break;
+    case "listening":
+      if (!na.includes("text")) items.push({ text: exercise.text, language });
+      break;
+    case "word-bank":
+      if (!na.includes("text")) items.push({ text: exercise.text, language });
+      for (const word of exercise.words) {
+        if (!na.includes(`word:${word}`)) items.push({ text: word, language });
+      }
+      break;
+    case "matching-pairs":
+      exercise.pairs.forEach((pair, i) => {
+        if (!na.includes(`left:${i}`)) items.push({ text: pair.left, language });
+      });
+      break;
+    case "speaking":
+      if (!na.includes("sentence")) {
+        items.push({ text: exercise.sentence, language });
+      }
+      break;
+    case "free-text":
+      // No TTS needed for free-text exercises
+      break;
+  }
+
+  return items;
+}
+
+async function main() {
+  console.log("Loading courses and units from DB...");
+
+  const units = await db
+    .select({ id: unit.id, markdown: unit.markdown, targetLanguage: unit.targetLanguage })
+    .from(unit);
+
+  // Collect all unique (text, language) pairs
+  const seen = new Set<string>();
+  const pairs: { text: string; language: string }[] = [];
+
+  for (const u of units) {
+    const language = u.targetLanguage;
+
+    const lessons = getUnitLessons(u.markdown);
+    for (const lesson of lessons) {
+      for (const exercise of lesson.exercises) {
+        const texts = extractTexts(exercise, language);
+        for (const item of texts) {
+          const key = `${item.language}:${item.text.toLowerCase()}`;
+          if (!seen.has(key)) {
+            seen.add(key);
+            pairs.push(item);
+          }
+        }
+      }
+    }
+  }
+
+  console.log(`Found ${pairs.length} unique audio items to generate.`);
+
+  let generated = 0;
+  let skipped = 0;
+
+  for (const { text, language } of pairs) {
+    try {
+      await generateSpeech(text, language);
+      generated++;
+      if (generated % 10 === 0) {
+        console.log(
+          `Progress: ${generated + skipped}/${pairs.length} (${generated} generated, ${skipped} cached)`
+        );
+      }
+    } catch (err) {
+      console.error(`Failed to generate audio for "${text}" (${language}):`, err);
+    }
+  }
+
+  console.log(
+    `\nDone! Generated ${generated} audio files, ${skipped} were already cached.`
+  );
+  process.exit(0);
+}
+
+main().catch((err) => {
+  console.error(err);
+  process.exit(1);
+});

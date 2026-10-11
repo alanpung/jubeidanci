@@ -1,0 +1,354 @@
+import type {
+  Exercise,
+  MultipleChoiceExercise,
+  TranslationExercise,
+  FillInTheBlankExercise,
+  MatchingPairsExercise,
+  ListeningExercise,
+  WordBankExercise,
+  SpeakingExercise,
+  FreeTextExercise,
+  FlashcardReviewExercise,
+} from "./types";
+import { exerciseSchema } from "./exercise-schema";
+
+/**
+ * Parse raw markdown content (after frontmatter) into Exercise[].
+ * Strips // comments, splits on [type-tag] boundaries, and parses each block.
+ * `---` separators between exercises are optional and ignored.
+ */
+export function parseExercisesFromMarkdown(content: string): Exercise[] {
+  const lines = content
+    .split("\n")
+    .filter((line) => !/^\s*\/\//.test(line));
+
+  const blocks: string[] = [];
+  let current: string[] = [];
+
+  for (const line of lines) {
+    if (/^\[.+?\]\s*$/.test(line.trim())) {
+      if (current.length > 0) {
+        blocks.push(current.join("\n").trim());
+      }
+      current = [line];
+    } else if (/^\s*---\s*$/.test(line)) {
+      // skip separator lines
+    } else {
+      current.push(line);
+    }
+  }
+  if (current.length > 0) {
+    blocks.push(current.join("\n").trim());
+  }
+
+  return blocks.filter(Boolean).map(parseExercise);
+}
+
+export function parseExercise(block: string): Exercise {
+  const typeMatch = block.match(/^\[(.+?)\]/);
+  if (!typeMatch) throw new Error(`No exercise type found in block: ${block}`);
+  const type = typeMatch[1];
+  const lines = block
+    .slice(typeMatch[0].length)
+    .trim()
+    .split("\n")
+    .map((l) => l.trim());
+
+  let exercise: Exercise;
+  switch (type) {
+    case "multiple-choice":
+      exercise = parseMultipleChoice(lines);
+      break;
+    case "translation":
+      exercise = parseTranslation(lines);
+      break;
+    case "fill-in-the-blank":
+      exercise = parseFillInTheBlank(lines);
+      break;
+    case "matching-pairs":
+      exercise = parseMatchingPairs(lines);
+      break;
+    case "listening":
+      exercise = parseListening(lines);
+      break;
+    case "word-bank":
+      exercise = parseWordBank(lines);
+      break;
+    case "speaking":
+      exercise = parseSpeaking(lines);
+      break;
+    case "free-text":
+      exercise = parseFreeText(lines);
+      break;
+    case "flashcard-review":
+      exercise = parseFlashcardReview(lines);
+      break;
+    default:
+      throw new Error(`Unknown exercise type: ${type}`);
+  }
+
+  return validateExercise(exercise);
+}
+
+/**
+ * Validate a parsed exercise against the Zod schema.
+ * Throws a descriptive error that AI can read and fix.
+ */
+function validateExercise(exercise: Exercise): Exercise {
+  const result = exerciseSchema.safeParse(exercise);
+  if (!result.success) {
+    const issues = result.error.issues.map((issue) => {
+      const path = issue.path.length > 0 ? issue.path.join(".") : "(root)";
+      return `  - ${path}: ${issue.message}`;
+    });
+
+    throw new Error(
+      `Invalid [${exercise.type}] exercise:\n${issues.join("\n")}\n` +
+      `Parsed data: ${JSON.stringify(exercise, null, 2)}`
+    );
+  }
+
+  // Enforce: listening mode "choices" requires choices + correctIndex
+  if (result.data.type === "listening" && result.data.mode === "choices") {
+    if (!result.data.choices || result.data.correctIndex === undefined) {
+      throw new Error(
+        `Invalid [listening] exercise:\n  - choices: choices and correctIndex are required when mode is 'choices'\n` +
+        `Parsed data: ${JSON.stringify(exercise, null, 2)}`
+      );
+    }
+  }
+
+  return result.data;
+}
+
+const NO_AUDIO_RE = /\s*\[no-audio\]\s*$/;
+
+export function stripNoAudio(text: string): { text: string; flagged: boolean } {
+  if (NO_AUDIO_RE.test(text)) {
+    return { text: text.replace(NO_AUDIO_RE, "").trim().replace(/^"(.*)"$/, "$1"), flagged: true };
+  }
+  return { text, flagged: false };
+}
+
+export function getField(lines: string[], key: string): string {
+  const line = lines.find((l) => l.startsWith(`${key}:`));
+  if (!line) throw new Error(`Missing field: ${key}`);
+  return line.slice(key.length + 1).trim().replace(/^"(.*)"$/, "$1");
+}
+
+export function hasFlag(lines: string[], key: string): boolean {
+  const line = lines.find((l) => l.startsWith(`${key}:`));
+  if (!line) return false;
+  return line.slice(key.length + 1).trim() === "true";
+}
+
+export function getOptionalField(lines: string[], key: string): string | undefined {
+  const line = lines.find((l) => l.startsWith(`${key}:`));
+  if (!line) return undefined;
+  return line.slice(key.length + 1).trim().replace(/^"(.*)"$/, "$1");
+}
+
+function parseSrsWords(lines: string[]): string | string[] | undefined {
+  const startIdx = lines.findIndex((l) => l.startsWith("srsWords:"));
+  if (startIdx === -1) return undefined;
+
+  // Inline value: srsWords: "word" or srsWords: "word1" "word2"
+  const inlineValue = lines[startIdx].slice("srsWords:".length).trim();
+  if (inlineValue) {
+    const matches = inlineValue.match(/"([^"]+)"/g);
+    if (matches) {
+      const words = matches.map((m) => m.replace(/"/g, ""));
+      return words.length === 1 ? words[0] : words;
+    }
+    // Unquoted single word
+    return inlineValue;
+  }
+
+  // List format: - "word" (with optional legacy = "translation" which we ignore)
+  const words: string[] = [];
+  for (let i = startIdx + 1; i < lines.length; i++) {
+    const match = lines[i].match(/^- "(.+?)"(\s*=\s*".*")?/);
+    if (!match) break;
+    words.push(match[1]);
+  }
+  if (words.length === 0) return undefined;
+  return words.length === 1 ? words[0] : words;
+}
+
+function parseMultipleChoice(lines: string[]): MultipleChoiceExercise {
+  const noAudio: string[] = [];
+  const rawText = stripNoAudio(getField(lines, "text"));
+  if (rawText.flagged) noAudio.push("text");
+
+  const mcSrsIdx = lines.findIndex((l) => l.startsWith("srsWords:"));
+  const choiceLines = lines.filter((l, i) => l.startsWith('- "') && (mcSrsIdx === -1 || i < mcSrsIdx));
+  const choices: string[] = [];
+  let correctIndex = 0;
+
+  choiceLines.forEach((line, i) => {
+    const match = line.match(/^- "(.+?)"\s*(\(correct\))?/);
+    if (match) {
+      const c = stripNoAudio(match[1]);
+      choices.push(c.text);
+      if (c.flagged) noAudio.push(`choice:${i}`);
+      if (match[2]) correctIndex = i;
+    }
+  });
+
+  const randomOrder = hasFlag(lines, "random_order");
+  const srsWords = parseSrsWords(lines) ?? "";
+  return { type: "multiple-choice", text: rawText.text, choices, correctIndex, srsWords, ...(randomOrder && { randomOrder }), ...(noAudio.length && { noAudio }) };
+}
+
+function parseTranslation(lines: string[]): TranslationExercise {
+  const noAudio: string[] = [];
+  const rawText = stripNoAudio(getField(lines, "text"));
+  if (rawText.flagged) noAudio.push("text");
+  const rawSentence = stripNoAudio(getField(lines, "sentence"));
+  if (rawSentence.flagged) noAudio.push("sentence");
+
+  const answer = getField(lines, "answer");
+  const acceptAlsoLine = lines.find((l) => l.startsWith("acceptAlso:"));
+  const acceptAlso: string[] = [];
+  if (acceptAlsoLine) {
+    const matches = acceptAlsoLine.match(/"([^"]+)"/g);
+    if (matches) acceptAlso.push(...matches.map((m) => m.replace(/"/g, "")));
+  }
+
+  const srsWords = parseSrsWords(lines) ?? "";
+  return { type: "translation", text: rawText.text, sentence: rawSentence.text, answer, acceptAlso, srsWords, ...(noAudio.length && { noAudio }) };
+}
+
+function parseFillInTheBlank(lines: string[]): FillInTheBlankExercise {
+  const noAudio: string[] = [];
+  const rawSentence = stripNoAudio(getField(lines, "sentence"));
+  if (rawSentence.flagged) noAudio.push("sentence");
+  const blank = getField(lines, "blank");
+
+  const acceptAlsoLine = lines.find((l) => l.startsWith("acceptAlso:"));
+  const acceptAlso: string[] = [];
+  if (acceptAlsoLine) {
+    const matches = acceptAlsoLine.match(/"([^"]+)"/g);
+    if (matches) acceptAlso.push(...matches.map((m) => m.replace(/"/g, "")));
+  }
+
+  const srsWords = parseSrsWords(lines) ?? "";
+  return { type: "fill-in-the-blank", sentence: rawSentence.text, blank, acceptAlso, srsWords, ...(noAudio.length && { noAudio }) };
+}
+
+function parseMatchingPairs(lines: string[]): MatchingPairsExercise {
+  const noAudio: string[] = [];
+  const srsIdx = lines.findIndex((l) => l.startsWith("srsWords:"));
+  const pairLines = lines.filter((l, i) => l.startsWith("- ") && (srsIdx === -1 || i < srsIdx));
+  const pairs = pairLines.map((l, i) => {
+    const match = l.match(/^- "(.+?)"\s*=\s*"(.+?)"/);
+    if (!match) throw new Error(`Invalid pair: ${l}`);
+    const left = stripNoAudio(match[1]);
+    const right = stripNoAudio(match[2]);
+    if (left.flagged) noAudio.push(`left:${i}`);
+    if (right.flagged) noAudio.push(`right:${i}`);
+    return { left: left.text, right: right.text };
+  });
+  const randomOrder = hasFlag(lines, "random_order");
+  const srsWords = parseSrsWords(lines) ?? (pairs.length === 1 ? pairs[0].left : pairs.map((p) => p.left));
+  return { type: "matching-pairs", pairs, srsWords, ...(randomOrder && { randomOrder }), ...(noAudio.length && { noAudio }) };
+}
+
+function parseListening(lines: string[]): ListeningExercise {
+  const noAudio: string[] = [];
+  const rawText = stripNoAudio(getField(lines, "text"));
+  if (rawText.flagged) noAudio.push("text");
+  const ttsLang = getField(lines, "ttsLang");
+  const mode = getOptionalField(lines, "mode") as "choices" | "word-bank" | undefined;
+  const srsWords = parseSrsWords(lines) ?? "";
+
+  // Parse author-provided choices when mode is "choices"
+  let choices: string[] | undefined;
+  let correctIndex: number | undefined;
+  if (mode === "choices") {
+    const srsIdx = lines.findIndex((l) => l.startsWith("srsWords:"));
+    const choiceLines = lines.filter((l, i) => l.startsWith('- "') && (srsIdx === -1 || i < srsIdx));
+    choices = [];
+    correctIndex = 0;
+    choiceLines.forEach((line, i) => {
+      const match = line.match(/^- "(.+?)"\s*(\(correct\))?/);
+      if (match) {
+        const c = stripNoAudio(match[1]);
+        choices!.push(c.text);
+        if (c.flagged) noAudio.push(`choice:${i}`);
+        if (match[2]) correctIndex = i;
+      }
+    });
+  }
+
+  return {
+    type: "listening",
+    text: rawText.text,
+    ttsLang,
+    srsWords,
+    ...(mode && { mode }),
+    ...(choices && { choices, correctIndex }),
+    ...(noAudio.length && { noAudio }),
+  };
+}
+
+function parseSpeaking(lines: string[]): SpeakingExercise {
+  const noAudio: string[] = [];
+  const rawSentence = stripNoAudio(getField(lines, "sentence"));
+  if (rawSentence.flagged) noAudio.push("sentence");
+  const srsWords = parseSrsWords(lines) ?? "";
+  return { type: "speaking", sentence: rawSentence.text, srsWords, ...(noAudio.length && { noAudio }) };
+}
+
+function parseFreeText(lines: string[]): FreeTextExercise {
+  const noAudio: string[] = [];
+  const rawText = stripNoAudio(getField(lines, "text"));
+  if (rawText.flagged) noAudio.push("text");
+  const afterSubmitPrompt = getField(lines, "afterSubmitPrompt");
+  const srsWords = parseSrsWords(lines);
+  return { type: "free-text", text: rawText.text, afterSubmitPrompt, ...(srsWords && { srsWords }), ...(noAudio.length && { noAudio }) };
+}
+
+function parseWordBank(lines: string[]): WordBankExercise {
+  const noAudio: string[] = [];
+  const rawText = stripNoAudio(getField(lines, "text"));
+  if (rawText.flagged) noAudio.push("text");
+  const wordsLine = lines.find((l) => l.startsWith("words:"));
+  const answerLine = lines.find((l) => l.startsWith("answer:"));
+  const words = wordsLine
+    ? (wordsLine.match(/"([^"]+)"/g) || []).map((m) => {
+        const w = stripNoAudio(m.replace(/"/g, ""));
+        if (w.flagged) noAudio.push(`word:${w.text}`);
+        return w.text;
+      })
+    : [];
+  const answer = answerLine
+    ? (answerLine.match(/"([^"]+)"/g) || []).map((m) => m.replace(/"/g, ""))
+    : [];
+  const randomOrder = hasFlag(lines, "random_order");
+  const srsWords = parseSrsWords(lines) ?? "";
+  return { type: "word-bank", text: rawText.text, words, answer, srsWords, ...(randomOrder && { randomOrder }), ...(noAudio.length && { noAudio }) };
+}
+
+function parseFlashcardReview(lines: string[]): FlashcardReviewExercise {
+  const front = getField(lines, "front");
+  const back = getOptionalField(lines, "back") || "";
+  const meaning = getOptionalField(lines, "meaning");
+  const translation = getOptionalField(lines, "translation");
+  const pos = getOptionalField(lines, "pos");
+  const ipa = getOptionalField(lines, "ipa");
+  const level = getOptionalField(lines, "level") || getOptionalField(lines, "cefrLevel");
+  const srsWords = parseSrsWords(lines) ?? "";
+  const finalBack = back || [meaning, translation].filter(Boolean).join("\n") || "";
+  return {
+    type: "flashcard-review",
+    front,
+    back: finalBack,
+    ...(meaning && { meaning }),
+    ...(translation && { translation }),
+    ...(pos && { pos }),
+    ...(ipa && { ipa }),
+    ...(level && { level, cefrLevel: level }),
+    srsWords,
+  };
+}

@@ -1,0 +1,48 @@
+{
+  "version": "7",
+  "dialect": "postgresql",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "7",
+      "when": 1771515799151,
+      "tag": "0000_young_charles_xavier",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1771606941313,
+      "tag": "0001_damp_runaways",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1771610810312,
+      "tag": "0002_quiet_lockjaw",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1771942391109,
+      "tag": "0003_pink_master_chief",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1772547473167,
+      "tag": "0004_tidy_spencer_smythe",
+      "breakpoints": true
+    },
+    {
+      "idx": 5,
+      "version": "7",
+      "when": 1790556618579,
+      "tag": "0005_fluffy_mandrill",
+      "breakpoints": true
+    }
+  ]
+}

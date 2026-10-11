@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #3c3c3c;
+  --lingo-green: #58CC02;
+  --lingo-green-dark: #46a302;
+  --lingo-blue: #1CB0F6;
+  --lingo-blue-dark: #1899d6;
+  --lingo-purple: #CE82FF;
+  --lingo-red: #FF4B4B;
+  --lingo-red-dark: #ea2b2b;
+  --lingo-orange: #FF9600;
+  --lingo-yellow: #FFC800;
+  --lingo-gray: #E5E5E5;
+  --lingo-gray-dark: #AFAFAF;
+  --lingo-bg: #f7f7f7;
+  --lingo-card: #ffffff;
+  --lingo-border: #e5e5e5;
+  --lingo-text: #3c3c3c;
+  --lingo-text-light: #777777;
+}
+
+body {
+  background-color: var(--lingo-bg);
+  color: var(--lingo-text);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.text-rainbow {
+  background: linear-gradient(135deg, #FF4B4B 0%, #FF9600 20%, #FFC800 40%, #58CC02 60%, #1CB0F6 80%, #CE82FF 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  display: inline-block;
+  padding-bottom: 0.12em;
+}
+
+@keyframes bounce-short {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+.animate-bounce-short {
+  animation: bounce-short 2.5s infinite ease-in-out;
+}

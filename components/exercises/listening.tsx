@@ -1,0 +1,474 @@
+"use client";
+
+import { useState, useEffect, useCallback, useMemo, useRef } from "react";
+import type { ListeningExercise } from "@/lib/content/types";
+import { useExercise } from "@/hooks/use-exercise";
+import { useAudio } from "@/hooks/use-audio";
+import { ExerciseShell } from "./exercise-shell";
+import { HoverableText } from "@/components/word/hoverable-text";
+import { AudioSpinner } from "@/components/audio-spinner";
+
+interface Props {
+  exercise: ListeningExercise;
+  onResult: (correct: boolean, answer: string) => void;
+  onContinue: () => void;
+  language: string;
+  autoplayAudio?: boolean;
+}
+
+function shuffleWithSeed<T>(arr: T[], seed: number): T[] {
+  const result = [...arr];
+  let s = seed;
+  for (let i = result.length - 1; i > 0; i--) {
+    s = (s * 1103515245 + 12345) & 0x7fffffff;
+    const j = s % (i + 1);
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+function SpeakerButton({ onSpeak }: { onSpeak: () => void }) {
+  return (
+    <div className="flex justify-center mb-6">
+      <button
+        onClick={onSpeak}
+        className="flex h-24 w-24 items-center justify-center rounded-full bg-lingo-blue text-white border-b-4 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-1 transition-all"
+      >
+        <svg className="h-10 w-10" fill="currentColor" viewBox="0 0 24 24">
+          <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+        </svg>
+      </button>
+    </div>
+  );
+}
+
+export function Listening({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
+  const [played, setPlayed] = useState(autoplayAudio);
+  const { status, checkAnswer } = useExercise();
+  const { play, stop, prefetch, loading: audioLoading } = useAudio();
+
+  const hasAudio = !exercise.noAudio?.includes("text");
+
+  // Prefetch exercise text and any choices immediately
+  useEffect(() => {
+    const textsToPrefetch: string[] = [];
+    if (exercise.text) textsToPrefetch.push(exercise.text);
+    if (exercise.choices) textsToPrefetch.push(...exercise.choices);
+    if (textsToPrefetch.length > 0) {
+      prefetch(textsToPrefetch, language);
+    }
+  }, [exercise.text, exercise.choices, language, prefetch]);
+
+  function speak() {
+    if (hasAudio) play(exercise.text, language);
+    setPlayed(true);
+  }
+
+  useEffect(() => {
+    if (autoplayAudio && hasAudio) play(exercise.text, language);
+    return stop;
+  }, [autoplayAudio, hasAudio, play, stop, exercise.text, language]);
+
+  if (exercise.mode === "word-bank") {
+    return (
+      <ListeningWordBank
+        exercise={exercise}
+        status={status}
+        checkAnswer={checkAnswer}
+        played={played}
+        onSpeak={speak}
+        onResult={onResult}
+        onContinue={onContinue}
+        language={language}
+        audioLoading={audioLoading}
+      />
+    );
+  }
+
+  if (exercise.mode === "choices") {
+    return (
+      <ListeningChoices
+        exercise={exercise}
+        status={status}
+        checkAnswer={checkAnswer}
+        played={played}
+        onSpeak={speak}
+        onResult={onResult}
+        onContinue={onContinue}
+        language={language}
+        audioLoading={audioLoading}
+      />
+    );
+  }
+
+  return (
+    <ListeningTypeAnswer
+      exercise={exercise}
+      status={status}
+      checkAnswer={checkAnswer}
+      played={played}
+      onSpeak={speak}
+      onResult={onResult}
+      onContinue={onContinue}
+      language={language}
+      audioLoading={audioLoading}
+    />
+  );
+}
+
+// --- Multiple-choice mode ---
+
+interface ModeProps {
+  exercise: ListeningExercise;
+  status: "answering" | "correct" | "incorrect";
+  checkAnswer: (correct: boolean) => void;
+  played: boolean;
+  onSpeak: () => void;
+  onResult: (correct: boolean, answer: string) => void;
+  onContinue: () => void;
+  language: string;
+  audioLoading: boolean;
+}
+
+function ListeningChoices({
+  exercise,
+  status,
+  checkAnswer,
+  played,
+  onSpeak,
+  onResult,
+  onContinue,
+  language,
+  audioLoading,
+}: ModeProps) {
+  const [selected, setSelected] = useState<number | null>(null);
+  const choices = exercise.choices!;
+  const correctIndex = exercise.correctIndex!;
+
+  function handleCheck() {
+    if (selected === null) return;
+    const correct = selected === correctIndex;
+    checkAnswer(correct);
+    onResult(correct, choices[selected]);
+  }
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (status !== "answering") return;
+      const num = parseInt(e.key, 10);
+      if (num >= 1 && num <= choices.length) {
+        setSelected(num - 1);
+      }
+    },
+    [status, choices.length]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
+
+  return (
+    <ExerciseShell
+      status={status}
+      onCheck={handleCheck}
+      onContinue={onContinue}
+      canCheck={selected !== null}
+      correctAnswer={choices[correctIndex]}
+      language={language}
+    >
+      <h2 className="text-xl font-bold text-lingo-text mb-6">
+        What do you hear?
+      </h2>
+      {status === "answering" && (
+        <div className="flex justify-center mb-4">
+          <button
+            onClick={() => {
+              checkAnswer(true);
+              onResult(true, "[skipped]");
+            }}
+            className="w-full rounded-xl border-2 border-lingo-blue bg-blue-50 px-4 py-2 text-sm font-bold text-lingo-blue hover:bg-blue-100 transition-all"
+          >
+            Skip, I can&apos;t listen now
+          </button>
+        </div>
+      )}
+      <SpeakerButton onSpeak={onSpeak} />
+      <AudioSpinner loading={audioLoading} />
+      {!played && !audioLoading && (
+        <p className="text-center text-sm text-lingo-text-light mb-4">
+          Tap the speaker to hear the phrase
+        </p>
+      )}
+      <div className="space-y-3">
+        {choices.map((choice, i) => (
+          <button
+            key={i}
+            disabled={status !== "answering"}
+            onClick={() => setSelected(i)}
+            className={`w-full rounded-xl border-2 p-4 text-left font-medium transition-all ${
+              selected === i
+                ? status === "correct" && i === correctIndex
+                  ? "border-lingo-green bg-green-50 text-lingo-green"
+                  : status === "incorrect" && i === selected
+                    ? "border-lingo-red bg-red-50 text-lingo-red"
+                    : "border-lingo-blue bg-blue-50 text-lingo-blue"
+                : status !== "answering" && i === correctIndex
+                  ? "border-lingo-green bg-green-50"
+                  : "border-lingo-border bg-white hover:bg-lingo-gray/20"
+            }`}
+          >
+            <span className="mr-3 inline-flex h-7 w-7 items-center justify-center rounded-full border-2 border-current text-sm font-bold">
+              {i + 1}
+            </span>
+            <HoverableText text={choice} language={language} />
+          </button>
+        ))}
+      </div>
+    </ExerciseShell>
+  );
+}
+
+// --- Type-answer mode (default, no mode set) ---
+
+function ListeningTypeAnswer({
+  exercise,
+  status,
+  checkAnswer,
+  played,
+  onSpeak,
+  onResult,
+  onContinue,
+  language,
+  audioLoading,
+}: ModeProps) {
+  const [answer, setAnswer] = useState("");
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    if (status === "answering") inputRef.current?.focus();
+  }, [status]);
+
+  function handleCheck() {
+    const correct = answer.trim().toLowerCase() === exercise.text.trim().toLowerCase();
+    checkAnswer(correct);
+    onResult(correct, answer.trim());
+  }
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (status !== "answering") return;
+      if (e.key === "Enter" && answer.trim()) {
+        e.preventDefault();
+        handleCheck();
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [status, answer]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
+
+  return (
+    <ExerciseShell
+      status={status}
+      onCheck={handleCheck}
+      onContinue={onContinue}
+      canCheck={answer.trim().length > 0}
+      correctAnswer={exercise.text}
+      language={language}
+    >
+      <h2 className="text-xl font-bold text-lingo-text mb-6">
+        Type what you hear
+      </h2>
+      {status === "answering" && (
+        <div className="flex justify-center mb-4">
+          <button
+            onClick={() => {
+              checkAnswer(true);
+              onResult(true, "[skipped]");
+            }}
+            className="w-full rounded-xl border-2 border-lingo-blue bg-blue-50 px-4 py-2 text-sm font-bold text-lingo-blue hover:bg-blue-100 transition-all"
+          >
+            Skip, I can&apos;t listen now
+          </button>
+        </div>
+      )}
+      <SpeakerButton onSpeak={onSpeak} />
+      <AudioSpinner loading={audioLoading} />
+      {!played && !audioLoading && (
+        <p className="text-center text-sm text-lingo-text-light mb-4">
+          Tap the speaker to hear the phrase
+        </p>
+      )}
+      <input
+        ref={inputRef}
+        type="text"
+        value={answer}
+        onChange={(e) => setAnswer(e.target.value)}
+        disabled={status !== "answering"}
+        placeholder="Type what you hear..."
+        className="w-full rounded-xl border-2 border-lingo-border bg-white p-4 text-lg font-medium text-lingo-text placeholder:text-lingo-gray-dark focus:border-lingo-blue focus:outline-none disabled:opacity-60"
+        autoComplete="off"
+        autoCorrect="off"
+        spellCheck={false}
+      />
+    </ExerciseShell>
+  );
+}
+
+// --- Word-bank mode ---
+
+function ListeningWordBank({
+  exercise,
+  status,
+  checkAnswer,
+  played,
+  onSpeak,
+  onResult,
+  onContinue,
+  language,
+  audioLoading,
+}: ModeProps) {
+  const answerWords = useMemo(() => exercise.text.split(/\s+/), [exercise.text]);
+  const [selected, setSelected] = useState<{ word: string; bankIndex: number }[]>([]);
+  const [bank] = useState<string[]>(() => {
+    const words = exercise.text.split(/\s+/);
+    const seed = exercise.text.length * 13 + exercise.text.charCodeAt(0);
+    return shuffleWithSeed(words, seed);
+  });
+  const [taken, setTaken] = useState<Set<number>>(new Set());
+
+  function addWord(word: string, bankIndex: number) {
+    setSelected((prev) => [...prev, { word, bankIndex }]);
+    setTaken((prev) => new Set(prev).add(bankIndex));
+  }
+
+  function removeLastWord() {
+    if (selected.length === 0) return;
+    const last = selected[selected.length - 1];
+    setSelected((prev) => prev.slice(0, -1));
+    setTaken((prev) => {
+      const next = new Set(prev);
+      next.delete(last.bankIndex);
+      return next;
+    });
+  }
+
+  function removeWord(index: number) {
+    const item = selected[index];
+    setSelected((prev) => prev.filter((_, i) => i !== index));
+    setTaken((prev) => {
+      const next = new Set(prev);
+      next.delete(item.bankIndex);
+      return next;
+    });
+  }
+
+  function handleCheck() {
+    const words = selected.map((s) => s.word);
+    const correct =
+      words.length === answerWords.length &&
+      words.every((w, i) => w === answerWords[i]);
+    checkAnswer(correct);
+    onResult(correct, words.join(" "));
+  }
+
+  const handleKeyDown = useCallback(
+    (e: KeyboardEvent) => {
+      if (status !== "answering") return;
+      if (e.key === "Backspace") {
+        e.preventDefault();
+        removeLastWord();
+        return;
+      }
+      const num = parseInt(e.key, 10);
+      if (num >= 1 && num <= bank.length && !taken.has(num - 1)) {
+        addWord(bank[num - 1], num - 1);
+      }
+    },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    [status, bank, taken]
+  );
+
+  useEffect(() => {
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
+
+  return (
+    <ExerciseShell
+      status={status}
+      onCheck={handleCheck}
+      onContinue={onContinue}
+      canCheck={selected.length > 0}
+      correctAnswer={exercise.text}
+      language={language}
+    >
+      <h2 className="text-xl font-bold text-lingo-text mb-6">
+        What do you hear?
+      </h2>
+      {status === "answering" && (
+        <div className="flex justify-center mb-4">
+          <button
+            onClick={() => {
+              checkAnswer(true);
+              onResult(true, "[skipped]");
+            }}
+            className="w-full rounded-xl border-2 border-lingo-blue bg-blue-50 px-4 py-2 text-sm font-bold text-lingo-blue hover:bg-blue-100 transition-all"
+          >
+            Skip, I can&apos;t listen now
+          </button>
+        </div>
+      )}
+      <SpeakerButton onSpeak={onSpeak} />
+      <AudioSpinner loading={audioLoading} />
+      {!played && !audioLoading && (
+        <p className="text-center text-sm text-lingo-text-light mb-4">
+          Tap the speaker to hear the phrase
+        </p>
+      )}
+
+      {/* Answer area */}
+      <div className="min-h-[60px] rounded-xl border-2 border-lingo-border bg-white p-3 mb-6 flex flex-wrap gap-2">
+        {selected.length === 0 && (
+          <span className="text-lingo-gray-dark">Tap words to build your answer</span>
+        )}
+        {selected.map((item, i) => (
+          <button
+            key={`${item.word}-${item.bankIndex}`}
+            disabled={status !== "answering"}
+            onClick={() => removeWord(i)}
+            className="rounded-xl border-2 border-lingo-blue bg-blue-50 px-4 py-2 font-bold text-lingo-blue transition-all hover:bg-blue-100"
+          >
+            {item.word}
+          </button>
+        ))}
+      </div>
+
+      {/* Word bank */}
+      <div className="flex flex-wrap gap-2 justify-center">
+        {bank.map((word, i) => (
+          <button
+            key={`${word}-${i}`}
+            disabled={taken.has(i) || status !== "answering"}
+            onClick={() => addWord(word, i)}
+            className={`rounded-xl border-2 px-4 py-2 font-bold transition-all ${
+              taken.has(i)
+                ? "border-transparent bg-transparent text-transparent pointer-events-none"
+                : "border-lingo-border bg-white text-lingo-text hover:bg-lingo-gray/30 hover:border-lingo-gray-dark"
+            }`}
+          >
+            <span className="mr-2 inline-flex h-5 w-5 items-center justify-center rounded-full border border-current text-xs">
+              {i + 1}
+            </span>
+            {word}
+          </button>
+        ))}
+      </div>
+    </ExerciseShell>
+  );
+}

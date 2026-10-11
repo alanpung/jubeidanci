@@ -1,0 +1,3 @@
+In the /units page add the feature to create a new course and add/remove units to it, also show allow to modify visibility same as with units, only allow to make public and show warning (admins can edit it tho). And i want this new behaviour: once a course/unit goes public it cannot be edited anymore. Only admins can make changes. Add this to the warning too.
+
+The courses/units can potentially be a lot, so we need to move all this UI for browsing functionality to a new route units/browse. By default it should have your native_language preselected in the dropdown, and if your native_language is null then show all languages in the dropdown.

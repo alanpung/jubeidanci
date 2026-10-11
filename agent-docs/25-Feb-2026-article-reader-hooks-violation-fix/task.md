@@ -1,0 +1,1 @@
+User reports: "getting this error when trying to load an article: Application error: a client-side exception has occurred while loading www.openlingo.dev (see the browser console for more information)."

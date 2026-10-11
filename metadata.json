@@ -1,0 +1,6 @@
+{
+  "name": "Nexus AI Studio",
+  "description": "An advanced AI-powered creative and strategic intelligence workspace for content creation, brainstorming, brand generation, and multimodal asset crafting.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

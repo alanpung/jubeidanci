@@ -1,0 +1,1 @@
+Can you remove the enroll into course behaviour and continue learning course on top of /units ? just keep my units and my courses and add a progress bar to my courses too. By clicking a course it should just go inside it and see the units directly without having to enroll

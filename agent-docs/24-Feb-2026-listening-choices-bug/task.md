@@ -1,0 +1,1 @@
+I think there is a bug with listening exercise when `mode: choices` I don't think there is a way to provide this choices? it is not documented in exercise-syntax.ts

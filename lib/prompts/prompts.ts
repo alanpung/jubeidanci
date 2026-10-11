@@ -1,0 +1,70 @@
+export type PromptDefinition = {
+  id: string;
+  displayName: string;
+  description: string;
+  defaultTemplate: string;
+  variables: string[];
+};
+
+export const langCodeToName: Record<string, string> = {
+  de: "German",
+  fr: "French",
+  es: "Spanish",
+  it: "Italian",
+  pt: "Portuguese",
+  ru: "Russian",
+  ar: "Arabic",
+  hi: "Hindi",
+  ko: "Korean",
+  zh: "Mandarin Chinese",
+  ja: "Japanese",
+  en: "English",
+  tr: "Turkish",
+  pl: "Polish",
+};
+
+import { CHAT_SYSTEM_PROMPT } from "./chat-system";
+
+const WORD_ANALYSIS: PromptDefinition = {
+  id: "word-analysis",
+  displayName: "Word Analysis",
+  description: "Used when looking up unknown words via AI",
+  defaultTemplate: `Analyze the {target_language} word "{word}".
+
+If this is an inflected/conjugated form, identify the base/dictionary form.
+
+Return the base form, English translation, part of speech, grammatical gender (or null), CEFR level, an example sentence in {target_language}, and its English translation.`,
+  variables: ["target_language", "word"],
+};
+
+const TTS_INSTRUCTIONS: PromptDefinition = {
+  id: "tts-instructions",
+  displayName: "TTS Voice",
+  description: "Instructions sent to the text-to-speech model",
+  defaultTemplate: `Speak in {target_language} with clear, native pronunciation. Calm, measured pace for learners.`,
+  variables: ["target_language"],
+};
+
+/** Prompts that users can edit in the UI */
+export const PROMPT_DEFINITIONS: PromptDefinition[] = [CHAT_SYSTEM_PROMPT];
+
+/** All prompts (editable + internal) keyed by ID */
+export const PROMPTS_BY_ID: Record<string, PromptDefinition> =
+  Object.fromEntries(
+    [CHAT_SYSTEM_PROMPT, WORD_ANALYSIS, TTS_INSTRUCTIONS].map((p) => [p.id, p]),
+  );
+
+export function getDefaultTemplate(id: string): string {
+  const def = PROMPTS_BY_ID[id];
+  if (!def) throw new Error(`Unknown prompt ID: ${id}`);
+  return def.defaultTemplate;
+}
+
+export function interpolateTemplate(
+  template: string,
+  vars: Record<string, string>,
+): string {
+  return template.replace(/\{(\w+)\}/g, (match, key) => {
+    return key in vars ? vars[key] : match;
+  });
+}
