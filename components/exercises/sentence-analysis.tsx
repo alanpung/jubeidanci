@@ -67,8 +67,8 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
 
   if (loading) {
     return (
-      <div className="my-6 p-4 bg-white rounded-2xl border border-gray-200 shadow-sm text-center">
-        <div className="inline-block animate-spin rounded-full h-6 w-6 border-3 border-lingo-blue border-t-transparent mb-1"></div>
+      <div className="my-4 p-3 bg-white rounded-2xl border border-gray-200 shadow-sm text-center">
+        <div className="inline-block animate-spin rounded-full h-5 w-5 border-2 border-lingo-blue border-t-transparent mb-1"></div>
         <p className="text-xs text-gray-500">Analyzing English sentence structure...</p>
       </div>
     );
@@ -77,15 +77,15 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
   if (!data || !data.chunks) return null;
 
   return (
-    <div className="my-4 p-3 sm:p-5 bg-white rounded-2xl border border-gray-200 shadow-xl transition-all">
-      <div className="flex items-center justify-between mb-4 pb-2 border-b border-gray-100">
+    <div className="my-3 p-2.5 sm:p-5 bg-white rounded-2xl border border-gray-200 shadow-xl transition-all">
+      <div className="flex items-center justify-between mb-3 pb-2 border-b border-gray-100">
         <div className="flex items-center gap-2">
           <span className="text-base">🌐</span>
-          <h3 className="text-sm sm:text-base font-bold text-gray-800">Sentence Breakdown & Structure</h3>
+          <h3 className="text-xs sm:text-base font-bold text-gray-800">Sentence Breakdown & Structure</h3>
         </div>
         <button
           onClick={onPlayAudio}
-          className="flex items-center gap-1.5 px-3 py-1 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors"
+          className="flex items-center gap-1.5 px-2.5 py-1 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors"
           title="Play English Audio"
         >
           <Volume2 className="w-3.5 h-3.5" />
@@ -93,24 +93,24 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
         </button>
       </div>
 
-      {/* Horizontal Row Layout for Chunks (compact single row with horizontal scroll) */}
-      <div className="flex flex-row flex-nowrap items-stretch gap-2.5 overflow-x-auto py-2 px-1 scrollbar-thin">
+      {/* Chunks Layout: Wrapping rows on mobile, single row on desktop */}
+      <div className="flex flex-row flex-wrap sm:flex-nowrap items-stretch justify-center sm:justify-start gap-2 sm:gap-3 py-1.5 px-0.5 sm:overflow-x-auto scrollbar-thin">
         {data.chunks.map((chunk, cIdx) => {
           const styling = CHUNK_COLORS[chunk.chunkLabel] || { badgeBg: "bg-gray-700 text-white", border: "border-gray-300" };
           return (
             <div
               key={cIdx}
-              className={`relative flex flex-col flex-shrink-0 bg-white border-2 ${styling.border} rounded-xl px-2.5 pt-4 pb-2.5 shadow-xs min-w-[95px] sm:min-w-[110px]`}
+              className={`relative flex flex-col flex-shrink-0 bg-white border-2 ${styling.border} rounded-xl px-2 pt-3.5 pb-2 shadow-xs min-w-[85px] sm:min-w-[110px]`}
             >
               {/* Chunk Badge at Top Center */}
               <div className="absolute -top-2.5 left-1/2 -translate-x-1/2">
-                <span className={`text-[10px] font-bold px-2.5 py-0.2 rounded-full shadow-xs whitespace-nowrap ${styling.badgeBg}`}>
+                <span className={`text-[10px] font-bold px-2 py-0.2 rounded-full shadow-xs whitespace-nowrap ${styling.badgeBg}`}>
                   {chunk.chunkLabel}
                 </span>
               </div>
 
-              {/* Words inside chunk in a compact single horizontal row */}
-              <div className="flex flex-row flex-nowrap items-end justify-center gap-2 mt-1.5">
+              {/* Words inside chunk in a compact horizontal row */}
+              <div className="flex flex-row flex-nowrap items-end justify-center gap-1.5 mt-1">
                 {chunk.words.map((w, wIdx) => (
                   <div key={wIdx} className="flex flex-col items-center text-center group flex-shrink-0">
                     {/* IPA (Hidden on mobile) */}
@@ -118,13 +118,13 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
                       {w.ipa || ""}
                     </span>
                     {/* Word (English) */}
-                    <span className="text-base sm:text-lg font-extrabold text-gray-900 tracking-tight whitespace-nowrap">
+                    <span className="text-sm sm:text-base font-extrabold text-gray-900 tracking-tight whitespace-nowrap">
                       {w.word}
                     </span>
                     {/* Underline bar */}
-                    <div className="w-full h-0.5 bg-lingo-blue my-1 rounded-full"></div>
+                    <div className="w-full h-0.5 bg-lingo-blue my-0.5 rounded-full"></div>
                     {/* Meaning (Chinese) */}
-                    <span className="text-[11px] sm:text-xs font-medium text-gray-700 max-w-[80px] truncate whitespace-nowrap">
+                    <span className="text-[10px] sm:text-xs font-medium text-gray-700 max-w-[70px] truncate whitespace-nowrap">
                       {w.meaning}
                     </span>
                     {/* POS (Hidden on mobile) */}
@@ -138,15 +138,6 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
           );
         })}
       </div>
-
-      {/* Full Sentence Translation at Bottom */}
-      {data.fullTranslation && (
-        <div className="mt-4 pt-3 border-t border-gray-100 text-center">
-          <p className="text-base sm:text-lg font-bold text-gray-800 bg-gray-50 py-2.5 px-5 rounded-xl border border-gray-200 inline-block shadow-xs">
-            {data.fullTranslation}
-          </p>
-        </div>
-      )}
     </div>
   );
 }
