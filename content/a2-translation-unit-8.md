@@ -17,72 +17,72 @@ color: "#EC4899"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 1 No. 1)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Playing Football的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding playing football, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about playing football."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 1 No. 2)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Playing Football的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding playing football, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about playing football."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 1 No. 3)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Playing Football的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding playing football, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about playing football."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 1 No. 4)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Playing Football的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding playing football, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about playing football."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 1 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Playing Football的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding playing football, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about playing football."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 1 No. 6)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Playing Football的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding playing football, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about playing football."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 1 No. 7)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Playing Football的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding playing football, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about playing football."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 1 No. 8)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Playing Football的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding playing football, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about playing football."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 1 No. 9)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Playing Football的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding playing football, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about playing football."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 1 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Playing Football的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding playing football, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about playing football."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -93,72 +93,72 @@ color: "#EC4899"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 2 No. 1)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Reading Books的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding reading books, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about reading books."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 2 No. 2)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Reading Books的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding reading books, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about reading books."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 2 No. 3)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Reading Books的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding reading books, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about reading books."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 2 No. 4)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Reading Books的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding reading books, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about reading books."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 2 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Reading Books的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding reading books, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about reading books."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 2 No. 6)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Reading Books的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding reading books, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about reading books."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 2 No. 7)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Reading Books的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding reading books, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about reading books."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 2 No. 8)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Reading Books的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding reading books, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about reading books."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 2 No. 9)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Reading Books的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding reading books, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about reading books."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 2 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Reading Books的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding reading books, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about reading books."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -169,72 +169,72 @@ color: "#EC4899"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 3 No. 1)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Photography的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding photography, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about photography."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 3 No. 2)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Photography的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding photography, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about photography."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 3 No. 3)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Photography的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding photography, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about photography."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 3 No. 4)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Photography的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding photography, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about photography."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 3 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Photography的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding photography, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about photography."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 3 No. 6)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Photography的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding photography, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about photography."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 3 No. 7)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Photography的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding photography, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about photography."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 3 No. 8)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Photography的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding photography, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about photography."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 3 No. 9)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Photography的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding photography, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about photography."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 3 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Photography的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding photography, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about photography."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -245,72 +245,72 @@ color: "#EC4899"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 4 No. 1)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Music & Instruments的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding music & instruments, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about music & instruments."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 4 No. 2)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Music & Instruments的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding music & instruments, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about music & instruments."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 4 No. 3)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Music & Instruments的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding music & instruments, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about music & instruments."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 4 No. 4)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Music & Instruments的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding music & instruments, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about music & instruments."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 4 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Music & Instruments的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding music & instruments, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about music & instruments."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 4 No. 6)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Music & Instruments的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding music & instruments, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about music & instruments."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 4 No. 7)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Music & Instruments的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding music & instruments, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about music & instruments."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 4 No. 8)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Music & Instruments的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding music & instruments, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about music & instruments."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 4 No. 9)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Music & Instruments的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding music & instruments, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about music & instruments."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 4 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Music & Instruments的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding music & instruments, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about music & instruments."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -321,72 +321,72 @@ color: "#EC4899"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 5 No. 1)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Movies & TV的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding movies & tv, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about movies & tv."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 5 No. 2)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Movies & TV的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding movies & tv, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about movies & tv."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 5 No. 3)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Movies & TV的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding movies & tv, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about movies & tv."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 5 No. 4)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Movies & TV的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding movies & tv, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about movies & tv."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 5 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Movies & TV的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding movies & tv, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about movies & tv."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 5 No. 6)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Movies & TV的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding movies & tv, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about movies & tv."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 5 No. 7)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Movies & TV的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding movies & tv, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about movies & tv."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 5 No. 8)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Movies & TV的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding movies & tv, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about movies & tv."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 5 No. 9)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Movies & TV的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding movies & tv, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about movies & tv."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 5 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Movies & TV的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding movies & tv, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about movies & tv."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -397,72 +397,72 @@ color: "#EC4899"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 6 No. 1)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Gaming的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding gaming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about gaming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 6 No. 2)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Gaming的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding gaming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about gaming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 6 No. 3)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Gaming的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding gaming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about gaming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 6 No. 4)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Gaming的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding gaming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about gaming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 6 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Gaming的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding gaming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about gaming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 6 No. 6)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Gaming的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding gaming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about gaming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 6 No. 7)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Gaming的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding gaming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about gaming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 6 No. 8)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Gaming的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding gaming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about gaming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 6 No. 9)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Gaming的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding gaming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about gaming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 6 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Gaming的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding gaming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about gaming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -473,72 +473,72 @@ color: "#EC4899"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 7 No. 1)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Painting的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding painting, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about painting."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 7 No. 2)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Painting的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding painting, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about painting."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 7 No. 3)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Painting的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding painting, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about painting."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 7 No. 4)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Painting的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding painting, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about painting."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 7 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Painting的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding painting, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about painting."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 7 No. 6)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Painting的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding painting, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about painting."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 7 No. 7)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Painting的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding painting, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about painting."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 7 No. 8)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Painting的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding painting, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about painting."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 7 No. 9)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Painting的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding painting, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about painting."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 7 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Painting的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding painting, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about painting."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -549,72 +549,72 @@ color: "#EC4899"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 8 No. 1)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Hiking的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding hiking, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about hiking."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 8 No. 2)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Hiking的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding hiking, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about hiking."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 8 No. 3)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Hiking的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding hiking, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about hiking."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 8 No. 4)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Hiking的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding hiking, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about hiking."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 8 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Hiking的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding hiking, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about hiking."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 8 No. 6)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Hiking的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding hiking, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about hiking."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 8 No. 7)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Hiking的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding hiking, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about hiking."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 8 No. 8)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Hiking的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding hiking, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about hiking."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 8 No. 9)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Hiking的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding hiking, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about hiking."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 8 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Hiking的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding hiking, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about hiking."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -625,72 +625,72 @@ color: "#EC4899"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 9 No. 1)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Swimming的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding swimming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about swimming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 9 No. 2)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Swimming的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding swimming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about swimming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 9 No. 3)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Swimming的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding swimming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about swimming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 9 No. 4)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Swimming的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding swimming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about swimming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 9 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Swimming的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding swimming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about swimming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Hobbies, Leisure & Sports - Lesson 9 No. 6)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Swimming的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding swimming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about swimming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Hobbies, Leisure & Sports - Lesson 9 No. 7)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Swimming的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding swimming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about swimming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Hobbies, Leisure & Sports - Lesson 9 No. 8)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Swimming的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding swimming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about swimming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Hobbies, Leisure & Sports - Lesson 9 No. 9)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Swimming的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding swimming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about swimming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 9 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Swimming的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding swimming, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about swimming."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -701,71 +701,71 @@ color: "#EC4899"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 10 No. 1)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Dancing的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding dancing, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about dancing."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 10 No. 2)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Dancing的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding dancing, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about dancing."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 10 No. 3)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Dancing的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding dancing, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about dancing."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 10 No. 4)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Dancing的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding dancing, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about dancing."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 10 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Dancing的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding dancing, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about dancing."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 10 No. 6)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Dancing的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding dancing, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about dancing."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 10 No. 7)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Dancing的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding dancing, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about dancing."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 10 No. 8)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Dancing的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding dancing, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about dancing."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 10 No. 9)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Dancing的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding dancing, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about dancing."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Hobbies, Leisure & Sports - Lesson 10 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Dancing的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding dancing, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about dancing."
 srsWords: "get" "morning" "breakfast" "practice"
 

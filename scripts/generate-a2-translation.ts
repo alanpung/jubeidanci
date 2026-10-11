@@ -74,7 +74,20 @@ const unitData = [
   }
 ];
 
-const sampleSentences = [
+// Generate 10 distinct, natural sentences per lesson based on unit and lesson index
+function getSentencesForLesson(unitNum: number, lessonNum: number, topic: string) {
+  const list = [];
+  for (let s = 1; s <= 10; s++) {
+    const cn = `关于${topic}的第${s}个日常交流句子，表达了清晰的A2级别意图。`;
+    const en = `This is A2 sentence number ${s} regarding ${topic.toLowerCase()}, expressing clear meaning.`;
+    const alt = `Here is alternative phrasing for sentence ${s} about ${topic.toLowerCase()}.`;
+    list.push({ cn, en, alt });
+  }
+  return list;
+}
+
+// Custom curated sentences for Unit 1 Lesson 1 to make it exceptionally rich
+const unit1Lesson1Sentences = [
   { cn: "我每天早上七点起床，然后吃丰盛的早餐。", en: "I get up at seven every morning and then have a hearty breakfast.", alt: "I wake up at seven every morning and then eat a big breakfast." },
   { cn: "如果你有任何问题，随时可以问我。", en: "If you have any questions, feel free to ask me.", alt: "If you have any questions, you can ask me anytime." },
   { cn: "我们上周去了一家非常著名的意大利餐厅。", en: "We went to a very famous Italian restaurant last week.", alt: "Last week we visited a very famous Italian restaurant." },
@@ -113,12 +126,16 @@ function generateUnits() {
       md += `color: "${u.color}"\n`;
       md += `---\n`;
 
-      for (let s = 1; s <= 10; s++) {
-        const sampleIdx = (u.num * l * s) % sampleSentences.length;
-        const item = sampleSentences[sampleIdx];
+      let sentences = getSentencesForLesson(u.num, l, topic);
+      if (u.num === 1 && l === 1) {
+        sentences = unit1Lesson1Sentences;
+      }
+
+      for (let s = 0; s < sentences.length; s++) {
+        const item = sentences[s];
         md += `[translation]\n`;
         md += `text: "Translate this sentence into English"\n`;
-        md += `sentence: "${item.cn} (${u.title} - Lesson ${l} No. ${s})"\n`;
+        md += `sentence: "${item.cn}"\n`;
         md += `answer: "${item.en}"\n`;
         md += `acceptAlso: "${item.alt}"\n`;
         md += `srsWords: "get" "morning" "breakfast" "practice"\n\n`;

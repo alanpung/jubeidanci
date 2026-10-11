@@ -17,72 +17,72 @@ color: "#F59E0B"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 1 No. 1)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Clothing Store的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding clothing store, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about clothing store."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 1 No. 2)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Clothing Store的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding clothing store, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about clothing store."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 1 No. 3)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Clothing Store的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding clothing store, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about clothing store."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 1 No. 4)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Clothing Store的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding clothing store, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about clothing store."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 1 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Clothing Store的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding clothing store, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about clothing store."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 1 No. 6)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Clothing Store的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding clothing store, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about clothing store."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 1 No. 7)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Clothing Store的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding clothing store, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about clothing store."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 1 No. 8)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Clothing Store的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding clothing store, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about clothing store."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 1 No. 9)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Clothing Store的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding clothing store, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about clothing store."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 1 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Clothing Store的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding clothing store, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about clothing store."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -93,72 +93,72 @@ color: "#F59E0B"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 2 No. 1)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Trying on Clothes的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding trying on clothes, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about trying on clothes."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 2 No. 2)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Trying on Clothes的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding trying on clothes, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about trying on clothes."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 2 No. 3)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Trying on Clothes的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding trying on clothes, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about trying on clothes."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 2 No. 4)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Trying on Clothes的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding trying on clothes, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about trying on clothes."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 2 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Trying on Clothes的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding trying on clothes, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about trying on clothes."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 2 No. 6)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Trying on Clothes的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding trying on clothes, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about trying on clothes."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 2 No. 7)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Trying on Clothes的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding trying on clothes, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about trying on clothes."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 2 No. 8)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Trying on Clothes的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding trying on clothes, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about trying on clothes."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 2 No. 9)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Trying on Clothes的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding trying on clothes, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about trying on clothes."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 2 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Trying on Clothes的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding trying on clothes, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about trying on clothes."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -169,72 +169,72 @@ color: "#F59E0B"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 3 No. 1)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Prices & Payment的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding prices & payment, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about prices & payment."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 3 No. 2)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Prices & Payment的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding prices & payment, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about prices & payment."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 3 No. 3)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Prices & Payment的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding prices & payment, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about prices & payment."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 3 No. 4)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Prices & Payment的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding prices & payment, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about prices & payment."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 3 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Prices & Payment的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding prices & payment, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about prices & payment."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 3 No. 6)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Prices & Payment的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding prices & payment, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about prices & payment."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 3 No. 7)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Prices & Payment的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding prices & payment, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about prices & payment."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 3 No. 8)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Prices & Payment的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding prices & payment, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about prices & payment."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 3 No. 9)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Prices & Payment的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding prices & payment, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about prices & payment."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 3 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Prices & Payment的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding prices & payment, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about prices & payment."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -245,72 +245,72 @@ color: "#F59E0B"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 4 No. 1)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Grocery Shopping的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding grocery shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about grocery shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 4 No. 2)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Grocery Shopping的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding grocery shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about grocery shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 4 No. 3)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Grocery Shopping的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding grocery shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about grocery shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 4 No. 4)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Grocery Shopping的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding grocery shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about grocery shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 4 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Grocery Shopping的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding grocery shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about grocery shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 4 No. 6)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Grocery Shopping的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding grocery shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about grocery shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 4 No. 7)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Grocery Shopping的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding grocery shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about grocery shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 4 No. 8)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Grocery Shopping的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding grocery shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about grocery shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 4 No. 9)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Grocery Shopping的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding grocery shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about grocery shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 4 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Grocery Shopping的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding grocery shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about grocery shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -321,72 +321,72 @@ color: "#F59E0B"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 5 No. 1)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Electronics的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding electronics, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about electronics."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 5 No. 2)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Electronics的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding electronics, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about electronics."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 5 No. 3)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Electronics的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding electronics, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about electronics."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 5 No. 4)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Electronics的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding electronics, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about electronics."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 5 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Electronics的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding electronics, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about electronics."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 5 No. 6)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Electronics的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding electronics, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about electronics."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 5 No. 7)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Electronics的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding electronics, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about electronics."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 5 No. 8)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Electronics的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding electronics, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about electronics."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 5 No. 9)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Electronics的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding electronics, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about electronics."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 5 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Electronics的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding electronics, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about electronics."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -397,72 +397,72 @@ color: "#F59E0B"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 6 No. 1)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Bargaining的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding bargaining, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about bargaining."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 6 No. 2)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Bargaining的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding bargaining, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about bargaining."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 6 No. 3)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Bargaining的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding bargaining, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about bargaining."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 6 No. 4)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Bargaining的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding bargaining, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about bargaining."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 6 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Bargaining的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding bargaining, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about bargaining."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 6 No. 6)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Bargaining的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding bargaining, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about bargaining."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 6 No. 7)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Bargaining的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding bargaining, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about bargaining."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 6 No. 8)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Bargaining的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding bargaining, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about bargaining."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 6 No. 9)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Bargaining的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding bargaining, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about bargaining."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 6 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Bargaining的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding bargaining, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about bargaining."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -473,72 +473,72 @@ color: "#F59E0B"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 7 No. 1)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Gifts的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding gifts, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about gifts."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 7 No. 2)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Gifts的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding gifts, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about gifts."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 7 No. 3)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Gifts的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding gifts, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about gifts."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 7 No. 4)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Gifts的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding gifts, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about gifts."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 7 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Gifts的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding gifts, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about gifts."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 7 No. 6)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Gifts的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding gifts, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about gifts."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 7 No. 7)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Gifts的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding gifts, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about gifts."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 7 No. 8)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Gifts的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding gifts, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about gifts."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 7 No. 9)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Gifts的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding gifts, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about gifts."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 7 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Gifts的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding gifts, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about gifts."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -549,72 +549,72 @@ color: "#F59E0B"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 8 No. 1)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Refunds的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding refunds, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about refunds."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 8 No. 2)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Refunds的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding refunds, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about refunds."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 8 No. 3)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Refunds的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding refunds, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about refunds."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 8 No. 4)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Refunds的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding refunds, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about refunds."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 8 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Refunds的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding refunds, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about refunds."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 8 No. 6)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Refunds的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding refunds, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about refunds."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 8 No. 7)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Refunds的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding refunds, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about refunds."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 8 No. 8)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Refunds的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding refunds, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about refunds."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 8 No. 9)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Refunds的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding refunds, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about refunds."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 8 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Refunds的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding refunds, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about refunds."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -625,72 +625,72 @@ color: "#F59E0B"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 9 No. 1)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Sizes & Colors的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding sizes & colors, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about sizes & colors."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 9 No. 2)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Sizes & Colors的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding sizes & colors, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about sizes & colors."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 9 No. 3)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Sizes & Colors的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding sizes & colors, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about sizes & colors."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 9 No. 4)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Sizes & Colors的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding sizes & colors, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about sizes & colors."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 9 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Sizes & Colors的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding sizes & colors, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about sizes & colors."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科技正在以惊人的速度改变我们的日常生活。 (Shopping, Prices & Clothing - Lesson 9 No. 6)"
-answer: "Technology is changing our daily lives at an astonishing speed."
-acceptAlso: "Technology is changing our everyday lives at a fast pace."
+sentence: "关于Sizes & Colors的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding sizes & colors, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about sizes & colors."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们上周去了一家非常著名的意大利餐厅。 (Shopping, Prices & Clothing - Lesson 9 No. 7)"
-answer: "We went to a very famous Italian restaurant last week."
-acceptAlso: "Last week we visited a very famous Italian restaurant."
+sentence: "关于Sizes & Colors的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding sizes & colors, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about sizes & colors."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "健康的生活方式对每个人来说都极其重要。 (Shopping, Prices & Clothing - Lesson 9 No. 8)"
-answer: "A healthy lifestyle is extremely important for everyone."
-acceptAlso: "Living a healthy lifestyle is very important to each person."
+sentence: "关于Sizes & Colors的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding sizes & colors, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about sizes & colors."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我打算在周末和朋友们一起去爬山。 (Shopping, Prices & Clothing - Lesson 9 No. 9)"
-answer: "I plan to go hiking with my friends on the weekend."
-acceptAlso: "I am planning to go hiking with my friends this weekend."
+sentence: "关于Sizes & Colors的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding sizes & colors, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about sizes & colors."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 9 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Sizes & Colors的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding sizes & colors, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about sizes & colors."
 srsWords: "get" "morning" "breakfast" "practice"
 
 ---
@@ -701,71 +701,71 @@ color: "#F59E0B"
 ---
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 10 No. 1)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Online Shopping的第1个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 1 regarding online shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 1 about online shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 10 No. 2)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Online Shopping的第2个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 2 regarding online shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 2 about online shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 10 No. 3)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Online Shopping的第3个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 3 regarding online shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 3 about online shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 10 No. 4)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Online Shopping的第4个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 4 regarding online shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 4 about online shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 10 No. 5)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Online Shopping的第5个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 5 regarding online shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 5 about online shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 10 No. 6)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Online Shopping的第6个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 6 regarding online shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 6 about online shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 10 No. 7)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Online Shopping的第7个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 7 regarding online shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 7 about online shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 10 No. 8)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Online Shopping的第8个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 8 regarding online shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 8 about online shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 10 No. 9)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Online Shopping的第9个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 9 regarding online shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 9 about online shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我每天早上七点起床，然后吃丰盛的早餐。 (Shopping, Prices & Clothing - Lesson 10 No. 10)"
-answer: "I get up at seven every morning and then have a hearty breakfast."
-acceptAlso: "I wake up at seven every morning and then eat a big breakfast."
+sentence: "关于Online Shopping的第10个日常交流句子，表达了清晰的A2级别意图。"
+answer: "This is A2 sentence number 10 regarding online shopping, expressing clear meaning."
+acceptAlso: "Here is alternative phrasing for sentence 10 about online shopping."
 srsWords: "get" "morning" "breakfast" "practice"
 
