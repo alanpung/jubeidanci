@@ -10,6 +10,7 @@ import { HoverableText } from "@/components/word/hoverable-text";
 import { AudioSpinner } from "@/components/audio-spinner";
 import { ReplayButton } from "@/components/replay-button";
 import { detectTextLanguage } from "@/lib/language-detector";
+import { SentenceAnalysisView } from "./sentence-analysis";
 
 interface Props {
   exercise: TranslationExercise;
@@ -72,6 +73,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     if (!result.isCorrect) setCorrectedMarkdown(result.correctedMarkdown);
     checkAnswer(result.isCorrect);
     onResult(result.isCorrect, trimmed);
+
+    // Audio out when checking/submitting
+    if (!exercise.noAudio?.includes("sentence")) {
+      play(exercise.sentence, sentenceLang);
+    }
   }
 
   return (
@@ -109,6 +115,14 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
         className="w-full rounded-xl border-2 border-lingo-border bg-white px-4 py-3 text-lg focus:border-lingo-blue focus:outline-none"
         autoFocus
       />
+
+      {status !== "answering" && (
+        <SentenceAnalysisView
+          sentence={exercise.sentence}
+          language={language}
+          onPlayAudio={() => play(exercise.sentence, sentenceLang)}
+        />
+      )}
     </ExerciseShell>
   );
 }
