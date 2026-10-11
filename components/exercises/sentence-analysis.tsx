@@ -102,8 +102,8 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
         </button>
       </div>
 
-      {/* Horizontal row layout with white background, no outer boxes, colored structure badges */}
-      <div className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-3 sm:gap-6 py-4 px-1 overflow-x-auto">
+      {/* Wrap layout with white background, no outer boxes, colored structure badges, fitting window width without horizontal scroller */}
+      <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 py-4 px-1">
         {data.chunks.map((chunk, cIdx) => {
           const badgeStyle = STRUCTURE_BADGE_COLORS[chunk.chunkLabel] || FALLBACK_BADGES[cIdx % FALLBACK_BADGES.length];
           return (
