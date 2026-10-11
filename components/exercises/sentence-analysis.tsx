@@ -26,23 +26,23 @@ interface Props {
   onPlayAudio: () => void;
 }
 
-const CHUNK_THEMES: Record<string, { bg: string; border: string; badge: string }> = {
-  "主语": { bg: "bg-amber-50/80", border: "border-amber-300", badge: "bg-amber-700 text-white" },
-  "谓语": { bg: "bg-rose-50/80", border: "border-rose-300", badge: "bg-rose-600 text-white" },
-  "宾语": { bg: "bg-blue-50/80", border: "border-blue-300", badge: "bg-blue-600 text-white" },
-  "状语": { bg: "bg-teal-50/80", border: "border-teal-300", badge: "bg-teal-600 text-white" },
-  "定语": { bg: "bg-purple-50/80", border: "border-purple-300", badge: "bg-purple-600 text-white" },
-  "补语": { bg: "bg-indigo-50/80", border: "border-indigo-300", badge: "bg-indigo-600 text-white" },
-  "连词": { bg: "bg-slate-100/90", border: "border-slate-300", badge: "bg-slate-700 text-white" },
-  "句子": { bg: "bg-gray-100/90", border: "border-gray-300", badge: "bg-gray-700 text-white" },
+const STRUCTURE_BADGE_COLORS: Record<string, string> = {
+  "主语": "bg-amber-100 text-amber-900 border border-amber-300",
+  "谓语": "bg-rose-100 text-rose-900 border border-rose-300",
+  "宾语": "bg-blue-100 text-blue-900 border border-blue-300",
+  "状语": "bg-teal-100 text-teal-900 border border-teal-300",
+  "定语": "bg-purple-100 text-purple-900 border border-purple-300",
+  "补语": "bg-indigo-100 text-indigo-900 border border-indigo-300",
+  "连词": "bg-slate-100 text-slate-800 border border-slate-300",
+  "句子": "bg-gray-100 text-gray-800 border border-gray-300",
 };
 
-const FALLBACK_THEMES = [
-  { bg: "bg-amber-50/80", border: "border-amber-300", badge: "bg-amber-700 text-white" },
-  { bg: "bg-rose-50/80", border: "border-rose-300", badge: "bg-rose-600 text-white" },
-  { bg: "bg-purple-50/80", border: "border-purple-300", badge: "bg-purple-600 text-white" },
-  { bg: "bg-teal-50/80", border: "border-teal-300", badge: "bg-teal-600 text-white" },
-  { bg: "bg-blue-50/80", border: "border-blue-300", badge: "bg-blue-600 text-white" },
+const FALLBACK_BADGES = [
+  "bg-amber-100 text-amber-900 border border-amber-300",
+  "bg-rose-100 text-rose-900 border border-rose-300",
+  "bg-purple-100 text-purple-900 border border-purple-300",
+  "bg-teal-100 text-teal-900 border border-teal-300",
+  "bg-blue-100 text-blue-900 border border-blue-300",
 ];
 
 export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props) {
@@ -86,7 +86,7 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
   if (!data || !data.chunks) return null;
 
   return (
-    <div className="my-4 p-4 sm:p-6 bg-white rounded-2xl border border-gray-200 shadow-xl transition-all">
+    <div className="my-4 p-4 sm:p-8 bg-white rounded-3xl border border-gray-200 shadow-xl transition-all w-full max-w-5xl mx-auto">
       <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
         <div className="flex items-center gap-2">
           <span className="text-base">🌐</span>
@@ -94,38 +94,38 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
         </div>
         <button
           onClick={onPlayAudio}
-          className="flex items-center gap-1.5 px-3 py-1 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors"
+          className="flex items-center gap-1.5 px-3.5 py-1.5 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors cursor-pointer"
           title="Play English Audio"
         >
-          <Volume2 className="w-3.5 h-3.5" />
+          <Volume2 className="w-4 h-4" />
           <span>Listen Audio</span>
         </button>
       </div>
 
-      {/* Horizontal Row Layout of Colored Structure Pills with Structure Name */}
-      <div className="flex flex-row flex-wrap sm:flex-nowrap items-center justify-center gap-3 sm:gap-4 py-4 px-2 overflow-x-auto">
+      {/* Horizontal row layout with white background, no outer boxes, colored structure badges */}
+      <div className="flex flex-wrap sm:flex-nowrap items-center justify-center gap-3 sm:gap-6 py-4 px-1 overflow-x-auto">
         {data.chunks.map((chunk, cIdx) => {
-          const theme = CHUNK_THEMES[chunk.chunkLabel] || FALLBACK_THEMES[cIdx % FALLBACK_THEMES.length];
+          const badgeStyle = STRUCTURE_BADGE_COLORS[chunk.chunkLabel] || FALLBACK_BADGES[cIdx % FALLBACK_BADGES.length];
           return (
             <div
               key={cIdx}
-              className={`flex flex-col items-center px-4 pt-3.5 pb-3 rounded-2xl ${theme.bg} border-2 ${theme.border} shadow-sm transition-transform hover:scale-[1.02] flex-shrink-0`}
+              className="flex flex-col items-center bg-white border border-gray-100 rounded-2xl p-3 sm:px-4 sm:py-3.5 shadow-xs hover:border-gray-200 transition-all flex-shrink-0"
             >
-              {/* Structure Name Badge */}
-              <span className={`text-[10px] font-bold px-2.5 py-0.5 rounded-full mb-2 shadow-xs whitespace-nowrap ${theme.badge}`}>
+              {/* Structure Name (e.g. 主语, 谓语) */}
+              <span className={`text-[10px] sm:text-xs font-bold px-3 py-0.5 rounded-full mb-2 shadow-2xs whitespace-nowrap ${badgeStyle}`}>
                 {chunk.chunkLabel}
               </span>
 
-              {/* Words inside chunk */}
-              <div className="flex flex-row items-center gap-3">
+              {/* Words inside chunk in a row */}
+              <div className="flex flex-row items-center gap-3 sm:gap-4">
                 {chunk.words.map((w, wIdx) => (
                   <div key={wIdx} className="flex flex-col items-center text-center">
-                    {/* IPA above */}
+                    {/* IPA above: hidden on mobile as requested */}
                     <span className="hidden sm:block text-[10px] font-mono text-gray-400 mb-0.5">
                       {w.ipa || ""}
                     </span>
                     {/* Word */}
-                    <span className="text-lg sm:text-xl font-extrabold text-gray-900 tracking-tight whitespace-nowrap">
+                    <span className="text-base sm:text-xl font-extrabold text-gray-900 tracking-tight whitespace-nowrap">
                       {w.word}
                     </span>
                     {/* Meaning below */}
