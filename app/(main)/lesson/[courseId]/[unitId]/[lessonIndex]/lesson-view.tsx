@@ -132,7 +132,7 @@ export function LessonView({
   }
 
   return (
-    <div className="mx-auto max-w-lg">
+    <div className="mx-auto w-full max-w-3xl sm:max-w-4xl md:max-w-5xl px-4 sm:px-6 py-6">
       {/* Header */}
       <div className="mb-6 flex items-center gap-4">
         <button

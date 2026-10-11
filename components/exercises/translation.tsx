@@ -76,7 +76,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
 
     // Audio out in English for the answer sentence when checking/submitting
     if (!exercise.noAudio?.includes("sentence")) {
-      play(exercise.sentence, "en");
+      play(exercise.answer, "en");
     }
   }
 
@@ -118,9 +118,9 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
 
       {status !== "answering" && (
         <SentenceAnalysisView
-          sentence={exercise.sentence}
+          sentence={exercise.answer}
           language="en"
-          onPlayAudio={() => play(exercise.sentence, "en")}
+          onPlayAudio={() => play(exercise.answer, "en")}
         />
       )}
     </ExerciseShell>
