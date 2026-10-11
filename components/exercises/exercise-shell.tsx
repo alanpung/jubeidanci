@@ -93,11 +93,18 @@ export function ExerciseShell({
                     ? `Accepted Answers (Max ${Math.min(3, allAnswers.length)}):`
                     : "Accepted Answer:"}
                 </span>
-                <div className="space-y-1">
+                <div className="space-y-1.5">
                   {allAnswers.slice(0, 3).map((ans, idx) => (
                     <div key={idx} className="flex items-start gap-2 text-sm font-semibold text-lingo-text">
                       <span className="text-lingo-green font-bold select-none">{idx + 1}.</span>
-                      <div>{language ? <HoverableText text={ans} language={language} /> : ans}</div>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <span>{language ? <HoverableText text={ans} language={language} /> : ans}</span>
+                        {idx === 0 && (
+                          <span className="text-xs font-medium text-lingo-green bg-lingo-green/10 px-1.5 py-0.5 rounded">
+                            (best match)
+                          </span>
+                        )}
+                      </div>
                     </div>
                   ))}
                 </div>
