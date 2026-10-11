@@ -74,9 +74,9 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     checkAnswer(result.isCorrect);
     onResult(result.isCorrect, trimmed);
 
-    // Audio out when checking/submitting
+    // Audio out in English for the answer sentence when checking/submitting
     if (!exercise.noAudio?.includes("sentence")) {
-      play(exercise.sentence, sentenceLang);
+      play(exercise.sentence, "en");
     }
   }
 
@@ -119,8 +119,8 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       {status !== "answering" && (
         <SentenceAnalysisView
           sentence={exercise.sentence}
-          language={language}
-          onPlayAudio={() => play(exercise.sentence, sentenceLang)}
+          language="en"
+          onPlayAudio={() => play(exercise.sentence, "en")}
         />
       )}
     </ExerciseShell>
