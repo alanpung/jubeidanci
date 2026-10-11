@@ -26,15 +26,25 @@ interface Props {
   onPlayAudio: () => void;
 }
 
-const CHUNK_COLORS: Record<string, { badgeBg: string; border: string }> = {
-  "主语": { badgeBg: "bg-amber-700 text-white", border: "border-amber-300" },
-  "谓语": { badgeBg: "bg-rose-600 text-white", border: "border-rose-300" },
-  "宾语": { badgeBg: "bg-blue-600 text-white", border: "border-blue-300" },
-  "状语": { badgeBg: "bg-teal-600 text-white", border: "border-teal-300" },
-  "定语": { badgeBg: "bg-purple-600 text-white", border: "border-purple-300" },
-  "补语": { badgeBg: "bg-indigo-600 text-white", border: "border-indigo-300" },
-  "句子": { badgeBg: "bg-gray-600 text-white", border: "border-gray-300" },
+const CHUNK_THEMES: Record<string, { bg: string; text: string }> = {
+  "主语": { bg: "bg-amber-900", text: "text-amber-100" },
+  "谓语": { bg: "bg-rose-900", text: "text-rose-100" },
+  "宾语": { bg: "bg-blue-900", text: "text-blue-100" },
+  "状语": { bg: "bg-teal-900", text: "text-teal-100" },
+  "定语": { bg: "bg-purple-950", text: "text-purple-100" },
+  "补语": { bg: "bg-indigo-900", text: "text-indigo-100" },
+  "连词": { bg: "bg-slate-800", text: "text-slate-100" },
+  "句子": { bg: "bg-gray-900", text: "text-gray-100" },
 };
+
+const FALLBACK_COLORS = [
+  { bg: "bg-amber-900", text: "text-amber-100" },
+  { bg: "bg-rose-900", text: "text-rose-100" },
+  { bg: "bg-purple-950", text: "text-purple-100" },
+  { bg: "bg-teal-900", text: "text-teal-100" },
+  { bg: "bg-blue-900", text: "text-blue-100" },
+  { bg: "bg-indigo-900", text: "text-indigo-100" },
+];
 
 export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props) {
   const [data, setData] = useState<SentenceAnalysisData | null>(null);
@@ -67,9 +77,9 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
 
   if (loading) {
     return (
-      <div className="my-4 p-3 bg-white rounded-2xl border border-gray-200 shadow-sm text-center">
+      <div className="my-4 p-3 bg-slate-900 rounded-2xl border border-slate-800 shadow-sm text-center text-white">
         <div className="inline-block animate-spin rounded-full h-5 w-5 border-2 border-lingo-blue border-t-transparent mb-1"></div>
-        <p className="text-xs text-gray-500">Analyzing English sentence structure...</p>
+        <p className="text-xs text-slate-400">Analyzing English sentence structure...</p>
       </div>
     );
   }
@@ -77,15 +87,15 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
   if (!data || !data.chunks) return null;
 
   return (
-    <div className="my-3 p-2.5 sm:p-5 bg-white rounded-2xl border border-gray-200 shadow-xl transition-all">
-      <div className="flex items-center justify-between mb-3 pb-2 border-b border-gray-100">
+    <div className="my-4 p-4 sm:p-6 bg-slate-950 rounded-2xl border border-slate-800 shadow-2xl transition-all text-white">
+      <div className="flex items-center justify-between mb-4 pb-3 border-b border-slate-800">
         <div className="flex items-center gap-2">
           <span className="text-base">🌐</span>
-          <h3 className="text-xs sm:text-base font-bold text-gray-800">Sentence Breakdown & Structure</h3>
+          <h3 className="text-sm sm:text-base font-bold text-slate-200">Sentence Structure Breakdown</h3>
         </div>
         <button
           onClick={onPlayAudio}
-          className="flex items-center gap-1.5 px-2.5 py-1 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors"
+          className="flex items-center gap-1.5 px-3 py-1 bg-blue-500/20 hover:bg-blue-500/30 text-blue-300 text-xs font-semibold rounded-full transition-colors"
           title="Play English Audio"
         >
           <Volume2 className="w-3.5 h-3.5" />
@@ -93,43 +103,30 @@ export function SentenceAnalysisView({ sentence, language, onPlayAudio }: Props)
         </button>
       </div>
 
-      {/* Chunks Layout: Wrapping rows on mobile, single row on desktop */}
-      <div className="flex flex-row flex-wrap sm:flex-nowrap items-stretch justify-center sm:justify-start gap-2 sm:gap-3 py-1.5 px-0.5 sm:overflow-x-auto scrollbar-thin">
+      {/* Horizontal Row Layout of Colored Structure Pills (no boxes) */}
+      <div className="flex flex-row flex-wrap sm:flex-nowrap items-center justify-center gap-3 sm:gap-4 py-4 px-2 overflow-x-auto">
         {data.chunks.map((chunk, cIdx) => {
-          const styling = CHUNK_COLORS[chunk.chunkLabel] || { badgeBg: "bg-gray-700 text-white", border: "border-gray-300" };
+          const theme = CHUNK_THEMES[chunk.chunkLabel] || FALLBACK_COLORS[cIdx % FALLBACK_COLORS.length];
           return (
             <div
               key={cIdx}
-              className={`relative flex flex-col flex-shrink-0 bg-white border-2 ${styling.border} rounded-xl px-2 pt-3.5 pb-2 shadow-xs min-w-[85px] sm:min-w-[110px]`}
+              className={`flex flex-row items-center gap-3 px-4 py-3 rounded-2xl ${theme.bg} ${theme.text} shadow-lg transition-transform hover:scale-[1.02] flex-shrink-0`}
             >
-              {/* Chunk Badge at Top Center */}
-              <div className="absolute -top-2.5 left-1/2 -translate-x-1/2">
-                <span className={`text-[10px] font-bold px-2 py-0.2 rounded-full shadow-xs whitespace-nowrap ${styling.badgeBg}`}>
-                  {chunk.chunkLabel}
-                </span>
-              </div>
-
-              {/* Words inside chunk in a compact horizontal row */}
-              <div className="flex flex-row flex-nowrap items-end justify-center gap-1.5 mt-1">
+              {/* Words inside chunk */}
+              <div className="flex flex-row items-center gap-3">
                 {chunk.words.map((w, wIdx) => (
-                  <div key={wIdx} className="flex flex-col items-center text-center group flex-shrink-0">
-                    {/* IPA (Hidden on mobile) */}
-                    <span className="hidden sm:block text-[10px] font-mono text-gray-400 mb-0.5 whitespace-nowrap">
+                  <div key={wIdx} className="flex flex-col items-center text-center">
+                    {/* IPA above */}
+                    <span className="hidden sm:block text-[10px] font-mono text-slate-400 mb-0.5">
                       {w.ipa || ""}
                     </span>
-                    {/* Word (English) */}
-                    <span className="text-sm sm:text-base font-extrabold text-gray-900 tracking-tight whitespace-nowrap">
+                    {/* Word */}
+                    <span className="text-lg sm:text-xl font-extrabold tracking-tight whitespace-nowrap">
                       {w.word}
                     </span>
-                    {/* Underline bar */}
-                    <div className="w-full h-0.5 bg-lingo-blue my-0.5 rounded-full"></div>
-                    {/* Meaning (Chinese) */}
-                    <span className="text-[10px] sm:text-xs font-medium text-gray-700 max-w-[70px] truncate whitespace-nowrap">
+                    {/* Meaning below */}
+                    <span className="text-[11px] font-medium text-slate-300 mt-0.5 whitespace-nowrap">
                       {w.meaning}
-                    </span>
-                    {/* POS (Hidden on mobile) */}
-                    <span className="hidden sm:block text-[9px] text-gray-500 bg-gray-100 rounded px-1 py-0.2 mt-0.5 font-medium whitespace-nowrap">
-                      {w.pos}
                     </span>
                   </div>
                 ))}
