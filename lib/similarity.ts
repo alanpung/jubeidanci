@@ -19,8 +19,8 @@ export interface SimilarityResult {
 }
 
 export interface SimilarityOptions {
-  /** Max Levenshtein distance (post-normalization) to still count as correct. Default: 1 */
-  threshold?: number;
+  /** Min similarity (0 to 1) to count as correct. Default: 0.8 */
+  minSimilarity?: number;
 }
 
 // ---------------------------------------------------------------------------
@@ -228,7 +228,7 @@ export function checkSimilarity(
   correctAnswer: string,
   options: SimilarityOptions = {},
 ): SimilarityResult {
-  const { threshold = 1 } = options;
+  const { minSimilarity = 0.8 } = options;
 
   const userTrimmed = preNormalize(userInput);
   const correctTrimmed = preNormalize(correctAnswer);
@@ -251,8 +251,6 @@ export function checkSimilarity(
 
   for (const word of essentialWords) {
     if (correctTokens.includes(word) && !userTokens.includes(word)) {
-      // Return incorrect if an essential word is missing,
-      // regardless of overall similarity score.
       return { 
         isCorrect: false, 
         similarity: 0, 
@@ -271,9 +269,8 @@ export function checkSimilarity(
   );
   const similarity = maxLen === 0 ? 1 : 1 - distance / maxLen;
 
-  // Scale threshold for very short strings to avoid contradictory results
-  // (e.g. "a" vs "b" should not be isCorrect with similarity 0)
-  const effectiveThreshold = Math.min(threshold, Math.floor(maxLen / 2));
+  console.log(`Checking: "${userInput}" vs "${correctAnswer}"`);
+  console.log(`Similarity: ${similarity}, isCorrect: ${similarity >= minSimilarity}`);
 
   const boldIndices = new Set<number>();
   for (let k = 0; k < ops.length; k++) {
@@ -293,12 +290,11 @@ export function checkSimilarity(
   }
 
   return {
-    isCorrect: distance <= effectiveThreshold,
+    isCorrect: similarity >= 0.8,
     similarity,
     correctedMarkdown: buildMarkdown(correctTrimmed, boldIndices),
   };
 }
-
 /** Compare user input against multiple accepted answers; return the best match. */
 export function checkBestMatch(
   userInput: string,
