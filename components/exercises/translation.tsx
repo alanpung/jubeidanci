@@ -147,10 +147,32 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
 
       {analysis ? (
         <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-          {analysis.chunks.map((chunk: any, cIdx: number) => (
-            <div key={cIdx} className="flex flex-col items-center p-3 border border-gray-200 rounded-2xl">
-              <span className="text-[10px] font-bold text-lingo-text-light mb-2">{chunk.chunkLabel}</span>
-              <div className="flex gap-2">
+          {analysis.chunks.map((chunk: any, cIdx: number) => {
+            const label = chunk.chunkLabel;
+            const colorClass = 
+              label === "主语" ? "border-amber-300" :
+              label === "谓语" ? "border-rose-300" :
+              label === "宾语" ? "border-blue-300" :
+              label === "状语" ? "border-teal-300" :
+              label === "定语" ? "border-purple-300" :
+              label === "补语" ? "border-indigo-300" :
+              "border-gray-300";
+            
+            const badgeClass = 
+              label === "主语" ? "bg-amber-100 text-amber-900" :
+              label === "谓语" ? "bg-rose-100 text-rose-900" :
+              label === "宾语" ? "bg-blue-100 text-blue-900" :
+              label === "状语" ? "bg-teal-100 text-teal-900" :
+              label === "定语" ? "bg-purple-100 text-purple-900" :
+              label === "补语" ? "bg-indigo-100 text-indigo-900" :
+              "bg-gray-100 text-gray-800";
+
+            return (
+              <div key={cIdx} className={`flex flex-col items-center p-3 border-2 ${colorClass} rounded-2xl`}>
+                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full mb-2 ${badgeClass}`}>
+                  {label}
+                </span>
+                <div className="flex gap-2">
                 {chunk.words.map((w: any, wIdx: number) => {
                   const globalIdx = analysis.chunks.slice(0, cIdx).reduce((acc: number, c: any) => acc + c.words.length, 0) + wIdx;
                   return (
@@ -166,7 +188,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                         }}
                         onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(globalIdx, e)}
                         disabled={status !== "answering"}
-                        style={{ width: `${Math.max(3, w.word.length)}ch` }}
+                        style={{ width: `${Math.max(4, w.word.length)}ch` }}
                         className={`text-center border-b-2 bg-transparent focus:outline-none ${
                           status === "correct" ? "border-lingo-green text-lingo-green" :
                           status === "incorrect" ? "border-lingo-red text-lingo-red" :
