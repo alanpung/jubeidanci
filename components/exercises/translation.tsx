@@ -21,20 +21,8 @@ interface Props {
 }
 
 export function Translation({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
-  const [analysis, setAnalysis] = useState<any>(null);
-  
-  // Create a flattened list of words from analysis chunks if available
-  const words = useMemo(() => {
-    if (!analysis) return exercise.answer.split(/\s+/);
-    return analysis.chunks.flatMap((c: any) => c.words.map((w: any) => w.word));
-  }, [analysis, exercise.answer]);
-
-  // Sync inputWords with words
-  const [inputWords, setInputWords] = useState<string[]>([]);
-  useEffect(() => {
-    setInputWords(words.map(() => ""));
-  }, [words]);
-
+  const words = useMemo(() => exercise.answer.split(/\s+/), [exercise.answer]);
+  const [inputWords, setInputWords] = useState<string[]>(() => exercise.answer.split(/\s+/).map(() => ""));
   const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
   const [bestMatchAnswer, setBestMatchAnswer] = useState<string>(exercise.answer);
   const [similarityScore, setSimilarityScore] = useState<number | null>(null);
@@ -43,20 +31,8 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   useEffect(() => {
-    async function fetchAnalysis() {
-      try {
-        const res = await fetch("/api/analyze-sentence", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ sentence: exercise.answer, targetLanguage: "en" }),
-        });
-        if (res.ok) setAnalysis(await res.json());
-      } catch (err) { console.error(err); }
-    }
-    fetchAnalysis();
+    setInputWords(exercise.answer.split(/\s+/).map(() => ""));
   }, [exercise.answer]);
-
-  // ... (rest of the logic remains similar)
 
   const allAnswers = useMemo(() => {
     const rawList = [exercise.answer, ...(exercise.acceptAlso || [])];
@@ -88,7 +64,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     [exercise.sentence, language]
   );
   
-  // Prefetch sentence and all acceptable answer audio
   useEffect(() => {
     const toFetch = [exercise.sentence, ...allAnswers].filter(Boolean);
     prefetch(toFetch, language);
@@ -119,7 +94,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
   const handleNavigation = (i: number, e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'ArrowRight' || e.key === ' ') {
       e.preventDefault();
-      inputRefs.current[Math.min(inputWords.length - 1, i + 1)]?.focus();
+      inputRefs.current[Math.min(words.length - 1, i + 1)]?.focus();
     } else if (e.key === 'ArrowLeft') {
       e.preventDefault();
       inputRefs.current[Math.max(0, i - 1)]?.focus();
@@ -138,78 +113,45 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       language={language}
       similarityScore={similarityScore}
     >
-      {(status === "answering") && (
+      {status === "answering" && (
         <div className="flex flex-col items-center mb-10">
-          <h2 className="text-xl font-bold text-lingo-text mb-2">Translate this sentence</h2>
-          <p className="text-lg text-lingo-text-light">&ldquo;{exercise.sentence}&rdquo;</p>
+          <h2 className="text-xl font-extrabold text-lingo-text mb-3">Translate this sentence</h2>
+          <p className="text-2xl sm:text-3xl font-black text-lingo-text-dark tracking-wide mb-6">
+            &ldquo;{exercise.sentence}&rdquo;
+          </p>
         </div>
       )}
 
-      {analysis ? (
-        <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-          {analysis.chunks.map((chunk: any, cIdx: number) => {
-            const label = chunk.chunkLabel;
-            const colorClass = 
-              label === "主语" ? "border-amber-300" :
-              label === "谓语" ? "border-rose-300" :
-              label === "宾语" ? "border-blue-300" :
-              label === "状语" ? "border-teal-300" :
-              label === "定语" ? "border-purple-300" :
-              label === "补语" ? "border-indigo-300" :
-              "border-gray-300";
-            
-            const badgeClass = 
-              label === "主语" ? "bg-amber-100 text-amber-900" :
-              label === "谓语" ? "bg-rose-100 text-rose-900" :
-              label === "宾语" ? "bg-blue-100 text-blue-900" :
-              label === "状语" ? "bg-teal-100 text-teal-900" :
-              label === "定语" ? "bg-purple-100 text-purple-900" :
-              label === "补语" ? "bg-indigo-100 text-indigo-900" :
-              "bg-gray-100 text-gray-800";
-
-            return (
-              <div key={cIdx} className={`flex flex-col items-center p-3 border-2 ${colorClass} rounded-2xl`}>
-                <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full mb-2 ${badgeClass}`}>
-                  {label}
-                </span>
-                <div className="flex gap-2">
-                  {chunk.words.map((w: any, wIdx: number) => {
-                    const globalIdx = analysis.chunks.slice(0, cIdx).reduce((acc: number, c: any) => acc + c.words.length, 0) + wIdx;
-                    return (
-                      <div key={wIdx} className="flex flex-col items-center">
-                        <input
-                          ref={(el: HTMLInputElement | null) => { inputRefs.current[globalIdx] = el; }}
-                          type="text"
-                          value={inputWords[globalIdx]}
-                          onChange={(e) => {
-                            const newInput = [...inputWords];
-                            newInput[globalIdx] = e.target.value;
-                            setInputWords(newInput);
-                          }}
-                          onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(globalIdx, e)}
-                          disabled={status !== "answering"}
-                          style={{ width: `${Math.max(4, w.word.length)}ch` }}
-                          className={`text-center border-b-2 bg-transparent focus:outline-none ${
-                            status === "correct" ? "border-lingo-green text-lingo-green" :
-                            status === "incorrect" ? "border-lingo-red text-lingo-red" :
-                            "border-gray-300 focus:border-lingo-blue"
-                          }`}
-                        />
-                        <div className={`flex flex-col items-center transition-opacity ${status === "answering" ? "opacity-0" : "opacity-100"}`}>
-                          <span className="text-[10px] text-gray-400">{w.ipa}</span>
-                          <span className="text-sm font-bold">{w.word}</span>
-                          <span className="text-[10px] text-gray-500">{w.meaning}</span>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-              </div>
-            );
-          })}
+      {status === "answering" ? (
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-10 py-6 px-4 bg-white border border-gray-100 rounded-3xl shadow-sm">
+          {words.map((word, i) => (
+            <div key={i} className="flex flex-col items-center">
+              <input
+                ref={(el: HTMLInputElement | null) => { inputRefs.current[i] = el; }}
+                type="text"
+                value={inputWords[i]}
+                onChange={(e) => {
+                  const newInput = [...inputWords];
+                  newInput[i] = e.target.value;
+                  setInputWords(newInput);
+                }}
+                onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(i, e)}
+                disabled={status !== "answering"}
+                style={{ width: `${Math.max(5, word.length)}ch` }}
+                className="text-center text-xl sm:text-2xl font-bold border-b-4 border-lingo-blue bg-transparent focus:outline-none py-1 px-1"
+              />
+              <span className="text-xs font-semibold text-gray-400 mt-2">({i + 1})</span>
+            </div>
+          ))}
         </div>
       ) : (
-        <div className="text-center">Loading structure...</div>
+        <div className="mt-8 border-t border-gray-100 pt-6">
+          <SentenceAnalysisView
+            sentence={bestMatchAnswer || orderedAnswers[0] || exercise.answer}
+            language="en"
+            onPlayAudio={() => play(bestMatchAnswer || orderedAnswers[0] || exercise.answer, "en")}
+          />
+        </div>
       )}
     </ExerciseShell>
   );
