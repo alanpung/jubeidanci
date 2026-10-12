@@ -173,39 +173,40 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                   {label}
                 </span>
                 <div className="flex gap-2">
-                {chunk.words.map((w: any, wIdx: number) => {
-                  const globalIdx = analysis.chunks.slice(0, cIdx).reduce((acc: number, c: any) => acc + c.words.length, 0) + wIdx;
-                  return (
-                    <div key={wIdx} className="flex flex-col items-center">
-                      <input
-                        ref={(el: HTMLInputElement | null) => { inputRefs.current[globalIdx] = el; }}
-                        type="text"
-                        value={inputWords[globalIdx]}
-                        onChange={(e) => {
-                          const newInput = [...inputWords];
-                          newInput[globalIdx] = e.target.value;
-                          setInputWords(newInput);
-                        }}
-                        onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(globalIdx, e)}
-                        disabled={status !== "answering"}
-                        style={{ width: `${Math.max(4, w.word.length)}ch` }}
-                        className={`text-center border-b-2 bg-transparent focus:outline-none ${
-                          status === "correct" ? "border-lingo-green text-lingo-green" :
-                          status === "incorrect" ? "border-lingo-red text-lingo-red" :
-                          "border-gray-300 focus:border-lingo-blue"
-                        }`}
-                      />
-                      <div className={`flex flex-col items-center transition-opacity ${status === "answering" ? "opacity-0" : "opacity-100"}`}>
-                        <span className="text-[10px] text-gray-400">{w.ipa}</span>
-                        <span className="text-sm font-bold">{w.word}</span>
-                        <span className="text-[10px] text-gray-500">{w.meaning}</span>
+                  {chunk.words.map((w: any, wIdx: number) => {
+                    const globalIdx = analysis.chunks.slice(0, cIdx).reduce((acc: number, c: any) => acc + c.words.length, 0) + wIdx;
+                    return (
+                      <div key={wIdx} className="flex flex-col items-center">
+                        <input
+                          ref={(el: HTMLInputElement | null) => { inputRefs.current[globalIdx] = el; }}
+                          type="text"
+                          value={inputWords[globalIdx]}
+                          onChange={(e) => {
+                            const newInput = [...inputWords];
+                            newInput[globalIdx] = e.target.value;
+                            setInputWords(newInput);
+                          }}
+                          onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(globalIdx, e)}
+                          disabled={status !== "answering"}
+                          style={{ width: `${Math.max(4, w.word.length)}ch` }}
+                          className={`text-center border-b-2 bg-transparent focus:outline-none ${
+                            status === "correct" ? "border-lingo-green text-lingo-green" :
+                            status === "incorrect" ? "border-lingo-red text-lingo-red" :
+                            "border-gray-300 focus:border-lingo-blue"
+                          }`}
+                        />
+                        <div className={`flex flex-col items-center transition-opacity ${status === "answering" ? "opacity-0" : "opacity-100"}`}>
+                          <span className="text-[10px] text-gray-400">{w.ipa}</span>
+                          <span className="text-sm font-bold">{w.word}</span>
+                          <span className="text-[10px] text-gray-500">{w.meaning}</span>
+                        </div>
                       </div>
-                    </div>
-                  );
-                })}
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       ) : (
         <div className="text-center">Loading structure...</div>
