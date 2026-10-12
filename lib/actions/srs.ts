@@ -651,11 +651,14 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
 
   const { loadContentDir, getUnitLessonsSafe } = await import("@/lib/content/loader");
   const { units: fsUnits } = loadContentDir();
+  const dictLevelMap = (await getWordToLevelMap().catch(() => ({}))) as Record<string, string>;
 
-  const unitMap = new Map<string, { id: string; markdown: string }>();
+  const LEVEL_ORDER: Record<string, number> = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6 };
+
+  const unitMap = new Map<string, { id: string; markdown: string; level: string }>();
   for (const u of activeUnits) {
     if (u.id && u.markdown) {
-      unitMap.set(u.id, { id: u.id, markdown: u.markdown });
+      unitMap.set(u.id, { id: u.id, markdown: u.markdown, level: u.level || "A2" });
     }
   }
   for (const fsu of fsUnits) {
@@ -664,7 +667,8 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
       const match = fsu.parsed.title.match(/Unit\s+(\d+)/i);
       const unitNum = match ? parseInt(match[1], 10) : null;
       const uId = unitNum ? `${cId}-unit-${unitNum}` : `${cId}-${fsu.parsed.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
-      unitMap.set(uId, { id: uId, markdown: fsu.markdown });
+      // Prefer filesystem markdown for system courses so updated srsWords are always reflected
+      unitMap.set(uId, { id: uId, markdown: fsu.markdown, level: fsu.parsed.level || "A2" });
     }
   }
 
@@ -672,6 +676,7 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
   for (const u of unitMap.values()) {
     if (!u.markdown) continue;
     const { lessons } = getUnitLessonsSafe(u.markdown);
+    const maxLvlRank = LEVEL_ORDER[(u.level || "C2").toUpperCase().trim()] || 6;
     for (const lesson of lessons) {
       for (const ex of lesson.exercises) {
         const exAny = ex as unknown as Record<string, unknown>;
@@ -680,7 +685,11 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
         const targetWords = words.length > 0 ? words : frontWord ? [frontWord] : [];
         for (const w of targetWords) {
           const norm = w.toLowerCase().trim();
-          if (norm) wordSet.add(norm);
+          if (!norm) continue;
+          const dictLvl = dictLevelMap[norm];
+          if (frontWord === norm || (dictLvl && (LEVEL_ORDER[dictLvl] || 1) <= maxLvlRank)) {
+            wordSet.add(norm);
+          }
         }
       }
     }
@@ -1559,10 +1568,13 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
         createdAt: Date;
       }[] = [];
 
+      const LEVEL_ORDER: Record<string, number> = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6 };
+
       for (const u of allActiveUnits) {
         if (!u.markdown) continue;
         const { lessons } = getUnitLessonsSafe(u.markdown);
         const unitLvl = (u.level || "A1").toUpperCase().trim();
+        const maxLvlRank = LEVEL_ORDER[unitLvl] || 6;
         const lang = u.targetLanguage || "en";
 
         for (const lesson of lessons) {
@@ -1574,30 +1586,34 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
 
             for (const w of targetWords) {
               const normWord = w.toLowerCase().trim();
-              if (normWord) {
-                activeLibraryWords.add(normWord);
-                if (!existingSet.has(normWord)) {
-                  existingSet.add(normWord);
-                  const translationStr = typeof exAny.translation === "string" ? exAny.translation : typeof exAny.meaning === "string" ? exAny.meaning : normWord;
-                  const rawCefrLevel = typeof exAny.cefrLevel === "string" ? exAny.cefrLevel.toUpperCase().trim() : unitLvl;
-                  const cefrLevelStr = dictLevelMap[normWord] || rawCefrLevel;
-                  const posStr = typeof exAny.pos === "string" ? exAny.pos : "noun";
+              if (!normWord) continue;
+              const dictLvl = dictLevelMap[normWord];
+              // Only count valid dictionary words at or below the course's CEFR level (or explicit flashcard front words)
+              if (frontWord !== normWord && (!dictLvl || (LEVEL_ORDER[dictLvl] || 1) > maxLvlRank)) {
+                continue;
+              }
+              activeLibraryWords.add(normWord);
+              if (!existingSet.has(normWord)) {
+                existingSet.add(normWord);
+                const translationStr = typeof exAny.translation === "string" ? exAny.translation : typeof exAny.meaning === "string" ? exAny.meaning : normWord;
+                const rawCefrLevel = typeof exAny.cefrLevel === "string" ? exAny.cefrLevel.toUpperCase().trim() : unitLvl;
+                const cefrLevelStr = dictLvl || rawCefrLevel;
+                const posStr = typeof exAny.pos === "string" ? exAny.pos : "noun";
 
-                  recordsToInsert.push({
-                    word: normWord,
-                    language: lang,
-                    userId,
-                    translation: translationStr,
-                    cefrLevel: cefrLevelStr,
-                    pos: posStr,
-                    status: "new",
-                    easeFactor: 2.5,
-                    interval: 0,
-                    repetitions: 0,
-                    nextReviewAt: null,
-                    createdAt: now,
-                  });
-                }
+                recordsToInsert.push({
+                  word: normWord,
+                  language: lang,
+                  userId,
+                  translation: translationStr,
+                  cefrLevel: cefrLevelStr,
+                  pos: posStr,
+                  status: "new",
+                  easeFactor: 2.5,
+                  interval: 0,
+                  repetitions: 0,
+                  nextReviewAt: null,
+                  createdAt: now,
+                });
               }
             }
           }

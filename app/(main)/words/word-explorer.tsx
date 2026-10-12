@@ -7,6 +7,7 @@ import {
   Volume2,
   Search,
   Check,
+  RotateCcw,
 } from "lucide-react";
 import { setWordStatus } from "@/lib/actions/srs";
 
@@ -935,9 +936,11 @@ function WordLookupCard({
 
   const isMastered = currentStatus === "learned" || currentStatus === "review";
   const isInLibrary = Boolean(libraryWordSet && libraryWordSet.has(w.word.toLowerCase().trim()));
+  const hasStatus = isMastered || currentStatus === "learning" || currentStatus === "new";
 
   async function handleClearStatus() {
-    // If in library, clicking status badge when learning or mastered sets to "new"; if already "new" or not in library, removes to none
+    if (!hasStatus) return;
+    // If word is in user's active library course/unit and currently learning/mastered, reset to "new"; otherwise remove to none
     const nextAction = isInLibrary && currentStatus !== "new" ? "new" : "remove";
     setCurrentStatus(nextAction === "remove" ? "" : nextAction);
     onStatusChange?.(w.word, nextAction, {
@@ -960,10 +963,10 @@ function WordLookupCard({
     }
   }
 
-  async function handleToggleMastered() {
-    // If currently mastered, unmastering ("xmaster") sets to "new" if word is in user's library course/unit, or "remove" (none) if not in library
-    const nextAction = isMastered ? (isInLibrary ? "new" : "remove") : "learned";
-    setCurrentStatus(nextAction === "remove" ? "" : nextAction);
+  async function handleSetMastered() {
+    if (isMastered) return;
+    const nextAction = "learned";
+    setCurrentStatus(nextAction);
     onStatusChange?.(w.word, nextAction, {
       cefrLevel: w.cefr_level,
       translation: w.definition_zh || w.english_translation,
@@ -978,7 +981,7 @@ function WordLookupCard({
         pos: w.pos,
       });
     } catch (err) {
-      console.error("Failed to update status:", err);
+      console.error("Failed to set mastered status:", err);
     } finally {
       setIsUpdating(false);
     }
@@ -989,7 +992,7 @@ function WordLookupCard({
       onClick={() => setExpanded(!expanded)}
       className="w-full rounded-xl border-2 border-lingo-border bg-lingo-card hover:border-lingo-gray-dark transition-all overflow-hidden shadow-xs cursor-pointer"
     >
-      {/* ── TOP BAR (Word, Multi-POS, English Meaning Preview, Mastered Button) ── */}
+      {/* ── TOP BAR (Word, Multi-POS, English Meaning Preview, 3 Right Icons: Status, Reset, Mastered) ── */}
       <div className="flex items-center justify-between p-2.5 sm:p-3 gap-2">
         {/* Left: Pronounce, Level Badge, Word, IPA, Multi-POS */}
         <div className="flex items-center gap-1.5 sm:gap-2 min-w-0 shrink-0 max-w-[52%] sm:max-w-[44%]">
@@ -1045,44 +1048,65 @@ function WordLookupCard({
           </p>
         </div>
 
-        {/* Right: Rounded Status Icon (N / L / M) + Tick Button for Mastered (No Dropdown Arrow) */}
+        {/* Right: 3 Icons — 1. Current Status Badge (display only), 2. Reset Button, 3. Mastered Button */}
         <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-          {(isMastered || currentStatus === "learning" || currentStatus === "new") && (
-            <button
-              type="button"
-              disabled={isUpdating}
-              onClick={(e) => {
-                e.stopPropagation();
-                handleClearStatus();
-              }}
-              className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-[11px] font-black shadow-xs shrink-0 cursor-pointer hover:scale-110 hover:opacity-80 transition-all ${
-                isMastered
-                  ? "bg-emerald-500 text-white"
-                  : currentStatus === "learning"
-                  ? "bg-amber-400 text-amber-950"
-                  : "bg-blue-500 text-white"
-              }`}
-              title={`Status: ${
-                isMastered ? "Mastered (M)" : currentStatus === "learning" ? "Learning (L)" : "New (N)"
-              } — click to reset`}
-            >
-              {isMastered ? "M" : currentStatus === "learning" ? "L" : "N"}
-            </button>
-          )}
+          {/* 1st Icon: Current Status Indicator (display only, does not trigger actions) */}
+          <span
+            onClick={(e) => e.stopPropagation()}
+            className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-[11px] font-black shadow-xs shrink-0 select-none cursor-default ${
+              isMastered
+                ? "bg-emerald-500 text-white"
+                : currentStatus === "learning"
+                ? "bg-amber-400 text-amber-950"
+                : currentStatus === "new"
+                ? "bg-blue-500 text-white"
+                : "bg-slate-100 dark:bg-slate-800 text-slate-400 border border-lingo-border"
+            }`}
+            title={`Current Status: ${
+              isMastered
+                ? "Mastered (M)"
+                : currentStatus === "learning"
+                ? "Learning (L)"
+                : currentStatus === "new"
+                ? "New (N)"
+                : "Not in SRS (-)"
+            }`}
+          >
+            {isMastered ? "M" : currentStatus === "learning" ? "L" : currentStatus === "new" ? "N" : "–"}
+          </span>
 
+          {/* 2nd Icon: Reset Word Status Button */}
           <button
             type="button"
-            disabled={isUpdating}
+            disabled={isUpdating || !hasStatus}
             onClick={(e) => {
               e.stopPropagation();
-              handleToggleMastered();
+              handleClearStatus();
             }}
-            className={`w-7 h-7 rounded-full transition-all cursor-pointer flex items-center justify-center shadow-xs shrink-0 ${
-              isMastered
-                ? "bg-emerald-500 text-white hover:bg-emerald-600 ring-2 ring-emerald-300"
-                : "bg-white text-lingo-text-light border-2 border-lingo-border hover:border-emerald-500 hover:text-emerald-600"
+            className={`w-7 h-7 rounded-full transition-all flex items-center justify-center shadow-xs shrink-0 ${
+              hasStatus
+                ? "bg-white text-lingo-text-light border-2 border-lingo-border hover:border-rose-500 hover:text-rose-600 hover:bg-rose-50 cursor-pointer"
+                : "bg-slate-50 text-slate-300 border-2 border-slate-200 cursor-not-allowed opacity-60"
             }`}
-            title={isMastered ? "Mastered (M) — click to reset" : "Mark as Mastered"}
+            title={hasStatus ? "Reset word status" : "No status to reset"}
+          >
+            <RotateCcw className="w-3.5 h-3.5 stroke-[2.5]" />
+          </button>
+
+          {/* 3rd Icon: Set as Mastered Button */}
+          <button
+            type="button"
+            disabled={isUpdating || isMastered}
+            onClick={(e) => {
+              e.stopPropagation();
+              handleSetMastered();
+            }}
+            className={`w-7 h-7 rounded-full transition-all flex items-center justify-center shadow-xs shrink-0 ${
+              isMastered
+                ? "bg-emerald-500 text-white ring-2 ring-emerald-300 cursor-default"
+                : "bg-white text-lingo-text-light border-2 border-lingo-border hover:border-emerald-500 hover:text-emerald-600 hover:bg-emerald-50 cursor-pointer"
+            }`}
+            title={isMastered ? "Already Mastered" : "Set as Mastered"}
           >
             <Check className="w-3.5 h-3.5 stroke-[3]" />
           </button>
