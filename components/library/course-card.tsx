@@ -18,7 +18,11 @@ export function CourseCard({ course }: CourseCardProps) {
     >
       <div className="flex items-start justify-between gap-3">
         <div className="flex min-w-0 flex-1 items-center gap-3.5">
-          <CourseLevelIcon level={course.level} />
+          <CourseLevelIcon
+            level={course.level}
+            title={course.title}
+            courseId={course.id}
+          />
           <div className="min-w-0 flex-1">
             <h3 className="text-lg font-bold text-lingo-text truncate">{course.title}</h3>
             <p className="mt-0.5 text-sm text-lingo-text-light">
