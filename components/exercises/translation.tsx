@@ -118,9 +118,9 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
 
       {status !== "answering" && (
         <SentenceAnalysisView
-          sentence={exercise.answer}
+          sentence={allAnswers[0] || exercise.answer}
           language="en"
-          onPlayAudio={() => play(exercise.answer, "en")}
+          onPlayAudio={() => play(allAnswers[0] || exercise.answer, "en")}
         />
       )}
     </ExerciseShell>
