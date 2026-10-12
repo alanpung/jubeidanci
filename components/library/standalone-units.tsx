@@ -10,6 +10,7 @@ import { removeUnitFromLibrary } from "@/lib/actions/library";
 import { CreateUnitForm } from "@/components/library/create-unit-form";
 import { QuestionTypeBadge } from "@/components/units/question-type-badge";
 import { CopyLinkButton } from "@/components/ui/copy-link-button";
+import { X } from "lucide-react";
 
 interface StandaloneUnitsProps {
   units: StandaloneUnitInfo[];
@@ -72,6 +73,7 @@ function StandaloneUnitCard({
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [activeAction, setActiveAction] = useState<string | null>(null);
+  const [isRemoved, setIsRemoved] = useState(false);
 
   const progress =
     unit.lessonCount > 0
@@ -83,12 +85,17 @@ function StandaloneUnitCard({
   const isActionPending = isPending && activeAction !== null;
   const isOwner = unit.isOwner;
 
+  if (isRemoved) {
+    return null;
+  }
+
   function handleRemoveFromLibrary() {
     setActiveAction("remove");
     startTransition(async () => {
       try {
         const result = await removeUnitFromLibrary(unit.id);
         if (result.success) {
+          setIsRemoved(true);
           router.refresh();
         } else {
           alert(result.error);
@@ -213,16 +220,14 @@ function StandaloneUnitCard({
                 handleRemoveFromLibrary();
               }}
               disabled={isActionPending}
-              className="text-xs font-bold text-red-500 hover:text-red-700 hover:underline disabled:opacity-50 transition-colors p-0.5 shrink-0 cursor-pointer"
-              title="Remove this unit from My Library"
+              className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-lingo-text-light hover:bg-red-50 hover:text-red-500 transition-colors disabled:opacity-50 cursor-pointer"
+              title="Remove from My Library"
+              aria-label="Remove from My Library"
             >
               {activeAction === "remove" ? (
-                <span className="flex items-center gap-1">
-                  <span className="h-2.5 w-2.5 animate-spin rounded-full border border-red-500 border-t-transparent" />
-                  removing
-                </span>
+                <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-red-500/30 border-t-red-500" />
               ) : (
-                "(remove)"
+                <X className="h-4 w-4 stroke-[2.5]" />
               )}
             </button>
           )}

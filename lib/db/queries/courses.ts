@@ -170,6 +170,7 @@ export async function listCourses(
 export const SYSTEM_COURSE_IDS = [
   "a1-flashcard-course",
   "a2-flashcard-course",
+  "a2-translation-course",
   "b1-flashcard-course",
   "b2-flashcard-course",
   "c1-flashcard-course",
@@ -213,6 +214,18 @@ export async function listCoursesWithLessonCounts(
       enrolledCourseIds = new Set(enrollments.map((e) => e.courseId));
     } catch (err) {
       console.warn("listCoursesWithLessonCounts: enrollment query failed:", err);
+    }
+    try {
+      const userUnits = await db
+        .select({ courseId: unit.courseId })
+        .from(userUnitLibrary)
+        .innerJoin(unit, eq(unit.id, userUnitLibrary.unitId))
+        .where(eq(userUnitLibrary.userId, userId));
+      userUnits.forEach((u) => {
+        if (u.courseId) enrolledCourseIds.add(u.courseId);
+      });
+    } catch (err) {
+      console.warn("listCoursesWithLessonCounts: userUnitLibrary query failed:", err);
     }
     try {
       const { getLocalCourseEnrollments } = await import("@/lib/srs-store");
@@ -836,21 +849,6 @@ export async function getUserOwnedCourses(
       });
     } catch (err) {
       console.warn("getUserOwnedCourses userUnitLibrary query failed:", err);
-    }
-
-    try {
-      const completedUnits = await db
-        .select({ courseId: unit.courseId })
-        .from(lessonCompletion)
-        .innerJoin(unit, eq(unit.id, lessonCompletion.unitId))
-        .where(eq(lessonCompletion.userId, userId));
-      completedUnits.forEach((u) => {
-        if (u.courseId && !enrolledCourseIds.includes(u.courseId)) {
-          enrolledCourseIds.push(u.courseId);
-        }
-      });
-    } catch (err) {
-      console.warn("getUserOwnedCourses lessonCompletion query failed:", err);
     }
 
     try {

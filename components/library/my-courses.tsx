@@ -11,6 +11,7 @@ import { CreateCourseForm } from "@/components/library/create-course-form";
 import { CourseManager } from "@/components/library/course-manager";
 import { CopyLinkButton } from "@/components/ui/copy-link-button";
 import { CourseLevelIcon } from "@/components/library/course-level-icon";
+import { X } from "lucide-react";
 
 interface MyCoursesProps {
   courses: OwnedCourseInfo[];
@@ -88,6 +89,7 @@ function OwnedCourseCard({
   const router = useRouter();
   const [isPending, startTransition] = useTransition();
   const [activeAction, setActiveAction] = useState<string | null>(null);
+  const [isRemoved, setIsRemoved] = useState(false);
   const [isEditingTitle, setIsEditingTitle] = useState(false);
   const [titleDraft, setTitleDraft] = useState(course.title);
   const [titleError, setTitleError] = useState<string | null>(null);
@@ -98,12 +100,21 @@ function OwnedCourseCard({
   const canManage = isOwner || isAdmin;
   const isActionPending = isPending && activeAction !== null;
 
-  function handleRemoveFromLibrary() {
+  if (isRemoved) {
+    return null;
+  }
+
+  function handleRemoveFromLibrary(e?: React.MouseEvent) {
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
     setActiveAction("remove");
     startTransition(async () => {
       try {
         const result = await removeCourseFromLibrary(course.id);
         if (result.success) {
+          setIsRemoved(true);
           router.refresh();
         } else {
           alert(result.error);
@@ -197,7 +208,7 @@ function OwnedCourseCard({
     });
   }
 
-  const showBottomActions = !isLocked || (isAdmin && isPublic) || (!isOwner && course.isInLibrary);
+  const showBottomActions = !isLocked || (isAdmin && isPublic && isOwner);
 
   return (
     <div className="relative min-w-0 overflow-hidden rounded-xl border-2 border-lingo-border bg-white shadow-[0_2px_0_0] shadow-lingo-border hover:border-lingo-blue transition-all">
@@ -228,6 +239,22 @@ function OwnedCourseCard({
                 ) : null}
               </div>
 
+              {course.isInLibrary && !course.isOwner && (
+                <button
+                  type="button"
+                  onClick={handleRemoveFromLibrary}
+                  disabled={isActionPending}
+                  title="Remove from My Library"
+                  aria-label="Remove from My Library"
+                  className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-lingo-text-light hover:bg-red-50 hover:text-red-500 transition-colors disabled:opacity-50 cursor-pointer"
+                >
+                  {activeAction === "remove" ? (
+                    <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-red-500/30 border-t-red-500" />
+                  ) : (
+                    <X className="h-4 w-4 stroke-[2.5]" />
+                  )}
+                </button>
+              )}
             </div>
 
             <div className="flex items-center gap-2 flex-wrap">
@@ -446,26 +473,6 @@ function OwnedCourseCard({
                     />
                   </svg>
                   Delete
-                </>
-              )}
-            </button>
-          )}
-
-          {course.isInLibrary && (
-            <button
-              onClick={handleRemoveFromLibrary}
-              disabled={isActionPending}
-              className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold text-red-500 hover:bg-red-50 transition-colors disabled:opacity-50"
-            >
-              {activeAction === "remove" ? (
-                <>
-                  <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-red-500/30 border-t-red-500" />
-                  Removing...
-                </>
-              ) : (
-                <>
-                  <span>✕</span>
-                  Remove from My Library
                 </>
               )}
             </button>

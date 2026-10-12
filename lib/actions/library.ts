@@ -8,7 +8,7 @@ import {
 
 import { db, isDbAvailable } from "@/lib/db";
 import { unit, course, user, userUnitLibrary, userCourseEnrollment } from "@/lib/db/schema";
-import { eq, and, inArray } from "drizzle-orm";
+import { eq, and, inArray, like, or } from "drizzle-orm";
 import { requireSession } from "@/lib/auth-server";
 import { revalidatePath } from "next/cache";
 import { isAdminEmail } from "@/lib/ai/models";
@@ -210,7 +210,10 @@ export async function addCourseToLibrary(
   }
 
   await invalidateUserLibraryWordsCache(userId);
-  await syncUserCourseWordsToSrs(userId, true);
+  await syncUserCourseWordsToSrs(userId, true).catch(() => {});
+
+  const { clearContentCache } = await import("@/lib/db/queries/courses");
+  clearContentCache();
 
   revalidatePath("/library", "page");
   revalidatePath("/library/browse", "page");
@@ -228,45 +231,73 @@ export async function removeCourseFromLibrary(
   const userId = session.user.id;
 
   const { removeLocalCourseEnrollment } = await import("@/lib/srs-store");
-  await removeLocalCourseEnrollment(userId, courseId);
+  await removeLocalCourseEnrollment(userId, courseId).catch(() => {});
 
-  // 1. Remove enrollment
-  await db
-    .delete(userCourseEnrollment)
-    .where(
-      and(
-        eq(userCourseEnrollment.userId, userId),
-        eq(userCourseEnrollment.courseId, courseId)
-      )
-    );
+  if (await isDbAvailable()) {
+    // 1. Remove enrollment (table may not exist in older deployments)
+    try {
+      await db
+        .delete(userCourseEnrollment)
+        .where(
+          and(
+            eq(userCourseEnrollment.userId, userId),
+            eq(userCourseEnrollment.courseId, courseId)
+          )
+        );
+    } catch {}
 
-  // 2. Remove all course units from user's unit library
-  const unitsInCourse = await db
-    .select({ id: unit.id })
-    .from(unit)
-    .where(eq(unit.courseId, courseId));
+    // 2. Remove all course units from user's unit library
+    try {
+      const unitsInCourse = await db
+        .select({ id: unit.id })
+        .from(unit)
+        .where(eq(unit.courseId, courseId));
 
-  if (unitsInCourse.length > 0) {
-    const unitIds = unitsInCourse.map((u) => u.id);
-    await db
-      .delete(userUnitLibrary)
-      .where(
-        and(
-          eq(userUnitLibrary.userId, userId),
-          inArray(userUnitLibrary.unitId, unitIds)
-        )
-      );
+      const unitIds = unitsInCourse.map((u) => u.id);
+      if (unitIds.length > 0) {
+        await db
+          .delete(userUnitLibrary)
+          .where(
+            and(
+              eq(userUnitLibrary.userId, userId),
+              or(
+                inArray(userUnitLibrary.unitId, unitIds),
+                like(userUnitLibrary.unitId, `${courseId}-%`)
+              )
+            )
+          );
+      } else {
+        await db
+          .delete(userUnitLibrary)
+          .where(
+            and(
+              eq(userUnitLibrary.userId, userId),
+              like(userUnitLibrary.unitId, `${courseId}-%`)
+            )
+          );
+      }
+    } catch (err) {
+      console.warn("removeCourseFromLibrary unit cleanup warning:", err);
+    }
+
+    // 3. If createdBy was set to userId on a system course, clear createdBy to null
+    try {
+      const { SYSTEM_COURSE_IDS } = await import("@/lib/db/queries/courses");
+      if (SYSTEM_COURSE_IDS.includes(courseId)) {
+        await db
+          .update(course)
+          .set({ createdBy: null })
+          .where(and(eq(course.id, courseId), eq(course.createdBy, userId)));
+      }
+    } catch {}
   }
 
-  // 3. If createdBy was set to userId on a system or public course, clear createdBy to null
-  await db
-    .update(course)
-    .set({ createdBy: null })
-    .where(and(eq(course.id, courseId), eq(course.createdBy, userId)));
-
   // 4. Clean up unstudied 'new' SRS cards for levels no longer active in user's library
-  await invalidateUserLibraryWordsCache(userId);
-  await cleanupUnstudiedCourseWordsFromSrs(userId);
+  const { clearContentCache } = await import("@/lib/db/queries/courses");
+  clearContentCache();
+
+  await invalidateUserLibraryWordsCache(userId).catch(() => {});
+  await cleanupUnstudiedCourseWordsFromSrs(userId).catch(() => {});
 
   revalidatePath("/", "layout");
   revalidatePath("/library", "page");
