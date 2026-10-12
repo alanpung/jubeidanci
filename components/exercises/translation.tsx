@@ -173,7 +173,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       {label}
                     </span>
                     <div className="flex gap-2">
-                      {chunk.words.map((w: any, _: number) => {
+                      {chunk.words.flatMap((w: any) => w.word.split(/\s+/).map((sub: string) => ({ ...w, word: sub }))).map((w: any, _: number) => {
                         const curIdx = globalCounter++;
                         const targetWord = words[curIdx] || w.word;
                         return (
