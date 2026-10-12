@@ -244,6 +244,23 @@ export function checkSimilarity(
     return { isCorrect: true, similarity: 1, correctedMarkdown: correctTrimmed };
   }
 
+  // Strict check for essential functional words
+  const essentialWords = ["to", "in", "at", "on", "of", "for", "with", "is", "are", "was", "were"];
+  const userTokens = userTrimmed.toLowerCase().split(/\s+/);
+  const correctTokens = correctTrimmed.toLowerCase().split(/\s+/);
+
+  for (const word of essentialWords) {
+    if (correctTokens.includes(word) && !userTokens.includes(word)) {
+      // Return incorrect if an essential word is missing,
+      // regardless of overall similarity score.
+      return { 
+        isCorrect: false, 
+        similarity: 0, 
+        correctedMarkdown: `**Missing word:** ${word}` 
+      };
+    }
+  }
+
   const { distance, ops, userIndices } = levenshteinOps(
     userMapping.normalized,
     correctMapping.normalized,
