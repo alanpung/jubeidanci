@@ -22,8 +22,19 @@ interface Props {
 
 export function Translation({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
   const [analysis, setAnalysis] = useState<any>(null);
-  const words = useMemo(() => exercise.answer.split(/\s+/), [exercise.answer]);
-  const [inputWords, setInputWords] = useState<string[]>(words.map(() => ""));
+  
+  // Create a flattened list of words from analysis chunks if available
+  const words = useMemo(() => {
+    if (!analysis) return exercise.answer.split(/\s+/);
+    return analysis.chunks.flatMap((c: any) => c.words.map((w: any) => w.word));
+  }, [analysis, exercise.answer]);
+
+  // Sync inputWords with words
+  const [inputWords, setInputWords] = useState<string[]>([]);
+  useEffect(() => {
+    setInputWords(words.map(() => ""));
+  }, [words]);
+
   const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
   const [bestMatchAnswer, setBestMatchAnswer] = useState<string>(exercise.answer);
   const [similarityScore, setSimilarityScore] = useState<number | null>(null);
