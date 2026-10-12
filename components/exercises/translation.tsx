@@ -21,6 +21,7 @@ interface Props {
 }
 
 export function Translation({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
+  const [analysis, setAnalysis] = useState<any>(null);
   const words = useMemo(() => exercise.answer.split(/\s+/), [exercise.answer]);
   const [inputWords, setInputWords] = useState<string[]>(() => exercise.answer.split(/\s+/).map(() => ""));
   const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
@@ -32,6 +33,20 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
 
   useEffect(() => {
     setInputWords(exercise.answer.split(/\s+/).map(() => ""));
+  }, [exercise.answer]);
+
+  useEffect(() => {
+    async function fetchAnalysis() {
+      try {
+        const res = await fetch("/api/analyze-sentence", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ sentence: exercise.answer, targetLanguage: "en" }),
+        });
+        if (res.ok) setAnalysis(await res.json());
+      } catch (err) { console.error(err); }
+    }
+    fetchAnalysis();
   }, [exercise.answer]);
 
   const allAnswers = useMemo(() => {
@@ -114,36 +129,81 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       similarityScore={similarityScore}
     >
       {status === "answering" && (
-        <div className="flex flex-col items-center mb-10">
-          <h2 className="text-xl font-extrabold text-lingo-text mb-3">Translate this sentence</h2>
-          <p className="text-2xl sm:text-3xl font-black text-lingo-text-dark tracking-wide mb-6">
-            &ldquo;{exercise.sentence}&rdquo;
-          </p>
+        <div className="flex flex-col items-center mb-8">
+          <h2 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Translate this sentence</h2>
+          <div className="flex items-center gap-3">
+            <p className="text-2xl sm:text-3xl font-black text-lingo-text-dark tracking-wide">
+              &ldquo;<HoverableText text={exercise.sentence} language={sentenceLang} />&rdquo;
+            </p>
+            {!exercise.noAudio?.includes("sentence") && (
+              <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
+            )}
+          </div>
         </div>
       )}
 
       {status === "answering" ? (
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-10 py-6 px-4 bg-white border border-gray-100 rounded-3xl shadow-sm">
-          {words.map((word, i) => (
-            <div key={i} className="flex flex-col items-center">
-              <input
-                ref={(el: HTMLInputElement | null) => { inputRefs.current[i] = el; }}
-                type="text"
-                value={inputWords[i]}
-                onChange={(e) => {
-                  const newInput = [...inputWords];
-                  newInput[i] = e.target.value;
-                  setInputWords(newInput);
-                }}
-                onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(i, e)}
-                disabled={status !== "answering"}
-                style={{ width: `${Math.max(5, word.length)}ch` }}
-                className="text-center text-xl sm:text-2xl font-bold border-b-4 border-lingo-blue bg-transparent focus:outline-none py-1 px-1"
-              />
-              <span className="text-xs font-semibold text-gray-400 mt-2">({i + 1})</span>
-            </div>
-          ))}
-        </div>
+        analysis ? (
+          <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+            {(() => {
+              let globalCounter = 0;
+              return analysis.chunks.map((chunk: any, cIdx: number) => {
+                const label = chunk.chunkLabel;
+                const colorClass = 
+                  label === "主语" ? "border-amber-300" :
+                  label === "谓语" ? "border-rose-300" :
+                  label === "宾语" ? "border-blue-300" :
+                  label === "状语" ? "border-teal-300" :
+                  label === "定语" ? "border-purple-300" :
+                  label === "补语" ? "border-indigo-300" :
+                  "border-gray-300";
+                
+                const badgeClass = 
+                  label === "主语" ? "bg-amber-100 text-amber-900" :
+                  label === "谓语" ? "bg-rose-100 text-rose-900" :
+                  label === "宾语" ? "bg-blue-100 text-blue-900" :
+                  label === "状语" ? "bg-teal-100 text-teal-900" :
+                  label === "定语" ? "bg-purple-100 text-purple-900" :
+                  label === "补语" ? "bg-indigo-100 text-indigo-900" :
+                  "bg-gray-100 text-gray-800";
+
+                return (
+                  <div key={cIdx} className={`flex flex-col items-center p-3 border-2 ${colorClass} rounded-2xl bg-white shadow-xs`}>
+                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full mb-2 ${badgeClass}`}>
+                      {label}
+                    </span>
+                    <div className="flex gap-2">
+                      {chunk.words.map((w: any, _: number) => {
+                        const curIdx = globalCounter++;
+                        const targetWord = words[curIdx] || w.word;
+                        return (
+                          <div key={curIdx} className="flex flex-col items-center">
+                            <input
+                              ref={(el: HTMLInputElement | null) => { inputRefs.current[curIdx] = el; }}
+                              type="text"
+                              value={inputWords[curIdx] || ""}
+                              onChange={(e) => {
+                                const newInput = [...inputWords];
+                                newInput[curIdx] = e.target.value;
+                                setInputWords(newInput);
+                              }}
+                              onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(curIdx, e)}
+                              disabled={status !== "answering"}
+                              style={{ width: `${Math.max(4, targetWord.length)}ch` }}
+                              className="text-center text-xl font-bold border-b-4 border-lingo-blue bg-transparent focus:outline-none py-1 px-1"
+                            />
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              });
+            })()}
+          </div>
+        ) : (
+          <div className="text-center py-8 text-gray-400">Loading structure breakdown...</div>
+        )
       ) : (
         <div className="mt-8 border-t border-gray-100 pt-6">
           <SentenceAnalysisView
