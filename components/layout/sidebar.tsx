@@ -3,14 +3,22 @@
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
+import {
+  MessageSquare,
+  Library,
+  BookOpen,
+  Languages,
+  BarChart3,
+  Settings,
+} from "lucide-react";
 
 const navItems = [
-  { href: "/chat", label: "Chat", icon: "💬" },
-  { href: "/library", label: "Library", icon: "📚" },
-  { href: "/read", label: "Read", icon: "📖" },
-  { href: "/words", label: "Words", icon: "🔤" },
-  { href: "/progress", label: "Progress", icon: "📊" },
-  { href: "/settings", label: "Settings", icon: "⚙️" },
+  { href: "/chat", label: "Chat", icon: MessageSquare },
+  { href: "/library", label: "Library", icon: Library },
+  { href: "/read", label: "Read", icon: BookOpen },
+  { href: "/words", label: "Words", icon: Languages },
+  { href: "/progress", label: "Progress", icon: BarChart3 },
+  { href: "/settings", label: "Settings", icon: Settings },
 ];
 
 interface SidebarProps {
@@ -47,6 +55,7 @@ export function Sidebar({ showChat = true, showRead = true }: SidebarProps) {
         {items.map((item) => {
           const active =
             pathname === item.href || pathname.startsWith(item.href + "/");
+          const Icon = item.icon;
           return (
             <Link
               key={item.href}
@@ -57,7 +66,7 @@ export function Sidebar({ showChat = true, showRead = true }: SidebarProps) {
                   : "text-lingo-text-light hover:bg-lingo-gray/50"
               }`}
             >
-              <span className="text-xl">{item.icon}</span>
+              <Icon className="w-5 h-5 shrink-0 stroke-[2.25]" />
               {item.label}
             </Link>
           );
