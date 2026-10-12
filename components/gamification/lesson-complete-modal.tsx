@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { Zap, Target, Award, Loader2 } from "lucide-react";
@@ -32,6 +32,16 @@ export function LessonCompleteModal({
     setIsNavigating(true);
     onContinue();
   }
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Enter") {
+        handleContinue();
+      }
+    };
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [handleContinue]);
 
   return (
     <div className="mx-auto max-w-md py-8 px-4 text-center select-none">
