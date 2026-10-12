@@ -30,6 +30,8 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     return analysis.chunks.flatMap((c: any) => c.words);
   }, [analysis, exercise.answer]);
 
+  const words = useMemo(() => analyzedWords.map(w => w.word), [analyzedWords]);
+
   const [inputWords, setInputWords] = useState<string[]>(() => exercise.answer.split(/\s+/).map(() => ""));
   const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
   const [bestMatchAnswer, setBestMatchAnswer] = useState<string>(exercise.answer);
