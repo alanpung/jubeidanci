@@ -22,7 +22,14 @@ interface Props {
 
 export function Translation({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
   const [analysis, setAnalysis] = useState<any>(null);
-  const words = useMemo(() => exercise.answer.split(/\s+/), [exercise.answer]);
+  
+  const analyzedWords = useMemo(() => {
+    if (!analysis || !analysis.chunks) {
+      return exercise.answer.split(/\s+/).map(w => ({ word: w, ipa: "", meaning: "" }));
+    }
+    return analysis.chunks.flatMap((c: any) => c.words);
+  }, [analysis, exercise.answer]);
+
   const [inputWords, setInputWords] = useState<string[]>(() => exercise.answer.split(/\s+/).map(() => ""));
   const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
   const [bestMatchAnswer, setBestMatchAnswer] = useState<string>(exercise.answer);
@@ -32,8 +39,8 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   useEffect(() => {
-    setInputWords(exercise.answer.split(/\s+/).map(() => ""));
-  }, [exercise.answer]);
+    setInputWords(analyzedWords.map(() => ""));
+  }, [analyzedWords]);
 
   useEffect(() => {
     async function fetchAnalysis() {
@@ -143,67 +150,32 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       )}
 
       {status === "answering" ? (
-        analysis ? (
-          <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-            {(() => {
-              let globalCounter = 0;
-              return analysis.chunks.map((chunk: any, cIdx: number) => {
-                const label = chunk.chunkLabel;
-                const colorClass = 
-                  label === "主语" ? "border-amber-300" :
-                  label === "谓语" ? "border-rose-300" :
-                  label === "宾语" ? "border-blue-300" :
-                  label === "状语" ? "border-teal-300" :
-                  label === "定语" ? "border-purple-300" :
-                  label === "补语" ? "border-indigo-300" :
-                  "border-gray-300";
-                
-                const badgeClass = 
-                  label === "主语" ? "bg-amber-100 text-amber-900" :
-                  label === "谓语" ? "bg-rose-100 text-rose-900" :
-                  label === "宾语" ? "bg-blue-100 text-blue-900" :
-                  label === "状语" ? "bg-teal-100 text-teal-900" :
-                  label === "定语" ? "bg-purple-100 text-purple-900" :
-                  label === "补语" ? "bg-indigo-100 text-indigo-900" :
-                  "bg-gray-100 text-gray-800";
-
-                return (
-                  <div key={cIdx} className={`flex flex-col items-center p-3 border-2 ${colorClass} rounded-2xl bg-white shadow-xs`}>
-                    <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full mb-2 ${badgeClass}`}>
-                      {label}
-                    </span>
-                    <div className="flex gap-2">
-                      {chunk.words.flatMap((w: any) => w.word.split(/\s+/).map((sub: string) => ({ ...w, word: sub }))).map((w: any, _: number) => {
-                        const curIdx = globalCounter++;
-                        const targetWord = words[curIdx] || w.word;
-                        return (
-                          <div key={curIdx} className="flex flex-col items-center">
-                            <input
-                              ref={(el: HTMLInputElement | null) => { inputRefs.current[curIdx] = el; }}
-                              type="text"
-                              value={inputWords[curIdx] || ""}
-                              onChange={(e) => {
-                                const newInput = [...inputWords];
-                                newInput[curIdx] = e.target.value;
-                                setInputWords(newInput);
-                              }}
-                              onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(curIdx, e)}
-                              disabled={status !== "answering"}
-                              style={{ width: `${Math.max(4, targetWord.length)}ch` }}
-                              className="text-center text-xl font-bold border-b-4 border-lingo-blue bg-transparent focus:outline-none py-1 px-1"
-                            />
-                          </div>
-                        );
-                      })}
-                    </div>
-                  </div>
-                );
-              });
-            })()}
-          </div>
-        ) : (
-          <div className="text-center py-8 text-gray-400">Loading structure breakdown...</div>
-        )
+        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-10 py-8 px-6 bg-white border border-gray-100 rounded-3xl shadow-sm">
+          {analyzedWords.map((w: any, i: number) => (
+            <div key={i} className="flex flex-col items-center gap-1.5">
+              <input
+                ref={(el: HTMLInputElement | null) => { inputRefs.current[i] = el; }}
+                type="text"
+                value={inputWords[i] || ""}
+                onChange={(e) => {
+                  const newInput = [...inputWords];
+                  newInput[i] = e.target.value;
+                  setInputWords(newInput);
+                }}
+                onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(i, e)}
+                disabled={status !== "answering"}
+                style={{ width: `${Math.max(4, w.word.length)}ch` }}
+                className="text-center text-xl sm:text-2xl font-bold border-b-4 border-lingo-blue bg-transparent focus:outline-none py-1 px-1"
+              />
+              {/* IPA and Chinese meaning below */}
+              <div className={`flex flex-col items-center transition-opacity duration-300 ${status === "answering" ? "opacity-0 h-0 overflow-hidden" : "opacity-100"}`}>
+                <span className="text-[11px] font-mono text-gray-400">{w.ipa}</span>
+                <span className="text-xs font-bold text-gray-800">{w.word}</span>
+                <span className="text-[11px] font-medium text-gray-600">{w.meaning}</span>
+              </div>
+            </div>
+          ))}
+        </div>
       ) : (
         <div className="mt-8 border-t border-gray-100 pt-6">
           <SentenceAnalysisView
