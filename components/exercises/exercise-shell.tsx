@@ -125,7 +125,7 @@ export function ExerciseShell({
             <div className="flex items-center gap-2 mb-2">
               <span className="text-2xl">&#10007;</span>
               <span className="font-bold text-lingo-red">Incorrect</span>
-              {similarityScore !== null && (
+              {typeof similarityScore === 'number' && (
                 <span className="text-xs font-medium text-lingo-red bg-lingo-red/10 px-2 py-0.5 rounded">
                   {Math.round(similarityScore * 100)}% match
                 </span>
