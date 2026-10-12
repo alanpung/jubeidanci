@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef, KeyboardEvent } from "react";
 import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
@@ -105,7 +105,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     }
   }
 
-  const handleNavigation = (i: number, e: KeyboardEvent) => {
+  const handleNavigation = (i: number, e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'ArrowRight' || e.key === ' ') {
       e.preventDefault();
       inputRefs.current[Math.min(inputWords.length - 1, i + 1)]?.focus();
@@ -145,7 +145,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                   return (
                     <div key={wIdx} className="flex flex-col items-center">
                       <input
-                        ref={el => inputRefs.current[globalIdx] = el}
+                        ref={(el: HTMLInputElement | null) => { inputRefs.current[globalIdx] = el; }}
                         type="text"
                         value={inputWords[globalIdx]}
                         onChange={(e) => {
@@ -153,7 +153,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                           newInput[globalIdx] = e.target.value;
                           setInputWords(newInput);
                         }}
-                        onKeyDown={(e) => handleNavigation(globalIdx, e)}
+                        onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(globalIdx, e)}
                         disabled={status !== "answering"}
                         style={{ width: `${Math.max(3, w.word.length)}ch` }}
                         className={`text-center border-b-2 bg-transparent focus:outline-none ${
