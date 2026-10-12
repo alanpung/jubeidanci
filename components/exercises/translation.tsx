@@ -123,6 +123,16 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     }
   };
 
+  // Auto-focus first input on mount / when analysis loads
+  useEffect(() => {
+    if (status === "answering" && analysis) {
+      const timer = setTimeout(() => {
+        inputRefs.current[0]?.focus();
+      }, 100);
+      return () => clearTimeout(timer);
+    }
+  }, [status, analysis]);
+
   return (
     <ExerciseShell
       status={status}
@@ -136,7 +146,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       similarityScore={similarityScore}
     >
       {status === "answering" && (
-        <div className="flex flex-col items-center mb-8">
+        <div className="flex flex-col items-center mb-6">
           <h2 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Translate this sentence</h2>
           <div className="flex items-center gap-3">
             <p className="text-2xl sm:text-3xl font-black text-lingo-text-dark tracking-wide">
@@ -149,40 +159,81 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
         </div>
       )}
 
-      {status === "answering" ? (
-        <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mb-10 py-8 px-6 bg-white border border-gray-100 rounded-3xl shadow-sm">
-          {analyzedWords.map((w: any, i: number) => (
-            <div key={i} className="flex flex-col items-center gap-1.5">
-              <input
-                ref={(el: HTMLInputElement | null) => { inputRefs.current[i] = el; }}
-                type="text"
-                value={inputWords[i] || ""}
-                onChange={(e) => {
-                  const newInput = [...inputWords];
-                  newInput[i] = e.target.value;
-                  setInputWords(newInput);
-                }}
-                onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(i, e)}
-                disabled={status !== "answering"}
-                style={{ width: `${Math.max(4, w.word.length)}ch` }}
-                className="text-center text-xl sm:text-2xl font-bold border-b-4 border-lingo-blue bg-transparent focus:outline-none py-1 px-1"
-              />
-              {/* IPA and Chinese meaning below */}
-              <div className={`flex flex-col items-center transition-opacity duration-300 ${status === "answering" ? "opacity-0 h-0 overflow-hidden" : "opacity-100"}`}>
-                <span className="text-[11px] font-mono text-gray-400">{w.ipa}</span>
-                <span className="text-xs font-bold text-gray-800">{w.word}</span>
-                <span className="text-[11px] font-medium text-gray-600">{w.meaning}</span>
-              </div>
-            </div>
-          ))}
+      {analysis ? (
+        <div className="my-4 p-4 sm:p-6 bg-white rounded-3xl border border-gray-200 shadow-xl transition-all w-full max-w-5xl mx-auto">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 py-4 px-1">
+            {(() => {
+              let globalCounter = 0;
+              const badgeColors: Record<string, string> = {
+                "主语": "bg-amber-100 text-amber-900 border border-amber-300",
+                "谓语": "bg-rose-100 text-rose-900 border border-rose-300",
+                "宾语": "bg-blue-100 text-blue-900 border border-blue-300",
+                "状语": "bg-teal-100 text-teal-900 border border-teal-300",
+                "定语": "bg-purple-100 text-purple-900 border border-purple-300",
+                "补语": "bg-indigo-100 text-indigo-900 border border-indigo-300",
+                "连词": "bg-slate-100 text-slate-800 border border-slate-300",
+                "句子": "bg-gray-100 text-gray-800 border border-gray-300",
+              };
+
+              return analysis.chunks.map((chunk: any, cIdx: number) => {
+                const badgeStyle = badgeColors[chunk.chunkLabel] || "bg-gray-100 text-gray-800 border border-gray-300";
+                return (
+                  <div
+                    key={cIdx}
+                    className="flex flex-col items-center bg-white border border-gray-200 rounded-2xl p-3 sm:px-4 sm:py-3.5 shadow-xs hover:border-gray-300 transition-all flex-shrink-0"
+                  >
+                    <span className={`text-[10px] sm:text-xs font-bold px-3 py-0.5 rounded-full mb-2 shadow-2xs whitespace-nowrap ${badgeStyle}`}>
+                      {chunk.chunkLabel}
+                    </span>
+                    <div className="flex flex-row items-center gap-3 sm:gap-4">
+                      {chunk.words.flatMap((w: any) => w.word.split(/\s+/).map((sub: string) => ({ ...w, word: sub }))).map((w: any, _: number) => {
+                        const curIdx = globalCounter++;
+                        const targetWord = words[curIdx] || w.word;
+                        return (
+                          <div key={curIdx} className="flex flex-col items-center text-center">
+                            <span className="text-[10px] font-mono text-gray-400 mb-0.5">
+                              {w.ipa || ""}
+                            </span>
+                            {status === "answering" ? (
+                              <input
+                                ref={(el: HTMLInputElement | null) => { inputRefs.current[curIdx] = el; }}
+                                type="text"
+                                value={inputWords[curIdx] || ""}
+                                onChange={(e) => {
+                                  const newInput = [...inputWords];
+                                  newInput[curIdx] = e.target.value;
+                                  setInputWords(newInput);
+                                }}
+                                onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(curIdx, e)}
+                                disabled={status !== "answering"}
+                                style={{ width: `${Math.max(4, targetWord.length)}ch` }}
+                                className="text-center text-base sm:text-xl font-extrabold text-gray-900 tracking-tight border-b-2 border-lingo-blue bg-transparent focus:outline-none py-0.5"
+                              />
+                            ) : (
+                              <span className="text-base sm:text-xl font-extrabold text-gray-900 tracking-tight whitespace-nowrap">
+                                {w.word}
+                              </span>
+                            )}
+                            <span className="text-[11px] font-medium text-gray-600 mt-0.5 whitespace-nowrap">
+                              {w.meaning}
+                            </span>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </div>
+                );
+              });
+            })()}
+          </div>
         </div>
       ) : (
-        <div className="mt-8 border-t border-gray-100 pt-6">
-          <SentenceAnalysisView
-            sentence={bestMatchAnswer || orderedAnswers[0] || exercise.answer}
-            language="en"
-            onPlayAudio={() => play(bestMatchAnswer || orderedAnswers[0] || exercise.answer, "en")}
-          />
+        <div className="text-center py-8 text-gray-400">Loading sentence structure...</div>
+      )}
+
+      {status !== "answering" && (
+        <div className="mt-6 text-center">
+          {/* SentenceAnalysisView can be omitted here since we render the exact same breakdown live */}
         </div>
       )}
     </ExerciseShell>
