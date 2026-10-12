@@ -14,6 +14,8 @@ export interface SimilarityResult {
   similarity: number;
   /** Correct answer with wrong/missing chars wrapped in **bold** */
   correctedMarkdown: string;
+  /** The specific accepted answer that matched best */
+  matchedAnswer?: string;
 }
 
 export interface SimilarityOptions {
@@ -293,7 +295,7 @@ export function checkBestMatch(
   let best: SimilarityResult | null = null;
 
   for (const answer of correctAnswers) {
-    const result = checkSimilarity(userInput, answer, options);
+    const result = { ...checkSimilarity(userInput, answer, options), matchedAnswer: answer };
     if (result.isCorrect && result.similarity === 1) return result;
 
     if (!best) {

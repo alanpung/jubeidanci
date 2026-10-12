@@ -23,6 +23,7 @@ interface Props {
 export function Translation({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
   const [input, setInput] = useState("");
   const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
+  const [bestMatchAnswer, setBestMatchAnswer] = useState<string>(exercise.answer);
   const { status, checkAnswer } = useExercise();
   const { play, stop, prefetch, loading: audioLoading } = useAudio();
 
@@ -40,6 +41,18 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     }
     return list.length > 0 ? list : [exercise.answer];
   }, [exercise.answer, exercise.acceptAlso]);
+
+  // Order answers so that the best matching answer for the user's attempt is first (#1 best match)
+  const orderedAnswers = useMemo(() => {
+    if (!bestMatchAnswer) return allAnswers;
+    const matched = allAnswers.find((a) => a.toLowerCase() === bestMatchAnswer.toLowerCase());
+    if (!matched) return allAnswers;
+    return [matched, ...allAnswers.filter((a) => a.toLowerCase() !== bestMatchAnswer.toLowerCase())];
+  }, [allAnswers, bestMatchAnswer]);
+
+  useEffect(() => {
+    setBestMatchAnswer(exercise.answer);
+  }, [exercise.answer]);
 
   const sentenceLang = useMemo(
     () => detectTextLanguage(exercise.sentence, { targetLanguage: language }),
@@ -70,13 +83,15 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
   function handleCheck() {
     const trimmed = input.trim();
     const result = checkBestMatch(trimmed, allAnswers);
+    const chosenBest = result.matchedAnswer || allAnswers[0] || exercise.answer;
+    setBestMatchAnswer(chosenBest);
     if (!result.isCorrect) setCorrectedMarkdown(result.correctedMarkdown);
     checkAnswer(result.isCorrect);
     onResult(result.isCorrect, trimmed);
 
-    // Audio out in English for the answer sentence when checking/submitting
+    // Audio out in English for the best-match answer sentence when checking/submitting
     if (!exercise.noAudio?.includes("sentence")) {
-      play(exercise.answer, "en");
+      play(chosenBest, "en");
     }
   }
 
@@ -86,8 +101,8 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       onCheck={handleCheck}
       onContinue={onContinue}
       canCheck={input.trim().length > 0}
-      correctAnswer={exercise.answer}
-      allAnswers={allAnswers}
+      correctAnswer={bestMatchAnswer}
+      allAnswers={orderedAnswers}
       correctedMarkdown={correctedMarkdown}
       language={answerLang}
     >
@@ -118,9 +133,9 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
 
       {status !== "answering" && (
         <SentenceAnalysisView
-          sentence={allAnswers[0] || exercise.answer}
+          sentence={bestMatchAnswer || orderedAnswers[0] || exercise.answer}
           language="en"
-          onPlayAudio={() => play(allAnswers[0] || exercise.answer, "en")}
+          onPlayAudio={() => play(bestMatchAnswer || orderedAnswers[0] || exercise.answer, "en")}
         />
       )}
     </ExerciseShell>
