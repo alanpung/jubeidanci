@@ -17,6 +17,7 @@ interface ExerciseShellProps {
   /** Correct answer with **bold** markers on differing chars */
   correctedMarkdown?: string;
   language?: string;
+  similarityScore?: number | null;
 }
 
 export function ExerciseShell({
@@ -29,6 +30,7 @@ export function ExerciseShell({
   allAnswers,
   correctedMarkdown,
   language,
+  similarityScore,
 }: ExerciseShellProps) {
   const justCheckedRef = useRef(false);
 
@@ -123,6 +125,11 @@ export function ExerciseShell({
             <div className="flex items-center gap-2 mb-2">
               <span className="text-2xl">&#10007;</span>
               <span className="font-bold text-lingo-red">Incorrect</span>
+              {similarityScore !== null && (
+                <span className="text-xs font-medium text-lingo-red bg-lingo-red/10 px-2 py-0.5 rounded">
+                  {Math.round(similarityScore * 100)}% match
+                </span>
+              )}
             </div>
             {allAnswers && allAnswers.length > 0 ? (
               <div className="mt-2 text-sm text-lingo-text border-t border-lingo-red/20 pt-2.5">

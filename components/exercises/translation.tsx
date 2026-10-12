@@ -24,6 +24,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
   const [input, setInput] = useState("");
   const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
   const [bestMatchAnswer, setBestMatchAnswer] = useState<string>(exercise.answer);
+  const [similarityScore, setSimilarityScore] = useState<number | null>(null);
   const { status, checkAnswer } = useExercise();
   const { play, stop, prefetch, loading: audioLoading } = useAudio();
 
@@ -83,6 +84,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
   function handleCheck() {
     const trimmed = input.trim();
     const result = checkBestMatch(trimmed, allAnswers);
+    setSimilarityScore(result.similarity);
     const chosenBest = result.matchedAnswer || allAnswers[0] || exercise.answer;
     setBestMatchAnswer(chosenBest);
     if (!result.isCorrect) setCorrectedMarkdown(result.correctedMarkdown);
@@ -105,6 +107,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       allAnswers={orderedAnswers}
       correctedMarkdown={correctedMarkdown}
       language={answerLang}
+      similarityScore={similarityScore}
     >
       <h2 className="text-xl font-bold text-lingo-text mb-2">
         <HoverableText text={exercise.text} language={textLang} noAudio={exercise.noAudio?.includes("text")} />
