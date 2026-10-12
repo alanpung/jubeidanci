@@ -21,6 +21,7 @@ interface Props {
 }
 
 export function Translation({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
+  const [analysis, setAnalysis] = useState<any>(null);
   const words = useMemo(() => exercise.answer.split(/\s+/), [exercise.answer]);
   const [inputWords, setInputWords] = useState<string[]>(words.map(() => ""));
   const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
@@ -28,6 +29,23 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
   const [similarityScore, setSimilarityScore] = useState<number | null>(null);
   const { status, checkAnswer } = useExercise();
   const { play, stop, prefetch, loading: audioLoading } = useAudio();
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+
+  useEffect(() => {
+    async function fetchAnalysis() {
+      try {
+        const res = await fetch("/api/analyze-sentence", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ sentence: exercise.answer, targetLanguage: "en" }),
+        });
+        if (res.ok) setAnalysis(await res.json());
+      } catch (err) { console.error(err); }
+    }
+    fetchAnalysis();
+  }, [exercise.answer]);
+
+  // ... (rest of the logic remains similar)
 
   const allAnswers = useMemo(() => {
     const rawList = [exercise.answer, ...(exercise.acceptAlso || [])];
@@ -87,6 +105,16 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     }
   }
 
+  const handleNavigation = (i: number, e: KeyboardEvent) => {
+    if (e.key === 'ArrowRight' || e.key === ' ') {
+      e.preventDefault();
+      inputRefs.current[Math.min(inputWords.length - 1, i + 1)]?.focus();
+    } else if (e.key === 'ArrowLeft') {
+      e.preventDefault();
+      inputRefs.current[Math.max(0, i - 1)]?.focus();
+    }
+  };
+
   return (
     <ExerciseShell
       status={status}
@@ -99,60 +127,55 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       language={language}
       similarityScore={similarityScore}
     >
-      {/* 1. Only show question text if still answering */}
       {(status === "answering") && (
         <div className="flex flex-col items-center mb-10">
           <h2 className="text-xl font-bold text-lingo-text mb-2">Translate this sentence</h2>
-          <div className="flex items-center gap-2">
-            <p className="text-lg text-lingo-text-light">
-              &ldquo;<HoverableText text={exercise.sentence} language={sentenceLang} />&rdquo;
-            </p>
-            {!exercise.noAudio?.includes("sentence") && (
-              <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
-            )}
-          </div>
+          <p className="text-lg text-lingo-text-light">&ldquo;{exercise.sentence}&rdquo;</p>
         </div>
       )}
-      
-      {/* 2. Word-by-word input builder */}
-      <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
-        {words.map((word, i) => (
-          <div key={i} className="flex flex-col items-center gap-1">
-            <input
-              type="text"
-              value={inputWords[i]}
-              onChange={(e) => {
-                const newInput = [...inputWords];
-                newInput[i] = e.target.value;
-                setInputWords(newInput);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter" && inputWords.every(w => w.trim()) && status === "answering") handleCheck();
-              }}
-              disabled={status !== "answering"}
-              className={`w-20 text-center border-b-2 bg-transparent focus:outline-none text-lg font-semibold ${
-                status === "correct" ? "border-lingo-green text-lingo-green" :
-                status === "incorrect" ? "border-lingo-red text-lingo-red" :
-                "border-gray-300 focus:border-lingo-blue"
-              }`}
-            />
-            {/* The hidden hint revealed after submission */}
-            <span className={`text-xs font-bold transition-opacity ${status === "answering" ? "opacity-0" : "opacity-100 text-amber-500"}`}>
-              {word}
-            </span>
-          </div>
-        ))}
-      </div>
 
-      {/* 3. Feedback and Alternatives shown at bottom */}
-      {status !== "answering" && (
-        <div className="mt-8 border-t border-gray-100 pt-6">
-          <SentenceAnalysisView
-            sentence={bestMatchAnswer || orderedAnswers[0] || exercise.answer}
-            language="en"
-            onPlayAudio={() => play(bestMatchAnswer || orderedAnswers[0] || exercise.answer, "en")}
-          />
+      {analysis ? (
+        <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
+          {analysis.chunks.map((chunk: any, cIdx: number) => (
+            <div key={cIdx} className="flex flex-col items-center p-3 border border-gray-200 rounded-2xl">
+              <span className="text-[10px] font-bold text-lingo-text-light mb-2">{chunk.chunkLabel}</span>
+              <div className="flex gap-2">
+                {chunk.words.map((w: any, wIdx: number) => {
+                  const globalIdx = analysis.chunks.slice(0, cIdx).reduce((acc: number, c: any) => acc + c.words.length, 0) + wIdx;
+                  return (
+                    <div key={wIdx} className="flex flex-col items-center">
+                      <input
+                        ref={el => inputRefs.current[globalIdx] = el}
+                        type="text"
+                        value={inputWords[globalIdx]}
+                        onChange={(e) => {
+                          const newInput = [...inputWords];
+                          newInput[globalIdx] = e.target.value;
+                          setInputWords(newInput);
+                        }}
+                        onKeyDown={(e) => handleNavigation(globalIdx, e)}
+                        disabled={status !== "answering"}
+                        style={{ width: `${Math.max(3, w.word.length)}ch` }}
+                        className={`text-center border-b-2 bg-transparent focus:outline-none ${
+                          status === "correct" ? "border-lingo-green text-lingo-green" :
+                          status === "incorrect" ? "border-lingo-red text-lingo-red" :
+                          "border-gray-300 focus:border-lingo-blue"
+                        }`}
+                      />
+                      <div className={`flex flex-col items-center transition-opacity ${status === "answering" ? "opacity-0" : "opacity-100"}`}>
+                        <span className="text-[10px] text-gray-400">{w.ipa}</span>
+                        <span className="text-sm font-bold">{w.word}</span>
+                        <span className="text-[10px] text-gray-500">{w.meaning}</span>
+                      </div>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
         </div>
+      ) : (
+        <div className="text-center">Loading structure...</div>
       )}
     </ExerciseShell>
   );
