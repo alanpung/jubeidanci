@@ -99,20 +99,25 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       language={language}
       similarityScore={similarityScore}
     >
+      {/* 1. Only show question text if still answering */}
       {(status === "answering") && (
-        <div className="flex items-start gap-2 mb-6">
-          <p className="text-lg text-lingo-text-light">
-            &ldquo;<HoverableText text={exercise.sentence} language={sentenceLang} noAudio={exercise.noAudio?.includes("sentence")} />&rdquo;
-          </p>
-          {!exercise.noAudio?.includes("sentence") && (
-            <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
-          )}
+        <div className="flex flex-col items-center mb-10">
+          <h2 className="text-xl font-bold text-lingo-text mb-2">Translate this sentence</h2>
+          <div className="flex items-center gap-2">
+            <p className="text-lg text-lingo-text-light">
+              &ldquo;<HoverableText text={exercise.sentence} language={sentenceLang} />&rdquo;
+            </p>
+            {!exercise.noAudio?.includes("sentence") && (
+              <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
+            )}
+          </div>
         </div>
       )}
       
-      <div className="flex flex-wrap items-center gap-2 mb-6">
+      {/* 2. Word-by-word input builder */}
+      <div className="flex flex-wrap items-center justify-center gap-4 mb-10">
         {words.map((word, i) => (
-          <div key={i} className="flex flex-col items-center">
+          <div key={i} className="flex flex-col items-center gap-1">
             <input
               type="text"
               value={inputWords[i]}
@@ -121,24 +126,33 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                 newInput[i] = e.target.value;
                 setInputWords(newInput);
               }}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && inputWords.every(w => w.trim()) && status === "answering") handleCheck();
+              }}
               disabled={status !== "answering"}
-              className={`w-24 text-center border-b-2 bg-transparent focus:outline-none ${
+              className={`w-20 text-center border-b-2 bg-transparent focus:outline-none text-lg font-semibold ${
                 status === "correct" ? "border-lingo-green text-lingo-green" :
-                status === "incorrect" ? "border-lingo-blue text-lingo-blue" :
-                "border-lingo-border focus:border-lingo-blue"
+                status === "incorrect" ? "border-lingo-red text-lingo-red" :
+                "border-gray-300 focus:border-lingo-blue"
               }`}
             />
-            <span className="text-xs text-lingo-text-light">{word}</span>
+            {/* The hidden hint revealed after submission */}
+            <span className={`text-xs font-bold transition-opacity ${status === "answering" ? "opacity-0" : "opacity-100 text-amber-500"}`}>
+              {word}
+            </span>
           </div>
         ))}
       </div>
 
+      {/* 3. Feedback and Alternatives shown at bottom */}
       {status !== "answering" && (
-        <SentenceAnalysisView
-          sentence={bestMatchAnswer || orderedAnswers[0] || exercise.answer}
-          language="en"
-          onPlayAudio={() => play(bestMatchAnswer || orderedAnswers[0] || exercise.answer, "en")}
-        />
+        <div className="mt-8 border-t border-gray-100 pt-6">
+          <SentenceAnalysisView
+            sentence={bestMatchAnswer || orderedAnswers[0] || exercise.answer}
+            language="en"
+            onPlayAudio={() => play(bestMatchAnswer || orderedAnswers[0] || exercise.answer, "en")}
+          />
+        </div>
       )}
     </ExerciseShell>
   );
