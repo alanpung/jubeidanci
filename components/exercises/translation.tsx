@@ -21,14 +21,14 @@ interface Props {
 }
 
 export function Translation({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
-  const [input, setInput] = useState("");
+  const words = useMemo(() => exercise.answer.split(/\s+/), [exercise.answer]);
+  const [inputWords, setInputWords] = useState<string[]>(words.map(() => ""));
   const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
   const [bestMatchAnswer, setBestMatchAnswer] = useState<string>(exercise.answer);
   const [similarityScore, setSimilarityScore] = useState<number | null>(null);
   const { status, checkAnswer } = useExercise();
   const { play, stop, prefetch, loading: audioLoading } = useAudio();
 
-  // Combine primary answer and acceptAlso, deduplicate, and limit to maximum 3 answers
   const allAnswers = useMemo(() => {
     const rawList = [exercise.answer, ...(exercise.acceptAlso || [])];
     const list: string[] = [];
@@ -38,12 +38,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       if (trimmed && !list.some((existing) => existing.toLowerCase() === trimmed.toLowerCase())) {
         list.push(trimmed);
       }
-      if (list.length >= 3) break; // Limit to maximum 3 answers
+      if (list.length >= 3) break;
     }
     return list.length > 0 ? list : [exercise.answer];
   }, [exercise.answer, exercise.acceptAlso]);
 
-  // Order answers so that the best matching answer for the user's attempt is first (#1 best match)
   const orderedAnswers = useMemo(() => {
     if (!bestMatchAnswer) return allAnswers;
     const matched = allAnswers.find((a) => a.toLowerCase() === bestMatchAnswer.toLowerCase());
@@ -59,15 +58,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     () => detectTextLanguage(exercise.sentence, { targetLanguage: language }),
     [exercise.sentence, language]
   );
-  const textLang = useMemo(
-    () => detectTextLanguage(exercise.text, { targetLanguage: language }),
-    [exercise.text, language]
-  );
-  const answerLang = useMemo(
-    () => detectTextLanguage(exercise.answer, { targetLanguage: language }),
-    [exercise.answer, language]
-  );
-
+  
   // Prefetch sentence and all acceptable answer audio
   useEffect(() => {
     const toFetch = [exercise.sentence, ...allAnswers].filter(Boolean);
@@ -82,16 +73,15 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
   }, [exercise.sentence, sentenceLang, autoplayAudio, play, stop, exercise.noAudio]);
 
   function handleCheck() {
-    const trimmed = input.trim();
-    const result = checkBestMatch(trimmed, allAnswers);
+    const fullAnswer = inputWords.join(" ").trim();
+    const result = checkBestMatch(fullAnswer, allAnswers);
     setSimilarityScore(result.similarity);
     const chosenBest = result.matchedAnswer || allAnswers[0] || exercise.answer;
     setBestMatchAnswer(chosenBest);
     if (!result.isCorrect) setCorrectedMarkdown(result.correctedMarkdown);
     checkAnswer(result.isCorrect);
-    onResult(result.isCorrect, trimmed);
+    onResult(result.isCorrect, fullAnswer);
 
-    // Audio out in English for the best-match answer sentence when checking/submitting
     if (!exercise.noAudio?.includes("sentence")) {
       play(chosenBest, "en");
     }
@@ -102,37 +92,46 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       status={status}
       onCheck={handleCheck}
       onContinue={onContinue}
-      canCheck={input.trim().length > 0}
+      canCheck={inputWords.every(w => w.trim().length > 0)}
       correctAnswer={bestMatchAnswer}
       allAnswers={orderedAnswers}
       correctedMarkdown={correctedMarkdown}
-      language={answerLang}
+      language={language}
       similarityScore={similarityScore}
     >
-      <h2 className="text-xl font-bold text-lingo-text mb-2">
-        <HoverableText text={exercise.text} language={textLang} noAudio={exercise.noAudio?.includes("text")} />
-      </h2>
-      <AudioSpinner loading={audioLoading} />
-      <div className="flex items-start gap-2 mb-6">
-        <p className="text-lg text-lingo-text-light">
-          &ldquo;<HoverableText text={exercise.sentence} language={sentenceLang} noAudio={exercise.noAudio?.includes("sentence")} />&rdquo;
-        </p>
-        {!exercise.noAudio?.includes("sentence") && (
-          <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
-        )}
+      {(status === "answering") && (
+        <div className="flex items-start gap-2 mb-6">
+          <p className="text-lg text-lingo-text-light">
+            &ldquo;<HoverableText text={exercise.sentence} language={sentenceLang} noAudio={exercise.noAudio?.includes("sentence")} />&rdquo;
+          </p>
+          {!exercise.noAudio?.includes("sentence") && (
+            <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
+          )}
+        </div>
+      )}
+      
+      <div className="flex flex-wrap items-center gap-2 mb-6">
+        {words.map((word, i) => (
+          <div key={i} className="flex flex-col items-center">
+            <input
+              type="text"
+              value={inputWords[i]}
+              onChange={(e) => {
+                const newInput = [...inputWords];
+                newInput[i] = e.target.value;
+                setInputWords(newInput);
+              }}
+              disabled={status !== "answering"}
+              className={`w-24 text-center border-b-2 bg-transparent focus:outline-none ${
+                status === "correct" ? "border-lingo-green text-lingo-green" :
+                status === "incorrect" ? "border-lingo-blue text-lingo-blue" :
+                "border-lingo-border focus:border-lingo-blue"
+              }`}
+            />
+            <span className="text-xs text-lingo-text-light">{word}</span>
+          </div>
+        ))}
       </div>
-      <input
-        type="text"
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-        onKeyDown={(e) => {
-          if (e.key === "Enter" && input.trim() && status === "answering") handleCheck();
-        }}
-        disabled={status !== "answering"}
-        placeholder="Type your answer..."
-        className="w-full rounded-xl border-2 border-lingo-border bg-white px-4 py-3 text-lg focus:border-lingo-blue focus:outline-none"
-        autoFocus
-      />
 
       {status !== "answering" && (
         <SentenceAnalysisView
