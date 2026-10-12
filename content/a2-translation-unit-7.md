@@ -9,81 +9,83 @@ level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"
 ---
+
 ---
 lessonTitle: "Lesson 1: Weather Forecast"
 description: "Translate A2 sentences about Weather Forecast"
 icon: "🌤️"
 color: "#06B6D4"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "像他们所有的其他朋友一样，他们喜欢在周末去钓鱼或游泳。"
-answer: "Like all their other friends, they enjoy going fishing or swimming at weekends."
-acceptAlso: "Like all their other friends, they enjoy going fishing or swimming at weekends."
-srsWords: "like" "all" "their" "other" "friend" "they" "enjoy" "go" "fishing" "or" "swimming" "at" "weekend"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们想了解更多关于我们朋友的访客的信息。"
-answer: "We wanted to know more about our friend's visitor."
-acceptAlso: "We wanted to know more about our friend's visitor."
-srsWords: "we" "want" "to" "know" "more" "about" "our" "friend" "visitor"
+sentence: "今天的天气怎么样？"
+answer: "What is the weather like today?"
+acceptAlso: "How is the weather today?" "What's the weather today?"
+srsWords: "what" "is" "the" "weather" "like" "today" "how"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "动物园里饲养的最长寿的一只活到了66岁。"
-answer: "The oldest one kept in a zoo was 66 years old."
-acceptAlso: "The oldest one kept in a zoo was 66 years old."
-srsWords: "the" "old" "one" "keep" "in" "a" "zoo" "was" "year"
+sentence: "外面正在下雨，出门记得带伞。"
+answer: "It is raining outside, remember to take an umbrella."
+acceptAlso: "It's raining outside, please bring an umbrella." "It is raining now, don't forget your umbrella."
+srsWords: "it" "is" "rain" "outside" "remember" "to" "take" "an" "umbrella" "bring" "forget" "your"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你还在找工作吗？"
-answer: "Are you still looking for a job?"
-acceptAlso: "Are you still looking for a job?"
-srsWords: "are" "you" "still" "look" "for" "a" "job"
+sentence: "明天会是一个晴朗温暖的日子。"
+answer: "Tomorrow will be a sunny and warm day."
+acceptAlso: "It will be sunny and warm tomorrow." "Tomorrow is going to be sunny and warm."
+srsWords: "tomorrow" "be" "a" "sunny" "and" "day" "it" "is" "go" "to"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她把他们父亲去世前遇到的问题告诉了她的兄弟。"
-answer: "She told her brother about their father's problems before he died."
-acceptAlso: "She told her brother about their father's problems before he died."
-srsWords: "she" "tell" "her" "brother" "about" "their" "father" "problem" "before" "he" "die"
+sentence: "冬天经常刮风而且很冷。"
+answer: "It is often windy and very cold in winter."
+acceptAlso: "Winter is often windy and cold." "It's usually windy and cold in the winter."
+srsWords: "it" "is" "often" "windy" "and" "very" "cold" "in" "winter" "usually" "the"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他不想让自己的生活重蹈父亲的覆辙。"
-answer: "He did not want his life to follow the mistakes of his father's life."
-acceptAlso: "He did not want his life to follow the mistakes of his father's life."
-srsWords: "he" "did" "not" "want" "his" "life" "to" "follow" "the" "mistake" "of" "father"
+sentence: "你喜欢下雪天吗？"
+answer: "Do you like snowy days?"
+acceptAlso: "Do you like snow?" "Are you a fan of snowy weather?"
+srsWords: "do" "you" "like" "snowy" "day" "snow" "are" "a" "fan" "of" "weather"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他想要一个更好的未来，并且他想帮助其他人。"
-answer: "He wanted to have a better future, and he wanted to help other people."
-acceptAlso: "He wanted to have a better future, and he wanted to help other people."
-srsWords: "he" "want" "to" "have" "a" "better" "future" "and" "help" "other" "people"
+sentence: "气温已经降到了零度以下。"
+answer: "The temperature has dropped below zero."
+acceptAlso: "The temperature is below zero now." "It is below freezing outside."
+srsWords: "the" "temperature" "has" "below" "zero" "is" "it" "freeze" "outside"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我尽量忘掉海滩上的那个印记和那些骨头。"
-answer: "I tried to forget about the mark on the beach and the bones."
-acceptAlso: "I tried to forget about the mark on the beach and the bones."
-srsWords: "i" "try" "to" "forget" "about" "the" "mark" "on" "beach" "and" "bone"
+sentence: "今天下午可能会有雷阵雨。"
+answer: "There might be thunderstorms this afternoon."
+acceptAlso: "It may rain with thunder this afternoon." "We could have thunderstorms this afternoon."
+srsWords: "there" "might" "be" "thunderstorm" "this" "afternoon" "it" "may" "rain" "with" "we" "could" "have"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然后我看到了另外三艘船。"
-answer: "Then I saw three other boats."
-acceptAlso: "Then I saw three other boats."
-srsWords: "then" "i" "see" "three" "other" "boat"
+sentence: "外面雾太大了，开车要小心。"
+answer: "It is too foggy outside, please drive carefully."
+acceptAlso: "It's very foggy outside, drive carefully." "There is heavy fog outside, be careful driving."
+srsWords: "it" "is" "too" "foggy" "outside" "carefully" "very" "there" "heavy" "fog" "be" "careful"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这五艘船向北驶去。"
-answer: "The five boats went north."
-acceptAlso: "The five boats went north."
-srsWords: "the" "five" "boat" "go" "north"
+sentence: "天气预报说周末会转晴。"
+answer: "The weather forecast says it will clear up on the weekend."
+acceptAlso: "The forecast says it will be sunny this weekend." "According to the weather report, the weekend will be clear."
+srsWords: "the" "weather" "say" "it" "up" "on" "weekend" "be" "sunny" "this" "to"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "夏天的天气总是又热又潮湿。"
+answer: "The weather in summer is always hot and humid."
+acceptAlso: "Summer weather is always hot and humid." "It is always hot and humid during the summer."
+srsWords: "the" "weather" "in" "summer" "is" "always" "hot" "and" "it" "during"
 
 ---
 lessonTitle: "Lesson 2: Seasons"
@@ -91,75 +93,76 @@ description: "Translate A2 sentences about Seasons"
 icon: "🌤️"
 color: "#06B6D4"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "他们静静地站着，怀念他们伟大的朋友。"
-answer: "They stood and remembered their great friend."
-acceptAlso: "They stood and remembered their great friend."
-srsWords: "they" "stand" "and" "remember" "their" "great" "friend"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他大声说话，她努力听清他的话。"
-answer: "He spoke loudly and she tried hard to listen to his words."
-acceptAlso: "He spoke loudly and she tried hard to listen to his words."
-srsWords: "he" "speak" "loudly" "and" "she" "try" "hard" "to" "listen" "his" "word"
+sentence: "一年有四个不同的季节。"
+answer: "There are four different seasons in a year."
+acceptAlso: "A year has four seasons." "There are four seasons in the year."
+srsWords: "there" "are" "four" "different" "in" "a" "year" "has" "the"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它们听起来非常重要，而且非常悲伤。"
-answer: "They sounded very important and very sad."
-acceptAlso: "They sounded very important and very sad."
-srsWords: "they" "sound" "very" "important" "and" "sad"
+sentence: "春天花儿盛开，树变绿了。"
+answer: "In spring, flowers bloom and trees turn green."
+acceptAlso: "Spring brings blooming flowers and green trees." "Flowers come out and trees get green in spring."
+srsWords: "in" "spring" "flower" "and" "tree" "turn" "green" "bring" "come" "out" "get"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我尽量注意饮食健康。"
-answer: "I try to eat well."
-acceptAlso: "I try to eat well."
-srsWords: "i" "try" "to" "eat" "well"
+sentence: "我最喜欢的季节是夏天，因为可以去游泳。"
+answer: "My favorite season is summer because I can go swimming."
+acceptAlso: "I like summer best because I can swim." "Summer is my favorite season since I can go swimming."
+srsWords: "my" "favorite" "is" "summer" "because" "i" "can" "go" "swimming" "like" "best" "swim" "since"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他指着院子的尽头。"
-answer: "He pointed to the end of the yard."
-acceptAlso: "He pointed to the end of the yard."
-srsWords: "he" "point" "to" "the" "end" "of" "yard"
+sentence: "秋天树叶会变成黄色和红色。"
+answer: "In autumn, the leaves turn yellow and red."
+acceptAlso: "Tree leaves become yellow and red in fall." "Fall leaves turn yellow and red."
+srsWords: "in" "autumn" "the" "leave" "turn" "yellow" "and" "red" "tree" "become" "fall"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她的口中发出奇怪的声音。"
-answer: "Strange sounds came from her mouth."
-acceptAlso: "Strange sounds came from her mouth."
-srsWords: "strange" "sound" "come" "from" "her" "mouth"
+sentence: "孩子们在冬天喜欢堆雪人。"
+answer: "Children like to make snowmen in winter."
+acceptAlso: "Kids love building snowmen in the winter." "Children enjoy making snowmen in winter."
+srsWords: "like" "to" "make" "in" "winter" "love" "building" "the" "enjoy"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他开始向村子走去。"
-answer: "He started walking down to the village."
-acceptAlso: "He started walking down to the village."
-srsWords: "he" "start" "walking" "down" "to" "the" "village"
+sentence: "春天经常下雨，空气很清新。"
+answer: "It often rains in spring and the air is very fresh."
+acceptAlso: "Spring is often rainy with fresh air." "There is much rain in spring and the air is fresh."
+srsWords: "it" "often" "rain" "in" "spring" "and" "the" "air" "is" "very" "fresh" "rainy" "with" "there" "much"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他能看到男男女女在村里劳作。"
-answer: "He could see men and women at work in the village."
-acceptAlso: "He could see men and women at work in the village."
-srsWords: "he" "could" "see" "men" "and" "woman" "at" "work" "in" "the" "village"
+sentence: "夏天白天长，夜晚短。"
+answer: "Days are long and nights are short in summer."
+acceptAlso: "Summer has long days and short nights." "In summer, the daytime is long and nighttime is short."
+srsWords: "day" "are" "long" "and" "night" "short" "in" "summer" "has" "the" "is" "nighttime"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们先看看这边，又看看那边。"
-answer: "They looked one way, and then the other way."
-acceptAlso: "They looked one way, and then the other way."
-srsWords: "they" "look" "one" "way" "and" "then" "the" "other"
+sentence: "秋天是收获的季节，农民们很忙。"
+answer: "Autumn is the harvest season and farmers are busy."
+acceptAlso: "Fall is harvest time and farmers are busy." "Autumn is a season for harvesting and farmers are busy."
+srsWords: "autumn" "is" "the" "and" "farmer" "are" "busy" "fall" "a" "for"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "那天晚上，雨下得很大。"
-answer: "That night, it rained heavily."
-acceptAlso: "That night, it rained heavily."
-srsWords: "that" "night" "it" "rain" "heavily"
+sentence: "你打算在夏天去哪里度假？"
+answer: "Where are you going to spend your summer vacation?"
+acceptAlso: "Where do you plan to go for your summer holiday?" "What are your plans for the summer vacation?"
+srsWords: "where" "are" "you" "go" "to" "spend" "your" "summer" "vacation" "do" "for" "holiday" "what" "the"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "冬天白雪皑皑，世界看起来像童话一样。"
+answer: "In winter everything is covered in white snow and the world looks like a fairy tale."
+acceptAlso: "Winter is snowy and the world looks like a fairy tale." "With white snow everywhere, winter looks like a fairy tale."
+srsWords: "in" "winter" "everything" "is" "cover" "white" "snow" "and" "the" "world" "look" "like" "a" "fairy" "snowy" "with" "everywhere"
 
 ---
 lessonTitle: "Lesson 3: Nature Parks"
@@ -167,75 +170,76 @@ description: "Translate A2 sentences about Nature Parks"
 icon: "🌤️"
 color: "#06B6D4"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "他看起来又累又病。"
-answer: "He looked tired and ill."
-acceptAlso: "He looked tired and ill."
-srsWords: "he" "look" "tired" "and" "ill"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "对方球队的表现比我们好得多！"
-answer: "The other team played much better than we did!"
-acceptAlso: "The other team played much better than we did!"
-srsWords: "the" "other" "team" "play" "much" "better" "than" "we" "did"
+sentence: "周末我想去自然公园散步。"
+answer: "I want to go for a walk in the nature park this weekend."
+acceptAlso: "I would like to take a walk in the nature park this weekend." "I want to go walking in the nature park this weekend."
+srsWords: "i" "want" "to" "go" "for" "a" "walk" "in" "the" "park" "this" "weekend" "would" "like" "take" "walking"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他和另外三个拿着棍棒的人迅速把狗赶开。"
-answer: "He and three other men with clubs quickly moved the dogs away."
-acceptAlso: "He and three other men with clubs quickly moved the dogs away."
-srsWords: "he" "and" "three" "other" "men" "with" "club" "quickly" "move" "the" "dog" "away"
+sentence: "公园里有很多高大的树木和绿色植物。"
+answer: "There are many tall trees and green plants in the park."
+acceptAlso: "There are a lot of tall trees and green plants in the park." "You can see many tall trees and green plants in the park."
+srsWords: "there" "are" "many" "tall" "tree" "and" "green" "in" "the" "park" "a" "lot" "of" "you" "can" "see"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他看到一个带着悲伤表情的旧洋娃娃。"
-answer: "He saw an old doll with a sad face."
-acceptAlso: "He saw an old doll with a sad face."
-srsWords: "he" "see" "an" "old" "doll" "with" "a" "sad" "face"
+sentence: "请不要在草地上乱扔垃圾。"
+answer: "Please do not litter on the grass."
+acceptAlso: "Please don't throw rubbish on the grass." "Please do not drop litter on the grass."
+srsWords: "do" "not" "on" "the" "grass" "throw" "drop"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他手里拿着洋娃娃走了出去。"
-answer: "He went out with the doll in his hand."
-acceptAlso: "He went out with the doll in his hand."
-srsWords: "he" "go" "out" "with" "the" "doll" "in" "his" "hand"
+sentence: "这条小路通向山顶。"
+answer: "This path leads to the top of the mountain."
+acceptAlso: "This trail leads to the mountain top." "This small path goes to the top of the mountain."
+srsWords: "this" "path" "to" "the" "top" "of" "mountain" "small" "go"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他看着它的脸。"
-answer: "He looked at its face."
-acceptAlso: "He looked at its face."
-srsWords: "he" "look" "at" "its" "face"
+sentence: "我们在湖边拍了许多漂亮的照片。"
+answer: "We took many beautiful photos by the lake."
+acceptAlso: "We took a lot of nice pictures near the lake." "We took many wonderful photos beside the lake."
+srsWords: "we" "many" "beautiful" "photo" "by" "the" "lake" "a" "lot" "of" "nice" "near" "wonderful" "beside"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "突然，车上有人说话了。"
-answer: "Suddenly, somebody on the bus spoke."
-acceptAlso: "Suddenly, somebody on the bus spoke."
-srsWords: "sudden" "somebody" "on" "the" "bus" "speak"
+sentence: "今天天气很好，适合去爬山。"
+answer: "The weather is very nice today, which is good for hiking."
+acceptAlso: "The weather is great today for going hiking." "It's a lovely day today, perfect for hiking."
+srsWords: "the" "weather" "is" "very" "nice" "today" "which" "for" "hiking" "great" "go" "it" "a" "lovely" "day"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "接着，那个丛林男孩突然站起来跳起舞来。"
-answer: "Then the bush boy suddenly got up and started to dance."
-acceptAlso: "Then the bush boy suddenly got up and started to dance."
-srsWords: "then" "the" "bush" "boy" "sudden" "got" "up" "and" "start" "to" "dance"
+sentence: "你能告诉我洗手间在哪里吗？"
+answer: "Can you tell me where the restrooms are?"
+acceptAlso: "Could you tell me where the toilet is?" "Can you tell me where the bathroom is?"
+srsWords: "can" "you" "tell" "me" "where" "the" "restroom" "are" "could" "toilet" "is" "bathroom"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他感到又虚弱又生病，于是坐了下来。"
-answer: "He felt weak and ill, so he sat down."
-acceptAlso: "He felt weak and ill, so he sat down."
-srsWords: "he" "feel" "weak" "and" "ill" "so" "sit" "down"
+sentence: "我们在树荫下吃午饭吧。"
+answer: "Let's eat our lunch under the shade of the trees."
+acceptAlso: "Let us have lunch under the trees." "Let's have lunch in the shade."
+srsWords: "let" "eat" "our" "lunch" "under" "the" "shade" "of" "tree" "us" "have" "in"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他把手放到脸上，又热又湿。"
-answer: "He put his hand to his face, and it was hot and wet."
-acceptAlso: "He put his hand to his face, and it was hot and wet."
-srsWords: "he" "put" "his" "hand" "to" "face" "and" "it" "was" "hot" "wet"
+sentence: "空气非常清新，我喜欢这里。"
+answer: "The air is very fresh, and I like this place."
+acceptAlso: "The air is so fresh, I love it here." "The air is very clean, I like here."
+srsWords: "the" "air" "is" "very" "fresh" "and" "i" "like" "this" "so" "love" "it" "here" "clean"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "离开时请把你的垃圾带走。"
+answer: "Please take your rubbish with you when you leave."
+acceptAlso: "Please take your trash when you leave." "Please carry your garbage away when leaving."
+srsWords: "take" "your" "with" "you" "when" "leave" "carry" "garbage" "away"
 
 ---
 lessonTitle: "Lesson 4: Animals"
@@ -243,75 +247,76 @@ description: "Translate A2 sentences about Animals"
 icon: "🌤️"
 color: "#06B6D4"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "彼得朝那个丛林男孩走去。"
-answer: "Peter went to the bush boy."
-acceptAlso: "Peter went to the bush boy."
-srsWords: "pet" "go" "to" "the" "bush" "boy"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们径直走到一个大广场，三面都有座位。"
-answer: "We went straight to a large square with seats on three sides."
-acceptAlso: "We went straight to a large square with seats on three sides."
-srsWords: "we" "go" "straight" "to" "a" "large" "square" "with" "seat" "on" "three" "side"
+sentence: "我最喜欢的动物是大熊猫。"
+answer: "My favorite animal is the giant panda."
+acceptAlso: "My favourite animal is pandas." "My favorite animal is the panda."
+srsWords: "my" "favorite" "animal" "is" "the" "panda" "favourite"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们把带作午餐的香蕉喂给了大象。"
-answer: "We gave the elephants the bananas we brought for our lunch."
-acceptAlso: "We gave the elephants the bananas we brought for our lunch."
-srsWords: "we" "give" "the" "elephant" "banana" "bring" "for" "our" "lunch"
+sentence: "动物园里有许多不同种类的动物。"
+answer: "There are many different kinds of animals in the zoo."
+acceptAlso: "There are lots of different animals in the zoo." "The zoo has many different types of animals."
+srsWords: "there" "are" "many" "different" "kind" "of" "animal" "in" "the" "zoo" "lot" "has"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "二十年前，大象在森林里工作。"
-answer: "Twenty years ago, elephants worked in the forest."
-acceptAlso: "Twenty years ago, elephants worked in the forest."
-srsWords: "twenty" "year" "ago" "elephant" "work" "in" "the" "forest"
+sentence: "猴子喜欢在树上跳来跳去。"
+answer: "Monkeys like to jump around in the trees."
+acceptAlso: "Monkeys enjoy jumping around in trees." "Monkeys like jumping up and down in the trees."
+srsWords: "monkey" "like" "to" "jump" "around" "in" "the" "tree" "enjoy" "up" "and" "down"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "一门课程多少钱？"
-answer: "How much does a course cost?"
-acceptAlso: "How much does a course cost?"
-srsWords: "how" "much" "does" "a" "course" "cost"
+sentence: "大象有长长的鼻子和巨大的耳朵。"
+answer: "Elephants have long trunks and huge ears."
+acceptAlso: "An elephant has a long trunk and big ears." "Elephants have long noses and large ears."
+srsWords: "elephant" "have" "long" "and" "ear" "an" "has" "a" "big" "nose" "large"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "通往山顶有好几条小路。"
-answer: "There are several paths to the top."
-acceptAlso: "There are several paths to the top."
-srsWords: "there" "are" "several" "path" "to" "the" "top"
+sentence: "请不要给动物喂食。"
+answer: "Please do not feed the animals."
+acceptAlso: "Please don't feed the animals." "Do not feed the animals, please."
+srsWords: "do" "not" "fee" "the" "animal"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这大约需要五天时间，深受游客欢迎。"
-answer: "It takes about five days and is very popular with tourists."
-acceptAlso: "It takes about five days and is very popular with tourists."
-srsWords: "it" "take" "about" "five" "day" "and" "is" "very" "popular" "with" "tourist"
+sentence: "老虎和狮子是危险的野生动物。"
+answer: "Tigers and lions are dangerous wild animals."
+acceptAlso: "Lions and tigers are dangerous wild animals." "Tigers and lions are wild and dangerous animals."
+srsWords: "tiger" "and" "lion" "are" "dangerous" "wild" "animal"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这通常是因为天气变化太快了。"
-answer: "This is often because the weather can change so suddenly."
-acceptAlso: "This is often because the weather can change so suddenly."
-srsWords: "this" "is" "often" "because" "the" "weather" "can" "change" "so" "sudden"
+sentence: "企鹅住在寒冷的南极。"
+answer: "Penguins live in the cold Antarctic."
+acceptAlso: "Penguins live in the cold South Pole." "Penguins live in Antarctica."
+srsWords: "live" "in" "the" "cold" "south"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们前面有一堵墙！"
-answer: "There's a wall in front of us!"
-acceptAlso: "There's a wall in front of us!"
-srsWords: "there" "a" "wall" "in" "front" "of" "us"
+sentence: "这只小狗非常友好且聪明。"
+answer: "This puppy is very friendly and smart."
+acceptAlso: "This little dog is very friendly and clever." "This puppy is extremely friendly and intelligent."
+srsWords: "this" "is" "very" "and" "smart" "dog" "clever" "extremely" "intelligent"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "如果你来这个办公室，我可以把它交给你。"
-answer: "If you come to this office, I can give it to you."
-acceptAlso: "If you come to this office, I can give it to you."
-srsWords: "if" "you" "come" "to" "this" "office" "i" "can" "give" "it"
+sentence: "鸟儿在树枝上快乐地唱歌。"
+answer: "The birds are singing happily in the branches."
+acceptAlso: "Birds sing happily in the trees." "The birds are singing happily on the tree branches."
+srsWords: "the" "bird" "are" "singing" "happily" "in" "sing" "tree" "on"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "你害怕蜘蛛吗？"
+answer: "Are you afraid of spiders?"
+acceptAlso: "Do you fear spiders?" "Are you scared of spiders?"
+srsWords: "are" "you" "afraid" "of" "do"
 
 ---
 lessonTitle: "Lesson 5: Gardening"
@@ -319,75 +324,76 @@ description: "Translate A2 sentences about Gardening"
 icon: "🌤️"
 color: "#06B6D4"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "所有的狗都有长毛，应该经常修剪。"
-answer: "All the dogs have long hair, which should be cut quite often."
-acceptAlso: "All the dogs have long hair, which should be cut quite often."
-srsWords: "all" "the" "dog" "have" "long" "hair" "which" "should" "be" "cut" "quite" "often"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "于是她非常礼貌地对它说话。"
-answer: "So she spoke to it very politely."
-acceptAlso: "So she spoke to it very politely."
-srsWords: "so" "she" "speak" "to" "it" "very" "polite"
+sentence: "我每天早上给这些植物浇水。"
+answer: "I water these plants every morning."
+acceptAlso: "I give water to these plants every morning." "Every morning, I water these plants."
+srsWords: "i" "these" "every" "morning" "give" "to"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它思考了一两分钟。"
-answer: "It thought for a minute or two."
-acceptAlso: "It thought for a minute or two."
-srsWords: "it" "thought" "for" "a" "minute" "or" "two"
+sentence: "这朵红色的花开得真漂亮。"
+answer: "This red flower blooms very beautifully."
+acceptAlso: "This red flower is blooming so nicely." "This red flower looks really beautiful when it opens."
+srsWords: "this" "red" "flower" "very" "is" "so" "look" "really" "beautiful" "when" "it" "open"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我能在那里见你吗？"
-answer: "Can I see you there?"
-acceptAlso: "Can I see you there?"
-srsWords: "can" "i" "see" "you" "there"
+sentence: "我们需要把土挖开才能种下这棵树。"
+answer: "We need to dig the soil to plant this tree."
+acceptAlso: "We have to dig the dirt before planting this tree." "We need to dig a hole in the soil to plant this tree."
+srsWords: "we" "need" "to" "the" "this" "tree" "have" "before" "a" "hole" "in"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "有一天，我走出了我们的花园，顺着路往前走。"
-answer: "One day I walked out of our garden and down the road."
-acceptAlso: "One day I walked out of our garden and down the road."
-srsWords: "one" "day" "i" "walk" "out" "of" "our" "garden" "and" "down" "the" "road"
+sentence: "请帮我把这些西红柿种子种在盆里。"
+answer: "Please help me plant these tomato seeds in the pot."
+acceptAlso: "Can you help me put these tomato seeds in the pot?" "Please help me to sow these tomato seeds in the pot."
+srsWords: "help" "me" "these" "tomato" "seed" "in" "the" "can" "you" "put" "to"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "所以我走过那扇门，一直走到路的尽头。"
-answer: "So I walked past the door to the end of the road."
-acceptAlso: "So I walked past the door to the end of the road."
-srsWords: "so" "i" "walk" "past" "the" "door" "to" "end" "of" "road"
+sentence: "杂草长得太快了，我得把它们拔掉。"
+answer: "The weeds are growing too fast, and I have to pull them out."
+acceptAlso: "Weeds grow so fast that I need to pull them up." "The weeds are growing too quickly, I must pull them out."
+srsWords: "the" "are" "grow" "too" "fast" "and" "i" "have" "to" "pull" "them" "out" "so" "that" "need" "up" "quickly" "must"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我在那里等了一分钟，思考了一下。"
-answer: "I waited there for a minute and thought about it."
-acceptAlso: "I waited there for a minute and thought about it."
-srsWords: "i" "wait" "there" "for" "a" "minute" "and" "thought" "about" "it"
+sentence: "春天是花园里种植蔬菜的最好季节。"
+answer: "Spring is the best season to grow vegetables in the garden."
+acceptAlso: "Spring is the best time for planting vegetables in the garden." "The best season to grow garden vegetables is spring."
+srsWords: "spring" "is" "the" "best" "to" "grow" "vegetable" "in" "garden" "for"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你明天能陪我去购物吗？"
-answer: "Can you come shopping with me tomorrow?"
-acceptAlso: "Can you come shopping with me tomorrow?"
-srsWords: "can" "you" "come" "shopping" "with" "me" "tomorrow"
+sentence: "你上周末在花园里修剪树枝了吗？"
+answer: "Did you prune the branches in the garden last weekend?"
+acceptAlso: "Did you cut the tree branches in the garden last weekend?" "Did you trim the plants in the garden last weekend?"
+srsWords: "did" "you" "the" "in" "garden" "weekend" "cut" "tree"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "今天，许多人仍然相信关于天气的陈旧观念。"
-answer: "Today, a lot of people still believe in the old ideas about the weather."
-acceptAlso: "Today, a lot of people still believe in the old ideas about the weather."
-srsWords: "today" "a" "lot" "of" "people" "still" "believe" "in" "the" "old" "idea" "about" "weather"
+sentence: "向日葵需要很多阳光才能长得高。"
+answer: "Sunflowers need a lot of sunlight to grow tall."
+acceptAlso: "Sunflowers require plenty of sun to grow tall." "Sunflowers need much sunshine to grow high."
+srsWords: "sunflower" "need" "a" "lot" "of" "sunlight" "to" "grow" "tall" "sun" "much" "sunshine" "high"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我想和她一起去买东西挑一件连衣裙。"
-answer: "I want to go shopping with her to choose a dress."
-acceptAlso: "I want to go shopping with her to choose a dress."
-srsWords: "i" "want" "to" "go" "shopping" "with" "her" "choose" "a" "dress"
+sentence: "我买了一把新的园艺铲子和一副手套。"
+answer: "I bought a new gardening shovel and a pair of gloves."
+acceptAlso: "I bought a new garden spade and a pair of gloves." "I purchased a new gardening trowel and gloves."
+srsWords: "i" "a" "new" "garden" "shovel" "and" "pair" "of" "glove"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "如果明天不下雨，我们就在院子里种花。"
+answer: "If it doesn't rain tomorrow, we will plant flowers in the yard."
+acceptAlso: "We will plant flowers in the yard if it is not raining tomorrow." "If it doesn't rain tomorrow, let's plant flowers in the garden."
+srsWords: "if" "it" "rain" "tomorrow" "we" "flower" "in" "the" "yard" "is" "not" "let" "garden"
 
 ---
 lessonTitle: "Lesson 6: Environmental Protection"
@@ -395,75 +401,76 @@ description: "Translate A2 sentences about Environmental Protection"
 icon: "🌤️"
 color: "#06B6D4"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "然后老奶奶哈哈大笑起来。"
-answer: "Then the old grandmother laughed loudly."
-acceptAlso: "Then the old grandmother laughed loudly."
-srsWords: "then" "the" "old" "grandmother" "laugh" "loudly"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我的人生已近尾声——这是辛劳的一生。"
-answer: "Here I am at the end of my life - a life of hard work."
-acceptAlso: "Here I am at the end of my life - a life of hard work."
-srsWords: "here" "i" "am" "at" "the" "end" "of" "my" "life" "a" "hard" "work"
+sentence: "我们应该把塑料瓶放进这个回收箱里。"
+answer: "We should put plastic bottles in this recycling bin."
+acceptAlso: "We ought to put plastic bottles into this recycling bin." "We should throw plastic bottles into this recycling box."
+srsWords: "we" "should" "put" "in" "this" "recycle" "to" "into" "throw" "box"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "日复一日，它们变得越来越虚弱。"
-answer: "And day after day, they got weaker and weaker."
-acceptAlso: "And day after day, they got weaker and weaker."
-srsWords: "and" "day" "after" "they" "got" "weak"
+sentence: "为了保护地球，我们不应该浪费水。"
+answer: "To protect the earth, we should not waste water."
+acceptAlso: "We must not waste water in order to protect the earth." "We shouldn't waste water to protect our planet."
+srsWords: "to" "the" "earth" "we" "should" "not" "must" "in" "order" "our" "planet"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "“聊点别的吧。”“我不能，”鬼魂回答道。"
-answer: "Talk about something different. I can't,' the ghost answered."
-acceptAlso: "Talk about something different. I can't,' the ghost answered."
-srsWords: "talk" "about" "something" "different" "i" "can" "the" "ghost" "answer"
+sentence: "骑自行车上班可以减少空气污染。"
+answer: "Riding a bike to work can reduce air pollution."
+acceptAlso: "Cycling to work can decrease air pollution." "To ride bicycles to work can reduce air pollution."
+srsWords: "ride" "a" "bike" "to" "work" "can" "air" "pollution" "cycling" "bicycle"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "今天是咱们村里的大日子。"
-answer: "Today is a very big day for our village."
-acceptAlso: "Today is a very big day for our village."
-srsWords: "today" "is" "a" "very" "big" "day" "for" "our" "village"
+sentence: "去超市购物时，请记得带上你的环保袋。"
+answer: "Please remember to bring your reusable bag when shopping at the supermarket."
+acceptAlso: "Remember to take your eco-friendly bag when you go shopping." "Please bring your shopping bag when visiting the supermarket."
+srsWords: "remember" "to" "bring" "your" "bag" "when" "shopping" "at" "the" "supermarket" "take" "you" "go" "visit"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她把这个卖给了一所她朋友工作的学校。"
-answer: "She sold this to a school where one of her friends worked."
-acceptAlso: "She sold this to a school where one of her friends worked."
-srsWords: "she" "sell" "this" "to" "a" "school" "where" "one" "of" "her" "friend" "work"
+sentence: "政府正在努力寻找清洁能源来代替煤炭。"
+answer: "The government is trying to find clean energy to replace coal."
+acceptAlso: "The government is working hard to find clean energy instead of coal." "The government is looking for clean energy to replace coal."
+srsWords: "the" "government" "is" "try" "to" "find" "clean" "replace" "work" "hard" "instead" "of" "look" "for"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他能听到孩子的哭声。"
-answer: "He could hear the cries of the child."
-acceptAlso: "He could hear the cries of the child."
-srsWords: "he" "could" "hear" "the" "cry" "of" "child"
+sentence: "许多野生动物因为森林被砍伐而失去了家园。"
+answer: "Many wild animals lose their homes because forests are cut down."
+acceptAlso: "Many wild animals have lost their homes due to deforestation." "Many wildlife animals lose their habitats because forests are cut down."
+srsWords: "many" "wild" "animal" "lose" "their" "home" "because" "forest" "are" "cut" "down" "have" "lost" "due" "to"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "那是他的一朵红玫瑰。"
-answer: "It was his red rose."
-acceptAlso: "It was his red rose."
-srsWords: "it" "was" "his" "red" "rose"
+sentence: "我们能做些什么来拯救濒危动物？"
+answer: "What can we do to save endangered animals?"
+acceptAlso: "What can we do to protect endangered species?" "How can we help save endangered animals?"
+srsWords: "what" "can" "we" "do" "to" "save" "endangered" "animal" "how" "help"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "一朵来自另一个世界、另一生世的玫瑰。"
-answer: "A rose from another world, another life."
-acceptAlso: "A rose from another world, another life."
-srsWords: "a" "rose" "from" "another" "world" "life"
+sentence: "纸张和纸板可以被回收并再次使用。"
+answer: "Paper and cardboard can be recycled and used again."
+acceptAlso: "Paper and cardboard can be recycled for reuse." "Paper and cardboard can be collected and recycled."
+srsWords: "paper" "and" "can" "be" "recycle" "used" "again" "for" "collect"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "里面有珠宝。"
-answer: "There was jewellery inside it."
-acceptAlso: "There was jewellery inside it."
-srsWords: "there" "was" "jewellery" "inside" "it"
+sentence: "离开房间时请随手关灯以节约用电。"
+answer: "Please turn off the lights when leaving the room to save electricity."
+acceptAlso: "Remember to turn off lights when you leave the room to save energy." "Please switch off the lights when leaving the room to save power."
+srsWords: "turn" "the" "when" "leave" "to" "save" "remember" "you" "power"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "气候变化是当今人类面临的最大挑战之一。"
+answer: "Climate change is one of the biggest challenges facing humanity today."
+acceptAlso: "Climate change is one of the greatest challenges for people today." "Global climate change is one of the biggest challenges today."
+srsWords: "change" "is" "one" "of" "the" "face" "today" "for" "people"
 
 ---
 lessonTitle: "Lesson 7: Natural Disasters"
@@ -471,75 +478,76 @@ description: "Translate A2 sentences about Natural Disasters"
 icon: "🌤️"
 color: "#06B6D4"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "他想了一会儿。"
-answer: "He thought for a minute."
-acceptAlso: "He thought for a minute."
-srsWords: "he" "thought" "for" "a" "minute"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "盘子里装满了食物，咖啡和茶也倒好了。"
-answer: "Plates were filled, and coffee and tea were poured."
-acceptAlso: "Plates were filled, and coffee and tea were poured."
-srsWords: "plate" "were" "fill" "and" "coffee" "tea" "pour"
+sentence: "昨天晚上发生了一场大地震。"
+answer: "A big earthquake happened last night."
+acceptAlso: "There was a large earthquake last night." "A major earthquake occurred last night."
+srsWords: "a" "big" "earthquake" "happen" "night" "there" "was" "large"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们谈论着国外的消息和体坛风云。"
-answer: "They talked about news from abroad and the world of sport."
-acceptAlso: "They talked about news from abroad and the world of sport."
-srsWords: "they" "talk" "about" "news" "from" "abroad" "and" "the" "world" "of" "sport"
+sentence: "台风来临时，我们必须呆在家里。"
+answer: "We must stay at home when the typhoon comes."
+acceptAlso: "We have to stay indoors when the typhoon arrives." "You need to stay home when a typhoon hits."
+srsWords: "we" "must" "stay" "at" "home" "when" "the" "come" "have" "to" "indoor" "arrive" "you" "need" "a" "hit"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "没有人谈论那座岛。"
-answer: "Nobody spoke about the island."
-acceptAlso: "Nobody spoke about the island."
-srsWords: "nobody" "speak" "about" "the" "island"
+sentence: "暴雨导致街道上到处都是水。"
+answer: "The heavy rain caused water everywhere in the street."
+acceptAlso: "The heavy rain made the streets flood." "There was water everywhere on the street because of the heavy rain."
+srsWords: "the" "heavy" "rain" "cause" "everywhere" "in" "street" "there" "was" "on" "because" "of"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我喜欢比赛，也喜欢身处群山之中。"
-answer: "I like the competitions and being in the mountains."
-acceptAlso: "I like the competitions and being in the mountains."
-srsWords: "i" "like" "the" "competition" "and" "being" "in" "mountain"
+sentence: "森林大火毁坏了许多树木和动物的家园。"
+answer: "The forest fire destroyed many trees and animal homes."
+acceptAlso: "The wildfire destroyed a lot of trees and animal habitats." "The forest fire ruined many trees and animal homes."
+srsWords: "the" "forest" "destroy" "many" "tree" "and" "animal" "home" "a" "lot" "of" "ruin"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然后他在房间里踱来踱去。"
-answer: "Then he walked up and down."
-acceptAlso: "Then he walked up and down."
-srsWords: "then" "he" "walk" "up" "and" "down"
+sentence: "海啸是非常危险的自然灾害。"
+answer: "A tsunami is a very dangerous natural disaster."
+acceptAlso: "Tsunamis are very dangerous natural disasters." "A tsunami is an extremely dangerous natural disaster."
+srsWords: "a" "is" "very" "dangerous" "natural" "are" "an" "extremely"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "酒店的游客们从窗户往外看，嘲笑他。"
-answer: "Visitors to the hotel watched out of their windows and laughed at him."
-acceptAlso: "Visitors to the hotel watched out of their windows and laughed at him."
-srsWords: "visitor" "to" "the" "hotel" "watch" "out" "of" "their" "window" "and" "laugh" "at" "him"
+sentence: "听到龙卷风警报时，请尽快寻找安全的地方。"
+answer: "Please find a safe place as soon as you hear the tornado warning."
+acceptAlso: "Please look for a safe place when you hear the tornado alert." "Find a safe spot quickly when you hear the tornado warning."
+srsWords: "find" "a" "safe" "as" "soon" "you" "hear" "the" "look" "for" "when" "quickly"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "第一辆自行车大约制造于一百五十年前。"
-answer: "The first bicycle was made about one hundred and fifty years ago."
-acceptAlso: "The first bicycle was made about one hundred and fifty years ago."
-srsWords: "the" "first" "bicycle" "was" "make" "about" "one" "hundred" "and" "fifty" "year" "ago"
+sentence: "由于大雪，今天学校停课了。"
+answer: "The school is closed today because of the heavy snow."
+acceptAlso: "There is no school today due to the heavy snow." "Classes are canceled today because of the heavy snow."
+srsWords: "the" "school" "is" "closed" "today" "because" "of" "heavy" "snow" "there" "no" "due" "to" "are"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "后来，随着自行车变便宜了，许多人买了一辆。"
-answer: "Later, when bicycles became cheaper, many people bought one."
-acceptAlso: "Later, when bicycles became cheaper, many people bought one."
-srsWords: "later" "when" "bicycle" "become" "cheap" "many" "people" "buy" "one"
+sentence: "干旱让土地变得非常干燥。"
+answer: "The drought made the land very dry."
+acceptAlso: "The drought caused the ground to become very dry." "The soil is very dry because of the drought."
+srsWords: "the" "land" "very" "dry" "cause" "to" "become" "is" "because" "of"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "那么，他为什么决定开一家餐馆呢？"
-answer: "So why did he decide to open a restaurant?"
-acceptAlso: "So why did he decide to open a restaurant?"
-srsWords: "so" "why" "did" "he" "decide" "to" "open" "a" "restaurant"
+sentence: "消防员正在努力扑灭大火。"
+answer: "The firefighters are trying to put out the big fire."
+acceptAlso: "Firefighters are working hard to extinguish the fire." "The firefighters are working to put out the fire."
+srsWords: "the" "are" "try" "to" "put" "out" "big" "work" "hard"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我们应该学习如何在灾害中保护自己。"
+answer: "We should learn how to protect ourselves in a disaster."
+acceptAlso: "We need to learn how to keep safe during a disaster." "We ought to learn how to protect ourselves when disasters happen."
+srsWords: "we" "should" "learn" "how" "to" "ourselves" "in" "a" "need" "keep" "safe" "during" "when" "happen"
 
 ---
 lessonTitle: "Lesson 8: Camping"
@@ -547,75 +555,76 @@ description: "Translate A2 sentences about Camping"
 icon: "🌤️"
 color: "#06B6D4"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "很简单，因为他热爱烹饪。"
-answer: "Simply because he loves cooking."
-acceptAlso: "Simply because he loves cooking."
-srsWords: "simply" "because" "he" "love" "cooking"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这是一件容易的事吗？"
-answer: "Has it been an easy thing to do?"
-acceptAlso: "Has it been an easy thing to do?"
-srsWords: "has" "it" "been" "an" "easy" "thing" "to" "do"
+sentence: "我们周末去山里露营吧。"
+answer: "Let's go camping in the mountains this weekend."
+acceptAlso: "How about going camping in the mountains this weekend?" "We can go camping in the mountains this weekend."
+srsWords: "let" "go" "camping" "in" "the" "mountain" "this" "weekend" "how" "about" "we" "can"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这些人多年前曾住在城堡里。"
-answer: "These people lived at the castle many years ago."
-acceptAlso: "These people lived at the castle many years ago."
-srsWords: "these" "people" "live" "at" "the" "castle" "many" "year" "ago"
+sentence: "我需要买一个新的帐篷。"
+answer: "I need to buy a new tent."
+acceptAlso: "I want to buy a new tent." "I have to purchase a new tent."
+srsWords: "i" "need" "to" "buy" "a" "new" "want" "have"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我总想在火车上读点有趣的东西。"
-answer: "I always want to read something interesting on the train."
-acceptAlso: "I always want to read something interesting on the train."
-srsWords: "i" "always" "want" "to" "read" "something" "interesting" "on" "the" "train"
+sentence: "请把睡袋准备好。"
+answer: "Please get your sleeping bag ready."
+acceptAlso: "Please prepare your sleeping bag." "Make sure your sleeping bag is ready."
+srsWords: "get" "your" "sleep" "bag" "ready" "prepare" "make" "sure" "is"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "酒店有停车场吗？"
-answer: "Is there a hotel car park?"
-acceptAlso: "Is there a hotel car park?"
-srsWords: "is" "there" "a" "hotel" "car" "park"
+sentence: "晚上我们在营地生火吧。"
+answer: "Let's make a fire at the campsite tonight."
+acceptAlso: "We can build a camp fire tonight." "Let's light a campfire tonight."
+srsWords: "let" "make" "a" "at" "the" "tonight" "we" "can" "build" "camp" "campfire"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "如果可能的话，我希望到达时能吃顿饭。"
-answer: "If possible, I would like a meal when I arrive."
-acceptAlso: "If possible, I would like a meal when I arrive."
-srsWords: "if" "possible" "i" "would" "like" "a" "meal" "when" "arrive"
+sentence: "你在背包里装了多少水？"
+answer: "How much water did you pack in your backpack?"
+acceptAlso: "How much water do you have in your backpack?" "How much water did you put in your backpack?"
+srsWords: "how" "much" "did" "you" "pack" "in" "your" "do" "have" "put"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他开始感到身体不舒服。"
-answer: "He began to feel ill."
-acceptAlso: "He began to feel ill."
-srsWords: "he" "begin" "to" "feel" "ill"
+sentence: "我们在星空下吃晚饭。"
+answer: "We are eating dinner under the stars."
+acceptAlso: "We have dinner under the starry sky." "We ate our dinner beneath the stars."
+srsWords: "we" "are" "eat" "dinner" "under" "the" "have" "sky" "our"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "三个男孩在街的另一头。"
-answer: "Three boys were at the other end of the street."
-acceptAlso: "Three boys were at the other end of the street."
-srsWords: "three" "boy" "were" "at" "the" "other" "end" "of" "street"
+sentence: "别忘了带上手电筒，外面很黑。"
+answer: "Don't forget to bring a flashlight; it's very dark outside."
+acceptAlso: "Remember to bring a torch because it is very dark outside." "Don't leave your flashlight behind, it's dark outside."
+srsWords: "forget" "to" "bring" "a" "flashlight" "it" "very" "dark" "outside" "remember" "because" "is" "leave" "your"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他去哪里都坐火车。"
-answer: "He went everywhere by train."
-acceptAlso: "He went everywhere by train."
-srsWords: "he" "go" "everywhere" "by" "train"
+sentence: "我们在森林里散步时看到了一些鸟。"
+answer: "We saw some birds while walking in the forest."
+acceptAlso: "We saw a few birds when we walked in the woods." "We spotted some birds while we walked through the forest."
+srsWords: "we" "some" "bird" "walking" "in" "the" "forest" "a" "when" "walk" "wood" "through"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们住在乡下，而且很穷。"
-answer: "They live in the country and they are poor."
-acceptAlso: "They live in the country and they are poor."
-srsWords: "they" "live" "in" "the" "country" "and" "are" "poor"
+sentence: "晚上外面有点冷，多穿一件衣服。"
+answer: "It is a bit cold outside at night, so wear more clothes."
+acceptAlso: "It's a little chilly at night, wear an extra jacket." "Wear another layer because it gets cold outside at night."
+srsWords: "it" "is" "a" "bit" "cold" "outside" "at" "night" "so" "wear" "more" "clothes" "an" "jacket" "another" "because" "get"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "离开前我们要把垃圾清理干净。"
+answer: "We need to clean up the trash before we leave."
+acceptAlso: "We must clean our rubbish before leaving." "Let's clear away all the garbage before we go."
+srsWords: "we" "need" "to" "clean" "up" "the" "before" "leave" "must" "our" "let" "away" "all" "garbage" "go"
 
 ---
 lessonTitle: "Lesson 9: Beach"
@@ -623,75 +632,76 @@ description: "Translate A2 sentences about Beach"
 icon: "🌤️"
 color: "#06B6D4"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "起初，大约有三十人住在那里。"
-answer: "At the beginning, about thirty people lived there."
-acceptAlso: "At the beginning, about thirty people lived there."
-srsWords: "at" "the" "beginning" "about" "thirty" "people" "live" "there"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然后是士兵们。"
-answer: "Then there were the soldiers."
-acceptAlso: "Then there were the soldiers."
-srsWords: "then" "there" "were" "the" "soldier"
+sentence: "今天天气很好，我们去海滩吧。"
+answer: "The weather is very nice today, let's go to the beach."
+acceptAlso: "It's a very nice day today, let's go to the beach." "The weather is great today, let's visit the beach."
+srsWords: "the" "weather" "is" "very" "nice" "today" "let" "go" "to" "beach" "it" "a" "day" "great" "visit"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "成年熊非常强壮，能杀死一个人。"
-answer: "The adult bear is very strong and it can kill a person."
-acceptAlso: "The adult bear is very strong and it can kill a person."
-srsWords: "the" "adult" "bear" "is" "very" "strong" "and" "it" "can" "kill" "a" "person"
+sentence: "别忘了带防晒霜和太阳镜。"
+answer: "Don't forget to bring sunscreen and sunglasses."
+acceptAlso: "Remember to bring sunscreen and sunglasses." "Don't forget your sunscreen and sunglasses."
+srsWords: "forget" "to" "bring" "sunscreen" "and" "sunglasses" "remember" "your"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他迅速穿过河流。"
-answer: "He came quickly across the river."
-acceptAlso: "He came quickly across the river."
-srsWords: "he" "come" "quickly" "across" "the" "river"
+sentence: "我喜欢在沙滩上走路。"
+answer: "I like walking on the sand."
+acceptAlso: "I love to walk on the sandy beach." "I enjoy walking on the sand."
+srsWords: "i" "like" "walking" "on" "the" "love" "to" "walk" "sandy" "beach" "enjoy"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他推了一下小船，小船慢慢地顺着河漂走了。"
-answer: "He pushed the boat and it moved slowly away, down the river."
-acceptAlso: "He pushed the boat and it moved slowly away, down the river."
-srsWords: "he" "push" "the" "boat" "and" "it" "move" "slowly" "away" "down" "river"
+sentence: "海水有点凉，但很舒服。"
+answer: "The sea water is a bit cold, but it is very comfortable."
+acceptAlso: "The ocean water is a little chilly, but very nice." "The water is a bit cool, but quite comfortable."
+srsWords: "the" "sea" "is" "a" "bit" "cold" "it" "very" "comfortable" "nice" "quite"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们在电影院外面见面好吗？"
-answer: "Shall we meet outside the cinema?"
-acceptAlso: "Shall we meet outside the cinema?"
-srsWords: "shall" "we" "meet" "outside" "the" "cinema"
+sentence: "他们在海边建造了一个很大的沙堡。"
+answer: "They built a very big sandcastle by the sea."
+acceptAlso: "They made a huge sandcastle on the beach." "They built a really big sandcastle on the shore."
+srsWords: "they" "a" "very" "big" "by" "the" "sea" "on" "beach" "really" "shore"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你明天可以把这件事告诉他。"
-answer: "You can tell me about it tomorrow."
-acceptAlso: "You can tell me about it tomorrow."
-srsWords: "you" "can" "tell" "me" "about" "it" "tomorrow"
+sentence: "你看，那边的海浪太美了。"
+answer: "Look, the waves over there are so beautiful."
+acceptAlso: "Look at the waves over there, they are so pretty." "Look, those waves are so nice."
+srsWords: "look" "the" "over" "there" "are" "so" "beautiful" "at" "they" "pretty" "those" "nice"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我哭是因为我很高兴。"
-answer: "I'm crying because I'm very happy."
-acceptAlso: "I'm crying because I'm very happy."
-srsWords: "i" "cry" "because" "very" "happy"
+sentence: "我们可以在遮阳伞下吃午饭。"
+answer: "We can eat lunch under the umbrella."
+acceptAlso: "We can have lunch under the beach umbrella." "Let's eat lunch under the umbrella."
+srsWords: "we" "can" "eat" "lunch" "under" "the" "umbrella" "have" "beach" "let"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "而且她的头发红得像胡萝卜一样！"
-answer: "And her hair is as red as carrots!"
-acceptAlso: "And her hair is as red as carrots!"
-srsWords: "and" "her" "hair" "is" "as" "red" "carrot"
+sentence: "我收集了许多漂亮的贝壳。"
+answer: "I collected many beautiful seashells."
+acceptAlso: "I gathered a lot of pretty shells." "I found many nice seashells on the beach."
+srsWords: "i" "collect" "many" "beautiful" "gather" "a" "lot" "of" "pretty" "nice" "on" "the" "beach"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她的脸气得通红。"
-answer: "Her face was red and angry."
-acceptAlso: "Her face was red and angry."
-srsWords: "her" "face" "was" "red" "and" "angry"
+sentence: "傍晚的日落非常壮观。"
+answer: "The sunset in the evening is very spectacular."
+acceptAlso: "The sunset is very beautiful tonight." "The evening sunset is amazing."
+srsWords: "the" "in" "evening" "is" "very" "beautiful" "tonight"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "离开时请把垃圾带走。"
+answer: "Please take your rubbish with you when you leave."
+acceptAlso: "Please clean up your trash before you leave." "Take your garbage with you when you go."
+srsWords: "take" "your" "with" "you" "when" "leave" "clean" "up" "before" "garbage" "go"
 
 ---
 lessonTitle: "Lesson 10: Mountains"
@@ -699,73 +709,73 @@ description: "Translate A2 sentences about Mountains"
 icon: "🌤️"
 color: "#06B6D4"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "他看到前面有很多年轻女孩。"
-answer: "He saw a lot of young girls in front of him."
-acceptAlso: "He saw a lot of young girls in front of him."
-srsWords: "he" "see" "a" "lot" "of" "young" "girl" "in" "front" "him"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他想起了那个女孩。"
-answer: "He thought about the girl."
-acceptAlso: "He thought about the girl."
-srsWords: "he" "thought" "about" "the" "girl"
+sentence: "周末我们去爬山怎么样？"
+answer: "How about going hiking in the mountains this weekend?"
+acceptAlso: "What about climbing mountains this weekend?" "Shall we go to the mountains this weekend?"
+srsWords: "how" "about" "go" "hiking" "in" "the" "mountain" "this" "weekend" "what" "climbing" "shall" "we" "to"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们用它来洗漱，以保持身体清洁和健康。"
-answer: "We use it to wash and to keep ourselves clean and healthy."
-acceptAlso: "We use it to wash and to keep ourselves clean and healthy."
-srsWords: "we" "use" "it" "to" "wash" "and" "keep" "ourselves" "clean" "healthy"
+sentence: "这座山非常高，爬上去需要几个小时。"
+answer: "This mountain is very high, and it takes a few hours to climb up."
+acceptAlso: "This mountain is quite tall, it takes hours to reach the top." "The mountain is very high, it takes a few hours to hike."
+srsWords: "this" "mountain" "is" "very" "high" "and" "it" "take" "a" "hour" "to" "climb" "up" "quite" "tall" "reach" "the" "top" "hike"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们原有的生活方式也面临着消失的危险。"
-answer: "Their way of living also was in danger of being lost."
-acceptAlso: "Their way of living also was in danger of being lost."
-srsWords: "their" "way" "of" "live" "also" "was" "in" "danger" "being" "lost"
+sentence: "登山时穿一双舒适的鞋子很重要。"
+answer: "It is important to wear comfortable shoes when hiking."
+acceptAlso: "Wearing comfortable shoes is important for mountain climbing." "You should wear comfortable shoes when you climb mountains."
+srsWords: "it" "is" "important" "to" "wear" "comfortable" "shoe" "when" "hiking" "for" "mountain" "climbing" "you" "should" "climb"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它不是一个国家。"
-answer: "It was not a country."
-acceptAlso: "It was not a country."
-srsWords: "it" "was" "not" "a" "country"
+sentence: "沿途的风景美得让人惊叹。"
+answer: "The scenery along the way is amazing."
+acceptAlso: "The views along the path are so beautiful." "The landscape on the way is wonderful."
+srsWords: "the" "scenery" "along" "way" "is" "path" "are" "so" "beautiful" "on" "wonderful"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "银行开始给报社写信。"
-answer: "Banks began to write letters to the newspapers."
-acceptAlso: "Banks began to write letters to the newspapers."
-srsWords: "bank" "begin" "to" "write" "letter" "the" "newspaper"
+sentence: "我们在半山腰休息了一会儿。"
+answer: "We took a rest halfway up the mountain."
+acceptAlso: "We had a break in the middle of the mountain." "We rested for a while halfway up."
+srsWords: "we" "a" "up" "the" "mountain" "had" "break" "in" "middle" "of" "for"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "娜娜去卫生间。"
-answer: "Nana goes to the bathroom."
-acceptAlso: "Nana goes to the bathroom."
-srsWords: "nana" "go" "to" "the" "bathroom"
+sentence: "山顶的风有点大，请穿上外套。"
+answer: "The wind at the top of the mountain is a bit strong, please put on your jacket."
+acceptAlso: "It's quite windy on the mountain peak, wear your coat." "Please wear a jacket because it's windy at the top."
+srsWords: "the" "at" "top" "of" "mountain" "is" "a" "bit" "strong" "put" "on" "your" "jacket" "it" "quite" "windy" "wear" "coat" "because"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它的封面很硬，看起来非常旧。"
-answer: "Its cover was hard and it looked very old."
-acceptAlso: "Its cover was hard and it looked very old."
-srsWords: "its" "cover" "was" "hard" "and" "it" "look" "very" "old"
+sentence: "我们在山里呼吸着新鲜的空气。"
+answer: "We are breathing fresh air in the mountains."
+acceptAlso: "We breathed the fresh air in the mountain area." "The air in the mountains is very fresh."
+srsWords: "we" "are" "breathe" "fresh" "air" "in" "the" "mountain" "area" "is" "very"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "每个国家都想把这片土地占为己有。"
-answer: "Each country wanted the land for itself."
-acceptAlso: "Each country wanted the land for itself."
-srsWords: "each" "country" "want" "the" "land" "for" "itself"
+sentence: "森林里有许多不同种类的树木和鸟类。"
+answer: "There are many different kinds of trees and birds in the forest."
+acceptAlso: "The forest has many types of trees and birds." "You can find various trees and birds in the woods."
+srsWords: "there" "are" "many" "different" "kind" "of" "tree" "and" "bird" "in" "the" "forest" "has" "you" "can" "find" "wood"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "消息在一个早晨传来了。"
-answer: "The news came one morning."
-acceptAlso: "The news came one morning."
-srsWords: "the" "news" "come" "one" "morning"
+sentence: "天黑之前我们必须下山。"
+answer: "We must go down the mountain before it gets dark."
+acceptAlso: "We have to descend the mountain before dark." "We need to get down before the sun sets."
+srsWords: "we" "must" "go" "down" "the" "mountain" "before" "it" "get" "dark" "have" "to" "need" "sun" "set"
 
+[translation]
+text: "Translate this sentence into English"
+sentence: "这次登山是一次难忘的经历。"
+answer: "This mountain climbing was an unforgettable experience."
+acceptAlso: "This hike was a memorable experience for us." "Climbing this mountain was an unforgettable trip."
+srsWords: "this" "mountain" "climbing" "was" "an" "unforgettable" "hike" "a" "for" "us"
