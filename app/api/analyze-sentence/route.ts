@@ -329,32 +329,28 @@ function buildSyntacticAnalysis(sentence: string): { fullTranslation: string; ch
   const rawTokens = cleanedSentence.split(/\s+/).filter(Boolean);
   const words: WordItem[] = [];
 
-  // Combine multi-word phrasal verbs where appropriate
+  // Keep each space-separated token as an individual word item so slots match 1-to-1
   let idx = 0;
   while (idx < rawTokens.length) {
     const t1 = rawTokens[idx].toLowerCase().replace(/[.,!?;:]+$/g, "");
     const t2 = idx + 1 < rawTokens.length ? rawTokens[idx + 1].toLowerCase().replace(/[.,!?;:]+$/g, "") : "";
-    const t3 = idx + 2 < rawTokens.length ? rawTokens[idx + 2].toLowerCase().replace(/[.,!?;:]+$/g, "") : "";
-
-    const threeKey = `${t1} ${t2} ${t3}`;
     const twoKey = `${t1} ${t2}`;
 
-    if (t3 && PHRASAL_VERBS[threeKey]) {
+    if (t2 && PHRASAL_VERBS[twoKey]) {
+      // Provide individual items for both words
+      const pv = PHRASAL_VERBS[twoKey];
+      const info1 = lookupWordInfo(rawTokens[idx]);
+      const info2 = lookupWordInfo(rawTokens[idx + 1]);
       words.push({
-        word: `${rawTokens[idx]} ${rawTokens[idx + 1]} ${rawTokens[idx + 2]}`,
-        ipa: PHRASAL_VERBS[threeKey].ipa,
-        meaning: PHRASAL_VERBS[threeKey].meaning,
+        word: rawTokens[idx],
+        ipa: info1.ipa || pv.ipa.split(" ")[0] || "",
+        meaning: pv.meaning || info1.meaning,
         pos: "verb",
       });
-      idx += 3;
-      continue;
-    }
-
-    if (t2 && PHRASAL_VERBS[twoKey]) {
       words.push({
-        word: `${rawTokens[idx]} ${rawTokens[idx + 1]}`,
-        ipa: PHRASAL_VERBS[twoKey].ipa,
-        meaning: PHRASAL_VERBS[twoKey].meaning,
+        word: rawTokens[idx + 1],
+        ipa: info2.ipa || pv.ipa.split(" ")[1] || "",
+        meaning: info2.meaning || "起来",
         pos: "verb",
       });
       idx += 2;
@@ -532,7 +528,7 @@ export async function POST(req: NextRequest) {
     const prompt = `Analyze the following English sentence ("${sentence}") into syntactic chunks (such as 主语, 谓语, 宾语, 状语, 定语, 连词).
 
 CRITICAL INSTRUCTIONS:
-1. The 'word' property MUST be the exact English word or short phrasal verb from the input sentence. DO NOT put Chinese characters in the 'word' field.
+1. The 'word' property MUST be each individual single English word from the input sentence (NEVER combine multiple words like 'wake up' into one item; each space-separated token must be its own item). DO NOT put Chinese characters in the 'word' field.
 2. The 'meaning' property MUST be the concise Chinese meaning (1-4 Chinese characters) of that English word in context. NEVER put the English word as the 'meaning'.
 3. The 'ipa' property MUST be the IPA pronunciation wrapped in slashes (e.g. "/ʃiː/").
 4. The 'pos' property should be the part of speech in Chinese (e.g. "代词", "动词", "副词", "介词", "数词", "名词", "形容词").

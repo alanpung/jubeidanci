@@ -58,6 +58,24 @@ Your goals:
   }
 });
 
+app.post("/api/analyze-sentence", async (req, res) => {
+  try {
+    const { POST } = await import("./app/api/analyze-sentence/route.js");
+    const fullUrl = `http://${req.headers.host || "localhost:3000"}${req.url}`;
+    const webReq = new Request(fullUrl, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(req.body),
+    });
+    const nextRes = await POST(webReq as any);
+    const data = await nextRes.json();
+    res.status(nextRes.status).json(data);
+  } catch (err: any) {
+    console.error("Error in /api/analyze-sentence:", err);
+    res.status(500).json({ error: err.message || "Failed to analyze sentence" });
+  }
+});
+
 // AI Unit & Lesson Generator
 app.post("/api/tutor/create-unit", async (req, res) => {
   try {

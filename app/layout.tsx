@@ -50,11 +50,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="w-full max-w-full overflow-x-hidden">
-      <head>
-        <link rel="icon" href="/icon.svg?v=2" type="image/svg+xml" />
-        <link rel="icon" href="/favicon.ico?v=2" sizes="any" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=2" />
-      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased w-full max-w-full overflow-x-hidden`}
       >

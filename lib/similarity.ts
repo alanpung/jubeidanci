@@ -245,9 +245,15 @@ export function checkSimilarity(
   }
 
   // Strict check for essential functional words
-  const essentialWords = ["to", "in", "at", "on", "of", "for", "with", "is", "are", "was", "were"];
-  const userTokens = userTrimmed.toLowerCase().split(/\s+/);
-  const correctTokens = correctTrimmed.toLowerCase().split(/\s+/);
+  const essentialWords = ["to", "in", "at", "on", "of", "for", "with", "is", "are", "was", "were", "do", "does", "did", "the", "a", "an"];
+  const cleanTokens = (str: string) =>
+    str
+      .toLowerCase()
+      .split(/\s+/)
+      .map((t) => t.replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, ""))
+      .filter(Boolean);
+  const userTokens = cleanTokens(userTrimmed);
+  const correctTokens = cleanTokens(correctTrimmed);
 
   for (const word of essentialWords) {
     if (correctTokens.includes(word) && !userTokens.includes(word)) {

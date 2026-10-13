@@ -9,83 +9,81 @@ level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"
 ---
-
 ---
 lessonTitle: "Lesson 1: Expressing Joy"
 description: "Translate A2 sentences about Expressing Joy"
 icon: "❤️"
 color: "#F43F5E"
 ---
+[translation]
+text: "Translate this sentence into English"
+sentence: "就像是在做梦一样。"
+answer: "It was like the dream."
+acceptAlso: "It was like the dream."
+srsWords: "it" "was" "like" "the" "dream"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "听到这个好消息我太高兴了。"
-answer: "I am so happy to hear this good news."
-acceptAlso: "I'm so glad to hear this good news." "I am very happy to hear the good news."
-srsWords: "i" "am" "so" "happy" "to" "hear" "this" "news" "glad" "very" "the"
+sentence: "他清楚地知道路。"
+answer: "He knew the way exactly."
+acceptAlso: "He knew the way exactly."
+srsWords: "he" "know" "the" "way" "exactly"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "今天真是个美好的一天！"
-answer: "Today is such a wonderful day!"
-acceptAlso: "What a wonderful day today is!" "Today is a really great day!"
-srsWords: "today" "is" "such" "a" "wonderful" "day" "what" "really" "great"
+sentence: "有两个人站在它旁边。"
+answer: "Two people were standing by it."
+acceptAlso: "Two people were standing by it."
+srsWords: "two" "people" "were" "stand" "by" "it"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我通过了考试，兴奋极了。"
-answer: "I passed the exam and I am thrilled."
-acceptAlso: "I passed the test and I am so excited." "I'm extremely excited because I passed the test."
-srsWords: "i" "pass" "the" "exam" "and" "am" "so" "excited" "extremely" "because"
+sentence: "他轻松地爬上去，打开了窗户。"
+answer: "He climbed up easily and opened the window."
+acceptAlso: "He climbed up easily and opened the window."
+srsWords: "he" "climb" "up" "easily" "and" "open" "the" "window"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "看到你我真高兴。"
-answer: "I am so glad to see you."
-acceptAlso: "I'm very happy to see you." "It's so good to see you."
-srsWords: "i" "am" "so" "glad" "to" "see" "you" "very" "happy" "it"
+sentence: "他有着长而瘦的身体和长而瘦的腿。"
+answer: "He had a long, thin body and long, thin legs."
+acceptAlso: "He had a long, thin body and long, thin legs."
+srsWords: "he" "had" "a" "long" "thin" "body" "and" "leg"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "祝贺你生日快乐！"
-answer: "Congratulations on your birthday!"
-acceptAlso: "Happy birthday to you!" "Wishing you a happy birthday!"
-srsWords: "congratulation" "on" "your" "birthday" "happy" "to" "you" "wish" "a"
+sentence: "他用那种方式挣了一些钱。"
+answer: "He earned some money that way."
+acceptAlso: "He earned some money that way."
+srsWords: "he" "earn" "some" "money" "that" "way"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这顿饭真美味，我很开心。"
-answer: "This meal is delicious and I am very happy."
-acceptAlso: "This food is so good, I'm really happy." "The meal is delicious, and I'm very pleased."
-srsWords: "this" "meal" "is" "delicious" "and" "i" "am" "very" "happy" "food" "so" "really" "the" "pleased"
+sentence: "他的电脑放在窗户附近的一张大桌子上。"
+answer: "His computer stood on a big desk near a window."
+acceptAlso: "His computer stood on a big desk near a window."
+srsWords: "his" "computer" "stand" "on" "a" "big" "desk" "near" "window"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们赢了比赛，大家都在笑。"
-answer: "We won the game and everyone is smiling."
-acceptAlso: "We won the match and everyone is laughing." "We won the game, and everybody is happy."
-srsWords: "we" "the" "game" "and" "everyone" "is" "laugh" "everybody" "happy"
+sentence: "然后，这件可怕的事便周而复始、永无休止地重复着。"
+answer: "Then the terrible thing is repeated for ever and ever."
+acceptAlso: "Then the terrible thing is repeated for ever and ever."
+srsWords: "then" "the" "terrible" "thing" "is" "repeat" "for" "ever" "and"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "收到你的礼物我太开心了。"
-answer: "I am so happy to receive your gift."
-acceptAlso: "I'm really glad to get your present." "I am very happy to get your gift."
-srsWords: "i" "am" "so" "happy" "to" "receive" "your" "gift" "really" "glad" "get" "very"
+sentence: "“快要来不及了，”她想。"
+answer: "It's almost too late,' she thought."
+acceptAlso: "It's almost too late,' she thought."
+srsWords: "it" "almost" "too" "late" "she" "thought"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "太棒了，我们去旅游吧！"
-answer: "That's fantastic, let's go traveling!"
-acceptAlso: "Awesome, let's go on a trip!" "That's great, let's go for a trip!"
-srsWords: "that" "fantastic" "let" "go" "travel" "on" "a" "great" "for"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "生活真美好呀！"
-answer: "Life is so wonderful!"
-acceptAlso: "Life is really great!" "What a wonderful life!"
-srsWords: "life" "is" "so" "wonderful" "really" "great" "what" "a"
+sentence: "接着，那张脸慢慢地开始发生变化。"
+answer: "Then, slowly, the face began to change."
+acceptAlso: "Then, slowly, the face began to change."
+srsWords: "then" "slowly" "the" "face" "begin" "to" "change"
 
 ---
 lessonTitle: "Lesson 2: Friendship"
@@ -93,76 +91,75 @@ description: "Translate A2 sentences about Friendship"
 icon: "❤️"
 color: "#F43F5E"
 ---
+[translation]
+text: "Translate this sentence into English"
+sentence: "没有电脑他们怎么工作？"
+answer: "How could they work without computers?"
+acceptAlso: "How could they work without computers?"
+srsWords: "how" "could" "they" "work" "without" "computer"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我和我的最好朋友经常一起玩。"
-answer: "My best friend and I often play together."
-acceptAlso: "I often hang out with my best friend." "My best friend and I always play together."
-srsWords: "my" "best" "friend" "and" "i" "often" "play" "together" "out" "with" "always"
+sentence: "没有人动，也没有人说话。"
+answer: "No one moved and no one spoke."
+acceptAlso: "No one moved and no one spoke."
+srsWords: "no" "one" "move" "and" "speak"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "谢谢你一直陪伴我。"
-answer: "Thank you for always being with me."
-acceptAlso: "Thanks for staying with me all the time." "Thank you for supporting me always."
-srsWords: "thank" "you" "for" "always" "being" "with" "me" "thanks" "stay" "all" "the"
+sentence: "你不是我最喜欢的人。"
+answer: "You are not my favorite person."
+acceptAlso: "You are not my favorite person."
+srsWords: "you" "are" "not" "my" "favorite" "person"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她是一个非常善良的朋友。"
-answer: "She is a very kind friend."
-acceptAlso: "She is a really nice friend." "She is a very good and kind friend."
-srsWords: "she" "is" "a" "very" "kind" "friend" "really" "nice" "and"
+sentence: "听不到汽车声或交通噪音。"
+answer: "There was no sound of cars or traffic."
+acceptAlso: "There was no sound of cars or traffic."
+srsWords: "there" "was" "no" "sound" "of" "car" "or" "traffic"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "周末我们一起去看电影吧。"
-answer: "Let's go see a movie together this weekend."
-acceptAlso: "Let's go to the movies together this weekend." "We can watch a movie together this weekend."
-srsWords: "let" "go" "see" "a" "movie" "together" "this" "weekend" "to" "the" "we" "can" "watch"
+sentence: "我迅速穿好衣服下了楼。"
+answer: "I dressed quickly and went downstairs."
+acceptAlso: "I dressed quickly and went downstairs."
+srsWords: "i" "dressed" "quickly" "and" "go" "downstairs"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "真正的朋友会在你难过时帮助你。"
-answer: "A true friend helps you when you are sad."
-acceptAlso: "Real friends help you when you feel down." "True friends will help you when you are sad."
-srsWords: "a" "true" "friend" "help" "you" "when" "are" "sad" "real" "feel" "down"
+sentence: "那地方很远，很难看清楚。"
+answer: "It was a long way away and it was difficult to see."
+acceptAlso: "It was a long way away and it was difficult to see."
+srsWords: "it" "was" "a" "long" "way" "away" "and" "difficult" "to" "see"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我和他认识五年了。"
-answer: "I have known him for five years."
-acceptAlso: "I have been friends with him for five years." "We have known each other for five years."
-srsWords: "i" "have" "him" "for" "five" "year" "been" "friend" "with" "we" "each" "other"
+sentence: "她就是住在村子另一头的老太太。"
+answer: "She's the old woman who lives on the other side of the village."
+acceptAlso: "She's the old woman who lives on the other side of the village."
+srsWords: "she" "the" "old" "woman" "who" "live" "on" "other" "side" "of" "village"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你会把你的秘密告诉朋友吗？"
-answer: "Do you tell your secrets to your friends?"
-acceptAlso: "Will you share your secrets with your friends?" "Do you tell your friends your secrets?"
-srsWords: "do" "you" "tell" "your" "secret" "to" "friend" "share" "with"
+sentence: "我胆子很小，而且非常爱我的父母。"
+answer: "I'm not very brave and I love my parents very much."
+acceptAlso: "I'm not very brave and I love my parents very much."
+srsWords: "i" "not" "very" "brave" "and" "love" "my" "parent" "much"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我昨天和朋友们一起吃晚饭了。"
-answer: "I had dinner with my friends yesterday."
-acceptAlso: "I ate dinner with my friends yesterday." "I went out for dinner with friends yesterday."
-srsWords: "i" "had" "dinner" "with" "my" "friend" "yesterday" "out" "for"
+sentence: "我看不见他的脸或身体。"
+answer: "I could not see his face or his body."
+acceptAlso: "I could not see his face or his body."
+srsWords: "i" "could" "not" "see" "his" "face" "or" "body"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "有朋友在身边真好。"
-answer: "It is great to have friends around."
-acceptAlso: "It's wonderful to have friends by your side." "It's so nice to have friends with you."
-srsWords: "it" "is" "great" "to" "have" "friend" "around" "wonderful" "by" "your" "side" "so" "nice" "with" "you"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "放学后我们经常聊天。"
-answer: "We often talk after school."
-acceptAlso: "We usually chat after school." "We often chat after school finishes."
-srsWords: "we" "often" "talk" "after" "school" "usually" "chat" "finish"
+sentence: "他头上戴着一顶巨大的黑帽子，像个大箱子。"
+answer: "He had an enormous black hat on his head, like a big box."
+acceptAlso: "He had an enormous black hat on his head, like a big box."
+srsWords: "he" "had" "an" "enormous" "black" "hat" "on" "his" "head" "like" "a" "big" "box"
 
 ---
 lessonTitle: "Lesson 3: Disagreements"
@@ -170,76 +167,75 @@ description: "Translate A2 sentences about Disagreements"
 icon: "❤️"
 color: "#F43F5E"
 ---
+[translation]
+text: "Translate this sentence into English"
+sentence: "一块灰色的布从帽子垂下来，挡在他的脸前面。"
+answer: "A grey cloth came down from the hat, in front of his face."
+acceptAlso: "A grey cloth came down from the hat, in front of his face."
+srsWords: "a" "grey" "cloth" "come" "down" "from" "the" "hat" "in" "front" "of" "his" "face"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我不认为这是个好主意。"
-answer: "I don't think this is a good idea."
-acceptAlso: "I don't believe this is a good idea." "I do not think this is a good idea."
-srsWords: "i" "think" "this" "is" "a" "idea" "believe" "do" "not"
+sentence: "在眼睛对应的布上有一个洞。"
+answer: "There was a hole in the cloth in front of his eyes."
+acceptAlso: "There was a hole in the cloth in front of his eyes."
+srsWords: "there" "was" "a" "hole" "in" "the" "cloth" "front" "of" "his" "eye"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我不同意你的看法。"
-answer: "I disagree with you."
-acceptAlso: "I don't agree with you." "I am afraid I disagree."
-srsWords: "i" "disagree" "with" "you" "agree" "am" "afraid"
+sentence: "他也穿着一件长黑大衣。"
+answer: "He wore a long black coat, too."
+acceptAlso: "He wore a long black coat, too."
+srsWords: "he" "wear" "a" "long" "black" "coat" "too"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "其实我觉得完全相反。"
-answer: "Actually, I think the opposite."
-acceptAlso: "Actually, I feel quite differently." "Actually, I think quite the opposite."
-srsWords: "actually" "i" "think" "the" "opposite" "feel" "quite" "differently"
+sentence: "我打开出租车的门，下了车。"
+answer: "I opened the door of the cab, and got out."
+acceptAlso: "I opened the door of the cab, and got out."
+srsWords: "i" "open" "the" "door" "of" "cab" "and" "got" "out"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我不确定是不是这样。"
-answer: "I am not sure about that."
-acceptAlso: "I'm not sure if that's true." "I don't think that's correct."
-srsWords: "i" "am" "not" "sure" "about" "that" "if" "true" "think"
+sentence: "一个留着黑发的高个女人正拉着他的手。"
+answer: "A tall woman with black hair was holding his hand."
+acceptAlso: "A tall woman with black hair was holding his hand."
+srsWords: "a" "tall" "woman" "with" "black" "hair" "was" "hold" "his" "hand"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我觉得这部电影一点也不好看。"
-answer: "I think this movie is not good at all."
-acceptAlso: "I don't think this movie is good at all." "I think this film is not good at all."
-srsWords: "i" "think" "this" "movie" "is" "not" "at" "all"
+sentence: "树木是绿的，太阳挂在天空。"
+answer: "The trees were green, the sun was in the sky."
+acceptAlso: "The trees were green, the sun was in the sky."
+srsWords: "the" "tree" "were" "green" "sun" "was" "in" "sky"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你说得对，但我还是有不同看法。"
-answer: "You are right, but I still see it differently."
-acceptAlso: "You're right, but I still have a different view." "You have a point, but I still disagree."
-srsWords: "you" "are" "right" "i" "still" "see" "it" "differently" "have" "a" "different" "point" "disagree"
+sentence: "突然，发生了一场小地震。"
+answer: "Suddenly, there was a small earthquake."
+acceptAlso: "Suddenly, there was a small earthquake."
+srsWords: "sudden" "there" "was" "a" "small" "earthquake"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们对这件事的看法不一样。"
-answer: "We have different views on this."
-acceptAlso: "We see this differently." "We don't see eye to eye on this."
-srsWords: "we" "have" "different" "on" "this" "see" "differently" "eye" "to"
+sentence: "她向父亲要了玉米、肉和其他食物。"
+answer: "She asked her father for corn, meat and other food."
+acceptAlso: "She asked her father for corn, meat and other food."
+srsWords: "she" "ask" "her" "father" "for" "corn" "meat" "and" "other" "food"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我不觉得这家餐厅很好吃。"
-answer: "I don't think this restaurant is very good."
-acceptAlso: "I don't feel this restaurant is that good." "I think this restaurant isn't very good."
-srsWords: "i" "think" "this" "restaurant" "is" "very" "feel" "that"
+sentence: "我父亲和巫师们今晚想杀了你！"
+answer: "My father and the medicine men want to kill you tonight!"
+acceptAlso: "My father and the medicine men want to kill you tonight!"
+srsWords: "my" "father" "and" "the" "medicine" "men" "want" "to" "kill" "you" "tonight"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "抱歉，我不能接受这个计划。"
-answer: "Sorry, I can't accept this plan."
-acceptAlso: "I'm sorry, I cannot accept this plan." "Sorry, I am unable to accept this plan."
-srsWords: "sorry" "i" "can" "accept" "this" "am" "to"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我不认为周末去会更好。"
-answer: "I don't think going on the weekend is better."
-acceptAlso: "I don't think it's better to go on the weekend." "I think going on the weekend isn't better."
-srsWords: "i" "think" "go" "on" "the" "weekend" "is" "better" "it" "to"
+sentence: "渔夫想这么做，于是跟着她去了。"
+answer: "The fisherman wanted to do this, and he followed her."
+acceptAlso: "The fisherman wanted to do this, and he followed her."
+srsWords: "the" "fisherman" "want" "to" "do" "this" "and" "he" "follow" "her"
 
 ---
 lessonTitle: "Lesson 4: Making Plans"
@@ -247,76 +243,75 @@ description: "Translate A2 sentences about Making Plans"
 icon: "❤️"
 color: "#F43F5E"
 ---
+[translation]
+text: "Translate this sentence into English"
+sentence: "他难过地看了看渔夫，然后消失了。"
+answer: "He looked at the fisherman sadly, and then disappeared."
+acceptAlso: "He looked at the fisherman sadly, and then disappeared."
+srsWords: "he" "look" "at" "the" "fisherman" "sadly" "and" "then" "disappear"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你明天下午有空吗？"
-answer: "Are you free tomorrow afternoon?"
-acceptAlso: "Do you have time tomorrow afternoon?" "Are you available tomorrow afternoon?"
-srsWords: "are" "you" "tomorrow" "afternoon" "do" "have"
+sentence: "这很安全，而且我们可以一遍又一遍地制作。"
+answer: "It's safe - and we can make it again and again."
+acceptAlso: "It's safe - and we can make it again and again."
+srsWords: "it" "safe" "and" "we" "can" "make" "again"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们周末一起去看电影吧。"
-answer: "Let's go see a movie together this weekend."
-acceptAlso: "Let's go to the cinema together this weekend." "We can watch a movie together this weekend."
-srsWords: "let" "go" "see" "a" "movie" "together" "this" "weekend" "to" "the" "cinema" "we" "can" "watch"
+sentence: "所以我用这些金属的。"
+answer: "So I use these metal ones."
+acceptAlso: "So I use these metal ones."
+srsWords: "so" "i" "use" "these" "metal" "on"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你今晚想吃点什么？"
-answer: "What would you like to eat tonight?"
-acceptAlso: "What do you want to eat tonight?" "What would you like for dinner tonight?"
-srsWords: "what" "would" "you" "like" "to" "eat" "tonight" "do" "want" "for" "dinner"
+sentence: "尽量享受这一天吧。"
+answer: "Try to enjoy the day."
+acceptAlso: "Try to enjoy the day."
+srsWords: "try" "to" "enjoy" "the" "day"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们明天几点见面？"
-answer: "What time shall we meet tomorrow?"
-acceptAlso: "What time are we meeting tomorrow?" "When should we meet tomorrow?"
-srsWords: "what" "shall" "we" "meet" "tomorrow" "are" "meeting" "when" "should"
+sentence: "我必须帮助其他人。"
+answer: "I must help other people."
+acceptAlso: "I must help other people."
+srsWords: "i" "must" "help" "other" "people"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们在咖啡馆门口碰头吧。"
-answer: "Let's meet outside the cafe."
-acceptAlso: "Let's meet at the entrance of the cafe." "We can meet outside the cafe."
-srsWords: "let" "meet" "outside" "the" "cafe" "at" "entrance" "of" "we" "can"
+sentence: "数周过去，玉米长得很高。"
+answer: "The weeks passed and the corn grew high."
+acceptAlso: "The weeks passed and the corn grew high."
+srsWords: "the" "week" "pass" "and" "corn" "grow" "high"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "听起来很棒！"
-answer: "That sounds great!"
-acceptAlso: "Sounds good!" "That sounds wonderful!"
-srsWords: "that" "sound" "great" "wonderful"
+sentence: "那是1844年秋天一个有风的傍晚，天刚黑不久。"
+answer: "It was just after dark one windy evening in the autumn of 1844."
+acceptAlso: "It was just after dark one windy evening in the autumn of 1844."
+srsWords: "it" "was" "just" "after" "dark" "one" "windy" "evening" "in" "the" "autumn" "of"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "抱歉，我今晚有别的事。"
-answer: "Sorry, I am busy tonight."
-acceptAlso: "Sorry, I have other plans tonight." "I'm sorry, I can't make it tonight."
-srsWords: "sorry" "i" "am" "busy" "tonight" "have" "other" "can" "make" "it"
+sentence: "他非常小心谨慎。"
+answer: "He was being very careful."
+acceptAlso: "He was being very careful."
+srsWords: "he" "was" "being" "very" "careful"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们可以把时间改到周五吗？"
-answer: "Can we change the time to Friday?"
-acceptAlso: "Could we move it to Friday?" "Can we reschedule for Friday?"
-srsWords: "can" "we" "change" "the" "to" "friday" "could" "move" "it" "for"
+sentence: "楼下厨房里的声音让他感到担心。"
+answer: "A sound in the kitchen below worried him."
+acceptAlso: "A sound in the kitchen below worried him."
+srsWords: "a" "sound" "in" "the" "kitchen" "below" "worried" "him"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "太好了，那就这么说定了！"
-answer: "Great, it's a deal!"
-acceptAlso: "Great, see you then!" "Awesome, it's settled!"
-srsWords: "great" "it" "a" "see" "you" "then"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "你想去哪家餐厅？"
-answer: "Which restaurant do you want to go to?"
-acceptAlso: "What restaurant would you like to go to?" "Where would you like to eat?"
-srsWords: "which" "restaurant" "do" "you" "want" "to" "go" "what" "would" "like" "where" "eat"
+sentence: "它和这条长街上的所有其他花园一模一样。"
+answer: "It was exactly like all the other gardens in the long street."
+acceptAlso: "It was exactly like all the other gardens in the long street."
+srsWords: "it" "was" "exactly" "like" "all" "the" "other" "garden" "in" "long" "street"
 
 ---
 lessonTitle: "Lesson 5: Giving Advice"
@@ -324,76 +319,75 @@ description: "Translate A2 sentences about Giving Advice"
 icon: "❤️"
 color: "#F43F5E"
 ---
+[translation]
+text: "Translate this sentence into English"
+sentence: "他的另外两个妻子也都曾很害羞。"
+answer: "Both his other wives had been shy, too."
+acceptAlso: "Both his other wives had been shy, too."
+srsWords: "both" "his" "other" "wife" "had" "been" "shy" "too"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你感冒了，应该多喝水。"
-answer: "You have a cold, and you should drink more water."
-acceptAlso: "You have a cold, you ought to drink more water." "You should drink more water because you have a cold."
-srsWords: "you" "have" "a" "cold" "and" "should" "drink" "more" "to" "because"
+sentence: "这个婴儿多漂亮啊！"
+answer: "How pretty the baby was!"
+acceptAlso: "How pretty the baby was!"
+srsWords: "how" "pretty" "the" "baby" "was"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "如果你觉得累，就早点睡觉吧。"
-answer: "If you feel tired, you should go to bed early."
-acceptAlso: "If you feel tired, go to sleep early." "You should go to bed early if you feel tired."
-srsWords: "if" "you" "feel" "tired" "should" "go" "to" "bed" "early" "sleep"
+sentence: "许多天过去了，他们才看到陆地。"
+answer: "Many days passed before they came in sight of land."
+acceptAlso: "Many days passed before they came in sight of land."
+srsWords: "many" "day" "pass" "before" "they" "come" "in" "sight" "of" "land"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我觉得你不应该买那件贵的外套。"
-answer: "I don't think you should buy that expensive coat."
-acceptAlso: "In my opinion, you shouldn't buy that expensive coat." "You had better not buy that expensive coat."
-srsWords: "i" "think" "you" "should" "buy" "that" "expensive" "coat" "in" "my" "opinion" "had" "better" "not"
+sentence: "船长本人曾是个强盗。"
+answer: "The captain himself had been a robber."
+acceptAlso: "The captain himself had been a robber."
+srsWords: "the" "captain" "himself" "had" "been" "a" "robber"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "考试前最好复习一下生词。"
-answer: "You had better review the new words before the exam."
-acceptAlso: "It is best to review the new words before the test." "You should review the new words before the exam."
-srsWords: "you" "had" "better" "the" "new" "word" "before" "exam" "it" "is" "best" "to" "should"
+sentence: "它们唱出最甜美的歌声，以表达它们是多么爱他。"
+answer: "They sang their sweetest songs to show how much they loved him."
+acceptAlso: "They sang their sweetest songs to show how much they loved him."
+srsWords: "they" "sing" "their" "sweet" "song" "to" "show" "how" "much" "love" "him"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "为什么不和你的朋友谈谈呢？"
-answer: "Why don't you talk to your friend?"
-acceptAlso: "Why not talk with your friend?" "How about talking to your friend?"
-srsWords: "why" "you" "talk" "to" "your" "friend" "not" "with" "how" "about"
+sentence: "他妈妈希望他在午夜前回家。"
+answer: "His mum expected him home before midnight."
+acceptAlso: "His mum expected him home before midnight."
+srsWords: "his" "mum" "expect" "him" "home" "before" "midnight"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "如果你胃痛，就别吃辣的食物了。"
-answer: "If you have a stomachache, don't eat spicy food."
-acceptAlso: "You shouldn't eat spicy food if your stomach hurts." "Don't eat spicy food if you have a stomachache."
-srsWords: "if" "you" "have" "a" "stomachache" "eat" "food" "your" "stomach" "hurt"
+sentence: "今天的汽车有车轮，这一辆没有。"
+answer: "Today's cars have wheels, this one does not."
+acceptAlso: "Today's cars have wheels, this one does not."
+srsWords: "today" "car" "have" "wheel" "this" "one" "does" "not"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "天气很冷，你出门时多穿点衣服吧。"
-answer: "The weather is cold, so you should wear more clothes when you go out."
-acceptAlso: "You had better wear warm clothes because it is cold outside." "It's cold, you should put on more clothes when going out."
-srsWords: "the" "weather" "is" "cold" "so" "you" "should" "wear" "more" "clothes" "when" "go" "out" "had" "better" "because" "it" "outside" "put" "on"
+sentence: "我昨晚没睡好，吃早饭迟到了。"
+answer: "I slept badly and was late for breakfast."
+acceptAlso: "I slept badly and was late for breakfast."
+srsWords: "i" "sleep" "badly" "and" "was" "late" "for" "breakfast"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你明天有空吗？我们去散散步吧。"
-answer: "Are you free tomorrow? How about going for a walk?"
-acceptAlso: "Do you have time tomorrow? Let's go for a walk." "Are you free tomorrow? Why don't we take a walk?"
-srsWords: "are" "you" "tomorrow" "how" "about" "go" "for" "a" "walk" "do" "have" "let" "why" "we" "take"
+sentence: "这朵小花来自一棵柠檬树。"
+answer: "The small flower was from a lemon tree."
+acceptAlso: "The small flower was from a lemon tree."
+srsWords: "the" "small" "flower" "was" "from" "a" "lemon" "tree"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "如果你想学好英语，每天都要练习。"
-answer: "If you want to learn English well, you should practice every day."
-acceptAlso: "You need to practice every day if you want to be good at English." "To learn English well, you must practice every day."
-srsWords: "if" "you" "want" "to" "learn" "well" "should" "practice" "every" "day" "need" "be" "at" "must"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我觉得你周末应该去公园放松一下。"
-answer: "I think you should go to the park to relax this weekend."
-acceptAlso: "You should go to the park to relax this weekend, I think." "I think you ought to relax at the park this weekend."
-srsWords: "i" "think" "you" "should" "go" "to" "the" "park" "relax" "this" "weekend" "at"
+sentence: "我在第二天晚上十一点到达。"
+answer: "I arrived at eleven the following night."
+acceptAlso: "I arrived at eleven the following night."
+srsWords: "i" "arrive" "at" "eleven" "the" "follow" "night"
 
 ---
 lessonTitle: "Lesson 6: Gratitude"
@@ -401,76 +395,75 @@ description: "Translate A2 sentences about Gratitude"
 icon: "❤️"
 color: "#F43F5E"
 ---
+[translation]
+text: "Translate this sentence into English"
+sentence: "人们用支票支付房租、买食品杂货和衣服。"
+answer: "People use checks for rent, groceries, clothes."
+acceptAlso: "People use checks for rent, groceries, clothes."
+srsWords: "people" "use" "check" "for" "rent" "grocery" "clothes"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "非常感谢你的帮助。"
-answer: "Thank you very much for your help."
-acceptAlso: "Many thanks for your help." "Thanks a lot for helping me."
-srsWords: "thank" "you" "very" "much" "for" "your" "help" "many" "thanks" "a" "lot" "me"
+sentence: "向银行借钱时情况也是如此。"
+answer: "The same holds true when you borrow from a bank."
+acceptAlso: "The same holds true when you borrow from a bank."
+srsWords: "the" "same" "hold" "true" "when" "you" "borrow" "from" "a" "bank"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "太感谢你了，你人真好。"
-answer: "Thank you so much, you are so kind."
-acceptAlso: "Thanks a million, you're very nice." "Thank you so much, that's very kind of you."
-srsWords: "thank" "you" "so" "much" "are" "kind" "thanks" "a" "million" "very" "nice" "that" "of"
+sentence: "不是每个人都能从银行借到钱。"
+answer: "Not everyone can borrow money from a bank."
+acceptAlso: "Not everyone can borrow money from a bank."
+srsWords: "not" "everyone" "can" "borrow" "money" "from" "a" "bank"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "谢谢你邀请我参加你的生日派对。"
-answer: "Thank you for inviting me to your birthday party."
-acceptAlso: "Thanks for inviting me to your birthday party." "Thank you for the invitation to your birthday party."
-srsWords: "thank" "you" "for" "invite" "me" "to" "your" "birthday" "party" "thanks" "the"
+sentence: "这被称为你的信用记录。"
+answer: "This is called your credit history."
+acceptAlso: "This is called your credit history."
+srsWords: "this" "is" "call" "your" "credit" "history"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "——谢谢你的午餐。——不用谢。"
-answer: "—Thank you for the lunch. —You're welcome."
-acceptAlso: "—Thanks for the lunch. —Not at all." "—Thank you for lunch. —You are welcome."
-srsWords: "thank" "you" "for" "the" "lunch" "welcome" "thanks" "not" "at" "all" "are"
+sentence: "它们吃水果、鸟蛋和昆虫。"
+answer: "They eat fruit, birds eggs and insects."
+acceptAlso: "They eat fruit, birds eggs and insects."
+srsWords: "they" "eat" "fruit" "bird" "egg" "and" "insect"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我不知道该怎么感谢你。"
-answer: "I don't know how to thank you."
-acceptAlso: "I can't thank you enough." "I really don't know how to thank you."
-srsWords: "i" "know" "how" "to" "thank" "you" "can" "enough" "really"
+sentence: "大陆是一大片陆地。"
+answer: "A continent is a large area of land."
+acceptAlso: "A continent is a large area of land."
+srsWords: "a" "continent" "is" "large" "area" "of" "land"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "谢谢你借给我这本有趣的书。"
-answer: "Thank you for lending me this interesting book."
-acceptAlso: "Thanks for lending me this interesting book." "Thank you for letting me borrow this interesting book."
-srsWords: "thank" "you" "for" "lend" "me" "this" "interesting" "thanks" "borrow"
+sentence: "解释说大陆是一大片陆地。"
+answer: "Explain that a continent is a large area of land."
+acceptAlso: "Explain that a continent is a large area of land."
+srsWords: "explain" "that" "a" "continent" "is" "large" "area" "of" "land"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "谢谢你昨天送我回家。"
-answer: "Thank you for driving me home yesterday."
-acceptAlso: "Thanks for taking me home yesterday." "Thank you for giving me a ride home yesterday."
-srsWords: "thank" "you" "for" "me" "home" "yesterday" "thanks" "take" "give" "a" "ride"
+sentence: "他们可能会收到一些有趣的回答。"
+answer: "They may receive some interesting responses."
+acceptAlso: "They may receive some interesting responses."
+srsWords: "they" "may" "receive" "some" "interesting" "response"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "非常感谢你们的精彩礼物。"
-answer: "Thank you very much for your wonderful gift."
-acceptAlso: "Many thanks for your wonderful present." "Thanks a lot for the great gift."
-srsWords: "thank" "you" "very" "much" "for" "your" "wonderful" "gift" "many" "thanks" "a" "lot" "the" "great"
+sentence: "我在派对上遇到的狗更糟糕。"
+answer: "The dogs I meet at parties are even worse."
+acceptAlso: "The dogs I meet at parties are even worse."
+srsWords: "the" "dog" "i" "meet" "at" "party" "are" "even" "bad"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "——谢谢你的好建议。——别客气。"
-answer: "—Thank you for your good advice. —You're welcome."
-acceptAlso: "—Thanks for your great advice. —Don't mention it." "—Thank you for the good advice. —No problem."
-srsWords: "thank" "you" "for" "your" "advice" "welcome" "thanks" "great" "it" "the" "no" "problem"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "今天有你陪我，真的谢谢了。"
-answer: "Thank you so much for being with me today."
-acceptAlso: "Thanks for keeping me company today." "Thank you for spending time with me today."
-srsWords: "thank" "you" "so" "much" "for" "being" "with" "me" "today" "thanks" "keep" "company" "spend"
+sentence: "尽管工作很辛苦，但非常好玩。"
+answer: "Even though it was hard work, it was great fun."
+acceptAlso: "Even though it was hard work, it was great fun."
+srsWords: "even" "though" "it" "was" "hard" "work" "great" "fun"
 
 ---
 lessonTitle: "Lesson 7: Apologies"
@@ -478,76 +471,75 @@ description: "Translate A2 sentences about Apologies"
 icon: "❤️"
 color: "#F43F5E"
 ---
+[translation]
+text: "Translate this sentence into English"
+sentence: "事实证明这是一件美好的事。"
+answer: "This turned out to be a beauty."
+acceptAlso: "This turned out to be a beauty."
+srsWords: "this" "turn" "out" "to" "be" "a" "beauty"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "对不起，我迟到了。"
-answer: "I am sorry that I am late."
-acceptAlso: "I'm sorry I'm late." "I apologize for being late."
-srsWords: "i" "am" "sorry" "that" "late" "apologize" "for" "being"
+sentence: "接着一个朋友想要另一个。"
+answer: "Then a friend wanted another."
+acceptAlso: "Then a friend wanted another."
+srsWords: "then" "a" "friend" "want" "another"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "打扰一下，能借过一下吗？"
-answer: "Excuse me, can I pass through?"
-acceptAlso: "Excuse me, could you let me pass?" "Pardon me, may I get by?"
-srsWords: "me" "can" "i" "pass" "through" "could" "you" "let" "may" "get" "by"
+sentence: "他试图继续工作，但没成功，于是下楼去了。"
+answer: "He tried to go on with his work, failed, and went downstairs."
+acceptAlso: "He tried to go on with his work, failed, and went downstairs."
+srsWords: "he" "try" "to" "go" "on" "with" "his" "work" "fail" "and" "downstairs"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "很抱歉我弄坏了你的笔。"
-answer: "I am sorry I broke your pen."
-acceptAlso: "I'm sorry for breaking your pen." "I apologize for breaking your pen."
-srsWords: "i" "am" "sorry" "your" "pen" "for" "break" "apologize"
+sentence: "她说：“我努力学习才获得了学位。”"
+answer: "She says,'I worked hard to earn my degree."
+acceptAlso: "She says,'I worked hard to earn my degree."
+srsWords: "she" "say" "i" "work" "hard" "to" "earn" "my" "degree"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "没关系，别担心。"
-answer: "That's okay, don't worry."
-acceptAlso: "It's fine, don't worry about it." "No problem at all."
-srsWords: "that" "worry" "it" "about" "no" "problem" "at" "all"
+sentence: "所以要确保你的言辞与肢体语言一致。"
+answer: "So make sure your words agree with your body language."
+acceptAlso: "So make sure your words agree with your body language."
+srsWords: "so" "make" "sure" "your" "word" "agree" "with" "body" "language"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我不是故意那样做的。"
-answer: "I didn't mean to do that."
-acceptAlso: "I didn't mean it." "It wasn't on purpose."
-srsWords: "i" "mean" "to" "do" "that" "it" "on" "purpose"
+sentence: "梅西耶决定亲自去告诉他们。"
+answer: "Mercier decided to go and tell them himself."
+acceptAlso: "Mercier decided to go and tell them himself."
+srsWords: "merci" "decide" "to" "go" "and" "tell" "them" "himself"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "真的很抱歉我忘了你的生日。"
-answer: "I am really sorry I forgot your birthday."
-acceptAlso: "I'm so sorry for forgetting your birthday." "I truly apologize for missing your birthday."
-srsWords: "i" "am" "really" "sorry" "your" "birthday" "so" "for" "truly" "apologize" "missing"
+sentence: "我们宁愿发短信也不愿说话。"
+answer: "We'd rather text than talk."
+acceptAlso: "We'd rather text than talk."
+srsWords: "we" "rather" "text" "than" "talk"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "请接受我的歉意。"
-answer: "Please accept my apology."
-acceptAlso: "I hope you can accept my apologies." "Please accept my apologies."
-srsWords: "accept" "my" "i" "you" "can"
+sentence: "她告诉我，她几乎不注意她奶奶在说些什么。"
+answer: "She tells me that she hardly pays attention to what her grandmother is saying."
+acceptAlso: "She tells me that she hardly pays attention to what her grandmother is saying."
+srsWords: "she" "tell" "me" "that" "hardly" "pay" "attention" "to" "what" "her" "grandmother" "is" "say"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "没事的，不用放在心上。"
-answer: "It's okay, don't take it to heart."
-acceptAlso: "That's alright, forget about it." "No worries at all."
-srsWords: "it" "take" "to" "heart" "that" "alright" "forget" "about" "no" "worry" "at" "all"
+sentence: "孩子们抱怨父母在早晚餐时发短信。"
+answer: "Children complain about parents texting at breakfast and dinner."
+acceptAlso: "Children complain about parents texting at breakfast and dinner."
+srsWords: "child" "complain" "about" "parent" "text" "at" "breakfast" "and" "dinner"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "对不起，我刚才没听清。"
-answer: "Sorry, I didn't hear you clearly."
-acceptAlso: "I'm sorry, I didn't catch that." "Pardon, I didn't hear you."
-srsWords: "sorry" "i" "hear" "you" "clearly" "catch" "that"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "非常抱歉给您带来不便。"
-answer: "I am very sorry for the inconvenience."
-acceptAlso: "I apologize for the inconvenience caused." "I'm so sorry for any inconvenience."
-srsWords: "i" "am" "very" "sorry" "for" "the" "apologize" "cause" "so" "any"
+sentence: "它一直是一家小企业。"
+answer: "It has remained a small business."
+acceptAlso: "It has remained a small business."
+srsWords: "it" "has" "remain" "a" "small" "business"
 
 ---
 lessonTitle: "Lesson 8: Future Goals"
@@ -555,76 +547,75 @@ description: "Translate A2 sentences about Future Goals"
 icon: "❤️"
 color: "#F43F5E"
 ---
+[translation]
+text: "Translate this sentence into English"
+sentence: "这让他放弃了医学研究。"
+answer: "That made him give up medical studies."
+acceptAlso: "That made him give up medical studies."
+srsWords: "that" "make" "him" "give" "up" "medical" "study"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "明年我打算去学一门新语言。"
-answer: "I am going to learn a new language next year."
-acceptAlso: "I plan to learn a new language next year." "I want to learn a new language next year."
-srsWords: "i" "am" "go" "to" "learn" "a" "new" "language" "year" "want"
+sentence: "我相信每个人在生活中都有机会。"
+answer: "I believe everyone's given a chance in life."
+acceptAlso: "I believe everyone's given a chance in life."
+srsWords: "i" "believe" "everyone" "given" "a" "chance" "in" "life"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我的梦想是成为一名医生。"
-answer: "My dream is to become a doctor."
-acceptAlso: "My goal is to be a doctor." "I want to be a doctor in the future."
-srsWords: "my" "dream" "is" "to" "become" "a" "doctor" "goal" "be" "i" "want" "in" "the" "future"
+sentence: "这为他们两个人的生活开了一个好头。"
+answer: "It's given both of them a great start in life."
+acceptAlso: "It's given both of them a great start in life."
+srsWords: "it" "given" "both" "of" "them" "a" "great" "start" "in" "life"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "大学毕业后我想找一份好工作。"
-answer: "I want to find a good job after graduating from university."
-acceptAlso: "I would like to get a good job after college." "I plan to find a good job after graduation."
-srsWords: "i" "want" "to" "find" "a" "job" "after" "graduate" "from" "university" "would" "like" "get" "college"
+sentence: "他过去早上甚至比我还起得早。"
+answer: "He used to be up even before me in the morning."
+acceptAlso: "He used to be up even before me in the morning."
+srsWords: "he" "used" "to" "be" "up" "even" "before" "me" "in" "the" "morning"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "下个月我将开始健身。"
-answer: "I will start working out next month."
-acceptAlso: "I am going to start exercising next month." "I plan to go to the gym starting next month."
-srsWords: "i" "start" "work" "out" "month" "am" "go" "to" "exercise" "the"
+sentence: "最后，他一直在帮助别人。"
+answer: "In the end, he was helping other people out."
+acceptAlso: "In the end, he was helping other people out."
+srsWords: "in" "the" "end" "he" "was" "help" "other" "people" "out"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "希望有一天我能去世界各地旅游。"
-answer: "I hope I can travel around the world one day."
-acceptAlso: "I want to travel all over the world in the future." "Hopefully, I will travel the world someday."
-srsWords: "i" "can" "travel" "around" "the" "world" "one" "day" "want" "to" "all" "over" "in" "future" "someday"
+sentence: "爱之或恨之，我们都得去购物。"
+answer: "Love it or hate it, we all go shopping."
+acceptAlso: "Love it or hate it, we all go shopping."
+srsWords: "love" "it" "or" "hate" "we" "all" "go" "shopping"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "今年我希望能存更多的钱。"
-answer: "I hope to save more money this year."
-acceptAlso: "I want to save more money this year." "My goal is to save more money this year."
-srsWords: "i" "to" "save" "more" "money" "this" "year" "want" "my" "goal" "is"
+sentence: "它们盛开开来，美极了。"
+answer: "They open out and are fantastic."
+acceptAlso: "They open out and are fantastic."
+srsWords: "they" "open" "out" "and" "are" "fantastic"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "下周我打算读两本新书。"
-answer: "I am going to read two new books next week."
-acceptAlso: "I plan to read two new books next week." "I want to read two new books next week."
-srsWords: "i" "am" "go" "to" "read" "two" "new" "week" "want"
+sentence: "他对自己很满意。"
+answer: "He is pleased with himself."
+acceptAlso: "He is pleased with himself."
+srsWords: "he" "is" "pleased" "with" "himself"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我想买一辆属于自己的车。"
-answer: "I want to buy a car of my own."
-acceptAlso: "I would like to buy my own car." "I plan to buy a car soon."
-srsWords: "i" "want" "to" "buy" "a" "car" "of" "my" "would" "like" "soon"
+sentence: "他太不开心、太迷茫了。"
+answer: "He is too unhappy and confused."
+acceptAlso: "He is too unhappy and confused."
+srsWords: "he" "is" "too" "unhappy" "and" "confused"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "未来我想开一家自己的小店。"
-answer: "I want to open my own small shop in the future."
-acceptAlso: "I would like to run my own store someday." "My goal is to start my own business one day."
-srsWords: "i" "want" "to" "open" "my" "small" "in" "the" "future" "would" "like" "run" "someday" "goal" "is" "start" "business" "one" "day"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "明天我要早起开始新生活。"
-answer: "I am going to wake up early tomorrow to start a new life."
-acceptAlso: "I will get up early tomorrow for a fresh start." "I plan to wake up early tomorrow and start fresh."
-srsWords: "i" "am" "go" "to" "up" "early" "tomorrow" "start" "a" "new" "life" "get" "for" "fresh" "and"
+sentence: "最重要的是，这个角色本身实在太宏大了。"
+answer: "Above all, the role itself is too enormous."
+acceptAlso: "Above all, the role itself is too enormous."
+srsWords: "above" "all" "the" "role" "itself" "is" "too" "enormous"
 
 ---
 lessonTitle: "Lesson 9: Childhood Memories"
@@ -632,76 +623,75 @@ description: "Translate A2 sentences about Childhood Memories"
 icon: "❤️"
 color: "#F43F5E"
 ---
+[translation]
+text: "Translate this sentence into English"
+sentence: "知道如何摔倒必须是滑冰者的基本技能之一。"
+answer: "Knowing how to fall must be learnt among the skater's first skills."
+acceptAlso: "Knowing how to fall must be learnt among the skater's first skills."
+srsWords: "know" "how" "to" "fall" "must" "be" "learn" "among" "the" "skater" "first" "skill"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我小时候经常和朋友一起踢足球。"
-answer: "I often played football with my friends when I was a child."
-acceptAlso: "When I was a kid, I frequently played soccer with my friends." "I used to play soccer with my friends when I was young."
-srsWords: "i" "often" "play" "football" "with" "my" "friend" "when" "was" "a" "child" "soccer" "used" "to" "young"
+sentence: "当然，然后你就呆住了。"
+answer: "Of course, then you freeze."
+acceptAlso: "Of course, then you freeze."
+srsWords: "of" "course" "then" "you" "freeze"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你小时候最喜欢的玩具是什么？"
-answer: "What was your favorite toy when you were little?"
-acceptAlso: "What was your favourite toy when you were a child?" "What did you like to play with when you were young?"
-srsWords: "what" "was" "your" "favorite" "toy" "when" "you" "were" "favourite" "a" "child" "did" "like" "to" "play" "with" "young"
+sentence: "我结果骑车多走了20公里。"
+answer: "I ended up cycling 20 kilometres too far."
+acceptAlso: "I ended up cycling 20 kilometres too far."
+srsWords: "i" "end" "up" "cycling" "kilometre" "too" "far"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我记得我奶奶总是给我讲有趣的故事。"
-answer: "I remember my grandma always told me interesting stories."
-acceptAlso: "I remember my grandmother always told me funny stories." "I recall that my grandma always told me interesting stories."
-srsWords: "i" "remember" "my" "grandma" "always" "me" "interesting" "story" "grandmother" "funny" "that"
+sentence: "而这只是其中一个来源。"
+answer: "And that's just one source."
+acceptAlso: "And that's just one source."
+srsWords: "and" "that" "just" "one" "source"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "放学后我们经常在公园里跑来跑去。"
-answer: "We often ran around in the park after school."
-acceptAlso: "After school, we usually ran around the park." "We used to run around in the park after school."
-srsWords: "we" "often" "around" "in" "the" "park" "after" "school" "usually" "used" "to" "run"
+sentence: "我很遗憾地说，我自己也是个粉丝！"
+answer: "I regret to say I'm a fan myself!"
+acceptAlso: "I regret to say I'm a fan myself!"
+srsWords: "i" "regret" "to" "say" "a" "fan" "myself"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我小时候不喜欢吃蔬菜。"
-answer: "I didn't like eating vegetables when I was a child."
-acceptAlso: "When I was little, I hated eating vegetables." "I didn't like to eat vegetables when I was young."
-srsWords: "i" "like" "eat" "vegetable" "when" "was" "a" "child" "hat" "to" "young"
+sentence: "比方说，你觉得你可能会喜欢写爱情短篇小说。"
+answer: "Let us say you feel that you might like to write short love stories."
+acceptAlso: "Let us say you feel that you might like to write short love stories."
+srsWords: "let" "us" "say" "you" "feel" "that" "might" "like" "to" "write" "short" "love" "story"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你还记得你的第一位老师吗？"
-answer: "Do you still remember your first teacher?"
-acceptAlso: "Do you remember your very first teacher?" "Can you remember your first teacher?"
-srsWords: "do" "you" "still" "remember" "your" "first" "teacher" "very" "can"
+sentence: "我要做的就是提出一个论点。"
+answer: "All I have to do is put forward an argument."
+acceptAlso: "All I have to do is put forward an argument."
+srsWords: "all" "i" "have" "to" "do" "is" "put" "forward" "an" "argument"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "那时候我们全家经常去海滩度假。"
-answer: "At that time, my family often went to the beach for holidays."
-acceptAlso: "Back then, my family usually went to the beach for vacation." "In those days, our family frequently visited the beach."
-srsWords: "at" "that" "my" "family" "often" "to" "the" "beach" "for" "holiday" "then" "usually" "vacation" "in" "those" "day" "our" "visit"
+sentence: "我去国外旅行时也是一样。"
+answer: "It's the same when I travel abroad."
+acceptAlso: "It's the same when I travel abroad."
+srsWords: "it" "the" "same" "when" "i" "travel" "abroad"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我十岁的时候学会了骑自行车。"
-answer: "I learned to ride a bike when I was ten years old."
-acceptAlso: "I learned how to ride a bicycle at the age of ten." "I knew how to ride a bicycle when I was ten."
-srsWords: "i" "learn" "to" "ride" "a" "bike" "when" "was" "ten" "year" "old" "how" "bicycle" "at" "the" "age" "of"
+sentence: "我过去常常在私人日记里记叙我的冒险经历。"
+answer: "I used to describe my adventures in my private diary."
+acceptAlso: "I used to describe my adventures in my private diary."
+srsWords: "i" "used" "to" "describe" "my" "adventure" "in" "private" "diary"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我经常在夏天吃冰淇淋。"
-answer: "I often ate ice cream in the summer."
-acceptAlso: "I used to eat ice cream a lot in the summer." "I frequently ate ice cream during summers."
-srsWords: "i" "often" "ice" "cream" "in" "the" "summer" "used" "to" "eat" "a" "lot" "during"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我的童年非常快乐。"
-answer: "My childhood was very happy."
-acceptAlso: "I had a very happy childhood." "My childhood days were really happy."
-srsWords: "my" "childhood" "was" "very" "happy" "i" "had" "a" "day" "were" "really"
+sentence: "这是一个未知的小角落，空旷而偏远，我喜欢那种空间感。"
+answer: "It's an unknown corner, empty and remote, and I like the feeling of space."
+acceptAlso: "It's an unknown corner, empty and remote, and I like the feeling of space."
+srsWords: "it" "an" "unknown" "corner" "empty" "and" "remote" "i" "like" "the" "feeling" "of" "space"
 
 ---
 lessonTitle: "Lesson 10: Celebrations"
@@ -709,73 +699,73 @@ description: "Translate A2 sentences about Celebrations"
 icon: "❤️"
 color: "#F43F5E"
 ---
+[translation]
+text: "Translate this sentence into English"
+sentence: "我确信她正指望你让这场比赛取得成功。"
+answer: "I'm sure she's depending on you to make the game a success."
+acceptAlso: "I'm sure she's depending on you to make the game a success."
+srsWords: "i" "sure" "she" "depend" "on" "you" "to" "make" "the" "game" "a" "success"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "祝你生日快乐！"
-answer: "Happy birthday to you!"
-acceptAlso: "Wish you a happy birthday!" "Happy birthday!"
-srsWords: "happy" "birthday" "to" "you" "wish" "a"
+sentence: "她黑色的眼睛注视着手里每个移动的生物。"
+answer: "Her dark eyes concentrated on each moving creature in her hands."
+acceptAlso: "Her dark eyes concentrated on each moving creature in her hands."
+srsWords: "her" "dark" "eye" "concentrate" "on" "each" "move" "creature" "in" "hand"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们今晚要办一个盛大的派对。"
-answer: "We are going to have a big party tonight."
-acceptAlso: "We will throw a big party this evening." "We are hosting a big party tonight."
-srsWords: "we" "are" "go" "to" "have" "a" "big" "party" "tonight" "throw" "this" "evening" "host"
+sentence: "事实上，我们印象深刻。"
+answer: "In fact, we were impressed."
+acceptAlso: "In fact, we were impressed."
+srsWords: "in" "fact" "we" "were" "impress"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "桌子上有一个巨大的生日蛋糕。"
-answer: "There is a huge birthday cake on the table."
-acceptAlso: "On the table, there is a big birthday cake." "There is a large birthday cake on the table."
-srsWords: "there" "is" "a" "birthday" "cake" "on" "the" "table" "big" "large"
+sentence: "而且这里应有尽有，包括成年人在内。"
+answer: "And there's something for everyone, adults included."
+acceptAlso: "And there's something for everyone, adults included."
+srsWords: "and" "there" "something" "for" "everyone" "adult" "include"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "谢谢你送的精美礼物。"
-answer: "Thank you for the wonderful gift."
-acceptAlso: "Thanks for the lovely present." "Thank you for your nice present."
-srsWords: "thank" "you" "for" "the" "wonderful" "gift" "thanks" "lovely" "your" "nice"
+sentence: "当我每晚只睡六小时的时候，我感觉有点无精打采。"
+answer: "When I'm running at six hours' sleep a night, I feel a bit wet."
+acceptAlso: "When I'm running at six hours' sleep a night, I feel a bit wet."
+srsWords: "when" "i" "running" "at" "six" "hour" "sleep" "a" "night" "feel" "bit" "wet"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "新年快到了，我们一起庆祝吧。"
-answer: "The New Year is coming, let's celebrate together."
-acceptAlso: "New Year is approaching, let's celebrate it together." "The New Year is coming soon, let's celebrate."
-srsWords: "the" "new" "year" "is" "come" "let" "celebrate" "together" "it" "soon"
+sentence: "我真的受不了态度消极的人。"
+answer: "I really can't stand people with negative attitudes."
+acceptAlso: "I really can't stand people with negative attitudes."
+srsWords: "i" "really" "can" "stand" "people" "with" "negative" "attitude"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "大家都穿着漂亮的衣服来参加婚礼。"
-answer: "Everyone wore nice clothes to attend the wedding."
-acceptAlso: "All people wore beautiful clothes to come to the wedding." "Everyone dressed up nicely for the wedding."
-srsWords: "everyone" "nice" "clothes" "to" "the" "wedding" "all" "people" "beautiful" "come" "dressed" "up" "for"
+sentence: "这远比顾影自怜要好得多。"
+answer: "It's far better than feeling sorry for yourself."
+acceptAlso: "It's far better than feeling sorry for yourself."
+srsWords: "it" "far" "better" "than" "feeling" "sorry" "for" "yourself"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "中秋节我们会和家人一起吃月饼。"
-answer: "We eat mooncakes with our family during the Mid-Autumn Festival."
-acceptAlso: "During the Mid-Autumn Festival, we eat mooncakes with family." "We will eat mooncakes with family at the Mid-Autumn Festival."
-srsWords: "we" "eat" "with" "our" "family" "during" "the" "autumn" "festival" "at"
+sentence: "自信的人——他们的秘诀是什么？"
+answer: "Confident people what's their secret?"
+acceptAlso: "Confident people what's their secret?"
+srsWords: "confident" "people" "what" "their" "secret"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们在花园里拍了许多照片。"
-answer: "They took many photos in the garden."
-acceptAlso: "They took a lot of pictures in the garden." "They took many pictures in the garden."
-srsWords: "they" "many" "photo" "in" "the" "garden" "a" "lot" "of"
+sentence: "要想自信，你必须相信自己。"
+answer: "To be confident you've got to believe in yourself."
+acceptAlso: "To be confident you've got to believe in yourself."
+srsWords: "to" "be" "confident" "you" "got" "believe" "in" "yourself"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "春节期间街上挂满了红灯笼。"
-answer: "The streets are full of red lanterns during the Spring Festival."
-acceptAlso: "Red lanterns hang everywhere on the street during Chinese New Year." "The streets were decorated with red lanterns during the Spring Festival."
-srsWords: "the" "street" "are" "full" "of" "red" "during" "spring" "festival" "everywhere" "on" "chinese" "new" "year" "were" "with"
+sentence: "这些展会持续一天到五天不等。"
+answer: "The shows are from one day to five days long."
+acceptAlso: "The shows are from one day to five days long."
+srsWords: "the" "show" "are" "from" "one" "day" "to" "five" "long"
 
-[translation]
-text: "Translate this sentence into English"
-sentence: "祝愿你们新婚快乐、幸福美满。"
-answer: "I wish you a happy marriage and a wonderful life together."
-acceptAlso: "Wishing you a happy wedding and much happiness." "May you both have a happy marriage and a great life."
-srsWords: "i" "wish" "you" "a" "happy" "and" "wonderful" "life" "together" "wedding" "much" "happiness" "may" "both" "have" "great"
