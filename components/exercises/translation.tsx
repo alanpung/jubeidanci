@@ -462,11 +462,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                         id={`word-input-${idx}`}
                         ref={(el: HTMLInputElement | null) => {
                           inputRefs.current[idx] = el;
-                          if (idx === 0 && el && status === "answering" && document.activeElement !== el) {
-                            requestAnimationFrame(() => {
-                              el.focus({ preventScroll: true });
-                            });
-                          }
                         }}
                         type="text"
                         autoFocus={idx === 0}
