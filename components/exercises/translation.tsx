@@ -494,18 +494,24 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       />
                     ) : (
                       <div className="flex flex-col items-center">
-                        <span
-                          className={`font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight pb-0.5 px-0.5 whitespace-nowrap border-b-2 ${
-                            isWordMatched
-                              ? "text-[#007a55] border-[#007a55]"
-                              : "text-[#007a55] border-red-500"
-                          }`}
-                        >
-                          {targetWord}
-                        </span>
-                        {!isWordMatched && userTyped && (
-                          <span className="text-[10px] sm:text-xs font-mono text-red-500 line-through mt-0.5 font-medium">
-                            {userTyped}
+                        {!isWordMatched && userTyped ? (
+                          <div className="flex flex-col items-center">
+                            <span className="text-xs sm:text-sm font-serif text-red-600 font-bold mb-0.5 tracking-tight">
+                              {userTyped}
+                            </span>
+                            <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] border-b-2 border-red-500 pb-0.5 px-0.5 whitespace-nowrap">
+                              {targetWord}
+                            </span>
+                          </div>
+                        ) : (
+                          <span
+                            className={`font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight pb-0.5 px-0.5 whitespace-nowrap border-b-2 ${
+                              isWordMatched
+                                ? "text-[#007a55] border-[#007a55]"
+                                : "text-[#007a55] border-red-500"
+                            }`}
+                          >
+                            {targetWord}
                           </span>
                         )}
                       </div>
