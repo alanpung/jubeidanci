@@ -9,6 +9,7 @@ import { ExerciseShell } from "./exercise-shell";
 import { HoverableText } from "@/components/word/hoverable-text";
 import { ReplayButton } from "@/components/replay-button";
 import { detectTextLanguage } from "@/lib/language-detector";
+import { Volume2 } from "lucide-react";
 
 interface Props {
   exercise: TranslationExercise;
@@ -35,6 +36,17 @@ interface SentenceAnalysisData {
   chunks: SyntacticChunk[];
 }
 
+const STRUCTURE_BADGE_COLORS: Record<string, string> = {
+  "主语": "bg-amber-100 text-amber-900 border border-amber-300",
+  "谓语": "bg-rose-100 text-rose-900 border border-rose-300",
+  "宾语": "bg-blue-100 text-blue-900 border border-blue-300",
+  "状语": "bg-teal-100 text-teal-900 border border-teal-300",
+  "定语": "bg-purple-100 text-purple-900 border border-purple-300",
+  "补语": "bg-indigo-100 text-indigo-900 border border-indigo-300",
+  "连词": "bg-slate-100 text-slate-800 border border-slate-300",
+  "句子": "bg-gray-100 text-gray-800 border border-gray-300",
+};
+
 export function Translation({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
   const [analysis, setAnalysis] = useState<SentenceAnalysisData | null>(null);
 
@@ -58,6 +70,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               word: parts[pIdx],
               ipa: pIdx === 0 ? (w.ipa || "") : "",
               meaning: pIdx === 0 ? (w.meaning || "") : "",
+              pos: w.pos,
             });
           }
         } else if (parts.length === 1) {
@@ -65,6 +78,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
             word: parts[0],
             ipa: w.ipa || "",
             meaning: w.meaning || "",
+            pos: w.pos,
           });
         }
       }
@@ -75,6 +89,32 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       return { word: token, ipa: "", meaning: "" };
     });
   }, [analysis, rawAnswerTokens]);
+
+  const displayChunks = useMemo(() => {
+    if (!analysis || !Array.isArray(analysis.chunks) || analysis.chunks.length === 0) {
+      return [
+        {
+          chunkLabel: "句子",
+          words: rawAnswerTokens.map((w, idx) => analyzedWordList[idx] || { word: w, ipa: "", meaning: "" }),
+        },
+      ];
+    }
+    return analysis.chunks.map((chunk) => ({
+      chunkLabel: chunk.chunkLabel,
+      words: (chunk.words || []).flatMap((w) => {
+        const parts = String(w.word || "").trim().split(/\s+/).filter(Boolean);
+        if (parts.length > 1) {
+          return parts.map((sub, pIdx) => ({
+            word: sub,
+            ipa: pIdx === 0 ? (w.ipa || "") : "",
+            meaning: pIdx === 0 ? (w.meaning || "") : "",
+            pos: w.pos,
+          }));
+        }
+        return [w];
+      }),
+    }));
+  }, [analysis, rawAnswerTokens, analyzedWordList]);
 
   const [inputWords, setInputWords] = useState<string[]>(() => rawAnswerTokens.map(() => ""));
   const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
@@ -223,20 +263,20 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
         </div>
       </div>
 
-      {/* Unified Answer Card with IPA, Inputs/Words, and Chinese Meaning */}
-      <div className="my-6 p-4 sm:p-6 bg-white rounded-3xl border border-gray-200 shadow-sm transition-all w-full max-w-4xl mx-auto">
-        <div className="flex flex-wrap items-end justify-center gap-3 sm:gap-4 py-3 px-1">
-          {rawAnswerTokens.map((targetWord: string, idx: number) => {
-            const info = analyzedWordList[idx] || { word: targetWord, ipa: "", meaning: "" };
-            return (
-              <div key={idx} className="flex flex-col items-center text-center">
-                {/* IPA above */}
-                <span className="text-[11px] sm:text-xs font-mono text-gray-400 min-h-[1.25rem] select-none mb-1">
-                  {info.ipa || ""}
-                </span>
+      {status === "answering" ? (
+        /* Answering Phase: Clean input slots with IPA above and Chinese meaning below */
+        <div className="my-6 p-4 sm:p-6 bg-white rounded-3xl border border-gray-200 shadow-sm transition-all w-full max-w-4xl mx-auto">
+          <div className="flex flex-wrap items-end justify-center gap-3 sm:gap-4 py-3 px-1">
+            {rawAnswerTokens.map((targetWord: string, idx: number) => {
+              const info = analyzedWordList[idx] || { word: targetWord, ipa: "", meaning: "" };
+              return (
+                <div key={idx} className="flex flex-col items-center text-center">
+                  {/* IPA above */}
+                  <span className="text-[11px] sm:text-xs font-mono text-gray-400 min-h-[1.25rem] select-none mb-1">
+                    {info.ipa || ""}
+                  </span>
 
-                {/* Word Input or Revealed Word */}
-                {status === "answering" ? (
+                  {/* Word Input */}
                   <input
                     ref={(el: HTMLInputElement | null) => {
                       inputRefs.current[idx] = el;
@@ -265,21 +305,77 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                     style={{ width: `${Math.max(4, targetWord.length + 1)}ch` }}
                     className="text-center text-xl sm:text-2xl font-black text-gray-900 tracking-tight border-b-2 border-lingo-blue focus:border-lingo-blue-dark bg-transparent focus:outline-none py-0.5 px-1 min-w-[3.2rem]"
                   />
-                ) : (
-                  <span className="text-xl sm:text-2xl font-black text-gray-900 tracking-tight px-1 py-0.5 border-b-2 border-transparent">
-                    {targetWord}
-                  </span>
-                )}
 
-                {/* Chinese meaning below */}
-                <span className="text-xs sm:text-sm font-medium text-gray-600 mt-1 min-h-[1.25rem] whitespace-nowrap">
-                  {info.meaning || ""}
-                </span>
-              </div>
-            );
-          })}
+                  {/* Chinese meaning below */}
+                  <span className="text-xs sm:text-sm font-medium text-gray-600 mt-1 min-h-[1.25rem] whitespace-nowrap">
+                    {info.meaning || ""}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
         </div>
-      </div>
+      ) : (
+        /* Checked Phase: Sentence Structure Breakdown showing 主语, 谓语, 宾语, 状语, etc. */
+        <div className="my-6 p-4 sm:p-6 bg-white rounded-3xl border border-gray-200 shadow-sm transition-all w-full max-w-4xl mx-auto">
+          <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
+            <div className="flex items-center gap-2">
+              <span className="text-base">🌐</span>
+              <h3 className="text-xs sm:text-sm font-bold text-gray-700 uppercase tracking-wider">
+                Sentence Structure Breakdown
+              </h3>
+            </div>
+            <button
+              onClick={() => play(bestMatchAnswer, "en")}
+              className="flex items-center gap-1.5 px-3 py-1 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors cursor-pointer"
+              title="Listen English Audio"
+            >
+              <Volume2 className="w-3.5 h-3.5" />
+              <span>Listen Audio</span>
+            </button>
+          </div>
+
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 py-2 px-1">
+            {displayChunks.map((chunk, cIdx) => {
+              const badgeStyle =
+                STRUCTURE_BADGE_COLORS[chunk.chunkLabel] || "bg-gray-100 text-gray-800 border border-gray-300";
+              return (
+                <div
+                  key={cIdx}
+                  className="flex flex-col items-center bg-white border border-gray-200 rounded-2xl p-3 sm:px-4 sm:py-3.5 shadow-xs hover:border-gray-300 transition-all flex-shrink-0"
+                >
+                  {/* Structure Role Badge (主语, 谓语, 宾语, 状语, etc.) */}
+                  <span
+                    className={`text-[10px] sm:text-xs font-bold px-3 py-0.5 rounded-full mb-2 shadow-2xs whitespace-nowrap ${badgeStyle}`}
+                  >
+                    {chunk.chunkLabel}
+                  </span>
+
+                  {/* Words inside chunk */}
+                  <div className="flex flex-row items-center gap-3 sm:gap-4">
+                    {chunk.words.map((w, wIdx) => (
+                      <div key={wIdx} className="flex flex-col items-center text-center">
+                        {/* IPA */}
+                        <span className="text-[11px] sm:text-xs font-mono text-gray-400 select-none mb-0.5 min-h-[1rem]">
+                          {w.ipa || ""}
+                        </span>
+                        {/* Word text */}
+                        <span className="text-xl sm:text-2xl font-black text-gray-900 tracking-tight whitespace-nowrap">
+                          {w.word}
+                        </span>
+                        {/* Chinese meaning */}
+                        <span className="text-xs sm:text-sm font-medium text-gray-600 mt-1 whitespace-nowrap">
+                          {w.meaning || ""}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      )}
     </ExerciseShell>
   );
 }
