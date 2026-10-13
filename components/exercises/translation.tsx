@@ -353,14 +353,15 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     setSimilarityScore(matchResult.score);
     setMatchDetail(`${matchResult.matchCount}/${matchResult.totalCount} words correct (${matchResult.percentage}%)`);
     setMatchedWordIndices(matchResult.matchedWordIndices);
-    setBestMatchAnswer(matchResult.matchedAnswer);
+    const primaryCorrect = allAnswers[0] || exercise.answer;
+    setBestMatchAnswer(primaryCorrect);
 
     // 80% and above is considered correct (>= 80% correct, <= 79% wrong)
     checkAnswer(matchResult.isCorrect);
     onResult(matchResult.isCorrect, inputWords.join(" ").trim());
 
     if (!exercise.noAudio?.includes("sentence")) {
-      play(matchResult.matchedAnswer, "en");
+      play(primaryCorrect, "en");
     }
   }
 

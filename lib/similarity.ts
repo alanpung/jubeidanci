@@ -468,59 +468,10 @@ export function checkWordMatch(
   acceptedAnswers: string[],
 ): WordMatchResult {
   const userTokens = Array.isArray(userInputWords)
-    ? userInputWords.map((w) => w.trim().toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, ""))
-    : userInputWords
-        .trim()
-        .split(/\s+/)
-        .map((w) => w.trim().toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, ""))
-        .filter(Boolean);
+    ? userInputWords.map((w) => w.trim())
+    : userInputWords.trim().split(/\s+/).filter(Boolean);
 
-  let bestResult: WordMatchResult | null = null;
-
-  for (const answer of acceptedAnswers) {
-    const targetTokens = answer
-      .trim()
-      .split(/\s+/)
-      .map((w) => w.trim().toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, ""))
-      .filter(Boolean);
-
-    if (targetTokens.length === 0) continue;
-
-    const matchedWordIndices: boolean[] = targetTokens.map(() => false);
-    let matchCount = 0;
-
-    for (let i = 0; i < targetTokens.length; i++) {
-      const u = userTokens[i] || "";
-      const t = targetTokens[i] || "";
-      if (u && t && u === t) {
-        matchedWordIndices[i] = true;
-        matchCount++;
-      }
-    }
-
-    const totalCount = targetTokens.length;
-    const score = totalCount > 0 ? matchCount / totalCount : 0;
-    const percentage = Math.round(score * 100);
-    const isCorrect = score >= 0.8; // 80% and above considered correct
-
-    const current: WordMatchResult = {
-      isCorrect,
-      score,
-      percentage,
-      matchCount,
-      totalCount,
-      matchedWordIndices,
-      matchedAnswer: answer,
-    };
-
-    if (!bestResult) {
-      bestResult = current;
-    } else if (current.score > bestResult.score) {
-      bestResult = current;
-    }
-  }
-
-  if (!bestResult) {
+  if (acceptedAnswers.length === 0) {
     return {
       isCorrect: false,
       score: 0,
@@ -528,8 +479,54 @@ export function checkWordMatch(
       matchCount: 0,
       totalCount: 1,
       matchedWordIndices: [false],
-      matchedAnswer: acceptedAnswers[0] || "",
+      matchedAnswer: "",
     };
+  }
+
+  let bestScore = -1;
+  let bestResult: WordMatchResult = {
+    isCorrect: false,
+    score: 0,
+    percentage: 0,
+    matchCount: 0,
+    totalCount: 1,
+    matchedWordIndices: [],
+    matchedAnswer: acceptedAnswers[0],
+  };
+
+  for (const answer of acceptedAnswers) {
+    const targetWords = answer.trim().split(/\s+/).filter(Boolean);
+    const matchedWordIndices: boolean[] = targetWords.map(() => false);
+    let matchCount = 0;
+
+    for (let i = 0; i < targetWords.length; i++) {
+      const u = normalize(userTokens[i] || "");
+      const t = normalize(targetWords[i] || "");
+      if (u && t && u === t) {
+        matchedWordIndices[i] = true;
+        matchCount++;
+      } else {
+        matchedWordIndices[i] = false;
+      }
+    }
+
+    const totalCount = targetWords.length;
+    const score = totalCount > 0 ? matchCount / totalCount : 0;
+    const percentage = Math.round(score * 100);
+    const isCorrect = score >= 0.8;
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestResult = {
+        isCorrect,
+        score,
+        percentage,
+        matchCount,
+        totalCount,
+        matchedWordIndices,
+        matchedAnswer: answer,
+      };
+    }
   }
 
   return bestResult;
