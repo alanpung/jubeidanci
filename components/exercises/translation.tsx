@@ -94,6 +94,9 @@ const BUILTIN_WORD_DICT: Record<string, { ipa: string; meaning: string; grammarT
   like: { ipa: "/laɪk/", meaning: "喜欢", grammarTag: "动词" },
   fresh: { ipa: "/freʃ/", meaning: "新鲜的", grammarTag: "形容词" },
   apples: { ipa: "/ˈæplz/", meaning: "苹果", grammarTag: "名词" },
+  this: { ipa: "/ðɪs/", meaning: "这", grammarTag: "指示代词" },
+  polluted: { ipa: "/pəˈluːtɪd/", meaning: "受污染的", grammarTag: "形容词" },
+  river: { ipa: "/ˈrɪv.ər/", meaning: "河流", grammarTag: "名词" },
 };
 
 const AUXILIARY_WORDS = new Set([
@@ -140,7 +143,6 @@ function resolveGrammarTag(word: string, pos?: string, chunkLabel?: string): str
   return "名词";
 }
 
-// Color styles matching IMG_7510.jpeg & reference layout
 const GRAMMAR_PILL_COLORS: Record<string, string> = {
   "助动词": "bg-[#009b69] text-white",
   "人称代词": "bg-[#c026d3] text-white",
@@ -155,9 +157,9 @@ const GRAMMAR_PILL_COLORS: Record<string, string> = {
   "指示代词": "bg-[#0284c7] text-white",
   "疑问词": "bg-[#d97706] text-white",
   "数词": "bg-[#f59e0b] text-white",
-  "主语": "bg-[#d97706] text-white", // Amber/Brown for 主语 badge
-  "谓语": "bg-[#e11d48] text-white", // Rose/Red for 谓语 badge
-  "宾语": "bg-[#2563eb] text-white", // Blue for 宾语 badge
+  "主语": "bg-[#d97706] text-white",
+  "谓语": "bg-[#e11d48] text-white",
+  "宾语": "bg-[#2563eb] text-white",
   "状语": "bg-[#059669] text-white",
   "定语": "bg-[#8b5cf6] text-white",
 };
@@ -254,76 +256,34 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     };
   }, [exercise.answer]);
 
-  // Flattened analyzed word list with global index tracking
+  // 1-to-1 mapping for EVERY token in rawAnswerTokens to ensure no missing word slots
   const analyzedWordList = useMemo<AnalyzedWord[]>(() => {
-    const fallbackList = rawAnswerTokens.map((token: string) => {
+    return rawAnswerTokens.map((token: string, idx: number) => {
       const clean = token.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
       const dict = BUILTIN_WORD_DICT[clean];
+      const gTag = dict?.grammarTag || resolveGrammarTag(token);
+
+      let chunkLabel = "宾语";
+      if (idx === 0) {
+        chunkLabel = "主语";
+      } else if (gTag === "动词" || gTag === "助动词" || idx === 1) {
+        chunkLabel = "谓语";
+      } else {
+        chunkLabel = "宾语";
+      }
+
       return {
         word: token,
         ipa: dict?.ipa || "",
         meaning: dict?.meaning || clean,
         pos: dict?.grammarTag || "名词",
-        grammarTag: dict?.grammarTag || resolveGrammarTag(token),
-        chunkLabel: "宾语",
+        grammarTag: gTag,
+        chunkLabel,
       };
     });
+  }, [rawAnswerTokens]);
 
-    if (!analysis || !Array.isArray(analysis.chunks)) {
-      return fallbackList;
-    }
-
-    const flattened: AnalyzedWord[] = [];
-    for (const chunk of analysis.chunks) {
-      if (!chunk || !Array.isArray(chunk.words)) continue;
-      for (const w of chunk.words) {
-        if (!w) continue;
-        const parts = String(w.word || "").trim().split(/\s+/).filter(Boolean);
-        if (parts.length > 1) {
-          for (let pIdx = 0; pIdx < parts.length; pIdx++) {
-            const sub = parts[pIdx];
-            const cleanSub = sub.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
-            const dict = BUILTIN_WORD_DICT[cleanSub];
-            flattened.push({
-              word: sub,
-              ipa: dict?.ipa || (pIdx === 0 ? (w.ipa || "") : ""),
-              meaning: dict?.meaning || (pIdx === 0 ? (w.meaning || "") : ""),
-              pos: w.pos,
-              grammarTag: dict?.grammarTag || resolveGrammarTag(sub, w.pos, chunk.chunkLabel),
-              chunkLabel: chunk.chunkLabel || "宾语",
-            });
-          }
-        } else if (parts.length === 1) {
-          const cleanSingle = parts[0].toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
-          const dict = BUILTIN_WORD_DICT[cleanSingle];
-          flattened.push({
-            word: parts[0],
-            ipa: dict?.ipa || w.ipa || "",
-            meaning: dict?.meaning || w.meaning || "",
-            pos: w.pos,
-            grammarTag: dict?.grammarTag || resolveGrammarTag(parts[0], w.pos, chunk.chunkLabel),
-            chunkLabel: chunk.chunkLabel || "宾语",
-          });
-        }
-      }
-    }
-
-    return rawAnswerTokens.map((token: string, idx: number) => {
-      const found = flattened[idx];
-      const clean = token.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
-      const dict = BUILTIN_WORD_DICT[clean];
-      return {
-        word: token,
-        ipa: dict?.ipa || found?.ipa || "",
-        meaning: dict?.meaning || found?.meaning || clean,
-        pos: found?.pos || dict?.grammarTag,
-        grammarTag: dict?.grammarTag || found?.grammarTag || resolveGrammarTag(token, found?.pos),
-        chunkLabel: found?.chunkLabel || (idx === 0 ? "主语" : idx === 1 ? "谓语" : "宾语"),
-      };
-    });
-  }, [analysis, rawAnswerTokens]);
-
-  // Group analyzed words by chunks for chunk-box UI (matching reference style)
+  // Group analyzed words by chunk boxes 1-to-1 with rawAnswerTokens
   const syntacticChunks = useMemo(() => {
     const map = new Map<string, { chunkLabel: string; words: { item: AnalyzedWord; globalIndex: number }[] }>();
     
@@ -412,7 +372,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       similarityDetail={matchDetail}
     >
       <div className="w-full max-w-5xl mx-auto flex flex-col items-center py-2 sm:py-4">
-        {/* Syntactic Chunks Container Cards Layout (matching reference style) */}
+        {/* Syntactic Chunks Container Cards Layout */}
         <div
           onClick={() => {
             if (status === "answering") {
@@ -440,12 +400,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
 
           {syntacticChunks.map((chunk, chunkIdx) => {
             const badgeColor = GRAMMAR_PILL_COLORS[chunk.chunkLabel] || "bg-[#2563eb] text-white";
-            const isMultiWordChunk = chunk.words.length > 1;
 
             return (
               <div
                 key={chunkIdx}
-                className="relative bg-white rounded-2xl sm:rounded-3xl border border-blue-200 shadow-xs px-4 sm:px-6 pt-5 pb-4 flex flex-col items-center justify-center transition-all min-w-[100px] sm:min-w-[130px]"
+                className="relative bg-white rounded-2xl sm:rounded-3xl border border-blue-200 shadow-xs px-4 sm:px-6 pt-5 pb-4 flex flex-col items-center justify-center transition-all min-w-[120px] sm:min-w-[150px]"
               >
                 {/* Chunk Header Badge */}
                 <div className="absolute -top-3 left-1/2 -translate-x-1/2">
@@ -463,7 +422,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                     const isSlotActive = activeSlot === idx;
 
                     return (
-                      <div key={idx} className="flex flex-col items-center min-w-[44px] sm:min-w-[64px] px-1">
+                      <div key={idx} className="flex flex-col items-center min-w-[50px] sm:min-w-[70px] px-1">
                         {/* IPA Pronunciation (hidden before submit) */}
                         <div className="h-5 flex items-center justify-center mb-1">
                           {status !== "answering" && item.ipa && (
@@ -503,8 +462,8 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                               }}
                               onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
                               disabled={status !== "answering"}
-                              style={{ width: `${Math.max(2, targetWord.length + 0.5)}ch` }}
-                              className={`text-center font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] bg-transparent focus:outline-none pb-0.5 min-w-[2rem] sm:min-w-[3rem] transition-all border-b-2 ${
+                              style={{ width: `${Math.max(3, targetWord.length + 1)}ch` }}
+                              className={`text-center font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] bg-transparent focus:outline-none pb-0.5 min-w-[2.5rem] sm:min-w-[3.5rem] transition-all border-b-2 ${
                                 isSlotActive
                                   ? "border-[#007a55] border-b-[3px] shadow-[0_2px_0_0_#007a55]"
                                   : "border-[#007a55]/60 hover:border-[#007a55]"
@@ -561,7 +520,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
           })}
         </div>
 
-        {/* Chinese Sentence Prompt below the word chunk boxes (matching reference layout in image.png) */}
+        {/* Chinese Sentence Prompt below the word chunk boxes */}
         <div className="flex flex-col items-center mt-2 mb-4 text-center px-2">
           <div className="flex items-center justify-center gap-2 sm:gap-3">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-800 tracking-normal select-none">
