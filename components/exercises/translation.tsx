@@ -228,11 +228,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     }
   }, [status, focusInputSlot]);
 
-  useEffect(() => {
-    if (status === "answering") {
-      focusInputSlot(activeSlot);
-    }
-  }, [analysis, status, activeSlot, focusInputSlot]);
 
   useEffect(() => {
     let isMounted = true;
