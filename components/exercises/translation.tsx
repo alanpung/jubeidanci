@@ -256,7 +256,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     };
   }, [exercise.answer]);
 
-  // 1-to-1 mapping for EVERY token in rawAnswerTokens to ensure no missing word slots
+  // 1-to-1 mapping for EVERY token in rawAnswerTokens
   const analyzedWordList = useMemo<AnalyzedWord[]>(() => {
     return rawAnswerTokens.map((token: string, idx: number) => {
       const clean = token.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
@@ -283,7 +283,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     });
   }, [rawAnswerTokens]);
 
-  // Group analyzed words by chunk boxes 1-to-1 with rawAnswerTokens
   const syntacticChunks = useMemo(() => {
     const map = new Map<string, { chunkLabel: string; words: { item: AnalyzedWord; globalIndex: number }[] }>();
     
@@ -380,7 +379,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               focusInputSlot(firstEmpty === -1 ? activeSlot : firstEmpty);
             }
           }}
-          className="w-full flex flex-wrap items-stretch justify-center gap-3 sm:gap-4 mb-6 cursor-text"
+          className="w-full flex flex-wrap items-stretch justify-center gap-3 sm:gap-4 mb-4 cursor-text"
         >
           {status !== "answering" && (
             <div className="w-full flex items-center justify-end mb-2">
@@ -423,11 +422,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
 
                     return (
                       <div key={idx} className="flex flex-col items-center min-w-[50px] sm:min-w-[70px] px-1">
-                        {/* IPA Pronunciation (hidden before submit) */}
+                        {/* POS / Grammar Tag (shown above word to help user key in answer) */}
                         <div className="h-5 flex items-center justify-center mb-1">
-                          {status !== "answering" && item.ipa && (
-                            <span className="text-[11px] sm:text-xs font-sans font-medium text-gray-400 tracking-wider select-none whitespace-nowrap">
-                              {item.ipa}
+                          {item.grammarTag && (
+                            <span className="text-[11px] sm:text-xs font-sans font-medium text-gray-500 tracking-wider select-none whitespace-nowrap">
+                              {item.grammarTag}
                             </span>
                           )}
                         </div>
@@ -494,7 +493,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                           )}
                         </div>
 
-                        {/* Chinese Meaning & Grammar Tag (shown after submit) */}
+                        {/* Chinese Meaning & IPA (revealed after Enter) */}
                         <div className="h-10 flex flex-col items-center justify-start mt-1">
                           {status !== "answering" && (
                             <>
@@ -503,9 +502,9 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                                   {item.meaning}
                                 </span>
                               )}
-                              {item.grammarTag && (
+                              {item.ipa && (
                                 <span className="text-[10px] sm:text-xs text-gray-400 select-none leading-tight mt-0.5">
-                                  {item.grammarTag}
+                                  {item.ipa}
                                 </span>
                               )}
                             </>
@@ -521,7 +520,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
         </div>
 
         {/* Chinese Sentence Prompt below the word chunk boxes */}
-        <div className="flex flex-col items-center mt-2 mb-4 text-center px-2">
+        <div className="flex flex-col items-center mt-2 mb-3 text-center px-2">
           <div className="flex items-center justify-center gap-2 sm:gap-3">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-800 tracking-normal select-none">
               <HoverableText text={exercise.sentence} language={sentenceLang} />
@@ -531,6 +530,29 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
             )}
           </div>
         </div>
+
+        {/* Dedicated "Your Answer" Row after submit to show what user entered with wrong words in red */}
+        {status !== "answering" && (
+          <div className="w-full bg-white rounded-2xl border border-gray-200 p-3 sm:p-4 mb-2 shadow-xs">
+            <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Your Answer:</div>
+            <div className="flex flex-wrap items-center gap-2 text-xl sm:text-2xl font-semibold">
+              {rawAnswerTokens.map((targetToken, idx) => {
+                const typedWord = inputWords[idx] || "";
+                const matched = matchedWordIndices[idx] !== undefined ? matchedWordIndices[idx] : true;
+                return (
+                  <span
+                    key={idx}
+                    className={`px-1.5 py-0.5 rounded ${
+                      matched ? "text-emerald-700 bg-emerald-50" : "text-red-600 bg-red-50 underline decoration-red-500 font-bold"
+                    }`}
+                  >
+                    {typedWord || "(empty)"}
+                  </span>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </ExerciseShell>
   );
