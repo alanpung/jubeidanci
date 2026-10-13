@@ -183,7 +183,7 @@ srsWords: "she" "make" "many" "friend" "before" "leave" "the" "country"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "已经完成了嵗？"
+sentence: "已经完成了吗？"
 answer: "Has it already been finished?"
 acceptAlso: "Has it already been finished?"
 srsWords: "has" "it" "already" "been" "finish"

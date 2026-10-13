@@ -328,3 +328,196 @@ export function checkBestMatch(
 
   return best!;
 }
+
+/**
+ * Automatically generates natural English variations (contractions, expansions, common modal/phrasal synonyms)
+ * so translation exercises always have multiple rich accepted alternatives.
+ */
+export function generateAlternativeTranslations(baseAnswer: string, existingList: string[] = []): string[] {
+  const result: string[] = [];
+  const add = (str: string) => {
+    const s = str.trim();
+    if (!s) return;
+    if (!result.some((r) => r.toLowerCase().replace(/[.,!?;:]/g, "") === s.toLowerCase().replace(/[.,!?;:]/g, ""))) {
+      result.push(s);
+    }
+  };
+
+  add(baseAnswer);
+  for (const alt of existingList) {
+    if (alt) add(alt);
+  }
+
+  const base = baseAnswer.trim();
+  const trailingPunct = base.match(/[.!?]$/)?.[0] || "";
+  const core = base.replace(/[.!?]$/, "").trim();
+
+  // Contraction / Expansion pairs
+  const contractions: [RegExp, string][] = [
+    [/\bI'm\b/g, "I am"],
+    [/\bI am\b/g, "I'm"],
+    [/\bcan't\b/g, "cannot"],
+    [/\bcannot\b/g, "can't"],
+    [/\bdon't\b/g, "do not"],
+    [/\bdo not\b/g, "don't"],
+    [/\bdoesn't\b/g, "does not"],
+    [/\bdoes not\b/g, "doesn't"],
+    [/\bdidn't\b/g, "did not"],
+    [/\bdid not\b/g, "didn't"],
+    [/\bwon't\b/g, "will not"],
+    [/\bwill not\b/g, "won't"],
+    [/\bit's\b/g, "it is"],
+    [/\bit is\b/g, "it's"],
+    [/\bthat's\b/g, "that is"],
+    [/\bthat is\b/g, "that's"],
+    [/\bthere's\b/g, "there is"],
+    [/\bthere is\b/g, "there's"],
+    [/\bthey're\b/g, "they are"],
+    [/\bthey are\b/g, "they're"],
+    [/\bwe're\b/g, "we are"],
+    [/\bwe are\b/g, "we're"],
+    [/\byou're\b/g, "you are"],
+    [/\byou are\b/g, "you're"],
+    [/\bhe's\b/g, "he is"],
+    [/\bhe is\b/g, "he's"],
+    [/\bshe's\b/g, "she is"],
+    [/\bshe is\b/g, "she's"],
+    [/\bI've\b/g, "I have"],
+    [/\bI have\b/g, "I've"],
+    [/\bwe've\b/g, "we have"],
+    [/\bwe have\b/g, "we've"],
+    [/\bthey've\b/g, "they have"],
+    [/\bthey have\b/g, "they've"],
+    [/\byou've\b/g, "you have"],
+    [/\byou have\b/g, "you've"],
+    [/\bI'd\b/g, "I would"],
+    [/\bI would\b/g, "I'd"],
+    [/\bI'll\b/g, "I will"],
+    [/\bI will\b/g, "I'll"],
+  ];
+
+  for (const [regex, replacement] of contractions) {
+    if (regex.test(core)) {
+      add(core.replace(regex, replacement) + trailingPunct);
+    }
+  }
+
+  // Common synonym / phrased alternatives
+  const phrasingVariants: [RegExp, string][] = [
+    [/\bwant to eat\b/gi, "would like to eat"],
+    [/\bwant to eat\b/gi, "want to have"],
+    [/\bwould like to eat\b/gi, "want to eat"],
+    [/\bwant to\b/gi, "would like to"],
+    [/\bwould like to\b/gi, "want to"],
+    [/\bhave to\b/gi, "need to"],
+    [/\bneed to\b/gi, "have to"],
+    [/\ba lot of\b/gi, "lots of"],
+    [/\blots of\b/gi, "a lot of"],
+    [/\bkids\b/gi, "children"],
+    [/\bchildren\b/gi, "kids"],
+    [/\bhard to\b/gi, "difficult to"],
+    [/\bdifficult to\b/gi, "hard to"],
+    [/\bstart\b/gi, "begin"],
+    [/\bbegin\b/gi, "start"],
+    [/\btalk to\b/gi, "speak with"],
+    [/\bspeak with\b/gi, "talk to"],
+  ];
+
+  for (const [regex, replacement] of phrasingVariants) {
+    if (regex.test(core)) {
+      add(core.replace(regex, replacement) + trailingPunct);
+    }
+  }
+
+  return result.slice(0, 3);
+}
+
+export interface WordMatchResult {
+  isCorrect: boolean;
+  score: number; // 0 to 1, e.g. 0.8
+  percentage: number; // 0 to 100, e.g. 80
+  matchCount: number; // e.g. 4
+  totalCount: number; // e.g. 5
+  matchedWordIndices: boolean[]; // array of boolean per target word
+  matchedAnswer: string;
+}
+
+/**
+ * Word-level accuracy checker:
+ * Compares user input words to target answer words.
+ * Score = (matched words / total target words).
+ * Example: "Did you get my message" vs "Did you got my message" => 4/5 = 80%.
+ * 80% (0.80) and above is considered correct.
+ */
+export function checkWordMatch(
+  userInputWords: string[] | string,
+  acceptedAnswers: string[],
+): WordMatchResult {
+  const userTokens = Array.isArray(userInputWords)
+    ? userInputWords.map((w) => w.trim().toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, ""))
+    : userInputWords
+        .trim()
+        .split(/\s+/)
+        .map((w) => w.trim().toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, ""))
+        .filter(Boolean);
+
+  let bestResult: WordMatchResult | null = null;
+
+  for (const answer of acceptedAnswers) {
+    const targetTokens = answer
+      .trim()
+      .split(/\s+/)
+      .map((w) => w.trim().toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, ""))
+      .filter(Boolean);
+
+    if (targetTokens.length === 0) continue;
+
+    const matchedWordIndices: boolean[] = targetTokens.map(() => false);
+    let matchCount = 0;
+
+    for (let i = 0; i < targetTokens.length; i++) {
+      const u = userTokens[i] || "";
+      const t = targetTokens[i] || "";
+      if (u && t && u === t) {
+        matchedWordIndices[i] = true;
+        matchCount++;
+      }
+    }
+
+    const totalCount = targetTokens.length;
+    const score = totalCount > 0 ? matchCount / totalCount : 0;
+    const percentage = Math.round(score * 100);
+    const isCorrect = score >= 0.8; // 80% and above considered correct
+
+    const current: WordMatchResult = {
+      isCorrect,
+      score,
+      percentage,
+      matchCount,
+      totalCount,
+      matchedWordIndices,
+      matchedAnswer: answer,
+    };
+
+    if (!bestResult) {
+      bestResult = current;
+    } else if (current.score > bestResult.score) {
+      bestResult = current;
+    }
+  }
+
+  if (!bestResult) {
+    return {
+      isCorrect: false,
+      score: 0,
+      percentage: 0,
+      matchCount: 0,
+      totalCount: 1,
+      matchedWordIndices: [false],
+      matchedAnswer: acceptedAnswers[0] || "",
+    };
+  }
+
+  return bestResult;
+}
+

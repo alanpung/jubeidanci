@@ -4,7 +4,7 @@ import { useState, useEffect, useMemo, useRef, KeyboardEvent } from "react";
 import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
-import { checkBestMatch } from "@/lib/similarity";
+import { checkWordMatch, generateAlternativeTranslations, WordMatchResult } from "@/lib/similarity";
 import { ExerciseShell } from "./exercise-shell";
 import { HoverableText } from "@/components/word/hoverable-text";
 import { ReplayButton } from "@/components/replay-button";
@@ -24,6 +24,7 @@ interface AnalyzedWord {
   ipa?: string;
   meaning?: string;
   pos?: string;
+  grammarTag?: string;
 }
 
 interface SyntacticChunk {
@@ -33,18 +34,128 @@ interface SyntacticChunk {
 
 interface SentenceAnalysisData {
   fullTranslation?: string;
+  acceptableTranslations?: string[];
   chunks: SyntacticChunk[];
 }
 
-const STRUCTURE_BADGE_COLORS: Record<string, string> = {
-  "主语": "bg-amber-100 text-amber-900 border border-amber-300",
-  "谓语": "bg-rose-100 text-rose-900 border border-rose-300",
-  "宾语": "bg-blue-100 text-blue-900 border border-blue-300",
-  "状语": "bg-teal-100 text-teal-900 border border-teal-300",
-  "定语": "bg-purple-100 text-purple-900 border border-purple-300",
-  "补语": "bg-indigo-100 text-indigo-900 border border-indigo-300",
-  "连词": "bg-slate-100 text-slate-800 border border-slate-300",
-  "句子": "bg-gray-100 text-gray-800 border border-gray-300",
+// Built-in word dictionary for instant accurate fallback mapping
+const BUILTIN_WORD_DICT: Record<string, { ipa: string; meaning: string; grammarTag: string }> = {
+  did: { ipa: "/dɪd/", meaning: "做/干", grammarTag: "助动词" },
+  do: { ipa: "/duː/", meaning: "做/干", grammarTag: "助动词" },
+  does: { ipa: "/dʌz/", meaning: "做/干", grammarTag: "助动词" },
+  have: { ipa: "/hæv/", meaning: "有/已经", grammarTag: "助动词" },
+  has: { ipa: "/hæz/", meaning: "有/已经", grammarTag: "助动词" },
+  had: { ipa: "/hæd/", meaning: "有/已经", grammarTag: "助动词" },
+  will: { ipa: "/wɪl/", meaning: "将会", grammarTag: "助动词" },
+  would: { ipa: "/wʊd/", meaning: "想要/会", grammarTag: "助动词" },
+  can: { ipa: "/kæn/", meaning: "能/可以", grammarTag: "助动词" },
+  could: { ipa: "/kʊd/", meaning: "能够", grammarTag: "助动词" },
+  should: { ipa: "/ʃʊd/", meaning: "应该", grammarTag: "助动词" },
+  must: { ipa: "/mʌst/", meaning: "必须", grammarTag: "助动词" },
+  is: { ipa: "/ɪz/", meaning: "是", grammarTag: "助动词" },
+  are: { ipa: "/ɑːr/", meaning: "是", grammarTag: "助动词" },
+  was: { ipa: "/wɒz/", meaning: "是(过去)", grammarTag: "助动词" },
+  were: { ipa: "/wɜːr/", meaning: "是(过去)", grammarTag: "助动词" },
+  been: { ipa: "/bɪn/", meaning: "是(分词)", grammarTag: "动词" },
+  you: { ipa: "/juː/", meaning: "你", grammarTag: "人称代词" },
+  i: { ipa: "/aɪ/", meaning: "我", grammarTag: "人称代词" },
+  he: { ipa: "/hiː/", meaning: "他", grammarTag: "人称代词" },
+  she: { ipa: "/ʃiː/", meaning: "她", grammarTag: "人称代词" },
+  it: { ipa: "/ɪt/", meaning: "它", grammarTag: "人称代词" },
+  we: { ipa: "/wiː/", meaning: "我们", grammarTag: "人称代词" },
+  they: { ipa: "/ðeɪ/", meaning: "他们", grammarTag: "人称代词" },
+  me: { ipa: "/miː/", meaning: "我", grammarTag: "人称代词" },
+  him: { ipa: "/hɪm/", meaning: "他", grammarTag: "人称代词" },
+  her: { ipa: "/hɜːr/", meaning: "她/她的", grammarTag: "人称代词" },
+  us: { ipa: "/ʌs/", meaning: "我们", grammarTag: "人称代词" },
+  them: { ipa: "/ðɛm/", meaning: "他们", grammarTag: "人称代词" },
+  my: { ipa: "/maɪ/", meaning: "我的", grammarTag: "物主限定词" },
+  your: { ipa: "/jɔːr/", meaning: "你的", grammarTag: "物主限定词" },
+  his: { ipa: "/hɪz/", meaning: "他的", grammarTag: "物主限定词" },
+  our: { ipa: "/aʊər/", meaning: "我们的", grammarTag: "物主限定词" },
+  their: { ipa: "/ðɛər/", meaning: "他们的", grammarTag: "物主限定词" },
+  its: { ipa: "/ɪts/", meaning: "它的", grammarTag: "物主限定词" },
+  get: { ipa: "/ɡɛt/", meaning: "使得/收到", grammarTag: "动词" },
+  message: { ipa: "/ˈmɛs.ɪdʒ/", meaning: "消息", grammarTag: "名词" },
+  the: { ipa: "/ðə/", meaning: "这/那", grammarTag: "冠词" },
+  a: { ipa: "/ə/", meaning: "一个", grammarTag: "冠词" },
+  an: { ipa: "/æn/", meaning: "一个", grammarTag: "冠词" },
+  to: { ipa: "/tuː/", meaning: "去/向", grammarTag: "介词" },
+  for: { ipa: "/fɔːr/", meaning: "为了/去", grammarTag: "介词" },
+  in: { ipa: "/ɪn/", meaning: "在…里", grammarTag: "介词" },
+  on: { ipa: "/ɒn/", meaning: "在…上", grammarTag: "介词" },
+  at: { ipa: "/æt/", meaning: "在", grammarTag: "介词" },
+  with: { ipa: "/wɪð/", meaning: "和…一起", grammarTag: "介词" },
+  sweet: { ipa: "/swiːt/", meaning: "甜的", grammarTag: "形容词" },
+  something: { ipa: "/ˈsʌm.θɪŋ/", meaning: "某物/东西", grammarTag: "代词" },
+  want: { ipa: "/wɒnt/", meaning: "想要", grammarTag: "动词" },
+  eat: { ipa: "/iːt/", meaning: "吃", grammarTag: "动词" },
+};
+
+const AUXILIARY_WORDS = new Set([
+  "did", "do", "does", "have", "has", "had", "will", "would",
+  "can", "could", "should", "must", "may", "might", "shall",
+  "am", "is", "are", "was", "were"
+]);
+
+const PRONOUN_WORDS = new Set([
+  "i", "you", "he", "she", "it", "we", "they", "me", "him", "her", "us", "them"
+]);
+
+const POSSESSIVE_WORDS = new Set([
+  "my", "your", "his", "her", "its", "our", "their"
+]);
+
+const ARTICLE_WORDS = new Set(["a", "an", "the"]);
+
+function resolveGrammarTag(word: string, pos?: string, chunkLabel?: string): string {
+  const clean = word.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
+
+  if (PRONOUN_WORDS.has(clean)) return "人称代词";
+  if (POSSESSIVE_WORDS.has(clean)) return "物主限定词";
+  if (ARTICLE_WORDS.has(clean)) return "冠词";
+  if (AUXILIARY_WORDS.has(clean)) return "助动词";
+
+  if (BUILTIN_WORD_DICT[clean]?.grammarTag) {
+    return BUILTIN_WORD_DICT[clean].grammarTag;
+  }
+
+  if (pos === "auxiliary" || pos === "助动词") return "助动词";
+  if (pos === "possessive" || pos === "物主限定词") return "物主限定词";
+  if (pos === "pronoun" || pos === "代词" || pos === "人称代词") return "人称代词";
+  if (pos === "verb" || pos === "动词") return "动词";
+  if (pos === "noun" || pos === "名词") return "名词";
+  if (pos === "adjective" || pos === "adj" || pos === "形容词") return "形容词";
+  if (pos === "adverb" || pos === "adv" || pos === "副词") return "副词";
+  if (pos === "preposition" || pos === "prep" || pos === "介词") return "介词";
+  if (pos === "conjunction" || pos === "conj" || pos === "连词") return "连词";
+  if (pos === "determiner" || pos === "限定词") return "限定词";
+  if (pos === "numeral" || pos === "num" || pos === "数词") return "数词";
+
+  if (chunkLabel && chunkLabel !== "句子") return chunkLabel;
+  return "名词";
+}
+
+// Color styles matching IMG_7510.jpeg
+const GRAMMAR_PILL_COLORS: Record<string, string> = {
+  "助动词": "bg-[#009b69] text-white",     // Green
+  "人称代词": "bg-[#c026d3] text-white",   // Magenta/fuchsia
+  "动词": "bg-[#7c3aed] text-white",       // Violet/purple
+  "物主限定词": "bg-[#0284c7] text-white", // Sky blue
+  "名词": "bg-[#b91c1c] text-white",       // Crimson/Rose
+  "副词": "bg-[#0d9488] text-white",       // Teal
+  "形容词": "bg-[#d97706] text-white",     // Amber
+  "介词": "bg-[#4f46e5] text-white",       // Indigo
+  "连词": "bg-[#475569] text-white",       // Slate
+  "冠词": "bg-[#0ea5e9] text-white",       // Light blue
+  "指示代词": "bg-[#0284c7] text-white",   // Blue
+  "疑问词": "bg-[#d97706] text-white",     // Amber
+  "数词": "bg-[#f59e0b] text-white",       // Orange
+  "主语": "bg-[#f59e0b] text-white",
+  "谓语": "bg-[#f43f5e] text-white",
+  "宾语": "bg-[#2563eb] text-white",
+  "状语": "bg-[#059669] text-white",
+  "定语": "bg-[#8b5cf6] text-white",
 };
 
 export function Translation({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
@@ -54,85 +165,32 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     return exercise.answer.trim().split(/\s+/).filter(Boolean);
   }, [exercise.answer]);
 
-  const analyzedWordList = useMemo<AnalyzedWord[]>(() => {
-    if (!analysis || !Array.isArray(analysis.chunks)) {
-      return rawAnswerTokens.map((w: string) => ({ word: w, ipa: "", meaning: "" }));
-    }
-    const flattened: AnalyzedWord[] = [];
-    for (const c of analysis.chunks) {
-      if (!c || !Array.isArray(c.words)) continue;
-      for (const w of c.words) {
-        if (!w) continue;
-        const parts = String(w.word || "").trim().split(/\s+/).filter(Boolean);
-        if (parts.length > 1) {
-          for (let pIdx = 0; pIdx < parts.length; pIdx++) {
-            flattened.push({
-              word: parts[pIdx],
-              ipa: pIdx === 0 ? (w.ipa || "") : "",
-              meaning: pIdx === 0 ? (w.meaning || "") : "",
-              pos: w.pos,
-            });
-          }
-        } else if (parts.length === 1) {
-          flattened.push({
-            word: parts[0],
-            ipa: w.ipa || "",
-            meaning: w.meaning || "",
-            pos: w.pos,
-          });
-        }
-      }
-    }
-    return rawAnswerTokens.map((token: string, idx: number) => {
-      const found = flattened[idx];
-      if (found) return found;
-      return { word: token, ipa: "", meaning: "" };
-    });
-  }, [analysis, rawAnswerTokens]);
-
-  const displayChunks = useMemo(() => {
-    if (!analysis || !Array.isArray(analysis.chunks) || analysis.chunks.length === 0) {
-      return [
-        {
-          chunkLabel: "句子",
-          words: rawAnswerTokens.map((w, idx) => analyzedWordList[idx] || { word: w, ipa: "", meaning: "" }),
-        },
-      ];
-    }
-    return analysis.chunks.map((chunk) => ({
-      chunkLabel: chunk.chunkLabel,
-      words: (chunk.words || []).flatMap((w) => {
-        const parts = String(w.word || "").trim().split(/\s+/).filter(Boolean);
-        if (parts.length > 1) {
-          return parts.map((sub, pIdx) => ({
-            word: sub,
-            ipa: pIdx === 0 ? (w.ipa || "") : "",
-            meaning: pIdx === 0 ? (w.meaning || "") : "",
-            pos: w.pos,
-          }));
-        }
-        return [w];
-      }),
-    }));
-  }, [analysis, rawAnswerTokens, analyzedWordList]);
+  // Generate multiple rich acceptable alternative translations
+  const allAnswers = useMemo(() => {
+    const fromProps = exercise.acceptAlso || [];
+    const fromApi = analysis?.acceptableTranslations || [];
+    return generateAlternativeTranslations(exercise.answer, [...fromProps, ...fromApi]);
+  }, [exercise.answer, exercise.acceptAlso, analysis?.acceptableTranslations]);
 
   const [inputWords, setInputWords] = useState<string[]>(() => rawAnswerTokens.map(() => ""));
-  const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
   const [bestMatchAnswer, setBestMatchAnswer] = useState<string>(exercise.answer);
   const [similarityScore, setSimilarityScore] = useState<number | null>(null);
+  const [matchDetail, setMatchDetail] = useState<string>("");
+  const [matchedWordIndices, setMatchedWordIndices] = useState<boolean[]>([]);
+
   const { status, checkAnswer } = useExercise();
   const { play, stop, prefetch } = useAudio();
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   useEffect(() => {
     setInputWords(rawAnswerTokens.map(() => ""));
-    setCorrectedMarkdown(undefined);
     setSimilarityScore(null);
+    setMatchDetail("");
+    setMatchedWordIndices([]);
     setBestMatchAnswer(exercise.answer);
-    // Auto-focus the first word line immediately as soon as question is displayed
     const timer = setTimeout(() => {
       inputRefs.current[0]?.focus();
-    }, 50);
+    }, 60);
     return () => clearTimeout(timer);
   }, [exercise.answer, rawAnswerTokens]);
 
@@ -156,7 +214,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
           if (isMounted) setAnalysis(json);
         }
       } catch (err) {
-        console.error(err);
+        console.error("Failed to fetch sentence analysis", err);
       }
     }
     fetchAnalysis();
@@ -165,19 +223,70 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     };
   }, [exercise.answer]);
 
-  const allAnswers = useMemo(() => {
-    const rawList = [exercise.answer, ...(exercise.acceptAlso || [])];
-    const list: string[] = [];
-    for (const item of rawList) {
-      if (!item) continue;
-      const trimmed = item.trim();
-      if (trimmed && !list.some((existing) => existing.toLowerCase() === trimmed.toLowerCase())) {
-        list.push(trimmed);
-      }
-      if (list.length >= 3) break;
+  // Flattened analyzed word list with grammar tags, IPA, and meaning
+  const analyzedWordList = useMemo<AnalyzedWord[]>(() => {
+    const fallbackList = rawAnswerTokens.map((token: string) => {
+      const clean = token.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
+      const dict = BUILTIN_WORD_DICT[clean];
+      return {
+        word: token,
+        ipa: dict?.ipa || "",
+        meaning: dict?.meaning || clean,
+        pos: dict?.grammarTag || "名词",
+        grammarTag: dict?.grammarTag || resolveGrammarTag(token),
+      };
+    });
+
+    if (!analysis || !Array.isArray(analysis.chunks)) {
+      return fallbackList;
     }
-    return list.length > 0 ? list : [exercise.answer];
-  }, [exercise.answer, exercise.acceptAlso]);
+
+    const flattened: AnalyzedWord[] = [];
+    for (const chunk of analysis.chunks) {
+      if (!chunk || !Array.isArray(chunk.words)) continue;
+      for (const w of chunk.words) {
+        if (!w) continue;
+        const parts = String(w.word || "").trim().split(/\s+/).filter(Boolean);
+        if (parts.length > 1) {
+          for (let pIdx = 0; pIdx < parts.length; pIdx++) {
+            const sub = parts[pIdx];
+            const cleanSub = sub.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
+            const dict = BUILTIN_WORD_DICT[cleanSub];
+            flattened.push({
+              word: sub,
+              ipa: dict?.ipa || (pIdx === 0 ? (w.ipa || "") : ""),
+              meaning: dict?.meaning || (pIdx === 0 ? (w.meaning || "") : ""),
+              pos: w.pos,
+              grammarTag: dict?.grammarTag || resolveGrammarTag(sub, w.pos, chunk.chunkLabel),
+            });
+          }
+        } else if (parts.length === 1) {
+          const cleanSingle = parts[0].toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
+          const dict = BUILTIN_WORD_DICT[cleanSingle];
+          flattened.push({
+            word: parts[0],
+            ipa: dict?.ipa || w.ipa || "",
+            meaning: dict?.meaning || w.meaning || "",
+            pos: w.pos,
+            grammarTag: dict?.grammarTag || resolveGrammarTag(parts[0], w.pos, chunk.chunkLabel),
+          });
+        }
+      }
+    }
+
+    return rawAnswerTokens.map((token: string, idx: number) => {
+      const found = flattened[idx];
+      const clean = token.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
+      const dict = BUILTIN_WORD_DICT[clean];
+      return {
+        word: token,
+        ipa: dict?.ipa || found?.ipa || "",
+        meaning: dict?.meaning || found?.meaning || clean,
+        pos: found?.pos || dict?.grammarTag,
+        grammarTag: dict?.grammarTag || found?.grammarTag || resolveGrammarTag(token, found?.pos),
+      };
+    });
+  }, [analysis, rawAnswerTokens]);
 
   const orderedAnswers = useMemo(() => {
     if (!bestMatchAnswer) return allAnswers;
@@ -203,18 +312,26 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     return stop;
   }, [exercise.sentence, sentenceLang, autoplayAudio, play, stop, exercise.noAudio]);
 
+  /**
+   * Word-by-word accuracy match calculation requested by user:
+   * Counts matched words against target sentence.
+   * Example: "Did you get my message" vs "Did you got my message" => 4/5 words = 80%.
+   * 80% and above considered correct!
+   */
   function handleCheck() {
-    const fullAnswer = inputWords.join(" ").trim();
-    const result = checkBestMatch(fullAnswer, allAnswers);
-    setSimilarityScore(result.similarity);
-    const chosenBest = result.matchedAnswer || allAnswers[0] || exercise.answer;
-    setBestMatchAnswer(chosenBest);
-    if (!result.isCorrect) setCorrectedMarkdown(result.correctedMarkdown);
-    checkAnswer(result.isCorrect);
-    onResult(result.isCorrect, fullAnswer);
+    const matchResult: WordMatchResult = checkWordMatch(inputWords, allAnswers);
+
+    setSimilarityScore(matchResult.score);
+    setMatchDetail(`${matchResult.matchCount}/${matchResult.totalCount} words`);
+    setMatchedWordIndices(matchResult.matchedWordIndices);
+    setBestMatchAnswer(matchResult.matchedAnswer);
+
+    // 80% and above is considered correct
+    checkAnswer(matchResult.isCorrect);
+    onResult(matchResult.isCorrect, inputWords.join(" ").trim());
 
     if (!exercise.noAudio?.includes("sentence")) {
-      play(chosenBest, "en");
+      play(matchResult.matchedAnswer, "en");
     }
   }
 
@@ -246,136 +363,138 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       canCheck={inputWords.length === rawAnswerTokens.length && inputWords.every((w: string) => w.trim().length > 0)}
       correctAnswer={bestMatchAnswer}
       allAnswers={orderedAnswers}
-      correctedMarkdown={correctedMarkdown}
       language={language}
       similarityScore={similarityScore}
+      similarityDetail={matchDetail}
     >
-      {/* Question Section - always visible and prominent */}
-      <div className="flex flex-col items-center mb-6">
-        <h2 className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Translate this sentence</h2>
-        <div className="flex items-center justify-center gap-3">
-          <p className="text-2xl sm:text-3xl font-black text-gray-900 tracking-wide text-center">
-            &ldquo;<HoverableText text={exercise.sentence} language={sentenceLang} />&rdquo;
-          </p>
-          {!exercise.noAudio?.includes("sentence") && (
-            <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
-          )}
-        </div>
-      </div>
-
-      {status === "answering" ? (
-        /* Answering Phase: Clean input slots with IPA above and Chinese meaning below */
-        <div className="my-6 p-4 sm:p-6 bg-white rounded-3xl border border-gray-200 shadow-sm transition-all w-full max-w-4xl mx-auto">
-          <div className="flex flex-wrap items-end justify-center gap-3 sm:gap-4 py-3 px-1">
-            {rawAnswerTokens.map((targetWord: string, idx: number) => {
-              const info = analyzedWordList[idx] || { word: targetWord, ipa: "", meaning: "" };
-              return (
-                <div key={idx} className="flex flex-col items-center text-center">
-                  {/* IPA above */}
-                  <span className="text-[11px] sm:text-xs font-mono text-gray-400 min-h-[1.25rem] select-none mb-1">
-                    {info.ipa || ""}
-                  </span>
-
-                  {/* Word Input */}
-                  <input
-                    ref={(el: HTMLInputElement | null) => {
-                      inputRefs.current[idx] = el;
-                    }}
-                    type="text"
-                    autoFocus={idx === 0}
-                    value={inputWords[idx] || ""}
-                    onChange={(e) => {
-                      const val = e.target.value;
-                      if (val.includes(" ")) {
-                        const clean = val.replace(/\s+/g, "");
-                        const next = [...inputWords];
-                        next[idx] = clean;
-                        setInputWords(next);
-                        if (idx + 1 < rawAnswerTokens.length) {
-                          inputRefs.current[idx + 1]?.focus();
-                        }
-                        return;
-                      }
-                      const next = [...inputWords];
-                      next[idx] = val;
-                      setInputWords(next);
-                    }}
-                    onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
-                    disabled={status !== "answering"}
-                    style={{ width: `${Math.max(4, targetWord.length + 1)}ch` }}
-                    className="text-center text-xl sm:text-2xl font-black text-gray-900 tracking-tight border-b-2 border-lingo-blue focus:border-lingo-blue-dark bg-transparent focus:outline-none py-0.5 px-1 min-w-[3.2rem]"
-                  />
-
-                  {/* Chinese meaning below */}
-                  <span className="text-xs sm:text-sm font-medium text-gray-600 mt-1 min-h-[1.25rem] whitespace-nowrap">
-                    {info.meaning || ""}
-                  </span>
-                </div>
-              );
-            })}
+      <div className="w-full max-w-4xl mx-auto flex flex-col items-center py-4">
+        {/* Chinese Sentence Prompt at Top (matching IMG_7510.jpeg) */}
+        <div className="flex flex-col items-center mb-8 sm:mb-10 text-center">
+          <div className="flex items-center justify-center gap-3">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-normal select-none">
+              <HoverableText text={exercise.sentence} language={sentenceLang} />
+            </h1>
+            {!exercise.noAudio?.includes("sentence") && (
+              <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
+            )}
           </div>
         </div>
-      ) : (
-        /* Checked Phase: Sentence Structure Breakdown showing 主语, 谓语, 宾语, 状语, etc. */
-        <div className="my-6 p-4 sm:p-6 bg-white rounded-3xl border border-gray-200 shadow-sm transition-all w-full max-w-4xl mx-auto">
-          <div className="flex items-center justify-between mb-4 pb-3 border-b border-gray-100">
-            <div className="flex items-center gap-2">
-              <span className="text-base">🌐</span>
-              <h3 className="text-xs sm:text-sm font-bold text-gray-700 uppercase tracking-wider">
-                Sentence Structure Breakdown
-              </h3>
-            </div>
-            <button
-              onClick={() => play(bestMatchAnswer, "en")}
-              className="flex items-center gap-1.5 px-3 py-1 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors cursor-pointer"
-              title="Listen English Audio"
-            >
-              <Volume2 className="w-3.5 h-3.5" />
-              <span>Listen Audio</span>
-            </button>
+
+        {/* Word Columns Card (matching IMG_7510.jpeg 4-tier column layout) */}
+        <div className="w-full bg-white rounded-3xl border border-gray-200 shadow-xs p-6 sm:p-10 mb-6 transition-all">
+          <div className="flex items-center justify-between mb-6 pb-2 border-b border-gray-100">
+            <span className="text-xs sm:text-sm font-bold text-gray-400 uppercase tracking-wider">
+              Sentence Structure & Alignment
+            </span>
+            {status !== "answering" && (
+              <button
+                onClick={() => play(bestMatchAnswer, "en")}
+                className="flex items-center gap-1.5 px-3 py-1 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors cursor-pointer"
+                title="Listen English Audio"
+              >
+                <Volume2 className="w-3.5 h-3.5" />
+                <span>Listen Audio</span>
+              </button>
+            )}
           </div>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 py-2 px-1">
-            {displayChunks.map((chunk, cIdx) => {
-              const badgeStyle =
-                STRUCTURE_BADGE_COLORS[chunk.chunkLabel] || "bg-gray-100 text-gray-800 border border-gray-300";
-              return (
-                <div
-                  key={cIdx}
-                  className="flex flex-col items-center bg-white border border-gray-200 rounded-2xl p-3 sm:px-4 sm:py-3.5 shadow-xs hover:border-gray-300 transition-all flex-shrink-0"
-                >
-                  {/* Structure Role Badge (主语, 谓语, 宾语, 状语, etc.) */}
-                  <span
-                    className={`text-[10px] sm:text-xs font-bold px-3 py-0.5 rounded-full mb-2 shadow-2xs whitespace-nowrap ${badgeStyle}`}
-                  >
-                    {chunk.chunkLabel}
-                  </span>
+          {/* Horizontal Layout of Columns (Structure -> Word -> Underline -> IPA -> Meaning) */}
+          <div className="flex flex-wrap items-start justify-center gap-4 sm:gap-7 py-2">
+            {analyzedWordList.map((item, idx) => {
+              const targetWord = item.word;
+              const pillColor = GRAMMAR_PILL_COLORS[item.grammarTag || "名词"] || "bg-[#009b69] text-white";
+              const isWordMatched = matchedWordIndices[idx] !== undefined ? matchedWordIndices[idx] : true;
+              const userTyped = inputWords[idx] || "";
 
-                  {/* Words inside chunk */}
-                  <div className="flex flex-row items-center gap-3 sm:gap-4">
-                    {chunk.words.map((w, wIdx) => (
-                      <div key={wIdx} className="flex flex-col items-center text-center">
-                        {/* IPA */}
-                        <span className="text-[11px] sm:text-xs font-mono text-gray-400 select-none mb-0.5 min-h-[1rem]">
-                          {w.ipa || ""}
+              return (
+                <div key={idx} className="flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
+                  {/* Tier 1: Grammatical Structure Badge (Always Visible, matching photo) */}
+                  <div className="mb-3">
+                    <span
+                      className={`inline-block px-3 py-0.5 rounded-full text-xs sm:text-sm font-bold tracking-tight shadow-2xs whitespace-nowrap ${pillColor}`}
+                    >
+                      {item.grammarTag}
+                    </span>
+                  </div>
+
+                  {/* Tier 2: Word Input (During typing) OR Word Result (After Enter) */}
+                  <div className="flex flex-col items-center justify-center min-h-[3.25rem]">
+                    {status === "answering" ? (
+                      <input
+                        ref={(el: HTMLInputElement | null) => {
+                          inputRefs.current[idx] = el;
+                        }}
+                        type="text"
+                        autoFocus={idx === 0}
+                        value={inputWords[idx] || ""}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          if (val.includes(" ")) {
+                            const clean = val.replace(/\s+/g, "");
+                            const next = [...inputWords];
+                            next[idx] = clean;
+                            setInputWords(next);
+                            if (idx + 1 < rawAnswerTokens.length) {
+                              inputRefs.current[idx + 1]?.focus();
+                            }
+                            return;
+                          }
+                          const next = [...inputWords];
+                          next[idx] = val;
+                          setInputWords(next);
+                        }}
+                        onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
+                        disabled={status !== "answering"}
+                        style={{ width: `${Math.max(3, targetWord.length + 1)}ch` }}
+                        className="text-center font-serif text-3xl sm:text-4xl font-bold tracking-tight text-[#007a55] border-b-2 border-[#007a55] focus:border-[#004d36] bg-transparent focus:outline-none pb-1 min-w-[3.5rem]"
+                      />
+                    ) : (
+                      <div className="flex flex-col items-center">
+                        <span
+                          className={`font-serif text-3xl sm:text-4xl font-bold tracking-tight pb-1 px-1 whitespace-nowrap border-b-2 ${
+                            isWordMatched
+                              ? "text-[#007a55] border-[#007a55]"
+                              : "text-[#007a55] border-red-500"
+                          }`}
+                        >
+                          {targetWord}
                         </span>
-                        {/* Word text */}
-                        <span className="text-xl sm:text-2xl font-black text-gray-900 tracking-tight whitespace-nowrap">
-                          {w.word}
-                        </span>
-                        {/* Chinese meaning */}
-                        <span className="text-xs sm:text-sm font-medium text-gray-600 mt-1 whitespace-nowrap">
-                          {w.meaning || ""}
-                        </span>
+                        {!isWordMatched && userTyped && (
+                          <span className="text-xs font-mono text-red-500 line-through mt-0.5 font-medium">
+                            {userTyped}
+                          </span>
+                        )}
                       </div>
-                    ))}
+                    )}
+                  </div>
+
+                  {/* Tier 3: IPA Pronunciation (Revealed AFTER Enter) */}
+                  <div className="min-h-[1.5rem] flex items-center justify-center mt-1">
+                    {status !== "answering" ? (
+                      <span className="text-xs sm:text-sm font-sans font-medium text-gray-500 tracking-wider select-none">
+                        {item.ipa ? item.ipa : ""}
+                      </span>
+                    ) : (
+                      <div className="h-4" />
+                    )}
+                  </div>
+
+                  {/* Tier 4: Chinese Word Meaning (Revealed AFTER Enter) */}
+                  <div className="min-h-[1.5rem] flex items-center justify-center mt-0.5">
+                    {status !== "answering" ? (
+                      <span className="text-sm sm:text-base font-bold text-gray-800 whitespace-nowrap select-none">
+                        {item.meaning || ""}
+                      </span>
+                    ) : (
+                      <div className="h-5" />
+                    )}
                   </div>
                 </div>
               );
             })}
           </div>
         </div>
-      )}
+      </div>
     </ExerciseShell>
   );
 }

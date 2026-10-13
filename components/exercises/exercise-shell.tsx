@@ -18,6 +18,7 @@ interface ExerciseShellProps {
   correctedMarkdown?: string;
   language?: string;
   similarityScore?: number | null;
+  similarityDetail?: string;
 }
 
 export function ExerciseShell({
@@ -31,6 +32,7 @@ export function ExerciseShell({
   correctedMarkdown,
   language,
   similarityScore,
+  similarityDetail,
 }: ExerciseShellProps) {
   const justCheckedRef = useRef(false);
 
@@ -84,9 +86,14 @@ export function ExerciseShell({
       {status === "correct" && (
         <div className="mt-6">
           <div className="rounded-xl bg-green-50 border-2 border-lingo-green p-4 mb-4">
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center gap-2 mb-2 flex-wrap">
               <span className="text-2xl">&#10003;</span>
               <span className="font-bold text-lingo-green">Correct!</span>
+              {typeof similarityScore === "number" && (
+                <span className="text-xs font-semibold text-lingo-green bg-lingo-green/10 px-2 py-0.5 rounded-full">
+                  {Math.round(similarityScore * 100)}% match {similarityDetail ? `(${similarityDetail})` : ""}
+                </span>
+              )}
             </div>
             {allAnswers && allAnswers.length > 0 && (
               <div className="mt-2 text-sm text-lingo-text border-t border-lingo-green/20 pt-2.5">
@@ -122,12 +129,12 @@ export function ExerciseShell({
       {status === "incorrect" && (
         <div className="mt-6">
           <div className="rounded-xl bg-red-50 border-2 border-lingo-red p-4 mb-4">
-            <div className="flex items-center gap-2 mb-2">
+            <div className="flex items-center gap-2 mb-2 flex-wrap">
               <span className="text-2xl">&#10007;</span>
               <span className="font-bold text-lingo-red">Incorrect</span>
-              {typeof similarityScore === 'number' && (
-                <span className="text-xs font-medium text-lingo-red bg-lingo-red/10 px-2 py-0.5 rounded">
-                  {Math.round(similarityScore * 100)}% match
+              {typeof similarityScore === "number" && (
+                <span className="text-xs font-semibold text-lingo-red bg-lingo-red/10 px-2 py-0.5 rounded-full">
+                  {Math.round(similarityScore * 100)}% match {similarityDetail ? `(${similarityDetail})` : ""}
                 </span>
               )}
             </div>

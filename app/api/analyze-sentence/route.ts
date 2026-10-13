@@ -37,44 +37,33 @@ const BUILTIN_WORD_OVERRIDES: Record<string, DictLookupEntry> = {
   her: { ipa: "/hɜːr/", meaning: "她/她的", pos: "pronoun" },
   us: { ipa: "/ʌs/", meaning: "我们", pos: "pronoun" },
   them: { ipa: "/ðɛm/", meaning: "他们", pos: "pronoun" },
-  my: { ipa: "/maɪ/", meaning: "我的", pos: "determiner" },
-  your: { ipa: "/jɔːr/", meaning: "你的", pos: "determiner" },
-  his: { ipa: "/hɪz/", meaning: "他的", pos: "determiner" },
-  our: { ipa: "/aʊər/", meaning: "我们的", pos: "determiner" },
-  their: { ipa: "/ðɛər/", meaning: "他们的", pos: "determiner" },
-  this: { ipa: "/ðɪs/", meaning: "这个", pos: "determiner" },
-  that: { ipa: "/ðæt/", meaning: "那个", pos: "determiner" },
-  these: { ipa: "/ðiːz/", meaning: "这些", pos: "determiner" },
-  those: { ipa: "/ðoʊz/", meaning: "那些", pos: "determiner" },
-  a: { ipa: "/ə/", meaning: "一个", pos: "determiner" },
-  an: { ipa: "/æn/", meaning: "一个", pos: "determiner" },
-  the: { ipa: "/ðə/", meaning: "这/那", pos: "determiner" },
-  every: { ipa: "/ˈɛvri/", meaning: "每个", pos: "determiner" },
-  all: { ipa: "/ɔːl/", meaning: "所有", pos: "determiner" },
-  some: { ipa: "/sʌm/", meaning: "一些", pos: "determiner" },
-  any: { ipa: "/ˈɛni/", meaning: "任何", pos: "determiner" },
-  many: { ipa: "/ˈmɛni/", meaning: "许多", pos: "determiner" },
-  most: { ipa: "/moʊst/", meaning: "大多数", pos: "determiner" },
-  no: { ipa: "/noʊ/", meaning: "没有", pos: "determiner" },
-  am: { ipa: "/æm/", meaning: "是", pos: "verb" },
-  is: { ipa: "/ɪz/", meaning: "是", pos: "verb" },
-  are: { ipa: "/ɑːr/", meaning: "是", pos: "verb" },
-  was: { ipa: "/wɒz/", meaning: "是(过去)", pos: "verb" },
-  were: { ipa: "/wɜːr/", meaning: "是(过去)", pos: "verb" },
+  my: { ipa: "/maɪ/", meaning: "我的", pos: "possessive" },
+  your: { ipa: "/jɔːr/", meaning: "你的", pos: "possessive" },
+  his: { ipa: "/hɪz/", meaning: "他的", pos: "possessive" },
+  our: { ipa: "/aʊər/", meaning: "我们的", pos: "possessive" },
+  their: { ipa: "/ðɛər/", meaning: "他们的", pos: "possessive" },
+  its: { ipa: "/ɪts/", meaning: "它的", pos: "possessive" },
+  get: { ipa: "/ɡɛt/", meaning: "使得/得到", pos: "verb" },
+  message: { ipa: "/ˈmɛs.ɪdʒ/", meaning: "消息", pos: "noun" },
+  am: { ipa: "/æm/", meaning: "是", pos: "auxiliary" },
+  is: { ipa: "/ɪz/", meaning: "是", pos: "auxiliary" },
+  are: { ipa: "/ɑːr/", meaning: "是", pos: "auxiliary" },
+  was: { ipa: "/wɒz/", meaning: "是(过去)", pos: "auxiliary" },
+  were: { ipa: "/wɜːr/", meaning: "是(过去)", pos: "auxiliary" },
   be: { ipa: "/biː/", meaning: "是/成为", pos: "verb" },
   been: { ipa: "/bɪn/", meaning: "是(分词)", pos: "verb" },
-  have: { ipa: "/hæv/", meaning: "有/吃", pos: "verb" },
-  has: { ipa: "/hæz/", meaning: "有", pos: "verb" },
-  had: { ipa: "/hæd/", meaning: "有(过去)", pos: "verb" },
-  do: { ipa: "/duː/", meaning: "做", pos: "verb" },
-  does: { ipa: "/dʌz/", meaning: "做", pos: "verb" },
-  did: { ipa: "/dɪd/", meaning: "做(过去)", pos: "verb" },
-  can: { ipa: "/kæn/", meaning: "能/可以", pos: "modal" },
-  could: { ipa: "/kʊd/", meaning: "能够", pos: "modal" },
-  will: { ipa: "/wɪl/", meaning: "将会", pos: "modal" },
-  would: { ipa: "/wʊd/", meaning: "想要/会", pos: "modal" },
-  should: { ipa: "/ʃʊd/", meaning: "应该", pos: "modal" },
-  must: { ipa: "/mʌst/", meaning: "必须", pos: "modal" },
+  have: { ipa: "/hæv/", meaning: "有/已经", pos: "verb" },
+  has: { ipa: "/hæz/", meaning: "有/已经", pos: "verb" },
+  had: { ipa: "/hæd/", meaning: "有/已经", pos: "verb" },
+  do: { ipa: "/duː/", meaning: "做/干", pos: "auxiliary" },
+  does: { ipa: "/dʌz/", meaning: "做/干", pos: "auxiliary" },
+  did: { ipa: "/dɪd/", meaning: "做/干", pos: "auxiliary" },
+  can: { ipa: "/kæn/", meaning: "能/可以", pos: "auxiliary" },
+  could: { ipa: "/kʊd/", meaning: "能够", pos: "auxiliary" },
+  will: { ipa: "/wɪl/", meaning: "将会", pos: "auxiliary" },
+  would: { ipa: "/wʊd/", meaning: "想要/会", pos: "auxiliary" },
+  should: { ipa: "/ʃʊd/", meaning: "应该", pos: "auxiliary" },
+  must: { ipa: "/mʌst/", meaning: "必须", pos: "auxiliary" },
   may: { ipa: "/meɪ/", meaning: "可以/可能", pos: "modal" },
   might: { ipa: "/maɪt/", meaning: "可能", pos: "modal" },
   to: { ipa: "/tuː/", meaning: "去/向", pos: "preposition" },
@@ -320,10 +309,10 @@ const AUX_AND_MODALS = new Set([
   "can", "could", "will", "would", "should", "must", "may", "might", "do", "does", "did", "am", "is", "are", "was", "were", "have", "has", "had"
 ]);
 
-function buildSyntacticAnalysis(sentence: string): { fullTranslation: string; chunks: SyntacticChunk[] } {
+function buildSyntacticAnalysis(sentence: string): { fullTranslation: string; acceptableTranslations: string[]; chunks: SyntacticChunk[] } {
   const cleanedSentence = (sentence || "").trim();
   if (!cleanedSentence) {
-    return { fullTranslation: "", chunks: [] };
+    return { fullTranslation: "", acceptableTranslations: [], chunks: [] };
   }
 
   const rawTokens = cleanedSentence.split(/\s+/).filter(Boolean);
@@ -503,8 +492,47 @@ function buildSyntacticAnalysis(sentence: string): { fullTranslation: string; ch
     i++;
   }
 
+  // Generate natural rule-based acceptable translations for fallback
+  const acceptableTranslations: string[] = [];
+  const addAlt = (str: string) => {
+    const s = str.trim();
+    if (s && s.toLowerCase() !== cleanedSentence.toLowerCase() && !acceptableTranslations.some((a) => a.toLowerCase() === s.toLowerCase())) {
+      acceptableTranslations.push(s);
+    }
+  };
+
+  const core = cleanedSentence.replace(/[.!?]$/, "").trim();
+  const punct = cleanedSentence.match(/[.!?]$/)?.[0] || ".";
+
+  if (/\bwant to eat\b/i.test(core)) {
+    addAlt(core.replace(/\bwant to eat\b/i, "would like to eat") + punct);
+    addAlt(core.replace(/\bwant to eat\b/i, "want to have") + punct);
+  } else if (/\bwant to\b/i.test(core)) {
+    addAlt(core.replace(/\bwant to\b/i, "would like to") + punct);
+  } else if (/\bwould like to\b/i.test(core)) {
+    addAlt(core.replace(/\bwould like to\b/i, "want to") + punct);
+  }
+
+  if (/\bI'm\b/.test(core)) addAlt(core.replace(/\bI'm\b/, "I am") + punct);
+  if (/\bI am\b/.test(core)) addAlt(core.replace(/\bI am\b/, "I'm") + punct);
+  if (/\bdon't\b/.test(core)) addAlt(core.replace(/\bdon't\b/, "do not") + punct);
+  if (/\bdo not\b/.test(core)) addAlt(core.replace(/\bdo not\b/, "don't") + punct);
+  if (/\bcan't\b/.test(core)) addAlt(core.replace(/\bcan't\b/, "cannot") + punct);
+  if (/\bcannot\b/.test(core)) addAlt(core.replace(/\bcannot\b/, "can't") + punct);
+  if (/\bit's\b/.test(core)) addAlt(core.replace(/\bit's\b/, "it is") + punct);
+  if (/\bit is\b/.test(core)) addAlt(core.replace(/\bit is\b/, "it's") + punct);
+  if (/\bthat's\b/.test(core)) addAlt(core.replace(/\bthat's\b/, "that is") + punct);
+  if (/\bthat is\b/.test(core)) addAlt(core.replace(/\bthat is\b/, "that's") + punct);
+  if (/\bthere's\b/.test(core)) addAlt(core.replace(/\bthere's\b/, "there is") + punct);
+  if (/\bthere is\b/.test(core)) addAlt(core.replace(/\bthere is\b/, "there's") + punct);
+  if (/\bthey've\b/.test(core)) addAlt(core.replace(/\bthey've\b/, "they have") + punct);
+  if (/\bthey have\b/.test(core)) addAlt(core.replace(/\bthey have\b/, "they've") + punct);
+  if (/\bhave to\b/i.test(core)) addAlt(core.replace(/\bhave to\b/i, "need to") + punct);
+  if (/\bneed to\b/i.test(core)) addAlt(core.replace(/\bneed to\b/i, "have to") + punct);
+
   return {
     fullTranslation: cleanedSentence,
+    acceptableTranslations: acceptableTranslations.slice(0, 2),
     chunks,
   };
 }
@@ -526,6 +554,7 @@ export async function POST(req: NextRequest) {
 
     const ai = new GoogleGenAI({ apiKey });
     const prompt = `Analyze the following English sentence ("${sentence}") into syntactic chunks (such as 主语, 谓语, 宾语, 状语, 定语, 连词).
+Also provide 2 natural alternative acceptable English translations that express the exact same meaning.
 
 CRITICAL INSTRUCTIONS:
 1. The 'word' property MUST be each individual single English word from the input sentence (NEVER combine multiple words like 'wake up' into one item; each space-separated token must be its own item). DO NOT put Chinese characters in the 'word' field.
@@ -533,10 +562,15 @@ CRITICAL INSTRUCTIONS:
 3. The 'ipa' property MUST be the IPA pronunciation wrapped in slashes (e.g. "/ʃiː/").
 4. The 'pos' property should be the part of speech in Chinese (e.g. "代词", "动词", "副词", "介词", "数词", "名词", "形容词").
 5. The 'chunkLabel' MUST be one of: "主语", "谓语", "宾语", "状语", "定语", "补语", "连词".
+6. The 'acceptableTranslations' property MUST be an array of 2 alternative valid, natural English sentences that mean the same thing.
 
 Return ONLY valid JSON format without markdown code blocks:
 {
   "fullTranslation": "...",
+  "acceptableTranslations": [
+    "Alternative sentence 1",
+    "Alternative sentence 2"
+  ],
   "chunks": [
     {
       "chunkLabel": "主语",
@@ -563,6 +597,9 @@ Return ONLY valid JSON format without markdown code blocks:
       parsed.chunks.length > 0 &&
       !(parsed.chunks.length === 1 && parsed.chunks[0].chunkLabel === "句子")
     ) {
+      if (!Array.isArray(parsed.acceptableTranslations) || parsed.acceptableTranslations.length === 0) {
+        parsed.acceptableTranslations = fallback.acceptableTranslations;
+      }
       return NextResponse.json(parsed);
     }
     return NextResponse.json(fallback);
