@@ -25,18 +25,12 @@ interface AnalyzedWord {
   meaning?: string;
   pos?: string;
   grammarTag?: string;
-  chunkLabel?: string;
-}
-
-interface SyntacticChunk {
-  chunkLabel: string;
-  words: AnalyzedWord[];
 }
 
 interface SentenceAnalysisData {
   fullTranslation?: string;
   acceptableTranslations?: string[];
-  chunks: SyntacticChunk[];
+  words?: AnalyzedWord[];
 }
 
 // Built-in word dictionary for instant accurate fallback mapping
@@ -115,11 +109,11 @@ const POSSESSIVE_WORDS = new Set([
 
 const ARTICLE_WORDS = new Set(["a", "an", "the"]);
 
-function resolveGrammarTag(word: string, pos?: string, chunkLabel?: string): string {
+function resolveGrammarTag(word: string, pos?: string): string {
   const clean = word.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
 
-  if (PRONOUN_WORDS.has(clean)) return "人称代词";
-  if (POSSESSIVE_WORDS.has(clean)) return "物主限定词";
+  if (PRONOUN_WORDS.has(clean)) return "代词";
+  if (POSSESSIVE_WORDS.has(clean)) return "限定词";
   if (ARTICLE_WORDS.has(clean)) return "冠词";
   if (AUXILIARY_WORDS.has(clean)) return "助动词";
 
@@ -128,8 +122,8 @@ function resolveGrammarTag(word: string, pos?: string, chunkLabel?: string): str
   }
 
   if (pos === "auxiliary" || pos === "助动词") return "助动词";
-  if (pos === "possessive" || pos === "物主限定词") return "物主限定词";
-  if (pos === "pronoun" || pos === "代词" || pos === "人称代词") return "人称代词";
+  if (pos === "possessive" || pos === "物主限定词") return "限定词";
+  if (pos === "pronoun" || pos === "代词" || pos === "人称代词") return "代词";
   if (pos === "verb" || pos === "动词") return "动词";
   if (pos === "noun" || pos === "名词") return "名词";
   if (pos === "adjective" || pos === "adj" || pos === "形容词") return "形容词";
@@ -137,32 +131,9 @@ function resolveGrammarTag(word: string, pos?: string, chunkLabel?: string): str
   if (pos === "preposition" || pos === "prep" || pos === "介词") return "介词";
   if (pos === "conjunction" || pos === "conj" || pos === "连词") return "连词";
   if (pos === "determiner" || pos === "限定词") return "限定词";
-  if (pos === "numeral" || pos === "num" || pos === "数词") return "数词";
 
-  if (chunkLabel && chunkLabel !== "句子") return chunkLabel;
   return "名词";
 }
-
-const GRAMMAR_PILL_COLORS: Record<string, string> = {
-  "助动词": "bg-[#009b69] text-white",
-  "人称代词": "bg-[#c026d3] text-white",
-  "动词": "bg-[#7c3aed] text-white",
-  "物主限定词": "bg-[#0284c7] text-white",
-  "名词": "bg-[#b91c1c] text-white",
-  "副词": "bg-[#0d9488] text-white",
-  "形容词": "bg-[#d97706] text-white",
-  "介词": "bg-[#4f46e5] text-white",
-  "连词": "bg-[#475569] text-white",
-  "冠词": "bg-[#0ea5e9] text-white",
-  "指示代词": "bg-[#0284c7] text-white",
-  "疑问词": "bg-[#d97706] text-white",
-  "数词": "bg-[#f59e0b] text-white",
-  "主语": "bg-[#d97706] text-white",
-  "谓语": "bg-[#e11d48] text-white",
-  "宾语": "bg-[#2563eb] text-white",
-  "状语": "bg-[#059669] text-white",
-  "定语": "bg-[#8b5cf6] text-white",
-};
 
 export function Translation({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
   const [analysis, setAnalysis] = useState<SentenceAnalysisData | null>(null);
@@ -171,7 +142,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     return exercise.answer.trim().split(/\s+/).filter(Boolean);
   }, [exercise.answer]);
 
-  // Generate multiple rich acceptable alternative translations
   const allAnswers = useMemo(() => {
     const fromProps = exercise.acceptAlso || [];
     const fromApi = analysis?.acceptableTranslations || [];
@@ -256,21 +226,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     };
   }, [exercise.answer]);
 
-  // 1-to-1 mapping for EVERY token in rawAnswerTokens
   const analyzedWordList = useMemo<AnalyzedWord[]>(() => {
     return rawAnswerTokens.map((token: string, idx: number) => {
       const clean = token.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
       const dict = BUILTIN_WORD_DICT[clean];
       const gTag = dict?.grammarTag || resolveGrammarTag(token);
-
-      let chunkLabel = "宾语";
-      if (idx === 0) {
-        chunkLabel = "主语";
-      } else if (gTag === "动词" || gTag === "助动词" || idx === 1) {
-        chunkLabel = "谓语";
-      } else {
-        chunkLabel = "宾语";
-      }
 
       return {
         word: token,
@@ -278,24 +238,9 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
         meaning: dict?.meaning || clean,
         pos: dict?.grammarTag || "名词",
         grammarTag: gTag,
-        chunkLabel,
       };
     });
   }, [rawAnswerTokens]);
-
-  const syntacticChunks = useMemo(() => {
-    const map = new Map<string, { chunkLabel: string; words: { item: AnalyzedWord; globalIndex: number }[] }>();
-    
-    analyzedWordList.forEach((item, globalIndex) => {
-      const label = item.chunkLabel || "宾语";
-      if (!map.has(label)) {
-        map.set(label, { chunkLabel: label, words: [] });
-      }
-      map.get(label)!.words.push({ item, globalIndex });
-    });
-
-    return Array.from(map.values());
-  }, [analyzedWordList]);
 
   const orderedAnswers = useMemo(() => {
     if (!bestMatchAnswer) return allAnswers;
@@ -371,7 +316,19 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       similarityDetail={matchDetail}
     >
       <div className="w-full max-w-5xl mx-auto flex flex-col items-center py-2 sm:py-4">
-        {/* Syntactic Chunks Container Cards Layout */}
+        {/* Chinese Sentence Prompt at the top */}
+        <div className="flex flex-col items-center mt-2 mb-6 text-center px-2">
+          <div className="flex items-center justify-center gap-2 sm:gap-3">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-800 tracking-normal select-none">
+              <HoverableText text={exercise.sentence} language={sentenceLang} />
+            </h1>
+            {!exercise.noAudio?.includes("sentence") && (
+              <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
+            )}
+          </div>
+        </div>
+
+        {/* Word Input Cards Layout (without word structure/chunk labels) */}
         <div
           onClick={() => {
             if (status === "answering") {
@@ -379,10 +336,10 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               focusInputSlot(firstEmpty === -1 ? activeSlot : firstEmpty);
             }
           }}
-          className="w-full flex flex-wrap items-stretch justify-center gap-3 sm:gap-4 mb-4 cursor-text"
+          className="w-full flex flex-col items-center cursor-text mb-4"
         >
           {status !== "answering" && (
-            <div className="w-full flex items-center justify-end mb-2">
+            <div className="w-full flex items-center justify-end mb-3 max-w-4xl">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
@@ -397,144 +354,104 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
             </div>
           )}
 
-          {syntacticChunks.map((chunk, chunkIdx) => {
-            const badgeColor = GRAMMAR_PILL_COLORS[chunk.chunkLabel] || "bg-[#2563eb] text-white";
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 w-full max-w-4xl">
+            {analyzedWordList.map((item, idx) => {
+              const targetWord = item.word;
+              const typedWord = inputWords[idx] || "";
+              const isSlotActive = activeSlot === idx;
+              const isWordMatched = matchedWordIndices[idx] !== undefined ? matchedWordIndices[idx] : true;
 
-            return (
-              <div
-                key={chunkIdx}
-                className="relative bg-white rounded-2xl sm:rounded-3xl border border-blue-200 shadow-xs px-4 sm:px-6 pt-5 pb-4 flex flex-col items-center justify-center transition-all min-w-[120px] sm:min-w-[150px]"
-              >
-                {/* Chunk Header Badge */}
-                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
-                  <span className={`inline-block px-3 py-0.5 rounded-full text-xs font-bold tracking-tight shadow-2xs whitespace-nowrap ${badgeColor}`}>
-                    {chunk.chunkLabel}
-                  </span>
-                </div>
+              return (
+                <div
+                  key={idx}
+                  className="bg-white rounded-2xl border border-blue-200 shadow-xs px-4 py-3.5 flex flex-col items-center justify-center min-w-[95px] sm:min-w-[115px]"
+                >
+                  {/* POS on top as hint */}
+                  <div className="h-5 flex items-center justify-center mb-1">
+                    {item.grammarTag && (
+                      <span className="text-[11px] sm:text-xs font-sans font-medium text-gray-500 tracking-wider select-none whitespace-nowrap">
+                        {item.grammarTag}
+                      </span>
+                    )}
+                  </div>
 
-                {/* Words inside this chunk */}
-                <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-1">
-                  {chunk.words.map(({ item, globalIndex: idx }) => {
-                    const targetWord = item.word;
-                    const isSlotActive = activeSlot === idx;
-
-                    return (
-                      <div key={idx} className="flex flex-col items-center min-w-[50px] sm:min-w-[70px] px-1">
-                        {/* POS / Grammar Tag (shown above word to help user key in answer) */}
-                        <div className="h-5 flex items-center justify-center mb-1">
-                          {item.grammarTag && (
-                            <span className="text-[11px] sm:text-xs font-sans font-medium text-gray-500 tracking-wider select-none whitespace-nowrap">
-                              {item.grammarTag}
-                            </span>
-                          )}
-                        </div>
-
-                        {/* Word Input or Correct Word Display */}
-                        <div className="flex flex-col items-center justify-center my-1">
-                          {status === "answering" ? (
-                            <input
-                              id={`word-input-${idx}`}
-                              ref={(el: HTMLInputElement | null) => {
-                                inputRefs.current[idx] = el;
-                              }}
-                              type="text"
-                              autoFocus={idx === 0}
-                              value={inputWords[idx] || ""}
-                              onFocus={() => setActiveSlot(idx)}
-                              onChange={(e) => {
-                                const val = e.target.value;
-                                if (val.includes(" ")) {
-                                  const clean = val.replace(/\s+/g, "");
-                                  const next = [...inputWords];
-                                  next[idx] = clean;
-                                  setInputWords(next);
-                                  if (idx + 1 < rawAnswerTokens.length) {
-                                    focusInputSlot(idx + 1);
-                                  }
-                                  return;
-                                }
-                                const next = [...inputWords];
-                                next[idx] = val;
-                                setInputWords(next);
-                              }}
-                              onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
-                              disabled={status !== "answering"}
-                              style={{ width: `${Math.max(3, targetWord.length + 1)}ch` }}
-                              className={`text-center font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] bg-transparent focus:outline-none pb-0.5 min-w-[2.5rem] sm:min-w-[3.5rem] transition-all border-b-2 ${
-                                isSlotActive
-                                  ? "border-[#007a55] border-b-[3px] shadow-[0_2px_0_0_#007a55]"
-                                  : "border-[#007a55]/60 hover:border-[#007a55]"
-                              }`}
-                            />
-                          ) : (
-                            <div className="flex flex-col items-center">
-                              <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight pb-0.5 px-0.5 whitespace-nowrap border-b-2 text-[#007a55] border-[#007a55]">
-                                {targetWord}
-                              </span>
-                            </div>
-                          )}
-                        </div>
-
-                        {/* Chinese Meaning & IPA below after Enter */}
-                        <div className="h-10 flex flex-col items-center justify-start mt-1">
-                          {status !== "answering" && (
-                            <>
-                              {item.meaning && (
-                                <span className="text-xs sm:text-sm font-bold text-gray-800 whitespace-nowrap select-none leading-tight">
-                                  {item.meaning}
-                                </span>
-                              )}
-                              {item.ipa && (
-                                <span className="text-[10px] sm:text-xs text-gray-400 select-none leading-tight mt-0.5">
-                                  {item.ipa}
-                                </span>
-                              )}
-                            </>
-                          )}
-                        </div>
+                  {/* Input or Result */}
+                  <div className="flex flex-col items-center justify-center my-1">
+                    {status === "answering" ? (
+                      <input
+                        id={`word-input-${idx}`}
+                        ref={(el: HTMLInputElement | null) => {
+                          inputRefs.current[idx] = el;
+                        }}
+                        type="text"
+                        autoFocus={idx === 0}
+                        value={typedWord}
+                        onFocus={() => setActiveSlot(idx)}
+                        onChange={(e) => {
+                          const val = e.target.value;
+                          if (val.includes(" ")) {
+                            const clean = val.replace(/\s+/g, "");
+                            const next = [...inputWords];
+                            next[idx] = clean;
+                            setInputWords(next);
+                            if (idx + 1 < rawAnswerTokens.length) {
+                              focusInputSlot(idx + 1);
+                            }
+                            return;
+                          }
+                          const next = [...inputWords];
+                          next[idx] = val;
+                          setInputWords(next);
+                        }}
+                        onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
+                        disabled={status !== "answering"}
+                        style={{ width: `${Math.max(3, targetWord.length + 1)}ch` }}
+                        className={`text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#007a55] bg-transparent focus:outline-none pb-0.5 min-w-[2.5rem] sm:min-w-[3rem] transition-all border-b-2 ${
+                          isSlotActive
+                            ? "border-[#007a55] border-b-[3px] shadow-[0_2px_0_0_#007a55]"
+                            : "border-[#007a55]/60 hover:border-[#007a55]"
+                        }`}
+                      />
+                    ) : (
+                      <div className="flex flex-col items-center">
+                        {!isWordMatched && (
+                          <span className="font-serif text-xs sm:text-sm font-bold text-emerald-600 mb-0.5 whitespace-nowrap">
+                            {targetWord}
+                          </span>
+                        )}
+                        <span
+                          className={`font-serif text-xl sm:text-2xl font-bold tracking-tight pb-0.5 px-1 whitespace-nowrap ${
+                            isWordMatched ? "text-emerald-700" : "text-red-600 line-through decoration-red-500"
+                          }`}
+                        >
+                          {typedWord || "(empty)"}
+                        </span>
                       </div>
-                    );
-                  })}
+                    )}
+                  </div>
+
+                  {/* Meaning & IPA below after Enter */}
+                  <div className="h-10 flex flex-col items-center justify-start mt-1">
+                    {status !== "answering" && (
+                      <>
+                        {item.meaning && (
+                          <span className="text-[11px] sm:text-xs font-bold text-gray-800 whitespace-nowrap select-none leading-tight">
+                            {item.meaning}
+                          </span>
+                        )}
+                        {item.ipa && (
+                          <span className="text-[10px] text-gray-400 select-none leading-tight mt-0.5">
+                            {item.ipa}
+                          </span>
+                        )}
+                      </>
+                    )}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
-        </div>
-
-        {/* Chinese Sentence Prompt below the word chunk boxes */}
-        <div className="flex flex-col items-center mt-2 mb-3 text-center px-2">
-          <div className="flex items-center justify-center gap-2 sm:gap-3">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-800 tracking-normal select-none">
-              <HoverableText text={exercise.sentence} language={sentenceLang} />
-            </h1>
-            {!exercise.noAudio?.includes("sentence") && (
-              <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
-            )}
+              );
+            })}
           </div>
         </div>
-
-        {/* Dedicated "Your Answer" Row after submit to show what user entered with wrong words in red */}
-        {status !== "answering" && (
-          <div className="w-full bg-white rounded-2xl border border-gray-200 p-3 sm:p-4 mb-2 shadow-xs">
-            <div className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Your Answer:</div>
-            <div className="flex flex-wrap items-center gap-2 text-xl sm:text-2xl font-semibold">
-              {rawAnswerTokens.map((targetToken, idx) => {
-                const typedWord = inputWords[idx] || "";
-                const matched = matchedWordIndices[idx] !== undefined ? matchedWordIndices[idx] : true;
-                return (
-                  <span
-                    key={idx}
-                    className={`px-1.5 py-0.5 rounded ${
-                      matched ? "text-emerald-700 bg-emerald-50" : "text-red-600 bg-red-50 underline decoration-red-500 font-bold"
-                    }`}
-                  >
-                    {typedWord || "(empty)"}
-                  </span>
-                );
-              })}
-            </div>
-          </div>
-        )}
       </div>
     </ExerciseShell>
   );
