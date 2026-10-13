@@ -496,11 +496,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       <div className="flex flex-col items-center">
                         {!isWordMatched && userTyped ? (
                           <div className="flex flex-col items-center">
-                            <span className="text-xs sm:text-sm font-serif text-red-600 font-bold mb-0.5 tracking-tight">
-                              {userTyped}
-                            </span>
-                            <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] border-b-2 border-red-500 pb-0.5 px-0.5 whitespace-nowrap">
+                            <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] mb-0.5 whitespace-nowrap">
                               {targetWord}
+                            </span>
+                            <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-red-600 border-b-2 border-red-500 pb-0.5 px-0.5 whitespace-nowrap">
+                              {userTyped}
                             </span>
                           </div>
                         ) : (
