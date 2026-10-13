@@ -416,8 +416,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                 <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-1">
                   {chunk.words.map(({ item, globalIndex: idx }) => {
                     const targetWord = item.word;
-                    const isWordMatched = matchedWordIndices[idx] !== undefined ? matchedWordIndices[idx] : true;
-                    const userTyped = inputWords[idx] || "";
                     const isSlotActive = activeSlot === idx;
 
                     return (
@@ -431,7 +429,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                           )}
                         </div>
 
-                        {/* Word Input or Result Display */}
+                        {/* Word Input or Correct Word Display */}
                         <div className="flex flex-col items-center justify-center my-1">
                           {status === "answering" ? (
                             <input
@@ -470,30 +468,14 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                             />
                           ) : (
                             <div className="flex flex-col items-center">
-                              {!isWordMatched ? (
-                                <div className="flex flex-col items-center">
-                                  {/* Correct word in green above */}
-                                  <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] mb-1 whitespace-nowrap">
-                                    {targetWord}
-                                  </span>
-                                  {/* User keyed-in answer below in red with cross */}
-                                  <div className="flex items-center gap-1">
-                                    <span className="text-red-500 font-bold select-none text-sm">✕</span>
-                                    <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-red-600 line-through border-b-2 border-red-500 pb-0.5 px-0.5 whitespace-nowrap">
-                                      {userTyped ? userTyped : "(missing)"}
-                                    </span>
-                                  </div>
-                                </div>
-                              ) : (
-                                <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight pb-0.5 px-0.5 whitespace-nowrap border-b-2 text-[#007a55] border-[#007a55]">
-                                  {targetWord}
-                                </span>
-                              )}
+                              <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight pb-0.5 px-0.5 whitespace-nowrap border-b-2 text-[#007a55] border-[#007a55]">
+                                {targetWord}
+                              </span>
                             </div>
                           )}
                         </div>
 
-                        {/* Chinese Meaning & IPA (revealed after Enter) */}
+                        {/* Chinese Meaning & IPA below after Enter */}
                         <div className="h-10 flex flex-col items-center justify-start mt-1">
                           {status !== "answering" && (
                             <>
