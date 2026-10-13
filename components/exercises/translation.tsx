@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, useRef, KeyboardEvent } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback, KeyboardEvent } from "react";
 import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
@@ -177,10 +177,30 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
   const [similarityScore, setSimilarityScore] = useState<number | null>(null);
   const [matchDetail, setMatchDetail] = useState<string>("");
   const [matchedWordIndices, setMatchedWordIndices] = useState<boolean[]>([]);
+  const [activeSlot, setActiveSlot] = useState<number>(0);
 
   const { status, checkAnswer } = useExercise();
   const { play, stop, prefetch } = useAudio();
   const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
+
+  const focusInputSlot = useCallback(
+    (idx: number = 0) => {
+      if (status !== "answering") return;
+      const targetIdx = Math.max(0, Math.min(rawAnswerTokens.length - 1, idx));
+      setActiveSlot(targetIdx);
+      requestAnimationFrame(() => {
+        const el = inputRefs.current[targetIdx] || (document.getElementById(`word-input-${targetIdx}`) as HTMLInputElement | null);
+        if (el) {
+          el.focus({ preventScroll: true });
+          try {
+            const len = el.value.length;
+            el.setSelectionRange(len, len);
+          } catch {}
+        }
+      });
+    },
+    [status, rawAnswerTokens.length]
+  );
 
   useEffect(() => {
     setInputWords(rawAnswerTokens.map(() => ""));
@@ -188,17 +208,31 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     setMatchDetail("");
     setMatchedWordIndices([]);
     setBestMatchAnswer(exercise.answer);
-    const timer = setTimeout(() => {
-      inputRefs.current[0]?.focus();
-    }, 60);
-    return () => clearTimeout(timer);
-  }, [exercise.answer, rawAnswerTokens]);
+    setActiveSlot(0);
+
+    // Staggered triggers to guarantee the cursor/pointer points to the first word line immediately
+    focusInputSlot(0);
+    const t1 = setTimeout(() => focusInputSlot(0), 30);
+    const t2 = setTimeout(() => focusInputSlot(0), 100);
+    const t3 = setTimeout(() => focusInputSlot(0), 250);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+      clearTimeout(t3);
+    };
+  }, [exercise.answer, rawAnswerTokens, focusInputSlot]);
 
   useEffect(() => {
     if (status === "answering") {
-      inputRefs.current[0]?.focus();
+      focusInputSlot(0);
     }
-  }, [status]);
+  }, [status, focusInputSlot]);
+
+  useEffect(() => {
+    if (status === "answering") {
+      focusInputSlot(activeSlot);
+    }
+  }, [analysis, status, activeSlot, focusInputSlot]);
 
   useEffect(() => {
     let isMounted = true;
@@ -338,19 +372,19 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
   const handleNavigation = (i: number, e: KeyboardEvent<HTMLInputElement>) => {
     if (e.key === "ArrowRight") {
       e.preventDefault();
-      inputRefs.current[Math.min(rawAnswerTokens.length - 1, i + 1)]?.focus();
+      focusInputSlot(Math.min(rawAnswerTokens.length - 1, i + 1));
     } else if (e.key === "ArrowLeft") {
       e.preventDefault();
-      inputRefs.current[Math.max(0, i - 1)]?.focus();
+      focusInputSlot(Math.max(0, i - 1));
     } else if (e.key === " " || e.key === "Spacebar") {
       e.preventDefault();
       if (i + 1 < rawAnswerTokens.length) {
-        inputRefs.current[i + 1]?.focus();
+        focusInputSlot(i + 1);
       }
     } else if (e.key === "Backspace" && (!inputWords[i] || inputWords[i].length === 0)) {
       if (i > 0) {
         e.preventDefault();
-        inputRefs.current[i - 1]?.focus();
+        focusInputSlot(i - 1);
       }
     }
   };
@@ -380,12 +414,23 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
           </div>
         </div>
 
-        {/* Word Columns Card (Compact & Tight Spacing) */}
-        <div className="w-full bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-xs p-3 sm:p-6 mb-4 transition-all">
+        {/* Word Columns Card (Click anywhere to focus active/first word line) */}
+        <div
+          onClick={() => {
+            if (status === "answering") {
+              const firstEmpty = inputWords.findIndex((w) => !w.trim());
+              focusInputSlot(firstEmpty === -1 ? activeSlot : firstEmpty);
+            }
+          }}
+          className="w-full bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-xs p-3 sm:p-6 mb-4 transition-all cursor-text"
+        >
           {status !== "answering" && (
             <div className="flex items-center justify-end mb-3 pb-2 border-b border-gray-100">
               <button
-                onClick={() => play(bestMatchAnswer, "en")}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  play(bestMatchAnswer, "en");
+                }}
                 className="flex items-center gap-1.5 px-3 py-1 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors cursor-pointer"
                 title="Listen English Audio"
               >
@@ -402,6 +447,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               const pillColor = GRAMMAR_PILL_COLORS[item.grammarTag || "名词"] || "bg-[#009b69] text-white";
               const isWordMatched = matchedWordIndices[idx] !== undefined ? matchedWordIndices[idx] : true;
               const userTyped = inputWords[idx] || "";
+              const isSlotActive = activeSlot === idx;
 
               return (
                 <div key={idx} className="flex flex-col items-center min-w-[36px] sm:min-w-[56px] px-0.5">
@@ -418,12 +464,19 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                   <div className="flex flex-col items-center justify-center">
                     {status === "answering" ? (
                       <input
+                        id={`word-input-${idx}`}
                         ref={(el: HTMLInputElement | null) => {
                           inputRefs.current[idx] = el;
+                          if (idx === 0 && el && status === "answering" && document.activeElement !== el) {
+                            requestAnimationFrame(() => {
+                              el.focus({ preventScroll: true });
+                            });
+                          }
                         }}
                         type="text"
                         autoFocus={idx === 0}
                         value={inputWords[idx] || ""}
+                        onFocus={() => setActiveSlot(idx)}
                         onChange={(e) => {
                           const val = e.target.value;
                           if (val.includes(" ")) {
@@ -432,7 +485,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                             next[idx] = clean;
                             setInputWords(next);
                             if (idx + 1 < rawAnswerTokens.length) {
-                              inputRefs.current[idx + 1]?.focus();
+                              focusInputSlot(idx + 1);
                             }
                             return;
                           }
@@ -443,7 +496,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                         onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
                         disabled={status !== "answering"}
                         style={{ width: `${Math.max(2, targetWord.length + 0.5)}ch` }}
-                        className="text-center font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] border-b-2 border-[#007a55] focus:border-[#004d36] bg-transparent focus:outline-none pb-0.5 min-w-[2rem] sm:min-w-[2.75rem]"
+                        className={`text-center font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] bg-transparent focus:outline-none pb-0.5 min-w-[2rem] sm:min-w-[2.75rem] transition-all border-b-2 ${
+                          isSlotActive
+                            ? "border-[#007a55] border-b-[3px] shadow-[0_2px_0_0_#007a55]"
+                            : "border-[#007a55]/60 hover:border-[#007a55]"
+                        }`}
                       />
                     ) : (
                       <div className="flex flex-col items-center">
