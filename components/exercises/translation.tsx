@@ -25,6 +25,7 @@ interface AnalyzedWord {
   meaning?: string;
   pos?: string;
   grammarTag?: string;
+  chunkLabel?: string;
 }
 
 interface SyntacticChunk {
@@ -90,6 +91,9 @@ const BUILTIN_WORD_DICT: Record<string, { ipa: string; meaning: string; grammarT
   something: { ipa: "/ˈsʌm.θɪŋ/", meaning: "某物/东西", grammarTag: "代词" },
   want: { ipa: "/wɒnt/", meaning: "想要", grammarTag: "动词" },
   eat: { ipa: "/iːt/", meaning: "吃", grammarTag: "动词" },
+  like: { ipa: "/laɪk/", meaning: "喜欢", grammarTag: "动词" },
+  fresh: { ipa: "/freʃ/", meaning: "新鲜的", grammarTag: "形容词" },
+  apples: { ipa: "/ˈæplz/", meaning: "苹果", grammarTag: "名词" },
 };
 
 const AUXILIARY_WORDS = new Set([
@@ -136,24 +140,24 @@ function resolveGrammarTag(word: string, pos?: string, chunkLabel?: string): str
   return "名词";
 }
 
-// Color styles matching IMG_7510.jpeg
+// Color styles matching IMG_7510.jpeg & reference layout
 const GRAMMAR_PILL_COLORS: Record<string, string> = {
-  "助动词": "bg-[#009b69] text-white",     // Green
-  "人称代词": "bg-[#c026d3] text-white",   // Magenta/fuchsia
-  "动词": "bg-[#7c3aed] text-white",       // Violet/purple
-  "物主限定词": "bg-[#0284c7] text-white", // Sky blue
-  "名词": "bg-[#b91c1c] text-white",       // Crimson/Rose
-  "副词": "bg-[#0d9488] text-white",       // Teal
-  "形容词": "bg-[#d97706] text-white",     // Amber
-  "介词": "bg-[#4f46e5] text-white",       // Indigo
-  "连词": "bg-[#475569] text-white",       // Slate
-  "冠词": "bg-[#0ea5e9] text-white",       // Light blue
-  "指示代词": "bg-[#0284c7] text-white",   // Blue
-  "疑问词": "bg-[#d97706] text-white",     // Amber
-  "数词": "bg-[#f59e0b] text-white",       // Orange
-  "主语": "bg-[#f59e0b] text-white",
-  "谓语": "bg-[#f43f5e] text-white",
-  "宾语": "bg-[#2563eb] text-white",
+  "助动词": "bg-[#009b69] text-white",
+  "人称代词": "bg-[#c026d3] text-white",
+  "动词": "bg-[#7c3aed] text-white",
+  "物主限定词": "bg-[#0284c7] text-white",
+  "名词": "bg-[#b91c1c] text-white",
+  "副词": "bg-[#0d9488] text-white",
+  "形容词": "bg-[#d97706] text-white",
+  "介词": "bg-[#4f46e5] text-white",
+  "连词": "bg-[#475569] text-white",
+  "冠词": "bg-[#0ea5e9] text-white",
+  "指示代词": "bg-[#0284c7] text-white",
+  "疑问词": "bg-[#d97706] text-white",
+  "数词": "bg-[#f59e0b] text-white",
+  "主语": "bg-[#d97706] text-white", // Amber/Brown for 主语 badge
+  "谓语": "bg-[#e11d48] text-white", // Rose/Red for 谓语 badge
+  "宾语": "bg-[#2563eb] text-white", // Blue for 宾语 badge
   "状语": "bg-[#059669] text-white",
   "定语": "bg-[#8b5cf6] text-white",
 };
@@ -210,7 +214,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     setBestMatchAnswer(exercise.answer);
     setActiveSlot(0);
 
-    // Staggered triggers to guarantee the cursor/pointer points to the first word line immediately
     focusInputSlot(0);
     const t1 = setTimeout(() => focusInputSlot(0), 30);
     const t2 = setTimeout(() => focusInputSlot(0), 100);
@@ -227,7 +230,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       focusInputSlot(0);
     }
   }, [status, focusInputSlot]);
-
 
   useEffect(() => {
     let isMounted = true;
@@ -252,7 +254,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     };
   }, [exercise.answer]);
 
-  // Flattened analyzed word list with grammar tags, IPA, and meaning
+  // Flattened analyzed word list with global index tracking
   const analyzedWordList = useMemo<AnalyzedWord[]>(() => {
     const fallbackList = rawAnswerTokens.map((token: string) => {
       const clean = token.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
@@ -263,6 +265,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
         meaning: dict?.meaning || clean,
         pos: dict?.grammarTag || "名词",
         grammarTag: dict?.grammarTag || resolveGrammarTag(token),
+        chunkLabel: "宾语",
       };
     });
 
@@ -287,6 +290,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               meaning: dict?.meaning || (pIdx === 0 ? (w.meaning || "") : ""),
               pos: w.pos,
               grammarTag: dict?.grammarTag || resolveGrammarTag(sub, w.pos, chunk.chunkLabel),
+              chunkLabel: chunk.chunkLabel || "宾语",
             });
           }
         } else if (parts.length === 1) {
@@ -298,6 +302,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
             meaning: dict?.meaning || w.meaning || "",
             pos: w.pos,
             grammarTag: dict?.grammarTag || resolveGrammarTag(parts[0], w.pos, chunk.chunkLabel),
+            chunkLabel: chunk.chunkLabel || "宾语",
           });
         }
       }
@@ -313,9 +318,25 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
         meaning: dict?.meaning || found?.meaning || clean,
         pos: found?.pos || dict?.grammarTag,
         grammarTag: dict?.grammarTag || found?.grammarTag || resolveGrammarTag(token, found?.pos),
+        chunkLabel: found?.chunkLabel || (idx === 0 ? "主语" : idx === 1 ? "谓语" : "宾语"),
       };
     });
   }, [analysis, rawAnswerTokens]);
+
+  // Group analyzed words by chunks for chunk-box UI (matching reference style)
+  const syntacticChunks = useMemo(() => {
+    const map = new Map<string, { chunkLabel: string; words: { item: AnalyzedWord; globalIndex: number }[] }>();
+    
+    analyzedWordList.forEach((item, globalIndex) => {
+      const label = item.chunkLabel || "宾语";
+      if (!map.has(label)) {
+        map.set(label, { chunkLabel: label, words: [] });
+      }
+      map.get(label)!.words.push({ item, globalIndex });
+    });
+
+    return Array.from(map.values());
+  }, [analyzedWordList]);
 
   const orderedAnswers = useMemo(() => {
     if (!bestMatchAnswer) return allAnswers;
@@ -341,12 +362,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     return stop;
   }, [exercise.sentence, sentenceLang, autoplayAudio, play, stop, exercise.noAudio]);
 
-  /**
-   * Word-by-word accuracy match calculation requested by user:
-   * Counts matched words against target sentence.
-   * Example: "Did you get my message" vs "Did you got my message" => 4/5 words = 80%.
-   * 80% and above considered correct!
-   */
   function handleCheck() {
     const matchResult: WordMatchResult = checkWordMatch(inputWords, allAnswers);
 
@@ -356,7 +371,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     const primaryCorrect = allAnswers[0] || exercise.answer;
     setBestMatchAnswer(primaryCorrect);
 
-    // 80% and above is considered correct (>= 80% correct, <= 79% wrong)
     checkAnswer(matchResult.isCorrect);
     onResult(matchResult.isCorrect, inputWords.join(" ").trim());
 
@@ -397,20 +411,8 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       similarityScore={similarityScore}
       similarityDetail={matchDetail}
     >
-      <div className="w-full max-w-4xl mx-auto flex flex-col items-center py-1 sm:py-3">
-        {/* Chinese Sentence Prompt at Top (Compact) */}
-        <div className="flex flex-col items-center mb-3 sm:mb-5 text-center px-2">
-          <div className="flex items-center justify-center gap-2 sm:gap-3">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 tracking-normal select-none">
-              <HoverableText text={exercise.sentence} language={sentenceLang} />
-            </h1>
-            {!exercise.noAudio?.includes("sentence") && (
-              <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
-            )}
-          </div>
-        </div>
-
-        {/* Word Columns Card (Click anywhere to focus active/first word line) */}
+      <div className="w-full max-w-5xl mx-auto flex flex-col items-center py-2 sm:py-4">
+        {/* Syntactic Chunks Container Cards Layout (matching reference style) */}
         <div
           onClick={() => {
             if (status === "answering") {
@@ -418,128 +420,156 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               focusInputSlot(firstEmpty === -1 ? activeSlot : firstEmpty);
             }
           }}
-          className="w-full bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-xs p-3 sm:p-6 mb-4 transition-all cursor-text"
+          className="w-full flex flex-wrap items-stretch justify-center gap-3 sm:gap-4 mb-6 cursor-text"
         >
           {status !== "answering" && (
-            <div className="flex items-center justify-end mb-3 pb-2 border-b border-gray-100">
+            <div className="w-full flex items-center justify-end mb-2">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
                   play(bestMatchAnswer, "en");
                 }}
-                className="flex items-center gap-1.5 px-3 py-1 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors cursor-pointer"
+                className="flex items-center gap-1.5 px-3.5 py-1.5 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors cursor-pointer"
                 title="Listen English Audio"
               >
-                <Volume2 className="w-3.5 h-3.5" />
+                <Volume2 className="w-4 h-4" />
                 <span>Listen Audio</span>
               </button>
             </div>
           )}
 
-          {/* Horizontal Layout of Columns - Tight gap-x & gap-y to fit more words per row */}
-          <div className="flex flex-wrap items-start justify-center gap-x-2 sm:gap-x-4 gap-y-2.5 sm:gap-y-4 py-1">
-            {analyzedWordList.map((item, idx) => {
-              const targetWord = item.word;
-              const pillColor = GRAMMAR_PILL_COLORS[item.grammarTag || "名词"] || "bg-[#009b69] text-white";
-              const isWordMatched = matchedWordIndices[idx] !== undefined ? matchedWordIndices[idx] : true;
-              const userTyped = inputWords[idx] || "";
-              const isSlotActive = activeSlot === idx;
+          {syntacticChunks.map((chunk, chunkIdx) => {
+            const badgeColor = GRAMMAR_PILL_COLORS[chunk.chunkLabel] || "bg-[#2563eb] text-white";
+            const isMultiWordChunk = chunk.words.length > 1;
 
-              return (
-                <div key={idx} className="flex flex-col items-center min-w-[36px] sm:min-w-[56px] px-0.5">
-                  {/* Tier 1: Grammatical Structure Badge (Compact Pill) */}
-                  <div className="mb-1 sm:mb-1.5">
-                    <span
-                      className={`inline-block px-1.5 sm:px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold tracking-tight shadow-2xs whitespace-nowrap ${pillColor}`}
-                    >
-                      {item.grammarTag}
-                    </span>
-                  </div>
-
-                  {/* Tier 2: Word Input (During typing) OR Word Result (After Enter) */}
-                  <div className="flex flex-col items-center justify-center">
-                    {status === "answering" ? (
-                      <input
-                        id={`word-input-${idx}`}
-                        ref={(el: HTMLInputElement | null) => {
-                          inputRefs.current[idx] = el;
-                        }}
-                        type="text"
-                        autoFocus={idx === 0}
-                        value={inputWords[idx] || ""}
-                        onFocus={() => setActiveSlot(idx)}
-                        onChange={(e) => {
-                          const val = e.target.value;
-                          if (val.includes(" ")) {
-                            const clean = val.replace(/\s+/g, "");
-                            const next = [...inputWords];
-                            next[idx] = clean;
-                            setInputWords(next);
-                            if (idx + 1 < rawAnswerTokens.length) {
-                              focusInputSlot(idx + 1);
-                            }
-                            return;
-                          }
-                          const next = [...inputWords];
-                          next[idx] = val;
-                          setInputWords(next);
-                        }}
-                        onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
-                        disabled={status !== "answering"}
-                        style={{ width: `${Math.max(2, targetWord.length + 0.5)}ch` }}
-                        className={`text-center font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] bg-transparent focus:outline-none pb-0.5 min-w-[2rem] sm:min-w-[2.75rem] transition-all border-b-2 ${
-                          isSlotActive
-                            ? "border-[#007a55] border-b-[3px] shadow-[0_2px_0_0_#007a55]"
-                            : "border-[#007a55]/60 hover:border-[#007a55]"
-                        }`}
-                      />
-                    ) : (
-                      <div className="flex flex-col items-center">
-                        {!isWordMatched ? (
-                          <div className="flex flex-col items-center">
-                            <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] mb-1 whitespace-nowrap">
-                              {targetWord}
-                            </span>
-                            <div className="flex items-center gap-1">
-                              <span className="text-red-500 font-bold select-none text-sm">✕</span>
-                              <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-red-600 line-through border-b-2 border-red-500 pb-0.5 px-0.5 whitespace-nowrap">
-                                {userTyped ? userTyped : "(missing)"}
-                              </span>
-                            </div>
-                          </div>
-                        ) : (
-                          <span
-                            className={`font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight pb-0.5 px-0.5 whitespace-nowrap border-b-2 ${
-                              isWordMatched
-                                ? "text-[#007a55] border-[#007a55]"
-                                : "text-[#007a55] border-red-500"
-                            }`}
-                          >
-                            {targetWord}
-                          </span>
-                        )}
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Tier 3 & Tier 4: IPA & Meaning (ONLY rendered after submit, zero empty space during answering) */}
-                  {status !== "answering" && (
-                    <div className="flex flex-col items-center mt-1">
-                      {item.ipa && (
-                        <span className="text-[10px] sm:text-xs font-sans font-medium text-gray-400 tracking-wider select-none leading-tight">
-                          {item.ipa}
-                        </span>
-                      )}
-                      {item.meaning && (
-                        <span className="text-xs sm:text-sm font-bold text-gray-800 whitespace-nowrap select-none mt-0.5 leading-tight">
-                          {item.meaning}
-                        </span>
-                      )}
-                    </div>
-                  )}
+            return (
+              <div
+                key={chunkIdx}
+                className="relative bg-white rounded-2xl sm:rounded-3xl border border-blue-200 shadow-xs px-4 sm:px-6 pt-5 pb-4 flex flex-col items-center justify-center transition-all min-w-[100px] sm:min-w-[130px]"
+              >
+                {/* Chunk Header Badge */}
+                <div className="absolute -top-3 left-1/2 -translate-x-1/2">
+                  <span className={`inline-block px-3 py-0.5 rounded-full text-xs font-bold tracking-tight shadow-2xs whitespace-nowrap ${badgeColor}`}>
+                    {chunk.chunkLabel}
+                  </span>
                 </div>
-              );
-            })}
+
+                {/* Words inside this chunk */}
+                <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-6 mt-1">
+                  {chunk.words.map(({ item, globalIndex: idx }) => {
+                    const targetWord = item.word;
+                    const isWordMatched = matchedWordIndices[idx] !== undefined ? matchedWordIndices[idx] : true;
+                    const userTyped = inputWords[idx] || "";
+                    const isSlotActive = activeSlot === idx;
+
+                    return (
+                      <div key={idx} className="flex flex-col items-center min-w-[44px] sm:min-w-[64px] px-1">
+                        {/* IPA Pronunciation (hidden before submit) */}
+                        <div className="h-5 flex items-center justify-center mb-1">
+                          {status !== "answering" && item.ipa && (
+                            <span className="text-[11px] sm:text-xs font-sans font-medium text-gray-400 tracking-wider select-none whitespace-nowrap">
+                              {item.ipa}
+                            </span>
+                          )}
+                        </div>
+
+                        {/* Word Input or Result Display */}
+                        <div className="flex flex-col items-center justify-center my-1">
+                          {status === "answering" ? (
+                            <input
+                              id={`word-input-${idx}`}
+                              ref={(el: HTMLInputElement | null) => {
+                                inputRefs.current[idx] = el;
+                              }}
+                              type="text"
+                              autoFocus={idx === 0}
+                              value={inputWords[idx] || ""}
+                              onFocus={() => setActiveSlot(idx)}
+                              onChange={(e) => {
+                                const val = e.target.value;
+                                if (val.includes(" ")) {
+                                  const clean = val.replace(/\s+/g, "");
+                                  const next = [...inputWords];
+                                  next[idx] = clean;
+                                  setInputWords(next);
+                                  if (idx + 1 < rawAnswerTokens.length) {
+                                    focusInputSlot(idx + 1);
+                                  }
+                                  return;
+                                }
+                                const next = [...inputWords];
+                                next[idx] = val;
+                                setInputWords(next);
+                              }}
+                              onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
+                              disabled={status !== "answering"}
+                              style={{ width: `${Math.max(2, targetWord.length + 0.5)}ch` }}
+                              className={`text-center font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] bg-transparent focus:outline-none pb-0.5 min-w-[2rem] sm:min-w-[3rem] transition-all border-b-2 ${
+                                isSlotActive
+                                  ? "border-[#007a55] border-b-[3px] shadow-[0_2px_0_0_#007a55]"
+                                  : "border-[#007a55]/60 hover:border-[#007a55]"
+                              }`}
+                            />
+                          ) : (
+                            <div className="flex flex-col items-center">
+                              {!isWordMatched ? (
+                                <div className="flex flex-col items-center">
+                                  {/* Correct word in green above */}
+                                  <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] mb-1 whitespace-nowrap">
+                                    {targetWord}
+                                  </span>
+                                  {/* User keyed-in answer below in red with cross */}
+                                  <div className="flex items-center gap-1">
+                                    <span className="text-red-500 font-bold select-none text-sm">✕</span>
+                                    <span className="font-serif text-xl sm:text-2xl font-bold tracking-tight text-red-600 line-through border-b-2 border-red-500 pb-0.5 px-0.5 whitespace-nowrap">
+                                      {userTyped ? userTyped : "(missing)"}
+                                    </span>
+                                  </div>
+                                </div>
+                              ) : (
+                                <span className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight pb-0.5 px-0.5 whitespace-nowrap border-b-2 text-[#007a55] border-[#007a55]">
+                                  {targetWord}
+                                </span>
+                              )}
+                            </div>
+                          )}
+                        </div>
+
+                        {/* Chinese Meaning & Grammar Tag (shown after submit) */}
+                        <div className="h-10 flex flex-col items-center justify-start mt-1">
+                          {status !== "answering" && (
+                            <>
+                              {item.meaning && (
+                                <span className="text-xs sm:text-sm font-bold text-gray-800 whitespace-nowrap select-none leading-tight">
+                                  {item.meaning}
+                                </span>
+                              )}
+                              {item.grammarTag && (
+                                <span className="text-[10px] sm:text-xs text-gray-400 select-none leading-tight mt-0.5">
+                                  {item.grammarTag}
+                                </span>
+                              )}
+                            </>
+                          )}
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
+        {/* Chinese Sentence Prompt below the word chunk boxes (matching reference layout in image.png) */}
+        <div className="flex flex-col items-center mt-2 mb-4 text-center px-2">
+          <div className="flex items-center justify-center gap-2 sm:gap-3">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-800 tracking-normal select-none">
+              <HoverableText text={exercise.sentence} language={sentenceLang} />
+            </h1>
+            {!exercise.noAudio?.includes("sentence") && (
+              <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
+            )}
           </div>
         </div>
       </div>
