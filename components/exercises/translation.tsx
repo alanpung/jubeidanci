@@ -367,11 +367,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       similarityScore={similarityScore}
       similarityDetail={matchDetail}
     >
-      <div className="w-full max-w-4xl mx-auto flex flex-col items-center py-4">
-        {/* Chinese Sentence Prompt at Top (matching IMG_7510.jpeg) */}
-        <div className="flex flex-col items-center mb-8 sm:mb-10 text-center">
-          <div className="flex items-center justify-center gap-3">
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-black text-gray-900 tracking-normal select-none">
+      <div className="w-full max-w-4xl mx-auto flex flex-col items-center py-1 sm:py-3">
+        {/* Chinese Sentence Prompt at Top (Compact) */}
+        <div className="flex flex-col items-center mb-3 sm:mb-5 text-center px-2">
+          <div className="flex items-center justify-center gap-2 sm:gap-3">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-900 tracking-normal select-none">
               <HoverableText text={exercise.sentence} language={sentenceLang} />
             </h1>
             {!exercise.noAudio?.includes("sentence") && (
@@ -380,13 +380,10 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
           </div>
         </div>
 
-        {/* Word Columns Card (matching IMG_7510.jpeg 4-tier column layout) */}
-        <div className="w-full bg-white rounded-3xl border border-gray-200 shadow-xs p-6 sm:p-10 mb-6 transition-all">
-          <div className="flex items-center justify-between mb-6 pb-2 border-b border-gray-100">
-            <span className="text-xs sm:text-sm font-bold text-gray-400 uppercase tracking-wider">
-              Sentence Structure & Alignment
-            </span>
-            {status !== "answering" && (
+        {/* Word Columns Card (Compact & Tight Spacing) */}
+        <div className="w-full bg-white rounded-2xl sm:rounded-3xl border border-gray-200 shadow-xs p-3 sm:p-6 mb-4 transition-all">
+          {status !== "answering" && (
+            <div className="flex items-center justify-end mb-3 pb-2 border-b border-gray-100">
               <button
                 onClick={() => play(bestMatchAnswer, "en")}
                 className="flex items-center gap-1.5 px-3 py-1 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors cursor-pointer"
@@ -395,11 +392,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                 <Volume2 className="w-3.5 h-3.5" />
                 <span>Listen Audio</span>
               </button>
-            )}
-          </div>
+            </div>
+          )}
 
-          {/* Horizontal Layout of Columns (Structure -> Word -> Underline -> IPA -> Meaning) */}
-          <div className="flex flex-wrap items-start justify-center gap-4 sm:gap-7 py-2">
+          {/* Horizontal Layout of Columns - Tight gap-x & gap-y to fit more words per row */}
+          <div className="flex flex-wrap items-start justify-center gap-x-2 sm:gap-x-4 gap-y-2.5 sm:gap-y-4 py-1">
             {analyzedWordList.map((item, idx) => {
               const targetWord = item.word;
               const pillColor = GRAMMAR_PILL_COLORS[item.grammarTag || "名词"] || "bg-[#009b69] text-white";
@@ -407,18 +404,18 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               const userTyped = inputWords[idx] || "";
 
               return (
-                <div key={idx} className="flex flex-col items-center min-w-[70px] sm:min-w-[90px]">
-                  {/* Tier 1: Grammatical Structure Badge (Always Visible, matching photo) */}
-                  <div className="mb-3">
+                <div key={idx} className="flex flex-col items-center min-w-[36px] sm:min-w-[56px] px-0.5">
+                  {/* Tier 1: Grammatical Structure Badge (Compact Pill) */}
+                  <div className="mb-1 sm:mb-1.5">
                     <span
-                      className={`inline-block px-3 py-0.5 rounded-full text-xs sm:text-sm font-bold tracking-tight shadow-2xs whitespace-nowrap ${pillColor}`}
+                      className={`inline-block px-1.5 sm:px-2.5 py-0.5 rounded-full text-[10px] sm:text-xs font-bold tracking-tight shadow-2xs whitespace-nowrap ${pillColor}`}
                     >
                       {item.grammarTag}
                     </span>
                   </div>
 
                   {/* Tier 2: Word Input (During typing) OR Word Result (After Enter) */}
-                  <div className="flex flex-col items-center justify-center min-h-[3.25rem]">
+                  <div className="flex flex-col items-center justify-center">
                     {status === "answering" ? (
                       <input
                         ref={(el: HTMLInputElement | null) => {
@@ -445,13 +442,13 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                         }}
                         onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
                         disabled={status !== "answering"}
-                        style={{ width: `${Math.max(3, targetWord.length + 1)}ch` }}
-                        className="text-center font-serif text-3xl sm:text-4xl font-bold tracking-tight text-[#007a55] border-b-2 border-[#007a55] focus:border-[#004d36] bg-transparent focus:outline-none pb-1 min-w-[3.5rem]"
+                        style={{ width: `${Math.max(2, targetWord.length + 0.5)}ch` }}
+                        className="text-center font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight text-[#007a55] border-b-2 border-[#007a55] focus:border-[#004d36] bg-transparent focus:outline-none pb-0.5 min-w-[2rem] sm:min-w-[2.75rem]"
                       />
                     ) : (
                       <div className="flex flex-col items-center">
                         <span
-                          className={`font-serif text-3xl sm:text-4xl font-bold tracking-tight pb-1 px-1 whitespace-nowrap border-b-2 ${
+                          className={`font-serif text-2xl sm:text-3xl md:text-4xl font-bold tracking-tight pb-0.5 px-0.5 whitespace-nowrap border-b-2 ${
                             isWordMatched
                               ? "text-[#007a55] border-[#007a55]"
                               : "text-[#007a55] border-red-500"
@@ -460,7 +457,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                           {targetWord}
                         </span>
                         {!isWordMatched && userTyped && (
-                          <span className="text-xs font-mono text-red-500 line-through mt-0.5 font-medium">
+                          <span className="text-[10px] sm:text-xs font-mono text-red-500 line-through mt-0.5 font-medium">
                             {userTyped}
                           </span>
                         )}
@@ -468,27 +465,21 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                     )}
                   </div>
 
-                  {/* Tier 3: IPA Pronunciation (Revealed AFTER Enter) */}
-                  <div className="min-h-[1.5rem] flex items-center justify-center mt-1">
-                    {status !== "answering" ? (
-                      <span className="text-xs sm:text-sm font-sans font-medium text-gray-500 tracking-wider select-none">
-                        {item.ipa ? item.ipa : ""}
-                      </span>
-                    ) : (
-                      <div className="h-4" />
-                    )}
-                  </div>
-
-                  {/* Tier 4: Chinese Word Meaning (Revealed AFTER Enter) */}
-                  <div className="min-h-[1.5rem] flex items-center justify-center mt-0.5">
-                    {status !== "answering" ? (
-                      <span className="text-sm sm:text-base font-bold text-gray-800 whitespace-nowrap select-none">
-                        {item.meaning || ""}
-                      </span>
-                    ) : (
-                      <div className="h-5" />
-                    )}
-                  </div>
+                  {/* Tier 3 & Tier 4: IPA & Meaning (ONLY rendered after submit, zero empty space during answering) */}
+                  {status !== "answering" && (
+                    <div className="flex flex-col items-center mt-1">
+                      {item.ipa && (
+                        <span className="text-[10px] sm:text-xs font-sans font-medium text-gray-400 tracking-wider select-none leading-tight">
+                          {item.ipa}
+                        </span>
+                      )}
+                      {item.meaning && (
+                        <span className="text-xs sm:text-sm font-bold text-gray-800 whitespace-nowrap select-none mt-0.5 leading-tight">
+                          {item.meaning}
+                        </span>
+                      )}
+                    </div>
+                  )}
                 </div>
               );
             })}
