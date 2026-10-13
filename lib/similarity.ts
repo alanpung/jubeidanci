@@ -429,6 +429,20 @@ export function generateAlternativeTranslations(baseAnswer: string, existingList
     }
   }
 
+  // Ensure we always have up to 3 acceptable variations
+  if (result.length < 3) {
+    if (!trailingPunct && baseAnswer) {
+      add(baseAnswer + ".");
+    }
+    if (baseAnswer.endsWith(".")) {
+      add(baseAnswer.slice(0, -1));
+    }
+    // Add lowercase/capitalization or punctuation variation
+    if (baseAnswer) {
+      add(baseAnswer.charAt(0).toUpperCase() + baseAnswer.slice(1));
+    }
+  }
+
   return result.slice(0, 3);
 }
 
