@@ -351,11 +351,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     const matchResult: WordMatchResult = checkWordMatch(inputWords, allAnswers);
 
     setSimilarityScore(matchResult.score);
-    setMatchDetail(`${matchResult.matchCount}/${matchResult.totalCount} words`);
+    setMatchDetail(`${matchResult.matchCount}/${matchResult.totalCount} words correct (${matchResult.percentage}%)`);
     setMatchedWordIndices(matchResult.matchedWordIndices);
     setBestMatchAnswer(matchResult.matchedAnswer);
 
-    // 80% and above is considered correct
+    // 80% and above is considered correct (>= 80% correct, <= 79% wrong)
     checkAnswer(matchResult.isCorrect);
     onResult(matchResult.isCorrect, inputWords.join(" ").trim());
 
