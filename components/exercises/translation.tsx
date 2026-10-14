@@ -109,6 +109,19 @@ const POSSESSIVE_WORDS = new Set([
 
 const ARTICLE_WORDS = new Set(["a", "an", "the"]);
 
+const POS_COLORS: Record<string, string> = {
+  "代词": "text-blue-600",
+  "限定词": "text-purple-600",
+  "冠词": "text-orange-600",
+  "助动词": "text-teal-600",
+  "动词": "text-red-600",
+  "名词": "text-emerald-700",
+  "形容词": "text-amber-600",
+  "副词": "text-pink-600",
+  "介词": "text-indigo-600",
+  "连词": "text-yellow-600",
+};
+
 function resolveGrammarTag(word: string, pos?: string): string {
   const clean = word.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
 
@@ -369,7 +382,9 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                   {/* POS on top as hint */}
                   <div className="h-5 flex items-center justify-center mb-1">
                     {item.grammarTag && (
-                      <span className="text-[11px] sm:text-xs font-sans font-medium text-gray-500 tracking-wider select-none whitespace-nowrap">
+                      <span className={`text-[11px] sm:text-xs font-sans font-medium tracking-wider select-none whitespace-nowrap ${
+                        POS_COLORS[item.grammarTag] || "text-gray-500"
+                      }`}>
                         {item.grammarTag}
                       </span>
                     )}
@@ -406,7 +421,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                         onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
                         disabled={status !== "answering"}
                         style={{ width: `${Math.max(3, targetWord.length + 1)}ch` }}
-                        className={`text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#007a55] bg-transparent focus:outline-none pb-0.5 min-w-[2.5rem] sm:min-w-[3rem] transition-all border-b-2 ${
+                        className={`text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 bg-transparent focus:outline-none pb-0.5 min-w-[2.5rem] sm:min-w-[3rem] transition-all border-b-2 ${
                           isSlotActive
                             ? "border-[#007a55] border-b-[3px] shadow-[0_2px_0_0_#007a55]"
                             : "border-[#007a55]/60 hover:border-[#007a55]"
