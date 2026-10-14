@@ -132,9 +132,9 @@ const POS_COLORS: Record<string, string> = {
 function resolveGrammarTag(word: string, pos?: string): string {
   const clean = word.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
 
+  if (ARTICLE_WORDS.has(clean)) return "冠词";
   if (PRONOUN_WORDS.has(clean)) return "代词";
   if (POSSESSIVE_WORDS.has(clean)) return "限定词";
-  if (ARTICLE_WORDS.has(clean)) return "冠词";
   if (AUXILIARY_WORDS.has(clean)) return "助动词";
 
   if (BUILTIN_WORD_DICT[clean]?.grammarTag) {
@@ -253,7 +253,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       const clean = token.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
       const dict = BUILTIN_WORD_DICT[clean];
       
-      const apiWord = analysis?.chunks?.flatMap(c => c.words)?.find(w => w.word.toLowerCase() === clean);
+      // Flatten chunks to find the word info from API analysis
+      // Use clean token for comparison to handle punctuation properly
+      const apiWord = analysis?.chunks?.flatMap(c => c.words)?.find(w => 
+        w.word.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "") === clean
+      );
       let gTag = resolveGrammarTag(token, apiWord?.pos);
       if (!POS_COLORS[gTag]) {
          gTag = dict?.grammarTag || gTag;
@@ -446,10 +450,10 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       <div className="flex flex-col items-center">
                         <span
                           className={`font-serif text-xl sm:text-2xl font-bold tracking-tight pb-0.5 px-1 whitespace-nowrap ${
-                            isWordMatched ? "text-emerald-700" : "text-red-600 line-through decoration-red-500"
+                            isWordMatched ? "text-emerald-700" : "text-red-600"
                           }`}
                         >
-                          {typedWord || targetWord}
+                          {typedWord}
                         </span>
                         {!isWordMatched && (
                           <span className="font-serif text-xs sm:text-sm font-bold text-emerald-600 mt-1 whitespace-nowrap">
