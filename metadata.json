@@ -1,6 +1,6 @@
 {
-  "name": "Nexus AI Studio",
-  "description": "An advanced AI-powered creative and strategic intelligence workspace for content creation, brainstorming, brand generation, and multimodal asset crafting.",
+  "name": "jubeidanci",
+  "description": "OpenSource AI connected to language learning with conversational tutor, interactive exercises, spaced repetition, and courses.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }
