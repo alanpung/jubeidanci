@@ -25,7 +25,6 @@ interface DictLookupEntry {
 let cachedDictMap: Map<string, DictLookupEntry> | null = null;
 
 const BUILTIN_WORD_OVERRIDES: Record<string, DictLookupEntry> = {
-const BUILTIN_WORD_OVERRIDES: Record<string, DictLookupEntry> = {
   i: { ipa: "/aɪ/", meaning: "我", pos: "代词" },
   you: { ipa: "/juː/", meaning: "你/你们", pos: "代词" },
   he: { ipa: "/hiː/", meaning: "他", pos: "代词" },
