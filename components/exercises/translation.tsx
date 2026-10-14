@@ -91,6 +91,11 @@ const BUILTIN_WORD_DICT: Record<string, { ipa: string; meaning: string; grammarT
   this: { ipa: "/ðɪs/", meaning: "这", grammarTag: "指示代词" },
   polluted: { ipa: "/pəˈluːtɪd/", meaning: "受污染的", grammarTag: "形容词" },
   river: { ipa: "/ˈrɪv.ər/", meaning: "河流", grammarTag: "名词" },
+  always: { ipa: "/ˈɔːl.weɪz/", meaning: "总是", grammarTag: "副词" },
+  see: { ipa: "/siː/", meaning: "看见", grammarTag: "动词" },
+  red: { ipa: "/red/", meaning: "红色", grammarTag: "形容词" },
+  fruit: { ipa: "/fruːt/", meaning: "水果", grammarTag: "名词" },
+  autumn: { ipa: "/ˈɔː.təm/", meaning: "秋天", grammarTag: "名词" },
 };
 
 const AUXILIARY_WORDS = new Set([
@@ -120,6 +125,7 @@ const POS_COLORS: Record<string, string> = {
   "副词": "text-pink-600",
   "介词": "text-indigo-600",
   "连词": "text-yellow-600",
+  "数词": "text-cyan-600",
 };
 
 function resolveGrammarTag(word: string, pos?: string): string {
@@ -134,16 +140,18 @@ function resolveGrammarTag(word: string, pos?: string): string {
     return BUILTIN_WORD_DICT[clean].grammarTag;
   }
 
-  if (pos === "auxiliary" || pos === "助动词") return "助动词";
-  if (pos === "possessive" || pos === "物主限定词") return "限定词";
-  if (pos === "pronoun" || pos === "代词" || pos === "人称代词") return "代词";
-  if (pos === "verb" || pos === "动词") return "动词";
-  if (pos === "noun" || pos === "名词") return "名词";
-  if (pos === "adjective" || pos === "adj" || pos === "形容词") return "形容词";
-  if (pos === "adverb" || pos === "adv" || pos === "副词") return "副词";
-  if (pos === "preposition" || pos === "prep" || pos === "介词") return "介词";
-  if (pos === "conjunction" || pos === "conj" || pos === "连词") return "连词";
-  if (pos === "determiner" || pos === "限定词") return "限定词";
+  const p = (pos || "").toLowerCase();
+  if (p.includes("pron") || p === "代词" || p === "人称代词") return "代词";
+  if (p.includes("det") || p.includes("possess") || p === "限定词" || p === "物主限定词") return "限定词";
+  if (p.includes("art") || p === "冠词") return "冠词";
+  if (p.includes("aux") || p.includes("modal") || p === "助动词") return "助动词";
+  if (p.includes("verb") || p === "v" || p === "动词") return "动词";
+  if (p.includes("noun") || p === "n" || p === "名词") return "名词";
+  if (p.includes("adj") || p === "a" || p === "形容词") return "形容词";
+  if (p.includes("adv") || p === "r" || p === "副词") return "副词";
+  if (p.includes("prep") || p === "p" || p === "介词") return "介词";
+  if (p.includes("conj") || p === "c" || p === "连词") return "连词";
+  if (p.includes("num") || p === "数词") return "数词";
 
   return "名词";
 }
@@ -243,7 +251,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     return rawAnswerTokens.map((token: string, idx: number) => {
       const clean = token.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
       const dict = BUILTIN_WORD_DICT[clean];
-      const gTag = dict?.grammarTag || resolveGrammarTag(token);
+      const gTag = dict?.grammarTag || resolveGrammarTag(token, analysis?.words?.find(w => w.word.toLowerCase() === clean)?.pos);
 
       return {
         word: token,
@@ -327,6 +335,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       language={language}
       similarityScore={similarityScore}
       similarityDetail={matchDetail}
+      inputWords={inputWords}
     >
       <div className="w-full max-w-5xl mx-auto flex flex-col items-center py-2 sm:py-4">
         {/* Chinese Sentence Prompt at the top */}

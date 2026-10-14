@@ -19,6 +19,7 @@ interface ExerciseShellProps {
   language?: string;
   similarityScore?: number | null;
   similarityDetail?: string;
+  inputWords?: string[];
 }
 
 export function ExerciseShell({
@@ -33,6 +34,7 @@ export function ExerciseShell({
   language,
   similarityScore,
   similarityDetail,
+  inputWords,
 }: ExerciseShellProps) {
   const justCheckedRef = useRef(false);
 
@@ -140,6 +142,9 @@ export function ExerciseShell({
             </div>
             {allAnswers && allAnswers.length > 0 ? (
               <div className="mt-2 text-sm text-lingo-text border-t border-lingo-red/20 pt-2.5">
+                <div className="mb-2 text-xs font-semibold text-lingo-red bg-lingo-red/10 px-2 py-1 rounded">
+                   Your input: {inputWords ? inputWords.join(" ") : "(empty)"}
+                </div>
                 <span className="font-bold text-lingo-red text-xs uppercase tracking-wider block mb-1.5">
                   {allAnswers.length > 1
                     ? `All Possible Answers (Max ${Math.min(3, allAnswers.length)}):`
