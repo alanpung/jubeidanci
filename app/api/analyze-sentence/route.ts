@@ -612,6 +612,7 @@ Return ONLY valid JSON format without markdown code blocks:
       if (!Array.isArray(parsed.acceptableTranslations) || parsed.acceptableTranslations.length === 0) {
         parsed.acceptableTranslations = fallback.acceptableTranslations;
       }
+      parsed.words = parsed.chunks.flatMap((c: any) => c.words);
       return NextResponse.json(parsed);
     }
     return NextResponse.json(fallback);

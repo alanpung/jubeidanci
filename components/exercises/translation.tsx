@@ -31,6 +31,7 @@ interface SentenceAnalysisData {
   fullTranslation?: string;
   acceptableTranslations?: string[];
   words?: AnalyzedWord[];
+  chunks?: { chunkLabel: string; words: AnalyzedWord[] }[];
 }
 
 // Built-in word dictionary for instant accurate fallback mapping
@@ -251,13 +252,18 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     return rawAnswerTokens.map((token: string, idx: number) => {
       const clean = token.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
       const dict = BUILTIN_WORD_DICT[clean];
-      const gTag = dict?.grammarTag || resolveGrammarTag(token, analysis?.words?.find(w => w.word.toLowerCase() === clean)?.pos);
+      
+      const apiWord = analysis?.chunks?.flatMap(c => c.words)?.find(w => w.word.toLowerCase() === clean);
+      let gTag = resolveGrammarTag(token, apiWord?.pos);
+      if (!POS_COLORS[gTag]) {
+         gTag = dict?.grammarTag || gTag;
+      }
 
       return {
         word: token,
-        ipa: dict?.ipa || "",
-        meaning: dict?.meaning || clean,
-        pos: dict?.grammarTag || "名词",
+        ipa: dict?.ipa || apiWord?.ipa || "",
+        meaning: dict?.meaning || apiWord?.meaning || clean,
+        pos: dict?.grammarTag || apiWord?.pos || "名词",
         grammarTag: gTag,
       };
     });
