@@ -382,7 +382,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                   {/* POS on top as hint */}
                   <div className="h-5 flex items-center justify-center mb-1">
                     {item.grammarTag && (
-                      <span className={`text-[11px] sm:text-xs font-sans font-medium tracking-wider select-none whitespace-nowrap ${
+                      <span className={`text-xs sm:text-sm font-sans font-black tracking-wider select-none whitespace-nowrap ${
                         POS_COLORS[item.grammarTag] || "text-gray-500"
                       }`}>
                         {item.grammarTag}
@@ -429,33 +429,33 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       />
                     ) : (
                       <div className="flex flex-col items-center">
-                        {!isWordMatched && (
-                          <span className="font-serif text-xs sm:text-sm font-bold text-emerald-600 mb-0.5 whitespace-nowrap">
-                            {targetWord}
-                          </span>
-                        )}
                         <span
                           className={`font-serif text-xl sm:text-2xl font-bold tracking-tight pb-0.5 px-1 whitespace-nowrap ${
                             isWordMatched ? "text-emerald-700" : "text-red-600 line-through decoration-red-500"
                           }`}
                         >
-                          {typedWord || "(empty)"}
+                          {typedWord || targetWord}
                         </span>
+                        {!isWordMatched && (
+                          <span className="font-serif text-xs sm:text-sm font-bold text-emerald-600 mt-1 whitespace-nowrap">
+                            ({targetWord})
+                          </span>
+                        )}
                       </div>
                     )}
                   </div>
 
                   {/* Meaning & IPA below after Enter */}
-                  <div className="h-10 flex flex-col items-center justify-start mt-1">
+                  <div className="h-12 flex flex-col items-center justify-start mt-1">
                     {status !== "answering" && (
                       <>
                         {item.meaning && (
-                          <span className="text-[11px] sm:text-xs font-bold text-gray-800 whitespace-nowrap select-none leading-tight">
+                          <span className="text-xs sm:text-sm font-bold text-gray-900 text-center whitespace-normal select-none leading-tight">
                             {item.meaning}
                           </span>
                         )}
                         {item.ipa && (
-                          <span className="text-[10px] text-gray-400 select-none leading-tight mt-0.5">
+                          <span className="text-[10px] text-gray-500 select-none leading-tight mt-0.5">
                             {item.ipa}
                           </span>
                         )}
