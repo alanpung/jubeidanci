@@ -19,14 +19,8 @@ export async function addUnitToLibrary(
   const session = await requireSession();
   const userId = session.user.id;
 
-  // Filesystem-backed units are only in the DB after a seed run. Without
-  // waiting here a freshly-deployed or throttled DB reports "Unit not found"
-  // for units that demonstrably exist in content/.
-  const { ensureContentSeeded } = await import("@/lib/db/seed-content");
-  await ensureContentSeeded().catch(() => {});
-
   // Verify unit exists
-  const [existing] = await db
+  let [existing] = await db
     .select({
       id: unit.id,
       visibility: unit.visibility,
@@ -35,6 +29,24 @@ export async function addUnitToLibrary(
     })
     .from(unit)
     .where(eq(unit.id, unitId));
+
+  if (!existing) {
+    // Filesystem-backed units only exist in the DB after a seed run. Only
+    // pay for that when the lookup actually missed, otherwise every add
+    // re-walks all of content/.
+    const { ensureContentSeeded } = await import("@/lib/db/seed-content");
+    await ensureContentSeeded().catch(() => {});
+
+    [existing] = await db
+      .select({
+        id: unit.id,
+        visibility: unit.visibility,
+        createdBy: unit.createdBy,
+        courseId: unit.courseId,
+      })
+      .from(unit)
+      .where(eq(unit.id, unitId));
+  }
 
   if (!existing) {
     return { success: false, error: "Unit not found" };
@@ -120,7 +132,13 @@ export async function removeUnitFromLibrary(
     );
 
   await invalidateUserLibraryWordsCache(userId);
-  await cleanupUnstudiedCourseWordsFromSrs(userId);
+  // Background-fire, same rationale as the add path. cleanupUnstudied
+  // forces a full re-walk of every enrolled course (the A2 course alone is
+  // 10 units x 100 exercises) before rewriting the deck. Awaiting it made
+  // deleting a single unit feel stuck and could blow the function limit.
+  void cleanupUnstudiedCourseWordsFromSrs(userId).catch((err) => {
+    console.warn("removeUnitFromLibrary: background SRS cleanup failed:", err);
+  });
 
   revalidatePath("/library", "page");
   revalidatePath("/units", "page");
@@ -133,13 +151,6 @@ export async function addCourseToLibrary(
 ): Promise<{ success: true } | { success: false; error: string }> {
   const session = await requireSession();
   const userId = session.user.id;
-
-  // Must actually wait for the filesystem content to land.
-  // seedContentFromFilesystem() is fire-and-forget by design, so awaiting it
-  // returns before any row exists — then userUnitLibrary.unitId (FK -> unit.id)
-  // violates the constraint and the whole action throws.
-  const { ensureContentSeeded } = await import("@/lib/db/seed-content");
-  await ensureContentSeeded().catch(() => {});
 
   let [existingCourse] = await db
     .select({
@@ -204,6 +215,22 @@ export async function addCourseToLibrary(
     .where(eq(unit.courseId, courseId));
 
   if (unitsInCourse.length === 0) {
+    // No rows means the filesystem content has not landed yet. The seed task
+    // walks every course/unit in content/ and upserts them, so only pay that
+    // cost when it is actually needed — and wait for it, because
+    // seedContentFromFilesystem() is fire-and-forget and
+    // userUnitLibrary.unitId has an FK to unit.id.
+    const { ensureContentSeeded } = await import("@/lib/db/seed-content");
+    await ensureContentSeeded().catch(() => {});
+
+    unitsInCourse = await db
+      .select({ id: unit.id })
+      .from(unit)
+      .where(eq(unit.courseId, courseId));
+  }
+
+  if (unitsInCourse.length === 0) {
+    // Still nothing (DB down or seed failed): fall back to filesystem ids.
     const { loadContentDir } = await import("@/lib/content/loader");
     const { units: fsUnits } = loadContentDir();
     const fsUnitIds = fsUnits
@@ -334,7 +361,11 @@ export async function removeCourseFromLibrary(
   clearContentCache();
 
   await invalidateUserLibraryWordsCache(userId).catch(() => {});
-  await cleanupUnstudiedCourseWordsFromSrs(userId).catch(() => {});
+  // Background-fire, same rationale as the add path: this is the same full
+  // deck rebuild, and awaiting it is what made "remove course" hang.
+  void cleanupUnstudiedCourseWordsFromSrs(userId).catch((err) => {
+    console.warn("removeCourseFromLibrary: background SRS cleanup failed:", err);
+  });
 
   revalidatePath("/", "layout");
   revalidatePath("/library", "page");

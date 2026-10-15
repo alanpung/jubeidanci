@@ -1687,6 +1687,17 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
 
 export async function cleanupUnstudiedCourseWordsFromSrs(userId: string): Promise<void> {
   if (!userId || userId === "default_user") return;
+
+  // Let any in-flight sync finish before forcing a rebuild.
+  // syncUserCourseWordsToSrs dedupes on inFlightSync, so calling it while a
+  // sync is still running hands back that promise — computed from the
+  // before-removal library state — meaning the words of the course the user
+  // just deleted would survive the cleanup.
+  const running = inFlightSync.get(userId);
+  if (running) {
+    await running.catch(() => {});
+  }
+
   userSyncMap.delete(userId);
   await syncUserCourseWordsToSrs(userId, true);
 }
