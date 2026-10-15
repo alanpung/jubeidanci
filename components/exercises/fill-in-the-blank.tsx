@@ -87,23 +87,26 @@ export function FillInTheBlank({ exercise, onResult, onContinue, language, autop
       <AudioSpinner loading={audioLoading} />
       <div className="flex flex-wrap items-center gap-2 text-2xl font-bold text-lingo-text mb-6">
         <HoverableText text={parts[0]} language={language} noAudio={exercise.noAudio?.includes("sentence")} />
-          <input
-            type="text"
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => {
-              if (e.key === "Enter" && input.trim() && status === "answering") handleCheck();
-            }}
-            disabled={status !== "answering"}
-            className={`w-40 border-b-4 bg-transparent text-center focus:outline-none font-bold transition-all ${
+          {status === "answering" ? (
+            <input
+              type="text"
+              value={input}
+              onChange={(e) => setInput(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === "Enter" && input.trim() && status === "answering") handleCheck();
+              }}
+              className="w-40 border-b-4 border-lingo-blue bg-transparent text-center focus:outline-none font-bold text-lingo-text"
+              autoFocus={true}
+            />
+          ) : (
+            <span className={`px-4 py-1 rounded-xl border-b-4 font-bold text-2xl ${
               status === "correct"
-                ? "border-lingo-green text-lingo-green bg-green-50/50"
-                : status === "incorrect"
-                ? "border-lingo-red text-lingo-red bg-red-50/50"
-                : "border-lingo-blue text-lingo-text"
-            }`}
-            autoFocus={status === "answering"}
-          />
+                ? "border-lingo-green text-lingo-green bg-green-50"
+                : "border-lingo-red text-lingo-red bg-red-50"
+            }`}>
+              {input || "(empty)"}
+            </span>
+          )}
         <HoverableText text={parts[1]} language={language} noAudio={exercise.noAudio?.includes("sentence")} />
       </div>
     </ExerciseShell>
