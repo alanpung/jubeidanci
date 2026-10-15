@@ -453,11 +453,11 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                             isWordMatched ? "text-emerald-700" : "text-red-600 bg-red-100 rounded px-1"
                           }`}
                         >
-                          {typedWord}
+                          {isWordMatched ? typedWord : targetWord}
                         </span>
                         {!isWordMatched && (
-                          <span className="font-serif text-xs sm:text-sm font-bold text-emerald-600 mt-1 whitespace-nowrap">
-                            ({targetWord})
+                          <span className="font-serif text-xs sm:text-sm font-bold text-red-600 mt-1 whitespace-nowrap">
+                            (Your input: {typedWord})
                           </span>
                         )}
                       </div>
