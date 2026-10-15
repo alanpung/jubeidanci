@@ -451,7 +451,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     const matchResult: WordMatchResult = checkWordMatch(inputWords, allAnswers);
 
     setSimilarityScore(matchResult.score);
-    setMatchDetail(`${matchResult.percentage}% (${matchResult.matchCount}/${matchResult.totalCount} words match)`);
+    setMatchDetail(`${matchResult.percentage}% (${matchResult.matchCount}/${matchResult.totalCount} words)`);
     setMatchedWordIndices(matchResult.matchedWordIndices);
     const primaryCorrect = allAnswers[0] || exercise.answer;
     setBestMatchAnswer(primaryCorrect);
@@ -522,7 +522,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
           className="w-full flex flex-col items-center cursor-text mb-4"
         >
           {status !== "answering" && (
-            <div className="w-full flex items-center justify-end mb-3 max-w-4xl">
+            <div className="w-full flex items-center justify-end mb-3 max-w-5xl">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
@@ -537,7 +537,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
             </div>
           )}
 
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 w-full max-w-4xl">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 w-full max-w-5xl">
             {analyzedWordList.map((item, idx) => {
               const targetWord = item.word;
               const typedWord = inputWords[idx] || "";
@@ -546,7 +546,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               return (
                 <div
                   key={idx}
-                  className={`bg-white rounded-2xl border-2 shadow-xs px-2 sm:px-3 lg:px-4 py-2 sm:py-3 flex flex-col items-center justify-between min-w-[62px] sm:min-w-[92px] lg:min-w-[115px] transition-all ${
+                  className={`bg-white rounded-2xl border-2 shadow-xs px-2 sm:px-3 lg:px-4 py-2 sm:py-3 flex flex-col items-center justify-between min-w-[62px] sm:min-w-[92px] lg:min-w-[100px] transition-all ${
                     status !== "answering"
                       ? isWordMatched
                         ? "border-emerald-200 bg-emerald-50/20"
@@ -660,53 +660,37 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               {/* Matching rate — theme red if <80%, green if >=80% */}
               {matchDetail && (
                 <div
-                  className={`p-4 rounded-2xl border-2 shadow-sm ${
+                  className={`p-3 sm:p-4 rounded-2xl border-2 shadow-sm ${
                     typeof similarityScore === "number" && similarityScore < 0.8
                       ? "bg-red-50/40 border-red-200"
                       : "bg-emerald-50/40 border-emerald-200"
                   }`}
                 >
-                  <div className="flex items-center justify-between text-sm sm:text-base font-bold text-gray-800">
-                    <span>Matching Rate:</span>
-                    <div className="flex items-center gap-3">
-                      {typeof similarityScore === "number" && (
-                        <span
-                          className={
-                            similarityScore < 0.8 ? "text-red-600" : "text-emerald-600"
-                          }
-                        >
-                          {similarityScore < 0.8 ? "Incorrect" : "Correct"}
-                        </span>
-                      )}
-                      <span
-                        className={
-                          typeof similarityScore === "number" && similarityScore < 0.8
-                            ? "text-red-600"
-                            : "text-emerald-600"
-                        }
-                      >
-                        {matchDetail}
-                      </span>
-                    </div>
+                  <div className="flex items-center justify-between gap-3 text-sm sm:text-base font-bold whitespace-nowrap">
+                    <span className="text-gray-800">MATCH:</span>
+                    <span
+                      className={
+                        typeof similarityScore === "number" && similarityScore < 0.8
+                          ? "text-red-600"
+                          : "text-emerald-600"
+                      }
+                    >
+                      {matchDetail}
+                    </span>
                   </div>
                 </div>
               )}
               {/* Alternative answers — blue separate card */}
               {orderedAnswers.length > 1 && (
-                <div className="p-4 bg-blue-50/40 border-2 border-blue-200 rounded-2xl shadow-sm space-y-2">
+                <div className="p-3 sm:p-4 bg-blue-50/40 border-2 border-blue-200 rounded-2xl shadow-sm space-y-1">
                   <span className="block text-xs font-bold text-blue-700 uppercase tracking-wider">
-                    Other Alternative Answers in English:
+                    ALT ANSWERS:
                   </span>
-                  <div className="space-y-1">
-                    {orderedAnswers.slice(1).map((alt, aIdx) => (
-                      <div
-                        key={aIdx}
-                        className="text-sm font-medium text-blue-900 bg-white px-3 py-1.5 rounded-lg border border-blue-100"
-                      >
-                        {alt}
-                      </div>
-                    ))}
-                  </div>
+                  {orderedAnswers.slice(1).map((alt, aIdx) => (
+                    <div key={aIdx} className="text-sm font-medium text-blue-900">
+                      {alt}
+                    </div>
+                  ))}
                 </div>
               )}
             </div>
