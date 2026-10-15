@@ -601,18 +601,20 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       />
                     ) : (
                       <div className="flex flex-col items-center">
-                        <span
-                          className={`font-serif text-xl sm:text-2xl font-black tracking-tight pb-0.5 px-2 py-0.5 rounded-md whitespace-nowrap ${
+                        <input
+                          type="text"
+                          value={typedWord}
+                          disabled={true}
+                          style={{ width: `${Math.max(3, Math.max(targetWord.length, typedWord.length) + 1)}ch` }}
+                          className={`text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight bg-transparent focus:outline-none pb-0.5 min-w-[2.5rem] sm:min-w-[3rem] transition-all border-b-2 ${
                             isWordMatched
-                              ? "text-emerald-700"
-                              : "text-red-600 bg-red-100 font-black border border-red-200"
+                              ? "text-emerald-700 border-emerald-500 bg-emerald-50/30"
+                              : "text-red-600 border-red-500 bg-red-50/30"
                           }`}
-                        >
-                          {targetWord}
-                        </span>
-                        {!isWordMatched && typedWord && (
-                          <span className="font-serif text-xs sm:text-sm font-bold text-red-500 mt-1 whitespace-nowrap">
-                            (You: {typedWord})
+                        />
+                        {!isWordMatched && (
+                          <span className="font-serif text-[11px] font-bold text-gray-500 mt-1 whitespace-nowrap">
+                            Expected: {targetWord}
                           </span>
                         )}
                       </div>

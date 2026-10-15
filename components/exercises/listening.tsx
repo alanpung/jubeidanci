@@ -317,7 +317,13 @@ function ListeningTypeAnswer({
         onChange={(e) => setAnswer(e.target.value)}
         disabled={status !== "answering"}
         placeholder="Type what you hear..."
-        className="w-full rounded-xl border-2 border-lingo-border bg-white p-4 text-lg font-medium text-lingo-text placeholder:text-lingo-gray-dark focus:border-lingo-blue focus:outline-none disabled:opacity-60"
+        className={`w-full rounded-xl border-2 p-4 text-lg font-medium focus:border-lingo-blue focus:outline-none disabled:opacity-100 ${
+          status === "correct"
+            ? "border-lingo-green bg-green-50 text-lingo-green font-bold"
+            : status === "incorrect"
+            ? "border-lingo-red bg-red-50 text-lingo-red font-bold"
+            : "border-lingo-border bg-white text-lingo-text placeholder:text-lingo-gray-dark"
+        }`}
         autoComplete="off"
         autoCorrect="off"
         spellCheck={false}

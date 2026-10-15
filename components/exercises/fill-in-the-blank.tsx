@@ -87,16 +87,6 @@ export function FillInTheBlank({ exercise, onResult, onContinue, language, autop
       <AudioSpinner loading={audioLoading} />
       <div className="flex flex-wrap items-center gap-2 text-2xl font-bold text-lingo-text mb-6">
         <HoverableText text={parts[0]} language={language} noAudio={exercise.noAudio?.includes("sentence")} />
-        {status === "correct" ? (
-          <span className="border-b-4 border-lingo-green px-4 text-lingo-green font-black min-w-40 text-center">
-            {input}
-          </span>
-        ) : status === "incorrect" ? (
-          <div className="inline-flex items-center gap-2 border-b-4 border-lingo-red px-2.5 min-w-[10rem] justify-center">
-            <span className="line-through text-lingo-red/60 font-semibold">{input || "empty"}</span>
-            <span className="text-lingo-green font-extrabold">{exercise.blank}</span>
-          </div>
-        ) : (
           <input
             type="text"
             value={input}
@@ -105,10 +95,15 @@ export function FillInTheBlank({ exercise, onResult, onContinue, language, autop
               if (e.key === "Enter" && input.trim() && status === "answering") handleCheck();
             }}
             disabled={status !== "answering"}
-            className="w-40 border-b-4 border-lingo-blue bg-transparent text-center focus:outline-none"
-            autoFocus
+            className={`w-40 border-b-4 bg-transparent text-center focus:outline-none font-bold transition-all ${
+              status === "correct"
+                ? "border-lingo-green text-lingo-green bg-green-50/50"
+                : status === "incorrect"
+                ? "border-lingo-red text-lingo-red bg-red-50/50"
+                : "border-lingo-blue text-lingo-text"
+            }`}
+            autoFocus={status === "answering"}
           />
-        )}
         <HoverableText text={parts[1]} language={language} noAudio={exercise.noAudio?.includes("sentence")} />
       </div>
     </ExerciseShell>
