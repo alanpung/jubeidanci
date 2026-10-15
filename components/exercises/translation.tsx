@@ -7,7 +7,6 @@ import { useAudio } from "@/hooks/use-audio";
 import { checkWordMatch, generateAlternativeTranslations, WordMatchResult } from "@/lib/similarity";
 import { ExerciseShell } from "./exercise-shell";
 import { HoverableText } from "@/components/word/hoverable-text";
-import { ReplayButton } from "@/components/replay-button";
 import { detectTextLanguage } from "@/lib/language-detector";
 
 interface Props {
@@ -504,9 +503,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-800 tracking-normal select-none">
               <HoverableText text={exercise.sentence} language={sentenceLang} />
             </h1>
-            {!exercise.noAudio?.includes("sentence") && (
-              <ReplayButton onPlay={() => play(exercise.sentence, sentenceLang)} />
-            )}
           </div>
         </div>
 
