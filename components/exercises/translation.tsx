@@ -496,6 +496,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       similarityScore={similarityScore}
       similarityDetail={matchDetail}
       matchedWordIndices={matchedWordIndices}
+      hideBottomFeedback
     >
       <div className="w-full max-w-5xl mx-auto flex flex-col items-center py-2 sm:py-4">
         {/* Chinese Sentence Prompt at the top */}
@@ -608,28 +609,38 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                     )}
                   </div>
                   {/* After input: reveal below the line in order:
-                      1st row: best match answer
-                      2nd row: chinese meaning
+                      1st row: best match answer (same size as user input)
+                      2nd row: chinese meaning (larger)
                       3rd row: ipa
-                      4th row: POS
+                      4th row: POS (colorful oval badge per POS_BADGE_STYLES)
                   */}
                   {status !== "answering" && (
-                    <div className="flex flex-col items-center justify-center mt-2 pt-2 border-t border-gray-100 w-full space-y-1">
-                      <div className="text-xs sm:text-sm font-bold text-gray-900 text-center">
+                    <div className="flex flex-col items-center justify-center mt-2 pt-2 border-t border-gray-100 w-full space-y-1.5">
+                      {/* 1. Best match answer — same size as the user's typed input */}
+                      <div className="text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight text-emerald-700 pb-0.5">
                         {targetWord}
                       </div>
+                      {/* 2. Chinese meaning — larger */}
                       {item.meaning && (
-                        <div className="text-xs text-gray-800 text-center font-semibold">
+                        <div className="text-sm sm:text-base text-gray-800 text-center font-semibold">
                           {item.meaning}
                         </div>
                       )}
+                      {/* 3. IPA */}
                       {item.ipa && (
-                        <div className="text-[11px] text-gray-500 font-mono text-center">
+                        <div className="text-xs sm:text-sm text-gray-500 font-mono text-center">
                           {item.ipa}
                         </div>
                       )}
+                      {/* 4. POS — colorful oval badge, color by POS_BADGE_STYLES */}
                       {item.grammarTag && (
-                        <div className="text-[11px] font-bold text-gray-600 text-center px-1.5 py-0.5 bg-gray-100 rounded-full">
+                        <div
+                          className={`text-[11px] sm:text-xs font-bold text-center px-2.5 py-0.5 rounded-full border shadow-2xs tracking-wide ${
+                            POS_BADGE_STYLES[item.grammarTag]
+                              ? `${POS_BADGE_STYLES[item.grammarTag].bg} ${POS_BADGE_STYLES[item.grammarTag].text} ${POS_BADGE_STYLES[item.grammarTag].border}`
+                              : "bg-gray-100 text-gray-600 border-gray-200"
+                          }`}
+                        >
                           {item.grammarTag}
                         </div>
                       )}
@@ -639,23 +650,55 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               );
             })}
           </div>
-          {/* Matching rate and alternative answers below the grid */}
+          {/* Matching rate card (themed red/green) + alternative answers card (blue) below the grid */}
           {status !== "answering" && (
-            <div className="w-full max-w-4xl mt-6 p-4 bg-white rounded-2xl border-2 border-gray-200 shadow-sm space-y-3">
+            <div className="w-full max-w-4xl mt-6 space-y-3">
+              {/* Matching rate — theme red if <80%, green if >=80% */}
               {matchDetail && (
-                <div className="flex items-center justify-between text-sm sm:text-base font-bold text-gray-800 border-b border-gray-100 pb-2">
-                  <span>Matching Rate:</span>
-                  <span className="text-emerald-600">{matchDetail}</span>
+                <div
+                  className={`p-4 rounded-2xl border-2 shadow-sm ${
+                    typeof similarityScore === "number" && similarityScore < 0.8
+                      ? "bg-red-50/40 border-red-200"
+                      : "bg-emerald-50/40 border-emerald-200"
+                  }`}
+                >
+                  <div className="flex items-center justify-between text-sm sm:text-base font-bold text-gray-800">
+                    <span>Matching Rate:</span>
+                    <div className="flex items-center gap-3">
+                      {typeof similarityScore === "number" && (
+                        <span
+                          className={
+                            similarityScore < 0.8 ? "text-red-600" : "text-emerald-600"
+                          }
+                        >
+                          {similarityScore < 0.8 ? "Incorrect" : "Correct"}
+                        </span>
+                      )}
+                      <span
+                        className={
+                          typeof similarityScore === "number" && similarityScore < 0.8
+                            ? "text-red-600"
+                            : "text-emerald-600"
+                        }
+                      >
+                        {matchDetail}
+                      </span>
+                    </div>
+                  </div>
                 </div>
               )}
+              {/* Alternative answers — blue separate card */}
               {orderedAnswers.length > 1 && (
-                <div className="space-y-1.5 pt-1">
-                  <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider">
+                <div className="p-4 bg-blue-50/40 border-2 border-blue-200 rounded-2xl shadow-sm space-y-2">
+                  <span className="block text-xs font-bold text-blue-700 uppercase tracking-wider">
                     Other Alternative Answers in English:
                   </span>
                   <div className="space-y-1">
                     {orderedAnswers.slice(1).map((alt, aIdx) => (
-                      <div key={aIdx} className="text-sm font-medium text-gray-700 bg-gray-50 px-3 py-1.5 rounded-lg">
+                      <div
+                        key={aIdx}
+                        className="text-sm font-medium text-blue-900 bg-white px-3 py-1.5 rounded-lg border border-blue-100"
+                      >
                         {alt}
                       </div>
                     ))}
