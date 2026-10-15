@@ -616,10 +616,13 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                   */}
                   {status !== "answering" && (
                     <div className="flex flex-col items-center justify-center mt-2 pt-2 border-t border-gray-100 w-full space-y-1.5">
-                      {/* 1. Best match answer — same size as the user's typed input */}
-                      <div className="text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight text-emerald-700 pb-0.5">
-                        {targetWord}
-                      </div>
+                      {/* 1. Best match answer — only show when user got it wrong, to avoid
+                          repeating the same green word the user already typed above */}
+                      {!isWordMatched && (
+                        <div className="text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight text-emerald-700 pb-0.5">
+                          {targetWord}
+                        </div>
+                      )}
                       {/* 2. Chinese meaning — larger */}
                       {item.meaning && (
                         <div className="text-sm sm:text-base text-gray-800 text-center font-semibold">
@@ -650,9 +653,10 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               );
             })}
           </div>
-          {/* Matching rate card (themed red/green) + alternative answers card (blue) below the grid */}
+          {/* Matching rate card (themed red/green) + alternative answers card (blue)
+              below the grid — shrink-wrapped to their own content width */}
           {status !== "answering" && (
-            <div className="w-full max-w-4xl mt-6 space-y-3">
+            <div className="mx-auto mt-6 space-y-3 inline-flex flex-col items-stretch">
               {/* Matching rate — theme red if <80%, green if >=80% */}
               {matchDetail && (
                 <div
