@@ -464,10 +464,9 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                     )}
                   </div>
 
-                  {/* Meaning & IPA below after Enter */}
-                  <div className="h-12 flex flex-col items-center justify-start mt-1">
-                    {status !== "answering" && (
-                      <>
+                  {/* Meaning & IPA inside box after Enter */}
+                  {status !== "answering" && (
+                    <div className="flex flex-col items-center justify-center mt-2">
                         {item.meaning && (
                           <span className="text-xs sm:text-sm font-bold text-gray-900 text-center whitespace-normal select-none leading-tight">
                             {item.meaning}
@@ -478,9 +477,8 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                             {item.ipa}
                           </span>
                         )}
-                      </>
-                    )}
-                  </div>
+                    </div>
+                  )}
                 </div>
               );
             })}
