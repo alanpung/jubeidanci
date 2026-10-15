@@ -14,7 +14,7 @@ for (let i = 2; i < process.argv.length; i++) {
 }
 
 if (!args.includes("-p") && !args.includes("--port")) {
-  args.unshift("-p", process.env.PORT || "3000");
+  args.unshift("-p", "3000");
 }
 if (!args.includes("-H") && !args.includes("--hostname")) {
   args.unshift("-H", "0.0.0.0");

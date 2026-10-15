@@ -135,15 +135,15 @@ export function ExerciseShell({
               <span className="text-2xl">&#10007;</span>
               <span className="font-bold text-lingo-red">Incorrect</span>
               {typeof similarityScore === "number" && (
-                <span className="text-xs font-semibold text-lingo-red bg-lingo-red/10 px-2 py-0.5 rounded-full">
-                  {Math.round(similarityScore * 100)}% match {similarityDetail ? `(${similarityDetail})` : ""}
+                <span className="text-sm font-black text-white bg-lingo-red px-2 py-0.5 rounded-full">
+                  {Math.round(similarityScore * 100)}% Match
                 </span>
               )}
             </div>
             {allAnswers && allAnswers.length > 0 ? (
               <div className="mt-2 text-sm text-lingo-text border-t border-lingo-red/20 pt-2.5">
-                <div className="mb-2 text-xs font-semibold text-lingo-red bg-lingo-red/10 px-2 py-1 rounded">
-                   Your input: {inputWords ? inputWords.join(" ") : "(empty)"}
+                <div className="mb-2 text-xs font-semibold text-red-800 bg-lingo-red/10 px-2 py-1 rounded">
+                   Your input: <span className="font-bold">{inputWords ? inputWords.join(" ") : "(empty)"}</span>
                 </div>
                 <span className="font-bold text-lingo-red text-xs uppercase tracking-wider block mb-1.5">
                   {allAnswers.length > 1
