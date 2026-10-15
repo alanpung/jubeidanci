@@ -189,7 +189,7 @@ export function ExerciseShell({
           </div>
           <Button
             onClick={onContinue}
-            variant={status === "correct" ? "default" : "danger"}
+            variant={status === "correct" ? ("primary" as const) : ("danger" as const)}
             className="w-full h-12 text-base font-bold"
           >
             Continue
