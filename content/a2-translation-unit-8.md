@@ -4,7 +4,7 @@ description: "Unit 8: Hobbies, Sports & Entertainment - A2 Translation Practice 
 icon: "⚽"
 color: "#EC4899"
 targetLanguage: "en"
-sourceLanguage: "en"
+sourceLanguage: "zh"
 level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"

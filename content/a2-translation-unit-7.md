@@ -4,7 +4,7 @@ description: "Unit 7: Weather, Nature & Environment - A2 Translation Practice (U
 icon: "🌤️"
 color: "#06B6D4"
 targetLanguage: "en"
-sourceLanguage: "en"
+sourceLanguage: "zh"
 level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"

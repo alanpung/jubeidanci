@@ -715,7 +715,7 @@ description: "${data.unitTitle} - A2 Translation Practice (Unit ${u}, 10 Lessons
 icon: "${data.icon}"
 color: "${data.color}"
 targetLanguage: "en"
-sourceLanguage: "en"
+sourceLanguage: "zh"
 level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"

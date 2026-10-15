@@ -4,7 +4,7 @@ description: "Unit 2: Travel, Transport & Directions - A2 Translation Practice (
 icon: "🚆"
 color: "#3B82F6"
 targetLanguage: "en"
-sourceLanguage: "en"
+sourceLanguage: "zh"
 level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"

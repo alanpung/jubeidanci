@@ -4,7 +4,7 @@ description: "Unit 1: Everyday Conversations & Routines - A2 Translation Practic
 icon: "🌐"
 color: "#6366F1"
 targetLanguage: "en"
-sourceLanguage: "en"
+sourceLanguage: "zh"
 level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"

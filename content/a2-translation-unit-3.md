@@ -4,7 +4,7 @@ description: "Unit 3: Food, Dining & Groceries - A2 Translation Practice (Unit 3
 icon: "🍲"
 color: "#EF4444"
 targetLanguage: "en"
-sourceLanguage: "en"
+sourceLanguage: "zh"
 level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"

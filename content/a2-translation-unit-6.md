@@ -4,7 +4,7 @@ description: "Unit 6: Work, Office & Productivity - A2 Translation Practice (Uni
 icon: "💼"
 color: "#8B5CF6"
 targetLanguage: "en"
-sourceLanguage: "en"
+sourceLanguage: "zh"
 level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"

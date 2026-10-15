@@ -4,7 +4,7 @@ description: "Unit 10: Social Life & Emotions - A2 Translation Practice (Unit 10
 icon: "❤️"
 color: "#F43F5E"
 targetLanguage: "en"
-sourceLanguage: "en"
+sourceLanguage: "zh"
 level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"

@@ -4,7 +4,7 @@ description: "Unit 4: Shopping, Clothes & Services - A2 Translation Practice (Un
 icon: "🛍️"
 color: "#F59E0B"
 targetLanguage: "en"
-sourceLanguage: "en"
+sourceLanguage: "zh"
 level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"

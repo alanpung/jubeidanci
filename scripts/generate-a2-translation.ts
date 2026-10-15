@@ -111,7 +111,7 @@ function generateUnits() {
     md += `icon: "${u.icon}"\n`;
     md += `color: "${u.color}"\n`;
     md += `targetLanguage: "en"\n`;
-    md += `sourceLanguage: "en"\n`;
+    md += `sourceLanguage: "zh"\n`;
     md += `level: "A2"\n`;
     md += `courseId: "a2-translation-course"\n`;
     md += `questionType: "translation"\n`;

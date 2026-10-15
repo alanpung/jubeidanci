@@ -4,7 +4,7 @@ description: "Unit 9: Technology & Digital Life - A2 Translation Practice (Unit 
 icon: "💻"
 color: "#64748B"
 targetLanguage: "en"
-sourceLanguage: "en"
+sourceLanguage: "zh"
 level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"
