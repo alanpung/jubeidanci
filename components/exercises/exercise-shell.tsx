@@ -155,7 +155,7 @@ export function ExerciseShell({
                     <div key={idx} className="flex items-start gap-2 text-sm font-semibold text-lingo-text">
                       <span className="text-lingo-red font-bold select-none">{idx + 1}.</span>
                       <div className="flex items-center gap-2 flex-wrap">
-                        <span>{language ? <HoverableText text={ans} language={language} /> : ans}</span>
+                        <span>{ans}</span>
                         {idx === 0 && (
                           <span className="text-xs font-medium text-lingo-red bg-lingo-red/10 px-1.5 py-0.5 rounded">
                             (best match)

@@ -450,7 +450,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       <div className="flex flex-col items-center">
                         <span
                           className={`font-serif text-xl sm:text-2xl font-bold tracking-tight pb-0.5 px-1 whitespace-nowrap ${
-                            isWordMatched ? "text-emerald-700" : "text-red-600"
+                            isWordMatched ? "text-emerald-700" : "text-red-600 bg-red-100 rounded px-1"
                           }`}
                         >
                           {typedWord}
