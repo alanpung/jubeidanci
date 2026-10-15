@@ -19,6 +19,12 @@ export async function addUnitToLibrary(
   const session = await requireSession();
   const userId = session.user.id;
 
+  // Filesystem-backed units are only in the DB after a seed run. Without
+  // waiting here a freshly-deployed or throttled DB reports "Unit not found"
+  // for units that demonstrably exist in content/.
+  const { ensureContentSeeded } = await import("@/lib/db/seed-content");
+  await ensureContentSeeded().catch(() => {});
+
   // Verify unit exists
   const [existing] = await db
     .select({
@@ -128,8 +134,12 @@ export async function addCourseToLibrary(
   const session = await requireSession();
   const userId = session.user.id;
 
-  const { seedContentFromFilesystem } = await import("@/lib/db/seed-content");
-  await seedContentFromFilesystem().catch(() => {});
+  // Must actually wait for the filesystem content to land.
+  // seedContentFromFilesystem() is fire-and-forget by design, so awaiting it
+  // returns before any row exists — then userUnitLibrary.unitId (FK -> unit.id)
+  // violates the constraint and the whole action throws.
+  const { ensureContentSeeded } = await import("@/lib/db/seed-content");
+  await ensureContentSeeded().catch(() => {});
 
   let [existingCourse] = await db
     .select({
@@ -210,10 +220,24 @@ export async function addCourseToLibrary(
     // Single multi-row insert instead of one query per unit. With 10 units
     // in a course, this turns N round-trips into 1 — well within Vercel's
     // action timeout on the free tier.
-    await db
-      .insert(userUnitLibrary)
-      .values(unitsInCourse.map((u) => ({ userId, unitId: u.id })))
-      .onConflictDoNothing();
+    try {
+      await db
+        .insert(userUnitLibrary)
+        .values(unitsInCourse.map((u) => ({ userId, unitId: u.id })))
+        .onConflictDoNothing();
+    } catch (err) {
+      // A single unit id that is not present in `unit` (stale filesystem
+      // fallback, interrupted seed) sinks the entire batch and surfaces as a
+      // user-visible error. Retry row-by-row so the valid units still land.
+      console.warn("addCourseToLibrary: batch unit insert failed:", err);
+      for (const u of unitsInCourse) {
+        await db
+          .insert(userUnitLibrary)
+          .values({ userId, unitId: u.id })
+          .onConflictDoNothing()
+          .catch(() => {});
+      }
+    }
   }
 
   await invalidateUserLibraryWordsCache(userId);

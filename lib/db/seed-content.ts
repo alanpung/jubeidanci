@@ -3,13 +3,24 @@ import { course, unit, user } from "./schema";
 import { getAllCourses, getAllUnits } from "../content/registry";
 import { eq, or, ilike, and, notInArray, inArray, sql } from "drizzle-orm";
 
-let isSeeding = false;
 let lastSyncedAt = 0;
+/**
+ * Single in-flight handle for the seed task. Callers that need the data to
+ * actually be present (e.g. addCourseToLibrary inserting rows that FK to
+ * unit.id) can await this; callers that just want a background refresh fire
+ * it and move on.
+ */
+let seedPromise: Promise<void> | null = null;
+
+function startSeedTask(): Promise<void> {
+  if (seedPromise) return seedPromise;
+  seedPromise = runSeedTask().finally(() => {
+    seedPromise = null;
+  });
+  return seedPromise;
+}
 
 async function runSeedTask() {
-  if (isSeeding) return;
-  isSeeding = true;
-
   try {
     // 1. Ensure Alan's user name is "Alan P"
     let alanUser = await db.query.user.findFirst({
@@ -166,9 +177,22 @@ async function runSeedTask() {
     lastSyncedAt = Date.now();
   } catch (err) {
     console.warn("seedContentFromFilesystem error:", err);
-  } finally {
-    isSeeding = false;
   }
+}
+
+/**
+ * Awaitable variant of seedContentFromFilesystem.
+ *
+ * seedContentFromFilesystem deliberately never waits (page renders must not
+ * block on it), which means a caller doing `await seedContentFromFilesystem()`
+ * gets control back before any row is written. Anything that subsequently
+ * writes rows referencing course/unit (user_unit_library.unitId has an FK to
+ * unit.id) must use this instead, or the insert fails with a foreign-key
+ * violation.
+ */
+export async function ensureContentSeeded(): Promise<void> {
+  if (!(await isDbAvailable())) return;
+  await startSeedTask();
 }
 
 export async function seedContentFromFilesystem() {
@@ -180,7 +204,7 @@ export async function seedContentFromFilesystem() {
 
   if (lastSyncedAt > 0) {
     // Already seeded before: run sync in background without delaying request
-    void runSeedTask();
+    void startSeedTask();
     return;
   }
 
@@ -189,7 +213,7 @@ export async function seedContentFromFilesystem() {
     const existing = await db.select({ id: course.id }).from(course).limit(1);
     if (existing.length > 0) {
       lastSyncedAt = now;
-      void runSeedTask();
+      void startSeedTask();
       return;
     }
   } catch (err) {
@@ -199,5 +223,5 @@ export async function seedContentFromFilesystem() {
 
   // Initial sync in background so page rendering is never blocked
   lastSyncedAt = now;
-  void runSeedTask();
+  void startSeedTask();
 }
