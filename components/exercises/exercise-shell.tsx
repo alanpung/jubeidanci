@@ -76,11 +76,11 @@ export function ExerciseShell({
       <div className="flex-1">{children}</div>
 
       {status === "answering" && (
-        <div className="mt-6">
+        <div className="mt-8 flex justify-center">
           <Button
             onClick={onCheck}
             disabled={!canCheck}
-            className="w-full h-12 text-base font-bold"
+            className="w-48 sm:w-64 h-12 text-base font-bold shadow-md"
           >
             Check
           </Button>
@@ -187,13 +187,15 @@ export function ExerciseShell({
               </div>
             )}
           </div>
-          <Button
-            onClick={onContinue}
-            variant={status === "correct" ? ("primary" as const) : ("danger" as const)}
-            className="w-full h-12 text-base font-bold"
-          >
-            Continue
-          </Button>
+          <div className="flex justify-center">
+            <Button
+              onClick={onContinue}
+              variant={status === "correct" ? ("primary" as const) : ("danger" as const)}
+              className="w-48 sm:w-64 h-12 text-base font-bold shadow-md"
+            >
+              Continue
+            </Button>
+          </div>
         </div>
       )}
     </div>

@@ -20,6 +20,7 @@ interface Props {
 
 export function FillInTheBlank({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
   const [input, setInput] = useState("");
+  const [similarityScore, setSimilarityScore] = useState<number | null>(null);
   const [correctedMarkdown, setCorrectedMarkdown] = useState<string>();
   const { status, checkAnswer } = useExercise();
   const { play, stop, prefetch, loading: audioLoading } = useAudio();
@@ -54,6 +55,7 @@ export function FillInTheBlank({ exercise, onResult, onContinue, language, autop
   function handleCheck() {
     const trimmed = input.trim();
     const result = checkBestMatch(trimmed, allAnswers);
+    setSimilarityScore(result.similarity);
     if (!result.isCorrect) setCorrectedMarkdown(result.correctedMarkdown);
     checkAnswer(result.isCorrect);
     onResult(result.isCorrect, trimmed);
@@ -71,6 +73,8 @@ export function FillInTheBlank({ exercise, onResult, onContinue, language, autop
       allAnswers={allAnswers}
       correctedMarkdown={correctedMarkdown}
       language={language}
+      similarityScore={similarityScore}
+      inputWords={[input]}
     >
       <div className="flex items-start gap-2 mb-6">
         <h2 className="text-xl font-bold text-lingo-text">

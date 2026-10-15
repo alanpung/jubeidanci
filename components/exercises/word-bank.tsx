@@ -1,4 +1,5 @@
 "use client";
+import { checkBestMatch } from "@/lib/similarity";
 
 import { useState, useEffect, useCallback } from "react";
 import type { WordBankExercise } from "@/lib/content/types";
@@ -27,6 +28,7 @@ function shuffleArr<T>(arr: T[]): T[] {
 }
 
 export function WordBank({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
+  const [similarityScore, setSimilarityScore] = useState<number | null>(null);
   // selected stores { word, bankIndex } so we can return words to exact slots
   const [selected, setSelected] = useState<{ word: string; bankIndex: number }[]>([]);
   const [bank] = useState<string[]>(() =>
@@ -73,11 +75,11 @@ export function WordBank({ exercise, onResult, onContinue, language, autoplayAud
 
   function handleCheck() {
     const words = selected.map((s) => s.word);
-    const correct =
-      words.length === exercise.answer.length &&
-      words.every((w, i) => w === exercise.answer[i]);
-    checkAnswer(correct);
-    onResult(correct, words.join(" "));
+    const userInput = words.join(" ");
+    const result = checkBestMatch(userInput, [exercise.answer.join(" ")]);
+    setSimilarityScore(result.similarity);
+    checkAnswer(result.isCorrect);
+    onResult(result.isCorrect, userInput);
   }
 
   const handleKeyDown = useCallback(
@@ -110,6 +112,8 @@ export function WordBank({ exercise, onResult, onContinue, language, autoplayAud
       canCheck={selected.length > 0}
       correctAnswer={exercise.answer.join(" ")}
       language={language}
+      similarityScore={similarityScore}
+      inputWords={selected.map((s) => s.word)}
     >
       <div className="flex items-start gap-2 mb-6">
         <h2 className="text-xl font-bold text-lingo-text">

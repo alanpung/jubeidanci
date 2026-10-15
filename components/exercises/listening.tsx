@@ -1,4 +1,5 @@
 "use client";
+import { checkBestMatch } from "@/lib/similarity";
 
 import { useState, useEffect, useCallback, useMemo, useRef } from "react";
 import type { ListeningExercise } from "@/lib/content/types";
@@ -243,6 +244,7 @@ function ListeningTypeAnswer({
   audioLoading,
 }: ModeProps) {
   const [answer, setAnswer] = useState("");
+  const [similarityScore, setSimilarityScore] = useState<number | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
@@ -250,9 +252,11 @@ function ListeningTypeAnswer({
   }, [status]);
 
   function handleCheck() {
-    const correct = answer.trim().toLowerCase() === exercise.text.trim().toLowerCase();
-    checkAnswer(correct);
-    onResult(correct, answer.trim());
+    const trimmed = answer.trim();
+    const result = checkBestMatch(trimmed, [exercise.text]);
+    setSimilarityScore(result.similarity);
+    checkAnswer(result.isCorrect);
+    onResult(result.isCorrect, trimmed);
   }
 
   const handleKeyDown = useCallback(
@@ -280,6 +284,8 @@ function ListeningTypeAnswer({
       canCheck={answer.trim().length > 0}
       correctAnswer={exercise.text}
       language={language}
+      similarityScore={similarityScore}
+      inputWords={[answer]}
     >
       <h2 className="text-xl font-bold text-lingo-text mb-6">
         Type what you hear
@@ -334,6 +340,7 @@ function ListeningWordBank({
   audioLoading,
 }: ModeProps) {
   const answerWords = useMemo(() => exercise.text.split(/\s+/), [exercise.text]);
+  const [similarityScore, setSimilarityScore] = useState<number | null>(null);
   const [selected, setSelected] = useState<{ word: string; bankIndex: number }[]>([]);
   const [bank] = useState<string[]>(() => {
     const words = exercise.text.split(/\s+/);
@@ -370,11 +377,11 @@ function ListeningWordBank({
 
   function handleCheck() {
     const words = selected.map((s) => s.word);
-    const correct =
-      words.length === answerWords.length &&
-      words.every((w, i) => w === answerWords[i]);
-    checkAnswer(correct);
-    onResult(correct, words.join(" "));
+    const userInput = words.join(" ");
+    const result = checkBestMatch(userInput, [exercise.text]);
+    setSimilarityScore(result.similarity);
+    checkAnswer(result.isCorrect);
+    onResult(result.isCorrect, userInput);
   }
 
   const handleKeyDown = useCallback(
@@ -407,6 +414,8 @@ function ListeningWordBank({
       canCheck={selected.length > 0}
       correctAnswer={exercise.text}
       language={language}
+      similarityScore={similarityScore}
+      inputWords={selected.map((s) => s.word)}
     >
       <h2 className="text-xl font-bold text-lingo-text mb-6">
         What do you hear?
