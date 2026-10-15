@@ -329,7 +329,17 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     [status, rawAnswerTokens.length]
   );
 
+  // Track the previously rendered answer so we only reset state when the
+  // exercise actually changes. Without this guard, any change to `status`
+  // (e.g. "answering" → "correct" when the user clicks Check) would re-run
+  // this effect via the `focusInputSlot` callback reference, wiping out the
+  // feedback that handleCheck() just wrote (inputWords, matchDetail,
+  // matchedWordIndices, bestMatchAnswer).
+  const prevAnswerRef = useRef<string | null>(null);
   useEffect(() => {
+    if (prevAnswerRef.current === exercise.answer) return;
+    prevAnswerRef.current = exercise.answer;
+
     setInputWords(rawAnswerTokens.map(() => ""));
     setSimilarityScore(null);
     setMatchDetail("");
@@ -441,7 +451,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     const matchResult: WordMatchResult = checkWordMatch(inputWords, allAnswers);
 
     setSimilarityScore(matchResult.score);
-    setMatchDetail(`${matchResult.matchCount}/${matchResult.totalCount} words correct (${matchResult.percentage}%)`);
+    setMatchDetail(`${matchResult.percentage}% (${matchResult.matchCount}/${matchResult.totalCount} words match)`);
     setMatchedWordIndices(matchResult.matchedWordIndices);
     const primaryCorrect = allAnswers[0] || exercise.answer;
     setBestMatchAnswer(primaryCorrect);
