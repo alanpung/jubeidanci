@@ -34,7 +34,7 @@ interface SentenceAnalysisData {
   chunks?: { chunkLabel: string; words: AnalyzedWord[] }[];
 }
 
-// Built-in word dictionary for instant accurate fallback mapping
+// Comprehensive built-in word dictionary for instant accurate fallback mapping
 const BUILTIN_WORD_DICT: Record<string, { ipa: string; meaning: string; grammarTag: string }> = {
   did: { ipa: "/dɪd/", meaning: "做/干", grammarTag: "助动词" },
   do: { ipa: "/duː/", meaning: "做/干", grammarTag: "助动词" },
@@ -48,31 +48,37 @@ const BUILTIN_WORD_DICT: Record<string, { ipa: string; meaning: string; grammarT
   could: { ipa: "/kʊd/", meaning: "能够", grammarTag: "助动词" },
   should: { ipa: "/ʃʊd/", meaning: "应该", grammarTag: "助动词" },
   must: { ipa: "/mʌst/", meaning: "必须", grammarTag: "助动词" },
+  shall: { ipa: "/ʃæl/", meaning: "将/要不要", grammarTag: "助动词" },
   is: { ipa: "/ɪz/", meaning: "是", grammarTag: "助动词" },
   are: { ipa: "/ɑːr/", meaning: "是", grammarTag: "助动词" },
+  am: { ipa: "/æm/", meaning: "是", grammarTag: "助动词" },
   was: { ipa: "/wɒz/", meaning: "是(过去)", grammarTag: "助动词" },
   were: { ipa: "/wɜːr/", meaning: "是(过去)", grammarTag: "助动词" },
+  be: { ipa: "/biː/", meaning: "是/成为", grammarTag: "动词" },
   been: { ipa: "/bɪn/", meaning: "是(分词)", grammarTag: "动词" },
-  you: { ipa: "/juː/", meaning: "你", grammarTag: "人称代词" },
-  i: { ipa: "/aɪ/", meaning: "我", grammarTag: "人称代词" },
-  he: { ipa: "/hiː/", meaning: "他", grammarTag: "人称代词" },
-  she: { ipa: "/ʃiː/", meaning: "她", grammarTag: "人称代词" },
-  it: { ipa: "/ɪt/", meaning: "它", grammarTag: "人称代词" },
-  we: { ipa: "/wiː/", meaning: "我们", grammarTag: "人称代词" },
-  they: { ipa: "/ðeɪ/", meaning: "他们", grammarTag: "人称代词" },
-  me: { ipa: "/miː/", meaning: "我", grammarTag: "人称代词" },
-  him: { ipa: "/hɪm/", meaning: "他", grammarTag: "人称代词" },
-  her: { ipa: "/hɜːr/", meaning: "她/她的", grammarTag: "人称代词" },
-  us: { ipa: "/ʌs/", meaning: "我们", grammarTag: "人称代词" },
-  them: { ipa: "/ðɛm/", meaning: "他们", grammarTag: "人称代词" },
-  my: { ipa: "/maɪ/", meaning: "我的", grammarTag: "物主限定词" },
-  your: { ipa: "/jɔːr/", meaning: "你的", grammarTag: "物主限定词" },
-  his: { ipa: "/hɪz/", meaning: "他的", grammarTag: "物主限定词" },
-  our: { ipa: "/aʊər/", meaning: "我们的", grammarTag: "物主限定词" },
-  their: { ipa: "/ðɛər/", meaning: "他们的", grammarTag: "物主限定词" },
-  its: { ipa: "/ɪts/", meaning: "它的", grammarTag: "物主限定词" },
-  get: { ipa: "/ɡɛt/", meaning: "使得/收到", grammarTag: "动词" },
-  message: { ipa: "/ˈmɛs.ɪdʒ/", meaning: "消息", grammarTag: "名词" },
+  you: { ipa: "/juː/", meaning: "你", grammarTag: "代词" },
+  i: { ipa: "/aɪ/", meaning: "我", grammarTag: "代词" },
+  he: { ipa: "/hiː/", meaning: "他", grammarTag: "代词" },
+  she: { ipa: "/ʃiː/", meaning: "她", grammarTag: "代词" },
+  it: { ipa: "/ɪt/", meaning: "它", grammarTag: "代词" },
+  we: { ipa: "/wiː/", meaning: "我们", grammarTag: "代词" },
+  they: { ipa: "/ðeɪ/", meaning: "他们", grammarTag: "代词" },
+  me: { ipa: "/miː/", meaning: "我", grammarTag: "代词" },
+  him: { ipa: "/hɪm/", meaning: "他", grammarTag: "代词" },
+  her: { ipa: "/hɜːr/", meaning: "她/她的", grammarTag: "代词" },
+  us: { ipa: "/ʌs/", meaning: "我们", grammarTag: "代词" },
+  them: { ipa: "/ðɛm/", meaning: "他们", grammarTag: "代词" },
+  my: { ipa: "/maɪ/", meaning: "我的", grammarTag: "限定词" },
+  your: { ipa: "/jɔːr/", meaning: "你的", grammarTag: "限定词" },
+  his: { ipa: "/hɪz/", meaning: "他的", grammarTag: "限定词" },
+  our: { ipa: "/aʊər/", meaning: "我们的", grammarTag: "限定词" },
+  their: { ipa: "/ðɛər/", meaning: "他们的", grammarTag: "限定词" },
+  its: { ipa: "/ɪts/", meaning: "它的", grammarTag: "限定词" },
+  this: { ipa: "/ðɪs/", meaning: "这", grammarTag: "限定词" },
+  that: { ipa: "/ðæt/", meaning: "那", grammarTag: "限定词" },
+  these: { ipa: "/ðiːz/", meaning: "这些", grammarTag: "限定词" },
+  those: { ipa: "/ðoʊz/", meaning: "那些", grammarTag: "限定词" },
+  another: { ipa: "/əˈnʌðər/", meaning: "另一", grammarTag: "限定词" },
   the: { ipa: "/ðə/", meaning: "这/那", grammarTag: "冠词" },
   a: { ipa: "/ə/", meaning: "一个", grammarTag: "冠词" },
   an: { ipa: "/æn/", meaning: "一个", grammarTag: "冠词" },
@@ -82,6 +88,21 @@ const BUILTIN_WORD_DICT: Record<string, { ipa: string; meaning: string; grammarT
   on: { ipa: "/ɒn/", meaning: "在…上", grammarTag: "介词" },
   at: { ipa: "/æt/", meaning: "在", grammarTag: "介词" },
   with: { ipa: "/wɪð/", meaning: "和…一起", grammarTag: "介词" },
+  from: { ipa: "/frɒm/", meaning: "从", grammarTag: "介词" },
+  by: { ipa: "/baɪ/", meaning: "通过", grammarTag: "介词" },
+  about: { ipa: "/əˈbaʊt/", meaning: "关于", grammarTag: "介词" },
+  after: { ipa: "/ˈæftər/", meaning: "在…之后", grammarTag: "介词" },
+  before: { ipa: "/bɪˈfɔːr/", meaning: "在…之前", grammarTag: "介词" },
+  during: { ipa: "/ˈdjʊərɪŋ/", meaning: "在…期间", grammarTag: "介词" },
+  near: { ipa: "/nɪər/", meaning: "在…附近", grammarTag: "介词" },
+  into: { ipa: "/ˈɪntuː/", meaning: "进入", grammarTag: "介词" },
+  of: { ipa: "/ɒv/", meaning: "…的", grammarTag: "介词" },
+  and: { ipa: "/ænd/", meaning: "和", grammarTag: "连词" },
+  but: { ipa: "/bʌt/", meaning: "但是", grammarTag: "连词" },
+  or: { ipa: "/ɔːr/", meaning: "或者", grammarTag: "连词" },
+  because: { ipa: "/bɪˈkɒz/", meaning: "因为", grammarTag: "连词" },
+  if: { ipa: "/ɪf/", meaning: "如果", grammarTag: "连词" },
+  when: { ipa: "/wɛn/", meaning: "当…时", grammarTag: "连词" },
   sweet: { ipa: "/swiːt/", meaning: "甜的", grammarTag: "形容词" },
   something: { ipa: "/ˈsʌm.θɪŋ/", meaning: "某物/东西", grammarTag: "代词" },
   want: { ipa: "/wɒnt/", meaning: "想要", grammarTag: "动词" },
@@ -89,70 +110,178 @@ const BUILTIN_WORD_DICT: Record<string, { ipa: string; meaning: string; grammarT
   like: { ipa: "/laɪk/", meaning: "喜欢", grammarTag: "动词" },
   fresh: { ipa: "/freʃ/", meaning: "新鲜的", grammarTag: "形容词" },
   apples: { ipa: "/ˈæplz/", meaning: "苹果", grammarTag: "名词" },
-  this: { ipa: "/ðɪs/", meaning: "这", grammarTag: "指示代词" },
+  apple: { ipa: "/ˈæpl/", meaning: "苹果", grammarTag: "名词" },
   polluted: { ipa: "/pəˈluːtɪd/", meaning: "受污染的", grammarTag: "形容词" },
   river: { ipa: "/ˈrɪv.ər/", meaning: "河流", grammarTag: "名词" },
   always: { ipa: "/ˈɔːl.weɪz/", meaning: "总是", grammarTag: "副词" },
   see: { ipa: "/siː/", meaning: "看见", grammarTag: "动词" },
-  red: { ipa: "/red/", meaning: "红色", grammarTag: "形容词" },
+  red: { ipa: "/red/", meaning: "红色的", grammarTag: "形容词" },
   fruit: { ipa: "/fruːt/", meaning: "水果", grammarTag: "名词" },
   autumn: { ipa: "/ˈɔː.təm/", meaning: "秋天", grammarTag: "名词" },
+  cycling: { ipa: "/ˈsaɪklɪŋ/", meaning: "骑行", grammarTag: "名词" },
+  mountains: { ipa: "/ˈmaʊntɪnz/", meaning: "山脉", grammarTag: "名词" },
+  mountain: { ipa: "/ˈmaʊntɪn/", meaning: "大山", grammarTag: "名词" },
+  teach: { ipa: "/tiːtʃ/", meaning: "教导", grammarTag: "动词" },
+  dance: { ipa: "/dɑːns/", meaning: "跳舞", grammarTag: "动词" },
+  stay: { ipa: "/steɪ/", meaning: "停留", grammarTag: "动词" },
+  stayed: { ipa: "/steɪd/", meaning: "停留", grammarTag: "动词" },
+  there: { ipa: "/ðɛər/", meaning: "那里", grammarTag: "副词" },
+  here: { ipa: "/hɪər/", meaning: "这里", grammarTag: "副词" },
+  forever: { ipa: "/fərˈevər/", meaning: "永远", grammarTag: "副词" },
+  beach: { ipa: "/biːtʃ/", meaning: "海滩", grammarTag: "名词" },
+  wish: { ipa: "/wɪʃ/", meaning: "希望", grammarTag: "动词" },
+  asked: { ipa: "/æskt/", meaning: "请/询问", grammarTag: "动词" },
+  ask: { ipa: "/æsk/", meaning: "请/询问", grammarTag: "动词" },
+  year: { ipa: "/jɪər/", meaning: "年", grammarTag: "名词" },
+  period: { ipa: "/ˈpɪəriəd/", meaning: "课时", grammarTag: "名词" },
+  lunch: { ipa: "/lʌntʃ/", meaning: "午餐", grammarTag: "名词" },
+  dinner: { ipa: "/ˈdɪnər/", meaning: "晚餐", grammarTag: "名词" },
+  breakfast: { ipa: "/ˈbrekfəst/", meaning: "早餐", grammarTag: "名词" },
+  third: { ipa: "/θɜːrd/", meaning: "第三", grammarTag: "数词" },
+  first: { ipa: "/fɜːrst/", meaning: "第一", grammarTag: "数词" },
+  second: { ipa: "/ˈsek.ənd/", meaning: "第二", grammarTag: "数词" },
+  seven: { ipa: "/ˈsev.ən/", meaning: "七点/七", grammarTag: "数词" },
+  eight: { ipa: "/eɪt/", meaning: "八点/八", grammarTag: "数词" },
+  nine: { ipa: "/naɪn/", meaning: "九点/九", grammarTag: "数词" },
+  ten: { ipa: "/ten/", meaning: "十点/十", grammarTag: "数词" },
+  "o'clock": { ipa: "/əˈklɒk/", meaning: "点钟", grammarTag: "副词" },
+  leaves: { ipa: "/liːvz/", meaning: "离开", grammarTag: "动词" },
+  leave: { ipa: "/liːv/", meaning: "离开", grammarTag: "动词" },
+  wakes: { ipa: "/weɪks/", meaning: "醒来", grammarTag: "动词" },
+  wake: { ipa: "/weɪk/", meaning: "醒来", grammarTag: "动词" },
+  up: { ipa: "/ʌp/", meaning: "起来", grammarTag: "副词" },
+  morning: { ipa: "/ˈmɔːrnɪŋ/", meaning: "早晨", grammarTag: "名词" },
+  afternoon: { ipa: "/ˌæftərˈnuːn/", meaning: "下午", grammarTag: "名词" },
+  evening: { ipa: "/ˈiːvnɪŋ/", meaning: "晚上", grammarTag: "名词" },
+  night: { ipa: "/naɪt/", meaning: "夜间", grammarTag: "名词" },
+  weekend: { ipa: "/ˈwiːk.end/", meaning: "周末", grammarTag: "名词" },
+  weekends: { ipa: "/ˈwiːk.endz/", meaning: "周末", grammarTag: "名词" },
+  reads: { ipa: "/riːdz/", meaning: "阅读", grammarTag: "动词" },
+  read: { ipa: "/riːd/", meaning: "阅读", grammarTag: "动词" },
+  books: { ipa: "/bʊks/", meaning: "书籍", grammarTag: "名词" },
+  book: { ipa: "/bʊk/", meaning: "书籍", grammarTag: "名词" },
+  bed: { ipa: "/bed/", meaning: "床", grammarTag: "名词" },
+  usually: { ipa: "/ˈjuː.ʒu.ə.li/", meaning: "通常", grammarTag: "副词" },
+  often: { ipa: "/ˈɒf.ən/", meaning: "经常", grammarTag: "副词" },
+  sometimes: { ipa: "/ˈsʌm.taɪmz/", meaning: "有时", grammarTag: "副词" },
+  never: { ipa: "/ˈnev.ər/", meaning: "从不", grammarTag: "副词" },
+  goes: { ipa: "/ɡoʊz/", meaning: "去", grammarTag: "动词" },
+  go: { ipa: "/ɡoʊ/", meaning: "去", grammarTag: "动词" },
+  park: { ipa: "/pɑːrk/", meaning: "公园", grammarTag: "名词" },
+  children: { ipa: "/ˈtʃɪl.drən/", meaning: "孩子们", grammarTag: "名词" },
+  kids: { ipa: "/kɪdz/", meaning: "孩子们", grammarTag: "名词" },
+  play: { ipa: "/pleɪ/", meaning: "玩耍", grammarTag: "动词" },
+  games: { ipa: "/ɡeɪmz/", meaning: "游戏", grammarTag: "名词" },
+  game: { ipa: "/ɡeɪm/", meaning: "游戏", grammarTag: "名词" },
+  outside: { ipa: "/ˌaʊtˈsaɪd/", meaning: "在外面", grammarTag: "副词" },
+  get: { ipa: "/ɡɛt/", meaning: "使得/收到", grammarTag: "动词" },
+  message: { ipa: "/ˈmɛs.ɪdʒ/", meaning: "消息", grammarTag: "名词" },
+  just: { ipa: "/dʒʌst/", meaning: "刚刚", grammarTag: "副词" },
+  "they've": { ipa: "/ðeɪv/", meaning: "他们已经", grammarTag: "代词" },
+  "i've": { ipa: "/aɪv/", meaning: "我已经", grammarTag: "代词" },
+  "we've": { ipa: "/wiːv/", meaning: "我们已经", grammarTag: "代词" },
+  "you've": { ipa: "/juːv/", meaning: "你已经", grammarTag: "代词" },
+  "i'm": { ipa: "/aɪm/", meaning: "我是", grammarTag: "代词" },
+  "you're": { ipa: "/jɔːr/", meaning: "你是", grammarTag: "代词" },
+  "he's": { ipa: "/hiːz/", meaning: "他是", grammarTag: "代词" },
+  "she's": { ipa: "/ʃiːz/", meaning: "她是", grammarTag: "代词" },
+  "it's": { ipa: "/ɪts/", meaning: "它是", grammarTag: "代词" },
+  "we're": { ipa: "/wɪər/", meaning: "我们是", grammarTag: "代词" },
+  "they're": { ipa: "/ðɛər/", meaning: "他们是", grammarTag: "代词" },
+  "that's": { ipa: "/ðæts/", meaning: "那是", grammarTag: "代词" },
+  "there's": { ipa: "/ðɛərz/", meaning: "有/在那", grammarTag: "副词" },
+  "don't": { ipa: "/doʊnt/", meaning: "不/别", grammarTag: "助动词" },
+  "doesn't": { ipa: "/ˈdʌznt/", meaning: "不", grammarTag: "助动词" },
+  "didn't": { ipa: "/ˈdɪdnt/", meaning: "没有", grammarTag: "助动词" },
+  "can't": { ipa: "/kænt/", meaning: "不能", grammarTag: "助动词" },
+  "won't": { ipa: "/woʊnt/", meaning: "不会", grammarTag: "助动词" },
 };
 
-const AUXILIARY_WORDS = new Set([
-  "did", "do", "does", "have", "has", "had", "will", "would",
-  "can", "could", "should", "must", "may", "might", "shall",
-  "am", "is", "are", "was", "were"
-]);
-
-const PRONOUN_WORDS = new Set([
-  "i", "you", "he", "she", "it", "we", "they", "me", "him", "her", "us", "them"
-]);
-
-const POSSESSIVE_WORDS = new Set([
-  "my", "your", "his", "her", "its", "our", "their"
-]);
-
-const ARTICLE_WORDS = new Set(["a", "an", "the"]);
-
-const POS_COLORS: Record<string, string> = {
-  "代词": "text-blue-600",
-  "限定词": "text-purple-600",
-  "冠词": "text-orange-600",
-  "助动词": "text-teal-600",
-  "动词": "text-red-600",
-  "名词": "text-emerald-700",
-  "形容词": "text-amber-600",
-  "副词": "text-pink-600",
-  "介词": "text-indigo-600",
-  "连词": "text-yellow-600",
-  "数词": "text-cyan-600",
+const POS_BADGE_STYLES: Record<string, { text: string; bg: string; border: string }> = {
+  "动词": { text: "text-rose-700", bg: "bg-rose-50", border: "border-rose-200" },
+  "名词": { text: "text-emerald-700", bg: "bg-emerald-50", border: "border-emerald-200" },
+  "代词": { text: "text-blue-700", bg: "bg-blue-50", border: "border-blue-200" },
+  "人称代词": { text: "text-blue-700", bg: "bg-blue-50", border: "border-blue-200" },
+  "形容词": { text: "text-amber-700", bg: "bg-amber-50", border: "border-amber-200" },
+  "副词": { text: "text-fuchsia-700", bg: "bg-fuchsia-50", border: "border-fuchsia-200" },
+  "介词": { text: "text-indigo-700", bg: "bg-indigo-50", border: "border-indigo-200" },
+  "连词": { text: "text-yellow-800", bg: "bg-yellow-50", border: "border-yellow-200" },
+  "冠词": { text: "text-orange-700", bg: "bg-orange-50", border: "border-orange-200" },
+  "限定词": { text: "text-purple-700", bg: "bg-purple-50", border: "border-purple-200" },
+  "物主限定词": { text: "text-purple-700", bg: "bg-purple-50", border: "border-purple-200" },
+  "助动词": { text: "text-teal-700", bg: "bg-teal-50", border: "border-teal-200" },
+  "数词": { text: "text-cyan-700", bg: "bg-cyan-50", border: "border-cyan-200" },
 };
+
+const ARTICLES_SET = new Set(["a", "an", "the"]);
+const PRONOUNS_SET = new Set([
+  "i", "you", "he", "she", "it", "we", "they", "me", "him", "her", "us", "them",
+  "someone", "anyone", "everyone", "nobody", "somebody", "anybody", "everybody",
+  "something", "anything", "everything", "nothing"
+]);
+const DETERMINERS_SET = new Set([
+  "my", "your", "his", "her", "its", "our", "their", "this", "that", "these", "those",
+  "some", "any", "no", "every", "each", "all", "both", "another"
+]);
+const AUXILIARIES_SET = new Set([
+  "am", "is", "are", "was", "were", "be", "been", "being",
+  "have", "has", "had", "do", "does", "did",
+  "can", "could", "will", "would", "shall", "should", "may", "might", "must"
+]);
+const PREPOSITIONS_SET = new Set([
+  "in", "on", "at", "to", "for", "with", "from", "by", "about", "around", "into",
+  "through", "during", "before", "after", "above", "below", "between", "under", "near", "without"
+]);
+const CONJUNCTIONS_SET = new Set([
+  "and", "but", "or", "so", "because", "although", "though", "if", "when", "while", "since"
+]);
+const NUMERALS_SET = new Set([
+  "zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten",
+  "first", "second", "third", "fourth", "fifth"
+]);
+const ADVERBS_SET = new Set([
+  "always", "usually", "often", "sometimes", "never", "seldom", "hardly", "ever",
+  "very", "too", "quite", "really", "already", "still", "yet", "just", "now", "then",
+  "here", "there", "today", "yesterday", "tomorrow", "tonight", "outside", "inside",
+  "o'clock", "please", "forever", "slowly", "quickly", "suddenly", "finally"
+]);
+const ADJECTIVES_SET = new Set([
+  "red", "blue", "green", "yellow", "white", "black", "orange", "purple", "pink", "sweet",
+  "fresh", "polluted", "cold", "hot", "warm", "clean", "dirty", "new", "old", "big",
+  "small", "good", "bad", "long", "short", "delicious", "nice", "pretty", "cute"
+]);
 
 function resolveGrammarTag(word: string, pos?: string): string {
-  const clean = word.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
+  const clean = word.toLowerCase().replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "");
 
-  if (ARTICLE_WORDS.has(clean)) return "冠词";
-  if (PRONOUN_WORDS.has(clean)) return "代词";
-  if (POSSESSIVE_WORDS.has(clean)) return "限定词";
-  if (AUXILIARY_WORDS.has(clean)) return "助动词";
+  if (ARTICLES_SET.has(clean)) return "冠词";
+  if (PRONOUNS_SET.has(clean)) return "代词";
+  if (DETERMINERS_SET.has(clean)) return "限定词";
+  if (AUXILIARIES_SET.has(clean)) return "助动词";
+  if (PREPOSITIONS_SET.has(clean)) return "介词";
+  if (CONJUNCTIONS_SET.has(clean)) return "连词";
+  if (NUMERALS_SET.has(clean)) return "数词";
+  if (ADVERBS_SET.has(clean)) return "副词";
+  if (ADJECTIVES_SET.has(clean)) return "形容词";
 
   if (BUILTIN_WORD_DICT[clean]?.grammarTag) {
     return BUILTIN_WORD_DICT[clean].grammarTag;
   }
 
-  const p = (pos || "").toLowerCase();
-  if (p.includes("pron") || p === "代词" || p === "人称代词") return "代词";
-  if (p.includes("det") || p.includes("possess") || p === "限定词" || p === "物主限定词") return "限定词";
-  if (p.includes("art") || p === "冠词") return "冠词";
-  if (p.includes("aux") || p.includes("modal") || p === "助动词") return "助动词";
-  if (p.includes("verb") || p === "v" || p === "动词") return "动词";
-  if (p.includes("noun") || p === "n" || p === "名词") return "名词";
-  if (p.includes("adj") || p === "a" || p === "形容词") return "形容词";
-  if (p.includes("adv") || p === "r" || p === "副词") return "副词";
-  if (p.includes("prep") || p === "p" || p === "介词") return "介词";
-  if (p.includes("conj") || p === "c" || p === "连词") return "连词";
-  if (p.includes("num") || p === "数词") return "数词";
+  const p = (pos || "").toLowerCase().trim();
+  if (p === "动词" || p === "名词" || p === "形容词" || p === "副词" || p === "代词" || p === "介词" || p === "连词" || p === "冠词" || p === "限定词" || p === "助动词" || p === "数词") {
+    return p;
+  }
+  if (p.includes("adv") || p === "r") return "副词";
+  if (p.includes("adj") || p === "a") return "形容词";
+  if (p.includes("pron")) return "代词";
+  if (p.includes("prep") || p === "p") return "介词";
+  if (p.includes("conj") || p === "c") return "连词";
+  if (p.includes("aux") || p.includes("modal") || p === "be-verb") return "助动词";
+  if (p.includes("verb") || p === "v") return "动词";
+  if (p.includes("noun") || p === "n") return "名词";
+  if (p.includes("num")) return "数词";
+  if (p.includes("det") || p.includes("art")) return "限定词";
 
   return "名词";
 }
@@ -249,29 +378,40 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
   }, [exercise.answer]);
 
   const analyzedWordList = useMemo<AnalyzedWord[]>(() => {
-    return rawAnswerTokens.map((token: string, idx: number) => {
-      const clean = token.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "");
+    return rawAnswerTokens.map((token: string) => {
+      const clean = token.toLowerCase().replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "");
       const dict = BUILTIN_WORD_DICT[clean];
       
       // Flatten chunks to find the word info from API analysis
-      // Use clean token for comparison to handle punctuation properly
-      const apiWord = analysis?.chunks?.flatMap(c => c.words)?.find(w => 
-        w.word.toLowerCase().replace(/^[.,!?;:"'()]+|[.,!?;:"'()]+$/g, "") === clean
+      const apiWord = analysis?.chunks?.flatMap((c) => c.words)?.find((w) => 
+        w.word.toLowerCase().replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "") === clean
       );
-      let gTag = resolveGrammarTag(token, apiWord?.pos);
-      if (!POS_COLORS[gTag]) {
-         gTag = dict?.grammarTag || gTag;
+
+      // Prefer API POS if in Chinese, or dict, or resolveGrammarTag
+      let gTag = (apiWord?.pos && POS_BADGE_STYLES[apiWord.pos])
+        ? apiWord.pos
+        : (dict?.grammarTag || resolveGrammarTag(clean, apiWord?.pos));
+
+      // Meaning: must be valid Chinese
+      let meaning = "";
+      if (apiWord?.meaning && /[\u4e00-\u9fa5]/.test(apiWord.meaning)) {
+        meaning = apiWord.meaning;
+      } else if (dict?.meaning && /[\u4e00-\u9fa5]/.test(dict.meaning)) {
+        meaning = dict.meaning;
       }
+
+      // IPA
+      const ipa = dict?.ipa || apiWord?.ipa || "";
 
       return {
         word: token,
-        ipa: dict?.ipa || apiWord?.ipa || "",
-        meaning: dict?.meaning || apiWord?.meaning || clean,
-        pos: dict?.grammarTag || apiWord?.pos || "名词",
+        ipa,
+        meaning,
+        pos: gTag,
         grammarTag: gTag,
       };
     });
-  }, [rawAnswerTokens]);
+  }, [rawAnswerTokens, analysis]);
 
   const orderedAnswers = useMemo(() => {
     if (!bestMatchAnswer) return allAnswers;
@@ -346,6 +486,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       similarityScore={similarityScore}
       similarityDetail={matchDetail}
       inputWords={inputWords}
+      matchedWordIndices={matchedWordIndices}
     >
       <div className="w-full max-w-5xl mx-auto flex flex-col items-center py-2 sm:py-4">
         {/* Chinese Sentence Prompt at the top */}
@@ -396,21 +537,33 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               return (
                 <div
                   key={idx}
-                  className="bg-white rounded-2xl border border-blue-200 shadow-xs px-4 py-3.5 flex flex-col items-center justify-center min-w-[95px] sm:min-w-[115px]"
+                  className={`bg-white rounded-2xl border-2 shadow-xs px-3 sm:px-4 py-3 flex flex-col items-center justify-between min-w-[95px] sm:min-w-[115px] transition-all ${
+                    status !== "answering"
+                      ? isWordMatched
+                        ? "border-emerald-200 bg-emerald-50/20"
+                        : "border-red-200 bg-red-50/20"
+                      : isSlotActive
+                      ? "border-[#007a55] shadow-sm ring-2 ring-[#007a55]/20"
+                      : "border-blue-100/80 hover:border-blue-200"
+                  }`}
                 >
-                  {/* POS on top as hint */}
-                  <div className="h-5 flex items-center justify-center mb-1">
+                  {/* POS on top as hint - larger and attractive colored badge */}
+                  <div className="h-6 flex items-center justify-center mb-1.5">
                     {item.grammarTag && (
-                      <span className={`text-xs sm:text-sm font-sans font-black tracking-wider select-none whitespace-nowrap ${
-                        POS_COLORS[item.grammarTag] || "text-gray-500"
-                      }`}>
+                      <span
+                        className={`text-xs sm:text-sm font-black px-2.5 py-0.5 rounded-full select-none whitespace-nowrap border shadow-2xs tracking-wide ${
+                          POS_BADGE_STYLES[item.grammarTag]
+                            ? `${POS_BADGE_STYLES[item.grammarTag].bg} ${POS_BADGE_STYLES[item.grammarTag].text} ${POS_BADGE_STYLES[item.grammarTag].border}`
+                            : "bg-gray-100 text-gray-700 border-gray-200"
+                        }`}
+                      >
                         {item.grammarTag}
                       </span>
                     )}
                   </div>
 
-                  {/* Input or Result */}
-                  <div className="flex flex-col items-center justify-center my-1">
+                  {/* Input or English Result */}
+                  <div className="flex flex-col items-center justify-center my-1.5 min-h-[3rem]">
                     {status === "answering" ? (
                       <input
                         id={`word-input-${idx}`}
@@ -449,34 +602,36 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                     ) : (
                       <div className="flex flex-col items-center">
                         <span
-                          className={`font-serif text-xl sm:text-2xl font-bold tracking-tight pb-0.5 px-1 whitespace-nowrap ${
-                            isWordMatched ? "text-emerald-700" : "text-red-600 bg-red-100 rounded px-1"
+                          className={`font-serif text-xl sm:text-2xl font-black tracking-tight pb-0.5 px-2 py-0.5 rounded-md whitespace-nowrap ${
+                            isWordMatched
+                              ? "text-emerald-700"
+                              : "text-red-600 bg-red-100 font-black border border-red-200"
                           }`}
                         >
-                          {isWordMatched ? typedWord : targetWord}
+                          {targetWord}
                         </span>
-                        {!isWordMatched && (
-                          <span className="font-serif text-xs sm:text-sm font-bold text-red-600 mt-1 whitespace-nowrap">
-                            (Your input: {typedWord})
+                        {!isWordMatched && typedWord && (
+                          <span className="font-serif text-xs sm:text-sm font-bold text-red-500 mt-1 whitespace-nowrap">
+                            (You: {typedWord})
                           </span>
                         )}
                       </div>
                     )}
                   </div>
 
-                  {/* Meaning & IPA inside box after Enter */}
+                  {/* Meaning & IPA inside box after Enter: Chinese on top, IPA on bottom */}
                   {status !== "answering" && (
-                    <div className="flex flex-col items-center justify-center mt-2">
-                        {item.meaning && (
-                          <span className="text-xs sm:text-sm font-bold text-gray-900 text-center whitespace-normal select-none leading-tight">
-                            {item.meaning}
-                          </span>
-                        )}
-                        {item.ipa && (
-                          <span className="text-[10px] text-gray-500 select-none leading-tight mt-0.5">
-                            {item.ipa}
-                          </span>
-                        )}
+                    <div className="flex flex-col items-center justify-center mt-1.5 pt-1.5 border-t border-gray-100 w-full">
+                      {item.meaning && (
+                        <span className="text-xs sm:text-sm font-bold text-gray-800 text-center whitespace-normal select-none leading-tight">
+                          {item.meaning}
+                        </span>
+                      )}
+                      {item.ipa && (
+                        <span className="text-[11px] text-gray-500 font-mono select-none leading-tight mt-0.5">
+                          {item.ipa}
+                        </span>
+                      )}
                     </div>
                   )}
                 </div>

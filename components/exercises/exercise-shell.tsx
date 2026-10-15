@@ -20,6 +20,7 @@ interface ExerciseShellProps {
   similarityScore?: number | null;
   similarityDetail?: string;
   inputWords?: string[];
+  matchedWordIndices?: boolean[];
 }
 
 export function ExerciseShell({
@@ -35,6 +36,7 @@ export function ExerciseShell({
   similarityScore,
   similarityDetail,
   inputWords,
+  matchedWordIndices,
 }: ExerciseShellProps) {
   const justCheckedRef = useRef(false);
 
@@ -85,95 +87,111 @@ export function ExerciseShell({
         </div>
       )}
 
-      {status === "correct" && (
+      {(status === "correct" || status === "incorrect") && (
         <div className="mt-6">
-          <div className="rounded-xl bg-green-50 border-2 border-lingo-green p-4 mb-4">
-            <div className="flex items-center gap-2 mb-2 flex-wrap">
-              <span className="text-2xl">&#10003;</span>
-              <span className="font-bold text-lingo-green">Correct!</span>
-              {typeof similarityScore === "number" && (
-                <span className="text-xs font-semibold text-lingo-green bg-lingo-green/10 px-2 py-0.5 rounded-full">
-                  {Math.round(similarityScore * 100)}% match {similarityDetail ? `(${similarityDetail})` : ""}
-                </span>
-              )}
-            </div>
-            {allAnswers && allAnswers.length > 0 && (
-              <div className="mt-2 text-sm text-lingo-text border-t border-lingo-green/20 pt-2.5">
-                <span className="font-bold text-lingo-green-dark text-xs uppercase tracking-wider block mb-1.5">
-                  {allAnswers.length > 1
-                    ? `Accepted Answers (Max ${Math.min(3, allAnswers.length)}):`
-                    : "Accepted Answer:"}
-                </span>
-                <div className="space-y-1.5">
-                  {allAnswers.slice(0, 3).map((ans, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-sm font-semibold text-lingo-text">
-                      <span className="text-lingo-green font-bold select-none">{idx + 1}.</span>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <span>{language ? <HoverableText text={ans} language={language} /> : ans}</span>
-                        {idx === 0 && (
-                          <span className="text-xs font-medium text-lingo-green bg-lingo-green/10 px-1.5 py-0.5 rounded">
-                            (best match)
-                          </span>
-                        )}
-                      </div>
-                    </div>
-                  ))}
+          <div
+            className={`rounded-2xl border-2 p-5 mb-4 ${
+              status === "correct"
+                ? "bg-green-50/80 border-lingo-green"
+                : "bg-red-50/80 border-lingo-red"
+            }`}
+          >
+            {inputWords && inputWords.length > 0 ? (
+              <div className="space-y-3 font-sans">
+                {/* My input */}
+                <div className="flex items-baseline gap-3 text-base">
+                  <span className="font-bold text-gray-800 w-24 shrink-0 text-left">
+                    My input:
+                  </span>
+                  <div className="flex flex-wrap items-baseline gap-1.5">
+                    {inputWords.map((word, wIdx) => {
+                      const isMatched =
+                        matchedWordIndices && matchedWordIndices[wIdx] !== undefined
+                          ? matchedWordIndices[wIdx]
+                          : status === "correct";
+                      return (
+                        <span
+                          key={wIdx}
+                          className={
+                            isMatched
+                              ? "text-emerald-600 font-semibold"
+                              : "text-red-600 font-bold underline decoration-wavy decoration-red-500"
+                          }
+                        >
+                          {word}
+                        </span>
+                      );
+                    })}
+                    {typeof similarityScore === "number" && (
+                      <span className="text-emerald-600 font-bold ml-1">
+                        ({Math.round(similarityScore * 100)}%)
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </div>
-            )}
-          </div>
-          <Button onClick={onContinue} className="w-full h-12 text-base font-bold">
-            Continue
-          </Button>
-        </div>
-      )}
 
-      {status === "incorrect" && (
-        <div className="mt-6">
-          <div className="rounded-xl bg-red-50 border-2 border-lingo-red p-4 mb-4">
-            <div className="flex items-center gap-2 mb-2 flex-wrap">
-              <span className="text-2xl">&#10007;</span>
-              <span className="font-bold text-lingo-red">Incorrect</span>
-              {typeof similarityScore === "number" && (
-                <span className="text-sm font-black text-white bg-lingo-red px-2 py-0.5 rounded-full">
-                  {Math.round(similarityScore * 100)}% Match
-                </span>
-              )}
-            </div>
-            {allAnswers && allAnswers.length > 0 ? (
-              <div className="mt-2 text-sm text-lingo-text border-t border-lingo-red/20 pt-2.5">
-                <div className="mb-2 text-xs font-semibold text-red-800 bg-lingo-red/10 px-2 py-1 rounded">
-                   Your input: <span className="font-bold">{inputWords ? inputWords.join(" ") : "(empty)"}</span>
+                {/* Answer */}
+                <div className="flex items-baseline gap-3 text-base">
+                  <span className="font-bold text-gray-800 w-24 shrink-0 text-left">
+                    Answer:
+                  </span>
+                  <span className="font-semibold text-gray-900">
+                    {correctAnswer || (allAnswers && allAnswers[0]) || ""}
+                  </span>
                 </div>
-                <span className="font-bold text-lingo-red text-xs uppercase tracking-wider block mb-1.5">
-                  {allAnswers.length > 1
-                    ? `All Possible Answers (Max ${Math.min(3, allAnswers.length)}):`
-                    : "Correct Answer:"}
-                </span>
-                <div className="space-y-1.5">
-                  {allAnswers.slice(0, 3).map((ans, idx) => (
-                    <div key={idx} className="flex items-start gap-2 text-sm font-semibold text-lingo-text">
-                      <span className="text-lingo-red font-bold select-none">{idx + 1}.</span>
-                      <div className="flex items-center gap-2 flex-wrap">
-                        <span>{ans}</span>
-                        {idx === 0 && (
-                          <span className="text-xs font-medium text-lingo-red bg-lingo-red/10 px-1.5 py-0.5 rounded">
-                            (best match)
-                          </span>
-                        )}
+
+                {/* Other answers */}
+                {allAnswers &&
+                  allAnswers.filter(
+                    (a) =>
+                      a.toLowerCase().trim() !==
+                      (correctAnswer || (allAnswers && allAnswers[0]) || "").toLowerCase().trim()
+                  ).length > 0 && (
+                    <div className="pt-3 border-t border-gray-200/70 mt-3">
+                      <span className="block font-bold text-gray-800 mb-1 text-sm">
+                        Other answers:
+                      </span>
+                      <div className="space-y-1">
+                        {allAnswers
+                          .filter(
+                            (a) =>
+                              a.toLowerCase().trim() !==
+                              (correctAnswer || (allAnswers && allAnswers[0]) || "").toLowerCase().trim()
+                          )
+                          .map((other, oIdx) => (
+                            <div key={oIdx} className="text-gray-800 font-medium text-sm">
+                              {other}
+                            </div>
+                          ))}
                       </div>
                     </div>
-                  ))}
-                </div>
+                  )}
               </div>
-            ) : correctAnswer && (
-              <div className="mt-1 text-sm text-lingo-text flex items-center gap-2 flex-wrap">
-                <span>Correct answer: <strong>{language ? <HoverableText text={correctAnswer} language={language} /> : correctAnswer}</strong></span>
-                <span className="text-xs font-medium text-lingo-red bg-lingo-red/10 px-1.5 py-0.5 rounded">(best match)</span>
+            ) : (
+              <div>
+                <div className="flex items-center gap-2 mb-2 flex-wrap">
+                  <span className="text-2xl">{status === "correct" ? "✓" : "✗"}</span>
+                  <span
+                    className={`font-bold ${
+                      status === "correct" ? "text-lingo-green" : "text-lingo-red"
+                    }`}
+                  >
+                    {status === "correct" ? "Correct!" : "Incorrect"}
+                  </span>
+                </div>
+                {correctAnswer && (
+                  <div className="mt-1 text-sm text-lingo-text">
+                    Correct answer: <strong>{correctAnswer}</strong>
+                  </div>
+                )}
               </div>
             )}
           </div>
-          <Button variant="danger" onClick={onContinue} className="w-full h-12 text-base font-bold">
+          <Button
+            onClick={onContinue}
+            variant={status === "correct" ? "default" : "danger"}
+            className="w-full h-12 text-base font-bold"
+          >
             Continue
           </Button>
         </div>
