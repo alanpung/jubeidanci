@@ -9,7 +9,6 @@ import { ExerciseShell } from "./exercise-shell";
 import { HoverableText } from "@/components/word/hoverable-text";
 import { ReplayButton } from "@/components/replay-button";
 import { detectTextLanguage } from "@/lib/language-detector";
-import { Volume2 } from "lucide-react";
 
 interface Props {
   exercise: TranslationExercise;
@@ -521,21 +520,37 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
           }}
           className="w-full flex flex-col items-center cursor-text mb-4"
         >
-          {status !== "answering" && (
-            <div className="w-full flex items-center justify-end mb-3 max-w-5xl">
+          {/* Audio output controls:
+              C = play the Chinese prompt (always available)
+              E = play the English answer (only revealed after Check) */}
+          <div className="w-full flex items-center justify-end mb-3 max-w-5xl">
+            <div className="flex items-center gap-2">
               <button
                 onClick={(e) => {
                   e.stopPropagation();
-                  play(bestMatchAnswer, "en");
+                  play(exercise.sentence, sentenceLang);
                 }}
-                className="flex items-center gap-1.5 px-3.5 py-1.5 bg-lingo-blue/10 hover:bg-lingo-blue/20 text-lingo-blue text-xs font-semibold rounded-full transition-colors cursor-pointer"
-                title="Listen English Audio"
+                className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-lingo-blue text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold"
+                aria-label="Play Chinese audio"
+                title="Chinese audio"
               >
-                <Volume2 className="w-4 h-4" />
-                <span>Listen Audio</span>
+                C
               </button>
+              {status !== "answering" && (
+                <button
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    play(bestMatchAnswer, "en");
+                  }}
+                  className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-lingo-blue text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold"
+                  aria-label="Play English audio"
+                  title="English audio"
+                >
+                  E
+                </button>
+              )}
             </div>
-          )}
+          </div>
 
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 w-full max-w-5xl">
             {analyzedWordList.map((item, idx) => {
