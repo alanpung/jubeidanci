@@ -537,7 +537,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
             </div>
           )}
 
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 w-full max-w-4xl">
+          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 w-full max-w-4xl">
             {analyzedWordList.map((item, idx) => {
               const targetWord = item.word;
               const typedWord = inputWords[idx] || "";
@@ -546,7 +546,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               return (
                 <div
                   key={idx}
-                  className={`bg-white rounded-2xl border-2 shadow-xs px-3 sm:px-4 py-3 flex flex-col items-center justify-between min-w-[95px] sm:min-w-[115px] transition-all ${
+                  className={`bg-white rounded-2xl border-2 shadow-xs px-2 sm:px-3 lg:px-4 py-2 sm:py-3 flex flex-col items-center justify-between min-w-[62px] sm:min-w-[92px] lg:min-w-[115px] transition-all ${
                     status !== "answering"
                       ? isWordMatched
                         ? "border-emerald-200 bg-emerald-50/20"
@@ -557,7 +557,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                   }`}
                 >
                   {/* Input line */}
-                  <div className="flex flex-col items-center justify-center my-1.5 min-h-[3rem]">
+                  <div className="flex flex-col items-center justify-center my-1 sm:my-1.5 min-h-[2.25rem] sm:min-h-[3rem]">
                     {status === "answering" ? (
                       <input
                         id={`word-input-${idx}`}
@@ -587,7 +587,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                         onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
                         disabled={status !== "answering"}
                         style={{ width: `${Math.max(3, targetWord.length + 1)}ch` }}
-                        className={`text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight text-gray-900 bg-transparent focus:outline-none pb-0.5 min-w-[2.5rem] sm:min-w-[3rem] transition-all border-b-2 ${
+                        className={`text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-gray-900 bg-transparent focus:outline-none pb-0.5 min-w-[2rem] sm:min-w-[2.5rem] lg:min-w-[3rem] transition-all border-b-2 ${
                           isSlotActive
                             ? "border-[#007a55] border-b-[3px] shadow-[0_2px_0_0_#007a55]"
                             : "border-[#007a55]/60 hover:border-[#007a55]"
@@ -597,7 +597,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       <div className="flex flex-col items-center">
                         <span
                           style={{ minWidth: `${Math.max(3, Math.max(targetWord.length, typedWord.length))}ch` }}
-                          className={`text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight pb-0.5 border-b-2 ${
+                          className={`text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight pb-0.5 border-b-2 ${
                             isWordMatched
                               ? "text-emerald-700 border-emerald-500 bg-emerald-50/30"
                               : "text-red-600 border-red-500 bg-red-50/30"
@@ -615,30 +615,30 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       4th row: POS (colorful oval badge per POS_BADGE_STYLES)
                   */}
                   {status !== "answering" && (
-                    <div className="flex flex-col items-center justify-center mt-2 pt-2 border-t border-gray-100 w-full space-y-1.5">
+                    <div className="flex flex-col items-center justify-center mt-1.5 sm:mt-2 pt-1.5 sm:pt-2 border-t border-gray-100 w-full space-y-1 sm:space-y-1.5">
                       {/* 1. Best match answer — only show when user got it wrong, to avoid
                           repeating the same green word the user already typed above */}
                       {!isWordMatched && (
-                        <div className="text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight text-emerald-700 pb-0.5">
+                        <div className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700 pb-0.5">
                           {targetWord}
                         </div>
                       )}
                       {/* 2. Chinese meaning — larger */}
                       {item.meaning && (
-                        <div className="text-sm sm:text-base text-gray-800 text-center font-semibold">
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-800 text-center font-semibold">
                           {item.meaning}
                         </div>
                       )}
                       {/* 3. IPA */}
                       {item.ipa && (
-                        <div className="text-xs sm:text-sm text-gray-500 font-mono text-center">
+                        <div className="text-[10px] sm:text-xs lg:text-sm text-gray-500 font-mono text-center">
                           {item.ipa}
                         </div>
                       )}
                       {/* 4. POS — colorful oval badge, color by POS_BADGE_STYLES */}
                       {item.grammarTag && (
                         <div
-                          className={`text-[11px] sm:text-xs font-bold text-center px-2.5 py-0.5 rounded-full border shadow-2xs tracking-wide ${
+                          className={`text-[10px] sm:text-[11px] lg:text-xs font-bold text-center px-2 sm:px-2.5 py-0.5 rounded-full border shadow-2xs tracking-wide ${
                             POS_BADGE_STYLES[item.grammarTag]
                               ? `${POS_BADGE_STYLES[item.grammarTag].bg} ${POS_BADGE_STYLES[item.grammarTag].text} ${POS_BADGE_STYLES[item.grammarTag].border}`
                               : "bg-gray-100 text-gray-600 border-gray-200"
