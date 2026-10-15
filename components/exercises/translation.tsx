@@ -485,7 +485,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
       language={language}
       similarityScore={similarityScore}
       similarityDetail={matchDetail}
-      inputWords={inputWords}
       matchedWordIndices={matchedWordIndices}
     >
       <div className="w-full max-w-5xl mx-auto flex flex-col items-center py-2 sm:py-4">
@@ -533,7 +532,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               const typedWord = inputWords[idx] || "";
               const isSlotActive = activeSlot === idx;
               const isWordMatched = matchedWordIndices[idx] !== undefined ? matchedWordIndices[idx] : true;
-
               return (
                 <div
                   key={idx}
@@ -547,22 +545,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       : "border-blue-100/80 hover:border-blue-200"
                   }`}
                 >
-                  {/* POS on top as hint - larger and attractive colored badge */}
-                  <div className="h-6 flex items-center justify-center mb-1.5">
-                    {item.grammarTag && (
-                      <span
-                        className={`text-xs sm:text-sm font-black px-2.5 py-0.5 rounded-full select-none whitespace-nowrap border shadow-2xs tracking-wide ${
-                          POS_BADGE_STYLES[item.grammarTag]
-                            ? `${POS_BADGE_STYLES[item.grammarTag].bg} ${POS_BADGE_STYLES[item.grammarTag].text} ${POS_BADGE_STYLES[item.grammarTag].border}`
-                            : "bg-gray-100 text-gray-700 border-gray-200"
-                        }`}
-                      >
-                        {item.grammarTag}
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Input or English Result */}
+                  {/* Input line */}
                   <div className="flex flex-col items-center justify-center my-1.5 min-h-[3rem]">
                     {status === "answering" ? (
                       <input
@@ -601,38 +584,44 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       />
                     ) : (
                       <div className="flex flex-col items-center">
-                        <input
-                          type="text"
-                          value={typedWord}
-                          disabled={true}
-                          style={{ width: `${Math.max(3, Math.max(targetWord.length, typedWord.length) + 1)}ch` }}
-                          className={`text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight bg-transparent focus:outline-none pb-0.5 min-w-[2.5rem] sm:min-w-[3rem] transition-all border-b-2 ${
+                        <span
+                          style={{ minWidth: `${Math.max(3, Math.max(targetWord.length, typedWord.length))}ch` }}
+                          className={`text-center font-serif text-2xl sm:text-3xl font-bold tracking-tight pb-0.5 border-b-2 ${
                             isWordMatched
                               ? "text-emerald-700 border-emerald-500 bg-emerald-50/30"
                               : "text-red-600 border-red-500 bg-red-50/30"
                           }`}
-                        />
-                        {!isWordMatched && (
-                          <span className="font-serif text-[11px] font-bold text-gray-500 mt-1 whitespace-nowrap">
-                            Expected: {targetWord}
-                          </span>
-                        )}
+                        >
+                          {typedWord || "(empty)"}
+                        </span>
                       </div>
                     )}
                   </div>
-
-                  {/* Meaning & IPA inside box after Enter: Chinese on top, IPA on bottom */}
+                  {/* After input: reveal below the line in order:
+                      1st row: best match answer
+                      2nd row: chinese meaning
+                      3rd row: ipa
+                      4th row: POS
+                  */}
                   {status !== "answering" && (
-                    <div className="flex flex-col items-center justify-center mt-1.5 pt-1.5 border-t border-gray-100 w-full">
+                    <div className="flex flex-col items-center justify-center mt-2 pt-2 border-t border-gray-100 w-full space-y-1">
+                      <div className="text-xs sm:text-sm font-bold text-gray-900 text-center">
+                        {targetWord}
+                      </div>
                       {item.meaning && (
-                        <span className="text-xs sm:text-sm font-bold text-gray-800 text-center whitespace-normal select-none leading-tight">
+                        <div className="text-xs text-gray-800 text-center font-semibold">
                           {item.meaning}
-                        </span>
+                        </div>
                       )}
                       {item.ipa && (
-                        <span className="text-[11px] text-gray-500 font-mono select-none leading-tight mt-0.5">
+                        <div className="text-[11px] text-gray-500 font-mono text-center">
                           {item.ipa}
-                        </span>
+                        </div>
+                      )}
+                      {item.grammarTag && (
+                        <div className="text-[11px] font-bold text-gray-600 text-center px-1.5 py-0.5 bg-gray-100 rounded-full">
+                          {item.grammarTag}
+                        </div>
                       )}
                     </div>
                   )}
@@ -640,8 +629,33 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               );
             })}
           </div>
+          {/* Matching rate and alternative answers below the grid */}
+          {status !== "answering" && (
+            <div className="w-full max-w-4xl mt-6 p-4 bg-white rounded-2xl border-2 border-gray-200 shadow-sm space-y-3">
+              {matchDetail && (
+                <div className="flex items-center justify-between text-sm sm:text-base font-bold text-gray-800 border-b border-gray-100 pb-2">
+                  <span>Matching Rate:</span>
+                  <span className="text-emerald-600">{matchDetail}</span>
+                </div>
+              )}
+              {orderedAnswers.length > 1 && (
+                <div className="space-y-1.5 pt-1">
+                  <span className="block text-xs font-bold text-gray-500 uppercase tracking-wider">
+                    Other Alternative Answers in English:
+                  </span>
+                  <div className="space-y-1">
+                    {orderedAnswers.slice(1).map((alt, aIdx) => (
+                      <div key={aIdx} className="text-sm font-medium text-gray-700 bg-gray-50 px-3 py-1.5 rounded-lg">
+                        {alt}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+          )}
         </div>
       </div>
-    </ExerciseShell>
+        </ExerciseShell>
   );
 }
