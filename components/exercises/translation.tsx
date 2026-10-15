@@ -629,41 +629,44 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       3rd row: ipa
                       4th row: POS (colorful oval badge per POS_BADGE_STYLES)
                   */}
-                  {status !== "answering" && (
-                    <div className="flex flex-col items-center justify-center mt-1.5 sm:mt-2 pt-1.5 sm:pt-2 border-t border-gray-100 w-full space-y-1 sm:space-y-1.5">
-                      {/* 1. Best match answer — only show when user got it wrong, to avoid
-                          repeating the same green word the user already typed above */}
-                      {!isWordMatched && (
-                        <div className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700 pb-0.5">
-                          {targetWord}
-                        </div>
-                      )}
-                      {/* 2. Chinese meaning — larger */}
-                      {item.meaning && (
-                        <div className="text-xs sm:text-sm lg:text-base text-gray-800 text-center font-semibold">
-                          {item.meaning}
-                        </div>
-                      )}
-                      {/* 3. IPA */}
-                      {item.ipa && (
-                        <div className="text-[10px] sm:text-xs lg:text-sm text-gray-500 font-mono text-center">
-                          {item.ipa}
-                        </div>
-                      )}
-                      {/* 4. POS — colorful oval badge, color by POS_BADGE_STYLES */}
-                      {item.grammarTag && (
-                        <div
-                          className={`text-[10px] sm:text-[11px] lg:text-xs font-bold text-center px-2 sm:px-2.5 py-0.5 rounded-full border shadow-2xs tracking-wide ${
-                            POS_BADGE_STYLES[item.grammarTag]
-                              ? `${POS_BADGE_STYLES[item.grammarTag].bg} ${POS_BADGE_STYLES[item.grammarTag].text} ${POS_BADGE_STYLES[item.grammarTag].border}`
-                              : "bg-gray-100 text-gray-600 border-gray-200"
-                          }`}
-                        >
-                          {item.grammarTag}
-                        </div>
-                      )}
-                    </div>
-                  )}
+                  <div className="flex flex-col items-center justify-center mt-1.5 sm:mt-2 pt-1.5 sm:pt-2 border-t border-gray-100 w-full space-y-1 sm:space-y-1.5">
+                    {/* POS badge — always visible while typing so the user has a hint
+                        of which part-of-speech each slot expects (e.g. 代词 / 动词 / 名词). */}
+                    {item.grammarTag && (
+                      <div
+                        className={`text-[10px] sm:text-[11px] lg:text-xs font-bold text-center px-2 sm:px-2.5 py-0.5 rounded-full border shadow-2xs tracking-wide ${
+                          POS_BADGE_STYLES[item.grammarTag]
+                            ? `${POS_BADGE_STYLES[item.grammarTag].bg} ${POS_BADGE_STYLES[item.grammarTag].text} ${POS_BADGE_STYLES[item.grammarTag].border}`
+                            : "bg-gray-100 text-gray-600 border-gray-200"
+                        }`}
+                      >
+                        {item.grammarTag}
+                      </div>
+                    )}
+                    {status !== "answering" && (
+                      <>
+                        {/* Best match answer — only on mismatch, to avoid repeating
+                            the same green word the user already typed above */}
+                        {!isWordMatched && (
+                          <div className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700 pb-0.5">
+                            {targetWord}
+                          </div>
+                        )}
+                        {/* Chinese meaning */}
+                        {item.meaning && (
+                          <div className="text-xs sm:text-sm lg:text-base text-gray-800 text-center font-semibold">
+                            {item.meaning}
+                          </div>
+                        )}
+                        {/* IPA */}
+                        {item.ipa && (
+                          <div className="text-[10px] sm:text-xs lg:text-sm text-gray-500 font-mono text-center">
+                            {item.ipa}
+                          </div>
+                        )}
+                      </>
+                    )}
+                  </div>
                 </div>
               );
             })}

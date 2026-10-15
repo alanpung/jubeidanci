@@ -80,7 +80,11 @@ export async function addUnitToLibrary(
     .onConflictDoNothing();
 
   await invalidateUserLibraryWordsCache(userId);
-  await syncUserCourseWordsToSrs(userId, true);
+  // Same background-fire rationale as addCourseToLibrary — keeping the action
+  // responsive even for users whose library implies thousands of SRS words.
+  void syncUserCourseWordsToSrs(userId, true).catch((err) => {
+    console.warn("addUnitToLibrary: background SRS sync failed:", err);
+  });
 
   revalidatePath("/library", "page");
   revalidatePath("/library/browse", "page");
@@ -202,15 +206,24 @@ export async function addCourseToLibrary(
     unitsInCourse = fsUnitIds.map((id) => ({ id }));
   }
 
-  for (const u of unitsInCourse) {
+  if (unitsInCourse.length > 0) {
+    // Single multi-row insert instead of one query per unit. With 10 units
+    // in a course, this turns N round-trips into 1 — well within Vercel's
+    // action timeout on the free tier.
     await db
       .insert(userUnitLibrary)
-      .values({ userId, unitId: u.id })
+      .values(unitsInCourse.map((u) => ({ userId, unitId: u.id })))
       .onConflictDoNothing();
   }
 
   await invalidateUserLibraryWordsCache(userId);
-  await syncUserCourseWordsToSrs(userId, true).catch(() => {});
+  // Sync course words into the SRS deck. For a 10-unit / 1000-question course
+  // this can mean thousands of srs_card rows. Run in background so the UI
+  // returns immediately rather than waiting on long-running DB writes that
+  // previously pushed the action over Vercel's function limit.
+  void syncUserCourseWordsToSrs(userId, true).catch((err) => {
+    console.warn("addCourseToLibrary: background SRS sync failed:", err);
+  });
 
   const { clearContentCache } = await import("@/lib/db/queries/courses");
   clearContentCache();
