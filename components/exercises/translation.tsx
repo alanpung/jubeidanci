@@ -557,7 +557,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               return (
                 <div
                   key={idx}
-                  className={`bg-white rounded-2xl border-2 shadow-xs px-2 sm:px-3 lg:px-4 py-2 sm:py-3 flex flex-col items-center justify-between min-w-[62px] sm:min-w-[92px] lg:min-w-[100px] transition-all ${
+                  className={`bg-white rounded-2xl border-2 shadow-xs px-2 sm:px-3 lg:px-4 py-2 sm:py-3 flex flex-col items-center justify-start min-w-[62px] sm:min-w-[92px] lg:min-w-[100px] transition-all ${
                     status !== "answering"
                       ? isWordMatched
                         ? "border-emerald-200 bg-emerald-50/20"
@@ -567,7 +567,22 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       : "border-blue-100/80 hover:border-blue-200"
                   }`}
                 >
-                  {/* Input line */}
+                  {/* After Check and word is unmatched: show the green best-match
+                      answer at the TOP of the card (above the user's red input).
+                      This is the user's preferred layout: "place 'died' on top of
+                      'die', and 'doing' on top of 'trust'". */}
+                  {status !== "answering" && !isWordMatched && (
+                    <div className="flex flex-col items-center justify-center mb-1 sm:mb-1.5">
+                      <span
+                        style={{ minWidth: `${Math.max(3, targetWord.length)}ch` }}
+                        className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700"
+                      >
+                        {targetWord}
+                      </span>
+                    </div>
+                  )}
+                  {/* Input line (always in its position, just below the green
+                      correct-answer when present; no grey separator anywhere). */}
                   <div className="flex flex-col items-center justify-center my-1 sm:my-1.5 min-h-[2.25rem] sm:min-h-[3rem]">
                     {status === "answering" ? (
                       <input
@@ -619,13 +634,12 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       </div>
                     )}
                   </div>
-                  {/* After input: reveal below the line in order:
-                      1st row: best match answer (same size as user input)
-                      2nd row: chinese meaning (larger)
-                      3rd row: ipa
-                      4th row: POS (colorful oval badge per POS_BADGE_STYLES)
-                  */}
-                  <div className="flex flex-col items-center justify-center mt-1.5 sm:mt-2 pt-1.5 sm:pt-2 border-t border-gray-100 w-full space-y-1 sm:space-y-1.5">
+                  {/* Below the input line — reveal in order:
+                      1st row: colorful oval POS badge (always shown, even while typing)
+                      2nd row: Chinese meaning (after Check, both matched/unmatched)
+                      3rd row: IPA (after Check, both matched/unmatched)
+                      The grey separator (border-t border-gray-100) is removed. */}
+                  <div className="flex flex-col items-center justify-center mt-1 sm:mt-2 w-full space-y-1 sm:space-y-1.5">
                     {/* POS badge — always visible while typing so the user has a hint
                         of which part-of-speech each slot expects (e.g. 代词 / 动词 / 名词). */}
                     {item.grammarTag && (
@@ -641,13 +655,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                     )}
                     {status !== "answering" && (
                       <>
-                        {/* Best match answer — only on mismatch, to avoid repeating
-                            the same green word the user already typed above */}
-                        {!isWordMatched && (
-                          <div className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700 pb-0.5">
-                            {targetWord}
-                          </div>
-                        )}
                         {/* Chinese meaning */}
                         {item.meaning && (
                           <div className="text-xs sm:text-sm lg:text-base text-gray-800 text-center font-semibold">
@@ -694,14 +701,18 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                   </div>
                 </div>
               )}
-              {/* Alternative answers — blue separate card */}
+              {/* Alternative answers — blue separate card. Each alt uses the
+                  same bold blue color as the title so the two visually match. */}
               {orderedAnswers.length > 1 && (
                 <div className="p-3 sm:p-4 bg-blue-50/40 border-2 border-blue-200 rounded-2xl shadow-sm space-y-1">
                   <span className="block text-xs font-bold text-blue-700 uppercase tracking-wider">
-                    ALT ANSWERS:
+                    ALTERNATIVE ANSWERS:
                   </span>
                   {orderedAnswers.slice(1).map((alt, aIdx) => (
-                    <div key={aIdx} className="text-sm font-medium text-blue-900">
+                    <div
+                      key={aIdx}
+                      className="text-sm sm:text-base font-bold text-blue-700"
+                    >
                       {alt}
                     </div>
                   ))}
