@@ -1,0 +1,158 @@
+{
+  "unit": 5,
+  "unitTitle": "Unit 5: Health, Body & Wellness",
+  "icon": "🏥",
+  "color": "#10B981",
+  "lessons": [
+    {
+      "title": "At the Doctor",
+      "sentences": [
+        { "zh": "我和医生约了今天下午。", "en": "I have an appointment with the doctor this afternoon.", "alt": "I am seeing the doctor this afternoon." },
+        { "zh": "医生给我量了体温。", "en": "The doctor took my temperature.", "alt": "My temperature was checked by the doctor." },
+        { "zh": "请深呼吸。", "en": "Please breathe deeply.", "alt": "Take a deep breath, please." },
+        { "zh": "我需要吃药吗？", "en": "Do I need to take any medicine?", "alt": "Must I take medicine for this?" },
+        { "zh": "我头疼两天了。", "en": "I have had a headache for two days.", "alt": "My head has hurt for two days." },
+        { "zh": "请在候诊室等一下。", "en": "Please wait in the waiting room.", "alt": "Wait outside the doctor's room, please." },
+        { "zh": "医生让我多喝水。", "en": "The doctor told me to drink more water.", "alt": "My doctor said I should drink plenty of water." },
+        { "zh": "我要请一天病假。", "en": "I want to take a day off sick.", "alt": "I need one sick day off work." },
+        { "zh": "诊所九点开门。", "en": "The clinic opens at nine.", "alt": "The doctor's office is open from nine." },
+        { "zh": "我感觉好多了。", "en": "I feel much better.", "alt": "I am feeling a lot better now." }
+      ]
+    },
+    {
+      "title": "Pharmacy",
+      "sentences": [
+        { "zh": "最近的药店在哪里？", "en": "Where is the nearest pharmacy?", "alt": "Where can I find the closest drugstore?" },
+        { "zh": "我需要买感冒药。", "en": "I need to buy some medicine for a cold.", "alt": "I want something for my cold." },
+        { "zh": "这个药一天吃三次。", "en": "Take this medicine three times a day.", "alt": "You take this three times daily." },
+        { "zh": "请给我一盒创可贴。", "en": "Please give me a box of plasters.", "alt": "I would like a box of band-aids." },
+        { "zh": "这个药有副作用吗？", "en": "Does this medicine have any side effects?", "alt": "Are there side effects from this drug?" },
+        { "zh": "我需要医生开的处方。", "en": "I need a prescription from the doctor.", "alt": "The doctor has to write me a prescription." },
+        { "zh": "这个药饭后吃。", "en": "Take this medicine after meals.", "alt": "You should take it after eating." },
+        { "zh": "药剂师给我解释了用法。", "en": "The pharmacist explained how to use it.", "alt": "The chemist told me how to take it." },
+        { "zh": "这瓶药水很苦。", "en": "This liquid medicine is very bitter.", "alt": "The syrup tastes quite bitter." },
+        { "zh": "药店晚上八点关门。", "en": "The pharmacy closes at eight in the evening.", "alt": "The drugstore shuts at eight at night." }
+      ]
+    },
+    {
+      "title": "Symptoms",
+      "sentences": [
+        { "zh": "我喉咙痛。", "en": "I have a sore throat.", "alt": "My throat hurts." },
+        { "zh": "我咳嗽得很厉害。", "en": "I have a bad cough.", "alt": "I am coughing a lot." },
+        { "zh": "我发烧了。", "en": "I have a fever.", "alt": "My temperature is high." },
+        { "zh": "我全身没有力气。", "en": "I have no energy at all.", "alt": "I feel weak all over." },
+        { "zh": "我的背很疼。", "en": "My back hurts a lot.", "alt": "I have a pain in my back." },
+        { "zh": "我昨晚呕吐了。", "en": "I was sick last night.", "alt": "I vomited yesterday evening." },
+        { "zh": "我鼻子不通气。", "en": "My nose is blocked.", "alt": "I cannot breathe through my nose." },
+        { "zh": "我的眼睛很痒。", "en": "My eyes are very itchy.", "alt": "My eyes itch a lot." },
+        { "zh": "我头晕。", "en": "I feel dizzy.", "alt": "My head is spinning." },
+        { "zh": "三天了这些症状还没好。", "en": "These symptoms have not got better after three days.", "alt": "I still feel ill three days later." }
+      ]
+    },
+    {
+      "title": "Exercise & Fitness",
+      "sentences": [
+        { "zh": "我每天早上跑步。", "en": "I go running every morning.", "alt": "I run every morning." },
+        { "zh": "他一周去两次健身房。", "en": "He goes to the gym twice a week.", "alt": "He works out at the gym two times a week." },
+        { "zh": "运动对身体有好处。", "en": "Exercise is good for your body.", "alt": "Working out is healthy for you." },
+        { "zh": "我做了二十个俯卧撑。", "en": "I did twenty push-ups.", "alt": "I managed twenty press-ups." },
+        { "zh": "我在公园里散步半小时。", "en": "I walk in the park for half an hour.", "alt": "I take a thirty-minute walk in the park." },
+        { "zh": "请先热身。", "en": "Please warm up first.", "alt": "Do some warm-up exercises first." },
+        { "zh": "我比以前强壮了。", "en": "I am stronger than before.", "alt": "I have become stronger than I was." },
+        { "zh": "游泳是很好的运动。", "en": "Swimming is very good exercise.", "alt": "Swimming is a great way to exercise." },
+        { "zh": "我每天走一万步。", "en": "I walk ten thousand steps every day.", "alt": "I do ten thousand steps a day." },
+        { "zh": "运动后我很渴。", "en": "I am very thirsty after exercise.", "alt": "I get thirsty after working out." }
+      ]
+    },
+    {
+      "title": "Healthy Diet",
+      "sentences": [
+        { "zh": "我每天吃很多蔬菜。", "en": "I eat a lot of vegetables every day.", "alt": "I have plenty of vegetables daily." },
+        { "zh": "请少吃油炸食品。", "en": "Please eat less fried food.", "alt": "You should cut down on fried food." },
+        { "zh": "水比汽水健康。", "en": "Water is healthier than soda.", "alt": "Water is better for you than fizzy drinks." },
+        { "zh": "我不再吃夜宵了。", "en": "I do not eat late-night snacks any more.", "alt": "I stopped eating food late at night." },
+        { "zh": "这个沙拉很新鲜。", "en": "This salad is very fresh.", "alt": "The salad tastes fresh." },
+        { "zh": "我一天吃三餐。", "en": "I eat three meals a day.", "alt": "I have three meals every day." },
+        { "zh": "鱼比红肉更健康。", "en": "Fish is healthier than red meat.", "alt": "Eating fish is better than eating red meat." },
+        { "zh": "我尽量不喝含糖饮料。", "en": "I try not to drink sugary drinks.", "alt": "I avoid drinks with sugar." },
+        { "zh": "早饭要吃得有营养。", "en": "Breakfast should be nutritious.", "alt": "You need a healthy breakfast." },
+        { "zh": "我的饮食习惯改变了。", "en": "My eating habits have changed.", "alt": "I have changed the way I eat." }
+      ]
+    },
+    {
+      "title": "Mental Health",
+      "sentences": [
+        { "zh": "我最近压力很大。", "en": "I have been under a lot of stress recently.", "alt": "I feel very stressed these days." },
+        { "zh": "我试着每天放松一下。", "en": "I try to relax a little every day.", "alt": "I make time to relax daily." },
+        { "zh": "锻炼能让心情变好。", "en": "Exercise can improve your mood.", "alt": "Working out makes you feel happier." },
+        { "zh": "我和朋友聊了我的烦恼。", "en": "I talked about my worries with a friend.", "alt": "I shared my problems with a friend." },
+        { "zh": "请不要太担心。", "en": "Please do not worry too much.", "alt": "Try not to worry so much." },
+        { "zh": "我需要休息几天。", "en": "I need to rest for a few days.", "alt": "I should take some days off to rest." },
+        { "zh": "深呼吸能帮助我冷静。", "en": "Deep breathing helps me calm down.", "alt": "Breathing slowly makes me feel calm." },
+        { "zh": "他去看心理医生了。", "en": "He went to see a counsellor.", "alt": "He is talking to a mental health doctor." },
+        { "zh": "我的睡眠改善了。", "en": "My sleep has improved.", "alt": "I am sleeping better now." },
+        { "zh": "保持乐观很重要。", "en": "It is important to stay positive.", "alt": "Staying optimistic really matters." }
+      ]
+    },
+    {
+      "title": "Emergency",
+      "sentences": [
+        { "zh": "请叫救护车！", "en": "Please call an ambulance!", "alt": "Call for an ambulance now!" },
+        { "zh": "这里发生了交通事故。", "en": "There has been a traffic accident here.", "alt": "A car accident happened here." },
+        { "zh": "请马上拨打急救电话。", "en": "Please dial the emergency number at once.", "alt": "Call the emergency services right away." },
+        { "zh": "他摔断了腿。", "en": "He broke his leg.", "alt": "His leg is broken." },
+        { "zh": "请帮忙，有人受伤了。", "en": "Help, someone is hurt.", "alt": "Please help, a person is injured." },
+        { "zh": "最近的医院在哪里？", "en": "Where is the nearest hospital?", "alt": "How do I get to the closest hospital?" },
+        { "zh": "他在流血。", "en": "He is bleeding.", "alt": "He has lost a lot of blood." },
+        { "zh": "请让她躺下。", "en": "Please let her lie down.", "alt": "Make her lie down, please." },
+        { "zh": "消防员很快就到了。", "en": "The firefighters arrived very quickly.", "alt": "The fire brigade came soon." },
+        { "zh": "请保持冷静。", "en": "Please stay calm.", "alt": "Keep calm, please." }
+      ]
+    },
+    {
+      "title": "Dentist",
+      "sentences": [
+        { "zh": "我约了牙医。", "en": "I have an appointment with the dentist.", "alt": "I am going to see the dentist." },
+        { "zh": "我牙疼得厉害。", "en": "I have a bad toothache.", "alt": "My tooth hurts badly." },
+        { "zh": "我每天刷两次牙。", "en": "I brush my teeth twice a day.", "alt": "I clean my teeth every morning and night." },
+        { "zh": "医生补了我的牙。", "en": "The dentist filled my tooth.", "alt": "My dentist fixed the hole in my tooth." },
+        { "zh": "我每天用牙线。", "en": "I use dental floss every day.", "alt": "I floss my teeth daily." },
+        { "zh": "这颗牙需要拔掉。", "en": "This tooth needs to be taken out.", "alt": "They have to pull this tooth." },
+        { "zh": "请张开嘴。", "en": "Please open your mouth.", "alt": "Open wide, please." },
+        { "zh": "不要吃太多糖。", "en": "Do not eat too much sugar.", "alt": "You should cut down on sweets." },
+        { "zh": "我半年洗一次牙。", "en": "I have my teeth cleaned every six months.", "alt": "My teeth are cleaned twice a year." },
+        { "zh": "检查牙齿很重要。", "en": "It is important to check your teeth.", "alt": "Regular dental checks matter." }
+      ]
+    },
+    {
+      "title": "First Aid",
+      "sentences": [
+        { "zh": "我包里有一个急救箱。", "en": "I have a first-aid kit in my bag.", "alt": "There is a first aid box in my bag." },
+        { "zh": "请先清洗伤口。", "en": "Please clean the wound first.", "alt": "Wash the cut before anything else." },
+        { "zh": "用绷带包住手指。", "en": "Cover the finger with a bandage.", "alt": "Put a bandage on your finger." },
+        { "zh": "请按压伤口止血。", "en": "Please press on the cut to stop the bleeding.", "alt": "Press the wound to stop the blood." },
+        { "zh": "我把冰块放在肿的地方。", "en": "I put ice on the swollen place.", "alt": "Ice helps the swelling go down." },
+        { "zh": "我被刀割伤了。", "en": "I cut myself with a knife.", "alt": "A knife gave me a cut." },
+        { "zh": "别碰那个伤口。", "en": "Do not touch that wound.", "alt": "Keep your hands off the cut." },
+        { "zh": "他烫伤了手。", "en": "He burnt his hand.", "alt": "His hand got burned." },
+        { "zh": "请马上叫医生。", "en": "Please call a doctor at once.", "alt": "Get a doctor immediately, please." },
+        { "zh": "我学过急救。", "en": "I have learned first aid.", "alt": "I know how to give first aid." }
+      ]
+    },
+    {
+      "title": "Sleeping Habits",
+      "sentences": [
+        { "zh": "我每晚睡七个小时。", "en": "I sleep seven hours every night.", "alt": "I get seven hours of sleep a night." },
+        { "zh": "我睡觉前不看手机。", "en": "I do not use my phone before bed.", "alt": "I keep my phone away before sleeping." },
+        { "zh": "我昨晚没睡好。", "en": "I did not sleep well last night.", "alt": "I slept badly yesterday night." },
+        { "zh": "我的卧室很暗。", "en": "My bedroom is very dark.", "alt": "It is dark in my room at night." },
+        { "zh": "我每天同一时间上床。", "en": "I go to bed at the same time every day.", "alt": "My bedtime is the same daily." },
+        { "zh": "咖啡让我睡不着。", "en": "Coffee keeps me awake.", "alt": "I cannot sleep after drinking coffee." },
+        { "zh": "我半夜醒了一次。", "en": "I woke up once in the middle of the night.", "alt": "I got up once during the night." },
+        { "zh": "午睡不要超过三十分钟。", "en": "Do not nap for more than thirty minutes.", "alt": "Keep your nap under half an hour." },
+        { "zh": "我起床时还是很困。", "en": "I am still sleepy when I get up.", "alt": "I feel tired in the morning." },
+        { "zh": "好的睡眠让我精神好。", "en": "Good sleep gives me energy.", "alt": "Sleeping well keeps me fresh." }
+      ]
+    }
+  ]
+}

@@ -9,81 +9,83 @@ level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"
 ---
+
 ---
 lessonTitle: "Lesson 1: Smartphone Apps"
 description: "Translate A2 sentences about Smartphone Apps"
 icon: "💻"
 color: "#64748B"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "他走进来，坐了下来。"
-answer: "He came in, and sat down."
-acceptAlso: "He came in, and sat down."
-srsWords: "he" "come" "in" "and" "sit" "down"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "也许我们能在所有这些东西中找到一些线索。"
-answer: "Maybe we can find something in all of them."
-acceptAlso: "Maybe we can find something in all of them."
-srsWords: "maybe" "we" "can" "find" "something" "in" "all" "of" "them"
+sentence: "我手机上有很多应用。"
+answer: "I have many apps on my phone."
+acceptAlso: "My phone is full of apps."
+srsWords: "i" "have" "many" "apps" "on" "my" "phone" "is" "full" "of"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我希望你们比较不同的城镇和城市。"
-answer: "I want you to compare different towns and cities."
-acceptAlso: "I want you to compare different towns and cities."
-srsWords: "i" "want" "you" "to" "compare" "different" "town" "and" "city"
+sentence: "请从应用商店下载它。"
+answer: "Please download it from the app store."
+acceptAlso: "Get it in the app store, please."
+srsWords: "please" "download" "it" "from" "the" "app" "store" "get" "in"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "把它们互相比较，再把它们与乡村地区进行比较。"
-answer: "Compare them with each other, and compare them with the country areas."
-acceptAlso: "Compare them with each other, and compare them with the country areas."
-srsWords: "compare" "them" "with" "each" "other" "and" "the" "country" "area"
+sentence: "这个应用很好用。"
+answer: "This app is very easy to use."
+acceptAlso: "The app works well."
+srsWords: "this" "app" "is" "very" "easy" "to" "use" "the" "works" "well"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她总是在考试周感到身体不适。"
-answer: "She always felt sick in exam week."
-acceptAlso: "She always felt sick in exam week."
-srsWords: "she" "always" "feel" "sick" "in" "exam" "week"
+sentence: "我每天用这个软件记笔记。"
+answer: "I use this app to take notes every day."
+acceptAlso: "Notes go into this app daily."
+srsWords: "i" "use" "this" "app" "to" "take" "notes" "every" "day" "go" "into" "daily"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她那天有两场考试。"
-answer: "She had two exams that day."
-acceptAlso: "She had two exams that day."
-srsWords: "she" "had" "two" "exam" "that" "day"
+sentence: "请更新到最新版本。"
+answer: "Please update to the latest version."
+acceptAlso: "Get the newest version, please."
+srsWords: "please" "update" "to" "the" "latest" "version" "get" "newest"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它出现在世界各地的火车、公共汽车和墙壁上。"
-answer: "It appeared on trains, buses and walls around the world."
-acceptAlso: "It appeared on trains, buses and walls around the world."
-srsWords: "it" "appear" "on" "train" "bus" "and" "wall" "around" "the" "world"
+sentence: "这个应用占了很多存储空间。"
+answer: "This app takes up a lot of storage."
+acceptAlso: "The app uses too much space."
+srsWords: "this" "app" "takes" "up" "a" "lot" "of" "storage" "the" "uses" "too" "much" "space"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "在一些国家，在墙壁上写字或画画是犯罪行为。"
-answer: "In some countries, writing or painting on walls is a crime."
-acceptAlso: "In some countries, writing or painting on walls is a crime."
-srsWords: "in" "some" "country" "writing" "or" "painting" "on" "wall" "is" "a" "crime"
+sentence: "我删掉了一些没用的应用。"
+answer: "I deleted some useless apps."
+acceptAlso: "A few apps I never use are gone."
+srsWords: "i" "deleted" "some" "useless" "apps" "a" "few" "never" "use" "are" "gone"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你也可以在一些画廊里看到街头艺术展。"
-answer: "You can see exhibitions of street art in some galleries too."
-acceptAlso: "You can see exhibitions of street art in some galleries too."
-srsWords: "you" "can" "see" "exhibition" "of" "street" "art" "in" "some" "gallery" "too"
+sentence: "请打开通知。"
+answer: "Please turn on notifications."
+acceptAlso: "Switch the notifications on, please."
+srsWords: "please" "turn" "on" "notifications" "switch" "the"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "词汇也非常简单。"
-answer: "The vocabulary is also very easy."
-acceptAlso: "The vocabulary is also very easy."
-srsWords: "the" "vocabulary" "is" "also" "very" "easy"
+sentence: "我用地图应用找路。"
+answer: "I use a map app to find my way."
+acceptAlso: "A maps app helps me get around."
+srsWords: "i" "use" "a" "map" "app" "to" "find" "my" "way" "maps" "helps" "me" "get" "around"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "手机没电了。"
+answer: "My phone battery is dead."
+acceptAlso: "The phone has run out of power."
+srsWords: "my" "phone" "battery" "is" "dead" "the" "has" "run" "out" "of" "power"
 
 ---
 lessonTitle: "Lesson 2: Social Media"
@@ -91,75 +93,76 @@ description: "Translate A2 sentences about Social Media"
 icon: "💻"
 color: "#64748B"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "她和新朋友们一起经历许多冒险。"
-answer: "With her new friends, she has many adventures."
-acceptAlso: "With her new friends, she has many adventures."
-srsWords: "with" "her" "new" "friend" "she" "has" "many" "adventure"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "对故事已经熟悉有助于读者更好地理解文本。"
-answer: "Being familiar with a story already helps the reader to understand the text better."
-acceptAlso: "Being familiar with a story already helps the reader to understand the text better."
-srsWords: "being" "familiar" "with" "a" "story" "already" "help" "the" "reader" "to" "understand" "text" "better"
+sentence: "我每天看社交媒体。"
+answer: "I check social media every day."
+acceptAlso: "Social networks are part of my day."
+srsWords: "i" "check" "social" "media" "every" "day" "networks" "are" "part" "of" "my"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然而，他理解他们的母亲一定有多难过。"
-answer: "However, he understands how sad their mother must be."
-acceptAlso: "However, he understands how sad their mother must be."
-srsWords: "however" "he" "understand" "how" "sad" "their" "mother" "must" "be"
+sentence: "请给我发一条私信。"
+answer: "Please send me a private message."
+acceptAlso: "Message me directly, please."
+srsWords: "please" "send" "me" "a" "private" "message" "directly"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "最后，他决定让他们回家。"
-answer: "In the end, he decides to let them go home."
-acceptAlso: "In the end, he decides to let them go home."
-srsWords: "in" "the" "end" "he" "decide" "to" "let" "them" "go" "home"
+sentence: "他发了一条新帖子。"
+answer: "He posted something new."
+acceptAlso: "A new post came from him."
+srsWords: "he" "posted" "something" "new" "a" "post" "came" "from" "him"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "那我能做什么呢？"
-answer: "So what can I do?"
-acceptAlso: "So what can I do?"
-srsWords: "so" "what" "can" "i" "do"
+sentence: "我关注了很多账号。"
+answer: "I follow many accounts."
+acceptAlso: "There are lots of accounts I follow."
+srsWords: "i" "follow" "many" "accounts" "there" "are" "lots" "of"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "八百年前这里大不相同。"
-answer: "Eight hundred years ago it was very different."
-acceptAlso: "Eight hundred years ago it was very different."
-srsWords: "eight" "hundred" "year" "ago" "it" "was" "very" "different"
+sentence: "请不要相信网上的一切。"
+answer: "Please do not believe everything online."
+acceptAlso: "Not all online news is true."
+srsWords: "please" "do" "not" "believe" "everything" "online" "all" "news" "is" "true"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "今天我们每个人都可以寻求改变。"
-answer: "Today any one of us can seek change."
-acceptAlso: "Today any one of us can seek change."
-srsWords: "today" "any" "one" "of" "us" "can" "seek" "change"
+sentence: "我在照片下面留言了。"
+answer: "I left a comment under the photo."
+acceptAlso: "My comment is below the picture."
+srsWords: "i" "left" "a" "comment" "under" "the" "photo" "my" "is" "below" "picture"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "现在许多人使用电子邮件互相交流。"
-answer: "Many people use email today to communicate with each other."
-acceptAlso: "Many people use email today to communicate with each other."
-srsWords: "many" "people" "use" "email" "today" "to" "communicate" "with" "each" "other"
+sentence: "这个视频有很多点赞。"
+answer: "This video has a lot of likes."
+acceptAlso: "Many people liked the video."
+srsWords: "this" "video" "has" "a" "lot" "of" "likes" "many" "people" "liked" "the"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "不过，我想尝试一下。"
-answer: "However, I would like to try."
-acceptAlso: "However, I would like to try."
-srsWords: "however" "i" "would" "like" "to" "try"
+sentence: "我减少了上网时间。"
+answer: "I reduced my time online."
+acceptAlso: "I spend less time on social media now."
+srsWords: "i" "reduced" "my" "time" "online" "spend" "less" "on" "social" "media" "now"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "清晨，学生们太困了，学不好。"
-answer: "Early in the morning, students are too sleepy to learn well."
-acceptAlso: "Early in the morning, students are too sleepy to learn well."
-srsWords: "early" "in" "the" "morning" "student" "are" "too" "sleepy" "to" "learn" "well"
+sentence: "请分享这篇文章。"
+answer: "Please share this article."
+acceptAlso: "Can you pass this post on?"
+srsWords: "please" "share" "this" "article" "can" "you" "pass" "post" "on"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "社交媒体让我和朋友保持联系。"
+answer: "Social media keeps me in touch with friends."
+acceptAlso: "I stay close to friends through social media."
+srsWords: "social" "media" "keeps" "me" "in" "touch" "with" "friends" "i" "stay" "close" "to" "through"
 
 ---
 lessonTitle: "Lesson 3: Computers"
@@ -167,75 +170,76 @@ description: "Translate A2 sentences about Computers"
 icon: "💻"
 color: "#64748B"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "王国里的许多人没有明智地利用天空的礼物。"
-answer: "Many people in the kingdom did not use the gift of the sky wisely."
-acceptAlso: "Many people in the kingdom did not use the gift of the sky wisely."
-srsWords: "many" "people" "in" "the" "kingdom" "did" "not" "use" "gift" "of" "sky" "wise"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "一天清晨，愤怒的天空变暗了。"
-answer: "Early one morning the angry sky turned dark."
-acceptAlso: "Early one morning the angry sky turned dark."
-srsWords: "early" "one" "morning" "the" "angry" "sky" "turn" "dark"
+sentence: "我的电脑很慢。"
+answer: "My computer is very slow."
+acceptAlso: "The laptop runs slowly."
+srsWords: "my" "computer" "is" "very" "slow" "the" "laptop" "runs" "slowly"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "不要拿超过你能吃完的食物。"
-answer: "Do not take more than you can eat."
-acceptAlso: "Do not take more than you can eat."
-srsWords: "do" "not" "take" "more" "than" "you" "can" "eat"
+sentence: "请保存文件。"
+answer: "Please save the file."
+acceptAlso: "Save your work, please."
+srsWords: "please" "save" "the" "file" "your" "work"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他知道自己绝不能把它们扔掉。"
-answer: "He knew he must not throw them away."
-acceptAlso: "He knew he must not throw them away."
-srsWords: "he" "know" "must" "not" "throw" "them" "away"
+sentence: "键盘上有几个键坏了。"
+answer: "A few keys on the keyboard are broken."
+acceptAlso: "Some keys do not work."
+srsWords: "a" "few" "keys" "on" "the" "keyboard" "are" "broken" "some" "do" "not" "work"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他试图把这些碎片给他的妻子。"
-answer: "He tried to give the pieces to his wife."
-acceptAlso: "He tried to give the pieces to his wife."
-srsWords: "he" "try" "to" "give" "the" "piece" "his" "wife"
+sentence: "我需要一个鼠标。"
+answer: "I need a mouse."
+acceptAlso: "A mouse is missing here."
+srsWords: "i" "need" "a" "mouse" "is" "missing" "here"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她迅速把报纸放进了一个橱柜里。"
-answer: "She quickly put the newspapers in a cupboard."
-acceptAlso: "She quickly put the newspapers in a cupboard."
-srsWords: "she" "quickly" "put" "the" "newspaper" "in" "a" "cupboard"
+sentence: "屏幕太亮了。"
+answer: "The screen is too bright."
+acceptAlso: "The display hurts my eyes."
+srsWords: "the" "screen" "is" "too" "bright" "display" "hurts" "my" "eyes"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他的脸看起来悲伤而疲惫。"
-answer: "His face looked sad and tired."
-acceptAlso: "His face looked sad and tired."
-srsWords: "his" "face" "look" "sad" "and" "tired"
+sentence: "请重启电脑。"
+answer: "Please restart the computer."
+acceptAlso: "Turn the machine off and on again."
+srsWords: "please" "restart" "the" "computer" "turn" "machine" "off" "and" "on" "again"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "事实上，她发现了我们奇妙的新油漆。"
-answer: "She discovered our wonderful new paint, in fact."
-acceptAlso: "She discovered our wonderful new paint, in fact."
-srsWords: "she" "discover" "our" "wonderful" "new" "paint" "in" "fact"
+sentence: "我把它备份到硬盘上。"
+answer: "I backed it up on the hard drive."
+acceptAlso: "A copy is on my external disk."
+srsWords: "i" "backed" "it" "up" "on" "the" "hard" "drive" "a" "copy" "is" "my" "external" "disk"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我永远也找不到这份工作了，他想。"
-answer: "I'll never get this job, he thought."
-acceptAlso: "I'll never get this job, he thought."
-srsWords: "i" "never" "get" "this" "job" "he" "thought"
+sentence: "电脑死机了。"
+answer: "The computer has frozen."
+acceptAlso: "My machine stopped working."
+srsWords: "the" "computer" "has" "frozen" "my" "machine" "stopped" "working"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你在一家大学工作过……"
-answer: "You worked at a university..."
-acceptAlso: "You worked at a university..."
-srsWords: "you" "work" "at" "a" "university"
+sentence: "请安装这个软件。"
+answer: "Please install this software."
+acceptAlso: "Can you put this program on my computer?"
+srsWords: "please" "install" "this" "software" "can" "you" "put" "program" "on" "my" "computer"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我用电脑工作和学习。"
+answer: "I use the computer for work and study."
+acceptAlso: "Work and study both happen on my computer."
+srsWords: "i" "use" "the" "computer" "for" "work" "and" "study" "both" "happen" "on" "my"
 
 ---
 lessonTitle: "Lesson 4: Internet Connection"
@@ -243,75 +247,76 @@ description: "Translate A2 sentences about Internet Connection"
 icon: "💻"
 color: "#64748B"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "某处一部电话在响。"
-answer: "Somewhere a telephone was ringing."
-acceptAlso: "Somewhere a telephone was ringing."
-srsWords: "somewhere" "a" "telephone" "was" "ring"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他的梦里一片漆黑，黑暗而可怕。"
-answer: "It was dark in his dream, dark and terrible."
-acceptAlso: "It was dark in his dream, dark and terrible."
-srsWords: "it" "was" "dark" "in" "his" "dream" "and" "terrible"
+sentence: "无线网连不上。"
+answer: "I cannot connect to the wifi."
+acceptAlso: "The wifi is not working."
+srsWords: "i" "cannot" "connect" "to" "the" "wifi" "is" "not" "working"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他周围全都是树，那些树试图阻拦他。"
-answer: "There were trees all around him, trees which tried to stop him."
-acceptAlso: "There were trees all around him, trees which tried to stop him."
-srsWords: "there" "were" "tree" "all" "around" "him" "which" "try" "to" "stop"
+sentence: "密码是什么？"
+answer: "What is the password?"
+acceptAlso: "Could you tell me the wifi password?"
+srsWords: "what" "is" "the" "password" "could" "you" "tell" "me" "wifi"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他把嘴巴张得大大的。"
-answer: "He was opening his mouth wide."
-acceptAlso: "He was opening his mouth wide."
-srsWords: "he" "was" "open" "his" "mouth" "wide"
+sentence: "网速很慢。"
+answer: "The internet is very slow."
+acceptAlso: "My connection is slow today."
+srsWords: "the" "internet" "is" "very" "slow" "my" "connection" "today"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "电话还在响。"
-answer: "The telephone was still ringing."
-acceptAlso: "The telephone was still ringing."
-srsWords: "the" "telephone" "was" "still" "ring"
+sentence: "请打开飞行模式。"
+answer: "Please turn on aeroplane mode."
+acceptAlso: "Switch to airplane mode, please."
+srsWords: "please" "turn" "on" "aeroplane" "mode" "switch" "to" "airplane"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他的身体又热又湿。"
-answer: "His body was hot and wet."
-acceptAlso: "His body was hot and wet."
-srsWords: "his" "body" "was" "hot" "and" "wet"
+sentence: "我关掉了移动数据。"
+answer: "I turned off mobile data."
+acceptAlso: "My phone data is off."
+srsWords: "i" "turned" "off" "mobile" "data" "my" "phone" "is"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他醒了，而且很安全。"
-answer: "He was awake and safe."
-acceptAlso: "He was awake and safe."
-srsWords: "he" "was" "awake" "and" "safe"
+sentence: "信号不太好。"
+answer: "The signal is not very good."
+acceptAlso: "We have poor signal here."
+srsWords: "the" "signal" "is" "not" "very" "good" "we" "have" "poor" "here"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这只是一场梦！"
-answer: "It was only a dream!"
-acceptAlso: "It was only a dream!"
-srsWords: "it" "was" "only" "a" "dream"
+sentence: "我换了另一个网络。"
+answer: "I changed to another network."
+acceptAlso: "Another wifi is being used now."
+srsWords: "i" "changed" "to" "another" "network" "wifi" "is" "being" "used" "now"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他可能是一个病人。"
-answer: "He was probably a patient."
-acceptAlso: "He was probably a patient."
-srsWords: "he" "was" "probably" "a" "patient"
+sentence: "请检查一下路由器。"
+answer: "Please check the router."
+acceptAlso: "Look at the wifi box, please."
+srsWords: "please" "check" "the" "router" "look" "at" "wifi" "box"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他生病了，或者受伤了。"
-answer: "He was ill, or hurt."
-acceptAlso: "He was ill, or hurt."
-srsWords: "he" "was" "ill" "or" "hurt"
+sentence: "我用的是流量套餐。"
+answer: "I use a data plan."
+acceptAlso: "My phone plan gives me data."
+srsWords: "i" "use" "a" "data" "plan" "my" "phone" "gives" "me"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "网络今天断了两次。"
+answer: "The internet went down twice today."
+acceptAlso: "We lost connection two times today."
+srsWords: "the" "internet" "went" "down" "twice" "today" "we" "lost" "connection" "two" "times"
 
 ---
 lessonTitle: "Lesson 5: Streaming"
@@ -319,75 +324,76 @@ description: "Translate A2 sentences about Streaming"
 icon: "💻"
 color: "#64748B"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "也许他遭遇了事故。"
-answer: "Maybe he had been in an accident."
-acceptAlso: "Maybe he had been in an accident."
-srsWords: "maybe" "he" "had" "been" "in" "an" "accident"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "到处都是拥挤的人群。"
-answer: "There were crowds of people everywhere."
-acceptAlso: "There were crowds of people everywhere."
-srsWords: "there" "were" "crowd" "of" "people" "everywhere"
+sentence: "我在网上看剧。"
+answer: "I watch series online."
+acceptAlso: "Streaming shows is what I do online."
+srsWords: "i" "watch" "series" "online" "streaming" "shows" "is" "what" "do"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "到处都是人，都在试图拍照。"
-answer: "There were people everywhere, trying to take photos."
-acceptAlso: "There were people everywhere, trying to take photos."
-srsWords: "there" "were" "people" "everywhere" "try" "to" "take" "photo"
+sentence: "视频一直在缓冲。"
+answer: "The video keeps buffering."
+acceptAlso: "The film stops and starts."
+srsWords: "the" "video" "keeps" "buffering" "film" "stops" "and" "starts"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她躺在床上，我能听到她的呼吸声。"
-answer: "She lay in bed and I could hear her breathing."
-acceptAlso: "She lay in bed and I could hear her breathing."
-srsWords: "she" "lie" "in" "bed" "and" "i" "could" "hear" "her" "breathe"
+sentence: "请调到高清画质。"
+answer: "Please switch to high definition."
+acceptAlso: "Can we watch it in HD?"
+srsWords: "please" "switch" "to" "high" "definition" "can" "we" "watch" "it" "in" "hd"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他似乎是船长。"
-answer: "He seemed to be the captain."
-acceptAlso: "He seemed to be the captain."
-srsWords: "he" "seem" "to" "be" "the" "captain"
+sentence: "我订阅了一个视频平台。"
+answer: "I subscribed to a video platform."
+acceptAlso: "I pay for a streaming service."
+srsWords: "i" "subscribed" "to" "a" "video" "platform" "pay" "for" "streaming" "service"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "船长死后，我们不得不听从他的命令。"
-answer: "When the captain died, we had to take orders from him."
-acceptAlso: "When the captain died, we had to take orders from him."
-srsWords: "when" "the" "captain" "die" "we" "had" "to" "take" "order" "from" "him"
+sentence: "这部剧一共八集。"
+answer: "This series has eight episodes in total."
+acceptAlso: "There are eight episodes of the show."
+srsWords: "this" "series" "has" "eight" "episodes" "in" "total" "there" "are" "of" "the" "show"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "村子周围到处都是带露台的大房子。"
-answer: "All around the village there are big homes with patios."
-acceptAlso: "All around the village there are big homes with patios."
-srsWords: "all" "around" "the" "village" "there" "are" "big" "home" "with" "patio"
+sentence: "请等一下，正在加载。"
+answer: "Please wait, it is loading."
+acceptAlso: "Give it a moment to load."
+srsWords: "please" "wait" "it" "is" "loading" "give" "a" "moment" "to" "load"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "今晚有一场可怕的风暴，还在下雨。"
-answer: "Tonight there is a terrible storm and it is raining."
-acceptAlso: "Tonight there is a terrible storm and it is raining."
-srsWords: "tonight" "there" "is" "a" "terrible" "storm" "and" "it" "rain"
+sentence: "我下载下来晚上看。"
+answer: "I downloaded it to watch tonight."
+acceptAlso: "It is saved for this evening."
+srsWords: "i" "downloaded" "it" "to" "watch" "tonight" "is" "saved" "for" "this" "evening"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "公司董事们总是听从他的建议。"
-answer: "The company directors always followed his advice."
-acceptAlso: "The company directors always followed his advice."
-srsWords: "the" "company" "director" "always" "follow" "his" "advice"
+sentence: "音量太小了。"
+answer: "The volume is too low."
+acceptAlso: "I can hardly hear it."
+srsWords: "the" "volume" "is" "too" "low" "i" "can" "hardly" "hear" "it"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我的工作是研究海底所有活着或死去的事物。"
-answer: "My job is to study everything dead or alive under the sea."
-acceptAlso: "My job is to study everything dead or alive under the sea."
-srsWords: "my" "job" "is" "to" "study" "everything" "dead" "or" "alive" "under" "the" "sea"
+sentence: "请暂停一下。"
+answer: "Please pause it for a moment."
+acceptAlso: "Stop it briefly, please."
+srsWords: "please" "pause" "it" "for" "a" "moment" "stop" "briefly"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我喜欢边吃饭边看视频。"
+answer: "I like watching videos while I eat."
+acceptAlso: "Videos keep me company at meals."
+srsWords: "i" "like" "watching" "videos" "while" "eat" "keep" "me" "company" "at" "meals"
 
 ---
 lessonTitle: "Lesson 6: Online Security"
@@ -395,75 +401,76 @@ description: "Translate A2 sentences about Online Security"
 icon: "💻"
 color: "#64748B"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "我在那下面看到了美的事物，也看到了丑的事物。"
-answer: "I see beautiful and ugly things down there."
-acceptAlso: "I see beautiful and ugly things down there."
-srsWords: "i" "see" "beautiful" "and" "ugly" "thing" "down" "there"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这些矿井非常危险。"
-answer: "The mines were very dangerous."
-acceptAlso: "The mines were very dangerous."
-srsWords: "the" "min" "were" "very" "dangerous"
+sentence: "请使用强密码。"
+answer: "Please use a strong password."
+acceptAlso: "Your password should be hard to guess."
+srsWords: "please" "use" "a" "strong" "password" "your" "should" "be" "hard" "to" "guess"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "尘土摧毁了他们的健康。"
-answer: "The dust destroyed their health."
-acceptAlso: "The dust destroyed their health."
-srsWords: "the" "dust" "destroy" "their" "health"
+sentence: "我改了所有密码。"
+answer: "I changed all my passwords."
+acceptAlso: "Every password of mine is new."
+srsWords: "i" "changed" "all" "my" "passwords" "every" "password" "of" "mine" "is" "new"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "“你在这里做什么？”我伸出了手。"
-answer: "What are you doing here?' I held out my hand."
-acceptAlso: "What are you doing here?' I held out my hand."
-srsWords: "what" "are" "you" "doing" "here" "i" "hold" "out" "my" "hand"
+sentence: "请不要点击陌生链接。"
+answer: "Please do not click on strange links."
+acceptAlso: "Avoid links you do not know."
+srsWords: "please" "do" "not" "click" "on" "strange" "links" "avoid" "you" "know"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他看起来和我以前认识的那个年轻、快乐的学生大不相同。"
-answer: "He looked so different from the young, happy student I used to know."
-acceptAlso: "He looked so different from the young, happy student I used to know."
-srsWords: "he" "look" "so" "different" "from" "the" "young" "happy" "student" "i" "used" "to" "know"
+sentence: "我的账号被盗了。"
+answer: "My account was hacked."
+acceptAlso: "Someone broke into my account."
+srsWords: "my" "account" "was" "hacked" "someone" "broke" "into"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "“你读错了，仅此而已，”她想。"
-answer: "You've read it wrong, that's all,' she thought."
-acceptAlso: "You've read it wrong, that's all,' she thought."
-srsWords: "you" "read" "it" "wrong" "that" "all" "she" "thought"
+sentence: "请开启双重验证。"
+answer: "Please turn on two-step verification."
+acceptAlso: "Use two-factor login, please."
+srsWords: "please" "turn" "on" "two" "step" "verification" "use" "factor" "login"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们的来访者从椅子上跳了起来。"
-answer: "Our visitor jumped from his chair."
-acceptAlso: "Our visitor jumped from his chair."
-srsWords: "our" "visitor" "jump" "from" "his" "chair"
+sentence: "我安装了一个杀毒软件。"
+answer: "I installed an antivirus program."
+acceptAlso: "Antivirus software is on my computer."
+srsWords: "i" "installed" "an" "antivirus" "program" "software" "is" "on" "my" "computer"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "人太多了，他坐飞机时总是很紧张。"
-answer: "There are too many people, and he is always nervous when he flies."
-acceptAlso: "There are too many people, and he is always nervous when he flies."
-srsWords: "there" "are" "too" "many" "people" "and" "he" "is" "always" "nervous" "when" "fly"
+sentence: "不要在公共电脑上登录。"
+answer: "Do not log in on a public computer."
+acceptAlso: "Never sign in on shared machines."
+srsWords: "do" "not" "log" "in" "on" "a" "public" "computer" "never" "sign" "shared" "machines"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他不耐烦地看着手表。"
-answer: "He looks at his watch impatiently."
-acceptAlso: "He looks at his watch impatiently."
-srsWords: "he" "look" "at" "his" "watch" "impatient"
+sentence: "这条信息看起来像诈骗。"
+answer: "This message looks like a scam."
+acceptAlso: "It seems to be a fraud message."
+srsWords: "this" "message" "looks" "like" "a" "scam" "it" "seems" "to" "be" "fraud"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你能来度假看望我，我太高兴了。"
-answer: "I am so happy that you can come and visit me for a holiday."
-acceptAlso: "I am so happy that you can come and visit me for a holiday."
-srsWords: "i" "am" "so" "happy" "that" "you" "can" "come" "and" "visit" "me" "for" "a" "holiday"
+sentence: "请保护好你的个人信息。"
+answer: "Please protect your personal information."
+acceptAlso: "Keep your private data safe."
+srsWords: "please" "protect" "your" "personal" "information" "keep" "private" "data" "safe"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我定期更新系统。"
+answer: "I update my system regularly."
+acceptAlso: "My software is kept up to date."
+srsWords: "i" "update" "my" "system" "regularly" "software" "is" "kept" "up" "to" "date"
 
 ---
 lessonTitle: "Lesson 7: Smart Home"
@@ -471,75 +478,76 @@ description: "Translate A2 sentences about Smart Home"
 icon: "💻"
 color: "#64748B"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "我有过许多刺激的冒险。"
-answer: "I had many exciting adventures."
-acceptAlso: "I had many exciting adventures."
-srsWords: "i" "had" "many" "exciting" "adventure"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这是他生命中最重要的事情。"
-answer: "It was the most important thing in his life."
-acceptAlso: "It was the most important thing in his life."
-srsWords: "it" "was" "the" "most" "important" "thing" "in" "his" "life"
+sentence: "我家里有一个智能音箱。"
+answer: "I have a smart speaker at home."
+acceptAlso: "A smart speaker sits in my living room."
+srsWords: "i" "have" "a" "smart" "speaker" "at" "home" "sits" "in" "my" "living" "room"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我很为我的朋友担心。"
-answer: "I was worried about my friend."
-acceptAlso: "I was worried about my friend."
-srsWords: "i" "was" "worried" "about" "my" "friend"
+sentence: "我用手机控制家里的灯。"
+answer: "I control the lights at home with my phone."
+acceptAlso: "My phone switches the lights on and off."
+srsWords: "i" "control" "the" "lights" "at" "home" "with" "my" "phone" "switches" "on" "and" "off"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我骑着马穿过潮湿、空旷的土地。"
-answer: "I was riding my horse across the wet, empty land."
-acceptAlso: "I was riding my horse across the wet, empty land."
-srsWords: "i" "was" "ride" "my" "horse" "across" "the" "wet" "empty" "land"
+sentence: "空调可以定时。"
+answer: "The air conditioner can be set on a timer."
+acceptAlso: "You can programme the air conditioning."
+srsWords: "the" "air" "conditioner" "can" "be" "set" "on" "a" "timer" "you" "programme" "conditioning"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我病了——病得很重。"
-answer: "I am ill - very ill."
-acceptAlso: "I am ill - very ill."
-srsWords: "i" "am" "ill" "very"
+sentence: "请打开窗帘。"
+answer: "Please open the curtains."
+acceptAlso: "Let the curtains open, please."
+srsWords: "please" "open" "the" "curtains" "let"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们从小就是朋友。"
-answer: "We have been friends since we were boys."
-acceptAlso: "We have been friends since we were boys."
-srsWords: "we" "have" "been" "friend" "since" "were" "boy"
+sentence: "传感器检测到有人。"
+answer: "The sensor detected someone."
+acceptAlso: "Something moved and the sensor knows."
+srsWords: "the" "sensor" "detected" "someone" "something" "moved" "and" "knows"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它的许多窗户就像空洞的眼睛。"
-answer: "Its many windows were like empty eyes."
-acceptAlso: "Its many windows were like empty eyes."
-srsWords: "its" "many" "window" "were" "like" "empty" "eye"
+sentence: "我设置了早上七点的闹钟。"
+answer: "I set the alarm for seven in the morning."
+acceptAlso: "The alarm goes off at seven am."
+srsWords: "i" "set" "the" "alarm" "for" "seven" "in" "morning" "goes" "off" "at" "am"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "“只是信件，”她喊道。"
-answer: "It's only the post,' she called."
-acceptAlso: "It's only the post,' she called."
-srsWords: "it" "only" "the" "post" "she" "call"
+sentence: "这个设备连不上网络。"
+answer: "This device cannot connect to the network."
+acceptAlso: "The gadget is offline."
+srsWords: "this" "device" "cannot" "connect" "to" "the" "network" "gadget" "is" "offline"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她穿着一套银色金属宇航服。"
-answer: "She was wearing a silver metal suit."
-acceptAlso: "She was wearing a silver metal suit."
-srsWords: "she" "was" "wear" "a" "silver" "metal" "suit"
+sentence: "请安装好摄像头。"
+answer: "Please install the camera."
+acceptAlso: "Set up the camera, please."
+srsWords: "please" "install" "the" "camera" "set" "up"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "第二泳道的那个女人似乎遇到了麻烦。"
-answer: "The woman in lane two seemed to be having problems."
-acceptAlso: "The woman in lane two seemed to be having problems."
-srsWords: "the" "woman" "in" "lane" "two" "seem" "to" "be" "have" "problem"
+sentence: "我可以用语音控制它。"
+answer: "I can control it with my voice."
+acceptAlso: "Voice commands work on it."
+srsWords: "i" "can" "control" "it" "with" "my" "voice" "commands" "work" "on"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "智能家居很方便。"
+answer: "A smart home is very convenient."
+acceptAlso: "Smart devices make life easier."
+srsWords: "a" "smart" "home" "is" "very" "convenient" "devices" "make" "life" "easier"
 
 ---
 lessonTitle: "Lesson 8: Customer Support"
@@ -547,75 +555,76 @@ description: "Translate A2 sentences about Customer Support"
 icon: "💻"
 color: "#64748B"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "两个小时过去了，我仍然穿着湿衣服。"
-answer: "It was two hours later, and I was still in my wet clothes."
-acceptAlso: "It was two hours later, and I was still in my wet clothes."
-srsWords: "it" "was" "two" "hour" "later" "and" "i" "still" "in" "my" "wet" "clothes"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "在离开他之前，我问他关于那个死去的女人了解到了什么。"
-answer: "Before leaving him, I asked what he had learnt about the dead woman."
-acceptAlso: "Before leaving him, I asked what he had learnt about the dead woman."
-srsWords: "before" "leave" "him" "i" "ask" "what" "he" "had" "learn" "about" "the" "dead" "woman"
+sentence: "我需要联系客服。"
+answer: "I need to contact customer support."
+acceptAlso: "I want to talk to the help desk."
+srsWords: "i" "need" "to" "contact" "customer" "support" "want" "talk" "the" "help" "desk"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "起初你在第二泳道。"
-answer: "At first you were in lane two."
-acceptAlso: "At first you were in lane two."
-srsWords: "at" "first" "you" "were" "in" "lane" "two"
+sentence: "我打了好几次客服电话。"
+answer: "I called customer service several times."
+acceptAlso: "I rang the support line more than once."
+srsWords: "i" "called" "customer" "service" "several" "times" "rang" "the" "support" "line" "more" "than" "once"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他不急着离开。"
-answer: "He was in no hurry to leave."
-acceptAlso: "He was in no hurry to leave."
-srsWords: "he" "was" "in" "no" "hurry" "to" "leave"
+sentence: "我要投诉这个问题。"
+answer: "I want to complain about this problem."
+acceptAlso: "There is an issue I want to report."
+srsWords: "i" "want" "to" "complain" "about" "this" "problem" "there" "is" "an" "issue" "report"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我的是下面那个。"
-answer: "Mine was the lower one."
-acceptAlso: "Mine was the lower one."
-srsWords: "mine" "was" "the" "low" "one"
+sentence: "我把订单号告诉了他。"
+answer: "I gave him my order number."
+acceptAlso: "He has my order number now."
+srsWords: "i" "gave" "him" "my" "order" "number" "he" "has" "now"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "第一天一切都很正常。"
-answer: "On the first day everything was normal."
-acceptAlso: "On the first day everything was normal."
-srsWords: "on" "the" "first" "day" "everything" "was" "normal"
+sentence: "客服很有耐心。"
+answer: "The customer service agent was very patient."
+acceptAlso: "Support staff were patient with me."
+srsWords: "the" "customer" "service" "agent" "was" "very" "patient" "support" "staff" "were" "with" "me"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "当我们做错事时，他总是告诉老师。"
-answer: "When we did something wrong, he always told the teacher."
-acceptAlso: "When we did something wrong, he always told the teacher."
-srsWords: "when" "we" "did" "something" "wrong" "he" "always" "tell" "the" "teacher"
+sentence: "请把问题写清楚。"
+answer: "Please describe the problem clearly."
+acceptAlso: "Explain the issue in detail, please."
+srsWords: "please" "describe" "the" "problem" "clearly" "explain" "issue" "in" "detail"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她拿起装有画画和绘画用品的包。"
-answer: "She picked up her bag of drawing and painting things."
-acceptAlso: "She picked up her bag of drawing and painting things."
-srsWords: "she" "pick" "up" "her" "bag" "of" "drawing" "and" "painting" "thing"
+sentence: "我等了二十分钟。"
+answer: "I waited for twenty minutes."
+acceptAlso: "My wait lasted twenty minutes."
+srsWords: "i" "waited" "for" "twenty" "minutes" "my" "wait" "lasted"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他的家在乡村，离一片大森林不远。"
-answer: "His home was in the country not far from a great forest."
-acceptAlso: "His home was in the country not far from a great forest."
-srsWords: "his" "home" "was" "in" "the" "country" "not" "far" "from" "a" "great" "forest"
+sentence: "他们答应退款。"
+answer: "They promised a refund."
+acceptAlso: "A refund was offered by them."
+srsWords: "they" "promised" "a" "refund" "was" "offered" "by" "them"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们没有深入树林。"
-answer: "They did not go far into the woods."
-acceptAlso: "They did not go far into the woods."
-srsWords: "they" "did" "not" "go" "far" "into" "the" "wood"
+sentence: "请给我发一封确认邮件。"
+answer: "Please send me a confirmation email."
+acceptAlso: "I need an email to confirm it."
+srsWords: "please" "send" "me" "a" "confirmation" "email" "i" "need" "an" "to" "confirm" "it"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "问题已经解决了。"
+answer: "The problem has been solved."
+acceptAlso: "It is all fixed now."
+srsWords: "the" "problem" "has" "been" "solved" "it" "is" "all" "fixed" "now"
 
 ---
 lessonTitle: "Lesson 9: Gadgets"
@@ -623,75 +632,76 @@ description: "Translate A2 sentences about Gadgets"
 icon: "💻"
 color: "#64748B"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "这里的食物足够所有人吃。"
-answer: "Here was food enough for all."
-acceptAlso: "Here was food enough for all."
-srsWords: "here" "was" "food" "enough" "for" "all"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "有一两天，甚至连火车都停止运行。"
-answer: "For a day or two, even the trains stop running."
-acceptAlso: "For a day or two, even the trains stop running."
-srsWords: "for" "a" "day" "or" "two" "even" "the" "train" "stop" "running"
+sentence: "我买了一块智能手表。"
+answer: "I bought a smart watch."
+acceptAlso: "A smartwatch is my new gadget."
+srsWords: "i" "bought" "a" "smart" "watch" "smartwatch" "is" "my" "new" "gadget"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "许多忙碌的人喜欢网上购物，因为它很简单。"
-answer: "Lots of busy people like shopping online, because it is easy."
-acceptAlso: "Lots of busy people like shopping online, because it is easy."
-srsWords: "lot" "of" "busy" "people" "like" "shopping" "online" "because" "it" "is" "easy"
+sentence: "这个设备很轻便。"
+answer: "This device is very light."
+acceptAlso: "The gadget is easy to carry."
+srsWords: "this" "device" "is" "very" "light" "the" "gadget" "easy" "to" "carry"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我尝试它只是为了看看它是什么样的。"
-answer: "I only tried it to see what it was like."
-acceptAlso: "I only tried it to see what it was like."
-srsWords: "i" "only" "try" "it" "to" "see" "what" "was" "like"
+sentence: "电池能用一整天。"
+answer: "The battery lasts all day."
+acceptAlso: "One charge is enough for a day."
+srsWords: "the" "battery" "lasts" "all" "day" "one" "charge" "is" "enough" "for" "a"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我对文化了解得挺多的……"
-answer: "I know quite a lot about culture...."
-acceptAlso: "I know quite a lot about culture...."
-srsWords: "i" "know" "quite" "a" "lot" "about" "culture"
+sentence: "请看一下说明书。"
+answer: "Please read the instructions."
+acceptAlso: "Check the manual, please."
+srsWords: "please" "read" "the" "instructions" "check" "manual"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "而且我也喜欢画画。"
-answer: "And I like drawing too."
-acceptAlso: "And I like drawing too."
-srsWords: "and" "i" "like" "drawing" "too"
+sentence: "充电需要一个小时。"
+answer: "Charging takes one hour."
+acceptAlso: "It needs an hour on the charger."
+srsWords: "charging" "takes" "one" "hour" "it" "needs" "an" "on" "the" "charger"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你有时去剧院或音乐会吗？"
-answer: "Do you ever go to the theatre, or to a concert?"
-acceptAlso: "Do you ever go to the theatre, or to a concert?"
-srsWords: "do" "you" "ever" "go" "to" "the" "theatre" "or" "a" "concert"
+sentence: "我把它和手机配对。"
+answer: "I paired it with my phone."
+acceptAlso: "Phone and gadget are connected."
+srsWords: "i" "paired" "it" "with" "my" "phone" "and" "gadget" "are" "connected"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你掌握了所有的细节。"
-answer: "You've got all the details."
-acceptAlso: "You've got all the details."
-srsWords: "you" "got" "all" "the" "detail"
+sentence: "这个功能很有用。"
+answer: "This function is very useful."
+acceptAlso: "The feature comes in handy."
+srsWords: "this" "function" "is" "very" "useful" "the" "feature" "comes" "in" "handy"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他需要零花钱。"
-answer: "He needed the pocket money."
-acceptAlso: "He needed the pocket money."
-srsWords: "he" "need" "the" "pocket" "money"
+sentence: "它防水。"
+answer: "It is waterproof."
+acceptAlso: "Water cannot damage it."
+srsWords: "it" "is" "waterproof" "water" "cannot" "damage"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你管那叫外出过夜？"
-answer: "You call that a night out?"
-acceptAlso: "You call that a night out?"
-srsWords: "you" "call" "that" "a" "night" "out"
+sentence: "我买了一个保护壳。"
+answer: "I bought a protective case."
+acceptAlso: "A case keeps it safe."
+srsWords: "i" "bought" "a" "protective" "case" "keeps" "it" "safe"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "这个牌子保修两年。"
+answer: "This brand has a two-year warranty."
+acceptAlso: "You get two years of guarantee."
+srsWords: "this" "brand" "has" "a" "two" "year" "warranty" "you" "get" "years" "of" "guarantee"
 
 ---
 lessonTitle: "Lesson 10: News"
@@ -699,73 +709,73 @@ description: "Translate A2 sentences about News"
 icon: "💻"
 color: "#64748B"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "当我走过马路时，我从来没有感到很自在。"
-answer: "I never felt very comfortable as I walked across the road."
-acceptAlso: "I never felt very comfortable as I walked across the road."
-srsWords: "i" "never" "feel" "very" "comfortable" "as" "walk" "across" "the" "road"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们走到一张空桌子旁。"
-answer: "They went to an empty table."
-acceptAlso: "They went to an empty table."
-srsWords: "they" "go" "to" "an" "empty" "table"
+sentence: "我每天早上看新闻。"
+answer: "I read the news every morning."
+acceptAlso: "News is part of my morning."
+srsWords: "i" "read" "the" "news" "every" "morning" "is" "part" "of" "my"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "一个服务员走过来记下了他们的点单。"
-answer: "A waiter came up to them and took their orders."
-acceptAlso: "A waiter came up to them and took their orders."
-srsWords: "a" "waiter" "come" "up" "to" "them" "and" "take" "their" "order"
+sentence: "这条新闻很重要。"
+answer: "This news is very important."
+acceptAlso: "The story matters a lot."
+srsWords: "this" "news" "is" "very" "important" "the" "story" "matters" "a" "lot"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "就在那时，窗户旁边的那拨人发出了一阵欢呼。"
-answer: "At that moment there was a cheer from the party beside the window."
-acceptAlso: "At that moment there was a cheer from the party beside the window."
-srsWords: "at" "that" "moment" "there" "was" "a" "cheer" "from" "the" "party" "beside" "window"
+sentence: "我在收音机里听到的。"
+answer: "I heard it on the radio."
+acceptAlso: "It came over the radio."
+srsWords: "i" "heard" "it" "on" "the" "radio" "came" "over"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他捂着脸，脸因为流血而通红。"
-answer: "He was holding his face, which was red with blood."
-acceptAlso: "He was holding his face, which was red with blood."
-srsWords: "he" "was" "hold" "his" "face" "which" "red" "with" "blood"
+sentence: "请给我看一下标题。"
+answer: "Please show me the headline."
+acceptAlso: "What does the headline say?"
+srsWords: "please" "show" "me" "the" "headline" "what" "does" "say"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们曾拥有许多新家具、两辆汽车、昂贵的假期——他们需要的一切。"
-answer: "They had had lots of new furniture, two cars, expensive holidays - everything they needed."
-acceptAlso: "They had had lots of new furniture, two cars, expensive holidays - everything they needed."
-srsWords: "they" "had" "lot" "of" "new" "furniture" "two" "car" "expensive" "holiday" "everything" "need"
+sentence: "报纸上说会下雨。"
+answer: "The newspaper says it will rain."
+acceptAlso: "Rain is in today's paper."
+srsWords: "the" "newspaper" "says" "it" "will" "rain" "is" "in" "today's" "paper"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然后他创办了造船公司，他的好运就此结束了。"
-answer: "And then he had started the boat-building company, and his luck had ended."
-acceptAlso: "And then he had started the boat-building company, and his luck had ended."
-srsWords: "and" "then" "he" "had" "start" "the" "boat" "building" "company" "his" "luck" "end"
+sentence: "我关注国际新闻。"
+answer: "I follow international news."
+acceptAlso: "World news interests me."
+srsWords: "i" "follow" "international" "news" "world" "interests" "me"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他没看见任何人，也没有人看见他。"
-answer: "He saw nobody, and nobody saw him."
-acceptAlso: "He saw nobody, and nobody saw him."
-srsWords: "he" "see" "nobody" "and" "him"
+sentence: "这个消息还没有被证实。"
+answer: "This news has not been confirmed."
+acceptAlso: "Nobody has confirmed the report yet."
+srsWords: "this" "news" "has" "not" "been" "confirmed" "nobody" "the" "report" "yet"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他有一种奇怪的感觉，仿佛这一切他以前都做过。"
-answer: "He had a strange feeling that he had done all this before."
-acceptAlso: "He had a strange feeling that he had done all this before."
-srsWords: "he" "had" "a" "strange" "feeling" "that" "done" "all" "this" "before"
+sentence: "我读了整篇文章。"
+answer: "I read the whole article."
+acceptAlso: "The full piece was read by me."
+srsWords: "i" "read" "the" "whole" "article" "full" "piece" "was" "by" "me"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这就像脑子里有一张地图。"
-answer: "It was like having a map in his head."
-acceptAlso: "It was like having a map in his head."
-srsWords: "it" "was" "like" "have" "a" "map" "in" "his" "head"
+sentence: "请不要相信谣言。"
+answer: "Please do not believe rumours."
+acceptAlso: "Stay away from rumours, please."
+srsWords: "please" "do" "not" "believe" "rumours" "stay" "away" "from"
 
+[translation]
+text: "Translate this sentence into English"
+sentence: "新闻让我了解世界。"
+answer: "The news helps me understand the world."
+acceptAlso: "Reading news teaches me about the world."
+srsWords: "the" "news" "helps" "me" "understand" "world" "reading" "teaches" "about"

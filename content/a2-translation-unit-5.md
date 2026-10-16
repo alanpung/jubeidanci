@@ -9,81 +9,83 @@ level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"
 ---
+
 ---
 lessonTitle: "Lesson 1: At the Doctor"
 description: "Translate A2 sentences about At the Doctor"
 icon: "🏥"
 color: "#10B981"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "这家公司也生产软饮料。"
-answer: "The company also produces soft drinks."
-acceptAlso: "The company also produces soft drinks."
-srsWords: "the" "company" "also" "produce" "soft" "drink"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们也生产一些软饮料。"
-answer: "They also make some soft drinks."
-acceptAlso: "They also make some soft drinks."
-srsWords: "they" "also" "make" "some" "soft" "drink"
+sentence: "我和医生约了今天下午。"
+answer: "I have an appointment with the doctor this afternoon."
+acceptAlso: "I am seeing the doctor this afternoon."
+srsWords: "i" "have" "an" "appointment" "with" "the" "doctor" "this" "afternoon" "am" "seeing"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这片海域一年中大部分时间都结冰。"
-answer: "The sea is frozen over most of the year."
-acceptAlso: "The sea is frozen over most of the year."
-srsWords: "the" "sea" "is" "freeze" "over" "most" "of" "year"
+sentence: "医生给我量了体温。"
+answer: "The doctor took my temperature."
+acceptAlso: "My temperature was checked by the doctor."
+srsWords: "the" "doctor" "took" "my" "temperature" "was" "checked" "by"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这个岛上的动物主要是鸟类，不过兔子在这里也已经繁衍很久了。"
-answer: "The island's animals are mainly birds, although rabbits are long established here."
-acceptAlso: "The island's animals are mainly birds, although rabbits are long established here."
-srsWords: "the" "island" "animal" "are" "mainly" "bird" "although" "rabbit" "long" "establish" "here"
+sentence: "请深呼吸。"
+answer: "Please breathe deeply."
+acceptAlso: "Take a deep breath, please."
+srsWords: "please" "breathe" "deeply" "take" "a" "deep" "breath"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它于1249年获得城市地位。"
-answer: "It received city rights in 1249."
-acceptAlso: "It received city rights in 1249."
-srsWords: "it" "receive" "city" "right" "in"
+sentence: "我需要吃药吗？"
+answer: "Do I need to take any medicine?"
+acceptAlso: "Must I take medicine for this?"
+srsWords: "do" "i" "need" "to" "take" "any" "medicine" "must" "for" "this"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它在1249年取得了城市资格。"
-answer: "It got city rights in 1249."
-acceptAlso: "It got city rights in 1249."
-srsWords: "it" "got" "city" "right" "in"
+sentence: "我头疼两天了。"
+answer: "I have had a headache for two days."
+acceptAlso: "My head has hurt for two days."
+srsWords: "i" "have" "had" "a" "headache" "for" "two" "days" "my" "head" "has" "hurt"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该游戏于2012年初开始开发。"
-answer: "The game started to be developed in early 2012."
-acceptAlso: "The game started to be developed in early 2012."
-srsWords: "the" "game" "start" "to" "be" "developed" "in" "early"
+sentence: "请在候诊室等一下。"
+answer: "Please wait in the waiting room."
+acceptAlso: "Wait outside the doctor's room, please."
+srsWords: "please" "wait" "in" "the" "waiting" "room" "outside" "doctor's"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它有218名居民。"
-answer: "It has a population of 218 people."
-acceptAlso: "It has a population of 218 people."
-srsWords: "it" "has" "a" "population" "of" "people"
+sentence: "医生让我多喝水。"
+answer: "The doctor told me to drink more water."
+acceptAlso: "My doctor said I should drink plenty of water."
+srsWords: "the" "doctor" "told" "me" "to" "drink" "more" "water" "my" "said" "i" "should" "plenty" "of"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它有218人。"
-answer: "It has a population of 218."
-acceptAlso: "It has a population of 218."
-srsWords: "it" "has" "a" "population" "of"
+sentence: "我要请一天病假。"
+answer: "I want to take a day off sick."
+acceptAlso: "I need one sick day off work."
+srsWords: "i" "want" "to" "take" "a" "day" "off" "sick" "need" "one" "work"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该公园建于1981年。"
-answer: "The park was established in 1981."
-acceptAlso: "The park was established in 1981."
-srsWords: "the" "park" "was" "establish" "in"
+sentence: "诊所九点开门。"
+answer: "The clinic opens at nine."
+acceptAlso: "The doctor's office is open from nine."
+srsWords: "the" "clinic" "opens" "at" "nine" "doctor's" "office" "is" "open" "from"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我感觉好多了。"
+answer: "I feel much better."
+acceptAlso: "I am feeling a lot better now."
+srsWords: "i" "feel" "much" "better" "am" "feeling" "a" "lot" "now"
 
 ---
 lessonTitle: "Lesson 2: Pharmacy"
@@ -91,75 +93,76 @@ description: "Translate A2 sentences about Pharmacy"
 icon: "🏥"
 color: "#10B981"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "该公园于1981年建立。"
-answer: "The park was created in 1981."
-acceptAlso: "The park was created in 1981."
-srsWords: "the" "park" "was" "create" "in"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这个公园有三个山谷。"
-answer: "This park has three valleys."
-acceptAlso: "This park has three valleys."
-srsWords: "this" "park" "has" "three" "valley"
+sentence: "最近的药店在哪里？"
+answer: "Where is the nearest pharmacy?"
+acceptAlso: "Where can I find the closest drugstore?"
+srsWords: "where" "is" "the" "nearest" "pharmacy" "can" "i" "find" "closest" "drugstore"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "上述论证在任何环中都成立。"
-answer: "The above arguments hold in any ring."
-acceptAlso: "The above arguments hold in any ring."
-srsWords: "the" "above" "argument" "hold" "in" "any" "ring"
+sentence: "我需要买感冒药。"
+answer: "I need to buy some medicine for a cold."
+acceptAlso: "I want something for my cold."
+srsWords: "i" "need" "to" "buy" "some" "medicine" "for" "a" "cold" "want" "something" "my"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "游泳比赛是在公海举行的。"
-answer: "The swimming competition was held in the open sea."
-acceptAlso: "The swimming competition was held in the open sea."
-srsWords: "the" "swimming" "competition" "was" "hold" "in" "open" "sea"
+sentence: "这个药一天吃三次。"
+answer: "Take this medicine three times a day."
+acceptAlso: "You take this three times daily."
+srsWords: "take" "this" "medicine" "three" "times" "a" "day" "you" "daily"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "在高尔夫球运动中，球手按规定的顺序打完一定数量的洞。"
-answer: "In golf, a golfer plays a number of holes in a given order."
-acceptAlso: "In golf, a golfer plays a number of holes in a given order."
-srsWords: "in" "golf" "a" "play" "number" "of" "hole" "given" "order"
+sentence: "请给我一盒创可贴。"
+answer: "Please give me a box of plasters."
+acceptAlso: "I would like a box of band-aids."
+srsWords: "please" "give" "me" "a" "box" "of" "plasters" "i" "would" "like" "band" "aids"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "大多数电子游戏为每个玩家提供一个游戏角色。"
-answer: "Most video games have one player character for each person playing the game."
-acceptAlso: "Most video games have one player character for each person playing the game."
-srsWords: "most" "video" "game" "have" "one" "player" "character" "for" "each" "person" "play" "the"
+sentence: "这个药有副作用吗？"
+answer: "Does this medicine have any side effects?"
+acceptAlso: "Are there side effects from this drug?"
+srsWords: "does" "this" "medicine" "have" "any" "side" "effects" "are" "there" "from" "drug"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "2008年有14只幼崽存活，2009年有15只。"
-answer: "There were 14 surviving cubs in 2008 and 15 in 2009."
-acceptAlso: "There were 14 surviving cubs in 2008 and 15 in 2009."
-srsWords: "there" "were" "survive" "cub" "in" "and"
+sentence: "我需要医生开的处方。"
+answer: "I need a prescription from the doctor."
+acceptAlso: "The doctor has to write me a prescription."
+srsWords: "i" "need" "a" "prescription" "from" "the" "doctor" "has" "to" "write" "me"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该俱乐部的传统主场球衣颜色全是白色。"
-answer: "The club's traditional home colors are all white."
-acceptAlso: "The club's traditional home colors are all white."
-srsWords: "the" "club" "traditional" "home" "color" "are" "all" "white"
+sentence: "这个药饭后吃。"
+answer: "Take this medicine after meals."
+acceptAlso: "You should take it after eating."
+srsWords: "take" "this" "medicine" "after" "meals" "you" "should" "it" "eating"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "镇中心还有一个汽车站。"
-answer: "There is also a bus station in the town center."
-acceptAlso: "There is also a bus station in the town center."
-srsWords: "there" "is" "also" "a" "bus" "station" "in" "the" "town" "center"
+sentence: "药剂师给我解释了用法。"
+answer: "The pharmacist explained how to use it."
+acceptAlso: "The chemist told me how to take it."
+srsWords: "the" "pharmacist" "explained" "how" "to" "use" "it" "chemist" "told" "me" "take"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "每种水果都有一颗种子。"
-answer: "Each fruit has one seed."
-acceptAlso: "Each fruit has one seed."
-srsWords: "each" "fruit" "has" "one" "seed"
+sentence: "这瓶药水很苦。"
+answer: "This liquid medicine is very bitter."
+acceptAlso: "The syrup tastes quite bitter."
+srsWords: "this" "liquid" "medicine" "is" "very" "bitter" "the" "syrup" "tastes" "quite"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "药店晚上八点关门。"
+answer: "The pharmacy closes at eight in the evening."
+acceptAlso: "The drugstore shuts at eight at night."
+srsWords: "the" "pharmacy" "closes" "at" "eight" "in" "evening" "drugstore" "shuts" "night"
 
 ---
 lessonTitle: "Lesson 3: Symptoms"
@@ -167,75 +170,76 @@ description: "Translate A2 sentences about Symptoms"
 icon: "🏥"
 color: "#10B981"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "它于1868年至1875年每年出版一次，自1886年以来又每年出版一次。"
-answer: "It has been published yearly from 1868 to 1875, and again every year since 1886."
-acceptAlso: "It has been published yearly from 1868 to 1875, and again every year since 1886."
-srsWords: "it" "has" "been" "publish" "yearly" "from" "to" "and" "again" "every" "year" "since"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "2004年，国立大学体制发生了变化。"
-answer: "In 2004, the national university system changed."
-acceptAlso: "In 2004, the national university system changed."
-srsWords: "in" "the" "national" "university" "system" "change"
+sentence: "我喉咙痛。"
+answer: "I have a sore throat."
+acceptAlso: "My throat hurts."
+srsWords: "i" "have" "a" "sore" "throat" "my" "hurts"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "比赛分为两个40分钟的半场，中间有休息时间。"
-answer: "Games are divided into 40 - minute halves, with a break in the middle."
-acceptAlso: "Games are divided into 40 - minute halves, with a break in the middle."
-srsWords: "game" "are" "divide" "into" "minute" "half" "with" "a" "break" "in" "the" "middle"
+sentence: "我咳嗽得很厉害。"
+answer: "I have a bad cough."
+acceptAlso: "I am coughing a lot."
+srsWords: "i" "have" "a" "bad" "cough" "am" "coughing" "lot"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "队伍最多可获得四条线索。"
-answer: "Teams are given up to four clues."
-acceptAlso: "Teams are given up to four clues."
-srsWords: "team" "are" "given" "up" "to" "four" "clue"
+sentence: "我发烧了。"
+answer: "I have a fever."
+acceptAlso: "My temperature is high."
+srsWords: "i" "have" "a" "fever" "my" "temperature" "is" "high"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该车站采用现代机场风格建造。"
-answer: "The station has been built in a modern airport style."
-acceptAlso: "The station has been built in a modern airport style."
-srsWords: "the" "station" "has" "been" "build" "in" "a" "modern" "airport" "style"
+sentence: "我全身没有力气。"
+answer: "I have no energy at all."
+acceptAlso: "I feel weak all over."
+srsWords: "i" "have" "no" "energy" "at" "all" "feel" "weak" "over"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这座现代城市建于1956年。"
-answer: "The modern city was established in 1956."
-acceptAlso: "The modern city was established in 1956."
-srsWords: "the" "modern" "city" "was" "establish" "in"
+sentence: "我的背很疼。"
+answer: "My back hurts a lot."
+acceptAlso: "I have a pain in my back."
+srsWords: "my" "back" "hurts" "a" "lot" "i" "have" "pain" "in"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "从1941年开始，所有入学的学生必须是高中毕业生。"
-answer: "Starting in 1941, all entering students had to be high school graduates."
-acceptAlso: "Starting in 1941, all entering students had to be high school graduates."
-srsWords: "start" "in" "all" "enter" "student" "had" "to" "be" "high" "school" "graduate"
+sentence: "我昨晚呕吐了。"
+answer: "I was sick last night."
+acceptAlso: "I vomited yesterday evening."
+srsWords: "i" "was" "sick" "last" "night" "vomited" "yesterday" "evening"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "到目前为止，这些是最常参加的考试。"
-answer: "These are by far the most commonly taken exams."
-acceptAlso: "These are by far the most commonly taken exams."
-srsWords: "these" "are" "by" "far" "the" "most" "common" "take" "exam"
+sentence: "我鼻子不通气。"
+answer: "My nose is blocked."
+acceptAlso: "I cannot breathe through my nose."
+srsWords: "my" "nose" "is" "blocked" "i" "cannot" "breathe" "through"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "以下人员是该乐队的成员。"
-answer: "Following people were members of the band."
-acceptAlso: "Following people were members of the band."
-srsWords: "follow" "people" "were" "member" "of" "the" "band"
+sentence: "我的眼睛很痒。"
+answer: "My eyes are very itchy."
+acceptAlso: "My eyes itch a lot."
+srsWords: "my" "eyes" "are" "very" "itchy" "itch" "a" "lot"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "所有的岛屿都很低平。"
-answer: "All the islands are low and flat."
-acceptAlso: "All the islands are low and flat."
-srsWords: "all" "the" "island" "are" "low" "and" "flat"
+sentence: "我头晕。"
+answer: "I feel dizzy."
+acceptAlso: "My head is spinning."
+srsWords: "i" "feel" "dizzy" "my" "head" "is" "spinning"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "三天了这些症状还没好。"
+answer: "These symptoms have not got better after three days."
+acceptAlso: "I still feel ill three days later."
+srsWords: "these" "symptoms" "have" "not" "got" "better" "after" "three" "days" "i" "still" "feel" "ill" "later"
 
 ---
 lessonTitle: "Lesson 4: Exercise & Fitness"
@@ -243,75 +247,76 @@ description: "Translate A2 sentences about Exercise & Fitness"
 icon: "🏥"
 color: "#10B981"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "这项活动展示了谁的射门最有力量。"
-answer: "This event shows who has the hardest shot."
-acceptAlso: "This event shows who has the hardest shot."
-srsWords: "this" "event" "show" "who" "has" "the" "hard" "shot"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "小企业往往因为规模而面临许多问题。"
-answer: "Small businesses often face a lot of problems because of their size."
-acceptAlso: "Small businesses often face a lot of problems because of their size."
-srsWords: "small" "business" "often" "face" "a" "lot" "of" "problem" "because" "their" "size"
+sentence: "我每天早上跑步。"
+answer: "I go running every morning."
+acceptAlso: "I run every morning."
+srsWords: "i" "go" "running" "every" "morning" "run"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "传统上，这种舞蹈只由女性在夜间无伴奏表演。"
-answer: "Traditionally, this dance is performed only by women at night without any instruments."
-acceptAlso: "Traditionally, this dance is performed only by women at night without any instruments."
-srsWords: "traditional" "this" "dance" "is" "perform" "only" "by" "woman" "at" "night" "without" "any" "instrument"
+sentence: "他一周去两次健身房。"
+answer: "He goes to the gym twice a week."
+acceptAlso: "He works out at the gym two times a week."
+srsWords: "he" "goes" "to" "the" "gym" "twice" "a" "week" "works" "out" "at" "two" "times"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "传统上，这种舞蹈不使用任何乐器表演。"
-answer: "Traditionally, this dance performed without any instruments."
-acceptAlso: "Traditionally, this dance performed without any instruments."
-srsWords: "traditional" "this" "dance" "perform" "without" "any" "instrument"
+sentence: "运动对身体有好处。"
+answer: "Exercise is good for your body."
+acceptAlso: "Working out is healthy for you."
+srsWords: "exercise" "is" "good" "for" "your" "body" "working" "out" "healthy" "you"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "赢得一场比赛得3分。"
-answer: "A team gets 3 points for a win."
-acceptAlso: "A team gets 3 points for a win."
-srsWords: "a" "team" "get" "point" "for" "win"
+sentence: "我做了二十个俯卧撑。"
+answer: "I did twenty push-ups."
+acceptAlso: "I managed twenty press-ups."
+srsWords: "i" "did" "twenty" "push" "ups" "managed" "press"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该俱乐部的为主场队服颜色是红色和白色。"
-answer: "The home uniform colors of the club are red and white."
-acceptAlso: "The home uniform colors of the club are red and white."
-srsWords: "the" "home" "uniform" "color" "of" "club" "are" "red" "and" "white"
+sentence: "我在公园里散步半小时。"
+answer: "I walk in the park for half an hour."
+acceptAlso: "I take a thirty-minute walk in the park."
+srsWords: "i" "walk" "in" "the" "park" "for" "half" "an" "hour" "take" "a" "thirty" "minute"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该岛面积约174平方公里。"
-answer: "The island has an area of about 174 km."
-acceptAlso: "The island has an area of about 174 km."
-srsWords: "the" "island" "has" "an" "area" "of" "about" "km"
+sentence: "请先热身。"
+answer: "Please warm up first."
+acceptAlso: "Do some warm-up exercises first."
+srsWords: "please" "warm" "up" "first" "do" "some" "exercises"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "成虫在上午晚些时候和下午早些时候飞行。"
-answer: "Adults fly in the late morning and early afternoon."
-acceptAlso: "Adults fly in the late morning and early afternoon."
-srsWords: "adult" "fly" "in" "the" "late" "morning" "and" "early" "afternoon"
+sentence: "我比以前强壮了。"
+answer: "I am stronger than before."
+acceptAlso: "I have become stronger than I was."
+srsWords: "i" "am" "stronger" "than" "before" "have" "become" "was"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "在2004和1896年，冠军奖牌实际上是银制的。"
-answer: "In 2004 1896, winners' medals were in fact silver."
-acceptAlso: "In 2004 1896, winners' medals were in fact silver."
-srsWords: "in" "winner" "medal" "were" "fact" "silver"
+sentence: "游泳是很好的运动。"
+answer: "Swimming is very good exercise."
+acceptAlso: "Swimming is a great way to exercise."
+srsWords: "swimming" "is" "very" "good" "exercise" "a" "great" "way" "to"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "在1896年，冠军奖牌是用银制作的。"
-answer: "In 1896, winners' medals were made from silver."
-acceptAlso: "In 1896, winners' medals were made from silver."
-srsWords: "in" "winner" "medal" "were" "make" "from" "silver"
+sentence: "我每天走一万步。"
+answer: "I walk ten thousand steps every day."
+acceptAlso: "I do ten thousand steps a day."
+srsWords: "i" "walk" "ten" "thousand" "steps" "every" "day" "do" "a"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "运动后我很渴。"
+answer: "I am very thirsty after exercise."
+acceptAlso: "I get thirsty after working out."
+srsWords: "i" "am" "very" "thirsty" "after" "exercise" "get" "working" "out"
 
 ---
 lessonTitle: "Lesson 5: Healthy Diet"
@@ -319,75 +324,76 @@ description: "Translate A2 sentences about Healthy Diet"
 icon: "🏥"
 color: "#10B981"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "这种长得像老鼠的仓鼠并不是真正的仓鼠，尽管它们看起来像。"
-answer: "The mouse - like hamsters are not real hamsters, although they look like hamsters."
-acceptAlso: "The mouse - like hamsters are not real hamsters, although they look like hamsters."
-srsWords: "the" "mouse" "like" "hamster" "are" "not" "real" "although" "they" "look"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "许多人就构成心灵的要素争论不休。"
-answer: "Many people argue about what makes up the mind."
-acceptAlso: "Many people argue about what makes up the mind."
-srsWords: "many" "people" "argue" "about" "what" "make" "up" "the" "mind"
+sentence: "我每天吃很多蔬菜。"
+answer: "I eat a lot of vegetables every day."
+acceptAlso: "I have plenty of vegetables daily."
+srsWords: "i" "eat" "a" "lot" "of" "vegetables" "every" "day" "have" "plenty" "daily"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "夏季几个月里，有多达2万人参观这座城市。"
-answer: "Up to 20,000 people visit the city during the summer months."
-acceptAlso: "Up to 20,000 people visit the city during the summer months."
-srsWords: "up" "to" "people" "visit" "the" "city" "during" "summer" "month"
+sentence: "请少吃油炸食品。"
+answer: "Please eat less fried food."
+acceptAlso: "You should cut down on fried food."
+srsWords: "please" "eat" "less" "fried" "food" "you" "should" "cut" "down" "on"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "珠宝可以用任何材料制作。"
-answer: "Jewelry can be made from any material."
-acceptAlso: "Jewelry can be made from any material."
-srsWords: "jewelry" "can" "be" "make" "from" "any" "material"
+sentence: "水比汽水健康。"
+answer: "Water is healthier than soda."
+acceptAlso: "Water is better for you than fizzy drinks."
+srsWords: "water" "is" "healthier" "than" "soda" "better" "for" "you" "fizzy" "drinks"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "采集是妇女和儿童的传统工作。"
-answer: "Gathering is the traditional job of the women and children."
-acceptAlso: "Gathering is the traditional job of the women and children."
-srsWords: "gather" "is" "the" "traditional" "job" "of" "woman" "and" "child"
+sentence: "我不再吃夜宵了。"
+answer: "I do not eat late-night snacks any more."
+acceptAlso: "I stopped eating food late at night."
+srsWords: "i" "do" "not" "eat" "late" "night" "snacks" "any" "more" "stopped" "eating" "food" "at"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这些山村周围的大部分地区都覆盖着树木。"
-answer: "Most of the area around these mountain villages is covered with trees."
-acceptAlso: "Most of the area around these mountain villages is covered with trees."
-srsWords: "most" "of" "the" "area" "around" "these" "mountain" "village" "is" "cover" "with" "tree"
+sentence: "这个沙拉很新鲜。"
+answer: "This salad is very fresh."
+acceptAlso: "The salad tastes fresh."
+srsWords: "this" "salad" "is" "very" "fresh" "the" "tastes"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "一个人的口语词汇量是指他们在说话时使用的所有词语。"
-answer: "A person's speaking vocabulary is all the words they use in speech."
-acceptAlso: "A person's speaking vocabulary is all the words they use in speech."
-srsWords: "a" "person" "speak" "vocabulary" "is" "all" "the" "word" "they" "use" "in" "speech"
+sentence: "我一天吃三餐。"
+answer: "I eat three meals a day."
+acceptAlso: "I have three meals every day."
+srsWords: "i" "eat" "three" "meals" "a" "day" "have" "every"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "一个人使用的词汇量是该人所知道并使用的所有词语。"
-answer: "The vocabulary a person uses is all the words that person knows and uses."
-acceptAlso: "The vocabulary a person uses is all the words that person knows and uses."
-srsWords: "the" "vocabulary" "a" "person" "us" "is" "all" "word" "that" "know" "and"
+sentence: "鱼比红肉更健康。"
+answer: "Fish is healthier than red meat."
+acceptAlso: "Eating fish is better than eating red meat."
+srsWords: "fish" "is" "healthier" "than" "red" "meat" "eating" "better"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "演职员表摘自专辑说明。"
-answer: "Credits taken from album notes."
-acceptAlso: "Credits taken from album notes."
-srsWords: "credit" "take" "from" "album" "not"
+sentence: "我尽量不喝含糖饮料。"
+answer: "I try not to drink sugary drinks."
+acceptAlso: "I avoid drinks with sugar."
+srsWords: "i" "try" "not" "to" "drink" "sugary" "drinks" "avoid" "with" "sugar"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这种情况在2004年几乎再次发生。"
-answer: "This situation almost happened again in 2004."
-acceptAlso: "This situation almost happened again in 2004."
-srsWords: "this" "situation" "almost" "happen" "again" "in"
+sentence: "早饭要吃得有营养。"
+answer: "Breakfast should be nutritious."
+acceptAlso: "You need a healthy breakfast."
+srsWords: "breakfast" "should" "be" "nutritious" "you" "need" "a" "healthy"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我的饮食习惯改变了。"
+answer: "My eating habits have changed."
+acceptAlso: "I have changed the way I eat."
+srsWords: "my" "eating" "habits" "have" "changed" "i" "the" "way" "eat"
 
 ---
 lessonTitle: "Lesson 6: Mental Health"
@@ -395,75 +401,76 @@ description: "Translate A2 sentences about Mental Health"
 icon: "🏥"
 color: "#10B981"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "数千名学生因豆腐渣工程的学校而丧生。"
-answer: "Thousands of school children died because of badly built schools."
-acceptAlso: "Thousands of school children died because of badly built schools."
-srsWords: "thousand" "of" "school" "child" "die" "because" "badly" "build"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "几乎全体人口都说法语。"
-answer: "French is spoken by almost all the population."
-acceptAlso: "French is spoken by almost all the population."
-srsWords: "french" "is" "speak" "by" "almost" "all" "the" "population"
+sentence: "我最近压力很大。"
+answer: "I have been under a lot of stress recently."
+acceptAlso: "I feel very stressed these days."
+srsWords: "i" "have" "been" "under" "a" "lot" "of" "stress" "recently" "feel" "very" "stressed" "these" "days"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "巧克力糖浆也用于许多甜点中。"
-answer: "Chocolate syrup is also used in many desserts."
-acceptAlso: "Chocolate syrup is also used in many desserts."
-srsWords: "chocolate" "syrup" "is" "also" "used" "in" "many" "dessert"
+sentence: "我试着每天放松一下。"
+answer: "I try to relax a little every day."
+acceptAlso: "I make time to relax daily."
+srsWords: "i" "try" "to" "relax" "a" "little" "every" "day" "make" "time" "daily"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "其中一些主题以前已经讨论过。"
-answer: "Some of these topics have been discussed before."
-acceptAlso: "Some of these topics have been discussed before."
-srsWords: "some" "of" "these" "topic" "have" "been" "discuss" "before"
+sentence: "锻炼能让心情变好。"
+answer: "Exercise can improve your mood."
+acceptAlso: "Working out makes you feel happier."
+srsWords: "exercise" "can" "improve" "your" "mood" "working" "out" "makes" "you" "feel" "happier"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "其中一些主题之前已经讨论过了。"
-answer: "Some of these topics had been discussed before."
-acceptAlso: "Some of these topics had been discussed before."
-srsWords: "some" "of" "these" "topic" "had" "been" "discuss" "before"
+sentence: "我和朋友聊了我的烦恼。"
+answer: "I talked about my worries with a friend."
+acceptAlso: "I shared my problems with a friend."
+srsWords: "i" "talked" "about" "my" "worries" "with" "a" "friend" "shared" "problems"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这首诗的结构分为五个部分。"
-answer: "The poem's structure is divided into five sections."
-acceptAlso: "The poem's structure is divided into five sections."
-srsWords: "the" "poem" "structure" "is" "divide" "into" "five" "section"
+sentence: "请不要太担心。"
+answer: "Please do not worry too much."
+acceptAlso: "Try not to worry so much."
+srsWords: "please" "do" "not" "worry" "too" "much" "try" "to" "so"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "岛上经常举行定期活动和艺术展。"
-answer: "Regular events and art shows are often held on the island."
-acceptAlso: "Regular events and art shows are often held on the island."
-srsWords: "regular" "event" "and" "art" "show" "are" "often" "hold" "on" "the" "island"
+sentence: "我需要休息几天。"
+answer: "I need to rest for a few days."
+acceptAlso: "I should take some days off to rest."
+srsWords: "i" "need" "to" "rest" "for" "a" "few" "days" "should" "take" "some" "off"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该岛还用于各种规模的私人活动。"
-answer: "The island is also used for private events both large and small."
-acceptAlso: "The island is also used for private events both large and small."
-srsWords: "the" "island" "is" "also" "used" "for" "private" "event" "both" "large" "and" "small"
+sentence: "深呼吸能帮助我冷静。"
+answer: "Deep breathing helps me calm down."
+acceptAlso: "Breathing slowly makes me feel calm."
+srsWords: "deep" "breathing" "helps" "me" "calm" "down" "slowly" "makes" "feel"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该地区面积为2.46平方公里，人口为19,921人。"
-answer: "The quarter has a population of 19,921, in an area of 2.46 km2."
-acceptAlso: "The quarter has a population of 19,921, in an area of 2.46 km2."
-srsWords: "the" "quarter" "has" "a" "population" "of" "in" "an" "area" "km"
+sentence: "他去看心理医生了。"
+answer: "He went to see a counsellor."
+acceptAlso: "He is talking to a mental health doctor."
+srsWords: "he" "went" "to" "see" "a" "counsellor" "is" "talking" "mental" "health" "doctor"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这部电影在票房上并不成功。"
-answer: "The movie was not a success at the box office."
-acceptAlso: "The movie was not a success at the box office."
-srsWords: "the" "movie" "was" "not" "a" "success" "at" "box" "office"
+sentence: "我的睡眠改善了。"
+answer: "My sleep has improved."
+acceptAlso: "I am sleeping better now."
+srsWords: "my" "sleep" "has" "improved" "i" "am" "sleeping" "better" "now"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "保持乐观很重要。"
+answer: "It is important to stay positive."
+acceptAlso: "Staying optimistic really matters."
+srsWords: "it" "is" "important" "to" "stay" "positive" "staying" "optimistic" "really" "matters"
 
 ---
 lessonTitle: "Lesson 7: Emergency"
@@ -471,75 +478,76 @@ description: "Translate A2 sentences about Emergency"
 icon: "🏥"
 color: "#10B981"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "天才和才能教育有着数千年的悠久历史。"
-answer: "Gifted and talented education has a long history of thousands of years."
-acceptAlso: "Gifted and talented education has a long history of thousands of years."
-srsWords: "gift" "and" "talent" "education" "has" "a" "long" "history" "of" "thousand" "year"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "王锦蛇（菜花蛇）通常被当作宠物饲养。"
-answer: "Rat snakes are commonly kept as pets."
-acceptAlso: "Rat snakes are commonly kept as pets."
-srsWords: "rat" "snake" "are" "common" "keep" "as" "pet"
+sentence: "请叫救护车！"
+answer: "Please call an ambulance!"
+acceptAlso: "Call for an ambulance now!"
+srsWords: "please" "call" "an" "ambulance" "for" "now"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "许多国家都使用筷子。"
-answer: "Chopsticks are used in many countries."
-acceptAlso: "Chopsticks are used in many countries."
-srsWords: "chopstick" "are" "used" "in" "many" "country"
+sentence: "这里发生了交通事故。"
+answer: "There has been a traffic accident here."
+acceptAlso: "A car accident happened here."
+srsWords: "there" "has" "been" "a" "traffic" "accident" "here" "car" "happened"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "1940年，这两个私人系统被市政府收购。"
-answer: "In 1940, the two private systems were bought by the city."
-acceptAlso: "In 1940, the two private systems were bought by the city."
-srsWords: "in" "the" "two" "private" "system" "were" "buy" "by" "city"
+sentence: "请马上拨打急救电话。"
+answer: "Please dial the emergency number at once."
+acceptAlso: "Call the emergency services right away."
+srsWords: "please" "dial" "the" "emergency" "number" "at" "once" "call" "services" "right" "away"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "1940年，市政府收购了这两个私人系统。"
-answer: "In 1940, the city bought the two private systems."
-acceptAlso: "In 1940, the city bought the two private systems."
-srsWords: "in" "the" "city" "buy" "two" "private" "system"
+sentence: "他摔断了腿。"
+answer: "He broke his leg."
+acceptAlso: "His leg is broken."
+srsWords: "he" "broke" "his" "leg" "is" "broken"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "上午10点，有一大群人在观看这场活动。"
-answer: "At 10.00 am there was a large crowd of people watching the action."
-acceptAlso: "At 10.00 am there was a large crowd of people watching the action."
-srsWords: "at" "am" "there" "was" "a" "large" "crowd" "of" "people" "watch" "the" "action"
+sentence: "请帮忙，有人受伤了。"
+answer: "Help, someone is hurt."
+acceptAlso: "Please help, a person is injured."
+srsWords: "help" "someone" "is" "hurt" "please" "a" "person" "injured"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这个公园包括三个山谷。"
-answer: "This park includes three valleys."
-acceptAlso: "This park includes three valleys."
-srsWords: "this" "park" "include" "three" "valley"
+sentence: "最近的医院在哪里？"
+answer: "Where is the nearest hospital?"
+acceptAlso: "How do I get to the closest hospital?"
+srsWords: "where" "is" "the" "nearest" "hospital" "how" "do" "i" "get" "to" "closest"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "红茶是国民饮料，通常在饭后饮用。"
-answer: "Black tea is the national drink, and is drunk after food is eaten."
-acceptAlso: "Black tea is the national drink, and is drunk after food is eaten."
-srsWords: "black" "tea" "is" "the" "national" "drink" "and" "after" "food" "eat"
+sentence: "他在流血。"
+answer: "He is bleeding."
+acceptAlso: "He has lost a lot of blood."
+srsWords: "he" "is" "bleeding" "has" "lost" "a" "lot" "of" "blood"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "您可以保存对话以便稍后阅读或重新查看。"
-answer: "It is possible to save a conversation to read later or look at again."
-acceptAlso: "It is possible to save a conversation to read later or look at again."
-srsWords: "it" "is" "possible" "to" "save" "a" "conversation" "read" "later" "or" "look" "at" "again"
+sentence: "请让她躺下。"
+answer: "Please let her lie down."
+acceptAlso: "Make her lie down, please."
+srsWords: "please" "let" "her" "lie" "down" "make"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "国际码正好是0.9144米。"
-answer: "The international yard is exactly 0.9144 metres."
-acceptAlso: "The international yard is exactly 0.9144 metres."
-srsWords: "the" "international" "yard" "is" "exactly" "metre"
+sentence: "消防员很快就到了。"
+answer: "The firefighters arrived very quickly."
+acceptAlso: "The fire brigade came soon."
+srsWords: "the" "firefighters" "arrived" "very" "quickly" "fire" "brigade" "came" "soon"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请保持冷静。"
+answer: "Please stay calm."
+acceptAlso: "Keep calm, please."
+srsWords: "please" "stay" "calm" "keep"
 
 ---
 lessonTitle: "Lesson 8: Dentist"
@@ -547,75 +555,76 @@ description: "Translate A2 sentences about Dentist"
 icon: "🏥"
 color: "#10B981"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "魔法在游戏中很常见。"
-answer: "Magic is common in the game."
-acceptAlso: "Magic is common in the game."
-srsWords: "magic" "is" "common" "in" "the" "game"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "一年后，她重新开张了书店。"
-answer: "After one year, she opened the bookshop again."
-acceptAlso: "After one year, she opened the bookshop again."
-srsWords: "after" "one" "year" "she" "open" "the" "bookshop" "again"
+sentence: "我约了牙医。"
+answer: "I have an appointment with the dentist."
+acceptAlso: "I am going to see the dentist."
+srsWords: "i" "have" "an" "appointment" "with" "the" "dentist" "am" "going" "to" "see"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "公众演讲者可能会使用观众反馈系统。"
-answer: "Public speakers may use audience response systems."
-acceptAlso: "Public speakers may use audience response systems."
-srsWords: "public" "speaker" "may" "use" "audience" "response" "system"
+sentence: "我牙疼得厉害。"
+answer: "I have a bad toothache."
+acceptAlso: "My tooth hurts badly."
+srsWords: "i" "have" "a" "bad" "toothache" "my" "tooth" "hurts" "badly"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "全球有90多种口味。"
-answer: "There are more than 90 flavors worldwide."
-acceptAlso: "There are more than 90 flavors worldwide."
-srsWords: "there" "are" "more" "than" "flavor" "worldwide"
+sentence: "我每天刷两次牙。"
+answer: "I brush my teeth twice a day."
+acceptAlso: "I clean my teeth every morning and night."
+srsWords: "i" "brush" "my" "teeth" "twice" "a" "day" "clean" "every" "morning" "and" "night"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "从右到左、从上到下阅读，符号如下。"
-answer: "Reading right to left, top to bottom, the symbols are as follows."
-acceptAlso: "Reading right to left, top to bottom, the symbols are as follows."
-srsWords: "reading" "right" "to" "left" "top" "bottom" "the" "symbol" "are" "as" "follow"
+sentence: "医生补了我的牙。"
+answer: "The dentist filled my tooth."
+acceptAlso: "My dentist fixed the hole in my tooth."
+srsWords: "the" "dentist" "filled" "my" "tooth" "fixed" "hole" "in"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "岛上租不到汽车。"
-answer: "It is not possible to rent a car on the island."
-acceptAlso: "It is not possible to rent a car on the island."
-srsWords: "it" "is" "not" "possible" "to" "rent" "a" "car" "on" "the" "island"
+sentence: "我每天用牙线。"
+answer: "I use dental floss every day."
+acceptAlso: "I floss my teeth daily."
+srsWords: "i" "use" "dental" "floss" "every" "day" "my" "teeth" "daily"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "有各种各样的系统。"
-answer: "There are many kinds of systems."
-acceptAlso: "There are many kinds of systems."
-srsWords: "there" "are" "many" "kind" "of" "system"
+sentence: "这颗牙需要拔掉。"
+answer: "This tooth needs to be taken out."
+acceptAlso: "They have to pull this tooth."
+srsWords: "this" "tooth" "needs" "to" "be" "taken" "out" "they" "have" "pull"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然而，在十九世纪初，女性写小说并不容易。"
-answer: "However, novel- writing was not easy for women in the early nineteenth century."
-acceptAlso: "However, novel- writing was not easy for women in the early nineteenth century."
-srsWords: "however" "novel" "writing" "was" "not" "easy" "for" "woman" "in" "the" "early" "nineteenth" "century"
+sentence: "请张开嘴。"
+answer: "Please open your mouth."
+acceptAlso: "Open wide, please."
+srsWords: "please" "open" "your" "mouth" "wide"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这面旗帜最初有二十八个白点。"
-answer: "The flag first had twenty - eight white points."
-acceptAlso: "The flag first had twenty - eight white points."
-srsWords: "the" "flag" "first" "had" "twenty" "eight" "white" "point"
+sentence: "不要吃太多糖。"
+answer: "Do not eat too much sugar."
+acceptAlso: "You should cut down on sweets."
+srsWords: "do" "not" "eat" "too" "much" "sugar" "you" "should" "cut" "down" "on" "sweets"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "毡被用于许多不同的用途。"
-answer: "Felt is used for many different things."
-acceptAlso: "Felt is used for many different things."
-srsWords: "feel" "is" "used" "for" "many" "different" "thing"
+sentence: "我半年洗一次牙。"
+answer: "I have my teeth cleaned every six months."
+acceptAlso: "My teeth are cleaned twice a year."
+srsWords: "i" "have" "my" "teeth" "cleaned" "every" "six" "months" "are" "twice" "a" "year"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "检查牙齿很重要。"
+answer: "It is important to check your teeth."
+acceptAlso: "Regular dental checks matter."
+srsWords: "it" "is" "important" "to" "check" "your" "teeth" "regular" "dental" "checks" "matter"
 
 ---
 lessonTitle: "Lesson 9: First Aid"
@@ -623,75 +632,76 @@ description: "Translate A2 sentences about First Aid"
 icon: "🏥"
 color: "#10B981"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "有很多网站提供歌曲歌词。"
-answer: "There are many websites that have the lyrics to songs."
-acceptAlso: "There are many websites that have the lyrics to songs."
-srsWords: "there" "are" "many" "website" "that" "have" "the" "lyric" "to" "song"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "皇马传统的客场球衣颜色全是蓝色或全是紫色。"
-answer: "Real's traditional away colors are all blue or all purple."
-acceptAlso: "Real's traditional away colors are all blue or all purple."
-srsWords: "real" "traditional" "away" "color" "are" "all" "blue" "or" "purple"
+sentence: "我包里有一个急救箱。"
+answer: "I have a first-aid kit in my bag."
+acceptAlso: "There is a first aid box in my bag."
+srsWords: "i" "have" "a" "first" "aid" "kit" "in" "my" "bag" "there" "is" "box"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "质量非常非常差，而且很贵！"
-answer: "Very very poor quality and expensive!"
-acceptAlso: "Very very poor quality and expensive!"
-srsWords: "very" "poor" "quality" "and" "expensive"
+sentence: "请先清洗伤口。"
+answer: "Please clean the wound first."
+acceptAlso: "Wash the cut before anything else."
+srsWords: "please" "clean" "the" "wound" "first" "wash" "cut" "before" "anything" "else"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我不能跟那个女孩在一起。"
-answer: "I can't go with that girl."
-acceptAlso: "I can't go with that girl."
-srsWords: "i" "can" "go" "with" "that" "girl"
+sentence: "用绷带包住手指。"
+answer: "Cover the finger with a bandage."
+acceptAlso: "Put a bandage on your finger."
+srsWords: "cover" "the" "finger" "with" "a" "bandage" "put" "on" "your"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "两个女孩随着音乐先挥动手臂，然后摆动双腿。"
-answer: "Two girls are moving their hands around and then their legs to music."
-acceptAlso: "Two girls are moving their hands around and then their legs to music."
-srsWords: "two" "girl" "are" "move" "their" "hand" "around" "and" "then" "leg" "to" "music"
+sentence: "请按压伤口止血。"
+answer: "Please press on the cut to stop the bleeding."
+acceptAlso: "Press the wound to stop the blood."
+srsWords: "please" "press" "on" "the" "cut" "to" "stop" "bleeding" "wound" "blood"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "谁知道我们是否能弄清楚这一点。"
-answer: "Who knows if we'll ever figure that out."
-acceptAlso: "Who knows if we'll ever figure that out."
-srsWords: "who" "know" "if" "we" "ever" "figure" "that" "out"
+sentence: "我把冰块放在肿的地方。"
+answer: "I put ice on the swollen place."
+acceptAlso: "Ice helps the swelling go down."
+srsWords: "i" "put" "ice" "on" "the" "swollen" "place" "helps" "swelling" "go" "down"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你好，有什么我可以帮你的吗？"
-answer: "Hello, is there anything I can do for you?"
-acceptAlso: "Hello, is there anything I can do for you?"
-srsWords: "hello" "is" "there" "anything" "i" "can" "do" "for" "you"
+sentence: "我被刀割伤了。"
+answer: "I cut myself with a knife."
+acceptAlso: "A knife gave me a cut."
+srsWords: "i" "cut" "myself" "with" "a" "knife" "gave" "me"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们知道女性的收入仍然比男性低。"
-answer: "We know that women still get paid less than men."
-acceptAlso: "We know that women still get paid less than men."
-srsWords: "we" "know" "that" "woman" "still" "get" "pay" "less" "than" "men"
+sentence: "别碰那个伤口。"
+answer: "Do not touch that wound."
+acceptAlso: "Keep your hands off the cut."
+srsWords: "do" "not" "touch" "that" "wound" "keep" "your" "hands" "off" "the" "cut"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "也许这并不全是坏消息。"
-answer: "It might not all be bad news."
-acceptAlso: "It might not all be bad news."
-srsWords: "it" "might" "not" "all" "be" "bad" "news"
+sentence: "他烫伤了手。"
+answer: "He burnt his hand."
+acceptAlso: "His hand got burned."
+srsWords: "he" "burnt" "his" "hand" "got" "burned"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "因此，当我们感到饥饿时，脑海中通常会浮现出某种特定的食物。"
-answer: "Therefore, when we are hungry, we often have a specific food item in mind."
-acceptAlso: "Therefore, when we are hungry, we often have a specific food item in mind."
-srsWords: "therefore" "when" "we" "are" "hungry" "often" "have" "a" "specific" "food" "item" "in" "mind"
+sentence: "请马上叫医生。"
+answer: "Please call a doctor at once."
+acceptAlso: "Get a doctor immediately, please."
+srsWords: "please" "call" "a" "doctor" "at" "once" "get" "immediately"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我学过急救。"
+answer: "I have learned first aid."
+acceptAlso: "I know how to give first aid."
+srsWords: "i" "have" "learned" "first" "aid" "know" "how" "to" "give"
 
 ---
 lessonTitle: "Lesson 10: Sleeping Habits"
@@ -699,73 +709,73 @@ description: "Translate A2 sentences about Sleeping Habits"
 icon: "🏥"
 color: "#10B981"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "在某些更重要的细节上，我也会犯错。"
-answer: "In certain more important details I shall make mistakes, also."
-acceptAlso: "In certain more important details I shall make mistakes, also."
-srsWords: "in" "certain" "more" "important" "detail" "i" "shall" "make" "mistake" "also"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我离墙只有二十米，却什么也没看见。"
-answer: "I was only twenty meters from the wall, and I still saw nothing."
-acceptAlso: "I was only twenty meters from the wall, and I still saw nothing."
-srsWords: "i" "was" "only" "twenty" "meter" "from" "the" "wall" "and" "still" "see" "nothing"
+sentence: "我每晚睡七个小时。"
+answer: "I sleep seven hours every night."
+acceptAlso: "I get seven hours of sleep a night."
+srsWords: "i" "sleep" "seven" "hours" "every" "night" "get" "of" "a"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她很乐意拿什么东西砸他的头。"
-answer: "She would gladly have thrown something at his head."
-acceptAlso: "She would gladly have thrown something at his head."
-srsWords: "she" "would" "glad" "have" "throw" "something" "at" "his" "head"
+sentence: "我睡觉前不看手机。"
+answer: "I do not use my phone before bed."
+acceptAlso: "I keep my phone away before sleeping."
+srsWords: "i" "do" "not" "use" "my" "phone" "before" "bed" "keep" "away" "sleeping"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它具备了我需要的所有布局。"
-answer: "It had all the lay I needed."
-acceptAlso: "It had all the lay I needed."
-srsWords: "it" "had" "all" "the" "lie" "i" "need"
+sentence: "我昨晚没睡好。"
+answer: "I did not sleep well last night."
+acceptAlso: "I slept badly yesterday night."
+srsWords: "i" "did" "not" "sleep" "well" "last" "night" "slept" "badly" "yesterday"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "所有的员工都很可爱。"
-answer: "All the staff were lovely."
-acceptAlso: "All the staff were lovely."
-srsWords: "all" "the" "staff" "were" "lovely"
+sentence: "我的卧室很暗。"
+answer: "My bedroom is very dark."
+acceptAlso: "It is dark in my room at night."
+srsWords: "my" "bedroom" "is" "very" "dark" "it" "in" "room" "at" "night"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它有一种不惜一切代价博人一笑的特质。"
-answer: "It has that anything-for-a-laugh being to it."
-acceptAlso: "It has that anything-for-a-laugh being to it."
-srsWords: "it" "has" "that" "anything" "for" "a" "laugh" "being" "to"
+sentence: "我每天同一时间上床。"
+answer: "I go to bed at the same time every day."
+acceptAlso: "My bedtime is the same daily."
+srsWords: "i" "go" "to" "bed" "at" "the" "same" "time" "every" "day" "my" "bedtime" "is" "daily"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你也可以躺在外面的毯子上。"
-answer: "You could also lie outside on a blanket."
-acceptAlso: "You could also lie outside on a blanket."
-srsWords: "you" "could" "also" "lie" "outside" "on" "a" "blanket"
+sentence: "咖啡让我睡不着。"
+answer: "Coffee keeps me awake."
+acceptAlso: "I cannot sleep after drinking coffee."
+srsWords: "coffee" "keeps" "me" "awake" "i" "cannot" "sleep" "after" "drinking"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "用馅料盖住所有香蕉。"
-answer: "Cover all bananas with filling."
-acceptAlso: "Cover all bananas with filling."
-srsWords: "cover" "all" "banana" "with" "fill"
+sentence: "我半夜醒了一次。"
+answer: "I woke up once in the middle of the night."
+acceptAlso: "I got up once during the night."
+srsWords: "i" "woke" "up" "once" "in" "the" "middle" "of" "night" "got" "during"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "肉半熟时，加入米饭。"
-answer: "When meat is half-baked, add rice."
-acceptAlso: "When meat is half-baked, add rice."
-srsWords: "when" "meat" "is" "half" "bake" "add" "rice"
+sentence: "午睡不要超过三十分钟。"
+answer: "Do not nap for more than thirty minutes."
+acceptAlso: "Keep your nap under half an hour."
+srsWords: "do" "not" "nap" "for" "more" "than" "thirty" "minutes" "keep" "your" "under" "half" "an" "hour"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这不是一件容易的事。"
-answer: "This was not an easy task."
-acceptAlso: "This was not an easy task."
-srsWords: "this" "was" "not" "an" "easy" "task"
+sentence: "我起床时还是很困。"
+answer: "I am still sleepy when I get up."
+acceptAlso: "I feel tired in the morning."
+srsWords: "i" "am" "still" "sleepy" "when" "get" "up" "feel" "tired" "in" "the" "morning"
 
+[translation]
+text: "Translate this sentence into English"
+sentence: "好的睡眠让我精神好。"
+answer: "Good sleep gives me energy."
+acceptAlso: "Sleeping well keeps me fresh."
+srsWords: "good" "sleep" "gives" "me" "energy" "sleeping" "well" "keeps" "fresh"

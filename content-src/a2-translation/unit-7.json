@@ -1,0 +1,158 @@
+{
+  "unit": 7,
+  "unitTitle": "Unit 7: Weather, Nature & Environment",
+  "icon": "🌤️",
+  "color": "#06B6D4",
+  "lessons": [
+    {
+      "title": "Weather Forecast",
+      "sentences": [
+        { "zh": "明天会下雨。", "en": "It will rain tomorrow.", "alt": "Tomorrow is going to be rainy." },
+        { "zh": "今天天气很好。", "en": "The weather is very good today.", "alt": "It is a nice day today." },
+        { "zh": "气温是二十五度。", "en": "The temperature is twenty-five degrees.", "alt": "It is twenty-five degrees outside." },
+        { "zh": "请带一把伞。", "en": "Please take an umbrella.", "alt": "Bring an umbrella with you." },
+        { "zh": "风很大。", "en": "The wind is very strong.", "alt": "It is quite windy." },
+        { "zh": "天气预报说会下雪。", "en": "The weather forecast says it will snow.", "alt": "They say snow is coming." },
+        { "zh": "今天多云。", "en": "It is cloudy today.", "alt": "There are a lot of clouds today." },
+        { "zh": "昨天下了一整天雨。", "en": "It rained all day yesterday.", "alt": "The rain lasted all day yesterday." },
+        { "zh": "太阳出来了。", "en": "The sun has come out.", "alt": "It is sunny now." },
+        { "zh": "周末会变暖和。", "en": "It will get warmer at the weekend.", "alt": "The weather turns warm on the weekend." }
+      ]
+    },
+    {
+      "title": "Seasons",
+      "sentences": [
+        { "zh": "我最喜欢秋天。", "en": "I like autumn best.", "alt": "Fall is my favorite season." },
+        { "zh": "春天天气很暖和。", "en": "The weather is very warm in spring.", "alt": "It gets warm during spring." },
+        { "zh": "夏天白天很长。", "en": "The days are very long in summer.", "alt": "Summer days last a long time." },
+        { "zh": "冬天这里很冷。", "en": "It is very cold here in winter.", "alt": "Winters are cold in this place." },
+        { "zh": "树叶在秋天变黄。", "en": "The leaves turn yellow in autumn.", "alt": "Leaves become yellow in fall." },
+        { "zh": "一年有四个季节。", "en": "There are four seasons in a year.", "alt": "A year has four seasons." },
+        { "zh": "春天经常下雨。", "en": "It often rains in spring.", "alt": "Spring is usually rainy." },
+        { "zh": "我们冬天去滑雪。", "en": "We go skiing in winter.", "alt": "Winter is when we ski." },
+        { "zh": "夏天我常常去游泳。", "en": "I often go swimming in summer.", "alt": "In summer I swim a lot." },
+        { "zh": "这个季节最适合旅行。", "en": "This season is best for travelling.", "alt": "It is the best time of year to travel." }
+      ]
+    },
+    {
+      "title": "Nature Parks",
+      "sentences": [
+        { "zh": "我们周末去了森林公园。", "en": "We went to the forest park at the weekend.", "alt": "We visited the nature park on the weekend." },
+        { "zh": "公园里有很多树。", "en": "There are many trees in the park.", "alt": "The park is full of trees." },
+        { "zh": "请不要摘花。", "en": "Please do not pick the flowers.", "alt": "Leave the flowers in the park, please." },
+        { "zh": "我们在湖边散步。", "en": "We walked by the lake.", "alt": "We took a walk near the lake." },
+        { "zh": "这里空气很新鲜。", "en": "The air here is very fresh.", "alt": "You can breathe fresh air here." },
+        { "zh": "公园早上六点开门。", "en": "The park opens at six in the morning.", "alt": "You can enter the park from six am." },
+        { "zh": "我看到了几只鸟。", "en": "I saw a few birds.", "alt": "There were some birds to see." },
+        { "zh": "请不要乱扔垃圾。", "en": "Please do not drop litter.", "alt": "No littering in the park, please." },
+        { "zh": "孩子们在草地上跑。", "en": "The children are running on the grass.", "alt": "Kids run around on the lawn." },
+        { "zh": "这里很安静。", "en": "It is very quiet here.", "alt": "This place is peaceful." }
+      ]
+    },
+    {
+      "title": "Animals",
+      "sentences": [
+        { "zh": "我家里养了一只猫。", "en": "We have a cat at home.", "alt": "I keep a cat in my house." },
+        { "zh": "公园里有很多鸽子。", "en": "There are many pigeons in the park.", "alt": "The park is full of pigeons." },
+        { "zh": "狗很聪明。", "en": "Dogs are very smart.", "alt": "A dog is a clever animal." },
+        { "zh": "我害怕蜘蛛。", "en": "I am afraid of spiders.", "alt": "Spiders scare me." },
+        { "zh": "动物园里有一只大象。", "en": "There is an elephant in the zoo.", "alt": "The zoo has one elephant." },
+        { "zh": "鸟儿在树上唱歌。", "en": "The birds are singing in the tree.", "alt": "Birds sing up in the trees." },
+        { "zh": "请不要喂动物。", "en": "Please do not feed the animals.", "alt": "No feeding the animals, please." },
+        { "zh": "熊猫吃竹子。", "en": "Pandas eat bamboo.", "alt": "Bamboo is what pandas eat." },
+        { "zh": "这只小狗很可爱。", "en": "This little dog is very cute.", "alt": "The puppy is really lovely." },
+        { "zh": "我们应该保护野生动物。", "en": "We should protect wild animals.", "alt": "Wild animals need our protection." }
+      ]
+    },
+    {
+      "title": "Gardening",
+      "sentences": [
+        { "zh": "我在花园里种了花。", "en": "I planted flowers in the garden.", "alt": "I put some flowers into the garden." },
+        { "zh": "请每天给植物浇水。", "en": "Please water the plants every day.", "alt": "The plants need water daily." },
+        { "zh": "这些树需要更多阳光。", "en": "These trees need more sunlight.", "alt": "The trees want more sun." },
+        { "zh": "我周末修剪草坪。", "en": "I cut the grass at the weekend.", "alt": "I mow the lawn on weekends." },
+        { "zh": "花园里有两只蝴蝶。", "en": "There are two butterflies in the garden.", "alt": "Two butterflies are in our garden." },
+        { "zh": "土壤很干。", "en": "The soil is very dry.", "alt": "The ground feels dry." },
+        { "zh": "我给花施了肥。", "en": "I gave the flowers some fertiliser.", "alt": "I fed the plants with plant food." },
+        { "zh": "这些花春天开。", "en": "These flowers bloom in spring.", "alt": "They flower during spring." },
+        { "zh": "我把枯叶清理了。", "en": "I cleared away the dead leaves.", "alt": "The dry leaves were cleaned up by me." },
+        { "zh": "种菜很有意思。", "en": "Growing vegetables is very interesting.", "alt": "It is fun to grow your own food." }
+      ]
+    },
+    {
+      "title": "Environmental Protection",
+      "sentences": [
+        { "zh": "我们应该节约用水。", "en": "We should save water.", "alt": "Saving water is something we must do." },
+        { "zh": "请把垃圾分类。", "en": "Please sort the rubbish.", "alt": "Separate your trash, please." },
+        { "zh": "我随身带着环保袋。", "en": "I carry a reusable bag with me.", "alt": "I bring my own bag when shopping." },
+        { "zh": "这个瓶子可以回收。", "en": "This bottle can be recycled.", "alt": "You can recycle this bottle." },
+        { "zh": "请关掉不必要的灯。", "en": "Please turn off unnecessary lights.", "alt": "Switch off lights you do not need." },
+        { "zh": "空气污染很严重。", "en": "Air pollution is very serious.", "alt": "The air here is badly polluted." },
+        { "zh": "我们骑自行车代替开车。", "en": "We ride bikes instead of driving.", "alt": "Cycling replaces driving for us." },
+        { "zh": "塑料袋对环境有害。", "en": "Plastic bags are bad for the environment.", "alt": "Plastic harms the environment." },
+        { "zh": "我们每年种树。", "en": "We plant trees every year.", "alt": "Trees are planted by us each year." },
+        { "zh": "请节约用电。", "en": "Please save electricity.", "alt": "Do not waste power, please." }
+      ]
+    },
+    {
+      "title": "Natural Disasters",
+      "sentences": [
+        { "zh": "昨天发生了地震。", "en": "There was an earthquake yesterday.", "alt": "An earthquake hit yesterday." },
+        { "zh": "雨太大，路上积水了。", "en": "The rain was so heavy that the road flooded.", "alt": "Heavy rain flooded the streets." },
+        { "zh": "请大家待在安全的地方。", "en": "Please stay in a safe place.", "alt": "Everyone should remain somewhere safe." },
+        { "zh": "台风将在明天登陆。", "en": "The typhoon will arrive tomorrow.", "alt": "A typhoon is coming tomorrow." },
+        { "zh": "大风把树吹倒了。", "en": "The strong wind blew the tree down.", "alt": "A tree fell because of the wind." },
+        { "zh": "我们需要准备一些食物和水。", "en": "We need to prepare some food and water.", "alt": "Get food and water ready, please." },
+        { "zh": "政府发出了警报。", "en": "The government sent out a warning.", "alt": "There is a warning from the government." },
+        { "zh": "地震时请躲在桌子下面。", "en": "Hide under the table during an earthquake.", "alt": "Get under a desk if the ground shakes." },
+        { "zh": "这场洪水损坏了很多房子。", "en": "This flood damaged many houses.", "alt": "A lot of homes were hurt by the flood." },
+        { "zh": "救援队很快就到了。", "en": "The rescue team arrived very quickly.", "alt": "Help came soon after." }
+      ]
+    },
+    {
+      "title": "Camping",
+      "sentences": [
+        { "zh": "我们周末去露营。", "en": "We are going camping at the weekend.", "alt": "We camp out on the weekend." },
+        { "zh": "请把帐篷搭好。", "en": "Please put up the tent.", "alt": "Set the tent up, please." },
+        { "zh": "我带了睡袋。", "en": "I brought a sleeping bag.", "alt": "My sleeping bag is with me." },
+        { "zh": "我们晚上生了一堆火。", "en": "We made a fire in the evening.", "alt": "A campfire was lit at night." },
+        { "zh": "请带走所有垃圾。", "en": "Please take all your rubbish away.", "alt": "Carry your trash out with you." },
+        { "zh": "夜里很冷。", "en": "It is very cold at night.", "alt": "Nights are cold out here." },
+        { "zh": "我们睡在帐篷里。", "en": "We sleep in the tent.", "alt": "Our beds are inside the tent." },
+        { "zh": "我在河边洗了手。", "en": "I washed my hands by the river.", "alt": "There is a river to wash in." },
+        { "zh": "早上我听到了鸟叫。", "en": "I heard birds in the morning.", "alt": "Birds woke me up early." },
+        { "zh": "露营很有趣。", "en": "Camping is a lot of fun.", "alt": "It is fun to sleep outside." }
+      ]
+    },
+    {
+      "title": "Beach",
+      "sentences": [
+        { "zh": "我们周六去了海滩。", "en": "We went to the beach on Saturday.", "alt": "Saturday we spent at the seaside." },
+        { "zh": "海水很温暖。", "en": "The sea water is very warm.", "alt": "The water feels warm." },
+        { "zh": "请不要在深水区游泳。", "en": "Please do not swim in deep water.", "alt": "Stay out of the deep sea, please." },
+        { "zh": "孩子们在沙滩上玩。", "en": "The children are playing on the sand.", "alt": "Kids play on the beach." },
+        { "zh": "我涂了防晒霜。", "en": "I put on sunscreen.", "alt": "Sunscreen protects my skin." },
+        { "zh": "我们捡了几个贝壳。", "en": "We collected a few shells.", "alt": "Some shells were picked up by us." },
+        { "zh": "今天浪很大。", "en": "The waves are very big today.", "alt": "There are huge waves today." },
+        { "zh": "请在阴凉处休息。", "en": "Please rest in the shade.", "alt": "Sit somewhere shady, please." },
+        { "zh": "海滩上人很多。", "en": "There are many people on the beach.", "alt": "The beach is crowded." },
+        { "zh": "我在海边看了日落。", "en": "I watched the sunset by the sea.", "alt": "We saw the sun go down at the beach." }
+      ]
+    },
+    {
+      "title": "Mountains",
+      "sentences": [
+        { "zh": "我们爬上了山顶。", "en": "We climbed to the top of the mountain.", "alt": "We reached the mountain top." },
+        { "zh": "山上的风景很美。", "en": "The view from the mountain is beautiful.", "alt": "You see a lovely view up there." },
+        { "zh": "这条路很陡。", "en": "This path is very steep.", "alt": "The trail goes up sharply." },
+        { "zh": "请带足够的水。", "en": "Please bring enough water.", "alt": "Take plenty of water with you." },
+        { "zh": "山里空气很清新。", "en": "The air in the mountains is very fresh.", "alt": "Mountain air feels clean." },
+        { "zh": "我们走了三个小时。", "en": "We walked for three hours.", "alt": "Our walk lasted three hours." },
+        { "zh": "山顶上很冷。", "en": "It is very cold on the top.", "alt": "The peak is cold." },
+        { "zh": "我拍了很多照片。", "en": "I took a lot of photos.", "alt": "Many pictures were taken by me." },
+        { "zh": "请穿舒服的鞋。", "en": "Please wear comfortable shoes.", "alt": "Good shoes are important here." },
+        { "zh": "我喜欢在山里散步。", "en": "I like walking in the mountains.", "alt": "Walking in the hills is something I enjoy." }
+      ]
+    }
+  ]
+}

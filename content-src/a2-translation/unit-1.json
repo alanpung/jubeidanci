@@ -1,0 +1,158 @@
+{
+  "unit": 1,
+  "unitTitle": "Unit 1: Everyday Conversations & Routines",
+  "icon": "🌐",
+  "color": "#6366F1",
+  "lessons": [
+    {
+      "title": "Daily Routine",
+      "sentences": [
+        { "zh": "我每天早上七点起床。", "en": "I get up at seven every morning.", "alt": "I wake up at seven every morning." },
+        { "zh": "我起床后先刷牙。", "en": "I brush my teeth after I get up.", "alt": "I brush my teeth first after getting up." },
+        { "zh": "我八点半去上班。", "en": "I go to work at half past eight.", "alt": "I leave for work at eight thirty." },
+        { "zh": "我下午六点回家。", "en": "I come home at six in the afternoon.", "alt": "I get home at six in the evening." },
+        { "zh": "我晚上常常看电视。", "en": "I often watch TV in the evening.", "alt": "I usually watch television at night." },
+        { "zh": "我每天晚上十点睡觉。", "en": "I go to bed at ten every night.", "alt": "I sleep at ten o'clock every night." },
+        { "zh": "我总是在出门前吃早饭。", "en": "I always eat breakfast before I leave home.", "alt": "I always have breakfast before going out." },
+        { "zh": "我上班很少迟到。", "en": "I am rarely late for work.", "alt": "I am seldom late for work." },
+        { "zh": "我午饭后休息二十分钟。", "en": "I rest for twenty minutes after lunch.", "alt": "I take a twenty-minute break after lunch." },
+        { "zh": "我的日常生活很有规律。", "en": "My daily routine is very regular.", "alt": "My everyday life follows a fixed routine." }
+      ]
+    },
+    {
+      "title": "Greetings",
+      "sentences": [
+        { "zh": "早上好，你今天怎么样？", "en": "Good morning, how are you today?", "alt": "Good morning, how are you doing today?" },
+        { "zh": "很高兴认识你。", "en": "Nice to meet you.", "alt": "It is nice to meet you." },
+        { "zh": "我们握手并互相介绍。", "en": "We shake hands and introduce ourselves.", "alt": "We shake hands and tell each other our names." },
+        { "zh": "我每天跟邻居打招呼。", "en": "I say hello to my neighbor every day.", "alt": "I greet my neighbor every day." },
+        { "zh": "他笑着跟我说再见。", "en": "He smiled and said goodbye to me.", "alt": "He said goodbye to me with a smile." },
+        { "zh": "见到你真高兴。", "en": "I am very happy to see you.", "alt": "I am glad to see you." },
+        { "zh": "你叫什么名字？", "en": "What is your name?", "alt": "May I know your name?" },
+        { "zh": "欢迎来到我们学校。", "en": "Welcome to our school.", "alt": "Welcome to our class." },
+        { "zh": "好久不见，你最近好吗？", "en": "Long time no see, how have you been?", "alt": "I have not seen you for a long time, how are you?" },
+        { "zh": "祝你周末愉快。", "en": "Have a nice weekend.", "alt": "I hope you have a good weekend." }
+      ]
+    },
+    {
+      "title": "Morning Habits",
+      "sentences": [
+        { "zh": "我六点半被闹钟叫醒。", "en": "My alarm wakes me up at half past six.", "alt": "I am woken up by my alarm at six thirty." },
+        { "zh": "我早上先洗个澡。", "en": "I take a shower first in the morning.", "alt": "I have a shower first thing in the morning." },
+        { "zh": "我每天早饭吃面包。", "en": "I eat bread for breakfast every day.", "alt": "I have bread for breakfast every day." },
+        { "zh": "我喝一杯咖啡开始新的一天。", "en": "I drink a cup of coffee to start the day.", "alt": "I start my day with a cup of coffee." },
+        { "zh": "我出门前看一下手机。", "en": "I check my phone before I leave home.", "alt": "I look at my phone before going out." },
+        { "zh": "我早上步行去车站。", "en": "I walk to the station in the morning.", "alt": "I go to the station on foot in the morning." },
+        { "zh": "我洗脸后梳头。", "en": "I comb my hair after I wash my face.", "alt": "After washing my face I brush my hair." },
+        { "zh": "我早上读一会儿新闻。", "en": "I read the news for a while in the morning.", "alt": "I spend some time reading news in the morning." },
+        { "zh": "我通常七点半出门。", "en": "I usually leave the house at half past seven.", "alt": "I normally go out at seven thirty." },
+        { "zh": "我早上给花浇水。", "en": "I water the plants in the morning.", "alt": "I water my flowers every morning." }
+      ]
+    },
+    {
+      "title": "Family",
+      "sentences": [
+        { "zh": "我有一个姐姐和一个弟弟。", "en": "I have one sister and one brother.", "alt": "I have a sister and a brother." },
+        { "zh": "我父母住在乡下。", "en": "My parents live in the countryside.", "alt": "My mother and father live in the country." },
+        { "zh": "我每个周末去看爷爷奶奶。", "en": "I visit my grandparents every weekend.", "alt": "I go to see my grandparents every weekend." },
+        { "zh": "我妹妹比我小三岁。", "en": "My sister is three years younger than me.", "alt": "My little sister is three years younger than I am." },
+        { "zh": "我们全家一起吃晚饭。", "en": "The whole family eats dinner together.", "alt": "My whole family has dinner together." },
+        { "zh": "我妈妈在医院工作。", "en": "My mother works in a hospital.", "alt": "My mom works at a hospital." },
+        { "zh": "我哥哥已经结婚了。", "en": "My brother is already married.", "alt": "My older brother has got married." },
+        { "zh": "我很爱我的家人。", "en": "I love my family very much.", "alt": "I love my family a lot." },
+        { "zh": "我叔叔有两个孩子。", "en": "My uncle has two children.", "alt": "My uncle has got two kids." },
+        { "zh": "我们每年一起过生日。", "en": "We celebrate birthdays together every year.", "alt": "Every year we spend our birthdays together." }
+      ]
+    },
+    {
+      "title": "Home Life",
+      "sentences": [
+        { "zh": "我住在市中心的一套公寓里。", "en": "I live in a flat in the city centre.", "alt": "I live in an apartment downtown." },
+        { "zh": "我们的房子有三个卧室。", "en": "Our house has three bedrooms.", "alt": "There are three bedrooms in our house." },
+        { "zh": "我晚上喜欢坐在沙发上。", "en": "I like sitting on the sofa in the evening.", "alt": "I enjoy sitting on the couch at night." },
+        { "zh": "我们家有一个小花园。", "en": "Our home has a small garden.", "alt": "There is a small garden at our house." },
+        { "zh": "我弟弟在房间里听音乐。", "en": "My brother listens to music in his room.", "alt": "My younger brother is listening to music in his room." },
+        { "zh": "妈妈正在厨房做饭。", "en": "My mother is cooking in the kitchen.", "alt": "Mom is making dinner in the kitchen." },
+        { "zh": "请关门，外面很冷。", "en": "Please close the door, it is cold outside.", "alt": "Close the door please, it is cold out there." },
+        { "zh": "我的房间在二楼。", "en": "My room is on the second floor.", "alt": "My room is upstairs." },
+        { "zh": "我们每天晚上一起看电视。", "en": "We watch TV together every evening.", "alt": "Every evening we watch television together." },
+        { "zh": "我家离学校很近。", "en": "My house is very close to the school.", "alt": "My home is near the school." }
+      ]
+    },
+    {
+      "title": "Cleaning",
+      "sentences": [
+        { "zh": "我每周六打扫房间。", "en": "I clean my room every Saturday.", "alt": "I tidy my room every Saturday." },
+        { "zh": "请你帮我洗碗。", "en": "Please help me wash the dishes.", "alt": "Can you help me do the dishes?" },
+        { "zh": "地板很脏，我需要拖一下。", "en": "The floor is dirty, I need to mop it.", "alt": "The floor is dirty and I must clean it." },
+        { "zh": "我把衣服放进洗衣机。", "en": "I put the clothes in the washing machine.", "alt": "I put my laundry into the washing machine." },
+        { "zh": "垃圾桶满了，我去倒掉。", "en": "The bin is full, I will take out the rubbish.", "alt": "The trash is full, I am going to empty it." },
+        { "zh": "她正在擦桌子。", "en": "She is cleaning the table.", "alt": "She is wiping the table now." },
+        { "zh": "我们每个月擦一次窗户。", "en": "We clean the windows once a month.", "alt": "We wash our windows once every month." },
+        { "zh": "书架上有很多灰尘。", "en": "There is a lot of dust on the shelf.", "alt": "The bookshelf is very dusty." },
+        { "zh": "我自己整理床铺。", "en": "I make my own bed.", "alt": "I tidy up my bed myself." },
+        { "zh": "打扫完以后房间很干净。", "en": "The room is very clean after cleaning.", "alt": "The room looks clean after we tidy it." }
+      ]
+    },
+    {
+      "title": "Time Management",
+      "sentences": [
+        { "zh": "我用一个本子记下要做的事。", "en": "I write down my tasks in a notebook.", "alt": "I keep a list of my tasks in a notebook." },
+        { "zh": "请先做最重要的事。", "en": "Please do the most important thing first.", "alt": "Do the most important task first, please." },
+        { "zh": "我没有时间看电影。", "en": "I do not have time to watch a film.", "alt": "I have no time for a movie." },
+        { "zh": "我们必须在五点前完成。", "en": "We must finish before five o'clock.", "alt": "We have to finish it by five." },
+        { "zh": "我迟到了十分钟。", "en": "I was ten minutes late.", "alt": "I arrived ten minutes late." },
+        { "zh": "会议从九点开到十点。", "en": "The meeting lasts from nine to ten.", "alt": "The meeting runs from nine o'clock until ten." },
+        { "zh": "我每天列一个计划。", "en": "I make a plan every day.", "alt": "I write a daily plan every day." },
+        { "zh": "别急，我们还有时间。", "en": "Do not worry, we still have time.", "alt": "Take it easy, we have enough time." },
+        { "zh": "我按时完成了作业。", "en": "I finished my homework on time.", "alt": "I completed my homework in time." },
+        { "zh": "这项工作花了两个小时。", "en": "This work took two hours.", "alt": "The job took me two hours." }
+      ]
+    },
+    {
+      "title": "Rest & Sleep",
+      "sentences": [
+        { "zh": "我每晚睡八个小时。", "en": "I sleep eight hours every night.", "alt": "I get eight hours of sleep every night." },
+        { "zh": "我十点半上床睡觉。", "en": "I go to bed at half past ten.", "alt": "I get into bed at ten thirty." },
+        { "zh": "工作一天后我很累。", "en": "I am very tired after a day of work.", "alt": "I feel tired after working all day." },
+        { "zh": "我下午常常小睡一会儿。", "en": "I often take a short nap in the afternoon.", "alt": "I usually have a nap after lunch." },
+        { "zh": "我的房间晚上很安静。", "en": "My room is very quiet at night.", "alt": "It is very quiet in my room at night." },
+        { "zh": "我昨晚做了一个奇怪的梦。", "en": "I had a strange dream last night.", "alt": "Last night I dreamt something strange." },
+        { "zh": "我早上起得很早。", "en": "I get up very early in the morning.", "alt": "I wake up early every morning." },
+        { "zh": "我需要好好休息一下。", "en": "I need to have a good rest.", "alt": "I need a proper rest." },
+        { "zh": "我睡觉前不看手机。", "en": "I do not look at my phone before bed.", "alt": "I never use my phone before sleeping." },
+        { "zh": "睡个好觉，明天见。", "en": "Sleep well, see you tomorrow.", "alt": "Have a good sleep, see you tomorrow." }
+      ]
+    },
+    {
+      "title": "Weekend Plans",
+      "sentences": [
+        { "zh": "这个周末你打算做什么？", "en": "What are you going to do this weekend?", "alt": "What do you plan to do this weekend?" },
+        { "zh": "我想周六去看电影。", "en": "I want to see a film on Saturday.", "alt": "I would like to watch a movie on Saturday." },
+        { "zh": "我们周日去公园野餐。", "en": "We are having a picnic in the park on Sunday.", "alt": "We will have a picnic in the park on Sunday." },
+        { "zh": "我朋友周末来我家。", "en": "My friend is coming to my home this weekend.", "alt": "A friend of mine will visit me at the weekend." },
+        { "zh": "我打算在家好好休息。", "en": "I plan to rest at home.", "alt": "I am going to relax at home." },
+        { "zh": "如果下雨，我们就待在家里。", "en": "If it rains, we will stay at home.", "alt": "We will stay home if it rains." },
+        { "zh": "你明天有空吗？", "en": "Are you free tomorrow?", "alt": "Do you have time tomorrow?" },
+        { "zh": "我们约好九点见面。", "en": "We agreed to meet at nine.", "alt": "We arranged to meet at nine o'clock." },
+        { "zh": "我周末常常去购物。", "en": "I often go shopping at the weekend.", "alt": "I usually do my shopping on weekends." },
+        { "zh": "我必须取消我们的计划。", "en": "I have to cancel our plan.", "alt": "I must call off our plans." }
+      ]
+    },
+    {
+      "title": "Pet Care",
+      "sentences": [
+        { "zh": "我每天早晚喂我的狗。", "en": "I feed my dog every morning and evening.", "alt": "I give my dog food twice a day." },
+        { "zh": "我晚饭后去遛狗。", "en": "I walk my dog after dinner.", "alt": "I take my dog for a walk after supper." },
+        { "zh": "我的猫很喜欢玩球。", "en": "My cat likes playing with a ball very much.", "alt": "My cat really enjoys playing with balls." },
+        { "zh": "我们每年带宠物去看兽医。", "en": "We take our pet to the vet every year.", "alt": "Our pet visits the vet once a year." },
+        { "zh": "请给猫一些干净的水。", "en": "Please give the cat some clean water.", "alt": "Give the cat fresh water, please." },
+        { "zh": "我一个月给狗洗一次澡。", "en": "I wash my dog once a month.", "alt": "I give my dog a bath every month." },
+        { "zh": "我的狗在门口等我。", "en": "My dog waits for me at the door.", "alt": "My dog is waiting for me by the door." },
+        { "zh": "养宠物需要很多时间。", "en": "Keeping a pet needs a lot of time.", "alt": "Taking care of a pet takes much time." },
+        { "zh": "它饿了，我们喂它吧。", "en": "It is hungry, let us feed it.", "alt": "It is hungry so let us give it food." },
+        { "zh": "我妹妹害怕大狗。", "en": "My sister is afraid of big dogs.", "alt": "My little sister fears large dogs." }
+      ]
+    }
+  ]
+}

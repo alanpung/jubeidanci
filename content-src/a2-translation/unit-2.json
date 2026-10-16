@@ -1,0 +1,158 @@
+{
+  "unit": 2,
+  "unitTitle": "Unit 2: Travel, Transport & Directions",
+  "icon": "🚆",
+  "color": "#3B82F6",
+  "lessons": [
+    {
+      "title": "Train Station",
+      "sentences": [
+        { "zh": "火车站在哪里？", "en": "Where is the train station?", "alt": "Where can I find the railway station?" },
+        { "zh": "我要买一张去北京的火车票。", "en": "I want to buy a train ticket to Beijing.", "alt": "I would like a ticket to Beijing by train." },
+        { "zh": "火车几点开？", "en": "What time does the train leave?", "alt": "When does the train depart?" },
+        { "zh": "我们的火车在几号站台？", "en": "Which platform is our train on?", "alt": "What platform does our train leave from?" },
+        { "zh": "这趟火车晚点了二十分钟。", "en": "This train is twenty minutes late.", "alt": "The train is delayed by twenty minutes." },
+        { "zh": "我在候车室等你。", "en": "I am waiting for you in the waiting room.", "alt": "I will wait for you inside the station hall." },
+        { "zh": "请问售票处在哪里？", "en": "Excuse me, where is the ticket office?", "alt": "Where is the ticket counter, please?" },
+        { "zh": "我应该在下一站下车。", "en": "I should get off at the next station.", "alt": "I need to get off at the next stop." },
+        { "zh": "这趟车中途要换车吗？", "en": "Do I have to change trains on the way?", "alt": "Must I change trains during the trip?" },
+        { "zh": "车厢里有很多空座位。", "en": "There are many empty seats in the carriage.", "alt": "The carriage has a lot of free seats." }
+      ]
+    },
+    {
+      "title": "Airport",
+      "sentences": [
+        { "zh": "我明天早上坐飞机去上海。", "en": "I am flying to Shanghai tomorrow morning.", "alt": "I will take a plane to Shanghai tomorrow morning." },
+        { "zh": "我们的航班在几号登机口？", "en": "Which gate is our flight at?", "alt": "What gate does our flight leave from?" },
+        { "zh": "请出示你的护照和登机牌。", "en": "Please show your passport and boarding pass.", "alt": "Show me your passport and boarding pass, please." },
+        { "zh": "飞机将在十分钟后起飞。", "en": "The plane will take off in ten minutes.", "alt": "The aircraft is leaving in ten minutes." },
+        { "zh": "我们的航班被取消了。", "en": "Our flight has been cancelled.", "alt": "They cancelled our flight." },
+        { "zh": "我在机场免税店买了礼物。", "en": "I bought gifts at the airport duty-free shop.", "alt": "I got some presents in the duty-free store." },
+        { "zh": "过安检要排很长的队。", "en": "There is a long queue at security.", "alt": "You have to wait a long time at the security check." },
+        { "zh": "我的航班延误了两个小时。", "en": "My flight is delayed by two hours.", "alt": "My plane was two hours late." },
+        { "zh": "请到三号门登机。", "en": "Please board at gate three.", "alt": "Boarding is at gate number three, please." },
+        { "zh": "我找不到行李领取处。", "en": "I cannot find the baggage claim area.", "alt": "Where is the place to collect luggage?" }
+      ]
+    },
+    {
+      "title": "Asking Directions",
+      "sentences": [
+        { "zh": "请问，怎么去博物馆？", "en": "Excuse me, how do I get to the museum?", "alt": "Excuse me, which way is the museum?" },
+        { "zh": "一直往前走，然后向右转。", "en": "Go straight ahead and then turn right.", "alt": "Walk straight on and turn right." },
+        { "zh": "银行在邮局旁边。", "en": "The bank is next to the post office.", "alt": "The bank is beside the post office." },
+        { "zh": "超市在路的另一边。", "en": "The supermarket is on the other side of the road.", "alt": "The supermarket is across the street." },
+        { "zh": "到火车站远吗？", "en": "Is it far from here to the train station?", "alt": "Is the railway station far away?" },
+        { "zh": "步行大约需要十分钟。", "en": "It takes about ten minutes on foot.", "alt": "It is about a ten-minute walk." },
+        { "zh": "在第二个红绿灯处左转。", "en": "Turn left at the second traffic light.", "alt": "Take the second left at the lights." },
+        { "zh": "你能给我看地图上的位置吗？", "en": "Can you show me the place on the map?", "alt": "Could you point it out on the map?" },
+        { "zh": "我恐怕迷路了。", "en": "I am afraid I am lost.", "alt": "I think I have lost my way." },
+        { "zh": "请带我去最近的地铁站。", "en": "Please take me to the nearest subway station.", "alt": "Can you direct me to the closest metro station?" }
+      ]
+    },
+    {
+      "title": "Hotel Check-in",
+      "sentences": [
+        { "zh": "我订了一间双人房。", "en": "I have booked a double room.", "alt": "I reserved a room for two people." },
+        { "zh": "我今晚要住两个晚上。", "en": "I am staying for two nights.", "alt": "I will stay two nights here." },
+        { "zh": "请给我你的护照。", "en": "Please give me your passport.", "alt": "May I see your passport, please?" },
+        { "zh": "房费包含早餐吗？", "en": "Is breakfast included in the price?", "alt": "Does the room price include breakfast?" },
+        { "zh": "我的房间在五楼。", "en": "My room is on the fifth floor.", "alt": "I am in a room on the fifth floor." },
+        { "zh": "电梯在走廊尽头。", "en": "The lift is at the end of the corridor.", "alt": "The elevator is at the end of the hall." },
+        { "zh": "我明天早上八点退房。", "en": "I am checking out at eight tomorrow morning.", "alt": "I will leave the hotel at eight tomorrow morning." },
+        { "zh": "房间里的无线网密码是什么？", "en": "What is the wifi password in the room?", "alt": "Could you tell me the room wifi password?" },
+        { "zh": "我可以把行李寄存在这里吗？", "en": "Can I leave my luggage here?", "alt": "May I store my bags here?" },
+        { "zh": "请再给我一条毛巾。", "en": "Please give me one more towel.", "alt": "Could I have another towel, please?" }
+      ]
+    },
+    {
+      "title": "Taxis",
+      "sentences": [
+        { "zh": "请叫一辆出租车。", "en": "Please call a taxi for me.", "alt": "Could you order a taxi, please?" },
+        { "zh": "我要去火车站。", "en": "I want to go to the train station.", "alt": "Take me to the railway station, please." },
+        { "zh": "到机场要多少钱？", "en": "How much does it cost to get to the airport?", "alt": "How much is the fare to the airport?" },
+        { "zh": "请在这里停车。", "en": "Please stop here.", "alt": "You can stop right here." },
+        { "zh": "你能开快一点吗？", "en": "Can you drive a little faster?", "alt": "Could you please hurry up?" },
+        { "zh": "请给我一张发票。", "en": "Please give me a receipt.", "alt": "I need a receipt, please." },
+        { "zh": "我赶时间。", "en": "I am in a hurry.", "alt": "I am running late." },
+        { "zh": "这个城市的出租车很干净。", "en": "The taxis in this city are very clean.", "alt": "Taxis here are quite clean." },
+        { "zh": "司机帮我把行李放进后备箱。", "en": "The driver helped me put my luggage in the boot.", "alt": "The driver put my bags in the trunk for me." },
+        { "zh": "我用现金付车费。", "en": "I pay the fare in cash.", "alt": "I will pay for the ride with cash." }
+      ]
+    },
+    {
+      "title": "Bus Rides",
+      "sentences": [
+        { "zh": "哪路公交车去市中心？", "en": "Which bus goes to the city centre?", "alt": "Which bus should I take downtown?" },
+        { "zh": "车站在超市前面。", "en": "The bus stop is in front of the supermarket.", "alt": "The stop is outside the supermarket." },
+        { "zh": "我每天早上坐公交车上班。", "en": "I take the bus to work every morning.", "alt": "I go to work by bus every morning." },
+        { "zh": "这辆车每十五分钟一班。", "en": "This bus comes every fifteen minutes.", "alt": "There is a bus every quarter of an hour." },
+        { "zh": "上车请买票。", "en": "Please buy a ticket when you get on.", "alt": "Buy your ticket as you board, please." },
+        { "zh": "我应该在第三站下车。", "en": "I should get off at the third stop.", "alt": "My stop is the third one." },
+        { "zh": "车上没有座位了。", "en": "There are no seats left on the bus.", "alt": "The bus has no free seats." },
+        { "zh": "请给老人让座。", "en": "Please give your seat to an old person.", "alt": "Let elderly people take your seat, please." },
+        { "zh": "下一站是人民公园。", "en": "The next stop is People's Park.", "alt": "We are arriving at People's Park next." },
+        { "zh": "末班车是晚上十点。", "en": "The last bus is at ten in the evening.", "alt": "The final bus leaves at ten at night." }
+      ]
+    },
+    {
+      "title": "Sightseeing",
+      "sentences": [
+        { "zh": "我们今天去参观古城。", "en": "We are visiting the old town today.", "alt": "Today we will see the old city." },
+        { "zh": "这张门票多少钱？", "en": "How much is this ticket?", "alt": "What does one ticket cost?" },
+        { "zh": "我们可以在这里拍照吗？", "en": "Can we take photos here?", "alt": "Is it allowed to take pictures here?" },
+        { "zh": "这座塔有一百米高。", "en": "This tower is one hundred metres high.", "alt": "The tower is a hundred meters tall." },
+        { "zh": "导游给我们讲了很多故事。", "en": "The guide told us many stories.", "alt": "Our guide shared a lot of stories with us." },
+        { "zh": "从这里看风景很美。", "en": "The view from here is beautiful.", "alt": "You can see a lovely view from here." },
+        { "zh": "博物馆九点开门。", "en": "The museum opens at nine.", "alt": "The museum is open from nine o'clock." },
+        { "zh": "我买了一张城市地图。", "en": "I bought a map of the city.", "alt": "I got a city map." },
+        { "zh": "我们排队等了半个小时。", "en": "We waited in line for half an hour.", "alt": "We queued for thirty minutes." },
+        { "zh": "这是我最喜欢的地方。", "en": "This is my favourite place.", "alt": "This place is my favorite one." }
+      ]
+    },
+    {
+      "title": "Luggage",
+      "sentences": [
+        { "zh": "我的行李箱很重。", "en": "My suitcase is very heavy.", "alt": "My luggage weighs a lot." },
+        { "zh": "我只有一个背包。", "en": "I only have a backpack.", "alt": "I have just one rucksack." },
+        { "zh": "请把行李放在秤上。", "en": "Please put your luggage on the scale.", "alt": "Put your bag on the scales, please." },
+        { "zh": "我的行李超重了。", "en": "My luggage is overweight.", "alt": "My bags weigh too much." },
+        { "zh": "我丢了一只手提箱。", "en": "I lost a suitcase.", "alt": "One of my cases is missing." },
+        { "zh": "这个包里有我的相机。", "en": "My camera is in this bag.", "alt": "I keep my camera inside this bag." },
+        { "zh": "我打包了三件衬衫。", "en": "I packed three shirts.", "alt": "I put three shirts in my case." },
+        { "zh": "请帮我拿一下行李。", "en": "Please help me with my luggage.", "alt": "Could you carry my bags for me?" },
+        { "zh": "我把行李锁好了。", "en": "I locked my suitcase.", "alt": "My luggage is locked now." },
+        { "zh": "贵重物品请随身带。", "en": "Please keep your valuables with you.", "alt": "Carry your valuable things yourself, please." }
+      ]
+    },
+    {
+      "title": "Tickets",
+      "sentences": [
+        { "zh": "我想买两张往返票。", "en": "I want to buy two return tickets.", "alt": "I would like two round-trip tickets." },
+        { "zh": "一张单程票多少钱？", "en": "How much is a single ticket?", "alt": "What is the price of a one-way ticket?" },
+        { "zh": "学生可以打折吗？", "en": "Do students get a discount?", "alt": "Is there a student discount?" },
+        { "zh": "我可以在网上订票吗？", "en": "Can I book tickets online?", "alt": "Is it possible to book a ticket on the internet?" },
+        { "zh": "这个座位已经有人了。", "en": "This seat is already taken.", "alt": "Someone is sitting in this seat." },
+        { "zh": "我要换一张早一点的车票。", "en": "I want to change to an earlier ticket.", "alt": "I would like to exchange this for an earlier one." },
+        { "zh": "请提前半小时取票。", "en": "Please collect your ticket half an hour early.", "alt": "Pick up your ticket thirty minutes before, please." },
+        { "zh": "这张票今天有效。", "en": "This ticket is valid today.", "alt": "You can use this ticket today." },
+        { "zh": "我把票忘在家里了。", "en": "I left my ticket at home.", "alt": "I forgot my ticket at home." },
+        { "zh": "检票处在二楼。", "en": "The ticket check is on the second floor.", "alt": "Tickets are checked upstairs on the second floor." }
+      ]
+    },
+    {
+      "title": "Car Rental",
+      "sentences": [
+        { "zh": "我想租一辆小汽车。", "en": "I want to rent a car.", "alt": "I would like to hire a car." },
+        { "zh": "租一天要多少钱？", "en": "How much does it cost for one day?", "alt": "What is the price per day?" },
+        { "zh": "我需要出示驾照吗？", "en": "Do I need to show my driving licence?", "alt": "Must I show a driver's license?" },
+        { "zh": "租金包含保险吗？", "en": "Does the price include insurance?", "alt": "Is insurance part of the rental price?" },
+        { "zh": "请加满油再还车。", "en": "Please return the car with a full tank.", "alt": "Fill the tank before you bring it back." },
+        { "zh": "这辆车是自动挡的吗？", "en": "Is this car automatic?", "alt": "Does this car have an automatic gearbox?" },
+        { "zh": "我可以在机场还车吗？", "en": "Can I return the car at the airport?", "alt": "Is it possible to drop the car off at the airport?" },
+        { "zh": "合同上写着还车时间。", "en": "The return time is written in the contract.", "alt": "The contract shows when to bring the car back." },
+        { "zh": "车子里有两个安全座椅。", "en": "There are two child seats in the car.", "alt": "The car comes with two safety seats." },
+        { "zh": "请在这里签名。", "en": "Please sign here.", "alt": "Sign your name here, please." }
+      ]
+    }
+  ]
+}

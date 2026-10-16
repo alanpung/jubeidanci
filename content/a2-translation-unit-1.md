@@ -9,81 +9,83 @@ level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"
 ---
+
 ---
 lessonTitle: "Lesson 1: Daily Routine"
 description: "Translate A2 sentences about Daily Routine"
 icon: "🌐"
 color: "#6366F1"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "我想吃点甜的东西。"
-answer: "I want to eat something sweet."
-acceptAlso: "I want to eat something sweet."
-srsWords: "i" "want" "to" "eat" "something" "sweet"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "要我教你跳舞吗？"
-answer: "Shall I teach you to dance?"
-acceptAlso: "Shall I teach you to dance?"
-srsWords: "shall" "i" "teach" "you" "to" "dance"
+sentence: "我每天早上七点起床。"
+answer: "I get up at seven every morning."
+acceptAlso: "I wake up at seven every morning."
+srsWords: "i" "get" "up" "at" "seven" "every" "morning" "wake"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们当时在山里骑自行车。"
-answer: "They were cycling in the mountains."
-acceptAlso: "They were cycling in the mountains."
-srsWords: "they" "were" "cycling" "in" "the" "mountain"
+sentence: "我起床后先刷牙。"
+answer: "I brush my teeth after I get up."
+acceptAlso: "I brush my teeth first after getting up."
+srsWords: "i" "brush" "my" "teeth" "after" "get" "up" "first" "getting"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们刚刚请她再留一年。"
-answer: "They've just asked her to stay another year."
-acceptAlso: "They've just asked her to stay another year."
-srsWords: "they" "just" "ask" "her" "to" "stay" "another" "year"
+sentence: "我八点半去上班。"
+answer: "I go to work at half past eight."
+acceptAlso: "I leave for work at eight thirty."
+srsWords: "i" "go" "to" "work" "at" "half" "past" "eight" "leave" "for" "thirty"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我在第三节课后吃午饭。"
-answer: "I have lunch after third period."
-acceptAlso: "I have lunch after third period."
-srsWords: "i" "have" "lunch" "after" "third" "period"
+sentence: "我下午六点回家。"
+answer: "I come home at six in the afternoon."
+acceptAlso: "I get home at six in the evening."
+srsWords: "i" "come" "home" "at" "six" "in" "the" "afternoon" "get" "evening"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我真希望当时能永远留在那个海滩上。"
-answer: "I wish I could have stayed there forever on that beach."
-acceptAlso: "I wish I could have stayed there forever on that beach."
-srsWords: "i" "wish" "could" "have" "stay" "there" "forever" "on" "that" "beach"
+sentence: "我晚上常常看电视。"
+answer: "I often watch TV in the evening."
+acceptAlso: "I usually watch television at night."
+srsWords: "i" "often" "watch" "tv" "in" "the" "evening" "usually" "television" "at" "night"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我希望情况能有所不同。"
-answer: "I wish it could be different."
-acceptAlso: "I wish it could be different."
-srsWords: "i" "wish" "it" "could" "be" "different"
+sentence: "我每天晚上十点睡觉。"
+answer: "I go to bed at ten every night."
+acceptAlso: "I sleep at ten o'clock every night."
+srsWords: "i" "go" "to" "bed" "at" "ten" "every" "night" "sleep" "o'clock"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "很难分清这些袜子是我的还是他的。"
-answer: "It's hard to tell if these are my socks or his."
-acceptAlso: "It's hard to tell if these are my socks or his."
-srsWords: "it" "hard" "to" "tell" "if" "these" "are" "my" "sock" "or" "his"
+sentence: "我总是在出门前吃早饭。"
+answer: "I always eat breakfast before I leave home."
+acceptAlso: "I always have breakfast before going out."
+srsWords: "i" "always" "eat" "breakfast" "before" "leave" "home" "have" "going" "out"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我一直想成为一名运动员。"
-answer: "I always wanted to be an athlete."
-acceptAlso: "I always wanted to be an athlete."
-srsWords: "i" "always" "want" "to" "be" "an" "athlete"
+sentence: "我上班很少迟到。"
+answer: "I am rarely late for work."
+acceptAlso: "I am seldom late for work."
+srsWords: "i" "am" "rarely" "late" "for" "work" "seldom"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "有什么你想买的裙子吗？"
-answer: "Were there any dresses you wanted to buy?"
-acceptAlso: "Were there any dresses you wanted to buy?"
-srsWords: "were" "there" "any" "dress" "you" "want" "to" "buy"
+sentence: "我午饭后休息二十分钟。"
+answer: "I rest for twenty minutes after lunch."
+acceptAlso: "I take a twenty-minute break after lunch."
+srsWords: "i" "rest" "for" "twenty" "minutes" "after" "lunch" "take" "a" "minute" "break"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我的日常生活很有规律。"
+answer: "My daily routine is very regular."
+acceptAlso: "My everyday life follows a fixed routine."
+srsWords: "my" "daily" "routine" "is" "very" "regular" "everyday" "life" "follows" "a" "fixed"
 
 ---
 lessonTitle: "Lesson 2: Greetings"
@@ -91,75 +93,76 @@ description: "Translate A2 sentences about Greetings"
 icon: "🌐"
 color: "#6366F1"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "我以为我得跟他谈谈。"
-answer: "I thought I had to talk to him."
-acceptAlso: "I thought I had to talk to him."
-srsWords: "i" "thought" "had" "to" "talk" "him"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我以为我看见他了。"
-answer: "I thought I saw him."
-acceptAlso: "I thought I saw him."
-srsWords: "i" "thought" "see" "him"
+sentence: "早上好，你今天怎么样？"
+answer: "Good morning, how are you today?"
+acceptAlso: "Good morning, how are you doing today?"
+srsWords: "good" "morning" "how" "are" "you" "today" "doing"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们在秋天总能看到红色的果实。"
-answer: "We always see red fruit in the autumn."
-acceptAlso: "We always see red fruit in the autumn."
-srsWords: "we" "always" "see" "red" "fruit" "in" "the" "autumn"
+sentence: "很高兴认识你。"
+answer: "Nice to meet you."
+acceptAlso: "It is nice to meet you."
+srsWords: "nice" "to" "meet" "you" "it" "is"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他做的事比其他任何人都多。"
-answer: "He has done more than anyone else."
-acceptAlso: "He has done more than anyone else."
-srsWords: "he" "has" "done" "more" "than" "anyone" "else"
+sentence: "我们握手并互相介绍。"
+answer: "We shake hands and introduce ourselves."
+acceptAlso: "We shake hands and tell each other our names."
+srsWords: "we" "shake" "hands" "and" "introduce" "ourselves" "tell" "each" "other" "our" "names"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "关于这事我接到了两个电话。"
-answer: "I was called twice about it."
-acceptAlso: "I was called twice about it."
-srsWords: "i" "was" "call" "twice" "about" "it"
+sentence: "我每天跟邻居打招呼。"
+answer: "I say hello to my neighbor every day."
+acceptAlso: "I greet my neighbor every day."
+srsWords: "i" "say" "hello" "to" "my" "neighbor" "every" "day" "greet"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "理解说话清楚的人很容易。"
-answer: "It is easy to understand people who speak clearly."
-acceptAlso: "It is easy to understand people who speak clearly."
-srsWords: "it" "is" "easy" "to" "understand" "people" "who" "speak" "clearly"
+sentence: "他笑着跟我说再见。"
+answer: "He smiled and said goodbye to me."
+acceptAlso: "He said goodbye to me with a smile."
+srsWords: "he" "smiled" "and" "said" "goodbye" "to" "me" "with" "a" "smile"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "在我眼里，你一如既往地美丽。"
-answer: "You are as beautiful as ever to me."
-acceptAlso: "You are as beautiful as ever to me."
-srsWords: "you" "are" "as" "beautiful" "ever" "to" "me"
+sentence: "见到你真高兴。"
+answer: "I am very happy to see you."
+acceptAlso: "I am glad to see you."
+srsWords: "i" "am" "very" "happy" "to" "see" "you" "glad"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我觉得那个是他的。"
-answer: "I think that one is his."
-acceptAlso: "I think that one is his."
-srsWords: "i" "think" "that" "one" "is" "his"
+sentence: "你叫什么名字？"
+answer: "What is your name?"
+acceptAlso: "May I know your name?"
+srsWords: "what" "is" "your" "name" "may" "i" "know"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "如果你想找人聊聊，你会打给谁？"
-answer: "If you wanted to talk to someone, who would you call?"
-acceptAlso: "If you wanted to talk to someone, who would you call?"
-srsWords: "if" "you" "want" "to" "talk" "someone" "who" "would" "call"
+sentence: "欢迎来到我们学校。"
+answer: "Welcome to our school."
+acceptAlso: "Welcome to our class."
+srsWords: "welcome" "to" "our" "school" "class"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我妈妈每个周末都打电话来。"
-answer: "My mother calls every weekend."
-acceptAlso: "My mother calls every weekend."
-srsWords: "my" "mother" "call" "every" "weekend"
+sentence: "好久不见，你最近好吗？"
+answer: "Long time no see, how have you been?"
+acceptAlso: "I have not seen you for a long time, how are you?"
+srsWords: "long" "time" "no" "see" "how" "have" "you" "been" "i" "not" "seen" "for" "a" "are"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "祝你周末愉快。"
+answer: "Have a nice weekend."
+acceptAlso: "I hope you have a good weekend."
+srsWords: "have" "a" "nice" "weekend" "i" "hope" "you" "good"
 
 ---
 lessonTitle: "Lesson 3: Morning Habits"
@@ -167,75 +170,76 @@ description: "Translate A2 sentences about Morning Habits"
 icon: "🌐"
 color: "#6366F1"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "我要是能更像你一点就好了。"
-answer: "I wish I could be more like you."
-acceptAlso: "I wish I could be more like you."
-srsWords: "i" "wish" "could" "be" "more" "like" "you"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们站在窗前看着我们。"
-answer: "They stood watching us from the window."
-acceptAlso: "They stood watching us from the window."
-srsWords: "they" "stand" "watch" "us" "from" "the" "window"
+sentence: "我六点半被闹钟叫醒。"
+answer: "My alarm wakes me up at half past six."
+acceptAlso: "I am woken up by my alarm at six thirty."
+srsWords: "my" "alarm" "wakes" "me" "up" "at" "half" "past" "six" "i" "am" "woken" "by" "thirty"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她的儿子成了一名牙医。"
-answer: "Her son became a dentist."
-acceptAlso: "Her son became a dentist."
-srsWords: "her" "son" "become" "a" "dentist"
+sentence: "我早上先洗个澡。"
+answer: "I take a shower first in the morning."
+acceptAlso: "I have a shower first thing in the morning."
+srsWords: "i" "take" "a" "shower" "first" "in" "the" "morning" "have" "thing"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她正邀请所有的朋友去野餐。"
-answer: "She's inviting all her friends to the picnic."
-acceptAlso: "She's inviting all her friends to the picnic."
-srsWords: "she" "invite" "all" "her" "friend" "to" "the" "picnic"
+sentence: "我每天早饭吃面包。"
+answer: "I eat bread for breakfast every day."
+acceptAlso: "I have bread for breakfast every day."
+srsWords: "i" "eat" "bread" "for" "breakfast" "every" "day" "have"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们看到一只棕色的小老鼠跑过马路。"
-answer: "We saw a brown mouse run across the road."
-acceptAlso: "We saw a brown mouse run across the road."
-srsWords: "we" "see" "a" "brown" "mouse" "run" "across" "the" "road"
+sentence: "我喝一杯咖啡开始新的一天。"
+answer: "I drink a cup of coffee to start the day."
+acceptAlso: "I start my day with a cup of coffee."
+srsWords: "i" "drink" "a" "cup" "of" "coffee" "to" "start" "the" "day" "my" "with"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你换发型了吗？"
-answer: "Have you changed your hairstyle?"
-acceptAlso: "Have you changed your hairstyle?"
-srsWords: "have" "you" "change" "your" "hairstyle"
+sentence: "我出门前看一下手机。"
+answer: "I check my phone before I leave home."
+acceptAlso: "I look at my phone before going out."
+srsWords: "i" "check" "my" "phone" "before" "leave" "home" "look" "at" "going" "out"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你是曲棍球队的吗？"
-answer: "Are you on the field hockey team?"
-acceptAlso: "Are you on the field hockey team?"
-srsWords: "are" "you" "on" "the" "field" "hockey" "team"
+sentence: "我早上步行去车站。"
+answer: "I walk to the station in the morning."
+acceptAlso: "I go to the station on foot in the morning."
+srsWords: "i" "walk" "to" "the" "station" "in" "morning" "go" "on" "foot"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "谁能借我一支铅笔？"
-answer: "Can anyone lend me a pencil?"
-acceptAlso: "Can anyone lend me a pencil?"
-srsWords: "can" "anyone" "lend" "me" "a" "pencil"
+sentence: "我洗脸后梳头。"
+answer: "I comb my hair after I wash my face."
+acceptAlso: "After washing my face I brush my hair."
+srsWords: "i" "comb" "my" "hair" "after" "wash" "face" "washing" "brush"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "大家都在找那几个失踪的男孩。"
-answer: "Everyone looked for the missing boys."
-acceptAlso: "Everyone looked for the missing boys."
-srsWords: "everyone" "look" "for" "the" "missing" "boy"
+sentence: "我早上读一会儿新闻。"
+answer: "I read the news for a while in the morning."
+acceptAlso: "I spend some time reading news in the morning."
+srsWords: "i" "read" "the" "news" "for" "a" "while" "in" "morning" "spend" "some" "time" "reading"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "除了他的父母，我都已经谈过了。"
-answer: "I've spoken with all the parents except for his."
-acceptAlso: "I've spoken with all the parents except for his."
-srsWords: "i" "speak" "with" "all" "the" "parent" "except" "for" "his"
+sentence: "我通常七点半出门。"
+answer: "I usually leave the house at half past seven."
+acceptAlso: "I normally go out at seven thirty."
+srsWords: "i" "usually" "leave" "the" "house" "at" "half" "past" "seven" "normally" "go" "out" "thirty"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我早上给花浇水。"
+answer: "I water the plants in the morning."
+acceptAlso: "I water my flowers every morning."
+srsWords: "i" "water" "the" "plants" "in" "morning" "my" "flowers" "every"
 
 ---
 lessonTitle: "Lesson 4: Family"
@@ -243,75 +247,76 @@ description: "Translate A2 sentences about Family"
 icon: "🌐"
 color: "#6366F1"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "你疯了吗？"
-answer: "Have you lost your mind?"
-acceptAlso: "Have you lost your mind?"
-srsWords: "have" "you" "lost" "your" "mind"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你下定决心了吗？"
-answer: "Have you made up your mind?"
-acceptAlso: "Have you made up your mind?"
-srsWords: "have" "you" "make" "up" "your" "mind"
+sentence: "我有一个姐姐和一个弟弟。"
+answer: "I have one sister and one brother."
+acceptAlso: "I have a sister and a brother."
+srsWords: "i" "have" "one" "sister" "and" "brother" "a"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这双运动鞋太软了，我甚至可以穿着它睡觉。"
-answer: "These sneakers are so soft I could wear them to sleep in."
-acceptAlso: "These sneakers are so soft I could wear them to sleep in."
-srsWords: "these" "sneaker" "are" "so" "soft" "i" "could" "wear" "them" "to" "sleep" "in"
+sentence: "我父母住在乡下。"
+answer: "My parents live in the countryside."
+acceptAlso: "My mother and father live in the country."
+srsWords: "my" "parents" "live" "in" "the" "countryside" "mother" "and" "father" "country"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我的航班两点起飞。"
-answer: "My flight leaves at two o'clock."
-acceptAlso: "My flight leaves at two o'clock."
-srsWords: "my" "flight" "leave" "at" "two" "o'clock"
+sentence: "我每个周末去看爷爷奶奶。"
+answer: "I visit my grandparents every weekend."
+acceptAlso: "I go to see my grandparents every weekend."
+srsWords: "i" "visit" "my" "grandparents" "every" "weekend" "go" "to" "see"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们希望自己能快乐。"
-answer: "They wish they could be happy."
-acceptAlso: "They wish they could be happy."
-srsWords: "they" "wish" "could" "be" "happy"
+sentence: "我妹妹比我小三岁。"
+answer: "My sister is three years younger than me."
+acceptAlso: "My little sister is three years younger than I am."
+srsWords: "my" "sister" "is" "three" "years" "younger" "than" "me" "little" "i" "am"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "公园里有狗吗？"
-answer: "Were there dogs at the park?"
-acceptAlso: "Were there dogs at the park?"
-srsWords: "were" "there" "dog" "at" "the" "park"
+sentence: "我们全家一起吃晚饭。"
+answer: "The whole family eats dinner together."
+acceptAlso: "My whole family has dinner together."
+srsWords: "the" "whole" "family" "eats" "dinner" "together" "my" "has"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我从早上开始就病了。"
-answer: "I have been ill since morning."
-acceptAlso: "I have been ill since morning."
-srsWords: "i" "have" "been" "ill" "since" "morning"
+sentence: "我妈妈在医院工作。"
+answer: "My mother works in a hospital."
+acceptAlso: "My mom works at a hospital."
+srsWords: "my" "mother" "works" "in" "a" "hospital" "mom" "at"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这只狗摸起来安全吗？"
-answer: "Is the dog safe to pet?"
-acceptAlso: "Is the dog safe to pet?"
-srsWords: "is" "the" "dog" "safe" "to" "pet"
+sentence: "我哥哥已经结婚了。"
+answer: "My brother is already married."
+acceptAlso: "My older brother has got married."
+srsWords: "my" "brother" "is" "already" "married" "older" "has" "got"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "如果他们去了北方，我们就能跟着去了。"
-answer: "If they had gone north, we could have followed them."
-acceptAlso: "If they had gone north, we could have followed them."
-srsWords: "if" "they" "had" "go" "north" "we" "could" "have" "follow" "them"
+sentence: "我很爱我的家人。"
+answer: "I love my family very much."
+acceptAlso: "I love my family a lot."
+srsWords: "i" "love" "my" "family" "very" "much" "a" "lot"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她坐在我们桌子正前方的桌子旁。"
-answer: "She sat at the table in front of ours."
-acceptAlso: "She sat at the table in front of ours."
-srsWords: "she" "sit" "at" "the" "table" "in" "front" "of" "ours"
+sentence: "我叔叔有两个孩子。"
+answer: "My uncle has two children."
+acceptAlso: "My uncle has got two kids."
+srsWords: "my" "uncle" "has" "two" "children" "got" "kids"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我们每年一起过生日。"
+answer: "We celebrate birthdays together every year."
+acceptAlso: "Every year we spend our birthdays together."
+srsWords: "we" "celebrate" "birthdays" "together" "every" "year" "spend" "our"
 
 ---
 lessonTitle: "Lesson 5: Home Life"
@@ -319,75 +324,76 @@ description: "Translate A2 sentences about Home Life"
 icon: "🌐"
 color: "#6366F1"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "你能保守秘密吗？"
-answer: "Can you keep a secret?"
-acceptAlso: "Can you keep a secret?"
-srsWords: "can" "you" "keep" "a" "secret"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我的运动鞋上有个洞。"
-answer: "There is a hole in my sneakers."
-acceptAlso: "There is a hole in my sneakers."
-srsWords: "there" "is" "a" "hole" "in" "my" "sneaker"
+sentence: "我住在市中心的一套公寓里。"
+answer: "I live in a flat in the city centre."
+acceptAlso: "I live in an apartment downtown."
+srsWords: "i" "live" "in" "a" "flat" "the" "city" "centre" "an" "apartment" "downtown"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她刚刚给我寄了一封信。"
-answer: "She's just sent me a letter."
-acceptAlso: "She's just sent me a letter."
-srsWords: "she" "just" "send" "me" "a" "letter"
+sentence: "我们的房子有三个卧室。"
+answer: "Our house has three bedrooms."
+acceptAlso: "There are three bedrooms in our house."
+srsWords: "our" "house" "has" "three" "bedrooms" "there" "are" "in"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "外面风太大，不能坐在户外。"
-answer: "It's too windy to sit outside."
-acceptAlso: "It's too windy to sit outside."
-srsWords: "it" "too" "windy" "to" "sit" "outside"
+sentence: "我晚上喜欢坐在沙发上。"
+answer: "I like sitting on the sofa in the evening."
+acceptAlso: "I enjoy sitting on the couch at night."
+srsWords: "i" "like" "sitting" "on" "the" "sofa" "in" "evening" "enjoy" "couch" "at" "night"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我弄丢了我的金戒指。"
-answer: "I lost my gold ring."
-acceptAlso: "I lost my gold ring."
-srsWords: "i" "lost" "my" "gold" "ring"
+sentence: "我们家有一个小花园。"
+answer: "Our home has a small garden."
+acceptAlso: "There is a small garden at our house."
+srsWords: "our" "home" "has" "a" "small" "garden" "there" "is" "at" "house"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "那个停车场停满了。"
-answer: "That parking lot is full."
-acceptAlso: "That parking lot is full."
-srsWords: "that" "park" "lot" "is" "full"
+sentence: "我弟弟在房间里听音乐。"
+answer: "My brother listens to music in his room."
+acceptAlso: "My younger brother is listening to music in his room."
+srsWords: "my" "brother" "listens" "to" "music" "in" "his" "room" "younger" "is" "listening"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她开始数羊以便入睡。"
-answer: "She started counting sheep so she could sleep."
-acceptAlso: "She started counting sheep so she could sleep."
-srsWords: "she" "start" "count" "sheep" "so" "could" "sleep"
+sentence: "妈妈正在厨房做饭。"
+answer: "My mother is cooking in the kitchen."
+acceptAlso: "Mom is making dinner in the kitchen."
+srsWords: "my" "mother" "is" "cooking" "in" "the" "kitchen" "mom" "making" "dinner"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "火鸡三明治是她的最爱。"
-answer: "Turkey sandwich was her favorite."
-acceptAlso: "Turkey sandwich was her favorite."
-srsWords: "turkey" "sandwich" "was" "her" "favorite"
+sentence: "请关门，外面很冷。"
+answer: "Please close the door, it is cold outside."
+acceptAlso: "Close the door please, it is cold out there."
+srsWords: "please" "close" "the" "door" "it" "is" "cold" "outside" "out" "there"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你一直在熬夜吗？"
-answer: "Have you been staying up late?"
-acceptAlso: "Have you been staying up late?"
-srsWords: "have" "you" "been" "stay" "up" "late"
+sentence: "我的房间在二楼。"
+answer: "My room is on the second floor."
+acceptAlso: "My room is upstairs."
+srsWords: "my" "room" "is" "on" "the" "second" "floor" "upstairs"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我迫不及待地想看到我们拥有飞行汽车的那一天。"
-answer: "I can't wait for the day when we have flying cars."
-acceptAlso: "I can't wait for the day when we have flying cars."
-srsWords: "i" "can" "wait" "for" "the" "day" "when" "we" "have" "fly" "car"
+sentence: "我们每天晚上一起看电视。"
+answer: "We watch TV together every evening."
+acceptAlso: "Every evening we watch television together."
+srsWords: "we" "watch" "tv" "together" "every" "evening" "television"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我家离学校很近。"
+answer: "My house is very close to the school."
+acceptAlso: "My home is near the school."
+srsWords: "my" "house" "is" "very" "close" "to" "the" "school" "home" "near"
 
 ---
 lessonTitle: "Lesson 6: Cleaning"
@@ -395,75 +401,76 @@ description: "Translate A2 sentences about Cleaning"
 icon: "🌐"
 color: "#6366F1"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "所有的盘子都在地震中碎了。"
-answer: "All the dishes were broken in the earthquake."
-acceptAlso: "All the dishes were broken in the earthquake."
-srsWords: "all" "the" "dish" "were" "broken" "in" "earthquake"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我希望她当时能看到。"
-answer: "I wish she could have seen it."
-acceptAlso: "I wish she could have seen it."
-srsWords: "i" "wish" "she" "could" "have" "see" "it"
+sentence: "我每周六打扫房间。"
+answer: "I clean my room every Saturday."
+acceptAlso: "I tidy my room every Saturday."
+srsWords: "i" "clean" "my" "room" "every" "saturday" "tidy"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她经常穿着睡衣直到中午。"
-answer: "She often wore her pajamas until noon."
-acceptAlso: "She often wore her pajamas until noon."
-srsWords: "she" "often" "wear" "her" "pajama" "until" "noon"
+sentence: "请你帮我洗碗。"
+answer: "Please help me wash the dishes."
+acceptAlso: "Can you help me do the dishes?"
+srsWords: "please" "help" "me" "wash" "the" "dishes" "can" "you" "do"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我希望我能找到我的亲生父母。"
-answer: "I wish I could find my real parents."
-acceptAlso: "I wish I could find my real parents."
-srsWords: "i" "wish" "could" "find" "my" "real" "parent"
+sentence: "地板很脏，我需要拖一下。"
+answer: "The floor is dirty, I need to mop it."
+acceptAlso: "The floor is dirty and I must clean it."
+srsWords: "the" "floor" "is" "dirty" "i" "need" "to" "mop" "it" "and" "must" "clean"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我希望我们当时能去看电影。"
-answer: "I wish we could have gone to the movies."
-acceptAlso: "I wish we could have gone to the movies."
-srsWords: "i" "wish" "we" "could" "have" "go" "to" "the" "movie"
+sentence: "我把衣服放进洗衣机。"
+answer: "I put the clothes in the washing machine."
+acceptAlso: "I put my laundry into the washing machine."
+srsWords: "i" "put" "the" "clothes" "in" "washing" "machine" "my" "laundry" "into"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "足球场里挤满了球迷。"
-answer: "The soccer stadium was full of fans."
-acceptAlso: "The soccer stadium was full of fans."
-srsWords: "the" "soccer" "stadium" "was" "full" "of" "fan"
+sentence: "垃圾桶满了，我去倒掉。"
+answer: "The bin is full, I will take out the rubbish."
+acceptAlso: "The trash is full, I am going to empty it."
+srsWords: "the" "bin" "is" "full" "i" "will" "take" "out" "rubbish" "trash" "am" "going" "to" "empty" "it"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我希望我有一只猫。"
-answer: "I wish I had a cat."
-acceptAlso: "I wish I had a cat."
-srsWords: "i" "wish" "had" "a" "cat"
+sentence: "她正在擦桌子。"
+answer: "She is cleaning the table."
+acceptAlso: "She is wiping the table now."
+srsWords: "she" "is" "cleaning" "the" "table" "wiping" "now"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我希望今晚能出去。"
-answer: "I wish I could go out tonight."
-acceptAlso: "I wish I could go out tonight."
-srsWords: "i" "wish" "could" "go" "out" "tonight"
+sentence: "我们每个月擦一次窗户。"
+answer: "We clean the windows once a month."
+acceptAlso: "We wash our windows once every month."
+srsWords: "we" "clean" "the" "windows" "once" "a" "month" "wash" "our" "every"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他绕着公园跑步。"
-answer: "He ran around the park."
-acceptAlso: "He ran around the park."
-srsWords: "he" "run" "around" "the" "park"
+sentence: "书架上有很多灰尘。"
+answer: "There is a lot of dust on the shelf."
+acceptAlso: "The bookshelf is very dusty."
+srsWords: "there" "is" "a" "lot" "of" "dust" "on" "the" "shelf" "bookshelf" "very" "dusty"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他跑过了篮球场。"
-answer: "He ran across the basketball court."
-acceptAlso: "He ran across the basketball court."
-srsWords: "he" "run" "across" "the" "basketball" "court"
+sentence: "我自己整理床铺。"
+answer: "I make my own bed."
+acceptAlso: "I tidy up my bed myself."
+srsWords: "i" "make" "my" "own" "bed" "tidy" "up" "myself"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "打扫完以后房间很干净。"
+answer: "The room is very clean after cleaning."
+acceptAlso: "The room looks clean after we tidy it."
+srsWords: "the" "room" "is" "very" "clean" "after" "cleaning" "looks" "we" "tidy" "it"
 
 ---
 lessonTitle: "Lesson 7: Time Management"
@@ -471,75 +478,76 @@ description: "Translate A2 sentences about Time Management"
 icon: "🌐"
 color: "#6366F1"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "我觉得有必要直言不讳。"
-answer: "I feel it necessary to speak up."
-acceptAlso: "I feel it necessary to speak up."
-srsWords: "i" "feel" "it" "necessary" "to" "speak" "up"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你能把那个白色的递给我吗？"
-answer: "Would you hand me that white one?"
-acceptAlso: "Would you hand me that white one?"
-srsWords: "would" "you" "hand" "me" "that" "white" "one"
+sentence: "我用一个本子记下要做的事。"
+answer: "I write down my tasks in a notebook."
+acceptAlso: "I keep a list of my tasks in a notebook."
+srsWords: "i" "write" "down" "my" "tasks" "in" "a" "notebook" "keep" "list" "of"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我希望我能找到另一只袜子。"
-answer: "I wish I could find my other sock."
-acceptAlso: "I wish I could find my other sock."
-srsWords: "i" "wish" "could" "find" "my" "other" "sock"
+sentence: "请先做最重要的事。"
+answer: "Please do the most important thing first."
+acceptAlso: "Do the most important task first, please."
+srsWords: "please" "do" "the" "most" "important" "thing" "first" "task"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我不确定什么时候该用这把不寻常的叉子。"
-answer: "I'm not sure when to use this unusual fork."
-acceptAlso: "I'm not sure when to use this unusual fork."
-srsWords: "i" "not" "sure" "when" "to" "use" "this" "unusual" "fork"
+sentence: "我没有时间看电影。"
+answer: "I do not have time to watch a film."
+acceptAlso: "I have no time for a movie."
+srsWords: "i" "do" "not" "have" "time" "to" "watch" "a" "film" "no" "for" "movie"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她教导孩子们要有礼貌。"
-answer: "She taught her children to be polite."
-acceptAlso: "She taught her children to be polite."
-srsWords: "she" "teach" "her" "child" "to" "be" "polite"
+sentence: "我们必须在五点前完成。"
+answer: "We must finish before five o'clock."
+acceptAlso: "We have to finish it by five."
+srsWords: "we" "must" "finish" "before" "five" "o'clock" "have" "to" "it" "by"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我希望我能成为一名科学家。"
-answer: "I wish I could be a scientist."
-acceptAlso: "I wish I could be a scientist."
-srsWords: "i" "wish" "could" "be" "a" "scientist"
+sentence: "我迟到了十分钟。"
+answer: "I was ten minutes late."
+acceptAlso: "I arrived ten minutes late."
+srsWords: "i" "was" "ten" "minutes" "late" "arrived"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我要是早知道就好了。"
-answer: "I wish I had known."
-acceptAlso: "I wish I had known."
-srsWords: "i" "wish" "had" "know"
+sentence: "会议从九点开到十点。"
+answer: "The meeting lasts from nine to ten."
+acceptAlso: "The meeting runs from nine o'clock until ten."
+srsWords: "the" "meeting" "lasts" "from" "nine" "to" "ten" "runs" "o'clock" "until"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你能教她怎么走路吗？"
-answer: "Can you teach her how to walk?"
-acceptAlso: "Can you teach her how to walk?"
-srsWords: "can" "you" "teach" "her" "how" "to" "walk"
+sentence: "我每天列一个计划。"
+answer: "I make a plan every day."
+acceptAlso: "I write a daily plan every day."
+srsWords: "i" "make" "a" "plan" "every" "day" "write" "daily"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我在海滩上觉得很无聊。"
-answer: "I got bored at the beach."
-acceptAlso: "I got bored at the beach."
-srsWords: "i" "got" "bored" "at" "the" "beach"
+sentence: "别急，我们还有时间。"
+answer: "Do not worry, we still have time."
+acceptAlso: "Take it easy, we have enough time."
+srsWords: "do" "not" "worry" "we" "still" "have" "time" "take" "it" "easy" "enough"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你介意我们的朋友和我们一起去吗？"
-answer: "Would you mind if our friends came with us?"
-acceptAlso: "Would you mind if our friends came with us?"
-srsWords: "would" "you" "mind" "if" "our" "friend" "come" "with" "us"
+sentence: "我按时完成了作业。"
+answer: "I finished my homework on time."
+acceptAlso: "I completed my homework in time."
+srsWords: "i" "finished" "my" "homework" "on" "time" "completed" "in"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "这项工作花了两个小时。"
+answer: "This work took two hours."
+acceptAlso: "The job took me two hours."
+srsWords: "this" "work" "took" "two" "hours" "the" "job" "me"
 
 ---
 lessonTitle: "Lesson 8: Rest & Sleep"
@@ -547,75 +555,76 @@ description: "Translate A2 sentences about Rest & Sleep"
 icon: "🌐"
 color: "#6366F1"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "烘干机吃掉了我的袜子。"
-answer: "The dryer ate my sock."
-acceptAlso: "The dryer ate my sock."
-srsWords: "the" "dryer" "eat" "my" "sock"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "需要我帮做作业吗？"
-answer: "Shall I help you with your homework?"
-acceptAlso: "Shall I help you with your homework?"
-srsWords: "shall" "i" "help" "you" "with" "your" "homework"
+sentence: "我每晚睡八个小时。"
+answer: "I sleep eight hours every night."
+acceptAlso: "I get eight hours of sleep every night."
+srsWords: "i" "sleep" "eight" "hours" "every" "night" "get" "of"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "每个故事都各不相同。"
-answer: "Each story is different from the others."
-acceptAlso: "Each story is different from the others."
-srsWords: "each" "story" "is" "different" "from" "the" "other"
+sentence: "我十点半上床睡觉。"
+answer: "I go to bed at half past ten."
+acceptAlso: "I get into bed at ten thirty."
+srsWords: "i" "go" "to" "bed" "at" "half" "past" "ten" "get" "into" "thirty"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我希望我们能告诉他们。"
-answer: "I wish we could tell them."
-acceptAlso: "I wish we could tell them."
-srsWords: "i" "wish" "we" "could" "tell" "them"
+sentence: "工作一天后我很累。"
+answer: "I am very tired after a day of work."
+acceptAlso: "I feel tired after working all day."
+srsWords: "i" "am" "very" "tired" "after" "a" "day" "of" "work" "feel" "working" "all"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你结过婚吗？"
-answer: "Have you ever been married?"
-acceptAlso: "Have you ever been married?"
-srsWords: "have" "you" "ever" "been" "married"
+sentence: "我下午常常小睡一会儿。"
+answer: "I often take a short nap in the afternoon."
+acceptAlso: "I usually have a nap after lunch."
+srsWords: "i" "often" "take" "a" "short" "nap" "in" "the" "afternoon" "usually" "have" "after" "lunch"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "那个男孩似乎对你感兴趣。"
-answer: "That boy seems interested in you."
-acceptAlso: "That boy seems interested in you."
-srsWords: "that" "boy" "seem" "interested" "in" "you"
+sentence: "我的房间晚上很安静。"
+answer: "My room is very quiet at night."
+acceptAlso: "It is very quiet in my room at night."
+srsWords: "my" "room" "is" "very" "quiet" "at" "night" "it" "in"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "如果我去的话会更好。"
-answer: "It would be better if I went."
-acceptAlso: "It would be better if I went."
-srsWords: "it" "would" "be" "better" "if" "i" "go"
+sentence: "我昨晚做了一个奇怪的梦。"
+answer: "I had a strange dream last night."
+acceptAlso: "Last night I dreamt something strange."
+srsWords: "i" "had" "a" "strange" "dream" "last" "night" "dreamt" "something"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "食物是用漂亮的盘子端上来的。"
-answer: "The food was brought on beautiful plates."
-acceptAlso: "The food was brought on beautiful plates."
-srsWords: "the" "food" "was" "bring" "on" "beautiful" "plate"
+sentence: "我早上起得很早。"
+answer: "I get up very early in the morning."
+acceptAlso: "I wake up early every morning."
+srsWords: "i" "get" "up" "very" "early" "in" "the" "morning" "wake" "every"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "母亲喜欢在每样东西里都加奶油。"
-answer: "Mother loved mixing cream with everything."
-acceptAlso: "Mother loved mixing cream with everything."
-srsWords: "mother" "love" "mix" "cream" "with" "everything"
+sentence: "我需要好好休息一下。"
+answer: "I need to have a good rest."
+acceptAlso: "I need a proper rest."
+srsWords: "i" "need" "to" "have" "a" "good" "rest" "proper"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这个故事被许多记者报道了。"
-answer: "The story was covered by many reporters."
-acceptAlso: "The story was covered by many reporters."
-srsWords: "the" "story" "was" "cover" "by" "many" "reporter"
+sentence: "我睡觉前不看手机。"
+answer: "I do not look at my phone before bed."
+acceptAlso: "I never use my phone before sleeping."
+srsWords: "i" "do" "not" "look" "at" "my" "phone" "before" "bed" "never" "use" "sleeping"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "睡个好觉，明天见。"
+answer: "Sleep well, see you tomorrow."
+acceptAlso: "Have a good sleep, see you tomorrow."
+srsWords: "sleep" "well" "see" "you" "tomorrow" "have" "a" "good"
 
 ---
 lessonTitle: "Lesson 9: Weekend Plans"
@@ -623,75 +632,76 @@ description: "Translate A2 sentences about Weekend Plans"
 icon: "🌐"
 color: "#6366F1"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "我试图收拾干净。"
-answer: "I tried to clean up."
-acceptAlso: "I tried to clean up."
-srsWords: "i" "try" "to" "clean" "up"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我希望雨能停下来。"
-answer: "I wish it would stop raining."
-acceptAlso: "I wish it would stop raining."
-srsWords: "i" "wish" "it" "would" "stop" "rain"
+sentence: "这个周末你打算做什么？"
+answer: "What are you going to do this weekend?"
+acceptAlso: "What do you plan to do this weekend?"
+srsWords: "what" "are" "you" "going" "to" "do" "this" "weekend" "plan"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "为了减肥，他吃起了蔬菜。"
-answer: "In order to lose weight, he ate vegetables."
-acceptAlso: "In order to lose weight, he ate vegetables."
-srsWords: "in" "order" "to" "lose" "weight" "he" "eat" "vegetable"
+sentence: "我想周六去看电影。"
+answer: "I want to see a film on Saturday."
+acceptAlso: "I would like to watch a movie on Saturday."
+srsWords: "i" "want" "to" "see" "a" "film" "on" "saturday" "would" "like" "watch" "movie"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你以前见过这样的东西吗？"
-answer: "Have you ever seen anything like this before?"
-acceptAlso: "Have you ever seen anything like this before?"
-srsWords: "have" "you" "ever" "see" "anything" "like" "this" "before"
+sentence: "我们周日去公园野餐。"
+answer: "We are having a picnic in the park on Sunday."
+acceptAlso: "We will have a picnic in the park on Sunday."
+srsWords: "we" "are" "having" "a" "picnic" "in" "the" "park" "on" "sunday" "will" "have"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你这套漂亮的睡衣是在哪里买的？"
-answer: "Where did you buy that beautiful pair of pajamas?"
-acceptAlso: "Where did you buy that beautiful pair of pajamas?"
-srsWords: "where" "did" "you" "buy" "that" "beautiful" "pair" "of" "pajama"
+sentence: "我朋友周末来我家。"
+answer: "My friend is coming to my home this weekend."
+acceptAlso: "A friend of mine will visit me at the weekend."
+srsWords: "my" "friend" "is" "coming" "to" "home" "this" "weekend" "a" "of" "mine" "will" "visit" "me" "at" "the"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我得因为牙痛去看牙医。"
-answer: "I need to see my dentist for this toothache."
-acceptAlso: "I need to see my dentist for this toothache."
-srsWords: "i" "need" "to" "see" "my" "dentist" "for" "this" "toothache"
+sentence: "我打算在家好好休息。"
+answer: "I plan to rest at home."
+acceptAlso: "I am going to relax at home."
+srsWords: "i" "plan" "to" "rest" "at" "home" "am" "going" "relax"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她开始走得越来越慢。"
-answer: "She began to walk more and more slowly."
-acceptAlso: "She began to walk more and more slowly."
-srsWords: "she" "begin" "to" "walk" "more" "and" "slowly"
+sentence: "如果下雨，我们就待在家里。"
+answer: "If it rains, we will stay at home."
+acceptAlso: "We will stay home if it rains."
+srsWords: "if" "it" "rains" "we" "will" "stay" "at" "home"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我五岁时，我的狗死了。"
-answer: "My dog died when I was five."
-acceptAlso: "My dog died when I was five."
-srsWords: "my" "dog" "die" "when" "i" "was" "five"
+sentence: "你明天有空吗？"
+answer: "Are you free tomorrow?"
+acceptAlso: "Do you have time tomorrow?"
+srsWords: "are" "you" "free" "tomorrow" "do" "have" "time"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我把外套借给她了。"
-answer: "I lent her my coat."
-acceptAlso: "I lent her my coat."
-srsWords: "i" "lend" "her" "my" "coat"
+sentence: "我们约好九点见面。"
+answer: "We agreed to meet at nine."
+acceptAlso: "We arranged to meet at nine o'clock."
+srsWords: "we" "agreed" "to" "meet" "at" "nine" "arranged" "o'clock"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她每周都吃意大利面。"
-answer: "She ate spaghetti every week."
-acceptAlso: "She ate spaghetti every week."
-srsWords: "she" "eat" "spaghetti" "every" "week"
+sentence: "我周末常常去购物。"
+answer: "I often go shopping at the weekend."
+acceptAlso: "I usually do my shopping on weekends."
+srsWords: "i" "often" "go" "shopping" "at" "the" "weekend" "usually" "do" "my" "on" "weekends"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我必须取消我们的计划。"
+answer: "I have to cancel our plan."
+acceptAlso: "I must call off our plans."
+srsWords: "i" "have" "to" "cancel" "our" "plan" "must" "call" "off" "plans"
 
 ---
 lessonTitle: "Lesson 10: Pet Care"
@@ -699,73 +709,73 @@ description: "Translate A2 sentences about Pet Care"
 icon: "🌐"
 color: "#6366F1"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "你看到我的运动鞋了吗？"
-answer: "Have you seen my sneakers?"
-acceptAlso: "Have you seen my sneakers?"
-srsWords: "have" "you" "see" "my" "sneaker"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我外祖母总是很擅长讲睡前故事。"
-answer: "My grandmother was always wonderful at telling bedtime stories."
-acceptAlso: "My grandmother was always wonderful at telling bedtime stories."
-srsWords: "my" "grandmother" "was" "always" "wonderful" "at" "tell" "bedtime" "story"
+sentence: "我每天早晚喂我的狗。"
+answer: "I feed my dog every morning and evening."
+acceptAlso: "I give my dog food twice a day."
+srsWords: "i" "feed" "my" "dog" "every" "morning" "and" "evening" "give" "food" "twice" "a" "day"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们教导孩子们如何发挥创造力。"
-answer: "We show children how to be creative."
-acceptAlso: "We show children how to be creative."
-srsWords: "we" "show" "child" "how" "to" "be" "creative"
+sentence: "我晚饭后去遛狗。"
+answer: "I walk my dog after dinner."
+acceptAlso: "I take my dog for a walk after supper."
+srsWords: "i" "walk" "my" "dog" "after" "dinner" "take" "for" "a" "supper"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "下午天气应该会凉爽一些。"
-answer: "It should get cooler in the afternoon."
-acceptAlso: "It should get cooler in the afternoon."
-srsWords: "it" "should" "get" "cooler" "in" "the" "afternoon"
+sentence: "我的猫很喜欢玩球。"
+answer: "My cat likes playing with a ball very much."
+acceptAlso: "My cat really enjoys playing with balls."
+srsWords: "my" "cat" "likes" "playing" "with" "a" "ball" "very" "much" "really" "enjoys" "balls"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这家恐龙博物馆里没有一样东西是真的。"
-answer: "Nothing in this dinosaur museum is real."
-acceptAlso: "Nothing in this dinosaur museum is real."
-srsWords: "nothing" "in" "this" "dinosaur" "museum" "is" "real"
+sentence: "我们每年带宠物去看兽医。"
+answer: "We take our pet to the vet every year."
+acceptAlso: "Our pet visits the vet once a year."
+srsWords: "we" "take" "our" "pet" "to" "the" "vet" "every" "year" "visits" "once" "a"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "不要听你姐姐的话，因为她并不总是对的。"
-answer: "Do not listen to your older sister because she is not always right."
-acceptAlso: "Do not listen to your older sister because she is not always right."
-srsWords: "do" "not" "listen" "to" "your" "old" "sister" "because" "she" "is" "always" "right"
+sentence: "请给猫一些干净的水。"
+answer: "Please give the cat some clean water."
+acceptAlso: "Give the cat fresh water, please."
+srsWords: "please" "give" "the" "cat" "some" "clean" "water" "fresh"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她的眼神一如既往地温和。"
-answer: "Her eyes were as kind as ever."
-acceptAlso: "Her eyes were as kind as ever."
-srsWords: "her" "eye" "were" "as" "kind" "ever"
+sentence: "我一个月给狗洗一次澡。"
+answer: "I wash my dog once a month."
+acceptAlso: "I give my dog a bath every month."
+srsWords: "i" "wash" "my" "dog" "once" "a" "month" "give" "bath" "every"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我在这里教书很多年了。"
-answer: "I have been teaching here for many years."
-acceptAlso: "I have been teaching here for many years."
-srsWords: "i" "have" "been" "teach" "here" "for" "many" "year"
+sentence: "我的狗在门口等我。"
+answer: "My dog waits for me at the door."
+acceptAlso: "My dog is waiting for me by the door."
+srsWords: "my" "dog" "waits" "for" "me" "at" "the" "door" "is" "waiting" "by"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他的腿非常有力量。"
-answer: "He had very powerful legs."
-acceptAlso: "He had very powerful legs."
-srsWords: "he" "had" "very" "powerful" "leg"
+sentence: "养宠物需要很多时间。"
+answer: "Keeping a pet needs a lot of time."
+acceptAlso: "Taking care of a pet takes much time."
+srsWords: "keeping" "a" "pet" "needs" "lot" "of" "time" "taking" "care" "takes" "much"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们喜欢邀请朋友来家里做客。"
-answer: "We love to invite our friends over."
-acceptAlso: "We love to invite our friends over."
-srsWords: "we" "love" "to" "invite" "our" "friend" "over"
+sentence: "它饿了，我们喂它吧。"
+answer: "It is hungry, let us feed it."
+acceptAlso: "It is hungry so let us give it food."
+srsWords: "it" "is" "hungry" "let" "us" "feed" "so" "give" "food"
 
+[translation]
+text: "Translate this sentence into English"
+sentence: "我妹妹害怕大狗。"
+answer: "My sister is afraid of big dogs."
+acceptAlso: "My little sister fears large dogs."
+srsWords: "my" "sister" "is" "afraid" "of" "big" "dogs" "little" "fears" "large"

@@ -1,0 +1,158 @@
+{
+  "unit": 6,
+  "unitTitle": "Unit 6: Work, Office & Productivity",
+  "icon": "💼",
+  "color": "#8B5CF6",
+  "lessons": [
+    {
+      "title": "Job Interview",
+      "sentences": [
+        { "zh": "我明天有一个工作面试。", "en": "I have a job interview tomorrow.", "alt": "My job interview is tomorrow." },
+        { "zh": "请带上你的简历。", "en": "Please bring your CV.", "alt": "Bring your resume with you, please." },
+        { "zh": "我申请了这个职位。", "en": "I applied for this position.", "alt": "I sent in an application for the job." },
+        { "zh": "你有相关工作经验吗？", "en": "Do you have any relevant work experience?", "alt": "Have you done this kind of work before?" },
+        { "zh": "我在这家公司工作了三年。", "en": "I have worked at this company for three years.", "alt": "I spent three years with this firm." },
+        { "zh": "面试在上午十点。", "en": "The interview is at ten in the morning.", "alt": "My interview is scheduled for ten am." },
+        { "zh": "请介绍一下你自己。", "en": "Please introduce yourself.", "alt": "Tell me about yourself, please." },
+        { "zh": "我擅长团队合作。", "en": "I am good at working in a team.", "alt": "Teamwork is one of my strengths." },
+        { "zh": "他们下周给我答复。", "en": "They will give me an answer next week.", "alt": "I will hear from them next week." },
+        { "zh": "我穿西装去面试。", "en": "I wear a suit to the interview.", "alt": "I put on a business suit for interviews." }
+      ]
+    },
+    {
+      "title": "Office Tasks",
+      "sentences": [
+        { "zh": "我正在打印一份文件。", "en": "I am printing a document.", "alt": "I have a document to print out." },
+        { "zh": "请把这份报告复印三份。", "en": "Please make three copies of this report.", "alt": "Copy this report three times, please." },
+        { "zh": "我把文件放进文件夹里。", "en": "I put the document in the folder.", "alt": "I filed the papers in the folder." },
+        { "zh": "我的打印机没纸了。", "en": "My printer has run out of paper.", "alt": "There is no paper left in the printer." },
+        { "zh": "请帮我订一间会议室。", "en": "Please book a meeting room for me.", "alt": "Can you reserve a room for a meeting?" },
+        { "zh": "我整理了一下桌面。", "en": "I tidied my desk.", "alt": "I cleaned up my work desk." },
+        { "zh": "这份表格需要签名。", "en": "This form needs a signature.", "alt": "You have to sign this form." },
+        { "zh": "我每天检查工作清单。", "en": "I check my task list every day.", "alt": "I look at my to-do list daily." },
+        { "zh": "我把数据输入了电脑。", "en": "I entered the data into the computer.", "alt": "I typed the information into the computer." },
+        { "zh": "这项工作很枯燥。", "en": "This work is very boring.", "alt": "The job is quite dull." }
+      ]
+    },
+    {
+      "title": "Meetings",
+      "sentences": [
+        { "zh": "会议十点开始。", "en": "The meeting starts at ten.", "alt": "We begin the meeting at ten o'clock." },
+        { "zh": "请把议程发给大家。", "en": "Please send the agenda to everyone.", "alt": "Share the meeting agenda with all, please." },
+        { "zh": "我们讨论了新计划。", "en": "We discussed the new plan.", "alt": "The new plan was talked about by us." },
+        { "zh": "会议持续了一个小时。", "en": "The meeting lasted one hour.", "alt": "We met for an hour." },
+        { "zh": "我做了会议记录。", "en": "I took the meeting notes.", "alt": "I wrote down what was said in the meeting." },
+        { "zh": "请准时参加。", "en": "Please come on time.", "alt": "Be punctual for the meeting, please." },
+        { "zh": "我明天要做一个报告。", "en": "I have to give a presentation tomorrow.", "alt": "I am presenting tomorrow." },
+        { "zh": "大家同意这个方案。", "en": "Everyone agrees with this plan.", "alt": "We all accept this proposal." },
+        { "zh": "会议被推迟到下午。", "en": "The meeting was put off until the afternoon.", "alt": "They moved the meeting to the afternoon." },
+        { "zh": "请关掉你的手机。", "en": "Please turn off your phone.", "alt": "Switch your phone off, please." }
+      ]
+    },
+    {
+      "title": "Colleagues",
+      "sentences": [
+        { "zh": "我的同事很友好。", "en": "My colleagues are very friendly.", "alt": "The people I work with are nice." },
+        { "zh": "我和他在一个小组。", "en": "He and I are in the same team.", "alt": "We work in one group together." },
+        { "zh": "我的经理很有经验。", "en": "My manager is very experienced.", "alt": "My boss has a lot of experience." },
+        { "zh": "她帮我解决了问题。", "en": "She helped me solve the problem.", "alt": "She gave me a hand with the issue." },
+        { "zh": "我们中午一起吃午饭。", "en": "We have lunch together at noon.", "alt": "We eat lunch together every midday." },
+        { "zh": "新同事昨天开始上班。", "en": "The new colleague started work yesterday.", "alt": "A new person joined us yesterday." },
+        { "zh": "我向同事请教。", "en": "I ask my colleagues for advice.", "alt": "I go to my coworkers with questions." },
+        { "zh": "团队合作很重要。", "en": "Teamwork is very important.", "alt": "Working together really matters." },
+        { "zh": "我和老板谈了一次。", "en": "I had a talk with my boss.", "alt": "I spoke to my manager about it." },
+        { "zh": "办公室里气氛很好。", "en": "The atmosphere in the office is very good.", "alt": "It feels nice to work in this office." }
+      ]
+    },
+    {
+      "title": "Emailing",
+      "sentences": [
+        { "zh": "我给他发了一封邮件。", "en": "I sent him an email.", "alt": "I emailed him about it." },
+        { "zh": "请尽快回复这封邮件。", "en": "Please reply to this email as soon as possible.", "alt": "Answer this message quickly, please." },
+        { "zh": "我把文件附在邮件里。", "en": "I attached the file to the email.", "alt": "The document is attached to my message." },
+        { "zh": "我的收件箱里有五十封邮件。", "en": "There are fifty emails in my inbox.", "alt": "I have fifty messages waiting." },
+        { "zh": "请抄送给李经理。", "en": "Please send a copy to Manager Li.", "alt": "Put Manager Li in copy, please." },
+        { "zh": "邮件的主题写得很清楚。", "en": "The subject of the email is very clear.", "alt": "The email has a clear subject line." },
+        { "zh": "我每天早上检查邮件。", "en": "I check my email every morning.", "alt": "I look at my inbox each morning." },
+        { "zh": "请把地址写正确。", "en": "Please write the address correctly.", "alt": "Make sure the address is right." },
+        { "zh": "这封邮件被退回了。", "en": "This email was returned.", "alt": "My message came back to me." },
+        { "zh": "我用英文写邮件。", "en": "I write emails in English.", "alt": "My emails are written in English." }
+      ]
+    },
+    {
+      "title": "Deadlines",
+      "sentences": [
+        { "zh": "截止日期是星期五。", "en": "The deadline is Friday.", "alt": "We must finish by Friday." },
+        { "zh": "我今天必须交这份报告。", "en": "I must hand in this report today.", "alt": "This report has to be submitted today." },
+        { "zh": "我们还有两天时间。", "en": "We still have two days.", "alt": "There are two days left for us." },
+        { "zh": "我赶不上这个期限了。", "en": "I cannot meet this deadline.", "alt": "I will not make it in time." },
+        { "zh": "请提前完成工作。", "en": "Please finish the work early.", "alt": "Try to complete the job ahead of time." },
+        { "zh": "这个项目很紧急。", "en": "This project is very urgent.", "alt": "We need to finish this project quickly." },
+        { "zh": "我加班到晚上九点。", "en": "I worked overtime until nine in the evening.", "alt": "I stayed at work till nine at night." },
+        { "zh": "我们按时完成了。", "en": "We finished on time.", "alt": "The work was done in time." },
+        { "zh": "请告诉我最新的进展。", "en": "Please tell me the latest progress.", "alt": "Give me an update on how it is going." },
+        { "zh": "时间不够了。", "en": "There is not enough time.", "alt": "We are running out of time." }
+      ]
+    },
+    {
+      "title": "Business Travel",
+      "sentences": [
+        { "zh": "我下周要去出差。", "en": "I am going on a business trip next week.", "alt": "I travel for work next week." },
+        { "zh": "我订了机票和酒店。", "en": "I booked the flight and the hotel.", "alt": "My plane ticket and room are reserved." },
+        { "zh": "出差时我每天给公司打电话。", "en": "I call the office every day when I travel for work.", "alt": "I phone my company daily during business trips." },
+        { "zh": "请保留所有发票。", "en": "Please keep all the receipts.", "alt": "Hold on to every receipt, please." },
+        { "zh": "我的航班延误了。", "en": "My flight was delayed.", "alt": "The plane left later than planned." },
+        { "zh": "会议在另一个城市。", "en": "The meeting is in another city.", "alt": "We have to travel for the meeting." },
+        { "zh": "我出差三天。", "en": "I am away on business for three days.", "alt": "My business trip lasts three days." },
+        { "zh": "酒店离公司很近。", "en": "The hotel is very close to the company.", "alt": "Our hotel is near the office." },
+        { "zh": "出差回来我要写报告。", "en": "I have to write a report after the trip.", "alt": "A report is needed when I get back." },
+        { "zh": "出差很累但有意思。", "en": "Business trips are tiring but interesting.", "alt": "Travelling for work is tiring and fun." }
+      ]
+    },
+    {
+      "title": "Promotions",
+      "sentences": [
+        { "zh": "我得到了升职。", "en": "I got a promotion.", "alt": "I was promoted at work." },
+        { "zh": "他现在是部门经理。", "en": "He is now the department manager.", "alt": "He leads the department these days." },
+        { "zh": "我的工资涨了一点。", "en": "My salary went up a little.", "alt": "I got a small pay rise." },
+        { "zh": "我想在公司里发展。", "en": "I want to develop my career in this company.", "alt": "I hope to grow within this firm." },
+        { "zh": "老板对我的工作很满意。", "en": "The boss is happy with my work.", "alt": "My manager is pleased with what I do." },
+        { "zh": "升职意味着更多责任。", "en": "A promotion means more responsibility.", "alt": "You take on more duties when promoted." },
+        { "zh": "我参加了管理培训。", "en": "I took part in a management training.", "alt": "I joined a course for managers." },
+        { "zh": "她工作很努力。", "en": "She works very hard.", "alt": "She is a hard worker." },
+        { "zh": "年底会有一次绩效评估。", "en": "There is a performance review at the end of the year.", "alt": "We review our work every December." },
+        { "zh": "这是我的职业目标。", "en": "This is my career goal.", "alt": "That is what I want in my career." }
+      ]
+    },
+    {
+      "title": "Remote Work",
+      "sentences": [
+        { "zh": "我在家办公。", "en": "I work from home.", "alt": "I do my job at home." },
+        { "zh": "我们每天开视频会议。", "en": "We have a video meeting every day.", "alt": "Our team meets online daily." },
+        { "zh": "家里办公很安静。", "en": "Working at home is very quiet.", "alt": "It is quiet when I work from home." },
+        { "zh": "我需要一台好电脑。", "en": "I need a good computer.", "alt": "A decent computer is necessary for me." },
+        { "zh": "我的网络不太稳定。", "en": "My internet is not very stable.", "alt": "My connection drops sometimes." },
+        { "zh": "我每周去公司两天。", "en": "I go to the office two days a week.", "alt": "I am in the office twice weekly." },
+        { "zh": "在家工作省了很多时间。", "en": "Working from home saves a lot of time.", "alt": "I save time by not commuting." },
+        { "zh": "请打开摄像头。", "en": "Please turn on your camera.", "alt": "Switch your video on, please." },
+        { "zh": "我很难分清工作和休息。", "en": "It is hard to separate work and rest.", "alt": "I find it hard to stop working at home." },
+        { "zh": "我觉得在家效率更高。", "en": "I feel more efficient at home.", "alt": "I get more done when working from home." }
+      ]
+    },
+    {
+      "title": "Coffee Breaks",
+      "sentences": [
+        { "zh": "我们休息一下吧。", "en": "Let us take a break.", "alt": "Time for a short break." },
+        { "zh": "你想喝咖啡还是茶？", "en": "Do you want coffee or tea?", "alt": "Coffee or tea for you?" },
+        { "zh": "我每天十点喝咖啡。", "en": "I have coffee at ten every day.", "alt": "My coffee time is ten o'clock." },
+        { "zh": "茶水间在走廊尽头。", "en": "The tea room is at the end of the corridor.", "alt": "The kitchen is down the hall." },
+        { "zh": "休息一下能让我放松。", "en": "A break helps me relax.", "alt": "Taking a break makes me feel better." },
+        { "zh": "我们边喝咖啡边聊天。", "en": "We chat while we drink coffee.", "alt": "We talk over a cup of coffee." },
+        { "zh": "请不要加糖。", "en": "No sugar, please.", "alt": "I take it without sugar." },
+        { "zh": "我带了饼干分给大家。", "en": "I brought biscuits to share.", "alt": "I have cookies for everyone." },
+        { "zh": "五分钟后再继续工作。", "en": "We will continue working in five minutes.", "alt": "Back to work after five minutes." },
+        { "zh": "午休时间是一小时。", "en": "The lunch break is one hour.", "alt": "We get an hour for lunch." }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "unit": 9,
+  "unitTitle": "Unit 9: Technology & Digital Life",
+  "icon": "💻",
+  "color": "#64748B",
+  "lessons": [
+    {
+      "title": "Smartphone Apps",
+      "sentences": [
+        { "zh": "我手机上有很多应用。", "en": "I have many apps on my phone.", "alt": "My phone is full of apps." },
+        { "zh": "请从应用商店下载它。", "en": "Please download it from the app store.", "alt": "Get it in the app store, please." },
+        { "zh": "这个应用很好用。", "en": "This app is very easy to use.", "alt": "The app works well." },
+        { "zh": "我每天用这个软件记笔记。", "en": "I use this app to take notes every day.", "alt": "Notes go into this app daily." },
+        { "zh": "请更新到最新版本。", "en": "Please update to the latest version.", "alt": "Get the newest version, please." },
+        { "zh": "这个应用占了很多存储空间。", "en": "This app takes up a lot of storage.", "alt": "The app uses too much space." },
+        { "zh": "我删掉了一些没用的应用。", "en": "I deleted some useless apps.", "alt": "A few apps I never use are gone." },
+        { "zh": "请打开通知。", "en": "Please turn on notifications.", "alt": "Switch the notifications on, please." },
+        { "zh": "我用地图应用找路。", "en": "I use a map app to find my way.", "alt": "A maps app helps me get around." },
+        { "zh": "手机没电了。", "en": "My phone battery is dead.", "alt": "The phone has run out of power." }
+      ]
+    },
+    {
+      "title": "Social Media",
+      "sentences": [
+        { "zh": "我每天看社交媒体。", "en": "I check social media every day.", "alt": "Social networks are part of my day." },
+        { "zh": "请给我发一条私信。", "en": "Please send me a private message.", "alt": "Message me directly, please." },
+        { "zh": "他发了一条新帖子。", "en": "He posted something new.", "alt": "A new post came from him." },
+        { "zh": "我关注了很多账号。", "en": "I follow many accounts.", "alt": "There are lots of accounts I follow." },
+        { "zh": "请不要相信网上的一切。", "en": "Please do not believe everything online.", "alt": "Not all online news is true." },
+        { "zh": "我在照片下面留言了。", "en": "I left a comment under the photo.", "alt": "My comment is below the picture." },
+        { "zh": "这个视频有很多点赞。", "en": "This video has a lot of likes.", "alt": "Many people liked the video." },
+        { "zh": "我减少了上网时间。", "en": "I reduced my time online.", "alt": "I spend less time on social media now." },
+        { "zh": "请分享这篇文章。", "en": "Please share this article.", "alt": "Can you pass this post on?" },
+        { "zh": "社交媒体让我和朋友保持联系。", "en": "Social media keeps me in touch with friends.", "alt": "I stay close to friends through social media." }
+      ]
+    },
+    {
+      "title": "Computers",
+      "sentences": [
+        { "zh": "我的电脑很慢。", "en": "My computer is very slow.", "alt": "The laptop runs slowly." },
+        { "zh": "请保存文件。", "en": "Please save the file.", "alt": "Save your work, please." },
+        { "zh": "键盘上有几个键坏了。", "en": "A few keys on the keyboard are broken.", "alt": "Some keys do not work." },
+        { "zh": "我需要一个鼠标。", "en": "I need a mouse.", "alt": "A mouse is missing here." },
+        { "zh": "屏幕太亮了。", "en": "The screen is too bright.", "alt": "The display hurts my eyes." },
+        { "zh": "请重启电脑。", "en": "Please restart the computer.", "alt": "Turn the machine off and on again." },
+        { "zh": "我把它备份到硬盘上。", "en": "I backed it up on the hard drive.", "alt": "A copy is on my external disk." },
+        { "zh": "电脑死机了。", "en": "The computer has frozen.", "alt": "My machine stopped working." },
+        { "zh": "请安装这个软件。", "en": "Please install this software.", "alt": "Can you put this program on my computer?" },
+        { "zh": "我用电脑工作和学习。", "en": "I use the computer for work and study.", "alt": "Work and study both happen on my computer." }
+      ]
+    },
+    {
+      "title": "Internet Connection",
+      "sentences": [
+        { "zh": "无线网连不上。", "en": "I cannot connect to the wifi.", "alt": "The wifi is not working." },
+        { "zh": "密码是什么？", "en": "What is the password?", "alt": "Could you tell me the wifi password?" },
+        { "zh": "网速很慢。", "en": "The internet is very slow.", "alt": "My connection is slow today." },
+        { "zh": "请打开飞行模式。", "en": "Please turn on aeroplane mode.", "alt": "Switch to airplane mode, please." },
+        { "zh": "我关掉了移动数据。", "en": "I turned off mobile data.", "alt": "My phone data is off." },
+        { "zh": "信号不太好。", "en": "The signal is not very good.", "alt": "We have poor signal here." },
+        { "zh": "我换了另一个网络。", "en": "I changed to another network.", "alt": "Another wifi is being used now." },
+        { "zh": "请检查一下路由器。", "en": "Please check the router.", "alt": "Look at the wifi box, please." },
+        { "zh": "我用的是流量套餐。", "en": "I use a data plan.", "alt": "My phone plan gives me data." },
+        { "zh": "网络今天断了两次。", "en": "The internet went down twice today.", "alt": "We lost connection two times today." }
+      ]
+    },
+    {
+      "title": "Streaming",
+      "sentences": [
+        { "zh": "我在网上看剧。", "en": "I watch series online.", "alt": "Streaming shows is what I do online." },
+        { "zh": "视频一直在缓冲。", "en": "The video keeps buffering.", "alt": "The film stops and starts." },
+        { "zh": "请调到高清画质。", "en": "Please switch to high definition.", "alt": "Can we watch it in HD?" },
+        { "zh": "我订阅了一个视频平台。", "en": "I subscribed to a video platform.", "alt": "I pay for a streaming service." },
+        { "zh": "这部剧一共八集。", "en": "This series has eight episodes in total.", "alt": "There are eight episodes of the show." },
+        { "zh": "请等一下，正在加载。", "en": "Please wait, it is loading.", "alt": "Give it a moment to load." },
+        { "zh": "我下载下来晚上看。", "en": "I downloaded it to watch tonight.", "alt": "It is saved for this evening." },
+        { "zh": "音量太小了。", "en": "The volume is too low.", "alt": "I can hardly hear it." },
+        { "zh": "请暂停一下。", "en": "Please pause it for a moment.", "alt": "Stop it briefly, please." },
+        { "zh": "我喜欢边吃饭边看视频。", "en": "I like watching videos while I eat.", "alt": "Videos keep me company at meals." }
+      ]
+    },
+    {
+      "title": "Online Security",
+      "sentences": [
+        { "zh": "请使用强密码。", "en": "Please use a strong password.", "alt": "Your password should be hard to guess." },
+        { "zh": "我改了所有密码。", "en": "I changed all my passwords.", "alt": "Every password of mine is new." },
+        { "zh": "请不要点击陌生链接。", "en": "Please do not click on strange links.", "alt": "Avoid links you do not know." },
+        { "zh": "我的账号被盗了。", "en": "My account was hacked.", "alt": "Someone broke into my account." },
+        { "zh": "请开启双重验证。", "en": "Please turn on two-step verification.", "alt": "Use two-factor login, please." },
+        { "zh": "我安装了一个杀毒软件。", "en": "I installed an antivirus program.", "alt": "Antivirus software is on my computer." },
+        { "zh": "不要在公共电脑上登录。", "en": "Do not log in on a public computer.", "alt": "Never sign in on shared machines." },
+        { "zh": "这条信息看起来像诈骗。", "en": "This message looks like a scam.", "alt": "It seems to be a fraud message." },
+        { "zh": "请保护好你的个人信息。", "en": "Please protect your personal information.", "alt": "Keep your private data safe." },
+        { "zh": "我定期更新系统。", "en": "I update my system regularly.", "alt": "My software is kept up to date." }
+      ]
+    },
+    {
+      "title": "Smart Home",
+      "sentences": [
+        { "zh": "我家里有一个智能音箱。", "en": "I have a smart speaker at home.", "alt": "A smart speaker sits in my living room." },
+        { "zh": "我用手机控制家里的灯。", "en": "I control the lights at home with my phone.", "alt": "My phone switches the lights on and off." },
+        { "zh": "空调可以定时。", "en": "The air conditioner can be set on a timer.", "alt": "You can programme the air conditioning." },
+        { "zh": "请打开窗帘。", "en": "Please open the curtains.", "alt": "Let the curtains open, please." },
+        { "zh": "传感器检测到有人。", "en": "The sensor detected someone.", "alt": "Something moved and the sensor knows." },
+        { "zh": "我设置了早上七点的闹钟。", "en": "I set the alarm for seven in the morning.", "alt": "The alarm goes off at seven am." },
+        { "zh": "这个设备连不上网络。", "en": "This device cannot connect to the network.", "alt": "The gadget is offline." },
+        { "zh": "请安装好摄像头。", "en": "Please install the camera.", "alt": "Set up the camera, please." },
+        { "zh": "我可以用语音控制它。", "en": "I can control it with my voice.", "alt": "Voice commands work on it." },
+        { "zh": "智能家居很方便。", "en": "A smart home is very convenient.", "alt": "Smart devices make life easier." }
+      ]
+    },
+    {
+      "title": "Customer Support",
+      "sentences": [
+        { "zh": "我需要联系客服。", "en": "I need to contact customer support.", "alt": "I want to talk to the help desk." },
+        { "zh": "我打了好几次客服电话。", "en": "I called customer service several times.", "alt": "I rang the support line more than once." },
+        { "zh": "我要投诉这个问题。", "en": "I want to complain about this problem.", "alt": "There is an issue I want to report." },
+        { "zh": "我把订单号告诉了他。", "en": "I gave him my order number.", "alt": "He has my order number now." },
+        { "zh": "客服很有耐心。", "en": "The customer service agent was very patient.", "alt": "Support staff were patient with me." },
+        { "zh": "请把问题写清楚。", "en": "Please describe the problem clearly.", "alt": "Explain the issue in detail, please." },
+        { "zh": "我等了二十分钟。", "en": "I waited for twenty minutes.", "alt": "My wait lasted twenty minutes." },
+        { "zh": "他们答应退款。", "en": "They promised a refund.", "alt": "A refund was offered by them." },
+        { "zh": "请给我发一封确认邮件。", "en": "Please send me a confirmation email.", "alt": "I need an email to confirm it." },
+        { "zh": "问题已经解决了。", "en": "The problem has been solved.", "alt": "It is all fixed now." }
+      ]
+    },
+    {
+      "title": "Gadgets",
+      "sentences": [
+        { "zh": "我买了一块智能手表。", "en": "I bought a smart watch.", "alt": "A smartwatch is my new gadget." },
+        { "zh": "这个设备很轻便。", "en": "This device is very light.", "alt": "The gadget is easy to carry." },
+        { "zh": "电池能用一整天。", "en": "The battery lasts all day.", "alt": "One charge is enough for a day." },
+        { "zh": "请看一下说明书。", "en": "Please read the instructions.", "alt": "Check the manual, please." },
+        { "zh": "充电需要一个小时。", "en": "Charging takes one hour.", "alt": "It needs an hour on the charger." },
+        { "zh": "我把它和手机配对。", "en": "I paired it with my phone.", "alt": "Phone and gadget are connected." },
+        { "zh": "这个功能很有用。", "en": "This function is very useful.", "alt": "The feature comes in handy." },
+        { "zh": "它防水。", "en": "It is waterproof.", "alt": "Water cannot damage it." },
+        { "zh": "我买了一个保护壳。", "en": "I bought a protective case.", "alt": "A case keeps it safe." },
+        { "zh": "这个牌子保修两年。", "en": "This brand has a two-year warranty.", "alt": "You get two years of guarantee." }
+      ]
+    },
+    {
+      "title": "News",
+      "sentences": [
+        { "zh": "我每天早上看新闻。", "en": "I read the news every morning.", "alt": "News is part of my morning." },
+        { "zh": "这条新闻很重要。", "en": "This news is very important.", "alt": "The story matters a lot." },
+        { "zh": "我在收音机里听到的。", "en": "I heard it on the radio.", "alt": "It came over the radio." },
+        { "zh": "请给我看一下标题。", "en": "Please show me the headline.", "alt": "What does the headline say?" },
+        { "zh": "报纸上说会下雨。", "en": "The newspaper says it will rain.", "alt": "Rain is in today's paper." },
+        { "zh": "我关注国际新闻。", "en": "I follow international news.", "alt": "World news interests me." },
+        { "zh": "这个消息还没有被证实。", "en": "This news has not been confirmed.", "alt": "Nobody has confirmed the report yet." },
+        { "zh": "我读了整篇文章。", "en": "I read the whole article.", "alt": "The full piece was read by me." },
+        { "zh": "请不要相信谣言。", "en": "Please do not believe rumours.", "alt": "Stay away from rumours, please." },
+        { "zh": "新闻让我了解世界。", "en": "The news helps me understand the world.", "alt": "Reading news teaches me about the world." }
+      ]
+    }
+  ]
+}

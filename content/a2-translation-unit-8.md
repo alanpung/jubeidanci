@@ -9,81 +9,83 @@ level: "A2"
 courseId: "a2-translation-course"
 questionType: "translation"
 ---
+
 ---
 lessonTitle: "Lesson 1: Playing Football"
 description: "Translate A2 sentences about Playing Football"
 icon: "⚽"
 color: "#EC4899"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "一个十几岁的男孩正站在我前面。"
-answer: "A teenage boy was standing in front of me."
-acceptAlso: "A teenage boy was standing in front of me."
-srsWords: "a" "teenage" "boy" "was" "stand" "in" "front" "of" "me"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我转过身去，看着男孩手指的方向。"
-answer: "I turned and looked where the boy was pointing."
-acceptAlso: "I turned and looked where the boy was pointing."
-srsWords: "i" "turn" "and" "look" "where" "the" "boy" "was" "point"
+sentence: "我每周六踢足球。"
+answer: "I play football every Saturday."
+acceptAlso: "Saturdays are for soccer for me."
+srsWords: "i" "play" "football" "every" "saturday" "saturdays" "are" "for" "soccer" "me"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "树林那边，一列火车缓缓驶过。"
-answer: "Beyond the trees, a train passed by slowly."
-acceptAlso: "Beyond the trees, a train passed by slowly."
-srsWords: "beyond" "the" "tree" "a" "train" "pass" "by" "slowly"
+sentence: "我们队赢了比赛。"
+answer: "Our team won the match."
+acceptAlso: "We were the winners of the game."
+srsWords: "our" "team" "won" "the" "match" "we" "were" "winners" "of" "game"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "男孩站在那里看着我。"
-answer: "The boy stood looking at me."
-acceptAlso: "The boy stood looking at me."
-srsWords: "the" "boy" "stand" "look" "at" "me"
+sentence: "他踢进了一个球。"
+answer: "He scored a goal."
+acceptAlso: "A goal was scored by him."
+srsWords: "he" "scored" "a" "goal" "was" "by" "him"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我要去河边。"
-answer: "I'll go down to the river."
-acceptAlso: "I'll go down to the river."
-srsWords: "i" "go" "down" "to" "the" "river"
+sentence: "球场在学校旁边。"
+answer: "The football field is next to the school."
+acceptAlso: "The pitch is beside our school."
+srsWords: "the" "football" "field" "is" "next" "to" "school" "pitch" "beside" "our"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她留着长长的黑发，穿着一件漂亮的白裙子。"
-answer: "She had long dark hair, and she was wearing a pretty white dress."
-acceptAlso: "She had long dark hair, and she was wearing a pretty white dress."
-srsWords: "she" "had" "long" "dark" "hair" "and" "was" "wear" "a" "pretty" "white" "dress"
+sentence: "我是守门员。"
+answer: "I am the goalkeeper."
+acceptAlso: "I play in goal."
+srsWords: "i" "am" "the" "goalkeeper" "play" "in" "goal"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他悄悄下了床。"
-answer: "He got out of bed quietly."
-acceptAlso: "He got out of bed quietly."
-srsWords: "he" "got" "out" "of" "bed" "quietly"
+sentence: "请穿运动鞋。"
+answer: "Please wear sports shoes."
+acceptAlso: "Put on trainers, please."
+srsWords: "please" "wear" "sports" "shoes" "put" "on" "trainers"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然后他迅速穿好衣服，走到椅子旁坐下。"
-answer: "Then he dressed quickly, and went to the chair and sat down."
-acceptAlso: "Then he dressed quickly, and went to the chair and sat down."
-srsWords: "then" "he" "dressed" "quickly" "and" "go" "to" "the" "chair" "sit" "down"
+sentence: "比赛下午三点开始。"
+answer: "The match starts at three in the afternoon."
+acceptAlso: "Kick-off is at three pm."
+srsWords: "the" "match" "starts" "at" "three" "in" "afternoon" "kick" "off" "is" "pm"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "听着，你下去吃早饭吧。"
-answer: "Look, you go down for breakfast."
-acceptAlso: "Look, you go down for breakfast."
-srsWords: "look" "you" "go" "down" "for" "breakfast"
+sentence: "我们输了，但很开心。"
+answer: "We lost, but we were happy."
+acceptAlso: "Losing did not spoil our fun."
+srsWords: "we" "lost" "but" "were" "happy" "losing" "did" "not" "spoil" "our" "fun"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我从包里拿出旅游指南开始阅读。"
-answer: "I took my guidebook out of my bag and began to read."
-acceptAlso: "I took my guidebook out of my bag and began to read."
-srsWords: "i" "take" "my" "guidebook" "out" "of" "bag" "and" "begin" "to" "read"
+sentence: "我受伤了，要休息一周。"
+answer: "I am injured and need to rest for a week."
+acceptAlso: "An injury keeps me out for a week."
+srsWords: "i" "am" "injured" "and" "need" "to" "rest" "for" "a" "week" "an" "injury" "keeps" "me" "out"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "足球是我最喜欢的运动。"
+answer: "Football is my favourite sport."
+acceptAlso: "Soccer is the sport I love most."
+srsWords: "football" "is" "my" "favourite" "sport" "soccer" "the" "i" "love" "most"
 
 ---
 lessonTitle: "Lesson 2: Reading Books"
@@ -91,75 +93,76 @@ description: "Translate A2 sentences about Reading Books"
 icon: "⚽"
 color: "#EC4899"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "他们在两千多年前建造了它。"
-answer: "They built it over two thousand years ago."
-acceptAlso: "They built it over two thousand years ago."
-srsWords: "they" "build" "it" "over" "two" "thousand" "year" "ago"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "一条小路穿过桥梁，经过田野，翻过了一座小山。"
-answer: "A small road ran across the bridge, through the fields and over a hill."
-acceptAlso: "A small road ran across the bridge, through the fields and over a hill."
-srsWords: "a" "small" "road" "run" "across" "the" "bridge" "through" "field" "and" "over" "hill"
+sentence: "我每天晚上看书。"
+answer: "I read a book every evening."
+acceptAlso: "Reading is part of my evening."
+srsWords: "i" "read" "a" "book" "every" "evening" "reading" "is" "part" "of" "my"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们下了公共汽车顶着烈日走了两公里。"
-answer: "They got out of the bus and walked two kilometres in the hot sun."
-acceptAlso: "They got out of the bus and walked two kilometres in the hot sun."
-srsWords: "they" "got" "out" "of" "the" "bus" "and" "walk" "two" "kilometre" "in" "hot" "sun"
+sentence: "这本书很有意思。"
+answer: "This book is very interesting."
+acceptAlso: "The book is really good."
+srsWords: "this" "book" "is" "very" "interesting" "the" "really" "good"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "路边开着白色的和黄色的花朵。"
-answer: "There were white and yellow flowers at the side of the road."
-acceptAlso: "There were white and yellow flowers at the side of the road."
-srsWords: "there" "were" "white" "and" "yellow" "flower" "at" "the" "side" "of" "road"
+sentence: "我从图书馆借了两本书。"
+answer: "I borrowed two books from the library."
+acceptAlso: "Two library books are with me."
+srsWords: "i" "borrowed" "two" "books" "from" "the" "library" "are" "with" "me"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他看着它们在长长的绿草丛中非常缓慢地移动。"
-answer: "He watched them moving very slowly through the long, green grass."
-acceptAlso: "He watched them moving very slowly through the long, green grass."
-srsWords: "he" "watch" "them" "move" "very" "slowly" "through" "the" "long" "green" "grass"
+sentence: "我喜欢看小说。"
+answer: "I like reading novels."
+acceptAlso: "Novels are my favourite kind of book."
+srsWords: "i" "like" "reading" "novels" "are" "my" "favourite" "kind" "of" "book"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他感到迷茫和不自在。"
-answer: "He felt lost and uncomfortable."
-acceptAlso: "He felt lost and uncomfortable."
-srsWords: "he" "feel" "lost" "and" "uncomfortable"
+sentence: "这本书有二百页。"
+answer: "This book has two hundred pages."
+acceptAlso: "It is a two-hundred-page book."
+srsWords: "this" "book" "has" "two" "hundred" "pages" "it" "is" "a" "page"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "花园里空无一人。"
-answer: "There was nobody in the garden."
-acceptAlso: "There was nobody in the garden."
-srsWords: "there" "was" "nobody" "in" "the" "garden"
+sentence: "我读完了第一章。"
+answer: "I finished the first chapter."
+acceptAlso: "Chapter one is done."
+srsWords: "i" "finished" "the" "first" "chapter" "one" "is" "done"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他推了推前门。"
-answer: "He pushed at the front door."
-acceptAlso: "He pushed at the front door."
-srsWords: "he" "push" "at" "the" "front" "door"
+sentence: "请安静，我在看书。"
+answer: "Please be quiet, I am reading."
+acceptAlso: "I need silence while reading."
+srsWords: "please" "be" "quiet" "i" "am" "reading" "need" "silence" "while"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它借了大量的钱来修路。"
-answer: "It had borrowed a lot of money to build roads."
-acceptAlso: "It had borrowed a lot of money to build roads."
-srsWords: "it" "had" "borrow" "a" "lot" "of" "money" "to" "build" "road"
+sentence: "这位作者写得很清楚。"
+answer: "The author writes very clearly."
+acceptAlso: "This writer is easy to follow."
+srsWords: "the" "author" "writes" "very" "clearly" "this" "writer" "is" "easy" "to" "follow"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "那里的居民人口增长很快。"
-answer: "The population there was growing quickly."
-acceptAlso: "The population there was growing quickly."
-srsWords: "the" "population" "there" "was" "grow" "quickly"
+sentence: "我把书放回了书架。"
+answer: "I put the book back on the shelf."
+acceptAlso: "The book is back on the shelf now."
+srsWords: "i" "put" "the" "book" "back" "on" "shelf" "is" "now"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "读书让我放松。"
+answer: "Reading helps me relax."
+acceptAlso: "Books make me feel calm."
+srsWords: "reading" "helps" "me" "relax" "books" "make" "feel" "calm"
 
 ---
 lessonTitle: "Lesson 3: Photography"
@@ -167,75 +170,76 @@ description: "Translate A2 sentences about Photography"
 icon: "⚽"
 color: "#EC4899"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "到1914年，人口已超过一百万。"
-answer: "By 1914, the population was over one million people."
-acceptAlso: "By 1914, the population was over one million people."
-srsWords: "by" "the" "population" "was" "over" "one" "million" "people"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然而，战后人们失去了这些工作。"
-answer: "However, after the war, people lost these jobs."
-acceptAlso: "However, after the war, people lost these jobs."
-srsWords: "however" "after" "the" "war" "people" "lost" "these" "job"
+sentence: "我喜欢拍照。"
+answer: "I like taking photos."
+acceptAlso: "Photography is a hobby of mine."
+srsWords: "i" "like" "taking" "photos" "photography" "is" "a" "hobby" "of" "mine"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它主动提出给每个家庭一笔钱。"
-answer: "It offered to give each family a sum of money."
-acceptAlso: "It offered to give each family a sum of money."
-srsWords: "it" "offer" "to" "give" "each" "family" "a" "sum" "of" "money"
+sentence: "请把相机递给我。"
+answer: "Please pass me the camera."
+acceptAlso: "Hand me the camera, please."
+srsWords: "please" "pass" "me" "the" "camera" "hand"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "几个世纪以来，人们一直在玩用脚踢球的游戏。"
-answer: "For centuries, people have been playing kicking games with a ball."
-acceptAlso: "For centuries, people have been playing kicking games with a ball."
-srsWords: "for" "century" "people" "have" "been" "play" "kick" "game" "with" "a" "ball"
+sentence: "这张照片很漂亮。"
+answer: "This photo is very beautiful."
+acceptAlso: "The picture looks great."
+srsWords: "this" "photo" "is" "very" "beautiful" "the" "picture" "looks" "great"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "现代足球运动就是从其中一些早期游戏发展而来的。"
-answer: "The game of soccer developed from some of these early games."
-acceptAlso: "The game of soccer developed from some of these early games."
-srsWords: "the" "game" "of" "soccer" "developed" "from" "some" "these" "early"
+sentence: "光线不太好。"
+answer: "The light is not very good."
+acceptAlso: "There is not enough light here."
+srsWords: "the" "light" "is" "not" "very" "good" "there" "enough" "here"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "世界上140多个国家的民众都在踢足球。"
-answer: "People in more than 140 countries around the world play soccer."
-acceptAlso: "People in more than 140 countries around the world play soccer."
-srsWords: "people" "in" "more" "than" "country" "around" "the" "world" "play" "soccer"
+sentence: "我在学用这台相机。"
+answer: "I am learning to use this camera."
+acceptAlso: "I am still learning this camera."
+srsWords: "i" "am" "learning" "to" "use" "this" "camera" "still"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这台洗衣机已经坏了两个星期了。"
-answer: "The washing machine has been broken for two weeks."
-acceptAlso: "The washing machine has been broken for two weeks."
-srsWords: "the" "wash" "machine" "has" "been" "broken" "for" "two" "week"
+sentence: "请把照片发给我。"
+answer: "Please send me the photos."
+acceptAlso: "Can you share the pictures with me?"
+srsWords: "please" "send" "me" "the" "photos" "can" "you" "share" "pictures" "with"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "所以对她来说，雪不仅非常美丽，而且令人兴奋。"
-answer: "So for her, the snow is exciting as well as very beautiful."
-acceptAlso: "So for her, the snow is exciting as well as very beautiful."
-srsWords: "so" "for" "her" "the" "snow" "is" "exciting" "as" "well" "very" "beautiful"
+sentence: "我把照片存在电脑里。"
+answer: "I keep the photos on my computer."
+acceptAlso: "My pictures are saved on the computer."
+srsWords: "i" "keep" "the" "photos" "on" "my" "computer" "pictures" "are" "saved"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她脖子上还围着一条围巾。"
-answer: "She also wears a scarf around her neck."
-acceptAlso: "She also wears a scarf around her neck."
-srsWords: "she" "also" "wear" "a" "scarf" "around" "her" "neck"
+sentence: "他拍了很多风景照。"
+answer: "He took many landscape photos."
+acceptAlso: "A lot of scenery shots were taken by him."
+srsWords: "he" "took" "many" "landscape" "photos" "a" "lot" "of" "scenery" "shots" "were" "taken" "by" "him"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "人们在自家庭院里干活并修剪草坪。"
-answer: "People work in their yards and mow their grass."
-acceptAlso: "People work in their yards and mow their grass."
-srsWords: "people" "work" "in" "their" "yard" "and" "mow" "grass"
+sentence: "请站在那里别动。"
+answer: "Please stand there and do not move."
+acceptAlso: "Stay still right there, please."
+srsWords: "please" "stand" "there" "and" "do" "not" "move" "stay" "still" "right"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我想买一个新镜头。"
+answer: "I want to buy a new lens."
+acceptAlso: "A new lens is on my shopping list."
+srsWords: "i" "want" "to" "buy" "a" "new" "lens" "is" "on" "my" "shopping" "list"
 
 ---
 lessonTitle: "Lesson 4: Music & Instruments"
@@ -243,75 +247,76 @@ description: "Translate A2 sentences about Music & Instruments"
 icon: "⚽"
 color: "#EC4899"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "到了秋天，树上的叶子变成了黄色、金色、红色和橙色。"
-answer: "In autumn, the leaves on the trees turn yellow, gold, red, and orange."
-acceptAlso: "In autumn, the leaves on the trees turn yellow, gold, red, and orange."
-srsWords: "in" "autumn" "the" "leave" "on" "tree" "turn" "yellow" "gold" "red" "and" "orange"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他只是站在路边，伸着手等待着。"
-answer: "He just stood there, beside the road, with his hand out, waiting."
-acceptAlso: "He just stood there, beside the road, with his hand out, waiting."
-srsWords: "he" "just" "stand" "there" "beside" "the" "road" "with" "his" "hand" "out" "wait"
+sentence: "我弹钢琴。"
+answer: "I play the piano."
+acceptAlso: "Piano is my instrument."
+srsWords: "i" "play" "the" "piano" "is" "my" "instrument"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "也许对他是来说，我是某种奇怪的、不太真实的东西。"
-answer: "Perhaps I was something strange, something not quite real to him."
-acceptAlso: "Perhaps I was something strange, something not quite real to him."
-srsWords: "perhaps" "i" "was" "something" "strange" "not" "quite" "real" "to" "him"
+sentence: "她唱歌很好听。"
+answer: "She sings very well."
+acceptAlso: "Her voice is lovely."
+srsWords: "she" "sings" "very" "well" "her" "voice" "is" "lovely"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "或者也许他只是视力不好。"
-answer: "Or perhaps he just had bad eyes."
-acceptAlso: "Or perhaps he just had bad eyes."
-srsWords: "or" "perhaps" "he" "just" "had" "bad" "eye"
+sentence: "我每周上一次吉他课。"
+answer: "I have a guitar lesson once a week."
+acceptAlso: "My guitar class is weekly."
+srsWords: "i" "have" "a" "guitar" "lesson" "once" "week" "my" "class" "is" "weekly"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我父亲当时在那里经商，我母亲则是一名秘书。"
-answer: "My father was a businessman there and my mother worked as a secretary."
-acceptAlso: "My father was a businessman there and my mother worked as a secretary."
-srsWords: "my" "father" "was" "a" "businessman" "there" "and" "mother" "work" "as" "secretary"
+sentence: "请小声一点。"
+answer: "Please be a little quieter."
+acceptAlso: "Turn the volume down, please."
+srsWords: "please" "be" "a" "little" "quieter" "turn" "the" "volume" "down"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "当时有七个人竞争同一个职位。"
-answer: "There were seven people there for one job."
-acceptAlso: "There were seven people there for one job."
-srsWords: "there" "were" "seven" "people" "for" "one" "job"
+sentence: "我在学一首新歌。"
+answer: "I am learning a new song."
+acceptAlso: "There is a new song I am practising."
+srsWords: "i" "am" "learning" "a" "new" "song" "there" "is" "practising"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她开始为自己制作半身裙和上衣。"
-answer: "She started making skirts and tops for herself."
-acceptAlso: "She started making skirts and tops for herself."
-srsWords: "she" "start" "make" "skirt" "and" "top" "for" "herself"
+sentence: "音乐让我心情好。"
+answer: "Music puts me in a good mood."
+acceptAlso: "Listening to music makes me happy."
+srsWords: "music" "puts" "me" "in" "a" "good" "mood" "listening" "to" "makes" "happy"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她的生意取得了巨大成功，她深知自己无比幸运。"
-answer: "Her business has come a long way and she knows she is extremely lucky."
-acceptAlso: "Her business has come a long way and she knows she is extremely lucky."
-srsWords: "her" "business" "has" "come" "a" "long" "way" "and" "she" "know" "is" "extremely" "lucky"
+sentence: "他加入了学校的乐队。"
+answer: "He joined the school band."
+acceptAlso: "He plays in a band at school."
+srsWords: "he" "joined" "the" "school" "band" "plays" "in" "a" "at"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "经过七个小时的攀登，我们到达了顶峰。"
-answer: "After seven hours of climbing, we reached the top."
-acceptAlso: "After seven hours of climbing, we reached the top."
-srsWords: "after" "seven" "hour" "of" "climbing" "we" "reach" "the" "top"
+sentence: "我每天练习半小时。"
+answer: "I practise for half an hour every day."
+acceptAlso: "Practice takes thirty minutes a day."
+srsWords: "i" "practise" "for" "half" "an" "hour" "every" "day" "practice" "takes" "thirty" "minutes" "a"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "在离开教室十四年后，我决定上大学。"
-answer: "I decided to go to university after fourteen years away from the classroom."
-acceptAlso: "I decided to go to university after fourteen years away from the classroom."
-srsWords: "i" "decide" "to" "go" "university" "after" "fourteen" "year" "away" "from" "the" "classroom"
+sentence: "这首曲子很难。"
+answer: "This piece of music is very difficult."
+acceptAlso: "The song is hard to play."
+srsWords: "this" "piece" "of" "music" "is" "very" "difficult" "the" "song" "hard" "to" "play"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "你会演奏乐器吗？"
+answer: "Can you play an instrument?"
+acceptAlso: "Do you play any musical instrument?"
+srsWords: "can" "you" "play" "an" "instrument" "do" "any" "musical"
 
 ---
 lessonTitle: "Lesson 5: Movies & TV"
@@ -319,75 +324,76 @@ description: "Translate A2 sentences about Movies & TV"
 icon: "⚽"
 color: "#EC4899"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "它们全都以这样或那样的方式依赖于草。"
-answer: "All of them depend on grass in one way or another."
-acceptAlso: "All of them depend on grass in one way or another."
-srsWords: "all" "of" "them" "depend" "on" "grass" "in" "one" "way" "or" "another"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然后他给我买了一双跑鞋，带我去训练。"
-answer: "Then he bought me running shoes and took me training."
-acceptAlso: "Then he bought me running shoes and took me training."
-srsWords: "then" "he" "buy" "me" "running" "shoe" "and" "take" "training"
+sentence: "我们今晚看一部电影。"
+answer: "We are watching a film tonight."
+acceptAlso: "A movie is on our plan this evening."
+srsWords: "we" "are" "watching" "a" "film" "tonight" "movie" "is" "on" "our" "plan" "this" "evening"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他们同意让他带她去接受训练。"
-answer: "They agreed to let him take her away to train."
-acceptAlso: "They agreed to let him take her away to train."
-srsWords: "they" "agree" "to" "let" "him" "take" "her" "away" "train"
+sentence: "这部电影很有意思。"
+answer: "This film is very interesting."
+acceptAlso: "The movie is a lot of fun."
+srsWords: "this" "film" "is" "very" "interesting" "the" "movie" "a" "lot" "of" "fun"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "Eight-eighteen 帮助我取得了超乎想象的成就。"
-answer: "Eight-eighteen has helped me achieve more than I thought possible."
-acceptAlso: "Eight-eighteen has helped me achieve more than I thought possible."
-srsWords: "eight" "eighteen" "has" "help" "me" "achieve" "more" "than" "i" "thought" "possible"
+sentence: "我喜欢看喜剧片。"
+answer: "I like watching comedies."
+acceptAlso: "Comedy films are my favourite."
+srsWords: "i" "like" "watching" "comedies" "comedy" "films" "are" "my" "favourite"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "Eight-eighteen 鼓励成员之间分享技能。"
-answer: "Eight-eighteen encourages skills-sharing between members."
-acceptAlso: "Eight-eighteen encourages skills-sharing between members."
-srsWords: "eight" "eighteen" "encourage" "skill" "share" "between" "member"
+sentence: "电影院离这里不远。"
+answer: "The cinema is not far from here."
+acceptAlso: "The movie theater is nearby."
+srsWords: "the" "cinema" "is" "not" "far" "from" "here" "movie" "theater" "nearby"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "作为成年人，我们总是在不断了解更多关于食物的知识。"
-answer: "As adults, we're always learning more about food."
-acceptAlso: "As adults, we're always learning more about food."
-srsWords: "as" "adult" "we" "always" "learn" "more" "about" "food"
+sentence: "请给我两张票。"
+answer: "Please give me two tickets."
+acceptAlso: "Two tickets, please."
+srsWords: "please" "give" "me" "two" "tickets"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "还有其他人当时也靠近过这些眼镜。"
-answer: "And there are other people who were near the glasses."
-acceptAlso: "And there are other people who were near the glasses."
-srsWords: "and" "there" "are" "other" "people" "who" "were" "near" "the" "glasses"
+sentence: "我很少看电视。"
+answer: "I rarely watch TV."
+acceptAlso: "Television is not something I watch often."
+srsWords: "i" "rarely" "watch" "tv" "television" "is" "not" "something" "often"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "当你翻过山头时，浓雾可能正等在那里迎接你。"
-answer: "Fog can be waiting to meet you over the top of a hill."
-acceptAlso: "Fog can be waiting to meet you over the top of a hill."
-srsWords: "fog" "can" "be" "wait" "to" "meet" "you" "over" "the" "top" "of" "a" "hill"
+sentence: "这个节目很受欢迎。"
+answer: "This programme is very popular."
+acceptAlso: "The show has many viewers."
+srsWords: "this" "programme" "is" "very" "popular" "the" "show" "has" "many" "viewers"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这是一漫长一天的结束。"
-answer: "It was the end of a long day."
-acceptAlso: "It was the end of a long day."
-srsWords: "it" "was" "the" "end" "of" "a" "long" "day"
+sentence: "电影八点开始。"
+answer: "The film starts at eight."
+acceptAlso: "The movie begins at eight o'clock."
+srsWords: "the" "film" "starts" "at" "eight" "movie" "begins" "o'clock"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "没有什么比一个糟糕的结局更让人沮丧的了。"
-answer: "There is nothing worse than a poor ending."
-acceptAlso: "There is nothing worse than a poor ending."
-srsWords: "there" "is" "nothing" "bad" "than" "a" "poor" "ending"
+sentence: "我看了两遍才明白。"
+answer: "I watched it twice before I understood."
+acceptAlso: "It took two watches to get it."
+srsWords: "i" "watched" "it" "twice" "before" "understood" "took" "two" "watches" "to" "get"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请打开字幕。"
+answer: "Please turn on the subtitles."
+acceptAlso: "Can we have the subtitles on?"
+srsWords: "please" "turn" "on" "the" "subtitles" "can" "we" "have"
 
 ---
 lessonTitle: "Lesson 6: Gaming"
@@ -395,75 +401,76 @@ description: "Translate A2 sentences about Gaming"
 icon: "⚽"
 color: "#EC4899"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "她很快因对新思想的了解而闻名。"
-answer: "She soon became famous for her knowledge of new ideas."
-acceptAlso: "She soon became famous for her knowledge of new ideas."
-srsWords: "she" "soon" "become" "famous" "for" "her" "knowledge" "of" "new" "idea"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这里还有一支足球队，队服颜色是绿色和黄色。"
-answer: "There is also a football team, whose colours are green and yellow."
-acceptAlso: "There is also a football team, whose colours are green and yellow."
-srsWords: "there" "is" "also" "a" "football" "team" "whose" "colour" "are" "green" "and" "yellow"
+sentence: "我周末玩电子游戏。"
+answer: "I play video games at the weekend."
+acceptAlso: "Gaming is my weekend hobby."
+srsWords: "i" "play" "video" "games" "at" "the" "weekend" "gaming" "is" "my" "hobby"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这些让鲨鱼对成为它们食物的小型海洋生物来说非常危险。"
-answer: "These make sharks very dangerous for smaller sea creatures that become their food."
-acceptAlso: "These make sharks very dangerous for smaller sea creatures that become their food."
-srsWords: "these" "make" "shark" "very" "dangerous" "for" "small" "sea" "creature" "that" "become" "their" "food"
+sentence: "这个游戏很难。"
+answer: "This game is very difficult."
+acceptAlso: "The game is quite hard."
+srsWords: "this" "game" "is" "very" "difficult" "the" "quite" "hard"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这让他们能够了解更多关于这些迷人生物的信息。"
-answer: "It allows them to find out more about these fascinating creatures."
-acceptAlso: "It allows them to find out more about these fascinating creatures."
-srsWords: "it" "allow" "them" "to" "find" "out" "more" "about" "these" "fascinating" "creature"
+sentence: "我和朋友一起联网玩。"
+answer: "I play online with my friends."
+acceptAlso: "My friends and I game together online."
+srsWords: "i" "play" "online" "with" "my" "friends" "and" "game" "together"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "如果你愿意，甚至可以在里面举行婚礼。"
-answer: "If you want, you can even get married in one."
-acceptAlso: "If you want, you can even get married in one."
-srsWords: "if" "you" "want" "can" "even" "get" "married" "in" "one"
+sentence: "请把手柄递给我。"
+answer: "Please pass me the controller."
+acceptAlso: "Give me the game controller, please."
+srsWords: "please" "pass" "me" "the" "controller" "give" "game"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你需要的只是感兴趣。"
-answer: "All you need is to be interested."
-acceptAlso: "All you need is to be interested."
-srsWords: "all" "you" "need" "is" "to" "be" "interested"
+sentence: "我赢了这一关。"
+answer: "I won this level."
+acceptAlso: "I beat this stage of the game."
+srsWords: "i" "won" "this" "level" "beat" "stage" "of" "the" "game"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "事实上，我当时站在路边直接哭了起来。"
-answer: "In fact, I stood by the side of the road and just cried."
-acceptAlso: "In fact, I stood by the side of the road and just cried."
-srsWords: "in" "fact" "i" "stand" "by" "the" "side" "of" "road" "and" "just" "cry"
+sentence: "不要玩太久。"
+answer: "Do not play for too long."
+acceptAlso: "You should not game for hours."
+srsWords: "do" "not" "play" "for" "too" "long" "you" "should" "game" "hours"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他给了我一些钱做回家的公车费。"
-answer: "He gave me some money for my bus fare home."
-acceptAlso: "He gave me some money for my bus fare home."
-srsWords: "he" "give" "me" "some" "money" "for" "my" "bus" "fare" "home"
+sentence: "游戏画面很漂亮。"
+answer: "The graphics of the game are beautiful."
+acceptAlso: "The game looks great."
+srsWords: "the" "graphics" "of" "game" "are" "beautiful" "looks" "great"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然而，它开业不到半小时就被迫关闭了。"
-answer: "However, it had to be shut within half an hour of opening."
-acceptAlso: "However, it had to be shut within half an hour of opening."
-srsWords: "however" "it" "had" "to" "be" "shut" "within" "half" "an" "hour" "of" "open"
+sentence: "我注册了一个账号。"
+answer: "I registered an account."
+acceptAlso: "I signed up for a game account."
+srsWords: "i" "registered" "an" "account" "signed" "up" "for" "a" "game"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "当然，和任何大学一样，这里也有考试要考。"
-answer: "Of course, there are exams to take, as in any university."
-acceptAlso: "Of course, there are exams to take, as in any university."
-srsWords: "of" "course" "there" "are" "exam" "to" "take" "as" "in" "any" "university"
+sentence: "我的电脑运行不了这个游戏。"
+answer: "My computer cannot run this game."
+acceptAlso: "The game will not work on my computer."
+srsWords: "my" "computer" "cannot" "run" "this" "game" "the" "will" "not" "work" "on"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "玩游戏让我放松。"
+answer: "Playing games helps me relax."
+acceptAlso: "Gaming makes me feel calm."
+srsWords: "playing" "games" "helps" "me" "relax" "gaming" "makes" "feel" "calm"
 
 ---
 lessonTitle: "Lesson 7: Painting"
@@ -471,75 +478,76 @@ description: "Translate A2 sentences about Painting"
 icon: "⚽"
 color: "#EC4899"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "你可以通过三种不同的方式收到这些。"
-answer: "You can receive these in three different ways."
-acceptAlso: "You can receive these in three different ways."
-srsWords: "you" "can" "receive" "these" "in" "three" "different" "way"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我后来参加了两部大学话剧的演出。"
-answer: "I've since appeared in two college plays."
-acceptAlso: "I've since appeared in two college plays."
-srsWords: "i" "since" "appear" "in" "two" "college" "play"
+sentence: "我喜欢画画。"
+answer: "I like painting."
+acceptAlso: "Painting is what I enjoy doing."
+srsWords: "i" "like" "painting" "is" "what" "enjoy" "doing"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我花了一年时间试图找出答案。"
-answer: "I spent a year trying to find out."
-acceptAlso: "I spent a year trying to find out."
-srsWords: "i" "spend" "a" "year" "try" "to" "find" "out"
+sentence: "她画了一幅风景画。"
+answer: "She painted a landscape."
+acceptAlso: "A picture of the countryside was painted by her."
+srsWords: "she" "painted" "a" "landscape" "picture" "of" "the" "countryside" "was" "by" "her"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们去了公园。"
-answer: "We went to the park."
-acceptAlso: "We went to the park."
-srsWords: "we" "go" "to" "the" "park"
+sentence: "请给我一支画笔。"
+answer: "Please give me a brush."
+acceptAlso: "I need a paintbrush, please."
+srsWords: "please" "give" "me" "a" "brush" "i" "need" "paintbrush"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "自从我们开始以来的这些年里，我学到了很多。"
-answer: "In the years since we began I have learned a lot."
-acceptAlso: "In the years since we began I have learned a lot."
-srsWords: "in" "the" "year" "since" "we" "begin" "i" "have" "learn" "a" "lot"
+sentence: "这些颜色很鲜艳。"
+answer: "These colours are very bright."
+acceptAlso: "The colors are really vivid."
+srsWords: "these" "colours" "are" "very" "bright" "the" "colors" "really" "vivid"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我觉得这是一个令人兴奋的想法。"
-answer: "I find that an exciting thought."
-acceptAlso: "I find that an exciting thought."
-srsWords: "i" "find" "that" "an" "exciting" "thought"
+sentence: "我在学水彩画。"
+answer: "I am learning watercolour painting."
+acceptAlso: "Watercolors are what I am studying now."
+srsWords: "i" "am" "learning" "watercolour" "painting" "watercolors" "are" "what" "studying" "now"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "起初，因为噪音问题，我们非常反对这个想法。"
-answer: "At first,we were very much against the idea because of the noise."
-acceptAlso: "At first,we were very much against the idea because of the noise."
-srsWords: "at" "first" "we" "were" "very" "much" "against" "the" "idea" "because" "of" "noise"
+sentence: "这幅画挂在墙上。"
+answer: "The painting hangs on the wall."
+acceptAlso: "There is a picture on the wall."
+srsWords: "the" "painting" "hangs" "on" "wall" "there" "is" "a" "picture"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "在许多早期动物园里，动物们被教导为游客表演。"
-answer: "In many of the early zoos, animals were taught to perform for the visitors."
-acceptAlso: "In many of the early zoos, animals were taught to perform for the visitors."
-srsWords: "in" "many" "of" "the" "early" "zoo" "animal" "were" "teach" "to" "perform" "for" "visitor"
+sentence: "美术课在下午。"
+answer: "The art class is in the afternoon."
+acceptAlso: "My art lesson is in the afternoon."
+srsWords: "the" "art" "class" "is" "in" "afternoon" "my" "lesson"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "如果没有动物园，这两点都是不可能实现的。"
-answer: "Both of these would not be possible without zoos."
-acceptAlso: "Both of these would not be possible without zoos."
-srsWords: "both" "of" "these" "would" "not" "be" "possible" "without" "zoo"
+sentence: "我用了一个小时画完。"
+answer: "It took me one hour to finish it."
+acceptAlso: "I spent an hour painting it."
+srsWords: "it" "took" "me" "one" "hour" "to" "finish" "i" "spent" "an" "painting"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它于2007年开业，从那时起已有数千人使用过它。"
-answer: "It opened in 2007 and since then thousands of people have used it."
-acceptAlso: "It opened in 2007 and since then thousands of people have used it."
-srsWords: "it" "open" "in" "and" "since" "then" "thousand" "of" "people" "have" "used"
+sentence: "颜料还没干。"
+answer: "The paint is not dry yet."
+acceptAlso: "Wait, the paint is still wet."
+srsWords: "the" "paint" "is" "not" "dry" "yet" "wait" "still" "wet"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "他想成为一名画家。"
+answer: "He wants to become a painter."
+acceptAlso: "Being an artist is his dream."
+srsWords: "he" "wants" "to" "become" "a" "painter" "being" "an" "artist" "is" "his" "dream"
 
 ---
 lessonTitle: "Lesson 8: Hiking"
@@ -547,75 +555,76 @@ description: "Translate A2 sentences about Hiking"
 icon: "⚽"
 color: "#EC4899"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "飞行时间有多长？"
-answer: "How long is the flight?"
-acceptAlso: "How long is the flight?"
-srsWords: "how" "long" "is" "the" "flight"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "平均飞行时间是12小时。"
-answer: "The average flight is 12 hours."
-acceptAlso: "The average flight is 12 hours."
-srsWords: "the" "average" "flight" "is" "hour"
+sentence: "我们周日去徒步。"
+answer: "We are going hiking on Sunday."
+acceptAlso: "Sunday is our hiking day."
+srsWords: "we" "are" "going" "hiking" "on" "sunday" "is" "our" "day"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "短篇小说的长度应该在1,000到1,500字之间。"
-answer: "Short stories should be between 1,000 and 1,500 words long."
-acceptAlso: "Short stories should be between 1,000 and 1,500 words long."
-srsWords: "short" "story" "should" "be" "between" "and" "word" "long"
+sentence: "这条路很长。"
+answer: "This trail is very long."
+acceptAlso: "The path goes on for miles."
+srsWords: "this" "trail" "is" "very" "long" "the" "path" "goes" "on" "for" "miles"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "从来没有人见过里面。"
-answer: "No one ever saw inside it."
-acceptAlso: "No one ever saw inside it."
-srsWords: "no" "one" "ever" "see" "inside" "it"
+sentence: "请穿舒服的鞋。"
+answer: "Please wear comfortable shoes."
+acceptAlso: "Good walking shoes are needed."
+srsWords: "please" "wear" "comfortable" "shoes" "good" "walking" "are" "needed"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "楼梯底部有两扇门。"
-answer: "At the bottom of the stairs there were two doors."
-acceptAlso: "At the bottom of the stairs there were two doors."
-srsWords: "at" "the" "bottom" "of" "stair" "there" "were" "two" "door"
+sentence: "我带了一些水和零食。"
+answer: "I brought some water and snacks."
+acceptAlso: "Water and snacks are in my bag."
+srsWords: "i" "brought" "some" "water" "and" "snacks" "are" "in" "my" "bag"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "三个月来，一切都很正常。"
-answer: "For three months, everything was normal."
-acceptAlso: "For three months, everything was normal."
-srsWords: "for" "three" "month" "everything" "was" "normal"
+sentence: "山里的空气很好。"
+answer: "The air in the mountains is very good."
+acceptAlso: "Mountain air is fresh."
+srsWords: "the" "air" "in" "mountains" "is" "very" "good" "mountain" "fresh"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "新顾客是一位非常漂亮的女人。"
-answer: "The new customer was a very beautiful woman."
-acceptAlso: "The new customer was a very beautiful woman."
-srsWords: "the" "new" "customer" "was" "a" "very" "beautiful" "woman"
+sentence: "我们在山顶休息。"
+answer: "We rest at the top of the hill."
+acceptAlso: "There is a break when we reach the top."
+srsWords: "we" "rest" "at" "the" "top" "of" "hill" "there" "is" "a" "break" "when" "reach"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这是辛苦活，而且弄伤了他的手。"
-answer: "It was hard work, and it hurt his hands."
-acceptAlso: "It was hard work, and it hurt his hands."
-srsWords: "it" "was" "hard" "work" "and" "hurt" "his" "hand"
+sentence: "请跟着路标走。"
+answer: "Please follow the signs."
+acceptAlso: "Stay on the marked path, please."
+srsWords: "please" "follow" "the" "signs" "stay" "on" "marked" "path"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你不能去参加舞会。"
-answer: "You can't go to the dance."
-acceptAlso: "You can't go to the dance."
-srsWords: "you" "can" "go" "to" "the" "dance"
+sentence: "我走了两个小时。"
+answer: "I walked for two hours."
+acceptAlso: "My walk took two hours."
+srsWords: "i" "walked" "for" "two" "hours" "my" "walk" "took"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "除了他之外，似乎没有人理解这个区别。"
-answer: "No one seemed to understand the difference except him."
-acceptAlso: "No one seemed to understand the difference except him."
-srsWords: "no" "one" "seem" "to" "understand" "the" "difference" "except" "him"
+sentence: "我的脚很疼。"
+answer: "My feet hurt a lot."
+acceptAlso: "My feet are sore after walking."
+srsWords: "my" "feet" "hurt" "a" "lot" "are" "sore" "after" "walking"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "徒步是很好的运动。"
+answer: "Hiking is very good exercise."
+acceptAlso: "Hiking is a great way to keep fit."
+srsWords: "hiking" "is" "very" "good" "exercise" "a" "great" "way" "to" "keep" "fit"
 
 ---
 lessonTitle: "Lesson 9: Swimming"
@@ -623,75 +632,76 @@ description: "Translate A2 sentences about Swimming"
 icon: "⚽"
 color: "#EC4899"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "他们笑着、哭着，要求再来一个。"
-answer: "They laughed and cried and called for more."
-acceptAlso: "They laughed and cried and called for more."
-srsWords: "they" "laugh" "and" "cry" "call" "for" "more"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我确信他开始跑了。"
-answer: "I am sure he began to run."
-acceptAlso: "I am sure he began to run."
-srsWords: "i" "am" "sure" "he" "begin" "to" "run"
+sentence: "我每周去游泳两次。"
+answer: "I go swimming twice a week."
+acceptAlso: "I swim two times every week."
+srsWords: "i" "go" "swimming" "twice" "a" "week" "swim" "two" "times" "every"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "而且明天小马就要来了。"
-answer: "And tomorrow the ponies are coming."
-acceptAlso: "And tomorrow the ponies are coming."
-srsWords: "and" "tomorrow" "the" "pony" "are" "come"
+sentence: "游泳池很干净。"
+answer: "The swimming pool is very clean."
+acceptAlso: "The pool is well kept."
+srsWords: "the" "swimming" "pool" "is" "very" "clean" "well" "kept"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "最好不要一个人去。"
-answer: "It was better not to go alone."
-acceptAlso: "It was better not to go alone."
-srsWords: "it" "was" "better" "not" "to" "go" "alone"
+sentence: "我六岁学会游泳。"
+answer: "I learned to swim when I was six."
+acceptAlso: "At six years old I could swim."
+srsWords: "i" "learned" "to" "swim" "when" "was" "six" "at" "years" "old" "could"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "没有任何销售记录。"
-answer: "There is no record of the sale."
-acceptAlso: "There is no record of the sale."
-srsWords: "there" "is" "no" "record" "of" "the" "sale"
+sentence: "请先在浅水区游。"
+answer: "Please swim in the shallow area first."
+acceptAlso: "Stay in the shallow end, please."
+srsWords: "please" "swim" "in" "the" "shallow" "area" "first" "stay" "end"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我对此深信不疑。"
-answer: "I was sure of this."
-acceptAlso: "I was sure of this."
-srsWords: "i" "was" "sure" "of" "this"
+sentence: "水有点凉。"
+answer: "The water is a little cold."
+acceptAlso: "It feels cool in the water."
+srsWords: "the" "water" "is" "a" "little" "cold" "it" "feels" "cool" "in"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "所以当他跟我说话时，我非常惊讶。"
-answer: "So I was very surprised when he spoke to me."
-acceptAlso: "So I was very surprised when he spoke to me."
-srsWords: "so" "i" "was" "very" "surprised" "when" "he" "speak" "to" "me"
+sentence: "我游了十个来回。"
+answer: "I swam ten lengths."
+acceptAlso: "Ten laps were swum by me."
+srsWords: "i" "swam" "ten" "lengths" "laps" "were" "swum" "by" "me"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它发自他身体的深处。"
-answer: "It came from somewhere deep in his body."
-acceptAlso: "It came from somewhere deep in his body."
-srsWords: "it" "come" "from" "somewhere" "deep" "in" "his" "body"
+sentence: "请戴上泳帽。"
+answer: "Please put on a swimming cap."
+acceptAlso: "A swim cap is needed here."
+srsWords: "please" "put" "on" "a" "swimming" "cap" "swim" "is" "needed" "here"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "也许他还没死！"
-answer: "Maybe he was not dead!"
-acceptAlso: "Maybe he was not dead!"
-srsWords: "maybe" "he" "was" "not" "dead"
+sentence: "我不会潜水。"
+answer: "I cannot dive."
+acceptAlso: "Diving is not something I can do."
+srsWords: "i" "cannot" "dive" "diving" "is" "not" "something" "can" "do"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他的身体没有动。"
-answer: "His body did not move."
-acceptAlso: "His body did not move."
-srsWords: "his" "body" "did" "not" "move"
+sentence: "游泳后我很饿。"
+answer: "I am very hungry after swimming."
+acceptAlso: "Swimming makes me hungry."
+srsWords: "i" "am" "very" "hungry" "after" "swimming" "makes" "me"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "游泳对全身都有好处。"
+answer: "Swimming is good for the whole body."
+acceptAlso: "It exercises your entire body."
+srsWords: "swimming" "is" "good" "for" "the" "whole" "body" "it" "exercises" "your" "entire"
 
 ---
 lessonTitle: "Lesson 10: Dancing"
@@ -699,73 +709,73 @@ description: "Translate A2 sentences about Dancing"
 icon: "⚽"
 color: "#EC4899"
 ---
-[translation]
-text: "Translate this sentence into English"
-sentence: "那是死亡的沉睡。"
-answer: "It was the sleep of death."
-acceptAlso: "It was the sleep of death."
-srsWords: "it" "was" "the" "sleep" "of" "death"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "尽头有一些楼梯。"
-answer: "There were some stairs at the end."
-acceptAlso: "There were some stairs at the end."
-srsWords: "there" "were" "some" "stair" "at" "the" "end"
+sentence: "我喜欢跳舞。"
+answer: "I like dancing."
+acceptAlso: "Dancing is something I enjoy."
+srsWords: "i" "like" "dancing" "is" "something" "enjoy"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他跑上了楼梯。"
-answer: "He ran up the stairs."
-acceptAlso: "He ran up the stairs."
-srsWords: "he" "run" "up" "the" "stair"
+sentence: "我们每周上一次舞蹈课。"
+answer: "We have a dance class once a week."
+acceptAlso: "Our dance lesson is weekly."
+srsWords: "we" "have" "a" "dance" "class" "once" "week" "our" "lesson" "is" "weekly"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他穿过那扇门，来到了屋顶上。"
-answer: "He went through the door, and he was on the roof."
-acceptAlso: "He went through the door, and he was on the roof."
-srsWords: "he" "go" "through" "the" "door" "and" "was" "on" "roof"
+sentence: "请跟着音乐的节奏。"
+answer: "Please follow the rhythm of the music."
+acceptAlso: "Move with the beat, please."
+srsWords: "please" "follow" "the" "rhythm" "of" "music" "move" "with" "beat"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他思考了一会儿。"
-answer: "He thought for a moment."
-acceptAlso: "He thought for a moment."
-srsWords: "he" "thought" "for" "a" "moment"
+sentence: "她跳得很优美。"
+answer: "She dances very gracefully."
+acceptAlso: "Her dancing is beautiful."
+srsWords: "she" "dances" "very" "gracefully" "her" "dancing" "is" "beautiful"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然后他走到另一边，朝那堵墙的下方望去。"
-answer: "Then he walked across to the other side and looked over that wall."
-acceptAlso: "Then he walked across to the other side and looked over that wall."
-srsWords: "then" "he" "walk" "across" "to" "the" "other" "side" "and" "look" "over" "that" "wall"
+sentence: "我想学跳拉丁舞。"
+answer: "I want to learn Latin dance."
+acceptAlso: "Latin dancing is what I want to learn."
+srsWords: "i" "want" "to" "learn" "latin" "dance" "dancing" "is" "what"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "那是另一个有更多建筑物的山谷。"
-answer: "There was another valley with more buildings."
-acceptAlso: "There was another valley with more buildings."
-srsWords: "there" "was" "another" "valley" "with" "more" "building"
+sentence: "舞会在周六晚上。"
+answer: "The dance party is on Saturday evening."
+acceptAlso: "There is a dance on Saturday night."
+srsWords: "the" "dance" "party" "is" "on" "saturday" "evening" "there" "a" "night"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "箱子上有字。"
-answer: "There was writing on the boxes."
-acceptAlso: "There was writing on the boxes."
-srsWords: "there" "was" "writing" "on" "the" "box"
+sentence: "我不太会跳舞。"
+answer: "I am not very good at dancing."
+acceptAlso: "Dancing is not my strong point."
+srsWords: "i" "am" "not" "very" "good" "at" "dancing" "is" "my" "strong" "point"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "也许那个女人是对的。"
-answer: "Maybe the woman was right."
-acceptAlso: "Maybe the woman was right."
-srsWords: "maybe" "the" "woman" "was" "right"
+sentence: "音乐很好听。"
+answer: "The music is very nice."
+acceptAlso: "The sound of the music is lovely."
+srsWords: "the" "music" "is" "very" "nice" "sound" "of" "lovely"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她站起身，朝门口走去。"
-answer: "She stood up, and went to the door."
-acceptAlso: "She stood up, and went to the door."
-srsWords: "she" "stand" "up" "and" "go" "to" "the" "door"
+sentence: "我们跳了一整晚。"
+answer: "We danced all evening."
+acceptAlso: "The dancing lasted the whole night."
+srsWords: "we" "danced" "all" "evening" "the" "dancing" "lasted" "whole" "night"
 
+[translation]
+text: "Translate this sentence into English"
+sentence: "跳舞让我很开心。"
+answer: "Dancing makes me very happy."
+acceptAlso: "I feel happy when I dance."
+srsWords: "dancing" "makes" "me" "very" "happy" "i" "feel" "when" "dance"

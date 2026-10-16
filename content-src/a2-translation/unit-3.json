@@ -1,0 +1,158 @@
+{
+  "unit": 3,
+  "unitTitle": "Unit 3: Food, Dining & Groceries",
+  "icon": "🍲",
+  "color": "#EF4444",
+  "lessons": [
+    {
+      "title": "At the Restaurant",
+      "sentences": [
+        { "zh": "我订了一张两个人的桌子。", "en": "I booked a table for two.", "alt": "I reserved a table for two people." },
+        { "zh": "我们可以看看菜单吗？", "en": "Can we see the menu, please?", "alt": "Could we have a look at the menu?" },
+        { "zh": "这家餐厅很受欢迎。", "en": "This restaurant is very popular.", "alt": "This place is quite popular." },
+        { "zh": "服务员很友好。", "en": "The waiter is very friendly.", "alt": "The waiters here are friendly." },
+        { "zh": "请给我一杯水。", "en": "Please give me a glass of water.", "alt": "Can I have a glass of water, please?" },
+        { "zh": "这道菜太咸了。", "en": "This dish is too salty.", "alt": "There is too much salt in this dish." },
+        { "zh": "我们等了很久才上菜。", "en": "We waited a long time for our food.", "alt": "Our food took a long time to arrive." },
+        { "zh": "请结账。", "en": "The bill, please.", "alt": "Could we have the bill, please?" },
+        { "zh": "我们坐在靠窗的位置。", "en": "We are sitting by the window.", "alt": "Our table is next to the window." },
+        { "zh": "这家餐厅周末很忙。", "en": "This restaurant is very busy at weekends.", "alt": "The restaurant gets busy on weekends." }
+      ]
+    },
+    {
+      "title": "Ordering Food",
+      "sentences": [
+        { "zh": "我要一份鸡肉饭。", "en": "I would like the chicken with rice.", "alt": "I will have the chicken and rice." },
+        { "zh": "你想喝点什么？", "en": "What would you like to drink?", "alt": "What do you want to drink?" },
+        { "zh": "请给我一份沙拉。", "en": "Please give me a salad.", "alt": "I would like a salad, please." },
+        { "zh": "这道菜是什么做的？", "en": "What is this dish made of?", "alt": "What ingredients are in this dish?" },
+        { "zh": "我不要辣椒。", "en": "I do not want any chilli.", "alt": "No chili for me, please." },
+        { "zh": "可以外带吗？", "en": "Can I take it away?", "alt": "Is it possible to get this to go?" },
+        { "zh": "我还想要一份甜点。", "en": "I also want a dessert.", "alt": "I would like a dessert too." },
+        { "zh": "今天的汤是什么？", "en": "What is the soup today?", "alt": "What soup do you have today?" },
+        { "zh": "我点了一份牛排。", "en": "I ordered a steak.", "alt": "I asked for a steak." },
+        { "zh": "请少放一点油。", "en": "Please use less oil.", "alt": "Could you put less oil in it?" }
+      ]
+    },
+    {
+      "title": "Cooking at Home",
+      "sentences": [
+        { "zh": "我妈妈每天做饭。", "en": "My mother cooks every day.", "alt": "My mom makes meals every day." },
+        { "zh": "我正在切洋葱。", "en": "I am cutting onions.", "alt": "I am chopping up some onions." },
+        { "zh": "水开了。", "en": "The water is boiling.", "alt": "The water has come to the boil." },
+        { "zh": "请把盐递给我。", "en": "Please pass me the salt.", "alt": "Can you hand me the salt?" },
+        { "zh": "这道菜要煮二十分钟。", "en": "This dish needs to cook for twenty minutes.", "alt": "You cook this for twenty minutes." },
+        { "zh": "我在学做中国菜。", "en": "I am learning to cook Chinese food.", "alt": "I am learning how to make Chinese dishes." },
+        { "zh": "我们用平底锅煎鸡蛋。", "en": "We fry eggs in a pan.", "alt": "We cook eggs in a frying pan." },
+        { "zh": "饭做好了吗？", "en": "Is the food ready?", "alt": "Is dinner ready yet?" },
+        { "zh": "我把蔬菜洗干净。", "en": "I wash the vegetables.", "alt": "I clean the vegetables with water." },
+        { "zh": "厨房里有一股香味。", "en": "There is a nice smell in the kitchen.", "alt": "The kitchen smells very good." }
+      ]
+    },
+    {
+      "title": "Supermarket",
+      "sentences": [
+        { "zh": "我去超市买牛奶。", "en": "I go to the supermarket to buy milk.", "alt": "I am going to the store for milk." },
+        { "zh": "蔬菜在入口旁边。", "en": "The vegetables are next to the entrance.", "alt": "You can find vegetables by the door." },
+        { "zh": "这盒鸡蛋多少钱？", "en": "How much is this box of eggs?", "alt": "What does this carton of eggs cost?" },
+        { "zh": "我在收银台排队。", "en": "I am queueing at the checkout.", "alt": "I am waiting in line at the cashier." },
+        { "zh": "我忘了带购物袋。", "en": "I forgot my shopping bag.", "alt": "I did not bring a bag for shopping." },
+        { "zh": "这个牌子比那个贵。", "en": "This brand is more expensive than that one.", "alt": "This brand costs more than that brand." },
+        { "zh": "牛奶在冷藏区。", "en": "The milk is in the cold section.", "alt": "You can find milk in the fridge area." },
+        { "zh": "我用现金付款。", "en": "I pay with cash.", "alt": "I am paying in cash." },
+        { "zh": "今天超市里人很多。", "en": "The supermarket is very crowded today.", "alt": "There are a lot of people in the store today." },
+        { "zh": "我买了面包和黄油。", "en": "I bought bread and butter.", "alt": "I got some bread and butter." }
+      ]
+    },
+    {
+      "title": "Coffee Shop",
+      "sentences": [
+        { "zh": "我想喝一杯咖啡。", "en": "I would like a cup of coffee.", "alt": "I want a coffee, please." },
+        { "zh": "请给我一杯奶茶。", "en": "Please give me a tea with milk.", "alt": "A tea with milk, please." },
+        { "zh": "这家咖啡馆很安静。", "en": "This cafe is very quiet.", "alt": "It is quiet in this coffee shop." },
+        { "zh": "我在这里等朋友。", "en": "I am waiting for a friend here.", "alt": "I am meeting a friend at this cafe." },
+        { "zh": "有大杯的吗？", "en": "Do you have a large size?", "alt": "Can I get a big one?" },
+        { "zh": "咖啡里请不要加糖。", "en": "No sugar in my coffee, please.", "alt": "Please do not add sugar to my coffee." },
+        { "zh": "这里可以上网吗？", "en": "Is there internet here?", "alt": "Do you have wifi in here?" },
+        { "zh": "我每天都来这家店。", "en": "I come to this shop every day.", "alt": "I visit this coffee shop daily." },
+        { "zh": "这杯咖啡太烫了。", "en": "This coffee is too hot.", "alt": "My coffee is very hot." },
+        { "zh": "我要一块巧克力蛋糕。", "en": "I want a piece of chocolate cake.", "alt": "I would like a slice of chocolate cake." }
+      ]
+    },
+    {
+      "title": "Dietary Preferences",
+      "sentences": [
+        { "zh": "我是素食者。", "en": "I am a vegetarian.", "alt": "I do not eat meat." },
+        { "zh": "我对花生过敏。", "en": "I am allergic to peanuts.", "alt": "Peanuts make me sick." },
+        { "zh": "我不吃猪肉。", "en": "I do not eat pork.", "alt": "I never eat pork." },
+        { "zh": "这道菜里有牛奶吗？", "en": "Is there milk in this dish?", "alt": "Does this dish contain dairy?" },
+        { "zh": "请给我一份无糖饮料。", "en": "Please give me a sugar-free drink.", "alt": "I would like a drink without sugar." },
+        { "zh": "我尽量少吃肉。", "en": "I try to eat less meat.", "alt": "I am trying to cut down on meat." },
+        { "zh": "这个面包是全麦的吗？", "en": "Is this bread wholegrain?", "alt": "Is this whole wheat bread?" },
+        { "zh": "你有什么忌口的吗？", "en": "Are there any foods you cannot eat?", "alt": "Do you have any special diet?" },
+        { "zh": "我每天吃很多水果。", "en": "I eat a lot of fruit every day.", "alt": "I have plenty of fruit daily." },
+        { "zh": "医生让我少吃盐。", "en": "The doctor told me to eat less salt.", "alt": "My doctor said I should cut down on salt." }
+      ]
+    },
+    {
+      "title": "Recipes",
+      "sentences": [
+        { "zh": "这个食谱很简单。", "en": "This recipe is very simple.", "alt": "This recipe is quite easy." },
+        { "zh": "我们需要两个鸡蛋。", "en": "We need two eggs.", "alt": "Two eggs are needed for this." },
+        { "zh": "第一步是把黄油融化。", "en": "The first step is to melt the butter.", "alt": "First, melt the butter." },
+        { "zh": "把面粉放进碗里。", "en": "Put the flour in the bowl.", "alt": "Add the flour to the bowl." },
+        { "zh": "用小火煮十分钟。", "en": "Cook it on a low heat for ten minutes.", "alt": "Simmer it gently for ten minutes." },
+        { "zh": "搅拌到面团变光滑。", "en": "Stir until the dough is smooth.", "alt": "Mix it until the dough feels smooth." },
+        { "zh": "最后加一点盐。", "en": "Finally add a little salt.", "alt": "Add some salt at the end." },
+        { "zh": "这个蛋糕要烤四十分钟。", "en": "This cake needs to bake for forty minutes.", "alt": "You bake the cake for forty minutes." },
+        { "zh": "我照奶奶的方法做汤。", "en": "I make the soup following my grandmother's method.", "alt": "I cook soup the way my grandma does." },
+        { "zh": "请把它放进冰箱一小时。", "en": "Please put it in the fridge for one hour.", "alt": "Leave it in the refrigerator for an hour." }
+      ]
+    },
+    {
+      "title": "Breakfast",
+      "sentences": [
+        { "zh": "我早饭吃麦片和牛奶。", "en": "I have cereal and milk for breakfast.", "alt": "I eat cereal with milk in the morning." },
+        { "zh": "他每天早上吃两片吐司。", "en": "He eats two pieces of toast every morning.", "alt": "He has two slices of toast each morning." },
+        { "zh": "我煎了一个鸡蛋。", "en": "I fried an egg.", "alt": "I cooked one egg in the pan." },
+        { "zh": "早饭是一天中最重要的一餐。", "en": "Breakfast is the most important meal of the day.", "alt": "Breakfast matters most of all meals." },
+        { "zh": "我没时间吃早饭。", "en": "I have no time for breakfast.", "alt": "I do not have time to eat breakfast." },
+        { "zh": "我喝一杯橙汁。", "en": "I drink a glass of orange juice.", "alt": "I have a glass of orange juice." },
+        { "zh": "你早饭时喝咖啡吗？", "en": "Do you drink coffee at breakfast?", "alt": "Do you have coffee with your breakfast?" },
+        { "zh": "我妈妈做了粥。", "en": "My mother made porridge.", "alt": "Mom cooked some rice porridge." },
+        { "zh": "我早饭吃得很简单。", "en": "I eat a very simple breakfast.", "alt": "My breakfast is usually simple." },
+        { "zh": "早饭以后我刷碗。", "en": "I wash the dishes after breakfast.", "alt": "I do the dishes after breakfast." }
+      ]
+    },
+    {
+      "title": "Dinner",
+      "sentences": [
+        { "zh": "我们七点吃晚饭。", "en": "We have dinner at seven.", "alt": "Our dinner is at seven o'clock." },
+        { "zh": "今晚我们吃鱼。", "en": "We are having fish tonight.", "alt": "We will eat fish this evening." },
+        { "zh": "请帮我摆桌子。", "en": "Please help me set the table.", "alt": "Can you help me lay the table?" },
+        { "zh": "晚饭已经准备好了。", "en": "Dinner is ready.", "alt": "The dinner is on the table." },
+        { "zh": "我请了朋友来吃晚饭。", "en": "I invited a friend to dinner.", "alt": "I asked a friend over for dinner." },
+        { "zh": "这道菜里有很多蔬菜。", "en": "There are many vegetables in this dish.", "alt": "This dish has a lot of vegetables in it." },
+        { "zh": "我吃得太多了。", "en": "I ate too much.", "alt": "I have eaten far too much." },
+        { "zh": "饭后我们吃水果。", "en": "We eat fruit after the meal.", "alt": "We have some fruit after dinner." },
+        { "zh": "今晚我不想做饭。", "en": "I would rather not cook tonight.", "alt": "I do not feel like cooking this evening." },
+        { "zh": "我们在餐厅吃了晚饭。", "en": "We had dinner at a restaurant.", "alt": "We ate out at a restaurant." }
+      ]
+    },
+    {
+      "title": "Snacks",
+      "sentences": [
+        { "zh": "我下午喜欢吃点零食。", "en": "I like to eat a snack in the afternoon.", "alt": "I enjoy having a snack in the afternoon." },
+        { "zh": "这些饼干很好吃。", "en": "These biscuits are very tasty.", "alt": "These cookies taste really good." },
+        { "zh": "我买了一包薯片。", "en": "I bought a packet of crisps.", "alt": "I got a bag of potato chips." },
+        { "zh": "不要吃太多甜食。", "en": "Do not eat too many sweets.", "alt": "You should not have too much candy." },
+        { "zh": "这个苹果很新鲜。", "en": "This apple is very fresh.", "alt": "These apples taste fresh." },
+        { "zh": "我饿的时候吃坚果。", "en": "I eat nuts when I am hungry.", "alt": "Nuts are my snack when hungry." },
+        { "zh": "冰箱里有一些酸奶。", "en": "There is some yogurt in the fridge.", "alt": "We have yoghurt in the refrigerator." },
+        { "zh": "孩子们喜欢吃冰淇淋。", "en": "Children like eating ice cream.", "alt": "Kids love ice cream." },
+        { "zh": "我把巧克力分给朋友。", "en": "I share the chocolate with my friends.", "alt": "I give some chocolate to my friends." },
+        { "zh": "睡前不要吃零食。", "en": "Do not eat snacks before bed.", "alt": "No snacks before you go to sleep." }
+      ]
+    }
+  ]
+}

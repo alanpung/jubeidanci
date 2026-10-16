@@ -1,0 +1,158 @@
+{
+  "unit": 8,
+  "unitTitle": "Unit 8: Hobbies, Sports & Entertainment",
+  "icon": "⚽",
+  "color": "#EC4899",
+  "lessons": [
+    {
+      "title": "Playing Football",
+      "sentences": [
+        { "zh": "我每周六踢足球。", "en": "I play football every Saturday.", "alt": "Saturdays are for soccer for me." },
+        { "zh": "我们队赢了比赛。", "en": "Our team won the match.", "alt": "We were the winners of the game." },
+        { "zh": "他踢进了一个球。", "en": "He scored a goal.", "alt": "A goal was scored by him." },
+        { "zh": "球场在学校旁边。", "en": "The football field is next to the school.", "alt": "The pitch is beside our school." },
+        { "zh": "我是守门员。", "en": "I am the goalkeeper.", "alt": "I play in goal." },
+        { "zh": "请穿运动鞋。", "en": "Please wear sports shoes.", "alt": "Put on trainers, please." },
+        { "zh": "比赛下午三点开始。", "en": "The match starts at three in the afternoon.", "alt": "Kick-off is at three pm." },
+        { "zh": "我们输了，但很开心。", "en": "We lost, but we were happy.", "alt": "Losing did not spoil our fun." },
+        { "zh": "我受伤了，要休息一周。", "en": "I am injured and need to rest for a week.", "alt": "An injury keeps me out for a week." },
+        { "zh": "足球是我最喜欢的运动。", "en": "Football is my favourite sport.", "alt": "Soccer is the sport I love most." }
+      ]
+    },
+    {
+      "title": "Reading Books",
+      "sentences": [
+        { "zh": "我每天晚上看书。", "en": "I read a book every evening.", "alt": "Reading is part of my evening." },
+        { "zh": "这本书很有意思。", "en": "This book is very interesting.", "alt": "The book is really good." },
+        { "zh": "我从图书馆借了两本书。", "en": "I borrowed two books from the library.", "alt": "Two library books are with me." },
+        { "zh": "我喜欢看小说。", "en": "I like reading novels.", "alt": "Novels are my favourite kind of book." },
+        { "zh": "这本书有二百页。", "en": "This book has two hundred pages.", "alt": "It is a two-hundred-page book." },
+        { "zh": "我读完了第一章。", "en": "I finished the first chapter.", "alt": "Chapter one is done." },
+        { "zh": "请安静，我在看书。", "en": "Please be quiet, I am reading.", "alt": "I need silence while reading." },
+        { "zh": "这位作者写得很清楚。", "en": "The author writes very clearly.", "alt": "This writer is easy to follow." },
+        { "zh": "我把书放回了书架。", "en": "I put the book back on the shelf.", "alt": "The book is back on the shelf now." },
+        { "zh": "读书让我放松。", "en": "Reading helps me relax.", "alt": "Books make me feel calm." }
+      ]
+    },
+    {
+      "title": "Photography",
+      "sentences": [
+        { "zh": "我喜欢拍照。", "en": "I like taking photos.", "alt": "Photography is a hobby of mine." },
+        { "zh": "请把相机递给我。", "en": "Please pass me the camera.", "alt": "Hand me the camera, please." },
+        { "zh": "这张照片很漂亮。", "en": "This photo is very beautiful.", "alt": "The picture looks great." },
+        { "zh": "光线不太好。", "en": "The light is not very good.", "alt": "There is not enough light here." },
+        { "zh": "我在学用这台相机。", "en": "I am learning to use this camera.", "alt": "I am still learning this camera." },
+        { "zh": "请把照片发给我。", "en": "Please send me the photos.", "alt": "Can you share the pictures with me?" },
+        { "zh": "我把照片存在电脑里。", "en": "I keep the photos on my computer.", "alt": "My pictures are saved on the computer." },
+        { "zh": "他拍了很多风景照。", "en": "He took many landscape photos.", "alt": "A lot of scenery shots were taken by him." },
+        { "zh": "请站在那里别动。", "en": "Please stand there and do not move.", "alt": "Stay still right there, please." },
+        { "zh": "我想买一个新镜头。", "en": "I want to buy a new lens.", "alt": "A new lens is on my shopping list." }
+      ]
+    },
+    {
+      "title": "Music & Instruments",
+      "sentences": [
+        { "zh": "我弹钢琴。", "en": "I play the piano.", "alt": "Piano is my instrument." },
+        { "zh": "她唱歌很好听。", "en": "She sings very well.", "alt": "Her voice is lovely." },
+        { "zh": "我每周上一次吉他课。", "en": "I have a guitar lesson once a week.", "alt": "My guitar class is weekly." },
+        { "zh": "请小声一点。", "en": "Please be a little quieter.", "alt": "Turn the volume down, please." },
+        { "zh": "我在学一首新歌。", "en": "I am learning a new song.", "alt": "There is a new song I am practising." },
+        { "zh": "音乐让我心情好。", "en": "Music puts me in a good mood.", "alt": "Listening to music makes me happy." },
+        { "zh": "他加入了学校的乐队。", "en": "He joined the school band.", "alt": "He plays in a band at school." },
+        { "zh": "我每天练习半小时。", "en": "I practise for half an hour every day.", "alt": "Practice takes thirty minutes a day." },
+        { "zh": "这首曲子很难。", "en": "This piece of music is very difficult.", "alt": "The song is hard to play." },
+        { "zh": "你会演奏乐器吗？", "en": "Can you play an instrument?", "alt": "Do you play any musical instrument?" }
+      ]
+    },
+    {
+      "title": "Movies & TV",
+      "sentences": [
+        { "zh": "我们今晚看一部电影。", "en": "We are watching a film tonight.", "alt": "A movie is on our plan this evening." },
+        { "zh": "这部电影很有意思。", "en": "This film is very interesting.", "alt": "The movie is a lot of fun." },
+        { "zh": "我喜欢看喜剧片。", "en": "I like watching comedies.", "alt": "Comedy films are my favourite." },
+        { "zh": "电影院离这里不远。", "en": "The cinema is not far from here.", "alt": "The movie theater is nearby." },
+        { "zh": "请给我两张票。", "en": "Please give me two tickets.", "alt": "Two tickets, please." },
+        { "zh": "我很少看电视。", "en": "I rarely watch TV.", "alt": "Television is not something I watch often." },
+        { "zh": "这个节目很受欢迎。", "en": "This programme is very popular.", "alt": "The show has many viewers." },
+        { "zh": "电影八点开始。", "en": "The film starts at eight.", "alt": "The movie begins at eight o'clock." },
+        { "zh": "我看了两遍才明白。", "en": "I watched it twice before I understood.", "alt": "It took two watches to get it." },
+        { "zh": "请打开字幕。", "en": "Please turn on the subtitles.", "alt": "Can we have the subtitles on?" }
+      ]
+    },
+    {
+      "title": "Gaming",
+      "sentences": [
+        { "zh": "我周末玩电子游戏。", "en": "I play video games at the weekend.", "alt": "Gaming is my weekend hobby." },
+        { "zh": "这个游戏很难。", "en": "This game is very difficult.", "alt": "The game is quite hard." },
+        { "zh": "我和朋友一起联网玩。", "en": "I play online with my friends.", "alt": "My friends and I game together online." },
+        { "zh": "请把手柄递给我。", "en": "Please pass me the controller.", "alt": "Give me the game controller, please." },
+        { "zh": "我赢了这一关。", "en": "I won this level.", "alt": "I beat this stage of the game." },
+        { "zh": "不要玩太久。", "en": "Do not play for too long.", "alt": "You should not game for hours." },
+        { "zh": "游戏画面很漂亮。", "en": "The graphics of the game are beautiful.", "alt": "The game looks great." },
+        { "zh": "我注册了一个账号。", "en": "I registered an account.", "alt": "I signed up for a game account." },
+        { "zh": "我的电脑运行不了这个游戏。", "en": "My computer cannot run this game.", "alt": "The game will not work on my computer." },
+        { "zh": "玩游戏让我放松。", "en": "Playing games helps me relax.", "alt": "Gaming makes me feel calm." }
+      ]
+    },
+    {
+      "title": "Painting",
+      "sentences": [
+        { "zh": "我喜欢画画。", "en": "I like painting.", "alt": "Painting is what I enjoy doing." },
+        { "zh": "她画了一幅风景画。", "en": "She painted a landscape.", "alt": "A picture of the countryside was painted by her." },
+        { "zh": "请给我一支画笔。", "en": "Please give me a brush.", "alt": "I need a paintbrush, please." },
+        { "zh": "这些颜色很鲜艳。", "en": "These colours are very bright.", "alt": "The colors are really vivid." },
+        { "zh": "我在学水彩画。", "en": "I am learning watercolour painting.", "alt": "Watercolors are what I am studying now." },
+        { "zh": "这幅画挂在墙上。", "en": "The painting hangs on the wall.", "alt": "There is a picture on the wall." },
+        { "zh": "美术课在下午。", "en": "The art class is in the afternoon.", "alt": "My art lesson is in the afternoon." },
+        { "zh": "我用了一个小时画完。", "en": "It took me one hour to finish it.", "alt": "I spent an hour painting it." },
+        { "zh": "颜料还没干。", "en": "The paint is not dry yet.", "alt": "Wait, the paint is still wet." },
+        { "zh": "他想成为一名画家。", "en": "He wants to become a painter.", "alt": "Being an artist is his dream." }
+      ]
+    },
+    {
+      "title": "Hiking",
+      "sentences": [
+        { "zh": "我们周日去徒步。", "en": "We are going hiking on Sunday.", "alt": "Sunday is our hiking day." },
+        { "zh": "这条路很长。", "en": "This trail is very long.", "alt": "The path goes on for miles." },
+        { "zh": "请穿舒服的鞋。", "en": "Please wear comfortable shoes.", "alt": "Good walking shoes are needed." },
+        { "zh": "我带了一些水和零食。", "en": "I brought some water and snacks.", "alt": "Water and snacks are in my bag." },
+        { "zh": "山里的空气很好。", "en": "The air in the mountains is very good.", "alt": "Mountain air is fresh." },
+        { "zh": "我们在山顶休息。", "en": "We rest at the top of the hill.", "alt": "There is a break when we reach the top." },
+        { "zh": "请跟着路标走。", "en": "Please follow the signs.", "alt": "Stay on the marked path, please." },
+        { "zh": "我走了两个小时。", "en": "I walked for two hours.", "alt": "My walk took two hours." },
+        { "zh": "我的脚很疼。", "en": "My feet hurt a lot.", "alt": "My feet are sore after walking." },
+        { "zh": "徒步是很好的运动。", "en": "Hiking is very good exercise.", "alt": "Hiking is a great way to keep fit." }
+      ]
+    },
+    {
+      "title": "Swimming",
+      "sentences": [
+        { "zh": "我每周去游泳两次。", "en": "I go swimming twice a week.", "alt": "I swim two times every week." },
+        { "zh": "游泳池很干净。", "en": "The swimming pool is very clean.", "alt": "The pool is well kept." },
+        { "zh": "我六岁学会游泳。", "en": "I learned to swim when I was six.", "alt": "At six years old I could swim." },
+        { "zh": "请先在浅水区游。", "en": "Please swim in the shallow area first.", "alt": "Stay in the shallow end, please." },
+        { "zh": "水有点凉。", "en": "The water is a little cold.", "alt": "It feels cool in the water." },
+        { "zh": "我游了十个来回。", "en": "I swam ten lengths.", "alt": "Ten laps were swum by me." },
+        { "zh": "请戴上泳帽。", "en": "Please put on a swimming cap.", "alt": "A swim cap is needed here." },
+        { "zh": "我不会潜水。", "en": "I cannot dive.", "alt": "Diving is not something I can do." },
+        { "zh": "游泳后我很饿。", "en": "I am very hungry after swimming.", "alt": "Swimming makes me hungry." },
+        { "zh": "游泳对全身都有好处。", "en": "Swimming is good for the whole body.", "alt": "It exercises your entire body." }
+      ]
+    },
+    {
+      "title": "Dancing",
+      "sentences": [
+        { "zh": "我喜欢跳舞。", "en": "I like dancing.", "alt": "Dancing is something I enjoy." },
+        { "zh": "我们每周上一次舞蹈课。", "en": "We have a dance class once a week.", "alt": "Our dance lesson is weekly." },
+        { "zh": "请跟着音乐的节奏。", "en": "Please follow the rhythm of the music.", "alt": "Move with the beat, please." },
+        { "zh": "她跳得很优美。", "en": "She dances very gracefully.", "alt": "Her dancing is beautiful." },
+        { "zh": "我想学跳拉丁舞。", "en": "I want to learn Latin dance.", "alt": "Latin dancing is what I want to learn." },
+        { "zh": "舞会在周六晚上。", "en": "The dance party is on Saturday evening.", "alt": "There is a dance on Saturday night." },
+        { "zh": "我不太会跳舞。", "en": "I am not very good at dancing.", "alt": "Dancing is not my strong point." },
+        { "zh": "音乐很好听。", "en": "The music is very nice.", "alt": "The sound of the music is lovely." },
+        { "zh": "我们跳了一整晚。", "en": "We danced all evening.", "alt": "The dancing lasted the whole night." },
+        { "zh": "跳舞让我很开心。", "en": "Dancing makes me very happy.", "alt": "I feel happy when I dance." }
+      ]
+    }
+  ]
+}
