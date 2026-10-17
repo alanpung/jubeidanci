@@ -63,43 +63,13 @@ async function loadEnglishMergedWords(): Promise<WordEntry[]> {
     const list = JSON.parse(content);
     if (!Array.isArray(list)) return [];
 
-    // Load Chinese translations & IPA from combined_a1_c2.json to enrich english_merged.json
-    const zhMap = new Map<string, Record<string, unknown>>();
-    try {
-      const combinedPath = path.join(process.cwd(), "words", "combined_a1_c2.json");
-      const combinedContent = await fs.readFile(combinedPath, "utf-8");
-      const combinedList = JSON.parse(combinedContent);
-      if (Array.isArray(combinedList)) {
-        for (const item of combinedList) {
-          const wKey = String(item.word || "").toLowerCase().trim();
-          if (wKey && !zhMap.has(wKey)) {
-            zhMap.set(wKey, item);
-          }
-        }
-      }
-    } catch {}
-
-    const mapped: WordEntry[] = list.map((w: Record<string, unknown>) => {
-      const entry = mapJsonToWordEntry(w);
-      const wKey = entry.word.toLowerCase().trim();
-      const extra = zhMap.get(wKey);
-      if (extra) {
-        const extraZh = (extra.translation_zh as string) || (extra.definition_zh as string) || "";
-        if (!entry.definition_zh && /[\u4e00-\u9fa5]/.test(extraZh)) {
-          entry.definition_zh = extraZh;
-        }
-        if (!entry.ipa && extra.ipa) {
-          entry.ipa = String(extra.ipa);
-        }
-        if (!entry.example_sentence_native && extra.example) {
-          entry.example_sentence_native = String(extra.example);
-        }
-        if (!entry.example_zh && extra.example_translation) {
-          entry.example_zh = String(extra.example_translation);
-        }
-      }
-      return entry;
-    });
+    // english_merged.json is the single source of truth for English words —
+    // it already carries definition_zh, ipa, example_sentence_english and
+    // cefr_level for every entry, so we don't need to merge with the old
+    // words/en/{a1..c2}.json or words/combined_a1_c2.json view files.
+    const mapped: WordEntry[] = list.map((w: Record<string, unknown>) =>
+      mapJsonToWordEntry(w),
+    );
 
     memoryWordsCache.set(cacheKey, mapped);
     return mapped;

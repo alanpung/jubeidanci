@@ -19,7 +19,7 @@ for (const file of existingUnitFiles) {
 
 console.log(`Initial used words in A1 + A2 units: ${usedWords.size}`);
 
-// 2. Load english_merged.json and words/en/b1..c2.json
+// 2. Load english_merged.json (single source of truth — no more words/en/*.json)
 const mergedPath = path.join(process.cwd(), "words", "english_merged.json");
 const merged = JSON.parse(fs.readFileSync(mergedPath, "utf8"));
 const mergedMap = new Map();
@@ -28,11 +28,12 @@ for (const w of merged) {
   if (lower) mergedMap.set(lower, w);
 }
 
+// Filter english_merged.json by cefr_level to replace the old words/en/<lvl>.json views.
 const enFiles = {
-  B1: JSON.parse(fs.readFileSync(path.join(process.cwd(), "words/en/b1.json"), "utf8")),
-  B2: JSON.parse(fs.readFileSync(path.join(process.cwd(), "words/en/b2.json"), "utf8")),
-  C1: JSON.parse(fs.readFileSync(path.join(process.cwd(), "words/en/c1.json"), "utf8")),
-  C2: JSON.parse(fs.readFileSync(path.join(process.cwd(), "words/en/c2.json"), "utf8")),
+  B1: merged.filter((w) => (w.cefr_level || w.level || "").toUpperCase() === "B1"),
+  B2: merged.filter((w) => (w.cefr_level || w.level || "").toUpperCase() === "B2"),
+  C1: merged.filter((w) => (w.cefr_level || w.level || "").toUpperCase() === "C1"),
+  C2: merged.filter((w) => (w.cefr_level || w.level || "").toUpperCase() === "C2"),
 };
 
 function sanitizeYamlString(str) {

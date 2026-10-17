@@ -199,27 +199,9 @@ function getDictionaryMap(): Map<string, DictLookupEntry> {
   if (cachedDictMap) return cachedDictMap;
   const map = new Map<string, DictLookupEntry>();
 
-  // 1. Load combined_a1_c2.json
-  try {
-    const combinedPath = path.join(process.cwd(), "words", "combined_a1_c2.json");
-    if (fs.existsSync(combinedPath)) {
-      const combined = JSON.parse(fs.readFileSync(combinedPath, "utf-8"));
-      if (Array.isArray(combined)) {
-        for (const item of combined) {
-          const w = String(item.word || "").toLowerCase().trim();
-          if (!w) continue;
-          const meaning = cleanShortZhMeaning(item.translation_zh || item.definition_zh || item.meaning);
-          const pos = getNormalizedPos(w, item.pos, meaning);
-          const ipa = item.ipa ? `/${String(item.ipa).replace(/^\/|\/$/g, "")}/` : "";
-          if (meaning) {
-            map.set(w, { ipa, meaning, pos });
-          }
-        }
-      }
-    }
-  } catch {}
-
-  // 2. Load english_merged.json
+  // Single source of truth: english_merged.json. It already carries
+  // definition_zh (100%), ipa (97%), pos and example_sentence_english for
+  // every entry, so the old combined_a1_c2.json view file isn't needed.
   try {
     const mergedPath = path.join(process.cwd(), "words", "english_merged.json");
     if (fs.existsSync(mergedPath)) {
@@ -230,7 +212,7 @@ function getDictionaryMap(): Map<string, DictLookupEntry> {
           if (!w) continue;
           const meaning = cleanShortZhMeaning(item.definition_zh) || map.get(w)?.meaning || "";
           const pos = getNormalizedPos(w, item.pos, meaning);
-          const ipa = item.ipa ? `/${String(item.ipa).replace(/^\/|\/$/g, "")}/` : map.get(w)?.ipa || "";
+          const ipa = item.ipa ? `/${String(item.ipa).replace(/^\/|\/$/g, "")}/` : "";
           if (meaning) {
             map.set(w, { ipa, meaning, pos });
           }
@@ -239,7 +221,7 @@ function getDictionaryMap(): Map<string, DictLookupEntry> {
     }
   } catch {}
 
-  // 3. Add contractions
+  // Add contractions
   for (const [k, v] of Object.entries(CONTRACTIONS)) {
     map.set(k, v);
   }

@@ -1,13 +1,12 @@
 const fs = require("fs");
 const path = require("path");
 
+// Single source of truth for English words. The legacy words/en/{a1..c2}.json
+// view files and words/combined_a1_c2.json have been removed — everything
+// (definition_zh, ipa, english_translation, cefr_level) lives here.
 const mergedPath = path.join(process.cwd(), "words", "english_merged.json");
-const combinedPath = path.join(process.cwd(), "words", "combined_a1_c2.json");
-const enCombinedPath = path.join(process.cwd(), "words", "en", "combined_a1_c2.json");
-const pubCombinedPath = path.join(process.cwd(), "public", "combined_a1_c2.json");
 
 const merged = JSON.parse(fs.readFileSync(mergedPath, "utf8"));
-const combined = JSON.parse(fs.readFileSync(combinedPath, "utf8"));
 
 const isDummyZh = (s) => {
   if (!s || typeof s !== "string") return true;
@@ -197,54 +196,11 @@ for (const w of merged) {
 fs.writeFileSync(mergedPath, JSON.stringify(merged), "utf8");
 console.log(`Updated ${mergedUpdated} entries in words/english_merged.json`);
 
-// 2. Update words/combined_a1_c2.json, words/en/combined_a1_c2.json, public/combined_a1_c2.json
-let combinedUpdated = 0;
-for (const w of combined) {
-  const info = resolveWordEntry(w.word, w.pos);
-  if (isDummyZh(w.translation_zh)) {
-    w.translation_zh = info.zh;
-    combinedUpdated++;
-  }
-  if (!w.meaning || w.meaning.toLowerCase() === w.word.toLowerCase() || /[\u4e00-\u9fa5]/.test(w.meaning)) {
-    if (info.en) {
-      w.meaning = info.en;
-    }
-  }
-  if (!w.ipa && info.ipa) {
-    w.ipa = info.ipa;
-  }
-}
-const combinedJsonStr = JSON.stringify(combined);
-fs.writeFileSync(combinedPath, combinedJsonStr, "utf8");
-if (fs.existsSync(enCombinedPath)) fs.writeFileSync(enCombinedPath, combinedJsonStr, "utf8");
-if (fs.existsSync(pubCombinedPath)) fs.writeFileSync(pubCombinedPath, combinedJsonStr, "utf8");
-console.log(`Updated ${combinedUpdated} entries in combined_a1_c2.json files`);
+// (legacy sync to words/combined_a1_c2.json + words/en/{a1..c2}.json +
+//  public/combined_a1_c2.json has been removed — those view files are
+//  derived from english_merged.json and are kept out of the repo now.)
 
-// 3. Update words/en/a1.json .. c2.json
-for (const lvl of ["a1", "a2", "b1", "b2", "c1", "c2"]) {
-  const p = path.join(process.cwd(), "words", "en", `${lvl}.json`);
-  if (!fs.existsSync(p)) continue;
-  const list = JSON.parse(fs.readFileSync(p, "utf8"));
-  let cnt = 0;
-  for (const w of list) {
-    const info = resolveWordEntry(w.word, w.pos);
-    if (isDummyZh(w.translation_zh) && isDummyZh(w.definition_zh)) {
-      w.translation_zh = info.zh;
-      w.definition_zh = info.zh;
-      cnt++;
-    }
-    if ((!w.meaning || w.meaning.toLowerCase() === w.word.toLowerCase()) && info.en) {
-      w.meaning = info.en;
-    }
-    if (!w.ipa && info.ipa) {
-      w.ipa = info.ipa;
-    }
-  }
-  fs.writeFileSync(p, JSON.stringify(list), "utf8");
-  console.log(`Updated ${cnt} entries in words/en/${lvl}.json`);
-}
-
-// 4. Update all 60 flashcard unit markdown files in content/
+// 2. Update all 60 flashcard unit markdown files in content/
 function sanitizeYaml(str) {
   return String(str || "")
     .replace(/\r?\n/g, "; ")
