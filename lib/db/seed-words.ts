@@ -1,6 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
-import { and, count, eq, inArray, isNull } from "drizzle-orm";
+import { and, count, eq, inArray, isNull, sql } from "drizzle-orm";
 import { db } from "./index";
 import { dictionaryWord } from "./schema";
 import { supportedLanguages } from "../languages";
@@ -119,10 +119,22 @@ export async function seedWords() {
         goetheB1Wordlist: w.goethe_b1_wordlist ?? null,
       }));
 
+      // The bundled JSON is the single source of truth, so re-running the seed
+      // also refreshes the fields we recompute (CEFR level, frequency rank,
+      // Chinese gloss, IPA) on rows that already exist.
       await db
         .insert(dictionaryWord)
         .values(rows)
-        .onConflictDoNothing();
+        .onConflictDoUpdate({
+          target: [dictionaryWord.word, dictionaryWord.language],
+          set: {
+            cefrLevel: sql`excluded.cefr_level`,
+            wordFrequency: sql`excluded.word_frequency`,
+            pos: sql`excluded.pos`,
+            definitionZh: sql`excluded.definition_zh`,
+            ipa: sql`excluded.ipa`,
+          },
+        });
     }
 
     // Sync Goethe B1 wordlist flags if applicable
