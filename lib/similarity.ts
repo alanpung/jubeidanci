@@ -462,6 +462,21 @@ export interface WordMatchResult {
  * Score = (matched words / total target words).
  * Example: "Did you get my message" vs "Did you got my message" => 4/5 = 80%.
  * 80% (0.80) and above is considered correct.
+ *
+ * The returned `matchedWordIndices` is aligned to the primary answer's token
+ * length — that's the slot count the UI renders, and the number shown in the
+ * "MATCH: 80% (4/5 words)" footer. Each position is independently evaluated:
+ * a position is "matched" if the user's token at that index normalises equal
+ * to the corresponding token in **any** accepted answer (so an alt with a
+ * different surface form still credits the user for that slot).
+ *
+ * This guards against two failure modes that bit us before:
+ *   1. The best-scoring alt answer was shorter than the primary answer, so
+ *      its `matchedWordIndices` array was shorter than the UI's slot count;
+ *      trailing slots fell back to `undefined` in React state and were
+ *      rendered as "matched" (green) by default.
+ *   2. An alt answer had a stray single-letter word that normalised to "a"
+ *      and produced a single false positive, hiding the real result.
  */
 export function checkWordMatch(
   userInputWords: string[] | string,
@@ -483,52 +498,86 @@ export function checkWordMatch(
     };
   }
 
-  let bestScore = -1;
-  let bestResult: WordMatchResult = {
-    isCorrect: false,
-    score: 0,
-    percentage: 0,
-    matchCount: 0,
-    totalCount: 1,
-    matchedWordIndices: [],
-    matchedAnswer: acceptedAnswers[0],
-  };
+  // Pre-compute each accepted answer's token list once.
+  const answerTokenLists = acceptedAnswers.map(
+    (a) => a.trim().split(/\s+/).filter(Boolean),
+  );
 
-  for (const answer of acceptedAnswers) {
-    const targetWords = answer.trim().split(/\s+/).filter(Boolean);
-    const matchedWordIndices: boolean[] = targetWords.map(() => false);
-    let matchCount = 0;
+  // The UI renders one slot per primary-answer token. Align everything to
+  // that length so the per-slot boolean array matches what the user sees.
+  const primaryTw = answerTokenLists[0];
+  const totalCount = primaryTw.length;
+  const alignedMatched: boolean[] = new Array(totalCount).fill(false);
 
-    for (let i = 0; i < targetWords.length; i++) {
-      const u = normalize(userTokens[i] || "");
-      const t = normalize(targetWords[i] || "");
-      if (u && t && u === t) {
-        matchedWordIndices[i] = true;
+  let matchCount = 0;
+  for (let i = 0; i < totalCount; i++) {
+    const u = normalize(userTokens[i] || "");
+    if (!u) continue;
+    for (const tw of answerTokenLists) {
+      const t = normalize(tw[i] || "");
+      if (t && u === t) {
+        alignedMatched[i] = true;
         matchCount++;
-      } else {
-        matchedWordIndices[i] = false;
+        break;
       }
-    }
-
-    const totalCount = targetWords.length;
-    const score = totalCount > 0 ? matchCount / totalCount : 0;
-    const percentage = Math.round(score * 100);
-    const isCorrect = score >= 0.8;
-
-    if (score > bestScore) {
-      bestScore = score;
-      bestResult = {
-        isCorrect,
-        score,
-        percentage,
-        matchCount,
-        totalCount,
-        matchedWordIndices,
-        matchedAnswer: answer,
-      };
     }
   }
 
-  return bestResult;
+  const score = totalCount > 0 ? matchCount / totalCount : 0;
+  const percentage = Math.round(score * 100);
+
+  // Bonus credit: if the user fully matches any single accepted answer (same
+  // length, every position matches), the exercise is correct regardless of
+  // percentage — this lets a learner answer with a shorter acceptable
+  // paraphrase without being marked wrong for not typing the longer form.
+  let fullyMatchedAnyAnswer = false;
+  for (const tw of answerTokenLists) {
+    if (tw.length !== userTokens.length) continue;
+    let allMatch = true;
+    for (let i = 0; i < tw.length; i++) {
+      if (normalize(userTokens[i]) !== normalize(tw[i])) {
+        allMatch = false;
+        break;
+      }
+    }
+    if (allMatch) {
+      fullyMatchedAnyAnswer = true;
+      break;
+    }
+  }
+
+  const isCorrect = fullyMatchedAnyAnswer || score >= 0.8;
+
+  // Pick the best-aligned answer as `matchedAnswer` (the one with the most
+  // token-overlap with the user, breaking ties by closeness in length to the
+  // user's input so the UI feels natural).
+  let bestAnswer = acceptedAnswers[0];
+  let bestOverlap = -1;
+  for (let ai = 0; ai < acceptedAnswers.length; ai++) {
+    const tw = answerTokenLists[ai];
+    let overlap = 0;
+    const limit = Math.min(tw.length, userTokens.length);
+    for (let i = 0; i < limit; i++) {
+      const u = normalize(userTokens[i] || "");
+      const t = normalize(tw[i] || "");
+      if (u && t && u === t) overlap++;
+    }
+    const lengthPenalty = Math.abs(tw.length - userTokens.length);
+    const scoreForAnswer = overlap * 1000 - lengthPenalty;
+    if (scoreForAnswer > bestOverlap) {
+      bestOverlap = scoreForAnswer;
+      bestAnswer = acceptedAnswers[ai];
+    }
+  }
+
+  return {
+    isCorrect,
+    score,
+    percentage,
+    matchCount,
+    totalCount,
+    matchedWordIndices: alignedMatched,
+    matchedAnswer: bestAnswer,
+  };
 }
 
