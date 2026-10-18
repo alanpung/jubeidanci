@@ -228,11 +228,11 @@ export function getEnLevelCounts(): Record<string, number> {
   // Last-known counts from words/english_merged.json after
   // scripts/rebuild-cefr-levels.py. Only used if the file cannot be read.
   return {
-    A1: 1082,
-    A2: 1484,
-    B1: 3819,
-    B2: 5437,
-    C1: 5453,
+    A1: 1163,
+    A2: 1642,
+    B1: 3989,
+    B2: 6069,
+    C1: 4412,
     C2: 5049,
   };
 }

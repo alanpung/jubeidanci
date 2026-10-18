@@ -426,16 +426,22 @@ def main() -> int:
             new = old if old in LEVEL_INDEX else "B2"
             source = "kept"
 
-        # 5. Reconcile with frequency. CEFR-J is a Japanese textbook profile and
-        #    labels a few rare-but-early-taught words (colonel, catholic, …) as
-        #    A1/A2, which would pollute the beginner courses. An anchor may be
-        #    one level *easier* than its frequency band, never more.
+        # 5. Reconcile with frequency, but let the anchor dominate. en_50k is a
+        #    general web corpus, so everyday classroom vocabulary is under-
+        #    represented there: CEFR-J calls biscuit/dictionary/grammar/grape
+        #    A1 (they are textbook core) while en_50k ranks them ~9-13k, which
+        #    is a B1 band. Deferring to frequency would push 40+ beginner words
+        #    out of A1. Only step in when the disagreement is extreme (>= 3
+        #    bands), which is what catches genuinely rare words that a
+        #    textbook profile teaches early (colonel, catholic, lieutenant).
         if new is not None and rank:
             freq_level = level_from_rank(rank, cuts)
-            idx = max(LEVEL_INDEX[new], LEVEL_INDEX[freq_level] - 1)
-            if LEVELS[idx] != new:
-                source += "+freq"
-                new = LEVELS[idx]
+            gap = LEVEL_INDEX[freq_level] - LEVEL_INDEX[new]
+            if gap >= 3:
+                idx = LEVEL_INDEX[freq_level] - 2
+                if LEVELS[idx] != new:
+                    source += "+freq"
+                    new = LEVELS[idx]
 
         # 6. ceiling from modern web frequency (wifi/podcast/app …)
         ceiling = google_ceiling(google, forms)
