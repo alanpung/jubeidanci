@@ -553,7 +553,10 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
               const targetWord = item.word;
               const typedWord = inputWords[idx] || "";
               const isSlotActive = activeSlot === idx;
-              const isWordMatched = matchedWordIndices[idx] !== undefined ? matchedWordIndices[idx] : true;
+              // Never default an unevaluated slot to "matched" — if the
+              // indices array is ever shorter than the rendered slots again,
+              // an ungraded word must read as wrong, not as a free green.
+              const isWordMatched = matchedWordIndices[idx] === true;
               return (
                 <div
                   key={idx}
