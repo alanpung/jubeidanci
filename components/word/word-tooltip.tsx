@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { addOrFailWord } from "@/lib/actions/srs";
+import { cseBucketLabel } from "@/lib/words";
 import { useAudio } from "@/hooks/use-audio";
 
 interface WordData {
@@ -156,9 +157,12 @@ export function WordTooltip({ word, language }: WordTooltipProps) {
             title="中国英语能力等级量表 (CSE)"
           >
             <span>CSE {data.cseLevel}</span>
-            <span className="text-[10px] font-normal opacity-70">国标</span>
+            {cseBucketLabel(data.cseLevel) && (
+              <span className="text-[10px] font-normal opacity-80">{cseBucketLabel(data.cseLevel)}</span>
+            )}
           </span>
         )}
+
       </div>
 
       {/* Example */}
