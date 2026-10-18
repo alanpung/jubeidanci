@@ -11,53 +11,24 @@ import {
 } from "@/lib/prompts";
 import { detectTextLanguage } from "@/lib/language-detector";
 
-// Fixed CEFR -> CSE fallback table. The dictionary itself carries the
-// authoritative cse_level, so this is only used for words that bypass the
-// dictionary (AI-lookups, words added after the latest JSON refresh, etc.).
-// The mapping mirrors scripts/rebuild-cse-levels-v2.py:
-//
-//   A1 -> CSE 1   (the very basics, before 小学 starts)
-//   A2 -> CSE 2   (小学 / 初中起)
-//   B1 -> CSE 3   (中考 / 初中)
-//   B2 -> CSE 4   (高考 / 高中)
-//   C1 -> CSE 5   (CET-4 范围)
-//   C2 -> CSE 6   (CET-6 范围)
-//
-// CSE 7/8/9 (专八 / C1 / C2) are not reached by the CEFR fallback - they
-// only come from the explicit exam wordlists in scripts/data/cse/.
-const CEFR_TO_CSE_TABLE: Record<string, string> = {
-  A1: "1",
-  A2: "2",
-  B1: "3",
-  B2: "4",
-  C1: "5",
-  C2: "6",
+// CSE helpers (cefrToCse, CSE_BUCKET_LABELS, cseBucketLabel, isDisplayableCse,
+// MIN_CSE_LEVEL) live in lib/cse.ts so client components can import them
+// without pulling the DB driver into the browser bundle. They are imported
+// here and re-exported for convenience / server-side callers.
+import {
+  cefrToCse,
+  CSE_BUCKET_LABELS,
+  cseBucketLabel,
+  isDisplayableCse,
+  MIN_CSE_LEVEL,
+} from "./cse";
+export {
+  cefrToCse,
+  CSE_BUCKET_LABELS,
+  cseBucketLabel,
+  isDisplayableCse,
+  MIN_CSE_LEVEL,
 };
-
-export function cefrToCse(cefr: string, _freqPct: number | undefined): string {
-  const upper = (cefr || "").toUpperCase().trim();
-  return CEFR_TO_CSE_TABLE[upper] ?? "";
-}
-
-// Human-readable label for each CSE 1-9 bucket. Used by the word tooltip so
-// users see "CSE 4 高考" instead of a bare number. Order matches the
-// build-cse-levels-v2.py priority ladder.
-export const CSE_BUCKET_LABELS: Record<string, string> = {
-  "1": "A1 基础",
-  "2": "小学",
-  "3": "初中",
-  "4": "高中",
-  "5": "CET-4",
-  "6": "CET-6",
-  "7": "专八",
-  "8": "雅思 7",
-  "9": "雅思 8",
-};
-
-export function cseBucketLabel(level: string | null | undefined): string | null {
-  if (!level) return null;
-  return CSE_BUCKET_LABELS[level] ?? null;
-}
 
 export interface WordEntry {
   word: string;
@@ -467,7 +438,7 @@ Return:
     // The AI may report a CSE level directly; only fall back to the table when
     // it produced something outside 1-9 or empty.
     const aiCse = (analysis.cseLevel ?? "") as string;
-    const cseFromAi = /^[1-9]$/.test(aiCse) ? aiCse : cefrToCse(analysis.cefrLevel || "", undefined);
+    const cseFromAi = /^[1-9]$/.test(aiCse) ? aiCse : cefrToCse(analysis.cefrLevel || "");
 
     // Cache in DB (fire and forget)
     db.insert(wordCache)

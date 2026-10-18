@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { addOrFailWord } from "@/lib/actions/srs";
-import { cseBucketLabel } from "@/lib/words";
+import { cseBucketLabel, isDisplayableCse } from "@/lib/cse";
 import { useAudio } from "@/hooks/use-audio";
 
 interface WordData {
@@ -27,9 +27,9 @@ const cefrColors: Record<string, string> = {
   C2: "bg-lingo-purple/20 text-lingo-purple",
 };
 
-// CSE color ramp: red (CSE 1, 小学水平) through purple (CSE 9, 顶尖).
+// CSE color ramp: orange (CSE 2, 小学) through fuchsia (CSE 9, 雅思 8).
+// CSE 1 is intentionally absent - that bucket was folded into 小学.
 const cseColors: Record<string, string> = {
-  "1": "bg-rose-100 text-rose-700",
   "2": "bg-orange-100 text-orange-700",
   "3": "bg-amber-100 text-amber-700",
   "4": "bg-lime-100 text-lime-700",
@@ -151,9 +151,9 @@ export function WordTooltip({ word, language }: WordTooltipProps) {
             CEFR {data.cefrLevel}
           </span>
         )}
-        {data.cseLevel && (
+        {isDisplayableCse(data.cseLevel) && (
           <span
-            className={`inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium ${cseColors[data.cseLevel] ?? "bg-lingo-gray/50 text-lingo-text"}`}
+            className={`inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium ${cseColors[String(data.cseLevel)] ?? "bg-lingo-gray/50 text-lingo-text"}`}
             title="中国英语能力等级量表 (CSE)"
           >
             <span>CSE {data.cseLevel}</span>

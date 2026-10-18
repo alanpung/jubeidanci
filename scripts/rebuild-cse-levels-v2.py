@@ -6,7 +6,8 @@ CEFR-derived buckets. The lookup priority is lowest-exam-wins (a word
 that appears in both the 小学 list and the 高考 list is taught at the
 小学 level, i.e. CSE 2).
 
-  CSE 1 → A1 words that are NOT in any of the 6 domestic lists
+  (CSE 1 → unused; the user asked for CSE 1 to be hidden and its 154 words
+   folded into CSE 2, so CSE 2 is the floor of the scale)
   CSE 2 → 小学 (mahavivo/english-wordlists 小学英语大纲词汇)
   CSE 3 → 初中 / 中考 (mahavivo/english-wordlists 中考英语词汇表)
   CSE 4 → 高中 / 高考 (mahavivo/english-wordlists Highschool_edited)
@@ -132,8 +133,13 @@ PRIMARY = [
     (7, "专八", CSE / "英语专业星标八级词汇.txt", "marked"),
 ]
 
+# CSE 1 is not used. The 小学 bucket (CSE 2) is the floor: every word that
+# is not claimed by a higher exam list lands there, including the A1
+# leftovers that used to get their own bucket.
+MIN_CSE = 2
+
 CEFR_FALLBACK = {
-    "A1": 1, "A2": 2, "B1": 3, "B2": 4, "C1": 5, "C2": 6,
+    "A1": 2, "A2": 2, "B1": 3, "B2": 4, "C1": 5, "C2": 6,
 }
 
 
@@ -181,12 +187,11 @@ def main() -> int:
         old = entry.get("cse_level")
         w = (entry.get("word") or "").strip().lower()
         if w in cse_of:
-            new = cse_of[w]
+            new = max(cse_of[w], MIN_CSE)
         else:
             cefr = (entry.get("cefr_level") or "").upper().strip()
-            new = CEFR_FALLBACK.get(cefr, 1)  # unknowns default to CSE 1
-            if w not in cse_of:
-                fallback += 1
+            new = max(CEFR_FALLBACK.get(cefr, MIN_CSE), MIN_CSE)
+            fallback += 1
         if old != new:
             entry["cse_level"] = new
             updated += 1
