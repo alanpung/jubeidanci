@@ -76,6 +76,8 @@ function normalizeWithMapping(s: string): NormalizedMapping {
   return { normalized, origIndices };
 }
 
+import { isEquivalentToken, synonymSentenceVariants } from "@/lib/synonyms";
+
 export function normalize(s: string): string {
   return s
     .toLowerCase()
@@ -344,6 +346,13 @@ export function generateAlternativeTranslations(baseAnswer: string, existingList
   };
 
   add(baseAnswer);
+
+  // Synonym paraphrases of the target sentence ("I wish …" -> "I hope …").
+  // These come first so learners can see the swaps the checker also accepts.
+  for (const variant of synonymSentenceVariants(baseAnswer, 2)) {
+    add(variant);
+  }
+
   for (const alt of existingList) {
     if (alt) add(alt);
   }
@@ -443,7 +452,7 @@ export function generateAlternativeTranslations(baseAnswer: string, existingList
     }
   }
 
-  return result.slice(0, 3);
+  return result.slice(0, 4);
 }
 
 export interface WordMatchResult {
@@ -469,6 +478,11 @@ export interface WordMatchResult {
  * a position is "matched" if the user's token at that index normalises equal
  * to the corresponding token in **any** accepted answer (so an alt with a
  * different surface form still credits the user for that slot).
+ *
+ * Equality is `isEquivalentToken()` rather than plain string equality: an
+ * accepted synonym counts as a match, so "I hope …" passes a target of
+ * "I wish …". Inflections are compared separately, so "hoping" does not
+ * satisfy a slot expecting "wish".
  *
  * This guards against two failure modes that bit us before:
  *   1. The best-scoring alt answer was shorter than the primary answer, so
@@ -511,11 +525,11 @@ export function checkWordMatch(
 
   let matchCount = 0;
   for (let i = 0; i < totalCount; i++) {
-    const u = normalize(userTokens[i] || "");
-    if (!u) continue;
+    const u = userTokens[i] || "";
+    if (!normalize(u)) continue;
     for (const tw of answerTokenLists) {
-      const t = normalize(tw[i] || "");
-      if (t && u === t) {
+      const t = tw[i] || "";
+      if (normalize(t) && isEquivalentToken(u, t)) {
         alignedMatched[i] = true;
         matchCount++;
         break;
@@ -535,7 +549,7 @@ export function checkWordMatch(
     if (tw.length !== userTokens.length) continue;
     let allMatch = true;
     for (let i = 0; i < tw.length; i++) {
-      if (normalize(userTokens[i]) !== normalize(tw[i])) {
+      if (!isEquivalentToken(userTokens[i] || "", tw[i] || "")) {
         allMatch = false;
         break;
       }
@@ -558,9 +572,9 @@ export function checkWordMatch(
     let overlap = 0;
     const limit = Math.min(tw.length, userTokens.length);
     for (let i = 0; i < limit; i++) {
-      const u = normalize(userTokens[i] || "");
-      const t = normalize(tw[i] || "");
-      if (u && t && u === t) overlap++;
+      const u = userTokens[i] || "";
+      const t = tw[i] || "";
+      if (normalize(u) && normalize(t) && isEquivalentToken(u, t)) overlap++;
     }
     const lengthPenalty = Math.abs(tw.length - userTokens.length);
     const scoreForAnswer = overlap * 1000 - lengthPenalty;

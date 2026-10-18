@@ -2,6 +2,7 @@ import { describe, expect, test } from "bun:test";
 import {
   checkSimilarity,
   checkBestMatch,
+  checkWordMatch,
   type SimilarityResult,
   type SimilarityOptions,
 } from "./similarity";
@@ -553,5 +554,96 @@ describe("checkBestMatch", () => {
         );
       });
     }
+  }
+});
+
+// ---------------------------------------------------------------------------
+// checkWordMatch — slot-by-slot translation checking
+// ---------------------------------------------------------------------------
+
+interface WordMatchCase {
+  label: string;
+  input: string[];
+  answers: string[];
+  expected: {
+    isCorrect: boolean;
+    percentage: number;
+    matched?: boolean[];
+  };
+}
+
+const wordMatchCases: WordMatchCase[] = [
+  {
+    label: "synonym counts as a match (wish -> hope)",
+    input: ["I", "hope", "to", "see", "you", "soon"],
+    answers: ["I wish to see you soon."],
+    expected: { isCorrect: true, percentage: 100, matched: [true, true, true, true, true, true] },
+  },
+  {
+    label: "synonym counts as a match (start -> begin)",
+    input: ["I", "begin", "work", "at", "nine"],
+    answers: ["I start work at nine."],
+    expected: { isCorrect: true, percentage: 100 },
+  },
+  {
+    label: "synonyms match through the same inflection (wishing -> hoping)",
+    input: ["I", "was", "hoping", "for", "rain"],
+    answers: ["I was wishing for rain."],
+    expected: { isCorrect: true, percentage: 100 },
+  },
+  {
+    label: "different inflection of a synonym does not match (hoped vs wish)",
+    input: ["I", "hoped", "to", "go"],
+    answers: ["I wish to go."],
+    expected: { isCorrect: false, percentage: 75, matched: [true, false, true, true] },
+  },
+  {
+    label: "synonym of an alternative answer also matches",
+    input: ["I", "hope", "to", "travel"],
+    answers: ["I want to travel.", "I wish to travel."],
+    expected: { isCorrect: true, percentage: 100 },
+  },
+  {
+    // 80% is the pass mark, so a single wrong word is still "correct" — two
+    // wrong words (3/5 = 60%) is where the exercise fails.
+    label: "unrelated words are still wrong",
+    input: ["I", "want", "to", "see", "them"],
+    answers: ["I wish to see you."],
+    expected: { isCorrect: false, percentage: 60, matched: [true, false, true, true, false] },
+  },
+  {
+    // Regression: seven identical filler words used to be scored as matched
+    // because the best-scoring alternative answer was shorter than the primary.
+    label: "repeated filler words score zero",
+    input: ["a", "a", "a", "a", "a", "a", "a"],
+    answers: [
+      "I get up at seven every morning.",
+      "I wake up at seven every morning.",
+      "I rise at seven each morning.",
+    ],
+    expected: { isCorrect: false, percentage: 0 },
+  },
+  {
+    label: "exact answer still scores 100%",
+    input: ["I", "get", "up", "at", "seven", "every", "morning"],
+    answers: ["I get up at seven every morning."],
+    expected: { isCorrect: true, percentage: 100 },
+  },
+];
+
+describe("checkWordMatch", () => {
+  for (const c of wordMatchCases) {
+    test(c.label, () => {
+      const result = checkWordMatch(c.input, c.answers);
+      expect(result.isCorrect).toBe(c.expected.isCorrect);
+      expect(result.percentage).toBe(c.expected.percentage);
+      if (c.expected.matched) {
+        expect(result.matchedWordIndices).toEqual(c.expected.matched);
+      }
+      // The slot array must always line up with the primary answer.
+      expect(result.matchedWordIndices.length).toBe(
+        c.answers[0].trim().split(/\s+/).filter(Boolean).length,
+      );
+    });
   }
 });
