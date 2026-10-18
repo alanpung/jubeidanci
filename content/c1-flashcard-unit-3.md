@@ -16,10 +16,10 @@ icon: "💹"
 color: "#4CAF50"
 ---
 [flashcard-review]
-front: "aquarium"
-meaning: "n. a tank or pool or bowl filled with water for keeping live fish and underwater animals"
-translation: "n. 水族馆, 养鱼池, 水草缸；[医] 培养缸"
-srsWords: "aquarium"
+front: "diversification"
+meaning: "n. the act of introducing variety (especially in investments or in the variety of goods and services offered); n. the condition of being varied; every day it is the same""
+translation: "n. 变化, 多样化；[经] 分散"
+srsWords: "diversification"
 
 [flashcard-review]
 front: "insightfully"
@@ -40,16 +40,16 @@ translation: "vt. 使极度痛苦, 折磨；vi. 感到痛苦"
 srsWords: "agonize"
 
 [flashcard-review]
-front: "cite"
-meaning: "n a short note recognizing a source of information or of a quoted passage; v make reference to; v commend; v refer to; v repeat a passage from; v refer to for illustration or proof; v advance evidence for; v call in an official matter, such as to attend court"
-translation: "vt. 引用, 引证, 表彰；[建] 引证, 指引"
-srsWords: "cite"
+front: "biennial"
+meaning: "n. (botany) a plant having a life cycle that normally takes two seasons from germination to death to complete; flowering biennials usually bloom and fruit in the second season; a. having a life cycle lasting two seasons; s. occurring every second year"
+translation: "n. 两年生植物, 两年一次的事；a. 两年生的, 两年一次的"
+srsWords: "biennial"
 
 [flashcard-review]
-front: "citation"
-meaning: "n. an official award (as for bravery or service) usually given as formal public statement; n. (law) the act of citing (as of spoken words or written passages or legal precedents etc.); n. a short note recognizing a source of information or of a quoted passage; n. a summons that commands the appearance of a party at a proceeding"
-translation: "n. 引用, 引证, 引用文；[建] 引证, 指引"
-srsWords: "citation"
+front: "somber/sombre"
+meaning: "s. grave or even gloomy in character"
+translation: "a. 昏暗的, 阴天的, 严峻的, 忧郁的"
+srsWords: "somber/sombre"
 
 [flashcard-review]
 front: "ecstatically"
@@ -64,16 +64,17 @@ translation: "a. 快乐的, 愉快的, 舒适的, 心情舒畅的"
 srsWords: "pleasurable"
 
 [flashcard-review]
-front: "substantially"
-meaning: "r. in a strong substantial way"
-translation: "adv. 实质上, 本质上, 大体上"
-srsWords: "substantially"
+front: "emeritus"
+meaning: "n. a professor or minister who is retired from assigned duties; s. honorably retired from assigned duties and retaining your title along with the additional title `emeritus' as in `professor emeritus'"
+translation: "a. 名誉退休的, 退休后保留头衔的"
+srsWords: "emeritus"
 
 [flashcard-review]
-front: "diversity"
-meaning: "n. the condition or result of being changeable"
-translation: "n. 差异, 多样性；[化] 多样性"
-srsWords: "diversity"
+front: "immersive"
+meaning: "engaging deeply"
+translation: "a. 拟真的"
+srsWords: "immersive"
+
 ---
 lessonTitle: "Lesson 2: Macroeconomics & Global Markets Part 2"
 description: "Practice 10 key C1 vocabulary flashcards for Macroeconomics & Global Markets"
@@ -129,16 +130,17 @@ translation: "adv. 无期限地"
 srsWords: "indefinitely"
 
 [flashcard-review]
-front: "atmospheric"
-meaning: "a. relating to or located in the atmosphere"
-translation: "a. 大气的；[医] 大气的; 大气压的"
-srsWords: "atmospheric"
+front: "microbiology"
+meaning: "n. the branch of biology that studies microorganisms and their effects on humans"
+translation: "n. 微生物学；[化] 微生物学"
+srsWords: "microbiology"
 
 [flashcard-review]
 front: "fuse"
 meaning: "n. an electrical device that can interrupt the flow of electrical current when it is overloaded; n. any igniter that is used to initiate the burning of a propellant; v. become plastic or fluid or liquefied from heat; v. equip with a fuse; provide with a fuse"
 translation: "n. 保险丝, 导火线；v. 熔化, 融合"
 srsWords: "fuse"
+
 ---
 lessonTitle: "Lesson 3: Macroeconomics & Global Markets Part 3"
 description: "Practice 10 key C1 vocabulary flashcards for Macroeconomics & Global Markets"
@@ -146,16 +148,16 @@ icon: "💹"
 color: "#4CAF50"
 ---
 [flashcard-review]
-front: "fusion"
-meaning: "n. an occurrence that involves the production of a union; n. the merging of adjacent sounds or syllables or words; n. a nuclear reaction in which nuclei combine to form more massive nuclei with the simultaneous release of energy; n. the combining of images from the two eyes to form a single visual percept"
-translation: "n. 熔合物, 结合, 熔合；[化] 熔融; 熔化; 聚变"
-srsWords: "fusion"
+front: "perpetrate"
+meaning: "v. perform an act, usually with a negative connotation"
+translation: "vt. 做(恶), 犯(罪), 胡说, 恶劣地做；[法] 犯, 作, 行"
+srsWords: "perpetrate"
 
 [flashcard-review]
-front: "robust"
-meaning: "a. sturdy and strong in form, constitution, or construction; s. strong enough to withstand or overcome intellectual challenges or adversity; s. rough and crude"
-translation: "a. 健康的, 强健的, 要用力气的, 坚定的, 粗野的；[计] 健壮性"
-srsWords: "robust"
+front: "stratum"
+meaning: "n. one of several parallel layers of material arranged one on top of another (such as a layer of tissue or cells in an organism or a layer of sedimentary rock)"
+translation: "n. 层, 地层, 阶层；[医] 层"
+srsWords: "stratum"
 
 [flashcard-review]
 front: "robustly"
@@ -188,22 +190,23 @@ translation: "n. 渴望, 热望；[医] 瘾, 癖, 嗜欲"
 srsWords: "craving"
 
 [flashcard-review]
-front: "prospective"
-meaning: "a. of or concerned with or related to the future"
-translation: "a. 预期的, 将来的；[经] 预期的, 未来的"
-srsWords: "prospective"
+front: "appall"
+meaning: "v strike with disgust or revulsion; v fill with apprehension or alarm; cause to be unpleasantly surprised"
+translation: "vt. 使丧胆, 使惊骇"
+srsWords: "appall"
 
 [flashcard-review]
-front: "swap"
-meaning: "v. move (a piece of a program) into memory, in computer science"
-translation: "n. 以货易货；v. 交换, 替换, 交易；[计] 交换"
-srsWords: "swap"
+front: "estrange"
+meaning: "v. remove from customary environment or associations; v. arouse hostility or indifference in where there had formerly been love, affection, or friendliness"
+translation: "vt. 使疏远, 离间, 使离开"
+srsWords: "estrange"
 
 [flashcard-review]
 front: "remotely"
 meaning: "r. in a remote manner; r. to a remote degree"
 translation: "adv. 极小地, 极细微地"
 srsWords: "remotely"
+
 ---
 lessonTitle: "Lesson 4: Macroeconomics & Global Markets Part 4"
 description: "Practice 10 key C1 vocabulary flashcards for Macroeconomics & Global Markets"
@@ -269,6 +272,7 @@ front: "overalls"
 meaning: "n (usually plural) work clothing consisting of denim trousers (usually with a bib and shoulder straps); n a loose protective coverall or smock worn over ordinary clothing for dirty work"
 translation: "n. 工装裤；[机] 工作服, 工装"
 srsWords: "overalls"
+
 ---
 lessonTitle: "Lesson 5: Macroeconomics & Global Markets Part 5"
 description: "Practice 10 key C1 vocabulary flashcards for Macroeconomics & Global Markets"
@@ -300,10 +304,10 @@ translation: "a. 用不完的, 无穷尽的, 不知疲倦的"
 srsWords: "inexhaustible"
 
 [flashcard-review]
-front: "acre"
-meaning: "n. a unit of area (4840 square yards) used in English-speaking countries; n. a territory of western Brazil bordering on Bolivia and Peru; n. a town and port in northwestern Israel in the eastern Mediterranean"
-translation: "n. 英亩"
-srsWords: "acre"
+front: "fluorescence"
+meaning: "n. light emitted during absorption of radiation of some other (invisible) wavelength"
+translation: "n. 荧光, 发荧光, 荧光性；[化] 荧光"
+srsWords: "fluorescence"
 
 [flashcard-review]
 front: "heifer"
@@ -334,6 +338,7 @@ front: "victoriously"
 meaning: "r. in a victorious manner"
 translation: "adv. 获胜地, 胜利地"
 srsWords: "victoriously"
+
 ---
 lessonTitle: "Lesson 6: Macroeconomics & Global Markets Part 6"
 description: "Practice 10 key C1 vocabulary flashcards for Macroeconomics & Global Markets"
@@ -399,6 +404,7 @@ front: "ceaseless"
 meaning: "s. uninterrupted in time and indefinitely long continuing"
 translation: "a. 不停的, 不断的"
 srsWords: "ceaseless"
+
 ---
 lessonTitle: "Lesson 7: Macroeconomics & Global Markets Part 7"
 description: "Practice 10 key C1 vocabulary flashcards for Macroeconomics & Global Markets"
@@ -464,6 +470,7 @@ front: "immortalize"
 meaning: "v. make famous forever"
 translation: "vt. 使不灭, 使名垂千古"
 srsWords: "immortalize"
+
 ---
 lessonTitle: "Lesson 8: Macroeconomics & Global Markets Part 8"
 description: "Practice 10 key C1 vocabulary flashcards for Macroeconomics & Global Markets"
@@ -471,16 +478,16 @@ icon: "💹"
 color: "#4CAF50"
 ---
 [flashcard-review]
-front: "genome"
-meaning: "n. the ordering of genes in a haploid set of chromosomes of a particular organism; the full DNA sequence of an organism"
-translation: "[化] 基因组；[医] 染色体组"
-srsWords: "genome"
+front: "seclude"
+meaning: "v. keep away from others"
+translation: "vt. 使隔离, 使孤立, 隔开"
+srsWords: "seclude"
 
 [flashcard-review]
-front: "fraction"
-meaning: "n. a component of a mixture that has been separated by a fractional process; n. a small part or item forming a piece of a whole; n. the quotient of two rational numbers"
-translation: "n. 小部分, 破片, 分数；[医] 部分, 成分, 分散"
-srsWords: "fraction"
+front: "gubernatorial"
+meaning: "a. relating to a governor"
+translation: "a. 州长的, 统治者的"
+srsWords: "gubernatorial"
 
 [flashcard-review]
 front: "faction"
@@ -529,6 +536,7 @@ front: "diverge"
 meaning: "v. move or draw apart; v. have no limits as a mathematical series; v. extend in a different direction"
 translation: "vi. 分歧, 岔开；vt. 使岔开"
 srsWords: "diverge"
+
 ---
 lessonTitle: "Lesson 9: Macroeconomics & Global Markets Part 9"
 description: "Practice 10 key C1 vocabulary flashcards for Macroeconomics & Global Markets"
@@ -590,10 +598,11 @@ translation: "vt. 追求, 向...求爱, 恳求；vi. 求爱, 央求"
 srsWords: "woo"
 
 [flashcard-review]
-front: "criteria"
-meaning: "n a basis for comparison; a reference point against which other things can be evaluated; n the ideal in terms of which something can be judged"
-translation: "pl. 标准；[计] 条件"
-srsWords: "criteria"
+front: "proto"
+meaning: "s. indicating the first or earliest or original"
+translation: "[计] 原型, 样机, 典型"
+srsWords: "proto"
+
 ---
 lessonTitle: "Lesson 10: Macroeconomics & Global Markets Part 10"
 description: "Practice 10 key C1 vocabulary flashcards for Macroeconomics & Global Markets"

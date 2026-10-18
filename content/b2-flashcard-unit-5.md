@@ -16,10 +16,10 @@ icon: "🎙️"
 color: "#FF9800"
 ---
 [flashcard-review]
-front: "corresponding"
-meaning: "s. accompanying; s. similar especially in position or purpose"
-translation: "a. 相当的, 一致的, 通信的；[计] 对应"
-srsWords: "corresponding"
+front: "circulation"
+meaning: "n. the dissemination of copies of periodicals (as newspapers or magazines); n. movement through a circuit; especially the movement of blood through the heart and blood vessels; n. (library science) the count of books that are loaned by a library over a specified period; n. number of copies of a newspaper or magazine that are sold"
+translation: "n. 流通, 循环, 发行量；[化] 环流"
+srsWords: "circulation"
 
 [flashcard-review]
 front: "corridor"
@@ -74,6 +74,7 @@ front: "courtesy"
 meaning: "n. a courteous or respectful or considerate act; n. a courteous or respectful or considerate remark; n. a courteous manner"
 translation: "n. 礼貌, 谦恭, 好意；[法] 优待, 礼貌, 恩惠"
 srsWords: "courtesy"
+
 ---
 lessonTitle: "Lesson 2: Media, Journalism & Ethics Part 2"
 description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
@@ -99,10 +100,10 @@ translation: "n. 螃蟹, 偏航, 脾气乖戾的人, 沙果；vi. 捕蟹, 偏航
 srsWords: "crab"
 
 [flashcard-review]
-front: "crack"
-meaning: "n. a long narrow opening; n. a sudden sharp noise; n. a blemish resulting from a break without complete separation of the parts; n. a purified and potent form of cocaine that is smoked rather than snorted; highly addictive"
-translation: "n. 裂缝, 爆裂声；v. (使)爆裂, (使)裂开, (使)发出爆裂声；a. 第一流的；adv. 啪地一声"
-srsWords: "crack"
+front: "herald"
+meaning: "n. (formal) a person who announces important news"
+translation: "n. 使者, 传令官, 先驱；vt. 预报, 宣布, 传达, 欢呼"
+srsWords: "herald"
 
 [flashcard-review]
 front: "craftsman"
@@ -135,10 +136,11 @@ translation: "adv. 创造性地；有创造力地"
 srsWords: "creatively"
 
 [flashcard-review]
-front: "creek"
-meaning: "n. any member of the Creek Confederacy (especially the Muskogee) formerly living in Georgia and Alabama but now chiefly in Oklahoma"
-translation: "n. 小溪, 小河, 小湾"
-srsWords: "creek"
+front: "tract"
+meaning: "n. an extended area of land; n. a system of body parts that together serve some particular purpose; n. a brief treatise on a subject of interest; published in the form of a booklet"
+translation: "n. 大片土地, 地带, 小册子；[医] 束, 道"
+srsWords: "tract"
+
 ---
 lessonTitle: "Lesson 3: Media, Journalism & Ethics Part 3"
 description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
@@ -204,6 +206,7 @@ front: "cube"
 meaning: "n. a hexahedron with six equal squares as faces; n. the product of three equal terms; n. any of several tropical American woody plants of the genus Lonchocarpus whose roots are used locally as a fish poison and commercially as a source of rotenone; n. a block in the (approximate) shape of a cube"
 translation: "n. 立方体, 立方；[机] 立方体, 立方"
 srsWords: "cube"
+
 ---
 lessonTitle: "Lesson 4: Media, Journalism & Ethics Part 4"
 description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
@@ -269,6 +272,7 @@ front: "cyberschool"
 meaning: "cyberschool"
 translation: "[网络] 电脑学校；网校；网络学校"
 srsWords: "cyberschool"
+
 ---
 lessonTitle: "Lesson 5: Media, Journalism & Ethics Part 5"
 description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
@@ -318,22 +322,23 @@ translation: "n. 冲撞, 破折号, 短跑；vi. 猛冲, 冲撞；vt. 泼溅, �
 srsWords: "dash"
 
 [flashcard-review]
-front: "data"
-meaning: "n. a collection of facts from which conclusions may be drawn"
-translation: "pl. 资料, 数据；[计] 数据; DOS内部命令:用于显示或设定系统的日期"
-srsWords: "data"
+front: "columnist"
+meaning: "n. a journalist who writes editorials"
+translation: "n. 专栏作家"
+srsWords: "columnist"
 
 [flashcard-review]
-front: "database"
-meaning: "n. an organized body of related information"
-translation: "n. 数据库；[计] 数据库"
-srsWords: "database"
+front: "plumbing"
+meaning: "n. utility consisting of the pipes and fixtures for the distribution of water or gas in a building and for the disposal of sewage; n. the occupation of a plumber (installing and repairing pipes and fixtures for water or gas or sewage in a building)"
+translation: "n. 测深, 管子工行业, 管道设备"
+srsWords: "plumbing"
 
 [flashcard-review]
 front: "dated"
 meaning: "s. marked by features of the immediate and usually discounted past"
 translation: "a. 有日期的, 陈旧的"
 srsWords: "dated"
+
 ---
 lessonTitle: "Lesson 6: Media, Journalism & Ethics Part 6"
 description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
@@ -395,10 +400,11 @@ translation: "a. 决定性的, 坚定的, 果断的"
 srsWords: "decisive"
 
 [flashcard-review]
-front: "deck"
-meaning: "n. any of various platforms built into a vessel; n. street name for a packet of illegal drugs; n. a porch that resembles the deck on a ship; v. be beautiful to look at"
-translation: "n. 甲板, (汽车后部的)行李仓；vt. 装饰, 打扮, 装甲板；[计] 纸牌背面图案"
-srsWords: "deck"
+front: "serum"
+meaning: "n. an amber, watery fluid, rich in proteins, that separates out when blood coagulates"
+translation: "n. 浆液, 血清, 乳清；[医] 血清; 浆液"
+srsWords: "serum"
+
 ---
 lessonTitle: "Lesson 7: Media, Journalism & Ethics Part 7"
 description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
@@ -464,6 +470,7 @@ front: "deforestation"
 meaning: "n. the state of being clear of trees; n. the removal of trees"
 translation: "n. 采伐森林, 森林开伐；[法] 砍伐森森"
 srsWords: "deforestation"
+
 ---
 lessonTitle: "Lesson 8: Media, Journalism & Ethics Part 8"
 description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
@@ -529,6 +536,7 @@ front: "densely"
 meaning: "r. in a concentrated manner"
 translation: "adv. 浓密地, 浓厚地"
 srsWords: "densely"
+
 ---
 lessonTitle: "Lesson 9: Media, Journalism & Ethics Part 9"
 description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
@@ -536,10 +544,10 @@ icon: "🎙️"
 color: "#FF9800"
 ---
 [flashcard-review]
-front: "dental"
-meaning: "a. of or relating to the teeth; a. of or relating to dentistry"
-translation: "a. 牙齿的；[医] 牙的, 齿的, 齿音, 齿音字母"
-srsWords: "dental"
+front: "cub"
+meaning: "n. an awkward and inexperienced youth; n. a male child (a familiar term of address to a boy); n. the young of certain carnivorous mammals such as the bear or wolf or lion; v. give birth to cubs"
+translation: "n. 幼兽, 年轻人"
+srsWords: "cub"
 
 [flashcard-review]
 front: "dependable"
@@ -548,10 +556,10 @@ translation: "a. 可信任的, 可靠的, 可信赖的"
 srsWords: "dependable"
 
 [flashcard-review]
-front: "deputy"
-meaning: "n. someone authorized to exercise the powers of sheriff in emergencies; n. an assistant with power to act when his superior is absent; n. a member of the lower chamber of a legislative assembly (such as in France); n. a person appointed to represent or act on behalf of others"
-translation: "n. 副手，代理人"
-srsWords: "deputy"
+front: "plum"
+meaning: "n. any of several trees producing edible oval fruit having a smooth skin and a single hard stone; n. any of numerous varieties of small to medium-sized round or oval fruit having a smooth skin and a single pit; n. a highly desirable position or assignment"
+translation: "n. 李子"
+srsWords: "plum"
 
 [flashcard-review]
 front: "descend"
@@ -572,10 +580,10 @@ translation: "a. 令人想望的, 可取的"
 srsWords: "desirable"
 
 [flashcard-review]
-front: "desktop"
-meaning: "n. the top of a desk"
-translation: "n. 桌面；[计] 桌面"
-srsWords: "desktop"
+front: "colorful"
+meaning: "full of color; vivid"
+translation: "adj.富有色彩的,鲜艳的,多姿多彩的,富有趣味的"
+srsWords: "colorful"
 
 [flashcard-review]
 front: "desolation"
@@ -594,6 +602,7 @@ front: "desperation"
 meaning: "n. desperate recklessness"
 translation: "n. 绝望"
 srsWords: "desperation"
+
 ---
 lessonTitle: "Lesson 10: Media, Journalism & Ethics Part 10"
 description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
@@ -625,10 +634,10 @@ translation: "n. 分离, 分遣, 分遣队；[医] 脱离, 分离, 支队"
 srsWords: "detachment"
 
 [flashcard-review]
-front: "detailed"
-meaning: "s. developed or executed with care and in minute detail"
-translation: "a. 详细的, 复杂的；[法] 详细的, 详尽的"
-srsWords: "detailed"
+front: "fossil"
+meaning: "n. the remains (or an impression) of a plant or animal that existed in a past geological age and that has been excavated from the soil; a. characteristic of a fossil"
+translation: "n. 化石, 古物；a. 化石的, 陈腐的, 守旧的"
+srsWords: "fossil"
 
 [flashcard-review]
 front: "detect"
@@ -637,10 +646,10 @@ translation: "vt. 发现, 察觉, 探测；[法] 发现, 查明, 探测"
 srsWords: "detect"
 
 [flashcard-review]
-front: "determined"
-meaning: "s. characterized by great determination; a. having been learned or found or determined especially by investigation; s. devoting full strength and concentrated attention to; s. determined or decided upon as by an authority"
-translation: "a. 坚决的, 已下决心的"
-srsWords: "determined"
+front: "fusion"
+meaning: "n. an occurrence that involves the production of a union; n. the merging of adjacent sounds or syllables or words; n. a nuclear reaction in which nuclei combine to form more massive nuclei with the simultaneous release of energy; n. the combining of images from the two eyes to form a single visual percept"
+translation: "n. 熔合物, 结合, 熔合；[化] 熔融; 熔化; 聚变"
+srsWords: "fusion"
 
 [flashcard-review]
 front: "determiner"
@@ -649,10 +658,10 @@ translation: "n. 限定词；[医] 定子, 决定因素"
 srsWords: "determiner"
 
 [flashcard-review]
-front: "developing"
-meaning: "s. relating to societies in which capital needed to industrialize is in short supply"
-translation: "a. 发展中的；[计] 显影"
-srsWords: "developing"
+front: "dairy"
+meaning: "n. a farm where dairy products are produced"
+translation: "n. 牛奶公司, 乳品店, 乳牛场"
+srsWords: "dairy"
 
 [flashcard-review]
 front: "devil"

@@ -74,6 +74,7 @@ front: "surrealist"
 meaning: "n. an artist who is a member of the movement called surrealism"
 translation: "n. 超现实主义者"
 srsWords: "surrealist"
+
 ---
 lessonTitle: "Lesson 2: Scientific Paradigms & Complexity Part 2"
 description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
@@ -139,6 +140,7 @@ front: "turret"
 meaning: "n. a small tower extending above a building"
 translation: "n. 塔楼, 角楼, 攻城用仰冲车；[机] 转塔, 多角刀架"
 srsWords: "turret"
+
 ---
 lessonTitle: "Lesson 3: Scientific Paradigms & Complexity Part 3"
 description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
@@ -204,6 +206,7 @@ front: "haughtily"
 meaning: "r. in a haughty manner"
 translation: "adv. 傲慢地, 骄傲地"
 srsWords: "haughtily"
+
 ---
 lessonTitle: "Lesson 4: Scientific Paradigms & Complexity Part 4"
 description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
@@ -269,6 +272,7 @@ front: "solitariness"
 meaning: "n. Condition of being solitary."
 translation: "n. 隐居；单独"
 srsWords: "solitariness"
+
 ---
 lessonTitle: "Lesson 5: Scientific Paradigms & Complexity Part 5"
 description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
@@ -334,6 +338,7 @@ front: "rickety"
 meaning: "s. inclined to shake as from weakness or defect; s. affected with, suffering from, or characteristic of rickets"
 translation: "a. 患佝偻病的, 虚弱的, 摇摆的；[医] 佝偻病的"
 srsWords: "rickety"
+
 ---
 lessonTitle: "Lesson 6: Scientific Paradigms & Complexity Part 6"
 description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
@@ -399,6 +404,7 @@ front: "edification"
 meaning: "n. uplifting enlightenment"
 translation: "n. 启迪, 熏陶"
 srsWords: "edification"
+
 ---
 lessonTitle: "Lesson 7: Scientific Paradigms & Complexity Part 7"
 description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
@@ -464,6 +470,7 @@ front: "romp"
 meaning: "v. run easily and fairly fast; v. win easily"
 translation: "n. 喧闹游玩, 顽皮女孩；vi. 喧闹玩耍, 轻快奔跑"
 srsWords: "romp"
+
 ---
 lessonTitle: "Lesson 8: Scientific Paradigms & Complexity Part 8"
 description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
@@ -513,10 +520,10 @@ translation: "n. 微光, 闪光；vi. 闪烁；vt. 使闪烁"
 srsWords: "shimmer"
 
 [flashcard-review]
-front: "hull"
-meaning: "n. dry outer covering of a fruit or seed or nut; n. persistent enlarged calyx at base of e.g. a strawberry or raspberry; n. United States naval officer who commanded the `Constitution' during the War of 1812 and won a series of brilliant victories against the British (1773-1843); n. United States diplomat who did the groundwork for creating the United Nations (1871-1955)"
-translation: "n. 壳, 皮, 船体；vt. 去壳"
-srsWords: "hull"
+front: "wrought"
+meaning: "v exert oneself by doing mental or physical work for a purpose or out of necessity; v be employed; v have an effect or outcome; often the one desired or expected; v perform as expected when applied; v shape, form, or improve a material; v give a workout to; v proceed along a path; v operate in a certain place, area, or specialty; v proceed towards a goal or along a path or through an activity; v move in an agitated manner; v cause to happen or to occur as a consequence; v cause to work; v prepare for crops; v behave in a certain way when handled; v have and exert influence or effect; v operate in or through; v cause to operate or function; v provoke or excite; v gratify and charm, usually in order to influence; v make something, usually for a specific function; v move into or onto; v make uniform; v use or manipulate to one's advantage; v find the solution to (a problem or question) or understand the meaning of; v cause to undergo fermentation; v go sour or spoil; v arrive at a certain condition through repeated motion; s shaped to fit by or as if by altering the contours of a pliable mass (as by work or effort)"
+translation: "a. 制成的, 精细的；work的过去式和过去分词"
+srsWords: "wrought"
 
 [flashcard-review]
 front: "cull"
@@ -529,6 +536,7 @@ front: "swivel"
 meaning: "n. a coupling (as in a chain) that has one end that turns on a headed pin"
 translation: "n. 转环, 旋转轴承, 转椅座架；v. (使)旋转"
 srsWords: "swivel"
+
 ---
 lessonTitle: "Lesson 9: Scientific Paradigms & Complexity Part 9"
 description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
@@ -594,6 +602,7 @@ front: "cay"
 meaning: "n a coral reef off the southern coast of Florida"
 translation: "n. 沙礁, 珊瑚礁, 沙洲"
 srsWords: "cay"
+
 ---
 lessonTitle: "Lesson 10: Scientific Paradigms & Complexity Part 10"
 description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"

@@ -16,64 +16,65 @@ icon: "✨"
 color: "#2196F3"
 ---
 [flashcard-review]
-front: "tribunal"
-meaning: "n an assembly (including one or more judges) to conduct judicial business"
-translation: "n. 法庭, 法官席, 裁决；[法] 法庭, 裁判所, 裁判"
-srsWords: "tribunal"
+front: "spinal"
+meaning: "a. of or relating to the spine or spinal cord"
+translation: "a. 针的, 尖刺的, 尖刺状突起的, 脊骨的；[医] 棘折; 脊柱的"
+srsWords: "spinal"
 
 [flashcard-review]
-front: "secretariat"
-meaning: "n. an administrative unit responsible for maintaining records and other secretarial duties; especially for international organizations; n. thoroughbred that won the triple crown in 1973"
-translation: "n. 书记处, 秘书之职, 秘书处"
-srsWords: "secretariat"
+front: "tertiary"
+meaning: "n. from 63 million to 2 million years ago"
+translation: "a. 第三的, 第三位的, 第三产业的；n. 第三修道会会员, 第三纪；第三的; 三代的(指无机盐)"
+srsWords: "tertiary"
 
 [flashcard-review]
-front: "concord"
-meaning: "n. capital of the state of New Hampshire; located in south central New Hampshire on the Merrimack river; n. town in eastern Massachusetts near Boston where the first battle of the American Revolution was fought; v. arrange by concord or agreement"
-translation: "n. 一致, 和睦, 协定"
-srsWords: "concord"
+front: "tonic"
+meaning: "n. lime- or lemon-flavored carbonated water containing quinine; n. (music) the first note of a diatonic scale; n. a medicine that strengthens and invigorates; a. of or relating to or producing normal tone or tonus in muscles or tissue"
+translation: "n. 补药, (音乐)主调音或基音；a. 滋补的, 声调的, 使精神振作的"
+srsWords: "tonic"
 
 [flashcard-review]
-front: "peripheral"
-meaning: "n. (computer science) electronic equipment connected by cable to the CPU of a computer; a. on or near an edge or constituting an outer boundary; the outer area; s. related to the key issue but not of central importance"
-translation: "a. 周边的, 周围的, 圆周的, 无关紧要的, 肤浅的；[医] 外周的, 周围的, 末梢的"
-srsWords: "peripheral"
+front: "dispose"
+meaning: "v. give, sell, or transfer to another; v. make receptive or willing towards an action or attitude or belief; v. place or put in a particular order"
+translation: "vt. 处理, 排列, 布置；vi. 处置"
+srsWords: "dispose"
 
 [flashcard-review]
-front: "confidentiality"
-meaning: "n. the state of being secret; n. discretion in keeping secret information"
-translation: "[计] 机密性；[经] 保密"
-srsWords: "confidentiality"
+front: "idiotic"
+meaning: "s insanely irresponsible; s incongruous; inviting ridicule; s having a mental age of three to seven years"
+translation: "a. 白痴的, 愚蠢的, 呆头呆脑的"
+srsWords: "idiotic"
 
 [flashcard-review]
-front: "transparency"
-meaning: "n. permitting the free passage of electromagnetic radiation; n. the quality of being clear and transparent"
-translation: "n. 透明, 透明度, 透过性, 透明物, 清晰；[计] 透明性; 透明"
-srsWords: "transparency"
+front: "solicitor"
+meaning: "n. a petitioner who solicits contributions or trade or votes; n. a British lawyer who gives legal advice and prepares legal documents"
+translation: "n. (英)律师, 初级律师, (美)法务官, (美)掮客, 游说者, (美)募捐者；[经] 募损者, 律师"
+srsWords: "solicitor"
 
 [flashcard-review]
-front: "psychiatry"
-meaning: "n. the branch of medicine dealing with the diagnosis and treatment of mental disorders"
-translation: "n. 精神病学, 精神病治疗；[医] 精神病学"
-srsWords: "psychiatry"
+front: "existent"
+meaning: "a. having existence or being or actuality"
+translation: "a. 存在的, 生存的, 现存的；[医] 生存者"
+srsWords: "existent"
 
 [flashcard-review]
-front: "neural"
-meaning: "a. of or relating to neurons"
-translation: "a. 神经的, 神经系统的, 神经中枢的, 背的；[医] 神经的"
-srsWords: "neural"
+front: "obligate"
+meaning: "v. commit in order to fulfill an obligation; a. restricted to a particular condition of life"
+translation: "vt. 使负义务, 强使, 使感激, 施恩惠于；a. 有责任的, 必须的"
+srsWords: "obligate"
 
 [flashcard-review]
-front: "wan"
-meaning: "v. become pale and sickly; s. lacking vitality as from weariness or illness or unhappiness"
-translation: "a. 苍白的, 无血色的, 病态的, 暗淡的；v. (使)变苍白；[计] 广域网"
-srsWords: "wan"
+front: "concurrent"
+meaning: "s occurring or operating at the same time"
+translation: "n. 同时发生的事件；a. 同时发生的, 一致的；[计] 并行的; 并发的; 同时发生的; 共行的"
+srsWords: "concurrent"
 
 [flashcard-review]
-front: "communist"
-meaning: "n. a member of the communist party; n. a socialist who advocates communism; a. relating to or marked by communism"
-translation: "n. 共产主义者, 共产党员；[法] 共产主义的, 共产党的"
-srsWords: "communist"
+front: "differentiation"
+meaning: "n. a discrimination between things as different and distinct; n. the mathematical process of obtaining the derivative of a function"
+translation: "n. 区别, 分化, 变异；[医] 鉴别, 区别, 分化[作用], 微分法"
+srsWords: "differentiation"
+
 ---
 lessonTitle: "Lesson 2: Advanced Idiomatic & Nuanced Expression Part 2"
 description: "Practice 10 key C1 vocabulary flashcards for Advanced Idiomatic & Nuanced Expression"
@@ -81,64 +82,65 @@ icon: "✨"
 color: "#2196F3"
 ---
 [flashcard-review]
-front: "biodiversity"
-meaning: "n. the diversity of plant and animal life in a particular habitat (or in the world as a whole)"
-translation: "n. 生物多样性"
-srsWords: "biodiversity"
+front: "volatility"
+meaning: "n. the property of changing readily from a solid or liquid to a vapor; n. the trait of being unpredictably irresolute"
+translation: "n. 挥发性, 挥发度, 轻快, 易变, 短暂；[计] 变更率"
+srsWords: "volatility"
 
 [flashcard-review]
-front: "erotica"
-meaning: "n creative activity (writing or pictures or films etc.) of no literary or artistic value other than to stimulate sexual desire"
-translation: "n. 色情作品；[法] 色情书籍, 色情画, 淫画"
-srsWords: "erotica"
+front: "immature"
+meaning: "a. characteristic of a lack of maturity; a. not yet mature"
+translation: "a. 不成熟的, 未完全发育的, 粗糙的；[医] 未成熟的"
+srsWords: "immature"
 
 [flashcard-review]
-front: "temporal"
-meaning: "s. not eternal; a. of or relating to or limited by time; a. of or relating to the temples (the sides of the skull behind the orbit); s. of this earth or world"
-translation: "a. 时间的, 暂时的, 现世的, 世俗的, 颞的, 太阳穴的；n. 世间万物, 教会财产"
-srsWords: "temporal"
+front: "formulation"
+meaning: "n. a substance prepared according to a formula; n. the style of expressing yourself"
+translation: "n. 系统陈述, 公式化, 配制；[化] 表述; 数学表述; 数式化; 数学表述"
+srsWords: "formulation"
 
 [flashcard-review]
-front: "asbestos"
-meaning: "n. a fibrous amphibole; used for making fireproof articles; inhaling fibers can cause asbestosis or lung cancer"
-translation: "n. 石棉；[化] 石棉"
-srsWords: "asbestos"
+front: "congregation"
+meaning: "n. a group of people who adhere to a common faith and habitually attend a given church; n. an assemblage of people or animals or things collected together; n. the act of congregating"
+translation: "n. 集合, 聚集；[法] 集会, 人一, 红衣主教会议"
+srsWords: "congregation"
 
 [flashcard-review]
-front: "savage"
-meaning: "n. a member of an uncivilized people; v. attack brutally and fiercely; v. criticize harshly or violently"
-translation: "a. 未开化的, 野蛮的, 无礼的, 残酷的, 原始的, 粗鲁的, 未开发的；vt. 用暴力对付, 凶猛攻击；n. 原始人, 粗鲁人"
-srsWords: "savage"
+front: "biomedical"
+meaning: "a. relating to the activities and applications of science to clinical medicine"
+translation: "a. 生物医学"
+srsWords: "biomedical"
 
 [flashcard-review]
-front: "replication"
-meaning: "n. (genetics) the process whereby DNA makes a copy of itself before cell division; n. (law) a pleading made by a plaintiff in reply to the defendant's plea or answer; n. the repetition of an experiment in order to test the validity of its conclusion"
-translation: "n. 回答, 反响, 复制, 第二次答辩, 折转, 弯回；[化] 复制"
-srsWords: "replication"
+front: "bulk up"
+meaning: "verb. bulk up"
+translation: "形成大数目, 胀大"
+srsWords: "bulk up"
 
 [flashcard-review]
-front: "firmware"
-meaning: "n. (computer science) coded instructions that are stored permanently in read-only memory"
-translation: "[计] 固件"
-srsWords: "firmware"
+front: "discriminatory"
+meaning: "s. containing or implying a slight or showing prejudice; s. manifesting partiality"
+translation: "a. 有辨识力的, 有差别的"
+srsWords: "discriminatory"
 
 [flashcard-review]
-front: "polymer"
-meaning: "n. a naturally occurring or synthetic compound consisting of large molecules made up of a linked series of repeated simple monomers"
-translation: "n. 聚合物, 聚合体；[化] 多聚体; 高分子; 大分子; 聚合物"
-srsWords: "polymer"
+front: "diaspora"
+meaning: "n. the body of Jews (or Jewish communities) outside Palestine or modern Israel; n. the dispersion of the Jews outside Israel; from the destruction of the temple in Jerusalem in 587-86 BC when they were exiled to Babylonia up to the present time; n. the dispersion or spreading of something that was originally localized (as a people or language or culture)"
+translation: "n. 犹太人的离散, 离散的犹太人"
+srsWords: "diaspora"
 
 [flashcard-review]
-front: "mandate"
-meaning: "n. a document giving an official instruction or command; n. a territory surrendered by Turkey or Germany after World War I and put under the tutelage of some other European power until they are able to stand by themselves; n. the commission that is given to a government and its policies through an electoral victory"
-translation: "n. 命令, 指令, 要求；vt. 委任统治"
-srsWords: "mandate"
+front: "semitism"
+meaning: "n. A Semitic idiom; a word of Semitic origin."
+translation: "n. 闪族人特质；闪族语"
+srsWords: "semitism"
 
 [flashcard-review]
-front: "terminology"
-meaning: "n. a system of words used to name things in a particular discipline"
-translation: "n. 术语, 术语学；[医] 名词学, 命名法"
-srsWords: "terminology"
+front: "episcopal"
+meaning: "a. of or pertaining to or characteristic of the Episcopal church; a. denoting or governed by or relating to a bishop or bishops"
+translation: "a. 主教的, 主教制度的, 英国国教的"
+srsWords: "episcopal"
+
 ---
 lessonTitle: "Lesson 3: Advanced Idiomatic & Nuanced Expression Part 3"
 description: "Practice 10 key C1 vocabulary flashcards for Advanced Idiomatic & Nuanced Expression"
@@ -146,64 +148,65 @@ icon: "✨"
 color: "#2196F3"
 ---
 [flashcard-review]
-front: "maiden"
-meaning: "n an unmarried girl (especially a virgin); n (cricket) an over in which no runs are scored; s serving to set in motion"
-translation: "n. 年轻未婚女子, 少女, 处女；a. 未婚的, 处女的, 初次的, 无经验的"
-srsWords: "maiden"
+front: "feasibility"
+meaning: "n. the quality of being doable"
+translation: "n. 可行性, 可能性；[化] 可行性"
+srsWords: "feasibility"
 
 [flashcard-review]
-front: "conceptual"
-meaning: "s. being or characterized by concepts or their formation"
-translation: "a. 概念的；[医] 概念的"
-srsWords: "conceptual"
+front: "inadvertent"
+meaning: "s happening by chance or unexpectedly or unintentionally"
+translation: "a. 漫不经心的, 非故意的"
+srsWords: "inadvertent"
 
 [flashcard-review]
-front: "instrumentation"
-meaning: "n. the act of providing or using the instruments needed for some implementation; n. the instruments called for in a musical score or arrangement for a band or orchestra"
-translation: "n. 乐器法, 仪器制造学, 仪表化；[医] 器械用法, 器械操作法"
-srsWords: "instrumentation"
+front: "premature"
+meaning: "a. born after a gestation period of less than the normal time; s. uncommonly early or before the expected time"
+translation: "a. 早产的, 过早的, 不成熟的；n. 早产儿, 过早发生的事物"
+srsWords: "premature"
 
 [flashcard-review]
-front: "theta"
-meaning: "n. the 8th letter of the Greek alphabet"
-translation: "n. 希腊字母的第八字"
-srsWords: "theta"
+front: "centric"
+meaning: "s. having or situated at or near a center"
+translation: "a. 中心的, 中央的；[医] 中心的, 中枢的"
+srsWords: "centric"
 
 [flashcard-review]
-front: "asylum"
-meaning: "n a shelter from danger or hardship; n a hospital for mentally incompetent or unbalanced person"
-translation: "n. 庇护, 收容所；[医] 养育院"
-srsWords: "asylum"
+front: "maneuver/manoeuvre"
+meaning: "n. a military training exercise; n. a deliberate coordinated movement requiring dexterity and skill; n. a move made to gain a tactical end"
+translation: "n. 演习, 调遣, 策略；v. 调遣, 演习, 用计"
+srsWords: "maneuver/manoeuvre"
 
 [flashcard-review]
-front: "whore"
-meaning: "v. work as a prostitute; v. have unlawful sex with a whore; v. compromise oneself for money or other gains"
-translation: "n. 娼妓；vi. 卖淫"
-srsWords: "whore"
+front: "relegation"
+meaning: "n. the act of assigning (someone or something) to a particular class or category; n. mild banishment; consignment to an inferior position"
+translation: "n. 驱逐, 调职, 归属；[法] 放逐, 贬谪"
+srsWords: "relegation"
 
 [flashcard-review]
-front: "comrade"
-meaning: "n. a fellow member of the Communist Party"
-translation: "n. 同志, 伙伴"
-srsWords: "comrade"
+front: "conservatism"
+meaning: "n. a political or theological orientation advocating the preservation of the best in society and opposing radical changes"
+translation: "n. 保守, 守旧性, 保守主义, [the]保守党的主张和政策, 保守党；[医] 保守性"
+srsWords: "conservatism"
 
 [flashcard-review]
-front: "penis"
-meaning: "n. the male organ of copulation (`member' is a euphemism)"
-translation: "n. 阳物, 阴茎；[医] 阴茎"
-srsWords: "penis"
+front: "plurality"
+meaning: "n. the state of being plural; n. (in an election with more than 2 options) the number of votes for the candidate or party receiving the greatest number (but less that half of the votes)"
+translation: "n. 复数, 较大的数, 多数状态, 兼职；[法] 大多数, 较多数, 复数"
+srsWords: "plurality"
 
 [flashcard-review]
-front: "slut"
-meaning: "n a dirty untidy woman; n a woman adulterer"
-translation: "n. 懒妇, 荡妇"
-srsWords: "slut"
+front: "endow"
+meaning: "v. give qualities or abilities to; v. furnish with an endowment"
+translation: "vt. 捐赠, 捐助, 赋予；[法] 赠送财产给, 分给寡妇一份遗产, 授与"
+srsWords: "endow"
 
 [flashcard-review]
-front: "baron"
-meaning: "n. a nobleman (in various countries) of varying rank; n. a British peer of the lowest rank; n. a very wealthy or powerful businessman"
-translation: "n. 男爵；[法] 男爵, 贵族, 大王"
-srsWords: "baron"
+front: "morphology"
+meaning: "n. the branch of biology that deals with the structure of animals and plants; n. studies of the rules for forming admissible words; n. the admissible arrangement of sounds in words"
+translation: "n. 形态学, 词法, 形态；[医] 形态学"
+srsWords: "morphology"
+
 ---
 lessonTitle: "Lesson 4: Advanced Idiomatic & Nuanced Expression Part 4"
 description: "Practice 10 key C1 vocabulary flashcards for Advanced Idiomatic & Nuanced Expression"
@@ -211,64 +214,65 @@ icon: "✨"
 color: "#2196F3"
 ---
 [flashcard-review]
-front: "marshal"
-meaning: "n. a law officer having duties similar to those of a sheriff in carrying out the judgments of a court of law; n. (in some countries) a military officer of highest rank; v. place in proper rank; v. arrange in logical order"
-translation: "n. 元帅, 陆空军高级将官, 典礼官, 执法官；vt. 整理, 引领, 统率；vi. 排列, 各就各位"
-srsWords: "marshal"
+front: "ordination"
+meaning: "n. the status of being ordained to a sacred office; n. the act of ordaining; the act of conferring (or receiving) holy orders"
+translation: "n. 任命, 授神职(礼), 颁布法令, 排列"
+srsWords: "ordination"
 
 [flashcard-review]
-front: "excellency"
-meaning: "n. a title used to address dignitaries (such as ambassadors or governors); usually preceded by `Your' or `His' or `Her'"
-translation: "n. 优点, 阁下"
-srsWords: "excellency"
+front: "parity"
+meaning: "n. (obstetrics) the number of liveborn children a woman has delivered; n. (mathematics) a relation between a pair of integers: if both integers are odd or both are even they have the same parity; if one is odd and the other is even they have different parity; n. (physics) parity is conserved in a universe in which the laws of physics are the same in a right-handed system of coordinates as in a left-handed system; n. functional equality"
+translation: "n. 同等, 同位, 平价, 奇偶性；[计] 奇偶性"
+srsWords: "parity"
 
 [flashcard-review]
-front: "sire"
-meaning: "n. a title of address formerly used for a man of rank and authority; n. male parent of an animal especially a domestic animal such as a horse"
-translation: "n. 陛下, 殿下, 父亲；vt. 生殖, 创作"
-srsWords: "sire"
+front: "ratify"
+meaning: "v approve and express assent, responsibility, or obligation"
+translation: "vt. 批准, 认可；[经] 证实, 肯定, 确认"
+srsWords: "ratify"
 
 [flashcard-review]
-front: "heroin"
-meaning: "n. a narcotic that is considered a hard drug; a highly addictive morphine derivative; intravenous injection provides the fastest and most intense rush"
-translation: "n. 海洛因, 吗啡；[化] 海洛因; 二醋吗啡; 二乙酰吗啡"
-srsWords: "heroin"
+front: "substantive"
+meaning: "n. any word or group of words functioning as a noun; a. defining rights and duties as opposed to giving the rules by which rights and duties are established"
+translation: "a. 表示实在的, 有实质的, 独立存在的, 大量的, 重大的, 坚实的, 名词的；n. 名词性实词, 名词"
+srsWords: "substantive"
 
 [flashcard-review]
-front: "cocaine"
-meaning: "n. a narcotic (alkaloid) extracted from coca leaves; used as a surface anesthetic or taken for pleasure; can become powerfully addictive"
-translation: "n. 可卡因, 古柯碱；[化] 可卡因; 古柯碱"
-srsWords: "cocaine"
+front: "accession"
+meaning: "n. a process of increasing by addition (as to a collection or group); n. (civil law) the right to all of that which your property produces whether by growth or improvement; n. something added to what you already have"
+translation: "n. 到达, 即位, 增加, 同意, 发作, 正式接受；vt. 登记入册"
+srsWords: "accession"
 
 [flashcard-review]
-front: "autopsy"
-meaning: "n. an examination and dissection of a dead body to determine cause of death or the changes produced by disease; v. perform an autopsy on a dead body; do a post-mortem"
-translation: "n. 验尸；[医] 尸体解剖, 尸体剖检"
-srsWords: "autopsy"
+front: "cohort"
+meaning: "n. a company of companions or supporters; n. a band of warriors (originally a unit of a Roman Legion)"
+translation: "n. 一群；步兵大队；支持者；共同特点的一群人"
+srsWords: "cohort"
 
 [flashcard-review]
-front: "scum"
-meaning: "n. a film of impurities or vegetation that can form on the surface of a liquid; v. remove the scum from"
-translation: "n. 浮渣, 糟粕, 浮藻, 熔渣, 不起好作用的人；vt. 撇去(浮沫)；vi. 产生泡沫"
-srsWords: "scum"
+front: "diffusion"
+meaning: "n. (physics) the process in which there is movement of a substance from an area of high concentration of that substance to an area of lower concentration; n. the spread of social institutions (and myths and skills) from one society to another"
+translation: "n. 散播, 传播, 蔓延；[医] 扩散, 弥散, 漫射(光)"
+srsWords: "diffusion"
 
 [flashcard-review]
-front: "psycho"
-meaning: "n a person afflicted with psychosis"
-translation: "n. 心理分析, 精神神经病患者；a. 精神变态的, 精神神经病的"
-srsWords: "psycho"
+front: "incorporation"
+meaning: "n. consolidating two or more things; union in (or into) one body; n. including by incorporating"
+translation: "n. 包含, 结合, 编入, 团体组织；[医] 惨合, 混合, 合并"
+srsWords: "incorporation"
 
 [flashcard-review]
-front: "prostitute"
-meaning: "n. a woman who engages in sexual intercourse for money; v. sell one's body; exchange sex for money"
-translation: "n. 妓女, 男娼；vt. 使沦为妓女；a. 卖淫的, 堕落的"
-srsWords: "prostitute"
+front: "legalization"
+meaning: "n. the act of making lawful"
+translation: "n. 合法化, 法律认可；[经] 立法, 合法化"
+srsWords: "legalization"
 
 [flashcard-review]
-front: "prosecution"
-meaning: "n. the institution and conduct of legal proceedings against a defendant for criminal behavior; n. the lawyers acting for the state to put the case against the defendant"
-translation: "n. 执行, 经营, 起诉"
-srsWords: "prosecution"
+front: "sedative"
+meaning: "n. a drug that reduces excitability and calms a person"
+translation: "a. 使安静的, 使镇静的；n. 镇静剂"
+srsWords: "sedative"
+
 ---
 lessonTitle: "Lesson 5: Advanced Idiomatic & Nuanced Expression Part 5"
 description: "Practice 10 key C1 vocabulary flashcards for Advanced Idiomatic & Nuanced Expression"
@@ -276,64 +280,65 @@ icon: "✨"
 color: "#2196F3"
 ---
 [flashcard-review]
-front: "mademoiselle"
-meaning: "n small silvery drumfish often mistaken for white perch; found along coasts of United States from New York to Mexico"
-translation: "[法] (pl.mademoiselles, mesdemoiselles )小姐(相当于英语Miss , 单数略为Mlle, 复数略为Mlles), [英]法国女(家庭)教师"
-srsWords: "mademoiselle"
+front: "semantic"
+meaning: "a. of or relating to meaning or the study of meaning"
+translation: "a. 语义的；[计] 语义"
+srsWords: "semantic"
 
 [flashcard-review]
-front: "deceased"
-meaning: "n someone who is no longer alive; v pass from physical life and lose all bodily attributes and functions necessary to sustain life; s dead"
-translation: "a. 已故的；n. 死者"
-srsWords: "deceased"
+front: "centenary"
+meaning: "n the 100th anniversary (or the celebration of it); a of or relating to or completing a period of 100 years"
+translation: "n. 一百年；a. 一百年的"
+srsWords: "centenary"
 
 [flashcard-review]
-front: "almighty"
-meaning: "s. having unlimited power"
-translation: "a. 万能的, 全能的"
-srsWords: "almighty"
+front: "interdisciplinary"
+meaning: "a. drawing from or characterized by participation of two or more fields of study"
+translation: "[计] 学科间的"
+srsWords: "interdisciplinary"
 
 [flashcard-review]
-front: "pervert"
-meaning: "n. a person whose behavior deviates from what is acceptable especially in sexual behavior; v. change the inherent purpose or function of something"
-translation: "vt. 使堕落, 使反常, 歪曲, 滥用, 使左右颠倒, 唆使...性变态；n. 堕落者, 行为反常者, 背教者, 性欲反常者"
-srsWords: "pervert"
+front: "iteration"
+meaning: "n. (computer science) a single execution of a set of instructions that are to be repeated; n. (computer science) executing the same set of instructions a given number of times or until a specified result is obtained; n. doing or saying again; a repeated performance"
+translation: "n. 重复, 反复说的话；[计] 迭代"
+srsWords: "iteration"
 
 [flashcard-review]
-front: "stark"
-meaning: "s. complete or extreme; r. completely"
-translation: "a. 僵硬的, 完全的, 刻板的, 明显的, 荒凉的, 结实的；adv. 突出地, 简直, 全然"
-srsWords: "stark"
+front: "oxidation"
+meaning: "n. the process of oxidizing; the addition of oxygen to a compound with a loss of electrons; always occurs accompanied by reduction"
+translation: "n. 氧化；[化] 氧化"
+srsWords: "oxidation"
 
 [flashcard-review]
-front: "fletcher"
-meaning: "n. prolific English dramatist who collaborated with Francis Beaumont and many other dramatists (1579-1625)"
-translation: "n. 弗莱彻（姓氏, 男子名）；弗莱彻（John, 1579-1625, 英国剧作家）；弗莱彻（John Gould, 1886-1950, 美国诗人及批评家）"
-srsWords: "fletcher"
+front: "repercussion"
+meaning: "n. a remote or indirect consequence of some action"
+translation: "n. 弹回, 反响, 反射；[医] 消退[法], 消肿[法], 浮动诊胎法"
+srsWords: "repercussion"
 
 [flashcard-review]
-front: "pimp"
-meaning: "n. someone who procures customers for whores (in England they call a pimp a ponce)"
-translation: "n. 皮条客, 男妓, 恶棍, 窥探情人者, 告密者；vi. 拉皮条, 告密"
-srsWords: "pimp"
+front: "standalone"
+meaning: "able to operate independently"
+translation: "n. 脱机；a. 单独的, 独立的"
+srsWords: "standalone"
 
 [flashcard-review]
-front: "scoundrel"
-meaning: "n a wicked or evil person; someone who does evil deliberately"
-translation: "n. 恶棍；a. 卑鄙的"
-srsWords: "scoundrel"
+front: "biomass"
+meaning: "n. plant materials and animal waste used as fuel; n. the total mass of living matter in a given unit area"
+translation: "n. 生物量；[化] 生物质; 生物量"
+srsWords: "biomass"
 
 [flashcard-review]
-front: "behold"
-meaning: "v. see with attention"
-translation: "vt. 看到, 注视；vi. 看"
-srsWords: "behold"
+front: "recon"
+meaning: "Reconnaissance"
+translation: "n. 侦察, 交换子；[计] 追溯转换"
+srsWords: "recon"
 
 [flashcard-review]
-front: "vengeance"
-meaning: "n. the act of taking revenge (harming someone in retaliation for something harmful that they have done) especially in the next life; I will repay, saith the Lord\"--Romans 12:19"
-translation: "n. 复仇, 报仇；[法] 报仇, 复仇"
-srsWords: "vengeance"
+front: "incremental"
+meaning: "s. increasing gradually by regular degrees or additions"
+translation: "a. 增加的, 增值的；[经] 增长的, 增量的"
+srsWords: "incremental"
+
 ---
 lessonTitle: "Lesson 6: Advanced Idiomatic & Nuanced Expression Part 6"
 description: "Practice 10 key C1 vocabulary flashcards for Advanced Idiomatic & Nuanced Expression"
@@ -341,28 +346,28 @@ icon: "✨"
 color: "#2196F3"
 ---
 [flashcard-review]
-front: "vagina"
-meaning: "n. the lower part of the female reproductive tract; a moist canal in female mammals extending from the labia minora to the uterus"
-translation: "n. 阴道, 鞘, 叶鞘；[医] 阴道; 鞘"
-srsWords: "vagina"
+front: "antitrust"
+meaning: "s of laws and regulations; designed to protect trade and commerce from unfair business practices"
+translation: "a. 反托拉斯的；[法] 反托拉斯的"
+srsWords: "antitrust"
 
 [flashcard-review]
-front: "rogue"
-meaning: "n. a deceitful and unreliable scoundrel"
-translation: "n. 恶棍, 流氓, 小淘气；vt. 欺骗；vi. 游手好闲"
-srsWords: "rogue"
+front: "bipartisan"
+meaning: "s. supported by both sides"
+translation: "a. 两党连立的"
+srsWords: "bipartisan"
 
 [flashcard-review]
-front: "treason"
-meaning: "n. a crime that undermines the offender's government; n. disloyalty by virtue of subversive behavior"
-translation: "n. 叛逆, 不忠, 叛国罪；[法] 叛逆, 通敌, 叛国罪"
-srsWords: "treason"
+front: "longitudinal"
+meaning: "a. of or relating to lines of longitude; s. running lengthwise; s. over an extended time"
+translation: "a. 经度的, 经线的, 纵的；[医] 纵的"
+srsWords: "longitudinal"
 
 [flashcard-review]
-front: "bounty"
-meaning: "n. payment or reward (especially from a government) for acts such as catching criminals or killing predatory animals or enlisting in the military; n. generosity evidenced by a willingness to give freely; n. a ship of the British navy; in 1789 part of the crew mutinied against their commander William Bligh and set him afloat in an open boat"
-translation: "n. 慷慨, 宽大, 礼物；[经] 奖励金, 补贴"
-srsWords: "bounty"
+front: "populist"
+meaning: "n an advocate of democratic principles"
+translation: "n. 民粹派的成员"
+srsWords: "populist"
 
 [flashcard-review]
 front: "regiment"
@@ -371,34 +376,35 @@ translation: "n. （军队）团, 大量（人或物）；v. 组编成团，组�
 srsWords: "regiment"
 
 [flashcard-review]
-front: "kin"
-meaning: "n. a person having kinship with another or others; n. group of people related by blood or marriage"
-translation: "n. 亲戚, 同族, 血缘关系, 家族；a. 有亲属关系的, 性质类似的, 同类的"
-srsWords: "kin"
+front: "analogous"
+meaning: "s. similar or equivalent in some respects though otherwise dissimilar; a. corresponding in function but not in evolutionary origin"
+translation: "a. 类似的, 相似的；[医] 类似的, 类同的"
+srsWords: "analogous"
 
 [flashcard-review]
-front: "urine"
-meaning: "n. liquid excretory product"
-translation: "n. 小便, 尿；[医] 尿"
-srsWords: "urine"
+front: "attribution"
+meaning: "n. assigning some quality or character to a person or thing; n. assigning to a cause or source"
+translation: "n. 归因；[法] 归因, 归属, 属性"
+srsWords: "attribution"
 
 [flashcard-review]
-front: "swine"
-meaning: "n. stout-bodied short-legged omnivorous animals"
-translation: "n. 猪, 卑鄙的家伙"
-srsWords: "swine"
+front: "renowned"
+meaning: "s widely known and esteemed"
+translation: "a. 有名的, 有声誉的"
+srsWords: "renowned"
 
 [flashcard-review]
-front: "lordship"
-meaning: "n. a title used to address any British peer except a duke and extended to a bishop or a judge; n. the authority of a lord"
-translation: "n. 贵族身分, 主权, 支配"
-srsWords: "lordship"
+front: "reaper"
+meaning: "n someone who helps to gather the harvest; n Death personified as an old man or a skeleton with a scythe; n farm machine that gathers a food crop from the fields"
+translation: "n. 收割者, 收割机"
+srsWords: "reaper"
 
 [flashcard-review]
-front: "morphine"
-meaning: "n. an alkaloid narcotic drug extracted from opium; a powerful, habit-forming narcotic used to relieve pain"
-translation: "n. 吗啡；[化] 吗啡"
-srsWords: "morphine"
+front: "impoverish"
+meaning: "v. make poor"
+translation: "vt. 使贫穷, 耗尽...的力气"
+srsWords: "impoverish"
+
 ---
 lessonTitle: "Lesson 7: Advanced Idiomatic & Nuanced Expression Part 7"
 description: "Practice 10 key C1 vocabulary flashcards for Advanced Idiomatic & Nuanced Expression"
@@ -406,64 +412,65 @@ icon: "✨"
 color: "#2196F3"
 ---
 [flashcard-review]
-front: "lam"
-meaning: "n a rapid escape (as by criminals); v flee; take to one's heels; cut and run; v give a thrashing to; beat hard"
-translation: "v. 打, 鞭笞, 逃脱；n. 逃亡"
-srsWords: "lam"
+front: "adherence"
+meaning: "n faithful support for a cause or political party or religion; n the property of sticking together (as of glue and wood) or the joining of surfaces of different composition"
+translation: "n. 依附, 固执, 坚持；[化] 粘合"
+srsWords: "adherence"
 
 [flashcard-review]
-front: "battalion"
-meaning: "n. an army unit usually consisting of a headquarters and three or more companies; n. a large indefinite number"
-translation: "n. 营, 军队, 集团"
-srsWords: "battalion"
+front: "cognition"
+meaning: "n. the psychological result of perception and learning and reasoning"
+translation: "n. 认识, 认识力, 认识的结果；[医] 认识, 识别"
+srsWords: "cognition"
 
 [flashcard-review]
-front: "assassination"
-meaning: "n. murder of a public figure by surprise attack"
-translation: "n. 暗杀；[法] 暗杀, 行刺"
-srsWords: "assassination"
+front: "marginalize"
+meaning: "v. relegate to a lower or outer edge, as of specific groups of people"
+translation: "vt.使处于社会边缘,使脱离社会发展进程, 忽视,排斥"
+srsWords: "marginalize"
 
 [flashcard-review]
-front: "sanctuary"
-meaning: "n. a consecrated place where sacred objects are kept"
-translation: "n. 圣所(指教堂、寺院等), 耶路撒冷的神殿, 避难所；[法] 庇护所, 避难所, 教堂"
-srsWords: "sanctuary"
+front: "munition"
+meaning: "n. military supplies; v. supply with weapons"
+translation: "n. 军需品；vt. 供给军需品"
+srsWords: "munition"
 
 [flashcard-review]
-front: "righteous"
-meaning: "a. characterized by or proceeding from accepted standards of morality or justice; s. morally justified"
-translation: "a. 公正的, 正义的, 正直的；[法] 正直的, 正当的, 正义的"
-srsWords: "righteous"
+front: "socioeconomic"
+meaning: "a. involving social as well as economic factors"
+translation: "a. 社会经济学的"
+srsWords: "socioeconomic"
 
 [flashcard-review]
-front: "rendezvous"
-meaning: "n. a meeting planned at a certain time and place; n. a place where people meet; v. meet at a rendezvous"
-translation: "n. 约会, 约会地点；v. 集合, 集结, 在约定场所会面；[计] 会合"
-srsWords: "rendezvous"
+front: "aero"
+meaning: "relating to aircraft or aeronautics"
+translation: "a. 飞机的, 航空的, 飞行的"
+srsWords: "aero"
 
 [flashcard-review]
-front: "scumbag"
-meaning: "a contemptible or despicable person"
-translation: "n. <俚>避孕套, 卑鄙的家伙"
-srsWords: "scumbag"
+front: "impotent"
+meaning: "a. lacking power or ability; morality without technology is impotent"- Freeman J.Dyson; a. (of a male) unable to copulate"
+translation: "a. 无力的, 虚弱的, 无效的, 阳萎的"
+srsWords: "impotent"
 
 [flashcard-review]
-front: "barb"
-meaning: "n. the pointed part of barbed wire; n. a subsidiary point facing opposite from the main point that makes an arrowhead or spear hard to remove; n. one of the parallel filaments projecting from the main shaft of a feather"
-translation: "n. 倒钩；vt. 装倒钩于"
-srsWords: "barb"
+front: "microbial"
+meaning: "a. of or involving or caused by or being microbes"
+translation: "a. 微生物的, 由细菌引起的；[医] 微生物的"
+srsWords: "microbial"
 
 [flashcard-review]
-front: "house"
-meaning: "n. a dwelling that serves as living quarters for one or more families; n. the members of a religious community living together; n. the audience gathered together in a theatre or cinema; n. an official assembly having legislative powers"
-translation: "n. 房子, 住宅, 机构, 议院, 家族, 家庭；vt. 给...房子住, 收藏；vi. 住, 躲藏"
-srsWords: "house"
+front: "abusive"
+meaning: "s. expressing offensive reproach; s. characterized by physical or psychological maltreatment"
+translation: "a. 恶言谩骂的, 被滥用的, 腐败的, 虐待的"
+srsWords: "abusive"
 
 [flashcard-review]
-front: "class"
-meaning: "n. a collection of things sharing a common attribute; n. a body of students who are taught together; n. people having the same social, economic, or educational status; n. a league ranked by quality"
-translation: "n. 班级, 阶级, 种类, 课；vt. 分类；[计] 类别; 类; 种类; 类程"
-srsWords: "class"
+front: "opioid"
+meaning: "A compound resembling opium in addictive properties or physiological effects."
+translation: "a. 类鸦片（引起）的；n. 类鸦片活性肽"
+srsWords: "opioid"
+
 ---
 lessonTitle: "Lesson 8: Advanced Idiomatic & Nuanced Expression Part 8"
 description: "Practice 10 key C1 vocabulary flashcards for Advanced Idiomatic & Nuanced Expression"
@@ -471,64 +478,65 @@ icon: "✨"
 color: "#2196F3"
 ---
 [flashcard-review]
-front: "perfect"
-meaning: "v. make perfect or complete; a. being complete of its kind and without defect or blemish; s. precisely accurate or exact"
-translation: "n. 完成时；a. 完美的, 完好的, 理想的, 熟练的, 精确的, 完成式的；vt. 使完美, 修改, 使精通, 改善, 使熟练"
-srsWords: "perfect"
+front: "canonical"
+meaning: "a appearing in a biblical canon; a of or relating to or required by canon law; s reduced to the simplest and most significant form possible without loss of generality; s conforming to orthodox or recognized rules"
+translation: "a. 依教规的, 被认为圣典的, 权威的, 典型的；[建] 正则的"
+srsWords: "canonical"
 
 [flashcard-review]
-front: "ground"
-meaning: "n. a position to be won or defended in battle (or as if in battle); n. a relatively homogeneous percept extending back of the figure on which attention is focused; n. a connection between an electrical device and a large conducting body, such as the earth (which is taken to be at zero voltage); n. (art) the surface (as a wall or canvas) prepared to take the paint for a painting"
-translation: "n. 土地, 战场, 场地, 地面, 范围；a. 土地的, 地面上的；vt. 放在地上, 使搁浅, 打基础, 给...以训练；vi. 搁浅, 落地, 根据, 基于；a. 磨过的；grind的过去式和过去分词"
-srsWords: "ground"
+front: "resentment"
+meaning: "n. a feeling of deep and bitter anger and ill-will"
+translation: "n. 怨恨, 愤恨"
+srsWords: "resentment"
 
 [flashcard-review]
-front: "drive"
-meaning: "n. the act of applying force to propel something; n. a mechanism by which force or power is transmitted in a machine; n. the trait of being highly motivated; n. hitting a golf ball off of a tee with a driver"
-translation: "n. 驾车, 快车道, 推进力, 驱动, 动力, 击球, 驱动器；vt. 开车, 驱使, 推动, 驾驶；vi. 开车, 猛击, 飞跑；[计] 驱动器"
-srsWords: "drive"
+front: "attributable"
+meaning: "a. capable of being attributed"
+translation: "a. 可归于...的"
+srsWords: "attributable"
 
 [flashcard-review]
-front: "voice"
-meaning: "n. the distinctive quality or pitch or condition of a person's speech; n. the sound made by the vibration of vocal folds modified by the resonance of the vocal tract; n. a sound suggestive of a vocal utterance; n. a means or agency by which something is expressed or communicated"
-translation: "n. 声音, 嗓音, 嗓子, 愿望, 发言权, 表达, 喉舌, 语态；vt. 表达, 吐露, 调音"
-srsWords: "voice"
+front: "entrench"
+meaning: "v. fix firmly or securely; v. occupy a trench or secured area"
+translation: "vt. 围以壕沟, 防护, 保卫, 使处于牢固地位；vi. 掘壕, 侵犯"
+srsWords: "entrench"
 
 [flashcard-review]
-front: "campaign"
-meaning: "n. a series of actions advancing a principle or tending toward a particular end; n. several related operations aimed at achieving a particular goal (usually within geographical and temporal constraints); n. an overland journey by hunters (especially in Africa); v. run, stand, or compete for an office or a position"
-translation: "n. 战役, 运动, 竞选运动；vi. 参加运动, 作战"
-srsWords: "campaign"
+front: "disobey"
+meaning: "v. refuse to go along with; refuse to follow; be disobedient"
+translation: "v. 违反, 不服从"
+srsWords: "disobey"
 
 [flashcard-review]
-front: "condition"
-meaning: "n. a state at a particular time; n. an assumption on which rests the validity or effect of something else; n. a mode of being or form of existence of a person or thing; n. the state of (good) health (especially in the phrases `in condition' or `in shape' or `out of condition' or `out of shape')"
-translation: "n. 情况, 条件；vt. 使健康, 以...为条件, 决定, 使适应；[计] 条件"
-srsWords: "condition"
+front: "latency"
+meaning: "n. the state of being not yet evident or active"
+translation: "n. 潜伏, 潜在；[计] 传输时间, 传输延迟时间"
+srsWords: "latency"
 
 [flashcard-review]
-front: "nature"
-meaning: "n. the essential qualities or characteristics by which something is recognized; n. a causal agent creating and controlling things in the universe; n. the natural physical world including plants and animals and landscapes etc.; n. the complex of emotional and intellectual attributes that determine a person's characteristic actions and reactions"
-translation: "n. 自然, 大自然, 本性, 性格, 性质；[医] 自然, 大自然; 本性, 性能"
-srsWords: "nature"
+front: "posture"
+meaning: "n the arrangement of the body and its limbs; n characteristic way of bearing one's body; n a rationalized mental attitude; n capability in terms of personnel and materiel that affect the capacity to fight a war; v behave affectedly or unnaturally in order to impress others; v assume a posture as for artistic purposes"
+translation: "n. 姿势, 态度, 情形, 形势；vt. 作...的姿势；vi. 作姿势"
+srsWords: "posture"
 
 [flashcard-review]
-front: "contract"
-meaning: "n. a binding agreement between two or more persons that is enforceable by law; n. (contract bridge) the highest bid becomes the contract setting the number of tricks that the bidder must make; n. a variety of bridge in which the bidder receives points toward game only for the number of tricks he bid; v. enter into a contractual arrangement"
-translation: "n. 合约, 婚约, 契约；vt. 使皱缩, 使缩短, 感染, 订约, 缔结；vi. 皱缩, 订约, 收缩"
-srsWords: "contract"
+front: "adjunct"
+meaning: "n. something added to another thing but not an essential part of it; n. a person who is an assistant or subordinate to another; n. a construction that can be used to extend the meaning of a word or phrase but is not one of the main constituents of a sentence"
+translation: "n. 附属物, 附件, 助手, 修饰语；a. 附属的"
+srsWords: "adjunct"
 
 [flashcard-review]
-front: "stock"
-meaning: "n. the capital raised by a corporation through the issue of shares entitling holders to an ownership interest (equity); n. the merchandise that a shop has on hand; n. the handle of a handgun or the butt end of a rifle or shotgun or part of the support of a machine gun or artillery gun; n. the reputation and popularity a person has"
-translation: "n. 树干, 祖先, 血统, 原料, 备料, 库存, 牲畜, 股票, 股份, 保留剧目；a. 存货的, 常备的, 平凡的, 普通的, 股票的, 保留剧目的, 繁殖用的；vt. 装把手于, 进货, 备有, 放牧；vi. 出新芽, 备货, 囤积"
-srsWords: "stock"
+front: "indecent"
+meaning: "s. not in keeping with accepted standards of what is right or proper in polite society; a. offensive to good taste especially in sexual matters; s. offending against sexual mores in conduct or appearance"
+translation: "a. 下流的, 不礼貌的；[医] 猥亵的"
+srsWords: "indecent"
 
 [flashcard-review]
-front: "rich"
-meaning: "a. possessing material wealth; a. having an abundant supply of desirable qualities or substances (especially natural resources); s. of great worth or quality; s. very productive"
-translation: "a. 富裕的, 富饶的, 浓厚的, 贵重的"
-srsWords: "rich"
+front: "disproportionately"
+meaning: "r. out of proportion; r. to a disproportionate degree"
+translation: "adv. 不匀称, 不相称"
+srsWords: "disproportionately"
+
 ---
 lessonTitle: "Lesson 9: Advanced Idiomatic & Nuanced Expression Part 9"
 description: "Practice 10 key C1 vocabulary flashcards for Advanced Idiomatic & Nuanced Expression"
@@ -536,64 +544,65 @@ icon: "✨"
 color: "#2196F3"
 ---
 [flashcard-review]
-front: "institute"
-meaning: "n. an association organized to promote art or science or education; v. advance or set forth in court"
-translation: "n. 学会, 学院, 协会；vt. 创立, 开始, 制定, 任命"
-srsWords: "institute"
+front: "epidemiology"
+meaning: "n. the branch of medical science dealing with the transmission and control of disease"
+translation: "n. 传染病学, 流行病学；[医] 流行病学"
+srsWords: "epidemiology"
 
 [flashcard-review]
-front: "senate"
-meaning: "n. assembly possessing high legislative powers"
-translation: "n. 参议院, 立法机构, 评议会"
-srsWords: "senate"
+front: "esque"
+meaning: "in the style of; resembling"
+translation: "[网络] 式的；机械人似的；以……方式的"
+srsWords: "esque"
 
 [flashcard-review]
-front: "cast"
-meaning: "n. the actors in a play; n. the distinctive form in which a thing is made; n. bandage consisting of a firm covering (often made of plaster of Paris) that immobilizes broken bones while they heal; n. object formed by a mold"
-translation: "n. 演员阵容, 投掷, 铸件, 预测, 特性；vt. 投, 掷, 抛, 脱落, 铸, 使弯曲, 计算；vi. 投, 计算, 浇铸成型"
-srsWords: "cast"
+front: "gild"
+meaning: "v. decorate with, or as if with, gold leaf or liquid gold"
+translation: "vt. 镀金, 虚饰, 装饰, 供给钱"
+srsWords: "gild"
 
 [flashcard-review]
-front: "firm"
-meaning: "n. the members of a business organization that owns or operates one or more establishments; s. marked by firm determination or resolution; not shakable; s. not soft or yielding to pressure; s. strong and sure"
-translation: "n. 公司, 商号；a. 坚定的, 坚强的, 牢固的, 结实的, 坚硬的, 坚挺的, 严格的, 确定的；vt. 使牢固, 使坚定；vi. 变稳固, 变坚实；adv. 稳固地"
-srsWords: "firm"
+front: "polarize"
+meaning: "v. cause to vibrate in a definite pattern; v. cause to concentrate about two conflicting or contrasting positions; v. become polarized in a conflict or contrasting situation"
+translation: "v. (使)偏振, (使)极化, (使)两极分化"
+srsWords: "polarize"
 
 [flashcard-review]
-front: "launch"
-meaning: "n. a motorboat with an open deck or a half deck; v. propel with force; v. launch for the first time; launch on a maiden voyage; v. get going; give impetus to"
-translation: "n. 下水, 汽艇, 发射；vt. 使下水, 发射, 发动；vi. 起飞, 下水, 投入, 开始"
-srsWords: "launch"
+front: "stabilization"
+meaning: "n. the act of stabilizing something or making it more stable; n. the act of making something (as a vessel or aircraft) less likely to overturn"
+translation: "n. 安定, 稳定, 平抑, 安定化, 稳定化；[医] 稳定, 安定"
+srsWords: "stabilization"
 
 [flashcard-review]
-front: "supreme"
-meaning: "s. final or last in your life or progress; s. highest in excellence or achievement; s. greatest or maximal in degree; extreme"
-translation: "n. 至高, 霸权；a. 至高的, 终极的, 极端的, 最大的"
-srsWords: "supreme"
+front: "decentralize"
+meaning: "v. make less central"
+translation: "vt. 使分散, 下放(权力), 疏散(人口)；[经] 分权"
+srsWords: "decentralize"
 
 [flashcard-review]
-front: "signal"
-meaning: "n. any nonverbal action or gesture that encodes a message; n. any incitement to action; n. an electric quantity (voltage or current or field strength) whose modulation represents coded information about the source from which it comes; s. notably out of the ordinary"
-translation: "n. 信号, 暗号, 近因, 导火线；vt. 向...作信号, 标志, 用信号通知；vi. 发信号；a. 作为信号的, 显著的；[计] 信号"
-srsWords: "signal"
+front: "incarcerate"
+meaning: "v lock up or confine, in or as in a jail"
+translation: "vt. 下狱, 监禁, 禁闭；[法] 监禁, 使下狱, 禁闭"
+srsWords: "incarcerate"
 
 [flashcard-review]
-front: "wing"
-meaning: "n. a movable organ for flying (one of a pair); n. one of the horizontal airfoils on either side of the fuselage of an airplane; n. a stage area out of sight of the audience; n. a unit of military aircraft"
-translation: "n. 翅膀, 翼, 机翼, 派别；vt. 给...装上翼, 飞过, 使飞, 空运, 增加...速度；vi. 飞行"
-srsWords: "wing"
+front: "ineligible"
+meaning: "a. not eligible; s. prohibited by official rules"
+translation: "a. 无被选任资格的, 不适任的, 无益的；n. 无被选任资格的人, 不合录用资格的人"
+srsWords: "ineligible"
 
 [flashcard-review]
-front: "absolute"
-meaning: "n. something that is conceived or that exists independently and not in relation to other things; something that does not depend on anything else and is beyond human control; something that is not relative; a. perfect or complete or pure; s. complete and without restriction or qualification; sometimes used informally as intensifiers; s. not limited by law"
-translation: "a. 绝对的, 专制的, 完全的, 独立的；n. 绝对事物"
-srsWords: "absolute"
+front: "lipid"
+meaning: "n. an oily organic compound insoluble in water but soluble in organic solvents; essential structural component of living cells (along with proteins and carbohydrates)"
+translation: "n. 脂类, 类脂物, 脂质；[化] 类脂; 脂质; 脂类"
+srsWords: "lipid"
 
 [flashcard-review]
-front: "contest"
-meaning: "n. an occasion on which a winner is selected from among two or more contestants; n. a struggle between rivals; v. to make the subject of dispute, contention, or litigation"
-translation: "n. 竞赛, 争论；vt. 竞争, 争取, 争辩；vi. 竞争"
-srsWords: "contest"
+front: "modulation"
+meaning: "n. (electronics) the transmission of a signal by using it to vary a carrier wave; changing the carrier's amplitude or frequency or phase; n. a manner of speaking in which the loudness or pitch or tone of the voice is modified; n. the act of modifying or adjusting according to due measure and proportion (as with regard to artistic effect)"
+translation: "n. 调制, 调节, 语调；[计] 调制"
+srsWords: "modulation"
+
 ---
 lessonTitle: "Lesson 10: Advanced Idiomatic & Nuanced Expression Part 10"
 description: "Practice 10 key C1 vocabulary flashcards for Advanced Idiomatic & Nuanced Expression"
@@ -601,61 +610,61 @@ icon: "✨"
 color: "#2196F3"
 ---
 [flashcard-review]
-front: "automatically"
-meaning: "r. in a reflex manner"
-translation: "adv. 自动地, 机械地"
-srsWords: "automatically"
+front: "purport"
+meaning: "v. have the often specious appearance of being, intending, or claiming"
+translation: "n. 意义, 要旨, 目的；vt. 意味着, 声称, 打算"
+srsWords: "purport"
 
 [flashcard-review]
-front: "battery"
-meaning: "n. group of guns or missile launchers operated together at one place; n. a device that produces electricity; may have several primary or secondary cells arranged in parallel or series; n. a collection of related things intended for use together; n. a unit composed of the pitcher and catcher"
-translation: "n. 电池, 殴打；[化] 蓄电池"
-srsWords: "battery"
+front: "ramification"
+meaning: "n. an arrangement of branching parts"
+translation: "n. 分枝, 分叉, 枝状物, 支脉, 支流, 衍生物；[医] 分支, 支状分布"
+srsWords: "ramification"
 
 [flashcard-review]
-front: "semi"
-meaning: "n one of the two competitions in the next to the last round of an elimination tournament; n a truck consisting of a tractor and trailer together; n a trailer having wheels only in the rear; the front is supported by the towing vehicle"
-translation: "[计] 半"
-srsWords: "semi"
+front: "amplitude"
+meaning: "n. (physics) the maximum displacement of a periodic wave; n. the property of copious abundance; n. greatness of magnitude"
+translation: "n. 广阔, 充足, 幅度；[化] 振幅"
+srsWords: "amplitude"
 
 [flashcard-review]
-front: "engineer"
-meaning: "n. a person who uses scientific knowledge to solve practical problems; n. the operator of a railway locomotive; v. design as an engineer"
-translation: "n. 工程师, 工兵；vt. 设计, 监造, 精明地处理, 策划"
-srsWords: "engineer"
+front: "assort"
+meaning: "v keep company with; hang out with; v arrange or order by classes or categories"
+translation: "vt. 把...分类, 把...归为一类；vi. 协调, 交往"
+srsWords: "assort"
 
 [flashcard-review]
-front: "tone"
-meaning: "n. the quality of a person's voice; n. (linguistics) a pitch or change in pitch of the voice that serves to distinguish words in tonal languages; n. a steady sound without overtones; n. a musical interval of two semitones"
-translation: "n. 音调, 音质, 语调, 语气, 色调, 气氛, 状况, 思想状态；vt. 给...定色调, 增强, 使...的声调和谐, 定音调；vi. 颜色调和；[计] 双音频"
-srsWords: "tone"
+front: "culminate"
+meaning: "v. end, especially to reach a final or climactic stage; v. bring to a head or to the highest point; v. reach the highest or most decisive point; v. reach the highest altitude or the meridian, of a celestial body"
+translation: "vi. 到绝顶, 达于极点, 达到高潮；vt. 使到绝顶, 使达到高潮"
+srsWords: "culminate"
 
 [flashcard-review]
-front: "chart"
-meaning: "n. a visual display of information; n. a map designed to assist navigation by air or sea; v. make a chart of; v. plan in detail"
-translation: "n. 图表, 海图；vt. 制成图表；[计] 图表"
-srsWords: "chart"
+front: "predominant"
+meaning: "s most frequent or common; s having superior power and influence"
+translation: "a. 占主导地位的, 卓越的；[法] 占优势的, 支配其他的, 主要的"
+srsWords: "predominant"
 
 [flashcard-review]
-front: "infrastructure"
-meaning: "n. the basic structure or features of a system or organization; n. the stock of basic facilities and capital equipment needed for the functioning of a country or area"
-translation: "n. 基础结构, 基础设施；[经] 基础设施"
-srsWords: "infrastructure"
+front: "investigative"
+meaning: "s designed to find information or ascertain facts"
+translation: "a. 审查的, 调查的, 好研究的；[法] 调查的, 审查的, 受调查研究的"
+srsWords: "investigative"
 
 [flashcard-review]
-front: "lieutenant"
-meaning: "n. a commissioned military officer; n. an officer in a police force; n. an officer holding a commissioned rank in the United States Navy or the United States Coast Guard; below lieutenant commander and above lieutenant junior grade"
-translation: "n. 中尉, 助理人员, 副官"
-srsWords: "lieutenant"
+front: "clinician"
+meaning: "n. a practitioner (of medicine or psychology) who does clinical work instead of laboratory experiments"
+translation: "[医] 临床医师, 临证医师"
+srsWords: "clinician"
 
 [flashcard-review]
-front: "commissioner"
-meaning: "n. a government administrator; n. a member of a commission"
-translation: "n. 委员, 理事, 行政长官；[法] 委员, 政府的特派员, 地方地官"
-srsWords: "commissioner"
+front: "gastrointestinal"
+meaning: "a. of or relating to the stomach and intestines"
+translation: "a. 胃肠的, 肠胃的；[医] 胃肠的"
+srsWords: "gastrointestinal"
 
 [flashcard-review]
-front: "desert"
-meaning: "n. arid land with little or no vegetation; v. leave behind"
-translation: "n. 沙漠, 应得的赏罚, 功劳；a. 沙漠的, 不毛的；vt. 放弃, 遗弃, 擅离；vi. 逃掉"
-srsWords: "desert"
+front: "localization"
+meaning: "n. a determination of the place where something is"
+translation: "n. 局限, 地方化；[化] 定位化"
+srsWords: "localization"

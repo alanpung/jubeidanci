@@ -70,10 +70,11 @@ translation: "n. 插入物；vt. 插入, 把(人造卫星)射入(轨道), 添写
 srsWords: "insert"
 
 [flashcard-review]
-front: "exchange"
-meaning: "n. chemical process in which one atom or ion or group changes places with another; n. a mutual expression of views (especially an unpleasant one); n. the act of changing one thing for another thing; n. the act of giving something in return for something received"
-translation: "n. 交换, (电话)交换局, 交换机, 汇兑, 交易所；v. 交换, 交易, 兑换；[计] 交换; 电话局"
-srsWords: "exchange"
+front: "duration"
+meaning: "n. the period of time during which something continues; n. the property of enduring or continuing in time; n. continuance in time"
+translation: "n. 持续时间, 持续；[计] 持续时间"
+srsWords: "duration"
+
 ---
 lessonTitle: "Lesson 2: Environment, Climate & Nature Part 2"
 description: "Practice 10 key B1 vocabulary flashcards for Environment, Climate & Nature"
@@ -93,10 +94,10 @@ translation: "n. 刺激, 兴奋；[医] 兴奋, 激动"
 srsWords: "excitement"
 
 [flashcard-review]
-front: "excuse"
-meaning: "n. a defense of some offensive behavior or some failure to keep a promise etc.; n. a note explaining an absence; v. accept an excuse for; v. grant exemption or release to"
-translation: "vt. 原谅, 申辩, 做为...的托辞；n. 致歉, 理由, 饶恕, 借口"
-srsWords: "excuse"
+front: "data"
+meaning: "n. a collection of facts from which conclusions may be drawn"
+translation: "pl. 资料, 数据；[计] 数据; DOS内部命令:用于显示或设定系统的日期"
+srsWords: "data"
 
 [flashcard-review]
 front: "exhausted"
@@ -135,10 +136,11 @@ translation: "n. 小贩, 卖主, 自动售货机；[计] 计算机销售商"
 srsWords: "vendor"
 
 [flashcard-review]
-front: "experience"
-meaning: "n. the accumulation of knowledge or skill that results from direct participation in events or activities; n. the content of direct observation or participation in an event; n. an event as apprehended; v. go or live through"
-translation: "n. 经历, 经验, 体验；vt. 经历, 经验, 体验"
-srsWords: "experience"
+front: "launch"
+meaning: "n. a motorboat with an open deck or a half deck; v. propel with force; v. launch for the first time; launch on a maiden voyage; v. get going; give impetus to"
+translation: "n. 下水, 汽艇, 发射；vt. 使下水, 发射, 发动；vi. 起飞, 下水, 投入, 开始"
+srsWords: "launch"
+
 ---
 lessonTitle: "Lesson 3: Environment, Climate & Nature Part 3"
 description: "Practice 10 key B1 vocabulary flashcards for Environment, Climate & Nature"
@@ -164,10 +166,10 @@ translation: "n. 爆发, 激增, 爆炸(声)；[化] 爆炸"
 srsWords: "explosion"
 
 [flashcard-review]
-front: "express"
-meaning: "n. mail that is distributed by a rapid and efficient system; n. public transport consisting of a fast train or bus that makes only a few scheduled stops; n. rapid transport of goods; v. give expression to"
-translation: "n. 快车, 快递, 专使；a. 明确的, 丝毫不差的, 专门的, 快的；vt. 表达, 表示, 表露"
-srsWords: "express"
+front: "absolute"
+meaning: "n. something that is conceived or that exists independently and not in relation to other things; something that does not depend on anything else and is beyond human control; something that is not relative; a. perfect or complete or pure; s. complete and without restriction or qualification; sometimes used informally as intensifiers; s. not limited by law"
+translation: "a. 绝对的, 专制的, 完全的, 独立的；n. 绝对事物"
+srsWords: "absolute"
 
 [flashcard-review]
 front: "extend"
@@ -176,10 +178,10 @@ translation: "v. 扩充, 延伸, 伸展, 扩大；[计] 扩展"
 srsWords: "extend"
 
 [flashcard-review]
-front: "extensively"
-meaning: "r. in a widespread way"
-translation: "adv. 广大, 广延, 外延, 大面积(耕种), 粗放, 广博, 广泛, 广阔"
-srsWords: "extensively"
+front: "pony"
+meaning: "n. a range horse of the western United States; n. an informal term for a racehorse; n. a literal translation used in studying a foreign language (often used illicitly); n. any of various breeds of small gentle horses usually less than five feet high at the shoulder"
+translation: "n. 矮种马；v. 借助逐字直译文翻译；a. 小型的, 每日摘要的"
+srsWords: "pony"
 
 [flashcard-review]
 front: "extent"
@@ -204,6 +206,7 @@ front: "extraordinary"
 meaning: "a. beyond what is ordinary or usual; highly unusual or exceptional or remarkable; s. far more than usual or expected; s. (of an official) serving an unusual or special function in addition to those of the regular officials"
 translation: "a. 非常的, 特别的, 非凡的；[经] 非常的, 特别的, 临时的"
 srsWords: "extraordinary"
+
 ---
 lessonTitle: "Lesson 4: Environment, Climate & Nature Part 4"
 description: "Practice 10 key B1 vocabulary flashcards for Environment, Climate & Nature"
@@ -247,16 +250,16 @@ translation: "n. 失败, 失败者, 不足, 缺乏, 破产；[计] 故障; 失�
 srsWords: "failure"
 
 [flashcard-review]
-front: "cutting"
-meaning: "n. a part (sometimes a root or leaf or bud) removed from a plant to propagate a new plant through rooting or grafting; n. a piece cut off from the main part of something; n. the act of diluting something; s. (of speech) harsh or hurtful in tone or character"
-translation: "n. 切断, 切下, 路堑；[化] 切屑"
-srsWords: "cutting"
+front: "amateur"
+meaning: "n. someone who pursues a study or sport as a pastime; n. an athlete who does not play for pay; s. engaged in as a pastime"
+translation: "n. 业余爱好者, 外行, 爱好者；[电] 业余家"
+srsWords: "amateur"
 
 [flashcard-review]
-front: "fair"
-meaning: "n. gathering of producers to promote business; n. a competitive exhibition of farm products; v. join so that the external surfaces blend smoothly; a. free from favoritism or self-interest or bias or deception; conforming with established standards or rules"
-translation: "n. 展览会, 市集, 美好的事物；a. 公平的, 按规则进行的, 不好不坏的, 晴朗的, 美丽的；adv. 公平地, 正面地, 有教养地, 清楚地；vi. 转晴"
-srsWords: "fair"
+front: "consistent"
+meaning: "a. (sometimes followed by `with') in agreement or consistent or reliable; s. the same throughout in structure or composition"
+translation: "a. 一致的, 坚持的, 并立的, 坚固的"
+srsWords: "consistent"
 
 [flashcard-review]
 front: "faithful"
@@ -269,6 +272,7 @@ front: "fake"
 meaning: "n. something that is a counterfeit; not what it seems to be; s. not genuine or real; being an imitation of the genuine article; it's real synthetic fur\""
 translation: "n. 假货, 欺骗, 诡计；a. 假的；vt. 假造, 仿造；vi. 伪装"
 srsWords: "fake"
+
 ---
 lessonTitle: "Lesson 5: Environment, Climate & Nature Part 5"
 description: "Practice 10 key B1 vocabulary flashcards for Environment, Climate & Nature"
@@ -312,10 +316,10 @@ translation: "n. 农业, 耕作"
 srsWords: "farming"
 
 [flashcard-review]
-front: "farmland"
-meaning: "n. a rural area where farming is practiced"
-translation: "n. 农田"
-srsWords: "farmland"
+front: "attic"
+meaning: "n. the dialect of Ancient Greek spoken and written in Attica and Athens and Ionia; n. informal terms for a human head; n. (architecture) a low wall at the top of the entablature; hides the roof; a. of or relating to Attica or its inhabitants or to the dialect spoken in Athens in classical times"
+translation: "n. 阁楼, 顶楼；[医] 鼓室上隐窝"
+srsWords: "attic"
 
 [flashcard-review]
 front: "farther"
@@ -330,10 +334,11 @@ translation: "a. 最远的, 最久的；adv. 最远, far的最高级"
 srsWords: "farthest"
 
 [flashcard-review]
-front: "fascinate"
-meaning: "v. to render motionless, as with a fixed stare or by arousing terror or awe"
-translation: "vt. 令人入神, 使着迷；vi. 入迷"
-srsWords: "fascinate"
+front: "institution"
+meaning: "n. an organization founded and united for a specific purpose; n. an establishment consisting of a building or complex of buildings where an organization for the promotion of some cause is situated; n. a custom that for a long time has been an important feature of some group or society"
+translation: "n. 机构, 惯例, 制度；[医] 机关, 机构, 设施"
+srsWords: "institution"
+
 ---
 lessonTitle: "Lesson 6: Environment, Climate & Nature Part 6"
 description: "Practice 10 key B1 vocabulary flashcards for Environment, Climate & Nature"
@@ -341,10 +346,10 @@ icon: "🌱"
 color: "#009688"
 ---
 [flashcard-review]
-front: "posting"
-meaning: "n. (bookkeeping) a listing on the company's records"
-translation: "[计] 记入, 记录, 稿件, 邮件；[经] 过帐, 誊入总帐"
-srsWords: "posting"
+front: "hence"
+meaning: "r. from this place; r. from this time"
+translation: "adv. 因此, 从此"
+srsWords: "hence"
 
 [flashcard-review]
 front: "fashionable"
@@ -359,16 +364,16 @@ translation: "vt. 拴紧, 使固定, 系, 集中于, 强加于；vi. 扣紧"
 srsWords: "fasten"
 
 [flashcard-review]
-front: "favor"
-meaning: "n. an act of gracious kindness; n. an advantage to the benefit of someone or something; n. an inclination to approve"
-translation: "n. 好意, 喜爱；vt. 赐予, 支持, 喜欢, 证实"
-srsWords: "favor"
+front: "maiden"
+meaning: "n an unmarried girl (especially a virgin); n (cricket) an over in which no runs are scored; s serving to set in motion"
+translation: "n. 年轻未婚女子, 少女, 处女；a. 未婚的, 处女的, 初次的, 无经验的"
+srsWords: "maiden"
 
 [flashcard-review]
-front: "viewing"
-meaning: "n the display of a motion picture; n a vigil held over a corpse the night before burial; v deem to be; v look at carefully; study mentally; v see or watch"
-translation: "[计] 可见的"
-srsWords: "viewing"
+front: "estimated"
+meaning: "v judge tentatively or form an estimate of (quantities or time); v judge to be probable"
+translation: "a. 估算的；估计的；预计的"
+srsWords: "estimated"
 
 [flashcard-review]
 front: "fax"
@@ -383,10 +388,10 @@ translation: "n. 宴会, 酒席, 享受, 节日；vt. 款待, 享乐, 请客；v
 srsWords: "feast"
 
 [flashcard-review]
-front: "increasing"
-meaning: "a. becoming greater or larger; a. music"
-translation: "[经] 递增"
-srsWords: "increasing"
+front: "premier"
+meaning: "v. be performed for the first time; v. perform a work for the first time; s. first in rank or degree; s. preceding all others in time"
+translation: "n. 总理, 首相；a. 首位的, 最初的"
+srsWords: "premier"
 
 [flashcard-review]
 front: "ferry"
@@ -399,6 +404,7 @@ front: "festive"
 meaning: "s offering fun and gaiety"
 translation: "a. 庆祝的, 喜庆的, 欢乐的"
 srsWords: "festive"
+
 ---
 lessonTitle: "Lesson 7: Environment, Climate & Nature Part 7"
 description: "Practice 10 key B1 vocabulary flashcards for Environment, Climate & Nature"
@@ -464,6 +470,7 @@ front: "preview"
 meaning: "n. an advertisement consisting of short scenes from a motion picture that will appear in the near future; n. a screening for a select audience in advance of release for the general public; v. watch (a movie or play) before it is released to the general public"
 translation: "n. 事先查看, 预览；vt. 事先查看, 预演；[计] 预览"
 srsWords: "preview"
+
 ---
 lessonTitle: "Lesson 8: Environment, Climate & Nature Part 8"
 description: "Practice 10 key B1 vocabulary flashcards for Environment, Climate & Nature"
@@ -471,10 +478,10 @@ icon: "🌱"
 color: "#009688"
 ---
 [flashcard-review]
-front: "firework"
-meaning: "n. (usually plural) a device with an explosive that burns at a low rate and with colored flames; can be used to illuminate areas or send signals etc."
-translation: "n. 烟火具, 烟火, 烟火信号弹, 焰火, 激情的表现"
-srsWords: "firework"
+front: "contemporary"
+meaning: "n. a person of nearly the same age as another; s. characteristic of the present; s. belonging to the present time"
+translation: "n. 同时代的人；a. 同时代的, 属于同一时期的"
+srsWords: "contemporary"
 
 [flashcard-review]
 front: "firmly"
@@ -489,10 +496,10 @@ translation: "一楼；二楼"
 srsWords: "first-floor"
 
 [flashcard-review]
-front: "fish"
-meaning: "n. any of various mostly cold-blooded aquatic vertebrates usually having scales and breathing through gills; n. the flesh of fish used as food; v. seek indirectly; v. catch or try to catch fish or shellfish"
-translation: "n. 鱼, 鱼肉, 鱼类, 接合板；vt. 钓, 钓鱼, 查出, 用接合板连接；vi. 捕鱼, 钓鱼, 用钩捞取, 摸索寻找"
-srsWords: "fish"
+front: "index"
+meaning: "n. a numerical scale used to compare variables with one another or with some reference number; n. a number or ratio (a value on a scale of measurement) derived from a series of observed facts; can reveal relative changes as a function of time; n. an alphabetical listing of names and topics along with page numbers where they are discussed; n. the finger next to the thumb"
+translation: "n. 索引, 指针, 指数, 指标；vt. 编入索引中, 指出；vi. 做索引；[计] 下标; 附标; 变址; 索引; 编索引"
+srsWords: "index"
 
 [flashcard-review]
 front: "banner"
@@ -529,6 +536,7 @@ front: "fluent"
 meaning: "s. smooth and unconstrained in movement"
 translation: "a. 流利的, 流畅的"
 srsWords: "fluent"
+
 ---
 lessonTitle: "Lesson 9: Environment, Climate & Nature Part 9"
 description: "Practice 10 key B1 vocabulary flashcards for Environment, Climate & Nature"
@@ -536,10 +544,10 @@ icon: "🌱"
 color: "#009688"
 ---
 [flashcard-review]
-front: "fluently"
-meaning: "r. in a fluent manner"
-translation: "adv. 流利地；通畅地"
-srsWords: "fluently"
+front: "earnings"
+meaning: "n the excess of revenues over outlays in a given period of time (including depreciation and other non-cash expenses); n something that remunerates; v earn on some commercial or business transaction; earn as salary or wages; v acquire or deserve by one's efforts or actions"
+translation: "n. 所赚的钱, 工资, 收入；[经] 工资, 收入, 收益, 盈余"
+srsWords: "earnings"
 
 [flashcard-review]
 front: "notification"
@@ -594,6 +602,7 @@ front: "foot"
 meaning: "n. the part of the leg of a human being below the ankle joint; n. a linear unit of length equal to 12 inches or a third of a yard; n. the lower part of anything; n. any of various organs of locomotion or attachment in invertebrates"
 translation: "n. 脚, 步调, 英尺, 底部, 末尾, 步兵；vt. 走在...上, 给...换底, 支付；vi. 跳舞, 步行, 总计"
 srsWords: "foot"
+
 ---
 lessonTitle: "Lesson 10: Environment, Climate & Nature Part 10"
 description: "Practice 10 key B1 vocabulary flashcards for Environment, Climate & Nature"

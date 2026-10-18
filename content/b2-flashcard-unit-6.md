@@ -34,10 +34,10 @@ translation: "n. 命令者, 独裁者"
 srsWords: "dictator"
 
 [flashcard-review]
-front: "digest"
-meaning: "n. a periodical that summarizes the news; v. convert food into absorbable substances; v. arrange and integrate in the mind; v. put up with something or somebody unpleasant"
-translation: "n. 文摘；vi. 消化；vt. 消化, 理解；[计] 摘要"
-srsWords: "digest"
+front: "paste"
+meaning: "n. any mixture of a soft and malleable consistency; n. a hard, brilliant lead glass that is used in making artificial jewelry; n. an adhesive made from water and flour or starch; used on paper and paperboard; v. hit with the fists"
+translation: "n. 面团, 面食, 浆糊, 糊状物, 粘贴, 用拳重击；vt. 用浆糊粘, 张贴, 狠狠地打；[计] 粘贴"
+srsWords: "paste"
 
 [flashcard-review]
 front: "dignify"
@@ -74,6 +74,7 @@ front: "dimension"
 meaning: "n. the magnitude of something in a particular direction (especially length or width or height); n. one of three Cartesian coordinates that determine a position in space; v. indicate the dimensions on; v. shape or form to required dimensions"
 translation: "n. 尺寸, 次元, 面积, 维数；vt. 标出尺寸"
 srsWords: "dimension"
+
 ---
 lessonTitle: "Lesson 2: Law, Crime & Justice Part 2"
 description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
@@ -139,6 +140,7 @@ front: "discipline"
 meaning: "n. a branch of knowledge; n. a system of rules of conduct or method of practice;; n. the trait of being well behaved; n. training to improve strength or self-control"
 translation: "n. 训练, 纪律；vt. 训练, 惩罚"
 srsWords: "discipline"
+
 ---
 lessonTitle: "Lesson 3: Law, Crime & Justice Part 3"
 description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
@@ -204,6 +206,7 @@ front: "disorderly"
 meaning: "a. undisciplined and unruly; s. in utter disorder"
 translation: "a. 无秩序的, 乱的, 骚乱的；[法] 妨害治安的, 骚乱的, 无法无天的"
 srsWords: "disorderly"
+
 ---
 lessonTitle: "Lesson 4: Law, Crime & Justice Part 4"
 description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
@@ -269,6 +272,7 @@ front: "dissatisfied"
 meaning: "v fail to satisfy; s in a state of sulky dissatisfaction"
 translation: "a. 不满的, 显出不满的"
 srsWords: "dissatisfied"
+
 ---
 lessonTitle: "Lesson 5: Law, Crime & Justice Part 5"
 description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
@@ -330,10 +334,11 @@ translation: "vt. 转移, 使欢娱；vi. 转移"
 srsWords: "divert"
 
 [flashcard-review]
-front: "divided"
-meaning: "a. separated into parts or pieces; s. having a median strip or island between lanes of traffic moving in opposite directions; s. distributed in portions (often equal) on the basis of a plan or purpose"
-translation: "a. 分开的"
-srsWords: "divided"
+front: "indulge"
+meaning: "v. give free rein to; v. enjoy to excess"
+translation: "vt. 纵情于, 使高兴, 放任, 迁就；vi. 沉溺"
+srsWords: "indulge"
+
 ---
 lessonTitle: "Lesson 6: Law, Crime & Justice Part 6"
 description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
@@ -341,22 +346,22 @@ icon: "🏛️"
 color: "#607D8B"
 ---
 [flashcard-review]
-front: "division"
-meaning: "n. an army unit large enough to sustain combat; n. the act or process of dividing; n. an administrative unit in government or business; n. discord that splits a group"
-translation: "n. 分, 分开, 除法, 部门(如部、处、系等), 师；[计] 部分"
-srsWords: "division"
+front: "consultancy"
+meaning: "n. the practice of giving expert advice within a particular field"
+translation: "n. 商量, 协商, 磋商, 会诊, 与...商量, 咨询, 请教, 找(医生)看病, 查阅, 考虑；[经] 咨询业务, 咨询服务"
+srsWords: "consultancy"
 
 [flashcard-review]
-front: "divorce"
-meaning: "n. the legal dissolution of a marriage; v. get a divorce; formally terminate a marriage"
-translation: "n. 离婚；vt. 与...离婚"
-srsWords: "divorce"
+front: "scroll"
+meaning: "n. a document that can be rolled up (as for storage); v. move through text or graphics in order to display parts that do not fit on the screen"
+translation: "n. 卷轴, 画卷, 名册, 条幅, 滚动；v. (使)成卷形；[计] 滚动"
+srsWords: "scroll"
 
 [flashcard-review]
-front: "dna"
-meaning: "n (biochemistry) a long linear polymer found in the nucleus of a cell and formed from nucleotides and shaped like a double helix; associated with the transmission of genetic information"
-translation: "脱氧核糖核酸；[计] 无效数据, 数字网络体系结构, 分布式网络体系结构"
-srsWords: "dna"
+front: "deliberate"
+meaning: "s. carefully thought out in advance"
+translation: "a. 深思熟虑的, 故意的, 从容的；v. 仔细考虑"
+srsWords: "deliberate"
 
 [flashcard-review]
 front: "dock"
@@ -365,10 +370,10 @@ translation: "n. 码头, 船坞, 被告席, 尾巴的骨肉部分；vt. 使靠�
 srsWords: "dock"
 
 [flashcard-review]
-front: "domestic"
-meaning: "n. a servant who is paid to perform menial tasks around the household; a. of concern to or concerning the internal affairs of a nation; a. of or relating to the home; a. of or involving the home or family"
-translation: "a. 家庭的, 国内的, 驯养的；[医] 家庭的, 家用的"
-srsWords: "domestic"
+front: "marvel"
+meaning: "v. express astonishment or surprise about something"
+translation: "n. 奇异事物, 罕见例子；vt. 惊异于；vi. 惊异"
+srsWords: "marvel"
 
 [flashcard-review]
 front: "dominate"
@@ -377,10 +382,10 @@ translation: "v. 支配, 占优势"
 srsWords: "dominate"
 
 [flashcard-review]
-front: "donate"
-meaning: "v. give to a charity or good cause"
-translation: "v. 捐赠"
-srsWords: "donate"
+front: "formidable"
+meaning: "s. extremely impressive in strength or excellence; s. inspiring fear"
+translation: "a. 巨大的, 优秀的, 可怕的, 艰难的"
+srsWords: "formidable"
 
 [flashcard-review]
 front: "donation"
@@ -399,6 +404,7 @@ front: "doom"
 meaning: "n. an unpleasant or disastrous destiny; v. make certain of the failure or destruction of"
 translation: "n. 厄运, 不幸, 法律, 宣告, 判决, 死亡；vt. 命中注定, 判决"
 srsWords: "doom"
+
 ---
 lessonTitle: "Lesson 7: Law, Crime & Justice Part 7"
 description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
@@ -430,10 +436,10 @@ translation: "n. 宿舍"
 srsWords: "dormitory"
 
 [flashcard-review]
-front: "dose"
-meaning: "n. a measured portion of medicine taken at any one time; n. the quantity of an active agent (substance or radiation) taken in or absorbed at any one time; v. treat with an agent; add (an agent) to"
-translation: "n. 剂量, 服用量；vt. 给药, (用药)医治；vi. 服药"
-srsWords: "dose"
+front: "moo"
+meaning: "n. the sound made by a cow or bull; v. make a low noise, characteristic of bovines"
+translation: "vi. 发哞声；n. 牛叫声"
+srsWords: "moo"
 
 [flashcard-review]
 front: "doubly"
@@ -464,6 +470,7 @@ front: "downsize"
 meaning: "v. dismiss from work; v. make in a smaller size; v. reduce in size or number"
 translation: "vt. 以较小尺寸设计；缩小尺寸；裁减人数"
 srsWords: "downsize"
+
 ---
 lessonTitle: "Lesson 8: Law, Crime & Justice Part 8"
 description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
@@ -529,6 +536,7 @@ front: "dropout"
 meaning: "n. someone who quits school before graduation; n. someone who withdraws from a social group or environment"
 translation: "n. 退学学生, 中途退学；[电] 离去"
 srsWords: "dropout"
+
 ---
 lessonTitle: "Lesson 9: Law, Crime & Justice Part 9"
 description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
@@ -566,10 +574,10 @@ translation: "n. 颜料, 染料；vt. 染, 染色；vi. 被着色"
 srsWords: "dye"
 
 [flashcard-review]
-front: "dynamic"
-meaning: "a. characterized by action or forcefulness or force of personality; a. of or relating to dynamics"
-translation: "a. 动态的, 有活力的, 有力的, 动力的, 不断变化的；n. 动力, 动态；[计] 动态的"
-srsWords: "dynamic"
+front: "pluck"
+meaning: "n. the act of pulling and releasing a taut cord; v. pull or pull out sharply; v. pull lightly but sharply with a plucking motion; v. strip of feathers"
+translation: "n. 勇气, 猛拉, 动物内脏；vt. 摘, 猛拉, 拔, 拉, 扯, 采；vi. 拉, 拽"
+srsWords: "pluck"
 
 [flashcard-review]
 front: "eagerly"
@@ -578,22 +586,23 @@ translation: "adv. 渴望, 热衷于, 热切"
 srsWords: "eagerly"
 
 [flashcard-review]
-front: "eagle"
-meaning: "n. any of various large keen-sighted diurnal birds of prey noted for their broad wings and strong soaring flight; n. (golf) a score of two strokes under par on a hole; n. a former gold coin in the United States worth 10 dollars; n. an emblem representing power"
-translation: "n. 鹰, 鹰状标饰"
-srsWords: "eagle"
+front: "surge"
+meaning: "n. a sudden or abrupt strong increase; v. see one's performance improve"
+translation: "n. 巨涌, 汹涌, 澎湃；vi. 汹涌, 澎湃, 颠簸, 猛冲, 突然放松；vt. 使汹涌奔腾, 急放；[计] 电压尖峰"
+srsWords: "surge"
 
 [flashcard-review]
-front: "earnings"
-meaning: "n the excess of revenues over outlays in a given period of time (including depreciation and other non-cash expenses); n something that remunerates; v earn on some commercial or business transaction; earn as salary or wages; v acquire or deserve by one's efforts or actions"
-translation: "n. 所赚的钱, 工资, 收入；[经] 工资, 收入, 收益, 盈余"
-srsWords: "earnings"
+front: "terrain"
+meaning: "n. a piece of ground having specific characteristics or military potential"
+translation: "n. 地带, 地区, 地形, 领域, 范围"
+srsWords: "terrain"
 
 [flashcard-review]
-front: "ease"
-meaning: "n. freedom from difficulty or hardship or effort; n. a freedom from financial difficulty that promotes a comfortable state; n. freedom from constraint or embarrassment; v. move gently or carefully"
-translation: "n. 安乐, 安逸, 悠闲；vt. 使安乐, 使安心, 减轻, 放松；vi. 减轻, 放松, 灵活地移动"
-srsWords: "ease"
+front: "neural"
+meaning: "a. of or relating to neurons"
+translation: "a. 神经的, 神经系统的, 神经中枢的, 背的；[医] 神经的"
+srsWords: "neural"
+
 ---
 lessonTitle: "Lesson 10: Law, Crime & Justice Part 10"
 description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
@@ -631,16 +640,16 @@ translation: "n. 经济学者, 经济家；[经] 经济学家"
 srsWords: "economist"
 
 [flashcard-review]
-front: "edit"
-meaning: "v. prepare for publication or presentation by correcting, revising, or adapting; v. supervise the publication of; v. cut and assemble the components of; v. cut or eliminate"
-translation: "vt. 编辑, 编校, 修订, 剪辑；[计] 编辑; DOS外部命令:该命令是一个用于编辑文本文件的全屏幕编辑程序"
-srsWords: "edit"
+front: "dominant"
+meaning: "n. (music) the fifth note of the diatonic scale; a. exercising influence or control; a. (of genes) producing the same phenotype whether its allele is identical or dissimilar"
+translation: "a. 占优势的, 支配的；[医] 优性的, 显性的"
+srsWords: "dominant"
 
 [flashcard-review]
-front: "editorial"
-meaning: "a. of or relating to an article stating opinions or giving perspectives; a. relating to or characteristic of an editor"
-translation: "n. 社论, 评论；a. 编辑的, 主笔的, 社论的"
-srsWords: "editorial"
+front: "doggie"
+meaning: "n informal terms for dogs"
+translation: "n. 小狗, 狗儿(对狗的爱称)"
+srsWords: "doggie"
 
 [flashcard-review]
 front: "educated"
@@ -655,7 +664,7 @@ translation: "n. 教育家"
 srsWords: "educator"
 
 [flashcard-review]
-front: "effectively"
-meaning: "r. in actuality or reality or fact"
-translation: "adv. 有效地, 有力地, 实际上"
-srsWords: "effectively"
+front: "hypothesis"
+meaning: "n. a proposal intended to explain certain facts or observations; n. a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena"
+translation: "n. 假设；[化] 假设"
+srsWords: "hypothesis"

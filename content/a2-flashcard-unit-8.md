@@ -82,10 +82,10 @@ icon: "🔬"
 color: "#4CAF50"
 ---
 [flashcard-review]
-front: "kilogram"
-meaning: "a unit of mass equal to 1,000 grams"
-translation: "n. 公斤；千克"
-srsWords: "kilogram"
+front: "reader"
+meaning: "n. a person who enjoys reading; n. a person who can read; a literate person; n. one of a series of texts for students learning to read"
+translation: "n. 读者；阅读器；读物 n. (Reader)人名；(英)里德"
+srsWords: "reader"
 
 [flashcard-review]
 front: "unfortunately"
@@ -94,16 +94,16 @@ translation: "adv. 恐怕, 不幸的是"
 srsWords: "unfortunately"
 
 [flashcard-review]
-front: "kilometer"
-meaning: "a unit of length, equal to 1,000 meters"
-translation: "n. 千米, 公里；[医] 千米, 公里"
-srsWords: "kilometer"
+front: "advisor"
+meaning: "n an expert who gives advice"
+translation: "n. 顾问, 劝告者, 指导教师"
+srsWords: "advisor"
 
 [flashcard-review]
-front: "kilometre"
-meaning: "a unit of length, equal to 1,000 meters"
-translation: "n. [计量] 公里；[计量] 千米"
-srsWords: "kilometre"
+front: "classmate"
+meaning: "n an acquaintance that you go to school with"
+translation: "n.（同班）同学,级友"
+srsWords: "classmate"
 
 [flashcard-review]
 front: "usual"
@@ -160,10 +160,10 @@ translation: "vt. 寻求, 寻找, 探索, 追求, 搜索, 请求；vi. 寻找, �
 srsWords: "seek"
 
 [flashcard-review]
-front: "cub"
-meaning: "n. an awkward and inexperienced youth; n. a male child (a familiar term of address to a boy); n. the young of certain carnivorous mammals such as the bear or wolf or lion; v. give birth to cubs"
-translation: "n. 幼兽, 年轻人"
-srsWords: "cub"
+front: "viewing"
+meaning: "n the display of a motion picture; n a vigil held over a corpse the night before burial; v deem to be; v look at carefully; study mentally; v see or watch"
+translation: "[计] 可见的"
+srsWords: "viewing"
 
 [flashcard-review]
 front: "lamp"
@@ -202,10 +202,10 @@ translation: "adv. 主要地, 大抵"
 srsWords: "mainly"
 
 [flashcard-review]
-front: "laziness"
-meaning: "n. relaxed and easy activity"
-translation: "n.怠惰，懒散，徐缓"
-srsWords: "laziness"
+front: "adviser"
+meaning: "n. an expert who gives advice"
+translation: "n. 顾问, 劝告者, 指导教师；[法] 顾问, 劝告者"
+srsWords: "adviser"
 
 ---
 lessonTitle: "Lesson 4: Education, Science & Nature Part 4"
@@ -220,10 +220,10 @@ translation: "n. 盐, 风趣, 刺激；a. 含盐的, 咸的, 风趣的, 辛辣�
 srsWords: "salt"
 
 [flashcard-review]
-front: "learner"
-meaning: "a person who is learning"
-translation: "n. 初学者，学习者 n. (Learner)人名；(英)勒纳"
-srsWords: "learner"
+front: "crystal"
+meaning: "n. a solid formed by the solidification of a chemical and having a highly regular atomic structure; n. a crystalline element used as a component in various electronic devices; n. a rock formed by the solidification of a substance; has regularly repeating internal structure; external plane faces; n. glassware made of quartz"
+translation: "n. 水晶, 水晶装饰品, 结晶；a. 水晶的, 水晶一样的, 透明的"
+srsWords: "crystal"
 
 [flashcard-review]
 front: "leather"
@@ -232,10 +232,10 @@ translation: "n. 皮革, 皮制品, 马镫的皮带；vt. 覆以皮革, 鞭苔, 
 srsWords: "leather"
 
 [flashcard-review]
-front: "fist"
-meaning: "n. a hand with the fingers clenched in the palm (as for hitting)"
-translation: "n. 拳头, 手；vt. 拳打, 握成拳, 紧握"
-srsWords: "fist"
+front: "makeup"
+meaning: "n. cosmetics applied to the face to improve or change your appearance; n. an event that is substituted for a previously cancelled event"
+translation: "n. 组成, 性格, 化妆品, 化装(术), 虚构, 补考"
+srsWords: "makeup"
 
 [flashcard-review]
 front: "bunny"
@@ -370,10 +370,10 @@ translation: "vt. 完成, 达到；vi. 如愿以偿"
 srsWords: "achieve"
 
 [flashcard-review]
-front: "liter"
-meaning: "a metric unit of volume equal to 1,000 cubic centimeters"
-translation: "n.计量 公升（容量单位）"
-srsWords: "liter"
+front: "cock"
+meaning: "n. obscene terms for penis; n. adult male chicken; n. adult male bird; v. tilt or slant to one side"
+translation: "n. 公鸡, 雄禽, 龙头, 头目, 锥形小干草堆；vt. 使耸立, 使竖起, 堆成锥形小干草堆；vi. 大摇大摆地走, 翘起"
+srsWords: "cock"
 
 [flashcard-review]
 front: "thief"
@@ -382,10 +382,10 @@ translation: "n. 小偷, 贼；[化] 取样"
 srsWords: "thief"
 
 [flashcard-review]
-front: "litre"
-meaning: "a unit of volume"
-translation: "n. [计量] 公升（米制容量单位） n. (Litre)人名；(西)利特雷"
-srsWords: "litre"
+front: "smooth"
+meaning: "n. the act of smoothing; v. make smooth or smoother, as if by rubbing; v. free from obstructions; a. having a surface free from roughness or bumps or ridges or irregularities"
+translation: "a. 平滑的, 平稳的, 流畅的, 和蔼的, 安祥的, 圆滑的, 调匀的, 无毛的；vt. 使光滑, 烫平, 使平和, 消除；vi. 变平滑, 变平静；n. 一块平地, 平滑部分"
+srsWords: "smooth"
 
 [flashcard-review]
 front: "diet"
@@ -400,10 +400,10 @@ translation: "adj. 充满活力的, 活泼的, 轻快的逼真的, 醒目的剧�
 srsWords: "lively"
 
 [flashcard-review]
-front: "yearly"
-meaning: "n a reference book that is published regularly once every year; s occurring or payable every year; r without missing a year"
-translation: "a. 每年的, 一年一度的；adv. 一年一次, 每年"
-srsWords: "yearly"
+front: "grey"
+meaning: "grey (color)"
+translation: "n. 灰色 adj. 灰色的；灰白的 vt. 使变成灰色；使变老 vi. 变成灰色；老化 n. (Grey)人名；(英、法)格雷"
+srsWords: "grey"
 
 ---
 lessonTitle: "Lesson 7: Education, Science & Nature Part 7"
@@ -484,10 +484,10 @@ translation: "ad; v. 高声地；吵闹地花哨地，华丽地"
 srsWords: "loudly"
 
 [flashcard-review]
-front: "lime"
-meaning: "n. any of various related trees bearing limes; n. the green acidic fruit of any of various lime trees; v. cover with lime so as to induce growth"
-translation: "n. 石灰, 粘鸟胶, 酸橙；vt. 以石灰处理, 粘鸟胶于, 撒石灰"
-srsWords: "lime"
+front: "succeed"
+meaning: "v. attain success or reach a desired goal; v. be the successor (of)"
+translation: "vi. 成功, 继承, 继续；vt. 继承, 接替"
+srsWords: "succeed"
 
 [flashcard-review]
 front: "lover"
@@ -544,10 +544,10 @@ icon: "🔬"
 color: "#4CAF50"
 ---
 [flashcard-review]
-front: "surf"
-meaning: "n. waves breaking on the shore; v. switch channels, on television"
-translation: "n. 海浪, 拍岸浪；vi. 作冲浪运动"
-srsWords: "surf"
+front: "award"
+meaning: "n. a grant made by a law court; n. a tangible symbol signifying approval or distinction; v. give, especially as an honor or reward; v. give as judged due or on the basis of merit"
+translation: "n. 奖品, 裁定, 判决；vt. 授予, 给予"
+srsWords: "award"
 
 [flashcard-review]
 front: "expression"
@@ -556,10 +556,10 @@ translation: "n. 表达, 表现, 词语, 措辞；[计] 表达式"
 srsWords: "expression"
 
 [flashcard-review]
-front: "lyric"
-meaning: "n. the text of a popular song or musical-comedy number; n. a short poem of songlike quality; v. write lyrics for (a song); s. expressing deep emotion"
-translation: "n. 歌词；抒情诗 adj. 抒情的，写抒情诗的；（歌声）柔美的；适于演奏的；（感情、风格等）奔放的，不拘束的"
-srsWords: "lyric"
+front: "peaceful"
+meaning: "a. not disturbed by strife or turmoil or war"
+translation: "a. 平静的, 和平的, 和平时期的, 爱好和平的, 喜爱安静的；[法] 和平的, 爱好和平的, 和平时期的"
+srsWords: "peaceful"
 
 [flashcard-review]
 front: "wheelchair"
@@ -568,10 +568,10 @@ translation: "n. 轮椅"
 srsWords: "wheelchair"
 
 [flashcard-review]
-front: "atm"
-meaning: "n a unit of pressure: the pressure that will support a column of mercury 760 mm high at sea level and 0 degrees centigrade; n a means of digital communications that is capable of very high speeds; suitable for transmission of images or voice or video as well as data; n an unattended machine (outside some banks) that dispenses money when a personal coded card is used"
-translation: "[计] 自动出纳机; 异步传输方式"
-srsWords: "atm"
+front: "string"
+meaning: "n. a lightweight cord; n. a tightly stretched cord of wire or gut, which makes sound when plucked, struck, or bowed; n. a sequentially ordered set of things or events or ideas in which each successive member is related to the preceding; n. a linear sequence of symbols (characters or words or phrases)"
+translation: "n. 线, 细绳, 一串, 字符串；vt. 串起, 成串, 收紧, 缚, 扎；vi. 成一串；[计] 字符串, 串"
+srsWords: "string"
 
 [flashcard-review]
 front: "manner"
@@ -598,10 +598,10 @@ translation: "n. 屋顶, 室顶；vt. 给...盖屋顶, 遮蔽"
 srsWords: "roof"
 
 [flashcard-review]
-front: "gasoline"
-meaning: "n. a volatile flammable mixture of hydrocarbons (hexane and heptane and octane etc.) derived from petroleum; used mainly as a fuel in internal-combustion engines"
-translation: "n. 汽油；[化] 汽油"
-srsWords: "gasoline"
+front: "symbol"
+meaning: "n. an arbitrary sign (written or printed) that has acquired a conventional significance; n. something visible that by association or convention represents something else that is invisible"
+translation: "n. 符号, 象征, 代号, 信条；[计] 符号; 码元"
+srsWords: "symbol"
 
 ---
 lessonTitle: "Lesson 10: Education, Science & Nature Part 10"

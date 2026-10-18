@@ -196,10 +196,10 @@ translation: "n. 工厂, 产生地, 代理店；[经] 工厂, 代理店, 商行�
 srsWords: "factory"
 
 [flashcard-review]
-front: "interviewer"
-meaning: "n. a person who conducts an interview"
-translation: "n. 采访者；会见者；面谈者；进行面试者"
-srsWords: "interviewer"
+front: "hurry"
+meaning: "to move or act quickly"
+translation: "n. 匆忙, 急忙, 急促；vt. 急派, 催促；vi. 匆忙, 赶快"
+srsWords: "hurry"
 
 [flashcard-review]
 front: "special"
@@ -316,10 +316,10 @@ translation: "n. 厨房；炊具；炊事人员 n. (Kitchen)人名；(英)基钦
 srsWords: "kitchen"
 
 [flashcard-review]
-front: "kite"
-meaning: "a toy consisting of a light frame covered with paper or cloth, flown in the wind at the end of a long string"
-translation: "n. 风筝 vi. 使用空头支票；像风筝一样飞；轻快地移动 vt. 骗钱；涂改（支票） n. (Kite)人名；(塞)基特；(英)凯特"
-srsWords: "kite"
+front: "along"
+meaning: "in a line; onward"
+translation: "adv. 平行地, 向前；prep. 沿着"
+srsWords: "along"
 
 [flashcard-review]
 front: "knee"
@@ -664,7 +664,7 @@ translation: "n.猴,猿,淘气鬼,小淘气vi.胡闹,捣蛋vt.嘲弄"
 srsWords: "monkey"
 
 [flashcard-review]
-front: "p.m"
-meaning: "afternoon/evening"
-translation: "abbr. 下午（post meridiem）"
-srsWords: "p.m"
+front: "outside"
+meaning: "the exterior part"
+translation: "n. 外面, 外表, 外界；a. 外面的, 外表的, 外界的；adv. 外面, 外表, 外界"
+srsWords: "outside"

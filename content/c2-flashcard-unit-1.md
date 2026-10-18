@@ -74,6 +74,7 @@ front: "constrained"
 meaning: "s. lacking spontaneity; not natural"
 translation: "a. 被强迫的, 被约束的, 不舒服的"
 srsWords: "constrained"
+
 ---
 lessonTitle: "Lesson 2: Epistemology & Abstract Thought Part 2"
 description: "Practice 10 key C2 vocabulary flashcards for Epistemology & Abstract Thought"
@@ -139,6 +140,7 @@ front: "stoicism"
 meaning: "n. an indifference to pleasure or pain; n. (philosophy) the philosophical system of the Stoics following the teachings of the ancient Greek philosopher Zeno"
 translation: "n. 斯多葛哲学, 禁欲主义, 淡泊"
 srsWords: "stoicism"
+
 ---
 lessonTitle: "Lesson 3: Epistemology & Abstract Thought Part 3"
 description: "Practice 10 key C2 vocabulary flashcards for Epistemology & Abstract Thought"
@@ -204,6 +206,7 @@ front: "brood"
 meaning: "n. the young of an animal cared for at one time; v. think moodily or anxiously about something; v. hang over, as of something threatening, dark, or menacing; v. sit on (eggs)"
 translation: "n. 一窝, 一伙；vt. 孵, 沉思"
 srsWords: "brood"
+
 ---
 lessonTitle: "Lesson 4: Epistemology & Abstract Thought Part 4"
 description: "Practice 10 key C2 vocabulary flashcards for Epistemology & Abstract Thought"
@@ -241,10 +244,10 @@ translation: "vt. 妨害, 阻塞, 拖累；[经] 使负(债等), 负有义务"
 srsWords: "encumber"
 
 [flashcard-review]
-front: "hypothesis"
-meaning: "n. a proposal intended to explain certain facts or observations; n. a tentative insight into the natural world; a concept that is not yet verified but that if true would explain certain facts or phenomena"
-translation: "n. 假设；[化] 假设"
-srsWords: "hypothesis"
+front: "epistemology"
+meaning: "n. the philosophical theory of knowledge"
+translation: "n. 认识论；[医] 认识论"
+srsWords: "epistemology"
 
 [flashcard-review]
 front: "hypothesize"
@@ -253,10 +256,10 @@ translation: "vt. 假设, 假定"
 srsWords: "hypothesize"
 
 [flashcard-review]
-front: "hypothetical"
-meaning: "n. a hypothetical possibility, circumstance, statement, proposal, situation, etc."
-translation: "a. 假设的, 有待证实的, 假定的, 有前提的；[计] 理想的"
-srsWords: "hypothetical"
+front: "probabilistic"
+meaning: "a. of or relating to the Roman Catholic philosophy of probabilism; a. of or relating to or based on probability"
+translation: "[计] 概率性的"
+srsWords: "probabilistic"
 
 [flashcard-review]
 front: "parasitic"
@@ -269,6 +272,7 @@ front: "plumage"
 meaning: "n the light horny waterproof structure forming the external covering of birds"
 translation: "n. 鸟类羽毛"
 srsWords: "plumage"
+
 ---
 lessonTitle: "Lesson 5: Epistemology & Abstract Thought Part 5"
 description: "Practice 10 key C2 vocabulary flashcards for Epistemology & Abstract Thought"
@@ -282,10 +286,10 @@ translation: "a. 有效用的, 实利主义的, 功利主义的；n. 功利主�
 srsWords: "utilitarian"
 
 [flashcard-review]
-front: "utilize"
-meaning: "v. convert (from an investment trust to a unit trust)"
-translation: "vt. 利用"
-srsWords: "utilize"
+front: "taoist"
+meaning: "n. an adherent of any branch of Taoism; a. of or relating to the popular Chinese religious system based on the teachings of Lao-tzu but including a pantheon of gods along with divination and magic; a. of or relating to the philosophical system developed by Lao-tzu and Chuang-tzu advocating a simple honest life"
+translation: "n. 道家, 道教徒；a. 道家的, 道教的"
+srsWords: "taoist"
 
 [flashcard-review]
 front: "predilection"
@@ -334,6 +338,7 @@ front: "wrack"
 meaning: "n. dried seaweed especially that cast ashore; n. the destruction or collapse of something"
 translation: "n. 漂积海草, 失事船只, 破坏；vt. 严重伤害"
 srsWords: "wrack"
+
 ---
 lessonTitle: "Lesson 6: Epistemology & Abstract Thought Part 6"
 description: "Practice 10 key C2 vocabulary flashcards for Epistemology & Abstract Thought"
@@ -399,6 +404,7 @@ front: "equable"
 meaning: "s. not varying; s. not easily irritated"
 translation: "a. 平静的, 变动小的"
 srsWords: "equable"
+
 ---
 lessonTitle: "Lesson 7: Epistemology & Abstract Thought Part 7"
 description: "Practice 10 key C2 vocabulary flashcards for Epistemology & Abstract Thought"
@@ -424,10 +430,10 @@ translation: "n. 谴责, 告发；[经] 废止合同(契约), 宣告合同(契�
 srsWords: "denunciation"
 
 [flashcard-review]
-front: "echo"
-meaning: "n. the repetition of a sound resulting from reflection of the sound waves; n. (Greek mythology) a nymph who was spurned by Narcissus and pined away until only her voice remained; n. a reply that repeats what has just been said; n. a reflected television or radio or radar beam"
-translation: "n. 回声, 回音, 回波；vi. 发回声, 随声附和；vt. 摹仿, 重复, 反射；[计] 回显; DOS批处理命令:控制MS-DOS命令是否在屏幕上显示"
-srsWords: "echo"
+front: "transference"
+meaning: "n. (psychoanalysis) the process whereby emotions are passed on or displaced from one person to another; during psychoanalysis the displacement of feelings toward others (usually the parents) is onto the analyst"
+translation: "n. 转移, 调动, 转让；[医] 转移; 情感转移"
+srsWords: "transference"
 
 [flashcard-review]
 front: "requisition"
@@ -464,6 +470,7 @@ front: "indulgently"
 meaning: "r. in an indulgent manner"
 translation: "adv. 放纵地, 纵容地"
 srsWords: "indulgently"
+
 ---
 lessonTitle: "Lesson 8: Epistemology & Abstract Thought Part 8"
 description: "Practice 10 key C2 vocabulary flashcards for Epistemology & Abstract Thought"
@@ -529,6 +536,7 @@ front: "imposition"
 meaning: "n. the act of imposing something (as a tax or an embargo); n. an uncalled-for burden"
 translation: "n. 征收, 课税, 强加, 欺骗；[经] 征税, 税, 税款"
 srsWords: "imposition"
+
 ---
 lessonTitle: "Lesson 9: Epistemology & Abstract Thought Part 9"
 description: "Practice 10 key C2 vocabulary flashcards for Epistemology & Abstract Thought"
@@ -594,6 +602,7 @@ front: "tenacious"
 meaning: "a good at remembering; s stubbornly unyielding; s sticking together"
 translation: "a. 紧握的, 固执的, 不屈不挠的, 黏着力强的；[医] 坚韧的"
 srsWords: "tenacious"
+
 ---
 lessonTitle: "Lesson 10: Epistemology & Abstract Thought Part 10"
 description: "Practice 10 key C2 vocabulary flashcards for Epistemology & Abstract Thought"

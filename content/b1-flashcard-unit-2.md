@@ -74,6 +74,7 @@ front: "assignment"
 meaning: "n. a duty that you are assigned to perform (especially in the armed forces); n. the instrument by which a claim or right or interest or property is transferred from one person to another; n. the act of distributing something to designated places or persons; n. an undertaking that you have been assigned to do (as by an instructor)"
 translation: "n. 分配, 功课, 任务, 转让, 归因, 陈述；[计] 赋值"
 srsWords: "assignment"
+
 ---
 lessonTitle: "Lesson 2: Travel, Tourism & Exploration Part 2"
 description: "Practice 10 key B1 vocabulary flashcards for Travel, Tourism & Exploration"
@@ -139,6 +140,7 @@ front: "attain"
 meaning: "v to gain with effort; v reach a point in time, or a certain state or level; v find unexpectedly; v reach a destination, either real or abstract"
 translation: "vt. 达到, 获得；vi. 达到"
 srsWords: "attain"
+
 ---
 lessonTitle: "Lesson 3: Travel, Tourism & Exploration Part 3"
 description: "Practice 10 key B1 vocabulary flashcards for Travel, Tourism & Exploration"
@@ -146,10 +148,10 @@ icon: "🧳"
 color: "#00BCD4"
 ---
 [flashcard-review]
-front: "attempt"
-meaning: "n. earnest and conscientious activity intended to do or accomplish something"
-translation: "n. 尝试, 企图；vt. 尝试, 企图"
-srsWords: "attempt"
+front: "carrier"
+meaning: "n. someone whose employment involves carrying something; n. a self-propelled wheeled vehicle designed specifically to carry something; n. an inactive substance that is a vehicle for a radioactive tracer of the same substance and that assists in its recovery after some chemical reaction; n. a person or firm in the business of transporting people or goods or messages"
+translation: "n. 运送者, 邮递员, 带菌者；[计] 载波"
+srsWords: "carrier"
 
 [flashcard-review]
 front: "attract"
@@ -194,16 +196,17 @@ translation: "n. 大街, 途径, 林荫路"
 srsWords: "avenue"
 
 [flashcard-review]
-front: "award"
-meaning: "n. a grant made by a law court; n. a tangible symbol signifying approval or distinction; v. give, especially as an honor or reward; v. give as judged due or on the basis of merit"
-translation: "n. 奖品, 裁定, 判决；vt. 授予, 给予"
-srsWords: "award"
+front: "rendezvous"
+meaning: "n. a meeting planned at a certain time and place; n. a place where people meet; v. meet at a rendezvous"
+translation: "n. 约会, 约会地点；v. 集合, 集结, 在约定场所会面；[计] 会合"
+srsWords: "rendezvous"
 
 [flashcard-review]
 front: "aware"
 meaning: "a. (sometimes followed by `of') having or showing knowledge or understanding or realization or perception"
 translation: "a. 知道的, 有觉悟的"
 srsWords: "aware"
+
 ---
 lessonTitle: "Lesson 4: Travel, Tourism & Exploration Part 4"
 description: "Practice 10 key B1 vocabulary flashcards for Travel, Tourism & Exploration"
@@ -241,10 +244,10 @@ translation: "n. 临时照顾幼儿者"
 srsWords: "babysitter"
 
 [flashcard-review]
-front: "backache"
-meaning: "n. an ache localized in the back"
-translation: "n. 背痛"
-srsWords: "backache"
+front: "transit"
+meaning: "v. make a passage or journey from one place to another; v. pass across (a sign or house of the zodiac) or pass across (the disk of a celestial body or the meridian of a place); v. revolve (the telescope of a surveying transit) about its horizontal transverse axis in order to reverse its direction; v. cause or enable to pass through"
+translation: "n. 经过, 通行, 运输, 运输线, 转变；vt. 运送, 使通过, 经过；vi. 通过"
+srsWords: "transit"
 
 [flashcard-review]
 front: "backpack"
@@ -259,16 +262,17 @@ translation: "n. 背包旅行者"
 srsWords: "backpacker"
 
 [flashcard-review]
-front: "backpacking"
-meaning: "n carrying something in a pack on the back; v hike with a backpack"
-translation: "n. 徒步旅行"
-srsWords: "backpacking"
+front: "traveller"
+meaning: "n a person who changes location"
+translation: "n. 旅行者；[经] 旅行商"
+srsWords: "traveller"
 
 [flashcard-review]
 front: "bacon"
 meaning: "n. back and sides of a hog salted and dried or smoked; usually sliced thin and fried; n. English scientist and Franciscan monk who stressed the importance of experimentation; first showed that air is required for combustion and first used lenses to correct vision (1220-1292); n. English statesman and philosopher; precursor of British empiricism; advocated inductive reasoning (1561-1626)"
 translation: "n. 熏猪肉；[机] 腌肉"
 srsWords: "bacon"
+
 ---
 lessonTitle: "Lesson 5: Travel, Tourism & Exploration Part 5"
 description: "Practice 10 key B1 vocabulary flashcards for Travel, Tourism & Exploration"
@@ -324,16 +328,17 @@ translation: "n. 桶；vt. 装入桶内"
 srsWords: "barrel"
 
 [flashcard-review]
-front: "base"
-meaning: "n. installation from which a military force initiates operations; n. a place that the runner must touch before scoring; n. the bottom or lowest part; n. (anatomy) the part of an organ nearest its point of attachment"
-translation: "n. 底部, 垒, 基础, 基地；vt. 以...作基础；a. 卑鄙的, 低劣的；[计] 基准"
-srsWords: "base"
+front: "fixed"
+meaning: "s. (of a number) having a fixed and unchanging value; s. fixed and unmoving; a. securely placed or fastened or set; s. incapable of being changed or moved or undone; e.g. \"frozen prices\""
+translation: "a. 固定的, 不变的；[法] 固定的, 确定的, 不变的"
+srsWords: "fixed"
 
 [flashcard-review]
 front: "basement"
 meaning: "n. the lowermost portion of a structure partly or wholly below ground level; often used for storage; n. the ground floor facade or interior in Renaissance architecture"
 translation: "n. 地下室, 墙脚；[化] 地下室"
 srsWords: "basement"
+
 ---
 lessonTitle: "Lesson 6: Travel, Tourism & Exploration Part 6"
 description: "Practice 10 key B1 vocabulary flashcards for Travel, Tourism & Exploration"
@@ -347,10 +352,10 @@ translation: "n. 盆, 盆地；[医] 第三脑室, 骨盆"
 srsWords: "basin"
 
 [flashcard-review]
-front: "bat"
-meaning: "n. nocturnal mouselike mammal with forelimbs modified to form membranous wings and anatomical adaptations for echolocation by which they navigate; n. (baseball) a turn trying to get a hit; n. a club used for hitting a ball in various games; v. strike with, or as if with a baseball bat"
-translation: "n. 蝙蝠, 球棒；v. 用球棒打, 眨眼；[计] 成批"
-srsWords: "bat"
+front: "campaign"
+meaning: "n. a series of actions advancing a principle or tending toward a particular end; n. several related operations aimed at achieving a particular goal (usually within geographical and temporal constraints); n. an overland journey by hunters (especially in Africa); v. run, stand, or compete for an office or a position"
+translation: "n. 战役, 运动, 竞选运动；vi. 参加运动, 作战"
+srsWords: "campaign"
 
 [flashcard-review]
 front: "bathe"
@@ -399,6 +404,7 @@ front: "behave"
 meaning: "v. behave in a certain manner; v. behave well or properly"
 translation: "vi. 举止端正, 行为规矩；vt. 检点(自己的)行为, 使表现好"
 srsWords: "behave"
+
 ---
 lessonTitle: "Lesson 7: Travel, Tourism & Exploration Part 7"
 description: "Practice 10 key B1 vocabulary flashcards for Travel, Tourism & Exploration"
@@ -406,10 +412,10 @@ icon: "🧳"
 color: "#00BCD4"
 ---
 [flashcard-review]
-front: "behavior"
-meaning: "n. manner of acting or controlling yourself; n. the action or reaction of something (as a machine or substance) under specified circumstances; n. (psychology) the aggregate of the responses or reactions or movements made by an organism in any situation"
-translation: "n. 行为, 举止；[医] 行为"
-srsWords: "behavior"
+front: "gear"
+meaning: "n. a toothed wheel that engages another toothed mechanism in order to change the speed or direction of transmitted motion; n. a mechanism for transmitting motion for some specific purpose (as the steering gear of a vehicle); n. equipment consisting of miscellaneous articles needed for a particular operation or sport etc.; v. set the level or character of"
+translation: "n. 齿轮, 工具；vt. 以齿轮连起, 开动, 使适应, 安排；vi. 连接上, 适合"
+srsWords: "gear"
 
 [flashcard-review]
 front: "belief"
@@ -442,10 +448,10 @@ translation: "n. 打赌, 赌注；v. 打赌"
 srsWords: "bet"
 
 [flashcard-review]
-front: "bilingual"
-meaning: "n. a person who speaks two languages fluently; s. using or knowing two languages"
-translation: "a. 双语的"
-srsWords: "bilingual"
+front: "deck"
+meaning: "n. any of various platforms built into a vessel; n. street name for a packet of illegal drugs; n. a porch that resembles the deck on a ship; v. be beautiful to look at"
+translation: "n. 甲板, (汽车后部的)行李仓；vt. 装饰, 打扮, 装甲板；[计] 纸牌背面图案"
+srsWords: "deck"
 
 [flashcard-review]
 front: "bin"
@@ -454,16 +460,17 @@ translation: "n. (贮存谷物等的)容器, 箱子；[计] 二进制, 商业信
 srsWords: "bin"
 
 [flashcard-review]
-front: "biochemistry"
-meaning: "n. the organic chemistry of compounds and processes occurring in organisms; the effort to understand biology within the context of chemistry"
-translation: "n. 生物化学；[化] 生物化学; 生化"
-srsWords: "biochemistry"
+front: "backup"
+meaning: "n. an accumulation caused by clogging or a stoppage; n. (computer science) a copy of a file or directory on a separate storage device"
+translation: "n. 倒车, 后退, 后援, 支持, 阻塞；vt. 做备份；a. 候补的, 支持的；[计] 备份; DOS外部命令:通常使用于将硬磁盘上指定的文件复制到软盘上"
+srsWords: "backup"
 
 [flashcard-review]
 front: "biography"
 meaning: "n. an account of the series of events making up a person's life"
 translation: "n. 传记"
 srsWords: "biography"
+
 ---
 lessonTitle: "Lesson 8: Travel, Tourism & Exploration Part 8"
 description: "Practice 10 key B1 vocabulary flashcards for Travel, Tourism & Exploration"
@@ -529,6 +536,7 @@ front: "boldly"
 meaning: "r. with boldness, in a bold manner"
 translation: "adv. 大胆地, 显眼地"
 srsWords: "boldly"
+
 ---
 lessonTitle: "Lesson 9: Travel, Tourism & Exploration Part 9"
 description: "Practice 10 key B1 vocabulary flashcards for Travel, Tourism & Exploration"
@@ -542,10 +550,10 @@ translation: "n. 炸弹；vt. 轰炸, 投弹于；vi. 失败"
 srsWords: "bomb"
 
 [flashcard-review]
-front: "book"
-meaning: "n. a written work or composition that has been published (printed on pages bound together); n. physical objects consisting of a number of pages bound together; n. a collection of playing cards satisfying the rules of a card game; n. a collection of rules or prescribed standards on the basis of which decisions are made"
-translation: "n. 书, 书籍, 帐簿, 名册, 工作簿；v. 登记, 预订；[计] 工作簿"
-srsWords: "book"
+front: "temper"
+meaning: "n. a characteristic (habitual or relatively temporary) state of feeling; n. a disposition to exhibit uncontrolled anger; n. the elasticity and hardness of a metal object; its ability to absorb considerable energy before cracking; v. harden by reheating and cooling in oil"
+translation: "n. (钢等的)硬度, 脾气, 心情, 中和剂, 倾向, 回火；vt. 使回火, 锻炼, 调和, 使缓和；vi. 回火"
+srsWords: "temper"
 
 [flashcard-review]
 front: "booking"
@@ -590,10 +598,11 @@ translation: "n. 跃, 回跳, 范围, 边界；a. 受约束的, 装有封面的,
 srsWords: "bound"
 
 [flashcard-review]
-front: "bowl"
-meaning: "n. a round vessel that is open at the top; used chiefly for holding food or liquids;; n. a concave shape with an open top; n. a dish that is round and open at the top for serving foods; n. the quantity contained in a bowl"
-translation: "n. 碗, 木球, 大酒杯；v. 滚木球, 快而稳地行驶"
-srsWords: "bowl"
+front: "aircraft"
+meaning: "n. a vehicle that can fly"
+translation: "n. 航空器, 飞机；[机] 航空器"
+srsWords: "aircraft"
+
 ---
 lessonTitle: "Lesson 10: Travel, Tourism & Exploration Part 10"
 description: "Practice 10 key B1 vocabulary flashcards for Travel, Tourism & Exploration"
@@ -613,10 +622,10 @@ translation: "n. 手镯；[医] 手镯, 腕带, 腕纹(掌侧横列腕部的线�
 srsWords: "bracelet"
 
 [flashcard-review]
-front: "brainstorming"
-meaning: "n. a group problem-solving technique in which members spontaneously share ideas and solutions"
-translation: "自由讨论, 发表独创[创造]性意见, 智力爆发"
-srsWords: "brainstorming"
+front: "airplane"
+meaning: "a powered flying vehicle with fixed wings"
+translation: "n.<美>飞机"
+srsWords: "airplane"
 
 [flashcard-review]
 front: "brand-new"

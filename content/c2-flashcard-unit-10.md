@@ -16,28 +16,28 @@ icon: "👑"
 color: "#009688"
 ---
 [flashcard-review]
-front: "daunting"
-meaning: "s. discouraging through fear"
-translation: "a. 使人畏缩的"
-srsWords: "daunting"
+front: "glory in"
+meaning: "verb. glory in"
+translation: "狂喜, 得意"
+srsWords: "glory in"
 
 [flashcard-review]
-front: "vocalist"
-meaning: "n a person who sings"
-translation: "n. 声乐家, 歌手"
-srsWords: "vocalist"
+front: "ad lib"
+meaning: "adjective. ad lib"
+translation: "没有限制地"
+srsWords: "ad lib"
 
 [flashcard-review]
-front: "hover"
-meaning: "v. be undecided about something; waver between conflicting positions or courses of action; v. move to and fro; v. hang in the air; fly or be suspended above"
-translation: "vi. 盘旋, 翱翔, 徘徊；vt. 孵；n. 翱翔"
-srsWords: "hover"
+front: "stabilize/stabilise"
+meaning: "v. make stable and keep from fluctuating or put into an equilibrium; v. become stable or more stable"
+translation: "vt. 使安定, 使稳固；vi. 稳定, 安定"
+srsWords: "stabilize/stabilise"
 
 [flashcard-review]
-front: "adorn"
-meaning: "v make more attractive by adding ornament, colour, etc.; v be beautiful to look at; v furnish with power or authority; of kings or emperors"
-translation: "vt. 装饰, 使生色"
-srsWords: "adorn"
+front: "armory/armoury"
+meaning: "n. a collection of resources; n. a place where arms are manufactured"
+translation: "n. 纹章, 纹章学, 军械库, 兵工厂；[机] 军械库"
+srsWords: "armory/armoury"
 
 [flashcard-review]
 front: "annal"
@@ -46,10 +46,10 @@ translation: "n. 记录；编年史"
 srsWords: "annal"
 
 [flashcard-review]
-front: "felicity"
-meaning: "n. pleasing and appropriate manner or style (especially manner or style of expression)"
-translation: "n. 快乐, 幸福, 幸运"
-srsWords: "felicity"
+front: "dole out"
+meaning: "verb. dole out"
+translation: "少量地发放（食物、救济金等）"
+srsWords: "dole out"
 
 [flashcard-review]
 front: "oncology"
@@ -64,16 +64,17 @@ translation: "a. 上诉的, 有权受理上诉的；[法] 受理上诉的, 上�
 srsWords: "appellate"
 
 [flashcard-review]
-front: "advantageous"
-meaning: "a. giving an advantage; s. appropriate for achieving a particular end; implies a lack of concern for fairness"
-translation: "a. 有利的, 有益的"
-srsWords: "advantageous"
+front: "patronize/patronise"
+meaning: "v. do one's shopping at; do business with; be a customer or client of; v. treat condescendingly; v. be a regular customer or client of"
+translation: "vt. 保护, 支援, 赞助, 庇护, 惠顾"
+srsWords: "patronize/patronise"
 
 [flashcard-review]
-front: "outpatient"
-meaning: "n. a patient who does not reside in the hospital where he is being treated"
-translation: "n. 门诊病人；[医] 门诊病人"
-srsWords: "outpatient"
+front: "misdemeanor/misdemanour"
+meaning: "n. a crime less serious than a felony"
+translation: "n. 行为不检, 品行不良, 轻罪, 不端行为"
+srsWords: "misdemeanor/misdemanour"
+
 ---
 lessonTitle: "Lesson 2: Apex Lexical Precision & Idiom Part 2"
 description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
@@ -81,10 +82,10 @@ icon: "👑"
 color: "#009688"
 ---
 [flashcard-review]
-front: "photon"
-meaning: "n. a quantum of electromagnetic radiation; an elementary particle that is its own antiparticle"
-translation: "n. 光子, 光量子, 光度；[化] 光量子; 光子"
-srsWords: "photon"
+front: "bona fide"
+meaning: "In or with good faith; without fraud or deceit; real or; really; actual or actually; genuine or genuinely; as, you must proceed; bona fide; a bona fide purchaser or transaction."
+translation: "真诚地(的), 真实地(的)；[经] 真诚的"
+srsWords: "bona fide"
 
 [flashcard-review]
 front: "peptide"
@@ -99,10 +100,10 @@ translation: "n. 硬化症, 硬化, 僵化；[医] 硬化"
 srsWords: "sclerosis"
 
 [flashcard-review]
-front: "retrospect"
-meaning: "n. contemplation of things past"
-translation: "n. 回顾, 追忆, 回溯；v. 回顾, 追忆"
-srsWords: "retrospect"
+front: "methylation"
+meaning: "the addition of a methyl group to a substrate"
+translation: "[化] 甲基化作用(指加甲基作用和加甲醇使酒精变性的作用)；[医] 甲基化[作用]"
+srsWords: "methylation"
 
 [flashcard-review]
 front: "entropy"
@@ -129,16 +130,17 @@ translation: "a. 精液的, 种子的, 生殖的；[医] 种子的; 精液的"
 srsWords: "seminal"
 
 [flashcard-review]
-front: "diligent"
-meaning: "s. quietly and steadily persevering especially in detail or exactness; a. characterized by care and perseverance in carrying out tasks"
-translation: "a. 勤勉的, 用功的"
-srsWords: "diligent"
+front: "pectoral"
+meaning: "n. either of two large muscles of the chest; n. an adornment worn on the chest or breast; a. of or relating to the chest or thorax"
+translation: "a. 胸的, 治疗胸科病的, 戴在胸前的, 出自内心的, 发自胸腔的；n. 胸饰, 胸部器官, 遮胸, 祛痰药"
+srsWords: "pectoral"
 
 [flashcard-review]
 front: "nomenclature"
 meaning: "n a system of words used to name things in a particular discipline"
 translation: "n. 命名法, 专门语, 术语；[化] 命名法; 命名原则"
 srsWords: "nomenclature"
+
 ---
 lessonTitle: "Lesson 3: Apex Lexical Precision & Idiom Part 3"
 description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
@@ -146,10 +148,10 @@ icon: "👑"
 color: "#009688"
 ---
 [flashcard-review]
-front: "mrna"
-meaning: "n the template for protein synthesis; the form of RNA that carries information from DNA in the nucleus to the ribosome sites of protein synthesis in the cell"
-translation: "[化] 信使核糖核酸"
-srsWords: "mrna"
+front: "therefor"
+meaning: "r. (in formal usage, especially legal usage) for that or for it"
+translation: "adv. 为此, 因之"
+srsWords: "therefor"
 
 [flashcard-review]
 front: "topology"
@@ -170,16 +172,16 @@ translation: "[医] 眼"
 srsWords: "oculus"
 
 [flashcard-review]
-front: "barometer"
-meaning: "n. an instrument that measures atmospheric pressure"
-translation: "n. 气压计；[化] 气压计"
-srsWords: "barometer"
+front: "stratigraphic"
+meaning: "a. Alt. of Stratigraphical; a. Alt. of -ical"
+translation: "a. 地层学的"
+srsWords: "stratigraphic"
 
 [flashcard-review]
-front: "pluck"
-meaning: "n. the act of pulling and releasing a taut cord; v. pull or pull out sharply; v. pull lightly but sharply with a plucking motion; v. strip of feathers"
-translation: "n. 勇气, 猛拉, 动物内脏；vt. 摘, 猛拉, 拔, 拉, 扯, 采；vi. 拉, 拽"
-srsWords: "pluck"
+front: "taxonomic"
+meaning: "a. of or relating to taxonomy"
+translation: "a. 分类学的, 分类的；[计] 分类的"
+srsWords: "taxonomic"
 
 [flashcard-review]
 front: "esoteric"
@@ -188,22 +190,23 @@ translation: "a. 秘教的, 奥秘的, 秘传的；[医] 体内的, 内部的, �
 srsWords: "esoteric"
 
 [flashcard-review]
-front: "skim"
-meaning: "n. a thin layer covering the surface of a liquid; n. reading or glancing through quickly; v. cause to skip over a surface; v. coat (a liquid) with a layer"
-translation: "vt. 撇取浮沫, 略读, 掠过；vi. 擦过, 浏览；n. 脱脂乳, 擦过, 表层物；a. 撇去浮沫的"
-srsWords: "skim"
+front: "adsorption"
+meaning: "n. the accumulation of molecules of a gas to form a thin film on the surface of a solid"
+translation: "n. 吸附；[化] 吸附"
+srsWords: "adsorption"
 
 [flashcard-review]
-front: "attainment"
-meaning: "n. the act of achieving an aim; n. arrival at a new stage"
-translation: "n. 达到"
-srsWords: "attainment"
+front: "electrochemical"
+meaning: "a. of or involving electrochemistry"
+translation: "a. 电气化学的；[医] 电化学的"
+srsWords: "electrochemical"
 
 [flashcard-review]
-front: "impedance"
-meaning: "n a material's opposition to the flow of electric current; measured in ohms"
-translation: "n. 阻抗；[计] 阻抗, 电抗"
-srsWords: "impedance"
+front: "amyloid"
+meaning: "n. a non-nitrogenous food substance consisting chiefly of starch; any substance resembling starch; n. (pathology) a waxy translucent complex protein resembling starch that results from degeneration of tissue"
+translation: "a. 淀粉的, 含淀粉的；n. 淀粉质食物, 淀粉状蛋白"
+srsWords: "amyloid"
+
 ---
 lessonTitle: "Lesson 4: Apex Lexical Precision & Idiom Part 4"
 description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
@@ -223,10 +226,10 @@ translation: "a. 形态的, 形态学的, 词法的；[计] 词法的"
 srsWords: "morphological"
 
 [flashcard-review]
-front: "contextual"
-meaning: "a. relating to or determined by or in context"
-translation: "a. 上下文的, 前后关系的"
-srsWords: "contextual"
+front: "genotype"
+meaning: "n. a group of organisms sharing a specific genetic constitution; n. the particular alleles at specified loci present in an organism"
+translation: "n. 基因型, 遗传型；[医] 遗传型, 基因型"
+srsWords: "genotype"
 
 [flashcard-review]
 front: "jurisprudence"
@@ -235,10 +238,10 @@ translation: "n. 法律学, 法律体系；[医] 法学, 法律学"
 srsWords: "jurisprudence"
 
 [flashcard-review]
-front: "lark"
-meaning: "n. any of numerous predominantly Old World birds noted for their singing"
-translation: "n. 云雀, 百灵鸟, 欢乐, 嬉耍；vi. 嬉耍, 骑马玩乐；vt. 愚弄"
-srsWords: "lark"
+front: "glycol"
+meaning: "n a sweet but poisonous syrupy liquid used as an antifreeze and solvent; n any of a class of alcohols having 2 hydroxyl groups in each molecule"
+translation: "n. 乙二醇；[化] 二醇; 乙二醇"
+srsWords: "glycol"
 
 [flashcard-review]
 front: "hegemony"
@@ -247,28 +250,29 @@ translation: "n. 霸权, 领导权, 支配权, 拥有支配权的政府；[法] 
 srsWords: "hegemony"
 
 [flashcard-review]
-front: "quirk"
-meaning: "n. a narrow groove beside a beading; v. twist or curve abruptly"
-translation: "n. 古怪举动, 俏皮话, 急转"
-srsWords: "quirk"
+front: "ischemic"
+meaning: "a. relating to or affected by ischemia"
+translation: "a. 局部出血的, 局部贫血的；[医] 局部缺血的"
+srsWords: "ischemic"
 
 [flashcard-review]
-front: "figurative"
-meaning: "a. (used of the meanings of words or text) not literal; using figures of speech"
-translation: "a. 比喻的, 象征的, 修饰丰富的"
-srsWords: "figurative"
+front: "phylogenetic"
+meaning: "a. of or relating to the evolutionary development of organisms"
+translation: "a. 种系发生的, 系统发育的；[医] 种系发生的, 种族发育的"
+srsWords: "phylogenetic"
 
 [flashcard-review]
-front: "relinquish"
-meaning: "v part with a possession or right; v do without or cease to hold or adhere to; v turn away from; give up; v release, as from one's grip"
-translation: "vt. 放弃, 撤回, 停止, 松开, 让与；[法] 让与, 把...交给, 放弃"
-srsWords: "relinquish"
+front: "vitriol"
+meaning: "n. (H2SO4) a highly corrosive acid made from sulfur dioxide; widely used in the chemical industry; v. expose to the effects of vitriol or injure with vitriol; v. subject to bitter verbal abuse"
+translation: "n. 硫酸盐, 矾油, 矾, 语言尖刻；vt. 用硫酸处理"
+srsWords: "vitriol"
 
 [flashcard-review]
-front: "envisage"
-meaning: "v form a mental image of something that is not present or that is not the case"
-translation: "vt. 面对, 正视, 想象"
-srsWords: "envisage"
+front: "burgh"
+meaning: "n. a borough in Scotland"
+translation: "n. 自治市"
+srsWords: "burgh"
+
 ---
 lessonTitle: "Lesson 5: Apex Lexical Precision & Idiom Part 5"
 description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
@@ -312,16 +316,16 @@ translation: "n. 恋童癖；[医] 爱童癖"
 srsWords: "pedophilia"
 
 [flashcard-review]
-front: "tactile"
-meaning: "s. producing a sensation of touch"
-translation: "a. 触觉的, 有触觉的；[医] 触觉的"
-srsWords: "tactile"
+front: "coptic"
+meaning: "n. the liturgical language of the Coptic Church used in Egypt and Ethiopia; written in the Greek alphabet; a. of or relating to the Copts or their church or language or art"
+translation: "a. 科普特人的, 科普特语的, 科普特基督教徒的；n. 科普特语"
+srsWords: "coptic"
 
 [flashcard-review]
-front: "inert"
-meaning: "s. unable to move or resist motion; s. having only a limited ability to react chemically; chemically inactive; s. slow and apathetic"
-translation: "a. 惰性的, 迟钝的, 无活力的, 呆滞的；[医] 惰性的, 无作用的, 无效的"
-srsWords: "inert"
+front: "cutaneous"
+meaning: "a. relating to or existing on or affecting the skin"
+translation: "a. 皮肤上的, 影响皮肤的；[医] 皮的"
+srsWords: "cutaneous"
 
 [flashcard-review]
 front: "mitochondrion"
@@ -334,6 +338,7 @@ front: "archdiocese"
 meaning: "n. the diocese of an archbishop"
 translation: "n. 大主教之管区"
 srsWords: "archdiocese"
+
 ---
 lessonTitle: "Lesson 6: Apex Lexical Precision & Idiom Part 6"
 description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
@@ -399,6 +404,7 @@ front: "scion"
 meaning: "n. a descendent or heir"
 translation: "n. 接穗, 子孙；[医] 嫩枝, 接穗"
 srsWords: "scion"
+
 ---
 lessonTitle: "Lesson 7: Apex Lexical Precision & Idiom Part 7"
 description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
@@ -406,10 +412,10 @@ icon: "👑"
 color: "#009688"
 ---
 [flashcard-review]
-front: "tensor"
-meaning: "n. a generalization of the concept of a vector; n. any of several muscles that cause an attached structure to become tense or firm"
-translation: "n. 张肌, 张量；[化] 张量"
-srsWords: "tensor"
+front: "hydrolysis"
+meaning: "n. a chemical reaction in which water reacts with a compound to produce other compounds; involves the splitting of a bond and the addition of the hydrogen cation and the hydroxide anion from the water"
+translation: "n. 水解(作用)；[计] 水解作用"
+srsWords: "hydrolysis"
 
 [flashcard-review]
 front: "tomography"
@@ -424,10 +430,10 @@ translation: "n. 无政府主义；[经] 无政府主义"
 srsWords: "anarchism"
 
 [flashcard-review]
-front: "wither"
-meaning: "v wither, as with a loss of moisture; v lose freshness, vigor, or vitality"
-translation: "vt. 使凋谢, 使消亡, 使畏缩；vi. 枯萎, 衰退"
-srsWords: "wither"
+front: "multivariate"
+meaning: "s. pertaining to any procedure involving two or more variables"
+translation: "[计] 多元"
+srsWords: "multivariate"
 
 [flashcard-review]
 front: "glaucoma"
@@ -464,6 +470,7 @@ front: "transcendental"
 meaning: "a. of or characteristic of a system of philosophy emphasizing the intuitive and spiritual above the empirical and material"
 translation: "a. 卓越的, 超凡的, 先验的"
 srsWords: "transcendental"
+
 ---
 lessonTitle: "Lesson 8: Apex Lexical Precision & Idiom Part 8"
 description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
@@ -489,16 +496,16 @@ translation: "a. 人种志的"
 srsWords: "ethnographic"
 
 [flashcard-review]
-front: "genomics"
-meaning: "n. the branch of genetics that studies organisms in terms of their genomes (their full DNA sequences)"
-translation: "基因组学"
-srsWords: "genomics"
+front: "tyrosine"
+meaning: "n. an amino acid found in most proteins; a precursor of several hormones"
+translation: "n. 酪氨酸；[化] 酪氨酸; 3-对羟苯基丙氨酸"
+srsWords: "tyrosine"
 
 [flashcard-review]
-front: "hoon"
-meaning: "a lout or hooligan, especially one who drives recklessly (Australian/NZ slang)"
-translation: "n. [澳大利亚英语]拉皮条者"
-srsWords: "hoon"
+front: "ambulatory"
+meaning: "n. a covered walkway (as in a cloister); a. relating to or adapted for walking"
+translation: "a. 步行的, 走动的, 流动的, 非固定的；n. 回廊"
+srsWords: "ambulatory"
 
 [flashcard-review]
 front: "nous"
@@ -529,6 +536,7 @@ front: "methamphetamine"
 meaning: "n. an amphetamine derivative (trade name Methedrine) used in the form of a crystalline hydrochloride; used as a stimulant to the nervous system and as an appetite suppressant"
 translation: "[化] 脱氧麻黄碱"
 srsWords: "methamphetamine"
+
 ---
 lessonTitle: "Lesson 9: Apex Lexical Precision & Idiom Part 9"
 description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
@@ -590,10 +598,11 @@ translation: "n. 重组, 重组物"
 srsWords: "recombinant"
 
 [flashcard-review]
-front: "tantamount"
-meaning: "s being essentially equal to something"
-translation: "a. 同等的, 相等的, 相当于...的；[法] 相等的, 相当的, 同等的"
-srsWords: "tantamount"
+front: "interpolation"
+meaning: "n. a message (spoken or written) that is introduced or inserted; n. (mathematics) calculation of the value of a function between the values already known"
+translation: "n. 篡改, 添写, 插补；[计] 内推法; 内插法"
+srsWords: "interpolation"
+
 ---
 lessonTitle: "Lesson 10: Apex Lexical Precision & Idiom Part 10"
 description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"

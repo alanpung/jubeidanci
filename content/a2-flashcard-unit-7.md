@@ -154,16 +154,16 @@ translation: "n. 抽屉, 小柜, 上锁人；[机] 锁柜"
 srsWords: "locker"
 
 [flashcard-review]
-front: "terrify"
-meaning: "v. fill with terror; frighten greatly"
-translation: "vt. 使恐惧, 恐吓"
-srsWords: "terrify"
+front: "athletes"
+meaning: "n. a person trained to compete in sports"
+translation: "n. 运动员( athlete的复数形式 ); 体育家; 擅长运动的人; 健儿"
+srsWords: "athletes"
 
 [flashcard-review]
-front: "neighbourhood"
-meaning: "n a surrounding or nearby region; n people living near one another"
-translation: "n. 邻接, 周围, 附近一带, 邻近, 邻居关系, 地区, 街道, 街坊, 四邻；[计] 邻域"
-srsWords: "neighbourhood"
+front: "desert"
+meaning: "n. arid land with little or no vegetation; v. leave behind"
+translation: "n. 沙漠, 应得的赏罚, 功劳；a. 沙漠的, 不毛的；vt. 放弃, 遗弃, 擅离；vi. 逃掉"
+srsWords: "desert"
 
 [flashcard-review]
 front: "discussion"
@@ -202,10 +202,10 @@ translation: "n. 博物馆"
 srsWords: "museum"
 
 [flashcard-review]
-front: "hold"
-meaning: "n. power by which something or someone is affected or dominated; n. a stronghold; n. a cell in a jail or prison; v. have or hold in one's hands or grip"
-translation: "n. 把握, 把持力, 柄, 控制, 掌握, 监禁；vt. 保存, 握住, 拿住, 占据, 持有, 拥有；vi. 支持, 持续, 有效；n. 保留；[计] 保留"
-srsWords: "hold"
+front: "stranger"
+meaning: "n. anyone who does not belong in the environment in which they are found; n. an individual that one is not acquainted with"
+translation: "n. 陌生人, 门外汉；[法] 局外人, 非当事人, 第三者"
+srsWords: "stranger"
 
 ---
 lessonTitle: "Lesson 4: Home, Neighborhood & Community Part 4"
@@ -220,10 +220,10 @@ translation: "n. 路径, 小路, 道路, 途径, 路线, 轨道；[计] 路径; 
 srsWords: "path"
 
 [flashcard-review]
-front: "wifi"
-meaning: "n a local area network that uses high frequency radio signals to transmit and receive data over distances of a few hundred feet; uses ethernet protocol"
-translation: "abbr. 基于IEEE 802.11b标准的无线局域网（Wireless Fidelity）；无线网络模块"
-srsWords: "wifi"
+front: "uniform"
+meaning: "n. clothing of distinctive design worn by members of a particular group as a means of identification; v. provide with uniforms; a. always the same; showing a single form or character in all occurrences; s. evenly spaced"
+translation: "n. 制服；a. 统一的, 一律的, 始终如一的"
+srsWords: "uniform"
 
 [flashcard-review]
 front: "painter"
@@ -316,10 +316,10 @@ translation: "n.猎人,猎犬,猎狐马，猎食其他动物的野兽,亨特"
 srsWords: "hunter"
 
 [flashcard-review]
-front: "hurry"
-meaning: "to move or act quickly"
-translation: "n. 匆忙, 急忙, 急促；vt. 急派, 催促；vi. 匆忙, 赶快"
-srsWords: "hurry"
+front: "theater"
+meaning: "n. a building where theatrical performances or motion-picture shows can be presented"
+translation: "n. 戏院, 电影院, 剧场, 全体观众, 戏剧, 戏剧效果, 阶梯式讲堂, 场所"
+srsWords: "theater"
 
 [flashcard-review]
 front: "download"
@@ -448,16 +448,16 @@ translation: "vt. 显示, 象征, 指示, 指出；[医] 指示"
 srsWords: "indicate"
 
 [flashcard-review]
-front: "indoor"
-meaning: "located or used inside a building"
-translation: "adj.室内的，户内的,在室内使用的,待在家里的,救济院内的"
-srsWords: "indoor"
+front: "attempt"
+meaning: "n. earnest and conscientious activity intended to do or accomplish something"
+translation: "n. 尝试, 企图；vt. 尝试, 企图"
+srsWords: "attempt"
 
 [flashcard-review]
-front: "inexpensive"
-meaning: "a relatively low in price or charging low prices"
-translation: "adj.不贵的，便宜的,廉,贱"
-srsWords: "inexpensive"
+front: "tone"
+meaning: "n. the quality of a person's voice; n. (linguistics) a pitch or change in pitch of the voice that serves to distinguish words in tonal languages; n. a steady sound without overtones; n. a musical interval of two semitones"
+translation: "n. 音调, 音质, 语调, 语气, 色调, 气氛, 状况, 思想状态；vt. 给...定色调, 增强, 使...的声调和谐, 定音调；vi. 颜色调和；[计] 双音频"
+srsWords: "tone"
 
 [flashcard-review]
 front: "mistake"
@@ -484,16 +484,16 @@ translation: "n. 昆虫；卑鄙的人形容词:insect; 形容词:insectival"
 srsWords: "insect"
 
 [flashcard-review]
-front: "smoke"
-meaning: "visible vapor from burning"
-translation: "n. 烟, 雾气, 烟熏剂, 抽烟, 烟色；vi. 吸烟, 冒烟, 弥漫；vt. 以烟熏, 抽烟而导致..."
-srsWords: "smoke"
+front: "neighbor"
+meaning: "n. a person who lives (or is located) near another; n. a nearby object of the same kind; v. live or be located as a neighbor"
+translation: "n. 邻居；vt. 邻接；vi. 毗邻而居, 友好；a. 邻近的"
+srsWords: "neighbor"
 
 [flashcard-review]
-front: "paste"
-meaning: "n. any mixture of a soft and malleable consistency; n. a hard, brilliant lead glass that is used in making artificial jewelry; n. an adhesive made from water and flour or starch; used on paper and paperboard; v. hit with the fists"
-translation: "n. 面团, 面食, 浆糊, 糊状物, 粘贴, 用拳重击；vt. 用浆糊粘, 张贴, 狠狠地打；[计] 粘贴"
-srsWords: "paste"
+front: "comrade"
+meaning: "n. a fellow member of the Communist Party"
+translation: "n. 同志, 伙伴"
+srsWords: "comrade"
 
 [flashcard-review]
 front: "inspiration"
@@ -526,10 +526,10 @@ translation: "adj. 聪明的; 理解力强的形容词:intelligential; 副 词:i
 srsWords: "intelligent"
 
 [flashcard-review]
-front: "snow"
-meaning: "frozen precipitation"
-translation: "n. 雪, 积雪, 下雪, 雪花形干扰；vi. 下雪, 似雪般落下；vt. 使雪白, 用雪覆盖, 使像雪般落下"
-srsWords: "snow"
+front: "script"
+meaning: "n. a written version of a play or other dramatic composition; used in preparing for a performance; n. a particular orthography or writing system; v. write a script for"
+translation: "n. 手迹, 手稿, 正本, 手写体；vt. 改编为演出本；[计] 手写体, 小型程序"
+srsWords: "script"
 
 [flashcard-review]
 front: "storm"
@@ -550,10 +550,10 @@ translation: "a. 不牢固的, 弱的, 虚弱的, 软弱的, 无力的, 无权�
 srsWords: "weak"
 
 [flashcard-review]
-front: "plaza"
-meaning: "n. a public square with room for pedestrians; n. mercantile establishment consisting of a carefully landscaped complex of shops representing leading merchandisers; usually includes restaurants and a convenient parking area; a modern version of the traditional marketplace"
-translation: "n. 广场, 市场, 购物区"
-srsWords: "plaza"
+front: "jewish"
+meaning: "a. of or relating to Jews or their culture or religion"
+translation: "a. 犹太人的, 犹太族的"
+srsWords: "jewish"
 
 [flashcard-review]
 front: "chain"

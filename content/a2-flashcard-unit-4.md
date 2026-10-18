@@ -166,10 +166,10 @@ translation: "n. 方向, 指导, 趋势；[计] 方向; 流向"
 srsWords: "direction"
 
 [flashcard-review]
-front: "disadvantage"
-meaning: "n. the quality of having an inferior or less favorable position; v. put at a disadvantage; hinder, harm"
-translation: "n. 缺点, 不利, 坏处"
-srsWords: "disadvantage"
+front: "nature"
+meaning: "n. the essential qualities or characteristics by which something is recognized; n. a causal agent creating and controlling things in the universe; n. the natural physical world including plants and animals and landscapes etc.; n. the complex of emotional and intellectual attributes that determine a person's characteristic actions and reactions"
+translation: "n. 自然, 大自然, 本性, 性格, 性质；[医] 自然, 大自然; 本性, 性能"
+srsWords: "nature"
 
 [flashcard-review]
 front: "disagree"
@@ -262,10 +262,10 @@ translation: "ad; v. 在市中心；往市中心（尤指商业中心区）; adj
 srsWords: "downtown"
 
 [flashcard-review]
-front: "favorite"
-meaning: "preferred above all others"
-translation: "n. 喜欢的事物, 幸运儿；a. 特别受喜爱的, 喜爱的, 宠爱的, 中意的"
-srsWords: "favorite"
+front: "defense"
+meaning: "n. (military) military action or resources protecting a country against potential enemies; n. protection from harm; n. (sports) the team that is trying to prevent the other team from scoring"
+translation: "n. 防卫, 防卫物；[医] 防御"
+srsWords: "defense"
 
 [flashcard-review]
 front: "drawer"
@@ -286,16 +286,16 @@ translation: "n. 图画；牵引；素描术; v. 拖曳；绘画；吸引（draw
 srsWords: "drawing"
 
 [flashcard-review]
-front: "dream"
-meaning: "a series of thoughts, images, and sensations occurring in a person's mind during sleep"
-translation: "n. 梦, 空想, 愿望；v. 做梦, 想象, 梦想"
-srsWords: "dream"
+front: "zero"
+meaning: "n. a mathematical element that when added to another number yields the same number; n. the point on a scale from which positive or negative numerical quantities can be measured; n. the sight setting that will cause a projectile to hit the center of the target with no wind blowing; v. adjust (an instrument or device) to zero value"
+translation: "n. (数字)零零点，零位；零度没有，无; vi. 把(枪等)直接瞄准[聚焦]…"
+srsWords: "zero"
 
 [flashcard-review]
-front: "dress"
-meaning: "n. a one-piece garment for a woman; has skirt and bodice; v. put on clothes; v. provide with clothes or put clothes on; v. put a finish on"
-translation: "n. 服装, 覆盖物；vi. 穿着；vt. 给...穿衣, 整理"
-srsWords: "dress"
+front: "direct"
+meaning: "v. command with authority; v. guide the actors in (plays and films); v. be in charge of; v. give directions to; point somebody into a certain direction"
+translation: "a. 直接的, 坦白的；vt. 指示, 指挥, 命令, 导演；vi. 指导, 指挥；adv. 直接地"
+srsWords: "direct"
 
 [flashcard-review]
 front: "manager"
@@ -352,10 +352,10 @@ translation: "[药] 药房（常兼售化妆品、杂志等杂货）；（美）
 srsWords: "drugstore"
 
 [flashcard-review]
-front: "dry"
-meaning: "n. a reformer who opposes the use of intoxicating beverages; v. remove the moisture from and make dry; v. become dry or drier; a. free from liquid or moisture; lacking natural or normal moisture or depleted of water; or no longer wet"
-translation: "a. 干的, 无酒的, 枯燥无味的, 干燥的；vt. 把...弄干；vi. 变干；n. 干, 干涸"
-srsWords: "dry"
+front: "behavior"
+meaning: "n. manner of acting or controlling yourself; n. the action or reaction of something (as a machine or substance) under specified circumstances; n. (psychology) the aggregate of the responses or reactions or movements made by an organism in any situation"
+translation: "n. 行为, 举止；[医] 行为"
+srsWords: "behavior"
 
 [flashcard-review]
 front: "duck"
@@ -556,10 +556,10 @@ translation: "vt. 鼓励, 支持, 激励；[法] 怂恿, 煽动, 助长"
 srsWords: "encourage"
 
 [flashcard-review]
-front: "stair"
-meaning: "n support consisting of a place to rest the foot while ascending or descending a stairway"
-translation: "n. 梯级, 楼梯, 阶梯"
-srsWords: "stair"
+front: "shore"
+meaning: "n. the land along the edge of a body of water; n. a beam or timber that is propped against a structure to provide support; v. serve as a shore to"
+translation: "n. 海岸, 海滨, 斜撑柱；vt. 把...送上岸, 支撑, 支持"
+srsWords: "shore"
 
 [flashcard-review]
 front: "opinion"

@@ -124,10 +124,10 @@ translation: "n. 城市, 市；[法] 都市, 城市, 市"
 srsWords: "city"
 
 [flashcard-review]
-front: "classmate"
-meaning: "n an acquaintance that you go to school with"
-translation: "n.（同班）同学,级友"
-srsWords: "classmate"
+front: "connection"
+meaning: "n. a relation between things or events (as in the case of one causing the other or sharing features with it); n. the state of being connected; n. an instrumentality that connects; n. (usually plural) a person who is influential and to whom you are connected in some way (as by family or friendship)"
+translation: "n. 连接, 关系, 前后关系；[计] 连接"
+srsWords: "connection"
 
 [flashcard-review]
 front: "classroom"
@@ -196,10 +196,10 @@ translation: "n. 云, 阴暗, 烟雾, 疑团；vt. 以云遮敝, 笼罩, 使黯�
 srsWords: "cloud"
 
 [flashcard-review]
-front: "cloudy"
-meaning: "s. lacking definite form or limits; a. full of or covered with clouds; s. (of liquids) clouded as with sediment"
-translation: "adj.多云的,阴天的,朦胧的,愁容满面的"
-srsWords: "cloudy"
+front: "second"
+meaning: "next after the first"
+translation: "n. 秒, 瞬间, 第二名, 支持者, 助手；a. 第二的, 其次的, 次要的, 附加的, 辅助的；num. 第二；vt. 当...助手, 支持"
+srsWords: "second"
 
 [flashcard-review]
 front: "coat"
@@ -430,10 +430,10 @@ translation: "vt. 告诉, 说, 吩咐, 断定, 知道；vi. 讲述, 泄密, 告�
 srsWords: "tell"
 
 [flashcard-review]
-front: "dictionary"
-meaning: "n. a reference book containing an alphabetical list of words with information about them"
-translation: "n.词典，字典,自代码字典"
-srsWords: "dictionary"
+front: "water"
+meaning: "n. binary compound that occurs at room temperature as a clear colorless odorless tasteless liquid; freezes into ice below 0 degrees centigrade and boils above 100 degrees centigrade; widely used as a solvent; n. once thought to be one of four elements composing the universe (Empedocles); n. a liquid necessary for the life of most animals and plants; v. supply with water, as with channels or ditches or streams"
+translation: "n. 水, 雨水, 海水, 水位, 水面, 流水；vt. 给...浇水, 供以水, 注入水, 使湿；vi. 流泪, 流口水, 加水；a. 水的, 水上的, 水生的, 含水的"
+srsWords: "water"
 
 [flashcard-review]
 front: "exercise"
@@ -652,10 +652,10 @@ translation: "n. 十八，十八个; adj. 十八个的，十八的; num. 十八�
 srsWords: "eighteen"
 
 [flashcard-review]
-front: "eighty"
-meaning: "the number 80"
-translation: "num.八十n.八十,八十年代,八十岁adj.八十的,八十个的,八十岁的"
-srsWords: "eighty"
+front: "point"
+meaning: "specific position or idea"
+translation: "n. 点, 小数点, 标点, 地点, 要点, 特点, 尖端, 分数, 得分, 穴位；vt. 弄尖, 强调, 指出, 加标点于, 瞄准；vi. 指, 指向, 表明"
+srsWords: "point"
 
 [flashcard-review]
 front: "elementary"

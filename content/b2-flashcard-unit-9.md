@@ -74,6 +74,7 @@ front: "gook"
 meaning: "n. (slang) a disparaging term for an Asian person (especially for North Vietnamese soldiers in the Vietnam War)"
 translation: "n. 污物, 粘性物质, 畸形人, 亚洲佬(对韩、日等国人的轻蔑称呼)"
 srsWords: "gook"
+
 ---
 lessonTitle: "Lesson 2: Workplace, Management & Strategy Part 2"
 description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
@@ -111,10 +112,10 @@ translation: "n. 谷粒, 颗粒, 谷类, 纹理, 本质；v. (使)成谷粒"
 srsWords: "grain"
 
 [flashcard-review]
-front: "grand"
-meaning: "s. large and impressive in physical size or extent; s. the most important and magnificent in adornment"
-translation: "a. 庄重的, 壮观的, 显赫的, 重大的, 最高的, 雄伟的, 宏大的, 豪华的, 傲慢的；[法] 重大的, 主要的, 伟大的"
-srsWords: "grand"
+front: "occupational"
+meaning: "a. of or relating to the activity or business for which you are trained"
+translation: "a. 职业的, 军事占领的；[医] 职业的"
+srsWords: "occupational"
 
 [flashcard-review]
 front: "graphically"
@@ -139,6 +140,7 @@ front: "gravitation"
 meaning: "n. movement downward resulting from gravitational attraction; n. a figurative movement toward some attraction"
 translation: "n. 引力, 重力, 沉下；[化] 引力"
 srsWords: "gravitation"
+
 ---
 lessonTitle: "Lesson 3: Workplace, Management & Strategy Part 3"
 description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
@@ -182,16 +184,16 @@ translation: "n. 紧握, 柄, 握力, 握手方式, 手提包, 掌握, 支配, �
 srsWords: "grip"
 
 [flashcard-review]
-front: "gross"
-meaning: "n. twelve dozen; n. the entire amount of income before any deductions are made; v. earn before taxes, expenses, etc.; a. before any deductions"
-translation: "n. 总数, 总量；a. 总共的, 未打折扣的, 恶劣的, 粗野的；vt. 总共收入"
-srsWords: "gross"
+front: "appliance"
+meaning: "n. a device or control that is very useful for a particular job; n. durable goods for home or office use"
+translation: "n. 器械, 用具, 应用；[医] 矫正器; 器"
+srsWords: "appliance"
 
 [flashcard-review]
-front: "growing"
-meaning: "n. (electronics) the production of (semiconductor) crystals by slow crystallization from the molten state; a. relating to or suitable for growth"
-translation: "a. 成长的"
-srsWords: "growing"
+front: "ensemble"
+meaning: "n. a group of musicians playing or singing together; n. a cast other than the principals; n. an assemblage of parts or details (as in a work of art) considered as forming a whole; n. a coordinated outfit (set of clothing)"
+translation: "n. 全体, 合唱曲, (女人的)全套服装；[化] 总体; 整体; 系综"
+srsWords: "ensemble"
 
 [flashcard-review]
 front: "guerrilla"
@@ -204,6 +206,7 @@ front: "guideline"
 meaning: "n. a light line that is used in lettering to help align the letters"
 translation: "n. 指导路线, 方针, 指标；[经] 指导路线, 方针, 准则"
 srsWords: "guideline"
+
 ---
 lessonTitle: "Lesson 4: Workplace, Management & Strategy Part 4"
 description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
@@ -253,10 +256,10 @@ translation: "n. 冰雹, 致敬, 欢呼, 招呼；vt. 向...欢呼, 致敬, 招�
 srsWords: "hail"
 
 [flashcard-review]
-front: "hairy"
-meaning: "a. having or covered with hair; s. hazardous and frightening"
-translation: "a. 多毛的, 毛状的, 长毛的"
-srsWords: "hairy"
+front: "firewall"
+meaning: "n. (colloquial) the application of maximum thrust; n. (computing) a security system consisting of a combination of hardware and software that limits the exposure of a computer or computer network to attack from crackers; commonly used on local area networks that are connected to the internet; n. a fireproof (or fire-resistant) wall designed to prevent the spread of fire through a building or a vehicle"
+translation: "[计] 放火墙, 隔离"
+srsWords: "firewall"
 
 [flashcard-review]
 front: "handicap"
@@ -269,6 +272,7 @@ front: "handicraft"
 meaning: "n. a work produced by hand labor; n. a craft that requires skillful hands"
 translation: "n. 手工艺, 手艺；[经] 手工业, 手工"
 srsWords: "handicraft"
+
 ---
 lessonTitle: "Lesson 5: Workplace, Management & Strategy Part 5"
 description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
@@ -288,10 +292,10 @@ translation: "n. 栏杆, 扶手"
 srsWords: "handrail"
 
 [flashcard-review]
-front: "hardware"
-meaning: "n. major items of military weaponry (as tanks or missile); n. instrumentalities (tools or implements) made of metal; n. (computer science) the mechanical, magnetic, electronic, and electrical components making up a computer system"
-translation: "n. 硬件, 五金器具, 零件；[计] 硬件"
-srsWords: "hardware"
+front: "practitioner"
+meaning: "n. someone who practices a learned profession"
+translation: "n. 从业者, 开业者；[医] 行医者, 医师"
+srsWords: "practitioner"
 
 [flashcard-review]
 front: "harmless"
@@ -334,6 +338,7 @@ front: "hay"
 meaning: "n. grass mowed and cured for use as fodder; v. convert (plant material) into hay"
 translation: "n. 干草；vt. 制干草, 供给干草；vi. 晒干草"
 srsWords: "hay"
+
 ---
 lessonTitle: "Lesson 6: Workplace, Management & Strategy Part 6"
 description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
@@ -399,6 +404,7 @@ front: "herb"
 meaning: "n. a plant lacking a permanent woody stem; many are flowering garden plants or potherbs; some having medicinal properties; some are pests; n. aromatic potherb used in cookery for its savory qualities"
 translation: "n. 药草, 香草；[医] 草, 草本, 草药"
 srsWords: "herb"
+
 ---
 lessonTitle: "Lesson 7: Workplace, Management & Strategy Part 7"
 description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
@@ -406,10 +412,10 @@ icon: "📊"
 color: "#2196F3"
 ---
 [flashcard-review]
-front: "heritage"
-meaning: "n. practices that are handed down from the past by tradition"
-translation: "n. 遗产, 祖先遗留物, 继承物；[医] 遗传性"
-srsWords: "heritage"
+front: "arbitration"
+meaning: "n. (law) the hearing and determination of a dispute by an impartial referee agreed to by both parties (often used to settle disputes between labor and management); n. the act of deciding as an arbiter; giving authoritative judgment"
+translation: "n. 仲裁, 公断；[计] 仲裁"
+srsWords: "arbitration"
 
 [flashcard-review]
 front: "hesitation"
@@ -436,10 +442,10 @@ translation: "n. 暗示, 提示；v. 暗示, 示意"
 srsWords: "hint"
 
 [flashcard-review]
-front: "holder"
-meaning: "n. a holding device; n. a person who holds something; n. the person who is in possession of a check or note or bond or document of title that is endorsed to him or to whoever holds it"
-translation: "n. 持有人, 所有人, 支持物；[化] 夹持器; 夹具; 贮罐"
-srsWords: "holder"
+front: "wifi"
+meaning: "n a local area network that uses high frequency radio signals to transmit and receive data over distances of a few hundred feet; uses ethernet protocol"
+translation: "abbr. 基于IEEE 802.11b标准的无线局域网（Wireless Fidelity）；无线网络模块"
+srsWords: "wifi"
 
 [flashcard-review]
 front: "hollow"
@@ -464,6 +470,7 @@ front: "hone"
 meaning: "n. a whetstone made of fine gritstone; used for sharpening razors; v. sharpen with a hone"
 translation: "n. 磨刀石, 抱怨, 想念；vt. 用磨刀石磨, 磨练"
 srsWords: "hone"
+
 ---
 lessonTitle: "Lesson 8: Workplace, Management & Strategy Part 8"
 description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
@@ -529,6 +536,7 @@ front: "hugely"
 meaning: "r extremely"
 translation: "adv. 巨大地, 非常地"
 srsWords: "hugely"
+
 ---
 lessonTitle: "Lesson 9: Workplace, Management & Strategy Part 9"
 description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
@@ -572,10 +580,10 @@ translation: "n. 耻辱, 丢脸, 谦卑"
 srsWords: "humiliation"
 
 [flashcard-review]
-front: "hunting"
-meaning: "n the pursuit and killing or capture of wild animals regarded as a sport; n the activity of looking thoroughly in order to find something or someone; n the work of finding and killing or capturing animals for food or pelts; v pursue for food or sport (as of wild animals); v pursue or chase relentlessly; v chase away, with as with force; v yaw back and forth about a flight path; v oscillate about a desired speed, position, or state to an undesirable extent; v seek, search for; v search (an area) for prey"
-translation: "n. 狩猎, 猎狐, 探求；[计] 寻找平衡; 寻找"
-srsWords: "hunting"
+front: "vocational"
+meaning: "a. of or relating to a vocation or occupation; especially providing or undergoing training in special skills"
+translation: "a. 职业的；[法] 职业上的, 天职的"
+srsWords: "vocational"
 
 [flashcard-review]
 front: "hush"
@@ -584,16 +592,17 @@ translation: "n. 肃静, 安静, 沉默；vt. (使)肃静, (使)安静, (使)缄
 srsWords: "hush"
 
 [flashcard-review]
-front: "hybrid"
-meaning: "n. a composite of mixed origin; n. (genetics) an organism that is the offspring of genetically dissimilar parents or stock; especially offspring produced by breeding plants or animals of different varieties or breeds or species; s. produced by crossbreeding"
-translation: "n. 混血儿, 杂种, 混合物；a. 混合的, 杂种的, 混合语的；[计] NetWare的主机实用程序, 双重用户建立程序"
-srsWords: "hybrid"
+front: "friendliness"
+meaning: "n. a feeling of liking for another person; enjoyment in their company; n. a friendly disposition"
+translation: "n. 友谊, 亲切, 亲密"
+srsWords: "friendliness"
 
 [flashcard-review]
 front: "hygiene"
 meaning: "n. a condition promoting sanitary practices; n. the science concerned with the prevention of illness and maintenance of health"
 translation: "n. 卫生保健, 卫生学, 保健法；[医] 卫生, 卫生学"
 srsWords: "hygiene"
+
 ---
 lessonTitle: "Lesson 10: Workplace, Management & Strategy Part 10"
 description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
@@ -619,10 +628,10 @@ translation: "n. 零售冰的人, 制冰的人"
 srsWords: "iceman"
 
 [flashcard-review]
-front: "icon"
-meaning: "n. (computer science) a graphic symbol (usually a simple picture) that denotes a program or a command or a data file or a concept in a graphical user interface; n. a conventional religious painting in oil on a small wooden panel; venerated in the Eastern Church"
-translation: "n. 画像, 肖像, 偶像, 图标, 像标；[计] 像标, 图标"
-srsWords: "icon"
+front: "acoustic"
+meaning: "n. a remedy for hearing loss or deafness; a. of or relating to the science of acoustics"
+translation: "a. 听觉的, 声学的, 音响的；[医] 听的; 声学的"
+srsWords: "acoustic"
 
 [flashcard-review]
 front: "icy"
@@ -643,16 +652,16 @@ translation: "a. 同一的, 恒等的, 完全相同的；[医] 同一的, 同等
 srsWords: "identical"
 
 [flashcard-review]
-front: "identification"
-meaning: "n. evidence of identity; something that identifies a person or thing; n. the condition of having the identity (of a person or object) established; n. the attribution to yourself (consciously or unconsciously) of the characteristics of another person (or group of persons)"
-translation: "n. 识别, 身份证明, 认同；[化] 鉴定; 鉴别; 鉴别法; 认证"
-srsWords: "identification"
+front: "complimentary"
+meaning: "a. conveying or resembling a compliment; s. costing nothing"
+translation: "a. 问候的, 称赞的, 夸奖的"
+srsWords: "complimentary"
 
 [flashcard-review]
-front: "identify"
-meaning: "v. recognize as being; establish the identity of someone or something; v. consider (oneself) as similar to somebody else; v. conceive of as united or associated; v. identify as in botany or biology, for example"
-translation: "vt. 识别, 认为...等同于, 确定, 使参与；vi. 一致, 认同"
-srsWords: "identify"
+front: "likelihood"
+meaning: "n. the probability of a specified outcome"
+translation: "n. 可能, 可能性"
+srsWords: "likelihood"
 
 [flashcard-review]
 front: "ideology"

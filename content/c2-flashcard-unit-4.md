@@ -74,6 +74,7 @@ front: "demystification"
 meaning: "demystification"
 translation: "n. 非神秘化启蒙,启发"
 srsWords: "demystification"
+
 ---
 lessonTitle: "Lesson 2: Jurisprudence, Equity & Doctrine Part 2"
 description: "Practice 10 key C2 vocabulary flashcards for Jurisprudence, Equity & Doctrine"
@@ -81,10 +82,10 @@ icon: "🏛️"
 color: "#795548"
 ---
 [flashcard-review]
-front: "proprietary"
-meaning: "a. protected by trademark or patent or copyright; made or produced or distributed by one having exclusive rights"
-translation: "a. 所有者的, 所有权的, 私有的；n. 所有者, 业主, 所有权"
-srsWords: "proprietary"
+front: "cardiologist"
+meaning: "n. a specialist in cardiology; a specialist in the structure and function and disorders of the heart"
+translation: "n. 心脏病学家；[医] 心[脏]病学家"
+srsWords: "cardiologist"
 
 [flashcard-review]
 front: "proprietorial"
@@ -135,10 +136,11 @@ translation: "n. 推荐广告；vt. 推荐吹捧"
 srsWords: "blurb"
 
 [flashcard-review]
-front: "provincial"
-meaning: "n. (Roman Catholic Church) an official in charge of an ecclesiastical province acting under the superior general of a religious order; a. of or associated with a province; a. characteristic of the provinces or their people"
-translation: "n. 外地人, 粗野的人；a. 省的, 外地的, 偏狭的"
-srsWords: "provincial"
+front: "tambourine"
+meaning: "n. a shallow drum with a single drumhead and with metallic disks in the sides"
+translation: "n. 小手鼓"
+srsWords: "tambourine"
+
 ---
 lessonTitle: "Lesson 3: Jurisprudence, Equity & Doctrine Part 3"
 description: "Practice 10 key C2 vocabulary flashcards for Jurisprudence, Equity & Doctrine"
@@ -164,10 +166,10 @@ translation: "n. 怠惰, 无痛；[医] 无痛"
 srsWords: "indolence"
 
 [flashcard-review]
-front: "deviant"
-meaning: "n a person whose behavior deviates from what is acceptable especially in sexual behavior; s markedly different from an accepted norm"
-translation: "a. 不正常的；n. 不正常的人(或物)"
-srsWords: "deviant"
+front: "venerable"
+meaning: "s. impressive by reason of age"
+translation: "a. 庄严的, 值得尊敬的"
+srsWords: "venerable"
 
 [flashcard-review]
 front: "deviantly"
@@ -204,6 +206,7 @@ front: "venomous"
 meaning: "s extremely poisonous or injurious; producing venom; s marked by deep ill will; deliberately harmful"
 translation: "a. 有毒的, 恶毒的, 分泌毒液的, 有毒腺的；[医] 毒的, 有毒的"
 srsWords: "venomous"
+
 ---
 lessonTitle: "Lesson 4: Jurisprudence, Equity & Doctrine Part 4"
 description: "Practice 10 key C2 vocabulary flashcards for Jurisprudence, Equity & Doctrine"
@@ -269,6 +272,7 @@ front: "hitherto"
 meaning: "r used in negative statement to describe a situation that has existed up to this point or up to the present time"
 translation: "adv. 迄今, 至今"
 srsWords: "hitherto"
+
 ---
 lessonTitle: "Lesson 5: Jurisprudence, Equity & Doctrine Part 5"
 description: "Practice 10 key C2 vocabulary flashcards for Jurisprudence, Equity & Doctrine"
@@ -334,6 +338,7 @@ front: "brink"
 meaning: "n. a region marking a boundary; n. the edge of a steep place"
 translation: "n. 边缘, 陡岸"
 srsWords: "brink"
+
 ---
 lessonTitle: "Lesson 6: Jurisprudence, Equity & Doctrine Part 6"
 description: "Practice 10 key C2 vocabulary flashcards for Jurisprudence, Equity & Doctrine"
@@ -371,10 +376,10 @@ translation: "[计] 本质的"
 srsWords: "intrinsically"
 
 [flashcard-review]
-front: "merit"
-meaning: "n. any admirable quality or attribute"
-translation: "n. 优点, 功绩, 价值, 功过, 真相；vt. 值得；vi. 应受"
-srsWords: "merit"
+front: "wanton"
+meaning: "n. lewd or lascivious woman; v. indulge in a carefree or voluptuous way of life; v. spend wastefully; v. engage in amorous play"
+translation: "n. 荡妇, 水性杨花的女人；a. 恶意的, 不负责任的, 无节制的, 嬉戏的, 繁茂的, 淫荡的；vi. 变化无常, 嬉戏, 闲荡, 放肆；vt. 挥霍"
+srsWords: "wanton"
 
 [flashcard-review]
 front: "promotable"
@@ -399,6 +404,7 @@ front: "splinter"
 meaning: "n. a small thin sharp bit or wood or glass or metal; v. break up into splinters or slivers"
 translation: "n. 碎片, 尖片, 分裂出来的小派别, 微小的东西；v. 使分裂, (使)破裂"
 srsWords: "splinter"
+
 ---
 lessonTitle: "Lesson 7: Jurisprudence, Equity & Doctrine Part 7"
 description: "Practice 10 key C2 vocabulary flashcards for Jurisprudence, Equity & Doctrine"
@@ -464,6 +470,7 @@ front: "mutinous"
 meaning: "s. disposed to or in a state of mutiny; s. consisting of or characterized by or inciting to mutiny"
 translation: "a. 暴动的, 反抗的"
 srsWords: "mutinous"
+
 ---
 lessonTitle: "Lesson 8: Jurisprudence, Equity & Doctrine Part 8"
 description: "Practice 10 key C2 vocabulary flashcards for Jurisprudence, Equity & Doctrine"
@@ -529,6 +536,7 @@ front: "nonchalant"
 meaning: "s marked by blithe unconcern"
 translation: "a. 不关心的, 冷淡的, 无动于衷的"
 srsWords: "nonchalant"
+
 ---
 lessonTitle: "Lesson 9: Jurisprudence, Equity & Doctrine Part 9"
 description: "Practice 10 key C2 vocabulary flashcards for Jurisprudence, Equity & Doctrine"
@@ -594,6 +602,7 @@ front: "ebb"
 meaning: "n. a gradual decline (in size or strength or power or number); n. the outward flow of the tide; v. flow back or recede"
 translation: "n. 退潮, 衰退；vi. 潮退, 衰退"
 srsWords: "ebb"
+
 ---
 lessonTitle: "Lesson 10: Jurisprudence, Equity & Doctrine Part 10"
 description: "Practice 10 key C2 vocabulary flashcards for Jurisprudence, Equity & Doctrine"

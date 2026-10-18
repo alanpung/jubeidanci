@@ -52,10 +52,10 @@ translation: "adv. 刚刚, 几乎不, 勉强是"
 srsWords: "hardly"
 
 [flashcard-review]
-front: "vanilla"
-meaning: "n. any of numerous climbing plants of the genus Vanilla having fleshy leaves and clusters of large waxy highly fragrant white or green or topaz flowers; n. a flavoring prepared from vanilla beans macerated in alcohol (or imitating vanilla beans); n. a distinctive fragrant flavor characteristic of vanilla beans"
-translation: "n. 香草, 香子兰"
-srsWords: "vanilla"
+front: "dutch"
+meaning: "n. the people of the Netherlands; n. the West Germanic language of the Netherlands; a. of or relating to the Netherlands or its people or culture"
+translation: "n. 荷兰人, 荷兰语；a. 荷兰的"
+srsWords: "dutch"
 
 [flashcard-review]
 front: "pc"
@@ -94,10 +94,10 @@ translation: "a. 不知道的, 未知的, 陌生的；n. 未知物, 未知数"
 srsWords: "unknown"
 
 [flashcard-review]
-front: "toddler"
-meaning: "n. a young child"
-translation: "n. 蹒跚行走的人, 学步的小孩, 学步的幼儿, (非正式)信步走的人"
-srsWords: "toddler"
+front: "increasing"
+meaning: "a. becoming greater or larger; a. music"
+translation: "[经] 递增"
+srsWords: "increasing"
 
 [flashcard-review]
 front: "pilot"
@@ -106,22 +106,22 @@ translation: "n. 飞行员, 领航员, 航船者, 导向器, 驾驶仪, 向导, 
 srsWords: "pilot"
 
 [flashcard-review]
-front: "matter"
-meaning: "a subject or situation"
-translation: "n. 事件, 物质, 原因, 素材, 实体, 重要；vi. 有关系"
-srsWords: "matter"
+front: "wisdom"
+meaning: "n. accumulated knowledge or erudition or enlightenment; n. the trait of utilizing knowledge and experience with common sense and insight; n. ability to apply knowledge or experience or understanding or common sense and insight; n. the quality of being prudent and sensible"
+translation: "n. 智慧, 明智行为, 学识, 名言, 贤人"
+srsWords: "wisdom"
 
 [flashcard-review]
-front: "pink"
-meaning: "a pale red color"
-translation: "n. 粉红色, 石竹花, 化身, 典范, 头面人物, 极度；a. 粉红的, 石竹科的, 比较激进的, 脸色发红的, 精致的, 有点下流的；vt. 刺, 扎, 刺痛, 射伤, 使面红耳赤, 使变粉红色；vi. 变粉红色"
-srsWords: "pink"
+front: "cellphone"
+meaning: "n a hand-held mobile radiotelephone for use in an area divided into small sections, each with its own short-range transmitter/receiver"
+translation: "n. 蜂窝式便携无线电话；大哥大"
+srsWords: "cellphone"
 
 [flashcard-review]
-front: "recognize"
-meaning: "identify"
-translation: "vt. 认出, 认可, 承认, 公认, 识别, 赏识；vi. 承认, 具结"
-srsWords: "recognize"
+front: "physically"
+meaning: "r. in accord with physical laws"
+translation: "adv. 按自然规律, 完全地, 实际上, 真正地, 身体上地"
+srsWords: "physically"
 
 [flashcard-review]
 front: "regularly"
@@ -154,10 +154,10 @@ translation: "n. 校园, 大学生活"
 srsWords: "campus"
 
 [flashcard-review]
-front: "nickel"
-meaning: "n. a hard malleable ductile silvery metallic element that is resistant to corrosion; used in alloys; occurs in pentlandite and smaltite and garnierite and millerite; n. a United States coin worth one twentieth of a dollar; n. five dollars worth of a drug; v. plate with nickel"
-translation: "n. 镍, 镍币, 五分镍币；vt. 镀镍于"
-srsWords: "nickel"
+front: "portrait"
+meaning: "n. any likeness of a person, in any medium"
+translation: "n. 肖像, 人像, 半身像, 描写, 竖排格式；[计] 纵向"
+srsWords: "portrait"
 
 [flashcard-review]
 front: "quiz"
@@ -172,10 +172,10 @@ translation: "n. 奖牌, 勋章；vt. 授勋予"
 srsWords: "medal"
 
 [flashcard-review]
-front: "injure"
-meaning: "cause harm or damage to"
-translation: "vt. 伤害, 损害, 使受冤屈；[医] 损伤"
-srsWords: "injure"
+front: "pursue"
+meaning: "v. follow in or as if in pursuit; v. carry further or advance"
+translation: "vt. 追赶, 追踪, 追随, 追求, 实行, 继续, 从事；vi. 追赶, 继续"
+srsWords: "pursue"
 
 [flashcard-review]
 front: "oppose"
@@ -262,10 +262,10 @@ translation: "n. 词汇(量), 词汇表；[计] 词表"
 srsWords: "vocabulary"
 
 [flashcard-review]
-front: "homemade"
-meaning: "a. made or produced in the home or by yourself"
-translation: "a. 自制的, 国产的"
-srsWords: "homemade"
+front: "suitable"
+meaning: "s. meant or adapted for an occasion or use"
+translation: "a. 适当的, 相配的；[法] 合适的, 适宜的, 适当的"
+srsWords: "suitable"
 
 [flashcard-review]
 front: "gallery"
@@ -280,10 +280,10 @@ icon: "🎨"
 color: "#673AB7"
 ---
 [flashcard-review]
-front: "pony"
-meaning: "n. a range horse of the western United States; n. an informal term for a racehorse; n. a literal translation used in studying a foreign language (often used illicitly); n. any of various breeds of small gentle horses usually less than five feet high at the shoulder"
-translation: "n. 矮种马；v. 借助逐字直译文翻译；a. 小型的, 每日摘要的"
-srsWords: "pony"
+front: "chart"
+meaning: "n. a visual display of information; n. a map designed to assist navigation by air or sea; v. make a chart of; v. plan in detail"
+translation: "n. 图表, 海图；vt. 制成图表；[计] 图表"
+srsWords: "chart"
 
 [flashcard-review]
 front: "junior"
@@ -292,16 +292,16 @@ translation: "n. 年少者, 地位较低者, 大学三年级学生；a. 年少�
 srsWords: "junior"
 
 [flashcard-review]
-front: "austrian"
-meaning: "n. a native or inhabitant of Austria; a. of or relating to Austria or its people or culture"
-translation: "n. 奥地利人；a. 奥地利的, 奥地利人的"
-srsWords: "austrian"
+front: "satisfy"
+meaning: "v. meet the requirements or expectations of; v. make happy or satisfied"
+translation: "vt. 使满意, 满足, 符合, 使确信, 赔偿；vi. 令人满意, 替人赎罪"
+srsWords: "satisfy"
 
 [flashcard-review]
-front: "meter"
-meaning: "unit of length; measuring device"
-translation: "n. 米；仪表；[计量] 公尺；韵律 vt. 用仪表测量 vi. 用表计量 n. (Meter)人名；(英)米特；(塞)梅特"
-srsWords: "meter"
+front: "reflect"
+meaning: "v. manifest or bring back; v. to throw or bend back (from a surface); v. be bright by reflecting or casting light; v. show an image of"
+translation: "vt. 反射, 反映, 招致, 深思；vi. 被反射, 映出, 深思, 考虑, 指责"
+srsWords: "reflect"
 
 [flashcard-review]
 front: "pride"
@@ -310,10 +310,10 @@ translation: "n. 骄傲, 自尊心, 自豪, 精华, 勇气；vt. 以...自豪"
 srsWords: "pride"
 
 [flashcard-review]
-front: "metre"
-meaning: "the fundamental unit of length in the metric system, equal to 100 centimeters"
-translation: "n. 米；公尺；韵律 n. (Metre)人名；(英)米特"
-srsWords: "metre"
+front: "automatically"
+meaning: "r. in a reflex manner"
+translation: "adv. 自动地, 机械地"
+srsWords: "automatically"
 
 [flashcard-review]
 front: "midday"
@@ -328,10 +328,10 @@ translation: "n. 说话人, 讲演者, 发言人, 喇叭, 扬声器；[计] 扬�
 srsWords: "speaker"
 
 [flashcard-review]
-front: "middle"
-meaning: "center; intermediate"
-translation: "n. 中央, 中间, 腰部；a. 中央的, 中庸的, 中间的"
-srsWords: "middle"
+front: "partly"
+meaning: "r in part; in some degree; not wholly"
+translation: "adv. 部分地, 在一定程度上"
+srsWords: "partly"
 
 [flashcard-review]
 front: "midnight"
@@ -352,10 +352,10 @@ translation: "n. 参观者, 游客, 访客；[法] 视察人, 检视人, 检查�
 srsWords: "visitor"
 
 [flashcard-review]
-front: "pant"
-meaning: "a single leg covering (usually plural 'pants')"
-translation: "n. 喘息, 悸动；vi. 喘息, 渴望；vt. 气喘吁吁地说"
-srsWords: "pant"
+front: "seventeen"
+meaning: "n. the cardinal number that is the sum of sixteen and one; s. being one more than sixteen"
+translation: "num. 十七, 十七个"
+srsWords: "seventeen"
 
 [flashcard-review]
 front: "audio"
@@ -364,10 +364,10 @@ translation: "a. 音频的, 声音的；[电] 声频"
 srsWords: "audio"
 
 [flashcard-review]
-front: "glue"
-meaning: "n. cement consisting of a sticky substance that is used as an adhesive; v. join or attach with or as if with glue; v. be fixed as if by glue"
-translation: "n. 胶, 粘性物；vt. 粘合, 胶合"
-srsWords: "glue"
+front: "hamburger"
+meaning: "a patty of ground beef, usually served in a bun"
+translation: "汉堡包，火腿汉堡；牛肉饼，肉饼；碎牛肉"
+srsWords: "hamburger"
 
 [flashcard-review]
 front: "psychologist"
@@ -394,10 +394,10 @@ translation: "n. 伤害, 害处；vt. 伤害, 损害"
 srsWords: "harm"
 
 [flashcard-review]
-front: "twentieth"
-meaning: "n. position 20 in a countable series of things; s. coming next after the nineteenth in position"
-translation: "num. 第二十, 二十分之一"
-srsWords: "twentieth"
+front: "biscuit"
+meaning: "a small, flat, baked cake, typically crisp and sweet"
+translation: "n.<英>饼干,<美>软烤饼,松饼（食用时常佐以肉汁）,淡黄褐色"
+srsWords: "biscuit"
 
 [flashcard-review]
 front: "mirror"
@@ -436,10 +436,10 @@ translation: "n. 漂洗工, 套柄铁锤；[机] 半圆型锤"
 srsWords: "fuller"
 
 [flashcard-review]
-front: "kindergarten"
-meaning: "n. a preschool for children age 4 to 6 to prepare them for primary school"
-translation: "n. 幼稚园"
-srsWords: "kindergarten"
+front: "dictionary"
+meaning: "n. a reference book containing an alphabetical list of words with information about them"
+translation: "n.词典，字典,自代码字典"
+srsWords: "dictionary"
 
 [flashcard-review]
 front: "playground"
@@ -454,10 +454,10 @@ translation: "n. 毛衣, 毛线衫, 运动衫, 出汗者；[化] 发汗器"
 srsWords: "sweater"
 
 [flashcard-review]
-front: "tractor"
-meaning: "n. a wheeled vehicle with large wheels; used in farming and other applications; n. a truck that has a cab but no body; used for pulling large trailers or vans"
-translation: "n. 牵引器, 拖拉机, 拉纸器；[计] 进纸器"
-srsWords: "tractor"
+front: "apron"
+meaning: "n. a garment of cloth or leather or plastic that is tied about the waist and worn to protect your clothing; n. (golf) the part of the fairway leading onto the green; n. a paved surface where aircraft stand while not being used"
+translation: "n.围裙,航 停机坪,机（防护）挡板,舞台口vt.用围裙围住,围绕"
+srsWords: "apron"
 
 [flashcard-review]
 front: "symphony"
@@ -478,10 +478,10 @@ icon: "🎨"
 color: "#673AB7"
 ---
 [flashcard-review]
-front: "dice"
-meaning: "v. play dice"
-translation: "n. 骰子；vt. 切成方块；vi. 掷骰子"
-srsWords: "dice"
+front: "grape"
+meaning: "n. any of various juicy fruit of the genus Vitis with green or purple skins; grow in clusters; n. any of numerous woody vines of genus Vitis bearing clusters of edible berries"
+translation: "n. 葡萄；葡萄酒；葡萄树；葡萄色 n. (Grape)人名；(法)格拉普；(德、瑞典)格拉佩"
+srsWords: "grape"
 
 [flashcard-review]
 front: "silence"
@@ -496,10 +496,10 @@ translation: "a. 暴力的, 猛烈的, 激烈的, 极端的, 凶暴的"
 srsWords: "violent"
 
 [flashcard-review]
-front: "nineteenth"
-meaning: "n. position 19 in a countable series of things; s. coming next after the eighteenth in position"
-translation: "num. 第十九, 十九分之一"
-srsWords: "nineteenth"
+front: "pollution"
+meaning: "n. undesirable state of the natural environment being contaminated with harmful substances as a consequence of human activities"
+translation: "n. 污染；污染物；噪音污染，（夜间扰人的）强烈灯光"
+srsWords: "pollution"
 
 [flashcard-review]
 front: "mood"
@@ -508,22 +508,22 @@ translation: "n. 情绪，语气；心境；气氛 n. (Mood)人名；(英)穆德
 srsWords: "mood"
 
 [flashcard-review]
-front: "recycle"
-meaning: "v. cause to repeat a cycle; v. use again after processing"
-translation: "vt. 使再循环, 重新利用, 再制；n. 再循环"
-srsWords: "recycle"
+front: "progressive"
+meaning: "n. a tense of verbs used in describing action that is on-going; a. favoring or promoting progress; s. favoring or promoting reform (often by government action); a. (of taxes) adjusted so that the rate increases as the amount of income increases"
+translation: "n. 改革论者, 进步论者；a. 前进的, 累进的, 进步的"
+srsWords: "progressive"
 
 [flashcard-review]
-front: "syrup"
-meaning: "n. a thick sweet sticky liquid"
-translation: "n. 糖浆, 果汁；[化] 糖浆剂"
-srsWords: "syrup"
+front: "rugby"
+meaning: "n. a form of football played with an oval ball"
+translation: "n. 橄榄球, 橄榄球赛"
+srsWords: "rugby"
 
 [flashcard-review]
-front: "username"
-meaning: "a name used to identify a user"
-translation: "n. [计]由字母或数字组成的用户名称, 以标明用户的身份"
-srsWords: "username"
+front: "interviewer"
+meaning: "n. a person who conducts an interview"
+translation: "n. 采访者；会见者；面谈者；进行面试者"
+srsWords: "interviewer"
 
 [flashcard-review]
 front: "math"
@@ -574,10 +574,10 @@ translation: "a. 不寻常的, 罕见的, 与众不同的"
 srsWords: "unusual"
 
 [flashcard-review]
-front: "motorway"
-meaning: "n a broad highway designed for high-speed traffic"
-translation: "n. 高速公路，汽车高速公路"
-srsWords: "motorway"
+front: "seventy"
+meaning: "n. the cardinal number that is the product of ten and seven; s. being ten more than sixty"
+translation: "num. 七十, 七十个"
+srsWords: "seventy"
 
 [flashcard-review]
 front: "perfume"
@@ -586,22 +586,22 @@ translation: "n. 香水, 香气, (悦人的)气氛, 美名；vt. 洒香水于, �
 srsWords: "perfume"
 
 [flashcard-review]
-front: "move"
-meaning: "n. the act of deciding to do something; n. the act of changing your residence or place of business; n. (game) a player's turn to take some action permitted by the rules of the game; v. cause to move or shift into a new position or place, both in a concrete and in an abstract sense"
-translation: "n. 移动, 迁居, 步骤；vt. 移动, 开动, 感动, 搬(家)；vi. 移动, 离开, 运行, 迁移, 摇动, 搬家, 交往, 进展, 脱手；[计] 移动; 传送; DOS外部命令:移动文件, 它可将文件移动到指定的地方"
-srsWords: "move"
+front: "drying"
+meaning: "v remove the moisture from and make dry; v become dry or drier"
+translation: "[计] 干燥的；[化] 干燥"
+srsWords: "drying"
 
 [flashcard-review]
-front: "selfie"
-meaning: "n. a photograph that you take of yourself, usually with a mobile phone. Selfies are often published using social media"
-translation: "n. 自拍照"
-srsWords: "selfie"
+front: "cloudy"
+meaning: "s. lacking definite form or limits; a. full of or covered with clouds; s. (of liquids) clouded as with sediment"
+translation: "adj.多云的,阴天的,朦胧的,愁容满面的"
+srsWords: "cloudy"
 
 [flashcard-review]
-front: "jewellery"
-meaning: "n an adornment (as a bracelet or ring or necklace) made of precious metals and set with gems (or imitation gems)"
-translation: "n. 宝石, 贵重饰物, 珠宝, 宝石饰物, 受珍视的人/物, 宝贝, 有价值的人/物"
-srsWords: "jewellery"
+front: "volleyball"
+meaning: "n. a game in which two teams hit an inflated ball over a high net using their hands; n. an inflated ball used in playing volleyball"
+translation: "n.排球（运动）"
+srsWords: "volleyball"
 
 ---
 lessonTitle: "Lesson 10: Culture, Arts & Entertainment Part 10"
@@ -616,10 +616,10 @@ translation: "n. 警察；[化] 淀帚"
 srsWords: "policeman"
 
 [flashcard-review]
-front: "singular"
-meaning: "n. the form of a word that is used to denote a singleton; s. being a single and separate person or thing; a. composed of one member, set, or kind; a. grammatical number category referring to a single item or unit"
-translation: "n. 单数；a. 异常的, 单一的"
-srsWords: "singular"
+front: "snowy"
+meaning: "s marked by the presence of snow; s covered with snow; s of the white color of snow"
+translation: "adj.下雪的,被雪覆盖的,雪白的，洁白无瑕的,多雪的"
+srsWords: "snowy"
 
 [flashcard-review]
 front: "mug"
@@ -664,7 +664,7 @@ translation: "n. 小提琴"
 srsWords: "violin"
 
 [flashcard-review]
-front: "flavour"
-meaning: "n the general atmosphere of a place or situation and the effect that it has on people; n (physics) the six kinds of quarks; n the taste experience when a savoury condiment is taken into the mouth; v lend flavor to"
-translation: "n. 味, 调味香料, 滋味, 香味, 气味, 风味, 情味, 情趣, 风韵；vt. 给...调味, 给...增添风趣, 加香料, 加味于"
-srsWords: "flavour"
+front: "foggy"
+meaning: "s stunned or confused and slow to react (as from blows or drunkenness or exhaustion); s indistinct or hazy in outline; s filled or abounding with fog or mist; s obscured by fog"
+translation: "adj.有雾的,雾气朦胧的,模糊的,混乱的"
+srsWords: "foggy"

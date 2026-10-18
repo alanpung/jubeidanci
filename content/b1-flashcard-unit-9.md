@@ -74,6 +74,7 @@ front: "global"
 meaning: "s. involving the entire earth; not limited or provincial in scope"
 translation: "a. 通用的, 全球的, 球形的, 综合的, 普遍的；[计] 共用"
 srsWords: "global"
+
 ---
 lessonTitle: "Lesson 2: Arts, Literature & Entertainment Part 2"
 description: "Practice 10 key B1 vocabulary flashcards for Arts, Literature & Entertainment"
@@ -93,10 +94,10 @@ translation: "n. 光荣, 荣耀, 荣誉, 壮丽, 繁荣；vi. 自豪"
 srsWords: "glory"
 
 [flashcard-review]
-front: "goalkeeper"
-meaning: "n. the soccer or hockey player assigned to protect the goal; n. the defensive position on an ice hockey or soccer or lacrosse team who stands in front of the goal and tries to prevent opposing players from scoring"
-translation: "n. 守门员"
-srsWords: "goalkeeper"
+front: "lyric"
+meaning: "n. the text of a popular song or musical-comedy number; n. a short poem of songlike quality; v. write lyrics for (a song); s. expressing deep emotion"
+translation: "n. 歌词；抒情诗 adj. 抒情的，写抒情诗的；（歌声）柔美的；适于演奏的；（感情、风格等）奔放的，不拘束的"
+srsWords: "lyric"
 
 [flashcard-review]
 front: "goddess"
@@ -139,6 +140,7 @@ front: "govern"
 meaning: "v. direct or strongly influence the behavior of; v. exercise authority over; as of nations; v. require to be in a certain grammatical case, voice, or mood"
 translation: "v. 统治, 支配, 管理"
 srsWords: "govern"
+
 ---
 lessonTitle: "Lesson 3: Arts, Literature & Entertainment Part 3"
 description: "Practice 10 key B1 vocabulary flashcards for Arts, Literature & Entertainment"
@@ -204,6 +206,7 @@ front: "gratitude"
 meaning: "n. a feeling of thankfulness and appreciation"
 translation: "n. 感激之情"
 srsWords: "gratitude"
+
 ---
 lessonTitle: "Lesson 4: Arts, Literature & Entertainment Part 4"
 description: "Practice 10 key B1 vocabulary flashcards for Arts, Literature & Entertainment"
@@ -247,10 +250,10 @@ translation: "n. 马夫, 新郎, 男仆；vt. 喂马, 使...整洁, 推荐；vi.
 srsWords: "groom"
 
 [flashcard-review]
-front: "grouping"
-meaning: "n. the activity of putting things together in groups; n. a system for classifying things into groups"
-translation: "n. 分组；[计] 组"
-srsWords: "grouping"
+front: "estate"
+meaning: "n. everything you own; all of your assets (whether real property or personal property) and liabilities; n. extensive landed property (especially in the country) retained by the owner for his own use"
+translation: "n. 不动产, (人生的)阶段, 阶层, 财产；[经] 房地产, 遗产, 财产"
+srsWords: "estate"
 
 [flashcard-review]
 front: "growth"
@@ -269,6 +272,7 @@ front: "guilt"
 meaning: "n. the state of having committed an offense; n. remorse caused by feeling responsible for some offense"
 translation: "n. 罪行, 内疚；[法] 罪, 犯罪, 罪行"
 srsWords: "guilt"
+
 ---
 lessonTitle: "Lesson 5: Arts, Literature & Entertainment Part 5"
 description: "Practice 10 key B1 vocabulary flashcards for Arts, Literature & Entertainment"
@@ -312,16 +316,16 @@ translation: "n. 美发师, 理发师"
 srsWords: "hairdresser"
 
 [flashcard-review]
-front: "hairdryer"
-meaning: "hairdryer"
-translation: "n. （吹干头发的）吹风机"
-srsWords: "hairdryer"
+front: "institute"
+meaning: "n. an association organized to promote art or science or education; v. advance or set forth in court"
+translation: "n. 学会, 学院, 协会；vt. 创立, 开始, 制定, 任命"
+srsWords: "institute"
 
 [flashcard-review]
-front: "handball"
-meaning: "n. a small rubber ball used in playing the game of handball; n. a game played in a walled court or against a single wall by two or four players who strike a rubber ball with their hands"
-translation: "n. 墙手球, 墙手球运动"
-srsWords: "handball"
+front: "fletcher"
+meaning: "n. prolific English dramatist who collaborated with Francis Beaumont and many other dramatists (1579-1625)"
+translation: "n. 弗莱彻（姓氏, 男子名）；弗莱彻（John, 1579-1625, 英国剧作家）；弗莱彻（John Gould, 1886-1950, 美国诗人及批评家）"
+srsWords: "fletcher"
 
 [flashcard-review]
 front: "handkerchief"
@@ -334,6 +338,7 @@ front: "handshake"
 meaning: "n. grasping and shaking a person's hand (as to acknowledge an introduction or to agree on a contract)"
 translation: "n. 握手"
 srsWords: "handshake"
+
 ---
 lessonTitle: "Lesson 6: Arts, Literature & Entertainment Part 6"
 description: "Practice 10 key B1 vocabulary flashcards for Arts, Literature & Entertainment"
@@ -399,6 +404,7 @@ front: "healing"
 meaning: "n. the natural process by which the body repairs itself"
 translation: "a. 治愈的, 恢复健康的；[计] 修复, 恢复"
 srsWords: "healing"
+
 ---
 lessonTitle: "Lesson 7: Arts, Literature & Entertainment Part 7"
 description: "Practice 10 key B1 vocabulary flashcards for Arts, Literature & Entertainment"
@@ -464,6 +470,7 @@ front: "herd"
 meaning: "n. a group of cattle or sheep or other domestic mammals all of the same kind that are herded by humans; n. a group of wild mammals of one species that remain together: antelope or elephants or seals or whales or zebra; v. cause to herd, drive, or crowd together; v. move together, like a herd"
 translation: "n. 兽群, 人群, 牧人；vt. 群集, 使成群, 放牧；vi. 聚在一起"
 srsWords: "herd"
+
 ---
 lessonTitle: "Lesson 8: Arts, Literature & Entertainment Part 8"
 description: "Practice 10 key B1 vocabulary flashcards for Arts, Literature & Entertainment"
@@ -529,6 +536,7 @@ front: "holy"
 meaning: "a. belonging to or derived from or associated with a divine power"
 translation: "a. 神圣的, 圣洁的, 至善的；n. 神圣的东西"
 srsWords: "holy"
+
 ---
 lessonTitle: "Lesson 9: Arts, Literature & Entertainment Part 9"
 description: "Practice 10 key B1 vocabulary flashcards for Arts, Literature & Entertainment"
@@ -594,6 +602,7 @@ front: "horn"
 meaning: "n. a noisemaker (as at parties or games) that makes a loud noise when you blow through it; n. one of the bony outgrowths on the heads of certain ungulates; n. a noise made by the driver of an automobile to give warning;; n. a high pommel of a Western saddle (usually metal covered with leather)"
 translation: "n. 角, 角质, 喇叭, 号角；a. 角制的；vt. 用角触, 长角于"
 srsWords: "horn"
+
 ---
 lessonTitle: "Lesson 10: Arts, Literature & Entertainment Part 10"
 description: "Practice 10 key B1 vocabulary flashcards for Arts, Literature & Entertainment"
@@ -655,7 +664,7 @@ translation: "n. 饥饿, 渴望, 饥荒；vt. 使挨饿；vi. 挨饿, 渴望"
 srsWords: "hunger"
 
 [flashcard-review]
-front: "hurriedly"
-meaning: "r. in a hurried or hasty manner"
-translation: "adv. 仓促地；匆忙地"
-srsWords: "hurriedly"
+front: "legacy"
+meaning: "n (law) a gift of personal property by will"
+translation: "n. 祖先传下来之物, 遗赠物；[经] 遗产, 遗赠物"
+srsWords: "legacy"

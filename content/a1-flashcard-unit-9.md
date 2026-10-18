@@ -106,16 +106,16 @@ translation: "v. is / has 的缩写，或表示"
 srsWords: "'s"
 
 [flashcard-review]
-front: "seventeen"
-meaning: "n. the cardinal number that is the sum of sixteen and one; s. being one more than sixteen"
-translation: "num. 十七, 十七个"
-srsWords: "seventeen"
+front: "engineer"
+meaning: "n. a person who uses scientific knowledge to solve practical problems; n. the operator of a railway locomotive; v. design as an engineer"
+translation: "n. 工程师, 工兵；vt. 设计, 监造, 精明地处理, 策划"
+srsWords: "engineer"
 
 [flashcard-review]
-front: "seventy"
-meaning: "n. the cardinal number that is the product of ten and seven; s. being ten more than sixty"
-translation: "num. 七十, 七十个"
-srsWords: "seventy"
+front: "surf"
+meaning: "n. waves breaking on the shore; v. switch channels, on television"
+translation: "n. 海浪, 拍岸浪；vi. 作冲浪运动"
+srsWords: "surf"
 
 [flashcard-review]
 front: "mobile"

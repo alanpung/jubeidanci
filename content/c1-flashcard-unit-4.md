@@ -74,6 +74,7 @@ front: "fatality"
 meaning: "n. a death resulting from an accident or a disaster; n. the quality of being able to cause death or fatal disasters"
 translation: "n. 不幸, 厄运, 致命性, 死亡者, 厄运, 天命"
 srsWords: "fatality"
+
 ---
 lessonTitle: "Lesson 2: Diplomacy, Governance & Policy Part 2"
 description: "Practice 10 key C1 vocabulary flashcards for Diplomacy, Governance & Policy"
@@ -139,6 +140,7 @@ front: "candidly"
 meaning: "r (used as intensives reflecting the speaker's attitude) it is sincerely the case that"
 translation: "adv. 率直地, 坦白地"
 srsWords: "candidly"
+
 ---
 lessonTitle: "Lesson 3: Diplomacy, Governance & Policy Part 3"
 description: "Practice 10 key C1 vocabulary flashcards for Diplomacy, Governance & Policy"
@@ -204,6 +206,7 @@ front: "animatedly"
 meaning: "r. in an animated manner"
 translation: "adv. 精力旺盛地；活生生地"
 srsWords: "animatedly"
+
 ---
 lessonTitle: "Lesson 4: Diplomacy, Governance & Policy Part 4"
 description: "Practice 10 key C1 vocabulary flashcards for Diplomacy, Governance & Policy"
@@ -229,10 +232,10 @@ translation: "vt. 举起, 提拔, 鼓舞"
 srsWords: "elevate"
 
 [flashcard-review]
-front: "elevation"
-meaning: "n. the event of something being raised upward; n. angular distance above the horizon (especially of a celestial object); n. distance of something above a reference point (such as sea level)"
-translation: "n. 海拔, 提高, 仰角；[计] 仰角"
-srsWords: "elevation"
+front: "enactment"
+meaning: "n. the passing of a law by a legislative body"
+translation: "n. 制定, 条例, 法规, 法令, 颁布, 规定；[法] 制定, 规定, 颁布"
+srsWords: "enactment"
 
 [flashcard-review]
 front: "tediously"
@@ -259,16 +262,17 @@ translation: "n. 登山家, 山地人；vi. 登山"
 srsWords: "mountaineer"
 
 [flashcard-review]
-front: "pioneer"
-meaning: "n. someone who helps to open up a new line of research or technology or art; n. one the first colonists or settlers in a new territory; v. open up an area or prepare a way; v. open up and explore a new area"
-translation: "n. 先锋, 拓荒者, 创始人；vt. 提倡, 开辟, 开创, 倡导；vi. 作先驱, 开路；a. 最早的, 开拓的, 先驱的, 有开拓者特点的"
-srsWords: "pioneer"
+front: "illegitimate"
+meaning: "s. contrary to or forbidden by law; a. of marriages and offspring; not recognized as lawful"
+translation: "a. 不法的, 私生的, 不合规则的, 不合理的, 不符合习惯的；n. 无合法身份的人；vt. 宣告...为非法, 证明...为私生"
+srsWords: "illegitimate"
 
 [flashcard-review]
-front: "quest"
-meaning: "n. the act of searching for something; v. make a search (for); v. search the trail of (game); v. seek alms, as for religious purposes"
-translation: "n. 探索, 寻求, 调查；v. 寻找, 找, 追寻猎物"
-srsWords: "quest"
+front: "liturgy"
+meaning: "n. a rite or body of rites prescribed for public worship"
+translation: "n. 礼拜仪式, 祷告文, 圣餐仪式"
+srsWords: "liturgy"
+
 ---
 lessonTitle: "Lesson 5: Diplomacy, Governance & Policy Part 5"
 description: "Practice 10 key C1 vocabulary flashcards for Diplomacy, Governance & Policy"
@@ -306,16 +310,16 @@ translation: "adv. 无限地, 广大地, 庞大地"
 srsWords: "immensely"
 
 [flashcard-review]
-front: "advisory"
-meaning: "n. an announcement that usually advises or warns the public of some threat; s. giving advice"
-translation: "a. 顾问的, 咨询的, 劝告的；[法] 劝告的, 忠告的, 咨询的"
-srsWords: "advisory"
+front: "washroom"
+meaning: "n. a lavatory (particularly a lavatory in a public place)"
+translation: "n. 盥洗室"
+srsWords: "washroom"
 
 [flashcard-review]
-front: "trying"
-meaning: "s. hard to endure"
-translation: "a. 难受的, 难堪的；[法] 裁决, 审判, 审理; 使人痛苦的, 难堪的, 难处的"
-srsWords: "trying"
+front: "noir"
+meaning: "a genre of crime film or fiction"
+translation: "a. 轮盘戏中黑色数字的"
+srsWords: "noir"
 
 [flashcard-review]
 front: "adrenaline"
@@ -334,6 +338,7 @@ front: "lavatory"
 meaning: "n a room or building equipped with one or more toilets; n a bathroom sink that is permanently installed and connected to a water supply and drainpipe; where you can wash your hands and face; n a toilet that is cleaned of waste by the flow of water through it"
 translation: "n. 洗脸盆, 厕所"
 srsWords: "lavatory"
+
 ---
 lessonTitle: "Lesson 6: Diplomacy, Governance & Policy Part 6"
 description: "Practice 10 key C1 vocabulary flashcards for Diplomacy, Governance & Policy"
@@ -399,6 +404,7 @@ front: "oversee"
 meaning: "v. watch and direct"
 translation: "vt. 向下看, 了望, 监督, 偷看到；[法] 监察, 监督, 俯瞰"
 srsWords: "oversee"
+
 ---
 lessonTitle: "Lesson 7: Diplomacy, Governance & Policy Part 7"
 description: "Practice 10 key C1 vocabulary flashcards for Diplomacy, Governance & Policy"
@@ -412,10 +418,10 @@ translation: "n. 监督, 工头；[经] 管理人, 监督, 盘工"
 srsWords: "overseer"
 
 [flashcard-review]
-front: "estimation"
-meaning: "n a document appraising the value of something (as for insurance or taxation); n the respect with which a person is held; n an approximate calculation of quantity or degree or worth; n a judgment of the qualities of something or somebody"
-translation: "n. 判断, 估计, 尊重；[化] 估计; 估定; 测定; 估值"
-srsWords: "estimation"
+front: "deregulation"
+meaning: "n. the act of freeing from regulation (especially from governmental regulations)"
+translation: "n. 撤消(价格等的)管制规定, 解除控制"
+srsWords: "deregulation"
 
 [flashcard-review]
 front: "liaison"
@@ -448,10 +454,10 @@ translation: "[计] 结构地"
 srsWords: "structurally"
 
 [flashcard-review]
-front: "structural"
-meaning: "a. relating to or caused by structure, especially political or economic structure; a. relating to or having or characterized by structure; s. affecting or involved in structure or construction; not ornamental elements\"; s. concerned with systematic structure in a particular field of study"
-translation: "a. 结构的, 建筑的；[医] 结构的"
-srsWords: "structural"
+front: "scapegoat"
+meaning: "n. someone who is punished for the errors of others"
+translation: "n. 替罪羔羊, 替人顶罪者, 替身；[法] 替罪羊, 代人受过者"
+srsWords: "scapegoat"
 
 [flashcard-review]
 front: "chauffer"
@@ -464,6 +470,7 @@ front: "sedentary"
 meaning: "s. requiring sitting or little activity"
 translation: "a. 久坐的, 坐惯的, 定栖的；[医] 静坐的; 坐式的"
 srsWords: "sedentary"
+
 ---
 lessonTitle: "Lesson 8: Diplomacy, Governance & Policy Part 8"
 description: "Practice 10 key C1 vocabulary flashcards for Diplomacy, Governance & Policy"
@@ -477,22 +484,22 @@ translation: "n. 关系, 融洽, 一致；[医] 关系, 协调(病人与医师�
 srsWords: "rapport"
 
 [flashcard-review]
-front: "consultation"
-meaning: "n. a conference (usually with someone important); n. a conference between two or more people to consider a particular question"
-translation: "n. 请教, 咨询, 磋商会；[医] 会诊"
-srsWords: "consultation"
+front: "burr"
+meaning: "n. rough projection left on a workpiece after drilling or cutting; n. United States politician who served as vice president under Jefferson; he mortally wounded his political rival Alexander Hamilton in a duel and fled south (1756-1836); n. rotary file for smoothing rough edges left on a workpiece"
+translation: "n. 毛边, 钻孔器, 芒刺；v. 发音含混地说话"
+srsWords: "burr"
 
 [flashcard-review]
-front: "consultancy"
-meaning: "n. the practice of giving expert advice within a particular field"
-translation: "n. 商量, 协商, 磋商, 会诊, 与...商量, 咨询, 请教, 找(医生)看病, 查阅, 考虑；[经] 咨询业务, 咨询服务"
-srsWords: "consultancy"
+front: "segmentation"
+meaning: "n (embryology) the repeated division of a fertilised ovum; n the act of dividing or partitioning; separation by the creation of a boundary that divides or keeps apart"
+translation: "n. 分割, 割断, 细胞分裂；[计] 分段; 分割; 段式调度; 分段法"
+srsWords: "segmentation"
 
 [flashcard-review]
-front: "retention"
-meaning: "n. the act of retaining something"
-translation: "n. 保持, 留置, 保留, 保持力, 保留物, 记忆, 停滞, 固位；[计] 保贸, 保持"
-srsWords: "retention"
+front: "auspices"
+meaning: "n. kindly endorsement and guidance"
+translation: "n. 赞助, 主办, 保护"
+srsWords: "auspices"
 
 [flashcard-review]
 front: "quarry"
@@ -501,16 +508,16 @@ translation: "n. 采石场, 方形石, 猎物, 被追求物, 来源；vt. 挖出
 srsWords: "quarry"
 
 [flashcard-review]
-front: "specification"
-meaning: "n. a detailed description of design criteria for a piece of work; n. naming explicitly; n. (patent law) a document drawn up by the applicant for a patent of invention that provides an explicit and detailed description of the nature and use of an invention"
-translation: "n. 规格, 详述, 详细说明书；[计] 规范; 形式说明; 说明; 说明书; 规格"
-srsWords: "specification"
+front: "catalytic"
+meaning: "a. relating to or causing or involving catalysis"
+translation: "a. 催化的；[医] 催化的"
+srsWords: "catalytic"
 
 [flashcard-review]
-front: "contractor"
-meaning: "n. someone (a person or firm) who contracts to build things; n. the bridge player in contract bridge who wins the bidding and can declare which suit is to be trumps; n. (law) a party to a contract"
-translation: "n. 立契约的人, 承包商；[化] 承包者; 承包工厂"
-srsWords: "contractor"
+front: "convection"
+meaning: "n. the transfer of heat through a fluid (liquid or gas) caused by molecular motion; n. (meteorology) the vertical movement of heat or other properties by massive motion within the atmosphere"
+translation: "n. 传送, 对流, 传导；[化] 对流"
+srsWords: "convection"
 
 [flashcard-review]
 front: "possessor"
@@ -529,6 +536,7 @@ front: "chilly"
 meaning: "s. not characterized by emotion; s. appreciably or disagreeably cold; s. lacking warmth of feeling"
 translation: "a. 寒冷的, 冷淡的, 不友好的；[建] 番椒, 冷"
 srsWords: "chilly"
+
 ---
 lessonTitle: "Lesson 9: Diplomacy, Governance & Policy Part 9"
 description: "Practice 10 key C1 vocabulary flashcards for Diplomacy, Governance & Policy"
@@ -594,6 +602,7 @@ front: "desertion"
 meaning: "n. withdrawing support or help despite allegiance or responsibility"
 translation: "n. 丢掉, 遗弃, 逃亡；[法] 长期分居, 开小差, 遗弃"
 srsWords: "desertion"
+
 ---
 lessonTitle: "Lesson 10: Diplomacy, Governance & Policy Part 10"
 description: "Practice 10 key C1 vocabulary flashcards for Diplomacy, Governance & Policy"
@@ -637,10 +646,10 @@ translation: "n. 有粘性, 强硬, 强健；[化] 韧性"
 srsWords: "toughness"
 
 [flashcard-review]
-front: "plumbing"
-meaning: "n. utility consisting of the pipes and fixtures for the distribution of water or gas in a building and for the disposal of sewage; n. the occupation of a plumber (installing and repairing pipes and fixtures for water or gas or sewage in a building)"
-translation: "n. 测深, 管子工行业, 管道设备"
-srsWords: "plumbing"
+front: "exacerbate"
+meaning: "v. exasperate or irritate"
+translation: "vt. 使恶化, 使增剧, 激怒, 使加剧"
+srsWords: "exacerbate"
 
 [flashcard-review]
 front: "glum"

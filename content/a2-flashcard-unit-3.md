@@ -34,22 +34,22 @@ translation: "n. 孩童时期；[医] 儿童期"
 srsWords: "childhood"
 
 [flashcard-review]
-front: "chili"
-meaning: "a small hot-tasting pod of a type of capsicum"
-translation: "n.红辣椒"
-srsWords: "chili"
+front: "slave"
+meaning: "n. a person who is owned by someone; n. someone who works as hard as a slave; n. someone entirely dominated by some influence or person; v. work very hard, like a slave"
+translation: "n. 奴隶, 从动装置, 卑鄙的人；vi. 拼命工作；[计] 从设备"
+srsWords: "slave"
 
 [flashcard-review]
-front: "chilli"
-meaning: "a small, hot-tasting pod of a variety of capsicum, used in cooking"
-translation: "红辣椒"
-srsWords: "chilli"
+front: "account"
+meaning: "n. a formal contractual relationship established to provide for regular banking or brokerage or business services; n. importance or value; n. a statement of recent transactions and the resulting balance; n. the quality of taking advantage"
+translation: "n. 报告, 解释, 估价, 理由, 利润, 算账, 帐目；vi. 报帐, 解释, 导致, 报偿, 占, 杀死；vt. 认为；[计] 帐户, 帐号"
+srsWords: "account"
 
 [flashcard-review]
-front: "chimpanzee"
-meaning: "n. intelligent somewhat arboreal ape of equatorial African forests"
-translation: "[脊椎] 黑猩猩"
-srsWords: "chimpanzee"
+front: "agency"
+meaning: "n. an administrative unit of government; n. a business that serves other businesses; n. the state of being in action or exerting power"
+translation: "n. 代理机构, 经销商, 中介；[化] 办事处"
+srsWords: "agency"
 
 [flashcard-review]
 front: "chin"
@@ -58,10 +58,10 @@ translation: "n. 下巴；聊天；引体向上动作 vt. 用下巴夹住；与�
 srsWords: "chin"
 
 [flashcard-review]
-front: "chirp"
-meaning: "n. a sharp sound made by small birds or insects"
-translation: "v. （鸟）啁啾，（昆虫）唧唧叫； 轻松愉快地说，嘁嘁喳喳地说；抱怨；故意惹怒（某人）而说，奚落 n. 吱吱声，唧唧声"
-srsWords: "chirp"
+front: "baron"
+meaning: "n. a nobleman (in various countries) of varying rank; n. a British peer of the lowest rank; n. a very wealthy or powerful businessman"
+translation: "n. 男爵；[法] 男爵, 贵族, 大王"
+srsWords: "baron"
 
 [flashcard-review]
 front: "tourist"
@@ -130,10 +130,10 @@ translation: "n. 咔哒声, 啪嗒声；vi. 作咔哒声；vt. 使发咔哒声�
 srsWords: "click"
 
 [flashcard-review]
-front: "climb"
-meaning: "ascend, go up"
-translation: "v. 攀登, 上升, 爬；n. 攀登, 爬升"
-srsWords: "climb"
+front: "photographer"
+meaning: "n. someone who takes photographs professionally"
+translation: "n. 摄影师, 摄影者"
+srsWords: "photographer"
 
 [flashcard-review]
 front: "deep"
@@ -196,10 +196,10 @@ translation: "n. 经过, 要隘, 途径, 通行, 护照, 及格；vt. 经过, �
 srsWords: "pass"
 
 [flashcard-review]
-front: "colorful"
-meaning: "full of color; vivid"
-translation: "adj.富有色彩的,鲜艳的,多姿多彩的,富有趣味的"
-srsWords: "colorful"
+front: "wooden"
+meaning: "s. made or consisting of (entirely or in part) or employing wood; s. lacking ease or grace"
+translation: "a. 木制的, 呆笨的, 木然的"
+srsWords: "wooden"
 
 [flashcard-review]
 front: "truth"
@@ -280,10 +280,10 @@ icon: "💻"
 color: "#3F51B5"
 ---
 [flashcard-review]
-front: "comparative"
-meaning: "n. the comparative form of an adjective or adverb; a. relating to or based on or involving comparison"
-translation: "n. （形容词或副词的）比较级；对手 adj. 比较的，相比的；相对的，比较而言的；（形容词或副词）比较级的"
-srsWords: "comparative"
+front: "paragraph"
+meaning: "n. one of several distinct subdivisions of a text intended to separate ideas; the beginning is usually marked by a new indented line; v. divide into paragraphs, as of text; v. write about in a paragraph; v. write paragraphs; work as a paragrapher"
+translation: "n.段落,分段符号vt.将…分段,写短文报导"
+srsWords: "paragraph"
 
 [flashcard-review]
 front: "complain"
@@ -352,10 +352,10 @@ translation: "n.结果，成果,逻结论,重要性,推论"
 srsWords: "consequence"
 
 [flashcard-review]
-front: "consist"
-meaning: "v. have its essential character; be comprised or contained in; be embodied in; v. be consistent in form, tenor, or character; be congruous; v. be composed of"
-translation: "vi. 组成, 存在于, 一致"
-srsWords: "consist"
+front: "posting"
+meaning: "n. (bookkeeping) a listing on the company's records"
+translation: "[计] 记入, 记录, 稿件, 邮件；[经] 过帐, 誊入总帐"
+srsWords: "posting"
 
 [flashcard-review]
 front: "container"
@@ -394,16 +394,16 @@ translation: "adj. 方便的, 便利的, 合适的附近的, 近便的副 词:co
 srsWords: "convenient"
 
 [flashcard-review]
-front: "tonight"
-meaning: "on the evening of the present day"
-translation: "n. 今晚, 今夜；adv. 今晚, 今夜"
-srsWords: "tonight"
+front: "sitting room"
+meaning: "noun. sitting room"
+translation: "起居室"
+srsWords: "sitting room"
 
 [flashcard-review]
-front: "cooker"
-meaning: "An appliance or device for cooking food."
-translation: "n. 炊具；烹饪用水果；窜改者"
-srsWords: "cooker"
+front: "relax"
+meaning: "v. become less tense, rest, or take one's ease; v. make less taut; v. cause to feel relaxed; v. become less tense, less formal, or less restrained, and assume a friendlier manner"
+translation: "vi. 放松, 松懈, 松弛, 变从容, 休息, 休养；vt. 使松弛, 缓和, 使松懈, 使休息"
+srsWords: "relax"
 
 ---
 lessonTitle: "Lesson 7: Work, Careers & Technology Part 7"
@@ -424,10 +424,10 @@ translation: "冷却器；清凉剂; 更冷的（cool的比较级）"
 srsWords: "cooler"
 
 [flashcard-review]
-front: "copy"
-meaning: "n. a thing made to be similar or identical to another thing; n. matter to be printed; exclusive of graphical materials; n. material suitable for a journalistic account; v. copy down as is"
-translation: "v. 抄写，誊写；模仿，效法；作弊，抄袭；听见（或明白）无线电收发报机中讲话人的话；复制，拷贝 n. 一本，一册，一份；复印件，副本；原稿，素材；广告文字"
-srsWords: "copy"
+front: "sake"
+meaning: "n. a reason for wanting something done; n. Japanese alcoholic beverage made from fermented rice; usually served hot; n. the purpose of achieving or obtaining"
+translation: "n. 目的, 缘故, 理由"
+srsWords: "sake"
 
 [flashcard-review]
 front: "effect"
@@ -574,10 +574,10 @@ translation: "n. 首都, 大写字母, 资本；a. 首都的, 重要的"
 srsWords: "capital"
 
 [flashcard-review]
-front: "cry"
-meaning: "n. a loud utterance; often in protest or opposition; n. a loud utterance of emotion (especially when inarticulate); n. a fit of weeping; n. the characteristic utterance of an animal"
-translation: "n. 叫声, 哭声, 大叫；vi. 哭, 叫, 喊；vt. 叫喊, 大声说, 哭出"
-srsWords: "cry"
+front: "experience"
+meaning: "n. the accumulation of knowledge or skill that results from direct participation in events or activities; n. the content of direct observation or participation in an event; n. an event as apprehended; v. go or live through"
+translation: "n. 经历, 经验, 体验；vt. 经历, 经验, 体验"
+srsWords: "experience"
 
 [flashcard-review]
 front: "cupboard"

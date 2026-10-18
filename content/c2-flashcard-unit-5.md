@@ -74,6 +74,7 @@ front: "idiomatic"
 meaning: "a. of or relating to or conforming to idiom"
 translation: "a. 符合语言习惯的, 惯用的, 有许多习语的"
 srsWords: "idiomatic"
+
 ---
 lessonTitle: "Lesson 2: Aesthetics, Artistry & Critique Part 2"
 description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
@@ -139,6 +140,7 @@ front: "exorcist"
 meaning: "n. one of the minor orders in the unreformed Western Church but now suppressed in the Roman Catholic Church; n. someone who practices exorcism"
 translation: "n. 驱魔的人, 召魂者"
 srsWords: "exorcist"
+
 ---
 lessonTitle: "Lesson 3: Aesthetics, Artistry & Critique Part 3"
 description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
@@ -188,10 +190,10 @@ translation: "a. 对立的, 正相反的"
 srsWords: "antithetical"
 
 [flashcard-review]
-front: "parameter"
-meaning: "n. a constant in the equation of a curve that can be varied to yield a family of similar curves; n. any factor that defines a system and determines (or limits) its performance; n. a quantity (such as the mean or variance) that characterizes a statistical population and that can be estimated by calculations from sample data"
-translation: "n. 参变数, 参变量, 参数, 参量；[计] 参量; 参数"
-srsWords: "parameter"
+front: "scandinavian"
+meaning: "n. an inhabitant of Scandinavia; n. the northern family of Germanic languages that are spoken in Scandinavia and Iceland; a. of or relating to Scandinavia or its peoples or cultures"
+translation: "n. 斯堪的纳维亚人, 斯堪的纳维亚语, 北欧日耳曼语系；a. 斯堪的纳维亚人的, 斯堪的纳维亚语的, 北欧日耳曼语系的"
+srsWords: "scandinavian"
 
 [flashcard-review]
 front: "detract"
@@ -204,6 +206,7 @@ front: "interrogate"
 meaning: "v. transmit (a signal) for setting off an appropriate response, as in telecommunication; v. pose a series of questions to"
 translation: "vt. 质问, 讯问, 审问；vi. 质问, 讯问"
 srsWords: "interrogate"
+
 ---
 lessonTitle: "Lesson 4: Aesthetics, Artistry & Critique Part 4"
 description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
@@ -269,6 +272,7 @@ front: "recourse"
 meaning: "n. act of turning to for assistance; n. something or someone turned to for assistance or security"
 translation: "n. 求援, 求助, 追索权；[经] 追索权"
 srsWords: "recourse"
+
 ---
 lessonTitle: "Lesson 5: Aesthetics, Artistry & Critique Part 5"
 description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
@@ -334,6 +338,7 @@ front: "superfluously"
 meaning: "r in a superfluous manner"
 translation: "adv. 过分地; 过剩地"
 srsWords: "superfluously"
+
 ---
 lessonTitle: "Lesson 6: Aesthetics, Artistry & Critique Part 6"
 description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
@@ -347,10 +352,10 @@ translation: "n. 小片, 片断, 摘录"
 srsWords: "snippet"
 
 [flashcard-review]
-front: "practitioner"
-meaning: "n. someone who practices a learned profession"
-translation: "n. 从业者, 开业者；[医] 行医者, 医师"
-srsWords: "practitioner"
+front: "opus"
+meaning: "n a musical work that has been created"
+translation: "n. 作品"
+srsWords: "opus"
 
 [flashcard-review]
 front: "ephemeral"
@@ -399,6 +404,7 @@ front: "depravity"
 meaning: "n. a corrupt or depraved or degenerate act or practice"
 translation: "n. 堕落, 腐败, 邪恶；[法] 堕落, 腐化, 败坏"
 srsWords: "depravity"
+
 ---
 lessonTitle: "Lesson 7: Aesthetics, Artistry & Critique Part 7"
 description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
@@ -464,6 +470,7 @@ front: "flit"
 meaning: "n. a sudden quick movement; n. a secret move (to avoid paying debts); v. move along rapidly and lightly; skim or dart"
 translation: "n. 掠过, 迁徙；vi. 掠过, 迁徙"
 srsWords: "flit"
+
 ---
 lessonTitle: "Lesson 8: Aesthetics, Artistry & Critique Part 8"
 description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
@@ -529,6 +536,7 @@ front: "vestigially"
 meaning: "vestigially"
 translation: "adv. vestigial的变形"
 srsWords: "vestigially"
+
 ---
 lessonTitle: "Lesson 9: Aesthetics, Artistry & Critique Part 9"
 description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
@@ -594,6 +602,7 @@ front: "euphemistic"
 meaning: "a. substituting a mild term for a harsher or distasteful one"
 translation: "a. 委婉的"
 srsWords: "euphemistic"
+
 ---
 lessonTitle: "Lesson 10: Aesthetics, Artistry & Critique Part 10"
 description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"

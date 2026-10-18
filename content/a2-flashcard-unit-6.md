@@ -22,10 +22,10 @@ translation: "n. 财富, 运气, 兴隆, 大量财产, 好运, 命运；[法] �
 srsWords: "fortune"
 
 [flashcard-review]
-front: "sibling"
-meaning: "n. a person's brother or sister"
-translation: "n. 兄弟, 同胞；[医] 同胞(兄弟姐妹)"
-srsWords: "sibling"
+front: "kite"
+meaning: "a toy consisting of a light frame covered with paper or cloth, flown in the wind at the end of a long string"
+translation: "n. 风筝 vi. 使用空头支票；像风筝一样飞；轻快地移动 vt. 骗钱；涂改（支票） n. (Kite)人名；(塞)基特；(英)凯特"
+srsWords: "kite"
 
 [flashcard-review]
 front: "fashion"
@@ -124,10 +124,10 @@ translation: "vt. 使惊吓；vi. 惊恐"
 srsWords: "frighten"
 
 [flashcard-review]
-front: "flavor"
-meaning: "n. (physics) the six kinds of quarks"
-translation: "n. 滋味, 调味品；vt. 加味于"
-srsWords: "flavor"
+front: "bookstore"
+meaning: "n a shop where books are sold"
+translation: "书店（等于bookshop）"
+srsWords: "bookstore"
 
 [flashcard-review]
 front: "apparently"
@@ -136,10 +136,10 @@ translation: "adv. 表面上, 清楚地, 显然地"
 srsWords: "apparently"
 
 [flashcard-review]
-front: "front"
-meaning: "n. the side that is forward or prominent; n. the outward appearance of a person; n. the side that is seen or that goes first; n. a sphere of activity involving effort"
-translation: "n. 前面, 开头, 前线, 阵线, 态度；vt. 面对, 朝向, 对抗；vi. 朝向"
-srsWords: "front"
+front: "pretend"
+meaning: "v. put forward a claim and assert right or possession of"
+translation: "v. 假装, 伪称, 自命, 自称"
+srsWords: "pretend"
 
 ---
 lessonTitle: "Lesson 3: Shopping, Fashion & Services Part 3"
@@ -292,10 +292,10 @@ translation: "v. 预防, 防止, 阻止, 妨碍"
 srsWords: "prevent"
 
 [flashcard-review]
-front: "gold"
-meaning: "a precious yellow metallic element"
-translation: "n. 黄金, 钱财, 金块, 金色, 宝贵；a. 金的, 似金的, 金色的, 金制的"
-srsWords: "gold"
+front: "remind"
+meaning: "v. put in the mind of someone"
+translation: "vt. 提醒, 使想起"
+srsWords: "remind"
 
 [flashcard-review]
 front: "golf"
@@ -316,10 +316,10 @@ translation: "adv. 成零碎, 成距离, 分别地, 分离着；a. 分离的"
 srsWords: "apart"
 
 [flashcard-review]
-front: "den"
-meaning: "n. a unit of 8 to 10 cub scouts; n. a room that is comfortable and secluded"
-translation: "n. 兽穴, 洞穴；[法] 匪巢, 贼窝"
-srsWords: "den"
+front: "regret"
+meaning: "v. feel sad about the loss or absence of; v. decline formally or politely; v. express with regret"
+translation: "n. 遗憾, 后悔, 悔恨, 抱歉, 歉意；vt. 为...感到遗憾, 后悔, 惋惜, 懊悔, 抱歉；vi. 感到抱歉"
+srsWords: "regret"
 
 [flashcard-review]
 front: "gradually"
@@ -328,10 +328,10 @@ translation: "adv.逐步地，渐渐地,按部就班地,日趋,冉冉"
 srsWords: "gradually"
 
 [flashcard-review]
-front: "gram"
-meaning: "a metric unit of mass"
-translation: "n. 克；[植]鹰嘴豆（用作饲料）Gram革兰(①姓氏 ②Hans Christian Joachim, 1853Gram1938, 丹麦细菌学家, 医师)"
-srsWords: "gram"
+front: "ruin"
+meaning: "n. an irrecoverable state of devastation and destruction; n. a ruined building; n. an event that results in destruction; v. destroy or cause to fail"
+translation: "n. 毁灭, 推翻, 废墟；vi. 毁灭, 衰败, 破坏, 破产, 堕落；vt. 使毁灭, 毁坏, 使破产"
+srsWords: "ruin"
 
 [flashcard-review]
 front: "function"
@@ -436,10 +436,10 @@ translation: "n. 朋友, 伙伴, 同志, 同谋；vi. 交友, 结伴"
 srsWords: "pal"
 
 [flashcard-review]
-front: "skinny"
-meaning: "n. confidential information about a topic or person; a. of or relating to or resembling skin"
-translation: "a. 似皮的, 极瘦的, 少的, 小气的；[医] 皮的; 消瘦的"
-srsWords: "skinny"
+front: "romantic"
+meaning: "n. a soulful or amorous idealist; a. belonging to or characteristic of Romanticism or the Romantic Movement in the arts"
+translation: "a. 浪漫的, 风流的, 传奇性的, 夸大的, 空想的, 浪漫派的"
+srsWords: "romantic"
 
 [flashcard-review]
 front: "host"
@@ -484,10 +484,10 @@ translation: "vt. 称...重量, 衡量, 把...压弯, 考虑, 权衡, 起锚；v
 srsWords: "weigh"
 
 [flashcard-review]
-front: "guidebook"
-meaning: "n. something that offers basic information or instruction"
-translation: "n. 旅行指南；指导手册"
-srsWords: "guidebook"
+front: "trap"
+meaning: "n. a device in which something (usually an animal) can be caught and penned; n. drain consisting of a U-shaped section of drainpipe that holds liquid and so prevents a return flow of sewer gas; n. something (often something deceptively attractive) that catches you unawares; n. a device to hurl clay pigeons into the air for trapshooters"
+translation: "n. 圈套, 陷阱, 诡计, 存水弯；vi. 设圈套, 设陷阱；vt. 诱捕, 诱骗, 抓住, 使受限制；[计] 俘获; 陷井"
+srsWords: "trap"
 
 [flashcard-review]
 front: "cart"
@@ -508,10 +508,10 @@ translation: "vi. 处理；vt. 管理, 控制, 维持, 达成, 经营, 运用"
 srsWords: "manage"
 
 [flashcard-review]
-front: "cord"
-meaning: "n. a line made of twisted fibers or threads; n. a unit of amount of wood cut for burning; 128 cubic feet; n. a light insulated conductor for household use; n. a cut pile fabric with vertical ribs; usually made of cotton"
-translation: "n. 绳索, 束缚；[医] 索, 带"
-srsWords: "cord"
+front: "rob"
+meaning: "v. take something away by force or without the consent of the owner"
+translation: "v. 抢夺, 抢掠, 剥夺"
+srsWords: "rob"
 
 [flashcard-review]
 front: "exist"

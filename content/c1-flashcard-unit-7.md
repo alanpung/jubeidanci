@@ -64,16 +64,17 @@ translation: "n. 囚犯, 罪犯；vt. 宣告有罪, 使知罪"
 srsWords: "convict"
 
 [flashcard-review]
-front: "conviction"
-meaning: "n. an unshakable belief in something without need for proof or evidence; n. (criminal law) a final judgment of guilty in a criminal case and the punishment that is imposed"
-translation: "n. 定罪, 信服, 坚信；[法] 定罪, 证明有罪, 判罪"
-srsWords: "conviction"
+front: "smuggler"
+meaning: "n. someone who imports or exports without paying duties"
+translation: "n. 走私者, 走私船；[经] 走私者, 走私船"
+srsWords: "smuggler"
 
 [flashcard-review]
 front: "latent"
 meaning: "s. potentially existing but not presently evident or realized; s. (pathology) not presently active"
 translation: "a. 潜伏性的, 隐藏的；n. 隐约指纹"
 srsWords: "latent"
+
 ---
 lessonTitle: "Lesson 2: Sociology, Demographics & Culture Part 2"
 description: "Practice 10 key C1 vocabulary flashcards for Sociology, Demographics & Culture"
@@ -139,6 +140,7 @@ front: "marginal"
 meaning: "s. producing at a rate that barely covers production costs"
 translation: "a. 边缘的, 最低限度的, 有旁注的；[医] 缘的"
 srsWords: "marginal"
+
 ---
 lessonTitle: "Lesson 3: Sociology, Demographics & Culture Part 3"
 description: "Practice 10 key C1 vocabulary flashcards for Sociology, Demographics & Culture"
@@ -152,10 +154,10 @@ translation: "adv. 记在页边, 有旁注, 边缘, 边沿地区, 边际, 限界
 srsWords: "marginally"
 
 [flashcard-review]
-front: "crude"
-meaning: "s. not carefully or expertly made; s. conspicuously and tastelessly indecent; s. belonging to an early stage of technical development; characterized by simplicity and (often) crudeness; s. not processed or subjected to analysis"
-translation: "a. 天然的, 未成熟的, 粗糙的, 粗鲁的；n. 天然的物质"
-srsWords: "crude"
+front: "intolerable"
+meaning: "a. incapable of being put up with"
+translation: "a. 无法忍受的, 难耐的"
+srsWords: "intolerable"
 
 [flashcard-review]
 front: "crudely"
@@ -164,10 +166,10 @@ translation: "adv. 照自然状态, 未成熟地, 粗杂地"
 srsWords: "crudely"
 
 [flashcard-review]
-front: "strap"
-meaning: "n. an elongated leather strip (or a strip of similar material) for binding things together or holding something in position; n. hanger consisting of a loop of leather suspended from the ceiling of a bus or train; passengers hold onto it; n. a band that goes over the shoulder and supports a garment or bag; n. whip consisting of a strip of leather used in flogging"
-translation: "n. 带, 皮带；vt. (用皮带)捆扎"
-srsWords: "strap"
+front: "wail"
+meaning: "v. cry weakly or softly"
+translation: "n. 恸哭, 哀号, 嚎啕, 呼啸(声)；vi. 恸哭, 呼啸, 悲叹, 哀号, 嚎啕"
+srsWords: "wail"
 
 [flashcard-review]
 front: "strapping"
@@ -204,6 +206,7 @@ front: "unmusical"
 meaning: "a. lacking interest in or talent for music; a. not musical in nature"
 translation: "a. 不合调的, 不悦耳的, 演奏音乐不熟练的, 对音乐不感兴趣的"
 srsWords: "unmusical"
+
 ---
 lessonTitle: "Lesson 4: Sociology, Demographics & Culture Part 4"
 description: "Practice 10 key C1 vocabulary flashcards for Sociology, Demographics & Culture"
@@ -229,10 +232,10 @@ translation: "n. 协奏曲"
 srsWords: "concerto"
 
 [flashcard-review]
-front: "premier"
-meaning: "v. be performed for the first time; v. perform a work for the first time; s. first in rank or degree; s. preceding all others in time"
-translation: "n. 总理, 首相；a. 首位的, 最初的"
-srsWords: "premier"
+front: "skid"
+meaning: "n. one of a pair of planks used to make a track for rolling or sliding objects; n. an unexpected slide; v. slide without control; v. elevate onto skids"
+translation: "vt. 刹住, 滚滑；vi. 打滑；n. 刹车, 滑动垫木"
+srsWords: "skid"
 
 [flashcard-review]
 front: "fanatic"
@@ -253,10 +256,10 @@ translation: "adv. 听觉上；声学上"
 srsWords: "acoustically"
 
 [flashcard-review]
-front: "acoustic"
-meaning: "n. a remedy for hearing loss or deafness; a. of or relating to the science of acoustics"
-translation: "a. 听觉的, 声学的, 音响的；[医] 听的; 声学的"
-srsWords: "acoustic"
+front: "dispersion"
+meaning: "n. spreading widely or driving off; n. the act of dispersing or diffusing something"
+translation: "n. 散布；[化] 分散; 分散作用; 分散体; 色散; 离差"
+srsWords: "dispersion"
 
 [flashcard-review]
 front: "acoustics"
@@ -269,6 +272,7 @@ front: "compromised"
 meaning: "v make a compromise; arrive at a compromise; we all must compromise\"; v settle by concession; v expose or make liable to danger, suspicion, or disrepute"
 translation: "[医]妥协, 让步的, 缺乏抵抗力的, 缺乏免疫力的, 妥协的"
 srsWords: "compromised"
+
 ---
 lessonTitle: "Lesson 5: Sociology, Demographics & Culture Part 5"
 description: "Practice 10 key C1 vocabulary flashcards for Sociology, Demographics & Culture"
@@ -324,16 +328,17 @@ translation: "adv. 迷途地, 入歧途地；[法] 误入歧途地, 离开正道
 srsWords: "astray"
 
 [flashcard-review]
-front: "duration"
-meaning: "n. the period of time during which something continues; n. the property of enduring or continuing in time; n. continuance in time"
-translation: "n. 持续时间, 持续；[计] 持续时间"
-srsWords: "duration"
+front: "typhoon"
+meaning: "n. a tropical cyclone occurring in the western Pacific or Indian oceans"
+translation: "n. 台风"
+srsWords: "typhoon"
 
 [flashcard-review]
-front: "durable"
-meaning: "s. existing for a long time; s. capable of withstanding wear and tear and decay; s. very long lasting"
-translation: "a. 持久的, 耐用的"
-srsWords: "durable"
+front: "perpetual"
+meaning: "s continuing forever or indefinitely; s uninterrupted in time and indefinitely long continuing"
+translation: "a. 永久的, 不断的, 无期限的, 没完没了的, 四季开花的；[经] 永远的, 终身的, 持续的"
+srsWords: "perpetual"
+
 ---
 lessonTitle: "Lesson 6: Sociology, Demographics & Culture Part 6"
 description: "Practice 10 key C1 vocabulary flashcards for Sociology, Demographics & Culture"
@@ -341,10 +346,10 @@ icon: "🌍"
 color: "#009688"
 ---
 [flashcard-review]
-front: "likelihood"
-meaning: "n. the probability of a specified outcome"
-translation: "n. 可能, 可能性"
-srsWords: "likelihood"
+front: "lash"
+meaning: "n. leather strip that forms the flexible part of a whip; v. lash or flick about sharply; v. bind with a rope, chain, or cord"
+translation: "n. 鞭子, 鞭打, 睫毛, 责骂, 讽刺；vt. 鞭打, 摆动, 扎捆, 冲击, 讽刺, 煽动；vi. 冲洗, 鞭打, 责骂"
+srsWords: "lash"
 
 [flashcard-review]
 front: "naive"
@@ -399,6 +404,7 @@ front: "screenwriter"
 meaning: "n. someone who writes screenplays"
 translation: "n. 电影剧本作家, 编剧家"
 srsWords: "screenwriter"
+
 ---
 lessonTitle: "Lesson 7: Sociology, Demographics & Culture Part 7"
 description: "Practice 10 key C1 vocabulary flashcards for Sociology, Demographics & Culture"
@@ -418,10 +424,10 @@ translation: "n. 搅乳器；v. 搅拌, 搅动"
 srsWords: "churn"
 
 [flashcard-review]
-front: "buffer"
-meaning: "n. (chemistry) an ionic compound that resists changes in its pH; n. (computer science) a part of RAM used for temporary storage of data that is waiting to be sent to a device; used to compensate for differences in the rate of flow of data between components of a computer system; n. a power tool used to buff surfaces; n. a cushion-like device that reduces shock due to an impact"
-translation: "n. 缓冲器, 缓冲区；vt. 缓冲；[计] 缓冲区, 缓冲器"
-srsWords: "buffer"
+front: "possum"
+meaning: "n nocturnal arboreal marsupial having a naked prehensile tail found from southern North America to northern South America; n small furry Australian arboreal marsupials having long usually prehensile tails"
+translation: "n. 负鼠"
+srsWords: "possum"
 
 [flashcard-review]
 front: "irate"
@@ -464,6 +470,7 @@ front: "fiendishly"
 meaning: "r as a devil; in an evil manner"
 translation: "adv. 恶魔似, 极坏, 残忍, 凶恶, (非正式)非常聪明, 不简单, 不平凡"
 srsWords: "fiendishly"
+
 ---
 lessonTitle: "Lesson 8: Sociology, Demographics & Culture Part 8"
 description: "Practice 10 key C1 vocabulary flashcards for Sociology, Demographics & Culture"
@@ -529,6 +536,7 @@ front: "raunchily"
 meaning: "raunchily"
 translation: "adv. raunchy的变形"
 srsWords: "raunchily"
+
 ---
 lessonTitle: "Lesson 9: Sociology, Demographics & Culture Part 9"
 description: "Practice 10 key C1 vocabulary flashcards for Sociology, Demographics & Culture"
@@ -542,10 +550,10 @@ translation: "n. 透支, 透支额, 气流, 过度通风；[经] 透支"
 srsWords: "overdraft"
 
 [flashcard-review]
-front: "synopsis"
-meaning: "n a sketchy summary of the main points of an argument or theory"
-translation: "n. 概要, 摘要, 大意；[化] 一览表; 提要"
-srsWords: "synopsis"
+front: "sleazy"
+meaning: "s. of cloth; thin and loosely woven"
+translation: "a. 质地薄的, 没有内容的, 低级庸俗的"
+srsWords: "sleazy"
 
 [flashcard-review]
 front: "renown"
@@ -566,10 +574,10 @@ translation: "n. 阳台, 走廊"
 srsWords: "verandah"
 
 [flashcard-review]
-front: "occupational"
-meaning: "a. of or relating to the activity or business for which you are trained"
-translation: "a. 职业的, 军事占领的；[医] 职业的"
-srsWords: "occupational"
+front: "kimono"
+meaning: "n. a loose robe; imitated from robes originally worn by Japanese"
+translation: "n. 和服, (妇女穿着的)宽大晨衣"
+srsWords: "kimono"
 
 [flashcard-review]
 front: "verdict"
@@ -594,6 +602,7 @@ front: "occupant"
 meaning: "n someone who lives at a particular place for a prolonged period or who was born there"
 translation: "n. 占有者, 居住者, 占用者"
 srsWords: "occupant"
+
 ---
 lessonTitle: "Lesson 10: Sociology, Demographics & Culture Part 10"
 description: "Practice 10 key C1 vocabulary flashcards for Sociology, Demographics & Culture"
@@ -625,10 +634,10 @@ translation: "adv. 官僚主义地"
 srsWords: "bureaucratically"
 
 [flashcard-review]
-front: "adjustable"
-meaning: "s. capable of being changed so as to match or fit; s. capable of being regulated"
-translation: "a. 可调节的；[电] 可调整的"
-srsWords: "adjustable"
+front: "horticulture"
+meaning: "n the cultivation of plants"
+translation: "n. 园艺"
+srsWords: "horticulture"
 
 [flashcard-review]
 front: "fatigue"

@@ -16,10 +16,10 @@ icon: "🎙️"
 color: "#E91E63"
 ---
 [flashcard-review]
-front: "portable"
-meaning: "n. a small light typewriter; usually with a case in which it can be carried; a. easily or conveniently transported; s. of a motor designed to be attached to the outside of a boat's hull"
-translation: "a. 可携带的, 可搬运的, 可移动的；[计] 可移植的"
-srsWords: "portable"
+front: "nonlinear"
+meaning: "a. designating or involving an equation whose terms are not of the first degree"
+translation: "a. 非线性的；[电] 非线性的"
+srsWords: "nonlinear"
 
 [flashcard-review]
 front: "ornamental"
@@ -46,10 +46,10 @@ translation: "a. 难管理的, 难处理的, 难操纵的, 处理不了的；[�
 srsWords: "unmanageable"
 
 [flashcard-review]
-front: "appliance"
-meaning: "n. a device or control that is very useful for a particular job; n. durable goods for home or office use"
-translation: "n. 器械, 用具, 应用；[医] 矫正器; 器"
-srsWords: "appliance"
+front: "secession"
+meaning: "n. an Austrian school of art and architecture parallel to the French art nouveau in the 1890s; n. the withdrawal of eleven southern states from the Union in 1860 which precipitated the American Civil War; n. formal separation from an alliance or federation"
+translation: "n. 脱离, 分离"
+srsWords: "secession"
 
 [flashcard-review]
 front: "tedious"
@@ -74,6 +74,7 @@ front: "alleviate"
 meaning: "v provide physical relief, as from pain; v make easier"
 translation: "vt. 减轻, 使缓和"
 srsWords: "alleviate"
+
 ---
 lessonTitle: "Lesson 2: Rhetoric, Persuasion & Debate Part 2"
 description: "Practice 10 key C1 vocabulary flashcards for Rhetoric, Persuasion & Debate"
@@ -139,6 +140,7 @@ front: "speculative"
 meaning: "s not financially safe or secure; s not based on fact or investigation; s showing curiosity"
 translation: "a. 思索性的, 投机的, 推测的；[经] 投机的, 冒险的"
 srsWords: "speculative"
+
 ---
 lessonTitle: "Lesson 3: Rhetoric, Persuasion & Debate Part 3"
 description: "Practice 10 key C1 vocabulary flashcards for Rhetoric, Persuasion & Debate"
@@ -182,16 +184,16 @@ translation: "n. 开发, 开采, 剥削；[经] 开发, 剥削, 宜传"
 srsWords: "exploitation"
 
 [flashcard-review]
-front: "mechanism"
-meaning: "n. the atomic process that occurs during a chemical reaction; n. the technical aspects of doing something; n. a natural object resembling a machine in structure or function; n. (philosophy) the philosophical theory that all phenomena can be explained in terms of physical or biological causes"
-translation: "n. 机械, 机构, 结构, 机理, 技巧；[化] 机理; 历程; 机构"
-srsWords: "mechanism"
+front: "sectarian"
+meaning: "n. a member of a sect; a. of or relating to or characteristic of a sect or sects; a. belonging to or characteristic of a sect"
+translation: "a. 宗派的, 党派的, 偏狭的；n. 宗派成员, 闹宗派的人"
+srsWords: "sectarian"
 
 [flashcard-review]
-front: "hence"
-meaning: "r. from this place; r. from this time"
-translation: "adv. 因此, 从此"
-srsWords: "hence"
+front: "disparate"
+meaning: "s. fundamentally different or distinct in quality or kind; s. including markedly dissimilar elements"
+translation: "a. 根本不同的, 全异的, 不相干的；n. 无法相比的东西(或人)"
+srsWords: "disparate"
 
 [flashcard-review]
 front: "offspring"
@@ -204,6 +206,7 @@ front: "oblige"
 meaning: "v. bind by an obligation; cause to be indebted; v. provide a service or favor for someone"
 translation: "vt. 强制, 施恩惠于, 使感激；vi. 施恩惠, 帮忙"
 srsWords: "oblige"
+
 ---
 lessonTitle: "Lesson 4: Rhetoric, Persuasion & Debate Part 4"
 description: "Practice 10 key C1 vocabulary flashcards for Rhetoric, Persuasion & Debate"
@@ -223,16 +226,16 @@ translation: "n. 合干者, 合作者, 通敌者；[法] 合作者, 协助者, �
 srsWords: "collaborator"
 
 [flashcard-review]
-front: "collaboration"
-meaning: "n. act of working jointly; n. act of cooperating traitorously with an enemy that is occupying your country"
-translation: "n. 合作, 勾结；[法] 通敌卖国者, 奸细"
-srsWords: "collaboration"
+front: "fledge"
+meaning: "v. feed, care for, and rear young birds for flight; v. decorate with feathers; v. grow feathers"
+translation: "vt. 喂养, 用羽毛盖上, 装上羽毛；vi. 长羽毛"
+srsWords: "fledge"
 
 [flashcard-review]
-front: "collaborative"
-meaning: "s. accomplished by collaboration"
-translation: "a. 合作的, 协作的"
-srsWords: "collaborative"
+front: "hierarchical"
+meaning: "a. classified according to various criteria into successive levels or layers"
+translation: "[计] 分级的, 分层的, 层次的"
+srsWords: "hierarchical"
 
 [flashcard-review]
 front: "showy"
@@ -269,6 +272,7 @@ front: "customary"
 meaning: "s. in accordance with convention or custom"
 translation: "a. 习惯的, 惯常的；[经] 通常的, 习惯的"
 srsWords: "customary"
+
 ---
 lessonTitle: "Lesson 5: Rhetoric, Persuasion & Debate Part 5"
 description: "Practice 10 key C1 vocabulary flashcards for Rhetoric, Persuasion & Debate"
@@ -334,6 +338,7 @@ front: "shortlist"
 meaning: "v. put someone or something on a short list"
 translation: "n. <英>供最后挑选(或考虑)用的候选人名单"
 srsWords: "shortlist"
+
 ---
 lessonTitle: "Lesson 6: Rhetoric, Persuasion & Debate Part 6"
 description: "Practice 10 key C1 vocabulary flashcards for Rhetoric, Persuasion & Debate"
@@ -399,6 +404,7 @@ front: "acidic"
 meaning: "a. being or containing an acid; of a solution having an excess of hydrogen atoms (having a pH of less than 7); s. being sour to the taste"
 translation: "a. 成酸的, 尖刻的, 酸性的；[机] 酸性"
 srsWords: "acidic"
+
 ---
 lessonTitle: "Lesson 7: Rhetoric, Persuasion & Debate Part 7"
 description: "Practice 10 key C1 vocabulary flashcards for Rhetoric, Persuasion & Debate"
@@ -406,16 +412,16 @@ icon: "🎙️"
 color: "#E91E63"
 ---
 [flashcard-review]
-front: "align"
-meaning: "v. place in a line or arrange so as to be parallel or straight; v. be or come into adjustment with; v. align oneself with a group or a way of thinking; v. bring (components or parts) into proper or desirable coordination correlation"
-translation: "vi. 排列, 排成一行, 结盟；vt. 使结盟, 使成一行, 校正"
-srsWords: "align"
+front: "precedent"
+meaning: "n. an example that is used to justify similar occurrences at a later time; n. a subject mentioned earlier (preceding in time); s. preceding in time, order, or significance"
+translation: "n. 先例, 前例；a. 在先的, 在前的"
+srsWords: "precedent"
 
 [flashcard-review]
-front: "alignment"
-meaning: "n. the spatial property possessed by an arrangement or position of things in a straight line or in parallel lines; n. the act of adjusting or aligning the parts of a device in relation to each other"
-translation: "n. 队列, 结盟, 校正；[计] 校准; 对齐; 对准"
-srsWords: "alignment"
+front: "hypothetically"
+meaning: "r. by hypothesis"
+translation: "adv. 假设地, 假想地"
+srsWords: "hypothetically"
 
 [flashcard-review]
 front: "manipulation"
@@ -464,6 +470,7 @@ front: "peasant"
 meaning: "n. a country person; n. one of a (chiefly European) class of agricultural laborers; n. a crude uncouth ill-bred person lacking culture or refinement"
 translation: "n. 农夫, 乡下人"
 srsWords: "peasant"
+
 ---
 lessonTitle: "Lesson 8: Rhetoric, Persuasion & Debate Part 8"
 description: "Practice 10 key C1 vocabulary flashcards for Rhetoric, Persuasion & Debate"
@@ -495,10 +502,10 @@ translation: "vt. 使困扰, 使烦恼, 折磨"
 srsWords: "harass"
 
 [flashcard-review]
-front: "harassment"
-meaning: "n. a feeling of intense annoyance caused by being tormented; n. the act of tormenting by continued persistent attacks and criticism"
-translation: "n. 困扰, 烦扰, 烦恼；[法] 折磨, 骚扰, 侵扰"
-srsWords: "harassment"
+front: "polarization"
+meaning: "n. the phenomenon in which waves of light or other radiation are restricted in direction of vibration; n. the condition of having or giving polarity"
+translation: "n. 极化, 极化强度, 偏振, 两极分化；[计] 定位; 对位"
+srsWords: "polarization"
 
 [flashcard-review]
 front: "believably"
@@ -529,6 +536,7 @@ front: "persecution"
 meaning: "n. the act of persecuting (especially on the basis of race or religion)"
 translation: "n. 虐待, 迫害运动, 迫害, 烦扰；[法] 迫害, 虐待, 困扰"
 srsWords: "persecution"
+
 ---
 lessonTitle: "Lesson 9: Rhetoric, Persuasion & Debate Part 9"
 description: "Practice 10 key C1 vocabulary flashcards for Rhetoric, Persuasion & Debate"
@@ -594,6 +602,7 @@ front: "ruthlessness"
 meaning: "n mercilessness characterized by a lack of pity; n feelings of extreme heartlessness"
 translation: "n. 无情；冷酷；残忍"
 srsWords: "ruthlessness"
+
 ---
 lessonTitle: "Lesson 10: Rhetoric, Persuasion & Debate Part 10"
 description: "Practice 10 key C1 vocabulary flashcards for Rhetoric, Persuasion & Debate"
@@ -601,10 +610,10 @@ icon: "🎙️"
 color: "#E91E63"
 ---
 [flashcard-review]
-front: "clan"
-meaning: "n group of people related by blood or marriage"
-translation: "n. 氏族, 宗族, 集团；[医] 支"
-srsWords: "clan"
+front: "supremacist"
+meaning: "n. a person who advocates the supremacy of some particular group or race over all others"
+translation: "n. 至上主义者"
+srsWords: "supremacist"
 
 [flashcard-review]
 front: "privileged"
@@ -655,7 +664,7 @@ translation: "a. & n.<主英>=repellent"
 srsWords: "repellant"
 
 [flashcard-review]
-front: "aqua"
-meaning: "n a shade of blue tinged with green"
-translation: "[医] 水, 水剂"
-srsWords: "aqua"
+front: "aggregation"
+meaning: "n several things grouped together or considered as a whole; n the act of gathering something together"
+translation: "n. 集合, 聚合, 集合体；[化] 聚集; 聚集作用"
+srsWords: "aggregation"

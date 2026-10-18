@@ -74,6 +74,7 @@ front: "breathtaking"
 meaning: "s tending to cause suspension of regular breathing"
 translation: "a. 惊人的, 惊险的"
 srsWords: "breathtaking"
+
 ---
 lessonTitle: "Lesson 2: Psychology, Emotion & Behavior Part 2"
 description: "Practice 10 key B2 vocabulary flashcards for Psychology, Emotion & Behavior"
@@ -99,10 +100,10 @@ translation: "adv. 辉煌地, 光亮地, 灿烂地"
 srsWords: "brilliantly"
 
 [flashcard-review]
-front: "broadband"
-meaning: "a. of or relating to or being a communications network in which the bandwidth can be divided and shared by multiple simultaneous signals (as for voice or data or video); a. responding to or operating at a wide band of frequencies"
-translation: "[计] 宽带"
-srsWords: "broadband"
+front: "cognitive"
+meaning: "a. of or being or relating to or involving cognition"
+translation: "a. 认知的, 认识的"
+srsWords: "cognitive"
 
 [flashcard-review]
 front: "broadcaster"
@@ -129,16 +130,17 @@ translation: "n. 小册子, 小册"
 srsWords: "brochure"
 
 [flashcard-review]
-front: "browse"
-meaning: "n. vegetation (such as young shoots, twigs, and leaves) that is suitable for animals to eat; n. reading superficially or at random; n. the act of feeding by continual nibbling; v. look around casually and randomly, without seeking anything in particular"
-translation: "v. 浏览, 吃草；n. 浏览, 吃草；[计] 浏览"
-srsWords: "browse"
+front: "psychiatry"
+meaning: "n. the branch of medicine dealing with the diagnosis and treatment of mental disorders"
+translation: "n. 精神病学, 精神病治疗；[医] 精神病学"
+srsWords: "psychiatry"
 
 [flashcard-review]
-front: "browser"
-meaning: "n. a viewer who looks around casually without seeking anything in particular; n. a program used to view HTML documents"
-translation: "n. 吃嫩叶的动物, 浏览书本的人；[计] 浏览程序"
-srsWords: "browser"
+front: "harassment"
+meaning: "n. a feeling of intense annoyance caused by being tormented; n. the act of tormenting by continued persistent attacks and criticism"
+translation: "n. 困扰, 烦扰, 烦恼；[法] 折磨, 骚扰, 侵扰"
+srsWords: "harassment"
+
 ---
 lessonTitle: "Lesson 3: Psychology, Emotion & Behavior Part 3"
 description: "Practice 10 key B2 vocabulary flashcards for Psychology, Emotion & Behavior"
@@ -204,6 +206,7 @@ front: "burglary"
 meaning: "n. entering a building unlawfully with intent to commit a felony or to steal valuable property"
 translation: "n. 夜盗行为, 盗窃, 盗窃行为；[法] 夜盗行为, 夜间入屋窃盗罪, 窃盗"
 srsWords: "burglary"
+
 ---
 lessonTitle: "Lesson 4: Psychology, Emotion & Behavior Part 4"
 description: "Practice 10 key B2 vocabulary flashcards for Psychology, Emotion & Behavior"
@@ -259,16 +262,17 @@ translation: "n. 炮弹"
 srsWords: "cannonball"
 
 [flashcard-review]
-front: "canon"
-meaning: "n. a rule or especially body of rules or principles generally established as valid and fundamental in a field or art or philosophy; n. a priest who is a member of a cathedral chapter; n. a contrapuntal piece of music in which a melody in one part is imitated exactly in other parts; n. a complete list of saints that have been recognized by the Roman Catholic Church"
-translation: "n. 教会法规, 圣典, 准则, 标准, 教士；[医] 规范, [加农]炮"
-srsWords: "canon"
+front: "sexuality"
+meaning: "n the properties that distinguish organisms on the basis of their reproductive roles"
+translation: "n. 性征, 性行为, 性欲；[医] 性别, 性欲"
+srsWords: "sexuality"
 
 [flashcard-review]
-front: "capability"
-meaning: "n. the quality of being capable -- physically or intellectually or legally; n. the susceptibility of something to a particular treatment; n. an aptitude that may be developed"
-translation: "n. 能力, 性能, 约束力；[化] 能力"
-srsWords: "capability"
+front: "backward"
+meaning: "a. directed or facing toward the back or rear; a. (used of temperament or behavior) marked by a retiring nature; s. retarded in intellectual development; s. having made less than normal progress"
+translation: "adv. 向后地, 相反地；a. 向后的, 相反的；[计] 倒推"
+srsWords: "backward"
+
 ---
 lessonTitle: "Lesson 5: Psychology, Emotion & Behavior Part 5"
 description: "Practice 10 key B2 vocabulary flashcards for Psychology, Emotion & Behavior"
@@ -294,10 +298,10 @@ translation: "n. 旅行队, 有篷顶的大车；[经] 商队, 结队商贩"
 srsWords: "caravan"
 
 [flashcard-review]
-front: "carbon"
-meaning: "n. an abundant nonmetallic tetravalent element occurring in three allotropic forms: amorphous carbon and graphite and diamond; occurs in all organic compounds; n. a copy made with carbon paper"
-translation: "n. 碳, 副本, 复写纸；[化] 碳"
-srsWords: "carbon"
+front: "wraith"
+meaning: "n a mental representation of some haunting experience"
+translation: "n. 生魂, 幻影, 幽灵"
+srsWords: "wraith"
 
 [flashcard-review]
 front: "cardboard"
@@ -334,6 +338,7 @@ front: "carpool"
 meaning: "an arrangement to share private transportation"
 translation: "v. 合伙使用汽车"
 srsWords: "carpool"
+
 ---
 lessonTitle: "Lesson 6: Psychology, Emotion & Behavior Part 6"
 description: "Practice 10 key B2 vocabulary flashcards for Psychology, Emotion & Behavior"
@@ -371,10 +376,10 @@ translation: "a. 易记住的, 欺骗性的, 不规则发生的"
 srsWords: "catchy"
 
 [flashcard-review]
-front: "catering"
-meaning: "n. providing food and services"
-translation: "n. 给养；承办酒席；[医]提供饮食及服务"
-srsWords: "catering"
+front: "apt"
+meaning: "s. (usually followed by `to') naturally disposed toward; s. at risk of or subject to experiencing something usually unpleasant; s. mentally quick and resourceful"
+translation: "a. 有...倾向的, 易于的, 恰当的, 聪明的；[计] 自动数控语言, 自动图象传输, 自动程序控制, 自动程序设计工具"
+srsWords: "apt"
 
 [flashcard-review]
 front: "cathedral"
@@ -399,6 +404,7 @@ front: "cellar"
 meaning: "n. storage space where wines are stored"
 translation: "n. 地窖, 地下室, 藏酒"
 srsWords: "cellar"
+
 ---
 lessonTitle: "Lesson 7: Psychology, Emotion & Behavior Part 7"
 description: "Practice 10 key B2 vocabulary flashcards for Psychology, Emotion & Behavior"
@@ -430,16 +436,16 @@ translation: "a. 百分度的, 摄氏的；[医] 百分度"
 srsWords: "centigrade"
 
 [flashcard-review]
-front: "certificate"
-meaning: "n. a document attesting to the truth of certain stated facts; v. present someone with a certificate; v. authorize by certificate"
-translation: "n. 证书, 证明书；vt. 发给证明书, 用证书批准, 用证书证明"
-srsWords: "certificate"
+front: "deficit"
+meaning: "n. the property of being an amount by which something is less than expected or required; n. a deficiency or failure in neurological or mental functioning; n. (sports) the score by which a team or individual is losing; n. an excess of liabilities over assets (usually over a certain period)"
+translation: "n. 赤字, 不足额；[医] 短缺"
+srsWords: "deficit"
 
 [flashcard-review]
-front: "certification"
-meaning: "n. the act of certifying or bestowing a franchise on"
-translation: "n. 证明；[经] 证明"
-srsWords: "certification"
+front: "malpractice"
+meaning: "n. professional wrongdoing that results in injury or damage; n. a wrongful act that the actor had no right to do; improper professional conduct"
+translation: "n. 不当治疗, 不端行为, 渎职；[医] 疗法失当, 医疗差错"
+srsWords: "malpractice"
 
 [flashcard-review]
 front: "certify"
@@ -464,6 +470,7 @@ front: "charming"
 meaning: "s. pleasing or delighting; s. possessing or using or characteristic of or appropriate to supernatural powers"
 translation: "a. 迷人的, 有吸引力的"
 srsWords: "charming"
+
 ---
 lessonTitle: "Lesson 8: Psychology, Emotion & Behavior Part 8"
 description: "Practice 10 key B2 vocabulary flashcards for Psychology, Emotion & Behavior"
@@ -529,6 +536,7 @@ front: "childish"
 meaning: "s. indicating a lack of maturity"
 translation: "a. 天真的, 孩子气的"
 srsWords: "childish"
+
 ---
 lessonTitle: "Lesson 9: Psychology, Emotion & Behavior Part 9"
 description: "Practice 10 key B2 vocabulary flashcards for Psychology, Emotion & Behavior"
@@ -542,10 +550,10 @@ translation: "n. 烟囱, 灯罩；[电] 烟囱"
 srsWords: "chimney"
 
 [flashcard-review]
-front: "chip"
-meaning: "n. a triangular wooden float attached to the end of a log line; n. a piece of dried bovine dung; n. a thin crisp slice of potato fried in deep fat; n. a small disk-shaped counter used to represent money when gambling"
-translation: "n. 屑片, 薄片, 碎片；vt. 削, 切, 削成碎片, 使摔倒, 凿；vi. 削下屑片；[计] 孔屑; 组件; 晶片; 芯片"
-srsWords: "chip"
+front: "deviant"
+meaning: "n a person whose behavior deviates from what is acceptable especially in sexual behavior; s markedly different from an accepted norm"
+translation: "a. 不正常的；n. 不正常的人(或物)"
+srsWords: "deviant"
 
 [flashcard-review]
 front: "chop"
@@ -594,6 +602,7 @@ front: "clarify"
 meaning: "v. make clear and (more) comprehensible; v. make clear by removing impurities or solids, as by heating"
 translation: "vi. 澄清, 阐明；vt. 使明晰"
 srsWords: "clarify"
+
 ---
 lessonTitle: "Lesson 10: Psychology, Emotion & Behavior Part 10"
 description: "Practice 10 key B2 vocabulary flashcards for Psychology, Emotion & Behavior"
@@ -601,16 +610,16 @@ icon: "🧠"
 color: "#E91E63"
 ---
 [flashcard-review]
-front: "classification"
-meaning: "n. a group of people or things arranged by class or category; n. the basic cognitive process of arranging into classes or categories; n. restriction imposed by the government on documents or weapons that are available only to certain authorized people"
-translation: "n. 分类, 分级；[化] 分级; 分粒; 分类"
-srsWords: "classification"
+front: "daze"
+meaning: "n. the feeling of distress and disbelief that you have when something bad happens accidentally; n. confusion characterized by lack of clarity"
+translation: "vt. 使茫然, 使发昏, 使眼花缭乱；n. 迷乱, 眼花缭乱"
+srsWords: "daze"
 
 [flashcard-review]
-front: "clause"
-meaning: "n. (grammar) an expression including a subject and predicate but not constituting a complete sentence"
-translation: "n. 子句, 条款；[计] 子句"
-srsWords: "clause"
+front: "indirect"
+meaning: "s. having intervening factors or persons or influences; a. not direct in spatial dimension; not leading by a straight line or course to a destination; a. extended senses; not direct in manner or language or behavior or action; s. not as a direct effect or consequence"
+translation: "a. 间接的, 非直截了当的, 不坦率的；[医] 间接的"
+srsWords: "indirect"
 
 [flashcard-review]
 front: "clearness"
@@ -637,10 +646,10 @@ translation: "n. 关闭；vt. 使终止"
 srsWords: "closure"
 
 [flashcard-review]
-front: "clothing"
-meaning: "n. a covering designed to be worn on a person's body"
-translation: "n. 衣服"
-srsWords: "clothing"
+front: "eagerness"
+meaning: "n. a positive feeling of wanting to push ahead with something"
+translation: "n. 热心"
+srsWords: "eagerness"
 
 [flashcard-review]
 front: "clumsy"

@@ -16,28 +16,28 @@ icon: "🏺"
 color: "#9C27B0"
 ---
 [flashcard-review]
-front: "facilities"
-meaning: "n a building or place that provides a particular service or is used for a particular industry; n skillful performance or ability without difficulty; n a natural effortlessness; n something designed and created to serve a particular function and to afford a particular convenience or service; n a service that an organization or a piece of equipment offers you"
-translation: "n. 工具, 设施, 设备"
-srsWords: "facilities"
+front: "paralysis"
+meaning: "n. loss of the ability to move a body part"
+translation: "n. 麻痹, 停顿, 瘫痪；[医] 麻痹, 瘫痪"
+srsWords: "paralysis"
 
 [flashcard-review]
-front: "factor"
-meaning: "n. anything that contributes causally to a result; n. any of the numbers (or symbols) that form a product when multiplied together; n. an independent variable in statistics; v. resolve into factors"
-translation: "n. 因素, 因数, 系数, 基因, 代理人；[计] 因式"
-srsWords: "factor"
+front: "voluntary"
+meaning: "n. composition (often improvised) for a solo instrument (especially solo organ) and not a regular part of a religious service or musical performance; a. of your own free will or design; done by choice; not forced or compelled; a. controlled by individual volition"
+translation: "a. 自动的, 自愿的, 故意的, 志愿的, 自发的；n. 自愿行动, 志愿者, 自由调"
+srsWords: "voluntary"
 
 [flashcard-review]
-front: "faculty"
-meaning: "n. one of the inherent cognitive or perceptual powers of the mind"
-translation: "n. 才能, 能力, 全体教员, (大学的)系；[医] 能力, [大学]院系"
-srsWords: "faculty"
+front: "rebound"
+meaning: "n. a reaction to a crisis or setback or frustration; n. the act of securing possession of the rebounding basketball after a missed shot"
+translation: "vi. 弹回, 返回, 产生事与愿违的结果；vt. 使弹回, 使返回；n. 反弹, 返回, 篮板球, 振作；rebind的过去式和过去分词"
+srsWords: "rebound"
 
 [flashcard-review]
-front: "faith"
-meaning: "n. complete confidence in a person or plan etc; n. loyalty or allegiance to a cause or a person"
-translation: "n. 信心, 信任, 忠实, 保证；[法] 信任, 信仰, 信念"
-srsWords: "faith"
+front: "provincial"
+meaning: "n. (Roman Catholic Church) an official in charge of an ecclesiastical province acting under the superior general of a religious order; a. of or associated with a province; a. characteristic of the provinces or their people"
+translation: "n. 外地人, 粗野的人；a. 省的, 外地的, 偏狭的"
+srsWords: "provincial"
 
 [flashcard-review]
 front: "falter"
@@ -74,6 +74,7 @@ front: "fatal"
 meaning: "a. bringing death; s. controlled or decreed by fate; predetermined"
 translation: "a. 致命的, 重大的, 命运注定的, 粗心的, 不幸的；[医] 致命的, 致死的"
 srsWords: "fatal"
+
 ---
 lessonTitle: "Lesson 2: Culture, Heritage & Philosophy Part 2"
 description: "Practice 10 key B2 vocabulary flashcards for Culture, Heritage & Philosophy"
@@ -105,16 +106,16 @@ translation: "n. 壮举, 功绩, 技艺表演；a. 灵巧的, 合适的, 整洁�
 srsWords: "feat"
 
 [flashcard-review]
-front: "federal"
-meaning: "n. a member of the Union Army during the American Civil War; n. any federal law-enforcement officer; s. national; especially in reference to the government of the United States as distinct from that of its member units; a. of or relating to the central government of a federation"
-translation: "a. 联邦的, 联合的, 同盟的；[法] 联邦的, 联邦制的, 联盟的"
-srsWords: "federal"
+front: "cheeseburger"
+meaning: "n. a hamburger with melted cheese on it"
+translation: "n. 干酪汉堡包"
+srsWords: "cheeseburger"
 
 [flashcard-review]
-front: "feedback"
-meaning: "n. the process in which part of the output of a system is returned to its input in order to regulate its further output; n. response to an inquiry or experiment"
-translation: "n. 反馈, 反应；[计] 反馈"
-srsWords: "feedback"
+front: "peninsula"
+meaning: "n. a large mass of land projecting into a body of water"
+translation: "n. 半岛, 突出的地方, 伊比利亚半岛"
+srsWords: "peninsula"
 
 [flashcard-review]
 front: "ferryboat"
@@ -135,10 +136,11 @@ translation: "a. 凶猛的, 猛烈的, 热烈的, 暴躁的"
 srsWords: "fierce"
 
 [flashcard-review]
-front: "fighting"
-meaning: "n the act of fighting; any contest or struggle; v be engaged in a fight; carry on a fight; v fight against or resist strongly; v make a strenuous or labored effort; v exert oneself continuously, vigorously, or obtrusively to gain an end or engage in a crusade for a certain cause or person; be an advocate for; s engaged in or ready for military or naval operations"
-translation: "a. 战斗的, 容易引起争斗的, 适于格斗的, 好斗的, 好战的, 斗争的, 搏斗的；n. 战斗, 斗争, 搏斗"
-srsWords: "fighting"
+front: "hypothetical"
+meaning: "n. a hypothetical possibility, circumstance, statement, proposal, situation, etc."
+translation: "a. 假设的, 有待证实的, 假定的, 有前提的；[计] 理想的"
+srsWords: "hypothetical"
+
 ---
 lessonTitle: "Lesson 3: Culture, Heritage & Philosophy Part 3"
 description: "Practice 10 key B2 vocabulary flashcards for Culture, Heritage & Philosophy"
@@ -194,16 +196,17 @@ translation: "adv. 第一, 首先"
 srsWords: "firstly"
 
 [flashcard-review]
-front: "fiscal"
-meaning: "a. involving financial matters"
-translation: "a. 财政的, 国库的；[经] 财政上的, 会计的, 国库的"
-srsWords: "fiscal"
+front: "suburban"
+meaning: "a. relating to or characteristic of or situated in suburbs"
+translation: "a. 郊外的, 郊区的, (贬)偏狭的, 土气的, 见识不广的；n. 郊区居民"
+srsWords: "suburban"
 
 [flashcard-review]
-front: "fixed"
-meaning: "s. (of a number) having a fixed and unchanging value; s. fixed and unmoving; a. securely placed or fastened or set; s. incapable of being changed or moved or undone; e.g. \"frozen prices\""
-translation: "a. 固定的, 不变的；[法] 固定的, 确定的, 不变的"
-srsWords: "fixed"
+front: "firmware"
+meaning: "n. (computer science) coded instructions that are stored permanently in read-only memory"
+translation: "[计] 固件"
+srsWords: "firmware"
+
 ---
 lessonTitle: "Lesson 4: Culture, Heritage & Philosophy Part 4"
 description: "Practice 10 key B2 vocabulary flashcards for Culture, Heritage & Philosophy"
@@ -265,10 +268,11 @@ translation: "n. 弹性, 适应性；[计] 灵活性; 适应性"
 srsWords: "flexibility"
 
 [flashcard-review]
-front: "flexible"
-meaning: "a. capable of being changed; a. able to flex; able to bend easily; s. bending and snapping back readily without breaking"
-translation: "a. 易曲的, 灵活的, 柔顺的, 能变形的, 可通融的；[医] 能屈的"
-srsWords: "flexible"
+front: "pant"
+meaning: "a single leg covering (usually plural 'pants')"
+translation: "n. 喘息, 悸动；vi. 喘息, 渴望；vt. 气喘吁吁地说"
+srsWords: "pant"
+
 ---
 lessonTitle: "Lesson 5: Culture, Heritage & Philosophy Part 5"
 description: "Practice 10 key B2 vocabulary flashcards for Culture, Heritage & Philosophy"
@@ -334,6 +338,7 @@ front: "footnote"
 meaning: "n. a printed note placed below the text on a printed page"
 translation: "n. 脚注；[计] 脚注"
 srsWords: "footnote"
+
 ---
 lessonTitle: "Lesson 6: Culture, Heritage & Philosophy Part 6"
 description: "Practice 10 key B2 vocabulary flashcards for Culture, Heritage & Philosophy"
@@ -365,10 +370,10 @@ translation: "n. 林学, 森林地；[法] 林地, 林学, 林业"
 srsWords: "forestry"
 
 [flashcard-review]
-front: "formation"
-meaning: "n. an arrangement of people or things acting as a unit; n. the act of fabricating something in a particular shape; n. a particular spatial arrangement; n. natural process that causes something to form"
-translation: "n. 形成, 构造, 编队；[医] 形成, 结构"
-srsWords: "formation"
+front: "atmospheric"
+meaning: "a. relating to or located in the atmosphere"
+translation: "a. 大气的；[医] 大气的; 大气压的"
+srsWords: "atmospheric"
 
 [flashcard-review]
 front: "formerly"
@@ -399,6 +404,7 @@ front: "frankly"
 meaning: "r (used as intensives reflecting the speaker's attitude) it is sincerely the case that"
 translation: "adv. 坦白地"
 srsWords: "frankly"
+
 ---
 lessonTitle: "Lesson 7: Culture, Heritage & Philosophy Part 7"
 description: "Practice 10 key B2 vocabulary flashcards for Culture, Heritage & Philosophy"
@@ -412,10 +418,10 @@ translation: "adv. 狂暴地, 疯狂似地"
 srsWords: "frantically"
 
 [flashcard-review]
-front: "fraud"
-meaning: "n. intentional deception resulting in injury to another person; n. something intended to deceive; deliberate trickery intended to gain an advantage"
-translation: "n. 欺骗, 欺诈, 诡计, 骗子；[经] 欺诈, 舞弊, 骗子"
-srsWords: "fraud"
+front: "vertex"
+meaning: "n. the point of intersection of lines or the point opposite the base of a figure; n. the highest point (of something)"
+translation: "n. 顶点, 最高点, 头顶, 天顶；[计] 顶点"
+srsWords: "vertex"
 
 [flashcard-review]
 front: "freak"
@@ -448,22 +454,23 @@ translation: "n. 臭气, 烟, 激怒；vt. 熏；vi. 冒烟"
 srsWords: "fume"
 
 [flashcard-review]
-front: "functional"
-meaning: "a. designed for or capable of a particular function or use; a. involving or affecting function rather than physiology; a. relating to or based on function especially as opposed to structure; it is a functional one\"; s. fit or ready for use or service"
-translation: "a. 功能的；[医] 机能的, 功能的, 官能的"
-srsWords: "functional"
+front: "prostate"
+meaning: "a. relating to the prostate gland"
+translation: "a. 前列腺的；n. 前列腺"
+srsWords: "prostate"
 
 [flashcard-review]
-front: "functionality"
-meaning: "n. capable of serving a purpose well"
-translation: "[计] 功能性, 泛函性；[化] 官能度"
-srsWords: "functionality"
+front: "aneurysm"
+meaning: "n. a cardiovascular disease characterized by a saclike widening of an artery resulting from weakening of the artery wall"
+translation: "n. 动脉瘤；[医] 动脉瘤"
+srsWords: "aneurysm"
 
 [flashcard-review]
-front: "fundamental"
-meaning: "n. any factor that could be considered important to the understanding of a particular business; n. the lowest tone of a harmonic series; s. being or involving basic facts or principles; s. far-reaching and thoroughgoing in effect especially on the nature of something"
-translation: "n. 基本原理, 原则, 基波；a. 基本的, 重要的, 原音的"
-srsWords: "fundamental"
+front: "mrna"
+meaning: "n the template for protein synthesis; the form of RNA that carries information from DNA in the nucleus to the ribosome sites of protein synthesis in the cell"
+translation: "[化] 信使核糖核酸"
+srsWords: "mrna"
+
 ---
 lessonTitle: "Lesson 8: Culture, Heritage & Philosophy Part 8"
 description: "Practice 10 key B2 vocabulary flashcards for Culture, Heritage & Philosophy"
@@ -501,16 +508,16 @@ translation: "n. 愉快, 快活, 高兴"
 srsWords: "gaiety"
 
 [flashcard-review]
-front: "gambling"
-meaning: "n. the act of playing for stakes in the hope of winning (including the payment of a price for a chance to win a prize)"
-translation: "n. 赌博"
-srsWords: "gambling"
+front: "geological"
+meaning: "a. of or relating to or based on geology"
+translation: "a. 地质学的, 地质的"
+srsWords: "geological"
 
 [flashcard-review]
-front: "gang"
-meaning: "n. an association of criminals; n. an organized group of workmen; n. tool consisting of a combination of implements arranged to work together; v. act as an organized group"
-translation: "n. 队, 群, 帮；vi. 成群结队, 结成一伙；vt. 使成群结队"
-srsWords: "gang"
+front: "commodity"
+meaning: "n. articles of commerce"
+translation: "n. 农产品, 商品, 有用的物品；[经] 商品, 货物, 日用品"
+srsWords: "commodity"
 
 [flashcard-review]
 front: "gangster"
@@ -529,6 +536,7 @@ front: "gasp"
 meaning: "n. a short labored intake of breath with the mouth open"
 translation: "n. 喘气；vi. 喘气, 喘息, 渴望；vt. 气喘吁吁地说"
 srsWords: "gasp"
+
 ---
 lessonTitle: "Lesson 9: Culture, Heritage & Philosophy Part 9"
 description: "Practice 10 key B2 vocabulary flashcards for Culture, Heritage & Philosophy"
@@ -536,10 +544,10 @@ icon: "🏺"
 color: "#9C27B0"
 ---
 [flashcard-review]
-front: "gateway"
-meaning: "n. an entrance that can be closed by a gate"
-translation: "n. 门, 通路；[计] 网关"
-srsWords: "gateway"
+front: "thereby"
+meaning: "r. by that means or because of that"
+translation: "adv. 因此"
+srsWords: "thereby"
 
 [flashcard-review]
 front: "gaudy"
@@ -554,10 +562,10 @@ translation: "n. 注视, 凝视；vi. 注视, 凝视"
 srsWords: "gaze"
 
 [flashcard-review]
-front: "gear"
-meaning: "n. a toothed wheel that engages another toothed mechanism in order to change the speed or direction of transmitted motion; n. a mechanism for transmitting motion for some specific purpose (as the steering gear of a vehicle); n. equipment consisting of miscellaneous articles needed for a particular operation or sport etc.; v. set the level or character of"
-translation: "n. 齿轮, 工具；vt. 以齿轮连起, 开动, 使适应, 安排；vi. 连接上, 适合"
-srsWords: "gear"
+front: "attainment"
+meaning: "n. the act of achieving an aim; n. arrival at a new stage"
+translation: "n. 达到"
+srsWords: "attainment"
 
 [flashcard-review]
 front: "generosity"
@@ -578,10 +586,10 @@ translation: "n. 天才, 天赋, 精神, 神魔；[医] 特征"
 srsWords: "genius"
 
 [flashcard-review]
-front: "genre"
-meaning: "n. a kind of literary or artistic work; n. a class of art (or artistic endeavor) having a characteristic form or technique"
-translation: "n. 类型, 流派"
-srsWords: "genre"
+front: "acre"
+meaning: "n. a unit of area (4840 square yards) used in English-speaking countries; n. a territory of western Brazil bordering on Bolivia and Peru; n. a town and port in northwestern Israel in the eastern Mediterranean"
+translation: "n. 英亩"
+srsWords: "acre"
 
 [flashcard-review]
 front: "gently"
@@ -590,10 +598,11 @@ translation: "adv. 温和地, 温柔地, 轻轻地, 逐渐地"
 srsWords: "gently"
 
 [flashcard-review]
-front: "genuine"
-meaning: "a. not fake or counterfeit; s. not pretended; sincerely felt or expressed"
-translation: "a. 真正的, 真实的, 诚恳的；[医] 真性的"
-srsWords: "genuine"
+front: "penetration"
+meaning: "n. an attack that penetrates into enemy territory; n. clear or deep perception of a situation; n. the act of entering into or through something"
+translation: "n. 穿透, 渗透, 侵入, 识穿, 洞察(力)；[化] 渗入"
+srsWords: "penetration"
+
 ---
 lessonTitle: "Lesson 10: Culture, Heritage & Philosophy Part 10"
 description: "Practice 10 key B2 vocabulary flashcards for Culture, Heritage & Philosophy"
@@ -607,10 +616,10 @@ translation: "adv. 真诚地；诚实地"
 srsWords: "genuinely"
 
 [flashcard-review]
-front: "geographic"
-meaning: "a. of or relating to the science of geography; a. determined by geography"
-translation: "a. 地理(学)的, 地区(性)的"
-srsWords: "geographic"
+front: "doctrine"
+meaning: "n. a belief (or system of beliefs) accepted as authoritative by some group or school"
+translation: "n. 教条, 学说；[医] 学说"
+srsWords: "doctrine"
 
 [flashcard-review]
 front: "germ"

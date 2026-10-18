@@ -74,6 +74,7 @@ front: "builder"
 meaning: "n. a substance added to soaps or detergents to increase their cleansing action; n. a person who creates a business or who organizes and develops a country; n. someone who contracts for and supervises construction (as of a building)"
 translation: "n. 建立者；[机] 组份"
 srsWords: "builder"
+
 ---
 lessonTitle: "Lesson 2: Work, Business & Ambition Part 2"
 description: "Practice 10 key B1 vocabulary flashcards for Work, Business & Ambition"
@@ -139,6 +140,7 @@ front: "gnu"
 meaning: "n. large African antelope having a head with horns like an ox and a long tufted tail"
 translation: "n. 牛羚, 角马；[计] GNU 计划，又称革奴计划，是由Richard Stallman在1983年9月27日公开发起的，目标是创建一套完全自由的操作系统"
 srsWords: "gnu"
+
 ---
 lessonTitle: "Lesson 3: Work, Business & Ambition Part 3"
 description: "Practice 10 key B1 vocabulary flashcards for Work, Business & Ambition"
@@ -146,10 +148,10 @@ icon: "💼"
 color: "#3F51B5"
 ---
 [flashcard-review]
-front: "but"
-meaning: "r and nothing more"
-translation: "prep. 除了；conj. 但是；adv. 仅仅"
-srsWords: "but"
+front: "firm"
+meaning: "n. the members of a business organization that owns or operates one or more establishments; s. marked by firm determination or resolution; not shakable; s. not soft or yielding to pressure; s. strong and sure"
+translation: "n. 公司, 商号；a. 坚定的, 坚强的, 牢固的, 结实的, 坚硬的, 坚挺的, 严格的, 确定的；vt. 使牢固, 使坚定；vi. 变稳固, 变坚实；adv. 稳固地"
+srsWords: "firm"
 
 [flashcard-review]
 front: "buyer"
@@ -200,10 +202,11 @@ translation: "n. 访客, 召集员, 传唤员；a. 新鲜的；[计] 呼叫方�
 srsWords: "caller"
 
 [flashcard-review]
-front: "calmness"
-meaning: "n. an absence of strong winds or rain; n. a feeling of calm; an absence of agitation or excitement"
-translation: "n. 平静, 镇静, 冷静"
-srsWords: "calmness"
+front: "corporation"
+meaning: "n. a business firm whose articles of incorporation have been approved in some state"
+translation: "n. 公司, 合作, 法人团体；[法] 法人团体, 社团, 法人"
+srsWords: "corporation"
+
 ---
 lessonTitle: "Lesson 4: Work, Business & Ambition Part 4"
 description: "Practice 10 key B1 vocabulary flashcards for Work, Business & Ambition"
@@ -269,6 +272,7 @@ front: "capture"
 meaning: "n. the act of forcibly dispossessing an owner of property; n. a process whereby a star or planet holds an object in its gravitational field; n. any process in which an atomic or nuclear system acquires an additional particle; n. the act of taking of a person by force"
 translation: "n. 抓取, 战利品, 捕获之物；vt. 抓取, 获得, 迷住；[计] 截获命令"
 srsWords: "capture"
+
 ---
 lessonTitle: "Lesson 5: Work, Business & Ambition Part 5"
 description: "Practice 10 key B1 vocabulary flashcards for Work, Business & Ambition"
@@ -288,16 +292,16 @@ translation: "a. 粗心的, 不关心的, 无忧无虑的"
 srsWords: "careless"
 
 [flashcard-review]
-front: "carelessly"
-meaning: "r. without care or concern"
-translation: "adv. 不注意地, 粗心地"
-srsWords: "carelessly"
+front: "employer"
+meaning: "n. a person or firm that employs workers"
+translation: "n. 雇主, 老板；[经] 雇主, 业主"
+srsWords: "employer"
 
 [flashcard-review]
-front: "carelessness"
-meaning: "n. the quality of not being careful or taking pains"
-translation: "n. 粗心大意"
-srsWords: "carelessness"
+front: "businesswoman"
+meaning: "a woman who works in business"
+translation: "n. 女商人"
+srsWords: "businesswoman"
 
 [flashcard-review]
 front: "carpet"
@@ -334,6 +338,7 @@ front: "categorise"
 meaning: "v place into or assign to a category"
 translation: "vt. 分类, 归类"
 srsWords: "categorise"
+
 ---
 lessonTitle: "Lesson 6: Work, Business & Ambition Part 6"
 description: "Practice 10 key B1 vocabulary flashcards for Work, Business & Ambition"
@@ -341,10 +346,10 @@ icon: "💼"
 color: "#3F51B5"
 ---
 [flashcard-review]
-front: "categorize"
-meaning: "v. place into or assign to a category"
-translation: "vt. 分类, 归类"
-srsWords: "categorize"
+front: "gang"
+meaning: "n. an association of criminals; n. an organized group of workmen; n. tool consisting of a combination of implements arranged to work together; v. act as an organized group"
+translation: "n. 队, 群, 帮；vi. 成群结队, 结成一伙；vt. 使成群结队"
+srsWords: "gang"
 
 [flashcard-review]
 front: "category"
@@ -399,6 +404,7 @@ front: "central"
 meaning: "n. a workplace that serves as a telecommunications facility where lines from telephones can be connected together to permit communication; a. in or near a center or constituting a center; the inner area"
 translation: "a. 中央的, 重要的；[医] 中央的, 中心的, 中枢的"
 srsWords: "central"
+
 ---
 lessonTitle: "Lesson 7: Work, Business & Ambition Part 7"
 description: "Practice 10 key B1 vocabulary flashcards for Work, Business & Ambition"
@@ -464,6 +470,7 @@ front: "charm"
 meaning: "n. something believed to bring good luck; n. (physics) one of the six flavors of quark; v. control by magic spells, as by practicing witchcraft; v. protect through supernatural powers or charms"
 translation: "n. 吸引力, 魔力, 符咒；vt. 迷住, 使陶醉, 行魔法；vi. 用符咒, 有魅力"
 srsWords: "charm"
+
 ---
 lessonTitle: "Lesson 8: Work, Business & Ambition Part 8"
 description: "Practice 10 key B1 vocabulary flashcards for Work, Business & Ambition"
@@ -525,10 +532,11 @@ translation: "n. 咯咯的笑声, 轻笑；vi. 咯咯的笑, 咕咕叫"
 srsWords: "chuckle"
 
 [flashcard-review]
-front: "circle"
-meaning: "n. ellipse in which the two axes are of equal length; a plane curve generated by one point moving at a constant distance from a fixed point; n. something approximating the shape of a circle; n. a curved section or tier of seats in a hall or theater or opera house; usually the first tier above the orchestra; n. any circular or rotating mechanism"
-translation: "n. 圆周, 社交圈, 循环, 范围；vt. 围着, 环绕；vi. 盘旋, 循环"
-srsWords: "circle"
+front: "hunting"
+meaning: "n the pursuit and killing or capture of wild animals regarded as a sport; n the activity of looking thoroughly in order to find something or someone; n the work of finding and killing or capturing animals for food or pelts; v pursue for food or sport (as of wild animals); v pursue or chase relentlessly; v chase away, with as with force; v yaw back and forth about a flight path; v oscillate about a desired speed, position, or state to an undesirable extent; v seek, search for; v search (an area) for prey"
+translation: "n. 狩猎, 猎狐, 探求；[计] 寻找平衡; 寻找"
+srsWords: "hunting"
+
 ---
 lessonTitle: "Lesson 9: Work, Business & Ambition Part 9"
 description: "Practice 10 key B1 vocabulary flashcards for Work, Business & Ambition"
@@ -554,10 +562,10 @@ translation: "n. 国籍, 市民权, 市民的身份；[法] 公民权, 公民资
 srsWords: "citizenship"
 
 [flashcard-review]
-front: "civilisation"
-meaning: "n the social process whereby societies achieve an advanced stage of development and organization; n a particular society at a particular time and place; n a society in an advanced state of social development (e.g., with complex legal and political and religious organizations); n the quality of excellence in thought and manners and taste"
-translation: "n. 文明, 文明世界, 文化, 开化, 教化"
-srsWords: "civilisation"
+front: "division"
+meaning: "n. an army unit large enough to sustain combat; n. the act or process of dividing; n. an administrative unit in government or business; n. discord that splits a group"
+translation: "n. 分, 分开, 除法, 部门(如部、处、系等), 师；[计] 部分"
+srsWords: "division"
 
 [flashcard-review]
 front: "classical"
@@ -566,10 +574,10 @@ translation: "a. 古典的, 正统派的, 经典的；[医] 古典的; 标准的
 srsWords: "classical"
 
 [flashcard-review]
-front: "classify"
-meaning: "v. arrange or order by classes or categories; v. declare unavailable, as for security reasons"
-translation: "vt. 分类, 归类, 分等；[建] 分类, 分级, 分粒"
-srsWords: "classify"
+front: "commission"
+meaning: "n. a fee for services rendered based on a percentage of an amount received or collected or agreed to be paid (as distinguished from a salary); n. the act of granting authority to undertake certain functions; n. the state of being in good working order and ready for operation; n. a formal statement of a command or injunction to do something"
+translation: "n. 委任状, 任官令, 所委职责, 佣金, 犯, 委托, 所托之事；vt. 委任, 委托制作, 使服役"
+srsWords: "commission"
 
 [flashcard-review]
 front: "cliff"
@@ -594,6 +602,7 @@ front: "clinic"
 meaning: "n. a medical establishment run by a group of medical specialists; n. meeting for diagnosis of problems and instruction or remedial work in a particular activity; n. a healthcare facility for outpatient care"
 translation: "n. 诊所, 临床教学；[医] 诊所(门诊部); 临床(讲解); 临床(学)科"
 srsWords: "clinic"
+
 ---
 lessonTitle: "Lesson 10: Work, Business & Ambition Part 10"
 description: "Practice 10 key B1 vocabulary flashcards for Work, Business & Ambition"
@@ -649,10 +658,10 @@ translation: "n. 样板, 模板, 垫木；[计] 模板"
 srsWords: "template"
 
 [flashcard-review]
-front: "columnist"
-meaning: "n. a journalist who writes editorials"
-translation: "n. 专栏作家"
-srsWords: "columnist"
+front: "executive"
+meaning: "n. a person responsible for the administration of a business; n. persons who administer the law; a. having the function of carrying out plans or orders etc."
+translation: "n. 执行部门, 执行委员会, 执行者, 经理主管人员；a. 执行的, 善于执行的, 善于经营的；[计] 执行程序"
+srsWords: "executive"
 
 [flashcard-review]
 front: "combination"

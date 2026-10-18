@@ -74,6 +74,7 @@ front: "capacity"
 meaning: "n. capability to perform or produce; n. the amount that can be contained; n. the maximum production possible; n. a specified function"
 translation: "n. 容量, 能力, 才能, 资格；[计] 容量"
 srsWords: "capacity"
+
 ---
 lessonTitle: "Lesson 2: Science, Technology & Innovation Part 2"
 description: "Practice 10 key B1 vocabulary flashcards for Science, Technology & Innovation"
@@ -139,6 +140,7 @@ front: "constitution"
 meaning: "n. the act of forming or establishing something; n. the way in which someone or something is composed; n. a United States 44-gun frigate that was one of the first three naval ships built by the United States; it won brilliant victories over British frigates during the War of 1812 and is without doubt the most famous ship in the history of the United States Navy; it has been rebuilt and is anchored in the Charlestown Navy Yard in Boston"
 translation: "n. 构成, 宪法, 体格；[医] 体质; 结构, 组织"
 srsWords: "constitution"
+
 ---
 lessonTitle: "Lesson 3: Science, Technology & Innovation Part 3"
 description: "Practice 10 key B1 vocabulary flashcards for Science, Technology & Innovation"
@@ -204,6 +206,7 @@ front: "depression"
 meaning: "n. a mental state characterized by a pessimistic sense of inadequacy and a despondent lack of activity; n. a long-term economic state characterized by unemployment and low prices and low levels of trade and investment; n. sad feelings of gloom and inadequacy; n. a period during the 1930s when there was a worldwide economic depression and mass unemployment"
 translation: "n. 不景气, 消沉, 沮丧, 洼地；[医] 抑郁[症], 阻抑, 压低, 凹, 窝, 衰退, 俯角"
 srsWords: "depression"
+
 ---
 lessonTitle: "Lesson 4: Science, Technology & Innovation Part 4"
 description: "Practice 10 key B1 vocabulary flashcards for Science, Technology & Innovation"
@@ -269,6 +272,7 @@ front: "engage"
 meaning: "v. ask to represent; of legal counsel; v. get caught; v. carry on (wars, battles, or campaigns); v. hire for work or assistance"
 translation: "vi. 答应, 从事, 交战；vt. 使忙碌, 雇佣, 预定, 使从事于, 使参加"
 srsWords: "engage"
+
 ---
 lessonTitle: "Lesson 5: Science, Technology & Innovation Part 5"
 description: "Practice 10 key B1 vocabulary flashcards for Science, Technology & Innovation"
@@ -334,6 +338,7 @@ front: "forgive"
 meaning: "v. stop blaming or grant forgiveness; v. absolve from payment"
 translation: "vt. 原谅, 宽恕, 免除；[法] 免除, 宽恕, 原谅"
 srsWords: "forgive"
+
 ---
 lessonTitle: "Lesson 6: Science, Technology & Innovation Part 6"
 description: "Practice 10 key B1 vocabulary flashcards for Science, Technology & Innovation"
@@ -399,6 +404,7 @@ front: "fountain"
 meaning: "n. a structure from which an artificially produced jet of water arises; n. an artificially produced flow of water; n. a plumbing fixture that provides a flow of water"
 translation: "n. 水源, 源, 喷泉, 泉水, 本源；[医] 泉"
 srsWords: "fountain"
+
 ---
 lessonTitle: "Lesson 7: Science, Technology & Innovation Part 7"
 description: "Practice 10 key B1 vocabulary flashcards for Science, Technology & Innovation"
@@ -448,10 +454,10 @@ translation: "n. 新手, 生手, 大学一年级学生, (美)中学一年级学�
 srsWords: "freshman"
 
 [flashcard-review]
-front: "friendliness"
-meaning: "n. a feeling of liking for another person; enjoyment in their company; n. a friendly disposition"
-translation: "n. 友谊, 亲切, 亲密"
-srsWords: "friendliness"
+front: "mechanism"
+meaning: "n. the atomic process that occurs during a chemical reaction; n. the technical aspects of doing something; n. a natural object resembling a machine in structure or function; n. (philosophy) the philosophical theory that all phenomena can be explained in terms of physical or biological causes"
+translation: "n. 机械, 机构, 结构, 机理, 技巧；[化] 机理; 历程; 机构"
+srsWords: "mechanism"
 
 [flashcard-review]
 front: "fright"
@@ -464,6 +470,7 @@ front: "frozen"
 meaning: "a. turned into ice; affected by freezing or by long and severe cold; s. absolutely still; s. not thawed; s. not convertible to cash"
 translation: "a. 冻结的, 冰冷的, 严寒的, 冻伤的, 冷酷的；freeze的过去分词"
 srsWords: "frozen"
+
 ---
 lessonTitle: "Lesson 8: Science, Technology & Innovation Part 8"
 description: "Practice 10 key B1 vocabulary flashcards for Science, Technology & Innovation"
@@ -529,6 +536,7 @@ front: "fuss"
 meaning: "n. an angry disturbance; v. worry unnecessarily or excessively"
 translation: "n. 大惊小怪, 小题大作, 忙乱；vi. 无事自扰, 焦急, 焦燥, 忙乱；vt. 使激动, 使烦燥"
 srsWords: "fuss"
+
 ---
 lessonTitle: "Lesson 9: Science, Technology & Innovation Part 9"
 description: "Practice 10 key B1 vocabulary flashcards for Science, Technology & Innovation"
@@ -594,6 +602,7 @@ front: "general"
 meaning: "n. a general officer of the highest rank; n. the head of a religious order or congregation; n. a fact about the whole (as opposed to particular); v. command as a general"
 translation: "n. 一般, 将军, 大体；a. 全面的, 大体的, 总的, 一般的, 普遍的；n. 常规；[计] 常规"
 srsWords: "general"
+
 ---
 lessonTitle: "Lesson 10: Science, Technology & Innovation Part 10"
 description: "Practice 10 key B1 vocabulary flashcards for Science, Technology & Innovation"
@@ -643,10 +652,10 @@ translation: "n. 绅士, 先生"
 srsWords: "gentleman"
 
 [flashcard-review]
-front: "geographical"
-meaning: "a of or relating to the science of geography; a determined by geography"
-translation: "a. 地理学的, 地理的"
-srsWords: "geographical"
+front: "pioneer"
+meaning: "n. someone who helps to open up a new line of research or technology or art; n. one the first colonists or settlers in a new territory; v. open up an area or prepare a way; v. open up and explore a new area"
+translation: "n. 先锋, 拓荒者, 创始人；vt. 提倡, 开辟, 开创, 倡导；vi. 作先驱, 开路；a. 最早的, 开拓的, 先驱的, 有开拓者特点的"
+srsWords: "pioneer"
 
 [flashcard-review]
 front: "geography"

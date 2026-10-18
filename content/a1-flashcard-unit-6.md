@@ -28,10 +28,10 @@ translation: "adv. 实际上, 真实地, 实在"
 srsWords: "really"
 
 [flashcard-review]
-front: "merci"
-meaning: "thank you (French loanword)"
-translation: "int. 谢谢（法语）"
-srsWords: "merci"
+front: "design"
+meaning: "n. the act of working out the form of something (as by making a sketch or outline or plan); n. an arrangement scheme; n. a decorative or artistic work; n. a preliminary sketch indicating the plan for something"
+translation: "n. 设计, 图样, 方案, 企图；v. 设计, 计划"
+srsWords: "design"
 
 [flashcard-review]
 front: "reporter"
@@ -46,10 +46,10 @@ translation: "n. 餐馆, 饭店"
 srsWords: "restaurant"
 
 [flashcard-review]
-front: "ribbon"
-meaning: "n. any long object resembling a thin line; n. a long strip of inked material for making characters on paper with a typewriter; n. notion consisting of a narrow strip of fine material used for trimming"
-translation: "n. 带；缎带；（勋章等的）绶带；带状物；勋表 vt. 把…撕成条带；用缎带装饰 vi. 形成带状"
-srsWords: "ribbon"
+front: "snow"
+meaning: "frozen precipitation"
+translation: "n. 雪, 积雪, 下雪, 雪花形干扰；vi. 下雪, 似雪般落下；vt. 使雪白, 用雪覆盖, 使像雪般落下"
+srsWords: "snow"
 
 [flashcard-review]
 front: "rice"
@@ -88,10 +88,10 @@ translation: "n. 尺；统治者；[测] 划线板，划线的人"
 srsWords: "ruler"
 
 [flashcard-review]
-front: "realy"
-meaning: "in fact; actually"
-translation: "n. 继电器"
-srsWords: "realy"
+front: "post"
+meaning: "a piece of writing"
+translation: "n. 柱, 杆, 准星, 邮件, 邮政, 标竿, 职位, 岗位, 哨所, 兵营；vt. 张帖, 邮递, 公布, 登入帐, 使熟悉, 布置；vi. 快速行进；adv. 急速地；[计] 记入; 登记, 上电自检"
+srsWords: "post"
 
 [flashcard-review]
 front: "russian"
@@ -172,10 +172,10 @@ translation: "n. 座, 座位, 位子, 席位, 所在地；vt. 使坐下, 使就�
 srsWords: "seat"
 
 [flashcard-review]
-front: "hallo"
-meaning: "an exclamation used as a greeting or to attract attention"
-translation: "interj. 嘿, 喂, 哈罗"
-srsWords: "hallo"
+front: "dig"
+meaning: "n. the site of an archeological exploration; n. a small gouge (as in the cover of a book); n. the act of touching someone suddenly with your finger or elbow; v. turn up, loosen, or remove earth"
+translation: "vt. 挖, 翻土, 发掘；vi. 挖掘；n. 挖掘；[计] 数字, 数位"
+srsWords: "dig"
 
 [flashcard-review]
 front: "september"
@@ -196,16 +196,16 @@ translation: "num. 七, 七个"
 srsWords: "seven"
 
 [flashcard-review]
-front: "lyin"
-meaning: "telling untruths; resting in a horizontal position"
-translation: "[网络] 说谎的；李颖；除甲醛这款有用"
-srsWords: "lyin"
+front: "saving"
+meaning: "s. characterized by thriftiness"
+translation: "n. 存款, 挽救, 节约；a. 搭救的, 节约的, 保留的, 补偿的；prep. 除...之外"
+srsWords: "saving"
 
 [flashcard-review]
-front: "tshirt"
-meaning: "a type of shirt"
-translation: "n. 短袖圆领汗衫；圆领运动衫；[网络] T恤；T恤文化；恤衫"
-srsWords: "tshirt"
+front: "climb"
+meaning: "ascend, go up"
+translation: "v. 攀登, 上升, 爬；n. 攀登, 爬升"
+srsWords: "climb"
 
 ---
 lessonTitle: "Lesson 4: Work & Professions Part 4"
@@ -436,10 +436,10 @@ translation: "conj. 和, 与；[计] 与"
 srsWords: "and"
 
 [flashcard-review]
-front: "snowy"
-meaning: "s marked by the presence of snow; s covered with snow; s of the white color of snow"
-translation: "adj.下雪的,被雪覆盖的,雪白的，洁白无瑕的,多雪的"
-srsWords: "snowy"
+front: "cutting"
+meaning: "n. a part (sometimes a root or leaf or bud) removed from a plant to propagate a new plant through rooting or grafting; n. a piece cut off from the main part of something; n. the act of diluting something; s. (of speech) harsh or hurtful in tone or character"
+translation: "n. 切断, 切下, 路堑；[化] 切屑"
+srsWords: "cutting"
 
 [flashcard-review]
 front: "soccer"

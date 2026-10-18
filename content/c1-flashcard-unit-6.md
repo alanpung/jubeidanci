@@ -16,10 +16,10 @@ icon: "💡"
 color: "#FF9800"
 ---
 [flashcard-review]
-front: "jersey"
-meaning: "n. the largest of the Channel Islands; n. a close-fitting pullover shirt; n. a slightly elastic machine-knit fabric; n. a breed of diary cattle developed on the island of Jersey"
-translation: "n. 运动衫"
-srsWords: "jersey"
+front: "enclave"
+meaning: "n. an enclosed territory that is culturally distinct from the foreign territory that surrounds it"
+translation: "n. 被包围的领土；[医] 被包围物"
+srsWords: "enclave"
 
 [flashcard-review]
 front: "startling"
@@ -58,10 +58,10 @@ translation: "[网络] 坚定地"
 srsWords: "unwaveringly"
 
 [flashcard-review]
-front: "removed"
-meaning: "s. separated in relationship by a given degree of descent"
-translation: "a. 离开的, 间隔的, 远离的；[化] 拆除的"
-srsWords: "removed"
+front: "scandalous"
+meaning: "s giving offense to moral sensibilities and injurious to reputation"
+translation: "a. 不体面的, 可耻的, 诽谤性的, 爱传播丑闻的"
+srsWords: "scandalous"
 
 [flashcard-review]
 front: "buffoon"
@@ -74,6 +74,7 @@ front: "beguiling"
 meaning: "s. misleading by means of pleasant or alluring methods"
 translation: "a. 欺骗的, 有趣的"
 srsWords: "beguiling"
+
 ---
 lessonTitle: "Lesson 2: Philosophy, Cognition & Mind Part 2"
 description: "Practice 10 key C1 vocabulary flashcards for Philosophy, Cognition & Mind"
@@ -123,10 +124,10 @@ translation: "n. 尊敬, 崇敬, 崇拜"
 srsWords: "veneration"
 
 [flashcard-review]
-front: "ethical"
-meaning: "a. of or relating to the philosophical study of ethics; a. conforming to accepted standards of social or professional behavior; s. adhering to ethical and moral principles"
-translation: "a. 伦理的, 民族的, 民族特有的；[医] 伦理的, 道德的"
-srsWords: "ethical"
+front: "stagnation"
+meaning: "n. a state of inactivity (in business or art etc); n. inactivity of liquids; being stagnant; standing still; without current or circulation"
+translation: "n. 淤塞, 停滞；[医] 停滞, 滞留, 郁积"
+srsWords: "stagnation"
 
 [flashcard-review]
 front: "ethically"
@@ -139,6 +140,7 @@ front: "heroine"
 meaning: "n. the main good female character in a work of fiction; n. a woman possessing heroic qualities or a woman who has performed heroic deeds"
 translation: "n. 巾帼英雄, 烈妇, 女主角；[化] 海洛因; 二醋吗啡; 二乙酰吗啡"
 srsWords: "heroine"
+
 ---
 lessonTitle: "Lesson 3: Philosophy, Cognition & Mind Part 3"
 description: "Practice 10 key C1 vocabulary flashcards for Philosophy, Cognition & Mind"
@@ -170,10 +172,10 @@ translation: "n. 油膏, 药膏, 安慰, 奉承话；vt. 涂油膏于, 安慰, �
 srsWords: "salve"
 
 [flashcard-review]
-front: "salvation"
-meaning: "n. a means of preserving from harm or unpleasantness; n. the state of being saved or preserved from harm; n. saving someone or something from harm or from an unpleasant situation"
-translation: "n. 拯救, 救助, 救世"
-srsWords: "salvation"
+front: "clang"
+meaning: "n. a loud resonant repeating noise; v. make a loud noise"
+translation: "n. 当当声, 铿锵声；vi. 发出当当声, 发铿锵声；vt. 使发铿锵声"
+srsWords: "clang"
 
 [flashcard-review]
 front: "salvage"
@@ -204,6 +206,7 @@ front: "preach"
 meaning: "v. deliver a sermon; v. speak, plead, or argue in favor of"
 translation: "v. 传道, 讲道, 说教, 宣讲, 鼓吹；n. 说教, 布道"
 srsWords: "preach"
+
 ---
 lessonTitle: "Lesson 4: Philosophy, Cognition & Mind Part 4"
 description: "Practice 10 key C1 vocabulary flashcards for Philosophy, Cognition & Mind"
@@ -269,6 +272,7 @@ front: "sentimentally"
 meaning: "r. in a sentimental manner"
 translation: "adv. 富情感地"
 srsWords: "sentimentally"
+
 ---
 lessonTitle: "Lesson 5: Philosophy, Cognition & Mind Part 5"
 description: "Practice 10 key C1 vocabulary flashcards for Philosophy, Cognition & Mind"
@@ -334,6 +338,7 @@ front: "engrossing"
 meaning: "v devote (oneself) fully to; v consume all of one's attention or time; s capable of arousing and holding the attention"
 translation: "a. 引人入胜的, 非常引人注意的, 趣味无穷的, 很有趣味的；[法] 誊清文件的, 囤积居奇的, 垄断的"
 srsWords: "engrossing"
+
 ---
 lessonTitle: "Lesson 6: Philosophy, Cognition & Mind Part 6"
 description: "Practice 10 key C1 vocabulary flashcards for Philosophy, Cognition & Mind"
@@ -389,16 +394,17 @@ translation: "adv. 离开中心, 反常地"
 srsWords: "eccentrically"
 
 [flashcard-review]
-front: "render"
-meaning: "n. a substance similar to stucco but exclusively applied to masonry walls; v. cause to become; v. give or supply; v. pass down"
-translation: "vt. 回报, 给于, 付给, 汇报, 提出, 舍弃, 反映, 表示, 表演, 致使, 执行, 实施；vi. 给予补偿；n. 交纳, 打底"
-srsWords: "render"
+front: "meteorite"
+meaning: "n. stony or metallic object that is the remains of a meteoroid that has reached the earth's surface"
+translation: "n. 陨星；[化] 陨石; 陨铁"
+srsWords: "meteorite"
 
 [flashcard-review]
-front: "rendering"
-meaning: "n. a coat of stucco applied to a masonry wall; n. perspective drawing of an architect's design; n. giving in acknowledgment of obligation"
-translation: "n. 翻译, 表现, 描写, 表演, 打底, 透视图"
-srsWords: "rendering"
+front: "reconnaissance"
+meaning: "n. the act of reconnoitring (especially to gain information about an enemy or potential enemy)"
+translation: "n. 侦察, 勘察队；[电] 勘查"
+srsWords: "reconnaissance"
+
 ---
 lessonTitle: "Lesson 7: Philosophy, Cognition & Mind Part 7"
 description: "Practice 10 key C1 vocabulary flashcards for Philosophy, Cognition & Mind"
@@ -430,10 +436,10 @@ translation: "n. 学徒身分, 见习(期)；[经] 学徒制, 学徒期"
 srsWords: "apprenticeship"
 
 [flashcard-review]
-front: "precision"
-meaning: "n the quality of being reproducible in amount or performance"
-translation: "n. 精密, 精确, 精确度, 精度；a. 精密的, 精确的；[计] 精度"
-srsWords: "precision"
+front: "leukemia"
+meaning: "n. malignant neoplasm of blood-forming tissues; characterized by abnormal proliferation of leukocytes; one of the four major types of cancer"
+translation: "n. 白血病, 白血球过多症；[化] 白血病"
+srsWords: "leukemia"
 
 [flashcard-review]
 front: "silhouette"
@@ -464,6 +470,7 @@ front: "negligently"
 meaning: "r. in a negligent manner"
 translation: "adv. 疏忽地；粗心大意地"
 srsWords: "negligently"
+
 ---
 lessonTitle: "Lesson 8: Philosophy, Cognition & Mind Part 8"
 description: "Practice 10 key C1 vocabulary flashcards for Philosophy, Cognition & Mind"
@@ -489,16 +496,16 @@ translation: "a. 利他的, 无私心的"
 srsWords: "altruistic"
 
 [flashcard-review]
-front: "scenario"
-meaning: "n. an outline or synopsis of a play (or, by extension, of a literary work); n. a setting for a work of art or literature; n. a postulated sequence of possible events"
-translation: "n. 剧本提纲, 情节, 剧本, 方案, 事态；[计] 方案"
-srsWords: "scenario"
+front: "din"
+meaning: "v. instill (into a person) by constant repetition"
+translation: "n. 喧嚣；v. 絮絮不休地说, 喧闹"
+srsWords: "din"
 
 [flashcard-review]
-front: "voluntary"
-meaning: "n. composition (often improvised) for a solo instrument (especially solo organ) and not a regular part of a religious service or musical performance; a. of your own free will or design; done by choice; not forced or compelled; a. controlled by individual volition"
-translation: "a. 自动的, 自愿的, 故意的, 志愿的, 自发的；n. 自愿行动, 志愿者, 自由调"
-srsWords: "voluntary"
+front: "icing"
+meaning: "n. (ice hockey) the act of shooting the puck from within your own defensive area the length of the rink beyond the opponent's goal"
+translation: "n. 糖衣, 结冰"
+srsWords: "icing"
 
 [flashcard-review]
 front: "voluntarily"
@@ -529,6 +536,7 @@ front: "maternalistic"
 meaning: "s showing maternal instincts"
 translation: "a. 母亲的；母性的；母系的；母体遗传的 (maternal的变形)"
 srsWords: "maternalistic"
+
 ---
 lessonTitle: "Lesson 9: Philosophy, Cognition & Mind Part 9"
 description: "Practice 10 key C1 vocabulary flashcards for Philosophy, Cognition & Mind"
@@ -542,10 +550,10 @@ translation: "a. 家长式作风的"
 srsWords: "paternalistic"
 
 [flashcard-review]
-front: "provisions"
-meaning: "n a stock or supply of foods; n a stipulated condition; n the activity of supplying or providing something; n the cognitive process of thinking about what you will do in the event of something happening; n a store or supply of something (especially of food or clothing or arms); v supply with provisions"
-translation: "n. 存粮, 给养, 口粮, 食物, 粮食；[经] 食品, 粮食"
-srsWords: "provisions"
+front: "fore"
+meaning: "a. situated at or toward the bow of a vessel; r. near or toward the bow of a ship or cockpit of a plane"
+translation: "a. 在前的, 以前的；adv. 在前面, 在船头；prep. 在...前"
+srsWords: "fore"
 
 [flashcard-review]
 front: "injustice"
@@ -572,10 +580,10 @@ translation: "[网络] 了不可持续；无法维持的；无法维持"
 srsWords: "unsustainably"
 
 [flashcard-review]
-front: "sustainable"
-meaning: "a. capable of being sustained"
-translation: "a. 足可支撑的, 养得起的, 可以忍受的"
-srsWords: "sustainable"
+front: "vibrant"
+meaning: "s. vigorous and animated; s. of sounds that are strong and resonating; s. of colors that are bright and striking"
+translation: "a. 振动的, 战栗的, 响亮的, 活跃的"
+srsWords: "vibrant"
 
 [flashcard-review]
 front: "sustainably"
@@ -594,6 +602,7 @@ front: "cynic"
 meaning: "n. someone who is critical of the motives of others; n. a member of a group of ancient Greek philosophers who advocated the doctrine that virtue is the only good and that the essence of virtue is self-control"
 translation: "n. 犬儒学派的人, 玩世不恭的人, 愤世嫉俗者, 好挖苦人的人；a. 犬儒学派的"
 srsWords: "cynic"
+
 ---
 lessonTitle: "Lesson 10: Philosophy, Cognition & Mind Part 10"
 description: "Practice 10 key C1 vocabulary flashcards for Philosophy, Cognition & Mind"

@@ -52,10 +52,10 @@ translation: "n. 木工手艺, 木工业, 木器"
 srsWords: "carpentry"
 
 [flashcard-review]
-front: "transit"
-meaning: "v. make a passage or journey from one place to another; v. pass across (a sign or house of the zodiac) or pass across (the disk of a celestial body or the meridian of a place); v. revolve (the telescope of a surveying transit) about its horizontal transverse axis in order to reverse its direction; v. cause or enable to pass through"
-translation: "n. 经过, 通行, 运输, 运输线, 转变；vt. 运送, 使通过, 经过；vi. 通过"
-srsWords: "transit"
+front: "firsthand"
+meaning: "s. received directly from a source; r. from the original source; directly"
+translation: "a. 直接的, 直接得来的, 直接采购的；adv. 直接地"
+srsWords: "firsthand"
 
 [flashcard-review]
 front: "plummet"
@@ -70,10 +70,11 @@ translation: "v. (使)流通, (使)循环, (使)传播"
 srsWords: "circulate"
 
 [flashcard-review]
-front: "circulation"
-meaning: "n. the dissemination of copies of periodicals (as newspapers or magazines); n. movement through a circuit; especially the movement of blood through the heart and blood vessels; n. (library science) the count of books that are loaned by a library over a specified period; n. number of copies of a newspaper or magazine that are sold"
-translation: "n. 流通, 循环, 发行量；[化] 环流"
-srsWords: "circulation"
+front: "smallpox"
+meaning: "n. a highly contagious viral disease characterized by fever and weakness and skin eruption with pustules that form scabs that slough off leaving scars"
+translation: "n. 天花；[医] 天花, 痘疮"
+srsWords: "smallpox"
+
 ---
 lessonTitle: "Lesson 2: Jurisprudence & Constitutional Law Part 2"
 description: "Practice 10 key C1 vocabulary flashcards for Jurisprudence & Constitutional Law"
@@ -87,10 +88,10 @@ translation: "n. 人口统计学；[医] 人口学, 人口统计学"
 srsWords: "demography"
 
 [flashcard-review]
-front: "demographic"
-meaning: "n. a statistic characterizing human populations (or segments of human populations broken down by age or sex or income etc.); a. of or relating to demography"
-translation: "a. 人口统计的；[法] 人口统计的, 人口学的"
-srsWords: "demographic"
+front: "traction"
+meaning: "n. (orthopedics) the act of pulling on a bone or limb (as in a fracture) to relieve pressure or align parts in a special way during healing"
+translation: "n. 曳, 牵引, 牵引力；[医] 牵引"
+srsWords: "traction"
 
 [flashcard-review]
 front: "demographically"
@@ -111,10 +112,10 @@ translation: "adv. 现象, 从感官认识到, 非凡, 出众"
 srsWords: "phenomenally"
 
 [flashcard-review]
-front: "prophet"
-meaning: "n. an authoritative person who divines the future; n. someone who speaks by divine inspiration; someone who is an interpreter of the will of God"
-translation: "n. 预言者, 先知, 提倡者"
-srsWords: "prophet"
+front: "insolvency"
+meaning: "n. the lack of financial resources"
+translation: "n. 无力偿还, 破产；[经] 破产, 无力偿付, 不足抵偿债务"
+srsWords: "insolvency"
 
 [flashcard-review]
 front: "prophetic"
@@ -129,16 +130,17 @@ translation: "n. 网站的付费门槛"
 srsWords: "paywall"
 
 [flashcard-review]
-front: "firewall"
-meaning: "n. (colloquial) the application of maximum thrust; n. (computing) a security system consisting of a combination of hardware and software that limits the exposure of a computer or computer network to attack from crackers; commonly used on local area networks that are connected to the internet; n. a fireproof (or fire-resistant) wall designed to prevent the spread of fire through a building or a vehicle"
-translation: "[计] 放火墙, 隔离"
-srsWords: "firewall"
+front: "guillotine"
+meaning: "n. instrument of execution that consists of a weighted blade between two vertical poles; used for beheading people; v. kill by cutting the head off with a guillotine"
+translation: "n. 断头台, 截断机, 切除器；vt. 用断头台斩首, 用截断机切"
+srsWords: "guillotine"
 
 [flashcard-review]
-front: "invoice"
-meaning: "v. send an bill to"
-translation: "n. 发票, 发货单；v. 开发票, 记清单"
-srsWords: "invoice"
+front: "limbo"
+meaning: "n. an imaginary place for lost or neglected things; n. (theology) in Roman Catholicism, the place of unbaptized but innocent or righteous souls (such as infants and virtuous individuals)"
+translation: "n. 地狱边缘, 监狱, 忘却；[法] 监狱, 拘禁, 忘却"
+srsWords: "limbo"
+
 ---
 lessonTitle: "Lesson 3: Jurisprudence & Constitutional Law Part 3"
 description: "Practice 10 key C1 vocabulary flashcards for Jurisprudence & Constitutional Law"
@@ -152,16 +154,16 @@ translation: "n. 破坏, 毁坏, 撤销；[经] 拆毁(除,破坏)"
 srsWords: "demolition"
 
 [flashcard-review]
-front: "demo"
-meaning: "n a visual presentation showing how something works; v give an exhibition of to an interested audience"
-translation: "n. 演示, 样本唱片；[计] 演示"
-srsWords: "demo"
+front: "pepperoni"
+meaning: "n. a pork and beef sausage (or a thin slice of this sausage)"
+translation: "n. 意大利辣香肠"
+srsWords: "pepperoni"
 
 [flashcard-review]
-front: "gig"
-meaning: "n. long and light rowing boat; especially for racing; n. a cluster of hooks (without barbs) that is drawn through a school of fish to hook their bodies; used when fish are not biting; n. tender that is a light ship's boat; often for personal use of captain; n. small two-wheeled horse-drawn carriage; with two seats and no hood"
-translation: "n. 旋转物, 轻便双轮马车, 赛艇, 鱼叉, 记过, 爵士乐演奏会；vi. 乘轻便双轮马车, 乘快艇, (用鱼叉)叉鱼；vt. (用鱼叉)叉, 刺激, 记过"
-srsWords: "gig"
+front: "cholera"
+meaning: "n. an acute intestinal infection caused by ingestion of contaminated water or food"
+translation: "n. 霍乱；[医] 霍乱"
+srsWords: "cholera"
 
 [flashcard-review]
 front: "socialization"
@@ -182,10 +184,10 @@ translation: "a. 陈旧的, 过时的, 年老的"
 srsWords: "antiquated"
 
 [flashcard-review]
-front: "restoration"
-meaning: "n. the reign of Charles II in England; 1660-1685; n. the act of restoring something or someone to a satisfactory state; n. some artifact that has been restored or reconstructed; n. a model that represents the landscape of a former geological age or that represents and extinct animal etc."
-translation: "n. 恢复, 归还, 复位；[医] 恢复, 康复, 复位, 回复, 修复"
-srsWords: "restoration"
+front: "mockery"
+meaning: "n showing your contempt by derision; n a composition that imitates or misrepresents somebody's style, usually in a humorous way; n humorous or satirical mimicry"
+translation: "n. 嘲弄, 笑柄, 歪曲"
+srsWords: "mockery"
 
 [flashcard-review]
 front: "restorative"
@@ -200,10 +202,11 @@ translation: "a. 辐状的；vt. 使旋转, 使转动, 使轮流；vi. 旋转, �
 srsWords: "rotate"
 
 [flashcard-review]
-front: "coupled"
-meaning: "s. connected by a link, as railway cars or trailer trucks"
-translation: "v. 联接的；成对的；耦合的；共轭的（couple的过去分词形式）"
-srsWords: "coupled"
+front: "migraine"
+meaning: "n. a severe recurring vascular headache; occurs more frequently in women than men"
+translation: "n. 严重的周期性偏头痛；[医] 偏头痛"
+srsWords: "migraine"
+
 ---
 lessonTitle: "Lesson 4: Jurisprudence & Constitutional Law Part 4"
 description: "Practice 10 key C1 vocabulary flashcards for Jurisprudence & Constitutional Law"
@@ -217,16 +220,16 @@ translation: "n. 旅程, 旅行指南, 游记；a. 巡回的, 旅程的"
 srsWords: "itinerary"
 
 [flashcard-review]
-front: "charter"
-meaning: "n. a document incorporating an institution and specifying its rights; includes the articles of incorporation and the certificate of incorporation; n. a contract to hire or lease transportation; v. grant a charter to"
-translation: "n. 特许状, 执照, 宪章；vt. 特许, 发给特许执照"
-srsWords: "charter"
+front: "fallout"
+meaning: "n. the radioactive particles that settle to the ground after a nuclear explosion"
+translation: "n. 原子尘的降下, 辐射性微尘, 原子尘, 附带结果；[医] [放射尘]回降"
+srsWords: "fallout"
 
 [flashcard-review]
-front: "terrain"
-meaning: "n. a piece of ground having specific characteristics or military potential"
-translation: "n. 地带, 地区, 地形, 领域, 范围"
-srsWords: "terrain"
+front: "casserole"
+meaning: "n. food cooked and served in a casserole; n. large deep dish in which food can be cooked and served"
+translation: "n. 餐桌上用有盖的焙盘, 砂锅菜；[化] 勺皿"
+srsWords: "casserole"
 
 [flashcard-review]
 front: "resilient"
@@ -247,10 +250,10 @@ translation: "a. 有魄力的, 有进取心的, 有事业心的"
 srsWords: "enterprising"
 
 [flashcard-review]
-front: "integral"
-meaning: "n. the result of a mathematical integration; F(x) is the integral of f(x) if dF/dx = f(x); s. constituting the undiminished entirety; lacking nothing essential especially not damaged; a. of or denoted by an integer"
-translation: "n. 整体, 积分, 整数；a. 固有的, 整体的, 整数的, 积分的；[计] 积分"
-srsWords: "integral"
+front: "girly"
+meaning: "characteristic of or appropriate to a girl"
+translation: "a. 像少女的"
+srsWords: "girly"
 
 [flashcard-review]
 front: "canoe"
@@ -259,16 +262,17 @@ translation: "n. 独木舟, 轻舟；vi. 乘独木舟；vt. 用独木舟运"
 srsWords: "canoe"
 
 [flashcard-review]
-front: "magnetic"
-meaning: "a. of or relating to or caused by magnetism; a. having the properties of a magnet; i.e. of attracting iron or steel; a. capable of being magnetized; a. determined by earth's magnetic fields"
-translation: "a. 有磁性的, 有吸引力的, 催眠术的；[医] 磁[性]的"
-srsWords: "magnetic"
+front: "graft"
+meaning: "n. (surgery) tissue or organ transplanted from a donor to a recipient; in some cases the patient can be both donor and recipient; n. the act of grafting something onto something else; v. cause to grow together parts from different plants"
+translation: "n. 嫁接, 贪污；v. 嫁接, 移植, 贪污"
+srsWords: "graft"
 
 [flashcard-review]
 front: "magnetism"
 meaning: "n. attraction for iron; associated with electric currents as well as magnets; characterized by fields of force; n. the branch of science that studies magnetism"
 translation: "n. 磁性, 吸引力, 磁学, 催眠术；[化] 磁学"
 srsWords: "magnetism"
+
 ---
 lessonTitle: "Lesson 5: Jurisprudence & Constitutional Law Part 5"
 description: "Practice 10 key C1 vocabulary flashcards for Jurisprudence & Constitutional Law"
@@ -334,6 +338,7 @@ front: "pendulous"
 meaning: "s having branches or flower heads that bend downward"
 translation: "a. 下垂的, 摇摆的, 摇摆不定的, 动荡的；[医] 下垂的, 悬垂的"
 srsWords: "pendulous"
+
 ---
 lessonTitle: "Lesson 6: Jurisprudence & Constitutional Law Part 6"
 description: "Practice 10 key C1 vocabulary flashcards for Jurisprudence & Constitutional Law"
@@ -341,16 +346,16 @@ icon: "⚖️"
 color: "#795548"
 ---
 [flashcard-review]
-front: "suspension"
-meaning: "n. a mixture in which fine particles are suspended in a fluid where they are supported by buoyancy; n. an interruption in the intensity or amount of something; n. a mechanical system of springs or shock absorbers connecting the wheels and axles to the chassis of a wheeled vehicle; n. the act of suspending something (hanging it from above so it moves freely)"
-translation: "n. 悬挂, 暂停, 中止；[化] 悬浮; 悬浮体; 悬浮液"
-srsWords: "suspension"
+front: "benefactor"
+meaning: "n. a person who helps people or institutions (especially with financial help)"
+translation: "n. 恩人, 捐助者, 施主；[法] 捐赠人, 赠送人"
+srsWords: "benefactor"
 
 [flashcard-review]
-front: "anthropology"
-meaning: "n. the social science that studies the origins and social relationships of human beings"
-translation: "n. 人类学；[医] 人类学"
-srsWords: "anthropology"
+front: "vendetta"
+meaning: "n. a feud in which members of the opposing parties murder each other"
+translation: "n. 族间仇杀, 世仇, 宿怨；[法] 血仇, 近亲复仇, 世仇"
+srsWords: "vendetta"
 
 [flashcard-review]
 front: "anthropologist"
@@ -399,6 +404,7 @@ front: "seedling"
 meaning: "n. young plant or tree grown from a seed"
 translation: "n. 秧苗, 树苗；[医] 籽苗, 幼苗, 实生苗"
 srsWords: "seedling"
+
 ---
 lessonTitle: "Lesson 7: Jurisprudence & Constitutional Law Part 7"
 description: "Practice 10 key C1 vocabulary flashcards for Jurisprudence & Constitutional Law"
@@ -406,10 +412,10 @@ icon: "⚖️"
 color: "#795548"
 ---
 [flashcard-review]
-front: "tract"
-meaning: "n. an extended area of land; n. a system of body parts that together serve some particular purpose; n. a brief treatise on a subject of interest; published in the form of a booklet"
-translation: "n. 大片土地, 地带, 小册子；[医] 束, 道"
-srsWords: "tract"
+front: "fatherland"
+meaning: "n. the country where you were born"
+translation: "n. 祖国"
+srsWords: "fatherland"
 
 [flashcard-review]
 front: "folktale"
@@ -464,6 +470,7 @@ front: "uniformity"
 meaning: "n. a condition in which everything is regular and unvarying; n. the quality of lacking diversity or variation (even to the point of boredom)"
 translation: "n. 无差异, 同样, 划一, 一致；[医] 均匀性"
 srsWords: "uniformity"
+
 ---
 lessonTitle: "Lesson 8: Jurisprudence & Constitutional Law Part 8"
 description: "Practice 10 key C1 vocabulary flashcards for Jurisprudence & Constitutional Law"
@@ -483,10 +490,10 @@ translation: "na. 味蕾；[网络] 味觉器官称味蕾；味觉球"
 srsWords: "tastebud"
 
 [flashcard-review]
-front: "amateur"
-meaning: "n. someone who pursues a study or sport as a pastime; n. an athlete who does not play for pay; s. engaged in as a pastime"
-translation: "n. 业余爱好者, 外行, 爱好者；[电] 业余家"
-srsWords: "amateur"
+front: "boon"
+meaning: "s. very close and convivial"
+translation: "n. 恩惠"
+srsWords: "boon"
 
 [flashcard-review]
 front: "retrace"
@@ -529,6 +536,7 @@ front: "embark"
 meaning: "v. go on board; v. set out on (an enterprise or subject of study)"
 translation: "vi. 乘船, 着手, 从事, 上飞机；vt. 使上船, 使上飞机, 使从事"
 srsWords: "embark"
+
 ---
 lessonTitle: "Lesson 9: Jurisprudence & Constitutional Law Part 9"
 description: "Practice 10 key C1 vocabulary flashcards for Jurisprudence & Constitutional Law"
@@ -542,10 +550,10 @@ translation: "vt. 加快, 促进, 发出；a. 畅通的, 无阻碍的, 迅速的
 srsWords: "expedite"
 
 [flashcard-review]
-front: "whilst"
-meaning: "adv. While."
-translation: "conj. 当...的时候, 和...同时, 虽然, 只要, 然而, 而, 尽管"
-srsWords: "whilst"
+front: "disposable"
+meaning: "n. an item that can be disposed of after it has been used; a. free or available for use or disposition; a. designed to be disposed of after use"
+translation: "a. 可任意处理的；[法] 可任意处理或处置的, 可自由使用的"
+srsWords: "disposable"
 
 [flashcard-review]
 front: "riveting"
@@ -560,10 +568,10 @@ translation: "n. 钻进, 跳进, 跳水, 跳水池, 猛跌, 落下, 投入, 开�
 srsWords: "plunge"
 
 [flashcard-review]
-front: "debut"
-meaning: "n. the presentation of a debutante in society; v. present for the first time to the public; v. appear for the first time in public; v. make one's debut"
-translation: "n. 初次登台, 开张；v. 初次登台"
-srsWords: "debut"
+front: "sturdy"
+meaning: "s. substantially made or constructed"
+translation: "a. 强健的, 健全的；[医] 羊晕倒病, 羊蹒跚病"
+srsWords: "sturdy"
 
 [flashcard-review]
 front: "turmoil"
@@ -594,6 +602,7 @@ front: "undaunted"
 meaning: "s. unshaken in purpose; s. resolutely courageous"
 translation: "a. 大无畏的, 勇敢的"
 srsWords: "undaunted"
+
 ---
 lessonTitle: "Lesson 10: Jurisprudence & Constitutional Law Part 10"
 description: "Practice 10 key C1 vocabulary flashcards for Jurisprudence & Constitutional Law"

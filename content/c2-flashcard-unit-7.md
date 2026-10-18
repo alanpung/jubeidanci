@@ -70,10 +70,11 @@ translation: "vt. 赦, 宽恕；[法] 宽恕, 不咎, 抵销"
 srsWords: "condone"
 
 [flashcard-review]
-front: "commodity"
-meaning: "n. articles of commerce"
-translation: "n. 农产品, 商品, 有用的物品；[经] 商品, 货物, 日用品"
-srsWords: "commodity"
+front: "stepdaughter"
+meaning: "n. a daughter of your spouse by a former marriage"
+translation: "n. 妻与前夫所生的女儿, 夫与前妻所生的女儿"
+srsWords: "stepdaughter"
+
 ---
 lessonTitle: "Lesson 2: Socio-Economic Theory & Institutions Part 2"
 description: "Practice 10 key C2 vocabulary flashcards for Socio-Economic Theory & Institutions"
@@ -135,10 +136,11 @@ translation: "a. 学者派头的, 学者风度的, 有学问的, 博学的, 好�
 srsWords: "scholarly"
 
 [flashcard-review]
-front: "cognitive"
-meaning: "a. of or being or relating to or involving cognition"
-translation: "a. 认知的, 认识的"
-srsWords: "cognitive"
+front: "invasive"
+meaning: "a. relating to a technique in which the body is entered by puncture or incision; a. marked by a tendency to spread especially into healthy tissue"
+translation: "a. 侵入的, 侵略性的, 攻击性的"
+srsWords: "invasive"
+
 ---
 lessonTitle: "Lesson 3: Socio-Economic Theory & Institutions Part 3"
 description: "Practice 10 key C2 vocabulary flashcards for Socio-Economic Theory & Institutions"
@@ -182,10 +184,10 @@ translation: "a. 居于修道院内的, 隐居的, 与世隔绝的, 有回廊的
 srsWords: "cloistered"
 
 [flashcard-review]
-front: "annex"
-meaning: "n. an addition that extends a main building; v. take (territory) as if by conquest; v. attach to"
-translation: "n. 附加物, 附属建筑物；vt. 附加, 盖(印), 并吞"
-srsWords: "annex"
+front: "bray"
+meaning: "n. the cry of an ass; v. laugh loudly and harshly"
+translation: "n. 驴叫声, 喇叭声；v. 叫, 嘶叫"
+srsWords: "bray"
 
 [flashcard-review]
 front: "resuscitate"
@@ -204,6 +206,7 @@ front: "ravish"
 meaning: "v force (someone) to have sex against their will; v hold spellbound"
 translation: "vt. 强夺, 夺走, 使出神, 强奸；[法] 强夺, 抢去, 强奸"
 srsWords: "ravish"
+
 ---
 lessonTitle: "Lesson 4: Socio-Economic Theory & Institutions Part 4"
 description: "Practice 10 key C2 vocabulary flashcards for Socio-Economic Theory & Institutions"
@@ -269,6 +272,7 @@ front: "inchoately"
 meaning: "inchoately"
 translation: "刚开始的"
 srsWords: "inchoately"
+
 ---
 lessonTitle: "Lesson 5: Socio-Economic Theory & Institutions Part 5"
 description: "Practice 10 key C2 vocabulary flashcards for Socio-Economic Theory & Institutions"
@@ -334,6 +338,7 @@ front: "contemptuous"
 meaning: "s. expressing extreme contempt"
 translation: "a. 轻蔑的, 鄙视的, 瞧不起人的"
 srsWords: "contemptuous"
+
 ---
 lessonTitle: "Lesson 6: Socio-Economic Theory & Institutions Part 6"
 description: "Practice 10 key C2 vocabulary flashcards for Socio-Economic Theory & Institutions"
@@ -399,6 +404,7 @@ front: "emulsification"
 meaning: "emulsification"
 translation: "n. 乳化, 乳化作用；[化] 乳化作用"
 srsWords: "emulsification"
+
 ---
 lessonTitle: "Lesson 7: Socio-Economic Theory & Institutions Part 7"
 description: "Practice 10 key C2 vocabulary flashcards for Socio-Economic Theory & Institutions"
@@ -464,6 +470,7 @@ front: "laryngitis"
 meaning: "n. inflammation of the mucous membrane of the larynx; characterized by hoarseness or loss of voice and coughing"
 translation: "n. 喉炎；[医] 喉炎"
 srsWords: "laryngitis"
+
 ---
 lessonTitle: "Lesson 8: Socio-Economic Theory & Institutions Part 8"
 description: "Practice 10 key C2 vocabulary flashcards for Socio-Economic Theory & Institutions"
@@ -489,10 +496,10 @@ translation: "adv. 严格地, 严厉地"
 srsWords: "stringently"
 
 [flashcard-review]
-front: "standing"
-meaning: "n. social or financial or professional status or reputation; n. an ordered listing of scores or results showing the relative positions of competitors (individuals or teams) in a sporting event; n. the act of assuming or maintaining an erect upright position; s. having a supporting base"
-translation: "n. 起立, 持续, 身分；a. 立着的, 不动的, 经常的, 持续的"
-srsWords: "standing"
+front: "befall"
+meaning: "v. become of; happen to"
+translation: "v. 降临(于)"
+srsWords: "befall"
 
 [flashcard-review]
 front: "breadwinner"
@@ -507,10 +514,10 @@ translation: "n. 供玩赏的小动物, 爱畜；vt. 宠爱, 珍爱, 溺爱"
 srsWords: "cosset"
 
 [flashcard-review]
-front: "counsel"
-meaning: "n a lawyer who pleads cases in court; n something that provides direction or advice as to a decision or course of action; v give advice to"
-translation: "n. 商议, 忠告, 法律顾问；v. 商议, 劝告"
-srsWords: "counsel"
+front: "psychedelic"
+meaning: "s. producing distorted sensory perceptions and feelings or altered states of awareness or sometimes states resembling psychosis; s. having the vivid colors and bizarre patterns associated with psychedelic states; s. (of a mental state) characterized by intense and distorted perceptions and hallucinations and feelings of euphoria or sometimes despair"
+translation: "a. 引起幻觉的, 荧光的；n. 迷幻剂"
+srsWords: "psychedelic"
 
 [flashcard-review]
 front: "aptitude"
@@ -529,6 +536,7 @@ front: "banish"
 meaning: "v. expel from a community or group; v. ban from a place of residence, as for punishment; v. expel, as if by official decree; v. drive away"
 translation: "vt. 驱逐, 消除；[法] 驱逐, 流放"
 srsWords: "banish"
+
 ---
 lessonTitle: "Lesson 9: Socio-Economic Theory & Institutions Part 9"
 description: "Practice 10 key C2 vocabulary flashcards for Socio-Economic Theory & Institutions"
@@ -578,10 +586,10 @@ translation: "n. 浅水, 浅滩, 沙洲, 鱼群, 暗礁, 潜在危险；a. 浅�
 srsWords: "shoal"
 
 [flashcard-review]
-front: "scroll"
-meaning: "n. a document that can be rolled up (as for storage); v. move through text or graphics in order to display parts that do not fit on the screen"
-translation: "n. 卷轴, 画卷, 名册, 条幅, 滚动；v. (使)成卷形；[计] 滚动"
-srsWords: "scroll"
+front: "porcupine"
+meaning: "n. relatively large rodents with sharp erectile bristles mingled with the fur"
+translation: "n. 豪猪"
+srsWords: "porcupine"
 
 [flashcard-review]
 front: "collide"
@@ -594,6 +602,7 @@ front: "collider"
 meaning: "n. an accelerator in which two beams of particles are forced to collide head on"
 translation: "碰撞机"
 srsWords: "collider"
+
 ---
 lessonTitle: "Lesson 10: Socio-Economic Theory & Institutions Part 10"
 description: "Practice 10 key C2 vocabulary flashcards for Socio-Economic Theory & Institutions"

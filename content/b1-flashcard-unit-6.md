@@ -74,6 +74,7 @@ front: "divorced"
 meaning: "s. of someone whose marriage has been legally dissolved"
 translation: "a. 离婚的"
 srsWords: "divorced"
+
 ---
 lessonTitle: "Lesson 2: Health, Lifestyle & Well-being Part 2"
 description: "Practice 10 key B1 vocabulary flashcards for Health, Lifestyle & Well-being"
@@ -129,16 +130,17 @@ translation: "a. 向下的"
 srsWords: "downward"
 
 [flashcard-review]
-front: "doze"
-meaning: "n. a light fitful sleep"
-translation: "vi. 打瞌睡, 假寐；vt. 打瞌睡度过；n. 瞌睡"
-srsWords: "doze"
+front: "autopsy"
+meaning: "n. an examination and dissection of a dead body to determine cause of death or the changes produced by disease; v. perform an autopsy on a dead body; do a post-mortem"
+translation: "n. 验尸；[医] 尸体解剖, 尸体剖检"
+srsWords: "autopsy"
 
 [flashcard-review]
 front: "dozen"
 meaning: "n the cardinal number that is the sum of eleven and one; s denoting a quantity consisting of 12 items or units"
 translation: "n. 打, 十二个；a. 一打的"
 srsWords: "dozen"
+
 ---
 lessonTitle: "Lesson 3: Health, Lifestyle & Well-being Part 3"
 description: "Practice 10 key B1 vocabulary flashcards for Health, Lifestyle & Well-being"
@@ -188,10 +190,10 @@ translation: "n. 垃圾场；vt. 倾倒, 倾销；vi. 倒垃圾, 倾销商品；
 srsWords: "dump"
 
 [flashcard-review]
-front: "dustbin"
-meaning: "n a bin that holds rubbish until it is collected"
-translation: "n. 垃圾箱"
-srsWords: "dustbin"
+front: "dose"
+meaning: "n. a measured portion of medicine taken at any one time; n. the quantity of an active agent (substance or radiation) taken in or absorbed at any one time; v. treat with an agent; add (an agent) to"
+translation: "n. 剂量, 服用量；vt. 给药, (用药)医治；vi. 服药"
+srsWords: "dose"
 
 [flashcard-review]
 front: "dusty"
@@ -204,6 +206,7 @@ front: "duty-free"
 meaning: "s. exempt from duty"
 translation: "a. 免税的；[法] 免税的"
 srsWords: "duty-free"
+
 ---
 lessonTitle: "Lesson 4: Health, Lifestyle & Well-being Part 4"
 description: "Practice 10 key B1 vocabulary flashcards for Health, Lifestyle & Well-being"
@@ -217,10 +220,10 @@ translation: "n. 劳动, 努力, 工作, 劳工, 分娩；vi. 劳动, 努力, �
 srsWords: "labour"
 
 [flashcard-review]
-front: "duvet"
-meaning: "n a soft quilt usually filled with the down of the eider"
-translation: "n. 羽绒被"
-srsWords: "duvet"
+front: "phase"
+meaning: "n. any distinct time period in a sequence of events; n. (physical chemistry) a distinct state of matter in a system; matter that is identical in chemical composition and physical state and separated from other material by the phase boundary; n. a particular point in the time of a cycle; measured from some arbitrary zero and expressed as an angle; n. (astronomy) the particular appearance of a body's state of illumination (especially one of the recurring shapes of the part of Earth's moon that is illuminated by the sun)"
+translation: "n. 时期, 局面, 方面, 位相, 相, 阶段；vt. 使调整相位, 使定相, 使一致, 逐步执行, 实行；[计] 阶段"
+srsWords: "phase"
 
 [flashcard-review]
 front: "dynasty"
@@ -235,10 +238,10 @@ translation: "a. 热心的, 渴望的, 热望的"
 srsWords: "eager"
 
 [flashcard-review]
-front: "eagerness"
-meaning: "n. a positive feeling of wanting to push ahead with something"
-translation: "n. 热心"
-srsWords: "eagerness"
+front: "asylum"
+meaning: "n a shelter from danger or hardship; n a hospital for mentally incompetent or unbalanced person"
+translation: "n. 庇护, 收容所；[医] 养育院"
+srsWords: "asylum"
 
 [flashcard-review]
 front: "earache"
@@ -259,16 +262,17 @@ translation: "n. 东方人, 东正教徒；a. 东方的, 向东的, 自东的"
 srsWords: "eastern"
 
 [flashcard-review]
-front: "easygoing"
-meaning: "s. relaxed and informal in attitude or standards"
-translation: "a. 脾气随和的, 逍遥自在的, 悠闲的, 懒散的"
-srsWords: "easygoing"
+front: "mattress"
+meaning: "n. a large thick pad filled with resilient material and often incorporating coiled springs, used as a bed or part of a bed"
+translation: "n. 床垫, 空气垫, 沉床；[医] 褥子, 床垫"
+srsWords: "mattress"
 
 [flashcard-review]
-front: "eco"
-meaning: "eco"
-translation: "abbr. 电子耦合振荡器（Electron-Coupled Oscillator）；环境控制组织（Environmental Control Organization）；经济合作组织（Economic Cooperation Organization）"
-srsWords: "eco"
+front: "canon"
+meaning: "n. a rule or especially body of rules or principles generally established as valid and fundamental in a field or art or philosophy; n. a priest who is a member of a cathedral chapter; n. a contrapuntal piece of music in which a melody in one part is imitated exactly in other parts; n. a complete list of saints that have been recognized by the Roman Catholic Church"
+translation: "n. 教会法规, 圣典, 准则, 标准, 教士；[医] 规范, [加农]炮"
+srsWords: "canon"
+
 ---
 lessonTitle: "Lesson 5: Health, Lifestyle & Well-being Part 5"
 description: "Practice 10 key B1 vocabulary flashcards for Health, Lifestyle & Well-being"
@@ -282,16 +286,16 @@ translation: "a. 生态学的, 主张生态保护的；[法] 生态的, 生态�
 srsWords: "ecological"
 
 [flashcard-review]
-front: "ecology"
-meaning: "n. the environment as it relates to living organisms; n. the branch of biology concerned with the relations between organisms and their environment"
-translation: "n. 生态学, 社会生态学；[化] 生态学"
-srsWords: "ecology"
+front: "stock"
+meaning: "n. the capital raised by a corporation through the issue of shares entitling holders to an ownership interest (equity); n. the merchandise that a shop has on hand; n. the handle of a handgun or the butt end of a rifle or shotgun or part of the support of a machine gun or artillery gun; n. the reputation and popularity a person has"
+translation: "n. 树干, 祖先, 血统, 原料, 备料, 库存, 牲畜, 股票, 股份, 保留剧目；a. 存货的, 常备的, 平凡的, 普通的, 股票的, 保留剧目的, 繁殖用的；vt. 装把手于, 进货, 备有, 放牧；vi. 出新芽, 备货, 囤积"
+srsWords: "stock"
 
 [flashcard-review]
-front: "saving"
-meaning: "s. characterized by thriftiness"
-translation: "n. 存款, 挽救, 节约；a. 搭救的, 节约的, 保留的, 补偿的；prep. 除...之外"
-srsWords: "saving"
+front: "identify"
+meaning: "v. recognize as being; establish the identity of someone or something; v. consider (oneself) as similar to somebody else; v. conceive of as united or associated; v. identify as in botany or biology, for example"
+translation: "vt. 识别, 认为...等同于, 确定, 使参与；vi. 一致, 认同"
+srsWords: "identify"
 
 [flashcard-review]
 front: "economics"
@@ -334,6 +338,7 @@ front: "efficient"
 meaning: "a. being effective without wasting time or effort or expense"
 translation: "a. 有效率的, 能干的"
 srsWords: "efficient"
+
 ---
 lessonTitle: "Lesson 6: Health, Lifestyle & Well-being Part 6"
 description: "Practice 10 key B1 vocabulary flashcards for Health, Lifestyle & Well-being"
@@ -399,6 +404,7 @@ front: "embarrassment"
 meaning: "n. the shame you feel when your inadequacy or guilt is made public; n. the state of being embarrassed (usually by some financial inadequacy); n. some event that causes someone to be embarrassed"
 translation: "n. 困难, 阻碍, 困窘；[医] 窘迫"
 srsWords: "embarrassment"
+
 ---
 lessonTitle: "Lesson 7: Health, Lifestyle & Well-being Part 7"
 description: "Practice 10 key B1 vocabulary flashcards for Health, Lifestyle & Well-being"
@@ -448,10 +454,10 @@ translation: "vt. 使能够；[计] 允许, 使能, 打开"
 srsWords: "enable"
 
 [flashcard-review]
-front: "enclose"
-meaning: "v. close in; darkness enclosed him\"; v. surround completely"
-translation: "vt. 围绕, 圈起, 放入封套, 附上"
-srsWords: "enclose"
+front: "core"
+meaning: "n. a small group of indispensable persons or things; n. the center of an object; n. the central part of the Earth; n. a cylindrical sample of soil or rock obtained with a hollow drill"
+translation: "n. 核心, 果心, 要点；vt. 挖...的核；[计] 内核, 核心网"
+srsWords: "core"
 
 [flashcard-review]
 front: "encouragement"
@@ -464,6 +470,7 @@ front: "encouraging"
 meaning: "a. giving courage or confidence or hope; s. furnishing support and encouragement"
 translation: "a. 鼓励的, 促进的"
 srsWords: "encouraging"
+
 ---
 lessonTitle: "Lesson 8: Health, Lifestyle & Well-being Part 8"
 description: "Practice 10 key B1 vocabulary flashcards for Health, Lifestyle & Well-being"
@@ -525,10 +532,11 @@ translation: "n. 享乐, 快乐, 享受；[经] 使用权"
 srsWords: "enjoyment"
 
 [flashcard-review]
-front: "enquiry"
-meaning: "n an instance of questioning; n a search for knowledge; n a systematic investigation of a matter of public interest"
-translation: "n. 询问；[经] 询价, 询盘"
-srsWords: "enquiry"
+front: "bid"
+meaning: "n. an attempt to get something; n. a formal proposal to buy at a specified price; n. (bridge) the number of tricks a bridge player is willing to contract to make; v. ask for or request earnestly"
+translation: "n. 出价；v. 命令, 吩咐, 请求, 表示, 宣布, 投标"
+srsWords: "bid"
+
 ---
 lessonTitle: "Lesson 9: Health, Lifestyle & Well-being Part 9"
 description: "Practice 10 key B1 vocabulary flashcards for Health, Lifestyle & Well-being"
@@ -536,10 +544,10 @@ icon: "🧘"
 color: "#E91E63"
 ---
 [flashcard-review]
-front: "enrich"
-meaning: "v. make better or improve in quality; v. make wealthy or richer"
-translation: "vt. 使富足, 使肥沃"
-srsWords: "enrich"
+front: "clothing"
+meaning: "n. a covering designed to be worn on a person's body"
+translation: "n. 衣服"
+srsWords: "clothing"
 
 [flashcard-review]
 front: "entertain"
@@ -560,10 +568,10 @@ translation: "n. 巨大的热情, 热心"
 srsWords: "enthusiasm"
 
 [flashcard-review]
-front: "enthusiast"
-meaning: "n. an ardent and enthusiastic supporter of some person or activity"
-translation: "n. 热心家, 狂热者, 爱好者"
-srsWords: "enthusiast"
+front: "skinny"
+meaning: "n. confidential information about a topic or person; a. of or relating to or resembling skin"
+translation: "a. 似皮的, 极瘦的, 少的, 小气的；[医] 皮的; 消瘦的"
+srsWords: "skinny"
 
 [flashcard-review]
 front: "packaging"
@@ -590,10 +598,11 @@ translation: "n. 登录, 条目, 进入, 入口, 报关；[计] 登录项, 输�
 srsWords: "entry"
 
 [flashcard-review]
-front: "environmentalist"
-meaning: "n. someone who works to protect the environment from destruction or pollution"
-translation: "n. 环保人士"
-srsWords: "environmentalist"
+front: "acid"
+meaning: "n. any of various water-soluble compounds having a sour taste and capable of turning litmus red and reacting with a base to form a salt; n. street name for lysergic acid diethylamide; s. having the characteristics of an acid"
+translation: "n. 酸, 酸类物质, 尖刻, 迷幻药；a. 酸的, 酸性的, 尖刻的, 敏锐的；[计] 自动文档互参与索引生成程序"
+srsWords: "acid"
+
 ---
 lessonTitle: "Lesson 10: Health, Lifestyle & Well-being Part 10"
 description: "Practice 10 key B1 vocabulary flashcards for Health, Lifestyle & Well-being"
@@ -613,16 +622,16 @@ translation: "adv. 相等地, 同样地, 平等地"
 srsWords: "equally"
 
 [flashcard-review]
-front: "escape"
-meaning: "n. the act of escaping physically; n. an inclination to retreat from unpleasant realities through diversion or fantasy; n. an avoidance of danger or difficulty; n. a means or way of escaping"
-translation: "n. 逃亡, 避难设备, 逃跑；vi. 逃脱, 避开, 溜走；vt. 逃避, 避免, 被...忘掉"
-srsWords: "escape"
+front: "genuine"
+meaning: "a. not fake or counterfeit; s. not pretended; sincerely felt or expressed"
+translation: "a. 真正的, 真实的, 诚恳的；[医] 真性的"
+srsWords: "genuine"
 
 [flashcard-review]
-front: "crystal"
-meaning: "n. a solid formed by the solidification of a chemical and having a highly regular atomic structure; n. a crystalline element used as a component in various electronic devices; n. a rock formed by the solidification of a substance; has regularly repeating internal structure; external plane faces; n. glassware made of quartz"
-translation: "n. 水晶, 水晶装饰品, 结晶；a. 水晶的, 水晶一样的, 透明的"
-srsWords: "crystal"
+front: "behaviour"
+meaning: "The way someone acts."
+translation: "n.行为,举止,（人、动植物、化学药品等的）表现方式,态度na.“behavior”的变体"
+srsWords: "behaviour"
 
 [flashcard-review]
 front: "finder"

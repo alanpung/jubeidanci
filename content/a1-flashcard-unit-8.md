@@ -292,10 +292,10 @@ translation: "pron. 它的"
 srsWords: "its"
 
 [flashcard-review]
-front: "yogurt"
-meaning: "a semi-solid food made from fermented milk"
-translation: "n.酸奶,酸乳酪"
-srsWords: "yogurt"
+front: "timer"
+meaning: "n. a timepiece that measures a time interval and signals its end; n. a regulator that activates or deactivates a mechanism at set times"
+translation: "n. 计时员, 计时器；[计] 计时器"
+srsWords: "timer"
 
 [flashcard-review]
 front: "jewelry/jewellery"
@@ -346,10 +346,10 @@ icon: "⏰"
 color: "#009688"
 ---
 [flashcard-review]
-front: "zero"
-meaning: "n. a mathematical element that when added to another number yields the same number; n. the point on a scale from which positive or negative numerical quantities can be measured; n. the sight setting that will cause a projectile to hit the center of the target with no wind blowing; v. adjust (an instrument or device) to zero value"
-translation: "n. (数字)零零点，零位；零度没有，无; vi. 把(枪等)直接瞄准[聚焦]…"
-srsWords: "zero"
+front: "contest"
+meaning: "n. an occasion on which a winner is selected from among two or more contestants; n. a struggle between rivals; v. to make the subject of dispute, contention, or litigation"
+translation: "n. 竞赛, 争论；vt. 竞争, 争取, 争辩；vi. 竞争"
+srsWords: "contest"
 
 [flashcard-review]
 front: "zoo"

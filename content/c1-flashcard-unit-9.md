@@ -74,6 +74,7 @@ front: "exhilarating"
 meaning: "s. making lively and cheerful"
 translation: "a. 令人喜欢的, 使人愉快的, 爽快的"
 srsWords: "exhilarating"
+
 ---
 lessonTitle: "Lesson 2: Literary Criticism & Aesthetics Part 2"
 description: "Practice 10 key C1 vocabulary flashcards for Literary Criticism & Aesthetics"
@@ -93,10 +94,10 @@ translation: "n. 肉体性"
 srsWords: "physicality"
 
 [flashcard-review]
-front: "hack"
-meaning: "n. one who works hard at boring tasks; n. a mediocre and disdained writer; n. a tool (as a hoe or pick or mattock) used for breaking up the surface of the soil; n. an old or over-worked horse"
-translation: "n. 劈, 砍, 砍痕, 出租车, 干咳, 晒架, 鹤嘴锄；vt. 劈, 砍, 出租, 用旧；vi. 劈, 砍, 干咳, 驾驶出租车；a. 出租的"
-srsWords: "hack"
+front: "throughput"
+meaning: "n. output relative to input; the amount passing through a system from input to output (especially of a computer program over a period of time)"
+translation: "n. 生产量, 通过量；[化] 通过量; 产量"
+srsWords: "throughput"
 
 [flashcard-review]
 front: "lust"
@@ -117,10 +118,10 @@ translation: "vt. 使移动, 搅乱, 使动摇, 使不安宁；vi. 动荡不定,
 srsWords: "unsettle"
 
 [flashcard-review]
-front: "suburban"
-meaning: "a. relating to or characteristic of or situated in suburbs"
-translation: "a. 郊外的, 郊区的, (贬)偏狭的, 土气的, 见识不广的；n. 郊区居民"
-srsWords: "suburban"
+front: "transnational"
+meaning: "s involving or operating in several nations or nationalities"
+translation: "a. 超越国界的, 跨国的；[法] 超越国界的, 超国家的, 跨国的"
+srsWords: "transnational"
 
 [flashcard-review]
 front: "suburbia"
@@ -139,6 +140,7 @@ front: "quirky"
 meaning: "s informal terms; strikingly unconventional"
 translation: "a. 诡诈的, 突兀的, 古怪的, 离奇的；[法] 诡诈的, 颇为曲折的"
 srsWords: "quirky"
+
 ---
 lessonTitle: "Lesson 3: Literary Criticism & Aesthetics Part 3"
 description: "Practice 10 key C1 vocabulary flashcards for Literary Criticism & Aesthetics"
@@ -194,16 +196,17 @@ translation: "vt. 遗赠, 遗留；[法] 遗赠, 遗留...给"
 srsWords: "bequeath"
 
 [flashcard-review]
-front: "legacy"
-meaning: "n (law) a gift of personal property by will"
-translation: "n. 祖先传下来之物, 遗赠物；[经] 遗产, 遗赠物"
-srsWords: "legacy"
+front: "abomination"
+meaning: "n. a person who is loathsome or disgusting; n. an action that is vicious or vile; an action that arouses disgust or abhorrence"
+translation: "n. 厌恶, 痛恶, 令人厌恶的事物"
+srsWords: "abomination"
 
 [flashcard-review]
-front: "synthetic"
-meaning: "n. a compound made artificially by chemical reactions; a. involving or of the nature of synthesis (combining separate elements to form a coherent whole) as opposed to analysis; a. systematic combining of root and modifying elements into single words; a. of a proposition whose truth value is determined by observation or facts"
-translation: "n. 合成物质；a. 综合(性)的, 人造的, 合成的"
-srsWords: "synthetic"
+front: "chino"
+meaning: "n. trousers made with chino cloth; n. a coarse twilled cotton fabric frequently used for uniforms"
+translation: "n. 斜纹棉布裤；丝光斜纹棉布"
+srsWords: "chino"
+
 ---
 lessonTitle: "Lesson 4: Literary Criticism & Aesthetics Part 4"
 description: "Practice 10 key C1 vocabulary flashcards for Literary Criticism & Aesthetics"
@@ -247,10 +250,10 @@ translation: "vi. 大量存在, 富于, 充满"
 srsWords: "abound"
 
 [flashcard-review]
-front: "sap"
-meaning: "n. a watery solution of sugars, salts, and minerals that circulates through the vascular system of a plant; v. excavate the earth beneath"
-translation: "n. 树液, 体液, 活力, 坑道, 消弱, 警棍；vt. 使排出体液, 使伤元气, 使衰竭, 挖坑道逼近, 逐渐侵蚀；vi. 挖坑道, 消弱；[计] 共享汇编程序, 结构分析程序, 符号汇编程序, 服务器广告协议"
-srsWords: "sap"
+front: "anus"
+meaning: "n. the excretory opening at the end of the alimentary canal"
+translation: "n. 肛门；[医] 肛门"
+srsWords: "anus"
 
 [flashcard-review]
 front: "monotonous"
@@ -269,6 +272,7 @@ front: "monotony"
 meaning: "n. the quality of wearisome constancy, routine, and lack of variety; n. constancy of tone or pitch or inflection"
 translation: "n. 单调, 缺乏变化"
 srsWords: "monotony"
+
 ---
 lessonTitle: "Lesson 5: Literary Criticism & Aesthetics Part 5"
 description: "Practice 10 key C1 vocabulary flashcards for Literary Criticism & Aesthetics"
@@ -334,6 +338,7 @@ front: "inexcusably"
 meaning: "r. in an unpardonable manner or to an unpardonable degree"
 translation: "adv. 无法原谅地"
 srsWords: "inexcusably"
+
 ---
 lessonTitle: "Lesson 6: Literary Criticism & Aesthetics Part 6"
 description: "Practice 10 key C1 vocabulary flashcards for Literary Criticism & Aesthetics"
@@ -359,10 +364,10 @@ translation: "n. 固定(状态), 固定物, 设备；[计] 夹具"
 srsWords: "fixture"
 
 [flashcard-review]
-front: "bulk"
-meaning: "n. the property of something that is great in magnitude; n. the property possessed by a large mass; v. stick out or up"
-translation: "n. 大小, 体积, 大块, 大多数；vt. 显得大, 显得重要"
-srsWords: "bulk"
+front: "accolade"
+meaning: "n a tangible symbol signifying approval or distinction"
+translation: "n. 荣誉, 赞美, 骑士爵位的授予礼, 连谱号"
+srsWords: "accolade"
 
 [flashcard-review]
 front: "bulky"
@@ -377,10 +382,10 @@ translation: "a. 补充的, 补足的；[经] 补足的, 补充的"
 srsWords: "complementary"
 
 [flashcard-review]
-front: "complimentary"
-meaning: "a. conveying or resembling a compliment; s. costing nothing"
-translation: "a. 问候的, 称赞的, 夸奖的"
-srsWords: "complimentary"
+front: "unannounced"
+meaning: "s. without warning or announcement"
+translation: "a. 未经宣布的"
+srsWords: "unannounced"
 
 [flashcard-review]
 front: "staple"
@@ -395,10 +400,11 @@ translation: "n. 货物, 商品；[经] 商品, 货物"
 srsWords: "wares"
 
 [flashcard-review]
-front: "testament"
-meaning: "n. a profession of belief; n. strong evidence for something; n. either of the two main parts of the Christian Bible"
-translation: "n. 遗嘱, <<圣约书>>；[法] 遗言, 遗嘱, 确实的证明"
-srsWords: "testament"
+front: "battleship"
+meaning: "n. large and heavily armoured warship"
+translation: "n. 战列舰, 主力舰"
+srsWords: "battleship"
+
 ---
 lessonTitle: "Lesson 7: Literary Criticism & Aesthetics Part 7"
 description: "Practice 10 key C1 vocabulary flashcards for Literary Criticism & Aesthetics"
@@ -436,10 +442,10 @@ translation: "a. 斯巴达的, 斯巴达式的, 刚强的, 勇敢的, 好战的,
 srsWords: "spartan"
 
 [flashcard-review]
-front: "peninsula"
-meaning: "n. a large mass of land projecting into a body of water"
-translation: "n. 半岛, 突出的地方, 伊比利亚半岛"
-srsWords: "peninsula"
+front: "scouting"
+meaning: "n. exploring in order to gain information"
+translation: "n. 侦察活动, 童子军活动；[经] 初步勘探"
+srsWords: "scouting"
 
 [flashcard-review]
 front: "billiards"
@@ -448,22 +454,23 @@ translation: "n. 台球, 桌球"
 srsWords: "billiards"
 
 [flashcard-review]
-front: "flux"
-meaning: "n. the rate of flow of energy or particles across a given surface; n. a flow or discharge; n. a substance added to molten metals to bond with impurities that can then be readily removed; n. excessive discharge of liquid from a cavity or organ (as in watery diarrhea)"
-translation: "n. 流出, 涨潮, 变迁；vi. 熔化, 流出；vt. 使熔融；[计] 助焊剂"
-srsWords: "flux"
+front: "parlour"
+meaning: "n reception room in an inn or club where visitors can be received; n a room in a private house or establishment where people can sit and talk and relax"
+translation: "n. 客厅, 会客室, 雅座；a. 客厅的"
+srsWords: "parlour"
 
 [flashcard-review]
-front: "regression"
-meaning: "n. (psychiatry) a defense mechanism in which you flee from reality by assuming a more infantile state; n. the relation between selected values of x and observed values of y (from which the most probable value of y can be predicted for any value of x); n. returning to a former state"
-translation: "n. 退步, 回归；[计] 回归"
-srsWords: "regression"
+front: "contiguous"
+meaning: "s. very close or connected in space or time"
+translation: "a. 邻近的, 接近的；[医] 接触的"
+srsWords: "contiguous"
 
 [flashcard-review]
-front: "doctrine"
-meaning: "n. a belief (or system of beliefs) accepted as authoritative by some group or school"
-translation: "n. 教条, 学说；[医] 学说"
-srsWords: "doctrine"
+front: "drool"
+meaning: "n. saliva spilling from the mouth"
+translation: "vi. 流口水, 淌, 胡说八道；vt. 从嘴淌下, 过分动感情地表示；n. 口水, 胡说"
+srsWords: "drool"
+
 ---
 lessonTitle: "Lesson 8: Literary Criticism & Aesthetics Part 8"
 description: "Practice 10 key C1 vocabulary flashcards for Literary Criticism & Aesthetics"
@@ -471,64 +478,65 @@ icon: "🖋️"
 color: "#9C27B0"
 ---
 [flashcard-review]
-front: "supplemental"
-meaning: "s functioning in a supporting capacity; s added to complete or make up a deficiency"
-translation: "a. 补足的, 追加的；[医] 补充的, 补足的"
-srsWords: "supplemental"
+front: "authorize"
+meaning: "v. grant authorization or clearance for"
+translation: "vt. 授权, 批准, 委托；[经] 授权, 委任, 认可"
+srsWords: "authorize"
 
 [flashcard-review]
-front: "criterion"
-meaning: "n. the ideal in terms of which something can be judged"
-translation: "n. 标准, 准则, 规范；[化] 判据"
-srsWords: "criterion"
+front: "leech"
+meaning: "n. carnivorous or bloodsucking aquatic or terrestrial worms typically having a sucker at each end; n. a follower who hangs around a host (without benefit to the host) in hope of gain or advantage"
+translation: "n. 水蛭, 吸血鬼, 榨取他人利益的人；vt. 以水蛭吸血；vi. 依附并榨取别人"
+srsWords: "leech"
 
 [flashcard-review]
-front: "trustee"
-meaning: "n. a person (or institution) to whom legal title to property is entrusted to use for another's benefit"
-translation: "n. 受托人, 理事；[计] 委托者"
-srsWords: "trustee"
+front: "sassy"
+meaning: "s improperly forward or bold"
+translation: "a. 无礼的, 充满生气的, 时髦的"
+srsWords: "sassy"
 
 [flashcard-review]
-front: "realm"
-meaning: "n a domain in which something is dominant; n the domain ruled by a king or queen; n a knowledge domain that you are interested in or are communicating about"
-translation: "n. 王国, 领土, 领域；[计] 领域"
-srsWords: "realm"
+front: "nab"
+meaning: "v. tag the base runner to get him out; v. seize suddenly"
+translation: "vt. 捉住, 逮捕, 抢夺；[电] 国际广播协会的简写"
+srsWords: "nab"
 
 [flashcard-review]
-front: "ensemble"
-meaning: "n. a group of musicians playing or singing together; n. a cast other than the principals; n. an assemblage of parts or details (as in a work of art) considered as forming a whole; n. a coordinated outfit (set of clothing)"
-translation: "n. 全体, 合唱曲, (女人的)全套服装；[化] 总体; 整体; 系综"
-srsWords: "ensemble"
+front: "equivalence"
+meaning: "n. essential equality and interchangeability"
+translation: "n. 同等, 等价, 等值；[计] 等价"
+srsWords: "equivalence"
 
 [flashcard-review]
-front: "biblical"
-meaning: "a. of or pertaining to or contained in or in accordance with the Bible; a. in keeping with the nature of the Bible or its times or people"
-translation: "a. 圣经的"
-srsWords: "biblical"
+front: "excite"
+meaning: "to cause strong feelings of enthusiasm and eagerness"
+translation: "vt. 刺激, 使兴奋, 激励"
+srsWords: "excite"
 
 [flashcard-review]
-front: "ambient"
-meaning: "s. completely enveloping"
-translation: "a. 周围的；n. 周围环境"
-srsWords: "ambient"
+front: "impedance"
+meaning: "n a material's opposition to the flow of electric current; measured in ohms"
+translation: "n. 阻抗；[计] 阻抗, 电抗"
+srsWords: "impedance"
 
 [flashcard-review]
-front: "prostate"
-meaning: "a. relating to the prostate gland"
-translation: "a. 前列腺的；n. 前列腺"
-srsWords: "prostate"
+front: "contextual"
+meaning: "a. relating to or determined by or in context"
+translation: "a. 上下文的, 前后关系的"
+srsWords: "contextual"
 
 [flashcard-review]
-front: "watershed"
-meaning: "n. a ridge of land that separates two adjacent river systems"
-translation: "n. 流域, 分水岭；[医] 分水界, 分水岭"
-srsWords: "watershed"
+front: "predecessor"
+meaning: "n. one who precedes you in time (as in holding a position or office)"
+translation: "n. 前任, 先辈, 前身；[医] 初牙, 前辈, 祖先"
+srsWords: "predecessor"
 
 [flashcard-review]
-front: "sperm"
-meaning: "n. the male reproductive cell; the male gamete"
-translation: "n. 精液, 精虫, 鲸油, 抹香鲸；[化] 鲸蜡油"
-srsWords: "sperm"
+front: "sibling"
+meaning: "n. a person's brother or sister"
+translation: "n. 兄弟, 同胞；[医] 同胞(兄弟姐妹)"
+srsWords: "sibling"
+
 ---
 lessonTitle: "Lesson 9: Literary Criticism & Aesthetics Part 9"
 description: "Practice 10 key C1 vocabulary flashcards for Literary Criticism & Aesthetics"
@@ -536,64 +544,65 @@ icon: "🖋️"
 color: "#9C27B0"
 ---
 [flashcard-review]
-front: "dame"
-meaning: "n. informal terms for a (young) woman; n. a woman of refinement"
-translation: "n. 夫人"
-srsWords: "dame"
+front: "envisage"
+meaning: "v form a mental image of something that is not present or that is not the case"
+translation: "vt. 面对, 正视, 想象"
+srsWords: "envisage"
 
 [flashcard-review]
-front: "breach"
-meaning: "n. a failure to perform some promised act or obligation; n. an opening (especially a gap in a dike or fortification)"
-translation: "n. 裂口, 违背, 破坏, 违反, 突破, 破裂；vt. 攻破, 突破；vi. 跳出水面"
-srsWords: "breach"
+front: "chilli"
+meaning: "a small, hot-tasting pod of a variety of capsicum, used in cooking"
+translation: "红辣椒"
+srsWords: "chilli"
 
 [flashcard-review]
-front: "antibody"
-meaning: "n. any of a large variety of proteins normally present in the body or produced in response to an antigen which it neutralizes, thus producing an immune response"
-translation: "n. 抗体；[化] 抗体"
-srsWords: "antibody"
+front: "omelette"
+meaning: "A dish of beaten eggs cooked in a pan"
+translation: "煎蛋卷"
+srsWords: "omelette"
 
 [flashcard-review]
-front: "serum"
-meaning: "n. an amber, watery fluid, rich in proteins, that separates out when blood coagulates"
-translation: "n. 浆液, 血清, 乳清；[医] 血清; 浆液"
-srsWords: "serum"
+front: "liter"
+meaning: "a metric unit of volume equal to 1,000 cubic centimeters"
+translation: "n.计量 公升（容量单位）"
+srsWords: "liter"
 
 [flashcard-review]
-front: "bibliographic"
-meaning: "a. relating to or dealing with bibliography"
-translation: "a. 书目有关的, 书目的"
-srsWords: "bibliographic"
+front: "metre"
+meaning: "the fundamental unit of length in the metric system, equal to 100 centimeters"
+translation: "n. 米；公尺；韵律 n. (Metre)人名；(英)米特"
+srsWords: "metre"
 
 [flashcard-review]
-front: "hydraulic"
-meaning: "a. moved or operated or effected by liquid (water or oil); a. of or relating to the study of hydraulics"
-translation: "a. 与水有关的, 水力的, 水压的；[电] 水力的"
-srsWords: "hydraulic"
+front: "zed"
+meaning: "n the 26th letter of the Roman alphabet"
+translation: "n. Z字母"
+srsWords: "zed"
 
 [flashcard-review]
-front: "penetration"
-meaning: "n. an attack that penetrates into enemy territory; n. clear or deep perception of a situation; n. the act of entering into or through something"
-translation: "n. 穿透, 渗透, 侵入, 识穿, 洞察(力)；[化] 渗入"
-srsWords: "penetration"
+front: "deprivation"
+meaning: "n a state of extreme poverty; n the disadvantage that results from losing something; n act of depriving someone of food or money or rights"
+translation: "n. 剥夺, 剥夺官职, 免职；[医] 丧失, 剥夺, 缺乏"
+srsWords: "deprivation"
 
 [flashcard-review]
-front: "empirical"
-meaning: "a. derived from experiment and observation rather than theory"
-translation: "a. 完全跟据经验的, 经验主义的；[医] 经验主义的"
-srsWords: "empirical"
+front: "genomics"
+meaning: "n. the branch of genetics that studies organisms in terms of their genomes (their full DNA sequences)"
+translation: "基因组学"
+srsWords: "genomics"
 
 [flashcard-review]
-front: "discrete"
-meaning: "s. constituting a separate entity or part"
-translation: "a. 不连续的, 离散的；[计] 离散的"
-srsWords: "discrete"
+front: "kilometer"
+meaning: "a unit of length, equal to 1,000 meters"
+translation: "n. 千米, 公里；[医] 千米, 公里"
+srsWords: "kilometer"
 
 [flashcard-review]
-front: "sexuality"
-meaning: "n the properties that distinguish organisms on the basis of their reproductive roles"
-translation: "n. 性征, 性行为, 性欲；[医] 性别, 性欲"
-srsWords: "sexuality"
+front: "litre"
+meaning: "a unit of volume"
+translation: "n. [计量] 公升（米制容量单位） n. (Litre)人名；(西)利特雷"
+srsWords: "litre"
+
 ---
 lessonTitle: "Lesson 10: Literary Criticism & Aesthetics Part 10"
 description: "Practice 10 key C1 vocabulary flashcards for Literary Criticism & Aesthetics"
@@ -601,61 +610,61 @@ icon: "🖋️"
 color: "#9C27B0"
 ---
 [flashcard-review]
-front: "reproductive"
-meaning: "s producing new life or offspring"
-translation: "a. 生殖的, 再生的, 复制的；[医] 生殖的, 复现的"
-srsWords: "reproductive"
+front: "relinquish"
+meaning: "v part with a possession or right; v do without or cease to hold or adhere to; v turn away from; give up; v release, as from one's grip"
+translation: "vt. 放弃, 撤回, 停止, 松开, 让与；[法] 让与, 把...交给, 放弃"
+srsWords: "relinquish"
 
 [flashcard-review]
-front: "variance"
-meaning: "n. the second moment around the mean; the expected value of the square of the deviations of a random variable from its mean value; n. an official dispensation to act contrary to a rule or regulation (typically a building regulation)"
-translation: "n. 不一致, 变化, 变异, 分歧, 不和；[化] 方差; 变种"
-srsWords: "variance"
+front: "photon"
+meaning: "n. a quantum of electromagnetic radiation; an elementary particle that is its own antiparticle"
+translation: "n. 光子, 光量子, 光度；[化] 光量子; 光子"
+srsWords: "photon"
 
 [flashcard-review]
-front: "nirvana"
-meaning: "n. (Hinduism and Buddhism) the beatitude that transcends the cycle of reincarnation; characterized by the extinction of desire and suffering and individual consciousness"
-translation: "n. 天堂"
-srsWords: "nirvana"
+front: "eraser"
+meaning: "n. an implement used to erase something"
+translation: "n. 擦子"
+srsWords: "eraser"
 
 [flashcard-review]
-front: "cardiovascular"
-meaning: "a. of or pertaining to or involving the heart and blood vessels"
-translation: "a. 心血管的；[医] 心血管的"
-srsWords: "cardiovascular"
+front: "daunting"
+meaning: "s. discouraging through fear"
+translation: "a. 使人畏缩的"
+srsWords: "daunting"
 
 [flashcard-review]
-front: "arbitration"
-meaning: "n. (law) the hearing and determination of a dispute by an impartial referee agreed to by both parties (often used to settle disputes between labor and management); n. the act of deciding as an arbiter; giving authoritative judgment"
-translation: "n. 仲裁, 公断；[计] 仲裁"
-srsWords: "arbitration"
+front: "resin"
+meaning: "n. any of a class of solid or semisolid viscous substances obtained either as exudations from certain plants or prepared by polymerization of simple molecules"
+translation: "n. 树脂；vt. 涂树脂于"
+srsWords: "resin"
 
 [flashcard-review]
-front: "convergence"
-meaning: "n. the occurrence of two or more things coming together; n. the approach of an infinite series to a finite limit; n. the act of converging (coming closer)"
-translation: "n. 集中, 收敛；[计] 收敛, 会聚"
-srsWords: "convergence"
+front: "hoon"
+meaning: "a lout or hooligan, especially one who drives recklessly (Australian/NZ slang)"
+translation: "n. [澳大利亚英语]拉皮条者"
+srsWords: "hoon"
 
 [flashcard-review]
-front: "levy"
-meaning: "n. a charge imposed and collected; n. the act of drafting into military service; v. impose and collect"
-translation: "n. 税款, 所征的人数, 征收；vi. 征税, 课税；vt. 征收, 强求, 召集"
-srsWords: "levy"
+front: "poise"
+meaning: "n. a cgs unit of dynamic viscosity equal to one dyne-second per square centimeter; the viscosity of a fluid in which a force of one dyne per square centimeter maintains a velocity of 1 centimeter per second; n. a state of being balanced in a stable equilibrium; v. be motionless, in suspension"
+translation: "n. 平衡, 均衡, 姿势, 镇静, 安静, 砝码；vt. 使平衡, 使悬着, 保持...姿势；vi. 平衡, 悬着, 准备好"
+srsWords: "poise"
 
 [flashcard-review]
-front: "malpractice"
-meaning: "n. professional wrongdoing that results in injury or damage; n. a wrongful act that the actor had no right to do; improper professional conduct"
-translation: "n. 不当治疗, 不端行为, 渎职；[医] 疗法失当, 医疗差错"
-srsWords: "malpractice"
+front: "advantageous"
+meaning: "a. giving an advantage; s. appropriate for achieving a particular end; implies a lack of concern for fairness"
+translation: "a. 有利的, 有益的"
+srsWords: "advantageous"
 
 [flashcard-review]
-front: "vertex"
-meaning: "n. the point of intersection of lines or the point opposite the base of a figure; n. the highest point (of something)"
-translation: "n. 顶点, 最高点, 头顶, 天顶；[计] 顶点"
-srsWords: "vertex"
+front: "quirk"
+meaning: "n. a narrow groove beside a beading; v. twist or curve abruptly"
+translation: "n. 古怪举动, 俏皮话, 急转"
+srsWords: "quirk"
 
 [flashcard-review]
-front: "hepatitis"
-meaning: "n. inflammation of the liver caused by a virus or a toxin"
-translation: "n. 肝炎；[医] 肝炎"
-srsWords: "hepatitis"
+front: "tantamount"
+meaning: "s being essentially equal to something"
+translation: "a. 同等的, 相等的, 相当于...的；[法] 相等的, 相当的, 同等的"
+srsWords: "tantamount"

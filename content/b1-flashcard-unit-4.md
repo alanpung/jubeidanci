@@ -74,6 +74,7 @@ front: "competitor"
 meaning: "n the contestant you hope to defeat"
 translation: "n. 竞争者；[经] 竞争者, 竞争对手"
 srsWords: "competitor"
+
 ---
 lessonTitle: "Lesson 2: Education, Learning & Skills Part 2"
 description: "Practice 10 key B1 vocabulary flashcards for Education, Learning & Skills"
@@ -87,10 +88,10 @@ translation: "n. 补足物, 补语, 补数；vt. 补充, 补足；[计] 补码; 
 srsWords: "complement"
 
 [flashcard-review]
-front: "complete"
-meaning: "v. come or bring to a finish or an end; others finished in over 4 hours\"; v. bring to a whole, with all the necessary parts or elements; v. complete a pass; v. write all the required information onto a form"
-translation: "a. 完全的, 十足的, 完成的；vt. 完成, 完工, 使圆满"
-srsWords: "complete"
+front: "extension"
+meaning: "n. a mutually agreed delay in the date set for the completion of a job or payment of a debt; n. act of expanding in scope; making more widely available; n. an educational opportunity provided by colleges and universities to people who are not enrolled as regular students; n. act of stretching or straightening out a flexed limb"
+translation: "n. 延长, 扩充, 范围, 扩展名；a. 伸缩的；[计] 扩展名, 扩充名"
+srsWords: "extension"
 
 [flashcard-review]
 front: "completely"
@@ -139,6 +140,7 @@ front: "concerned"
 meaning: "a. feeling or showing worry or solicitude; s. involved in or affected by or having a claim to or share in"
 translation: "a. 关心的, 有关的, 参与的, 担心的"
 srsWords: "concerned"
+
 ---
 lessonTitle: "Lesson 3: Education, Learning & Skills Part 3"
 description: "Practice 10 key B1 vocabulary flashcards for Education, Learning & Skills"
@@ -200,10 +202,11 @@ translation: "vt. 祝贺, 庆贺"
 srsWords: "congratulate"
 
 [flashcard-review]
-front: "connection"
-meaning: "n. a relation between things or events (as in the case of one causing the other or sharing features with it); n. the state of being connected; n. an instrumentality that connects; n. (usually plural) a person who is influential and to whom you are connected in some way (as by family or friendship)"
-translation: "n. 连接, 关系, 前后关系；[计] 连接"
-srsWords: "connection"
+front: "learner"
+meaning: "a person who is learning"
+translation: "n. 初学者，学习者 n. (Learner)人名；(英)勒纳"
+srsWords: "learner"
+
 ---
 lessonTitle: "Lesson 4: Education, Learning & Skills Part 4"
 description: "Practice 10 key B1 vocabulary flashcards for Education, Learning & Skills"
@@ -269,6 +272,7 @@ front: "constitute"
 meaning: "v. form or compose"
 translation: "vt. 构成, 组成, 任命；[建] 构造, 组成"
 srsWords: "constitute"
+
 ---
 lessonTitle: "Lesson 5: Education, Learning & Skills Part 5"
 description: "Practice 10 key B1 vocabulary flashcards for Education, Learning & Skills"
@@ -334,6 +338,7 @@ front: "content"
 meaning: "n. everything that is included in a collection and that is held or included in something; n. the proportion of a substance that is contained in a mixture or alloy etc.; n. the sum or range of what has been perceived, discovered, or learned; v. satisfy in a limited way"
 translation: "n. 内容, 满足, 意义, 要旨；a. 满足的, 满意的；vt. 使...满足, 使...安心；[计] 内容"
 srsWords: "content"
+
 ---
 lessonTitle: "Lesson 6: Education, Learning & Skills Part 6"
 description: "Practice 10 key B1 vocabulary flashcards for Education, Learning & Skills"
@@ -341,10 +346,10 @@ icon: "🎓"
 color: "#4CAF50"
 ---
 [flashcard-review]
-front: "continual"
-meaning: "a. occurring without interruption; chiefly restricted to what recurs regularly or frequently in a prolonged and closely spaced series; s. `continual' (meaning seemingly uninterrupted) is often used interchangeably with `continuous' (meaning without interruption)"
-translation: "a. 持续不断的, 继续的；[建] 连续的"
-srsWords: "continual"
+front: "curriculum"
+meaning: "n an integrated course of academic studies"
+translation: "n. 课程；[医] 课程, 学程"
+srsWords: "curriculum"
 
 [flashcard-review]
 front: "continually"
@@ -395,10 +400,11 @@ translation: "n. 捐助, 捐助之物, 贡献；[经] 贡献, 捐款, 补助品"
 srsWords: "contribution"
 
 [flashcard-review]
-front: "control"
-meaning: "n. power to direct or determine; n. a relation of constraint of one entity (thing or person or group) by another; n. (physiology) regulation or maintenance of a function or action or reflex etc; n. the activity of managing or exerting control over something"
-translation: "n. 控制, 管理, 克制, 控制器, 操纵装置；vt. 控制, 操纵, 抑制；[计] 控制; 控制器"
-srsWords: "control"
+front: "considering"
+meaning: "v deem to be; v give careful consideration to; v take into consideration for exemplifying purposes; v show consideration for; take into account; v think about carefully; weigh; v judge or regard; look upon; judge; v look at attentively; v look at carefully; study mentally; v regard or treat with consideration, respect, and esteem"
+translation: "prep. 就...而论；conj. 考虑到"
+srsWords: "considering"
+
 ---
 lessonTitle: "Lesson 7: Education, Learning & Skills Part 7"
 description: "Practice 10 key B1 vocabulary flashcards for Education, Learning & Skills"
@@ -464,6 +470,7 @@ front: "courageous"
 meaning: "a possessing or displaying courage; able to face and deal with danger or fear without flinching"
 translation: "a. 勇敢的, 大胆的, 有胆量的"
 srsWords: "courageous"
+
 ---
 lessonTitle: "Lesson 8: Education, Learning & Skills Part 8"
 description: "Practice 10 key B1 vocabulary flashcards for Education, Learning & Skills"
@@ -529,6 +536,7 @@ front: "crush"
 meaning: "n. a dense crowd of people; n. the act of crushing; v. break into small pieces; v. humiliate or depress completely"
 translation: "n. 压碎, 粉碎, 群众, 迷恋；vt. 压破, 征服, 塞, 弄皱, 榨出；vi. 被压碎, 起皱, 挤"
 srsWords: "crush"
+
 ---
 lessonTitle: "Lesson 9: Education, Learning & Skills Part 9"
 description: "Practice 10 key B1 vocabulary flashcards for Education, Learning & Skills"
@@ -560,10 +568,10 @@ translation: "a. 好奇的, 求知的, 古怪的"
 srsWords: "curious"
 
 [flashcard-review]
-front: "curiously"
-meaning: "r. in a manner differing from the usual or expected; r. with curiosity"
-translation: "adv. 好奇地"
-srsWords: "curiously"
+front: "determined"
+meaning: "s. characterized by great determination; a. having been learned or found or determined especially by investigation; s. devoting full strength and concentrated attention to; s. determined or decided upon as by an authority"
+translation: "a. 坚决的, 已下决心的"
+srsWords: "determined"
 
 [flashcard-review]
 front: "upcoming"
@@ -594,6 +602,7 @@ front: "currently"
 meaning: "r at this time or period; now"
 translation: "adv. 现在, 当前, 一般, 普通；[计] 当前"
 srsWords: "currently"
+
 ---
 lessonTitle: "Lesson 10: Education, Learning & Skills Part 10"
 description: "Practice 10 key B1 vocabulary flashcards for Education, Learning & Skills"

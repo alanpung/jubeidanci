@@ -74,6 +74,7 @@ front: "colleague"
 meaning: "n. an associate that one works with; n. a person who is member of one's class or profession"
 translation: "n. 同事, 同僚"
 srsWords: "colleague"
+
 ---
 lessonTitle: "Lesson 2: Science, Research & Discovery Part 2"
 description: "Practice 10 key B2 vocabulary flashcards for Science, Research & Discovery"
@@ -129,16 +130,17 @@ translation: "vt. 纪念"
 srsWords: "commemorate"
 
 [flashcard-review]
-front: "commerce"
-meaning: "n. transactions (sales and purchases) having the objective of supplying commodities (goods and services); n. social exchange, especially of opinions, attitudes, etc."
-translation: "n. 商业, 商务, 贸易；[经] 商业, 贸易, 商务"
-srsWords: "commerce"
+front: "utter"
+meaning: "v. express audibly; utter sounds (not necessarily words); v. put into circulation"
+translation: "a. 全然的, 绝对的, 完全的；vt. 发出声音, 做声, 发表, 发射, 流通"
+srsWords: "utter"
 
 [flashcard-review]
 front: "commonwealth"
 meaning: "n. the official name of some states in the United States (Massachusetts and Pennsylvania and Virginia and Kentucky) and associated territories (Puerto Rico); n. a world organization of autonomous states that are united in allegiance to a central power but are not subordinate to it or to one another"
 translation: "n. 共和国；联邦；国民整体"
 srsWords: "commonwealth"
+
 ---
 lessonTitle: "Lesson 3: Science, Research & Discovery Part 3"
 description: "Practice 10 key B2 vocabulary flashcards for Science, Research & Discovery"
@@ -170,10 +172,10 @@ translation: "a. 慈悲的, 富于同情心的, 照顾性的；vt. 怜悯, 同�
 srsWords: "compassionate"
 
 [flashcard-review]
-front: "compatible"
-meaning: "a. able to exist and perform in harmonious or agreeable combination; a. capable of being used with or connected to other devices or components without modification; s. capable of forming a homogeneous mixture that neither separates nor is altered by chemical interaction"
-translation: "a. 能共处的, 可并立的, 适合的；[计] 相容的; 兼容的"
-srsWords: "compatible"
+front: "whilst"
+meaning: "adv. While."
+translation: "conj. 当...的时候, 和...同时, 虽然, 只要, 然而, 而, 尽管"
+srsWords: "whilst"
 
 [flashcard-review]
 front: "compensate"
@@ -182,10 +184,10 @@ translation: "v. 偿还, 补偿, 付报酬"
 srsWords: "compensate"
 
 [flashcard-review]
-front: "compensation"
-meaning: "n. something (such as money) given or received as payment or reparation (as for a service or loss or injury); n. (psychiatry) a defense mechanism that conceals your undesirable shortcomings by exaggerating desirable behaviors"
-translation: "n. 补偿, 赔偿金, 工资；[医] 代偿(机能), 补偿"
-srsWords: "compensation"
+front: "dwarf"
+meaning: "n. a person who is markedly small; n. a plant or animal that is atypically small; v. check the growth of"
+translation: "n. 矮子, 侏儒；v. (使)变矮小"
+srsWords: "dwarf"
 
 [flashcard-review]
 front: "competence"
@@ -204,6 +206,7 @@ front: "compile"
 meaning: "v. use a computer program to translate source code written in a particular programming language into computer-readable machine code that can be executed"
 translation: "vt. 编译, 编辑, 编纂, 收集；[计] 编译"
 srsWords: "compile"
+
 ---
 lessonTitle: "Lesson 4: Science, Research & Discovery Part 4"
 description: "Practice 10 key B2 vocabulary flashcards for Science, Research & Discovery"
@@ -211,10 +214,10 @@ icon: "🧪"
 color: "#00BCD4"
 ---
 [flashcard-review]
-front: "completion"
-meaning: "n. (American football) a successful forward pass in football; n. a concluding action"
-translation: "n. 完成；[经] 完井, 结束, 完工"
-srsWords: "completion"
+front: "hull"
+meaning: "n. dry outer covering of a fruit or seed or nut; n. persistent enlarged calyx at base of e.g. a strawberry or raspberry; n. United States naval officer who commanded the `Constitution' during the War of 1812 and won a series of brilliant victories against the British (1773-1843); n. United States diplomat who did the groundwork for creating the United Nations (1871-1955)"
+translation: "n. 壳, 皮, 船体；vt. 去壳"
+srsWords: "hull"
 
 [flashcard-review]
 front: "complexion"
@@ -223,10 +226,10 @@ translation: "n. 肤色, 情况, 局面；[医] 体质; 面色, 面容"
 srsWords: "complexion"
 
 [flashcard-review]
-front: "component"
-meaning: "n. an abstract part of something; n. an artifact that is one of the individual parts of which a composite entity is made up; especially a part that can be separated from or attached to a system"
-translation: "n. 元件, 组件, 成分；a. 组成的, 构成的；[计] 组件"
-srsWords: "component"
+front: "juvenile"
+meaning: "n. a young person, not fully developed; a. of or relating to or characteristic of or appropriate for children or young people"
+translation: "n. 少年, 少年读物；a. 少年的, 不成熟的, 适于少年的"
+srsWords: "juvenile"
 
 [flashcard-review]
 front: "comprehension"
@@ -235,10 +238,10 @@ translation: "n. 理解, 包含"
 srsWords: "comprehension"
 
 [flashcard-review]
-front: "comprehensive"
-meaning: "a. including all or everything; s. broad in scope"
-translation: "a. 广泛的, 有理解力的, 综合的；[经] 广泛的, 综合的, 全面的"
-srsWords: "comprehensive"
+front: "tractor"
+meaning: "n. a wheeled vehicle with large wheels; used in farming and other applications; n. a truck that has a cab but no body; used for pulling large trailers or vans"
+translation: "n. 牵引器, 拖拉机, 拉纸器；[计] 进纸器"
+srsWords: "tractor"
 
 [flashcard-review]
 front: "compress"
@@ -269,6 +272,7 @@ front: "conceal"
 meaning: "v. hold back; keep from being perceived by others"
 translation: "vt. 隐藏, 掩盖, 隐瞒；[法] 隐瞒, 隐匿, 保守秘密"
 srsWords: "conceal"
+
 ---
 lessonTitle: "Lesson 5: Science, Research & Discovery Part 5"
 description: "Practice 10 key B2 vocabulary flashcards for Science, Research & Discovery"
@@ -294,10 +298,10 @@ translation: "n. 观念, 概念；[医] 妊娠, 受孕; 概念"
 srsWords: "conception"
 
 [flashcard-review]
-front: "concerning"
-meaning: "v be relevant to; v be on the mind of"
-translation: "prep. 关于；[法] 关于"
-srsWords: "concerning"
+front: "strap"
+meaning: "n. an elongated leather strip (or a strip of similar material) for binding things together or holding something in position; n. hanger consisting of a loop of leather suspended from the ceiling of a bus or train; passengers hold onto it; n. a band that goes over the shoulder and supports a garment or bag; n. whip consisting of a strip of leather used in flogging"
+translation: "n. 带, 皮带；vt. (用皮带)捆扎"
+srsWords: "strap"
 
 [flashcard-review]
 front: "concession"
@@ -306,10 +310,10 @@ translation: "n. 特许, 让步, 认可；[经] 核准, 许可, 特殊(权)"
 srsWords: "concession"
 
 [flashcard-review]
-front: "concrete"
-meaning: "n. a strong hard building material composed of sand and gravel and cement and water; v. cover with cement; v. form into a solid mass; coalesce; a. capable of being perceived by the senses; not abstract or imaginary"
-translation: "n. 凝结物, 混凝土；a. 具体的, 实在的, 混凝土的；v. (使)凝结, 用混凝土浇筑"
-srsWords: "concrete"
+front: "suspension"
+meaning: "n. a mixture in which fine particles are suspended in a fluid where they are supported by buoyancy; n. an interruption in the intensity or amount of something; n. a mechanical system of springs or shock absorbers connecting the wheels and axles to the chassis of a wheeled vehicle; n. the act of suspending something (hanging it from above so it moves freely)"
+translation: "n. 悬挂, 暂停, 中止；[化] 悬浮; 悬浮体; 悬浮液"
+srsWords: "suspension"
 
 [flashcard-review]
 front: "condemn"
@@ -334,6 +338,7 @@ front: "conferencing"
 meaning: "conferencing"
 translation: "[计] 召开会议"
 srsWords: "conferencing"
+
 ---
 lessonTitle: "Lesson 6: Science, Research & Discovery Part 6"
 description: "Practice 10 key B2 vocabulary flashcards for Science, Research & Discovery"
@@ -399,6 +404,7 @@ front: "consensus"
 meaning: "n. agreement in the judgment or opinion reached by a group as a whole"
 translation: "n. 合意, 一致, 同感；[计] 合意"
 srsWords: "consensus"
+
 ---
 lessonTitle: "Lesson 7: Science, Research & Discovery Part 7"
 description: "Practice 10 key B2 vocabulary flashcards for Science, Research & Discovery"
@@ -406,10 +412,10 @@ icon: "🧪"
 color: "#00BCD4"
 ---
 [flashcard-review]
-front: "consent"
-meaning: "n. permission to do something"
-translation: "n. 同意, 许可；vi. 同意, 赞同"
-srsWords: "consent"
+front: "idle"
+meaning: "n. the state of an engine or other mechanism that is idling; v. run disconnected or idle; v. be idle; exist in a changeless situation; a. not in action or at work"
+translation: "a. 懒惰的, 闲散的, 停顿的, 空闲的, 无用的；vi. 无所事事, 闲散, 浪费, 空转；vt. 虚度, 使闲散, 使空转；n. 空转, 空闲时间；[计] 空闲时间"
+srsWords: "idle"
 
 [flashcard-review]
 front: "considerably"
@@ -418,16 +424,16 @@ translation: "adv. 非常地, 很, 颇"
 srsWords: "considerably"
 
 [flashcard-review]
-front: "considering"
-meaning: "v deem to be; v give careful consideration to; v take into consideration for exemplifying purposes; v show consideration for; take into account; v think about carefully; weigh; v judge or regard; look upon; judge; v look at attentively; v look at carefully; study mentally; v regard or treat with consideration, respect, and esteem"
-translation: "prep. 就...而论；conj. 考虑到"
-srsWords: "considering"
+front: "kindergarten"
+meaning: "n. a preschool for children age 4 to 6 to prepare them for primary school"
+translation: "n. 幼稚园"
+srsWords: "kindergarten"
 
 [flashcard-review]
-front: "consistent"
-meaning: "a. (sometimes followed by `with') in agreement or consistent or reliable; s. the same throughout in structure or composition"
-translation: "a. 一致的, 坚持的, 并立的, 坚固的"
-srsWords: "consistent"
+front: "brazilian"
+meaning: "n. a native or inhabitant of Brazil; a. of or relating to or characteristic of Brazil or the people of Brazil"
+translation: "n. 巴西人；a. 巴西的, 巴西人的"
+srsWords: "brazilian"
 
 [flashcard-review]
 front: "consolation"
@@ -436,16 +442,16 @@ translation: "n. 安慰, 令人安慰的事物；[法] 安慰, 慰问"
 srsWords: "consolation"
 
 [flashcard-review]
-front: "console"
-meaning: "n. a scientific instrument consisting of displays and an input device that an operator can use to monitor and control a system (especially a computer system); n. an ornamental scroll-shaped bracket (especially one used to support a wall fixture)"
-translation: "vt. 安慰, 藉慰；n. 控制台；[计] 控制台"
-srsWords: "console"
+front: "yogurt"
+meaning: "a semi-solid food made from fermented milk"
+translation: "n.酸奶,酸乳酪"
+srsWords: "yogurt"
 
 [flashcard-review]
-front: "constant"
-meaning: "n. a quantity that does not vary; n. a number representing a quantity assumed to have a fixed value in a specified mathematical context; a. steadfast in purpose or devotion or affection"
-translation: "n. 常数, 恒量；a. 不变的, 一定的, 时常的；[计] 常量; 常数; 恒值"
-srsWords: "constant"
+front: "homemade"
+meaning: "a. made or produced in the home or by yourself"
+translation: "a. 自制的, 国产的"
+srsWords: "homemade"
 
 [flashcard-review]
 front: "consult"
@@ -454,16 +460,17 @@ translation: "vi. 商讨, 商量, 协商, 会诊；vt. 向...请教, 查阅, 考
 srsWords: "consult"
 
 [flashcard-review]
-front: "consultant"
-meaning: "n an expert who gives advice"
-translation: "n. 顾问, 征询意见者；[医] 顾问医师"
-srsWords: "consultant"
+front: "lime"
+meaning: "n. any of various related trees bearing limes; n. the green acidic fruit of any of various lime trees; v. cover with lime so as to induce growth"
+translation: "n. 石灰, 粘鸟胶, 酸橙；vt. 以石灰处理, 粘鸟胶于, 撒石灰"
+srsWords: "lime"
 
 [flashcard-review]
 front: "contaminate"
 meaning: "v. make radioactive by adding radioactive material"
 translation: "vt. 弄污, 弄脏, 污染, 毒害；[化] 污染"
 srsWords: "contaminate"
+
 ---
 lessonTitle: "Lesson 8: Science, Research & Discovery Part 8"
 description: "Practice 10 key B2 vocabulary flashcards for Science, Research & Discovery"
@@ -471,10 +478,10 @@ icon: "🧪"
 color: "#00BCD4"
 ---
 [flashcard-review]
-front: "contemporary"
-meaning: "n. a person of nearly the same age as another; s. characteristic of the present; s. belonging to the present time"
-translation: "n. 同时代的人；a. 同时代的, 属于同一时期的"
-srsWords: "contemporary"
+front: "gem"
+meaning: "n. art highly prized for its beauty or perfection; n. a crystalline rock that can be cut and polished for jewelry"
+translation: "n. 珠宝, 宝石, 珍贵之物；vt. 饰以宝石"
+srsWords: "gem"
 
 [flashcard-review]
 front: "contempt"
@@ -513,10 +520,10 @@ translation: "a. 方便, 合宜"
 srsWords: "conveniently"
 
 [flashcard-review]
-front: "convention"
-meaning: "n. a large formal assembly; n. something regarded as a normative example; n. (diplomacy) an international agreement; n. the act of convening"
-translation: "n. 大会, 协定, 惯例, 约定；[计] 约定"
-srsWords: "convention"
+front: "testament"
+meaning: "n. a profession of belief; n. strong evidence for something; n. either of the two main parts of the Christian Bible"
+translation: "n. 遗嘱, <<圣约书>>；[法] 遗言, 遗嘱, 确实的证明"
+srsWords: "testament"
 
 [flashcard-review]
 front: "conventional"
@@ -529,6 +536,7 @@ front: "conversely"
 meaning: "r. with the terms of the relation reversed"
 translation: "adv. 相反, 逆, 颠倒, 反题, 反"
 srsWords: "conversely"
+
 ---
 lessonTitle: "Lesson 9: Science, Research & Discovery Part 9"
 description: "Practice 10 key B2 vocabulary flashcards for Science, Research & Discovery"
@@ -536,16 +544,16 @@ icon: "🧪"
 color: "#00BCD4"
 ---
 [flashcard-review]
-front: "conversion"
-meaning: "n. an event that results in a transformation; n. a change in the units or form of an expression: \"conversion from Fahrenheit to Centigrade\"; n. a successful free throw or try for point after a touchdown; n. a spiritual enlightenment causing a person to lead a new life"
-translation: "n. 转变, 转换, 改变宗教信仰, 换位法；[计] 转换"
-srsWords: "conversion"
+front: "ketchup"
+meaning: "n thick spicy sauce made from tomatoes"
+translation: "n. 蕃茄酱"
+srsWords: "ketchup"
 
 [flashcard-review]
-front: "convert"
-meaning: "n. a person who has been converted to another religious or political belief; v. change from one system to another or to a new plan or policy; v. change the nature, purpose, or function of something; v. change religious beliefs, or adopt a religious belief"
-translation: "n. 皈依者, 改变宗教信仰者；vt. 使改变信仰, 转换, 兑换, 倒置；vi. 皈依；[计] 转换"
-srsWords: "convert"
+front: "merit"
+meaning: "n. any admirable quality or attribute"
+translation: "n. 优点, 功绩, 价值, 功过, 真相；vt. 值得；vi. 应受"
+srsWords: "merit"
 
 [flashcard-review]
 front: "convinced"
@@ -560,10 +568,10 @@ translation: "vi. 合作, 协力, 配合；[化] 合作"
 srsWords: "cooperate"
 
 [flashcard-review]
-front: "cooperation"
-meaning: "n. joint operation or action; n. the practice of cooperating"
-translation: "n. 合作, 协力, 配合；[化] 合作"
-srsWords: "cooperation"
+front: "bouquet"
+meaning: "n. an arrangement of flowers that is usually given as a present; n. a pleasingly sweet olfactory property"
+translation: "n. 花束；[医] 丛, 酒香, 末梢分极"
+srsWords: "bouquet"
 
 [flashcard-review]
 front: "cooperative"
@@ -578,10 +586,10 @@ translation: "vi. 竞争, 应付；n. 长袍"
 srsWords: "cope"
 
 [flashcard-review]
-front: "copper"
-meaning: "n. a ductile malleable reddish-brown corrosion-resistant diamagnetic metallic element; occurs in various minerals but is the only metal that occurs abundantly in large masses; used as an electrical and thermal conductor; n. a copper penny; n. a reddish-brown color resembling the color of polished copper; n. any of various small butterflies of the family Lycaenidae having coppery wings"
-translation: "n. 铜, 警察；[化] 铜Cu"
-srsWords: "copper"
+front: "gale"
+meaning: "n. a strong wind moving 45-90 knots; force 7 to 10 on Beaufort scale"
+translation: "n. 狂风, 大风, 定期租金；[经] 地租, 年金"
+srsWords: "gale"
 
 [flashcard-review]
 front: "coral"
@@ -590,10 +598,11 @@ translation: "n. 珊瑚, 珊瑚色；[化] 珊瑚"
 srsWords: "coral"
 
 [flashcard-review]
-front: "core"
-meaning: "n. a small group of indispensable persons or things; n. the center of an object; n. the central part of the Earth; n. a cylindrical sample of soil or rock obtained with a hollow drill"
-translation: "n. 核心, 果心, 要点；vt. 挖...的核；[计] 内核, 核心网"
-srsWords: "core"
+front: "chalk"
+meaning: "n. a soft whitish calcite; n. a pure flat white with little reflectance; n. a piece of calcite or a similar substance, usually in the shape of a crayon, that is used to write or draw on blackboards or other flat surfaces; v. write, draw, or trace with chalk"
+translation: "n. 粉笔, 白垩；vt. 用粉笔写, 记录"
+srsWords: "chalk"
+
 ---
 lessonTitle: "Lesson 10: Science, Research & Discovery Part 10"
 description: "Practice 10 key B2 vocabulary flashcards for Science, Research & Discovery"
@@ -625,16 +634,16 @@ translation: "n. 下士；a. 肉体的, 身体的, 个人的"
 srsWords: "corporal"
 
 [flashcard-review]
-front: "corporate"
-meaning: "a. of or belonging to a corporation; s. done by or characteristic of individuals acting together; s. organized and maintained as a legal corporation"
-translation: "a. 社团的, 合伙的, 公司的；[经] 团体的, 法人的, 社团的"
-srsWords: "corporate"
+front: "wan"
+meaning: "v. become pale and sickly; s. lacking vitality as from weariness or illness or unhappiness"
+translation: "a. 苍白的, 无血色的, 病态的, 暗淡的；v. (使)变苍白；[计] 广域网"
+srsWords: "wan"
 
 [flashcard-review]
-front: "corporation"
-meaning: "n. a business firm whose articles of incorporation have been approved in some state"
-translation: "n. 公司, 合作, 法人团体；[法] 法人团体, 社团, 法人"
-srsWords: "corporation"
+front: "noodle"
+meaning: "n. a ribbonlike strip of pasta"
+translation: "n. 面条, 笨蛋"
+srsWords: "noodle"
 
 [flashcard-review]
 front: "correctness"

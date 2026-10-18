@@ -58,10 +58,10 @@ translation: "n. 开始"
 srsWords: "beginning"
 
 [flashcard-review]
-front: "behaviour"
-meaning: "The way someone acts."
-translation: "n.行为,举止,（人、动植物、化学药品等的）表现方式,态度na.“behavior”的变体"
-srsWords: "behaviour"
+front: "passenger"
+meaning: "n. a traveler riding in a vehicle (a boat or bus or car or plane or train etc) who is not operating it"
+translation: "n. 乘客, 旅客；[经] 乘客, 旅客"
+srsWords: "passenger"
 
 [flashcard-review]
 front: "being"
@@ -112,10 +112,10 @@ translation: "n. 根据, 证据, 迹象；[经] 证据, 凭证"
 srsWords: "evidence"
 
 [flashcard-review]
-front: "better"
-meaning: "n. something superior in quality or condition or effect; n. a superior person having claim to precedence; n. the superior one of two alternatives; v. surpass in excellence"
-translation: "n. 长辈；较好者；打赌的人（等于bettor） adj. 较好的 vt. 改善；胜过 adv. 更好的；更多的；较大程度地 vi. 变得较好 n. (Better)人名；(西、瑞典、德)贝特尔"
-srsWords: "better"
+front: "express"
+meaning: "n. mail that is distributed by a rapid and efficient system; n. public transport consisting of a fast train or bus that makes only a few scheduled stops; n. rapid transport of goods; v. give expression to"
+translation: "n. 快车, 快递, 专使；a. 明确的, 丝毫不差的, 专门的, 快的；vt. 表达, 表示, 表露"
+srsWords: "express"
 
 [flashcard-review]
 front: "production"
@@ -124,10 +124,10 @@ translation: "n. 制造, 生产, 产物；[医] 产生, 生成"
 srsWords: "production"
 
 [flashcard-review]
-front: "stand"
-meaning: "be upright, tolerate"
-translation: "n. 站立, 站住, 停顿, 讲台, 看台, 立场, 法院证人席；vi. 站, 立, 坐落, 停滞, 位于, 坚持, 维持原状；vt. 忍受, 使站立, 抵挡"
-srsWords: "stand"
+front: "battery"
+meaning: "n. group of guns or missile launchers operated together at one place; n. a device that produces electricity; may have several primary or secondary cells arranged in parallel or series; n. a collection of related things intended for use together; n. a unit composed of the pitcher and catcher"
+translation: "n. 电池, 殴打；[化] 蓄电池"
+srsWords: "battery"
 
 [flashcard-review]
 front: "fall"
@@ -148,16 +148,16 @@ icon: "🚗"
 color: "#00BCD4"
 ---
 [flashcard-review]
-front: "green"
-meaning: "n. green color or pigment; resembling the color of growing grass; n. United States labor leader who was president of the American Federation of Labor from 1924 to 1952 and who led the struggle with the Congress of Industrial Organizations (1873-1952); n. an environmentalist who belongs to the Green Party; n. a river that rises in western Wyoming and flows southward through Utah to become a tributary of the Colorado River"
-translation: "n. 绿色, 绿色颜料；a. 绿色的, 未成熟的, 新鲜的, 青春的, 无经验的, 脸色发青的"
-srsWords: "green"
+front: "repair"
+meaning: "n. the act of putting something in working order again; n. a formal way of referring to the condition of something; v. restore by replacing a part or putting together what is torn or broken; v. move, travel, or proceed toward some place"
+translation: "n. 修理, 补救, 修复；vt. 修理, 修补, 补救, 恢复, 补偿；vi. 修理, 修补, 补救, 恢复, 去, 常去, 集合"
+srsWords: "repair"
 
 [flashcard-review]
-front: "blackboard"
-meaning: "A large board with a smooth, dark surface, used for writing on with chalk."
-translation: "n. 黑板"
-srsWords: "blackboard"
+front: "passage"
+meaning: "n. the act of passing from one state or place to the next; n. a section of text; particularly a section of medium length; n. a way through or along which someone or something may pass; n. a journey usually by ship"
+translation: "n. 通道, 通过, 移居, 航行, 一段, 走廊；vi. 通过, 经过, 航行, 横渡, 争吵；vt. (使)马以斜横步前进, 使传代"
+srsWords: "passage"
 
 [flashcard-review]
 front: "blanket"
@@ -232,22 +232,22 @@ translation: "n. 奖金, 红利；[经] 奖金, 红利, 额外补贴"
 srsWords: "bonus"
 
 [flashcard-review]
-front: "bookcase"
-meaning: "a piece of furniture with shelves for books"
-translation: "n. [家具] 书柜，书架"
-srsWords: "bookcase"
+front: "base"
+meaning: "n. installation from which a military force initiates operations; n. a place that the runner must touch before scoring; n. the bottom or lowest part; n. (anatomy) the part of an organ nearest its point of attachment"
+translation: "n. 底部, 垒, 基础, 基地；vt. 以...作基础；a. 卑鄙的, 低劣的；[计] 基准"
+srsWords: "base"
 
 [flashcard-review]
-front: "bookshelf"
-meaning: "a shelf for holding books"
-translation: "n.书架,书橱"
-srsWords: "bookshelf"
+front: "exchange"
+meaning: "n. chemical process in which one atom or ion or group changes places with another; n. a mutual expression of views (especially an unpleasant one); n. the act of changing one thing for another thing; n. the act of giving something in return for something received"
+translation: "n. 交换, (电话)交换局, 交换机, 汇兑, 交易所；v. 交换, 交易, 兑换；[计] 交换; 电话局"
+srsWords: "exchange"
 
 [flashcard-review]
-front: "bookshop"
-meaning: "A shop where books are sold"
-translation: "n. 书店"
-srsWords: "bookshop"
+front: "robin"
+meaning: "n. small Old World songbird with a reddish breast; n. large American thrush having a rust-red breast and abdomen"
+translation: "n. 旅鸫；[医] 刺槐毒素"
+srsWords: "robin"
 
 [flashcard-review]
 front: "blood"
@@ -286,10 +286,10 @@ translation: "n. 胸罩 n. (Bra)人名；(科特)布拉"
 srsWords: "bra"
 
 [flashcard-review]
-front: "brainstorm"
-meaning: "v. try to solve a problem by thinking intensely about it"
-translation: "n.集思广益；头脑风暴；灵机一动vt.集体讨论；集思广益以寻找vi.集体讨论；动脑筋；出主意"
-srsWords: "brainstorm"
+front: "marshal"
+meaning: "n. a law officer having duties similar to those of a sheriff in carrying out the judgments of a court of law; n. (in some countries) a military officer of highest rank; v. place in proper rank; v. arrange in logical order"
+translation: "n. 元帅, 陆空军高级将官, 典礼官, 执法官；vt. 整理, 引领, 统率；vi. 排列, 各就各位"
+srsWords: "marshal"
 
 [flashcard-review]
 front: "attack"
@@ -298,10 +298,10 @@ translation: "n. 攻击, 抨击；vt. 攻击, 抨击, 动手干；vi. 攻击"
 srsWords: "attack"
 
 [flashcard-review]
-front: "bear"
-meaning: "n. massive plantigrade carnivorous or omnivorous mammals with long shaggy coats and strong claws; n. an investor with a pessimistic market outlook; an investor who expects prices to fall and so sells now in order to buy later at a lower price; v. have; v. move while holding up or supporting"
-translation: "n. 熊；vt. 忍受, 支承, 产生, 怀有, 通过卖空使跌价；vi. 忍受, 结果实, 压挤, 行进, 转向"
-srsWords: "bear"
+front: "overseas"
+meaning: "r. in a place across an ocean"
+translation: "a. 海外的, 国外的；adv. 在海外, 在国外"
+srsWords: "overseas"
 
 [flashcard-review]
 front: "brave"
@@ -352,10 +352,10 @@ translation: "n. 网站（全球资讯网的主机站）"
 srsWords: "website"
 
 [flashcard-review]
-front: "brown"
-meaning: "n. an orange of low brightness and saturation; n. Scottish botanist who first observed the movement of small particles in fluids now known a Brownian motion (1773-1858); n. abolitionist who was hanged after leading an unsuccessful raid at Harper's Ferry, Virginia (1800-1859); v. fry in a pan until it changes color"
-translation: "n. 褐色；a. 褐色的；v. (使)变褐色"
-srsWords: "brown"
+front: "ribbon"
+meaning: "n. any long object resembling a thin line; n. a long strip of inked material for making characters on paper with a typewriter; n. notion consisting of a narrow strip of fine material used for trimming"
+translation: "n. 带；缎带；（勋章等的）绶带；带状物；勋表 vt. 把…撕成条带；用缎带装饰 vi. 形成带状"
+srsWords: "ribbon"
 
 [flashcard-review]
 front: "bug"
@@ -394,10 +394,10 @@ translation: "vi. 继续, 延续, 延长；vt. 使继续, 使延长"
 srsWords: "continue"
 
 [flashcard-review]
-front: "cover"
-meaning: "n. the act of concealing the existence of something by obstructing the view of it; n. fire that makes it difficult for the enemy to fire on your own individuals or formations; n. a recording of a song that was first recorded or made popular by somebody else; n. a false identity and background (especially one created for an undercover agent)"
-translation: "n. 盖子, 封面, 藉口；vt. 覆盖, 掩饰, 保护, 掩护, 包括；vi. 覆盖"
-srsWords: "cover"
+front: "table tennis"
+meaning: "noun. table tennis"
+translation: "乒乓球"
+srsWords: "table tennis"
 
 [flashcard-review]
 front: "bush"
@@ -424,10 +424,10 @@ translation: "n. 商人；实业家，从事工商业的人具有经营者所必
 srsWords: "businessman"
 
 [flashcard-review]
-front: "businesswoman"
-meaning: "a woman who works in business"
-translation: "n. 女商人"
-srsWords: "businesswoman"
+front: "across"
+meaning: "r. to the opposite side; r. transversely"
+translation: "prep. 越过, 穿过, 与...相交叉, 在...的对面；adv. 交叉, 到另一边, 在对面, 成十字"
+srsWords: "across"
 
 [flashcard-review]
 front: "cab"
@@ -448,10 +448,10 @@ translation: "n.日历,历法,日程表,（一年之中的）重大事件（或�
 srsWords: "calendar"
 
 [flashcard-review]
-front: "swiss"
-meaning: "n. the natives or inhabitants of Switzerland; a. of or relating to Switzerland or its people or culture"
-translation: "n. 瑞士人, 瑞士腔调；a. 瑞士的, 瑞士风格的"
-srsWords: "swiss"
+front: "handle"
+meaning: "n. the appendage to an object that is designed to be held in order to use or move it; v. touch, lift, or hold with the hands; v. show and train"
+translation: "n. 柄, 把手, 把柄, 柄状物, 手感；vt. 触摸, 运用, 买卖, 处理, 操作；vi. 搬运, 易于操纵；n. 句柄；[计] 句柄"
+srsWords: "handle"
 
 [flashcard-review]
 front: "increase"
@@ -460,10 +460,10 @@ translation: "n. 增加, 增进, 利益；vt. 增加, 加大；vi. 增加, 繁�
 srsWords: "increase"
 
 [flashcard-review]
-front: "camp"
-meaning: "n. temporary living quarters specially built by the army for soldiers; n. a group of people living together in a camp; n. temporary lodgings in the country for travelers or vacationers; n. a penal institution (often for forced labor)"
-translation: "n. 露营, 帐篷；vi. 露营, 扎营；vt. 使扎营"
-srsWords: "camp"
+front: "bill"
+meaning: "n. a statute in draft before it becomes law; n. an itemized statement of money owed for goods shipped or services rendered; n. a piece of paper money (especially one issued by a central bank); n. the entertainment offered at a public presentation"
+translation: "n. 帐单, 清单, 钞票, 鸟嘴, 广告, 法案, 票据；vt. 开帐单, (用招贴)宣布"
+srsWords: "bill"
 
 [flashcard-review]
 front: "camping"
@@ -478,10 +478,10 @@ icon: "🚗"
 color: "#00BCD4"
 ---
 [flashcard-review]
-front: "eighth"
-meaning: "n. position eight in a countable series of things; s. coming next after the seventh and just before the ninth in position"
-translation: "num. 第八, 八分之一"
-srsWords: "eighth"
+front: "lead"
+meaning: "n. an advantage held by a competitor in a race; n. a soft heavy toxic malleable metallic element; bluish white when freshly cut but tarnishes readily to dull grey; n. evidence pointing to a possible solution; n. a position of leadership (especially in the phrase `take the lead')"
+translation: "n. 铅, 铅条, 领导, 超前量, 领引, 榜样, 主角, 导线；vt. 引导, 带领, 领导, 指挥, 致使, 加铅于, 用铅包；vi. 领导, 带头, 导致, 用测深锤测深, 被铅覆盖；a. 带头的, 最重要的"
+srsWords: "lead"
 
 [flashcard-review]
 front: "simple"
@@ -568,10 +568,10 @@ translation: "n. 中心, 中心点, 中锋；a. 中央的, 位在正中的；vt.
 srsWords: "center"
 
 [flashcard-review]
-front: "centimeter"
-meaning: "a unit of length, equal to one hundredth of a meter"
-translation: "n.厘米"
-srsWords: "centimeter"
+front: "fool"
+meaning: "n. a person who lacks good judgment; v. make a fool or dupe of"
+translation: "n. 愚人, 受骗者, 奶油拌水果；vt. 愚弄, 欺骗, 浪费；vi. 干傻事, 开玩笑, 游荡；a. 傻的"
+srsWords: "fool"
 
 [flashcard-review]
 front: "popular"
@@ -640,10 +640,10 @@ translation: "a. 便宜的, 不值钱的, 可鄙的；adv. 便宜地"
 srsWords: "cheap"
 
 [flashcard-review]
-front: "check"
-meaning: "n. a written order directing a bank to pay money; n. the bill in a restaurant; n. the act of inspecting or verifying; n. a mark left after a small piece has been chopped or broken off of something"
-translation: "n. 检查, 支票, 阻止物, 寄物牌, 象棋中将军；vt. 检查, 阻止, 核对, 寄存, 托运；vi. 逐项相符, 开支票；[计] 复选"
-srsWords: "check"
+front: "single"
+meaning: "n. a base hit on which the batter stops safely at first base; v. hit a single; a. used of flowers having usually only one row or whorl of petals; a. existing alone or consisting of one entity or part or aspect or individual"
+translation: "a. 单身的, 单程的, 单一的, 个别的, 孤独的, 专一的；n. 一个, 单打, 单程票；vt. 选出；vi. 击出一垒打；[计] 单精度型"
+srsWords: "single"
 
 [flashcard-review]
 front: "cheek"

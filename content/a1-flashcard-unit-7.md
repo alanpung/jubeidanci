@@ -598,10 +598,10 @@ translation: "下午好"
 srsWords: "good afternoon"
 
 [flashcard-review]
-front: "volleyball"
-meaning: "n. a game in which two teams hit an inflated ball over a high net using their hands; n. an inflated ball used in playing volleyball"
-translation: "n.排球（运动）"
-srsWords: "volleyball"
+front: "bat"
+meaning: "n. nocturnal mouselike mammal with forelimbs modified to form membranous wings and anatomical adaptations for echolocation by which they navigate; n. (baseball) a turn trying to get a hit; n. a club used for hitting a ball in various games; v. strike with, or as if with a baseball bat"
+translation: "n. 蝙蝠, 球棒；v. 用球棒打, 眨眼；[计] 成批"
+srsWords: "bat"
 
 ---
 lessonTitle: "Lesson 10: Travel, Places & City Part 10"

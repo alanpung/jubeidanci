@@ -28,10 +28,10 @@ translation: "n. 身份, 相同, 一致, 特性, 恒等式；[计] (打)标记, 
 srsWords: "identity"
 
 [flashcard-review]
-front: "idiom"
-meaning: "n. an expression whose meanings cannot be inferred from the meanings of the words that make it up"
-translation: "n. 习语, 成语, 惯用语法, 方言"
-srsWords: "idiom"
+front: "treason"
+meaning: "n. a crime that undermines the offender's government; n. disloyalty by virtue of subversive behavior"
+translation: "n. 叛逆, 不忠, 叛国罪；[法] 叛逆, 通敌, 叛国罪"
+srsWords: "treason"
 
 [flashcard-review]
 front: "idol"
@@ -74,6 +74,7 @@ front: "imitate"
 meaning: "v. reproduce someone's behavior or looks; v. appear like, as in behavior or appearance; v. make a reproduction or copy of"
 translation: "vt. 模仿, 效法, 冒充, 仿造"
 srsWords: "imitate"
+
 ---
 lessonTitle: "Lesson 2: Society, Law & Community Part 2"
 description: "Practice 10 key B1 vocabulary flashcards for Society, Law & Community"
@@ -139,6 +140,7 @@ front: "incident"
 meaning: "n. a single distinct event; n. a public disturbance; a. falling or striking of light rays on something"
 translation: "n. 事件, 事变, 小事；a. 附带的, 易于发生的, 外来的, 入射的"
 srsWords: "incident"
+
 ---
 lessonTitle: "Lesson 3: Society, Law & Community Part 3"
 description: "Practice 10 key B1 vocabulary flashcards for Society, Law & Community"
@@ -194,16 +196,17 @@ translation: "n. 独立自主者, 无党派者；a. 独立的, 有主见的, 不
 srsWords: "independent"
 
 [flashcard-review]
-front: "indirect"
-meaning: "s. having intervening factors or persons or influences; a. not direct in spatial dimension; not leading by a straight line or course to a destination; a. extended senses; not direct in manner or language or behavior or action; s. not as a direct effect or consequence"
-translation: "a. 间接的, 非直截了当的, 不坦率的；[医] 间接的"
-srsWords: "indirect"
+front: "federal"
+meaning: "n. a member of the Union Army during the American Civil War; n. any federal law-enforcement officer; s. national; especially in reference to the government of the United States as distinct from that of its member units; a. of or relating to the central government of a federation"
+translation: "a. 联邦的, 联合的, 同盟的；[法] 联邦的, 联邦制的, 联盟的"
+srsWords: "federal"
 
 [flashcard-review]
 front: "indirectly"
 meaning: "r. not in a forthright manner"
 translation: "adv. 间接, 曲折, 迂回, 不直截了当, 不诚实, 不坦率；[计] 间接地"
 srsWords: "indirectly"
+
 ---
 lessonTitle: "Lesson 4: Society, Law & Community Part 4"
 description: "Practice 10 key B1 vocabulary flashcards for Society, Law & Community"
@@ -253,10 +256,10 @@ translation: "vt. 通知, 使了解, 使充满；vi. 提供资料, 告发"
 srsWords: "inform"
 
 [flashcard-review]
-front: "informative"
-meaning: "a. providing or conveying information"
-translation: "a. 提供消息的, 见闻广博的"
-srsWords: "informative"
+front: "commissioner"
+meaning: "n. a government administrator; n. a member of a commission"
+translation: "n. 委员, 理事, 行政长官；[法] 委员, 政府的特派员, 地方地官"
+srsWords: "commissioner"
 
 [flashcard-review]
 front: "ingredient"
@@ -265,10 +268,11 @@ translation: "n. 成分, 因素；[化] 配合剂; 拼料; 成分; 组分"
 srsWords: "ingredient"
 
 [flashcard-review]
-front: "inhabitant"
-meaning: "n. a person who inhabits a particular place"
-translation: "n. 居民, 居住者；[医] 居民"
-srsWords: "inhabitant"
+front: "counsel"
+meaning: "n a lawyer who pleads cases in court; n something that provides direction or advice as to a decision or course of action; v give advice to"
+translation: "n. 商议, 忠告, 法律顾问；v. 商议, 劝告"
+srsWords: "counsel"
+
 ---
 lessonTitle: "Lesson 5: Society, Law & Community Part 5"
 description: "Practice 10 key B1 vocabulary flashcards for Society, Law & Community"
@@ -306,10 +310,10 @@ translation: "n. 墨水, 墨汁；vt. 涂墨水于, 签署, 加墨水"
 srsWords: "ink"
 
 [flashcard-review]
-front: "innermost"
-meaning: "s being deepest within the self; s situated or occurring farthest within"
-translation: "a. 内心的, 秘密的, 最深处的"
-srsWords: "innermost"
+front: "righteous"
+meaning: "a. characterized by or proceeding from accepted standards of morality or justice; s. morally justified"
+translation: "a. 公正的, 正义的, 正直的；[法] 正直的, 正当的, 正义的"
+srsWords: "righteous"
 
 [flashcard-review]
 front: "innocent"
@@ -318,10 +322,10 @@ translation: "a. 无罪的, 不懂事的, 无知的；n. 天真的人, 笨蛋"
 srsWords: "innocent"
 
 [flashcard-review]
-front: "innovator"
-meaning: "n someone who helps to open up a new line of research or technology or art"
-translation: "n. 改革者, 创新者"
-srsWords: "innovator"
+front: "utility"
+meaning: "n. a company that performs a public service; subject to government regulation; n. the quality of being of practical use; n. the service (electric power or water or transportation) provided by a public utility; n. (economics) a measure that is to be maximized in any situation involving choice"
+translation: "n. 功用, 有用之物, 实用, 公用事业, 实用程序；a. 实用的, 有多种用途的；[计] 实用程序, 工具"
+srsWords: "utility"
 
 [flashcard-review]
 front: "insane"
@@ -334,6 +338,7 @@ front: "inscribe"
 meaning: "v. draw within a figure so as to touch in as many places as possible; v. write, engrave, or print as a lasting record; v. address, (a work of literature) in a style less formal than a dedication"
 translation: "vt. 登记, 铭记于, 题写, 雕刻；[电] 书写"
 srsWords: "inscribe"
+
 ---
 lessonTitle: "Lesson 6: Society, Law & Community Part 6"
 description: "Practice 10 key B1 vocabulary flashcards for Society, Law & Community"
@@ -399,6 +404,7 @@ front: "intend"
 meaning: "v. have in mind as a purpose; v. design or destine"
 translation: "vt. 计划, 打算, 意思是；[法] 想要, 打算, 意旨"
 srsWords: "intend"
+
 ---
 lessonTitle: "Lesson 7: Society, Law & Community Part 7"
 description: "Practice 10 key B1 vocabulary flashcards for Society, Law & Community"
@@ -464,6 +470,7 @@ front: "internationally"
 meaning: "r. throughout the world"
 translation: "adv. 国际性地, 在国际间"
 srsWords: "internationally"
+
 ---
 lessonTitle: "Lesson 8: Society, Law & Community Part 8"
 description: "Practice 10 key B1 vocabulary flashcards for Society, Law & Community"
@@ -519,16 +526,17 @@ translation: "n. 邀请, 请柬, 引诱；[经] 邀请, 招待, 吸引"
 srsWords: "invitation"
 
 [flashcard-review]
-front: "involuntarily"
-meaning: "r. against your will"
-translation: "adv. 不知不觉地, 无意识地"
-srsWords: "involuntarily"
+front: "contract"
+meaning: "n. a binding agreement between two or more persons that is enforceable by law; n. (contract bridge) the highest bid becomes the contract setting the number of tricks that the bidder must make; n. a variety of bridge in which the bidder receives points toward game only for the number of tricks he bid; v. enter into a contractual arrangement"
+translation: "n. 合约, 婚约, 契约；vt. 使皱缩, 使缩短, 感染, 订约, 缔结；vi. 皱缩, 订约, 收缩"
+srsWords: "contract"
 
 [flashcard-review]
 front: "involve"
 meaning: "v. connect closely and often incriminatingly; v. engage as a participant; v. contain as a part; v. occupy or engage the interest of"
 translation: "vt. 包括, 使陷于, 潜心于, 包围；[医] 累及, 牵涉, 包含"
 srsWords: "involve"
+
 ---
 lessonTitle: "Lesson 9: Society, Law & Community Part 9"
 description: "Practice 10 key B1 vocabulary flashcards for Society, Law & Community"
@@ -594,6 +602,7 @@ front: "jazz"
 meaning: "n. a genre of popular music that originated in New Orleans around 1900 and developed through increasingly complex styles; n. a style of dance music popular in the 1920s; similar to New Orleans jazz but played by large bands; v. play something in the style of jazz"
 translation: "n. 爵士乐, 喧闹；a. 爵士乐的, 喧吵的；vi. 演奏爵士乐, 跳爵士舞, 游荡；vt. 奏爵士乐, 使活泼"
 srsWords: "jazz"
+
 ---
 lessonTitle: "Lesson 10: Society, Law & Community Part 10"
 description: "Practice 10 key B1 vocabulary flashcards for Society, Law & Community"

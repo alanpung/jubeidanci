@@ -74,6 +74,7 @@ front: "cogently"
 meaning: "adv. In a cogent manner; forcibly; convincingly;; conclusively."
 translation: "adv. 痛切地, 中肯地"
 srsWords: "cogently"
+
 ---
 lessonTitle: "Lesson 2: Archaic, Formal & Erudite Register Part 2"
 description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
@@ -139,6 +140,7 @@ front: "incipient"
 meaning: "s. only partly in existence; imperfectly formed"
 translation: "a. 起初的, 发端的, 初期的；[医] 初发的, 初期的"
 srsWords: "incipient"
+
 ---
 lessonTitle: "Lesson 3: Archaic, Formal & Erudite Register Part 3"
 description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
@@ -200,10 +202,11 @@ translation: "n. 弹力, 弹性；[化] 弹性"
 srsWords: "elasticity"
 
 [flashcard-review]
-front: "synthesis"
-meaning: "n. the process of producing a chemical compound (usually by the union of simpler chemical compounds); n. the combination of ideas into a complex whole"
-translation: "n. 综合, 组织, 综合体；[化] 合成"
-srsWords: "synthesis"
+front: "escrow"
+meaning: "n. a written agreement (or property or money) delivered to a third party or put in trust by one party to a contract to be returned after fulfillment of some condition"
+translation: "n. 附带条件实现后交付的契约；[经] 有条件转让契约, 第三者代管契约"
+srsWords: "escrow"
+
 ---
 lessonTitle: "Lesson 4: Archaic, Formal & Erudite Register Part 4"
 description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
@@ -269,6 +272,7 @@ front: "inexorable"
 meaning: "s not to be placated or appeased or moved by entreaty; s impervious to pleas, persuasion, requests, reason; she would have none of him\"- W.Churchill"
 translation: "a. 无情的, 冷酷的"
 srsWords: "inexorable"
+
 ---
 lessonTitle: "Lesson 5: Archaic, Formal & Erudite Register Part 5"
 description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
@@ -288,52 +292,53 @@ translation: "n. 无情, 冷酷"
 srsWords: "inexorability"
 
 [flashcard-review]
-front: "wraith"
-meaning: "n a mental representation of some haunting experience"
-translation: "n. 生魂, 幻影, 幽灵"
-srsWords: "wraith"
+front: "saracen"
+meaning: "n. (historically) a member of the nomadic people of the Syrian and Arabian deserts at the time of the Roman Empire; n. (when used broadly) any Arab; n. (historically) a Muslim who opposed the Crusades"
+translation: "n. 撒拉森人"
+srsWords: "saracen"
 
 [flashcard-review]
-front: "bey"
-meaning: "n. (formerly) a title of respect for a man in Turkey or Egypt; n. the governor of a district or province in the Ottoman Empire"
-translation: "n. (奥斯曼帝国,土尔其较小地区的)州长,土耳其对要人的尊称"
-srsWords: "bey"
+front: "anterior"
+meaning: "a. of or near the head end or toward the front plane of a body; s. earlier in time"
+translation: "a. 前面的, 先前的；[医] 前的"
+srsWords: "anterior"
 
 [flashcard-review]
-front: "aneurysm"
-meaning: "n. a cardiovascular disease characterized by a saclike widening of an artery resulting from weakening of the artery wall"
-translation: "n. 动脉瘤；[医] 动脉瘤"
-srsWords: "aneurysm"
+front: "backfire"
+meaning: "n. a loud noise made by the explosion of fuel in the manifold or exhaust of an internal combustion engine; n. a fire that is set intentionally in order to slow an approaching forest fire or grassfire by clearing a burned area in its path; n. a miscalculation that recoils on its maker; v. come back to the originator of an action with an undesired effect"
+translation: "n. 逆火, 回火, 放火；vi. 放逆火, 预先放火, 发生意外"
+srsWords: "backfire"
 
 [flashcard-review]
-front: "commission"
-meaning: "n. a fee for services rendered based on a percentage of an amount received or collected or agreed to be paid (as distinguished from a salary); n. the act of granting authority to undertake certain functions; n. the state of being in good working order and ready for operation; n. a formal statement of a command or injunction to do something"
-translation: "n. 委任状, 任官令, 所委职责, 佣金, 犯, 委托, 所托之事；vt. 委任, 委托制作, 使服役"
-srsWords: "commission"
+front: "apricot"
+meaning: "n. Asian tree having clusters of usually white blossoms and edible fruit resembling the peach; n. downy yellow to rosy-colored fruit resembling a small peach"
+translation: "n. 杏子, 杏树, 杏黄色；a. 杏黄色的"
+srsWords: "apricot"
 
 [flashcard-review]
-front: "agency"
-meaning: "n. an administrative unit of government; n. a business that serves other businesses; n. the state of being in action or exerting power"
-translation: "n. 代理机构, 经销商, 中介；[化] 办事处"
-srsWords: "agency"
+front: "brisk"
+meaning: "v. become brisk; s. very active"
+translation: "a. 强烈的, 寒冷而干燥的, 活泼的；vt. 使活泼；vi. 活跃起来"
+srsWords: "brisk"
 
 [flashcard-review]
-front: "plane"
-meaning: "n. (mathematics) an unbounded two-dimensional shape; n. a level of existence or development; n. a power tool for smoothing or shaping wood; n. a carpenter's hand tool with an adjustable blade for smoothing or shaping wood"
-translation: "n. 平面, 扁平物, 机翼, 飞机, 水准, 地位；a. 平的, 平面的；vt. 将...刨平, 刨平, 掠过水面；vi. 翱翔, 乘飞机旅行, 刨掉"
-srsWords: "plane"
+front: "mahogany"
+meaning: "n. wood of any of various mahogany trees; much used for cabinetwork and furniture; n. any of various tropical timber trees of the family Meliaceae especially the genus Swietinia valued for their hard yellowish- to reddish-brown wood that is readily worked and takes a high polish"
+translation: "n. 桃花心木, 红褐色；[机] 桃花心木"
+srsWords: "mahogany"
 
 [flashcard-review]
-front: "phase"
-meaning: "n. any distinct time period in a sequence of events; n. (physical chemistry) a distinct state of matter in a system; matter that is identical in chemical composition and physical state and separated from other material by the phase boundary; n. a particular point in the time of a cycle; measured from some arbitrary zero and expressed as an angle; n. (astronomy) the particular appearance of a body's state of illumination (especially one of the recurring shapes of the part of Earth's moon that is illuminated by the sun)"
-translation: "n. 时期, 局面, 方面, 位相, 相, 阶段；vt. 使调整相位, 使定相, 使一致, 逐步执行, 实行；[计] 阶段"
-srsWords: "phase"
+front: "microchip"
+meaning: "n electronic equipment consisting of a small crystal of a silicon semiconductor fabricated to carry out a number of electronic functions in an integrated circuit"
+translation: "n. 微型集成电路片, 微片, 芯片；[计] 微片"
+srsWords: "microchip"
 
 [flashcard-review]
-front: "secure"
-meaning: "v. assure payment of; a. free from fear or doubt; easy in mind; a. free from danger or risk; a. not likely to fail or give way"
-translation: "a. 无虑的, 安心的, 安全的, 可靠的, 保险的；vt. 固定, 获得, 保证, 使安全, 掩护, 招致；vi. 停止操作, 船抛锚"
-srsWords: "secure"
+front: "spar"
+meaning: "n. any of various nonmetallic minerals (calcite or feldspar) that are light in color and transparent or translucent and cleavable; n. a stout rounded pole of wood or metal used to support rigging; n. making the motions of attack and defense with the fists and arms; a part of training for a boxer; v. furnish with spars"
+translation: "n. 晶石, 圆材, 拳斗, 争论；vt. 装圆材于；vi. 拳斗, 争论"
+srsWords: "spar"
+
 ---
 lessonTitle: "Lesson 6: Archaic, Formal & Erudite Register Part 6"
 description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
@@ -341,64 +346,65 @@ icon: "✒️"
 color: "#673AB7"
 ---
 [flashcard-review]
-front: "brief"
-meaning: "n. a document stating the facts and points of law of a client's case; n. a condensed written summary or abstract; v. give essential information to someone; s. of short duration or distance"
-translation: "n. 摘要, 简报；a. 简短的, 短暂的；vt. 对...作简报, 摘要, 节录"
-srsWords: "brief"
+front: "ardent"
+meaning: "s. characterized by intense emotion; s. characterized by strong enthusiasm; s. glowing or shining like fire"
+translation: "a. 热心的, 激动的, 燃烧般的；[医] 灼热的; 热心的"
+srsWords: "ardent"
 
 [flashcard-review]
-front: "exact"
-meaning: "a. marked by strict and particular and complete accordance with fact"
-translation: "a. 精确的, 准确的, 精密的；vt. 强求, 急需"
-srsWords: "exact"
+front: "jumpsuit"
+meaning: "n one-piece garment fashioned after a parachutist's uniform"
+translation: "n. 连衣裤, （尤指女式）连衣裤"
+srsWords: "jumpsuit"
 
 [flashcard-review]
-front: "circuit"
-meaning: "n. an electrical device that provides a path for electrical current to flow; n. an established itinerary of venues or events that a particular group of people travel to; n. (law) a judicial division of a state or the United States (so-called because originally judges traveled and held court in different locations); one of the twelve groups of states in the United States that is covered by a particular circuit court of appeals; v. make a circuit"
-translation: "n. 电路, 环(行)道, 巡回；[计] 线路; 电路"
-srsWords: "circuit"
+front: "clitoris"
+meaning: "n. a female sexual organ homologous to the penis"
+translation: "n. 阴核, 阴蒂；[医] 阴蒂"
+srsWords: "clitoris"
 
 [flashcard-review]
-front: "succeed"
-meaning: "v. attain success or reach a desired goal; v. be the successor (of)"
-translation: "vi. 成功, 继承, 继续；vt. 继承, 接替"
-srsWords: "succeed"
+front: "admissible"
+meaning: "a. deserving to be admitted"
+translation: "a. 可进入的, 可容许的"
+srsWords: "admissible"
 
 [flashcard-review]
-front: "ally"
-meaning: "n. a friendly nation; n. an associate who provides cooperation or assistance; v. become an ally or associate, as by a treaty or marriage"
-translation: "n. 同盟者, 同盟国, 助手；vt. 使联盟, 使联合, 使有关系；vi. 结盟"
-srsWords: "ally"
+front: "poppa"
+meaning: "father (informal)"
+translation: "n. 爸爸, 大伯"
+srsWords: "poppa"
 
 [flashcard-review]
-front: "utility"
-meaning: "n. a company that performs a public service; subject to government regulation; n. the quality of being of practical use; n. the service (electric power or water or transportation) provided by a public utility; n. (economics) a measure that is to be maximized in any situation involving choice"
-translation: "n. 功用, 有用之物, 实用, 公用事业, 实用程序；a. 实用的, 有多种用途的；[计] 实用程序, 工具"
-srsWords: "utility"
+front: "patronizing/patronising"
+meaning: "apparently kind or helpful but betraying a feeling of superiority; condescending"
+translation: "adj. 居高临下的，摆架子的，傲慢俯就的"
+srsWords: "patronizing/patronising"
 
 [flashcard-review]
-front: "venture"
-meaning: "n. any venturesome undertaking especially one with an uncertain outcome; n. a commercial undertaking that risks a loss but promises a profit; v. proceed somewhere despite the risk of possible dangers; v. put at risk"
-translation: "n. 冒险, 风险；vt. 敢于, 冒...的危险；vi. 冒险"
-srsWords: "venture"
+front: "standoff"
+meaning: "n the finish of a contest in which the score is tied and the winner is undecided; n the act of repulsing or repelling an attack; a successful defensive stand"
+translation: "a. 冷淡的, 有支架的；n. 冷淡, 平衡, 和局"
+srsWords: "standoff"
 
 [flashcard-review]
-front: "marvel"
-meaning: "v. express astonishment or surprise about something"
-translation: "n. 奇异事物, 罕见例子；vt. 惊异于；vi. 惊异"
-srsWords: "marvel"
+front: "transducer"
+meaning: "n. an electrical device that converts one form of energy into another"
+translation: "n. 换能器, 变换器；[计] 传感器; 翻译机; 变换器; 换能器"
+srsWords: "transducer"
 
 [flashcard-review]
-front: "haven"
-meaning: "n. a shelter serving as a place of safety or sanctuary"
-translation: "n. 港, 避难所, 安息所；vt. 安置...于港中, 庇护, 入港"
-srsWords: "haven"
+front: "breakout"
+meaning: "n an escape from jail"
+translation: "n. 爆发, 越狱, 突围；[计] 中断, 断裂"
+srsWords: "breakout"
 
 [flashcard-review]
-front: "curriculum"
-meaning: "n an integrated course of academic studies"
-translation: "n. 课程；[医] 课程, 学程"
-srsWords: "curriculum"
+front: "tangerine"
+meaning: "n. a variety of mandarin orange; n. any of various deep orange mandarins grown in the United States and southern Africa; n. a reddish to vivid orange color"
+translation: "n. 柑橘"
+srsWords: "tangerine"
+
 ---
 lessonTitle: "Lesson 7: Archaic, Formal & Erudite Register Part 7"
 description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
@@ -406,64 +412,65 @@ icon: "✒️"
 color: "#673AB7"
 ---
 [flashcard-review]
-front: "dive"
-meaning: "n. a headlong plunge into water; n. a steep nose-down descent by an aircraft; v. drop steeply; v. plunge into water"
-translation: "n. 潜水, 跳水；vi. 跳水, 俯冲, 猛冲；vt. 把...突然伸入"
-srsWords: "dive"
+front: "insidious"
+meaning: "s. beguiling but harmful; s. intended to entrap; s. working or spreading in a hidden and usually injurious way"
+translation: "a. 隐伏的, 阴险的, 狡猾的；[医] 隐袭的"
+srsWords: "insidious"
 
 [flashcard-review]
-front: "deficit"
-meaning: "n. the property of being an amount by which something is less than expected or required; n. a deficiency or failure in neurological or mental functioning; n. (sports) the score by which a team or individual is losing; n. an excess of liabilities over assets (usually over a certain period)"
-translation: "n. 赤字, 不足额；[医] 短缺"
-srsWords: "deficit"
+front: "gumbo"
+meaning: "n. any of various fine-grained silty soils that become waxy and very sticky mud when saturated with water; n. long mucilaginous green pods; may be simmered or sauteed but used especially in soups and stews; n. a soup or stew thickened with okra pods"
+translation: "n. 大杂烩"
+srsWords: "gumbo"
 
 [flashcard-review]
-front: "audit"
-meaning: "n. a methodical examination or review of a condition or situation; v. examine carefully for accuracy with the intent of verification; v. attend academic courses without getting credit"
-translation: "n. 审计, 查帐；vt. 查(帐), 旁听；vi. 查账；[计] 查帐; 审查; 检查"
-srsWords: "audit"
+front: "crucifixion"
+meaning: "n. the act of executing by a method widespread in the ancient world; the victim's hands and feet are bound or nailed to a cross; n. the death of Jesus by crucifixion; n. the infliction of extremely painful punishment or suffering"
+translation: "n. 在十字架上钉死的刑罚, 酷刑, 苦难, 折磨"
+srsWords: "crucifixion"
 
 [flashcard-review]
-front: "hazard"
-meaning: "n. a source of danger; a possibility of incurring loss or misfortune; n. an obstacle on a golf course"
-translation: "n. 冒险, 危险, 机会；vt. 冒...的危险, 赌运气, 使冒危险；[计] 相关危险; 冒险"
-srsWords: "hazard"
+front: "piranha"
+meaning: "n. small voraciously carnivorous freshwater fishes of South America that attack and destroy living animals"
+translation: "n. 水虎鱼(南美产)"
+srsWords: "piranha"
 
 [flashcard-review]
-front: "merger"
-meaning: "n the combination of two or more commercial companies; n an occurrence that involves the production of a union"
-translation: "n. 合并, 归并；[经] 购并"
-srsWords: "merger"
+front: "scrappy"
+meaning: "s. full of fighting spirit"
+translation: "a. 杂凑的, 不连贯的, 爱打架的, 坚决的"
+srsWords: "scrappy"
 
 [flashcard-review]
-front: "adverse"
-meaning: "s. contrary to your interests or welfare; s. in an opposing direction"
-translation: "a. 不利的, 敌对的, 相反的, 逆的；[法] 相反的, 敌对的, 逆的"
-srsWords: "adverse"
+front: "decorum"
+meaning: "n. propriety in manners and conduct"
+translation: "n. 端正, 礼貌, 合宜, 礼仪"
+srsWords: "decorum"
 
 [flashcard-review]
-front: "abundance"
-meaning: "n. the property of a more than adequate quantity or supply; n. (physics) the ratio of the number of atoms of a specific isotope of an element to the total number of isotopes present; n. (chemistry) the ratio of the total mass of an element in the earth's crust to the total mass of the earth's crust; expressed as a percentage or in parts per million"
-translation: "n. 丰富, 充足, 大量；[经] 丰富, 充裕"
-srsWords: "abundance"
+front: "voucher"
+meaning: "n. someone who vouches for another or for the correctness of a statement; n. a document that serves as evidence of some expenditure"
+translation: "n. 证人, 保证人, 证明者, 凭证, 凭单；vt. 证实...的可靠性"
+srsWords: "voucher"
 
 [flashcard-review]
-front: "utter"
-meaning: "v. express audibly; utter sounds (not necessarily words); v. put into circulation"
-translation: "a. 全然的, 绝对的, 完全的；vt. 发出声音, 做声, 发表, 发射, 流通"
-srsWords: "utter"
+front: "converge"
+meaning: "v. be adjacent or come together; v. approach a limit as the number of terms increases without limit; v. move or draw together at a certain location; v. come together so as to form a single product"
+translation: "vi. 聚合, 集中于一点；vt. 使集合"
+srsWords: "converge"
 
 [flashcard-review]
-front: "notorious"
-meaning: "s known widely and usually unfavorably;"
-translation: "a. 声名狼藉的, 臭名昭著的, 众人皆知的"
-srsWords: "notorious"
+front: "paisley"
+meaning: "n. a soft wool fabric with a colorful swirled pattern of curved shapes"
+translation: "(苏格兰)佩斯利涡纹旋花呢(的)"
+srsWords: "paisley"
 
 [flashcard-review]
-front: "deliberate"
-meaning: "s. carefully thought out in advance"
-translation: "a. 深思熟虑的, 故意的, 从容的；v. 仔细考虑"
-srsWords: "deliberate"
+front: "chipmunk"
+meaning: "n. a burrowing ground squirrel of western America and Asia; has cheek pouches and a light and dark stripe running down the body"
+translation: "n. 金花鼠"
+srsWords: "chipmunk"
+
 ---
 lessonTitle: "Lesson 8: Archaic, Formal & Erudite Register Part 8"
 description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
@@ -471,64 +478,65 @@ icon: "✒️"
 color: "#673AB7"
 ---
 [flashcard-review]
-front: "predecessor"
-meaning: "n. one who precedes you in time (as in holding a position or office)"
-translation: "n. 前任, 先辈, 前身；[医] 初牙, 前辈, 祖先"
-srsWords: "predecessor"
+front: "bloc"
+meaning: "n. a group of countries in special alliance"
+translation: "n. 集团"
+srsWords: "bloc"
 
 [flashcard-review]
-front: "surge"
-meaning: "n. a sudden or abrupt strong increase; v. see one's performance improve"
-translation: "n. 巨涌, 汹涌, 澎湃；vi. 汹涌, 澎湃, 颠簸, 猛冲, 突然放松；vt. 使汹涌奔腾, 急放；[计] 电压尖峰"
-srsWords: "surge"
+front: "airstrip"
+meaning: "n. an airfield without normal airport facilities"
+translation: "n. 飞机跑道"
+srsWords: "airstrip"
 
 [flashcard-review]
-front: "temper"
-meaning: "n. a characteristic (habitual or relatively temporary) state of feeling; n. a disposition to exhibit uncontrolled anger; n. the elasticity and hardness of a metal object; its ability to absorb considerable energy before cracking; v. harden by reheating and cooling in oil"
-translation: "n. (钢等的)硬度, 脾气, 心情, 中和剂, 倾向, 回火；vt. 使回火, 锻炼, 调和, 使缓和；vi. 回火"
-srsWords: "temper"
+front: "tinder"
+meaning: "n material for starting a fire"
+translation: "n. 火绒盒"
+srsWords: "tinder"
 
 [flashcard-review]
-front: "phantom"
-meaning: "s. something apparently sensed but having no physical reality"
-translation: "n. 幻影, 虚位, 幽灵, 化身, 令人恐惧的事物, 骇人的想法；a. 幻觉的, 幻影的, 幽灵的, 虚无飘渺的, 捉摸不定的, 有名无实的"
-srsWords: "phantom"
+front: "lien"
+meaning: "n. the right to take another's property if an obligation is not discharged"
+translation: "n. 留置权, 扣押权；[医] 脾"
+srsWords: "lien"
 
 [flashcard-review]
-front: "abundant"
-meaning: "a. present in great quantity"
-translation: "a. 丰富的, 充分的, 大量的"
-srsWords: "abundant"
+front: "pester"
+meaning: "v annoy persistently"
+translation: "vt. 不断打扰, 纠缠"
+srsWords: "pester"
 
 [flashcard-review]
-front: "dwarf"
-meaning: "n. a person who is markedly small; n. a plant or animal that is atypically small; v. check the growth of"
-translation: "n. 矮子, 侏儒；v. (使)变矮小"
-srsWords: "dwarf"
+front: "backdrop"
+meaning: "n. scenery hung at back of stage"
+translation: "n. 背景幕, 背景"
+srsWords: "backdrop"
 
 [flashcard-review]
-front: "pedestrian"
-meaning: "n. a person who travels by foot; s. lacking wit or imagination"
-translation: "n. 行人, 步行者；a. 人行的, 徒步的, 呆板的, 通俗的, 平淡无奇的"
-srsWords: "pedestrian"
+front: "deport"
+meaning: "v behave in a certain manner; v hand over to the authorities of another country; v expel from a country"
+translation: "vt. 举止, 驱逐出境；[法] 放逐, 驱逐, 递解"
+srsWords: "deport"
 
 [flashcard-review]
-front: "apprentice"
-meaning: "n. works for an expert to learn a trade; v. be or work as an apprentice"
-translation: "n. 学徒, 生手；vt. 使做学徒"
-srsWords: "apprentice"
+front: "rosebud"
+meaning: "n. the bud of a rose; n. (a literary reference to) a pretty young girl"
+translation: "n. 蔷薇花蕾, 妙龄少女"
+srsWords: "rosebud"
 
 [flashcard-review]
-front: "idle"
-meaning: "n. the state of an engine or other mechanism that is idling; v. run disconnected or idle; v. be idle; exist in a changeless situation; a. not in action or at work"
-translation: "a. 懒惰的, 闲散的, 停顿的, 空闲的, 无用的；vi. 无所事事, 闲散, 浪费, 空转；vt. 虚度, 使闲散, 使空转；n. 空转, 空闲时间；[计] 空闲时间"
-srsWords: "idle"
+front: "molasses"
+meaning: "n. thick dark syrup produced by boiling down juice from sugar cane; especially during sugar refining"
+translation: "n. 糖蜜；[化] 糖蜜; 废糖蜜"
+srsWords: "molasses"
 
 [flashcard-review]
-front: "formidable"
-meaning: "s. extremely impressive in strength or excellence; s. inspiring fear"
-translation: "a. 巨大的, 优秀的, 可怕的, 艰难的"
-srsWords: "formidable"
+front: "haw"
+meaning: "n. the nictitating membrane of a horse; v. utter `haw'"
+translation: "n. 山楂, 吆喝牲畜左转, 呃, 瞬膜；vt. 使向左转；vi. 向左转"
+srsWords: "haw"
+
 ---
 lessonTitle: "Lesson 9: Archaic, Formal & Erudite Register Part 9"
 description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
@@ -536,64 +544,65 @@ icon: "✒️"
 color: "#673AB7"
 ---
 [flashcard-review]
-front: "posture"
-meaning: "n the arrangement of the body and its limbs; n characteristic way of bearing one's body; n a rationalized mental attitude; n capability in terms of personnel and materiel that affect the capacity to fight a war; v behave affectedly or unnaturally in order to impress others; v assume a posture as for artistic purposes"
-translation: "n. 姿势, 态度, 情形, 形势；vt. 作...的姿势；vi. 作姿势"
-srsWords: "posture"
+front: "feasible"
+meaning: "s. capable of being done with means at hand and circumstances as they are"
+translation: "a. 能实行的, 可行的, 适宜的；[法] 可行的, 可执行的, 可完成的"
+srsWords: "feasible"
 
 [flashcard-review]
-front: "abolish"
-meaning: "v. do away with"
-translation: "vt. 废止, 革除, 消灭；[经] 废除, 取消, 裁撤"
-srsWords: "abolish"
+front: "cranial"
+meaning: "a. of or relating to the cranium which encloses the brain"
+translation: "a. 头盖的, 颅侧的；[医] 颅的, 颅侧的"
+srsWords: "cranial"
 
 [flashcard-review]
-front: "resin"
-meaning: "n. any of a class of solid or semisolid viscous substances obtained either as exudations from certain plants or prepared by polymerization of simple molecules"
-translation: "n. 树脂；vt. 涂树脂于"
-srsWords: "resin"
+front: "nonexistent"
+meaning: "a. not having existence or being or actuality"
+translation: "a. 不存在的"
+srsWords: "nonexistent"
 
 [flashcard-review]
-front: "strait"
-meaning: "n. a narrow channel of the sea joining two larger bodies of water; s. narrow"
-translation: "n. 海峡, 困境；a. 困难的, 窘迫的, 狭窄的"
-srsWords: "strait"
+front: "poncho"
+meaning: "n. a blanket-like cloak with a hole in the center for the head"
+translation: "n. 南美披风, 雨披"
+srsWords: "poncho"
 
 [flashcard-review]
-front: "redundant"
-meaning: "s more than is needed, desired, or required; s repetition of same sense in different words"
-translation: "a. 多余的, 过多的, 冗长的；[医] 过多的, 多余的"
-srsWords: "redundant"
+front: "outsmart"
+meaning: "v beat through cleverness and wit; v defeat by more skillful maneuvering"
+translation: "vt. 比...更聪明, 打败, 瞒过"
+srsWords: "outsmart"
 
 [flashcard-review]
-front: "catastrophic"
-meaning: "s. extremely harmful; bringing physical or financial ruin"
-translation: "a. 悲惨的, 灾难的"
-srsWords: "catastrophic"
+front: "undying"
+meaning: "s never dying"
+translation: "a. 不死的, 不灭的, 不朽的"
+srsWords: "undying"
 
 [flashcard-review]
-front: "plum"
-meaning: "n. any of several trees producing edible oval fruit having a smooth skin and a single hard stone; n. any of numerous varieties of small to medium-sized round or oval fruit having a smooth skin and a single pit; n. a highly desirable position or assignment"
-translation: "n. 李子"
-srsWords: "plum"
+front: "stony"
+meaning: "s abounding in rocks or stones; s showing unfeeling resistance to tender feelings; s hard as granite"
+translation: "a. 多石的, 无情的"
+srsWords: "stony"
 
 [flashcard-review]
-front: "articulate"
-meaning: "v. unite by forming a joint or joints; v. express or state clearly; a. expressing yourself easily or characterized by clear expressive language"
-translation: "a. 发音清晰的, 口才好的；vt. 明白地说, 以关节连接, 使成为系统的整体"
-srsWords: "articulate"
+front: "trouser"
+meaning: "n. (usually in the plural) a garment extending from the waist to the knee or ankle, covering each leg separately; n. a garment (or part of a garment) designed for or relating to trousers"
+translation: "a. 裤子的"
+srsWords: "trouser"
 
 [flashcard-review]
-front: "indulge"
-meaning: "v. give free rein to; v. enjoy to excess"
-translation: "vt. 纵情于, 使高兴, 放任, 迁就；vi. 沉溺"
-srsWords: "indulge"
+front: "twentieth"
+meaning: "n. position 20 in a countable series of things; s. coming next after the nineteenth in position"
+translation: "num. 第二十, 二十分之一"
+srsWords: "twentieth"
 
 [flashcard-review]
-front: "accessibility"
-meaning: "n the quality of being at hand when needed; n the attribute of being easy to meet or deal with"
-translation: "n. 易接近, 可进入；[化] 可及性; 可达性; 可接近性; 吸湿性"
-srsWords: "accessibility"
+front: "p.m"
+meaning: "afternoon/evening"
+translation: "abbr. 下午（post meridiem）"
+srsWords: "p.m"
+
 ---
 lessonTitle: "Lesson 10: Archaic, Formal & Erudite Register Part 10"
 description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
@@ -601,10 +610,10 @@ icon: "✒️"
 color: "#673AB7"
 ---
 [flashcard-review]
-front: "diligence"
-meaning: "n. conscientiousness in paying proper attention to a task; giving the degree of care required in a given situation; n. persevering determination to perform a task"
-translation: "n. 勤奋"
-srsWords: "diligence"
+front: "centimeter"
+meaning: "a unit of length, equal to one hundredth of a meter"
+translation: "n.厘米"
+srsWords: "centimeter"
 
 [flashcard-review]
 front: "ecclesiastical"
@@ -619,43 +628,43 @@ translation: "a. 类似的, 准的；[经] 半, 准; 类似的"
 srsWords: "quasi"
 
 [flashcard-review]
-front: "converse"
-meaning: "n. a proposition obtained by conversion; v. carry on a conversation; s. of words so related that one reverses the relation denoted by the other; s. turned about in order or relation"
-translation: "n. 相反的事物, 倒, 逆向；a. 相反的, 逆向的, 颠倒的；vi. 交谈, 谈话"
-srsWords: "converse"
+front: "kilometre"
+meaning: "a unit of length, equal to 1,000 meters"
+translation: "n. [计量] 公里；[计量] 千米"
+srsWords: "kilometre"
 
 [flashcard-review]
-front: "paralysis"
-meaning: "n. loss of the ability to move a body part"
-translation: "n. 麻痹, 停顿, 瘫痪；[医] 麻痹, 瘫痪"
-srsWords: "paralysis"
+front: "bbq"
+meaning: "barbecue"
+translation: "abbr. 野外烧烤（barbecue）；烧烤炉"
+srsWords: "bbq"
 
 [flashcard-review]
-front: "cascade"
-meaning: "n. a small waterfall or series of small waterfalls; n. a succession of stages or operations or processes or units; v. rush down in big quantities, like a cascade; v. arrange (open windows) on a computer desktop so that they overlap each other, with the title bars visible"
-translation: "n. 小瀑布, 瀑布状物；vi. 成瀑布落下；[计] 层叠, 级联"
-srsWords: "cascade"
+front: "smartphone"
+meaning: "a mobile phone that performs many of the functions of a computer"
+translation: "n. 智能手机"
+srsWords: "smartphone"
 
 [flashcard-review]
-front: "graft"
-meaning: "n. (surgery) tissue or organ transplanted from a donor to a recipient; in some cases the patient can be both donor and recipient; n. the act of grafting something onto something else; v. cause to grow together parts from different plants"
-translation: "n. 嫁接, 贪污；v. 嫁接, 移植, 贪污"
-srsWords: "graft"
+front: "easygoing"
+meaning: "s. relaxed and informal in attitude or standards"
+translation: "a. 脾气随和的, 逍遥自在的, 悠闲的, 懒散的"
+srsWords: "easygoing"
 
 [flashcard-review]
-front: "deprivation"
-meaning: "n a state of extreme poverty; n the disadvantage that results from losing something; n act of depriving someone of food or money or rights"
-translation: "n. 剥夺, 剥夺官职, 免职；[医] 丧失, 剥夺, 缺乏"
-srsWords: "deprivation"
+front: "kilogram"
+meaning: "a unit of mass equal to 1,000 grams"
+translation: "n. 公斤；千克"
+srsWords: "kilogram"
 
 [flashcard-review]
-front: "poise"
-meaning: "n. a cgs unit of dynamic viscosity equal to one dyne-second per square centimeter; the viscosity of a fluid in which a force of one dyne per square centimeter maintains a velocity of 1 centimeter per second; n. a state of being balanced in a stable equilibrium; v. be motionless, in suspension"
-translation: "n. 平衡, 均衡, 姿势, 镇静, 安静, 砝码；vt. 使平衡, 使悬着, 保持...姿势；vi. 平衡, 悬着, 准备好"
-srsWords: "poise"
+front: "nineteenth"
+meaning: "n. position 19 in a countable series of things; s. coming next after the eighteenth in position"
+translation: "num. 第十九, 十九分之一"
+srsWords: "nineteenth"
 
 [flashcard-review]
-front: "chronological"
-meaning: "a. relating to or arranged according to temporal order"
-translation: "a. 年代学的, 按时间顺序的, 按照年月顺序的；[计] 编年的, 按年月日顺序的"
-srsWords: "chronological"
+front: "categorize"
+meaning: "v. place into or assign to a category"
+translation: "vt. 分类, 归类"
+srsWords: "categorize"

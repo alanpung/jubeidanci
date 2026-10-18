@@ -16,10 +16,10 @@ icon: "🏛️"
 color: "#673AB7"
 ---
 [flashcard-review]
-front: "exterior"
-meaning: "a. situated in or suitable for the outdoors or outside of a building"
-translation: "n. 外部, 表面, 外貌；a. 外部的, 外在的, 表面的"
-srsWords: "exterior"
+front: "assay"
+meaning: "n. an appraisal of the state of affairs; n. a substance that is undergoing an analysis of its components; n. a written report of the results of an analysis of the composition of some substance"
+translation: "n. 试验, 化验, 分析；vt. 化验, 分析, 评价, 尝试；vi. 被验明内含成分"
+srsWords: "assay"
 
 [flashcard-review]
 front: "cloak"
@@ -58,10 +58,10 @@ translation: "a. 令人羡慕的, 可羡慕的"
 srsWords: "enviable"
 
 [flashcard-review]
-front: "organizational"
-meaning: "a. of or relating to an organization"
-translation: "a. 组织的；[法] 组织的, 编制的, 机构的"
-srsWords: "organizational"
+front: "analyse"
+meaning: "v consider in detail and subject to an analysis in order to discover essential features or meaning; v break down into components or essential features; v make a mathematical, chemical, or grammatical analysis of; break down into components or essential features; v subject to psychoanalytic treatment"
+translation: "vt. 分析, 细察, 分解；[经] 分析"
+srsWords: "analyse"
 
 [flashcard-review]
 front: "psychiatrist"
@@ -74,6 +74,7 @@ front: "psychiatric"
 meaning: "a. relating to or used in or engaged in the practice of psychiatry"
 translation: "a. 精神病学的, 医精神病的；[医] 精神病学的"
 srsWords: "psychiatric"
+
 ---
 lessonTitle: "Lesson 2: Academic Research & Methodology Part 2"
 description: "Practice 10 key C1 vocabulary flashcards for Academic Research & Methodology"
@@ -81,16 +82,16 @@ icon: "🏛️"
 color: "#673AB7"
 ---
 [flashcard-review]
-front: "clinical"
-meaning: "a. relating to a clinic or conducted in or as if in a clinic and depending on direct observation of patients; s. scientifically detached; unemotional"
-translation: "a. 临床的, 门诊部的；[医] 临床的, 临证的"
-srsWords: "clinical"
+front: "construe"
+meaning: "v make sense of; assign a meaning to"
+translation: "vt. 解释, 分析, 对...逐字直译；vi. 作句法分析；n. 直译"
+srsWords: "construe"
 
 [flashcard-review]
-front: "corps"
-meaning: "n. an army unit usually consisting of two or more divisions and their support; n. a body of people associated together"
-translation: "n. 军, 队, 部队, 兵种；[医] 对, 团; 体, 物体"
-srsWords: "corps"
+front: "turn to"
+meaning: "verb. turn to"
+translation: "转向, 变成, 求助于, 起劲地开始行动"
+srsWords: "turn to"
 
 [flashcard-review]
 front: "forensic"
@@ -99,16 +100,16 @@ translation: "a. 辩论的, 法院的, 关于法庭的；n. 辩论练习"
 srsWords: "forensic"
 
 [flashcard-review]
-front: "juvenile"
-meaning: "n. a young person, not fully developed; a. of or relating to or characteristic of or appropriate for children or young people"
-translation: "n. 少年, 少年读物；a. 少年的, 不成熟的, 适于少年的"
-srsWords: "juvenile"
+front: "rumbling"
+meaning: "n a loud low dull continuous noise; v make a low noise; v to utter or emit low dull rumbling sounds; s continuous full and low-pitched throbbing sound"
+translation: "n. 隆隆声, 辘辘声"
+srsWords: "rumbling"
 
 [flashcard-review]
-front: "jurisdiction"
-meaning: "n. in law; the territory within which power can be exercised"
-translation: "n. 司法权, 审判权, 管辖权；[经] 法律管辖权, 审判权"
-srsWords: "jurisdiction"
+front: "counselor"
+meaning: "n. someone who gives advice about problems; n. someone who has supervisory duties at a summer camp"
+translation: "n. 顾问, 参事, 法律顾问"
+srsWords: "counselor"
 
 [flashcard-review]
 front: "accustomed"
@@ -117,10 +118,10 @@ translation: "a. 惯常的, 习惯了的"
 srsWords: "accustomed"
 
 [flashcard-review]
-front: "trauma"
-meaning: "n. an emotional wound or shock often having long-lasting effects"
-translation: "n. 外伤, 损伤；[医] 创伤, 外伤"
-srsWords: "trauma"
+front: "marvelous"
+meaning: "s. being or having the character of a miracle"
+translation: "a. 令人惊异的, 了不起的, 不平常的"
+srsWords: "marvelous"
 
 [flashcard-review]
 front: "traumatic"
@@ -129,16 +130,17 @@ translation: "a. 外伤的, 创伤的；[医] 创伤的, 外伤的"
 srsWords: "traumatic"
 
 [flashcard-review]
-front: "constraint"
-meaning: "n. the state of being physically constrained; n. the act of constraining; the threat or use of force to control the thoughts or behavior of others"
-translation: "n. 强制, 约束；[计] 约束"
-srsWords: "constraint"
+front: "intact"
+meaning: "s. (of a woman) having the hymen unbroken; s. undamaged in any way"
+translation: "a. 尚未被人碰过的, 原封不动的, 完整的；[医] 完整的, 无伤的"
+srsWords: "intact"
 
 [flashcard-review]
 front: "revealing"
 meaning: "s. disclosing unintentionally; a. showing or making known"
 translation: "a. 暴露的, 显露的, 揭露的"
 srsWords: "revealing"
+
 ---
 lessonTitle: "Lesson 3: Academic Research & Methodology Part 3"
 description: "Practice 10 key C1 vocabulary flashcards for Academic Research & Methodology"
@@ -204,6 +206,7 @@ front: "psyche"
 meaning: "n. (Greek mythology) a beautiful princess loved by Cupid who visited her at night and told her she must not try to see him; became the personification of the soul"
 translation: "n. 灵魂, 精神, 普赛克(希腊神话中人类灵魂的化身)；[医] 精神, 心灵"
 srsWords: "psyche"
+
 ---
 lessonTitle: "Lesson 4: Academic Research & Methodology Part 4"
 description: "Practice 10 key C1 vocabulary flashcards for Academic Research & Methodology"
@@ -269,6 +272,7 @@ front: "naturalness"
 meaning: "n. the quality of being natural or based on natural principles; n. the likeness of a representation to the thing represented"
 translation: "n. 自然, 当然"
 srsWords: "naturalness"
+
 ---
 lessonTitle: "Lesson 5: Academic Research & Methodology Part 5"
 description: "Practice 10 key C1 vocabulary flashcards for Academic Research & Methodology"
@@ -282,10 +286,10 @@ translation: "vt. 使隔离, 使孤立, 使绝缘；n. 隔离种群"
 srsWords: "isolate"
 
 [flashcard-review]
-front: "isolated"
-meaning: "s. not close together in time; s. cut off or left behind; s. under forced isolation especially for health reasons"
-translation: "a. 孤立的, 孤零零的；[计] 隔离的, 绝缘的"
-srsWords: "isolated"
+front: "telecommunication"
+meaning: "n. (often plural) systems used in transmitting messages over a distance electronically; n. (often plural) the branch of electrical engineering concerned with the technology of electronic communication at a distance"
+translation: "n. 电讯, 远距离通讯, 无线电通讯；[计] 远程通信, 电信"
+srsWords: "telecommunication"
 
 [flashcard-review]
 front: "refreshingly"
@@ -300,10 +304,10 @@ translation: "a. 容易的, 不费力气的"
 srsWords: "effortless"
 
 [flashcard-review]
-front: "vegetation"
-meaning: "n. all the plant life in a particular region or period; n. the process of growth in plants; n. an abnormal growth or excrescence (especially a warty excrescence on the valves of the heart); n. inactivity that is passive and monotonous, comparable to the inactivity of plant life"
-translation: "n. 植物；[医] 贽生物, 贽疣, 增殖体; 生长, 增殖"
-srsWords: "vegetation"
+front: "betrayal"
+meaning: "n. the quality of aiding an enemy"
+translation: "n. 背叛, 辜负；[法] 背叛, 通敌, 背信"
+srsWords: "betrayal"
 
 [flashcard-review]
 front: "respite"
@@ -334,6 +338,7 @@ front: "comprise"
 meaning: "v be composed of; v include or contain; have as a component; v form or compose"
 translation: "vt. 包含, 构成"
 srsWords: "comprise"
+
 ---
 lessonTitle: "Lesson 6: Academic Research & Methodology Part 6"
 description: "Practice 10 key C1 vocabulary flashcards for Academic Research & Methodology"
@@ -359,22 +364,22 @@ translation: "vt. 引导, 使入门, 引入, 使就职"
 srsWords: "induct"
 
 [flashcard-review]
-front: "induction"
-meaning: "n. an electrical phenomenon whereby an electromotive force (EMF) is generated in a closed circuit by a change in the flow of current; n. the act of bringing about something (especially at an early time)"
-translation: "n. 归纳法, 感应, 就职, 入门；[计] 归纳法"
-srsWords: "induction"
+front: "lade"
+meaning: "v remove with or as if with a ladle; v fill or place a load on"
+translation: "vt. 装满, 装载；vi. 装货"
+srsWords: "lade"
 
 [flashcard-review]
-front: "fossil"
-meaning: "n. the remains (or an impression) of a plant or animal that existed in a past geological age and that has been excavated from the soil; a. characteristic of a fossil"
-translation: "n. 化石, 古物；a. 化石的, 陈腐的, 守旧的"
-srsWords: "fossil"
+front: "emirate"
+meaning: "n. the domain controlled by an emir; n. the office of an emir"
+translation: "n. 埃米尔的地位, 酋长国"
+srsWords: "emirate"
 
 [flashcard-review]
-front: "geological"
-meaning: "a. of or relating to or based on geology"
-translation: "a. 地质学的, 地质的"
-srsWords: "geological"
+front: "accredit"
+meaning: "v. grant credentials to; v. provide or send (envoys or embassadors) with official credentials; v. ascribe an achievement to"
+translation: "vt. 信托, 确认, 归结于, 委派；[经] 发行信用证, 信托, 委托"
+srsWords: "accredit"
 
 [flashcard-review]
 front: "geologically"
@@ -395,10 +400,11 @@ translation: "adv. 非常地, 巨大地"
 srsWords: "enormously"
 
 [flashcard-review]
-front: "gem"
-meaning: "n. art highly prized for its beauty or perfection; n. a crystalline rock that can be cut and polished for jewelry"
-translation: "n. 珠宝, 宝石, 珍贵之物；vt. 饰以宝石"
-srsWords: "gem"
+front: "irrelevant"
+meaning: "a. having no bearing on or connection with the subject at issue"
+translation: "a. 不恰当的, 无关系的, 不相干的；[法] 无关的, 不相干的, 离题的"
+srsWords: "irrelevant"
+
 ---
 lessonTitle: "Lesson 7: Academic Research & Methodology Part 7"
 description: "Practice 10 key C1 vocabulary flashcards for Academic Research & Methodology"
@@ -412,10 +418,10 @@ translation: "a. 说明的, 解释的, 辩明的；[法] 解释的, 说明的"
 srsWords: "explanatory"
 
 [flashcard-review]
-front: "vertical"
-meaning: "n. something that is oriented vertically; a. at right angles to the plane of the horizon or a base line; a. relating to or involving all stages of a business from production to distribution; s. of or relating to different levels in a hierarchy (as levels of social class or income group)"
-translation: "a. 垂直的, 直立的；[医] 垂直的, 顶的, 头顶的"
-srsWords: "vertical"
+front: "diplomatic"
+meaning: "a. relating to or characteristic of diplomacy; a. using or marked by tact in dealing with sensitive matters or people"
+translation: "a. 外交的, 老练的；[法] 外交的, 外交上的, 文献上的"
+srsWords: "diplomatic"
 
 [flashcard-review]
 front: "knowledgeable"
@@ -436,10 +442,10 @@ translation: "vt. 用公式表示, 明确叙述, 制订；[机] 公式化, 公�
 srsWords: "formulate"
 
 [flashcard-review]
-front: "sacrifice"
-meaning: "n. personnel that are sacrificed (e.g., surrendered or lost in order to gain an objective); n. a loss entailed by giving up or selling something at less than its value; n. the act of killing (an animal or person) in order to propitiate a deity; n. (baseball) an out that advances the base runners"
-translation: "n. 牺牲, 供奉, 祭品；vt. 牺牲, 祭祀, 贱卖；vi. 献祭"
-srsWords: "sacrifice"
+front: "blockchain"
+meaning: "a digital ledger"
+translation: "na. (脚踏车等的)车链；[网络] 块环链；数据块链；资料块链"
+srsWords: "blockchain"
 
 [flashcard-review]
 front: "cleanly"
@@ -448,10 +454,10 @@ translation: "a. 爱清洁的, 干净的, 清洁的；adv. 干净地, 利索地,
 srsWords: "cleanly"
 
 [flashcard-review]
-front: "endorsement"
-meaning: "n. a promotional statement (as found on the dust jackets of books); n. a signature that validates something; n. the act of endorsing"
-translation: "n. 支持, 认可, 背书；[经] 背书, 担保, 保证"
-srsWords: "endorsement"
+front: "forex"
+meaning: "foreign exchange (market)"
+translation: "[经] 外汇"
+srsWords: "forex"
 
 [flashcard-review]
 front: "stretching"
@@ -460,10 +466,11 @@ translation: "[机] 伸展作业, 锻伸作业"
 srsWords: "stretching"
 
 [flashcard-review]
-front: "continuity"
-meaning: "n. uninterrupted connection or union; n. a detailed script used in making a film in order to avoid discontinuities from shot to shot; n. the property of a continuous and connected period of time"
-translation: "n. 连续性；[化] 连续性"
-srsWords: "continuity"
+front: "standardize"
+meaning: "v. cause to conform to standard or norm; v. evaluate by comparing with a standard"
+translation: "vt. 使标准化, 使合于标准, 用标准检验；[计] 标准化; 规格化"
+srsWords: "standardize"
+
 ---
 lessonTitle: "Lesson 8: Academic Research & Methodology Part 8"
 description: "Practice 10 key C1 vocabulary flashcards for Academic Research & Methodology"
@@ -519,16 +526,17 @@ translation: "n. 水疱；[化] 砂眼"
 srsWords: "blister"
 
 [flashcard-review]
-front: "sponsorship"
-meaning: "n. the act of sponsoring (either officially or financially)"
-translation: "n. 发起, 倡议, 主办, 保证人的地位, 教父的地位, 教母的地位"
-srsWords: "sponsorship"
+front: "substrate"
+meaning: "n. the substance that is acted upon by an enzyme or ferment; n. a surface on which an organism grows or is attached; n. any stratum or layer lying underneath another"
+translation: "n. 底层, 地层, 衬底, 基底, 基质, 酶作用物, 酶解物；[计] 衬底; 基片"
+srsWords: "substrate"
 
 [flashcard-review]
 front: "ego"
 meaning: "n. an inflated feeling of pride in your superiority to others; n. (psychoanalysis) the conscious mind"
 translation: "n. 自我；[医] 自我"
 srsWords: "ego"
+
 ---
 lessonTitle: "Lesson 9: Academic Research & Methodology Part 9"
 description: "Practice 10 key C1 vocabulary flashcards for Academic Research & Methodology"
@@ -554,10 +562,10 @@ translation: "n. 泥, 软泥, 粗俗平庸的人"
 srsWords: "slob"
 
 [flashcard-review]
-front: "coverage"
-meaning: "n. the total amount and type of insurance carried; n. the extent to which something is covered; n. the news as presented by reporters for newspapers or radio or television"
-translation: "n. 覆盖的范围, 保险总额, 新闻报导；[化] 可达范围; 覆盖度"
-srsWords: "coverage"
+front: "entrepreneurship"
+meaning: "the activity of setting up a business or businesses, taking on financial risks in the hope of profit"
+translation: "企业家能力/职能; 企业家[主办人等]的身份[地位、职权、能力]"
+srsWords: "entrepreneurship"
 
 [flashcard-review]
 front: "unplug"
@@ -594,6 +602,7 @@ front: "brainwashing"
 meaning: "n. forcible indoctrination into a new set of attitudes and beliefs"
 translation: "n. 洗脑"
 srsWords: "brainwashing"
+
 ---
 lessonTitle: "Lesson 10: Academic Research & Methodology Part 10"
 description: "Practice 10 key C1 vocabulary flashcards for Academic Research & Methodology"
@@ -625,10 +634,10 @@ translation: "vi. 期满, 呼气, 断气；vt. 呼出"
 srsWords: "expire"
 
 [flashcard-review]
-front: "con"
-meaning: "n. an argument opposed to a proposal; r. in opposition to a proposition, opinion, etc."
-translation: "vt. 精读, 仔细研究, 默记；adv. 反面地, 从反面；a. 欺诈的；n. 反对者, 反对票, 肺结核；[计] 控制台"
-srsWords: "con"
+front: "alga"
+meaning: "n. primitive chlorophyll-containing mainly aquatic eukaryotic organisms lacking true stems and roots and leaves"
+translation: "n. 藻类, 海藻；[机] 藻"
+srsWords: "alga"
 
 [flashcard-review]
 front: "damply"
@@ -643,10 +652,10 @@ translation: "a. 幽灵的, 影子似的, 精神的"
 srsWords: "ghostly"
 
 [flashcard-review]
-front: "carrier"
-meaning: "n. someone whose employment involves carrying something; n. a self-propelled wheeled vehicle designed specifically to carry something; n. an inactive substance that is a vehicle for a radioactive tracer of the same substance and that assists in its recovery after some chemical reaction; n. a person or firm in the business of transporting people or goods or messages"
-translation: "n. 运送者, 邮递员, 带菌者；[计] 载波"
-srsWords: "carrier"
+front: "incompetent"
+meaning: "n. someone who is not competent to take effective action; a. legally not qualified or sufficient; a. not qualified or suited for a purpose; s. not doing a good job"
+translation: "a. 无能力的, 无资格的, 机能不全的, 不胜任的；n. 无能力者"
+srsWords: "incompetent"
 
 [flashcard-review]
 front: "washtub"
@@ -655,7 +664,7 @@ translation: "n. 洗衣盆"
 srsWords: "washtub"
 
 [flashcard-review]
-front: "apt"
-meaning: "s. (usually followed by `to') naturally disposed toward; s. at risk of or subject to experiencing something usually unpleasant; s. mentally quick and resourceful"
-translation: "a. 有...倾向的, 易于的, 恰当的, 聪明的；[计] 自动数控语言, 自动图象传输, 自动程序控制, 自动程序设计工具"
-srsWords: "apt"
+front: "apprentice"
+meaning: "n. works for an expert to learn a trade; v. be or work as an apprentice"
+translation: "n. 学徒, 生手；vt. 使做学徒"
+srsWords: "apprentice"

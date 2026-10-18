@@ -74,6 +74,7 @@ front: "accent"
 meaning: "n. distinctive manner of oral expression; n. a diacritical mark used to indicate stress or placed above a vowel to indicate a special pronunciation"
 translation: "n. 重音, 口音, 特点, 注重点；vt. 重读, 加重音号于, 强调"
 srsWords: "accent"
+
 ---
 lessonTitle: "Lesson 2: Social Interactions & Opinions Part 2"
 description: "Practice 10 key B1 vocabulary flashcards for Social Interactions & Opinions"
@@ -123,10 +124,10 @@ translation: "vt. 完成, 达到, 实现, 使完美"
 srsWords: "accomplish"
 
 [flashcard-review]
-front: "account"
-meaning: "n. a formal contractual relationship established to provide for regular banking or brokerage or business services; n. importance or value; n. a statement of recent transactions and the resulting balance; n. the quality of taking advantage"
-translation: "n. 报告, 解释, 估价, 理由, 利润, 算账, 帐目；vi. 报帐, 解释, 导致, 报偿, 占, 杀死；vt. 认为；[计] 帐户, 帐号"
-srsWords: "account"
+front: "trying"
+meaning: "s. hard to endure"
+translation: "a. 难受的, 难堪的；[法] 裁决, 审判, 审理; 使人痛苦的, 难堪的, 难处的"
+srsWords: "trying"
 
 [flashcard-review]
 front: "accountant"
@@ -139,6 +140,7 @@ front: "accuracy"
 meaning: "n. the quality of being near to the true value; n. (mathematics) the number of significant figures given in a number"
 translation: "n. 精确, 正确；[计] 准确度"
 srsWords: "accuracy"
+
 ---
 lessonTitle: "Lesson 3: Social Interactions & Opinions Part 3"
 description: "Practice 10 key B1 vocabulary flashcards for Social Interactions & Opinions"
@@ -204,6 +206,7 @@ front: "ad"
 meaning: "n. a public promotion of some product or service; r. in the Christian era; used before dates after the supposed year Christ was born"
 translation: "n. 广告；[计] 地址, 模拟-数字"
 srsWords: "ad"
+
 ---
 lessonTitle: "Lesson 4: Social Interactions & Opinions Part 4"
 description: "Practice 10 key B1 vocabulary flashcards for Social Interactions & Opinions"
@@ -269,6 +272,7 @@ front: "advert"
 meaning: "n a public promotion of some product or service; v give heed (to); v make a more or less disguised reference to; v make reference to"
 translation: "vi. 提出看法, 引起注意, 留意；n. 广告"
 srsWords: "advert"
+
 ---
 lessonTitle: "Lesson 5: Social Interactions & Opinions Part 5"
 description: "Practice 10 key B1 vocabulary flashcards for Social Interactions & Opinions"
@@ -282,16 +286,16 @@ translation: "vt. 做广告, 通知, 公布；vi. 做广告"
 srsWords: "advertise"
 
 [flashcard-review]
-front: "adviser"
-meaning: "n. an expert who gives advice"
-translation: "n. 顾问, 劝告者, 指导教师；[法] 顾问, 劝告者"
-srsWords: "adviser"
+front: "haven"
+meaning: "n. a shelter serving as a place of safety or sanctuary"
+translation: "n. 港, 避难所, 安息所；vt. 安置...于港中, 庇护, 入港"
+srsWords: "haven"
 
 [flashcard-review]
-front: "advisor"
-meaning: "n an expert who gives advice"
-translation: "n. 顾问, 劝告者, 指导教师"
-srsWords: "advisor"
+front: "fighting"
+meaning: "n the act of fighting; any contest or struggle; v be engaged in a fight; carry on a fight; v fight against or resist strongly; v make a strenuous or labored effort; v exert oneself continuously, vigorously, or obtrusively to gain an end or engage in a crusade for a certain cause or person; be an advocate for; s engaged in or ready for military or naval operations"
+translation: "a. 战斗的, 容易引起争斗的, 适于格斗的, 好斗的, 好战的, 斗争的, 搏斗的；n. 战斗, 斗争, 搏斗"
+srsWords: "fighting"
 
 [flashcard-review]
 front: "aerobics"
@@ -334,6 +338,7 @@ front: "agenda"
 meaning: "n. a temporally organized plan for matters to be attended to; n. a list of matters to be taken up (as at a meeting)"
 translation: "pl. 议程, 日常工作事项；[计] 待议事件"
 srsWords: "agenda"
+
 ---
 lessonTitle: "Lesson 6: Social Interactions & Opinions Part 6"
 description: "Practice 10 key B1 vocabulary flashcards for Social Interactions & Opinions"
@@ -399,6 +404,7 @@ front: "allowance"
 meaning: "n. an amount allowed or granted (as during a given period); n. a sum granted as reimbursement for expenses; n. an amount added or deducted on the basis of qualifying circumstances; n. a permissible difference; allowing some freedom to move within limits"
 translation: "n. 津贴, 零用钱, 限额, 折扣, 允许；vt. 定量供应"
 srsWords: "allowance"
+
 ---
 lessonTitle: "Lesson 7: Social Interactions & Opinions Part 7"
 description: "Practice 10 key B1 vocabulary flashcards for Social Interactions & Opinions"
@@ -448,22 +454,23 @@ translation: "a. 有趣的, 引人发笑的"
 srsWords: "amusing"
 
 [flashcard-review]
-front: "analyse"
-meaning: "v consider in detail and subject to an analysis in order to discover essential features or meaning; v break down into components or essential features; v make a mathematical, chemical, or grammatical analysis of; break down into components or essential features; v subject to psychoanalytic treatment"
-translation: "vt. 分析, 细察, 分解；[经] 分析"
-srsWords: "analyse"
+front: "standing"
+meaning: "n. social or financial or professional status or reputation; n. an ordered listing of scores or results showing the relative positions of competitors (individuals or teams) in a sporting event; n. the act of assuming or maintaining an erect upright position; s. having a supporting base"
+translation: "n. 起立, 持续, 身分；a. 立着的, 不动的, 经常的, 持续的"
+srsWords: "standing"
 
 [flashcard-review]
-front: "analyze"
-meaning: "v. consider in detail and subject to an analysis in order to discover essential features or meaning; v. make a mathematical, chemical, or grammatical analysis of; break down into components or essential features; v. break down into components or essential features"
-translation: "vt. 分析, 细察, 分解；[机] 分析"
-srsWords: "analyze"
+front: "evil"
+meaning: "n. morally objectionable behavior; n. that which causes harm or destruction or misfortune; the good is oft interred with their bones\"- Shakespeare; n. the quality of being morally wrong in principle or practice; a. morally bad or wrong"
+translation: "n. 邪恶, 不幸, 罪恶；a. 邪恶的, 不幸的, 有害的, 讨厌的"
+srsWords: "evil"
 
 [flashcard-review]
 front: "anger"
 meaning: "n. a strong emotion; a feeling that is oriented toward some real or supposed grievance; n. the state of being angry; v. make angry; v. become angry"
 translation: "n. 忿怒；vt. 激怒, 使发怒；vi. 发怒"
 srsWords: "anger"
+
 ---
 lessonTitle: "Lesson 8: Social Interactions & Opinions Part 8"
 description: "Practice 10 key B1 vocabulary flashcards for Social Interactions & Opinions"
@@ -495,10 +502,10 @@ translation: "n. 公告, 发表, 告知；[经] 通告, 布告, 公告"
 srsWords: "announcement"
 
 [flashcard-review]
-front: "annoyance"
-meaning: "n. anger produced by some annoying irritation; n. something or someone that causes trouble; a source of unhappiness; n. the act of troubling or annoying someone"
-translation: "n. 烦恼, 打扰, 可厌之事；[法] 使人烦恼的事物, 麻烦事, 讨厌物"
-srsWords: "annoyance"
+front: "grand"
+meaning: "s. large and impressive in physical size or extent; s. the most important and magnificent in adornment"
+translation: "a. 庄重的, 壮观的, 显赫的, 重大的, 最高的, 雄伟的, 宏大的, 豪华的, 傲慢的；[法] 重大的, 主要的, 伟大的"
+srsWords: "grand"
 
 [flashcard-review]
 front: "annoyed"
@@ -507,10 +514,10 @@ translation: "a. 恼怒的；烦闷的"
 srsWords: "annoyed"
 
 [flashcard-review]
-front: "annually"
-meaning: "r. without missing a year"
-translation: "adv. 一年一次, 每年；[经] 年度的, 每年的"
-srsWords: "annually"
+front: "faith"
+meaning: "n. complete confidence in a person or plan etc; n. loyalty or allegiance to a cause or a person"
+translation: "n. 信心, 信任, 忠实, 保证；[法] 信任, 信仰, 信念"
+srsWords: "faith"
 
 [flashcard-review]
 front: "ant"
@@ -529,6 +536,7 @@ front: "anxiety"
 meaning: "n. (psychiatry) a relatively permanent state of worry and nervousness occurring in a variety of mental disorders, usually accompanied by compulsive behavior or attacks of panic; n. a vague unpleasant emotion that is experienced in anticipation of some (usually ill-defined) misfortune"
 translation: "n. 焦虑, 忧虑, 令人焦虑的事；[医] 焦虑"
 srsWords: "anxiety"
+
 ---
 lessonTitle: "Lesson 9: Social Interactions & Opinions Part 9"
 description: "Practice 10 key B1 vocabulary flashcards for Social Interactions & Opinions"
@@ -594,6 +602,7 @@ front: "application"
 meaning: "n. the act of bringing something to bear; using it for a particular purpose; n. a verbal or written request for assistance or employment or admission to a school; n. the work of applying something;; n. a program that gives a computer instructions that provide the user with tools to accomplish a task"
 translation: "n. 应用, 申请, 志愿书, 应用程序；[计] 应用, 应用程序"
 srsWords: "application"
+
 ---
 lessonTitle: "Lesson 10: Social Interactions & Opinions Part 10"
 description: "Practice 10 key B1 vocabulary flashcards for Social Interactions & Opinions"
@@ -637,10 +646,10 @@ translation: "n. 算术, 算术知识；[机] 算术; 算术的"
 srsWords: "arithmetic"
 
 [flashcard-review]
-front: "arm"
-meaning: "n. a human limb; technically the part of the superior limb between the shoulder and the elbow but commonly used to refer to the whole superior limb; n. any projection that is thought to resemble a human arm; n. the part of an armchair or sofa that supports the elbow and forearm of a seated person; v. prepare oneself for a military confrontation"
-translation: "n. 手臂, 袖子, 狭长港湾, 武器；vt. 武装, 装备；vi. 武装起来；[计] ARM 处理器；异步应答方式; 自动货品销路管理"
-srsWords: "arm"
+front: "mister"
+meaning: "n. a form of address for a man"
+translation: "n. 先生"
+srsWords: "mister"
 
 [flashcard-review]
 front: "army"

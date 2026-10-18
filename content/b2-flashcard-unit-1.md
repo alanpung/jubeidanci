@@ -52,16 +52,16 @@ translation: "a. 荒谬的, 不合理的, 可笑的；n. 荒诞"
 srsWords: "absurd"
 
 [flashcard-review]
-front: "abuse"
-meaning: "n. a rude expression intended to offend or hurt; v. use foul or abusive language towards; v. use wrongly or improperly or excessively"
-translation: "n. 滥用, 虐待, 恶习, 辱骂；vt. 滥用, 辱骂, 虐待"
-srsWords: "abuse"
+front: "civilisation"
+meaning: "n the social process whereby societies achieve an advanced stage of development and organization; n a particular society at a particular time and place; n a society in an advanced state of social development (e.g., with complex legal and political and religious organizations); n the quality of excellence in thought and manners and taste"
+translation: "n. 文明, 文明世界, 文化, 开化, 教化"
+srsWords: "civilisation"
 
 [flashcard-review]
-front: "accommodation"
-meaning: "n. a settlement of differences; n. in the theories of Jean Piaget: the modification of internal representations in order to accommodate a changing knowledge of reality; n. living quarters provided for public convenience; n. the act of providing something (lodging or seat or food) to meet a need"
-translation: "n. 膳宿, 预订铺位, 适应性调节, 调和, 贷款；[医] 调节(眼); 适应"
-srsWords: "accommodation"
+front: "conviction"
+meaning: "n. an unshakable belief in something without need for proof or evidence; n. (criminal law) a final judgment of guilty in a criminal case and the punishment that is imposed"
+translation: "n. 定罪, 信服, 坚信；[法] 定罪, 证明有罪, 判罪"
+srsWords: "conviction"
 
 [flashcard-review]
 front: "accordingly"
@@ -74,6 +74,7 @@ front: "accumulate"
 meaning: "v. collect or gather"
 translation: "v. 积聚, 堆积"
 srsWords: "accumulate"
+
 ---
 lessonTitle: "Lesson 2: Global Issues & Politics Part 2"
 description: "Practice 10 key B2 vocabulary flashcards for Global Issues & Politics"
@@ -93,16 +94,16 @@ translation: "a. 做得成的, 可完成的, 可有成就的"
 srsWords: "achievable"
 
 [flashcard-review]
-front: "acid"
-meaning: "n. any of various water-soluble compounds having a sour taste and capable of turning litmus red and reacting with a base to form a salt; n. street name for lysergic acid diethylamide; s. having the characteristics of an acid"
-translation: "n. 酸, 酸类物质, 尖刻, 迷幻药；a. 酸的, 酸性的, 尖刻的, 敏锐的；[计] 自动文档互参与索引生成程序"
-srsWords: "acid"
+front: "jurisdiction"
+meaning: "n. in law; the territory within which power can be exercised"
+translation: "n. 司法权, 审判权, 管辖权；[经] 法律管辖权, 审判权"
+srsWords: "jurisdiction"
 
 [flashcard-review]
-front: "acquisition"
-meaning: "n. the act of contracting or assuming or acquiring possession of something; n. something acquired"
-translation: "n. 获得, 获得物；[经] 收购, 招揽, 取得"
-srsWords: "acquisition"
+front: "debut"
+meaning: "n. the presentation of a debutante in society; v. present for the first time to the public; v. appear for the first time in public; v. make one's debut"
+translation: "n. 初次登台, 开张；v. 初次登台"
+srsWords: "debut"
 
 [flashcard-review]
 front: "actively"
@@ -139,6 +140,7 @@ front: "addiction"
 meaning: "n. being abnormally tolerant to and dependent on something that is psychologically or physically habit-forming (especially alcohol or narcotic drugs); n. an abnormally strong craving; n. (Roman law) a formal award by a magistrate of a thing or person to another person (as the award of a debtor to his creditor); a surrender to a master"
 translation: "n. 入迷, 瘾；[医] 瘾, 癖嗜"
 srsWords: "addiction"
+
 ---
 lessonTitle: "Lesson 3: Global Issues & Politics Part 3"
 description: "Practice 10 key B2 vocabulary flashcards for Global Issues & Politics"
@@ -152,10 +154,10 @@ translation: "adv. 另外, 此外"
 srsWords: "additionally"
 
 [flashcard-review]
-front: "adequate"
-meaning: "a. having the requisite qualities or resources to meet a task; s. sufficient for the purpose; s. about average; acceptable"
-translation: "a. 适当的, 足够的；[法] 胜任的, 适当的, 充分的"
-srsWords: "adequate"
+front: "ethical"
+meaning: "a. of or relating to the philosophical study of ethics; a. conforming to accepted standards of social or professional behavior; s. adhering to ethical and moral principles"
+translation: "a. 伦理的, 民族的, 民族特有的；[医] 伦理的, 道德的"
+srsWords: "ethical"
 
 [flashcard-review]
 front: "adequately"
@@ -170,10 +172,10 @@ translation: "n. 调整, 调节, 校正；[化] 调节"
 srsWords: "adjustment"
 
 [flashcard-review]
-front: "administrative"
-meaning: "a. of or relating to or responsible for administration"
-translation: "a. 管理的, 行政的；[法] 行政的, 管理的, 遗产管理的"
-srsWords: "administrative"
+front: "bey"
+meaning: "n. (formerly) a title of respect for a man in Turkey or Egypt; n. the governor of a district or province in the Ottoman Empire"
+translation: "n. (奥斯曼帝国,土尔其较小地区的)州长,土耳其对要人的尊称"
+srsWords: "bey"
 
 [flashcard-review]
 front: "admirable"
@@ -194,16 +196,17 @@ translation: "adv. 公认地, 诚然"
 srsWords: "admittedly"
 
 [flashcard-review]
-front: "adopted"
-meaning: "a. acquired as your own by free choice"
-translation: "a. 被收养的, 被采用的"
-srsWords: "adopted"
+front: "enquiry"
+meaning: "n an instance of questioning; n a search for knowledge; n a systematic investigation of a matter of public interest"
+translation: "n. 询问；[经] 询价, 询盘"
+srsWords: "enquiry"
 
 [flashcard-review]
-front: "adoption"
-meaning: "n. the act of accepting with approval; favorable reception; n. a legal proceeding that creates a parent-child relation between persons not related by blood; the adopted child is entitled to all privileges belonging to a natural child of the adoptive parents (including the right to inherit)"
-translation: "n. 采用, 采纳, 收养；[法] 收养, 采纳, 采用"
-srsWords: "adoption"
+front: "selfie"
+meaning: "n. a photograph that you take of yourself, usually with a mobile phone. Selfies are often published using social media"
+translation: "n. 自拍照"
+srsWords: "selfie"
+
 ---
 lessonTitle: "Lesson 4: Global Issues & Politics Part 4"
 description: "Practice 10 key B2 vocabulary flashcards for Global Issues & Politics"
@@ -253,10 +256,10 @@ translation: "adv. 挚爱地, 亲切地"
 srsWords: "affectionately"
 
 [flashcard-review]
-front: "affordable"
-meaning: "s that you have the financial means for"
-translation: "[计] 普及型"
-srsWords: "affordable"
+front: "mandate"
+meaning: "n. a document giving an official instruction or command; n. a territory surrendered by Turkey or Germany after World War I and put under the tutelage of some other European power until they are able to stand by themselves; n. the commission that is given to a government and its policies through an electoral victory"
+translation: "n. 命令, 指令, 要求；vt. 委任统治"
+srsWords: "mandate"
 
 [flashcard-review]
 front: "ageless"
@@ -269,6 +272,7 @@ front: "aggressively"
 meaning: "r. in an aggressive manner"
 translation: "adv. (贬)侵略, 侵犯, 寻衅, (褒)敢作敢为, 有进取心, (武器)攻击性, 过分, 放肆"
 srsWords: "aggressively"
+
 ---
 lessonTitle: "Lesson 5: Global Issues & Politics Part 5"
 description: "Practice 10 key B2 vocabulary flashcards for Global Issues & Politics"
@@ -282,10 +286,10 @@ translation: "n. 极大的痛苦, 挣扎；[医] 濒死苦闷; 剧痛"
 srsWords: "agony"
 
 [flashcard-review]
-front: "aircraft"
-meaning: "n. a vehicle that can fly"
-translation: "n. 航空器, 飞机；[机] 航空器"
-srsWords: "aircraft"
+front: "anthropology"
+meaning: "n. the social science that studies the origins and social relationships of human beings"
+translation: "n. 人类学；[医] 人类学"
+srsWords: "anthropology"
 
 [flashcard-review]
 front: "aircrew"
@@ -300,16 +304,16 @@ translation: "n. 酗酒, 酒精中毒；[化] 酒中毒"
 srsWords: "alcoholism"
 
 [flashcard-review]
-front: "alert"
-meaning: "n. condition of heightened watchfulness or preparation for action; n. a warning serves to make you more alert to danger; a. engaged in or accustomed to close observation; s. quick and energetic"
-translation: "a. 警觉的, 灵敏的, 留心的；n. 警报；vt. 使警觉, 通知, 使意识到"
-srsWords: "alert"
+front: "citation"
+meaning: "n. an official award (as for bravery or service) usually given as formal public statement; n. (law) the act of citing (as of spoken words or written passages or legal precedents etc.); n. a short note recognizing a source of information or of a quoted passage; n. a summons that commands the appearance of a party at a proceeding"
+translation: "n. 引用, 引证, 引用文；[建] 引证, 指引"
+srsWords: "citation"
 
 [flashcard-review]
-front: "alliance"
-meaning: "n. the state of being allied or confederated; n. a connection based on kinship or marriage or common interest; n. an organization of people (or countries) involved in a pact or treaty; n. a formal agreement establishing an association or alliance between nations or other groups to achieve a particular aim"
-translation: "n. 联盟, 联合；[法] 同盟, 联盟, 联姻"
-srsWords: "alliance"
+front: "ecology"
+meaning: "n. the environment as it relates to living organisms; n. the branch of biology concerned with the relations between organisms and their environment"
+translation: "n. 生态学, 社会生态学；[化] 生态学"
+srsWords: "ecology"
 
 [flashcard-review]
 front: "alongside"
@@ -334,6 +338,7 @@ front: "alter"
 meaning: "v. make an alteration to; v. remove the ovaries of"
 translation: "v. 改变"
 srsWords: "alter"
+
 ---
 lessonTitle: "Lesson 6: Global Issues & Politics Part 6"
 description: "Practice 10 key B2 vocabulary flashcards for Global Issues & Politics"
@@ -399,6 +404,7 @@ front: "ammonia"
 meaning: "n. a pungent gas compounded of nitrogen and hydrogen (NH3)"
 translation: "n. 氨水, 阿摩尼亚；[化] 氨"
 srsWords: "ammonia"
+
 ---
 lessonTitle: "Lesson 7: Global Issues & Politics Part 7"
 description: "Practice 10 key B2 vocabulary flashcards for Global Issues & Politics"
@@ -442,10 +448,10 @@ translation: "n. 相似, 类似；[计] 模拟"
 srsWords: "analogy"
 
 [flashcard-review]
-front: "analyst"
-meaning: "n. someone who is skilled at analyzing data; n. an expert who studies financial data (on credit or securities or sales or financial patterns etc.) and recommends appropriate business actions; n. a licensed practitioner of psychoanalysis"
-translation: "n. 分析者, 精神分析学家；[化] 分析员; 化验员"
-srsWords: "analyst"
+front: "adjective"
+meaning: "n. a word that expresses an attribute of something; n. the word class that qualifies nouns; a. relating to court practice and procedure as opposed to the principles of law"
+translation: "n.形容词adj.形容词的,附属的，不独立的,法有关程序的"
+srsWords: "adjective"
 
 [flashcard-review]
 front: "anchorage"
@@ -464,6 +470,7 @@ front: "anchorperson"
 meaning: "n a television reporter who coordinates a broadcast to which several correspondents contribute"
 translation: "n. 新闻节目主持人"
 srsWords: "anchorperson"
+
 ---
 lessonTitle: "Lesson 8: Global Issues & Politics Part 8"
 description: "Practice 10 key B2 vocabulary flashcards for Global Issues & Politics"
@@ -483,10 +490,10 @@ translation: "vt. 使有生气, 赋予生命；a. 有生命的, 有生气的"
 srsWords: "animate"
 
 [flashcard-review]
-front: "anonymous"
-meaning: "a. having no known name or identity or known source; s. not known or lacking marked individuality"
-translation: "a. 姓氏不详的, 无名的, 无特色的；[计] 无记录"
-srsWords: "anonymous"
+front: "sacrifice"
+meaning: "n. personnel that are sacrificed (e.g., surrendered or lost in order to gain an objective); n. a loss entailed by giving up or selling something at less than its value; n. the act of killing (an animal or person) in order to propitiate a deity; n. (baseball) an out that advances the base runners"
+translation: "n. 牺牲, 供奉, 祭品；vt. 牺牲, 祭祀, 贱卖；vi. 献祭"
+srsWords: "sacrifice"
 
 [flashcard-review]
 front: "antiaircraft"
@@ -529,6 +536,7 @@ front: "antistatic"
 meaning: "antistatic"
 translation: "a. 抗静电的"
 srsWords: "antistatic"
+
 ---
 lessonTitle: "Lesson 9: Global Issues & Politics Part 9"
 description: "Practice 10 key B2 vocabulary flashcards for Global Issues & Politics"
@@ -548,10 +556,10 @@ translation: "n. 撇号, 呼语法"
 srsWords: "apostrophe"
 
 [flashcard-review]
-front: "applicant"
-meaning: "n. a person who requests or seeks something such as assistance or employment or admission"
-translation: "n. 申请者；[经] 申请人, 请求人, 谋事人"
-srsWords: "applicant"
+front: "trauma"
+meaning: "n. an emotional wound or shock often having long-lasting effects"
+translation: "n. 外伤, 损伤；[医] 创伤, 外伤"
+srsWords: "trauma"
 
 [flashcard-review]
 front: "appreciative"
@@ -584,16 +592,17 @@ translation: "a. 北极的, 极寒的；n. 北极圈, 北极"
 srsWords: "arctic"
 
 [flashcard-review]
-front: "arena"
-meaning: "n. the central area of an ancient Roman amphitheater where contests and spectacles were held; especially an area that was strewn with sand; n. a playing field where sports events take place"
-translation: "n. 角斗场, 舞台, 场地；[医] 尿沉渣, 尿沙; 脑沙"
-srsWords: "arena"
+front: "wicked"
+meaning: "a. morally bad in principle or practice"
+translation: "a. 坏的, 邪恶的, 缺德的, 刻毒的, 恶劣的, 淘气的"
+srsWords: "wicked"
 
 [flashcard-review]
 front: "aristocracy"
 meaning: "n a privileged class holding hereditary titles; n the most powerful members of a society"
 translation: "n. 贵族, 上层社会, 知识界杰出分子；[法] 贵族政治, 贵族统治"
 srsWords: "aristocracy"
+
 ---
 lessonTitle: "Lesson 10: Global Issues & Politics Part 10"
 description: "Practice 10 key B2 vocabulary flashcards for Global Issues & Politics"

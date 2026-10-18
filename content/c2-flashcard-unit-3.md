@@ -74,6 +74,7 @@ front: "eminent"
 meaning: "s. standing above others in quality or position; s. of imposing height; especially standing out above others"
 translation: "a. 显赫的, 杰出的, 有名的"
 srsWords: "eminent"
+
 ---
 lessonTitle: "Lesson 2: Geopolitics & Statecraft Part 2"
 description: "Practice 10 key C2 vocabulary flashcards for Geopolitics & Statecraft"
@@ -139,6 +140,7 @@ front: "denote"
 meaning: "v. be a sign or indication of; v. have as a meaning"
 translation: "vt. 指示, 表示"
 srsWords: "denote"
+
 ---
 lessonTitle: "Lesson 3: Geopolitics & Statecraft Part 3"
 description: "Practice 10 key C2 vocabulary flashcards for Geopolitics & Statecraft"
@@ -170,16 +172,16 @@ translation: "n. 下倾, 倾斜, 衰微；[医] 偏角, 偏差, 偏转(眼球)"
 srsWords: "declination"
 
 [flashcard-review]
-front: "vocational"
-meaning: "a. of or relating to a vocation or occupation; especially providing or undergoing training in special skills"
-translation: "a. 职业的；[法] 职业上的, 天职的"
-srsWords: "vocational"
+front: "ngo"
+meaning: "n an organization that is not part of the local or state or federal government"
+translation: "abbr. 民间组织；非政府组织（Non-Governmental Organization）"
+srsWords: "ngo"
 
 [flashcard-review]
-front: "spatial"
-meaning: "a. pertaining to or involving or having the nature of space"
-translation: "a. 空间的, 受空间条件限制的, 占地位的；[医] 隙的, 间隙的, 腔的; 空间的, 立体的"
-srsWords: "spatial"
+front: "affinity"
+meaning: "n. (immunology) the attraction between an antigen and an antibody; n. (anthropology) kinship by marriage or adoption; not a blood relationship; n. (biology) state of relationship between organisms or groups of organisms resulting in resemblance in structure or structural parts; n. a close connection marked by community of interests or similarity in nature or character"
+translation: "n. 吸引, 姻亲关系, 类同；[化] 亲合力; 亲合能; 亲合势; 近似; 类似"
+srsWords: "affinity"
 
 [flashcard-review]
 front: "spatially"
@@ -188,10 +190,10 @@ translation: "[计] 空间地"
 srsWords: "spatially"
 
 [flashcard-review]
-front: "integration"
-meaning: "n. the action of incorporating a racial or religious group into a community; n. an operation used in the calculus whereby the integral of a function is determined"
-translation: "n. 综合, 与环境协调的行为, 集成；[化] 集成; 整合"
-srsWords: "integration"
+front: "artiste"
+meaning: "n. a public performer (a dancer or singer)"
+translation: "n. 艺人, 技艺家"
+srsWords: "artiste"
 
 [flashcard-review]
 front: "extracurricular"
@@ -204,6 +206,7 @@ front: "encompass"
 meaning: "v include in scope; include as part of something broader; have as one's sphere or territory"
 translation: "vt. 围绕, 完成, 包括, 包含, 环绕, 包围"
 srsWords: "encompass"
+
 ---
 lessonTitle: "Lesson 4: Geopolitics & Statecraft Part 4"
 description: "Practice 10 key C2 vocabulary flashcards for Geopolitics & Statecraft"
@@ -211,10 +214,10 @@ icon: "♟️"
 color: "#607D8B"
 ---
 [flashcard-review]
-front: "accountability"
-meaning: "n. responsibility to someone or for some activity"
-translation: "n. 负有责任, 可说明性；[化] 衡算计量"
-srsWords: "accountability"
+front: "jus"
+meaning: "natural juice or gravy"
+translation: "n. （拉）法律；权利；法律原则；（法）汁液"
+srsWords: "jus"
 
 [flashcard-review]
 front: "frolic"
@@ -269,6 +272,7 @@ front: "wordage"
 meaning: "wordage"
 translation: "n. 文字, 一篇故事中的词汇量, 用词, 措词"
 srsWords: "wordage"
+
 ---
 lessonTitle: "Lesson 5: Geopolitics & Statecraft Part 5"
 description: "Practice 10 key C2 vocabulary flashcards for Geopolitics & Statecraft"
@@ -330,10 +334,11 @@ translation: "n. 有相互关系的东西, 相关物；vt. 使有相互关系；
 srsWords: "correlate"
 
 [flashcard-review]
-front: "correlation"
-meaning: "n. a reciprocal relation between two or more things; n. a statistical relation between two or more variables such that systematic changes in the value of one variable are accompanied by systematic changes in the other"
-translation: "n. 相互关系, 相关, 关联；[医] 相关, 联系"
-srsWords: "correlation"
+front: "shifty"
+meaning: "s characterized by insincerity or deceit; evasive; s changing position or direction"
+translation: "a. 变化的；[法] 善于应变的, 多策略的, 诡诈的"
+srsWords: "shifty"
+
 ---
 lessonTitle: "Lesson 6: Geopolitics & Statecraft Part 6"
 description: "Practice 10 key C2 vocabulary flashcards for Geopolitics & Statecraft"
@@ -365,10 +370,10 @@ translation: "n. 奇妙的装置, 稀奇古怪的玩意儿, 新发明的玩意�
 srsWords: "contraption"
 
 [flashcard-review]
-front: "mesh"
-meaning: "n. the number of openings per linear inch of a screen; measures size of particles; n. the act of interlocking or meshing; v. work together in harmony"
-translation: "n. 网孔, 网丝, 网眼, 网状物, 圈套, 陷阱, 啮合；vt. 以网捕捉, 啮合, 使缠住；vi. 落网, 相啮合"
-srsWords: "mesh"
+front: "celibate"
+meaning: "n. an unmarried person who has taken a religious vow of chastity; s. abstaining from sexual intercourse"
+translation: "n. 独身者, 独身主义者；a. 独身的, 独身主义的"
+srsWords: "celibate"
 
 [flashcard-review]
 front: "enabler"
@@ -399,6 +404,7 @@ front: "lyrical"
 meaning: "s. suitable for or suggestive of singing"
 translation: "a. 抒情诗调的, 有抒情味的, 感情丰富的"
 srsWords: "lyrical"
+
 ---
 lessonTitle: "Lesson 7: Geopolitics & Statecraft Part 7"
 description: "Practice 10 key C2 vocabulary flashcards for Geopolitics & Statecraft"
@@ -464,6 +470,7 @@ front: "precociously"
 meaning: "r. in a precocious manner"
 translation: "adv. 发育过早地, 过早发展地"
 srsWords: "precociously"
+
 ---
 lessonTitle: "Lesson 8: Geopolitics & Statecraft Part 8"
 description: "Practice 10 key C2 vocabulary flashcards for Geopolitics & Statecraft"
@@ -489,10 +496,10 @@ translation: "n. 含蓄, 内涵"
 srsWords: "connotation"
 
 [flashcard-review]
-front: "herald"
-meaning: "n. (formal) a person who announces important news"
-translation: "n. 使者, 传令官, 先驱；vt. 预报, 宣布, 传达, 欢呼"
-srsWords: "herald"
+front: "wedlock"
+meaning: "n the state of being a married couple voluntarily joined for life (or until divorce)"
+translation: "n. 结婚生活；[法] 婚姻"
+srsWords: "wedlock"
 
 [flashcard-review]
 front: "philistine"
@@ -529,6 +536,7 @@ front: "lament"
 meaning: "n. a cry of sorrow and grief; v. express grief verbally"
 translation: "n. 悲叹, 悔恨, 恸哭, 挽歌, 悼词；vt. 哀悼；vi. 悔恨, 悲叹"
 srsWords: "lament"
+
 ---
 lessonTitle: "Lesson 9: Geopolitics & Statecraft Part 9"
 description: "Practice 10 key C2 vocabulary flashcards for Geopolitics & Statecraft"
@@ -560,22 +568,22 @@ translation: "adv. 按时间的前后顺序排列地"
 srsWords: "chronologically"
 
 [flashcard-review]
-front: "equilibrium"
-meaning: "n. a stable situation in which forces cancel one another; n. a sensory system located in structures of the inner ear that registers the orientation of the head"
-translation: "n. 平衡, 平静, 均衡；[化] 平衡"
-srsWords: "equilibrium"
+front: "mucus"
+meaning: "n. protective secretion of the mucus membranes; in the gut it lubricates the passage of food and protects the epithelial cells; in the nose and throat and lungs it can make it difficult for bacteria to penetrate the body through the epithelium"
+translation: "n. 粘液；[化] 粘液"
+srsWords: "mucus"
 
 [flashcard-review]
-front: "rebound"
-meaning: "n. a reaction to a crisis or setback or frustration; n. the act of securing possession of the rebounding basketball after a missed shot"
-translation: "vi. 弹回, 返回, 产生事与愿违的结果；vt. 使弹回, 使返回；n. 反弹, 返回, 篮板球, 振作；rebind的过去式和过去分词"
-srsWords: "rebound"
+front: "metamorphosis"
+meaning: "n. the marked and rapid transformation of a larva into an adult that occurs in some animals; n. a complete change of physical form or substance especially as by magic or witchcraft"
+translation: "n. 蜕变, 变质, 变形；[医] 变态, 变形, 变质"
+srsWords: "metamorphosis"
 
 [flashcard-review]
-front: "proposition"
-meaning: "n. (logic) a statement that affirms or denies something and is either true or false; n. an offer for a private bargain (especially a request for sexual favors); n. a task to be dealt with; v. suggest sex to"
-translation: "n. 建议, 命题, 主张；vt. 向...提议, 向...提出猥亵的要求"
-srsWords: "proposition"
+front: "ablaze"
+meaning: "s. keenly excited (especially sexually) or indicating excitement; s. lighted up by or as by fire or flame; s. resembling flame in brilliance or color; s. lighted with red light as if with flames"
+translation: "a. 着火的, 闪亮的, 激昂的；adv. 着火, 闪耀"
+srsWords: "ablaze"
 
 [flashcard-review]
 front: "flagging"
@@ -594,6 +602,7 @@ front: "caffeinate"
 meaning: "add caffeine to; stimulate with caffeine"
 translation: "含有咖啡因的"
 srsWords: "caffeinate"
+
 ---
 lessonTitle: "Lesson 10: Geopolitics & Statecraft Part 10"
 description: "Practice 10 key C2 vocabulary flashcards for Geopolitics & Statecraft"

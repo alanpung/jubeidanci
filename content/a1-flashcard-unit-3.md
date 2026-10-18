@@ -238,10 +238,10 @@ translation: "n. 花, 开花植物, 精华, 盛时；vi. 开花, 发育, 旺盛,
 srsWords: "flower"
 
 [flashcard-review]
-front: "foggy"
-meaning: "s stunned or confused and slow to react (as from blows or drunkenness or exhaustion); s indistinct or hazy in outline; s filled or abounding with fog or mist; s obscured by fog"
-translation: "adj.有雾的,雾气朦胧的,模糊的,混乱的"
-srsWords: "foggy"
+front: "bowl"
+meaning: "n. a round vessel that is open at the top; used chiefly for holding food or liquids;; n. a concave shape with an open top; n. a dish that is round and open at the top for serving foods; n. the quantity contained in a bowl"
+translation: "n. 碗, 木球, 大酒杯；v. 滚木球, 快而稳地行驶"
+srsWords: "bowl"
 
 [flashcard-review]
 front: "video"
@@ -466,10 +466,10 @@ translation: "n. 薪资, 付款, 补偿；vt. 支付, 付清, 补偿, 偿还, �
 srsWords: "pay"
 
 [flashcard-review]
-front: "grammar"
-meaning: "n. the branch of linguistics that deals with syntax and morphology (and sometimes also deals with semantics)"
-translation: "n.语法,语法书,（学术的）基本原理,（人的）语言知识及运用能力"
-srsWords: "grammar"
+front: "sweet"
+meaning: "having the pleasant taste characteristic of sugar or honey"
+translation: "n. 甜蜜, 糖果, 情人；a. 甜的, 芳香的, 悦耳的, 漂亮的, 和蔼的, 不咸的, 灵活的, 轻快的"
+srsWords: "sweet"
 
 ---
 lessonTitle: "Lesson 8: Food & Dining Part 8"
@@ -514,16 +514,16 @@ translation: "a. 真实的, 正确的, 忠诚的, 可靠的, 纯粹的, 正式�
 srsWords: "true"
 
 [flashcard-review]
-front: "grandparent"
-meaning: "a parent of one's parent"
-translation: "n. 祖父母；祖父或祖母；外祖父母；外祖父或外祖母"
-srsWords: "grandparent"
+front: "wish"
+meaning: "a desire or hope"
+translation: "n. 希望, 愿望, 祝愿, 命令, 请求；vt. 愿, 想要, 希望, 祝愿；vi. 希望"
+srsWords: "wish"
 
 [flashcard-review]
-front: "grape"
-meaning: "n. any of various juicy fruit of the genus Vitis with green or purple skins; grow in clusters; n. any of numerous woody vines of genus Vitis bearing clusters of edible berries"
-translation: "n. 葡萄；葡萄酒；葡萄树；葡萄色 n. (Grape)人名；(法)格拉普；(德、瑞典)格拉佩"
-srsWords: "grape"
+front: "stand"
+meaning: "be upright, tolerate"
+translation: "n. 站立, 站住, 停顿, 讲台, 看台, 立场, 法院证人席；vi. 站, 立, 坐落, 停滞, 位于, 坚持, 维持原状；vt. 忍受, 使站立, 抵挡"
+srsWords: "stand"
 
 [flashcard-review]
 front: "grass"
@@ -532,10 +532,10 @@ translation: "n. 草, 草原, 牧场；[医] 草, 禾本"
 srsWords: "grass"
 
 [flashcard-review]
-front: "gray"
-meaning: "a color between black and white"
-translation: "n. 灰色, 暗淡；a. 灰色的, 灰白的, 面色苍白的, 年老的, 老练的, 阴沉的；v. (使)变灰色"
-srsWords: "gray"
+front: "high"
+meaning: "of great or more than average extent, size, or amount"
+translation: "n. 高度, 高处；a. 高的, 高级的, 主要的, 高尚的, 高原的, 高音的, 昂贵的, 傲慢的；adv. 高度地, 奢侈地"
+srsWords: "high"
 
 ---
 lessonTitle: "Lesson 9: Food & Dining Part 9"
@@ -556,10 +556,10 @@ translation: "vt. 欢迎，迎接；致敬，致意；映入眼帘 n. (Greet)人
 srsWords: "greet"
 
 [flashcard-review]
-front: "grey"
-meaning: "grey (color)"
-translation: "n. 灰色 adj. 灰色的；灰白的 vt. 使变成灰色；使变老 vi. 变成灰色；老化 n. (Grey)人名；(英、法)格雷"
-srsWords: "grey"
+front: "half"
+meaning: "one of two equal parts"
+translation: "n. 一半, 半场, 不完全；a. 一半的, 不完全的, 部分的, 半场的；adv. 一半地, 部分地, 在某种程度上地, 几乎"
+srsWords: "half"
 
 [flashcard-review]
 front: "cream"
@@ -598,10 +598,10 @@ translation: "a. 大的, 大量的, 宽大的, 广博的；adv. 大大地, 夸�
 srsWords: "large"
 
 [flashcard-review]
-front: "hamburger"
-meaning: "a patty of ground beef, usually served in a bun"
-translation: "汉堡包，火腿汉堡；牛肉饼，肉饼；碎牛肉"
-srsWords: "hamburger"
+front: "front"
+meaning: "n. the side that is forward or prominent; n. the outward appearance of a person; n. the side that is seen or that goes first; n. a sphere of activity involving effort"
+translation: "n. 前面, 开头, 前线, 阵线, 态度；vt. 面对, 朝向, 对抗；vi. 朝向"
+srsWords: "front"
 
 ---
 lessonTitle: "Lesson 10: Food & Dining Part 10"

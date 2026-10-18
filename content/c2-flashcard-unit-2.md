@@ -74,6 +74,7 @@ front: "calorific"
 meaning: "s. heat-generating"
 translation: "a. 生热的, 产热的, (热)卡的；[医] 生热的, 产热的"
 srsWords: "calorific"
+
 ---
 lessonTitle: "Lesson 2: High Rhetoric & Oratory Mastery Part 2"
 description: "Practice 10 key C2 vocabulary flashcards for High Rhetoric & Oratory Mastery"
@@ -139,6 +140,7 @@ front: "domesticity"
 meaning: "n. the quality of being domestic or domesticated; n. domestic activities or life"
 translation: "n. 专心于家务, 恋家, 家庭生活"
 srsWords: "domesticity"
+
 ---
 lessonTitle: "Lesson 3: High Rhetoric & Oratory Mastery Part 3"
 description: "Practice 10 key C2 vocabulary flashcards for High Rhetoric & Oratory Mastery"
@@ -204,6 +206,7 @@ front: "malleable"
 meaning: "s easily influenced; s capable of being shaped or bent or drawn out"
 translation: "a. 有延展性的, 可锻的；[医] 可展的, 易适应的"
 srsWords: "malleable"
+
 ---
 lessonTitle: "Lesson 4: High Rhetoric & Oratory Mastery Part 4"
 description: "Practice 10 key C2 vocabulary flashcards for High Rhetoric & Oratory Mastery"
@@ -223,10 +226,10 @@ translation: "n. 矿石；[经] 矿"
 srsWords: "ore"
 
 [flashcard-review]
-front: "gale"
-meaning: "n. a strong wind moving 45-90 knots; force 7 to 10 on Beaufort scale"
-translation: "n. 狂风, 大风, 定期租金；[经] 地租, 年金"
-srsWords: "gale"
+front: "moot"
+meaning: "n. a hypothetical case that law students argue as an exercise; s. of no legal significance (as having been previously decided)"
+translation: "n. 大会, 模拟案件, 辩论会；a. 未决议的, 无实际意义的；vt. 讨论, 争论"
+srsWords: "moot"
 
 [flashcard-review]
 front: "promenade"
@@ -269,6 +272,7 @@ front: "nostalgia"
 meaning: "n. longing for something past"
 translation: "n. 乡愁, 向往过去, 怀旧之情；[医] 怀乡病"
 srsWords: "nostalgia"
+
 ---
 lessonTitle: "Lesson 5: High Rhetoric & Oratory Mastery Part 5"
 description: "Practice 10 key C2 vocabulary flashcards for High Rhetoric & Oratory Mastery"
@@ -318,10 +322,10 @@ translation: "adv. 生理学方面"
 srsWords: "physiologically"
 
 [flashcard-review]
-front: "methodology"
-meaning: "n. the branch of philosophy that analyzes the principles and procedures of inquiry in a particular discipline; n. the system of methods followed in a particular discipline"
-translation: "n. 方法学, 方法论；[化] 操作法; 工艺"
-srsWords: "methodology"
+front: "monoclonal"
+meaning: "a. forming or derived from a single clone"
+translation: "a. [生]单克隆的"
+srsWords: "monoclonal"
 
 [flashcard-review]
 front: "methodological"
@@ -334,6 +338,7 @@ front: "methodologically"
 meaning: "r. in a methodical manner"
 translation: "adv. 方法学(methodological的变形)"
 srsWords: "methodologically"
+
 ---
 lessonTitle: "Lesson 6: High Rhetoric & Oratory Mastery Part 6"
 description: "Practice 10 key C2 vocabulary flashcards for High Rhetoric & Oratory Mastery"
@@ -395,10 +400,11 @@ translation: "n. 传送者, 传达人, (疾病的)传播者；[计] 发散机; �
 srsWords: "transmitter"
 
 [flashcard-review]
-front: "regulatory"
-meaning: "s restricting according to rules or principles"
-translation: "a. 受控制的, 统制的, 调整的；[经] 规则的"
-srsWords: "regulatory"
+front: "sporty"
+meaning: "s. appropriate for sport or engagement in a sport"
+translation: "a. 象运动员的, 有体育道德精神的, 炫耀的, 华而不实的, 花哨的, 供娱乐的"
+srsWords: "sporty"
+
 ---
 lessonTitle: "Lesson 7: High Rhetoric & Oratory Mastery Part 7"
 description: "Practice 10 key C2 vocabulary flashcards for High Rhetoric & Oratory Mastery"
@@ -464,6 +470,7 @@ front: "autonomously"
 meaning: "autonomously"
 translation: "adv. 自治地；独立自主地"
 srsWords: "autonomously"
+
 ---
 lessonTitle: "Lesson 8: High Rhetoric & Oratory Mastery Part 8"
 description: "Practice 10 key C2 vocabulary flashcards for High Rhetoric & Oratory Mastery"
@@ -529,6 +536,7 @@ front: "prostrate"
 meaning: "v. get into a prostrate position, as in submission; v. render helpless or defenseless; v. throw down flat, as on the ground"
 translation: "a. 拜倒的, 降伏的, 俯卧的, 衰竭的, 沮丧的；vt. 弄倒, 使屈服, 使俯伏, 使平卧"
 srsWords: "prostrate"
+
 ---
 lessonTitle: "Lesson 9: High Rhetoric & Oratory Mastery Part 9"
 description: "Practice 10 key C2 vocabulary flashcards for High Rhetoric & Oratory Mastery"
@@ -594,6 +602,7 @@ front: "ignominiously"
 meaning: "r in a dishonorable manner or to a dishonorable degree"
 translation: "adv. 耻辱地, 屈辱地, 丢脸地"
 srsWords: "ignominiously"
+
 ---
 lessonTitle: "Lesson 10: High Rhetoric & Oratory Mastery Part 10"
 description: "Practice 10 key C2 vocabulary flashcards for High Rhetoric & Oratory Mastery"

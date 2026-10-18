@@ -16,10 +16,10 @@ icon: "♻️"
 color: "#009688"
 ---
 [flashcard-review]
-front: "effectiveness"
-meaning: "n. power to be effective; the quality of being able to bring about an effect"
-translation: "n. 效力；[经] 有效性, 能行性"
-srsWords: "effectiveness"
+front: "vegetation"
+meaning: "n. all the plant life in a particular region or period; n. the process of growth in plants; n. an abnormal growth or excrescence (especially a warty excrescence on the valves of the heart); n. inactivity that is passive and monotonous, comparable to the inactivity of plant life"
+translation: "n. 植物；[医] 贽生物, 贽疣, 增殖体; 生长, 增殖"
+srsWords: "vegetation"
 
 [flashcard-review]
 front: "elective"
@@ -40,10 +40,10 @@ translation: "adv. 电子地"
 srsWords: "electronically"
 
 [flashcard-review]
-front: "electronics"
-meaning: "n. the branch of physics that deals with the emission and effects of electrons and with the use of electronic devices"
-translation: "n. 电子学；[计] 电子学"
-srsWords: "electronics"
+front: "environmentalist"
+meaning: "n. someone who works to protect the environment from destruction or pollution"
+translation: "n. 环保人士"
+srsWords: "environmentalist"
 
 [flashcard-review]
 front: "elegance"
@@ -70,10 +70,11 @@ translation: "a. 元素的, 基本的"
 srsWords: "elemental"
 
 [flashcard-review]
-front: "eligible"
-meaning: "a. qualified for or allowed or worthy of being chosen"
-translation: "a. 有资格当选的, 合格的；n. 有资格者, 合格者, 适任者"
-srsWords: "eligible"
+front: "biodiversity"
+meaning: "n. the diversity of plant and animal life in a particular habitat (or in the world as a whole)"
+translation: "n. 生物多样性"
+srsWords: "biodiversity"
+
 ---
 lessonTitle: "Lesson 2: Environment, Sustainability & Energy Part 2"
 description: "Practice 10 key B2 vocabulary flashcards for Environment, Sustainability & Energy"
@@ -129,16 +130,17 @@ translation: "n. 雇用；vt. 雇用, 使用, 使从事于"
 srsWords: "employ"
 
 [flashcard-review]
-front: "employer"
-meaning: "n. a person or firm that employs workers"
-translation: "n. 雇主, 老板；[经] 雇主, 业主"
-srsWords: "employer"
+front: "biblical"
+meaning: "a. of or pertaining to or contained in or in accordance with the Bible; a. in keeping with the nature of the Bible or its times or people"
+translation: "a. 圣经的"
+srsWords: "biblical"
 
 [flashcard-review]
 front: "endlessly"
 meaning: "r. with unflagging resolve; r. (spatial sense) without bounds"
 translation: "adv. 不断地, 无穷尽地"
 srsWords: "endlessly"
+
 ---
 lessonTitle: "Lesson 3: Environment, Sustainability & Energy Part 3"
 description: "Practice 10 key B2 vocabulary flashcards for Environment, Sustainability & Energy"
@@ -182,16 +184,16 @@ translation: "vt. 卷入, 吸进, 吞没, 使全神贯注"
 srsWords: "engulf"
 
 [flashcard-review]
-front: "enhance"
-meaning: "v. increase; v. make better or more attractive"
-translation: "vt. 提高, 加强, 增加"
-srsWords: "enhance"
+front: "temporal"
+meaning: "s. not eternal; a. of or relating to or limited by time; a. of or relating to the temples (the sides of the skull behind the orbit); s. of this earth or world"
+translation: "a. 时间的, 暂时的, 现世的, 世俗的, 颞的, 太阳穴的；n. 世间万物, 教会财产"
+srsWords: "temporal"
 
 [flashcard-review]
-front: "enterprise"
-meaning: "n. a purposeful or industrious undertaking (especially one that requires effort or boldness); n. an organization created for business ventures; n. readiness to embark on bold new ventures"
-translation: "n. 企业, 事业心, 进取心, 干事业；[计] 企业"
-srsWords: "enterprise"
+front: "aquarium"
+meaning: "n. a tank or pool or bowl filled with water for keeping live fish and underwater animals"
+translation: "n. 水族馆, 养鱼池, 水草缸；[医] 培养缸"
+srsWords: "aquarium"
 
 [flashcard-review]
 front: "entertaining"
@@ -204,6 +206,7 @@ front: "enthusiastically"
 meaning: "r. with enthusiasm; in an enthusiastic manner"
 translation: "adv. 热心地, 狂热地"
 srsWords: "enthusiastically"
+
 ---
 lessonTitle: "Lesson 4: Environment, Sustainability & Energy Part 4"
 description: "Practice 10 key B2 vocabulary flashcards for Environment, Sustainability & Energy"
@@ -241,10 +244,10 @@ translation: "vt. 装备, 配备；[机] 设备, 装置"
 srsWords: "equip"
 
 [flashcard-review]
-front: "equity"
-meaning: "n. the difference between the market value of a property and the claims held against it; n. the ownership interest of shareholders in a corporation"
-translation: "n. 公平, 公正；[经] 权益, 产权"
-srsWords: "equity"
+front: "restoration"
+meaning: "n. the reign of Charles II in England; 1660-1685; n. the act of restoring something or someone to a satisfactory state; n. some artifact that has been restored or reconstructed; n. a model that represents the landscape of a former geological age or that represents and extinct animal etc."
+translation: "n. 恢复, 归还, 复位；[医] 恢复, 康复, 复位, 回复, 修复"
+srsWords: "restoration"
 
 [flashcard-review]
 front: "erect"
@@ -269,6 +272,7 @@ front: "essayist"
 meaning: "n. a writer of literary works"
 translation: "n. 随笔作家, 评论家"
 srsWords: "essayist"
+
 ---
 lessonTitle: "Lesson 5: Environment, Sustainability & Energy Part 5"
 description: "Practice 10 key B2 vocabulary flashcards for Environment, Sustainability & Energy"
@@ -282,16 +286,16 @@ translation: "adv. 本质上, 本来"
 srsWords: "essentially"
 
 [flashcard-review]
-front: "estate"
-meaning: "n. everything you own; all of your assets (whether real property or personal property) and liabilities; n. extensive landed property (especially in the country) retained by the owner for his own use"
-translation: "n. 不动产, (人生的)阶段, 阶层, 财产；[经] 房地产, 遗产, 财产"
-srsWords: "estate"
+front: "endorsement"
+meaning: "n. a promotional statement (as found on the dust jackets of books); n. a signature that validates something; n. the act of endorsing"
+translation: "n. 支持, 认可, 背书；[经] 背书, 担保, 保证"
+srsWords: "endorsement"
 
 [flashcard-review]
-front: "estimated"
-meaning: "v judge tentatively or form an estimate of (quantities or time); v judge to be probable"
-translation: "a. 估算的；估计的；预计的"
-srsWords: "estimated"
+front: "flux"
+meaning: "n. the rate of flow of energy or particles across a given surface; n. a flow or discharge; n. a substance added to molten metals to bond with impurities that can then be readily removed; n. excessive discharge of liquid from a cavity or organ (as in watery diarrhea)"
+translation: "n. 流出, 涨潮, 变迁；vi. 熔化, 流出；vt. 使熔融；[计] 助焊剂"
+srsWords: "flux"
 
 [flashcard-review]
 front: "eternally"
@@ -306,10 +310,10 @@ translation: "n. 道德规范, 伦理"
 srsWords: "ethic"
 
 [flashcard-review]
-front: "ethnic"
-meaning: "n. a person who is a member of an ethnic group"
-translation: "a. 人种的, 种族的；[医] 人种的"
-srsWords: "ethnic"
+front: "ambient"
+meaning: "s. completely enveloping"
+translation: "a. 周围的；n. 周围环境"
+srsWords: "ambient"
 
 [flashcard-review]
 front: "evacuate"
@@ -324,16 +328,17 @@ translation: "n. 撤退, 疏散；[化] 抽空; 排空"
 srsWords: "evacuation"
 
 [flashcard-review]
-front: "evaluate"
-meaning: "v. form a critical opinion of"
-translation: "vt. 评估, 评价, 赋值"
-srsWords: "evaluate"
+front: "spatial"
+meaning: "a. pertaining to or involving or having the nature of space"
+translation: "a. 空间的, 受空间条件限制的, 占地位的；[医] 隙的, 间隙的, 腔的; 空间的, 立体的"
+srsWords: "spatial"
 
 [flashcard-review]
-front: "evaluation"
-meaning: "n. act of ascertaining or fixing the value or worth of; n. an appraisal of the value of something"
-translation: "n. 评估, 估价, 求值；[计] 鉴定; 评价; 求值"
-srsWords: "evaluation"
+front: "theta"
+meaning: "n. the 8th letter of the Greek alphabet"
+translation: "n. 希腊字母的第八字"
+srsWords: "theta"
+
 ---
 lessonTitle: "Lesson 6: Environment, Sustainability & Energy Part 6"
 description: "Practice 10 key B2 vocabulary flashcards for Environment, Sustainability & Energy"
@@ -353,16 +358,16 @@ translation: "adv. 明显地, 根据现有证据来看"
 srsWords: "evidently"
 
 [flashcard-review]
-front: "evil"
-meaning: "n. morally objectionable behavior; n. that which causes harm or destruction or misfortune; the good is oft interred with their bones\"- Shakespeare; n. the quality of being morally wrong in principle or practice; a. morally bad or wrong"
-translation: "n. 邪恶, 不幸, 罪恶；a. 邪恶的, 不幸的, 有害的, 讨厌的"
-srsWords: "evil"
+front: "comply"
+meaning: "v. act in accordance with someone's rules, commands, or wishes"
+translation: "vi. 顺从, 依从；[法] 遵守, 承诺, 照做"
+srsWords: "comply"
 
 [flashcard-review]
-front: "evolution"
-meaning: "n. (biology) the sequence of events involved in the evolutionary development of a species or taxonomic group of organisms"
-translation: "n. 进化, 发展, 进展, (气体)放出, 开方；[医] 进化, 演化, 旋出"
-srsWords: "evolution"
+front: "fraction"
+meaning: "n. a component of a mixture that has been separated by a fractional process; n. a small part or item forming a piece of a whole; n. the quotient of two rational numbers"
+translation: "n. 小部分, 破片, 分数；[医] 部分, 成分, 分散"
+srsWords: "fraction"
 
 [flashcard-review]
 front: "evolve"
@@ -399,6 +404,7 @@ front: "examinee"
 meaning: "n someone who is tested (as by an intelligence test or an academic examination)"
 translation: "n. 受试人, 应试者；[法] 受审人, 接受讯问者, 接受考试者"
 srsWords: "examinee"
+
 ---
 lessonTitle: "Lesson 7: Environment, Sustainability & Energy Part 7"
 description: "Practice 10 key B2 vocabulary flashcards for Environment, Sustainability & Energy"
@@ -406,22 +412,22 @@ icon: "♻️"
 color: "#009688"
 ---
 [flashcard-review]
-front: "exceed"
-meaning: "v. be greater in scope or size than some standard; v. be superior or better than some standard"
-translation: "vt. 超过, 超越, 胜过；vi. 超过其他"
-srsWords: "exceed"
+front: "catastrophic"
+meaning: "s. extremely harmful; bringing physical or financial ruin"
+translation: "a. 悲惨的, 灾难的"
+srsWords: "catastrophic"
 
 [flashcard-review]
-front: "excel"
-meaning: "v. distinguish oneself"
-translation: "vt. 胜过, 优于, 擅长；vi. 胜过其他"
-srsWords: "excel"
+front: "merger"
+meaning: "n the combination of two or more commercial companies; n an occurrence that involves the production of a union"
+translation: "n. 合并, 归并；[经] 购并"
+srsWords: "merger"
 
 [flashcard-review]
-front: "exception"
-meaning: "n. a deliberate act of omission; n. an instance that does not conform to a rule or generalization; the only exception was her last child\"; n. grounds for adverse criticism"
-translation: "n. 例外, 除外, 异议；[计] 例外; 异常"
-srsWords: "exception"
+front: "speedy"
+meaning: "s characterized by speed; moving with or capable of moving with high speed; s accomplished rapidly and without delay"
+translation: "a. 快的, 迅速的；[经] 快的, 迅速的"
+srsWords: "speedy"
 
 [flashcard-review]
 front: "exceptional"
@@ -464,6 +470,7 @@ front: "exclusively"
 meaning: "r without any others being included or involved"
 translation: "adv. 排他地, 仅仅, 专门, 只, 仅, 唯一地, 专有地"
 srsWords: "exclusively"
+
 ---
 lessonTitle: "Lesson 8: Environment, Sustainability & Energy Part 8"
 description: "Practice 10 key B2 vocabulary flashcards for Environment, Sustainability & Energy"
@@ -483,16 +490,16 @@ translation: "vt. 执行, 实行, 完成, 处死, 制成；[计] 执行"
 srsWords: "execute"
 
 [flashcard-review]
-front: "execution"
-meaning: "n. putting a condemned person to death; n. (computer science) the process of carrying out an instruction by a computer; n. (law) the completion of a legal instrument (such as a contract or deed) by signing it (and perhaps sealing and delivering it) so that it becomes legally binding and enforceable"
-translation: "n. 实行, 完成, 执行, 死刑；[计] 执行"
-srsWords: "execution"
+front: "gram"
+meaning: "a metric unit of mass"
+translation: "n. 克；[植]鹰嘴豆（用作饲料）Gram革兰(①姓氏 ②Hans Christian Joachim, 1853Gram1938, 丹麦细菌学家, 医师)"
+srsWords: "gram"
 
 [flashcard-review]
-front: "executive"
-meaning: "n. a person responsible for the administration of a business; n. persons who administer the law; a. having the function of carrying out plans or orders etc."
-translation: "n. 执行部门, 执行委员会, 执行者, 经理主管人员；a. 执行的, 善于执行的, 善于经营的；[计] 执行程序"
-srsWords: "executive"
+front: "austrian"
+meaning: "n. a native or inhabitant of Austria; a. of or relating to Austria or its people or culture"
+translation: "n. 奥地利人；a. 奥地利的, 奥地利人的"
+srsWords: "austrian"
 
 [flashcard-review]
 front: "exhausting"
@@ -507,10 +514,10 @@ translation: "n. 抽空, 耗尽, 疲惫, 筋疲力尽；[化] 抽空"
 srsWords: "exhaustion"
 
 [flashcard-review]
-front: "exhibit"
-meaning: "n. an object or statement produced before a court of law and referred to while giving evidence; v. show an attribute, property, knowledge, or skill"
-translation: "n. 显示, 显现, 展览品, 陈列品, 展览；vt. 展现, 陈列, 展览；vi. 开展览会"
-srsWords: "exhibit"
+front: "confidentiality"
+meaning: "n. the state of being secret; n. discretion in keeping secret information"
+translation: "[计] 机密性；[经] 保密"
+srsWords: "confidentiality"
 
 [flashcard-review]
 front: "exile"
@@ -519,16 +526,17 @@ translation: "n. 放逐, 流放, 被放逐者；vt. 放逐, 流放, 使背井离
 srsWords: "exile"
 
 [flashcard-review]
-front: "existing"
-meaning: "s. presently existing; s. existing in something specified"
-translation: "a. 存在的, 目前的, 现存的, 现有的；[计] 现成的, 已有的, 现存的"
-srsWords: "existing"
+front: "hallo"
+meaning: "an exclamation used as a greeting or to attract attention"
+translation: "interj. 嘿, 喂, 哈罗"
+srsWords: "hallo"
 
 [flashcard-review]
-front: "expansion"
-meaning: "n. the act of increasing (something) in size or volume or quantity or scope; n. a function expressed as a sum or product of terms; n. a discussion that provides additional information"
-translation: "n. 扩充, 开展, 膨胀；[计] 扩展"
-srsWords: "expansion"
+front: "rollin"
+meaning: "to move by turning over and over"
+translation: "n. 转入（返回）；n. (Rollin)人名；(英、德、西、意、葡、瑞典、芬)罗林；(法)罗兰"
+srsWords: "rollin"
+
 ---
 lessonTitle: "Lesson 9: Environment, Sustainability & Energy Part 9"
 description: "Practice 10 key B2 vocabulary flashcards for Environment, Sustainability & Energy"
@@ -542,10 +550,10 @@ translation: "n. 期待, 指望, 展望；[化] 期望值"
 srsWords: "expectation"
 
 [flashcard-review]
-front: "expected"
-meaning: "a. considered likely or probable to happen or arrive"
-translation: "a. 预期的；预料的"
-srsWords: "expected"
+front: "render"
+meaning: "n. a substance similar to stucco but exclusively applied to masonry walls; v. cause to become; v. give or supply; v. pass down"
+translation: "vt. 回报, 给于, 付给, 汇报, 提出, 舍弃, 反映, 表示, 表演, 致使, 执行, 实施；vi. 给予补偿；n. 交纳, 打底"
+srsWords: "render"
 
 [flashcard-review]
 front: "explode"
@@ -554,10 +562,10 @@ translation: "vi. 爆炸, 爆发, 激增；vt. 使爆炸"
 srsWords: "explode"
 
 [flashcard-review]
-front: "explorer"
-meaning: "n. someone who travels into little known regions (especially for some scientific purpose)"
-translation: "n. 探险家, 探测者, 勘探器；[医] 探察器"
-srsWords: "explorer"
+front: "omelet"
+meaning: "A dish made from beaten eggs cooked in a pan."
+translation: "n.煎蛋饼，煎蛋卷"
+srsWords: "omelet"
 
 [flashcard-review]
 front: "explosive"
@@ -566,10 +574,10 @@ translation: "n. 炸药, 爆破音；a. 易爆发的, 爆炸的, 暴躁的"
 srsWords: "explosive"
 
 [flashcard-review]
-front: "export"
-meaning: "n. commodities (goods or services) sold to a foreign country; v. sell or transfer abroad; v. transfer (electronic data) out of a database or document in a format that can be used by other programs; v. cause to spread in another part of the world"
-translation: "n. 输出品, 输出；vt. 输出, 出口；vi. 输出物资；[计] 导出"
-srsWords: "export"
+front: "donut"
+meaning: "n a small ring-shaped friedcake"
+translation: "[医] 电子回旋加速器环状真空室, 同步加速器环状真空室"
+srsWords: "donut"
 
 [flashcard-review]
 front: "expressive"
@@ -584,16 +592,17 @@ translation: "a. 精致的, 细腻的, 敏锐的"
 srsWords: "exquisite"
 
 [flashcard-review]
-front: "extension"
-meaning: "n. a mutually agreed delay in the date set for the completion of a job or payment of a debt; n. act of expanding in scope; making more widely available; n. an educational opportunity provided by colleges and universities to people who are not enrolled as regular students; n. act of stretching or straightening out a flexed limb"
-translation: "n. 延长, 扩充, 范围, 扩展名；a. 伸缩的；[计] 扩展名, 扩充名"
-srsWords: "extension"
+front: "tribunal"
+meaning: "n an assembly (including one or more judges) to conduct judicial business"
+translation: "n. 法庭, 法官席, 裁决；[法] 法庭, 裁判所, 裁判"
+srsWords: "tribunal"
 
 [flashcard-review]
-front: "extensive"
-meaning: "s. large in spatial extent or range or scope or quantity; a. of agriculture; increasing productivity by using large areas with minimal outlay and labor"
-translation: "a. 广的, 广泛的, 多方面的；[经] 广大的, 扩大的"
-srsWords: "extensive"
+front: "lark"
+meaning: "n. any of numerous predominantly Old World birds noted for their singing"
+translation: "n. 云雀, 百灵鸟, 欢乐, 嬉耍；vi. 嬉耍, 骑马玩乐；vt. 愚弄"
+srsWords: "lark"
+
 ---
 lessonTitle: "Lesson 10: Environment, Sustainability & Energy Part 10"
 description: "Practice 10 key B2 vocabulary flashcards for Environment, Sustainability & Energy"
@@ -601,10 +610,10 @@ icon: "♻️"
 color: "#009688"
 ---
 [flashcard-review]
-front: "external"
-meaning: "n. outward features; a. happening or arising or located outside or beyond some limits or especially surface; s. coming from the outside; s. from or between other countries"
-translation: "n. 外部, 外面；a. 外部的, 客观的, 表面的"
-srsWords: "external"
+front: "flavour"
+meaning: "n the general atmosphere of a place or situation and the effect that it has on people; n (physics) the six kinds of quarks; n the taste experience when a savoury condiment is taken into the mouth; v lend flavor to"
+translation: "n. 味, 调味香料, 滋味, 香味, 气味, 风味, 情味, 情趣, 风韵；vt. 给...调味, 给...增添风趣, 加香料, 加味于"
+srsWords: "flavour"
 
 [flashcard-review]
 front: "extract"
@@ -643,10 +652,10 @@ translation: "n. 眼皮, 眼睑；[医] 睑"
 srsWords: "eyelid"
 
 [flashcard-review]
-front: "fabric"
-meaning: "n. artifact made by weaving or felting or knitting or crocheting natural or synthetic fibers"
-translation: "n. 织物, 布, 结构, 构造, 建筑物；[经] 组织, 建筑物, 工厂"
-srsWords: "fabric"
+front: "exterior"
+meaning: "a. situated in or suitable for the outdoors or outside of a building"
+translation: "n. 外部, 表面, 外貌；a. 外部的, 外在的, 表面的"
+srsWords: "exterior"
 
 [flashcard-review]
 front: "fabulous"

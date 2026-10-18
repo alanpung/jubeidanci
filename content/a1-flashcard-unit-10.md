@@ -58,10 +58,10 @@ translation: "adv. 是；n. 是, 同意；v. 同意"
 srsWords: "yes"
 
 [flashcard-review]
-front: "yogurt/yoghurt"
-meaning: "n. a custard-like food made from curdled milk"
-translation: "n. 酸乳酪；[医] 酸乳"
-srsWords: "yogurt/yoghurt"
+front: "ground"
+meaning: "n. a position to be won or defended in battle (or as if in battle); n. a relatively homogeneous percept extending back of the figure on which attention is focused; n. a connection between an electrical device and a large conducting body, such as the earth (which is taken to be at zero voltage); n. (art) the surface (as a wall or canvas) prepared to take the paint for a painting"
+translation: "n. 土地, 战场, 场地, 地面, 范围；a. 土地的, 地面上的；vt. 放在地上, 使搁浅, 打基础, 给...以训练；vi. 搁浅, 落地, 根据, 基于；a. 磨过的；grind的过去式和过去分词"
+srsWords: "ground"
 
 [flashcard-review]
 front: "want"
@@ -124,16 +124,16 @@ translation: "pron. 你自己"
 srsWords: "yourself"
 
 [flashcard-review]
-front: "romantic"
-meaning: "n. a soulful or amorous idealist; a. belonging to or characteristic of Romanticism or the Romantic Movement in the arts"
-translation: "a. 浪漫的, 风流的, 传奇性的, 夸大的, 空想的, 浪漫派的"
-srsWords: "romantic"
+front: "bank"
+meaning: "n. sloping land (especially the slope beside a body of water); n. a long ridge or pile; n. an arrangement of similar objects in a row or in tiers; n. a supply or stock held in reserve for future use (especially in emergencies)"
+translation: "n. 银行, 堤, 岸；[医] 库"
+srsWords: "bank"
 
 [flashcard-review]
-front: "stomach"
-meaning: "n. an enlarged and muscular saclike organ of the alimentary canal; the principal organ of digestion; n. an inclination or liking for things involving conflict or difficulty or unpleasantness; n. an appetite for food; v. bear to eat"
-translation: "n. 胃, 食欲, 欲望, 肚子；vt. 吃下, 忍受"
-srsWords: "stomach"
+front: "can"
+meaning: "n. airtight sealed metal container for food or drink or paint etc.; n. the quantity contained in a can; n. a buoy with a round bottom and conical top; v. preserve in a can or tin"
+translation: "vt. 装罐；n. 罐头, 容器；aux. 能, 可以；[计] 作废字符"
+srsWords: "can"
 
 [flashcard-review]
 front: "very"
@@ -148,34 +148,34 @@ icon: "🌿"
 color: "#8BC34A"
 ---
 [flashcard-review]
-front: "dutch"
-meaning: "n. the people of the Netherlands; n. the West Germanic language of the Netherlands; a. of or relating to the Netherlands or its people or culture"
-translation: "n. 荷兰人, 荷兰语；a. 荷兰的"
-srsWords: "dutch"
+front: "back"
+meaning: "n. the posterior part of a human (or animal) body from the neck to the end of the spine; n. the part of something that is furthest from the normal viewer; n. (football) a person who plays in the backfield; n. the part of a garment that covers the back of your body"
+translation: "a. 后面的；vt. 使后退, 支持；vi. 倒退, 背靠；adv. 向后地；n. 背部, 后面"
+srsWords: "back"
 
 [flashcard-review]
-front: "remote"
-meaning: "n a device that can be used to control a machine or apparatus from a distance; s located far away spatially; s very unlikely; s separate or apart in time; s inaccessible and sparsely populated;; a far apart in relevance or relationship or kinship"
-translation: "a. 遥远的, 偏僻的, 疏远的, 微少的；[计] 远程, 远程访问实用程序"
-srsWords: "remote"
+front: "please"
+meaning: "v. give pleasure to or be pleasing to; v. be the will of or have the will (to); v. give satisfaction; r. used in polite request"
+translation: "adv. 请；vt. 使高兴, 合...的心意, 取悦；vi. 使人满意, 讨好, 愿意, 敬请"
+srsWords: "please"
 
 [flashcard-review]
-front: "repair"
-meaning: "n. the act of putting something in working order again; n. a formal way of referring to the condition of something; v. restore by replacing a part or putting together what is torn or broken; v. move, travel, or proceed toward some place"
-translation: "n. 修理, 补救, 修复；vt. 修理, 修补, 补救, 恢复, 补偿；vi. 修理, 修补, 补救, 恢复, 去, 常去, 集合"
-srsWords: "repair"
+front: "fine"
+meaning: "n. money extracted as a penalty; s. minutely precise especially in differences in meaning; s. thin in thickness or diameter; s. characterized by elegance or refinement or accomplishment"
+translation: "n. 罚款, 罚金, 晴天, 精细；a. 好的, 晴朗的, 健康的, 细小的, 精细的；vt. 罚款, 精炼, 澄清；vi. 变清, 变细；adv. 很好；[计] 精细"
+srsWords: "fine"
 
 [flashcard-review]
-front: "root"
-meaning: "n. (botany) the usually underground organ that lacks buds or leaves or nodes; absorbs water and mineral salts; usually it anchors the plant to the ground; n. (linguistics) the form of a word after all affixes are removed; n. a number that, when multiplied by itself some number of times, equals a given number; n. the part of a tooth that is embedded in the jaw and serves as support"
-translation: "n. 根, 根本, 根源, 基础, 底部；vt. 使扎根, 使固定, 根除, 肃清, 搜出, 用鼻拱；vi. 生根, 固定, 源于, 用鼻拱土, 寻找, 捧场, 支持"
-srsWords: "root"
+front: "coming"
+meaning: "n the act of drawing spatially closer to something; n arrival that has been awaited (especially of something momentous); n the temporal property of becoming nearer in time; n the moment of most intense pleasure in sexual intercourse; v move toward, travel toward something or somebody or approach something or somebody; v reach a destination; arrive by movement or progress; v come to pass; arrive, as in due course; v reach or enter a state, relation, condition, use, or position; v to be the product or result; v be found or available; The furniture comes unassembled"; v come forth; v be a native of; v extend or reach; v exist or occur in a certain point in a series; v cover a certain distance; v come under, be classified or included; v happen as a result; v add up in number or quantity; v develop into; v be received; v come to one's mind; suggest itself; v come from; be connected by a relationship of blood, for example; v proceed or get along; v experience orgasm; v have a certain priority; s of the relatively near future"
+translation: "n. 来临；a. 就要来的, 接着的"
+srsWords: "coming"
 
 [flashcard-review]
-front: "steal"
-meaning: "n. a stolen base; an instance in which a base runner advances safely during the delivery of a pitch (without the help of a hit or walk or passed ball or wild pitch); v. take without the owner's consent; v. move stealthily; v. steal a base"
-translation: "vt. 剽窃；偷偷地做；偷窃；vi. 窃取；偷偷地行动；[棒球]偷垒；n. [口]偷窃；便宜货；偷垒；[篮球]断球"
-srsWords: "steal"
+front: "left"
+meaning: "on the side of the body that is to the west when one is facing north"
+translation: "a. 左边的, 左倾的, 左侧的, 左派的；adv. 在左面；n. 左, 左面, 左派；leave的过去式和过去分词"
+srsWords: "left"
 
 [flashcard-review]
 front: "telephone"
@@ -184,28 +184,28 @@ translation: "n. 电话, 电话机；v. 打电话"
 srsWords: "telephone"
 
 [flashcard-review]
-front: "congratulation"
-meaning: "n. the act of acknowledging that someone has an occasion for celebration; n. (usually plural) an expression of pleasure at the success or good fortune of another"
-translation: "n. 祝贺, 恭喜"
-srsWords: "congratulation"
+front: "try"
+meaning: "v. make an effort or attempt; v. give pain or trouble to; v. test the limits of; v. melt (fat or lard) in order to separate out impurities"
+translation: "n. 尝试, 试验, 审理, 审判；vt. 试, 尝试, 试验, 考验, 审问, 提炼；vi. 尝试, 试图"
+srsWords: "try"
 
 [flashcard-review]
-front: "rugby"
-meaning: "n. a form of football played with an oval ball"
-translation: "n. 橄榄球, 橄榄球赛"
-srsWords: "rugby"
+front: "hope"
+meaning: "n. a specific instance of feeling hopeful; n. the general feeling that some desire will be fulfilled; n. someone (or something) on which expectations are centered; n. United States comedian (born in England) who appeared in films with Bing Crosby (1903-2003)"
+translation: "n. 希望, 信心, 期待；v. 希望, 期望, 信赖"
+srsWords: "hope"
 
 [flashcard-review]
-front: "sake"
-meaning: "n. a reason for wanting something done; n. Japanese alcoholic beverage made from fermented rice; usually served hot; n. the purpose of achieving or obtaining"
-translation: "n. 目的, 缘故, 理由"
-srsWords: "sake"
+front: "hand"
+meaning: "part of the body"
+translation: "n. 手, 爪, 指针, 掌握, 协助, 人手, 手艺, 手迹, 支配, 插手；vt. 交给, 支持, 搀扶"
+srsWords: "hand"
 
 [flashcard-review]
-front: "smooth"
-meaning: "n. the act of smoothing; v. make smooth or smoother, as if by rubbing; v. free from obstructions; a. having a surface free from roughness or bumps or ridges or irregularities"
-translation: "a. 平滑的, 平稳的, 流畅的, 和蔼的, 安祥的, 圆滑的, 调匀的, 无毛的；vt. 使光滑, 烫平, 使平和, 消除；vi. 变平滑, 变平静；n. 一块平地, 平滑部分"
-srsWords: "smooth"
+front: "check"
+meaning: "n. a written order directing a bank to pay money; n. the bill in a restaurant; n. the act of inspecting or verifying; n. a mark left after a small piece has been chopped or broken off of something"
+translation: "n. 检查, 支票, 阻止物, 寄物牌, 象棋中将军；vt. 检查, 阻止, 核对, 寄存, 托运；vi. 逐项相符, 开支票；[计] 复选"
+srsWords: "check"
 
 ---
 lessonTitle: "Lesson 4: Hobbies, Health & Nature Part 4"
@@ -214,28 +214,28 @@ icon: "🌿"
 color: "#8BC34A"
 ---
 [flashcard-review]
-front: "string"
-meaning: "n. a lightweight cord; n. a tightly stretched cord of wire or gut, which makes sound when plucked, struck, or bowed; n. a sequentially ordered set of things or events or ideas in which each successive member is related to the preceding; n. a linear sequence of symbols (characters or words or phrases)"
-translation: "n. 线, 细绳, 一串, 字符串；vt. 串起, 成串, 收紧, 缚, 扎；vi. 成一串；[计] 字符串, 串"
-srsWords: "string"
+front: "class"
+meaning: "n. a collection of things sharing a common attribute; n. a body of students who are taught together; n. people having the same social, economic, or educational status; n. a league ranked by quality"
+translation: "n. 班级, 阶级, 种类, 课；vt. 分类；[计] 类别; 类; 种类; 类程"
+srsWords: "class"
 
 [flashcard-review]
-front: "sudden"
-meaning: "a. happening without warning or in a short space of time"
-translation: "n. 突然, 忽然；a. 突然的, 意外的, 快速的"
-srsWords: "sudden"
+front: "fish"
+meaning: "n. any of various mostly cold-blooded aquatic vertebrates usually having scales and breathing through gills; n. the flesh of fish used as food; v. seek indirectly; v. catch or try to catch fish or shellfish"
+translation: "n. 鱼, 鱼肉, 鱼类, 接合板；vt. 钓, 钓鱼, 查出, 用接合板连接；vi. 捕鱼, 钓鱼, 用钩捞取, 摸索寻找"
+srsWords: "fish"
 
 [flashcard-review]
-front: "bother"
-meaning: "v. intrude or enter uninvited; v. make nervous or agitated; v. make confused or perplexed or puzzled"
-translation: "vt. 烦扰, 迷惑；vi. 烦恼, 操心；n. 麻烦, 纠纷, 讨厌的人"
-srsWords: "bother"
+front: "cover"
+meaning: "n. the act of concealing the existence of something by obstructing the view of it; n. fire that makes it difficult for the enemy to fire on your own individuals or formations; n. a recording of a song that was first recorded or made popular by somebody else; n. a false identity and background (especially one created for an undercover agent)"
+translation: "n. 盖子, 封面, 藉口；vt. 覆盖, 掩饰, 保护, 掩护, 包括；vi. 覆盖"
+srsWords: "cover"
 
 [flashcard-review]
-front: "makeup"
-meaning: "n. cosmetics applied to the face to improve or change your appearance; n. an event that is substituted for a previously cancelled event"
-translation: "n. 组成, 性格, 化妆品, 化装(术), 虚构, 补考"
-srsWords: "makeup"
+front: "pink"
+meaning: "a pale red color"
+translation: "n. 粉红色, 石竹花, 化身, 典范, 头面人物, 极度；a. 粉红的, 石竹科的, 比较激进的, 脸色发红的, 精致的, 有点下流的；vt. 刺, 扎, 刺痛, 射伤, 使面红耳赤, 使变粉红色；vi. 变粉红色"
+srsWords: "pink"
 
 [flashcard-review]
 front: "take"
@@ -244,16 +244,16 @@ translation: "vt. 拿, 取, 抓, 带领, 获得, 就座, 接受, 吃, 吸引, �
 srsWords: "take"
 
 [flashcard-review]
-front: "pan"
-meaning: "n. cooking utensil consisting of a wide metal vessel; n. (Greek mythology) god of fields and woods and shepherds and flocks; represented as a man with goat's legs and horns and ears; identified with Roman Sylvanus or Faunus; n. shallow container made of metal; n. chimpanzees; more closely related to Australopithecus than to other pongids"
-translation: "n. 平锅, 浅盘, 盆地, 硬土层, 拍摄全景；v. 上下左右移动, 摇镜头, 淘洗, 淘金"
-srsWords: "pan"
+front: "don"
+meaning: "n. a Spanish gentleman or nobleman; n. the head of an organized crime family; n. Celtic goddess; mother of Gwydion and Arianrhod; corresponds to Irish Danu"
+translation: "n. 西班牙贵族(或绅士), 先生, 阁下；vt. 穿上"
+srsWords: "don"
 
 [flashcard-review]
-front: "reflect"
-meaning: "v. manifest or bring back; v. to throw or bend back (from a surface); v. be bright by reflecting or casting light; v. show an image of"
-translation: "vt. 反射, 反映, 招致, 深思；vi. 被反射, 映出, 深思, 考虑, 指责"
-srsWords: "reflect"
+front: "but"
+meaning: "r and nothing more"
+translation: "prep. 除了；conj. 但是；adv. 仅仅"
+srsWords: "but"
 
 [flashcard-review]
 front: "strange"
@@ -262,16 +262,16 @@ translation: "adj. 陌生的；奇怪的；外行的ad; v. 奇怪地；陌生地
 srsWords: "strange"
 
 [flashcard-review]
-front: "silly"
-meaning: "n. a word used for misbehaving children"
-translation: "a. 愚蠢的, 糊涂的"
-srsWords: "silly"
+front: "right"
+meaning: "correct"
+translation: "n. 权利, 右边, 正义, 右派, 公正；a. 正确的, 对的, 恰当的, 正常的, 正直的, 正面的, 右方的；adv. 正确地, 以有利结果, 一直, 直接, 向右；vt. 扶直, 整理, 纠正, 伸冤, 使昭雪；vi. 恢复平衡；[计] 右, 权利"
+srsWords: "right"
 
 [flashcard-review]
-front: "passenger"
-meaning: "n. a traveler riding in a vehicle (a boat or bus or car or plane or train etc) who is not operating it"
-translation: "n. 乘客, 旅客；[经] 乘客, 旅客"
-srsWords: "passenger"
+front: "now"
+meaning: "n. the momentary present; r. in the historical present; at this point in the narration of a series of past events; r. used to preface a command or reproof or request; r. at the present moment"
+translation: "adv. 现在, 刚才, 目前；n. 现在；a. 现在的；conj. 由于"
+srsWords: "now"
 
 ---
 lessonTitle: "Lesson 5: Hobbies, Health & Nature Part 5"
@@ -280,34 +280,34 @@ icon: "🌿"
 color: "#8BC34A"
 ---
 [flashcard-review]
-front: "suitable"
-meaning: "s. meant or adapted for an occasion or use"
-translation: "a. 适当的, 相配的；[法] 合适的, 适宜的, 适当的"
-srsWords: "suitable"
+front: "one"
+meaning: "n. the smallest whole number or a numeral representing this number; n. a single person or thing; s. used of a single unit or thing; not two or more; s. having the indivisible character of a unit"
+translation: "n. 一(个)；pron. 一, 任何人；num. 一, 一个；a. 一致的, 完整的"
+srsWords: "one"
 
 [flashcard-review]
-front: "km"
-meaning: "n a metric unit of length equal to 1000 meters (or 0.621371 miles)"
-translation: "[医] 千米, 公里"
-srsWords: "km"
+front: "will"
+meaning: "n. a fixed and persistent intent or purpose; n. a legal document declaring a person's wishes regarding the disposal of their property when they die; v. decree or ordain; v. determine by choice"
+translation: "n. 意志, 决心, 意愿, 意向, 干劲, 遗嘱；vt. 用意志的力量驱使, 决意, 愿意, 立遗嘱；vi. 下决心, 愿意；aux. 将, 愿意, 必须"
+srsWords: "will"
 
 [flashcard-review]
-front: "regret"
-meaning: "v. feel sad about the loss or absence of; v. decline formally or politely; v. express with regret"
-translation: "n. 遗憾, 后悔, 悔恨, 抱歉, 歉意；vt. 为...感到遗憾, 后悔, 惋惜, 懊悔, 抱歉；vi. 感到抱歉"
-srsWords: "regret"
+front: "good"
+meaning: "n. benefit; n. moral excellence or admirableness; n. that which is pleasing or valuable or useful; a. having desirable or positive qualities especially those suitable for a thing specified"
+translation: "n. 善行, 好处, 利益；a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的"
+srsWords: "good"
 
 [flashcard-review]
-front: "remind"
-meaning: "v. put in the mind of someone"
-translation: "vt. 提醒, 使想起"
-srsWords: "remind"
+front: "going"
+meaning: "n. advancing toward a goal; s. in full operation"
+translation: "n. 去, 离去, 工作情况, 地面状况, 行为；a. 进行中的, 流行的, 成功的, 现存的"
+srsWords: "going"
 
 [flashcard-review]
-front: "seed"
-meaning: "n. a small hard fruit; n. a mature fertilized plant ovule consisting of an embryo and its food source and having a protective coat or testa; v. go to seed; shed seeds; v. help (an enterprise) in its early stages of development by providing seed money"
-translation: "n. 种子, 籽, 萌芽, 子孙, 精液；vt. 在...播种, 催...发育, 脱...籽；vi. 结实, 播种"
-srsWords: "seed"
+front: "time"
+meaning: "n. an instance or single occasion for some event; n. a period of time considered as a resource under your control and sufficient to accomplish something; n. an indefinite period (usually marked by specific attributes or activities); n. a suitable moment"
+translation: "n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间；vt. 测定...的时间, 记录...的时间, 计时, 定时；a. 时间的, 记时的, 定时的, 定期的, 分期的；[计] DOS内部命令:用于显示或设定系统的时间"
+srsWords: "time"
 
 [flashcard-review]
 front: "survey"
@@ -328,16 +328,16 @@ translation: "n. 队, 组；vt. 把马(牛)套在同一辆车上, 把...编成�
 srsWords: "team"
 
 [flashcard-review]
-front: "summary"
-meaning: "n. a brief statement that presents the main points in a concise form"
-translation: "n. 摘要, 概要；a. 摘要的, 简略的；[计] 摘要; 概要"
-srsWords: "summary"
+front: "man"
+meaning: "n. an adult person who is male (as opposed to a woman); n. the generic use of the word to refer to any human being; n. a male subordinate; n. an adult male person who has a manly character (virile and courageous competent)"
+translation: "n. 男人, 人类, 人；vt. 为...配备人手, 操纵, 使振奋；[计] 城域网, 手册"
+srsWords: "man"
 
 [flashcard-review]
-front: "script"
-meaning: "n. a written version of a play or other dramatic composition; used in preparing for a performance; n. a particular orthography or writing system; v. write a script for"
-translation: "n. 手迹, 手稿, 正本, 手写体；vt. 改编为演出本；[计] 手写体, 小型程序"
-srsWords: "script"
+front: "need"
+meaning: "require"
+translation: "n. 需要, 必须, 缺乏；vt. 需要, 必需；vi. 贫困, 有必要；aux. 需要"
+srsWords: "need"
 
 ---
 lessonTitle: "Lesson 6: Hobbies, Health & Nature Part 6"
@@ -346,10 +346,10 @@ icon: "🌿"
 color: "#8BC34A"
 ---
 [flashcard-review]
-front: "rob"
-meaning: "v. take something away by force or without the consent of the owner"
-translation: "v. 抢夺, 抢掠, 剥夺"
-srsWords: "rob"
+front: "down"
+meaning: "to a lower position"
+translation: "a. 向下的；adv. 下, 下去, 降下；prep. 往下, 沿着；n. 丘陵, 软毛, 开阔的高地；[计] 向下, 退下命令"
+srsWords: "down"
 
 [flashcard-review]
 front: "home"
@@ -358,10 +358,10 @@ translation: "n. 家, 避难所, 故乡；a. 家庭的, 国内的, 打中目标�
 srsWords: "home"
 
 [flashcard-review]
-front: "theater"
-meaning: "n. a building where theatrical performances or motion-picture shows can be presented"
-translation: "n. 戏院, 电影院, 剧场, 全体观众, 戏剧, 戏剧效果, 阶梯式讲堂, 场所"
-srsWords: "theater"
+front: "little"
+meaning: "n. a small amount or duration; a. (quantifier used with mass nouns) small in quantity or degree; not much or almost none or (with `a') at least some; s. (of children and animals) young, immature; s. (of a voice) faint"
+translation: "n. 一点点, 少许, 一会儿, 短时间；a. 小的, 很少的, 幼小的, 琐碎的, 短暂的, 矮小的；adv. 很少, 稍微, 完全不"
+srsWords: "little"
 
 [flashcard-review]
 front: "use"
@@ -370,22 +370,22 @@ translation: "n. 使用, 习惯, 使用价值, 用法, 使用权；vt. 使用, �
 srsWords: "use"
 
 [flashcard-review]
-front: "athletes"
-meaning: "n. a person trained to compete in sports"
-translation: "n. 运动员( athlete的复数形式 ); 体育家; 擅长运动的人; 健儿"
-srsWords: "athletes"
+front: "off"
+meaning: "a. not in operation or operational; s. below a satisfactory level; a. (of events) no longer planned or scheduled; s. in an unpalatable state"
+translation: "a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的；adv. 走开, ...掉, ...下, 休息, 出发, 隔断；prep. 离开, 脱落, 不在从事......, 在...之外；vi. 离开, 滚开；vt. 杀死；n. 关闭状态；[计] 关闭, 清屏命令"
+srsWords: "off"
 
 [flashcard-review]
-front: "progressive"
-meaning: "n. a tense of verbs used in describing action that is on-going; a. favoring or promoting progress; s. favoring or promoting reform (often by government action); a. (of taxes) adjusted so that the rate increases as the amount of income increases"
-translation: "n. 改革论者, 进步论者；a. 前进的, 累进的, 进步的"
-srsWords: "progressive"
+front: "sure"
+meaning: "certain"
+translation: "a. 确信, 必然的, 必定的；adv. 当然, 确实地, 无疑地"
+srsWords: "sure"
 
 [flashcard-review]
-front: "pretend"
-meaning: "v. put forward a claim and assert right or possession of"
-translation: "v. 假装, 伪称, 自命, 自称"
-srsWords: "pretend"
+front: "still"
+meaning: "continuing"
+translation: "n. 蒸馏室, 寂静, 剧照；v. 蒸馏, (使)平静, (使)静止；a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的；adv. 仍然, 更, 静止地；conj. 然而, 但是"
+srsWords: "still"
 
 [flashcard-review]
 front: "tool"
@@ -418,16 +418,16 @@ translation: "n. 塔，塔楼；（发送信号等的）塔台；塔状堆积物
 srsWords: "tower"
 
 [flashcard-review]
-front: "robin"
-meaning: "n. small Old World songbird with a reddish breast; n. large American thrush having a rust-red breast and abdomen"
-translation: "n. 旅鸫；[医] 刺槐毒素"
-srsWords: "robin"
+front: "other"
+meaning: "different from the one mentioned"
+translation: "a. 其他的, 另外的, 从前的；pron. 其他的, 他人, 另外一个"
+srsWords: "other"
 
 [flashcard-review]
-front: "shore"
-meaning: "n. the land along the edge of a body of water; n. a beam or timber that is propped against a structure to provide support; v. serve as a shore to"
-translation: "n. 海岸, 海滨, 斜撑柱；vt. 把...送上岸, 支撑, 支持"
-srsWords: "shore"
+front: "call"
+meaning: "to telephone"
+translation: "n. 呼叫, 访问, 打电话, 号召, 召集, 要求；vt. 呼叫, 召集, 打电话；vi. 叫喊, 访问, 叫牌；[计] 调用; 呼叫; DOS内部命令:在批处理文件中调用另一个批处理文件"
+srsWords: "call"
 
 [flashcard-review]
 front: "help"
@@ -442,34 +442,34 @@ translation: "土耳其（横跨欧亚两洲的国家）"
 srsWords: "turkey"
 
 [flashcard-review]
-front: "trap"
-meaning: "n. a device in which something (usually an animal) can be caught and penned; n. drain consisting of a U-shaped section of drainpipe that holds liquid and so prevents a return flow of sewer gas; n. something (often something deceptively attractive) that catches you unawares; n. a device to hurl clay pigeons into the air for trapshooters"
-translation: "n. 圈套, 陷阱, 诡计, 存水弯；vi. 设圈套, 设陷阱；vt. 诱捕, 诱骗, 抓住, 使受限制；[计] 俘获; 陷井"
-srsWords: "trap"
+front: "better"
+meaning: "n. something superior in quality or condition or effect; n. a superior person having claim to precedence; n. the superior one of two alternatives; v. surpass in excellence"
+translation: "n. 长辈；较好者；打赌的人（等于bettor） adj. 较好的 vt. 改善；胜过 adv. 更好的；更多的；较大程度地 vi. 变得较好 n. (Better)人名；(西、瑞典、德)贝特尔"
+srsWords: "better"
 
 [flashcard-review]
-front: "uniform"
-meaning: "n. clothing of distinctive design worn by members of a particular group as a means of identification; v. provide with uniforms; a. always the same; showing a single form or character in all occurrences; s. evenly spaced"
-translation: "n. 制服；a. 统一的, 一律的, 始终如一的"
-srsWords: "uniform"
+front: "long"
+meaning: "measuring a great distance from end to end"
+translation: "a. 长的, 长久的, 冗长的, 做多头的；vi. 渴望, 热望, 极想；adv. 长久, 始终；n. 长时间, 长信号, 长整型；[计] 长, 长整型"
+srsWords: "long"
 
 [flashcard-review]
-front: "wooden"
-meaning: "s. made or consisting of (entirely or in part) or employing wood; s. lacking ease or grace"
-translation: "a. 木制的, 呆笨的, 木然的"
-srsWords: "wooden"
+front: "name"
+meaning: "n. a language unit by which a person or thing is known; n. a person's reputation; n. family based on male descent; n. a well-known or notable person"
+translation: "n. 名字, 名称, 姓名, 名义, 名誉, 文件名；vt. 命名, 称呼, 任命, 提名, 列举；a. 姓名的, 据以取名的；[计] 名称, 文件名, 姓名"
+srsWords: "name"
 
 [flashcard-review]
-front: "romance"
-meaning: "n. the group of languages derived from Latin; n. a novel dealing with idealized events remote from everyday life; v. have a love affair with; v. tell romantic or exaggerated lies"
-translation: "n. 冒险故事, 浪漫史, 传奇文学；vi. 写传奇, 作空想, 虚构"
-srsWords: "romance"
+front: "place"
+meaning: "n. any area set aside for a particular purpose; n. an abstract mental location; n. a general vicinity; n. a particular situation"
+translation: "n. 地方, 地点, 位置, 住所, 座位, 地位, 处境, 特权, 空间, 余地, 职务, 位；vt. 放置, 寄予, 认出, 评定, 任命；vi. 名次列前"
+srsWords: "place"
 
 [flashcard-review]
-front: "ruin"
-meaning: "n. an irrecoverable state of devastation and destruction; n. a ruined building; n. an event that results in destruction; v. destroy or cause to fail"
-translation: "n. 毁灭, 推翻, 废墟；vi. 毁灭, 衰败, 破坏, 破产, 堕落；vt. 使毁灭, 毁坏, 使破产"
-srsWords: "ruin"
+front: "every time"
+meaning: "on every occasion"
+translation: "每次; 每当; 每到"
+srsWords: "every time"
 
 ---
 lessonTitle: "Lesson 8: Hobbies, Health & Nature Part 8"
@@ -478,28 +478,28 @@ icon: "🌿"
 color: "#8BC34A"
 ---
 [flashcard-review]
-front: "slave"
-meaning: "n. a person who is owned by someone; n. someone who works as hard as a slave; n. someone entirely dominated by some influence or person; v. work very hard, like a slave"
-translation: "n. 奴隶, 从动装置, 卑鄙的人；vi. 拼命工作；[计] 从设备"
-srsWords: "slave"
+front: "wrong"
+meaning: "incorrect or mistaken"
+translation: "a. 错误的, 不正当的, 失常的；adv. 错误地"
+srsWords: "wrong"
 
 [flashcard-review]
-front: "symbol"
-meaning: "n. an arbitrary sign (written or printed) that has acquired a conventional significance; n. something visible that by association or convention represents something else that is invisible"
-translation: "n. 符号, 象征, 代号, 信条；[计] 符号; 码元"
-srsWords: "symbol"
+front: "another"
+meaning: "s. any of various alternatives; some other"
+translation: "a. 另外的, 再一的, 不同的；pron. 又一个, 另一个, 类似的另一个"
+srsWords: "another"
 
 [flashcard-review]
-front: "partly"
-meaning: "r in part; in some degree; not wholly"
-translation: "adv. 部分地, 在一定程度上"
-srsWords: "partly"
+front: "own"
+meaning: "v. have ownership or possession of; s. belonging to or on behalf of a specified person (especially yourself); preceded by a possessive"
+translation: "n. 自己的；a. 自己的, 嫡亲的, 同胞的；vt. 拥有, 支配, 自认, 承认, 顺从于；vi. 承认, 供认"
+srsWords: "own"
 
 [flashcard-review]
-front: "physically"
-meaning: "r. in accord with physical laws"
-translation: "adv. 按自然规律, 完全地, 实际上, 真正地, 身体上地"
-srsWords: "physically"
+front: "care"
+meaning: "n. the work of providing treatment for or attending to someone or something; n. a cause for feeling concern; n. attention and management implying responsibility for safety; n. activity involved in maintaining something in good working order"
+translation: "n. 小心, 照料, 忧虑；vi. 关心, 介意；vt. 在意, 喜欢"
+srsWords: "care"
 
 [flashcard-review]
 front: "wheel"
@@ -508,16 +508,16 @@ translation: "n. 轮子, 车轮, 轮, 方向盘, 旋转, 机构, 重要人物；
 srsWords: "wheel"
 
 [flashcard-review]
-front: "sauce"
-meaning: "n. flavorful relish or dressing or topping served as an accompaniment to food; v. behave saucily or impudently towards; v. dress (food) with a relish; v. add zest or flavor to, make more interesting"
-translation: "n. 酱油, 调味汁, 酱；vt. 给...调味, 使增加趣味"
-srsWords: "sauce"
+front: "mind"
+meaning: "intellect"
+translation: "n. 思想, 愿望, 智力, 记忆, 心理, 情绪, 理智, 主意, 心意；vi. 介意, 注意, 留心；vt. 注意, 留意, 专心于, 照看, 介意"
+srsWords: "mind"
 
 [flashcard-review]
-front: "wisdom"
-meaning: "n. accumulated knowledge or erudition or enlightenment; n. the trait of utilizing knowledge and experience with common sense and insight; n. ability to apply knowledge or experience or understanding or common sense and insight; n. the quality of being prudent and sensible"
-translation: "n. 智慧, 明智行为, 学识, 名言, 贤人"
-srsWords: "wisdom"
+front: "saw"
+meaning: "n. hand tool having a toothed blade for cutting; v. cut with a saw"
+translation: "n. 锯子, 谚语；vt. 锯, 锯开, 来回移动；vi. 拉锯, 移动；see的过去式"
+srsWords: "saw"
 
 [flashcard-review]
 front: "show"
@@ -526,16 +526,16 @@ translation: "n. 显示, 表现, 展览, 卖弄, 炫耀, 外观, 演出, 洋相�
 srsWords: "show"
 
 [flashcard-review]
-front: "overseas"
-meaning: "r. in a place across an ocean"
-translation: "a. 海外的, 国外的；adv. 在海外, 在国外"
-srsWords: "overseas"
+front: "room"
+meaning: "n. an area within a building enclosed by walls and floor and ceiling; n. space for movement; n. opportunity for; n. the people who are present in a room"
+translation: "n. 房间, 空位, 场所；vi. 住宿, 居住；vt. 留宿"
+srsWords: "room"
 
 [flashcard-review]
-front: "relax"
-meaning: "v. become less tense, rest, or take one's ease; v. make less taut; v. cause to feel relaxed; v. become less tense, less formal, or less restrained, and assume a friendlier manner"
-translation: "vi. 放松, 松懈, 松弛, 变从容, 休息, 休养；vt. 使松弛, 缓和, 使松懈, 使休息"
-srsWords: "relax"
+front: "most"
+meaning: "a. (superlative of `many' used with count nouns and often preceded by `the') quantifier meaning the greatest in number; a. the superlative of `much' that can be used with mass nouns and is usually preceded by `the'; a quantifier meaning the greatest in amount or extent or degree; r. used to form the superlative; r. very"
+translation: "n. 最多, 最大；a. 大多数的, 几乎全部的, 最多的；adv. 最, 最多, 极其"
+srsWords: "most"
 
 ---
 lessonTitle: "Lesson 9: Hobbies, Health & Nature Part 9"
@@ -544,10 +544,10 @@ icon: "🌿"
 color: "#8BC34A"
 ---
 [flashcard-review]
-front: "peaceful"
-meaning: "a. not disturbed by strife or turmoil or war"
-translation: "a. 平静的, 和平的, 和平时期的, 爱好和平的, 喜爱安静的；[法] 和平的, 爱好和平的, 和平时期的"
-srsWords: "peaceful"
+front: "once"
+meaning: "r. on one occasion; r. as soon as; r. at a previous time;"
+translation: "adv. 一次, 曾经, 一旦；conj. 一旦, 一经；n. 一次；a. 从前的"
+srsWords: "once"
 
 [flashcard-review]
 front: "writer"
@@ -562,16 +562,16 @@ translation: "vt. 感觉, 觉得, 触摸, 以为；vi. 有知觉, 摸索, 同情
 srsWords: "feel"
 
 [flashcard-review]
-front: "photographer"
-meaning: "n. someone who takes photographs professionally"
-translation: "n. 摄影师, 摄影者"
-srsWords: "photographer"
+front: "hold"
+meaning: "n. power by which something or someone is affected or dominated; n. a stronghold; n. a cell in a jail or prison; v. have or hold in one's hands or grip"
+translation: "n. 把握, 把持力, 柄, 控制, 掌握, 监禁；vt. 保存, 握住, 拿住, 占据, 持有, 拥有；vi. 支持, 持续, 有效；n. 保留；[计] 保留"
+srsWords: "hold"
 
 [flashcard-review]
-front: "satisfy"
-meaning: "v. meet the requirements or expectations of; v. make happy or satisfied"
-translation: "vt. 使满意, 满足, 符合, 使确信, 赔偿；vi. 令人满意, 替人赎罪"
-srsWords: "satisfy"
+front: "pretty"
+meaning: "attractive in a delicate way"
+translation: "a. 漂亮的, 优美的, 机灵的, 狡猾的, 恰当的；adv. 相当, 颇"
+srsWords: "pretty"
 
 [flashcard-review]
 front: "keep"
@@ -580,22 +580,22 @@ translation: "n. 生计, 维持, 保持；vt. 保持, 保存, 遵守, 看守, �
 srsWords: "keep"
 
 [flashcard-review]
-front: "stranger"
-meaning: "n. anyone who does not belong in the environment in which they are found; n. an individual that one is not acquainted with"
-translation: "n. 陌生人, 门外汉；[法] 局外人, 非当事人, 第三者"
-srsWords: "stranger"
+front: "yet"
+meaning: "r. up to the present time; r. within an indefinite time or at an unspecified future time"
+translation: "adv. 还, 尚, 仍然, 已经, 然而；conj. 然而"
+srsWords: "yet"
 
 [flashcard-review]
-front: "passage"
-meaning: "n. the act of passing from one state or place to the next; n. a section of text; particularly a section of medium length; n. a way through or along which someone or something may pass; n. a journey usually by ship"
-translation: "n. 通道, 通过, 移居, 航行, 一段, 走廊；vi. 通过, 经过, 航行, 横渡, 争吵；vt. (使)马以斜横步前进, 使传代"
-srsWords: "passage"
+front: "matter"
+meaning: "a subject or situation"
+translation: "n. 事件, 物质, 原因, 素材, 实体, 重要；vi. 有关系"
+srsWords: "matter"
 
 [flashcard-review]
-front: "pursue"
-meaning: "v. follow in or as if in pursuit; v. carry further or advance"
-translation: "vt. 追赶, 追踪, 追随, 追求, 实行, 继续, 从事；vi. 追赶, 继续"
-srsWords: "pursue"
+front: "tonight"
+meaning: "on the evening of the present day"
+translation: "n. 今晚, 今夜；adv. 今晚, 今夜"
+srsWords: "tonight"
 
 [flashcard-review]
 front: "away"
@@ -610,16 +610,16 @@ icon: "🌿"
 color: "#8BC34A"
 ---
 [flashcard-review]
-front: "neighbor"
-meaning: "n. a person who lives (or is located) near another; n. a nearby object of the same kind; v. live or be located as a neighbor"
-translation: "n. 邻居；vt. 邻接；vi. 毗邻而居, 友好；a. 邻近的"
-srsWords: "neighbor"
+front: "end"
+meaning: "the final part"
+translation: "n. 结束, 终点, 目标, 末端, 梢, 死亡, 残余；v. 结束, 终结, 终止；[计] 端; 结束"
+srsWords: "end"
 
 [flashcard-review]
-front: "brazilian"
-meaning: "n. a native or inhabitant of Brazil; a. of or relating to or characteristic of Brazil or the people of Brazil"
-translation: "n. 巴西人；a. 巴西的, 巴西人的"
-srsWords: "brazilian"
+front: "saying"
+meaning: "n. a word or phrase that particular people use in particular situations"
+translation: "n. 叙述, 话, 说, 言论"
+srsWords: "saying"
 
 [flashcard-review]
 front: "lot"
@@ -628,16 +628,16 @@ translation: "n. 运气, 签, 抽签, 份额, 许多, 一堆；vt. 划分；vi. 
 srsWords: "lot"
 
 [flashcard-review]
-front: "cock"
-meaning: "n. obscene terms for penis; n. adult male chicken; n. adult male bird; v. tilt or slant to one side"
-translation: "n. 公鸡, 雄禽, 龙头, 头目, 锥形小干草堆；vt. 使耸立, 使竖起, 堆成锥形小干草堆；vi. 大摇大摆地走, 翘起"
-srsWords: "cock"
+front: "face"
+meaning: "n. the front of the human head from the forehead to the chin and ear to ear; n. the general outward appearance of something; n. the striking or working surface of an implement; n. a part of a person that is used to refer to a person"
+translation: "n. 脸, 面容, 正面, 外观；vt. 面对, 朝, 正视, 面临；vi. 朝, 向；[计] 现场可改变的控制元件"
+srsWords: "face"
 
 [flashcard-review]
-front: "pleasant"
-meaning: "a. affording pleasure; being in harmony with your taste or likings; s. (of persons) having pleasing manners or behavior"
-translation: "a. 愉快的, 可爱的, 活泼的, 亲切的"
-srsWords: "pleasant"
+front: "excuse"
+meaning: "n. a defense of some offensive behavior or some failure to keep a promise etc.; n. a note explaining an absence; v. accept an excuse for; v. grant exemption or release to"
+translation: "vt. 原谅, 申辩, 做为...的托辞；n. 致歉, 理由, 饶恕, 借口"
+srsWords: "excuse"
 
 [flashcard-review]
 front: "o'clock"
@@ -646,10 +646,10 @@ translation: "adv. …点钟"
 srsWords: "o'clock"
 
 [flashcard-review]
-front: "portrait"
-meaning: "n. any likeness of a person, in any medium"
-translation: "n. 肖像, 人像, 半身像, 描写, 竖排格式；[计] 纵向"
-srsWords: "portrait"
+front: "worry"
+meaning: "to feel or cause to feel anxious or troubled"
+translation: "n. 担心, 烦恼, 忧虑, 苦恼, 撕咬；vt. 使烦恼, 使焦虑, 使苦恼, 困扰, 折磨, 撕咬；vi. 烦恼, 担心, 撕咬"
+srsWords: "worry"
 
 [flashcard-review]
 front: "real"

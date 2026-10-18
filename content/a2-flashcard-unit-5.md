@@ -22,10 +22,10 @@ translation: "a. 精确的, 严谨的, 明确的；[机] 精密的, 正确的"
 srsWords: "precise"
 
 [flashcard-review]
-front: "escalator"
-meaning: "a moving staircase"
-translation: "（美）自动扶梯；电动扶梯"
-srsWords: "escalator"
+front: "stomach"
+meaning: "n. an enlarged and muscular saclike organ of the alimentary canal; the principal organ of digestion; n. an inclination or liking for things involving conflict or difficulty or unpleasantness; n. an appetite for food; v. bear to eat"
+translation: "n. 胃, 食欲, 欲望, 肚子；vt. 吃下, 忍受"
+srsWords: "stomach"
 
 [flashcard-review]
 front: "compare"
@@ -118,16 +118,16 @@ translation: "n. 细节, 详情；vt. 详述, 选派；vi. 画详图；[计] 详
 srsWords: "detail"
 
 [flashcard-review]
-front: "excite"
-meaning: "to cause strong feelings of enthusiasm and eagerness"
-translation: "vt. 刺激, 使兴奋, 激励"
-srsWords: "excite"
+front: "toaster"
+meaning: "n. someone who proposes a toast; someone who drinks to the health of success of someone or some venture; n. a kitchen appliance (usually electric) for toasting bread"
+translation: "n. 烤面包器, 烤面包炉, 祝酒人"
+srsWords: "toaster"
 
 [flashcard-review]
-front: "fig"
-meaning: "n. Mediterranean tree widely cultivated for its edible fruit; n. fleshy sweet pear-shaped yellowish or purple multiple fruit eaten fresh or preserved or dried"
-translation: "n. 无花果, 无价值的东西, 少许, 服装；vt. 打扮, 使马跑快"
-srsWords: "fig"
+front: "sauce"
+meaning: "n. flavorful relish or dressing or topping served as an accompaniment to food; v. behave saucily or impudently towards; v. dress (food) with a relish; v. add zest or flavor to, make more interesting"
+translation: "n. 酱油, 调味汁, 酱；vt. 给...调味, 使增加趣味"
+srsWords: "sauce"
 
 [flashcard-review]
 front: "pour"
@@ -166,10 +166,10 @@ translation: "n. 鲨鱼, 骗子；v. 诈骗"
 srsWords: "shark"
 
 [flashcard-review]
-front: "sweet"
-meaning: "having the pleasant taste characteristic of sugar or honey"
-translation: "n. 甜蜜, 糖果, 情人；a. 甜的, 芳香的, 悦耳的, 漂亮的, 和蔼的, 不咸的, 灵活的, 轻快的"
-srsWords: "sweet"
+front: "pleasant"
+meaning: "a. affording pleasure; being in harmony with your taste or likings; s. (of persons) having pleasing manners or behavior"
+translation: "a. 愉快的, 可爱的, 活泼的, 亲切的"
+srsWords: "pleasant"
 
 [flashcard-review]
 front: "explain"
@@ -196,16 +196,16 @@ translation: "vt. 建立, 确立, 制定；vi. 移植生长"
 srsWords: "establish"
 
 [flashcard-review]
-front: "cafe"
-meaning: "n. a small restaurant where drinks and snacks are sold"
-translation: "n. 咖啡馆, 酒店"
-srsWords: "cafe"
+front: "pan"
+meaning: "n. cooking utensil consisting of a wide metal vessel; n. (Greek mythology) god of fields and woods and shepherds and flocks; represented as a man with goat's legs and horns and ears; identified with Roman Sylvanus or Faunus; n. shallow container made of metal; n. chimpanzees; more closely related to Australopithecus than to other pongids"
+translation: "n. 平锅, 浅盘, 盆地, 硬土层, 拍摄全景；v. 上下左右移动, 摇镜头, 淘洗, 淘金"
+srsWords: "pan"
 
 [flashcard-review]
-front: "dairy"
-meaning: "n. a farm where dairy products are produced"
-translation: "n. 牛奶公司, 乳品店, 乳牛场"
-srsWords: "dairy"
+front: "seed"
+meaning: "n. a small hard fruit; n. a mature fertilized plant ovule consisting of an embryo and its food source and having a protective coat or testa; v. go to seed; shed seeds; v. help (an enterprise) in its early stages of development by providing seed money"
+translation: "n. 种子, 籽, 萌芽, 子孙, 精液；vt. 在...播种, 催...发育, 脱...籽；vi. 结实, 播种"
+srsWords: "seed"
 
 ---
 lessonTitle: "Lesson 4: Food, Cooking & Restaurants Part 4"
@@ -508,10 +508,10 @@ translation: "adv. 两次, 两倍"
 srsWords: "twice"
 
 [flashcard-review]
-front: "worry"
-meaning: "to feel or cause to feel anxious or troubled"
-translation: "n. 担心, 烦恼, 忧虑, 苦恼, 撕咬；vt. 使烦恼, 使焦虑, 使苦恼, 困扰, 折磨, 撕咬；vi. 烦恼, 担心, 撕咬"
-srsWords: "worry"
+front: "yogurt/yoghurt"
+meaning: "n. a custard-like food made from curdled milk"
+translation: "n. 酸乳酪；[医] 酸乳"
+srsWords: "yogurt/yoghurt"
 
 [flashcard-review]
 front: "brand"
@@ -532,10 +532,10 @@ translation: "n.跳蚤，蚤目的昆虫,生蚤的动物"
 srsWords: "flea"
 
 [flashcard-review]
-front: "smartphone"
-meaning: "a mobile phone that performs many of the functions of a computer"
-translation: "n. 智能手机"
-srsWords: "smartphone"
+front: "escape"
+meaning: "n. the act of escaping physically; n. an inclination to retreat from unpleasant realities through diversion or fantasy; n. an avoidance of danger or difficulty; n. a means or way of escaping"
+translation: "n. 逃亡, 避难设备, 逃跑；vi. 逃脱, 避开, 溜走；vt. 逃避, 避免, 被...忘掉"
+srsWords: "escape"
 
 ---
 lessonTitle: "Lesson 9: Food, Cooking & Restaurants Part 9"
@@ -586,10 +586,10 @@ translation: "n. 文件夹；折叠机；折叠式印刷品 n. (Folder)人名；
 srsWords: "folder"
 
 [flashcard-review]
-front: "realize"
-meaning: "to become aware of something."
-translation: "vt. 了解, 实现, 使显得逼真, 变卖；vi. 变卖"
-srsWords: "realize"
+front: "bother"
+meaning: "v. intrude or enter uninvited; v. make nervous or agitated; v. make confused or perplexed or puzzled"
+translation: "vt. 烦扰, 迷惑；vi. 烦恼, 操心；n. 麻烦, 纠纷, 讨厌的人"
+srsWords: "bother"
 
 [flashcard-review]
 front: "unhappy"
@@ -616,16 +616,16 @@ translation: "n. 刻度, 衡量, 比例, 比例尺, 数值范围, 等级, 规模
 srsWords: "scale"
 
 [flashcard-review]
-front: "footballer"
-meaning: "a person who plays football"
-translation: "足球运动员；橄榄球运动员"
-srsWords: "footballer"
+front: "steal"
+meaning: "n. a stolen base; an instance in which a base runner advances safely during the delivery of a pitch (without the help of a hit or walk or passed ball or wild pitch); v. take without the owner's consent; v. move stealthily; v. steal a base"
+translation: "vt. 剽窃；偷偷地做；偷窃；vi. 窃取；偷偷地行动；[棒球]偷垒；n. [口]偷窃；便宜货；偷垒；[篮球]断球"
+srsWords: "steal"
 
 [flashcard-review]
-front: "throw"
-meaning: "to propel something through the air with a rapid movement of the arm and hand."
-translation: "vt. 投, 掷, 抛, 发射, 摔下, 匆匆穿上(或脱下), 抛弃, 摆脱；vi. 丢, 掷, 抛；n. 投掷, 掷骰子, 冒险"
-srsWords: "throw"
+front: "silly"
+meaning: "n. a word used for misbehaving children"
+translation: "a. 愚蠢的, 糊涂的"
+srsWords: "silly"
 
 [flashcard-review]
 front: "wedding"

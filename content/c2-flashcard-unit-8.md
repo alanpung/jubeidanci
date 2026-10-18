@@ -74,6 +74,7 @@ front: "assimilation"
 meaning: "n. the state of being assimilated; people of different backgrounds come to see themselves as part of a larger national family; n. the social process of absorbing one cultural group into harmony with another; n. the process of absorbing nutrients into the body after digestion"
 translation: "n. 同化, 同化作用, 吸收；[化] 同化; 同化作用"
 srsWords: "assimilation"
+
 ---
 lessonTitle: "Lesson 2: Psychological Nuance & Temperament Part 2"
 description: "Practice 10 key C2 vocabulary flashcards for Psychological Nuance & Temperament"
@@ -139,6 +140,7 @@ front: "virtuoso"
 meaning: "n. a musician who is a consummate master of technique and artistry"
 translation: "n. 艺术品鉴赏家"
 srsWords: "virtuoso"
+
 ---
 lessonTitle: "Lesson 3: Psychological Nuance & Temperament Part 3"
 description: "Practice 10 key C2 vocabulary flashcards for Psychological Nuance & Temperament"
@@ -170,10 +172,10 @@ translation: "n. 肤浅的知识, 一知半解的知识, 片断的知识, 少数
 srsWords: "smattering"
 
 [flashcard-review]
-front: "corpus"
-meaning: "n. a collection of writings; n. the main part of an organ or other bodily structure"
-translation: "n. (事物的)主体, 文集, 本金, 语料库；[医] 体"
-srsWords: "corpus"
+front: "agitation"
+meaning: "n. a mental state of extreme emotional disturbance; n. a state of agitation or turbulent change or development; n. the feeling of being agitated; not calm"
+translation: "n. 激动, 焦虑, 煽动, 搅动, 摇动；[化] 搅拌; 搅拌作用"
+srsWords: "agitation"
 
 [flashcard-review]
 front: "wheeze"
@@ -204,6 +206,7 @@ front: "squint"
 meaning: "n. the act of squinting; looking with the eyes partly closed; v. cross one's eyes as if in strabismus; v. be cross-eyed; have a squint or strabismus; v. partly close one's eyes, as when hit by direct blinding light"
 translation: "n. 斜视眼, 斜着；a. 斜视的；vt. 使变斜视眼；vi. 斜视, 倾向, 斜行"
 srsWords: "squint"
+
 ---
 lessonTitle: "Lesson 4: Psychological Nuance & Temperament Part 4"
 description: "Practice 10 key C2 vocabulary flashcards for Psychological Nuance & Temperament"
@@ -269,6 +272,7 @@ front: "prurience"
 meaning: "n. feeling morbid sexual desire or a propensity to lewdness"
 translation: "n. 好色, 渴望"
 srsWords: "prurience"
+
 ---
 lessonTitle: "Lesson 5: Psychological Nuance & Temperament Part 5"
 description: "Practice 10 key C2 vocabulary flashcards for Psychological Nuance & Temperament"
@@ -334,6 +338,7 @@ front: "rapturously"
 meaning: "r in an ecstatic manner"
 translation: "adv. 兴高采烈地, 狂喜地"
 srsWords: "rapturously"
+
 ---
 lessonTitle: "Lesson 6: Psychological Nuance & Temperament Part 6"
 description: "Practice 10 key C2 vocabulary flashcards for Psychological Nuance & Temperament"
@@ -399,6 +404,7 @@ front: "instantaneous"
 meaning: "s. occurring with no delay"
 translation: "a. 即时的, 瞬间的, 猝发的；[机] 瞬时的"
 srsWords: "instantaneous"
+
 ---
 lessonTitle: "Lesson 7: Psychological Nuance & Temperament Part 7"
 description: "Practice 10 key C2 vocabulary flashcards for Psychological Nuance & Temperament"
@@ -464,6 +470,7 @@ front: "paramount"
 meaning: "s having superior power and influence"
 translation: "n. 首长, 最高当局；a. 最重要的, 最高的, 至上的"
 srsWords: "paramount"
+
 ---
 lessonTitle: "Lesson 8: Psychological Nuance & Temperament Part 8"
 description: "Practice 10 key C2 vocabulary flashcards for Psychological Nuance & Temperament"
@@ -529,6 +536,7 @@ front: "subsist"
 meaning: "v support oneself"
 translation: "vt. 供给食物, 供养；vi. 生存, 存在"
 srsWords: "subsist"
+
 ---
 lessonTitle: "Lesson 9: Psychological Nuance & Temperament Part 9"
 description: "Practice 10 key C2 vocabulary flashcards for Psychological Nuance & Temperament"
@@ -594,6 +602,7 @@ front: "hindrance"
 meaning: "n. something immaterial that interferes with or delays action or progress; n. any obstruction that impedes or is burdensome; n. the act of hindering or obstructing or impeding"
 translation: "n. 妨害, 障碍, 阻碍物"
 srsWords: "hindrance"
+
 ---
 lessonTitle: "Lesson 10: Psychological Nuance & Temperament Part 10"
 description: "Practice 10 key C2 vocabulary flashcards for Psychological Nuance & Temperament"

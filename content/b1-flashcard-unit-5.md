@@ -46,10 +46,10 @@ translation: "[计] 记日期的；[经] 注明日期"
 srsWords: "dating"
 
 [flashcard-review]
-front: "daze"
-meaning: "n. the feeling of distress and disbelief that you have when something bad happens accidentally; n. confusion characterized by lack of clarity"
-translation: "vt. 使茫然, 使发昏, 使眼花缭乱；n. 迷乱, 眼花缭乱"
-srsWords: "daze"
+front: "coverage"
+meaning: "n. the total amount and type of insurance carried; n. the extent to which something is covered; n. the news as presented by reporters for newspapers or radio or television"
+translation: "n. 覆盖的范围, 保险总额, 新闻报导；[化] 可达范围; 覆盖度"
+srsWords: "coverage"
 
 [flashcard-review]
 front: "dazzle"
@@ -64,16 +64,17 @@ translation: "n. 最后期限, 截止期限；[经] 截止日期"
 srsWords: "deadline"
 
 [flashcard-review]
-front: "jewish"
-meaning: "a. of or relating to Jews or their culture or religion"
-translation: "a. 犹太人的, 犹太族的"
-srsWords: "jewish"
+front: "divided"
+meaning: "a. separated into parts or pieces; s. having a median strip or island between lanes of traffic moving in opposite directions; s. distributed in portions (often equal) on the basis of a plan or purpose"
+translation: "a. 分开的"
+srsWords: "divided"
 
 [flashcard-review]
 front: "deadly"
 meaning: "s. causing or capable of causing death; s. of an instrument of certain death; s. extremely poisonous or injurious; producing venom; s. involving loss of divine grace or spiritual death"
 translation: "a. 致命的, 致死的；adv. 非常, 如死一般地"
 srsWords: "deadly"
+
 ---
 lessonTitle: "Lesson 2: Media, News & Communication Part 2"
 description: "Practice 10 key B1 vocabulary flashcards for Media, News & Communication"
@@ -87,10 +88,10 @@ translation: "a. 聋的；[医] 聋的"
 srsWords: "deaf"
 
 [flashcard-review]
-front: "deal"
-meaning: "n. a particular instance of buying or selling; n. a plank of softwood (fir or pine board); n. the type of treatment received (especially as the result of an agreement); n. the act of distributing playing cards"
-translation: "n. 交易, 协定, 数量, 买卖, 松木板；vi. 处理, 应付, 做生意；vt. 分配, 发牌, 给予；[计] 发牌"
-srsWords: "deal"
+front: "realm"
+meaning: "n a domain in which something is dominant; n the domain ruled by a king or queen; n a knowledge domain that you are interested in or are communicating about"
+translation: "n. 王国, 领土, 领域；[计] 领域"
+srsWords: "realm"
 
 [flashcard-review]
 front: "dealer"
@@ -135,10 +136,11 @@ translation: "n. 防卫者, 防护者, 辩护者；[法] 辩护人, 保护人"
 srsWords: "defender"
 
 [flashcard-review]
-front: "defense"
-meaning: "n. (military) military action or resources protecting a country against potential enemies; n. protection from harm; n. (sports) the team that is trying to prevent the other team from scoring"
-translation: "n. 防卫, 防卫物；[医] 防御"
-srsWords: "defense"
+front: "interpretation"
+meaning: "n. a mental representation of the meaning or significance of something; n. an explanation that results from interpreting something; n. an explanation of something that is not immediately obvious"
+translation: "n. 解释, 演出, 翻译；[计] 插值; 插值法; 解释"
+srsWords: "interpretation"
+
 ---
 lessonTitle: "Lesson 3: Media, News & Communication Part 3"
 description: "Practice 10 key B1 vocabulary flashcards for Media, News & Communication"
@@ -204,6 +206,7 @@ front: "delightful"
 meaning: "s. greatly pleasing or entertaining"
 translation: "a. 令人愉快的, 可爱的"
 srsWords: "delightful"
+
 ---
 lessonTitle: "Lesson 4: Media, News & Communication Part 4"
 description: "Practice 10 key B1 vocabulary flashcards for Media, News & Communication"
@@ -269,6 +272,7 @@ front: "departure"
 meaning: "n. the act of departing"
 translation: "n. 离开, 出发, 违背, 偏离；[经] 启运"
 srsWords: "departure"
+
 ---
 lessonTitle: "Lesson 5: Media, News & Communication Part 5"
 description: "Practice 10 key B1 vocabulary flashcards for Media, News & Communication"
@@ -300,10 +304,10 @@ translation: "n. 深度, 深处, 深奥；[计] 深度"
 srsWords: "depth"
 
 [flashcard-review]
-front: "derive"
-meaning: "v. obtain; v. come from; v. develop or evolve from a latent or potential state; v. come from; be connected by a relationship of blood, for example"
-translation: "vt. 得自；vi. 起源"
-srsWords: "derive"
+front: "digest"
+meaning: "n. a periodical that summarizes the news; v. convert food into absorbable substances; v. arrange and integrate in the mind; v. put up with something or somebody unpleasant"
+translation: "n. 文摘；vi. 消化；vt. 消化, 理解；[计] 摘要"
+srsWords: "digest"
 
 [flashcard-review]
 front: "organisation"
@@ -318,10 +322,10 @@ translation: "vt. 该得到, 值得；vi. 应得报答"
 srsWords: "deserve"
 
 [flashcard-review]
-front: "design"
-meaning: "n. the act of working out the form of something (as by making a sketch or outline or plan); n. an arrangement scheme; n. a decorative or artistic work; n. a preliminary sketch indicating the plan for something"
-translation: "n. 设计, 图样, 方案, 企图；v. 设计, 计划"
-srsWords: "design"
+front: "corresponding"
+meaning: "s. accompanying; s. similar especially in position or purpose"
+translation: "a. 相当的, 一致的, 通信的；[计] 对应"
+srsWords: "corresponding"
 
 [flashcard-review]
 front: "despair"
@@ -334,6 +338,7 @@ front: "desperate"
 meaning: "n. a person who is frightened and in need of help; s. desperately determined; s. (of persons) dangerously reckless or violent as from urgency or despair; s. showing extreme courage; especially of actions courageously undertaken in desperation as a last resort"
 translation: "a. 不顾一切的, 危急的, 令人绝望的, 极渴望的"
 srsWords: "desperate"
+
 ---
 lessonTitle: "Lesson 6: Media, News & Communication Part 6"
 description: "Practice 10 key B1 vocabulary flashcards for Media, News & Communication"
@@ -377,10 +382,10 @@ translation: "n. 决心, 果断；[化] 判定; 测定"
 srsWords: "determination"
 
 [flashcard-review]
-front: "devastate"
-meaning: "v. overwhelm or overpower"
-translation: "vt. 毁坏；[法] 使荒废, 毁灭, 掠夺"
-srsWords: "devastate"
+front: "yearly"
+meaning: "n a reference book that is published regularly once every year; s occurring or payable every year; r without missing a year"
+translation: "a. 每年的, 一年一度的；adv. 一年一次, 每年"
+srsWords: "yearly"
 
 [flashcard-review]
 front: "devastating"
@@ -399,6 +404,7 @@ front: "device"
 meaning: "n. an instrumentality invented for a particular purpose; n. something in an artistic work designed to achieve a particular effect; n. any clever maneuver; n. any ornamental pattern or design (as in embroidery)"
 translation: "n. 装置, 设计, 策略, 发明物, 设备；[计] 设备; DOS内部命令:该命令要求DOS安装一个设备驱动程序"
 srsWords: "device"
+
 ---
 lessonTitle: "Lesson 7: Media, News & Communication Part 7"
 description: "Practice 10 key B1 vocabulary flashcards for Media, News & Communication"
@@ -424,10 +430,10 @@ translation: "n. 刻度盘, 钟面, 转盘；v. 拨"
 srsWords: "dial"
 
 [flashcard-review]
-front: "dialog"
-meaning: "n a conversation between two persons; n the lines spoken by characters in drama or fiction; n a literary composition in the form of a conversation between two people"
-translation: "n. 会话, 对话；[计] 对话"
-srsWords: "dialog"
+front: "broadband"
+meaning: "a. of or relating to or being a communications network in which the bandwidth can be divided and shared by multiple simultaneous signals (as for voice or data or video); a. responding to or operating at a wide band of frequencies"
+translation: "[计] 宽带"
+srsWords: "broadband"
 
 [flashcard-review]
 front: "adapter"
@@ -454,16 +460,17 @@ translation: "vi. 不一致, 不同；[机] 差异, 不同"
 srsWords: "differ"
 
 [flashcard-review]
-front: "dig"
-meaning: "n. the site of an archeological exploration; n. a small gouge (as in the cover of a book); n. the act of touching someone suddenly with your finger or elbow; v. turn up, loosen, or remove earth"
-translation: "vt. 挖, 翻土, 发掘；vi. 挖掘；n. 挖掘；[计] 数字, 数位"
-srsWords: "dig"
+front: "expected"
+meaning: "a. considered likely or probable to happen or arrive"
+translation: "a. 预期的；预料的"
+srsWords: "expected"
 
 [flashcard-review]
 front: "spam"
 meaning: "n. a canned meat made largely from pork; n. unwanted e-mail (usually of a commercial nature sent out in bulk); v. send unwanted or junk e-mail"
 translation: "n. 罐头猪肉, 垃圾邮件；v. 发送垃圾邮件"
 srsWords: "spam"
+
 ---
 lessonTitle: "Lesson 8: Media, News & Communication Part 8"
 description: "Practice 10 key B1 vocabulary flashcards for Media, News & Communication"
@@ -483,10 +490,10 @@ translation: "n. 二氧化物；[医] 二氧化物"
 srsWords: "dioxide"
 
 [flashcard-review]
-front: "direct"
-meaning: "v. command with authority; v. guide the actors in (plays and films); v. be in charge of; v. give directions to; point somebody into a certain direction"
-translation: "a. 直接的, 坦白的；vt. 指示, 指挥, 命令, 导演；vi. 指导, 指挥；adv. 直接地"
-srsWords: "direct"
+front: "signal"
+meaning: "n. any nonverbal action or gesture that encodes a message; n. any incitement to action; n. an electric quantity (voltage or current or field strength) whose modulation represents coded information about the source from which it comes; s. notably out of the ordinary"
+translation: "n. 信号, 暗号, 近因, 导火线；vt. 向...作信号, 标志, 用信号通知；vi. 发信号；a. 作为信号的, 显著的；[计] 信号"
+srsWords: "signal"
 
 [flashcard-review]
 front: "directly"
@@ -529,6 +536,7 @@ front: "disappoint"
 meaning: "v. fail to meet the hopes or expectations of"
 translation: "vt. 使失望"
 srsWords: "disappoint"
+
 ---
 lessonTitle: "Lesson 9: Media, News & Communication Part 9"
 description: "Practice 10 key B1 vocabulary flashcards for Media, News & Communication"
@@ -594,6 +602,7 @@ front: "discrimination"
 meaning: "n. unfair treatment of a person or group on the basis of prejudice; n. the cognitive process whereby two or more stimuli are distinguished"
 translation: "n. 差别, 岐视, 辨别力；[化] 鉴别"
 srsWords: "discrimination"
+
 ---
 lessonTitle: "Lesson 10: Media, News & Communication Part 10"
 description: "Practice 10 key B1 vocabulary flashcards for Media, News & Communication"
@@ -631,10 +640,10 @@ translation: "n. 圆盘, 磁盘；[计] 磁盘"
 srsWords: "disk"
 
 [flashcard-review]
-front: "display"
-meaning: "n. something intended to communicate a particular impression; n. something shown to the public; n. a visual representation of something; n. behavior that makes your feelings public"
-translation: "n. 显示, 陈列, 炫耀, 显示器；vt. 陈列, 显示, 表现, 夸示；[计] 显示器; 显示"
-srsWords: "display"
+front: "divorce"
+meaning: "n. the legal dissolution of a marriage; v. get a divorce; formally terminate a marriage"
+translation: "n. 离婚；vt. 与...离婚"
+srsWords: "divorce"
 
 [flashcard-review]
 front: "dissolve"

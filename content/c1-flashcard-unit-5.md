@@ -40,10 +40,10 @@ translation: "n. 赞赏, 嘉奖, 推荐"
 srsWords: "commendation"
 
 [flashcard-review]
-front: "thereby"
-meaning: "r. by that means or because of that"
-translation: "adv. 因此"
-srsWords: "thereby"
+front: "homogeneous"
+meaning: "a. all of the same or similar kind or nature"
+translation: "a. 同种的, 同质的, 齐性的；[医] 同种的, 纯一的, 同质的, 均匀的"
+srsWords: "homogeneous"
 
 [flashcard-review]
 front: "flick"
@@ -74,6 +74,7 @@ front: "allege"
 meaning: "v. report or maintain"
 translation: "vt. 宣称, 主张, 提出, 断言；[法] 断言, 指称, 指证"
 srsWords: "allege"
+
 ---
 lessonTitle: "Lesson 2: Scientific Inquiry & Ethics Part 2"
 description: "Practice 10 key C1 vocabulary flashcards for Scientific Inquiry & Ethics"
@@ -93,16 +94,16 @@ translation: "n. 贿赂行为, 行贿, 受贿；[经] 行贿, 受贿"
 srsWords: "bribery"
 
 [flashcard-review]
-front: "inclusion"
-meaning: "n. the state of being included; n. the relation of comprising something; n. the act of including"
-translation: "n. 包含, 内含物；[计] 蕴含"
-srsWords: "inclusion"
+front: "methyl"
+meaning: "n. the univalent radical CH3- derived from methane"
+translation: "n. 甲基；[化] 甲基"
+srsWords: "methyl"
 
 [flashcard-review]
-front: "inclusive"
-meaning: "a. including much or everything; and especially including stated limits"
-translation: "a. 包含的, 包括的"
-srsWords: "inclusive"
+front: "specificity"
+meaning: "n. the quality of being specific rather than general; n. the quality of being specific to a particular organism"
+translation: "n. 特异性, 专一性, 特殊性, 特性, 特征；[化] 专一性"
+srsWords: "specificity"
 
 [flashcard-review]
 front: "inclusively"
@@ -135,10 +136,11 @@ translation: "[医] 容易化, 助长, 接通[作用]"
 srsWords: "facilitation"
 
 [flashcard-review]
-front: "conditional"
-meaning: "s. qualified by reservations; a. imposing or depending on or containing a condition"
-translation: "a. 有条件的, 有前提的；[电] 有条件的"
-srsWords: "conditional"
+front: "stewardship"
+meaning: "n. the position of steward"
+translation: "n. steward的职务, 管理工作"
+srsWords: "stewardship"
+
 ---
 lessonTitle: "Lesson 3: Scientific Inquiry & Ethics Part 3"
 description: "Practice 10 key C1 vocabulary flashcards for Scientific Inquiry & Ethics"
@@ -170,16 +172,16 @@ translation: "n. 脚治疗, 脚治疗医师, 修趾甲术；vt. 修脚, 医脚"
 srsWords: "pedicure"
 
 [flashcard-review]
-front: "facial"
-meaning: "n. cranial nerve that supplies facial muscles; n. care for the face that usually involves cleansing and massage and the application of cosmetic creams; a. of or concerning the face; a. of or pertaining to the outside surface of an object"
-translation: "n. 美颜, 脸部按摩；a. 脸的, 表面的, 脸部用的"
-srsWords: "facial"
+front: "antigen"
+meaning: "n. any substance (as a toxin or enzyme) that stimulates an immune response in the body (especially the production of antibodies)"
+translation: "n. 抗原；[化] 抗原"
+srsWords: "antigen"
 
 [flashcard-review]
-front: "bouquet"
-meaning: "n. an arrangement of flowers that is usually given as a present; n. a pleasingly sweet olfactory property"
-translation: "n. 花束；[医] 丛, 酒香, 末梢分极"
-srsWords: "bouquet"
+front: "modernist"
+meaning: "n. an artist who makes a deliberate break with previous styles"
+translation: "n. 现代主义者, 现代人, 现代主义作家"
+srsWords: "modernist"
 
 [flashcard-review]
 front: "refurbish"
@@ -194,16 +196,17 @@ translation: "n. 整修; 翻新; 重新磨亮"
 srsWords: "refurbishment"
 
 [flashcard-review]
-front: "grounds"
-meaning: "n. a tract of land cleared for some special purposes (recreation or burial etc.); n. dregs consisting of solid particles (especially of coffee) that form a residue"
-translation: "n. 场地, 庭院, 理由, 渣滓, 沉淀物"
-srsWords: "grounds"
+front: "shenanigan"
+meaning: "n reckless or malicious behavior that causes discomfort or annoyance in others; n the use of tricks to deceive someone (usually to extract money from them)"
+translation: "n. 鬼把戏, 诡计, 淘气, 恶作剧, 胡闹"
+srsWords: "shenanigan"
 
 [flashcard-review]
 front: "lethargy"
 meaning: "n. a state of comatose torpor (as found in sleeping sickness)"
 translation: "n. 昏睡, 瞌睡, 无力气；[医] 昏睡, 嗜眠"
 srsWords: "lethargy"
+
 ---
 lessonTitle: "Lesson 4: Scientific Inquiry & Ethics Part 4"
 description: "Practice 10 key C1 vocabulary flashcards for Scientific Inquiry & Ethics"
@@ -269,6 +272,7 @@ front: "flask"
 meaning: "n. bottle that has a narrow neck; n. the quantity a flask will hold"
 translation: "n. 细颈瓶, 烧瓶, 小水瓶；[化] 瓶; 烧瓶"
 srsWords: "flask"
+
 ---
 lessonTitle: "Lesson 5: Scientific Inquiry & Ethics Part 5"
 description: "Practice 10 key C1 vocabulary flashcards for Scientific Inquiry & Ethics"
@@ -282,10 +286,10 @@ translation: "a. 广大的, 宽广的"
 srsWords: "spacious"
 
 [flashcard-review]
-front: "gourmet"
-meaning: "n a person devoted to refined sensuous enjoyment (especially good food and drink)"
-translation: "n. 美食家"
-srsWords: "gourmet"
+front: "derange"
+meaning: "v derange mentally, throw out of mental balance; make insane; v throw into great confusion or disorder"
+translation: "vt. 扰乱, 使发狂"
+srsWords: "derange"
 
 [flashcard-review]
 front: "conjure"
@@ -334,6 +338,7 @@ front: "dutiful"
 meaning: "s. willingly obedient out of a sense of duty and respect;"
 translation: "a. 尽职的, 忠实的, 顺从的, 守本分的"
 srsWords: "dutiful"
+
 ---
 lessonTitle: "Lesson 6: Scientific Inquiry & Ethics Part 6"
 description: "Practice 10 key C1 vocabulary flashcards for Scientific Inquiry & Ethics"
@@ -359,10 +364,10 @@ translation: "adv. 非常(富有的/伟大的)"
 srsWords: "fabulously"
 
 [flashcard-review]
-front: "premises"
-meaning: "n. land and the buildings on it"
-translation: "n. 房屋, 上述各点, 上述房屋；[经] 房屋, 店铺, 契约前言"
-srsWords: "premises"
+front: "serenity"
+meaning: "n a disposition free from stress or emotion; n the absence of mental stress or anxiety"
+translation: "n. 宁静, 沉着, 晴朗"
+srsWords: "serenity"
 
 [flashcard-review]
 front: "eclectic"
@@ -399,6 +404,7 @@ front: "waterfront"
 meaning: "n. the area of a city (such as a harbor or dockyard) alongside a body of water"
 translation: "n. 水边, 滨水区, 滩, 海滨, 江边"
 srsWords: "waterfront"
+
 ---
 lessonTitle: "Lesson 7: Scientific Inquiry & Ethics Part 7"
 description: "Practice 10 key C1 vocabulary flashcards for Scientific Inquiry & Ethics"
@@ -424,22 +430,22 @@ translation: "a. 磨损的；弄垮的；破旧的；受到虐待的"
 srsWords: "battered"
 
 [flashcard-review]
-front: "comply"
-meaning: "v. act in accordance with someone's rules, commands, or wishes"
-translation: "vi. 顺从, 依从；[法] 遵守, 承诺, 照做"
-srsWords: "comply"
+front: "misogyny"
+meaning: "n. hatred of women"
+translation: "n. 厌恶女人；[医] 厌女症, 厌恶女人"
+srsWords: "misogyny"
 
 [flashcard-review]
-front: "compliance"
-meaning: "n acting according to certain accepted standards; n a disposition or tendency to yield to the will of others; n the act of submitting; usually surrendering power to another"
-translation: "n. 遵从, 顺从, 屈从；[化] 柔顺; 顺应"
-srsWords: "compliance"
+front: "maturity"
+meaning: "n. state of being mature; full development; n. the date on which an obligation must be repaid"
+translation: "n. 成熟, 完备, 到期；[医] 成熟, 成熟期, 发育期"
+srsWords: "maturity"
 
 [flashcard-review]
-front: "compliant"
-meaning: "a. disposed or willing to comply"
-translation: "a. 顺从的, 屈从的；[电] 适用于, 配合...使用"
-srsWords: "compliant"
+front: "reparation"
+meaning: "n. compensation (given or received) for an insult or injury; n. (usually plural) compensation exacted from a defeated nation by the victors; n. something done or paid in expiation of a wrong"
+translation: "n. 补偿, 赔偿, 弥补, 修复, 修理；[经] 赔偿, 补偿, 修理"
+srsWords: "reparation"
 
 [flashcard-review]
 front: "compliantly"
@@ -464,6 +470,7 @@ front: "exuberance"
 meaning: "n. joyful enthusiasm; n. overflowing with eager enjoyment or approval"
 translation: "n. 茂盛, 茂盛的生长物, 丰富"
 srsWords: "exuberance"
+
 ---
 lessonTitle: "Lesson 8: Scientific Inquiry & Ethics Part 8"
 description: "Practice 10 key C1 vocabulary flashcards for Scientific Inquiry & Ethics"
@@ -477,10 +484,10 @@ translation: "adv. 兴高采烈地, 活跃地, 愉快地"
 srsWords: "exuberantly"
 
 [flashcard-review]
-front: "linear"
-meaning: "a. designating or involving an equation whose terms are of the first degree; a. of or in or along or relating to a line; involving a single dimension; s. (of a leaf shape) long and narrow; s. measured lengthwise"
-translation: "a. 线的, 直线的, 线状的；[计] 线性"
-srsWords: "linear"
+front: "algebraic"
+meaning: "a. of or relating to algebra"
+translation: "a. 代数的, 代数学的"
+srsWords: "algebraic"
 
 [flashcard-review]
 front: "linearly"
@@ -507,10 +514,10 @@ translation: "n. 支配, 控制, 管辖"
 srsWords: "domination"
 
 [flashcard-review]
-front: "dominant"
-meaning: "n. (music) the fifth note of the diatonic scale; a. exercising influence or control; a. (of genes) producing the same phenotype whether its allele is identical or dissimilar"
-translation: "a. 占优势的, 支配的；[医] 优性的, 显性的"
-srsWords: "dominant"
+front: "debilitate"
+meaning: "v make weak"
+translation: "vt. 使衰弱"
+srsWords: "debilitate"
 
 [flashcard-review]
 front: "dominantly"
@@ -529,6 +536,7 @@ front: "interjection"
 meaning: "n. the action of interjecting or interposing an action or remark that interrupts"
 translation: "n. 感叹词, 插入语"
 srsWords: "interjection"
+
 ---
 lessonTitle: "Lesson 9: Scientific Inquiry & Ethics Part 9"
 description: "Practice 10 key C1 vocabulary flashcards for Scientific Inquiry & Ethics"
@@ -594,6 +602,7 @@ front: "impishly"
 meaning: "r. in an appealing but bold manner"
 translation: "adv. 顽皮地；恶作剧地"
 srsWords: "impishly"
+
 ---
 lessonTitle: "Lesson 10: Scientific Inquiry & Ethics Part 10"
 description: "Practice 10 key C1 vocabulary flashcards for Scientific Inquiry & Ethics"
@@ -601,10 +610,10 @@ icon: "🧬"
 color: "#00BCD4"
 ---
 [flashcard-review]
-front: "wicked"
-meaning: "a. morally bad in principle or practice"
-translation: "a. 坏的, 邪恶的, 缺德的, 刻毒的, 恶劣的, 淘气的"
-srsWords: "wicked"
+front: "dystopian"
+meaning: "a. of or pertaining to or resembling a dystopia; a. as bad as can be; characterized by human misery"
+translation: "a. 反面乌托邦的,反面假想国的；n. 反面乌托邦的鼓吹者(或描写者)"
+srsWords: "dystopian"
 
 [flashcard-review]
 front: "wickedly"

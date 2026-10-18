@@ -74,6 +74,7 @@ front: "immoral"
 meaning: "a. deliberately violating accepted principles of right and wrong"
 translation: "a. 不道德的, 邪恶的, 放荡的；[法] 不道德的, 道德败坏的, 邪恶的"
 srsWords: "immoral"
+
 ---
 lessonTitle: "Lesson 2: Academic & Analytical Discourse Part 2"
 description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
@@ -111,10 +112,10 @@ translation: "a. 暂时的, 非永久的"
 srsWords: "impermanent"
 
 [flashcard-review]
-front: "implement"
-meaning: "n. instrumentation (a piece of equipment or tool) used to effect an end; v. apply in a manner consistent with its purpose or design"
-translation: "n. 工具, 器具, 手段；vt. 实现, 使生效, 执行"
-srsWords: "implement"
+front: "analyze"
+meaning: "v. consider in detail and subject to an analysis in order to discover essential features or meaning; v. make a mathematical, chemical, or grammatical analysis of; break down into components or essential features; v. break down into components or essential features"
+translation: "vt. 分析, 细察, 分解；[机] 分析"
+srsWords: "analyze"
 
 [flashcard-review]
 front: "implication"
@@ -139,6 +140,7 @@ front: "impolitely"
 meaning: "r in an impolite manner"
 translation: "adv. 无礼地, 没规矩地"
 srsWords: "impolitely"
+
 ---
 lessonTitle: "Lesson 3: Academic & Analytical Discourse Part 3"
 description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
@@ -146,10 +148,10 @@ icon: "📑"
 color: "#673AB7"
 ---
 [flashcard-review]
-front: "import"
-meaning: "n. commodities (goods or services) bought from a foreign country; n. an imported person brought from a foreign country; v. bring in from abroad; v. transfer (electronic data) into a database or document"
-translation: "n. 进口货, 进口, 输入, 含义, 重要性；vt. 输入, 引入, 进口, 含...的意思, 重要；vi. 有关系；[计] 引入"
-srsWords: "import"
+front: "synopsis"
+meaning: "n a sketchy summary of the main points of an argument or theory"
+translation: "n. 概要, 摘要, 大意；[化] 一览表; 提要"
+srsWords: "synopsis"
 
 [flashcard-review]
 front: "impose"
@@ -204,6 +206,7 @@ front: "improbable"
 meaning: "a. not likely to be true or to occur or to have occurred; s. having a probability too low to inspire belief; s. too improbable to admit of belief"
 translation: "a. 不大可能的, 不象发生的, 荒谬可笑的；[法] 未必会的, 不大可能发生的, 未必确实的"
 srsWords: "improbable"
+
 ---
 lessonTitle: "Lesson 4: Academic & Analytical Discourse Part 4"
 description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
@@ -217,10 +220,10 @@ translation: "[计] 不适当地"
 srsWords: "improperly"
 
 [flashcard-review]
-front: "improved"
-meaning: "a. made more desirable or valuable or profitable; especially made ready for use or marketing; s. become or made better in quality; s. (of land) made ready for development or agriculture by clearing of trees and brush"
-translation: "a. 改良的"
-srsWords: "improved"
+front: "crude"
+meaning: "s. not carefully or expertly made; s. conspicuously and tastelessly indecent; s. belonging to an early stage of technical development; characterized by simplicity and (often) crudeness; s. not processed or subjected to analysis"
+translation: "a. 天然的, 未成熟的, 粗糙的, 粗鲁的；n. 天然的物质"
+srsWords: "crude"
 
 [flashcard-review]
 front: "impulse"
@@ -269,6 +272,7 @@ front: "incentive"
 meaning: "n. a positive motivational influence"
 translation: "n. 动机；a. 激励的"
 srsWords: "incentive"
+
 ---
 lessonTitle: "Lesson 5: Academic & Analytical Discourse Part 5"
 description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
@@ -312,10 +316,10 @@ translation: "a. 不能用语言表达的, 不可名状的, 莫名其妙的"
 srsWords: "indescribable"
 
 [flashcard-review]
-front: "index"
-meaning: "n. a numerical scale used to compare variables with one another or with some reference number; n. a number or ratio (a value on a scale of measurement) derived from a series of observed facts; can reveal relative changes as a function of time; n. an alphabetical listing of names and topics along with page numbers where they are discussed; n. the finger next to the thumb"
-translation: "n. 索引, 指针, 指数, 指标；vt. 编入索引中, 指出；vi. 做索引；[计] 下标; 附标; 变址; 索引; 编索引"
-srsWords: "index"
+front: "synthetic"
+meaning: "n. a compound made artificially by chemical reactions; a. involving or of the nature of synthesis (combining separate elements to form a coherent whole) as opposed to analysis; a. systematic combining of root and modifying elements into single words; a. of a proposition whose truth value is determined by observation or facts"
+translation: "n. 合成物质；a. 综合(性)的, 人造的, 合成的"
+srsWords: "synthetic"
 
 [flashcard-review]
 front: "indifferent"
@@ -334,6 +338,7 @@ front: "indulgent"
 meaning: "a. characterized by or given to yielding to the wishes of someone; s. tolerant or lenient; s. being favorably inclined"
 translation: "a. 纵容的, 任性的, 宽容的"
 srsWords: "indulgent"
+
 ---
 lessonTitle: "Lesson 6: Academic & Analytical Discourse Part 6"
 description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
@@ -399,6 +404,7 @@ front: "inflammatory"
 meaning: "s. characterized or caused by inflammation"
 translation: "a. 激动的, 煽动的, 炎症性的；[医] 炎的, 炎性的"
 srsWords: "inflammatory"
+
 ---
 lessonTitle: "Lesson 7: Academic & Analytical Discourse Part 7"
 description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
@@ -460,10 +466,11 @@ translation: "vt. 继承, 遗传；vi. 接受遗产"
 srsWords: "inherit"
 
 [flashcard-review]
-front: "initiative"
-meaning: "n readiness to embark on bold new ventures; n the first of a series of actions; s serving to set in motion"
-translation: "n. 主动行动, 首创精神, 主动权；a. 自发的, 起始的"
-srsWords: "initiative"
+front: "sap"
+meaning: "n. a watery solution of sugars, salts, and minerals that circulates through the vascular system of a plant; v. excavate the earth beneath"
+translation: "n. 树液, 体液, 活力, 坑道, 消弱, 警棍；vt. 使排出体液, 使伤元气, 使衰竭, 挖坑道逼近, 逐渐侵蚀；vi. 挖坑道, 消弱；[计] 共享汇编程序, 结构分析程序, 符号汇编程序, 服务器广告协议"
+srsWords: "sap"
+
 ---
 lessonTitle: "Lesson 8: Academic & Analytical Discourse Part 8"
 description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
@@ -495,10 +502,10 @@ translation: "adv. 纯洁地；无罪地"
 srsWords: "innocently"
 
 [flashcard-review]
-front: "input"
-meaning: "n. a component of production; something that goes into the production of output; v. enter (data or a program) into a computer"
-translation: "n. 输入, 输入电路；vt. 输入；[计] 输入"
-srsWords: "input"
+front: "methodology"
+meaning: "n. the branch of philosophy that analyzes the principles and procedures of inquiry in a particular discipline; n. the system of methods followed in a particular discipline"
+translation: "n. 方法学, 方法论；[化] 操作法; 工艺"
+srsWords: "methodology"
 
 [flashcard-review]
 front: "inseparable"
@@ -529,6 +536,7 @@ front: "instantly"
 meaning: "r without delay or hesitation; with no time intervening; r without any delay"
 translation: "adv. 立即地, 即刻地"
 srsWords: "instantly"
+
 ---
 lessonTitle: "Lesson 9: Academic & Analytical Discourse Part 9"
 description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
@@ -542,10 +550,10 @@ translation: "n. 本能, 直觉；a. 充满着的"
 srsWords: "instinct"
 
 [flashcard-review]
-front: "institution"
-meaning: "n. an organization founded and united for a specific purpose; n. an establishment consisting of a building or complex of buildings where an organization for the promotion of some cause is situated; n. a custom that for a long time has been an important feature of some group or society"
-translation: "n. 机构, 惯例, 制度；[医] 机关, 机构, 设施"
-srsWords: "institution"
+front: "empirical"
+meaning: "a. derived from experiment and observation rather than theory"
+translation: "a. 完全跟据经验的, 经验主义的；[医] 经验主义的"
+srsWords: "empirical"
 
 [flashcard-review]
 front: "instruct"
@@ -572,10 +580,10 @@ translation: "vt. 综合, 使完整, 使成整体；vi. 成一体；a. 完整的
 srsWords: "integrate"
 
 [flashcard-review]
-front: "intellectual"
-meaning: "n. a person who uses the mind creatively; s. of or associated with or requiring the use of the mind; a. appealing to or using the intellect"
-translation: "n. 有知识者, 知识分子, 凭理智做事者；a. 智力的, 用脑力的, 聪明的"
-srsWords: "intellectual"
+front: "clan"
+meaning: "n group of people related by blood or marriage"
+translation: "n. 氏族, 宗族, 集团；[医] 支"
+srsWords: "clan"
 
 [flashcard-review]
 front: "intent"
@@ -584,16 +592,17 @@ translation: "n. 意图, 含义, 故意；a. 专心的, 决心的, 热心的"
 srsWords: "intent"
 
 [flashcard-review]
-front: "interactive"
-meaning: "a used especially of drugs or muscles that work together so the total effect is greater than the sum of the two (or more); s capable of acting on or influencing each other"
-translation: "a. 相互作用的, 相互影响的；[计] 交互, 人机对话的"
-srsWords: "interactive"
+front: "grounds"
+meaning: "n. a tract of land cleared for some special purposes (recreation or burial etc.); n. dregs consisting of solid particles (especially of coffee) that form a residue"
+translation: "n. 场地, 庭院, 理由, 渣滓, 沉淀物"
+srsWords: "grounds"
 
 [flashcard-review]
 front: "interfere"
 meaning: "v. come between so as to be hindrance or obstacle"
 translation: "vi. 妨碍, 冲突, 干涉, 抵触；[医] 干扰, 干涉, 阻碍, 碰腿(马)"
 srsWords: "interfere"
+
 ---
 lessonTitle: "Lesson 10: Academic & Analytical Discourse Part 10"
 description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
@@ -601,10 +610,10 @@ icon: "📑"
 color: "#673AB7"
 ---
 [flashcard-review]
-front: "interior"
-meaning: "a. situated within or suitable for inside a building; s. inside and toward a center; s. of or coming from the middle of a region or country"
-translation: "n. 内部, 内政；a. 内部的, 心灵的, 内地的, 内政的"
-srsWords: "interior"
+front: "gig"
+meaning: "n. long and light rowing boat; especially for racing; n. a cluster of hooks (without barbs) that is drawn through a school of fish to hook their bodies; used when fish are not biting; n. tender that is a light ship's boat; often for personal use of captain; n. small two-wheeled horse-drawn carriage; with two seats and no hood"
+translation: "n. 旋转物, 轻便双轮马车, 赛艇, 鱼叉, 记过, 爵士乐演奏会；vi. 乘轻便双轮马车, 乘快艇, (用鱼叉)叉鱼；vt. (用鱼叉)叉, 刺激, 记过"
+srsWords: "gig"
 
 [flashcard-review]
 front: "interpersonal"
@@ -619,10 +628,10 @@ translation: "vt. 解释, 演出, 翻译, 理解；vi. 翻译, 解释"
 srsWords: "interpret"
 
 [flashcard-review]
-front: "interpretation"
-meaning: "n. a mental representation of the meaning or significance of something; n. an explanation that results from interpreting something; n. an explanation of something that is not immediately obvious"
-translation: "n. 解释, 演出, 翻译；[计] 插值; 插值法; 解释"
-srsWords: "interpretation"
+front: "ally"
+meaning: "n. a friendly nation; n. an associate who provides cooperation or assistance; v. become an ally or associate, as by a treaty or marriage"
+translation: "n. 同盟者, 同盟国, 助手；vt. 使联盟, 使联合, 使有关系；vi. 结盟"
+srsWords: "ally"
 
 [flashcard-review]
 front: "interpreter"

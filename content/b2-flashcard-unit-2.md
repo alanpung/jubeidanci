@@ -22,10 +22,10 @@ translation: "vt. 集合, 收集, 装配；vi. 集合；[计] 汇编"
 srsWords: "assemble"
 
 [flashcard-review]
-front: "assembly"
-meaning: "n. a group of machine parts that fit together to form a self-contained unit; n. a group of persons who are gathered together for a common purpose; n. a unit consisting of components that have been fitted together; n. the social act of assembling"
-translation: "n. 与会者, 集会, 装配, 组件；[化] 装配；[计] 汇编语言"
-srsWords: "assembly"
+front: "eco"
+meaning: "eco"
+translation: "abbr. 电子耦合振荡器（Electron-Coupled Oscillator）；环境控制组织（Environmental Control Organization）；经济合作组织（Economic Cooperation Organization）"
+srsWords: "eco"
 
 [flashcard-review]
 front: "assert"
@@ -40,10 +40,10 @@ translation: "vt. 估定, 对...征税, 评定；[经] 估计, 估价, 确定(�
 srsWords: "assess"
 
 [flashcard-review]
-front: "assessment"
-meaning: "n. an amount determined as payable; n. the market value set on assets"
-translation: "n. 评估, 估定, 评定的款额；[化] 评估"
-srsWords: "assessment"
+front: "atm"
+meaning: "n a unit of pressure: the pressure that will support a column of mercury 760 mm high at sea level and 0 degrees centigrade; n a means of digital communications that is capable of very high speeds; suitable for transmission of images or voice or video as well as data; n an unattended machine (outside some banks) that dispenses money when a personal coded card is used"
+translation: "[计] 自动出纳机; 异步传输方式"
+srsWords: "atm"
 
 [flashcard-review]
 front: "assumption"
@@ -74,6 +74,7 @@ front: "astonished"
 meaning: "v affect with wonder; s filled with the emotional impact of overwhelming surprise or shock"
 translation: "a. 吃惊的"
 srsWords: "astonished"
+
 ---
 lessonTitle: "Lesson 2: Economy, Finance & Trade Part 2"
 description: "Practice 10 key B2 vocabulary flashcards for Economy, Finance & Trade"
@@ -105,10 +106,10 @@ translation: "n. 体育运动"
 srsWords: "athletics"
 
 [flashcard-review]
-front: "attached"
-meaning: "a. used of buildings joined by common sidewalls; a. associated in an exclusive sexual relationship; s. fond and affectionate"
-translation: "a. 附加的；依恋的, 充满爱心的"
-srsWords: "attached"
+front: "utilize"
+meaning: "v. convert (from an investment trust to a unit trust)"
+translation: "vt. 利用"
+srsWords: "utilize"
 
 [flashcard-review]
 front: "attainable"
@@ -117,10 +118,10 @@ translation: "a. 可到达的, 可得到的"
 srsWords: "attainable"
 
 [flashcard-review]
-front: "attendance"
-meaning: "n. the act of being present (at a meeting or event etc.); n. the frequency with which a person is present; n. the number of people that are present"
-translation: "n. 出席, 出席的人数, 照料；[法] 管理, 照料, 资助"
-srsWords: "attendance"
+front: "proprietary"
+meaning: "a. protected by trademark or patent or copyright; made or produced or distributed by one having exclusive rights"
+translation: "a. 所有者的, 所有权的, 私有的；n. 所有者, 业主, 所有权"
+srsWords: "proprietary"
 
 [flashcard-review]
 front: "attentive"
@@ -139,6 +140,7 @@ front: "attractiveness"
 meaning: "n. sexual allure"
 translation: "[经] 吸引性, 有利可图"
 srsWords: "attractiveness"
+
 ---
 lessonTitle: "Lesson 3: Economy, Finance & Trade Part 3"
 description: "Practice 10 key B2 vocabulary flashcards for Economy, Finance & Trade"
@@ -146,10 +148,10 @@ icon: "📈"
 color: "#4CAF50"
 ---
 [flashcard-review]
-front: "attribute"
-meaning: "n. an abstraction belonging to or characteristic of an entity"
-translation: "n. 属性, 标志, 定语；vt. 把...归于, 认为...属于；[计] 属性"
-srsWords: "attribute"
+front: "hack"
+meaning: "n. one who works hard at boring tasks; n. a mediocre and disdained writer; n. a tool (as a hoe or pick or mattock) used for breaking up the surface of the soil; n. an old or over-worked horse"
+translation: "n. 劈, 砍, 砍痕, 出租车, 干咳, 晒架, 鹤嘴锄；vt. 劈, 砍, 出租, 用旧；vi. 劈, 砍, 干咳, 驾驶出租车；a. 出租的"
+srsWords: "hack"
 
 [flashcard-review]
 front: "atypical"
@@ -176,10 +178,10 @@ translation: "a. 权威性的, 官方的, 命令式的；[法] 官方的, 当局
 srsWords: "authoritative"
 
 [flashcard-review]
-front: "availability"
-meaning: "n the quality of being at hand when needed"
-translation: "n. 有效性, 可利用性, 可利用的人；[计] 有效性; 可用性"
-srsWords: "availability"
+front: "corps"
+meaning: "n. an army unit usually consisting of two or more divisions and their support; n. a body of people associated together"
+translation: "n. 军, 队, 部队, 兵种；[医] 对, 团; 体, 物体"
+srsWords: "corps"
 
 [flashcard-review]
 front: "await"
@@ -194,16 +196,17 @@ translation: "n. 轴；[计] 坐标轴"
 srsWords: "axis"
 
 [flashcard-review]
-front: "backup"
-meaning: "n. an accumulation caused by clogging or a stoppage; n. (computer science) a copy of a file or directory on a separate storage device"
-translation: "n. 倒车, 后退, 后援, 支持, 阻塞；vt. 做备份；a. 候补的, 支持的；[计] 备份; DOS外部命令:通常使用于将硬磁盘上指定的文件复制到软盘上"
-srsWords: "backup"
+front: "scenario"
+meaning: "n. an outline or synopsis of a play (or, by extension, of a literary work); n. a setting for a work of art or literature; n. a postulated sequence of possible events"
+translation: "n. 剧本提纲, 情节, 剧本, 方案, 事态；[计] 方案"
+srsWords: "scenario"
 
 [flashcard-review]
 front: "backyard"
 meaning: "n. the grounds in back of a house"
 translation: "n. 后院, 后庭"
 srsWords: "backyard"
+
 ---
 lessonTitle: "Lesson 4: Economy, Finance & Trade Part 4"
 description: "Practice 10 key B2 vocabulary flashcards for Economy, Finance & Trade"
@@ -259,16 +262,17 @@ translation: "n. 破产者；a. 破产的；vt. 使破产"
 srsWords: "bankrupt"
 
 [flashcard-review]
-front: "bankruptcy"
-meaning: "n. a state of complete lack of some abstract property; n. inability to discharge all your debts as they come due; n. a legal process intended to insure equality among the creditors of a corporation declared to be insolvent"
-translation: "n. 破产者；[经] 破产, 倒闭"
-srsWords: "bankruptcy"
+front: "isolated"
+meaning: "s. not close together in time; s. cut off or left behind; s. under forced isolation especially for health reasons"
+translation: "a. 孤立的, 孤零零的；[计] 隔离的, 绝缘的"
+srsWords: "isolated"
 
 [flashcard-review]
 front: "barbershop"
 meaning: "n. a shop where men can get their hair cut"
 translation: "n. 理发店"
 srsWords: "barbershop"
+
 ---
 lessonTitle: "Lesson 5: Economy, Finance & Trade Part 5"
 description: "Practice 10 key B2 vocabulary flashcards for Economy, Finance & Trade"
@@ -334,6 +338,7 @@ front: "beam"
 meaning: "n. long thick piece of wood or metal or concrete, etc., used in construction; n. a group of nearly parallel lines of electromagnetic radiation; n. a column of light (as from a beacon); n. (nautical) breadth amidships"
 translation: "n. 横梁, 杆, 光线, 容光焕发；vi. 用梁支承, 微笑, 射出光线；vt. 照耀, 感到欣喜；[计] 束"
 srsWords: "beam"
+
 ---
 lessonTitle: "Lesson 6: Economy, Finance & Trade Part 6"
 description: "Practice 10 key B2 vocabulary flashcards for Economy, Finance & Trade"
@@ -399,6 +404,7 @@ front: "bestseller"
 meaning: "n a book that has had a large and rapid sale"
 translation: "n. 畅销书"
 srsWords: "bestseller"
+
 ---
 lessonTitle: "Lesson 7: Economy, Finance & Trade Part 7"
 description: "Practice 10 key B2 vocabulary flashcards for Economy, Finance & Trade"
@@ -424,16 +430,16 @@ translation: "n. 困惑, 昏乱"
 srsWords: "bewilderment"
 
 [flashcard-review]
-front: "bid"
-meaning: "n. an attempt to get something; n. a formal proposal to buy at a specified price; n. (bridge) the number of tricks a bridge player is willing to contract to make; v. ask for or request earnestly"
-translation: "n. 出价；v. 命令, 吩咐, 请求, 表示, 宣布, 投标"
-srsWords: "bid"
+front: "salvation"
+meaning: "n. a means of preserving from harm or unpleasantness; n. the state of being saved or preserved from harm; n. saving someone or something from harm or from an unpleasant situation"
+translation: "n. 拯救, 救助, 救世"
+srsWords: "salvation"
 
 [flashcard-review]
-front: "bidding"
-meaning: "n. a request to be present"
-translation: "n. 命令, 邀请, 出价；[经] 投标, 招标"
-srsWords: "bidding"
+front: "prophet"
+meaning: "n. an authoritative person who divines the future; n. someone who speaks by divine inspiration; someone who is an interpreter of the will of God"
+translation: "n. 预言者, 先知, 提倡者"
+srsWords: "prophet"
 
 [flashcard-review]
 front: "bikini"
@@ -448,22 +454,23 @@ translation: "vt. 绑, 约束, 装订, 包扎, 使结合；vi. 凝固, 有约束
 srsWords: "bind"
 
 [flashcard-review]
-front: "bio"
-meaning: "a short biography or biographical sketch"
-translation: "n. 个人简历, 小传"
-srsWords: "bio"
+front: "facial"
+meaning: "n. cranial nerve that supplies facial muscles; n. care for the face that usually involves cleansing and massage and the application of cosmetic creams; a. of or concerning the face; a. of or pertaining to the outside surface of an object"
+translation: "n. 美颜, 脸部按摩；a. 脸的, 表面的, 脸部用的"
+srsWords: "facial"
 
 [flashcard-review]
-front: "biological"
-meaning: "a. pertaining to biology or to life and living things; a. of parents and children; related by blood"
-translation: "a. 生物学的；[医] 生物学的"
-srsWords: "biological"
+front: "proposition"
+meaning: "n. (logic) a statement that affirms or denies something and is either true or false; n. an offer for a private bargain (especially a request for sexual favors); n. a task to be dealt with; v. suggest sex to"
+translation: "n. 建议, 命题, 主张；vt. 向...提议, 向...提出猥亵的要求"
+srsWords: "proposition"
 
 [flashcard-review]
 front: "biotechnology"
 meaning: "n. the branch of molecular biology that studies the use of microorganisms to perform specific industrial processes; n. the branch of engineering science in which biological science is used to study the relation between workers and their environments"
 translation: "n. 生物工艺学；生物技术"
 srsWords: "biotechnology"
+
 ---
 lessonTitle: "Lesson 8: Economy, Finance & Trade Part 8"
 description: "Practice 10 key B2 vocabulary flashcards for Economy, Finance & Trade"
@@ -529,6 +536,7 @@ front: "blink"
 meaning: "n. a reflex that closes and opens the eyes rapidly; v. briefly shut the eyes"
 translation: "vi. 眨眼, 闪亮；vt. 眨眼, 使闪亮；n. 眨眼, 瞬间, 闪光, 闪烁；[计] 闪烁"
 srsWords: "blink"
+
 ---
 lessonTitle: "Lesson 9: Economy, Finance & Trade Part 9"
 description: "Practice 10 key B2 vocabulary flashcards for Economy, Finance & Trade"
@@ -594,6 +602,7 @@ front: "bomber"
 meaning: "n. a military aircraft that drops bombs during flight; n. a person who plants bombs; n. a large sandwich made of a long crusty roll split lengthwise and filled with meats and cheese (and tomato and onion and lettuce and condiments); different names are used in different sections of the United States"
 translation: "n. 轰炸机, 投弹手"
 srsWords: "bomber"
+
 ---
 lessonTitle: "Lesson 10: Economy, Finance & Trade Part 10"
 description: "Practice 10 key B2 vocabulary flashcards for Economy, Finance & Trade"
@@ -625,16 +634,16 @@ translation: "n. 小册子"
 srsWords: "booklet"
 
 [flashcard-review]
-front: "bookmark"
-meaning: "n. a marker (a piece of paper or ribbon) placed between the pages of a book to mark the reader's place"
-translation: "n. 书签；[计] 书签"
-srsWords: "bookmark"
+front: "swap"
+meaning: "v. move (a piece of a program) into memory, in computer science"
+translation: "n. 以货易货；v. 交换, 替换, 交易；[计] 交换"
+srsWords: "swap"
 
 [flashcard-review]
-front: "boost"
-meaning: "n. the act of giving hope or support to someone; n. the act of giving a push; v. give a boost to; be beneficial to; v. increase or raise"
-translation: "n. 推进, 吹捧；vt. 推进, 提高, 宣扬, 促进"
-srsWords: "boost"
+front: "premises"
+meaning: "n. land and the buildings on it"
+translation: "n. 房屋, 上述各点, 上述房屋；[经] 房屋, 店铺, 契约前言"
+srsWords: "premises"
 
 [flashcard-review]
 front: "booth"
