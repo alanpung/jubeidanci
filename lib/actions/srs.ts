@@ -9,7 +9,7 @@ import { revalidatePath } from "next/cache";
 import { calculateNextReview, type Quality, type CardStatus } from "@/lib/srs";
 import type { Exercise } from "@/lib/content/types";
 import { extractSrsWords } from "@/lib/srs-words";
-import { getWordToLevelMap } from "@/lib/words";
+import { getWordToLevelMap, getWordToCseMap } from "@/lib/words";
 import {
   getLocalCards,
   getLocalCard,
@@ -147,7 +147,8 @@ export async function addWordToSrs(
 export async function addOrFailWord(
   word: string,
   language: string,
-  translation: string
+  translation: string,
+  metadata?: { cefrLevel?: string; cseLevel?: string; pos?: string }
 ): Promise<"added" | "failed"> {
   const userId = await getSafeUserId();
   const normalizedWord = word.toLowerCase().trim();
@@ -155,12 +156,32 @@ export async function addOrFailWord(
 
   const localExisting = await getLocalCard(normalizedWord, aliases, userId);
 
+  // Fill CEFR/CSE from dictionary when caller didn't supply them — the
+  // word tooltip always passes just the translation; this way every newly
+  // tracked card still records its level badge.
+  let cefrLevel = metadata?.cefrLevel || null;
+  let cseLevel = metadata?.cseLevel || null;
+  if (!cefrLevel || !cseLevel) {
+    try {
+      const [levelMap, cseMap] = await Promise.all([
+        cefrLevel ? Promise.resolve(null) : getWordToLevelMap(),
+        cseLevel ? Promise.resolve(null) : getWordToCseMap(),
+      ]);
+      if (!cefrLevel && levelMap) cefrLevel = levelMap[normalizedWord] || null;
+      if (!cseLevel && cseMap) cseLevel = cseMap[normalizedWord] || null;
+    } catch {
+      // ignore — both fields are optional
+    }
+  }
+
   if (!localExisting) {
     await upsertLocalCard({
       word: normalizedWord,
       language,
       userId,
       translation,
+      cefrLevel,
+      cseLevel,
       status: "learning",
       nextReviewAt: new Date().toISOString(),
     });
@@ -172,6 +193,8 @@ export async function addOrFailWord(
           language,
           userId,
           translation,
+          cefrLevel,
+          cseLevel,
           status: "learning",
           nextReviewAt: new Date(),
         }).onConflictDoNothing();
@@ -704,7 +727,7 @@ export async function setWordStatus(
   word: string,
   language: string,
   status: "new" | "learning" | "learned" | "remove" | "unmaster",
-  metadata?: { translation?: string; cefrLevel?: string; pos?: string }
+  metadata?: { translation?: string; cefrLevel?: string; cseLevel?: string; pos?: string }
 ) {
   const userId = await getSafeUserId();
   const normalizedWord = word.toLowerCase().trim();
@@ -747,6 +770,7 @@ export async function setWordStatus(
   const translation = metadata?.translation || word;
   let cefrLevel = metadata?.cefrLevel || null;
   const pos = metadata?.pos || null;
+  const cseLevel = metadata?.cseLevel || null;
 
   if (!cefrLevel) {
     try {
@@ -769,6 +793,7 @@ export async function setWordStatus(
     status: effectiveStatus,
     translation,
     cefrLevel,
+    cseLevel,
     pos,
     nextReviewAt: effectiveStatus === "learning" ? now.toISOString() : null,
     lastReviewedAt: effectiveStatus === "learned" ? now.toISOString() : null,
@@ -819,6 +844,7 @@ export async function setWordStatus(
             userId,
             translation,
             cefrLevel,
+            cseLevel,
             pos,
             status: effectiveStatus,
             nextReviewAt: effectiveStatus === "learning" ? now : null,
@@ -832,6 +858,7 @@ export async function setWordStatus(
               status: effectiveStatus,
               translation,
               cefrLevel: cefrLevel || sql`COALESCE(${srsCard.cefrLevel}, ${cefrLevel})`,
+              cseLevel: cseLevel || sql`COALESCE(${srsCard.cseLevel}, ${cseLevel})`,
               pos: pos || sql`COALESCE(${srsCard.pos}, ${pos})`,
               nextReviewAt: effectiveStatus === "learning" ? now : null,
               lastReviewedAt: effectiveStatus === "learned" ? now : null,

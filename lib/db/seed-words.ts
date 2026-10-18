@@ -9,6 +9,7 @@ interface RawWord {
   word: string;
   pos?: string;
   cefr_level?: string;
+  cse_level?: string;
   english_translation: string;
   definition_zh?: string;
   example_sentence_native?: string;
@@ -106,6 +107,7 @@ export async function seedWords() {
         language: langCode,
         pos: w.pos ?? null,
         cefrLevel: w.cefr_level ?? null,
+        cseLevel: w.cse_level ?? null,
         englishTranslation: w.english_translation,
         definitionZh: w.definition_zh ?? null,
         exampleSentenceNative: w.example_sentence_native ?? null,
@@ -120,8 +122,8 @@ export async function seedWords() {
       }));
 
       // The bundled JSON is the single source of truth, so re-running the seed
-      // also refreshes the fields we recompute (CEFR level, frequency rank,
-      // Chinese gloss, IPA) on rows that already exist.
+      // also refreshes the fields we recompute (CEFR level, CSE level, frequency
+      // rank, Chinese gloss, IPA) on rows that already exist.
       await db
         .insert(dictionaryWord)
         .values(rows)
@@ -129,6 +131,7 @@ export async function seedWords() {
           target: [dictionaryWord.word, dictionaryWord.language],
           set: {
             cefrLevel: sql`excluded.cefr_level`,
+            cseLevel: sql`excluded.cse_level`,
             wordFrequency: sql`excluded.word_frequency`,
             pos: sql`excluded.pos`,
             definitionZh: sql`excluded.definition_zh`,

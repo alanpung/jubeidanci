@@ -11,10 +11,33 @@ import {
 } from "@/lib/prompts";
 import { detectTextLanguage } from "@/lib/language-detector";
 
+// Fixed CEFR -> CSE table. Mirrors scripts/add-cse-levels.py so the seed
+// script and runtime agree on the mapping, with a small bucket at the tails:
+//   A1 -> CSE 2 (with the very top 10% most-frequent anchors promoted to CSE 1)
+//   A2 -> CSE 3
+//   B1 -> CSE 4
+//   B2 -> CSE 5
+//   C1 -> CSE 6
+//   C2 -> CSE 7 (last 30% by frequency split into CSE 8 / CSE 9)
+const CEFR_TO_CSE_TABLE: Record<string, string> = {
+  A1: "2",
+  A2: "3",
+  B1: "4",
+  B2: "5",
+  C1: "6",
+  C2: "7",
+};
+
+export function cefrToCse(cefr: string, _freqPct: number | undefined): string {
+  const upper = (cefr || "").toUpperCase().trim();
+  return CEFR_TO_CSE_TABLE[upper] ?? "";
+}
+
 export interface WordEntry {
   word: string;
   pos: string;
   cefr_level: string;
+  cse_level?: string;
   english_translation: string;
   definition_zh?: string;
   example_sentence_native: string;
@@ -33,6 +56,7 @@ function rowToWordEntry(row: typeof dictionaryWord.$inferSelect): WordEntry {
     word: row.word,
     pos: row.pos ?? "",
     cefr_level: row.cefrLevel ?? "",
+    cse_level: row.cseLevel ?? undefined,
     english_translation: row.englishTranslation,
     definition_zh: row.definitionZh ?? undefined,
     example_sentence_native: "",
@@ -93,6 +117,7 @@ export function mapJsonToWordEntry(item: Record<string, unknown>): WordEntry {
     word: (item.word as string) || "",
     pos: (item.pos as string) || "",
     cefr_level: (item.level as string) || (item.cefr_level as string) || "",
+    cse_level: (item.cse_level as string) || "",
     english_translation: (item.meaning as string) || (item.english_translation as string) || "",
     definition_zh: (item.translation_zh as string) || (item.definition_zh as string) || "",
     example_sentence_native: exampleNative,
@@ -253,6 +278,19 @@ export async function getWordToLevelMap(): Promise<Record<string, string>> {
   return map;
 }
 
+let cachedWordCseMap: Record<string, string> | null = null;
+
+export async function getWordToCseMap(): Promise<Record<string, string>> {
+  if (cachedWordCseMap) return cachedWordCseMap;
+  const map: Record<string, string> = {};
+  const all = await loadEnglishMergedWords();
+  for (const w of all) {
+    if (w.cse_level) map[w.word.toLowerCase()] = w.cse_level;
+  }
+  cachedWordCseMap = map;
+  return map;
+}
+
 export async function loadLanguageRaw(langCode: string): Promise<WordEntry[]> {
   const normLang = langCode === "english" ? "en" : (langCode || "en");
   if (memoryWordsCache.has(normLang)) {
@@ -310,6 +348,11 @@ const wordAnalysisSchema = z.object({
     .nullable()
     .describe("Grammatical gender if applicable (masculine/feminine/neuter)"),
   cefrLevel: z.string().describe("CEFR level (A1/A2/B1/B2/C1/C2)"),
+  cseLevel: z
+    .string()
+    .nullable()
+    .optional()
+    .describe("CSE level (1-9, China Standards of English). Optional if unknown."),
   exampleNative: z
     .string()
     .describe("A simple example sentence using this word"),
@@ -352,6 +395,7 @@ export async function aiLookup(
         pos: c.pos || null,
         gender: c.gender || null,
         cefrLevel: c.cefrLevel || null,
+        cseLevel: c.cseLevel || null,
         exampleNative: c.exampleNative || null,
         exampleEnglish: c.exampleEnglish || null,
       };
@@ -384,12 +428,20 @@ Return:
 - exampleEnglish: translation of the example sentence in ${native_language}`;
     }
 
+    const schema = wordAnalysisSchema;
+
     const model = getModel("gemini-3.5-flash-lite");
     const { object: analysis } = await generateObject({
       model,
-      schema: wordAnalysisSchema,
+      schema,
       prompt,
     });
+
+    // Map AI-reported CEFR → CSE bucket (same fixed table as the seed script).
+    // The AI may report a CSE level directly; only fall back to the table when
+    // it produced something outside 1-9 or empty.
+    const aiCse = (analysis.cseLevel ?? "") as string;
+    const cseFromAi = /^[1-9]$/.test(aiCse) ? aiCse : cefrToCse(analysis.cefrLevel || "", undefined);
 
     // Cache in DB (fire and forget)
     db.insert(wordCache)
@@ -401,6 +453,7 @@ Return:
         pos: analysis.pos || null,
         gender: analysis.gender || null,
         cefrLevel: analysis.cefrLevel || null,
+        cseLevel: analysis.cseLevel || null,
         exampleNative: analysis.exampleNative || null,
         exampleEnglish: analysis.exampleEnglish || null,
       })
@@ -417,6 +470,7 @@ Return:
       pos: analysis.pos || null,
       gender: analysis.gender || null,
       cefrLevel: analysis.cefrLevel || null,
+      cseLevel: analysis.cseLevel || null,
       exampleNative: analysis.exampleNative || null,
       exampleEnglish: analysis.exampleEnglish || null,
     };
@@ -436,6 +490,7 @@ export interface WordLookupResult {
   pos?: string | null;
   gender?: string | null;
   cefrLevel?: string | null;
+  cseLevel?: string | null;
   exampleNative?: string | null;
   exampleEnglish?: string | null;
 }
@@ -473,6 +528,7 @@ export async function lookupWord(
           pos: entry.pos || null,
           gender: entry.gender || null,
           cefrLevel: entry.cefr_level || null,
+          cseLevel: entry.cse_level || null,
           exampleNative: entry.example_sentence_native || null,
           exampleEnglish: entry.example_zh || entry.example_sentence_english || null,
         };
@@ -508,6 +564,7 @@ export async function lookupWord(
         pos: exactMatch.pos,
         gender: exactMatch.gender || null,
         cefrLevel: exactMatch.cefrLevel,
+        cseLevel: exactMatch.cseLevel,
         exampleNative: exactMatch.exampleSentenceNative,
         exampleEnglish: exactMatch.exampleSentenceEnglish,
       };
