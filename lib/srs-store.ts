@@ -7,6 +7,7 @@ export interface SrsCardRecord {
   userId: string;
   translation: string;
   cefrLevel: string | null;
+  cseLevel: string | null;
   pos: string | null;
   gender?: string | null;
   status: string; // "new" | "learning" | "review" | "learned"
@@ -152,6 +153,7 @@ export async function upsertLocalCardsBatch(
         userId: uId,
         translation: record.translation || existing.translation || normWord,
         cefrLevel: record.cefrLevel || existing.cefrLevel || null,
+        cseLevel: record.cseLevel || existing.cseLevel || null,
         pos: record.pos || existing.pos || null,
         status: mappedStatus,
         easeFactor: record.easeFactor ?? existing.easeFactor ?? 2.5,
@@ -170,6 +172,7 @@ export async function upsertLocalCardsBatch(
         userId: uId,
         translation: record.translation || normWord,
         cefrLevel: record.cefrLevel || null,
+        cseLevel: record.cseLevel || null,
         pos: record.pos || null,
         gender: record.gender || null,
         status: mappedStatus,
@@ -255,6 +258,7 @@ export async function upsertLocalCard(
       userId: record.userId || "default_user",
       translation: record.translation || normWord,
       cefrLevel: record.cefrLevel || null,
+      cseLevel: record.cseLevel || null,
       pos: record.pos || null,
       gender: record.gender || null,
       status: mappedStatus,

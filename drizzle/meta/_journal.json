@@ -43,6 +43,13 @@
       "when": 1790556618579,
       "tag": "0005_fluffy_mandrill",
       "breakpoints": true
+    },
+    {
+      "idx": 6,
+      "version": "7",
+      "when": 1792289349705,
+      "tag": "0006_cse_level",
+      "breakpoints": true
     }
   ]
 }

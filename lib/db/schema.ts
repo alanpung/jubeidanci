@@ -203,6 +203,7 @@ export const dictionaryWord = pgTable(
     language: text("language").notNull(),
     pos: text("pos"),
     cefrLevel: text("cefr_level"),
+    cseLevel: text("cse_level"),
     englishTranslation: text("english_translation").notNull(),
     definitionZh: text("definition_zh"),
     exampleSentenceNative: text("example_sentence_native"),
