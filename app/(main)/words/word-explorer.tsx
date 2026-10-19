@@ -731,52 +731,7 @@ function WordLookupSection({
         </div>
       </div>
 
-      {/* CSE Level Filter Pills (中国英语能力等级量表 2–9) */}
-      <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card p-1.5 sm:p-2 shadow-xs space-y-1.5">
-        <div className="flex items-center justify-between gap-2 px-0.5">
-          <span className="text-[10px] sm:text-[11px] font-black text-lingo-text-light tracking-wide">
-            CSE 能力等级 (小学 → 雅思8)
-          </span>
-          <button
-            onClick={() => handleCseLevelChange("")}
-            className={`rounded-lg px-2 py-0.5 text-[10px] sm:text-[11px] font-black transition-all ${
-              selectedCseLevel === ""
-                ? "bg-lingo-blue text-white shadow-xs"
-                : "bg-lingo-card border border-lingo-border text-lingo-text-light hover:text-lingo-text"
-            }`}
-          >
-            All CSE
-          </button>
-        </div>
-        <div className="flex items-center gap-1 w-full justify-start overflow-x-auto">
-          {CSE_LEVELS.map((lvl) => {
-            const active = selectedCseLevel === lvl;
-            const count = cseLevelCounts?.[lvl] ?? 0;
-            return (
-              <button
-                key={lvl}
-                onClick={() => handleCseLevelChange(lvl)}
-                title={`CSE ${lvl} · ${CSE_BUCKET_LABELS[lvl] || ""}`}
-                className={`shrink-0 rounded-lg px-1.5 py-1 text-[10px] sm:text-xs font-black transition-all border whitespace-nowrap flex items-center gap-1 ${
-                  active
-                    ? "bg-lingo-blue text-white border-transparent shadow-xs"
-                    : `${CSE_BADGES[lvl]} opacity-70 hover:opacity-100`
-                }`}
-              >
-                <span>{lvl}</span>
-                <span className={active ? "text-white/80" : "text-lingo-text-light/70"}>
-                  {CSE_BUCKET_LABELS[lvl] || ""}
-                </span>
-                {count > 0 && (
-                  <span className={`text-[9px] font-bold ${active ? "text-white/80" : "text-lingo-text-light/70"}`}>
-                    {count.toLocaleString()}
-                  </span>
-                )}
-              </button>
-            );
-          })}
-        </div>
-      </div>
+
 
       {/* ── 2-Row A–Z Alphabet Grid (Spans full width) ── */}
       <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card p-1 sm:p-1.5 shadow-xs space-y-1">

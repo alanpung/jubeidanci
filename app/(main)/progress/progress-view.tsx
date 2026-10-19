@@ -459,101 +459,50 @@ export function ProgressView({
             </div>
           </div>
 
-          {/* ── CSE PROGRESS TABLE (CSE 2–9, 小学–雅思8) ── */}
+          {/* ── CSE & CEFR LEVEL MATCHING REFERENCE TABLE ── */}
           <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card overflow-hidden shadow-xs">
             <div className="px-4 py-3 border-b border-lingo-border flex items-center justify-between gap-2 bg-lingo-card/50">
               <div className="flex items-center gap-2">
                 <GraduationCap className="w-4 h-4 text-lingo-purple" />
                 <h2 className="text-sm sm:text-base font-black text-lingo-text">
-                  CSE Progress
+                  CEFR 与 CSE 能力等级对照表
                 </h2>
-                {isAdmin && (
-                  <span className="rounded-md bg-lingo-purple/10 px-2 py-0.5 text-[10px] font-black text-lingo-purple">
-                    Alan P
-                  </span>
-                )}
               </div>
               <span className="text-[11px] font-bold text-lingo-text-light hidden sm:inline">
-                中国英语能力等级量表 · CSE 2–9
+                中国英语能力等级量表对照参考
               </span>
             </div>
 
             <div className="w-full overflow-x-auto">
-              <table className="w-full text-left text-xs sm:text-sm table-fixed">
-                <colgroup>
-                  <col className="w-[16%]" />
-                  <col className="w-[17%]" />
-                  <col className="w-[17%]" />
-                  <col className="w-[17%]" />
-                  <col className="w-[16%]" />
-                  <col className="w-[17%]" />
-                </colgroup>
+              <table className="w-full text-left text-xs sm:text-sm">
                 <thead className="bg-lingo-gray/30 text-[10px] sm:text-xs font-black text-lingo-text-light uppercase tracking-wider border-b border-lingo-border">
                   <tr>
-                    <th className="py-2.5 sm:py-3 px-2 sm:px-3.5 text-left">CSE</th>
-                    <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center">My Words</th>
-                    <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-emerald-700">Mastered</th>
-                    <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-blue-700">Learning</th>
-                    <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-lingo-text-light">New</th>
-                    <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-lingo-text-light/80">Word Count</th>
+                    <th className="py-2.5 sm:py-3 px-3.5 text-left">CEFR 级别</th>
+                    <th className="py-2.5 sm:py-3 px-3.5 text-left">阶段</th>
+                    <th className="py-2.5 sm:py-3 px-3.5 text-left">CSE 量表对应</th>
+                    <th className="py-2.5 sm:py-3 px-3.5 text-left">国内学段/考试</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-lingo-border">
-                  {CSE_LEVELS.map((lvl) => {
-                    const stat = cseStats[lvl];
-                    const label = CSE_BUCKET_LABELS[lvl] ?? "";
-                    return (
-                      <tr key={lvl} className="hover:bg-lingo-gray/20">
-                        <td className="py-2.5 px-3.5">
-                          <div className="flex items-center gap-1.5">
-                            <span
-                              className={`inline-block px-2 py-0.5 text-center rounded-md text-[11px] sm:text-xs font-black border ${CSE_BADGES[lvl]}`}
-                            >
-                              {label}
-                            </span>
-                          </div>
-                        </td>
-                        <td className="py-2.5 px-2 text-center font-black text-lingo-text text-xs sm:text-sm whitespace-nowrap">
-                          {stat.myWords.toLocaleString()}
-                        </td>
-                        <td className="py-2.5 px-2 text-center font-black text-emerald-600 text-xs sm:text-sm whitespace-nowrap">
-                          {stat.learned.toLocaleString()}
-                        </td>
-                        <td className="py-2.5 px-2 text-center font-bold text-blue-600 text-xs sm:text-sm whitespace-nowrap">
-                          {stat.learning.toLocaleString()}
-                        </td>
-                        <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
-                          {stat.new.toLocaleString()}
-                        </td>
-                        <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light/80 text-xs sm:text-sm whitespace-nowrap">
-                          {stat.wordCount.toLocaleString()}
-                        </td>
-                      </tr>
-                    );
-                  })}
-                </tbody>
-                <tfoot className="bg-lingo-gray/40 border-t-2 border-lingo-border font-black">
-                  <tr>
-                    <td className="py-3 px-3.5 text-xs sm:text-sm font-black text-lingo-text uppercase tracking-wider">
-                      TOTAL
-                    </td>
-                    <td className="py-3 px-2 text-center font-black text-lingo-text text-xs sm:text-sm whitespace-nowrap">
-                      {totalCseMyWords.toLocaleString()}
-                    </td>
-                    <td className="py-3 px-2 text-center font-black text-emerald-700 text-xs sm:text-sm whitespace-nowrap">
-                      {totalCseLearned.toLocaleString()}
-                    </td>
-                    <td className="py-3 px-2 text-center font-black text-blue-700 text-xs sm:text-sm whitespace-nowrap">
-                      {totalCseLearning.toLocaleString()}
-                    </td>
-                    <td className="py-3 px-2 text-center font-black text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
-                      {totalCseNew.toLocaleString()}
-                    </td>
-                    <td className="py-3 px-2 text-center font-black text-lingo-text-light/90 text-xs sm:text-sm whitespace-nowrap">
-                      {totalCseWordCount.toLocaleString()}
-                    </td>
+                  <tr className="hover:bg-lingo-gray/20">
+                    <td className="py-3 px-3.5 font-black text-lingo-text">A1 - A2</td>
+                    <td className="py-3 px-3.5 font-bold text-emerald-600">基础段</td>
+                    <td className="py-3 px-3.5 font-bold text-lingo-text">CSE 1 - 3</td>
+                    <td className="py-3 px-3.5 text-lingo-text-light">小学 - 初中</td>
                   </tr>
-                </tfoot>
+                  <tr className="hover:bg-lingo-gray/20">
+                    <td className="py-3 px-3.5 font-black text-lingo-text">B1 - B2</td>
+                    <td className="py-3 px-3.5 font-bold text-blue-600">进阶段</td>
+                    <td className="py-3 px-3.5 font-bold text-lingo-text">CSE 4 - 6</td>
+                    <td className="py-3 px-3.5 text-lingo-text-light">高中 - 大学</td>
+                  </tr>
+                  <tr className="hover:bg-lingo-gray/20">
+                    <td className="py-3 px-3.5 font-black text-lingo-text">C1 - C2</td>
+                    <td className="py-3 px-3.5 font-bold text-purple-600">精通段</td>
+                    <td className="py-3 px-3.5 font-bold text-lingo-text">CSE 7 - 9</td>
+                    <td className="py-3 px-3.5 text-lingo-text-light">专八 - 雅思</td>
+                  </tr>
+                </tbody>
               </table>
             </div>
           </div>
