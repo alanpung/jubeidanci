@@ -49,20 +49,27 @@ export function cefrToCse(cefr: string): string {
  * Human-readable label for each CSE bucket, so the word tooltip can show
  * "CSE 4 高中" instead of a bare number. There is deliberately no "1" entry.
  */
+export const CSE_LEVELS = ["2", "3", "4", "5_6", "7", "8_9"] as const;
+
+/**
+ * Human-readable label for each CSE bucket:
+ * 小学 (2), 初中 (3), 高中 (4), 大学 (5-6), 专业 (7), 雅思 (8-9).
+ */
 export const CSE_BUCKET_LABELS: Record<string, string> = {
   "2": "小学",
   "3": "初中",
   "4": "高中",
-  "5": "CET-4",
-  "6": "CET-6",
-  "7": "专八",
-  "8": "雅思 7",
-  "9": "雅思 8",
+  "5_6": "大学",
+  "7": "专业",
+  "8_9": "雅思",
 };
 
 export function cseBucketLabel(level: string | null | undefined): string | null {
   if (!level) return null;
-  return CSE_BUCKET_LABELS[level] ?? null;
+  const norm = String(level).trim();
+  if (norm === "5" || norm === "6") return "大学";
+  if (norm === "8" || norm === "9") return "雅思";
+  return CSE_BUCKET_LABELS[norm] ?? null;
 }
 
 /** False for levels that should never be rendered (currently only "1"). */

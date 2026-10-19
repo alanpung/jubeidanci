@@ -82,9 +82,21 @@ export async function GET(req: NextRequest) {
       filtered = filtered.filter((w: WordEntry) => w.cefr_level?.toUpperCase() === level.toUpperCase());
     }
 
-    // Filter by CSE Level (China Standards of English, 2–9)
+    // Filter by CSE Level (China Standards of English)
     if (cseLevel) {
-      filtered = filtered.filter((w: WordEntry) => String(w.cse_level || "").trim() === cseLevel);
+      if (cseLevel === "5_6" || cseLevel === "5-6") {
+        filtered = filtered.filter((w: WordEntry) => {
+          const c = String(w.cse_level || "").trim();
+          return c === "5" || c === "6";
+        });
+      } else if (cseLevel === "8_9" || cseLevel === "8-9") {
+        filtered = filtered.filter((w: WordEntry) => {
+          const c = String(w.cse_level || "").trim();
+          return c === "8" || c === "9";
+        });
+      } else {
+        filtered = filtered.filter((w: WordEntry) => String(w.cse_level || "").trim() === cseLevel);
+      }
     }
 
     // Filter by A-Z Letter

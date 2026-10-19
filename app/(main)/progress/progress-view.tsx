@@ -9,7 +9,7 @@ import {
 } from "lucide-react";
 import { StudentInspector } from "@/components/words/student-inspector";
 import { WordStatusFlow } from "@/components/words/word-status-flow";
-import { CSE_BUCKET_LABELS } from "@/lib/cse";
+import { CSE_LEVELS, CSE_BUCKET_LABELS } from "@/lib/cse";
 
 interface SrsCard {
   word: string;
@@ -29,7 +29,6 @@ interface SrsCard {
 }
 
 const CEFR_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
-const CSE_LEVELS = ["2", "3", "4", "5", "6", "7", "8", "9"] as const;
 
 const LEVEL_BADGES: Record<string, string> = {
   A1: "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800",
@@ -44,11 +43,9 @@ const CSE_BADGES: Record<string, string> = {
   "2": "bg-orange-100 text-orange-800 dark:bg-orange-950/60 dark:text-orange-300 border-orange-300 dark:border-orange-800",
   "3": "bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300 border-amber-300 dark:border-amber-800",
   "4": "bg-yellow-100 text-yellow-800 dark:bg-yellow-950/60 dark:text-yellow-300 border-yellow-300 dark:border-yellow-800",
-  "5": "bg-lime-100 text-lime-800 dark:bg-lime-950/60 dark:text-lime-300 border-lime-300 dark:border-lime-800",
-  "6": "bg-green-100 text-green-800 dark:bg-green-950/60 dark:text-green-300 border-green-300 dark:border-green-800",
-  "7": "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800",
-  "8": "bg-teal-100 text-teal-800 dark:bg-teal-950/60 dark:text-teal-300 border-teal-300 dark:border-teal-800",
-  "9": "bg-cyan-100 text-cyan-800 dark:bg-cyan-950/60 dark:text-cyan-300 border-cyan-300 dark:border-cyan-800",
+  "5_6": "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800",
+  "7": "bg-sky-100 text-sky-800 dark:bg-sky-950/60 dark:text-sky-300 border-sky-300 dark:border-sky-800",
+  "8_9": "bg-indigo-100 text-indigo-800 dark:bg-indigo-950/60 dark:text-indigo-300 border-indigo-300 dark:border-indigo-800",
 };
 
 export function ProgressView({
@@ -61,11 +58,9 @@ export function ProgressView({
     "2": 1057,
     "3": 1399,
     "4": 3323,
-    "5": 1485,
-    "6": 4898,
+    "5_6": 1485 + 4898,
     "7": 2943,
-    "8": 3327,
-    "9": 3892,
+    "8_9": 3327 + 3892,
   },
 }: {
   isAdmin?: boolean;
@@ -158,14 +153,23 @@ export function ProgressView({
     cards.forEach((card) => {
       if (!card.word) return;
       const lvl = (card.cseLevel || "").toString().trim();
-      const targetLvl = CSE_LEVELS.includes(lvl as (typeof CSE_LEVELS)[number]) ? lvl : "2";
+      let targetLvl = "2";
+      if (lvl === "2" || lvl === "3" || lvl === "4" || lvl === "7") {
+        targetLvl = lvl;
+      } else if (lvl === "5" || lvl === "6") {
+        targetLvl = "5_6";
+      } else if (lvl === "8" || lvl === "9") {
+        targetLvl = "8_9";
+      }
 
-      if (card.status === "learned" || card.status === "review" || (card.repetitions && card.repetitions >= 3)) {
-        stats[targetLvl].learned++;
-      } else if (card.status === "learning") {
-        stats[targetLvl].learning++;
-      } else if (card.status === "new") {
-        stats[targetLvl].new++;
+      if (stats[targetLvl]) {
+        if (card.status === "learned" || card.status === "review" || (card.repetitions && card.repetitions >= 3)) {
+          stats[targetLvl].learned++;
+        } else if (card.status === "learning") {
+          stats[targetLvl].learning++;
+        } else if (card.status === "new") {
+          stats[targetLvl].new++;
+        }
       }
     });
 
@@ -503,11 +507,8 @@ export function ProgressView({
                         <td className="py-2.5 px-3.5">
                           <div className="flex items-center gap-1.5">
                             <span
-                              className={`inline-block w-9 py-0.5 text-center rounded-md text-[11px] sm:text-xs font-black border ${CSE_BADGES[lvl]}`}
+                              className={`inline-block px-2 py-0.5 text-center rounded-md text-[11px] sm:text-xs font-black border ${CSE_BADGES[lvl]}`}
                             >
-                              {lvl}
-                            </span>
-                            <span className="text-[10px] sm:text-xs font-bold text-lingo-text-light truncate">
                               {label}
                             </span>
                           </div>

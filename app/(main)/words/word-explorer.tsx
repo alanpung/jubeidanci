@@ -10,7 +10,7 @@ import {
   RotateCcw,
 } from "lucide-react";
 import { setWordStatus } from "@/lib/actions/srs";
-import { CSE_BUCKET_LABELS, cefrToCse } from "@/lib/cse";
+import { CSE_LEVELS, CSE_BUCKET_LABELS, cefrToCse } from "@/lib/cse";
 
 interface Word {
   word: string;
@@ -64,17 +64,13 @@ const CEFR_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
 
 // China Standards of English (CSE) scale 2–9 (小学 → 雅思8). CSE 1 is folded
 // into CSE 2 and never shown.
-const CSE_LEVELS = ["2", "3", "4", "5", "6", "7", "8", "9"] as const;
-
 const CSE_BADGES: Record<string, string> = {
   "2": "bg-orange-100 text-orange-800 dark:bg-orange-950/60 dark:text-orange-300 border-orange-300 dark:border-orange-800",
   "3": "bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300 border-amber-300 dark:border-amber-800",
   "4": "bg-lime-100 text-lime-800 dark:bg-lime-950/60 dark:text-lime-300 border-lime-300 dark:border-lime-800",
-  "5": "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800",
-  "6": "bg-cyan-100 text-cyan-800 dark:bg-cyan-950/60 dark:text-cyan-300 border-cyan-300 dark:border-cyan-800",
+  "5_6": "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800",
   "7": "bg-sky-100 text-sky-800 dark:bg-sky-950/60 dark:text-sky-300 border-sky-300 dark:border-sky-800",
-  "8": "bg-indigo-100 text-indigo-800 dark:bg-indigo-950/60 dark:text-indigo-300 border-indigo-300 dark:border-indigo-800",
-  "9": "bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-950/60 dark:text-fuchsia-300 border-fuchsia-300 dark:border-fuchsia-800",
+  "8_9": "bg-indigo-100 text-indigo-800 dark:bg-indigo-950/60 dark:text-indigo-300 border-indigo-300 dark:border-indigo-800",
 };
 
 // 2 rows for A-Z alphabet navigation (14 items each)
@@ -480,6 +476,12 @@ function WordLookupSection({
         const targetCse = selectedCseLevel;
         cards = cards.filter((c) => {
           const cardCse = (c.cseLevel || cefrToCse(c.cefrLevel || "")).trim();
+          if (targetCse === "5_6" || targetCse === "5-6") {
+            return cardCse === "5" || cardCse === "6";
+          }
+          if (targetCse === "8_9" || targetCse === "8-9") {
+            return cardCse === "8" || cardCse === "9";
+          }
           return cardCse === targetCse;
         });
       }
@@ -1041,7 +1043,8 @@ function WordLookupCard({
   const level = (w.cefr_level || card?.cefrLevel || "A1").toUpperCase();
   const cseRaw = (w.cse_level || card?.cseLevel || cefrToCse(w.cefr_level || card?.cefrLevel || "")).trim();
   const cse = /^[2-9]$/.test(cseRaw) ? cseRaw : "";
-  const cseLabel = cse ? CSE_BUCKET_LABELS[cse] || `CSE ${cse}` : "";
+  const cseKey = cse === "5" || cse === "6" ? "5_6" : cse === "8" || cse === "9" ? "8_9" : cse;
+  const cseLabel = cse ? CSE_BUCKET_LABELS[cseKey] || `CSE ${cse}` : "";
   const levelBadge = LEVEL_BADGES[level] || LEVEL_BADGES["A1"];
   const posList = getAllPosLabels(w);
 
@@ -1132,10 +1135,10 @@ function WordLookupCard({
           </span>
           {cse && (
             <span
-              className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] sm:text-[11px] font-black border ${CSE_BADGES[cse]}`}
+              className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] sm:text-[11px] font-black border ${CSE_BADGES[cseKey] || ""}`}
               title={`CSE ${cse} · ${cseLabel}`}
             >
-              CSE {cse}
+              {cseLabel}
             </span>
           )}
 

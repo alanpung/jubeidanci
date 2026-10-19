@@ -213,7 +213,7 @@ export async function loadEnLevelWords(level: string): Promise<WordEntry[]> {
 
 export async function loadEnCseLevelWords(cseLevel: string): Promise<WordEntry[]> {
   const norm = String(cseLevel || "").trim();
-  if (!/^[2-9]$/.test(norm)) return [];
+  if (!["2", "3", "4", "5_6", "5-6", "7", "8_9", "8-9"].includes(norm)) return [];
 
   const cacheKey = `en_cse_${norm}`;
   if (memoryWordsCache.has(cacheKey)) {
@@ -222,7 +222,20 @@ export async function loadEnCseLevelWords(cseLevel: string): Promise<WordEntry[]
 
   try {
     const merged = await loadEnglishMergedWords();
-    const filtered = merged.filter((word) => String(word.cse_level || "").trim() === norm);
+    let filtered: WordEntry[] = [];
+    if (norm === "5_6" || norm === "5-6") {
+      filtered = merged.filter((word) => {
+        const c = String(word.cse_level || "").trim();
+        return c === "5" || c === "6";
+      });
+    } else if (norm === "8_9" || norm === "8-9") {
+      filtered = merged.filter((word) => {
+        const c = String(word.cse_level || "").trim();
+        return c === "8" || c === "9";
+      });
+    } else {
+      filtered = merged.filter((word) => String(word.cse_level || "").trim() === norm);
+    }
     if (filtered.length > 0) {
       memoryWordsCache.set(cacheKey, filtered);
       return filtered;
@@ -283,9 +296,7 @@ export function getEnLevelCounts(): Record<string, number> {
 let cachedCseCounts: Record<string, number> | null = null;
 
 /**
- * Word count per CSE level (2–9) from words/english_merged.json, mirroring
- * getEnLevelCounts but grouped by the China Standards of English scale.
- * CSE 1 is intentionally omitted — those words were folded into CSE 2.
+ * Word count per CSE 6-bucket level from words/english_merged.json.
  */
 export function getEnCseLevelCounts(): Record<string, number> {
   if (cachedCseCounts) return cachedCseCounts;
@@ -294,11 +305,9 @@ export function getEnCseLevelCounts(): Record<string, number> {
     "2": 0,
     "3": 0,
     "4": 0,
-    "5": 0,
-    "6": 0,
+    "5_6": 0,
     "7": 0,
-    "8": 0,
-    "9": 0,
+    "8_9": 0,
   };
 
   try {
@@ -311,9 +320,12 @@ export function getEnCseLevelCounts(): Record<string, number> {
       if (Array.isArray(list)) {
         for (const item of list) {
           const cse = String((item.cse_level as string) || "").trim();
-          if (cse in counts) {
-            counts[cse]++;
-          }
+          if (cse === "2") counts["2"]++;
+          else if (cse === "3") counts["3"]++;
+          else if (cse === "4") counts["4"]++;
+          else if (cse === "5" || cse === "6") counts["5_6"]++;
+          else if (cse === "7") counts["7"]++;
+          else if (cse === "8" || cse === "9") counts["8_9"]++;
         }
         cachedCseCounts = counts;
         return counts;
@@ -323,16 +335,14 @@ export function getEnCseLevelCounts(): Record<string, number> {
     console.error("Failed to count words by CSE level from english_merged.json:", err);
   }
 
-  // Fallback counts (post scripts/rebuild-cse-levels-v2.py).
+  // Fallback counts.
   return {
     "2": 1057,
     "3": 1399,
     "4": 3323,
-    "5": 1485,
-    "6": 4898,
+    "5_6": 1485 + 4898,
     "7": 2943,
-    "8": 3327,
-    "9": 3892,
+    "8_9": 3327 + 3892,
   };
 }
 
