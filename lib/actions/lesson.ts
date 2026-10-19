@@ -6,7 +6,6 @@ import {
   lessonCompletion,
   exerciseAttempt,
   dailyActivity,
-  unit,
   userUnitLibrary,
   userCourseEnrollment,
 } from "@/lib/db/schema";
@@ -14,9 +13,11 @@ import { eq, sql } from "drizzle-orm";
 import { requireSession } from "@/lib/auth-server";
 import { computeStreak } from "@/lib/game/streaks";
 import type { Exercise } from "@/lib/content/types";
-import { getUnitLessons } from "@/lib/content/loader";
 import { recordWordPracticeBatch } from "@/lib/actions/srs";
 import { extractSrsWords } from "@/lib/srs-words";
+import { getUnitWithContent } from "@/lib/db/queries/courses";
+import { addLocalLessonCompletion, upsertLocalUserStats } from "@/lib/srs-store";
+import { revalidatePath } from "next/cache";
 
 interface CompleteLessonInput {
   unitId: string;
@@ -37,36 +38,61 @@ export async function completeLesson(input: CompleteLessonInput) {
   const perfectScore = input.mistakeCount === 0;
   const today = new Date().toISOString().split("T")[0];
 
+  // 1. Fetch unit reliably from DB or filesystem registry
+  const unitData = await getUnitWithContent(input.unitId);
+
+  // 2. Extract words from exercises for this lesson index
+  const practicesToRecord: { word: string; correct: boolean }[] = [];
+  if (unitData && unitData.lessons && unitData.lessons[input.lessonIndex]) {
+    const lesson = unitData.lessons[input.lessonIndex];
+    for (const result of input.results) {
+      if (result.userAnswer === "[skipped]") continue;
+      const exercise = lesson.exercises[result.exerciseIndex] as Exercise | undefined;
+      if (!exercise) continue;
+      const words = extractSrsWords(exercise);
+      for (const w of words) {
+        practicesToRecord.push({ word: w, correct: result.correct });
+      }
+    }
+  }
+
+  // 3. Always record SRS practice batch (saves to local store + DB)
+  if (practicesToRecord.length > 0) {
+    try {
+      await recordWordPracticeBatch(
+        userId,
+        practicesToRecord,
+        unitData?.targetLanguage || "en"
+      );
+    } catch (err) {
+      console.error("recordWordPracticeBatch error in completeLesson:", err);
+    }
+  }
+
+  // 4. Always record lesson completion, streak & course enrollment locally
+  try {
+    await addLocalLessonCompletion(userId, input.unitId, input.lessonIndex, perfectScore);
+    await upsertLocalUserStats(userId, today);
+    if (unitData) {
+      await autoAddToLibrary(userId, unitData);
+    }
+  } catch (err) {
+    console.warn("Local lesson save error:", err);
+  }
+
+  // 5. Also save to database if available
   if (await isDbAvailable()) {
     try {
-      // Create lesson completion + fetch unit row in parallel
-      const [completionResult, unitResult] = await Promise.all([
-        db
-          .insert(lessonCompletion)
-          .values({
-            userId,
-            unitId: input.unitId,
-            lessonIndex: input.lessonIndex,
-            perfectScore,
-          })
-          .returning(),
-        db
-          .select({
-            id: unit.id,
-            courseId: unit.courseId,
-            markdown: unit.markdown,
-            targetLanguage: unit.targetLanguage,
-            visibility: unit.visibility,
-            createdBy: unit.createdBy,
-          })
-          .from(unit)
-          .where(eq(unit.id, input.unitId)),
-      ]);
+      const [completion] = await db
+        .insert(lessonCompletion)
+        .values({
+          userId,
+          unitId: input.unitId,
+          lessonIndex: input.lessonIndex,
+          perfectScore,
+        })
+        .returning();
 
-      const completion = completionResult[0];
-      const unitRow = unitResult[0];
-
-      // Save exercise attempts (depends on completion.id)
       if (completion && input.results.length > 0) {
         await db.insert(exerciseAttempt).values(
           input.results.map((r) => ({
@@ -80,33 +106,7 @@ export async function completeLesson(input: CompleteLessonInput) {
         );
       }
 
-      // Collect all SRS word practices for batch recording
-      const practicesToRecord: { word: string; correct: boolean }[] = [];
-      if (unitRow) {
-        try {
-          const lessons = getUnitLessons(unitRow.markdown);
-          const lesson = lessons[input.lessonIndex];
-          if (lesson) {
-            for (const result of input.results) {
-              if (result.userAnswer === "[skipped]") continue;
-              const exercise = lesson.exercises[result.exerciseIndex] as Exercise | undefined;
-              if (!exercise) continue;
-              if (exercise.type === "flashcard-review") continue;
-              const words = extractSrsWords(exercise);
-              for (const w of words) {
-                practicesToRecord.push({ word: w, correct: result.correct });
-              }
-            }
-          }
-        } catch {
-          // SRS extraction error — continue without SRS
-        }
-      }
-
       await Promise.all([
-        practicesToRecord.length > 0
-          ? recordWordPracticeBatch(userId, practicesToRecord, unitRow?.targetLanguage || "en").catch(() => {})
-          : Promise.resolve(),
         upsertUserStats(userId, today),
         db
           .insert(dailyActivity)
@@ -117,12 +117,18 @@ export async function completeLesson(input: CompleteLessonInput) {
               lessonsCompleted: sql`${dailyActivity.lessonsCompleted} + 1`,
             },
           }),
-        autoAddToLibrary(userId, unitRow),
       ]);
     } catch (e) {
       console.warn("Complete lesson DB save skipped:", e);
     }
   }
+
+  // 6. Revalidate caches so Progress and Words pages show updated stats immediately
+  try {
+    revalidatePath("/progress");
+    revalidatePath("/words");
+    revalidatePath(`/unit/${input.unitId}`);
+  } catch {}
 
   return { perfectScore };
 }

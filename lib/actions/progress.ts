@@ -4,6 +4,7 @@ import { db, isDbAvailable } from "@/lib/db";
 import { userStats, lessonCompletion, unit } from "@/lib/db/schema";
 import { eq, and, inArray } from "drizzle-orm";
 import { requireSession } from "@/lib/auth-server";
+import { getLocalLessonCompletions, getLocalUserStats } from "@/lib/srs-store";
 
 export async function getUserProgress(courseId: string) {
   const session = await requireSession();
@@ -37,11 +38,23 @@ export async function getUserProgress(courseId: string) {
               )
           : [];
 
-      return { completions };
+      if (completions.length > 0) {
+        return { completions };
+      }
     } catch {}
   }
 
-  return { completions: [] };
+  // Fallback to local completions
+  const localCompletions = await getLocalLessonCompletions(userId);
+  return {
+    completions: localCompletions.map((c) => ({
+      id: c.id,
+      unitId: c.unitId,
+      lessonIndex: c.lessonIndex,
+      perfectScore: c.perfectScore,
+      completedAt: new Date(c.completedAt),
+    })),
+  };
 }
 
 export async function getUnitProgress(unitId: string) {
@@ -66,11 +79,23 @@ export async function getUnitProgress(unitId: string) {
           )
         );
 
-      return { completions };
+      if (completions.length > 0) {
+        return { completions };
+      }
     } catch {}
   }
 
-  return { completions: [] };
+  // Fallback to local completions
+  const localCompletions = await getLocalLessonCompletions(userId, [unitId]);
+  return {
+    completions: localCompletions.map((c) => ({
+      id: c.id,
+      unitId: c.unitId,
+      lessonIndex: c.lessonIndex,
+      perfectScore: c.perfectScore,
+      completedAt: new Date(c.completedAt),
+    })),
+  };
 }
 
 export async function getUserStatsData() {
@@ -84,16 +109,22 @@ export async function getUserStatsData() {
         .from(userStats)
         .where(eq(userStats.userId, userId));
 
-      if (!stats) {
-        const [newStats] = await db
-          .insert(userStats)
-          .values({ userId })
-          .returning();
-        return newStats;
+      if (stats) {
+        return stats;
       }
-
-      return stats;
     } catch {}
+  }
+
+  // Fallback to local user stats
+  const local = await getLocalUserStats(userId);
+  if (local) {
+    return {
+      userId: local.userId,
+      currentStreak: local.currentStreak,
+      longestStreak: local.longestStreak,
+      totalLessonsCompleted: local.totalLessonsCompleted,
+      lastPracticeDate: local.lastPracticeDate,
+    };
   }
 
   return {

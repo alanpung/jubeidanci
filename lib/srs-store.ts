@@ -107,8 +107,9 @@ export async function getLocalCards(
 ): Promise<SrsCardRecord[]> {
   const cards = await ensureStore();
   return cards.filter((c) => {
-    if (userId) {
-      if ((c.userId || "default_user") !== userId) {
+    if (userId && userId !== "default_user") {
+      const cardUser = c.userId || "default_user";
+      if (cardUser !== userId && cardUser !== "default_user" && cardUser !== "user_demo_123") {
         return false;
       }
     }
@@ -297,4 +298,135 @@ export async function deleteLocalCard(
     await persistStore(filtered);
   }
 }
+
+export interface LocalLessonCompletion {
+  id: string;
+  userId: string;
+  unitId: string;
+  lessonIndex: number;
+  perfectScore: boolean;
+  completedAt: string;
+}
+
+const COMPLETION_FILE = path.join(DATA_DIR, "lesson-completions.json");
+let completionCache: LocalLessonCompletion[] | null = null;
+
+async function ensureCompletionStore(): Promise<LocalLessonCompletion[]> {
+  if (completionCache !== null) return completionCache;
+  try {
+    await fs.mkdir(DATA_DIR, { recursive: true });
+    const content = await fs.readFile(COMPLETION_FILE, "utf-8");
+    completionCache = JSON.parse(content);
+    return completionCache || [];
+  } catch {
+    completionCache = [];
+    return completionCache;
+  }
+}
+
+export async function addLocalLessonCompletion(
+  userId: string,
+  unitId: string,
+  lessonIndex: number,
+  perfectScore: boolean
+): Promise<LocalLessonCompletion> {
+  const store = await ensureCompletionStore();
+  const existing = store.find(
+    (c) => c.userId === userId && c.unitId === unitId && c.lessonIndex === lessonIndex
+  );
+  if (existing) {
+    existing.perfectScore = existing.perfectScore || perfectScore;
+    existing.completedAt = new Date().toISOString();
+    try {
+      await fs.writeFile(COMPLETION_FILE, JSON.stringify(store, null, 2), "utf-8");
+    } catch {}
+    return existing;
+  }
+
+  const record: LocalLessonCompletion = {
+    id: `comp_${Date.now()}_${Math.random().toString(36).slice(2, 7)}`,
+    userId,
+    unitId,
+    lessonIndex,
+    perfectScore,
+    completedAt: new Date().toISOString(),
+  };
+  store.push(record);
+  try {
+    await fs.writeFile(COMPLETION_FILE, JSON.stringify(store, null, 2), "utf-8");
+  } catch {}
+  return record;
+}
+
+export async function getLocalLessonCompletions(
+  userId: string,
+  unitIds?: string[]
+): Promise<LocalLessonCompletion[]> {
+  const store = await ensureCompletionStore();
+  return store.filter(
+    (c) =>
+      c.userId === userId && (!unitIds || unitIds.length === 0 || unitIds.includes(c.unitId))
+  );
+}
+
+export interface LocalUserStats {
+  userId: string;
+  currentStreak: number;
+  longestStreak: number;
+  totalLessonsCompleted: number;
+  lastPracticeDate: string | null;
+}
+
+const STATS_FILE = path.join(DATA_DIR, "user-stats.json");
+let statsCache: Record<string, LocalUserStats> | null = null;
+
+async function ensureStatsStore(): Promise<Record<string, LocalUserStats>> {
+  if (statsCache !== null) return statsCache;
+  try {
+    await fs.mkdir(DATA_DIR, { recursive: true });
+    const content = await fs.readFile(STATS_FILE, "utf-8");
+    statsCache = JSON.parse(content);
+    return statsCache || {};
+  } catch {
+    statsCache = {};
+    return statsCache;
+  }
+}
+
+export async function upsertLocalUserStats(userId: string, today: string): Promise<LocalUserStats> {
+  const store = await ensureStatsStore();
+  const current = store[userId] || {
+    userId,
+    currentStreak: 0,
+    longestStreak: 0,
+    totalLessonsCompleted: 0,
+    lastPracticeDate: null,
+  };
+
+  const { computeStreak } = await import("@/lib/game/streaks");
+  const { newStreak, shouldUpdate } = computeStreak(current.currentStreak, current.lastPracticeDate);
+  const totalCompleted = current.totalLessonsCompleted + 1;
+  const longestStreak = Math.max(current.longestStreak, newStreak);
+
+  current.totalLessonsCompleted = totalCompleted;
+  if (shouldUpdate) {
+    current.currentStreak = newStreak;
+    current.longestStreak = longestStreak;
+    current.lastPracticeDate = today;
+  } else if (!current.lastPracticeDate) {
+    current.lastPracticeDate = today;
+  }
+
+  store[userId] = current;
+  try {
+    await fs.writeFile(STATS_FILE, JSON.stringify(store, null, 2), "utf-8");
+  } catch {}
+  return current;
+}
+
+export async function getLocalUserStats(userId: string): Promise<LocalUserStats | null> {
+  const store = await ensureStatsStore();
+  return store[userId] || null;
+}
+
 

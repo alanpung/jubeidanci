@@ -1,0 +1,82 @@
+[
+  {
+    "id": "comp_1792399340953_ciudd",
+    "userId": "user_demo_123",
+    "unitId": "a1-flashcard-course-unit-1",
+    "lessonIndex": 0,
+    "perfectScore": true,
+    "completedAt": "2026-10-19T08:43:25.841Z"
+  },
+  {
+    "id": "comp_1792399405865_a59j8",
+    "userId": "user_demo_123",
+    "unitId": "a1-flashcard-course-unit-1",
+    "lessonIndex": 1,
+    "perfectScore": true,
+    "completedAt": "2026-10-19T08:43:25.865Z"
+  },
+  {
+    "id": "comp_1792399405870_3ntea",
+    "userId": "user_demo_123",
+    "unitId": "a1-flashcard-course-unit-1",
+    "lessonIndex": 2,
+    "perfectScore": true,
+    "completedAt": "2026-10-19T08:43:25.870Z"
+  },
+  {
+    "id": "comp_1792399405876_gkan8",
+    "userId": "user_demo_123",
+    "unitId": "a1-flashcard-course-unit-1",
+    "lessonIndex": 3,
+    "perfectScore": true,
+    "completedAt": "2026-10-19T08:43:25.876Z"
+  },
+  {
+    "id": "comp_1792399405880_4dl1d",
+    "userId": "user_demo_123",
+    "unitId": "a1-flashcard-course-unit-1",
+    "lessonIndex": 4,
+    "perfectScore": true,
+    "completedAt": "2026-10-19T08:43:25.880Z"
+  },
+  {
+    "id": "comp_1792399405885_bzl2d",
+    "userId": "user_demo_123",
+    "unitId": "a1-flashcard-course-unit-1",
+    "lessonIndex": 5,
+    "perfectScore": true,
+    "completedAt": "2026-10-19T08:43:25.885Z"
+  },
+  {
+    "id": "comp_1792399405888_98l38",
+    "userId": "user_demo_123",
+    "unitId": "a1-flashcard-course-unit-1",
+    "lessonIndex": 6,
+    "perfectScore": true,
+    "completedAt": "2026-10-19T08:43:25.888Z"
+  },
+  {
+    "id": "comp_1792399405892_gnafo",
+    "userId": "user_demo_123",
+    "unitId": "a1-flashcard-course-unit-1",
+    "lessonIndex": 7,
+    "perfectScore": true,
+    "completedAt": "2026-10-19T08:43:25.892Z"
+  },
+  {
+    "id": "comp_1792399405897_k7da5",
+    "userId": "user_demo_123",
+    "unitId": "a1-flashcard-course-unit-1",
+    "lessonIndex": 8,
+    "perfectScore": true,
+    "completedAt": "2026-10-19T08:43:25.897Z"
+  },
+  {
+    "id": "comp_1792399405902_3v4y9",
+    "userId": "user_demo_123",
+    "unitId": "a1-flashcard-course-unit-1",
+    "lessonIndex": 9,
+    "perfectScore": true,
+    "completedAt": "2026-10-19T08:43:25.902Z"
+  }
+]
