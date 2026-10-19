@@ -1,6 +1,6 @@
 "use server";
 
-import { db } from "@/lib/db";
+import { db, isDbAvailable } from "@/lib/db";
 import { userPreferences } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { requireSession } from "@/lib/auth-server";
@@ -13,6 +13,10 @@ export async function getTargetLanguage(userId?: string): Promise<string> {
   try {
     const session = await requireSession();
     const uid = userId ?? session.user.id;
+
+    if (!(await isDbAvailable())) {
+      return DEFAULT_TARGET_LANGUAGE;
+    }
 
     const [row] = await db
       .select({ targetLanguage: userPreferences.targetLanguage })
@@ -39,13 +43,15 @@ export async function updateTargetLanguage(language: string) {
     throw new Error(`Unsupported language: ${language}`);
   }
 
-  await db
-    .insert(userPreferences)
-    .values({ userId, targetLanguage: language })
-    .onConflictDoUpdate({
-      target: userPreferences.userId,
-      set: { targetLanguage: language, updatedAt: new Date() },
-    });
+  if (await isDbAvailable()) {
+    await db
+      .insert(userPreferences)
+      .values({ userId, targetLanguage: language })
+      .onConflictDoUpdate({
+        target: userPreferences.userId,
+        set: { targetLanguage: language, updatedAt: new Date() },
+      });
+  }
 
   revalidatePath("/");
   revalidatePath("/settings");
@@ -56,6 +62,10 @@ export async function getPreferredModel(userId?: string): Promise<string> {
   try {
     const session = await requireSession();
     const uid = userId ?? session.user.id;
+
+    if (!(await isDbAvailable())) {
+      return DEFAULT_AI_MODEL;
+    }
 
     const [row] = await db
       .select({ preferredModel: userPreferences.preferredModel })
