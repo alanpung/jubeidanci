@@ -50,7 +50,7 @@ text: "Translate this sentence into English"
 sentence: "店员帮了我很多。"
 answer: "The shop assistant helped me a lot."
 acceptAlso: "The salesperson was very helpful."
-srsWords: "the" "shop" "assistant" "helped" "me" "a" "lot" "salesperson" "was" "very" "helpful"
+srsWords: "the" "shop" "assistant" "helped" "me" "a" "lot" "was" "very" "helpful"
 
 [translation]
 text: "Translate this sentence into English"
@@ -265,9 +265,9 @@ srsWords: "these" "tomatoes" "are" "very" "fresh" "the" "look"
 [translation]
 text: "Translate this sentence into English"
 sentence: "请给我半公斤米。"
-answer: "Please give me half a kilo of rice."
+answer: "Please give me a bag of rice."
 acceptAlso: "Half a kilogram of rice, please."
-srsWords: "please" "give" "me" "half" "a" "kilo" "of" "rice" "kilogram"
+srsWords: "please" "give" "me" "a" "bag" "of" "rice"
 
 [translation]
 text: "Translate this sentence into English"
@@ -377,9 +377,9 @@ srsWords: "this" "brand" "is" "very" "reliable" "you" "can" "trust"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我把它连上了无线网络。"
-answer: "I connected it to the wifi."
+answer: "I connected it to the internet."
 acceptAlso: "I got it onto the wireless network."
-srsWords: "i" "connected" "it" "to" "the" "wifi" "got" "onto" "wireless" "network"
+srsWords: "i" "connected" "it" "to" "the" "internet" "got" "onto" "wireless" "network"
 
 [translation]
 text: "Translate this sentence into English"
@@ -538,9 +538,9 @@ srsWords: "do" "not" "tell" "him" "it" "is" "a" "surprise" "keep" "secret"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我送了她一束花。"
-answer: "I gave her a bunch of flowers."
+answer: "I gave her some flowers."
 acceptAlso: "She got a bouquet of flowers from me."
-srsWords: "i" "gave" "her" "a" "bunch" "of" "flowers" "she" "got" "bouquet" "from" "me"
+srsWords: "i" "gave" "her" "some" "flowers"
 
 [translation]
 text: "Translate this sentence into English"
@@ -610,14 +610,14 @@ text: "Translate this sentence into English"
 sentence: "我可以换别的颜色吗？"
 answer: "Can I change it for another colour?"
 acceptAlso: "May I swap it for a different color?"
-srsWords: "can" "i" "change" "it" "for" "another" "colour" "may" "swap" "a" "different" "color"
+srsWords: "can" "i" "change" "it" "for" "another" "colour" "may" "a" "different" "color"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "商店给了我一张代金券。"
-answer: "The shop gave me a voucher."
+answer: "The shop gave me a gift card."
 acceptAlso: "They offered me a store coupon."
-srsWords: "the" "shop" "gave" "me" "a" "voucher" "they" "offered" "store" "coupon"
+srsWords: "the" "shop" "gave" "me" "a" "gift" "card" "they" "offered" "store"
 
 [translation]
 text: "Translate this sentence into English"

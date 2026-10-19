@@ -300,9 +300,9 @@ srsWords: "we" "plan" "to" "see" "an" "exhibition" "is" "on" "our" "list"
 [translation]
 text: "Translate this sentence into English"
 sentence: "请提前告诉我。"
-answer: "Please tell me in advance."
+answer: "Please tell me before."
 acceptAlso: "Let me know beforehand, please."
-srsWords: "please" "tell" "me" "in" "advance" "let" "know" "beforehand"
+srsWords: "please" "tell" "me" "before"
 
 [translation]
 text: "Translate this sentence into English"
@@ -505,7 +505,7 @@ text: "Translate this sentence into English"
 sentence: "我不是故意的。"
 answer: "I did not do it on purpose."
 acceptAlso: "It was not done deliberately."
-srsWords: "i" "did" "not" "do" "it" "on" "purpose" "was" "done" "deliberately"
+srsWords: "i" "did" "not" "do" "it" "on" "purpose"
 
 [translation]
 text: "Translate this sentence into English"

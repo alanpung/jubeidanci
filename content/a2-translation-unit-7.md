@@ -223,16 +223,16 @@ srsWords: "i" "saw" "a" "few" "birds" "there" "were" "some" "to" "see"
 [translation]
 text: "Translate this sentence into English"
 sentence: "请不要乱扔垃圾。"
-answer: "Please do not drop litter."
+answer: "Please do not drop rubbish."
 acceptAlso: "No littering in the park, please."
-srsWords: "please" "do" "not" "drop" "litter" "no" "littering" "in" "the" "park"
+srsWords: "please" "do" "not" "drop" "rubbish" "no" "in" "the" "park"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "孩子们在草地上跑。"
 answer: "The children are running on the grass."
 acceptAlso: "Kids run around on the lawn."
-srsWords: "the" "children" "are" "running" "on" "grass" "kids" "run" "around" "lawn"
+srsWords: "the" "children" "are" "running" "on" "grass" "kids" "run" "around"
 
 [translation]
 text: "Translate this sentence into English"
@@ -258,9 +258,9 @@ srsWords: "we" "have" "a" "cat" "at" "home" "i" "keep" "in" "my" "house"
 [translation]
 text: "Translate this sentence into English"
 sentence: "公园里有很多鸽子。"
-answer: "There are many pigeons in the park."
+answer: "There are many birds in the park."
 acceptAlso: "The park is full of pigeons."
-srsWords: "there" "are" "many" "pigeons" "in" "the" "park" "is" "full" "of"
+srsWords: "there" "are" "many" "birds" "in" "the" "park" "is" "full" "of"
 
 [translation]
 text: "Translate this sentence into English"
@@ -300,9 +300,9 @@ srsWords: "please" "do" "not" "feed" "the" "animals" "no" "feeding"
 [translation]
 text: "Translate this sentence into English"
 sentence: "熊猫吃竹子。"
-answer: "Pandas eat bamboo."
+answer: "Pandas eat plants."
 acceptAlso: "Bamboo is what pandas eat."
-srsWords: "pandas" "eat" "bamboo" "is" "what"
+srsWords: "pandas" "eat" "plants"
 
 [translation]
 text: "Translate this sentence into English"
@@ -351,7 +351,7 @@ text: "Translate this sentence into English"
 sentence: "我周末修剪草坪。"
 answer: "I cut the grass at the weekend."
 acceptAlso: "I mow the lawn on weekends."
-srsWords: "i" "cut" "the" "grass" "at" "weekend" "mow" "lawn" "on" "weekends"
+srsWords: "i" "cut" "the" "grass" "at" "weekend" "on" "weekends"
 
 [translation]
 text: "Translate this sentence into English"
@@ -370,9 +370,9 @@ srsWords: "the" "soil" "is" "very" "dry" "ground" "feels"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我给花施了肥。"
-answer: "I gave the flowers some fertiliser."
+answer: "I gave the flowers some food."
 acceptAlso: "I fed the plants with plant food."
-srsWords: "i" "gave" "the" "flowers" "some" "fertiliser" "fed" "plants" "with" "plant" "food"
+srsWords: "i" "gave" "the" "flowers" "some" "food" "fed" "plants" "with"
 
 [translation]
 text: "Translate this sentence into English"
@@ -440,9 +440,9 @@ srsWords: "please" "turn" "off" "unnecessary" "lights" "switch" "you" "do" "not"
 [translation]
 text: "Translate this sentence into English"
 sentence: "空气污染很严重。"
-answer: "Air pollution is very serious."
+answer: "The air here is very dirty."
 acceptAlso: "The air here is badly polluted."
-srsWords: "air" "pollution" "is" "very" "serious" "the" "here" "badly" "polluted"
+srsWords: "the" "air" "here" "is" "very" "dirty" "badly"
 
 [translation]
 text: "Translate this sentence into English"
@@ -503,9 +503,9 @@ srsWords: "please" "stay" "in" "a" "safe" "place" "everyone" "should" "remain" "
 [translation]
 text: "Translate this sentence into English"
 sentence: "台风将在明天登陆。"
-answer: "The typhoon will arrive tomorrow."
+answer: "The storm will arrive tomorrow."
 acceptAlso: "A typhoon is coming tomorrow."
-srsWords: "the" "typhoon" "will" "arrive" "tomorrow" "a" "is" "coming"
+srsWords: "the" "storm" "will" "arrive" "tomorrow" "a" "is" "coming"
 
 [translation]
 text: "Translate this sentence into English"
@@ -582,7 +582,7 @@ text: "Translate this sentence into English"
 sentence: "我们晚上生了一堆火。"
 answer: "We made a fire in the evening."
 acceptAlso: "A campfire was lit at night."
-srsWords: "we" "made" "a" "fire" "in" "the" "evening" "campfire" "was" "lit" "at" "night"
+srsWords: "we" "made" "a" "fire" "in" "the" "evening" "was" "lit" "at" "night"
 
 [translation]
 text: "Translate this sentence into English"
@@ -664,9 +664,9 @@ srsWords: "the" "children" "are" "playing" "on" "sand" "kids" "play" "beach"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我涂了防晒霜。"
-answer: "I put on sunscreen."
+answer: "I put on sun cream."
 acceptAlso: "Sunscreen protects my skin."
-srsWords: "i" "put" "on" "sunscreen" "protects" "my" "skin"
+srsWords: "i" "put" "on" "sun" "cream" "protects" "my" "skin"
 
 [translation]
 text: "Translate this sentence into English"
@@ -687,7 +687,7 @@ text: "Translate this sentence into English"
 sentence: "请在阴凉处休息。"
 answer: "Please rest in the shade."
 acceptAlso: "Sit somewhere shady, please."
-srsWords: "please" "rest" "in" "the" "shade" "sit" "somewhere" "shady"
+srsWords: "please" "rest" "in" "the" "shade" "sit" "somewhere"
 
 [translation]
 text: "Translate this sentence into English"
@@ -727,9 +727,9 @@ srsWords: "the" "view" "from" "mountain" "is" "beautiful" "you" "see" "a" "lovel
 [translation]
 text: "Translate this sentence into English"
 sentence: "这条路很陡。"
-answer: "This path is very steep."
+answer: "This hill is very high."
 acceptAlso: "The trail goes up sharply."
-srsWords: "this" "path" "is" "very" "steep" "the" "trail" "goes" "up" "sharply"
+srsWords: "this" "hill" "is" "very" "high" "the" "road" "goes" "up"
 
 [translation]
 text: "Translate this sentence into English"

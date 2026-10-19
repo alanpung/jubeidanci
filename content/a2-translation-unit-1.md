@@ -71,7 +71,7 @@ text: "Translate this sentence into English"
 sentence: "我上班很少迟到。"
 answer: "I am rarely late for work."
 acceptAlso: "I am seldom late for work."
-srsWords: "i" "am" "rarely" "late" "for" "work" "seldom"
+srsWords: "i" "am" "rarely" "late" "for" "work"
 
 [translation]
 text: "Translate this sentence into English"
@@ -265,9 +265,9 @@ srsWords: "my" "parents" "live" "in" "the" "countryside" "mother" "and" "father"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我每个周末去看爷爷奶奶。"
-answer: "I visit my grandparents every weekend."
+answer: "I visit my grandma and grandpa every weekend."
 acceptAlso: "I go to see my grandparents every weekend."
-srsWords: "i" "visit" "my" "grandparents" "every" "weekend" "go" "to" "see"
+srsWords: "i" "visit" "my" "grandma" "and" "grandpa" "every" "weekend"
 
 [translation]
 text: "Translate this sentence into English"
@@ -419,16 +419,16 @@ srsWords: "please" "help" "me" "wash" "the" "dishes" "can" "you" "do"
 [translation]
 text: "Translate this sentence into English"
 sentence: "地板很脏，我需要拖一下。"
-answer: "The floor is dirty, I need to mop it."
+answer: "The floor is dirty, I need to clean it."
 acceptAlso: "The floor is dirty and I must clean it."
-srsWords: "the" "floor" "is" "dirty" "i" "need" "to" "mop" "it" "and" "must" "clean"
+srsWords: "the" "floor" "is" "dirty" "i" "need" "to" "clean" "it"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我把衣服放进洗衣机。"
 answer: "I put the clothes in the washing machine."
 acceptAlso: "I put my laundry into the washing machine."
-srsWords: "i" "put" "the" "clothes" "in" "washing" "machine" "my" "laundry" "into"
+srsWords: "i" "put" "the" "clothes" "in" "washing" "machine" "into"
 
 [translation]
 text: "Translate this sentence into English"
@@ -442,7 +442,7 @@ text: "Translate this sentence into English"
 sentence: "她正在擦桌子。"
 answer: "She is cleaning the table."
 acceptAlso: "She is wiping the table now."
-srsWords: "she" "is" "cleaning" "the" "table" "wiping" "now"
+srsWords: "she" "is" "cleaning" "the" "table" "now"
 
 [translation]
 text: "Translate this sentence into English"
@@ -456,7 +456,7 @@ text: "Translate this sentence into English"
 sentence: "书架上有很多灰尘。"
 answer: "There is a lot of dust on the shelf."
 acceptAlso: "The bookshelf is very dusty."
-srsWords: "there" "is" "a" "lot" "of" "dust" "on" "the" "shelf" "bookshelf" "very" "dusty"
+srsWords: "there" "is" "a" "lot" "of" "dust" "on" "the" "shelf" "very" "dusty"
 
 [translation]
 text: "Translate this sentence into English"

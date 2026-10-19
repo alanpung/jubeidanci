@@ -251,16 +251,16 @@ color: "#64748B"
 [translation]
 text: "Translate this sentence into English"
 sentence: "无线网连不上。"
-answer: "I cannot connect to the wifi."
+answer: "I cannot connect to the internet."
 acceptAlso: "The wifi is not working."
-srsWords: "i" "cannot" "connect" "to" "the" "wifi" "is" "not" "working"
+srsWords: "i" "cannot" "connect" "to" "the" "internet" "is" "not" "working"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "密码是什么？"
 answer: "What is the password?"
 acceptAlso: "Could you tell me the wifi password?"
-srsWords: "what" "is" "the" "password" "could" "you" "tell" "me" "wifi"
+srsWords: "what" "is" "the" "password" "could" "you" "tell" "me"
 
 [translation]
 text: "Translate this sentence into English"
@@ -272,9 +272,9 @@ srsWords: "the" "internet" "is" "very" "slow" "my" "connection" "today"
 [translation]
 text: "Translate this sentence into English"
 sentence: "请打开飞行模式。"
-answer: "Please turn on aeroplane mode."
+answer: "Please turn on flight mode."
 acceptAlso: "Switch to airplane mode, please."
-srsWords: "please" "turn" "on" "aeroplane" "mode" "switch" "to" "airplane"
+srsWords: "please" "turn" "on" "flight" "mode" "switch" "to"
 
 [translation]
 text: "Translate this sentence into English"
@@ -295,14 +295,14 @@ text: "Translate this sentence into English"
 sentence: "我换了另一个网络。"
 answer: "I changed to another network."
 acceptAlso: "Another wifi is being used now."
-srsWords: "i" "changed" "to" "another" "network" "wifi" "is" "being" "used" "now"
+srsWords: "i" "changed" "to" "another" "network" "is" "being" "used" "now"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请检查一下路由器。"
 answer: "Please check the router."
 acceptAlso: "Look at the wifi box, please."
-srsWords: "please" "check" "the" "router" "look" "at" "wifi" "box"
+srsWords: "please" "check" "the" "router" "look" "at" "box"
 
 [translation]
 text: "Translate this sentence into English"
@@ -426,23 +426,23 @@ srsWords: "please" "do" "not" "click" "on" "strange" "links" "avoid" "you" "know
 [translation]
 text: "Translate this sentence into English"
 sentence: "我的账号被盗了。"
-answer: "My account was hacked."
+answer: "My account was broken into."
 acceptAlso: "Someone broke into my account."
-srsWords: "my" "account" "was" "hacked" "someone" "broke" "into"
+srsWords: "my" "account" "was" "broken" "into" "someone"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请开启双重验证。"
-answer: "Please turn on two-step verification."
+answer: "Please turn on the safety check."
 acceptAlso: "Use two-factor login, please."
-srsWords: "please" "turn" "on" "two" "step" "verification" "use" "factor" "login"
+srsWords: "please" "turn" "on" "the" "safety" "check" "use" "factor" "login"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我安装了一个杀毒软件。"
-answer: "I installed an antivirus program."
+answer: "I put a program on my computer to stop viruses."
 acceptAlso: "Antivirus software is on my computer."
-srsWords: "i" "installed" "an" "antivirus" "program" "software" "is" "on" "my" "computer"
+srsWords: "i" "put" "a" "program" "on" "my" "computer" "to" "stop" "viruses"
 
 [translation]
 text: "Translate this sentence into English"
@@ -510,9 +510,9 @@ srsWords: "please" "open" "the" "curtains" "let"
 [translation]
 text: "Translate this sentence into English"
 sentence: "传感器检测到有人。"
-answer: "The sensor detected someone."
+answer: "The machine saw someone."
 acceptAlso: "Something moved and the sensor knows."
-srsWords: "the" "sensor" "detected" "someone" "something" "moved" "and" "knows"
+srsWords: "the" "machine" "saw" "someone" "something" "moved" "and" "knows"
 
 [translation]
 text: "Translate this sentence into English"
@@ -526,7 +526,7 @@ text: "Translate this sentence into English"
 sentence: "这个设备连不上网络。"
 answer: "This device cannot connect to the network."
 acceptAlso: "The gadget is offline."
-srsWords: "this" "device" "cannot" "connect" "to" "the" "network" "gadget" "is" "offline"
+srsWords: "this" "device" "cannot" "connect" "to" "the" "network" "is" "offline"
 
 [translation]
 text: "Translate this sentence into English"
@@ -638,14 +638,14 @@ text: "Translate this sentence into English"
 sentence: "我买了一块智能手表。"
 answer: "I bought a smart watch."
 acceptAlso: "A smartwatch is my new gadget."
-srsWords: "i" "bought" "a" "smart" "watch" "smartwatch" "is" "my" "new" "gadget"
+srsWords: "i" "bought" "a" "smart" "watch" "is" "my" "new"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这个设备很轻便。"
 answer: "This device is very light."
 acceptAlso: "The gadget is easy to carry."
-srsWords: "this" "device" "is" "very" "light" "the" "gadget" "easy" "to" "carry"
+srsWords: "this" "device" "is" "very" "light" "easy" "to" "carry"
 
 [translation]
 text: "Translate this sentence into English"
@@ -673,7 +673,7 @@ text: "Translate this sentence into English"
 sentence: "我把它和手机配对。"
 answer: "I paired it with my phone."
 acceptAlso: "Phone and gadget are connected."
-srsWords: "i" "paired" "it" "with" "my" "phone" "and" "gadget" "are" "connected"
+srsWords: "i" "paired" "it" "with" "my" "phone" "and" "are" "connected"
 
 [translation]
 text: "Translate this sentence into English"
@@ -685,9 +685,9 @@ srsWords: "this" "function" "is" "very" "useful" "the" "feature" "comes" "in" "h
 [translation]
 text: "Translate this sentence into English"
 sentence: "它防水。"
-answer: "It is waterproof."
+answer: "It does not let water in."
 acceptAlso: "Water cannot damage it."
-srsWords: "it" "is" "waterproof" "water" "cannot" "damage"
+srsWords: "it" "does" "not" "let" "water" "in" "cannot" "damage"
 
 [translation]
 text: "Translate this sentence into English"
@@ -769,9 +769,9 @@ srsWords: "i" "read" "the" "whole" "article" "full" "piece" "was" "by" "me"
 [translation]
 text: "Translate this sentence into English"
 sentence: "请不要相信谣言。"
-answer: "Please do not believe rumours."
+answer: "Please do not believe the stories."
 acceptAlso: "Stay away from rumours, please."
-srsWords: "please" "do" "not" "believe" "rumours" "stay" "away" "from"
+srsWords: "please" "do" "not" "believe" "the" "stories" "stay" "away" "from"
 
 [translation]
 text: "Translate this sentence into English"

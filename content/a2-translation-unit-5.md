@@ -118,9 +118,9 @@ srsWords: "take" "this" "medicine" "three" "times" "a" "day" "you" "daily"
 [translation]
 text: "Translate this sentence into English"
 sentence: "请给我一盒创可贴。"
-answer: "Please give me a box of plasters."
+answer: "Please give me a box of band aids."
 acceptAlso: "I would like a box of band-aids."
-srsWords: "please" "give" "me" "a" "box" "of" "plasters" "i" "would" "like" "band" "aids"
+srsWords: "please" "give" "me" "a" "box" "of" "band" "aids"
 
 [translation]
 text: "Translate this sentence into English"
@@ -146,9 +146,9 @@ srsWords: "take" "this" "medicine" "after" "meals" "you" "should" "it" "eating"
 [translation]
 text: "Translate this sentence into English"
 sentence: "药剂师给我解释了用法。"
-answer: "The pharmacist explained how to use it."
-acceptAlso: "The chemist told me how to take it."
-srsWords: "the" "pharmacist" "explained" "how" "to" "use" "it" "chemist" "told" "me" "take"
+answer: "The shop worker told me how to use the medicine."
+acceptAlso: "The worker told me how to take it."
+srsWords: "the" "shop" "worker" "told" "me" "how" "to" "use" "the" "medicine"
 
 [translation]
 text: "Translate this sentence into English"
@@ -211,7 +211,7 @@ text: "Translate this sentence into English"
 sentence: "我昨晚呕吐了。"
 answer: "I was sick last night."
 acceptAlso: "I vomited yesterday evening."
-srsWords: "i" "was" "sick" "last" "night" "vomited" "yesterday" "evening"
+srsWords: "i" "was" "sick" "last" "night" "yesterday" "evening"
 
 [translation]
 text: "Translate this sentence into English"
@@ -223,9 +223,9 @@ srsWords: "my" "nose" "is" "blocked" "i" "cannot" "breathe" "through"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我的眼睛很痒。"
-answer: "My eyes are very itchy."
+answer: "My eyes feel bad."
 acceptAlso: "My eyes itch a lot."
-srsWords: "my" "eyes" "are" "very" "itchy" "itch" "a" "lot"
+srsWords: "my" "eyes" "feel" "bad" "a" "lot"
 
 [translation]
 text: "Translate this sentence into English"
@@ -344,7 +344,7 @@ text: "Translate this sentence into English"
 sentence: "水比汽水健康。"
 answer: "Water is healthier than soda."
 acceptAlso: "Water is better for you than fizzy drinks."
-srsWords: "water" "is" "healthier" "than" "soda" "better" "for" "you" "fizzy" "drinks"
+srsWords: "water" "is" "healthier" "than" "soda" "better" "for" "you" "drinks"
 
 [translation]
 text: "Translate this sentence into English"
@@ -377,9 +377,9 @@ srsWords: "fish" "is" "healthier" "than" "red" "meat" "eating" "better"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我尽量不喝含糖饮料。"
-answer: "I try not to drink sugary drinks."
+answer: "I try not to drink sweet drinks."
 acceptAlso: "I avoid drinks with sugar."
-srsWords: "i" "try" "not" "to" "drink" "sugary" "drinks" "avoid" "with" "sugar"
+srsWords: "i" "try" "not" "to" "drink" "sweet" "drinks" "avoid" "with" "sugar"
 
 [translation]
 text: "Translate this sentence into English"
@@ -454,9 +454,9 @@ srsWords: "deep" "breathing" "helps" "me" "calm" "down" "slowly" "makes" "feel"
 [translation]
 text: "Translate this sentence into English"
 sentence: "他去看心理医生了。"
-answer: "He went to see a counsellor."
+answer: "He went to see a doctor."
 acceptAlso: "He is talking to a mental health doctor."
-srsWords: "he" "went" "to" "see" "a" "counsellor" "is" "talking" "mental" "health" "doctor"
+srsWords: "he" "went" "to" "see" "a" "doctor" "is" "talking" "health"
 
 [translation]
 text: "Translate this sentence into English"
@@ -470,7 +470,7 @@ text: "Translate this sentence into English"
 sentence: "保持乐观很重要。"
 answer: "It is important to stay positive."
 acceptAlso: "Staying optimistic really matters."
-srsWords: "it" "is" "important" "to" "stay" "positive" "staying" "optimistic" "really" "matters"
+srsWords: "it" "is" "important" "to" "stay" "positive" "really" "matters"
 
 ---
 lessonTitle: "Lesson 7: Emergency"
@@ -512,7 +512,7 @@ text: "Translate this sentence into English"
 sentence: "请帮忙，有人受伤了。"
 answer: "Help, someone is hurt."
 acceptAlso: "Please help, a person is injured."
-srsWords: "help" "someone" "is" "hurt" "please" "a" "person" "injured"
+srsWords: "help" "someone" "is" "hurt" "please" "a" "person"
 
 [translation]
 text: "Translate this sentence into English"
@@ -587,9 +587,9 @@ srsWords: "the" "dentist" "filled" "my" "tooth" "fixed" "hole" "in"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我每天用牙线。"
-answer: "I use dental floss every day."
+answer: "I clean my teeth every day."
 acceptAlso: "I floss my teeth daily."
-srsWords: "i" "use" "dental" "floss" "every" "day" "my" "teeth" "daily"
+srsWords: "i" "clean" "my" "teeth" "every" "day" "my" "daily"
 
 [translation]
 text: "Translate this sentence into English"

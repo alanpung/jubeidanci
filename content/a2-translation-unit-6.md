@@ -211,7 +211,7 @@ text: "Translate this sentence into English"
 sentence: "请准时参加。"
 answer: "Please come on time."
 acceptAlso: "Be punctual for the meeting, please."
-srsWords: "please" "come" "on" "time" "be" "punctual" "for" "the" "meeting"
+srsWords: "please" "come" "on" "time" "be" "for" "the" "meeting"
 
 [translation]
 text: "Translate this sentence into English"
@@ -251,9 +251,9 @@ color: "#8B5CF6"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我的同事很友好。"
-answer: "My colleagues are very friendly."
+answer: "My work friends are very friendly."
 acceptAlso: "The people I work with are nice."
-srsWords: "my" "colleagues" "are" "very" "friendly" "the" "people" "i" "work" "with" "nice"
+srsWords: "my" "work" "friends" "are" "very" "friendly" "the" "people" "i" "with" "nice"
 
 [translation]
 text: "Translate this sentence into English"
@@ -286,16 +286,16 @@ srsWords: "we" "have" "lunch" "together" "at" "noon" "eat" "every" "midday"
 [translation]
 text: "Translate this sentence into English"
 sentence: "新同事昨天开始上班。"
-answer: "The new colleague started work yesterday."
+answer: "The new worker started work yesterday."
 acceptAlso: "A new person joined us yesterday."
-srsWords: "the" "new" "colleague" "started" "work" "yesterday" "a" "person" "joined" "us"
+srsWords: "the" "new" "worker" "started" "work" "yesterday" "a" "person" "joined" "us"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我向同事请教。"
-answer: "I ask my colleagues for advice."
+answer: "I ask my work friends for help."
 acceptAlso: "I go to my coworkers with questions."
-srsWords: "i" "ask" "my" "colleagues" "for" "advice" "go" "to" "coworkers" "with" "questions"
+srsWords: "i" "ask" "my" "work" "friends" "for" "help" "go" "to" "with" "questions"
 
 [translation]
 text: "Translate this sentence into English"
@@ -349,9 +349,9 @@ srsWords: "i" "attached" "the" "file" "to" "email" "document" "is" "my" "message
 [translation]
 text: "Translate this sentence into English"
 sentence: "我的收件箱里有五十封邮件。"
-answer: "There are fifty emails in my inbox."
+answer: "There are fifty emails in my mail."
 acceptAlso: "I have fifty messages waiting."
-srsWords: "there" "are" "fifty" "emails" "in" "my" "inbox" "i" "have" "messages" "waiting"
+srsWords: "there" "are" "fifty" "emails" "in" "my" "mail" "i" "have" "messages" "waiting"
 
 [translation]
 text: "Translate this sentence into English"
@@ -372,7 +372,7 @@ text: "Translate this sentence into English"
 sentence: "我每天早上检查邮件。"
 answer: "I check my email every morning."
 acceptAlso: "I look at my inbox each morning."
-srsWords: "i" "check" "my" "email" "every" "morning" "look" "at" "inbox" "each"
+srsWords: "i" "check" "my" "email" "every" "morning" "look" "at" "each"
 
 [translation]
 text: "Translate this sentence into English"
@@ -447,9 +447,9 @@ srsWords: "this" "project" "is" "very" "urgent" "we" "need" "to" "finish" "quick
 [translation]
 text: "Translate this sentence into English"
 sentence: "我加班到晚上九点。"
-answer: "I worked overtime until nine in the evening."
+answer: "I worked late until nine in the evening."
 acceptAlso: "I stayed at work till nine at night."
-srsWords: "i" "worked" "overtime" "until" "nine" "in" "the" "evening" "stayed" "at" "work" "till" "night"
+srsWords: "i" "worked" "late" "until" "nine" "in" "the" "evening" "stayed" "at" "work" "till" "night"
 
 [translation]
 text: "Translate this sentence into English"
@@ -659,7 +659,7 @@ text: "Translate this sentence into English"
 sentence: "我需要一台好电脑。"
 answer: "I need a good computer."
 acceptAlso: "A decent computer is necessary for me."
-srsWords: "i" "need" "a" "good" "computer" "decent" "is" "necessary" "for" "me"
+srsWords: "i" "need" "a" "good" "computer" "is" "necessary" "for" "me"
 
 [translation]
 text: "Translate this sentence into English"
@@ -680,7 +680,7 @@ text: "Translate this sentence into English"
 sentence: "在家工作省了很多时间。"
 answer: "Working from home saves a lot of time."
 acceptAlso: "I save time by not commuting."
-srsWords: "working" "from" "home" "saves" "a" "lot" "of" "time" "i" "save" "by" "not" "commuting"
+srsWords: "working" "from" "home" "saves" "a" "lot" "of" "time" "i" "save" "by" "not"
 
 [translation]
 text: "Translate this sentence into English"
@@ -734,9 +734,9 @@ srsWords: "i" "have" "coffee" "at" "ten" "every" "day" "my" "time" "is" "o'clock
 [translation]
 text: "Translate this sentence into English"
 sentence: "茶水间在走廊尽头。"
-answer: "The tea room is at the end of the corridor."
+answer: "The tea room is at the end of the hall."
 acceptAlso: "The kitchen is down the hall."
-srsWords: "the" "tea" "room" "is" "at" "end" "of" "corridor" "kitchen" "down" "hall"
+srsWords: "the" "tea" "room" "is" "at" "end" "of" "hall" "kitchen" "down"
 
 [translation]
 text: "Translate this sentence into English"

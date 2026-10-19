@@ -5,6 +5,7 @@ import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
 import { checkWordMatch, generateAlternativeTranslations, WordMatchResult } from "@/lib/similarity";
+import { synonymsOf } from "@/lib/synonyms";
 import { ExerciseShell } from "./exercise-shell";
 import { HoverableText } from "@/components/word/hoverable-text";
 import { detectTextLanguage } from "@/lib/language-detector";
@@ -570,20 +571,43 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       : "border-blue-100/80 hover:border-blue-200"
                   }`}
                 >
-                  {/* After Check and word is unmatched: show the green best-match
-                      answer at the TOP of the card (above the user's red input).
-                      This is the user's preferred layout: "place 'died' on top of
-                      'die', and 'doing' on top of 'trust'". */}
-                  {status !== "answering" && !isWordMatched && (
-                    <div className="flex flex-col items-center justify-center mb-1 sm:mb-1.5">
-                      <span
-                        style={{ minWidth: `${Math.max(3, targetWord.length)}ch` }}
-                        className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700"
-                      >
-                        {targetWord}
-                      </span>
-                    </div>
-                  )}
+                  {/* After Check: a green strip ABOVE the input line.
+                      - Unmatched slot: show the canonical correct answer.
+                      - Matched slot: show the OTHER accepted synonyms (so a
+                        learner who typed "metro" also sees "subway" / "train"
+                        above their green input, confirming they weren't wrong
+                        and revealing valid alternatives). */}
+                  {status !== "answering" && (() => {
+                    if (!isWordMatched) {
+                      return (
+                        <div className="flex flex-col items-center justify-center mb-1 sm:mb-1.5">
+                          <span
+                            style={{ minWidth: `${Math.max(3, targetWord.length)}ch` }}
+                            className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700"
+                          >
+                            {targetWord}
+                          </span>
+                        </div>
+                      );
+                    }
+                    const typed = (typedWord || "").toLowerCase().trim();
+                    const syns = synonymsOf(targetWord)
+                      .filter((s) => s.toLowerCase() !== typed)
+                      .slice(0, 4);
+                    if (syns.length === 0) return null;
+                    return (
+                      <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-0.5 mb-1 sm:mb-1.5">
+                        {syns.map((s, si) => (
+                          <span
+                            key={si}
+                            className="text-center font-serif text-sm sm:text-base lg:text-lg font-bold tracking-tight text-emerald-600"
+                          >
+                            {s}
+                          </span>
+                        ))}
+                      </div>
+                    );
+                  })()}
                   {/* Input line (always in its position, just below the green
                       correct-answer when present; no grey separator anywhere). */}
                   <div className="flex flex-col items-center justify-center my-1 sm:my-1.5 min-h-[2.25rem] sm:min-h-[3rem]">

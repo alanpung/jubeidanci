@@ -43,21 +43,21 @@ text: "Translate this sentence into English"
 sentence: "球场在学校旁边。"
 answer: "The football field is next to the school."
 acceptAlso: "The pitch is beside our school."
-srsWords: "the" "football" "field" "is" "next" "to" "school" "pitch" "beside" "our"
+srsWords: "the" "football" "field" "is" "next" "to" "school" "beside" "our"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我是守门员。"
-answer: "I am the goalkeeper."
+answer: "I am the player in goal."
 acceptAlso: "I play in goal."
-srsWords: "i" "am" "the" "goalkeeper" "play" "in" "goal"
+srsWords: "i" "am" "the" "player" "in" "goal" "play"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请穿运动鞋。"
 answer: "Please wear sports shoes."
 acceptAlso: "Put on trainers, please."
-srsWords: "please" "wear" "sports" "shoes" "put" "on" "trainers"
+srsWords: "please" "wear" "sports" "shoes" "put" "on"
 
 [translation]
 text: "Translate this sentence into English"
@@ -76,9 +76,9 @@ srsWords: "we" "lost" "but" "were" "happy" "losing" "did" "not" "spoil" "our" "f
 [translation]
 text: "Translate this sentence into English"
 sentence: "我受伤了，要休息一周。"
-answer: "I am injured and need to rest for a week."
+answer: "I am hurt and need to rest for a week."
 acceptAlso: "An injury keeps me out for a week."
-srsWords: "i" "am" "injured" "and" "need" "to" "rest" "for" "a" "week" "an" "injury" "keeps" "me" "out"
+srsWords: "i" "am" "hurt" "and" "need" "to" "rest" "for" "a" "week" "an" "keeps" "me" "out"
 
 [translation]
 text: "Translate this sentence into English"
@@ -146,9 +146,9 @@ srsWords: "please" "be" "quiet" "i" "am" "reading" "need" "silence" "while"
 [translation]
 text: "Translate this sentence into English"
 sentence: "这位作者写得很清楚。"
-answer: "The author writes very clearly."
+answer: "The writer is easy to read."
 acceptAlso: "This writer is easy to follow."
-srsWords: "the" "author" "writes" "very" "clearly" "this" "writer" "is" "easy" "to" "follow"
+srsWords: "the" "writer" "is" "easy" "to" "read" "this" "follow"
 
 [translation]
 text: "Translate this sentence into English"
@@ -281,7 +281,7 @@ text: "Translate this sentence into English"
 sentence: "我在学一首新歌。"
 answer: "I am learning a new song."
 acceptAlso: "There is a new song I am practising."
-srsWords: "i" "am" "learning" "a" "new" "song" "there" "is" "practising"
+srsWords: "i" "am" "learning" "a" "new" "song" "there" "is"
 
 [translation]
 text: "Translate this sentence into English"
@@ -300,9 +300,9 @@ srsWords: "he" "joined" "the" "school" "band" "plays" "in" "a" "at"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我每天练习半小时。"
-answer: "I practise for half an hour every day."
+answer: "I study for half an hour every day."
 acceptAlso: "Practice takes thirty minutes a day."
-srsWords: "i" "practise" "for" "half" "an" "hour" "every" "day" "practice" "takes" "thirty" "minutes" "a"
+srsWords: "i" "study" "for" "half" "an" "hour" "every" "day" "takes" "thirty" "minutes" "a"
 
 [translation]
 text: "Translate this sentence into English"
@@ -372,7 +372,7 @@ text: "Translate this sentence into English"
 sentence: "这个节目很受欢迎。"
 answer: "This programme is very popular."
 acceptAlso: "The show has many viewers."
-srsWords: "this" "programme" "is" "very" "popular" "the" "show" "has" "many" "viewers"
+srsWords: "this" "programme" "is" "very" "popular" "the" "show" "has" "many"
 
 [translation]
 text: "Translate this sentence into English"
@@ -391,9 +391,9 @@ srsWords: "i" "watched" "it" "twice" "before" "understood" "took" "two" "watches
 [translation]
 text: "Translate this sentence into English"
 sentence: "请打开字幕。"
-answer: "Please turn on the subtitles."
+answer: "Please turn up the sound."
 acceptAlso: "Can we have the subtitles on?"
-srsWords: "please" "turn" "on" "the" "subtitles" "can" "we" "have"
+srsWords: "please" "turn" "up" "the" "sound" "can" "we" "have"
 
 ---
 lessonTitle: "Lesson 6: Gaming"
@@ -498,7 +498,7 @@ text: "Translate this sentence into English"
 sentence: "请给我一支画笔。"
 answer: "Please give me a brush."
 acceptAlso: "I need a paintbrush, please."
-srsWords: "please" "give" "me" "a" "brush" "i" "need" "paintbrush"
+srsWords: "please" "give" "me" "a" "brush" "i" "need"
 
 [translation]
 text: "Translate this sentence into English"
@@ -671,9 +671,9 @@ srsWords: "the" "water" "is" "a" "little" "cold" "it" "feels" "cool" "in"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我游了十个来回。"
-answer: "I swam ten lengths."
+answer: "I swam ten times."
 acceptAlso: "Ten laps were swum by me."
-srsWords: "i" "swam" "ten" "lengths" "laps" "were" "swum" "by" "me"
+srsWords: "i" "swam" "ten" "times" "were" "swum" "by" "me"
 
 [translation]
 text: "Translate this sentence into English"

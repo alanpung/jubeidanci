@@ -55,9 +55,9 @@ srsWords: "please" "give" "me" "a" "glass" "of" "water" "can" "i" "have"
 [translation]
 text: "Translate this sentence into English"
 sentence: "这道菜太咸了。"
-answer: "This dish is too salty."
+answer: "This dish has too much salt."
 acceptAlso: "There is too much salt in this dish."
-srsWords: "this" "dish" "is" "too" "salty" "there" "much" "salt" "in"
+srsWords: "this" "dish" "has" "too" "much" "salt"
 
 [translation]
 text: "Translate this sentence into English"
@@ -125,9 +125,9 @@ srsWords: "what" "is" "this" "dish" "made" "of" "ingredients" "are" "in"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我不要辣椒。"
-answer: "I do not want any chilli."
+answer: "I do not want any spicy food."
 acceptAlso: "No chili for me, please."
-srsWords: "i" "do" "not" "want" "any" "chilli" "no" "chili" "for" "me" "please"
+srsWords: "i" "do" "not" "want" "any" "spicy" "food" "please"
 
 [translation]
 text: "Translate this sentence into English"
@@ -188,9 +188,9 @@ srsWords: "i" "am" "cutting" "onions" "chopping" "up" "some"
 [translation]
 text: "Translate this sentence into English"
 sentence: "水开了。"
-answer: "The water is boiling."
+answer: "The water is hot."
 acceptAlso: "The water has come to the boil."
-srsWords: "the" "water" "is" "boiling" "has" "come" "to" "boil"
+srsWords: "the" "water" "is" "hot"
 
 [translation]
 text: "Translate this sentence into English"
@@ -272,9 +272,9 @@ srsWords: "how" "much" "is" "this" "box" "of" "eggs" "what" "does" "carton" "cos
 [translation]
 text: "Translate this sentence into English"
 sentence: "我在收银台排队。"
-answer: "I am queueing at the checkout."
+answer: "I am waiting in line at the shop."
 acceptAlso: "I am waiting in line at the cashier."
-srsWords: "i" "am" "queueing" "at" "the" "checkout" "waiting" "in" "line" "cashier"
+srsWords: "i" "am" "waiting" "in" "line" "at" "the" "shop"
 
 [translation]
 text: "Translate this sentence into English"
@@ -372,7 +372,7 @@ text: "Translate this sentence into English"
 sentence: "这里可以上网吗？"
 answer: "Is there internet here?"
 acceptAlso: "Do you have wifi in here?"
-srsWords: "is" "there" "internet" "here" "do" "you" "have" "wifi" "in"
+srsWords: "is" "there" "internet" "here" "do" "you" "have" "in"
 
 [translation]
 text: "Translate this sentence into English"
@@ -428,7 +428,7 @@ text: "Translate this sentence into English"
 sentence: "这道菜里有牛奶吗？"
 answer: "Is there milk in this dish?"
 acceptAlso: "Does this dish contain dairy?"
-srsWords: "is" "there" "milk" "in" "this" "dish" "does" "contain" "dairy"
+srsWords: "is" "there" "milk" "in" "this" "dish" "does" "contain"
 
 [translation]
 text: "Translate this sentence into English"
@@ -447,9 +447,9 @@ srsWords: "i" "try" "to" "eat" "less" "meat" "am" "trying" "cut" "down" "on"
 [translation]
 text: "Translate this sentence into English"
 sentence: "这个面包是全麦的吗？"
-answer: "Is this bread wholegrain?"
+answer: "Is this bread brown?"
 acceptAlso: "Is this whole wheat bread?"
-srsWords: "is" "this" "bread" "wholegrain" "whole" "wheat"
+srsWords: "is" "this" "bread" "brown"
 
 [translation]
 text: "Translate this sentence into English"
@@ -512,7 +512,7 @@ text: "Translate this sentence into English"
 sentence: "用小火煮十分钟。"
 answer: "Cook it on a low heat for ten minutes."
 acceptAlso: "Simmer it gently for ten minutes."
-srsWords: "cook" "it" "on" "a" "low" "heat" "for" "ten" "minutes" "simmer" "gently"
+srsWords: "cook" "it" "on" "a" "low" "heat" "for" "ten" "minutes"
 
 [translation]
 text: "Translate this sentence into English"
@@ -608,9 +608,9 @@ srsWords: "do" "you" "drink" "coffee" "at" "breakfast" "have" "with" "your"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我妈妈做了粥。"
-answer: "My mother made porridge."
+answer: "My mother made soup."
 acceptAlso: "Mom cooked some rice porridge."
-srsWords: "my" "mother" "made" "porridge" "mom" "cooked" "some" "rice"
+srsWords: "my" "mother" "made" "soup" "mom" "cooked"
 
 [translation]
 text: "Translate this sentence into English"
@@ -748,16 +748,16 @@ srsWords: "this" "apple" "is" "very" "fresh" "these" "apples" "taste"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我饿的时候吃坚果。"
-answer: "I eat nuts when I am hungry."
+answer: "I eat fruit when I am hungry."
 acceptAlso: "Nuts are my snack when hungry."
-srsWords: "i" "eat" "nuts" "when" "am" "hungry" "are" "my" "snack"
+srsWords: "i" "eat" "fruit" "when" "am" "hungry"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "冰箱里有一些酸奶。"
-answer: "There is some yogurt in the fridge."
+answer: "There is some milk in the fridge."
 acceptAlso: "We have yoghurt in the refrigerator."
-srsWords: "there" "is" "some" "yogurt" "in" "the" "fridge" "we" "have" "yoghurt" "refrigerator"
+srsWords: "there" "is" "some" "milk" "in" "the" "fridge"
 
 [translation]
 text: "Translate this sentence into English"

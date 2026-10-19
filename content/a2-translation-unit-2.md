@@ -286,9 +286,9 @@ srsWords: "my" "room" "is" "on" "the" "fifth" "floor" "i" "am" "in" "a"
 [translation]
 text: "Translate this sentence into English"
 sentence: "电梯在走廊尽头。"
-answer: "The lift is at the end of the corridor."
+answer: "The lift is at the end of the hall."
 acceptAlso: "The elevator is at the end of the hall."
-srsWords: "the" "lift" "is" "at" "end" "of" "corridor" "elevator" "hall"
+srsWords: "the" "lift" "is" "at" "end" "of" "hall" "elevator"
 
 [translation]
 text: "Translate this sentence into English"
@@ -300,9 +300,9 @@ srsWords: "i" "am" "checking" "out" "at" "eight" "tomorrow" "morning" "will" "le
 [translation]
 text: "Translate this sentence into English"
 sentence: "房间里的无线网密码是什么？"
-answer: "What is the wifi password in the room?"
+answer: "What is the internet password in the room?"
 acceptAlso: "Could you tell me the room wifi password?"
-srsWords: "what" "is" "the" "wifi" "password" "in" "room" "could" "you" "tell" "me"
+srsWords: "what" "is" "the" "internet" "password" "in" "room"
 
 [translation]
 text: "Translate this sentence into English"
@@ -386,7 +386,7 @@ text: "Translate this sentence into English"
 sentence: "司机帮我把行李放进后备箱。"
 answer: "The driver helped me put my luggage in the boot."
 acceptAlso: "The driver put my bags in the trunk for me."
-srsWords: "the" "driver" "helped" "me" "put" "my" "luggage" "in" "boot" "bags" "trunk" "for"
+srsWords: "the" "driver" "helped" "me" "put" "my" "luggage" "in" "boot" "bags" "for"
 
 [translation]
 text: "Translate this sentence into English"
@@ -503,9 +503,9 @@ srsWords: "can" "we" "take" "photos" "here" "is" "it" "allowed" "to" "pictures"
 [translation]
 text: "Translate this sentence into English"
 sentence: "这座塔有一百米高。"
-answer: "This tower is one hundred metres high."
+answer: "This tower is very tall."
 acceptAlso: "The tower is a hundred meters tall."
-srsWords: "this" "tower" "is" "one" "hundred" "metres" "high" "the" "a" "meters" "tall"
+srsWords: "this" "tower" "is" "very" "tall"
 
 [translation]
 text: "Translate this sentence into English"
@@ -568,7 +568,7 @@ text: "Translate this sentence into English"
 sentence: "我只有一个背包。"
 answer: "I only have a backpack."
 acceptAlso: "I have just one rucksack."
-srsWords: "i" "only" "have" "a" "backpack" "just" "one" "rucksack"
+srsWords: "i" "only" "have" "a" "backpack" "just" "one"
 
 [translation]
 text: "Translate this sentence into English"
@@ -601,9 +601,9 @@ srsWords: "my" "camera" "is" "in" "this" "bag" "i" "keep" "inside"
 [translation]
 text: "Translate this sentence into English"
 sentence: "我打包了三件衬衫。"
-answer: "I packed three shirts."
+answer: "I put three shirts in my bag."
 acceptAlso: "I put three shirts in my case."
-srsWords: "i" "packed" "three" "shirts" "put" "in" "my" "case"
+srsWords: "i" "put" "three" "shirts" "in" "my" "bag"
 
 [translation]
 text: "Translate this sentence into English"
@@ -750,7 +750,7 @@ text: "Translate this sentence into English"
 sentence: "这辆车是自动挡的吗？"
 answer: "Is this car automatic?"
 acceptAlso: "Does this car have an automatic gearbox?"
-srsWords: "is" "this" "car" "automatic" "does" "have" "an" "gearbox"
+srsWords: "is" "this" "car" "automatic" "does" "have" "an"
 
 [translation]
 text: "Translate this sentence into English"
