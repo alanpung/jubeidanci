@@ -211,6 +211,28 @@ export async function loadEnLevelWords(level: string): Promise<WordEntry[]> {
   }
 }
 
+export async function loadEnCseLevelWords(cseLevel: string): Promise<WordEntry[]> {
+  const norm = String(cseLevel || "").trim();
+  if (!/^[2-9]$/.test(norm)) return [];
+
+  const cacheKey = `en_cse_${norm}`;
+  if (memoryWordsCache.has(cacheKey)) {
+    return memoryWordsCache.get(cacheKey)!;
+  }
+
+  try {
+    const merged = await loadEnglishMergedWords();
+    const filtered = merged.filter((word) => String(word.cse_level || "").trim() === norm);
+    if (filtered.length > 0) {
+      memoryWordsCache.set(cacheKey, filtered);
+      return filtered;
+    }
+  } catch {
+    // Fall through to empty.
+  }
+  return [];
+}
+
 let cachedDynamicCounts: Record<string, number> | null = null;
 
 export function getEnLevelCounts(): Record<string, number> {

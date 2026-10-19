@@ -10,10 +10,12 @@ import {
   RotateCcw,
 } from "lucide-react";
 import { setWordStatus } from "@/lib/actions/srs";
+import { CSE_BUCKET_LABELS, cefrToCse } from "@/lib/cse";
 
 interface Word {
   word: string;
   cefr_level: string;
+  cse_level?: string;
   english_translation: string;
   definition_zh?: string;
   pos: string;
@@ -32,6 +34,7 @@ interface SrsCard {
   language: string;
   translation: string;
   cefrLevel?: string | null;
+  cseLevel?: string | null;
   pos?: string | null;
   status: string;
   easeFactor: number;
@@ -58,6 +61,21 @@ interface SrsStats {
 type SrsFilter = "all" | "learned" | "learning" | "new";
 
 const CEFR_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
+
+// China Standards of English (CSE) scale 2–9 (小学 → 雅思8). CSE 1 is folded
+// into CSE 2 and never shown.
+const CSE_LEVELS = ["2", "3", "4", "5", "6", "7", "8", "9"] as const;
+
+const CSE_BADGES: Record<string, string> = {
+  "2": "bg-orange-100 text-orange-800 dark:bg-orange-950/60 dark:text-orange-300 border-orange-300 dark:border-orange-800",
+  "3": "bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300 border-amber-300 dark:border-amber-800",
+  "4": "bg-lime-100 text-lime-800 dark:bg-lime-950/60 dark:text-lime-300 border-lime-300 dark:border-lime-800",
+  "5": "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800",
+  "6": "bg-cyan-100 text-cyan-800 dark:bg-cyan-950/60 dark:text-cyan-300 border-cyan-300 dark:border-cyan-800",
+  "7": "bg-sky-100 text-sky-800 dark:bg-sky-950/60 dark:text-sky-300 border-sky-300 dark:border-sky-800",
+  "8": "bg-indigo-100 text-indigo-800 dark:bg-indigo-950/60 dark:text-indigo-300 border-indigo-300 dark:border-indigo-800",
+  "9": "bg-fuchsia-100 text-fuchsia-800 dark:bg-fuchsia-950/60 dark:text-fuchsia-300 border-fuchsia-300 dark:border-fuchsia-800",
+};
 
 // 2 rows for A-Z alphabet navigation (14 items each)
 const ALPHABET_ROWS = [
@@ -250,6 +268,7 @@ export function WordExplorer({
   srsCards = [],
   libraryWords = [],
   language = "en",
+  cseLevelCounts,
 }: {
   isAdmin?: boolean;
   words?: Word[];
@@ -258,9 +277,11 @@ export function WordExplorer({
   libraryWords?: string[];
   language?: string;
   levelDictionaryCounts?: Record<string, number>;
+  cseLevelCounts?: Record<string, number>;
 }) {
   const router = useRouter();
   const [selectedLevel, setSelectedLevel] = useState<string>("");
+  const [selectedCseLevel, setSelectedCseLevel] = useState<string>("");
   const [cards, setCards] = useState<SrsCard[]>(srsCards);
 
   // Sync state when props change
@@ -280,6 +301,11 @@ export function WordExplorer({
     });
     return map;
   }, [cards]);
+
+  const handleClearCseLevel = () => {
+    setSelectedLevel("");
+    setSelectedCseLevel("");
+  };
 
   const handleCardStatusChange = useCallback(
     (
@@ -347,6 +373,10 @@ export function WordExplorer({
       <WordLookupSection
         selectedLevel={selectedLevel}
         onSelectLevel={setSelectedLevel}
+        selectedCseLevel={selectedCseLevel}
+        onSelectCseLevel={setSelectedCseLevel}
+        onClearLevels={handleClearCseLevel}
+        cseLevelCounts={cseLevelCounts}
         language={language}
         srsMap={srsMap}
         srsCards={cards}
@@ -364,6 +394,10 @@ export function WordExplorer({
 function WordLookupSection({
   selectedLevel,
   onSelectLevel,
+  selectedCseLevel,
+  onSelectCseLevel,
+  onClearLevels,
+  cseLevelCounts,
   language,
   srsMap,
   srsCards,
@@ -372,6 +406,10 @@ function WordLookupSection({
 }: {
   selectedLevel: string;
   onSelectLevel: (lvl: string) => void;
+  selectedCseLevel: string;
+  onSelectCseLevel: (lvl: string) => void;
+  onClearLevels: () => void;
+  cseLevelCounts?: Record<string, number>;
   language: string;
   srsMap: Map<string, SrsCard>;
   srsCards: SrsCard[];
@@ -436,6 +474,14 @@ function WordLookupSection({
         cards = cards.filter(
           (c) => (c.cefrLevel || "").toUpperCase().trim() === selectedLevel
         );
+      }
+
+      if (selectedCseLevel) {
+        const targetCse = selectedCseLevel;
+        cards = cards.filter((c) => {
+          const cardCse = (c.cseLevel || cefrToCse(c.cefrLevel || "")).trim();
+          return cardCse === targetCse;
+        });
       }
 
       if (statusFilter === "learning") {
@@ -517,6 +563,7 @@ function WordLookupSection({
           return {
             word: c.word,
             cefr_level: dictEntry?.cefr_level || c.cefrLevel || "A1",
+            cse_level: dictEntry?.cse_level || c.cseLevel || undefined,
             english_translation: dictEntry?.english_translation || c.translation,
             definition_zh: dictEntry?.definition_zh || c.translation,
             pos: dictEntry?.pos || c.pos || "noun",
@@ -548,6 +595,7 @@ function WordLookupSection({
         const params = new URLSearchParams();
         params.set("lang", language);
         if (selectedLevel) params.set("level", selectedLevel);
+        if (selectedCseLevel) params.set("cseLevel", selectedCseLevel);
         if (selectedLetter && selectedLetter !== "ALL") params.set("letter", selectedLetter);
         if (selectedPos && selectedPos !== "all") params.set("pos", selectedPos);
         if (debouncedSearch) params.set("q", debouncedSearch);
@@ -583,6 +631,7 @@ function WordLookupSection({
   }, [
     language,
     selectedLevel,
+    selectedCseLevel,
     selectedLetter,
     selectedPos,
     statusFilter,
@@ -594,7 +643,17 @@ function WordLookupSection({
   ]);
 
   function handleLevelChange(lvl: string) {
-    onSelectLevel(selectedLevel === lvl ? "" : lvl);
+    const next = selectedLevel === lvl ? "" : lvl;
+    onSelectLevel(next);
+    // CEFR and CSE are mutually exclusive level filters — picking one clears the other.
+    onSelectCseLevel("");
+    setPage(1);
+  }
+
+  function handleCseLevelChange(lvl: string) {
+    const next = selectedCseLevel === lvl ? "" : lvl;
+    onSelectCseLevel(next);
+    onSelectLevel("");
     setPage(1);
   }
 
@@ -615,13 +674,14 @@ function WordLookupSection({
 
   const hasActiveFilters =
     selectedLevel !== "" ||
+    selectedCseLevel !== "" ||
     selectedLetter !== "ALL" ||
     selectedPos !== "all" ||
     statusFilter !== "all" ||
     search !== "";
 
   function clearAllFilters() {
-    onSelectLevel("");
+    onClearLevels();
     setSelectedLetter("ALL");
     setSelectedPos("all");
     setStatusFilter("all");
@@ -663,6 +723,53 @@ function WordLookupSection({
                 }`}
               >
                 {lvl}
+              </button>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* CSE Level Filter Pills (中国英语能力等级量表 2–9) */}
+      <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card p-1.5 sm:p-2 shadow-xs space-y-1.5">
+        <div className="flex items-center justify-between gap-2 px-0.5">
+          <span className="text-[10px] sm:text-[11px] font-black text-lingo-text-light tracking-wide">
+            CSE 能力等级 (小学 → 雅思8)
+          </span>
+          <button
+            onClick={() => handleCseLevelChange("")}
+            className={`rounded-lg px-2 py-0.5 text-[10px] sm:text-[11px] font-black transition-all ${
+              selectedCseLevel === ""
+                ? "bg-lingo-blue text-white shadow-xs"
+                : "bg-lingo-card border border-lingo-border text-lingo-text-light hover:text-lingo-text"
+            }`}
+          >
+            All CSE
+          </button>
+        </div>
+        <div className="flex items-center gap-1 w-full justify-start overflow-x-auto">
+          {CSE_LEVELS.map((lvl) => {
+            const active = selectedCseLevel === lvl;
+            const count = cseLevelCounts?.[lvl] ?? 0;
+            return (
+              <button
+                key={lvl}
+                onClick={() => handleCseLevelChange(lvl)}
+                title={`CSE ${lvl} · ${CSE_BUCKET_LABELS[lvl] || ""}`}
+                className={`shrink-0 rounded-lg px-1.5 py-1 text-[10px] sm:text-xs font-black transition-all border whitespace-nowrap flex items-center gap-1 ${
+                  active
+                    ? "bg-lingo-blue text-white border-transparent shadow-xs"
+                    : `${CSE_BADGES[lvl]} opacity-70 hover:opacity-100`
+                }`}
+              >
+                <span>{lvl}</span>
+                <span className={active ? "text-white/80" : "text-lingo-text-light/70"}>
+                  {CSE_BUCKET_LABELS[lvl] || ""}
+                </span>
+                {count > 0 && (
+                  <span className={`text-[9px] font-bold ${active ? "text-white/80" : "text-lingo-text-light/70"}`}>
+                    {count.toLocaleString()}
+                  </span>
+                )}
               </button>
             );
           })}
@@ -783,6 +890,7 @@ function WordLookupSection({
         <p className="truncate mr-2">
           {words.length.toLocaleString()} of {total.toLocaleString()} words
           {selectedLevel && ` • ${selectedLevel}`}
+          {selectedCseLevel && ` • CSE ${selectedCseLevel} ${CSE_BUCKET_LABELS[selectedCseLevel] || ""}`}
           {selectedLetter !== "ALL" && ` • "${selectedLetter}"`}
           {selectedPos !== "all" && ` • ${selectedPos.toUpperCase()}`}
           {statusFilter !== "all" && ` • ${statusFilter}`}
@@ -931,6 +1039,9 @@ function WordLookupCard({
   }
 
   const level = (w.cefr_level || card?.cefrLevel || "A1").toUpperCase();
+  const cseRaw = (w.cse_level || card?.cseLevel || cefrToCse(w.cefr_level || card?.cefrLevel || "")).trim();
+  const cse = /^[2-9]$/.test(cseRaw) ? cseRaw : "";
+  const cseLabel = cse ? CSE_BUCKET_LABELS[cse] || `CSE ${cse}` : "";
   const levelBadge = LEVEL_BADGES[level] || LEVEL_BADGES["A1"];
   const posList = getAllPosLabels(w);
 
@@ -1009,12 +1120,20 @@ function WordLookupCard({
             <Volume2 className="w-3.5 h-3.5" />
           </button>
 
-          {/* Level Badge */}
+          {/* Level Badge (CEFR) + CSE badge */}
           <span
             className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] sm:text-[11px] font-black border ${levelBadge}`}
           >
             {level}
           </span>
+          {cse && (
+            <span
+              className={`shrink-0 rounded px-1.5 py-0.5 text-[10px] sm:text-[11px] font-black border ${CSE_BADGES[cse]}`}
+              title={`CSE ${cse} · ${cseLabel}`}
+            >
+              CSE {cse}
+            </span>
+          )}
 
           {/* Word Name, IPA & Multiple POS */}
           <div className="flex items-baseline gap-1 sm:gap-1.5 flex-wrap min-w-0">

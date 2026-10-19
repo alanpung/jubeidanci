@@ -1,6 +1,6 @@
 import { getAllCards, getSrsStats, getUserLibraryWords } from "@/lib/actions/srs";
 import { getTargetLanguage } from "@/lib/actions/preferences";
-import { getEnLevelCounts } from "@/lib/words";
+import { getEnLevelCounts, getEnCseLevelCounts } from "@/lib/words";
 import { getSession } from "@/lib/auth-server";
 import { isAdminEmail } from "@/lib/ai/models";
 import { WordExplorer } from "./word-explorer";
@@ -30,6 +30,7 @@ export default async function WordsPage() {
   ]);
 
   const levelCounts = getEnLevelCounts();
+  const cseLevelCounts = getEnCseLevelCounts();
 
   return (
     <div className="w-full max-w-3xl mx-auto px-1 sm:px-4">
@@ -40,6 +41,7 @@ export default async function WordsPage() {
         libraryWords={libraryWords}
         language={language}
         levelDictionaryCounts={levelCounts}
+        cseLevelCounts={cseLevelCounts}
       />
     </div>
   );

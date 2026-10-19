@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { loadEnLevelWords, getBundledWords, type WordEntry } from "@/lib/words";
+import { loadEnLevelWords, loadEnCseLevelWords, getBundledWords, type WordEntry } from "@/lib/words";
 import { db, isDbAvailable } from "@/lib/db";
 import { dictionaryWord } from "@/lib/db/schema";
 
@@ -46,6 +46,7 @@ export async function GET(req: NextRequest) {
     const { searchParams } = new URL(req.url);
     const lang = searchParams.get("lang") || "en";
     const level = searchParams.get("level") || "";
+    const cseLevel = (searchParams.get("cseLevel") || "").trim();
     const letter = (searchParams.get("letter") || "").trim().toUpperCase();
     const pos = (searchParams.get("pos") || "").trim().toLowerCase();
     const q = (searchParams.get("q") || "").toLowerCase().trim();
@@ -57,6 +58,9 @@ export async function GET(req: NextRequest) {
     if ((lang === "en" || lang === "english") && level) {
       const levelWords = await loadEnLevelWords(level);
       allWords = levelWords.length > 0 ? levelWords : await getBundledWords(lang);
+    } else if ((lang === "en" || lang === "english") && cseLevel) {
+      const cseWords = await loadEnCseLevelWords(cseLevel);
+      allWords = cseWords.length > 0 ? cseWords : await getBundledWords(lang);
     } else {
       allWords = await getBundledWords(lang);
     }
@@ -76,6 +80,11 @@ export async function GET(req: NextRequest) {
     // Filter by CEFR Level
     if (level && allWords.length > 0 && allWords[0]?.cefr_level !== level) {
       filtered = filtered.filter((w: WordEntry) => w.cefr_level?.toUpperCase() === level.toUpperCase());
+    }
+
+    // Filter by CSE Level (China Standards of English, 2–9)
+    if (cseLevel) {
+      filtered = filtered.filter((w: WordEntry) => String(w.cse_level || "").trim() === cseLevel);
     }
 
     // Filter by A-Z Letter
