@@ -25,19 +25,19 @@ export const MAX_CSE_LEVEL = 9;
  *   A2 -> CSE 2   (小学)
  *   B1 -> CSE 4   (高中 / 高考, jumps over CSE 3 中考)
  *   B2 -> CSE 6   (CET-6,     jumps over CSE 5 CET-4)
- *   C1 -> CSE 7   (专八)
- *   C2 -> CSE 8   (雅思 7)
+ *   C1 -> CSE 8   (雅思 7, jumps over CSE 7 专八)
+ *   C2 -> CSE 9   (雅思 8)
  *
- * CSE 9 (雅思 8 / Octanove C2) is not reached by the CEFR fallback - it only
- * comes from the explicit exam wordlists in scripts/data/cse/.
+ * CSE 7 (专八) is not reached by the CEFR fallback - it only comes from the
+ * 专八 exam wordlist in scripts/data/cse/.
  */
 const CEFR_TO_CSE_TABLE: Record<string, string> = {
   A1: "2",
   A2: "2",
   B1: "4",
   B2: "6",
-  C1: "7",
-  C2: "8",
+  C1: "8",
+  C2: "9",
 };
 
 export function cefrToCse(cefr: string): string {

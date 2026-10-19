@@ -881,6 +881,7 @@ export async function getUserOwnedCourses(
     creatorName: string | null;
     createdAt: Date | null;
     unitCount: number;
+    firstUnitId: string | null;
   }> = [];
 
   if (dbUp) {
@@ -897,6 +898,7 @@ export async function getUserOwnedCourses(
           creatorName: user.name,
           createdAt: course.createdAt,
           unitCount: countDistinct(unit.id),
+          firstUnitId: sql<string | null>`MIN(${unit.id})`,
         })
         .from(course)
         .leftJoin(unit, eq(unit.courseId, course.id))
@@ -915,7 +917,11 @@ export async function getUserOwnedCourses(
         )
         .orderBy(course.title);
 
-      rows = dbRows.map((r) => ({ ...r, unitCount: Number(r.unitCount) }));
+      rows = dbRows.map((r) => ({
+        ...r,
+        unitCount: Number(r.unitCount),
+        firstUnitId: r.firstUnitId ?? null,
+      }));
     } catch (err) {
       console.warn("getUserOwnedCourses DB query failed, using filesystem fallback:", err);
     }
@@ -944,6 +950,7 @@ export async function getUserOwnedCourses(
             creatorName: "Alan P",
             createdAt: null,
             unitCount: cUnits.length,
+            firstUnitId: cUnits[0]?.parsed.id ?? null,
           });
         }
       }

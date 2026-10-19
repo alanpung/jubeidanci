@@ -235,6 +235,8 @@ export interface OwnedCourseInfo {
   isOwner?: boolean;
   isInLibrary?: boolean;
   markdown?: string | null;
+  /** First unit id under this course, used for the "Edit Markdown" shortcut. */
+  firstUnitId?: string | null;
 }
 
 export interface CourseManagementInfo {
