@@ -1051,8 +1051,12 @@ function WordLookupCard({
 
   async function handleClearStatus() {
     if (!hasStatus) return;
-    // If word is in user's active library course/unit and currently learning/mastered, reset to "new"; otherwise remove to none
-    const nextAction = isInLibrary && currentStatus !== "new" ? "new" : "remove";
+    // Words that belong to a course/unit the user is still enrolled in must
+    // remain in SRS as "new" — otherwise the reset wipes the card and the
+    // Words page status counters go to 0 even though the library still owns
+    // the word. Only out-of-library cards (added ad‑hoc, not tied to any
+    // course) get fully removed.
+    const nextAction = isInLibrary ? "new" : "remove";
     setCurrentStatus(nextAction === "remove" ? "" : nextAction);
     onStatusChange?.(w.word, nextAction, {
       cefrLevel: w.cefr_level,
