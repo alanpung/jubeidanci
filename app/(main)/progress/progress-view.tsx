@@ -9,12 +9,14 @@ import {
 } from "lucide-react";
 import { StudentInspector } from "@/components/words/student-inspector";
 import { WordStatusFlow } from "@/components/words/word-status-flow";
+import { CSE_BUCKET_LABELS } from "@/lib/cse";
 
 interface SrsCard {
   word: string;
   language: string;
   translation: string;
   cefrLevel?: string | null;
+  cseLevel?: string | null;
   pos?: string | null;
   status: string;
   easeFactor: number;
@@ -27,6 +29,7 @@ interface SrsCard {
 }
 
 const CEFR_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
+const CSE_LEVELS = ["2", "3", "4", "5", "6", "7", "8", "9"] as const;
 
 const LEVEL_BADGES: Record<string, string> = {
   A1: "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800",
@@ -37,18 +40,40 @@ const LEVEL_BADGES: Record<string, string> = {
   C2: "bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300 border-rose-300 dark:border-rose-800",
 };
 
+const CSE_BADGES: Record<string, string> = {
+  "2": "bg-orange-100 text-orange-800 dark:bg-orange-950/60 dark:text-orange-300 border-orange-300 dark:border-orange-800",
+  "3": "bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300 border-amber-300 dark:border-amber-800",
+  "4": "bg-yellow-100 text-yellow-800 dark:bg-yellow-950/60 dark:text-yellow-300 border-yellow-300 dark:border-yellow-800",
+  "5": "bg-lime-100 text-lime-800 dark:bg-lime-950/60 dark:text-lime-300 border-lime-300 dark:border-lime-800",
+  "6": "bg-green-100 text-green-800 dark:bg-green-950/60 dark:text-green-300 border-green-300 dark:border-green-800",
+  "7": "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800",
+  "8": "bg-teal-100 text-teal-800 dark:bg-teal-950/60 dark:text-teal-300 border-teal-300 dark:border-teal-800",
+  "9": "bg-cyan-100 text-cyan-800 dark:bg-cyan-950/60 dark:text-cyan-300 border-cyan-300 dark:border-cyan-800",
+};
+
 export function ProgressView({
   isAdmin = false,
   isAuthorAllWords = false,
   srsCards = [],
   language = "en",
   levelDictionaryCounts = { A1: 1000, A2: 1555, B1: 4610, B2: 8760, C1: 5127, C2: 1275 },
+  cseLevelCounts = {
+    "2": 1057,
+    "3": 1399,
+    "4": 3323,
+    "5": 1485,
+    "6": 4898,
+    "7": 2943,
+    "8": 3327,
+    "9": 3892,
+  },
 }: {
   isAdmin?: boolean;
   isAuthorAllWords?: boolean;
   srsCards?: SrsCard[];
   language?: string;
   levelDictionaryCounts?: Record<string, number>;
+  cseLevelCounts?: Record<string, number>;
 }) {
   const [activeTab, setActiveTab] = useState<"author" | "inspector">("author");
   const [selectedLevel, setSelectedLevel] = useState<string>("");
@@ -105,6 +130,71 @@ export function ProgressView({
 
     return stats;
   }, [cards, levelDictionaryCounts, isAuthorAllWords]);
+
+  // Compute CSE-level statistics (2–9) the same way as CEFR.
+  const cseStats = useMemo(() => {
+    const stats: Record<
+      string,
+      {
+        wordCount: number;
+        learning: number;
+        learned: number;
+        new: number;
+        myWords: number;
+      }
+    > = {};
+
+    CSE_LEVELS.forEach((lvl) => {
+      const dictCount = cseLevelCounts ? cseLevelCounts[lvl] || 0 : 0;
+      stats[lvl] = {
+        wordCount: dictCount,
+        learning: 0,
+        learned: 0,
+        new: 0,
+        myWords: 0,
+      };
+    });
+
+    cards.forEach((card) => {
+      if (!card.word) return;
+      const lvl = (card.cseLevel || "").toString().trim();
+      const targetLvl = CSE_LEVELS.includes(lvl as (typeof CSE_LEVELS)[number]) ? lvl : "2";
+
+      if (card.status === "learned" || card.status === "review" || (card.repetitions && card.repetitions >= 3)) {
+        stats[targetLvl].learned++;
+      } else if (card.status === "learning") {
+        stats[targetLvl].learning++;
+      } else if (card.status === "new") {
+        stats[targetLvl].new++;
+      }
+    });
+
+    CSE_LEVELS.forEach((lvl) => {
+      stats[lvl].myWords = stats[lvl].learned + stats[lvl].learning + stats[lvl].new;
+    });
+
+    return stats;
+  }, [cards, cseLevelCounts]);
+
+  const totalCseLearning = useMemo(() => {
+    return Object.values(cseStats).reduce((acc, curr) => acc + curr.learning, 0);
+  }, [cseStats]);
+
+  const totalCseLearned = useMemo(() => {
+    return Object.values(cseStats).reduce((acc, curr) => acc + curr.learned, 0);
+  }, [cseStats]);
+
+  const totalCseNew = useMemo(() => {
+    return Object.values(cseStats).reduce((acc, curr) => acc + curr.new, 0);
+  }, [cseStats]);
+
+  const totalCseMyWords = useMemo(() => {
+    return Object.values(cseStats).reduce((acc, curr) => acc + curr.myWords, 0);
+  }, [cseStats]);
+
+  const totalCseWordCount = useMemo(() => {
+    return Object.values(cseLevelCounts).reduce((acc, curr) => acc + curr, 0);
+  }, [cseLevelCounts]);
 
   const totalLearning = useMemo(() => {
     return Object.values(levelStats).reduce((acc, curr) => acc + curr.learning, 0);
@@ -358,6 +448,108 @@ export function ProgressView({
                     </td>
                     <td className="py-3 px-2 text-center font-black text-lingo-text-light/90 text-xs sm:text-sm whitespace-nowrap">
                       {totalWordCount.toLocaleString()}
+                    </td>
+                  </tr>
+                </tfoot>
+              </table>
+            </div>
+          </div>
+
+          {/* ── CSE PROGRESS TABLE (CSE 2–9, 小学–雅思8) ── */}
+          <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card overflow-hidden shadow-xs">
+            <div className="px-4 py-3 border-b border-lingo-border flex items-center justify-between gap-2 bg-lingo-card/50">
+              <div className="flex items-center gap-2">
+                <GraduationCap className="w-4 h-4 text-lingo-purple" />
+                <h2 className="text-sm sm:text-base font-black text-lingo-text">
+                  CSE Progress
+                </h2>
+                {isAdmin && (
+                  <span className="rounded-md bg-lingo-purple/10 px-2 py-0.5 text-[10px] font-black text-lingo-purple">
+                    Alan P
+                  </span>
+                )}
+              </div>
+              <span className="text-[11px] font-bold text-lingo-text-light hidden sm:inline">
+                中国英语能力等级量表 · CSE 2–9
+              </span>
+            </div>
+
+            <div className="w-full overflow-x-auto">
+              <table className="w-full text-left text-xs sm:text-sm table-fixed">
+                <colgroup>
+                  <col className="w-[16%]" />
+                  <col className="w-[17%]" />
+                  <col className="w-[17%]" />
+                  <col className="w-[17%]" />
+                  <col className="w-[16%]" />
+                  <col className="w-[17%]" />
+                </colgroup>
+                <thead className="bg-lingo-gray/30 text-[10px] sm:text-xs font-black text-lingo-text-light uppercase tracking-wider border-b border-lingo-border">
+                  <tr>
+                    <th className="py-2.5 sm:py-3 px-2 sm:px-3.5 text-left">CSE</th>
+                    <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center">My Words</th>
+                    <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-emerald-700">Mastered</th>
+                    <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-blue-700">Learning</th>
+                    <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-lingo-text-light">New</th>
+                    <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-lingo-text-light/80">Word Count</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-lingo-border">
+                  {CSE_LEVELS.map((lvl) => {
+                    const stat = cseStats[lvl];
+                    const label = CSE_BUCKET_LABELS[lvl] ?? "";
+                    return (
+                      <tr key={lvl} className="hover:bg-lingo-gray/20">
+                        <td className="py-2.5 px-3.5">
+                          <div className="flex items-center gap-1.5">
+                            <span
+                              className={`inline-block w-9 py-0.5 text-center rounded-md text-[11px] sm:text-xs font-black border ${CSE_BADGES[lvl]}`}
+                            >
+                              {lvl}
+                            </span>
+                            <span className="text-[10px] sm:text-xs font-bold text-lingo-text-light truncate">
+                              {label}
+                            </span>
+                          </div>
+                        </td>
+                        <td className="py-2.5 px-2 text-center font-black text-lingo-text text-xs sm:text-sm whitespace-nowrap">
+                          {stat.myWords.toLocaleString()}
+                        </td>
+                        <td className="py-2.5 px-2 text-center font-black text-emerald-600 text-xs sm:text-sm whitespace-nowrap">
+                          {stat.learned.toLocaleString()}
+                        </td>
+                        <td className="py-2.5 px-2 text-center font-bold text-blue-600 text-xs sm:text-sm whitespace-nowrap">
+                          {stat.learning.toLocaleString()}
+                        </td>
+                        <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
+                          {stat.new.toLocaleString()}
+                        </td>
+                        <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light/80 text-xs sm:text-sm whitespace-nowrap">
+                          {stat.wordCount.toLocaleString()}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+                <tfoot className="bg-lingo-gray/40 border-t-2 border-lingo-border font-black">
+                  <tr>
+                    <td className="py-3 px-3.5 text-xs sm:text-sm font-black text-lingo-text uppercase tracking-wider">
+                      TOTAL
+                    </td>
+                    <td className="py-3 px-2 text-center font-black text-lingo-text text-xs sm:text-sm whitespace-nowrap">
+                      {totalCseMyWords.toLocaleString()}
+                    </td>
+                    <td className="py-3 px-2 text-center font-black text-emerald-700 text-xs sm:text-sm whitespace-nowrap">
+                      {totalCseLearned.toLocaleString()}
+                    </td>
+                    <td className="py-3 px-2 text-center font-black text-blue-700 text-xs sm:text-sm whitespace-nowrap">
+                      {totalCseLearning.toLocaleString()}
+                    </td>
+                    <td className="py-3 px-2 text-center font-black text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
+                      {totalCseNew.toLocaleString()}
+                    </td>
+                    <td className="py-3 px-2 text-center font-black text-lingo-text-light/90 text-xs sm:text-sm whitespace-nowrap">
+                      {totalCseWordCount.toLocaleString()}
                     </td>
                   </tr>
                 </tfoot>

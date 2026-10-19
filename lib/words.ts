@@ -224,7 +224,6 @@ export function getEnLevelCounts(): Record<string, number> {
     C1: 0,
     C2: 0,
   };
-
   try {
     const fs = require("fs");
     const path = require("path");
@@ -256,6 +255,62 @@ export function getEnLevelCounts(): Record<string, number> {
     B2: 6069,
     C1: 4412,
     C2: 5049,
+  };
+}
+
+let cachedCseCounts: Record<string, number> | null = null;
+
+/**
+ * Word count per CSE level (2–9) from words/english_merged.json, mirroring
+ * getEnLevelCounts but grouped by the China Standards of English scale.
+ * CSE 1 is intentionally omitted — those words were folded into CSE 2.
+ */
+export function getEnCseLevelCounts(): Record<string, number> {
+  if (cachedCseCounts) return cachedCseCounts;
+
+  const counts: Record<string, number> = {
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5": 0,
+    "6": 0,
+    "7": 0,
+    "8": 0,
+    "9": 0,
+  };
+
+  try {
+    const fs = require("fs");
+    const path = require("path");
+    const filePath = path.join(process.cwd(), "words", "english_merged.json");
+    if (fs.existsSync(filePath)) {
+      const content = fs.readFileSync(filePath, "utf-8");
+      const list = JSON.parse(content);
+      if (Array.isArray(list)) {
+        for (const item of list) {
+          const cse = String((item.cse_level as string) || "").trim();
+          if (cse in counts) {
+            counts[cse]++;
+          }
+        }
+        cachedCseCounts = counts;
+        return counts;
+      }
+    }
+  } catch (err) {
+    console.error("Failed to count words by CSE level from english_merged.json:", err);
+  }
+
+  // Fallback counts (post scripts/rebuild-cse-levels-v2.py).
+  return {
+    "2": 1057,
+    "3": 1399,
+    "4": 3323,
+    "5": 1485,
+    "6": 4898,
+    "7": 2943,
+    "8": 3327,
+    "9": 3892,
   };
 }
 

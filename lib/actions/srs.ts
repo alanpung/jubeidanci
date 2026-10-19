@@ -303,6 +303,7 @@ export interface SrsCardItem {
   userId: string;
   translation: string;
   cefrLevel: string | null;
+  cseLevel: string | null;
   pos: string | null;
   gender?: string | null;
   status: string;
@@ -352,16 +353,24 @@ export async function getAllCards(language?: string): Promise<SrsCardItem[]> {
 
   try {
     const levelMap = await getWordToLevelMap();
+    const cseMap = await getWordToCseMap();
     for (const card of cards) {
-      const mappedLvl = levelMap[card.word.toLowerCase().trim()];
+      const key = card.word.toLowerCase().trim();
+      const mappedLvl = levelMap[key];
       if (mappedLvl) {
         card.cefrLevel = mappedLvl;
       } else if (!card.cefrLevel) {
         card.cefrLevel = "A1";
       }
+      const mappedCse = cseMap[key];
+      if (mappedCse) {
+        card.cseLevel = mappedCse;
+      } else if (!card.cseLevel) {
+        card.cseLevel = null;
+      }
     }
   } catch (err) {
-    console.error("Failed to map CEFR levels:", err);
+    console.error("Failed to map CEFR/CSE levels:", err);
   }
 
   return cards;
@@ -710,7 +719,7 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
           const norm = w.toLowerCase().trim();
           if (!norm) continue;
           const dictLvl = dictLevelMap[norm];
-          if (frontWord === norm || (dictLvl && (LEVEL_ORDER[dictLvl] || 1) <= maxLvlRank)) {
+          if (dictLvl || frontWord === norm) {
             wordSet.add(norm);
           }
         }
@@ -1615,8 +1624,13 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
               const normWord = w.toLowerCase().trim();
               if (!normWord) continue;
               const dictLvl = dictLevelMap[normWord];
-              // Only count valid dictionary words at or below the course's CEFR level (or explicit flashcard front words)
-              if (frontWord !== normWord && (!dictLvl || (LEVEL_ORDER[dictLvl] || 1) > maxLvlRank)) {
+              // Count every valid word that belongs to the enrolled course/unit:
+              // a dictionary word OR an explicit flashcard/unit front word.
+              // We no longer skip words whose dictionary CEFR level is above the
+              // course level — the user expects every word in their library to
+              // surface as "new", and skipping them also broke the reset-to-new
+              // flow (those cards were treated as "not in library" and removed).
+              if (!dictLvl && frontWord !== normWord) {
                 continue;
               }
               activeLibraryWords.add(normWord);
