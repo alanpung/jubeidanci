@@ -114,7 +114,7 @@ export function mapJsonToWordEntry(item: Record<string, unknown>): WordEntry {
     word: (item.word as string) || "",
     pos: (item.pos as string) || "",
     cefr_level: (item.level as string) || (item.cefr_level as string) || "",
-    cse_level: (item.cse_level as string) || "",
+    cse_level: String(item.cse_level || ""),
     english_translation: (item.meaning as string) || (item.english_translation as string) || "",
     definition_zh: (item.translation_zh as string) || (item.definition_zh as string) || "",
     example_sentence_native: exampleNative,
