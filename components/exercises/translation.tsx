@@ -508,15 +508,20 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
         </div>
 
         {/* Word Input Cards Layout (without word structure/chunk labels) */}
-        <div
-          onClick={() => {
-            if (status === "answering") {
-              const firstEmpty = inputWords.findIndex((w) => !w.trim());
-              focusInputSlot(firstEmpty === -1 ? activeSlot : firstEmpty);
-            }
-          }}
-          className="w-full flex flex-col items-center cursor-text mb-4"
-        >
+          <div
+            onClick={(e) => {
+              // Only jump to the first empty slot when the click lands on the
+              // wrapper background itself. If the user clicks a specific input
+              // box, let the native focus + onFocus handler select THAT box —
+              // otherwise the bubbled click would steal focus to the first
+              // empty slot and mouse selection wouldn't work (arrow keys only).
+              if (status === "answering" && e.target === e.currentTarget) {
+                const firstEmpty = inputWords.findIndex((w) => !w.trim());
+                focusInputSlot(firstEmpty === -1 ? activeSlot : firstEmpty);
+              }
+            }}
+            className="w-full flex flex-col items-center cursor-text mb-4"
+          >
           {/* Audio output controls:
               C = play the Chinese prompt (always available)
               E = play the English answer (only revealed after Check) */}
