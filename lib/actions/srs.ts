@@ -358,7 +358,7 @@ export async function getAllCards(language?: string): Promise<SrsCardItem[]> {
     if (!localMap.has(key)) localMap.set(key, c);
   });
 
-  const dbMap = new Map<string, typeof srsCard.$inferSelect>();
+  const dbMap = new Map<string, SrsCardItem>();
   cards.forEach((c) => {
     dbMap.set(c.word.toLowerCase().trim(), c);
   });
