@@ -1136,8 +1136,13 @@ export async function recordWordPracticeBatch(
   userId: string,
   practices: { word: string; correct: boolean; translation?: string }[],
   language: string
-) {
-  if (!userId || practices.length === 0) return;
+): Promise<{
+  learningAdded: number;
+  masteredAdded: number;
+  totalPracticed: number;
+}> {
+  if (!userId || practices.length === 0)
+    return { learningAdded: 0, masteredAdded: 0, totalPracticed: 0 };
 
   const targetLang = (language || "en").toLowerCase().trim();
   const aliases = getLanguageAliases(targetLang);
@@ -1199,6 +1204,13 @@ export async function recordWordPracticeBatch(
   const localUpdatesToSave: (Partial<SrsCardRecord> & { word: string; language: string; userId: string })[] = [];
   const dbInsertsToSave: (typeof srsCard.$inferInsert)[] = [];
 
+  // Count the transitions this batch actually caused, so the lesson-complete
+  // screen can show how many words moved from "new" -> "learning" and how many
+  // crossed into "learned" this lesson (rather than a hard-coded gamification
+  // number with no observable meaning).
+  let learningAdded = 0;
+  let masteredAdded = 0;
+
   for (const [normWord, data] of wordMap.entries()) {
     const local = localCardMap.get(normWord);
     const dbCard = dbCardMap.get(normWord);
@@ -1220,6 +1232,11 @@ export async function recordWordPracticeBatch(
     } else {
       finalStatus = "learning";
     }
+
+    // Track transitions caused by THIS lesson so the lesson-complete screen can
+    // show meaningful numbers instead of an opaque XP total.
+    if (previousStatus === "new" && finalStatus === "learning") learningAdded++;
+    if (previousStatus !== "learned" && finalStatus === "learned") masteredAdded++;
 
     const nextReviewAt = new Date(now);
     if (finalStatus === "learned") {
@@ -1319,6 +1336,12 @@ export async function recordWordPracticeBatch(
       }
     }
   }
+
+  return {
+    learningAdded,
+    masteredAdded,
+    totalPracticed: wordMap.size,
+  };
 }
 
 export async function addAllLevelWordsToMyWords(

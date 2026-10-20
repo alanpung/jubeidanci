@@ -69,13 +69,19 @@ export async function completeLesson(input: CompleteLessonInput) {
   }
 
   // 3. Always record SRS practice batch (saves to local store + DB)
+  let wordsLearned = 0;
+  let wordsMastered = 0;
+  let wordsPracticed = 0;
   if (practicesToRecord.length > 0) {
     try {
-      await recordWordPracticeBatch(
+      const result = await recordWordPracticeBatch(
         userId,
         practicesToRecord,
         unitData?.targetLanguage || "en"
       );
+      wordsLearned = result.learningAdded;
+      wordsMastered = result.masteredAdded;
+      wordsPracticed = result.totalPracticed;
     } catch (err) {
       console.error("recordWordPracticeBatch error in completeLesson:", err);
     }
@@ -142,7 +148,7 @@ export async function completeLesson(input: CompleteLessonInput) {
     revalidatePath(`/unit/${input.unitId}`);
   } catch {}
 
-  return { perfectScore };
+  return { perfectScore, wordsLearned, wordsMastered, wordsPracticed };
 }
 
 async function upsertUserStats(userId: string, today: string) {

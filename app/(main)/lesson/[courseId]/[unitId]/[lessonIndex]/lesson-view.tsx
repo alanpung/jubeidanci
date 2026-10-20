@@ -42,6 +42,9 @@ export function LessonView({
   const [showComplete, setShowComplete] = useState(false);
   const [lessonResult, setLessonResult] = useState<{
     perfectScore: boolean;
+    wordsLearned?: number;
+    wordsMastered?: number;
+    wordsPracticed?: number;
   } | null>(null);
 
   const [backUrl, setBackUrl] = useState<string>(() => {
@@ -126,6 +129,9 @@ export function LessonView({
         perfectScore={lessonResult?.perfectScore ?? mistakeCount === 0}
         totalExercises={totalExercises}
         mistakeCount={mistakeCount}
+        wordsLearned={lessonResult?.wordsLearned ?? 0}
+        wordsMastered={lessonResult?.wordsMastered ?? 0}
+        wordsPracticed={lessonResult?.wordsPracticed ?? 0}
         onContinue={handleReturn}
       />
     );

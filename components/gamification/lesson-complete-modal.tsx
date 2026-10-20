@@ -3,13 +3,15 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
-import { Zap, Target, Award, Loader2 } from "lucide-react";
+import { BookOpen, Target, Award, Loader2 } from "lucide-react";
 
 interface LessonCompleteModalProps {
   perfectScore: boolean;
   totalExercises?: number;
   mistakeCount?: number;
-  xpEarned?: number;
+  wordsLearned?: number;
+  wordsMastered?: number;
+  wordsPracticed?: number;
   onContinue: () => void;
 }
 
@@ -17,15 +19,30 @@ export function LessonCompleteModal({
   perfectScore,
   totalExercises = 5,
   mistakeCount = 0,
-  xpEarned,
+  wordsLearned = 0,
+  wordsMastered = 0,
+  wordsPracticed = 0,
   onContinue,
 }: LessonCompleteModalProps) {
   const [isNavigating, setIsNavigating] = useState(false);
 
-  const calculatedXp = xpEarned ?? (perfectScore ? 15 : 10);
   const accuracy = totalExercises > 0
     ? Math.max(0, Math.round(((totalExercises - mistakeCount) / totalExercises) * 100))
     : 100;
+
+  // Total words this lesson actually transitioned into a more-progressed state.
+  // wordsLearned = new -> learning; wordsMastered = crossed into learned.
+  const wordsAdded = wordsLearned + wordsMastered;
+  const breakdown =
+    wordsLearned > 0 && wordsMastered > 0
+      ? `${wordsLearned} learning · ${wordsMastered} mastered`
+      : wordsMastered > 0
+        ? `${wordsMastered} mastered`
+        : wordsLearned > 0
+          ? `${wordsLearned} new in learning`
+          : wordsPracticed > 0
+            ? `${wordsPracticed} reviewed`
+            : "no words recorded";
 
   function handleContinue() {
     if (isNavigating) return;
@@ -81,15 +98,18 @@ export function LessonCompleteModal({
 
         {/* Stats Grid */}
         <div className="grid grid-cols-2 gap-3 mb-6">
-          {/* XP Card */}
-          <div className="rounded-2xl border-2 border-amber-200 bg-amber-50/80 p-3 flex flex-col items-center justify-center text-amber-900 dark:bg-amber-950/30 dark:border-amber-800 dark:text-amber-200">
+          {/* Words Added Card */}
+          <div className="rounded-2xl border-2 border-sky-200 bg-sky-50/80 p-3 flex flex-col items-center justify-center text-sky-900 dark:bg-sky-950/30 dark:border-sky-800 dark:text-sky-200">
             <div className="flex items-center gap-1 mb-0.5">
-              <Zap className="w-4 h-4 text-amber-500 fill-amber-500" />
-              <span className="text-[11px] font-black uppercase tracking-wider text-amber-700 dark:text-amber-300">
-                Total XP
+              <BookOpen className="w-4 h-4 text-sky-500" />
+              <span className="text-[11px] font-black uppercase tracking-wider text-sky-700 dark:text-sky-300">
+                Words Added
               </span>
             </div>
-            <span className="text-xl sm:text-2xl font-black">+{calculatedXp} XP</span>
+            <span className="text-xl sm:text-2xl font-black">{wordsAdded}</span>
+            <span className="text-[10px] sm:text-[11px] font-semibold text-sky-700/80 dark:text-sky-300/80 mt-0.5 text-center leading-tight">
+              {breakdown}
+            </span>
           </div>
 
           {/* Accuracy Card */}
@@ -107,7 +127,7 @@ export function LessonCompleteModal({
         {perfectScore && (
           <div className="mb-6 flex items-center justify-center gap-2 rounded-2xl bg-amber-100/90 dark:bg-amber-900/40 border border-amber-300 dark:border-amber-700 px-4 py-2 text-xs font-black text-amber-900 dark:text-amber-200">
             <Award className="w-4 h-4 text-amber-600 dark:text-amber-400 shrink-0" />
-            <span>Bonus +5 XP for Perfect Score!</span>
+            <span>Perfect score — flawless run!</span>
           </div>
         )}
 
