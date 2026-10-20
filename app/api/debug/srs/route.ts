@@ -123,6 +123,70 @@ export async function GET() {
     }
   }
 
+  // ── Live write probe ────────────────────────────────────────────────
+  // Every static-code explanation has been ruled out (no status filter on the
+  // read, PK matches the ON CONFLICT target, translation is never null,
+  // completeLesson is called with results). So ask Postgres directly: run the
+  // exact upsert recordWordPracticeBatch runs, on a throwaway row, and report
+  // the raw error. Then delete it again.
+  if (dbUp) {
+    const probeWord = "__srs_probe__";
+    try {
+      await db
+        .insert(srsCard)
+        .values({
+          word: probeWord,
+          language: "en",
+          userId,
+          translation: probeWord,
+          status: "learning",
+          easeFactor: 2.5,
+          interval: 1,
+          repetitions: 1,
+          nextReviewAt: new Date(),
+          lastReviewedAt: new Date(),
+        })
+        .onConflictDoUpdate({
+          target: [srsCard.word, srsCard.language, srsCard.userId],
+          set: {
+            status: sql`excluded.status`,
+            cefrLevel: sql`COALESCE(excluded.cefr_level, ${srsCard.cefrLevel})`,
+            repetitions: sql`excluded.repetitions`,
+            interval: sql`excluded.interval`,
+            nextReviewAt: sql`excluded.next_review_at`,
+            lastReviewedAt: sql`excluded.last_reviewed_at`,
+          },
+        });
+
+      const readBack = await db
+        .select({
+          status: srsCard.status,
+          repetitions: srsCard.repetitions,
+        })
+        .from(srsCard)
+        .where(and(eq(srsCard.userId, userId), eq(srsCard.word, probeWord)));
+
+      out.probe = { ok: true, readBack };
+    } catch (e) {
+      const err = e as { code?: string; detail?: string; message?: string };
+      out.probe = {
+        ok: false,
+        message: err?.message ?? String(e),
+        code: err?.code ?? null,
+        detail: err?.detail ?? null,
+      };
+    } finally {
+      try {
+        await db
+          .delete(srsCard)
+          .where(and(eq(srsCard.userId, userId), eq(srsCard.word, probeWord)));
+        (out.probe as Record<string, unknown>).cleanedUp = true;
+      } catch {
+        (out.probe as Record<string, unknown>).cleanedUp = false;
+      }
+    }
+  }
+
   try {
     const local = await getLocalCards(userId);
     const byStatus: Record<string, number> = {};
