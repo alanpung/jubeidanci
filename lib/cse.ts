@@ -12,24 +12,12 @@
 /** Lowest CSE level that exists. */
 export const MIN_CSE_LEVEL = 2;
 
-/** Highest CSE level that exists. */
-export const MAX_CSE_LEVEL = 9;
-
 /**
- * Fixed CEFR -> CSE fallback. The dictionary carries the authoritative
- * `cse_level`, so this is only used for words that bypass the dictionary
- * (AI lookups, words added after the latest JSON refresh, …).
- * Mirrors scripts/rebuild-cse-levels-v2.py.
- *
- *   A1 -> CSE 2   (小学)
- *   A2 -> CSE 2   (小学)
- *   B1 -> CSE 4   (高中 / 高考, jumps over CSE 3 中考)
- *   B2 -> CSE 6   (CET-6,     jumps over CSE 5 CET-4)
- *   C1 -> CSE 8   (雅思 7, jumps over CSE 7 专八)
- *   C2 -> CSE 9   (雅思 8)
- *
- * CSE 7 (专八) is not reached by the CEFR fallback - it only comes from the
- * 专八 exam wordlist in scripts/data/cse/.
+ * Fixed CEFR -> CSE fallback. Used to derive a CSE bucket from a word's
+ * CEFR level (e.g. when the dictionary no longer carries a per-word
+ * `cse_level` field, or for words added after the last JSON refresh).
+ * Mirrors scripts/rebuild-cse-levels-v2.py:
+ *   A1 -> 2, A2 -> 2, B1 -> 4, B2 -> 6, C1 -> 8, C2 -> 9
  */
 const CEFR_TO_CSE_TABLE: Record<string, string> = {
   A1: "2",
@@ -43,38 +31,4 @@ const CEFR_TO_CSE_TABLE: Record<string, string> = {
 export function cefrToCse(cefr: string): string {
   const upper = (cefr || "").toUpperCase().trim();
   return CEFR_TO_CSE_TABLE[upper] ?? String(MIN_CSE_LEVEL);
-}
-
-/**
- * Human-readable label for each CSE bucket, so the word tooltip can show
- * "CSE 4 高中" instead of a bare number. There is deliberately no "1" entry.
- */
-export const CSE_LEVELS = ["2", "3", "4", "5_6", "7", "8_9"] as const;
-
-/**
- * Human-readable label for each CSE bucket:
- * 小学 (2), 初中 (3), 高中 (4), 大学 (5-6), 专业 (7), 雅思 (8-9).
- */
-export const CSE_BUCKET_LABELS: Record<string, string> = {
-  "2": "小学",
-  "3": "初中",
-  "4": "高中",
-  "5_6": "大学",
-  "7": "专业",
-  "8_9": "雅思",
-};
-
-export function cseBucketLabel(level: string | null | undefined): string | null {
-  if (!level) return null;
-  const norm = String(level).trim();
-  if (norm === "5" || norm === "6") return "大学";
-  if (norm === "8" || norm === "9") return "雅思";
-  return CSE_BUCKET_LABELS[norm] ?? null;
-}
-
-/** False for levels that should never be rendered (currently only "1"). */
-export function isDisplayableCse(level: string | null | undefined): boolean {
-  if (!level) return false;
-  const n = Number(level);
-  return Number.isInteger(n) && n >= MIN_CSE_LEVEL && n <= MAX_CSE_LEVEL;
 }

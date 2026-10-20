@@ -1,6 +1,6 @@
 import { getAllCards } from "@/lib/actions/srs";
 import { getTargetLanguage } from "@/lib/actions/preferences";
-import { getEnLevelCounts, getEnCseLevelCounts } from "@/lib/words";
+import { getEnLevelCounts } from "@/lib/words";
 import { getSession } from "@/lib/auth-server";
 import { isAdminEmail } from "@/lib/ai/models";
 import { ProgressView } from "./progress-view";
@@ -16,7 +16,6 @@ export default async function ProgressPage() {
   const srsCards = await getAllCards(language).catch(() => []);
 
   const levelCounts = getEnLevelCounts();
-  const cseCounts = getEnCseLevelCounts();
 
   return (
     <div className="w-full max-w-3xl mx-auto px-1 sm:px-4 py-4 pb-20">
@@ -26,7 +25,6 @@ export default async function ProgressPage() {
         srsCards={srsCards}
         language={language}
         levelDictionaryCounts={levelCounts}
-        cseLevelCounts={cseCounts}
       />
     </div>
   );

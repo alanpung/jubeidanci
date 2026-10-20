@@ -9,7 +9,6 @@ import {
 } from "lucide-react";
 import { StudentInspector } from "@/components/words/student-inspector";
 import { WordStatusFlow } from "@/components/words/word-status-flow";
-import { CSE_LEVELS, CSE_BUCKET_LABELS } from "@/lib/cse";
 
 interface SrsCard {
   word: string;
@@ -39,36 +38,18 @@ const LEVEL_BADGES: Record<string, string> = {
   C2: "bg-rose-100 text-rose-800 dark:bg-rose-950/60 dark:text-rose-300 border-rose-300 dark:border-rose-800",
 };
 
-const CSE_BADGES: Record<string, string> = {
-  "2": "bg-orange-100 text-orange-800 dark:bg-orange-950/60 dark:text-orange-300 border-orange-300 dark:border-orange-800",
-  "3": "bg-amber-100 text-amber-800 dark:bg-amber-950/60 dark:text-amber-300 border-amber-300 dark:border-amber-800",
-  "4": "bg-yellow-100 text-yellow-800 dark:bg-yellow-950/60 dark:text-yellow-300 border-yellow-300 dark:border-yellow-800",
-  "5_6": "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800",
-  "7": "bg-sky-100 text-sky-800 dark:bg-sky-950/60 dark:text-sky-300 border-sky-300 dark:border-sky-800",
-  "8_9": "bg-indigo-100 text-indigo-800 dark:bg-indigo-950/60 dark:text-indigo-300 border-indigo-300 dark:border-indigo-800",
-};
-
 export function ProgressView({
   isAdmin = false,
   isAuthorAllWords = false,
   srsCards = [],
   language = "en",
   levelDictionaryCounts = { A1: 1000, A2: 1555, B1: 4610, B2: 8760, C1: 5127, C2: 1275 },
-  cseLevelCounts = {
-    "2": 1057,
-    "3": 1399,
-    "4": 3323,
-    "5_6": 1485 + 4898,
-    "7": 2943,
-    "8_9": 3327 + 3892,
-  },
 }: {
   isAdmin?: boolean;
   isAuthorAllWords?: boolean;
   srsCards?: SrsCard[];
   language?: string;
   levelDictionaryCounts?: Record<string, number>;
-  cseLevelCounts?: Record<string, number>;
 }) {
   const [activeTab, setActiveTab] = useState<"author" | "inspector">("author");
   const [selectedLevel, setSelectedLevel] = useState<string>("");
@@ -125,80 +106,6 @@ export function ProgressView({
 
     return stats;
   }, [cards, levelDictionaryCounts, isAuthorAllWords]);
-
-  // Compute CSE-level statistics (2–9) the same way as CEFR.
-  const cseStats = useMemo(() => {
-    const stats: Record<
-      string,
-      {
-        wordCount: number;
-        learning: number;
-        learned: number;
-        new: number;
-        myWords: number;
-      }
-    > = {};
-
-    CSE_LEVELS.forEach((lvl) => {
-      const dictCount = cseLevelCounts ? cseLevelCounts[lvl] || 0 : 0;
-      stats[lvl] = {
-        wordCount: dictCount,
-        learning: 0,
-        learned: 0,
-        new: 0,
-        myWords: 0,
-      };
-    });
-
-    cards.forEach((card) => {
-      if (!card.word) return;
-      const lvl = (card.cseLevel || "").toString().trim();
-      let targetLvl = "2";
-      if (lvl === "2" || lvl === "3" || lvl === "4" || lvl === "7") {
-        targetLvl = lvl;
-      } else if (lvl === "5" || lvl === "6") {
-        targetLvl = "5_6";
-      } else if (lvl === "8" || lvl === "9") {
-        targetLvl = "8_9";
-      }
-
-      if (stats[targetLvl]) {
-        if (card.status === "learned" || card.status === "review" || (card.repetitions && card.repetitions >= 3)) {
-          stats[targetLvl].learned++;
-        } else if (card.status === "learning") {
-          stats[targetLvl].learning++;
-        } else if (card.status === "new") {
-          stats[targetLvl].new++;
-        }
-      }
-    });
-
-    CSE_LEVELS.forEach((lvl) => {
-      stats[lvl].myWords = stats[lvl].learned + stats[lvl].learning + stats[lvl].new;
-    });
-
-    return stats;
-  }, [cards, cseLevelCounts]);
-
-  const totalCseLearning = useMemo(() => {
-    return Object.values(cseStats).reduce((acc, curr) => acc + curr.learning, 0);
-  }, [cseStats]);
-
-  const totalCseLearned = useMemo(() => {
-    return Object.values(cseStats).reduce((acc, curr) => acc + curr.learned, 0);
-  }, [cseStats]);
-
-  const totalCseNew = useMemo(() => {
-    return Object.values(cseStats).reduce((acc, curr) => acc + curr.new, 0);
-  }, [cseStats]);
-
-  const totalCseMyWords = useMemo(() => {
-    return Object.values(cseStats).reduce((acc, curr) => acc + curr.myWords, 0);
-  }, [cseStats]);
-
-  const totalCseWordCount = useMemo(() => {
-    return Object.values(cseLevelCounts).reduce((acc, curr) => acc + curr, 0);
-  }, [cseLevelCounts]);
 
   const totalLearning = useMemo(() => {
     return Object.values(levelStats).reduce((acc, curr) => acc + curr.learning, 0);
@@ -455,54 +362,6 @@ export function ProgressView({
                     </td>
                   </tr>
                 </tfoot>
-              </table>
-            </div>
-          </div>
-
-          {/* ── CSE & CEFR LEVEL MATCHING REFERENCE TABLE ── */}
-          <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card overflow-hidden shadow-xs">
-            <div className="px-4 py-3 border-b border-lingo-border flex items-center justify-between gap-2 bg-lingo-card/50">
-              <div className="flex items-center gap-2">
-                <GraduationCap className="w-4 h-4 text-lingo-purple" />
-                <h2 className="text-sm sm:text-base font-black text-lingo-text">
-                  CEFR 与 CSE 能力等级对照表
-                </h2>
-              </div>
-              <span className="text-[11px] font-bold text-lingo-text-light hidden sm:inline">
-                中国英语能力等级量表对照参考
-              </span>
-            </div>
-
-            <div className="w-full overflow-x-auto">
-              <table className="w-full text-left text-xs sm:text-sm">
-                <thead className="bg-lingo-gray/30 text-[10px] sm:text-xs font-black text-lingo-text-light uppercase tracking-wider border-b border-lingo-border">
-                  <tr>
-                    <th className="py-2.5 sm:py-3 px-3.5 text-left">CEFR 级别</th>
-                    <th className="py-2.5 sm:py-3 px-3.5 text-left">阶段</th>
-                    <th className="py-2.5 sm:py-3 px-3.5 text-left">CSE 量表对应</th>
-                    <th className="py-2.5 sm:py-3 px-3.5 text-left">国内学段/考试</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-lingo-border">
-                  <tr className="hover:bg-lingo-gray/20">
-                    <td className="py-3 px-3.5 font-black text-lingo-text">A1 - A2</td>
-                    <td className="py-3 px-3.5 font-bold text-emerald-600">基础段</td>
-                    <td className="py-3 px-3.5 font-bold text-lingo-text">CSE 1 - 3</td>
-                    <td className="py-3 px-3.5 text-lingo-text-light">小学 - 初中</td>
-                  </tr>
-                  <tr className="hover:bg-lingo-gray/20">
-                    <td className="py-3 px-3.5 font-black text-lingo-text">B1 - B2</td>
-                    <td className="py-3 px-3.5 font-bold text-blue-600">进阶段</td>
-                    <td className="py-3 px-3.5 font-bold text-lingo-text">CSE 4 - 6</td>
-                    <td className="py-3 px-3.5 text-lingo-text-light">高中 - 大学</td>
-                  </tr>
-                  <tr className="hover:bg-lingo-gray/20">
-                    <td className="py-3 px-3.5 font-black text-lingo-text">C1 - C2</td>
-                    <td className="py-3 px-3.5 font-bold text-purple-600">精通段</td>
-                    <td className="py-3 px-3.5 font-bold text-lingo-text">CSE 7 - 9</td>
-                    <td className="py-3 px-3.5 text-lingo-text-light">专八 - 雅思</td>
-                  </tr>
-                </tbody>
               </table>
             </div>
           </div>

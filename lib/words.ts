@@ -10,25 +10,8 @@ import {
   langCodeToName,
 } from "@/lib/prompts";
 import { detectTextLanguage } from "@/lib/language-detector";
-
-// CSE helpers (cefrToCse, CSE_BUCKET_LABELS, cseBucketLabel, isDisplayableCse,
-// MIN_CSE_LEVEL) live in lib/cse.ts so client components can import them
-// without pulling the DB driver into the browser bundle. They are imported
-// here and re-exported for convenience / server-side callers.
-import {
-  cefrToCse,
-  CSE_BUCKET_LABELS,
-  cseBucketLabel,
-  isDisplayableCse,
-  MIN_CSE_LEVEL,
-} from "./cse";
-export {
-  cefrToCse,
-  CSE_BUCKET_LABELS,
-  cseBucketLabel,
-  isDisplayableCse,
-  MIN_CSE_LEVEL,
-};
+import { cefrToCse } from "./cse";
+export { cefrToCse };
 
 export interface WordEntry {
   word: string;
@@ -211,38 +194,6 @@ export async function loadEnLevelWords(level: string): Promise<WordEntry[]> {
   }
 }
 
-export async function loadEnCseLevelWords(cseLevel: string): Promise<WordEntry[]> {
-  const norm = String(cseLevel || "").trim();
-  if (!["2", "3", "4", "5_6", "5-6", "7", "8_9", "8-9"].includes(norm)) return [];
-
-  const cacheKey = `en_cse_${norm}`;
-  if (memoryWordsCache.has(cacheKey)) {
-    return memoryWordsCache.get(cacheKey)!;
-  }
-
-  try {
-    const merged = await loadEnglishMergedWords();
-    // The authoritative `cse_level` field was removed from
-    // words/english_merged.json, so CSE is now derived from each word's CEFR
-    // level via cefrToCse() (see lib/cse.ts). This collapses the exam-specific
-    // buckets 3 (中考) / 5 (CET-4) / 7 (专八) into their nearest CEFR-derived
-    // bucket — the best we can do without the now-removed per-word field.
-    const matches = (cse: string): boolean => {
-      if (norm === "5_6" || norm === "5-6") return cse === "5" || cse === "6";
-      if (norm === "8_9" || norm === "8-9") return cse === "8" || cse === "9";
-      return cse === norm;
-    };
-    const filtered = merged.filter((word) => matches(cefrToCse(word.cefr_level || "")));
-    if (filtered.length > 0) {
-      memoryWordsCache.set(cacheKey, filtered);
-      return filtered;
-    }
-  } catch {
-    // Fall through to empty.
-  }
-  return [];
-}
-
 let cachedDynamicCounts: Record<string, number> | null = null;
 
 export function getEnLevelCounts(): Record<string, number> {
@@ -287,60 +238,6 @@ export function getEnLevelCounts(): Record<string, number> {
     B2: 6069,
     C1: 4412,
     C2: 5049,
-  };
-}
-
-let cachedCseCounts: Record<string, number> | null = null;
-
-/**
- * Word count per CSE 6-bucket level from words/english_merged.json.
- */
-export function getEnCseLevelCounts(): Record<string, number> {
-  if (cachedCseCounts) return cachedCseCounts;
-
-  const counts: Record<string, number> = {
-    "2": 0,
-    "3": 0,
-    "4": 0,
-    "5_6": 0,
-    "7": 0,
-    "8_9": 0,
-  };
-
-  try {
-    const fs = require("fs");
-    const path = require("path");
-    const filePath = path.join(process.cwd(), "words", "english_merged.json");
-    if (fs.existsSync(filePath)) {
-      const content = fs.readFileSync(filePath, "utf-8");
-      const list = JSON.parse(content);
-      if (Array.isArray(list)) {
-        // `cse_level` was removed from the dictionary; derive CSE from CEFR.
-        for (const item of list) {
-          const cse = cefrToCse((item.cefr_level as string) || "");
-          if (cse === "2") counts["2"]++;
-          else if (cse === "3") counts["3"]++;
-          else if (cse === "4") counts["4"]++;
-          else if (cse === "5" || cse === "6") counts["5_6"]++;
-          else if (cse === "7") counts["7"]++;
-          else if (cse === "8" || cse === "9") counts["8_9"]++;
-        }
-        cachedCseCounts = counts;
-        return counts;
-      }
-    }
-  } catch (err) {
-    console.error("Failed to count words by CSE level from english_merged.json:", err);
-  }
-
-  // Fallback counts — uniformly zero once the per-word field is gone.
-  return {
-    "2": 0,
-    "3": 0,
-    "4": 0,
-    "5_6": 0,
-    "7": 0,
-    "8_9": 0,
   };
 }
 
