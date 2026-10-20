@@ -220,7 +220,9 @@ function OwnedCourseCard({
             courseId={course.id}
           />
           <div className="flex-1 min-w-0">
-            {/* Top header row with Share button on left and Remove on right */}
+            {/* Top header row: status badges on the left; owner action cluster
+                (1: edit title, 2: public/private switch) on the left of the
+                Remove button (3, available to every user). All three are oval. */}
             <div className="flex items-center justify-between gap-2 mb-1">
               <div className="flex items-center gap-1.5 flex-wrap min-w-0">
                 {isPublic && (
@@ -243,22 +245,76 @@ function OwnedCourseCard({
                 ) : null}
               </div>
 
-              {course.isInLibrary && (
-                <button
-                  type="button"
-                  onClick={handleRemoveFromLibrary}
-                  disabled={isActionPending}
-                  title="Remove from My Library"
-                  aria-label="Remove from My Library"
-                  className="inline-flex h-6 shrink-0 items-center justify-center gap-1 rounded-md px-2 text-[10px] font-black uppercase tracking-wide text-lingo-text-light hover:bg-red-50 hover:text-red-500 transition-colors disabled:opacity-50 cursor-pointer"
-                >
-                  {activeAction === "remove" ? (
-                    <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-red-500/30 border-t-red-500" />
-                  ) : (
-                    <>✕&nbsp;Remove</>
-                  )}
-                </button>
-              )}
+              <div className="flex items-center gap-1.5 shrink-0">
+                {/* 1. Edit title — owner only */}
+                {course.isOwner && (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      setTitleDraft(course.title);
+                      setIsEditingTitle(!isEditingTitle);
+                    }}
+                    disabled={isPending}
+                    title="Edit title"
+                    aria-label="Edit title"
+                    className="inline-flex h-6 shrink-0 items-center justify-center gap-1 rounded-full border-2 border-lingo-border px-2.5 text-[10px] font-black uppercase tracking-wide text-lingo-text hover:bg-lingo-gray/30 transition-colors disabled:opacity-50 cursor-pointer"
+                  >
+                    ✎&nbsp;Title
+                  </button>
+                )}
+
+                {/* 2. Public / Private switch — owner only */}
+                {course.isOwner && (
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      e.stopPropagation();
+                      if (isPublic) {
+                        handleMakePrivate();
+                      } else {
+                        handleMakePublic();
+                      }
+                    }}
+                    disabled={isActionPending}
+                    title={isPublic ? "Make private" : "Make public"}
+                    aria-label={isPublic ? "Make private" : "Make public"}
+                    className={`inline-flex h-6 shrink-0 items-center justify-center gap-1 rounded-full border-2 px-2.5 text-[10px] font-black uppercase tracking-wide transition-colors disabled:opacity-50 cursor-pointer ${
+                      isPublic
+                        ? "border-lingo-green/50 text-lingo-green hover:bg-lingo-green/10"
+                        : "border-lingo-gray text-lingo-text-light hover:bg-lingo-gray/30"
+                    }`}
+                  >
+                    {activeAction === "make-public" || activeAction === "make-private" ? (
+                      <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                    ) : isPublic ? (
+                      <>🌐&nbsp;Public</>
+                    ) : (
+                      <>🔒&nbsp;Private</>
+                    )}
+                  </button>
+                )}
+
+                {/* 3. Remove from library — available to every user */}
+                {course.isInLibrary && (
+                  <button
+                    type="button"
+                    onClick={handleRemoveFromLibrary}
+                    disabled={isActionPending}
+                    title="Remove from My Library"
+                    aria-label="Remove from My Library"
+                    className="inline-flex h-6 shrink-0 items-center justify-center gap-1 rounded-full border-2 border-red-300 px-2.5 text-[10px] font-black uppercase tracking-wide text-red-500 hover:bg-red-50 transition-colors disabled:opacity-50 cursor-pointer"
+                  >
+                    {activeAction === "remove" ? (
+                      <span className="h-3 w-3 animate-spin rounded-full border-2 border-red-500/30 border-t-red-500" />
+                    ) : (
+                      <>✕&nbsp;Remove</>
+                    )}
+                  </button>
+                )}
+              </div>
             </div>
 
             <div className="flex items-center gap-2 flex-wrap">
@@ -366,31 +422,6 @@ function OwnedCourseCard({
 
           {!isLocked && (
             <button
-              onClick={() => {
-                setTitleDraft(course.title);
-                setIsEditingTitle(!isEditingTitle);
-              }}
-              className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold text-lingo-text hover:bg-lingo-gray/30 transition-colors"
-            >
-              <svg
-                className="h-3.5 w-3.5"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-                strokeWidth={2}
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z"
-                />
-              </svg>
-              Edit Title
-            </button>
-          )}
-
-          {!isLocked && (
-            <button
               onClick={onToggleManage}
               className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold text-lingo-blue hover:bg-lingo-blue/10 transition-colors"
             >
@@ -408,71 +439,6 @@ function OwnedCourseCard({
                 />
               </svg>
               {isManaging ? "Close" : "Manage"}
-            </button>
-          )}
-
-          {!isPublic && (
-            <button
-              onClick={handleMakePublic}
-              disabled={isActionPending}
-              className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold text-lingo-green hover:bg-lingo-green/10 transition-colors disabled:opacity-50"
-            >
-              {activeAction === "make-public" ? (
-                <>
-                  <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-lingo-green/30 border-t-lingo-green" />
-                  Making Public...
-                </>
-              ) : (
-                <>
-                  <svg
-                    className="h-3.5 w-3.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M12 21a9.004 9.004 0 008.716-6.747M12 21a9.004 9.004 0 01-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 017.843 4.582M12 3a8.997 8.997 0 00-7.843 4.582m15.686 0A11.953 11.953 0 0112 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0121 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0112 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 013 12c0-1.605.42-3.113 1.157-4.418"
-                    />
-                  </svg>
-                  Make Public
-                </>
-              )}
-            </button>
-          )}
-
-          {/* Admin: Make Private button */}
-          {isAdmin && isPublic && (
-            <button
-              onClick={handleMakePrivate}
-              disabled={isActionPending}
-              className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold text-red-500 hover:bg-red-50 transition-colors disabled:opacity-50"
-            >
-              {activeAction === "make-private" ? (
-                <>
-                  <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-red-500/30 border-t-red-500" />
-                  Making Private...
-                </>
-              ) : (
-                <>
-                  <svg
-                    className="h-3.5 w-3.5"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    strokeWidth={2}
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
-                    />
-                  </svg>
-                  Make Private
-                </>
-              )}
             </button>
           )}
 
