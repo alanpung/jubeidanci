@@ -624,13 +624,33 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                         onChange={(e) => {
                           const val = e.target.value;
                           if (val.includes(" ")) {
-                            const clean = val.replace(/\s+/g, "");
+                            // The user pasted a whole sentence, or a space
+                            // slipped through the keydown handler, or an IME/
+                            // autocorrect inserted a space. Split into words
+                            // and DISTRIBUTE them across this slot and the
+                            // following ones — do NOT concatenate them into a
+                            // single slot. The old behaviour stripped the
+                            // spaces and jammed every word into one slot while
+                            // leaving the rest empty, so a perfectly correct
+                            // answer could score as low as 5/8.
+                            const words = val
+                              .split(/\s+/)
+                              .map((w) => w.trim())
+                              .filter(Boolean);
+                            if (words.length === 0) return;
                             const next = [...inputWords];
-                            next[idx] = clean;
-                            setInputWords(next);
-                            if (idx + 1 < rawAnswerTokens.length) {
-                              focusInputSlot(idx + 1);
+                            let slot = idx;
+                            for (const w of words) {
+                              if (slot >= rawAnswerTokens.length) break;
+                              next[slot] = w;
+                              slot++;
                             }
+                            setInputWords(next);
+                            const lastFilled = Math.min(slot - 1, rawAnswerTokens.length - 1);
+                            const nextFocus = Math.min(slot, rawAnswerTokens.length - 1);
+                            // Keep the cursor moving forward while slots remain,
+                            // otherwise park it on the final filled slot.
+                            focusInputSlot(slot < rawAnswerTokens.length ? nextFocus : lastFilled);
                             return;
                           }
                           const next = [...inputWords];
