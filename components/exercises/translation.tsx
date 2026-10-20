@@ -571,43 +571,21 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       : "border-blue-100/80 hover:border-blue-200"
                   }`}
                 >
-                  {/* After Check: a green strip ABOVE the input line.
-                      - Unmatched slot: show the canonical correct answer.
-                      - Matched slot: show the OTHER accepted synonyms (so a
-                        learner who typed "metro" also sees "subway" / "train"
-                        above their green input, confirming they weren't wrong
-                        and revealing valid alternatives). */}
-                  {status !== "answering" && (() => {
-                    if (!isWordMatched) {
-                      return (
-                        <div className="flex flex-col items-center justify-center mb-1 sm:mb-1.5">
-                          <span
-                            style={{ minWidth: `${Math.max(3, targetWord.length)}ch` }}
-                            className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700"
-                          >
-                            {targetWord}
-                          </span>
-                        </div>
-                      );
-                    }
-                    const typed = (typedWord || "").toLowerCase().trim();
-                    const syns = synonymsOf(targetWord)
-                      .filter((s) => s.toLowerCase() !== typed)
-                      .slice(0, 4);
-                    if (syns.length === 0) return null;
-                    return (
-                      <div className="flex flex-wrap items-center justify-center gap-x-1.5 gap-y-0.5 mb-1 sm:mb-1.5">
-                        {syns.map((s, si) => (
-                          <span
-                            key={si}
-                            className="text-center font-serif text-sm sm:text-base lg:text-lg font-bold tracking-tight text-emerald-600"
-                          >
-                            {s}
-                          </span>
-                        ))}
-                      </div>
-                    );
-                  })()}
+                  {/* After Check: for an UNMATCHED slot only, show the
+                      canonical correct word ABOVE the input line.
+                      Accepted synonyms are deliberately NOT shown here — they
+                      are rendered BELOW the answer boxes (see the "also
+                      accepted" row in the lower info stack). */}
+                  {status !== "answering" && !isWordMatched && (
+                    <div className="flex flex-col items-center justify-center mb-1 sm:mb-1.5">
+                      <span
+                        style={{ minWidth: `${Math.max(3, targetWord.length)}ch` }}
+                        className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700"
+                      >
+                        {targetWord}
+                      </span>
+                    </div>
+                  )}
                   {/* Input line (always in its position, just below the green
                       correct-answer when present; no grey separator anywhere). */}
                   <div className="flex flex-col items-center justify-center my-1 sm:my-1.5 min-h-[2.25rem] sm:min-h-[3rem]">
@@ -685,6 +663,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                       1st row: colorful oval POS badge (always shown, even while typing)
                       2nd row: Chinese meaning (after Check, both matched/unmatched)
                       3rd row: IPA (after Check, both matched/unmatched)
+                      4th row: "also:" accepted synonyms (after Check)
                       The grey separator (border-t border-gray-100) is removed. */}
                   <div className="flex flex-col items-center justify-center mt-1 sm:mt-2 w-full space-y-1 sm:space-y-1.5">
                     {/* POS badge — always visible while typing so the user has a hint
@@ -714,6 +693,33 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                             {item.ipa}
                           </div>
                         )}
+                        {/* Also-accepted synonyms — shown BELOW the answer
+                            boxes (user request). For a matched slot it tells
+                            the learner "you weren't wrong, these count too";
+                            for a wrong slot it hints at valid alternatives
+                            without cluttering the area above the input. */}
+                        {(() => {
+                          const typed = (typedWord || "").toLowerCase().trim();
+                          const syns = synonymsOf(targetWord)
+                            .filter((s) => s.toLowerCase() !== typed)
+                            .slice(0, 3);
+                          if (syns.length === 0) return null;
+                          return (
+                            <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-0.5 pt-0.5">
+                              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wide text-gray-400">
+                                also:
+                              </span>
+                              {syns.map((s, si) => (
+                                <span
+                                  key={si}
+                                  className="text-center font-serif text-xs sm:text-sm lg:text-base font-bold tracking-tight text-emerald-600"
+                                >
+                                  {s}
+                                </span>
+                              ))}
+                            </div>
+                          );
+                        })()}
                       </>
                     )}
                   </div>

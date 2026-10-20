@@ -1,5 +1,5 @@
 import { notFound } from "next/navigation";
-import { getCourseWithContent, SYSTEM_COURSE_IDS } from "@/lib/db/queries/courses";
+import { getCourseWithContent } from "@/lib/db/queries/courses";
 import { getUserProgress } from "@/lib/actions/progress";
 import { LearningPath } from "@/components/library/learning-path";
 import { getSession } from "@/lib/auth-server";
@@ -23,7 +23,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
 
   const progress = await getUserProgress(course.id);
   const isAdmin = isAdminEmail(session?.user?.email);
-  const isOwner = course.createdBy === userId && !SYSTEM_COURSE_IDS.includes(course.id);
+  const isOwner = course.createdBy === userId;
   const canEdit = isAdmin || (isOwner && course.visibility !== "public");
 
   let libraryUnitIds: string[] = [];

@@ -237,7 +237,11 @@ export async function listCoursesWithLessonCounts(
   return courses.map((c) => ({
     ...c,
     lessonCount: lessonCountByCourse.get(c.id) ?? c.lessonCount ?? 0,
-    isOwner: userId ? c.createdBy === userId && !SYSTEM_COURSE_IDS.includes(c.id) : false,
+    // Ownership is decided purely by createdBy, matching the server actions
+    // (makeCoursePublic / updateCourseTitle / …), which only compare
+    // createdBy against the session user. Excluding SYSTEM_COURSE_IDS here
+    // used to hide the owner controls for courses the admin had created.
+    isOwner: userId ? c.createdBy === userId : false,
     isInLibrary: enrolledCourseIds.has(c.id),
   }));
 }
@@ -1033,7 +1037,7 @@ export async function getUserOwnedCourses(
     unitCount: Number(r.unitCount),
     lessonCount: lessonCountMap.get(r.id) ?? 0,
     completedLessons: completionMap.get(r.id) ?? 0,
-    isOwner: r.createdBy === userId && !SYSTEM_COURSE_IDS.includes(r.id),
+    isOwner: r.createdBy === userId,
     isInLibrary: true,
   }));
 }
