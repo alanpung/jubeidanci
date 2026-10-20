@@ -1266,33 +1266,57 @@ export async function recordWordPracticeBatch(
   }
 
   if (dbUp && dbInsertsToSave.length > 0) {
+    const upsertRows = async (rows: (typeof srsCard.$inferInsert)[]) => {
+      await db
+        .insert(srsCard)
+        .values(rows)
+        .onConflictDoUpdate({
+          target: [srsCard.word, srsCard.language, srsCard.userId],
+          set: {
+            status: sql`excluded.status`,
+            cefrLevel: sql`COALESCE(excluded.cefr_level, ${srsCard.cefrLevel})`,
+            repetitions: sql`excluded.repetitions`,
+            interval: sql`excluded.interval`,
+            nextReviewAt: sql`excluded.next_review_at`,
+            lastReviewedAt: sql`excluded.last_reviewed_at`,
+          },
+        });
+    };
+
     try {
       const CHUNK_SIZE = 100;
       for (let i = 0; i < dbInsertsToSave.length; i += CHUNK_SIZE) {
         const chunk = dbInsertsToSave.slice(i, i + CHUNK_SIZE);
-        await db
-          .insert(srsCard)
-          .values(chunk)
-          .onConflictDoUpdate({
-            target: [srsCard.word, srsCard.language, srsCard.userId],
-            set: {
-              status: sql`excluded.status`,
-              cefrLevel: sql`COALESCE(excluded.cefr_level, ${srsCard.cefrLevel})`,
-              repetitions: sql`excluded.repetitions`,
-              interval: sql`excluded.interval`,
-              nextReviewAt: sql`excluded.next_review_at`,
-              lastReviewedAt: sql`excluded.last_reviewed_at`,
-            },
-          });
+        await upsertRows(chunk);
       }
+      console.log(
+        `[srs] recordWordPracticeBatch: upserted ${dbInsertsToSave.length} card(s) for user ${userId}`,
+      );
     } catch (err) {
-      // Surfaced (not swallowed): the local store now keeps the learner's real
-      // progress when this fails, but a silent DB failure is what made
-      // completed lessons look un-started on the Progress page.
+      // One rejected row used to discard the ENTIRE batch, so a completed
+      // lesson recorded zero words and the Progress page kept reporting every
+      // word as "new". Retry row-by-row so the rest survive, and report both
+      // counts so the failure is visible instead of silent.
       console.warn(
-        `recordWordPracticeBatch: DB upsert failed for ${dbInsertsToSave.length} card(s); local store retained the progress.`,
+        `[srs] recordWordPracticeBatch: batch upsert failed for ${dbInsertsToSave.length} card(s):`,
         err,
       );
+      let ok = 0;
+      const failures: string[] = [];
+      for (const row of dbInsertsToSave) {
+        try {
+          await upsertRows([row]);
+          ok++;
+        } catch (rowErr) {
+          failures.push(`${row.word} (${row.language}): ${String(rowErr)}`);
+        }
+      }
+      console.warn(
+        `[srs] recordWordPracticeBatch: per-row retry -> ${ok} ok, ${failures.length} failed`,
+      );
+      if (failures.length > 0) {
+        console.warn("[srs] recordWordPracticeBatch failures:", failures.slice(0, 10));
+      }
     }
   }
 }
