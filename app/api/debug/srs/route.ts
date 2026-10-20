@@ -7,6 +7,7 @@ import { eq, desc, sql, inArray, and } from "drizzle-orm";
 import { getLocalCards } from "@/lib/srs-store";
 import { getUnitWithContent } from "@/lib/db/queries/courses";
 import { extractSrsWords } from "@/lib/srs-words";
+import { exerciseSchema } from "@/lib/content/exercise-schema";
 
 export const dynamic = "force-dynamic";
 
@@ -103,6 +104,25 @@ export async function GET() {
           });
         });
 
+        // Per-exercise breakdown for the newest lesson: how many words each
+        // exercise yields, and whether it passes the Zod schema the lesson
+        // screen validates against. An exercise that fails validation is
+        // auto-"[skipped]" at render time and contributes no words at all,
+        // which looks like "wordsPracticed: 0" on the completion screen.
+        const perExercise = (lesson?.exercises ?? []).map((ex, i) => {
+          const exWords = extractSrsWords(ex);
+          const parsed = exerciseSchema.safeParse(ex);
+          return {
+            i,
+            type: (ex as { type?: string }).type,
+            schemaValid: parsed.success,
+            schemaIssue: parsed.success
+              ? null
+              : (parsed.error.issues?.[0]?.message ?? "unknown"),
+            wordCount: exWords.length,
+          };
+        });
+
         out.lastLesson = {
           unitId: last.unitId,
           lessonIndex: last.lessonIndex,
@@ -110,6 +130,9 @@ export async function GET() {
           lessonFound: Boolean(lesson),
           exerciseCount: lesson?.exercises?.length ?? 0,
           extractedWordCount: unique.length,
+          invalidSchemaCount: perExercise.filter((e) => !e.schemaValid).length,
+          zeroWordCount: perExercise.filter((e) => e.wordCount === 0).length,
+          perExercise,
           sample: unique.slice(0, 12).map((w) => ({
             word: w,
             inDb: statusOf.has(w),

@@ -49,7 +49,28 @@ export function extractSrsWords(exercise: Exercise): string[] {
       if (typeof alt === "string") textParts.push(alt);
     }
   }
+  if (typeof exAny.accept === "string") textParts.push(exAny.accept);
   if (typeof exAny.front === "string") textParts.push(exAny.front);
+  // free-text has neither answer nor front (srsWords is optional there), so
+  // without these it silently yielded zero words and the lesson recorded no
+  // practice at all.
+  if (typeof exAny.sentence === "string") textParts.push(exAny.sentence);
+  if (typeof exAny.text === "string") textParts.push(exAny.text);
+  if (typeof exAny.prompt === "string") textParts.push(exAny.prompt);
+  if (typeof exAny.term === "string") textParts.push(exAny.term);
+  if (typeof exAny.word === "string") textParts.push(exAny.word);
+  if (Array.isArray(exAny.pairs)) {
+    for (const p of exAny.pairs as unknown[]) {
+      if (p && typeof p === "object") {
+        const rec = p as Record<string, unknown>;
+        if (typeof rec.left === "string") textParts.push(rec.left);
+        if (typeof rec.right === "string") textParts.push(rec.right);
+        if (typeof rec.word === "string") textParts.push(rec.word);
+      } else if (typeof p === "string") {
+        textParts.push(p);
+      }
+    }
+  }
 
   const combined = tokenizeEnglishWords(textParts.join(" "));
   const combinedWithExplicit = [...explicit, ...combined];

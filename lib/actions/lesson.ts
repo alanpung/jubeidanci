@@ -43,21 +43,29 @@ export async function completeLesson(input: CompleteLessonInput) {
 
   // 2. Extract words from exercises for this lesson index
   const practicesToRecord: { word: string; correct: boolean }[] = [];
+  let skippedResults = 0;
+  let missingExercises = 0;
+  let zeroWordExercises = 0;
   if (unitData && unitData.lessons && unitData.lessons[input.lessonIndex]) {
     const lesson = unitData.lessons[input.lessonIndex];
     for (const result of input.results) {
-      if (result.userAnswer === "[skipped]") continue;
+      if (result.userAnswer === "[skipped]") {
+        skippedResults++;
+        continue;
+      }
       // Guard the index: a stale/out-of-range exerciseIndex used to `continue`
       // silently, which discarded that exercise's words and left the learner
       // with a completed lesson but zero recorded practice.
       const exercise = lesson.exercises?.[result.exerciseIndex] as Exercise | undefined;
       if (!exercise) {
+        missingExercises++;
         console.warn(
           `completeLesson: exerciseIndex ${result.exerciseIndex} out of range for unit ${input.unitId} lesson ${input.lessonIndex} (${lesson.exercises?.length ?? 0} exercises) - skipping SRS words`,
         );
         continue;
       }
       const words = extractSrsWords(exercise);
+      if (words.length === 0) zeroWordExercises++;
       for (const w of words) {
         practicesToRecord.push({ word: w, correct: result.correct });
       }
@@ -67,6 +75,17 @@ export async function completeLesson(input: CompleteLessonInput) {
       `completeLesson: unit ${input.unitId} lesson ${input.lessonIndex} not found - no SRS practice recorded`,
     );
   }
+
+  // The completion screen reports wordsPracticed from this batch. When it shows
+  // "no words recorded" while accuracy is non-zero, the results array arrived
+  // empty or every exercise yielded nothing — record which, so the cause is
+  // visible in the deployment logs instead of having to be re-derived.
+  console.log(
+    `[lesson] completeLesson unit=${input.unitId} lesson=${input.lessonIndex} ` +
+      `results=${input.results.length} skipped=${skippedResults} ` +
+      `missingExercise=${missingExercises} zeroWordExercises=${zeroWordExercises} ` +
+      `practices=${practicesToRecord.length} mistakeCount=${input.mistakeCount}`,
+  );
 
   // 3. Always record SRS practice batch (saves to local store + DB)
   let wordsLearned = 0;
