@@ -105,6 +105,10 @@ const BUILTIN_WORD_DICT: Record<string, { ipa: string; meaning: string; grammarT
   sweet: { ipa: "/swiːt/", meaning: "甜的", grammarTag: "形容词" },
   something: { ipa: "/ˈsʌm.θɪŋ/", meaning: "某物/东西", grammarTag: "代词" },
   want: { ipa: "/wɒnt/", meaning: "想要", grammarTag: "动词" },
+  // "Excuse me" is a fixed polite opener — it means 打扰一下/请问, NOT the
+  // noun sense 原谅. Showing 原谅 here made the sentence "请问售票处在哪里？"
+  // look like its English answer was missing the "excuse me" politeness.
+  excuse: { ipa: "/ɪkˈskjuːz/", meaning: "打扰(Excuse me)", grammarTag: "动词" },
   eat: { ipa: "/iːt/", meaning: "吃", grammarTag: "动词" },
   like: { ipa: "/laɪk/", meaning: "喜欢", grammarTag: "动词" },
   fresh: { ipa: "/freʃ/", meaning: "新鲜的", grammarTag: "形容词" },

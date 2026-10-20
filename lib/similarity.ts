@@ -517,17 +517,29 @@ export function checkWordMatch(
     (a) => a.trim().split(/\s+/).filter(Boolean),
   );
 
-  // The UI renders one slot per primary-answer token. Align everything to
-  // that length so the per-slot boolean array matches what the user sees.
+  // The UI renders one slot per primary-answer token, and each slot shows the
+  // primary answer's word for that position. So a slot-by-slot comparison is
+  // only meaningful against an answer of the SAME length: comparing slot i of
+  // a 7-word answer with slot i of an 8-word alternative compares words that
+  // do not actually occupy the same position, which produced false positives.
+  //
+  // Example: primary "Excuse me, where is the ticket office?" (7) vs alt
+  // "Where is the ticket counter, please?" (8). Slot 0 holds "Excuse" but the
+  // alt's slot 0 holds "Where" — typing "where" there was wrongly graded as a
+  // match. Different-length alternatives are still honoured, but only through
+  // the whole-sentence `fullyMatchedAnyAnswer` check below.
   const primaryTw = answerTokenLists[0];
   const totalCount = primaryTw.length;
+  const slotComparableLists = answerTokenLists.filter(
+    (tw) => tw.length === totalCount,
+  );
   const alignedMatched: boolean[] = new Array(totalCount).fill(false);
 
   let matchCount = 0;
   for (let i = 0; i < totalCount; i++) {
     const u = userTokens[i] || "";
     if (!normalize(u)) continue;
-    for (const tw of answerTokenLists) {
+    for (const tw of slotComparableLists) {
       const t = tw[i] || "";
       if (normalize(t) && isEquivalentToken(u, t)) {
         alignedMatched[i] = true;
