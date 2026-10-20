@@ -341,15 +341,68 @@ export async function getAllCards(language?: string): Promise<SrsCardItem[]> {
     }
   }
 
-  if (!dbUp || cards.length === 0) {
-    const local = await getLocalCards(userId, aliases);
-    cards = local.map((c) => ({
-      ...c,
-      createdAt: new Date(c.createdAt),
-      nextReviewAt: c.nextReviewAt ? new Date(c.nextReviewAt) : null,
-      lastReviewedAt: c.lastReviewedAt ? new Date(c.lastReviewedAt) : null,
-    }));
-  }
+  // Always load the local store as well, then MERGE it with the DB rows.
+  // The local store is the one that recordWordPracticeBatch/upsertLocalCard
+  // always write, while the Postgres write sits behind isDbAvailable() and a
+  // try/catch. When that write silently fails, the DB still holds the card as
+  // status="new" (seeded by syncUserCourseWordsToSrs) and the learner's real
+  // progress was visible nowhere: the old code returned DB cards whenever
+  // cards.length > 0 and never consulted the local store at all.
+  // Merge precedence: a card that has actually been practised (status other
+  // than "new", or repetitions > 0, or a recent lastReviewedAt) wins over the
+  // DB copy, so a completed lesson can never be reported as all-new again.
+  const local = await getLocalCards(userId, aliases);
+  const localMap = new Map<string, SrsCardRecord>();
+  local.forEach((c) => {
+    const key = c.word.toLowerCase().trim();
+    if (!localMap.has(key)) localMap.set(key, c);
+  });
+
+  const dbMap = new Map<string, typeof srsCard.$inferSelect>();
+  cards.forEach((c) => {
+    dbMap.set(c.word.toLowerCase().trim(), c);
+  });
+
+  cards = Array.from(dbMap.keys()).map((key) => {
+    const d = dbMap.get(key)!;
+    const l = localMap.get(key);
+    if (!l) return d as unknown as SrsCardItem;
+
+    const dbPractised =
+      d.status !== "new" || (d.repetitions ?? 0) > 0 || d.lastReviewedAt != null;
+    const localPractised =
+      l.status !== "new" || (l.repetitions ?? 0) > 0 || l.lastReviewedAt != null;
+
+    // Take whichever record reflects more study; never regress a practised
+    // word back to "new" just because the DB copy is stale.
+    const winner = localPractised && !dbPractised ? l : dbPractised && !localPractised ? d : dbPractised && localPractised
+      ? l.lastReviewedAt && d.lastReviewedAt
+        ? new Date(l.lastReviewedAt).getTime() >= new Date(d.lastReviewedAt).getTime()
+          ? l
+          : d
+        : l
+      : d;
+
+    return winner as unknown as SrsCardItem;
+  });
+
+  // Cards that exist ONLY locally (DB write failed or not yet replicated) must
+  // still count — dropping them is exactly how practised words disappeared.
+  localMap.forEach((l, key) => {
+    if (!dbMap.has(key)) cards.push(l as unknown as SrsCardItem);
+  });
+
+  // Normalise date fields: the local store persists ISO strings while the DB
+  // returns Date objects, and callers (progress-view, word tables) expect Dates.
+  cards = cards.map((c) => {
+    const any = c as unknown as Record<string, unknown>;
+    return {
+      ...(c as unknown as SrsCardItem),
+      createdAt: any.createdAt ? new Date(any.createdAt as string) : new Date(),
+      nextReviewAt: any.nextReviewAt ? new Date(any.nextReviewAt as string) : null,
+      lastReviewedAt: any.lastReviewedAt ? new Date(any.lastReviewedAt as string) : null,
+    } as SrsCardItem;
+  });
 
   try {
     const levelMap = await getWordToLevelMap();
@@ -1233,7 +1286,13 @@ export async function recordWordPracticeBatch(
           });
       }
     } catch (err) {
-      console.warn("recordWordPracticeBatch DB upsert error:", err);
+      // Surfaced (not swallowed): the local store now keeps the learner's real
+      // progress when this fails, but a silent DB failure is what made
+      // completed lessons look un-started on the Progress page.
+      console.warn(
+        `recordWordPracticeBatch: DB upsert failed for ${dbInsertsToSave.length} card(s); local store retained the progress.`,
+        err,
+      );
     }
   }
 }
@@ -1669,6 +1728,28 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       if (dbUp) {
         try {
           const activeWordsArr = Array.from(activeLibraryWords);
+          // Never delete a word the learner has actually practised. A card can
+          // legitimately sit at status="new" with repetitions=0 in the DB while
+          // the local store holds real progress for it (the Postgres write is
+          // best-effort). Purging on the DB alone would destroy that progress,
+          // so only words that are un-practised in BOTH stores are removed.
+          const practisedLocally = new Set<string>();
+          for (const lc of await getLocalCards(userId)) {
+            if (lc.status !== "new" || (lc.repetitions ?? 0) > 0 || lc.lastReviewedAt) {
+              practisedLocally.add(lc.word.toLowerCase().trim());
+            }
+          }
+          if (practisedLocally.size > 0) {
+            await db.delete(srsCard).where(
+              and(
+                eq(srsCard.userId, userId),
+                eq(srsCard.status, "new"),
+                eq(srsCard.repetitions, 0),
+                notInArray(srsCard.word, Array.from(practisedLocally))
+              )
+            );
+          }
+
           if (activeWordsArr.length > 0) {
             await db.delete(srsCard).where(
               and(

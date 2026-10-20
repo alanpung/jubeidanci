@@ -47,13 +47,25 @@ export async function completeLesson(input: CompleteLessonInput) {
     const lesson = unitData.lessons[input.lessonIndex];
     for (const result of input.results) {
       if (result.userAnswer === "[skipped]") continue;
-      const exercise = lesson.exercises[result.exerciseIndex] as Exercise | undefined;
-      if (!exercise) continue;
+      // Guard the index: a stale/out-of-range exerciseIndex used to `continue`
+      // silently, which discarded that exercise's words and left the learner
+      // with a completed lesson but zero recorded practice.
+      const exercise = lesson.exercises?.[result.exerciseIndex] as Exercise | undefined;
+      if (!exercise) {
+        console.warn(
+          `completeLesson: exerciseIndex ${result.exerciseIndex} out of range for unit ${input.unitId} lesson ${input.lessonIndex} (${lesson.exercises?.length ?? 0} exercises) - skipping SRS words`,
+        );
+        continue;
+      }
       const words = extractSrsWords(exercise);
       for (const w of words) {
         practicesToRecord.push({ word: w, correct: result.correct });
       }
     }
+  } else {
+    console.warn(
+      `completeLesson: unit ${input.unitId} lesson ${input.lessonIndex} not found - no SRS practice recorded`,
+    );
   }
 
   // 3. Always record SRS practice batch (saves to local store + DB)
