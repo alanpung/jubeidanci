@@ -116,6 +116,7 @@ export async function completeLesson(input: CompleteLessonInput) {
   let wordsLearned = 0;
   let wordsMastered = 0;
   let wordsPracticed = 0;
+  let wordsAdded = 0;
   let srsError: string | null = null;
   if (practicesToRecord.length > 0) {
     try {
@@ -127,6 +128,7 @@ export async function completeLesson(input: CompleteLessonInput) {
       wordsLearned = result.learningAdded;
       wordsMastered = result.masteredAdded;
       wordsPracticed = result.totalPracticed;
+      wordsAdded = result.activeCount;
     } catch (err) {
       srsError = String(err);
       console.error("recordWordPracticeBatch error in completeLesson:", err);
@@ -145,6 +147,7 @@ export async function completeLesson(input: CompleteLessonInput) {
     practices: practicesToRecord.length,
     learningAdded: wordsLearned,
     masteredAdded: wordsMastered,
+    wordsAdded,
     srsError,
   });
 
@@ -209,7 +212,7 @@ export async function completeLesson(input: CompleteLessonInput) {
     revalidatePath(`/unit/${input.unitId}`);
   } catch {}
 
-  return { perfectScore, wordsLearned, wordsMastered, wordsPracticed };
+  return { perfectScore, wordsLearned, wordsMastered, wordsPracticed, wordsAdded };
 }
 
 async function upsertUserStats(userId: string, today: string) {

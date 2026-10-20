@@ -1140,9 +1140,15 @@ export async function recordWordPracticeBatch(
   learningAdded: number;
   masteredAdded: number;
   totalPracticed: number;
+  /** Distinct words in this batch that ended up in learning/learned status.
+   *  Unlike learningAdded (a new->learning delta), this is always meaningful:
+   *  it is the number of words this lesson actually contributed to the
+   *  learner's active vocabulary, so the completion screen never shows a
+   *  misleading 0 just because the words were already "learning". */
+  activeCount: number;
 }> {
   if (!userId || practices.length === 0)
-    return { learningAdded: 0, masteredAdded: 0, totalPracticed: 0 };
+    return { learningAdded: 0, masteredAdded: 0, totalPracticed: 0, activeCount: 0 };
 
   const targetLang = (language || "en").toLowerCase().trim();
   const aliases = getLanguageAliases(targetLang);
@@ -1168,7 +1174,7 @@ export async function recordWordPracticeBatch(
 
   const uniqueWords = Array.from(wordMap.keys());
   if (uniqueWords.length === 0)
-    return { learningAdded: 0, masteredAdded: 0, totalPracticed: 0 };
+    return { learningAdded: 0, masteredAdded: 0, totalPracticed: 0, activeCount: 0 };
 
   const localCards = await getLocalCards(userId, aliases);
   const localCardMap = new Map<string, SrsCardRecord>();
@@ -1211,6 +1217,7 @@ export async function recordWordPracticeBatch(
   // number with no observable meaning).
   let learningAdded = 0;
   let masteredAdded = 0;
+  let activeCount = 0;
 
   for (const [normWord, data] of wordMap.entries()) {
     const local = localCardMap.get(normWord);
@@ -1238,6 +1245,11 @@ export async function recordWordPracticeBatch(
     // show meaningful numbers instead of an opaque XP total.
     if (previousStatus === "new" && finalStatus === "learning") learningAdded++;
     if (previousStatus !== "learned" && finalStatus === "learned") masteredAdded++;
+    // Every distinct word this lesson touched is now in the active set
+    // ("learning" or "learned"), so count it as a word added to the learner's
+    // vocabulary. This never collapses to a misleading 0 just because the words
+    // were already past "new".
+    if (finalStatus === "learning" || finalStatus === "learned") activeCount++;
 
     const nextReviewAt = new Date(now);
     if (finalStatus === "learned") {
@@ -1342,6 +1354,7 @@ export async function recordWordPracticeBatch(
     learningAdded,
     masteredAdded,
     totalPracticed: wordMap.size,
+    activeCount,
   };
 }
 

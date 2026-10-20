@@ -12,6 +12,11 @@ interface LessonCompleteModalProps {
   wordsLearned?: number;
   wordsMastered?: number;
   wordsPracticed?: number;
+  /** Absolute count of distinct words that are now in the learner's active
+   *  vocabulary (learning or mastered) as a result of this lesson. Computed
+   *  server-side so it never collapses to a misleading 0 just because the
+   *  words were already past "new". */
+  wordsAdded?: number;
   onContinue: () => void;
 }
 
@@ -22,6 +27,7 @@ export function LessonCompleteModal({
   wordsLearned = 0,
   wordsMastered = 0,
   wordsPracticed = 0,
+  wordsAdded,
   onContinue,
 }: LessonCompleteModalProps) {
   const [isNavigating, setIsNavigating] = useState(false);
@@ -30,12 +36,16 @@ export function LessonCompleteModal({
     ? Math.max(0, Math.round(((totalExercises - mistakeCount) / totalExercises) * 100))
     : 100;
 
-  // Total words this lesson actually transitioned into a more-progressed state.
-  // wordsLearned = new -> learning; wordsMastered = crossed into learned.
-  const wordsAdded = wordsLearned + wordsMastered;
+  // Prefer the server-computed absolute count (distinct words now active) so a
+  // lesson of already-learning words still reports a meaningful number. Fall
+  // back to the delta sum only if the server value is unavailable.
+  const addedCount =
+    typeof wordsAdded === "number" && wordsAdded > 0
+      ? wordsAdded
+      : wordsLearned + wordsMastered;
   const breakdown =
     wordsLearned > 0 && wordsMastered > 0
-      ? `${wordsLearned} learning · ${wordsMastered} mastered`
+      ? `${wordsLearned} new · ${wordsMastered} mastered`
       : wordsMastered > 0
         ? `${wordsMastered} mastered`
         : wordsLearned > 0
@@ -106,7 +116,7 @@ export function LessonCompleteModal({
                 Words Added
               </span>
             </div>
-            <span className="text-xl sm:text-2xl font-black">{wordsAdded}</span>
+            <span className="text-xl sm:text-2xl font-black">{addedCount}</span>
             <span className="text-[10px] sm:text-[11px] font-semibold text-sky-700/80 dark:text-sky-300/80 mt-0.5 text-center leading-tight">
               {breakdown}
             </span>

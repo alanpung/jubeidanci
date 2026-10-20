@@ -22,6 +22,7 @@ export interface LessonDebugEntry {
   practices: number;
   learningAdded: number;
   masteredAdded: number;
+  wordsAdded: number;
   srsError?: string | null;
 }
 

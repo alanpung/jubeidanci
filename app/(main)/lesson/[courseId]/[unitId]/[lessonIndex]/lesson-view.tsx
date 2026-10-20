@@ -45,6 +45,7 @@ export function LessonView({
     wordsLearned?: number;
     wordsMastered?: number;
     wordsPracticed?: number;
+    wordsAdded?: number;
   } | null>(null);
 
   const [backUrl, setBackUrl] = useState<string>(() => {
@@ -132,6 +133,7 @@ export function LessonView({
         wordsLearned={lessonResult?.wordsLearned ?? 0}
         wordsMastered={lessonResult?.wordsMastered ?? 0}
         wordsPracticed={lessonResult?.wordsPracticed ?? 0}
+        wordsAdded={lessonResult?.wordsAdded ?? 0}
         onContinue={handleReturn}
       />
     );
