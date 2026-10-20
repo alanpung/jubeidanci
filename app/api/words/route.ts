@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { loadEnLevelWords, loadEnCseLevelWords, getBundledWords, type WordEntry } from "@/lib/words";
+import { cefrToCse } from "@/lib/cse";
 import { db, isDbAvailable } from "@/lib/db";
 import { dictionaryWord } from "@/lib/db/schema";
 
@@ -82,21 +83,18 @@ export async function GET(req: NextRequest) {
       filtered = filtered.filter((w: WordEntry) => w.cefr_level?.toUpperCase() === level.toUpperCase());
     }
 
-    // Filter by CSE Level (China Standards of English)
+    // Filter by CSE Level (China Standards of English) — derived from CEFR
+    // now that the per-word `cse_level` field is gone from the dictionary.
     if (cseLevel) {
-      if (cseLevel === "5_6" || cseLevel === "5-6") {
-        filtered = filtered.filter((w: WordEntry) => {
-          const c = String(w.cse_level || "").trim();
-          return c === "5" || c === "6";
-        });
-      } else if (cseLevel === "8_9" || cseLevel === "8-9") {
-        filtered = filtered.filter((w: WordEntry) => {
-          const c = String(w.cse_level || "").trim();
-          return c === "8" || c === "9";
-        });
-      } else {
-        filtered = filtered.filter((w: WordEntry) => String(w.cse_level || "").trim() === cseLevel);
-      }
+      const target =
+        cseLevel === "5_6" || cseLevel === "5-6"
+          ? ["5", "6"]
+          : cseLevel === "8_9" || cseLevel === "8-9"
+            ? ["8", "9"]
+            : [cseLevel];
+      filtered = filtered.filter((w: WordEntry) =>
+        target.includes(cefrToCse(w.cefr_level || ""))
+      );
     }
 
     // Filter by A-Z Letter

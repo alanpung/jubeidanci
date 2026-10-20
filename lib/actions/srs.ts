@@ -6,7 +6,7 @@ import { and, eq, lte, count, sql, asc, isNotNull, inArray, notInArray, or } fro
 import { getSession } from "@/lib/auth-server";
 import { isAdminEmail } from "@/lib/ai/models";
 import { revalidatePath } from "next/cache";
-import { calculateNextReview, type Quality, type CardStatus } from "@/lib/srs";
+import { calculateNextReview, GRADUATION_THRESHOLD, type Quality, type CardStatus } from "@/lib/srs";
 import type { Exercise } from "@/lib/content/types";
 import { extractSrsWords } from "@/lib/srs-words";
 import { getWordToLevelMap, getWordToCseMap } from "@/lib/words";
@@ -527,9 +527,9 @@ export async function getSrsStats(language?: string) {
         SELECT
           COUNT(*)::int AS total,
           COUNT(CASE WHEN status IN ('learning', 'review') AND next_review_at IS NOT NULL AND next_review_at <= NOW() THEN 1 END)::int AS due,
-          COUNT(CASE WHEN status = 'new' THEN 1 END)::int AS new_count,
-          COUNT(CASE WHEN status = 'learning' THEN 1 END)::int AS learning_count,
-          COUNT(CASE WHEN status IN ('learned', 'review') THEN 1 END)::int AS learned_count
+          COUNT(CASE WHEN status = 'new' AND repetitions < 3 THEN 1 END)::int AS new_count,
+          COUNT(CASE WHEN status = 'learning' AND repetitions < 3 THEN 1 END)::int AS learning_count,
+          COUNT(CASE WHEN status IN ('learned', 'review') OR repetitions >= 3 THEN 1 END)::int AS learned_count
         FROM srs_card
         WHERE user_id = ${userId}
           ${aliases.length > 0 ? sql`AND language = ANY(${aliases})` : sql``}
@@ -565,7 +565,11 @@ export async function getSrsStats(language?: string) {
   let easyCount = 0;
 
   for (const c of local) {
-    if (c.status === "learned" || c.status === "review") {
+    // A card graduates (counts as "learned") once it has survived the SM-2
+    // graduation threshold of 3 successful repetitions — matching the
+    // front-end rule in progress-view.tsx / word-explorer.tsx and teacher.ts.
+    const graduated = c.repetitions >= GRADUATION_THRESHOLD;
+    if (c.status === "learned" || c.status === "review" || graduated) {
       learnedCount++;
     } else if (c.status === "learning") {
       learningCount++;

@@ -222,20 +222,17 @@ export async function loadEnCseLevelWords(cseLevel: string): Promise<WordEntry[]
 
   try {
     const merged = await loadEnglishMergedWords();
-    let filtered: WordEntry[] = [];
-    if (norm === "5_6" || norm === "5-6") {
-      filtered = merged.filter((word) => {
-        const c = String(word.cse_level || "").trim();
-        return c === "5" || c === "6";
-      });
-    } else if (norm === "8_9" || norm === "8-9") {
-      filtered = merged.filter((word) => {
-        const c = String(word.cse_level || "").trim();
-        return c === "8" || c === "9";
-      });
-    } else {
-      filtered = merged.filter((word) => String(word.cse_level || "").trim() === norm);
-    }
+    // The authoritative `cse_level` field was removed from
+    // words/english_merged.json, so CSE is now derived from each word's CEFR
+    // level via cefrToCse() (see lib/cse.ts). This collapses the exam-specific
+    // buckets 3 (中考) / 5 (CET-4) / 7 (专八) into their nearest CEFR-derived
+    // bucket — the best we can do without the now-removed per-word field.
+    const matches = (cse: string): boolean => {
+      if (norm === "5_6" || norm === "5-6") return cse === "5" || cse === "6";
+      if (norm === "8_9" || norm === "8-9") return cse === "8" || cse === "9";
+      return cse === norm;
+    };
+    const filtered = merged.filter((word) => matches(cefrToCse(word.cefr_level || "")));
     if (filtered.length > 0) {
       memoryWordsCache.set(cacheKey, filtered);
       return filtered;
@@ -318,8 +315,9 @@ export function getEnCseLevelCounts(): Record<string, number> {
       const content = fs.readFileSync(filePath, "utf-8");
       const list = JSON.parse(content);
       if (Array.isArray(list)) {
+        // `cse_level` was removed from the dictionary; derive CSE from CEFR.
         for (const item of list) {
-          const cse = String((item.cse_level as string) || "").trim();
+          const cse = cefrToCse((item.cefr_level as string) || "");
           if (cse === "2") counts["2"]++;
           else if (cse === "3") counts["3"]++;
           else if (cse === "4") counts["4"]++;
@@ -335,14 +333,14 @@ export function getEnCseLevelCounts(): Record<string, number> {
     console.error("Failed to count words by CSE level from english_merged.json:", err);
   }
 
-  // Fallback counts.
+  // Fallback counts — uniformly zero once the per-word field is gone.
   return {
-    "2": 1057,
-    "3": 1399,
-    "4": 3323,
-    "5_6": 1485 + 4898,
-    "7": 2943,
-    "8_9": 3327 + 3892,
+    "2": 0,
+    "3": 0,
+    "4": 0,
+    "5_6": 0,
+    "7": 0,
+    "8_9": 0,
   };
 }
 
@@ -368,8 +366,12 @@ export async function getWordToCseMap(): Promise<Record<string, string>> {
   if (cachedWordCseMap) return cachedWordCseMap;
   const map: Record<string, string> = {};
   const all = await loadEnglishMergedWords();
+  // The per-word `cse_level` field was removed from the dictionary; derive CSE
+  // from each word's CEFR level so SRS cards (and any consumer) still get a
+  // usable cseLevel value.
   for (const w of all) {
-    if (w.cse_level) map[w.word.toLowerCase()] = w.cse_level;
+    const cse = cefrToCse(w.cefr_level || "");
+    if (cse) map[w.word.toLowerCase()] = cse;
   }
   cachedWordCseMap = map;
   return map;
