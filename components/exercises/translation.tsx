@@ -405,12 +405,18 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
         ? apiWord.pos
         : (dict?.grammarTag || resolveGrammarTag(clean, apiWord?.pos));
 
-      // Meaning: must be valid Chinese
+      // Meaning: must be valid Chinese.
+      // The built-in dictionary wins over the API. Its entries are hand-checked
+      // against the sentences this app actually ships, whereas the API returns
+      // the most common dictionary sense — e.g. "Excuse" came back as 原谅
+      // (the noun sense), hiding the 打扰一下/请问 sense that actually matches
+      // the Chinese prompt 请问…. IPA already preferred the dictionary; this
+      // makes the meaning follow the same rule so both come from one source.
       let meaning = "";
-      if (apiWord?.meaning && /[\u4e00-\u9fa5]/.test(apiWord.meaning)) {
-        meaning = apiWord.meaning;
-      } else if (dict?.meaning && /[\u4e00-\u9fa5]/.test(dict.meaning)) {
+      if (dict?.meaning && /[\u4e00-\u9fa5]/.test(dict.meaning)) {
         meaning = dict.meaning;
+      } else if (apiWord?.meaning && /[\u4e00-\u9fa5]/.test(apiWord.meaning)) {
+        meaning = apiWord.meaning;
       }
 
       // IPA
