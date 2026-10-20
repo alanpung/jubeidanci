@@ -1167,7 +1167,8 @@ export async function recordWordPracticeBatch(
   }
 
   const uniqueWords = Array.from(wordMap.keys());
-  if (uniqueWords.length === 0) return;
+  if (uniqueWords.length === 0)
+    return { learningAdded: 0, masteredAdded: 0, totalPracticed: 0 };
 
   const localCards = await getLocalCards(userId, aliases);
   const localCardMap = new Map<string, SrsCardRecord>();
