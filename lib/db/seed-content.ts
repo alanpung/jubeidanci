@@ -62,13 +62,17 @@ async function runSeedTask() {
         .onConflictDoUpdate({
           target: course.id,
           set: {
-            title: sql`excluded.title`,
+            // The filesystem is only the source of truth for rows that do not
+            // exist yet. Once a course is in the DB its title and visibility
+            // belong to the owner (edit title / public-private switch), so the
+            // periodic re-seed must not clobber them back.
+            title: sql`coalesce(${course.title}, excluded.title)`,
             sourceLanguage: sql`excluded.source_language`,
             targetLanguage: sql`excluded.target_language`,
             level: sql`excluded.level`,
-            visibility: "public",
+            visibility: sql`coalesce(${course.visibility}, excluded.visibility)`,
             published: true,
-            createdBy: creatorId,
+            createdBy: sql`coalesce(${course.createdBy}, excluded.created_by)`,
             updatedAt: new Date(),
           },
         });
@@ -153,8 +157,9 @@ async function runSeedTask() {
             targetLanguage: sql`excluded.target_language`,
             sourceLanguage: sql`excluded.source_language`,
             level: sql`excluded.level`,
-            visibility: "public",
-            createdBy: creatorId,
+            // Same rule as courses: never reset a visibility the owner chose.
+            visibility: sql`coalesce(${unit.visibility}, excluded.visibility)`,
+            createdBy: sql`coalesce(${unit.createdBy}, excluded.created_by)`,
             updatedAt: new Date(),
           },
         });

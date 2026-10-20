@@ -15,6 +15,7 @@ import { computeStreak } from "@/lib/game/streaks";
 import type { Exercise } from "@/lib/content/types";
 import { recordWordPracticeBatch } from "@/lib/actions/srs";
 import { extractSrsWords } from "@/lib/srs-words";
+import { recordLessonDebug } from "@/lib/lesson-debug";
 import { getUnitWithContent } from "@/lib/db/queries/courses";
 import { addLocalLessonCompletion, upsertLocalUserStats } from "@/lib/srs-store";
 import { revalidatePath } from "next/cache";
@@ -46,8 +47,10 @@ export async function completeLesson(input: CompleteLessonInput) {
   let skippedResults = 0;
   let missingExercises = 0;
   let zeroWordExercises = 0;
-  if (unitData && unitData.lessons && unitData.lessons[input.lessonIndex]) {
-    const lesson = unitData.lessons[input.lessonIndex];
+  let fallbackUsed = false;
+  const lesson =
+    unitData && unitData.lessons ? unitData.lessons[input.lessonIndex] : undefined;
+  if (lesson) {
     for (const result of input.results) {
       if (result.userAnswer === "[skipped]") {
         skippedResults++;
@@ -70,6 +73,28 @@ export async function completeLesson(input: CompleteLessonInput) {
         practicesToRecord.push({ word: w, correct: result.correct });
       }
     }
+
+    // A learner who answered every question must never end the lesson with
+    // zero recorded words: that silently wipes the Learning count on the
+    // Progress page. If the per-result lookup produced nothing (index drift,
+    // an exercise shape that yields no tokens), fall back to the lesson's own
+    // vocabulary, pairing each exercise with its result when one exists.
+    if (practicesToRecord.length === 0 && input.results.length > 0) {
+      fallbackUsed = true;
+      lesson.exercises?.forEach((ex, i) => {
+        const result =
+          input.results.find((r) => r.exerciseIndex === i) ?? input.results[i];
+        if (!result || result.userAnswer === "[skipped]") return;
+        for (const w of extractSrsWords(ex as Exercise)) {
+          practicesToRecord.push({ word: w, correct: Boolean(result.correct) });
+        }
+      });
+      console.warn(
+        `[lesson] completeLesson fallback: per-result extraction yielded 0 words ` +
+          `(unit=${input.unitId} lesson=${input.lessonIndex} exercises=${lesson.exercises?.length ?? 0}) ` +
+          `- recorded ${practicesToRecord.length} word practice(s) from the lesson vocabulary`,
+      );
+    }
   } else {
     console.warn(
       `completeLesson: unit ${input.unitId} lesson ${input.lessonIndex} not found - no SRS practice recorded`,
@@ -91,6 +116,7 @@ export async function completeLesson(input: CompleteLessonInput) {
   let wordsLearned = 0;
   let wordsMastered = 0;
   let wordsPracticed = 0;
+  let srsError: string | null = null;
   if (practicesToRecord.length > 0) {
     try {
       const result = await recordWordPracticeBatch(
@@ -102,9 +128,25 @@ export async function completeLesson(input: CompleteLessonInput) {
       wordsMastered = result.masteredAdded;
       wordsPracticed = result.totalPracticed;
     } catch (err) {
+      srsError = String(err);
       console.error("recordWordPracticeBatch error in completeLesson:", err);
     }
   }
+
+  recordLessonDebug({
+    unitId: input.unitId,
+    lessonIndex: input.lessonIndex,
+    resultCount: input.results.length,
+    skipped: skippedResults,
+    missingExercise: missingExercises,
+    zeroWordExercises,
+    lessonExerciseCount: lesson?.exercises?.length ?? null,
+    fallbackUsed,
+    practices: practicesToRecord.length,
+    learningAdded: wordsLearned,
+    masteredAdded: wordsMastered,
+    srsError,
+  });
 
   // 4. Always record lesson completion, streak & course enrollment locally
   try {

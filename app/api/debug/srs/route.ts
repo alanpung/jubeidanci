@@ -8,6 +8,7 @@ import { getLocalCards } from "@/lib/srs-store";
 import { getUnitWithContent } from "@/lib/db/queries/courses";
 import { extractSrsWords } from "@/lib/srs-words";
 import { exerciseSchema } from "@/lib/content/exercise-schema";
+import { readLessonDebug } from "@/lib/lesson-debug";
 
 export const dynamic = "force-dynamic";
 
@@ -32,6 +33,12 @@ export async function GET() {
   const userId = session!.user!.id;
   const dbUp = await isDbAvailable();
   const out: Record<string, unknown> = { userId, email, dbUp };
+
+  // Runtime trace of the most recent completeLesson calls on THIS instance:
+  // how many results arrived, how many words survived extraction, and how many
+  // the SRS batch actually counted. This is the same data the completion
+  // screen shows, so a mismatch points straight at the broken step.
+  out.lessonTrace = readLessonDebug();
 
   if (dbUp) {
     try {
