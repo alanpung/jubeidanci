@@ -1009,7 +1009,7 @@ function WordLookupCard({
       {/* ── TOP BAR (Word, Multi-POS, English Meaning Preview, 3 Right Icons: Status, Reset, Mastered) ── */}
       <div className="flex items-center justify-between p-2.5 sm:p-3 gap-2">
         {/* Left: Pronounce, Level Badge, Word, IPA, Multi-POS */}
-        <div className="flex items-center gap-1.5 sm:gap-2 min-w-0 shrink-0 max-w-[52%] sm:max-w-[44%]">
+        <div className="flex items-center gap-1.5 sm:gap-2 min-w-0 shrink-0 max-w-[38%] sm:max-w-[44%]">
           {/* Audio Button */}
           <button
             type="button"
@@ -1036,12 +1036,12 @@ function WordLookupCard({
               {w.word}
             </span>
             {w.ipa && (
-              <span className="text-[10px] sm:text-[11px] font-mono text-lingo-text-light/80 shrink-0">
+              <span className="hidden sm:inline text-[10px] sm:text-[11px] font-mono text-lingo-text-light/80 shrink-0">
                 /{w.ipa}/
               </span>
             )}
             {posList.length > 0 && (
-              <span className="text-[10px] font-semibold text-lingo-text-light/70 italic truncate">
+              <span className="hidden sm:inline text-[10px] font-semibold text-lingo-text-light/70 italic truncate">
                 {posList.join(" · ")}
               </span>
             )}
@@ -1051,7 +1051,7 @@ function WordLookupCard({
         {/* ── Middle: Simplest Chinese Translation Preview at Top Line ── */}
         <div className="flex-1 min-w-0 px-1.5 sm:px-3 text-left">
           <p
-            className="text-xs sm:text-sm font-semibold text-lingo-text/85 dark:text-lingo-text/80 truncate"
+            className="text-xs sm:text-sm font-bold text-lingo-text dark:text-lingo-text truncate"
             title={zhDef || engDef || "Click to expand details"}
           >
             {cleanZhSummary(zhDef || engDef) || (

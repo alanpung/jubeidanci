@@ -11,6 +11,7 @@ import { CreateCourseForm } from "@/components/library/create-course-form";
 import { CourseManager } from "@/components/library/course-manager";
 import { CopyLinkButton } from "@/components/ui/copy-link-button";
 import { CourseLevelIcon } from "@/components/library/course-level-icon";
+import { DeckShelf, DeckStack, groupByLevel } from "@/components/library/library-deck";
 import { X } from "lucide-react";
 
 interface MyCoursesProps {
@@ -57,17 +58,22 @@ export function MyCourses({ courses, isAdmin }: MyCoursesProps) {
           You haven&apos;t created any courses yet.
         </p>
       ) : (
-        <div className="grid min-w-0 gap-3">
-          {courses.map((c) => (
-            <OwnedCourseCard
-              key={c.id}
-              course={c}
-              isAdmin={isAdmin}
-              isManaging={managingCourseId === c.id}
-              onToggleManage={() =>
-                setManagingCourseId(managingCourseId === c.id ? null : c.id)
-              }
-            />
+        <div className="min-w-0">
+          {groupByLevel(courses, (c) => c.level).map(({ level, items }) => (
+            <DeckShelf key={level ?? "other"} level={level} count={items.length}>
+              {items.map((c) => (
+                <DeckStack key={c.id}>
+                  <OwnedCourseCard
+                    course={c}
+                    isAdmin={isAdmin}
+                    isManaging={managingCourseId === c.id}
+                    onToggleManage={() =>
+                      setManagingCourseId(managingCourseId === c.id ? null : c.id)
+                    }
+                  />
+                </DeckStack>
+              ))}
+            </DeckShelf>
           ))}
         </div>
       )}

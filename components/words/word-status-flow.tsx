@@ -307,7 +307,7 @@ export function WordStatusFlow({
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
           {/* Dictionary (D) */}
-          <div className="rounded-xl border-2 border-slate-200 dark:border-slate-800 bg-slate-50/80 dark:bg-slate-900/40 p-2.5 flex flex-col justify-between">
+          <div className="rounded-xl border-2 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/60 p-2.5 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between gap-1 mb-1">
                 <div className="flex items-center gap-1.5">
@@ -324,14 +324,14 @@ export function WordStatusFlow({
                   </span>
                 )}
               </div>
-              <p className="text-[11px] text-slate-600 dark:text-slate-400 font-medium leading-tight mt-1">
+              <p className="text-[11px] text-slate-700 dark:text-slate-300 font-semibold leading-tight mt-1">
                 Total available vocabulary across CEFR levels A1–C2 in the master dictionary.
               </p>
             </div>
           </div>
 
           {/* New (N) */}
-          <div className="rounded-xl border-2 border-blue-200 dark:border-blue-900/60 bg-blue-50/80 dark:bg-blue-950/30 p-2.5 flex flex-col justify-between">
+          <div className="rounded-xl border-2 border-blue-300 dark:border-blue-800 bg-blue-100 dark:bg-blue-950/50 p-2.5 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between gap-1 mb-1">
                 <div className="flex items-center gap-1.5">
@@ -348,14 +348,14 @@ export function WordStatusFlow({
                   </span>
                 )}
               </div>
-              <p className="text-[11px] text-blue-800/80 dark:text-blue-300/80 font-medium leading-tight mt-1">
+              <p className="text-[11px] text-blue-900 dark:text-blue-100 font-semibold leading-tight mt-1">
                 Words added to your personal list from lessons, waiting for initial practice.
               </p>
             </div>
           </div>
 
           {/* Learning (L) */}
-          <div className="rounded-xl border-2 border-amber-200 dark:border-amber-900/60 bg-amber-50/80 dark:bg-amber-950/30 p-2.5 flex flex-col justify-between">
+          <div className="rounded-xl border-2 border-amber-300 dark:border-amber-800 bg-amber-100 dark:bg-amber-950/50 p-2.5 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between gap-1 mb-1">
                 <div className="flex items-center gap-1.5">
@@ -372,14 +372,14 @@ export function WordStatusFlow({
                   </span>
                 )}
               </div>
-              <p className="text-[11px] text-amber-800/80 dark:text-amber-300/80 font-medium leading-tight mt-1">
+              <p className="text-[11px] text-amber-900 dark:text-amber-100 font-semibold leading-tight mt-1">
                 Words actively in practice and flashcard SRS review cycles (&lt;3 repetitions).
               </p>
             </div>
           </div>
 
           {/* Mastered (M) */}
-          <div className="rounded-xl border-2 border-emerald-200 dark:border-emerald-900/60 bg-emerald-50/80 dark:bg-emerald-950/30 p-2.5 flex flex-col justify-between">
+          <div className="rounded-xl border-2 border-emerald-300 dark:border-emerald-800 bg-emerald-100 dark:bg-emerald-950/50 p-2.5 flex flex-col justify-between">
             <div>
               <div className="flex items-center justify-between gap-1 mb-1">
                 <div className="flex items-center gap-1.5">
@@ -396,7 +396,7 @@ export function WordStatusFlow({
                   </span>
                 )}
               </div>
-              <p className="text-[11px] text-emerald-800/80 dark:text-emerald-300/80 font-medium leading-tight mt-1">
+              <p className="text-[11px] text-emerald-900 dark:text-emerald-100 font-semibold leading-tight mt-1">
                 Words successfully learned (≥3 correct reviews) or manually ticked as mastered.
               </p>
             </div>
