@@ -18,20 +18,30 @@ const isSupabase =
   connectionString.includes("pooler");
 const isProduction = process.env.NODE_ENV === "production";
 
-export const client = postgres(connectionString, {
-  max: isProduction ? 5 : 10,
-  idle_timeout: 20,
-  connect_timeout: 10,
-  max_lifetime: 60 * 30,
-  // Required for Supabase transaction pooler (port 6543) which does not support prepared statements
-  prepare: false,
-  ssl: isSupabase || connectionString.includes("sslmode=require")
-    ? "require"
-    : connectionString.includes("localhost") || connectionString.includes("127.0.0.1")
-    ? undefined
-    : (isProduction ? { rejectUnauthorized: false } : undefined),
-  onnotice: () => {},
-});
+// Cache the postgres client on globalThis so a warm serverless instance reuses
+// the same connection pool across invocations instead of opening a new one per
+// request. This matters now that reads no longer short-circuit on the probe:
+// without the cache, scaling lambdas would churn (and exhaust) DB connections.
+const globalForDb = globalThis as unknown as {
+  __pgClient?: ReturnType<typeof postgres>;
+};
+
+export const client =
+  globalForDb.__pgClient ??
+  (globalForDb.__pgClient = postgres(connectionString, {
+    max: isProduction ? 5 : 10,
+    idle_timeout: 20,
+    connect_timeout: 10,
+    max_lifetime: 60 * 30,
+    // Required for Supabase transaction pooler (port 6543) which does not support prepared statements
+    prepare: false,
+    ssl: isSupabase || connectionString.includes("sslmode=require")
+      ? "require"
+      : connectionString.includes("localhost") || connectionString.includes("127.0.0.1")
+      ? undefined
+      : (isProduction ? { rejectUnauthorized: false } : undefined),
+    onnotice: () => {},
+  }));
 
 export const db = drizzle(client, { schema });
 

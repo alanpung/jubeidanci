@@ -320,7 +320,12 @@ export async function getAllCards(language?: string): Promise<SrsCardItem[]> {
   const userId = await getSafeUserId();
   void syncUserCourseWordsToSrs(userId, false).catch(() => {});
   const aliases = language ? getLanguageAliases(language) : [];
-  const dbUp = await isDbAvailable();
+  // Gate on hasDbConfig (DB URL present), NOT the flaky isDbAvailable()
+  // cold-start probe. The probe can false-negative on a cold serverless
+  // instance and make getAllCards() return 0 for everything — the exact
+  // "67 -> 0 on refresh" symptom. Attempt the real read below and let its
+  // try/catch absorb a genuine failure instead of guessing.
+  const dbUp = hasDbConfig;
 
   let cards: SrsCardItem[] = [];
   if (dbUp) {
@@ -437,7 +442,8 @@ export async function reviewCard(
   const userId = await getSafeUserId();
   const normalizedWord = word.toLowerCase().trim();
   const aliases = getLanguageAliases(language);
-  const dbUp = await isDbAvailable();
+  // Gate on hasDbConfig, not the flaky cold-start probe (see getAllCards).
+  const dbUp = hasDbConfig;
 
   let card: SrsCardItem | null = null;
   if (dbUp) {
@@ -1183,7 +1189,10 @@ export async function recordWordPracticeBatch(
     if (!localCardMap.has(key)) localCardMap.set(key, c);
   });
 
-  const dbUp = await isDbAvailable();
+  // Gate on hasDbConfig, not the flaky cold-start probe. Reading existing rows
+  // matters here: without it, previousStatus/reps default to new/0 and a word
+  // that was already "learning"/"mastered" gets reset instead of incremented.
+  const dbUp = hasDbConfig;
   const dbCardMap = new Map<string, typeof srsCard.$inferSelect>();
   if (dbUp) {
     try {

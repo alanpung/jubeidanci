@@ -1,4 +1,4 @@
-import { db, isDbAvailable } from "@/lib/db";
+import { db, isDbAvailable, hasDbConfig } from "@/lib/db";
 import {
   course,
   unit,
@@ -735,7 +735,7 @@ export async function getUnitWithContent(
   }
 
   try {
-    if (await isDbAvailable()) {
+    if (hasDbConfig) {
       const [u] = await db.select().from(unit).where(eq(unit.id, unitId));
       if (u) {
         const safeResult = getUnitLessonsSafe(u.markdown ?? "");

@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSession } from "@/lib/auth-server";
 import { getAllCards } from "@/lib/actions/srs";
-import { db, isDbAvailable } from "@/lib/db";
+import { db, isDbAvailable, hasDbConfig } from "@/lib/db";
 import { srsCard } from "@/lib/db/schema";
 import { eq, sql } from "drizzle-orm";
 
@@ -21,7 +21,9 @@ export async function GET() {
     );
   }
 
-  const dbUp = await isDbAvailable();
+  // Gate on hasDbConfig, not the flaky cold-start probe: a false-negative would
+  // make the refresh endpoint report 0 rows and an empty deck.
+  const dbUp = hasDbConfig;
   let dbRowCount: number | null = null;
   let dbError: string | null = null;
   if (dbUp) {
