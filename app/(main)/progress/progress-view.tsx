@@ -6,6 +6,7 @@ import {
   GraduationCap,
   Users,
   Sparkles,
+  RefreshCw,
 } from "lucide-react";
 import { StudentInspector } from "@/components/words/student-inspector";
 import { WordStatusFlow } from "@/components/words/word-status-flow";
@@ -54,6 +55,36 @@ export function ProgressView({
   const [activeTab, setActiveTab] = useState<"author" | "inspector">("author");
   const [selectedLevel, setSelectedLevel] = useState<string>("");
   const [cards, setCards] = useState<SrsCard[]>(srsCards);
+  const [refreshing, setRefreshing] = useState(false);
+  const [refreshNote, setRefreshNote] = useState<string | null>(null);
+  const [refreshError, setRefreshError] = useState<string | null>(null);
+
+  // Client-side "fetch latest SRS info" — bypasses the server render path
+  // (and its silent .catch(() => []) swallow) so a zero count is never
+  // silently shown, and the user can pull fresh data on demand.
+  async function refreshSrs() {
+    setRefreshing(true);
+    setRefreshError(null);
+    setRefreshNote(null);
+    try {
+      const res = await fetch("/api/srs-cards", { cache: "no-store" });
+      const data = await res.json();
+      if (!res.ok || !data.ok) {
+        setRefreshError(data.error || `HTTP ${res.status}`);
+        setRefreshNote(null);
+      } else {
+        setCards(Array.isArray(data.cards) ? data.cards : []);
+        const dbInfo = data.dbUp
+          ? `DB up · ${data.dbRowCount ?? "?"} rows in Postgres`
+          : "DB unreachable — reading local store only";
+        setRefreshNote(`${dbInfo} · ${data.count ?? 0} cards loaded`);
+      }
+    } catch (err) {
+      setRefreshError(err instanceof Error ? err.message : String(err));
+    } finally {
+      setRefreshing(false);
+    }
+  }
 
   // Sync with server cards
   useEffect(() => {
@@ -233,7 +264,31 @@ export function ProgressView({
                   Students add words by completing lessons & units
                 </span>
               )}
+
+              <button
+                onClick={refreshSrs}
+                disabled={refreshing}
+                className="inline-flex items-center gap-1.5 rounded-lg border-2 border-lingo-blue/30 bg-lingo-blue/5 px-2.5 py-1 text-[11px] font-black text-lingo-blue hover:bg-lingo-blue/10 disabled:opacity-50 transition-colors"
+                title="Fetch the latest SRS deck numbers from the server"
+              >
+                <RefreshCw className={`w-3.5 h-3.5 ${refreshing ? "animate-spin" : ""}`} />
+                {refreshing ? "Fetching…" : "Refresh SRS Data"}
+              </button>
             </div>
+
+            {(refreshNote || refreshError) && (
+              <div
+                className={`px-4 py-2 text-[11px] font-bold ${
+                  refreshError
+                    ? "bg-lingo-red/5 text-lingo-red"
+                    : "bg-lingo-blue/5 text-lingo-blue"
+                }`}
+              >
+                {refreshError
+                  ? `Refresh failed: ${refreshError}`
+                  : refreshNote}
+              </div>
+            )}
 
             {/* 100% Fit Responsive Table */}
             <div className="w-full overflow-x-auto">
