@@ -12,7 +12,6 @@ interface WordData {
   pos?: string;
   gender?: string | null;
   cefrLevel?: string;
-  cseLevel?: string;
   exampleNative?: string;
   exampleEnglish?: string;
 }
@@ -65,7 +64,6 @@ export function WordTooltip({ word, language }: WordTooltipProps) {
 
     addOrFailWord(data.word, language, data.translation, {
         cefrLevel: data.cefrLevel,
-        cseLevel: data.cseLevel,
       })
       .then((status) => setSrsStatus(status))
       .catch(() => {});

@@ -16,7 +16,6 @@ interface SrsCard {
   language: string;
   translation: string;
   cefrLevel?: string | null;
-  cseLevel?: string | null;
   pos?: string | null;
   status: string;
   easeFactor: number;
@@ -81,9 +80,9 @@ export function ProgressView({
           : "DB unreachable — reading local store only";
         setRefreshNote(`${dbInfo} · ${data.count ?? 0} cards loaded`);
 
-        // If Postgres has rows but the deck read failed (schema drift such as a
-        // missing srs_card.cse_level), say so loudly — otherwise the page just
-        // shows the locally-seeded course words and looks like data loss.
+        // If Postgres has rows but the deck read failed (a schema/connection
+        // error), say so loudly — otherwise the page just shows the
+        // locally-seeded course words and looks like data loss.
         if (data.dbDeckError) {
           setRefreshError(
             `Database read failed: ${data.dbDeckError}. The counts below may be incomplete.`,

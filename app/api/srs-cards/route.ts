@@ -51,10 +51,10 @@ export async function GET(request: Request) {
   });
 
   // getAllCards attaches a non-enumerable __dbReadError when the Postgres half
-  // of the merge could not be read (e.g. the database is missing
-  // srs_card.cse_level, so `.select()` throws while count(*) still works).
-  // Surface it so the UI can explain a wrong count instead of silently
-  // showing only the locally-seeded course words.
+  // of the merge could not be read (e.g. a schema/connection error that makes
+  // `.select()` throw even though count(*) still works). Surface it so the UI
+  // can explain a wrong count instead of silently showing only the
+  // locally-seeded course words.
   const dbDeckError =
     (cards as unknown as { __dbReadError?: string }).__dbReadError ?? null;
 

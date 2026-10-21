@@ -50,6 +50,13 @@
       "when": 1792289349705,
       "tag": "0006_cse_level",
       "breakpoints": true
+    },
+    {
+      "idx": 7,
+      "version": "7",
+      "when": 1792581859119,
+      "tag": "0007_drop_cse_level",
+      "breakpoints": true
     }
   ]
 }

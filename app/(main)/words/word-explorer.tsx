@@ -14,7 +14,6 @@ import { setWordStatus } from "@/lib/actions/srs";
 interface Word {
   word: string;
   cefr_level: string;
-  cse_level?: string;
   english_translation: string;
   definition_zh?: string;
   pos: string;
@@ -33,7 +32,6 @@ interface SrsCard {
   language: string;
   translation: string;
   cefrLevel?: string | null;
-  cseLevel?: string | null;
   pos?: string | null;
   status: string;
   easeFactor: number;
@@ -526,7 +524,6 @@ function WordLookupSection({
           return {
             word: c.word,
             cefr_level: dictEntry?.cefr_level || c.cefrLevel || "A1",
-            cse_level: dictEntry?.cse_level || c.cseLevel || undefined,
             english_translation: dictEntry?.english_translation || c.translation,
             definition_zh: dictEntry?.definition_zh || c.translation,
             pos: dictEntry?.pos || c.pos || "noun",

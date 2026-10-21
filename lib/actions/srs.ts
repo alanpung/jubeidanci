@@ -9,7 +9,7 @@ import { revalidatePath } from "next/cache";
 import { calculateNextReview, GRADUATION_THRESHOLD, type Quality, type CardStatus } from "@/lib/srs";
 import type { Exercise } from "@/lib/content/types";
 import { extractSrsWords } from "@/lib/srs-words";
-import { getWordToLevelMap, getWordToCseMap } from "@/lib/words";
+import { getWordToLevelMap } from "@/lib/words";
 import {
   getLocalCards,
   getLocalCard,
@@ -148,7 +148,7 @@ export async function addOrFailWord(
   word: string,
   language: string,
   translation: string,
-  metadata?: { cefrLevel?: string; cseLevel?: string; pos?: string }
+  metadata?: { cefrLevel?: string; pos?: string }
 ): Promise<"added" | "failed"> {
   const userId = await getSafeUserId();
   const normalizedWord = word.toLowerCase().trim();
@@ -156,21 +156,15 @@ export async function addOrFailWord(
 
   const localExisting = await getLocalCard(normalizedWord, aliases, userId);
 
-  // Fill CEFR/CSE from dictionary when caller didn't supply them — the
-  // word tooltip always passes just the translation; this way every newly
-  // tracked card still records its level badge.
+  // Fill CEFR from the dictionary when the caller (the word tooltip) didn't
+  // supply it — that way every newly tracked card still records its level badge.
   let cefrLevel = metadata?.cefrLevel || null;
-  let cseLevel = metadata?.cseLevel || null;
-  if (!cefrLevel || !cseLevel) {
+  if (!cefrLevel) {
     try {
-      const [levelMap, cseMap] = await Promise.all([
-        cefrLevel ? Promise.resolve(null) : getWordToLevelMap(),
-        cseLevel ? Promise.resolve(null) : getWordToCseMap(),
-      ]);
-      if (!cefrLevel && levelMap) cefrLevel = levelMap[normalizedWord] || null;
-      if (!cseLevel && cseMap) cseLevel = cseMap[normalizedWord] || null;
+      const levelMap = await getWordToLevelMap();
+      cefrLevel = levelMap[normalizedWord] || null;
     } catch {
-      // ignore — both fields are optional
+      // ignore — the field is optional
     }
   }
 
@@ -181,7 +175,6 @@ export async function addOrFailWord(
       userId,
       translation,
       cefrLevel,
-      cseLevel,
       status: "learning",
       nextReviewAt: new Date().toISOString(),
     });
@@ -194,7 +187,6 @@ export async function addOrFailWord(
           userId,
           translation,
           cefrLevel,
-          cseLevel,
           status: "learning",
           nextReviewAt: new Date(),
         }).onConflictDoNothing();
@@ -303,7 +295,6 @@ export interface SrsCardItem {
   userId: string;
   translation: string;
   cefrLevel: string | null;
-  cseLevel: string | null;
   pos: string | null;
   gender?: string | null;
   status: string;
@@ -314,173 +305,6 @@ export interface SrsCardItem {
   lastReviewedAt: Date | null;
   lastRating?: string | null;
   createdAt: Date;
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// Schema self-healing
-//
-// drizzle/0000 creates srs_card WITHOUT "cse_level"; only 0006_cse_level.sql
-// adds it. If a deployed database never had 0006 applied, then:
-//
-//   * `count(*)`  -> works, reports the real rows (e.g. 221)
-//   * `.select()` -> expands to EVERY schema column, including cse_level, so
-//                    Postgres raises `column srs_card.cse_level does not exist`,
-//                    the read throws, and the deck silently falls back to the
-//                    local store (showing only locally-seeded course words).
-//
-// That is precisely the "Postgres has 221 rows but the Progress page shows
-// 1,092 all-new words and 0 learning" symptom. So: detect the missing-column
-// error, apply the idempotent ADD COLUMN IF NOT EXISTS from 0006, then retry.
-// ─────────────────────────────────────────────────────────────────────────────
-
-let srsSchemaRepair: Promise<void> | null = null;
-
-function isMissingColumnError(err: unknown, column: string): boolean {
-  const msg = err instanceof Error ? err.message : String(err);
-  const m = /column "?([a-z_]+)"? (does not exist|not found)/i.exec(msg);
-  if (!m) return false;
-  return m[1].toLowerCase() === column.toLowerCase();
-}
-
-/** Columns that exist in srs_card per migration 0000 (i.e. no cse_level). */
-const SRS_BASE_COLUMNS = {
-  word: srsCard.word,
-  language: srsCard.language,
-  userId: srsCard.userId,
-  translation: srsCard.translation,
-  cefrLevel: srsCard.cefrLevel,
-  pos: srsCard.pos,
-  gender: srsCard.gender,
-  exampleNative: srsCard.exampleNative,
-  exampleEnglish: srsCard.exampleEnglish,
-  status: srsCard.status,
-  easeFactor: srsCard.easeFactor,
-  interval: srsCard.interval,
-  repetitions: srsCard.repetitions,
-  nextReviewAt: srsCard.nextReviewAt,
-  lastReviewedAt: srsCard.lastReviewedAt,
-  createdAt: srsCard.createdAt,
-} as const;
-
-async function repairSrsCardSchema(): Promise<void> {
-  if (!srsSchemaRepair) {
-    srsSchemaRepair = (async () => {
-      await db.execute(
-        sql`ALTER TABLE srs_card ADD COLUMN IF NOT EXISTS cse_level text`,
-      );
-      console.warn(
-        "[srs] Repaired srs_card: added missing column cse_level (migration 0006 was never applied).",
-      );
-    })().catch((err) => {
-      // Reset so a later request can retry instead of caching the failure.
-      srsSchemaRepair = null;
-      throw err;
-    });
-  }
-  return srsSchemaRepair;
-}
-
-/**
- * Runs a srs_card DB operation, and if it fails because the database is
- * missing a column that later migrations add (cse_level), repairs the schema
- * and retries once. Every read AND write against srs_card should go through
- * this so a database that never had migration 0006 applied can still work.
- */
-async function withSrsSchemaRepair<T>(op: () => Promise<T>): Promise<T> {
-  try {
-    return await op();
-  } catch (err) {
-    if (err && typeof err === "object") {
-      const anyErr = err as { cause?: unknown; message?: string; routine?: string };
-      const causeMsg =
-        anyErr.cause instanceof Error ? anyErr.cause.message : undefined;
-      const combined = [anyErr.message, anyErr.routine, causeMsg]
-        .filter(Boolean)
-        .join(" ");
-      if (/cse_level/i.test(combined) && /does not exist|not found/i.test(combined)) {
-        console.warn(
-          "[srs] srs_card.cse_level missing — repairing schema and retrying.",
-        );
-        await repairSrsCardSchema();
-        return op();
-      }
-    }
-    throw err;
-  }
-}
-
-/**
- * Reads srs_card rows, transparently working around a database missing the
- * cse_level column. Returns the rows plus the error text when the DB could not
- * be read at all, so callers can surface it instead of silently degrading to an
- * empty deck.
- */
-async function selectSrsCardsSafely(
-  userId: string,
-  aliases: string[],
-): Promise<{ cards: SrsCardItem[]; error: string | null }> {
-  const run = async () =>
-    db
-      .select()
-      .from(srsCard)
-      .where(
-        and(
-          eq(srsCard.userId, userId),
-          ...(aliases.length > 0 ? [inArray(srsCard.language, aliases)] : []),
-        ),
-      )
-      .orderBy(srsCard.createdAt);
-
-  try {
-    return { cards: (await run()) as unknown as SrsCardItem[], error: null };
-  } catch (err) {
-    if (isMissingColumnError(err, "cse_level")) {
-      console.warn(
-        "[srs] srs_card.cse_level is missing in the database — attempting repair.",
-      );
-      try {
-        await repairSrsCardSchema();
-        return { cards: (await run()) as unknown as SrsCardItem[], error: null };
-      } catch (repairErr) {
-        const msg =
-          repairErr instanceof Error ? repairErr.message : String(repairErr);
-        console.error("[srs] srs_card schema repair failed:", repairErr);
-        // Degrade to the 0000-era columns rather than losing the whole deck.
-        try {
-          const rows = await db
-            .select(SRS_BASE_COLUMNS)
-            .from(srsCard)
-            .where(
-              and(
-                eq(srsCard.userId, userId),
-                ...(aliases.length > 0
-                  ? [inArray(srsCard.language, aliases)]
-                  : []),
-              ),
-            )
-            .orderBy(srsCard.createdAt);
-          return {
-            cards: rows.map((r) => ({
-              ...(r as unknown as SrsCardItem),
-              cseLevel: null,
-            })),
-            error: msg,
-          };
-        } catch (fallbackErr) {
-          return {
-            cards: [],
-            error:
-              fallbackErr instanceof Error
-                ? fallbackErr.message
-                : String(fallbackErr),
-          };
-        }
-      }
-    }
-    const msg = err instanceof Error ? err.message : String(err);
-    console.warn("[srs] Postgres read failed, falling back to local store:", msg);
-    return { cards: [], error: msg };
-  }
 }
 
 export async function getAllCards(
@@ -502,18 +326,28 @@ export async function getAllCards(
   // try/catch absorb a genuine failure instead of guessing.
   const dbUp = hasDbConfig;
 
-  // Populated only when the DB half of the merge could not be read (e.g. the
-  // database is missing srs_card.cse_level). Surfaced via the /api/srs-cards
-  // diagnostics so a wrong count is never silent again.
+  // Populated only when the DB half of the merge could not be read (e.g. a
+  // schema/connection error). Surfaced via the /api/srs-cards diagnostics so a
+  // wrong count is never silent again.
   let srsDbReadError: string | null = null;
   let cards: SrsCardItem[] = [];
   if (dbUp) {
-    const result = await selectSrsCardsSafely(userId, aliases);
-    cards = result.cards;
-    if (result.error) {
-      srsDbReadError = result.error;
+    try {
+      cards = (await db
+        .select()
+        .from(srsCard)
+        .where(
+          and(
+            eq(srsCard.userId, userId),
+            ...(aliases.length > 0 ? [inArray(srsCard.language, aliases)] : []),
+          ),
+        )
+        .orderBy(srsCard.createdAt)) as unknown as SrsCardItem[];
+    } catch (err) {
+      srsDbReadError =
+        err instanceof Error ? err.message : String(err);
       console.warn(
-        `[srs] getAllCards: DB half of the merge unavailable for user "${userId}": ${result.error}`,
+        `[srs] getAllCards: DB half of the merge unavailable for user "${userId}": ${srsDbReadError}`,
       );
     }
   }
@@ -583,7 +417,6 @@ export async function getAllCards(
 
   try {
     const levelMap = await getWordToLevelMap();
-    const cseMap = await getWordToCseMap();
     for (const card of cards) {
       const key = card.word.toLowerCase().trim();
       const mappedLvl = levelMap[key];
@@ -592,15 +425,9 @@ export async function getAllCards(
       } else if (!card.cefrLevel) {
         card.cefrLevel = "A1";
       }
-      const mappedCse = cseMap[key];
-      if (mappedCse) {
-        card.cseLevel = mappedCse;
-      } else if (!card.cseLevel) {
-        card.cseLevel = null;
-      }
     }
   } catch (err) {
-    console.error("Failed to map CEFR/CSE levels:", err);
+    console.error("Failed to map CEFR levels:", err);
   }
 
   // Expose the DB-read diagnostic on the returned array (non-enumerable, so it
@@ -981,7 +808,7 @@ export async function setWordStatus(
   word: string,
   language: string,
   status: "new" | "learning" | "learned" | "remove" | "unmaster",
-  metadata?: { translation?: string; cefrLevel?: string; cseLevel?: string; pos?: string }
+  metadata?: { translation?: string; cefrLevel?: string; pos?: string }
 ) {
   const userId = await getSafeUserId();
   const normalizedWord = word.toLowerCase().trim();
@@ -1024,7 +851,6 @@ export async function setWordStatus(
   const translation = metadata?.translation || word;
   let cefrLevel = metadata?.cefrLevel || null;
   const pos = metadata?.pos || null;
-  const cseLevel = metadata?.cseLevel || null;
 
   if (!cefrLevel) {
     try {
@@ -1047,7 +873,6 @@ export async function setWordStatus(
     status: effectiveStatus,
     translation,
     cefrLevel,
-    cseLevel,
     pos,
     nextReviewAt: effectiveStatus === "learning" ? now.toISOString() : null,
     lastReviewedAt: effectiveStatus === "learned" ? now.toISOString() : null,
@@ -1055,12 +880,9 @@ export async function setWordStatus(
     repetitions: reps,
   });
 
-  // 2. Also save to DB if available. Wrapped in withSrsSchemaRepair because this
-    // path writes cse_level, so on a database that never had migration 0006
-    // applied both the read and the insert would throw.
-    if (dbUp) {
-      try {
-        await withSrsSchemaRepair(async () => {
+  // 2. Also save to DB if available.
+  if (dbUp) {
+    try {
       const [existing] = await db
         .select()
         .from(srsCard)
@@ -1101,7 +923,6 @@ export async function setWordStatus(
             userId,
             translation,
             cefrLevel,
-            cseLevel,
             pos,
             status: effectiveStatus,
             nextReviewAt: effectiveStatus === "learning" ? now : null,
@@ -1115,7 +936,6 @@ export async function setWordStatus(
               status: effectiveStatus,
               translation,
               cefrLevel: cefrLevel || sql`COALESCE(${srsCard.cefrLevel}, ${cefrLevel})`,
-              cseLevel: cseLevel || sql`COALESCE(${srsCard.cseLevel}, ${cseLevel})`,
               pos: pos || sql`COALESCE(${srsCard.pos}, ${pos})`,
               nextReviewAt: effectiveStatus === "learning" ? now : null,
               lastReviewedAt: effectiveStatus === "learned" ? now : null,
@@ -1124,7 +944,6 @@ export async function setWordStatus(
             },
           });
         }
-      });
       } catch (err) {
         console.error("setWordStatus DB error:", err);
       }
@@ -1382,17 +1201,15 @@ export async function recordWordPracticeBatch(
   const dbCardMap = new Map<string, typeof srsCard.$inferSelect>();
   if (dbUp) {
     try {
-      const dbRows = await withSrsSchemaRepair(() =>
-        db
-          .select()
-          .from(srsCard)
-          .where(
-            and(
-              eq(srsCard.userId, userId),
-              inArray(srsCard.word, uniqueWords)
-            )
-          ),
-      );
+      const dbRows = await db
+        .select()
+        .from(srsCard)
+        .where(
+          and(
+            eq(srsCard.userId, userId),
+            inArray(srsCard.word, uniqueWords)
+          )
+        );
       dbRows.forEach((r) => dbCardMap.set(r.word.toLowerCase().trim(), r));
     } catch (err) {
       console.warn("recordWordPracticeBatch DB fetch failed:", err);
