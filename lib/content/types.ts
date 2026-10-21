@@ -181,6 +181,8 @@ export interface CourseListItem {
   creatorName?: string | null;
   isOwner?: boolean;
   isInLibrary?: boolean;
+  /** "public" when published to everyone, null/undefined while private. */
+  visibility?: string | null;
 }
 
 export interface StandaloneUnitInfo {

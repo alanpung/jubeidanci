@@ -110,6 +110,7 @@ export async function listCourses(
         level: course.level,
         createdBy: course.createdBy,
         creatorName: user.name,
+        visibility: course.visibility,
         unitCount: countDistinct(unit.id),
       })
       .from(course)
@@ -123,6 +124,7 @@ export async function listCourses(
         course.targetLanguage,
         course.level,
         course.createdBy,
+        course.visibility,
         user.name
       )
       .orderBy(course.title);

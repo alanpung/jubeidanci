@@ -2,16 +2,19 @@ import Link from "next/link";
 import { getSession } from "@/lib/auth-server";
 import {
   getStandaloneUnits,
-  getUserOwnedCourses,
+  listCoursesWithLessonCounts,
 } from "@/lib/db/queries/courses";
 import type {
   StandaloneUnitInfo,
-  OwnedCourseInfo,
+  CourseListItem,
 } from "@/lib/content/types";
 import { isAdminEmail } from "@/lib/ai/models";
 import { getTargetLanguage } from "@/lib/actions/preferences";
 import { StandaloneUnits } from "@/components/library/standalone-units";
-import { MyCourses } from "@/components/library/my-courses";
+import {
+  CourseBookShelf,
+  LibraryLegend,
+} from "@/components/library/course-book-shelf";
 import { LearnHeader } from "@/components/library/learn-header";
 
 export const dynamic = "force-dynamic";
@@ -23,13 +26,13 @@ export default async function LearnPage() {
   const isAdmin = isAdminEmail(session?.user?.email);
 
   let standaloneUnits: StandaloneUnitInfo[] = [];
-  let ownedCourses: OwnedCourseInfo[] = [];
+  let allCourses: CourseListItem[] = [];
   let targetLang: string | null = null;
 
   if (userId) {
     const results = await Promise.allSettled([
       getStandaloneUnits(userId),
-      getUserOwnedCourses(userId),
+      listCoursesWithLessonCounts(undefined, userId),
       getTargetLanguage(userId),
     ]);
 
@@ -40,9 +43,9 @@ export default async function LearnPage() {
     }
 
     if (results[1].status === "fulfilled") {
-      ownedCourses = results[1].value;
+      allCourses = results[1].value;
     } else {
-      console.error("LearnPage: getUserOwnedCourses failed:", results[1].reason);
+      console.error("LearnPage: listCoursesWithLessonCounts failed:", results[1].reason);
     }
 
     if (results[2].status === "fulfilled") {
@@ -52,10 +55,11 @@ export default async function LearnPage() {
     }
   }
 
-  const isEmptyLibrary = ownedCourses.length === 0 && standaloneUnits.length === 0 && !isAdmin;
+  const isEmptyLibrary =
+    allCourses.length === 0 && standaloneUnits.length === 0 && !isAdmin;
 
   return (
-    <div className="mx-auto w-full max-w-2xl">
+    <div className="mx-auto w-full max-w-6xl">
       <div className="mb-6 text-center">
         <h1 className="text-2xl font-black text-lingo-text">My Library</h1>
       </div>
@@ -76,14 +80,21 @@ export default async function LearnPage() {
             href="/library/browse"
             className="inline-flex items-center gap-2 rounded-xl border-2 border-lingo-green bg-lingo-green px-5 py-2.5 text-sm font-black text-white shadow-[0_2px_0_0] shadow-green-700 transition-all hover:bg-lingo-green/90 active:translate-y-[1px]"
           >
-            <span>🔍</span> Browse Courses & Units
+            <span>🔍</span> Browse Courses &amp; Units
           </Link>
         </div>
       ) : (
-        <>
-          <MyCourses courses={ownedCourses} isAdmin={isAdmin} />
-          <StandaloneUnits units={standaloneUnits} isAdmin={isAdmin} />
-        </>
+        <div className="flex flex-col gap-6 lg:flex-row">
+          <div className="min-w-0 flex-1">
+            <CourseBookShelf courses={allCourses} isAdmin={isAdmin} />
+            <StandaloneUnits units={standaloneUnits} isAdmin={isAdmin} />
+          </div>
+          <aside className="hidden shrink-0 lg:block lg:w-60">
+            <div className="sticky top-4">
+              <LibraryLegend />
+            </div>
+          </aside>
+        </div>
       )}
     </div>
   );
