@@ -47,13 +47,22 @@ export async function GET(request: Request) {
   // never disagree with the page.
   const cards = await getAllCards(undefined, userId).catch((err) => {
     console.error("[srs-cards] getAllCards failed:", err);
-    return [];
+    return [] as Awaited<ReturnType<typeof getAllCards>>;
   });
+
+  // getAllCards attaches a non-enumerable __dbReadError when the Postgres half
+  // of the merge could not be read (e.g. the database is missing
+  // srs_card.cse_level, so `.select()` throws while count(*) still works).
+  // Surface it so the UI can explain a wrong count instead of silently
+  // showing only the locally-seeded course words.
+  const dbDeckError =
+    (cards as unknown as { __dbReadError?: string }).__dbReadError ?? null;
 
   return NextResponse.json({
     ok: true,
     dbUp,
     dbError,
+    dbDeckError,
     userId,
     dbRowCount,
     fetchedAt: new Date().toISOString(),

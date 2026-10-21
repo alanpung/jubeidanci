@@ -80,6 +80,15 @@ export function ProgressView({
           ? `DB up · ${data.dbRowCount ?? "?"} rows in Postgres`
           : "DB unreachable — reading local store only";
         setRefreshNote(`${dbInfo} · ${data.count ?? 0} cards loaded`);
+
+        // If Postgres has rows but the deck read failed (schema drift such as a
+        // missing srs_card.cse_level), say so loudly — otherwise the page just
+        // shows the locally-seeded course words and looks like data loss.
+        if (data.dbDeckError) {
+          setRefreshError(
+            `Database read failed: ${data.dbDeckError}. The counts below may be incomplete.`,
+          );
+        }
       }
     } catch (err) {
       setRefreshError(err instanceof Error ? err.message : String(err));
