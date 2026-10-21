@@ -32,7 +32,7 @@ export default async function LearnPage() {
   if (userId) {
     const results = await Promise.allSettled([
       getStandaloneUnits(userId),
-      listCoursesWithLessonCounts(undefined, userId),
+      listCoursesWithLessonCounts(undefined, userId, false),
       getTargetLanguage(userId),
     ]);
 

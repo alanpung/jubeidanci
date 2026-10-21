@@ -179,16 +179,27 @@ export const SYSTEM_COURSE_IDS = [
   "c2-flashcard-course",
 ];
 
-// Separate query for accurate lesson counts
+// Separate query for accurate lesson counts.
+//
+// `includeLessonCounts` lets callers that don't render lesson counts skip the
+// expensive part entirely. Computing them pulls every visible unit's markdown
+// from Postgres and counts lessonTitle headers — fine when cached, but on a
+// cold serverless instance (empty in-memory cache) that full-table scan blows
+// past the function timeout and the page hangs. The Library shelf
+// (CourseBookShelf) never shows lesson counts, so it passes false and avoids
+// the scan altogether; pages that display them (browse) keep the default.
 export async function listCoursesWithLessonCounts(
   filters?: CourseFilters,
-  userId?: string
+  userId?: string,
+  includeLessonCounts = true
 ): Promise<CourseListItem[]> {
   const courses = await listCourses(filters, userId);
   if (courses.length === 0) return courses;
 
   const courseIds = courses.map((c) => c.id);
-  const lessonCountByCourse = await computeLessonCountByCourse(courseIds);
+  const lessonCountByCourse = includeLessonCounts
+    ? await computeLessonCountByCourse(courseIds)
+    : new Map<string, number>();
 
   let enrolledCourseIds = new Set<string>();
   if (userId) {
