@@ -1,6 +1,6 @@
 "use server";
 
-import { db, isDbAvailable } from "@/lib/db";
+import { db, isDbAvailable, hasDbConfig } from "@/lib/db";
 import {
   userStats,
   lessonCompletion,
@@ -162,8 +162,11 @@ export async function completeLesson(input: CompleteLessonInput) {
     console.warn("Local lesson save error:", err);
   }
 
-  // 5. Also save to database if available
-  if (await isDbAvailable()) {
+  // 5. Also save to database if configured. Gate on hasDbConfig (URL present),
+  // not the flaky isDbAvailable() probe — same cold-start fix as
+  // recordWordPracticeBatch, so lesson / streak / stats rows are attempted even
+  // when the probe is inconclusive (a genuine failure is swallowed below).
+  if (hasDbConfig) {
     try {
       const [completion] = await db
         .insert(lessonCompletion)

@@ -55,7 +55,10 @@ export async function isDbAvailable(): Promise<boolean> {
   try {
     const checkPromise = client`SELECT 1`;
     const timeoutPromise = new Promise<never>((_, reject) =>
-      setTimeout(() => reject(new Error("DB probe timeout")), 4000)
+      // 9s: must clear the 10s connect_timeout on a cold serverless invocation,
+      // otherwise the probe loses the race and the cached false bleeds into
+      // write gates (the "learning/mastered stay 0" bug).
+      setTimeout(() => reject(new Error("DB probe timeout")), 9000)
     );
     await Promise.race([checkPromise, timeoutPromise]);
     dbStatusCached = true;

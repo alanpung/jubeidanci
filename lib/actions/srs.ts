@@ -1,6 +1,6 @@
 "use server";
 
-import { db, isDbAvailable } from "@/lib/db";
+import { db, isDbAvailable, hasDbConfig } from "@/lib/db";
 import { srsCard, dictionaryWord, userCourseEnrollment, userUnitLibrary, course, unit, user } from "@/lib/db/schema";
 import { and, eq, lte, count, sql, asc, isNotNull, inArray, notInArray, or } from "drizzle-orm";
 import { getSession } from "@/lib/auth-server";
@@ -1295,7 +1295,13 @@ export async function recordWordPracticeBatch(
     console.error("recordWordPracticeBatch local store error:", err);
   }
 
-  if (dbUp && dbInsertsToSave.length > 0) {
+  // Gate the Postgres write on hasDbConfig (DB URL present), NOT on the flaky
+  // isDbAvailable() probe. On a cold serverless invocation the probe can time
+  // out before the 10s connect handshake, return false, and silently drop every
+  // learning/mastered upsert — which is exactly the "new shows up but
+  // learning/mastered stay 0" bug. If the URL is set we attempt the write and
+  // let the try/catch absorb a genuine failure instead of guessing.
+  if (hasDbConfig && dbInsertsToSave.length > 0) {
     const upsertRows = async (rows: (typeof srsCard.$inferInsert)[]) => {
       await db
         .insert(srsCard)
