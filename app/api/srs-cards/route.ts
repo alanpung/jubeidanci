@@ -49,7 +49,7 @@ export async function GET(request: Request) {
     }
   }
 
-  const cards = await getAllCards(language).catch((err) => {
+  const cards = await getAllCards(language, userId).catch((err) => {
     console.error("[srs-cards] getAllCards failed:", err);
     return [];
   });

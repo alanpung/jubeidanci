@@ -316,8 +316,16 @@ export interface SrsCardItem {
   createdAt: Date;
 }
 
-export async function getAllCards(language?: string): Promise<SrsCardItem[]> {
-  const userId = await getSafeUserId();
+export async function getAllCards(
+  language?: string,
+  userIdOverride?: string
+): Promise<SrsCardItem[]> {
+  // Prefer an explicitly resolved userId (e.g. the one the caller already
+  // authenticated) over re-resolving via getSession(). In a Route Handler the
+  // second getSession() call can throw/return null and silently fall back to
+  // "default_user", which is exactly why the Refresh endpoint returned an empty
+  // deck (0 cards) while its own count query reported the real user's rows.
+  const userId = userIdOverride ?? (await getSafeUserId());
   void syncUserCourseWordsToSrs(userId, false).catch(() => {});
   const aliases = language ? getLanguageAliases(language) : [];
   // Gate on hasDbConfig (DB URL present), NOT the flaky isDbAvailable()

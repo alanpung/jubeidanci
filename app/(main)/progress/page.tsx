@@ -13,7 +13,7 @@ export default async function ProgressPage() {
   const isAdmin = isAdminEmail(session?.user?.email);
   const language = (await getTargetLanguage()) || "en";
 
-  const srsCards = await getAllCards(language).catch((err) => {
+  const srsCards = await getAllCards(language, session?.user?.id).catch((err) => {
     console.error("[progress] getAllCards failed, showing empty deck:", err);
     return [];
   });
