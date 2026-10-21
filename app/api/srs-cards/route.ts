@@ -45,7 +45,7 @@ export async function GET(request: Request) {
   // mismatch returned an empty deck even though Postgres had the rows. Omitting
   // the language makes the deck authoritative and language-agnostic, so it can
   // never disagree with the page.
-  const cards = await getAllCards(undefined, userId).catch((err) => {
+  const cards = await getAllCards(undefined, userId, true).catch((err) => {
     console.error("[srs-cards] getAllCards failed:", err);
     return [] as Awaited<ReturnType<typeof getAllCards>>;
   });

@@ -9,11 +9,18 @@ export { parseCourseMarkdown } from "./course-parser";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
+// Cached result of loadContentDir() — see that function for why.
+let contentDirCache: { ts: number; value: { courses: LoadedCourse[]; units: LoadedUnit[] } } | null = null;
+const CONTENT_DIR_CACHE_TTL_MS = 60_000;
+
 // ---------------------------------------------------------------------------
 // Convenience helpers (used by read paths that store markdown in DB)
 // ---------------------------------------------------------------------------
 
 const parsedLessonsCache = new Map<string, { lessons: UnitLesson[]; parseError: boolean }>();
+// Cap raised from 200: libraries with many units used to evict the cache on
+// every sync and re-parse all markdown each time, which is pure CPU waste.
+const PARSED_LESSONS_CACHE_CAP = 2000;
 
 /** Parse raw unit markdown into UnitLesson[]. */
 export function getUnitLessons(markdown: string): UnitLesson[] {
@@ -31,7 +38,7 @@ export function getUnitLessonsSafe(markdown: string): {
 
   try {
     const res = { lessons: parseUnitMarkdown(markdown).lessons, parseError: false };
-    if (parsedLessonsCache.size > 200) parsedLessonsCache.clear();
+    if (parsedLessonsCache.size > PARSED_LESSONS_CACHE_CAP) parsedLessonsCache.clear();
     parsedLessonsCache.set(markdown, res);
     return res;
   } catch {
@@ -76,42 +83,58 @@ export interface LoadedUnit {
  * Course ID is derived from filename: `testing-course.md` → `testing`.
  */
 export function loadContentDir(): { courses: LoadedCourse[]; units: LoadedUnit[] } {
-  if (!fs.existsSync(CONTENT_DIR)) return { courses: [], units: [] };
-
-  const entries = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md")).sort();
-  const courses: LoadedCourse[] = [];
-  const units: LoadedUnit[] = [];
-
-  for (const entry of entries) {
-    const fullPath = path.join(CONTENT_DIR, entry);
-    if (!fs.statSync(fullPath).isFile()) continue;
-
-    const raw = fs.readFileSync(fullPath, "utf-8");
-
-    if (entry.endsWith("-course.md")) {
-      try {
-        const parsed = parseCourseMarkdown(raw);
-        const id = parsed.id ?? entry.replace(/-course\.md$/, "");
-        courses.push({
-          id,
-          title: parsed.courseTitle,
-          sourceLanguage: parsed.sourceLanguage,
-          targetLanguage: parsed.targetLanguage,
-          level: parsed.level,
-          description: parsed.description,
-        });
-      } catch {
-        // skip malformed
-      }
-    } else {
-      try {
-        const parsed = parseUnitMarkdown(raw);
-        units.push({ parsed, markdown: raw });
-      } catch {
-        // skip malformed
-      }
-    }
+  // The content directory is bundled at build time and only changes on deploy,
+  // but a warm serverless instance reuses this module across many invocations.
+  // Cache the scan for a short window so syncUserCourseWordsToSrs (which only
+  // needs filesystem units as a fallback for enrolled courses) doesn't re-read
+  // and re-parse every .md on disk on every refresh — that disk scan was a
+  // meaningful slice of the sync's wall-clock time.
+  const now = Date.now();
+  if (contentDirCache && now - contentDirCache.ts < CONTENT_DIR_CACHE_TTL_MS) {
+    return contentDirCache.value;
   }
 
-  return { courses, units };
+  const value: { courses: LoadedCourse[]; units: LoadedUnit[] } = (() => {
+    if (!fs.existsSync(CONTENT_DIR)) return { courses: [], units: [] };
+
+    const entries = fs.readdirSync(CONTENT_DIR).filter((f) => f.endsWith(".md")).sort();
+    const courses: LoadedCourse[] = [];
+    const units: LoadedUnit[] = [];
+
+    for (const entry of entries) {
+      const fullPath = path.join(CONTENT_DIR, entry);
+      if (!fs.statSync(fullPath).isFile()) continue;
+
+      const raw = fs.readFileSync(fullPath, "utf-8");
+
+      if (entry.endsWith("-course.md")) {
+        try {
+          const parsed = parseCourseMarkdown(raw);
+          const id = parsed.id ?? entry.replace(/-course\.md$/, "");
+          courses.push({
+            id,
+            title: parsed.courseTitle,
+            sourceLanguage: parsed.sourceLanguage,
+            targetLanguage: parsed.targetLanguage,
+            level: parsed.level,
+            description: parsed.description,
+          });
+        } catch {
+          // skip malformed
+        }
+      } else {
+        try {
+          const parsed = parseUnitMarkdown(raw);
+          units.push({ parsed, markdown: raw });
+        } catch {
+          // skip malformed
+        }
+      }
+    }
+
+    return { courses, units };
+  })();
+
+  contentDirCache = { ts: now, value };
+  return value;
 }

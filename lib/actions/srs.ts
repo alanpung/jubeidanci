@@ -309,7 +309,8 @@ export interface SrsCardItem {
 
 export async function getAllCards(
   language?: string,
-  userIdOverride?: string
+  userIdOverride?: string,
+  forceSync = false
 ): Promise<SrsCardItem[]> {
   // Prefer an explicitly resolved userId (e.g. the one the caller already
   // authenticated) over re-resolving via getSession(). In a Route Handler the
@@ -317,7 +318,11 @@ export async function getAllCards(
   // "default_user", which is exactly why the Refresh endpoint returned an empty
   // deck (0 cards) while its own count query reported the real user's rows.
   const userId = userIdOverride ?? (await getSafeUserId());
-  void syncUserCourseWordsToSrs(userId, false).catch(() => {});
+  // forceSync=true (used by the explicit "Refresh SRS Data" button) bypasses
+  // the 60s throttle so a manual refresh always triggers a full sync. Without
+  // it, a refresh landing within the throttle window would silently skip the
+  // sync and the user would keep seeing a stale "New" count.
+  void syncUserCourseWordsToSrs(userId, forceSync).catch(() => {});
   const aliases = language ? getLanguageAliases(language) : [];
   // Gate on hasDbConfig (DB URL present), NOT the flaky isDbAvailable()
   // cold-start probe. The probe can false-negative on a cold serverless
@@ -1604,50 +1609,61 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
         }
       }
 
-      // 1. Get enrolled course IDs and standalone unit IDs for this user
+      // 1. Resolve the user's enrolled courses + standalone units. These three
+      // DB reads are independent, so run them concurrently — on a cold
+      // serverless instance the old serial round-trips added up and the
+      // 2412-word sync timed out mid-insert, which is why "New" only trickled
+      // in across several manual refreshes. The existing-card read is also
+      // independent, so kick it off in parallel too.
       const enrolledCourseIds = new Set<string>();
-      // Tracks whether the enrollment lookups below actually succeeded, so the
+      const standaloneUnitIds = new Set<string>();
+      // Tracks whether the enrollment lookups actually succeeded, so the
       // destructive prune further down only runs on trustworthy emptiness.
       let enrollmentLookupOk = false;
+      // Pre-declared so the parallel existing-rows read can populate it.
+      const existingSet = new Set<string>();
+
+      const localEnrollments = await getLocalCourseEnrollments(userId);
+
+      const existingRowsPromise = dbUp
+        ? db
+            .select({ word: srsCard.word })
+            .from(srsCard)
+            .where(eq(srsCard.userId, userId))
+            .catch(() => [])
+        : Promise.resolve([] as { word: string }[]);
 
       if (dbUp) {
         try {
-          const enrollments = await db
-            .select({ courseId: userCourseEnrollment.courseId })
-            .from(userCourseEnrollment)
-            .where(eq(userCourseEnrollment.userId, userId));
-          enrollments.forEach((e) => enrolledCourseIds.add(e.courseId));
-
           const { SYSTEM_COURSE_IDS } = await import("@/lib/db/queries/courses");
-          const createdCourses = await db
-            .select({ id: course.id })
-            .from(course)
-            .where(eq(course.createdBy, userId));
+          const [enrollments, createdCourses, libraryUnitRows] = await Promise.all([
+            db
+              .select({ courseId: userCourseEnrollment.courseId })
+              .from(userCourseEnrollment)
+              .where(eq(userCourseEnrollment.userId, userId)),
+            db
+              .select({ id: course.id })
+              .from(course)
+              .where(eq(course.createdBy, userId)),
+            db
+              .select({ unitId: userUnitLibrary.unitId, courseId: unit.courseId })
+              .from(userUnitLibrary)
+              .innerJoin(unit, eq(unit.id, userUnitLibrary.unitId))
+              .where(eq(userUnitLibrary.userId, userId)),
+          ]);
+          enrollments.forEach((e) => enrolledCourseIds.add(e.courseId));
           createdCourses.forEach((c) => {
             if (!SYSTEM_COURSE_IDS.includes(c.id)) enrolledCourseIds.add(c.id);
+          });
+          libraryUnitRows.forEach((u) => {
+            if (u.courseId) enrolledCourseIds.add(u.courseId);
+            else standaloneUnitIds.add(u.unitId);
           });
           enrollmentLookupOk = true;
         } catch {}
       }
 
-      const localEnrollments = await getLocalCourseEnrollments(userId);
       localEnrollments.forEach((id) => enrolledCourseIds.add(id));
-
-      const standaloneUnitIds = new Set<string>();
-      if (dbUp) {
-        try {
-          const libraryUnitRows = await db
-            .select({ unitId: userUnitLibrary.unitId, courseId: unit.courseId })
-            .from(userUnitLibrary)
-            .innerJoin(unit, eq(unit.id, userUnitLibrary.unitId))
-            .where(eq(userUnitLibrary.userId, userId));
-          for (const u of libraryUnitRows) {
-            if (u.courseId) enrolledCourseIds.add(u.courseId);
-            else standaloneUnitIds.add(u.unitId);
-          }
-          enrollmentLookupOk = true;
-        } catch {}
-      }
 
       if (enrolledCourseIds.size === 0 && standaloneUnitIds.size === 0) {
         // Only prune if we can trust the emptiness — i.e. the DB was reachable
@@ -1730,14 +1746,12 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       const allActiveUnits = Array.from(unitMap.values());
       if (allActiveUnits.length === 0) return;
 
-      // Fetch existing cards in srs_card and local store for this user
-      const existingSet = new Set<string>();
+      // Resolve the existing-card read we kicked off in parallel above, then
+      // fold in the local store so cards written there (but not yet replicated
+      // to Postgres) still count.
       if (dbUp) {
         try {
-          const existingRows = await db
-            .select({ word: srsCard.word })
-            .from(srsCard)
-            .where(eq(srsCard.userId, userId));
+          const existingRows = await existingRowsPromise;
           existingRows.forEach((r) => existingSet.add(r.word.toLowerCase().trim()));
         } catch {}
       }
@@ -1871,7 +1885,10 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       if (recordsToInsert.length > 0) {
         if (dbUp) {
           try {
-            const CHUNK_SIZE = 200;
+            // Larger chunks = fewer round-trips. 500 rows × ~11 cols stays well
+            // under Postgres' parameter limit, so the full 2412-word insert
+            // finishes in ~5 statements instead of ~12.
+            const CHUNK_SIZE = 500;
             for (let i = 0; i < recordsToInsert.length; i += CHUNK_SIZE) {
               const chunk = recordsToInsert.slice(i, i + CHUNK_SIZE);
               await db.insert(srsCard).values(chunk).onConflictDoNothing();
