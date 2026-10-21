@@ -648,21 +648,21 @@ export function FlashcardReview({
                 : actionFeedback === "yes"
                 ? "border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20"
                 : actionFeedback === "learned"
-                ? "border-lingo-blue bg-blue-50/50 dark:bg-blue-950/20"
+                ? "border-blue-600 bg-blue-50/50 dark:bg-blue-950/20"
                 : "border-lingo-border"
             }`}
           >
               {/* Swipe Overlays / Badges */}
               <motion.div
                 style={{ opacity: noOpacity }}
-                className="absolute top-4 left-4 z-20 pointer-events-none rounded-xl bg-rose-500 text-white font-black px-3 py-1.5 text-xs sm:text-sm shadow-md flex items-center gap-1 border border-white/30"
+                className="absolute top-4 left-4 z-20 pointer-events-none rounded-xl bg-rose-600 text-white font-black px-3 py-1.5 text-xs sm:text-sm shadow-md flex items-center gap-1 border border-white/30"
               >
                 <X className="w-4 h-4" /> NO
               </motion.div>
 
               <motion.div
                 style={{ opacity: yesOpacity }}
-                className="absolute top-4 right-4 z-20 pointer-events-none rounded-xl bg-emerald-500 text-white font-black px-3 py-1.5 text-xs sm:text-sm shadow-md flex items-center gap-1 border border-white/30"
+                className="absolute top-4 right-4 z-20 pointer-events-none rounded-xl bg-emerald-600 text-white font-black px-3 py-1.5 text-xs sm:text-sm shadow-md flex items-center gap-1 border border-white/30"
               >
                 <Check className="w-4 h-4" /> YES
               </motion.div>
@@ -678,7 +678,7 @@ export function FlashcardReview({
                 <>
                   <motion.div
                     style={{ opacity: learnedOpacity }}
-                    className="absolute top-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none rounded-xl bg-lingo-blue text-white font-black px-3 py-1.5 text-xs sm:text-sm shadow-md flex items-center gap-1 border border-white/30"
+                    className="absolute top-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none rounded-xl bg-blue-600 text-white font-black px-3 py-1.5 text-xs sm:text-sm shadow-md flex items-center gap-1 border border-white/30"
                   >
                     <Award className="w-4 h-4" /> MASTERED
                   </motion.div>
@@ -764,7 +764,7 @@ export function FlashcardReview({
                       <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
                         {/* Part of Speech (POS) */}
                         {activePos && (
-                          <span className="text-xs font-extrabold text-lingo-blue bg-lingo-blue/10 px-2.5 py-1 rounded-lg border border-lingo-blue/20">
+                          <span className="text-xs font-extrabold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">
                             {POS_LABELS[activePos.toLowerCase()] || activePos}
                           </span>
                         )}
@@ -837,7 +837,7 @@ export function FlashcardReview({
           type="button"
           onClick={handleNo}
           disabled={rated}
-          className="group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl bg-rose-50 hover:bg-rose-100/80 active:scale-95 text-rose-600 dark:bg-rose-950/30 dark:text-rose-300 dark:hover:bg-rose-900/40 font-black transition-all cursor-pointer disabled:opacity-50 select-none"
+          className="group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl bg-rose-600 hover:bg-rose-700 active:scale-95 text-white font-black transition-all cursor-pointer disabled:opacity-50 select-none shadow-sm"
           title="Don't remember this word (Swipe Left)"
         >
           <div className="flex items-center gap-1 text-xs sm:text-sm font-black">
@@ -847,19 +847,19 @@ export function FlashcardReview({
           <ArrowLeft className="w-3.5 h-3.5 opacity-50 group-hover:opacity-80 transition-opacity" />
         </button>
 
-        {/* 2. MASTERED (Lingo Blue / Middle Up) */}
+        {/* 2. MASTERED (Blue / Middle Up) */}
         <button
           type="button"
           onClick={handleLearned}
           disabled={rated}
-          className="group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl bg-lingo-blue/10 hover:bg-lingo-blue/20 active:scale-95 text-lingo-blue dark:bg-lingo-blue/20 dark:text-blue-300 font-black transition-all cursor-pointer disabled:opacity-50 select-none"
+          className="group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-black transition-all cursor-pointer disabled:opacity-50 select-none shadow-sm"
           title="Mark as Mastered (Swipe Up)"
         >
           <div className="flex items-center gap-1 text-xs sm:text-sm font-black">
             <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
             <span>Mastered</span>
           </div>
-          <ArrowUp className="w-3.5 h-3.5 opacity-50 group-hover:opacity-80 transition-opacity" />
+          <ArrowUp className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100 transition-opacity" />
         </button>
 
         {/* 3. EXAMPLES (Indigo / Middle Down) */}
@@ -867,11 +867,7 @@ export function FlashcardReview({
           type="button"
           onClick={() => setShowExamples((prev) => !prev)}
           disabled={rated}
-          className={`group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl font-black transition-all cursor-pointer disabled:opacity-50 select-none ${
-            showExamples
-              ? "bg-indigo-600 text-white shadow-sm"
-              : "bg-indigo-50 hover:bg-indigo-100/80 active:scale-95 text-indigo-600 dark:bg-indigo-950/30 dark:text-indigo-300 dark:hover:bg-indigo-900/40"
-          }`}
+          className="group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white font-black transition-all cursor-pointer disabled:opacity-50 select-none shadow-sm"
           title="View example sentences (Swipe Down)"
         >
           <div className="flex items-center gap-1 text-xs sm:text-sm font-black">
@@ -890,7 +886,7 @@ export function FlashcardReview({
           type="button"
           onClick={handleYes}
           disabled={rated}
-          className="group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl bg-emerald-50 hover:bg-emerald-100/80 active:scale-95 text-emerald-600 dark:bg-emerald-950/30 dark:text-emerald-300 dark:hover:bg-emerald-900/40 font-black transition-all cursor-pointer disabled:opacity-50 select-none"
+          className="group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-black transition-all cursor-pointer disabled:opacity-50 select-none shadow-sm"
           title="Remember this word (Swipe Right)"
         >
           <div className="flex items-center gap-1 text-xs sm:text-sm font-black">
