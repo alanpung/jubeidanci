@@ -1,7 +1,6 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
 import { CreateUnitForm } from "@/components/library/create-unit-form";
 
 export function LearnHeader({
@@ -24,12 +23,6 @@ export function LearnHeader({
             {showCreateUnit ? "Close Form" : "+ New Unit"}
           </button>
         )}
-        <Link
-          href="/library/browse"
-          className="rounded-xl border-2 border-lingo-border bg-white px-4 py-2.5 text-sm font-bold text-lingo-text shadow-[0_2px_0_0] shadow-lingo-border transition-all hover:border-lingo-blue hover:bg-lingo-blue/5 active:translate-y-[1px] active:shadow-none"
-        >
-          Browse Content
-        </Link>
       </div>
 
       {isAdmin && showCreateUnit && (
