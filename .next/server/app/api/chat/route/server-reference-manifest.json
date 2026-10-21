@@ -1,0 +1,165 @@
+{
+  "node": {
+    "00b609d2fd25e75d1c211b680cefe81a0461292143": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "getGitHubSyncConfig",
+      "filename": "lib/actions/github-sync.ts"
+    },
+    "409dbb179f53b27382e5a9dbd8262f22a50a7760fb": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "syncToGitHub",
+      "filename": "lib/actions/github-sync.ts"
+    },
+    "40c808b651e51e6d53431bf9172400477f73fecb0e": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "saveGitHubSyncConfig",
+      "filename": "lib/actions/github-sync.ts"
+    },
+    "006ed9c1479518c0b7d1a06f46a549f31e1ec63bbe": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "getMemory",
+      "filename": "lib/actions/prompts.ts"
+    },
+    "0095ea8fd0cfb341a242760febd4faef1821d7bf41": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "getPrompts",
+      "filename": "lib/actions/prompts.ts"
+    },
+    "4058aa1f99a2cee81963f4cf3a2dca459cee854f73": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "saveMemory",
+      "filename": "lib/actions/prompts.ts"
+    },
+    "40a8838180db332b5391009a480a17e3d45b9c4137": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "resetPrompt",
+      "filename": "lib/actions/prompts.ts"
+    },
+    "60412191dc41f330e573b857638e46b646b3fa68bb": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "getUserPromptTemplate",
+      "filename": "lib/actions/prompts.ts"
+    },
+    "607044c89ee4eeb27d52fcd9f4f9b0f17f4dda6117": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "savePrompt",
+      "filename": "lib/actions/prompts.ts"
+    },
+    "4015e08066a78aeb376bb028c030f077417d5256f4": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "getTargetLanguage",
+      "filename": "lib/actions/preferences.ts"
+    },
+    "408c54964ffe7852d5cbdf10135943327ce51014dc": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "getPreferredModel",
+      "filename": "lib/actions/preferences.ts"
+    },
+    "40ccf3c25e609cf0da633c126eb8614c476cec56f8": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "updatePreferredModel",
+      "filename": "lib/actions/preferences.ts"
+    },
+    "40f7b110c754ead95d412d9f7f65f9793071828662": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "updateTargetLanguage",
+      "filename": "lib/actions/preferences.ts"
+    },
+    "007d9e33ad4ca396ccd081c7c5261a951d55567df2": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "getProfileData",
+      "filename": "lib/actions/profile.ts"
+    },
+    "402d0b8bcfe1bd7887e46ea193e41b36ebe3425f5f": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "updateNativeLanguage",
+      "filename": "lib/actions/profile.ts"
+    },
+    "40b6116ceb4e5ce48c8623de9b7fecb04713248936": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "exportedName": "getNativeLanguage",
+      "filename": "lib/actions/profile.ts"
+    }
+  },
+  "edge": {}
+}

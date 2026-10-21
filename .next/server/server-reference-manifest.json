@@ -1,0 +1,2730 @@
+{
+  "node": {
+    "00b609d2fd25e75d1c211b680cefe81a0461292143": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/github-sync.ts",
+      "exportedName": "getGitHubSyncConfig"
+    },
+    "409dbb179f53b27382e5a9dbd8262f22a50a7760fb": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/github-sync.ts",
+      "exportedName": "syncToGitHub"
+    },
+    "40c808b651e51e6d53431bf9172400477f73fecb0e": {
+      "workers": {
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/github-sync.ts",
+      "exportedName": "saveGitHubSyncConfig"
+    },
+    "006ed9c1479518c0b7d1a06f46a549f31e1ec63bbe": {
+      "workers": {
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/prompts.ts",
+      "exportedName": "getMemory"
+    },
+    "0095ea8fd0cfb341a242760febd4faef1821d7bf41": {
+      "workers": {
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/prompts.ts",
+      "exportedName": "getPrompts"
+    },
+    "4058aa1f99a2cee81963f4cf3a2dca459cee854f73": {
+      "workers": {
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/prompts.ts",
+      "exportedName": "saveMemory"
+    },
+    "40a8838180db332b5391009a480a17e3d45b9c4137": {
+      "workers": {
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/prompts.ts",
+      "exportedName": "resetPrompt"
+    },
+    "60412191dc41f330e573b857638e46b646b3fa68bb": {
+      "workers": {
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/prompts.ts",
+      "exportedName": "getUserPromptTemplate"
+    },
+    "607044c89ee4eeb27d52fcd9f4f9b0f17f4dda6117": {
+      "workers": {
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/prompts.ts",
+      "exportedName": "savePrompt"
+    },
+    "4015e08066a78aeb376bb028c030f077417d5256f4": {
+      "workers": {
+        "app/(auth)/onboarding/page": {
+          "moduleId": 151376,
+          "async": false
+        },
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/preferences.ts",
+      "exportedName": "getTargetLanguage"
+    },
+    "408c54964ffe7852d5cbdf10135943327ce51014dc": {
+      "workers": {
+        "app/(auth)/onboarding/page": {
+          "moduleId": 151376,
+          "async": false
+        },
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/preferences.ts",
+      "exportedName": "getPreferredModel"
+    },
+    "40ccf3c25e609cf0da633c126eb8614c476cec56f8": {
+      "workers": {
+        "app/(auth)/onboarding/page": {
+          "moduleId": 151376,
+          "async": false
+        },
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/preferences.ts",
+      "exportedName": "updatePreferredModel"
+    },
+    "40f7b110c754ead95d412d9f7f65f9793071828662": {
+      "workers": {
+        "app/(auth)/onboarding/page": {
+          "moduleId": 151376,
+          "async": false
+        },
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/preferences.ts",
+      "exportedName": "updateTargetLanguage"
+    },
+    "007d9e33ad4ca396ccd081c7c5261a951d55567df2": {
+      "workers": {
+        "app/(auth)/onboarding/page": {
+          "moduleId": 151376,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        },
+        "app/api/word/lookup/route": {
+          "moduleId": 452030,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/profile.ts",
+      "exportedName": "getProfileData"
+    },
+    "402d0b8bcfe1bd7887e46ea193e41b36ebe3425f5f": {
+      "workers": {
+        "app/(auth)/onboarding/page": {
+          "moduleId": 151376,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        },
+        "app/api/word/lookup/route": {
+          "moduleId": 452030,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/profile.ts",
+      "exportedName": "updateNativeLanguage"
+    },
+    "40b6116ceb4e5ce48c8623de9b7fecb04713248936": {
+      "workers": {
+        "app/(auth)/onboarding/page": {
+          "moduleId": 151376,
+          "async": false
+        },
+        "app/api/chat/route": {
+          "moduleId": 452801,
+          "async": false
+        },
+        "app/api/word/lookup/route": {
+          "moduleId": 452030,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/profile.ts",
+      "exportedName": "getNativeLanguage"
+    },
+    "4005da384e9ec94758555b3f820ba7ebea1ffc2897": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "invalidateUserLibraryWordsCache"
+    },
+    "401288b89a988d811194b46ba64d9e2311a48122b9": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "syncOwnerLibraryToSrs"
+    },
+    "4036dbb391e62422f4fae4f4f5d98ae94acf2ba536": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "migrateDefaultUserCards"
+    },
+    "4052da3ebf31a39edce8283d0a2d649712d5740b31": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "getUserLibraryWords"
+    },
+    "4068df4e36be05a64dfecce693c4c55aa0146fb1da": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "cleanupUnstudiedCourseWordsFromSrs"
+    },
+    "40af6748b98bd31b241e35bc1d1b0372cfb0281f5b": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "getSrsStats"
+    },
+    "40dd5879b8233ccb4d567a84fac887b1fe16b7cb9a": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "getAllCards"
+    },
+    "6065391100e38b70509ee432588651e0b3460adb14": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "introduceNewCards"
+    },
+    "60ade1cb5a3b631445a64125680f1da9ec29e66cf4": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "addAllLevelWordsToMyWords"
+    },
+    "60f032384a054e9ab6c19a971168ed44d1c40bfff6": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "getDueCards"
+    },
+    "60f81a4b4636b7e850d141da2860c18150c592b15c": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "getNewCards"
+    },
+    "7027a2d4ed9013d46525ba804bf5cf851c0a17d650": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "recordChatExerciseResult"
+    },
+    "704a9f5846d7b5726b28f7ea5a65c29de7b3a1d613": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "addWordToSrs"
+    },
+    "70545cd6bb42497876d0a761c350ea9d1996c32f19": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "syncUserCourseWordsToSrs"
+    },
+    "70780d81fa887ccb22a93d7f5f8687a2bace2287b3": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "recordWordPracticeBatch"
+    },
+    "70c7f65416f5037368855776656df25ad6bccd828a": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "reviewCard"
+    },
+    "78ab0b4219e74af2017aadbff31e9b98f80e1cce32": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "setWordStatus"
+    },
+    "78cd91dcaf01bb00f4d6cc21721b1083e3edd7d03d": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "addOrFailWord"
+    },
+    "7cb29d6c3754fb82cb68f3e54299430612214bd305": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        },
+        "app/api/srs-cards/route": {
+          "moduleId": 116601,
+          "async": false
+        },
+        "app/api/srs/status/route": {
+          "moduleId": 375580,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/srs.ts",
+      "exportedName": "recordWordPractice"
+    },
+    "40acf596f8aa485e86f46b934848531d6291df4e3b": {
+      "workers": {
+        "app/page": {
+          "moduleId": 726099,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/feedback.ts",
+      "exportedName": "submitFeedback"
+    },
+    "00707650f214b156f4acd3c066f2662d64d1453dae": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/progress.ts",
+      "exportedName": "getUserStatsData"
+    },
+    "405df9b5577fc501df766b4e40b6e10ec288bda8ce": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/progress.ts",
+      "exportedName": "getUserProgress"
+    },
+    "40be66747455605b7ac46691f6dff2cafa0b1e283f": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        },
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        },
+        "app/(main)/read/[id]/page": {
+          "moduleId": 555551,
+          "async": false
+        },
+        "app/(main)/read/page": {
+          "moduleId": 82918,
+          "async": false
+        },
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(main)/words/page": {
+          "moduleId": 281347,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/progress.ts",
+      "exportedName": "getUnitProgress"
+    },
+    "00a92f7a765f5f72a6966ea9b9e76700d4a0606f45": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/chat.ts",
+      "exportedName": "listConversations"
+    },
+    "00c1baf230bb5a3d03a3f6c2d8d159b7f2765382e0": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/chat.ts",
+      "exportedName": "deleteAllConversations"
+    },
+    "406f111ed96412a87cbbbdc1fbe0051c1953652ad2": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/chat.ts",
+      "exportedName": "getConversation"
+    },
+    "407484bf613898b81b217e504f2ae6c0461d5014b5": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/chat.ts",
+      "exportedName": "deleteConversation"
+    },
+    "6022f53f1099b70c8c5fa98f145e3f49d69c1f6fa2": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/chat.ts",
+      "exportedName": "saveMessages"
+    },
+    "705188ca6cc35836ae1eba7aa64620ac9b55c648ec": {
+      "workers": {
+        "app/(main)/chat/[id]/page": {
+          "moduleId": 486747,
+          "async": false
+        },
+        "app/(main)/chat/page": {
+          "moduleId": 287050,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/chat.ts",
+      "exportedName": "createConversation"
+    },
+    "40d14fb0c125fb0d4d4aec582c15bc97c5c8e17ae4": {
+      "workers": {
+        "app/(main)/lesson/[courseId]/[unitId]/[lessonIndex]/page": {
+          "moduleId": 817582,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": {
+          "moduleId": 689472,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/lesson.ts",
+      "exportedName": "completeLesson"
+    },
+    "40dab51d556748ce5cea4051830b23e430bf41424b": {
+      "workers": {
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "makeUnitPublic"
+    },
+    "40a81509428b23935e145342648869c7dc2e1de924": {
+      "workers": {
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "makeUnitPrivate"
+    },
+    "40073c26988292fd8e699ea9d0777e3e3733a78f44": {
+      "workers": {
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "deleteUnit"
+    },
+    "404e9320b21a118f1e5e5455867bef24cfe04c36e9": {
+      "workers": {
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/library.ts",
+      "exportedName": "removeUnitFromLibrary"
+    },
+    "403d58f40f8f1ed062d6893ca4f00260bb614faa2f": {
+      "workers": {
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "createManualUnit"
+    },
+    "40f6a702cc39c4605e1efd2303fffed01df12be343": {
+      "workers": {
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "makeCoursePublic"
+    },
+    "40993ddcf654d5344e871a5eacb41b619625bf6572": {
+      "workers": {
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "makeCoursePrivate"
+    },
+    "40258d9383ba35d486ad6508dc4f784be6ad11f792": {
+      "workers": {
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "deleteCourse"
+    },
+    "6028cd183c6c0c082bec9904b856b1e81604401159": {
+      "workers": {
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "updateCourseTitle"
+    },
+    "405a09eb95476c2b2726ad7333af2c6ebb10d338d4": {
+      "workers": {
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/library.ts",
+      "exportedName": "removeCourseFromLibrary"
+    },
+    "40b874980fcfff3c289b6963cb89b11bc96e3e8d8a": {
+      "workers": {
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "createCourse"
+    },
+    "400cdac444787ebccee9cfcfa10443595ea9b992e6": {
+      "workers": {
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "fetchCourseManagementData"
+    },
+    "607fb1057839bbc192959ce766359dae0c63848230": {
+      "workers": {
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "addUnitToCourse"
+    },
+    "4013c6091ce704abc5c287efefd95510894e90a9d4": {
+      "workers": {
+        "app/(main)/library/page": {
+          "moduleId": 290617,
+          "async": false
+        },
+        "app/(main)/units/page": {
+          "moduleId": 715708,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "removeUnitFromCourse"
+    },
+    "400f46dc6d2a6801148931fc29f7d662653f1c16fe": {
+      "workers": {
+        "app/(main)/library/[courseId]/page": {
+          "moduleId": 586534,
+          "async": false
+        },
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/units/[courseId]/page": {
+          "moduleId": 335045,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/library.ts",
+      "exportedName": "addCourseToLibrary"
+    },
+    "40ac84f55c794a38645fbb34767fcd77a05a954762": {
+      "workers": {
+        "app/(main)/library/browse/page": {
+          "moduleId": 627335,
+          "async": false
+        },
+        "app/(main)/units/browse/page": {
+          "moduleId": 783218,
+          "async": false
+        },
+        "app/(public-or-auth)/unit/[unitId]/page": {
+          "moduleId": 191214,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/library.ts",
+      "exportedName": "addUnitToLibrary"
+    },
+    "605310056afb4510c27f165797803866f2d9ac40a9": {
+      "workers": {
+        "app/(main)/library/edit-course/[courseId]/page": {
+          "moduleId": 484635,
+          "async": false
+        },
+        "app/(main)/library/edit/[unitId]/page": {
+          "moduleId": 37507,
+          "async": false
+        },
+        "app/(main)/units/edit/[unitId]/page": {
+          "moduleId": 967931,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/units.ts",
+      "exportedName": "updateUnitMarkdown"
+    },
+    "00e219b6af6dae9eb7f41fe5b472f1dc01207aa3d9": {
+      "workers": {
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/teacher.ts",
+      "exportedName": "getStudentsList"
+    },
+    "60f1e426524fd198569e08fe19189c350c5ca24687": {
+      "workers": {
+        "app/(main)/progress/page": {
+          "moduleId": 261057,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/teacher.ts",
+      "exportedName": "getStudentSrsDeck"
+    },
+    "003a2327f2b96af6b7445cf6425c67310ad9252d00": {
+      "workers": {
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/tts-settings.ts",
+      "exportedName": "getVoiceSettings"
+    },
+    "40015067dd89f5b15ed928ce0f0b2e1acac81a073a": {
+      "workers": {
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/tts-settings.ts",
+      "exportedName": "previewVoiceAudio"
+    },
+    "4080eef7af2804a5d69428ebe809b77eba9ccdcdde": {
+      "workers": {
+        "app/(main)/settings/page": {
+          "moduleId": 590022,
+          "async": false
+        }
+      },
+      "filename": "lib/actions/tts-settings.ts",
+      "exportedName": "saveVoiceSettings"
+    }
+  },
+  "edge": {},
+  "encryptionKey": "VXSvrrhpz61Mzc9X0orY5qDjDVLOwx/BVrE8E75jGf4="
+}

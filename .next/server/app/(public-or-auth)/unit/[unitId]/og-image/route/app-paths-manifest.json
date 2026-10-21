@@ -1,0 +1,3 @@
+{
+  "/(public-or-auth)/unit/[unitId]/og-image/route": "app/(public-or-auth)/unit/[unitId]/og-image/route.js"
+}

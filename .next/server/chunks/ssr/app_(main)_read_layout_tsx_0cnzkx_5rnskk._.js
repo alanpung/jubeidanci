@@ -1,0 +1,3 @@
+module.exports=[518773,a=>{"use strict";var b=a.i(907997);a.i(570396);var c=a.i(673727),d=a.i(618110),e=a.i(389637);async function f({children:a}){let g=await (0,d.k)();return(0,e.isAdminEmail)(g.user.email)||(0,c.redirect)("/library"),(0,b.jsx)(b.Fragment,{children:a})}a.s(["default",0,f])},429603,function(a){a.n(a.i(518773))}];
+
+//# sourceMappingURL=app_%28main%29_read_layout_tsx_0cnzkx_5rnskk._.js.map

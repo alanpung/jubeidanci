@@ -40,12 +40,11 @@ export function LessonView({
 }: LessonViewProps) {
   const router = useRouter();
   const [showComplete, setShowComplete] = useState(false);
+  // Only perfectScore is rendered on the completion screen; the SRS word
+  // counters come back from the background action but are intentionally not
+  // shown here (see LessonCompleteModal).
   const [lessonResult, setLessonResult] = useState<{
     perfectScore: boolean;
-    wordsLearned?: number;
-    wordsMastered?: number;
-    wordsPracticed?: number;
-    wordsAdded?: number;
   } | null>(null);
 
   const [backUrl, setBackUrl] = useState<string>(() => {
@@ -130,10 +129,6 @@ export function LessonView({
         perfectScore={lessonResult?.perfectScore ?? mistakeCount === 0}
         totalExercises={totalExercises}
         mistakeCount={mistakeCount}
-        wordsLearned={lessonResult?.wordsLearned ?? 0}
-        wordsMastered={lessonResult?.wordsMastered ?? 0}
-        wordsPracticed={lessonResult?.wordsPracticed ?? 0}
-        wordsAdded={lessonResult?.wordsAdded ?? 0}
         onContinue={handleReturn}
       />
     );

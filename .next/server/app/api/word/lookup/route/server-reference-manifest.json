@@ -1,0 +1,35 @@
+{
+  "node": {
+    "007d9e33ad4ca396ccd081c7c5261a951d55567df2": {
+      "workers": {
+        "app/api/word/lookup/route": {
+          "moduleId": 452030,
+          "async": false
+        }
+      },
+      "exportedName": "getProfileData",
+      "filename": "lib/actions/profile.ts"
+    },
+    "402d0b8bcfe1bd7887e46ea193e41b36ebe3425f5f": {
+      "workers": {
+        "app/api/word/lookup/route": {
+          "moduleId": 452030,
+          "async": false
+        }
+      },
+      "exportedName": "updateNativeLanguage",
+      "filename": "lib/actions/profile.ts"
+    },
+    "40b6116ceb4e5ce48c8623de9b7fecb04713248936": {
+      "workers": {
+        "app/api/word/lookup/route": {
+          "moduleId": 452030,
+          "async": false
+        }
+      },
+      "exportedName": "getNativeLanguage",
+      "filename": "lib/actions/profile.ts"
+    }
+  },
+  "edge": {}
+}

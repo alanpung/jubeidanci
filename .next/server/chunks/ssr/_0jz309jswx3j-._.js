@@ -1,0 +1,3 @@
+module.exports=[[563073,a=>{var b=a.i(907997),c=a.i(526130),d=a.i(179938);async function e({children:a}){let f=await (0,c.k)();return(0,b.jsx)(d.ChatLayout,{conversations:f,children:a})}a.s(["default",0,e])},308882,a=>{let b=(0,a.i(211857).registerClientReference)(function(){throw Error("Attempted to call ChatLayout() from the server but ChatLayout is on the client. It's not possible to invoke a client function from the server, it can only be rendered as a Component or passed to props of a Client Component.")},"[project]/components/chat/chat-layout.tsx","ChatLayout");a.s(["ChatLayout",0,b])},179938,a=>{var b=a.i(308882);a.n(b)}],73513,function(a){a.n(a.i(563073))}];
+
+//# sourceMappingURL=_0jz309jswx3j-._.js.map

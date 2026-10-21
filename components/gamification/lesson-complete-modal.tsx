@@ -3,20 +3,12 @@
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
-import { BookOpen, Target, Award, Loader2 } from "lucide-react";
+import { Target, Award, Loader2 } from "lucide-react";
 
 interface LessonCompleteModalProps {
   perfectScore: boolean;
   totalExercises?: number;
   mistakeCount?: number;
-  wordsLearned?: number;
-  wordsMastered?: number;
-  wordsPracticed?: number;
-  /** Absolute count of distinct words that are now in the learner's active
-   *  vocabulary (learning or mastered) as a result of this lesson. Computed
-   *  server-side so it never collapses to a misleading 0 just because the
-   *  words were already past "new". */
-  wordsAdded?: number;
   onContinue: () => void;
 }
 
@@ -24,10 +16,6 @@ export function LessonCompleteModal({
   perfectScore,
   totalExercises = 5,
   mistakeCount = 0,
-  wordsLearned = 0,
-  wordsMastered = 0,
-  wordsPracticed = 0,
-  wordsAdded,
   onContinue,
 }: LessonCompleteModalProps) {
   const [isNavigating, setIsNavigating] = useState(false);
@@ -35,24 +23,6 @@ export function LessonCompleteModal({
   const accuracy = totalExercises > 0
     ? Math.max(0, Math.round(((totalExercises - mistakeCount) / totalExercises) * 100))
     : 100;
-
-  // Prefer the server-computed absolute count (distinct words now active) so a
-  // lesson of already-learning words still reports a meaningful number. Fall
-  // back to the delta sum only if the server value is unavailable.
-  const addedCount =
-    typeof wordsAdded === "number" && wordsAdded > 0
-      ? wordsAdded
-      : wordsLearned + wordsMastered;
-  const breakdown =
-    wordsLearned > 0 && wordsMastered > 0
-      ? `${wordsLearned} new · ${wordsMastered} mastered`
-      : wordsMastered > 0
-        ? `${wordsMastered} mastered`
-        : wordsLearned > 0
-          ? `${wordsLearned} new in learning`
-          : wordsPracticed > 0
-            ? `${wordsPracticed} reviewed`
-            : "no words recorded";
 
   function handleContinue() {
     if (isNavigating) return;
@@ -106,22 +76,12 @@ export function LessonCompleteModal({
             : "Great job! You completed all exercises."}
         </p>
 
-        {/* Stats Grid */}
-        <div className="grid grid-cols-2 gap-3 mb-6">
-          {/* Words Added Card */}
-          <div className="rounded-2xl border-2 border-sky-200 bg-sky-50/80 p-3 flex flex-col items-center justify-center text-sky-900 dark:bg-sky-950/30 dark:border-sky-800 dark:text-sky-200">
-            <div className="flex items-center gap-1 mb-0.5">
-              <BookOpen className="w-4 h-4 text-sky-500" />
-              <span className="text-[11px] font-black uppercase tracking-wider text-sky-700 dark:text-sky-300">
-                Words Added
-              </span>
-            </div>
-            <span className="text-xl sm:text-2xl font-black">{addedCount}</span>
-            <span className="text-[10px] sm:text-[11px] font-semibold text-sky-700/80 dark:text-sky-300/80 mt-0.5 text-center leading-tight">
-              {breakdown}
-            </span>
-          </div>
-
+        {/* Stats Grid — accuracy only. The "Words Added" tile was removed: the
+            count is computed in a background server action that lands AFTER
+            this screen renders, so it always showed a misleading 0 first and
+            then jumped (67 -> 0 across refreshes). The authoritative,
+            persistent figures live on the Progress page. */}
+        <div className="grid grid-cols-1 gap-3 mb-6">
           {/* Accuracy Card */}
           <div className="rounded-2xl border-2 border-emerald-200 bg-emerald-50/80 p-3 flex flex-col items-center justify-center text-emerald-900 dark:bg-emerald-950/30 dark:border-emerald-800 dark:text-emerald-200">
             <div className="flex items-center gap-1 mb-0.5">

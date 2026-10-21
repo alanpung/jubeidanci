@@ -8,6 +8,7 @@ import {
   dailyActivity,
   userUnitLibrary,
   userCourseEnrollment,
+  user,
 } from "@/lib/db/schema";
 import { eq, sql } from "drizzle-orm";
 import { requireSession } from "@/lib/auth-server";
@@ -38,6 +39,29 @@ export async function completeLesson(input: CompleteLessonInput) {
 
   const perfectScore = input.mistakeCount === 0;
   const today = new Date().toISOString().split("T")[0];
+
+  // Fail loudly if this identity has no `user` row. srs_card.user_id and
+  // lesson_completion.user_id are FKs to user.id, so writing under an id that
+  // only exists in a cookie (the old fallback-auth path minted
+  // user_<hex(email)>) threw a foreign-key error that was swallowed by the
+  // surrounding try/catch — the lesson looked complete but recorded nothing.
+  // Better to record locally and say so than to silently lose the practice.
+  let userRowExists = true;
+  if (hasDbConfig) {
+    try {
+      const [row] = await db.select({ id: user.id }).from(user).where(eq(user.id, userId));
+      userRowExists = Boolean(row);
+    } catch (err) {
+      // Can't verify (DB hiccup) — assume fine and let the real writes try.
+      console.warn("completeLesson: could not verify user row:", err);
+    }
+  }
+  if (!userRowExists) {
+    console.error(
+      `[lesson] completeLesson: session user "${userId}" has no row in the user table. ` +
+        `SRS/lesson rows cannot be persisted (FK violation). Re-authenticating will fix this.`,
+    );
+  }
 
   // 1. Fetch unit reliably from DB or filesystem registry
   const unitData = await getUnitWithContent(input.unitId);
@@ -118,7 +142,7 @@ export async function completeLesson(input: CompleteLessonInput) {
   let wordsPracticed = 0;
   let wordsAdded = 0;
   let srsError: string | null = null;
-  if (practicesToRecord.length > 0) {
+  if (practicesToRecord.length > 0 && userRowExists) {
     try {
       const result = await recordWordPracticeBatch(
         userId,
@@ -166,7 +190,7 @@ export async function completeLesson(input: CompleteLessonInput) {
   // not the flaky isDbAvailable() probe — same cold-start fix as
   // recordWordPracticeBatch, so lesson / streak / stats rows are attempted even
   // when the probe is inconclusive (a genuine failure is swallowed below).
-  if (hasDbConfig) {
+  if (hasDbConfig && userRowExists) {
     try {
       const [completion] = await db
         .insert(lessonCompletion)
@@ -268,6 +292,14 @@ async function autoAddToLibrary(
   unitRow: { id: string; courseId: string | null; visibility: string | null; createdBy: string | null } | undefined
 ) {
   if (!unitRow) return;
+  // Enrollment tables also FK to user.id; skip rather than throw when the
+  // identity is unknown.
+  try {
+    const [row] = await db.select({ id: user.id }).from(user).where(eq(user.id, userId));
+    if (!row) return;
+  } catch {
+    return;
+  }
   if (unitRow.courseId) {
     // Automatically record course enrollment so course appears in user's library and stays enrolled
     try {

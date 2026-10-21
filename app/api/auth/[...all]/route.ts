@@ -1,21 +1,27 @@
 import { auth } from "@/lib/auth";
-import { isDbAvailable } from "@/lib/db";
+import { hasDbConfig } from "@/lib/db";
 import { toNextJsHandler } from "better-auth/next-js";
 import { NextRequest, NextResponse } from "next/server";
 
 const defaultHandler = toNextJsHandler(auth);
 
+// Gate on hasDbConfig (a static env check), NOT the isDbAvailable() probe.
+// The probe races the 10s connect handshake and false-negatives on a cold
+// serverless instance, which sent sign-in/sign-out to handleFallbackAuth and
+// fabricated a cookie identity (user_<hex(email)>) that has no matching row in
+// the `user` table. Every SRS write under that id then died on the
+// srs_card.user_id foreign key — which is exactly why the learner's practice
+// vanished on logout/login. hasDbConfig cannot lie, and if the DB is truly
+// down the fallback below still applies.
 export async function GET(req: NextRequest) {
-  const dbUp = await isDbAvailable();
-  if (dbUp) {
+  if (hasDbConfig) {
     return defaultHandler.GET(req);
   }
   return handleFallbackAuth(req);
 }
 
 export async function POST(req: NextRequest) {
-  const dbUp = await isDbAvailable();
-  if (dbUp) {
+  if (hasDbConfig) {
     return defaultHandler.POST(req);
   }
   return handleFallbackAuth(req);

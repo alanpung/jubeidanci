@@ -107,9 +107,14 @@ export async function getLocalCards(
 ): Promise<SrsCardRecord[]> {
   const cards = await ensureStore();
   return cards.filter((c) => {
+    // Strict per-user isolation. This used to also accept "default_user" and
+    // "user_demo_123" rows for *any* caller, so a card written under the demo
+    // identity leaked into every learner's deck (and vice versa). Combined with
+    // getSession()'s cold-start fallback to DEMO_USER, that made the counts
+    // depend on which identity a given lambda happened to resolve.
     if (userId && userId !== "default_user") {
       const cardUser = c.userId || "default_user";
-      if (cardUser !== userId && cardUser !== "default_user" && cardUser !== "user_demo_123") {
+      if (cardUser !== userId) {
         return false;
       }
     }
