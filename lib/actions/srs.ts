@@ -1587,7 +1587,12 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
   const promise = (async () => {
     try {
       const { getLocalCourseEnrollments, addLocalCourseEnrollment, upsertLocalCardsBatch } = await import("@/lib/srs-store");
-      const dbUp = await isDbAvailable();
+      // Gate on hasDbConfig, NOT the isDbAvailable() probe. A cold-start
+      // false-negative here used to make dbUp=false, which pushed this function
+      // down the "no enrollments" branch and DELETED the user's new/0-rep
+      // cards (see the delete below) even though they were perfectly valid.
+      // hasDbConfig cannot lie: the DB URL is present or it isn't.
+      const dbUp = hasDbConfig;
 
       // Automatically purge junk / non-word scraped entries from database
       if (dbUp) {
@@ -1604,6 +1609,9 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
 
       // 1. Get enrolled course IDs and standalone unit IDs for this user
       const enrolledCourseIds = new Set<string>();
+      // Tracks whether the enrollment lookups below actually succeeded, so the
+      // destructive prune further down only runs on trustworthy emptiness.
+      let enrollmentLookupOk = false;
 
       if (dbUp) {
         try {
@@ -1621,6 +1629,7 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
           createdCourses.forEach((c) => {
             if (!SYSTEM_COURSE_IDS.includes(c.id)) enrolledCourseIds.add(c.id);
           });
+          enrollmentLookupOk = true;
         } catch {}
       }
 
@@ -1639,11 +1648,16 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
             if (u.courseId) enrolledCourseIds.add(u.courseId);
             else standaloneUnitIds.add(u.unitId);
           }
+          enrollmentLookupOk = true;
         } catch {}
       }
 
       if (enrolledCourseIds.size === 0 && standaloneUnitIds.size === 0) {
-        if (dbUp) {
+        // Only prune if we can trust the emptiness — i.e. the DB was reachable
+        // and the enrollment queries actually succeeded. A swallowed query error
+        // would otherwise look identical to "user has no courses" and wipe the
+        // user's new cards.
+        if (dbUp && enrollmentLookupOk) {
           try {
             await db.delete(srsCard).where(
               and(

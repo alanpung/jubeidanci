@@ -13,7 +13,14 @@ export default async function ProgressPage() {
   const isAdmin = isAdminEmail(session?.user?.email);
   const language = (await getTargetLanguage()) || "en";
 
-  const srsCards = await getAllCards(language, session?.user?.id).catch((err) => {
+  // Read the learner's ENTIRE deck, every language. The Progress "My Words /
+  // Mastered / Learning / New" tiles are a personal total, not a per-language
+  // view. Filtering by a single language here hid cards whenever the unit's
+  // targetLanguage (used on write) differed from the user's global preference
+  // (used on read) — the rows were in Postgres but the UI showed 0. Reading
+  // without a language filter makes the page authoritative and guarantees it
+  // matches the "Refresh SRS Data" endpoint, which now reads the same way.
+  const srsCards = await getAllCards(undefined, session?.user?.id).catch((err) => {
     console.error("[progress] getAllCards failed, showing empty deck:", err);
     return [];
   });

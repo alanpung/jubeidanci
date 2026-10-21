@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { getSession } from "@/lib/auth-server";
 import { getAllCards } from "@/lib/actions/srs";
-import { db, isDbAvailable, hasDbConfig } from "@/lib/db";
+import { db, hasDbConfig } from "@/lib/db";
 import { srsCard } from "@/lib/db/schema";
 import { eq, sql } from "drizzle-orm";
 
@@ -21,19 +21,8 @@ export async function GET(request: Request) {
     );
   }
 
-  // Match the Progress page's read path exactly: when the client passes the
-  // active language we forward it to getAllCards() so the refresh deck is
-  // filtered identically (same aliases, same merge) instead of a broader,
-  // language-agnostic pull that could disagree with the rendered page.
-  let language: string | undefined;
-  try {
-    const params = new URL(request.url).searchParams;
-    const lang = params.get("lang");
-    if (lang) language = lang;
-  } catch {}
-
-  // Gate on hasDbConfig, not the flaky cold-start probe: a false-negative would
-  // make the refresh endpoint report 0 rows and an empty deck.
+  // Raw DB row count for this user (no language filter) — the ground truth we
+  // compare the merged deck against, so "0 cards" is always diagnosable.
   const dbUp = hasDbConfig;
   let dbRowCount: number | null = null;
   let dbError: string | null = null;
@@ -49,7 +38,14 @@ export async function GET(request: Request) {
     }
   }
 
-  const cards = await getAllCards(language, userId).catch((err) => {
+  // Read the learner's whole deck (every language), identical to the Progress
+  // page render, so the two paths cannot diverge. We deliberately do NOT filter
+  // by ?lang= here: the SRS rows were written with the unit's targetLanguage
+  // while this endpoint used to filter by the user's global preference, so a
+  // mismatch returned an empty deck even though Postgres had the rows. Omitting
+  // the language makes the deck authoritative and language-agnostic, so it can
+  // never disagree with the page.
+  const cards = await getAllCards(undefined, userId).catch((err) => {
     console.error("[srs-cards] getAllCards failed:", err);
     return [];
   });
