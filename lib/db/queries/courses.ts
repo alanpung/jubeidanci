@@ -188,23 +188,7 @@ export async function listCoursesWithLessonCounts(
   if (courses.length === 0) return courses;
 
   const courseIds = courses.map((c) => c.id);
-  const lessonCountByCourse = new Map<string, number>();
-
-  try {
-    const units = await db
-      .select({ id: unit.id, courseId: unit.courseId, markdown: unit.markdown })
-      .from(unit)
-      .where(inArray(unit.courseId, courseIds));
-
-    for (const u of units) {
-      if (!u.courseId) continue;
-      const count = getUnitLessonCountFast(u.markdown ?? "");
-      const prev = lessonCountByCourse.get(u.courseId) ?? 0;
-      lessonCountByCourse.set(u.courseId, prev + count);
-    }
-  } catch (err) {
-    console.warn("listCoursesWithLessonCounts: unit query failed:", err);
-  }
+  const lessonCountByCourse = await computeLessonCountByCourse(courseIds);
 
   let enrolledCourseIds = new Set<string>();
   if (userId) {
@@ -254,6 +238,61 @@ const courseMemoryCache = new Map<string, { data: Course; expiresAt: number }>()
 export function clearContentCache() {
   unitMemoryCache.clear();
   courseMemoryCache.clear();
+}
+
+// ---------------------------------------------------------------------------
+// Lesson-count cache
+//
+// listCoursesWithLessonCounts previously paid for fetching *every* unit's
+// markdown from Postgres and counting lessonTitle headers on EACH /library
+// load. With a large content library that DB scan + transfer blows past the
+// serverless timeout and the page just hangs. Lesson counts change rarely, so
+// cache the result per course-set, and dedupe concurrent in-flight computes so
+// a burst of navigations hits the database only once.
+const LESSON_COUNT_TTL_MS = 60_000;
+const lessonCountCache = new Map<string, { ts: number; value: Map<string, number> }>();
+const lessonCountInFlight = new Map<string, Promise<Map<string, number>>>();
+
+async function computeLessonCountByCourse(
+  courseIds: string[],
+): Promise<Map<string, number>> {
+  const key = [...courseIds].sort().join("|");
+  const now = Date.now();
+  const cached = lessonCountCache.get(key);
+  if (cached && now - cached.ts < LESSON_COUNT_TTL_MS) return cached.value;
+
+  const existing = lessonCountInFlight.get(key);
+  if (existing) return existing;
+
+  const run = (async () => {
+    const map = new Map<string, number>();
+    try {
+      const units = await db
+        .select({
+          id: unit.id,
+          courseId: unit.courseId,
+          markdown: unit.markdown,
+        })
+        .from(unit)
+        .where(inArray(unit.courseId, courseIds));
+
+      for (const u of units) {
+        if (!u.courseId) continue;
+        const count = getUnitLessonCountFast(u.markdown ?? "");
+        map.set(u.courseId, (map.get(u.courseId) ?? 0) + count);
+      }
+      lessonCountCache.set(key, { ts: Date.now(), value: map });
+      return map;
+    } catch (err) {
+      console.warn("computeLessonCountByCourse: unit query failed:", err);
+      return map;
+    } finally {
+      lessonCountInFlight.delete(key);
+    }
+  })();
+
+  lessonCountInFlight.set(key, run);
+  return run;
 }
 
 export async function getCourseWithContent(
