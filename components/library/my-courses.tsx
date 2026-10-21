@@ -398,7 +398,7 @@ function OwnedCourseCard({
             <Link
               href={
                 course.firstUnitId
-                  ? `/library/edit/${course.firstUnitId}`
+                  ? `/library/edit-course/${course.id}`
                   : `/library/${course.id}`
               }
               className="inline-flex items-center gap-1.5 rounded-lg px-3 py-1.5 text-xs font-bold text-lingo-blue hover:bg-lingo-blue/10 transition-colors"

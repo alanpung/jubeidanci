@@ -1130,3 +1130,69 @@ export async function getUserOwnedStandaloneUnits(
 
   return naturalSortUnits(mapped);
 }
+
+/**
+ * Owner-or-admin variant that returns the raw unit markdown for every unit in
+ * a course so the whole course can be opened in the markdown editor at once.
+ * Used by `/library/edit-course/[courseId]` which lists every unit and offers
+ * Unit # / Lesson # filters — the single-unit shortcut (`/library/edit/[unitId]`)
+ * only ever edits one unit, but a course can easily have 10+ units × 10 lessons.
+ */
+export interface CourseMarkdownForEdit {
+  id: string;
+  title: string;
+  units: {
+    id: string;
+    title: string;
+    icon: string | null;
+    markdown: string;
+    lessonCount: number;
+  }[];
+}
+
+export async function getCourseMarkdownForEdit(
+  courseId: string,
+  userId: string,
+  isAdmin: boolean,
+): Promise<CourseMarkdownForEdit | null> {
+  if (!(await isDbAvailable())) return null;
+
+  const [courseRow] = await db
+    .select({
+      id: course.id,
+      title: course.title,
+      createdBy: course.createdBy,
+    })
+    .from(course)
+    .where(eq(course.id, courseId));
+
+  if (!courseRow) return null;
+  if (courseRow.createdBy !== userId && !isAdmin) return null;
+
+  const units = await db
+    .select({
+      id: unit.id,
+      title: unit.title,
+      icon: unit.icon,
+      markdown: unit.markdown,
+    })
+    .from(unit)
+    .where(eq(unit.courseId, courseId));
+
+  return {
+    id: courseRow.id,
+    title: courseRow.title,
+    units: naturalSortUnits(
+      units.map((u) => {
+        const { lessons } = getUnitLessonsSafe(u.markdown ?? "");
+        return {
+          id: u.id,
+          title: u.title ?? "Untitled",
+          icon: u.icon ?? null,
+          markdown: u.markdown ?? "",
+          lessonCount: lessons.length,
+        };
+      }),
+    ),
+  };
+}
