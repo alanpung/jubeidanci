@@ -67,7 +67,9 @@ export function ProgressView({
     setRefreshError(null);
     setRefreshNote(null);
     try {
-      const res = await fetch("/api/srs-cards", { cache: "no-store" });
+      const res = await fetch(`/api/srs-cards?lang=${encodeURIComponent(language)}`, {
+        cache: "no-store",
+      });
       const data = await res.json();
       if (!res.ok || !data.ok) {
         setRefreshError(data.error || `HTTP ${res.status}`);

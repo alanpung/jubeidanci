@@ -46,20 +46,17 @@ export async function completeLesson(input: CompleteLessonInput) {
   // user_<hex(email)>) threw a foreign-key error that was swallowed by the
   // surrounding try/catch — the lesson looked complete but recorded nothing.
   // Better to record locally and say so than to silently lose the practice.
-  let userRowExists = true;
-  if (hasDbConfig) {
-    try {
-      const [row] = await db.select({ id: user.id }).from(user).where(eq(user.id, userId));
-      userRowExists = Boolean(row);
-    } catch (err) {
-      // Can't verify (DB hiccup) — assume fine and let the real writes try.
-      console.warn("completeLesson: could not verify user row:", err);
-    }
-  }
+  // Ensure the `user` row exists before writing. srs_card / lesson_completion
+  // FK to user.id, so a missing row makes every Postgres insert fail and the
+  // whole lesson's progress falls through to the ephemeral server local store
+  // (/tmp) — which is exactly why "Refresh SRS Data" showed 0 while the warm
+  // instance still reported the count. If the row is missing we create it from
+  // the session instead of silently skipping the writes.
+  const userRowExists = await ensureUserRow(userId, session.user);
   if (!userRowExists) {
     console.error(
-      `[lesson] completeLesson: session user "${userId}" has no row in the user table. ` +
-        `SRS/lesson rows cannot be persisted (FK violation). Re-authenticating will fix this.`,
+      `[lesson] completeLesson: could not ensure user row "${userId}" — ` +
+        `SRS/lesson rows will not be persisted to Postgres (FK violation).`,
     );
   }
 
@@ -284,6 +281,47 @@ async function upsertUserStats(userId: string, today: string) {
       lastPracticeDate: today,
       totalLessonsCompleted: totalCompleted,
     });
+  }
+}
+
+async function ensureUserRow(
+  userId: string,
+  sessionUser?: { name?: string | null; email?: string | null } | null
+): Promise<boolean> {
+  if (!hasDbConfig) return true;
+  try {
+    const [row] = await db.select({ id: user.id }).from(user).where(eq(user.id, userId));
+    if (row) return true;
+
+    const email = sessionUser?.email;
+    if (!email) {
+      console.error(`[lesson] ensureUserRow: cannot create user "${userId}" — session has no email`);
+      return false;
+    }
+
+    // Row is missing: create it from the authenticated session so the FK on
+    // srs_card / lesson_completion passes and the learner's progress is
+    // actually persisted to Postgres (not just the ephemeral /tmp store).
+    await db
+      .insert(user)
+      .values({
+        id: userId,
+        name: sessionUser?.name || email,
+        email,
+        emailVerified: false,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      })
+      .onConflictDoNothing();
+
+    const [after] = await db.select({ id: user.id }).from(user).where(eq(user.id, userId));
+    return Boolean(after);
+  } catch (err) {
+    // A unique-email collision (row exists under a different id) or any other
+    // failure: don't throw — just report and let the local-store fallback keep
+    // the progress visible on the warm instance.
+    console.warn(`[lesson] ensureUserRow failed for "${userId}":`, err);
+    return false;
   }
 }
 
