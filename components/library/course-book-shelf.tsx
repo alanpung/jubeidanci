@@ -7,7 +7,6 @@ import { Plus, X, MoreHorizontal, Globe, Lock, Pencil, Trash2, FolderOpen } from
 import type { CourseListItem } from "@/lib/content/types";
 import {
   CourseLevelIcon,
-  getCourseLevelStyle,
   QUESTION_TYPE_LEGEND,
   LEVEL_LEGEND,
 } from "@/components/library/course-level-icon";
@@ -34,10 +33,13 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
   const [showCreate, setShowCreate] = useState(false);
   const [, startTransition] = useTransition();
 
-  const borrowed = courses
-    .filter((c) => borrowedIds.has(c.id))
-    .slice(0, BORROW_CAP);
-  const catalog = courses;
+  // Only the books we actually show on the top shelf are hidden below. Slicing
+  // first and filtering by that same set matters: if someone somehow has more
+  // than BORROW_CAP saved, the overflow must still be listed underneath rather
+  // than vanishing (it would be unreachable — no + on top, absent below).
+  const borrowed = courses.filter((c) => borrowedIds.has(c.id)).slice(0, BORROW_CAP);
+  const shownIds = new Set(borrowed.map((c) => c.id));
+  const catalog = courses.filter((c) => !shownIds.has(c.id));
 
   function borrow(course: CourseListItem) {
     if (borrowedIds.size >= BORROW_CAP) {
@@ -88,7 +90,7 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
   return (
     <div>
       {isAdmin && (
-        <div className="mb-4">
+        <div className="mb-6">
           <button
             onClick={() => setShowCreate(!showCreate)}
             className="rounded-xl border-2 border-lingo-border bg-white px-3 py-1.5 text-xs font-bold text-lingo-text shadow-[0_2px_0_0] shadow-lingo-border transition-all hover:border-lingo-green hover:bg-lingo-green/5 active:translate-y-[1px] active:shadow-none"
@@ -105,7 +107,7 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
 
       {/* Upper portion: My Books (borrowed, capped at BORROW_CAP) */}
       <section>
-        <div className="mb-3 flex items-center gap-2">
+        <div className="mb-4 flex items-center gap-2">
           <h2 className="text-base font-bold text-lingo-text">My Books</h2>
           <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
             {borrowed.length}/{BORROW_CAP}
@@ -118,7 +120,7 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
             add it here for practice.
           </p>
         ) : (
-          <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-5">
+          <div className="grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 lg:grid-cols-5">
             {borrowed.map((c) => (
               <CourseBook
                 key={c.id}
@@ -134,8 +136,8 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
         )}
       </section>
 
-      {/* Thin dividing line between borrowed (rows 1-2) and the public catalog */}
-      <div className="my-6 flex items-center gap-3">
+      {/* Thin dividing line between borrowed books and the public catalog */}
+      <div className="my-7 flex items-center gap-3">
         <span className="h-px flex-1 bg-lingo-border" />
         <span className="text-[11px] font-bold uppercase tracking-wide text-lingo-text-light">
           Public Books
@@ -143,27 +145,42 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
         <span className="h-px flex-1 bg-lingo-border" />
       </div>
 
-      {/* Lower portion: all courses, rows of five */}
+      {/* Lower portion: everything not yet on the top shelf */}
       <section>
-        <h2 className="mb-3 text-base font-bold text-lingo-text">Browse All Courses</h2>
-        <div className="grid grid-cols-3 gap-3 sm:grid-cols-4 lg:grid-cols-5">
-          {catalog.map((c) => (
-            <CourseBook
-              key={c.id}
-              course={c}
-              isAdmin={isAdmin}
-              isBorrowed={borrowedIds.has(c.id)}
-              pending={pendingId === c.id}
-              onBorrow={() => borrow(c)}
-              onRemove={() => unborrow(c)}
-            />
-          ))}
+        <div className="mb-4 flex items-center gap-2">
+          <h2 className="text-base font-bold text-lingo-text">Browse All Courses</h2>
+          <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
+            {catalog.length}
+          </span>
         </div>
+
+        {catalog.length === 0 ? (
+          <p className="rounded-xl border-2 border-dashed border-lingo-border bg-white p-4 text-center text-sm text-lingo-text-light">
+            Every available book is already on your shelf.
+          </p>
+        ) : (
+          <div className="grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 lg:grid-cols-5">
+            {catalog.map((c) => (
+              <CourseBook
+                key={c.id}
+                course={c}
+                isAdmin={isAdmin}
+                isBorrowed={false}
+                pending={pendingId === c.id}
+                onBorrow={() => borrow(c)}
+                onRemove={() => unborrow(c)}
+              />
+            ))}
+          </div>
+        )}
       </section>
     </div>
   );
 }
 
+/** A single book: just the symbol (with its level badge), the title beneath it,
+ *  and the owner's controls tucked into the symbol's corners. Deliberately no
+ *  card/rectangle around it — the symbol is the whole visual. */
 function CourseBook({
   course,
   isAdmin,
@@ -184,7 +201,6 @@ function CourseBook({
   const [actionPending, startTransition] = useTransition();
   const isOwner = !!course.isOwner || isAdmin;
   const isPublic = course.visibility === "public";
-  const levelStyle = getCourseLevelStyle(course.level);
 
   function toggleVisibility() {
     const action = isPublic ? makeCoursePrivate : makeCoursePublic;
@@ -217,115 +233,114 @@ function CourseBook({
   }
 
   return (
-    <div className="group relative flex aspect-[3/4] flex-col overflow-hidden rounded-md border-2 border-lingo-border bg-white shadow-[0_2px_0_0] shadow-lingo-border transition-transform hover:-translate-y-0.5">
-      {/* Book spine */}
-      <div
-        aria-hidden
-        className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-r from-black/25 via-black/10 to-transparent"
-      />
-      {/* Level-coloured top edge */}
-      <div aria-hidden className={`absolute inset-x-0 top-0 h-1.5 ${levelStyle.bg}`} />
+    <div className="group flex flex-col items-center">
+      {/* Symbol zone — buttons are anchored to this box, not to a card */}
+      <div className="relative">
+        <Link
+          href={`/library/${course.id}`}
+          className="inline-block transition-transform hover:-translate-y-0.5"
+          title={`${course.title} · ${course.level} · ${course.unitCount} units`}
+        >
+          <CourseLevelIcon
+            level={course.level}
+            title={course.title}
+            courseId={course.id}
+            size="lg"
+          />
+        </Link>
 
-      {/* Main body links to the course detail */}
-      <Link
-        href={`/library/${course.id}`}
-        className="flex flex-1 flex-col items-center justify-center px-2 pt-3"
-        title={`${course.title} · ${course.level} · ${course.unitCount} units`}
-      >
-        <CourseLevelIcon
-          level={course.level}
-          title={course.title}
-          courseId={course.id}
-          size="lg"
-        />
-      </Link>
-
-      {/* Top-right: borrow / return */}
-      <button
-        type="button"
-        onClick={isBorrowed ? onRemove : onBorrow}
-        disabled={pending}
-        title={isBorrowed ? "Remove from My Books" : "Add to My Books"}
-        aria-label={isBorrowed ? "Remove from My Books" : "Add to My Books"}
-        className={`absolute right-1 top-1 flex h-7 w-7 items-center justify-center rounded-full border-2 transition-all disabled:opacity-50 ${
-          isBorrowed
-            ? "border-red-300 bg-white text-red-500 hover:bg-red-50"
-            : "border-lingo-blue bg-lingo-blue text-white hover:bg-lingo-blue/90 active:scale-95"
-        }`}
-      >
-        {pending ? (
-          <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
-        ) : isBorrowed ? (
-          <X className="h-4 w-4 stroke-[2.5]" />
-        ) : (
-          <Plus className="h-4 w-4 stroke-[2.5]" />
-        )}
-      </button>
-
-      {/* Bottom-left: owner controls */}
-      {isOwner && (
-        <div className="absolute bottom-1 left-1">
-          <button
-            type="button"
-            onClick={() => setMenuOpen((o) => !o)}
-            disabled={actionPending}
-            title="Course options"
-            aria-label="Course options"
-            className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 disabled:opacity-50"
-          >
-            <MoreHorizontal className="h-3.5 w-3.5" />
-          </button>
-
-          {menuOpen && (
-            <>
-              {/* Click-away backdrop */}
-              <div
-                className="fixed inset-0 z-30"
-                onClick={() => setMenuOpen(false)}
-                aria-hidden
-              />
-              <div className="absolute bottom-7 left-0 z-40 w-40 overflow-hidden rounded-lg border-2 border-lingo-border bg-white text-sm shadow-lg">
-                <button
-                  type="button"
-                  onClick={toggleVisibility}
-                  className="flex w-full items-center gap-2 px-3 py-2 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
-                >
-                  {isPublic ? (
-                    <>
-                      <Lock className="h-4 w-4" /> Make Private
-                    </>
-                  ) : (
-                    <>
-                      <Globe className="h-4 w-4" /> Make Public
-                    </>
-                  )}
-                </button>
-                <Link
-                  href={`/library/edit-course/${course.id}`}
-                  onClick={() => setMenuOpen(false)}
-                  className="flex w-full items-center gap-2 px-3 py-2 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
-                >
-                  <Pencil className="h-4 w-4" /> Edit
-                </Link>
-                <Link
-                  href={`/library/${course.id}`}
-                  onClick={() => setMenuOpen(false)}
-                  className="flex w-full items-center gap-2 px-3 py-2 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
-                >
-                  <FolderOpen className="h-4 w-4" /> Manage
-                </Link>
-                <button
-                  type="button"
-                  onClick={handleDelete}
-                  className="flex w-full items-center gap-2 border-t border-lingo-border px-3 py-2 text-left font-bold text-red-500 hover:bg-red-50"
-                >
-                  <Trash2 className="h-4 w-4" /> Delete
-                </button>
-              </div>
-            </>
+        {/* Top-right: borrow (+) / return (×) */}
+        <button
+          type="button"
+          onClick={isBorrowed ? onRemove : onBorrow}
+          disabled={pending}
+          title={isBorrowed ? "Remove from My Books" : "Add to My Books"}
+          aria-label={isBorrowed ? "Remove from My Books" : "Add to My Books"}
+          className={`absolute -right-2 -top-2 flex h-7 w-7 items-center justify-center rounded-full border-2 shadow-sm transition-all disabled:opacity-50 ${
+            isBorrowed
+              ? "border-red-300 bg-white text-red-500 hover:bg-red-50"
+              : "border-lingo-blue bg-lingo-blue text-white hover:bg-lingo-blue/90 active:scale-95"
+          }`}
+        >
+          {pending ? (
+            <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
+          ) : isBorrowed ? (
+            <X className="h-4 w-4 stroke-[2.5]" />
+          ) : (
+            <Plus className="h-4 w-4 stroke-[2.5]" />
           )}
-        </div>
-      )}
+        </button>
+
+        {/* Bottom-left of the symbol: owner controls */}
+        {isOwner && (
+          <div className="absolute -bottom-2 -left-2">
+            <button
+              type="button"
+              onClick={() => setMenuOpen((o) => !o)}
+              disabled={actionPending}
+              title="Course options"
+              aria-label="Course options"
+              className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 disabled:opacity-50"
+            >
+              <MoreHorizontal className="h-3.5 w-3.5" />
+            </button>
+
+            {menuOpen && (
+              <>
+                {/* Click-away backdrop */}
+                <div
+                  className="fixed inset-0 z-30"
+                  onClick={() => setMenuOpen(false)}
+                  aria-hidden
+                />
+                <div className="absolute bottom-7 left-0 z-40 w-40 overflow-hidden rounded-lg border-2 border-lingo-border bg-white text-sm shadow-lg">
+                  <button
+                    type="button"
+                    onClick={toggleVisibility}
+                    className="flex w-full items-center gap-2 px-3 py-2 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
+                  >
+                    {isPublic ? (
+                      <>
+                        <Lock className="h-4 w-4" /> Make Private
+                      </>
+                    ) : (
+                      <>
+                        <Globe className="h-4 w-4" /> Make Public
+                      </>
+                    )}
+                  </button>
+                  <Link
+                    href={`/library/edit-course/${course.id}`}
+                    onClick={() => setMenuOpen(false)}
+                    className="flex w-full items-center gap-2 px-3 py-2 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
+                  >
+                    <Pencil className="h-4 w-4" /> Edit
+                  </Link>
+                  <Link
+                    href={`/library/${course.id}`}
+                    onClick={() => setMenuOpen(false)}
+                    className="flex w-full items-center gap-2 px-3 py-2 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
+                  >
+                    <FolderOpen className="h-4 w-4" /> Manage
+                  </Link>
+                  <button
+                    type="button"
+                    onClick={handleDelete}
+                    className="flex w-full items-center gap-2 border-t border-lingo-border px-3 py-2 text-left font-bold text-red-500 hover:bg-red-50"
+                  >
+                    <Trash2 className="h-4 w-4" /> Delete
+                  </button>
+                </div>
+              </>
+            )}
+          </div>
+        )}
+      </div>
+
+      {/* Title beneath the symbol */}
+      <p className="mt-2.5 line-clamp-2 min-h-[2rem] w-full px-1 text-center text-xs font-semibold leading-tight text-lingo-text">
+        {course.title}
+      </p>
     </div>
   );
 }
@@ -334,8 +349,6 @@ function CourseBook({
 export function LibraryLegend() {
   return (
     <div className="rounded-2xl border-2 border-lingo-border bg-white p-4 shadow-sm">
-      <h3 className="mb-3 text-sm font-black text-lingo-text">What the symbols mean</h3>
-
       <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-lingo-text-light">
         Book type
       </p>
@@ -365,11 +378,6 @@ export function LibraryLegend() {
           </span>
         ))}
       </div>
-      <p className="mt-3 text-[11px] leading-snug text-lingo-text-light">
-        The badge in the corner of each book shows its CEFR level. Tap{" "}
-        <span className="font-black text-lingo-blue">+</span> to borrow a book onto your shelf, or{" "}
-        <span className="font-black text-red-500">×</span> to return it.
-      </p>
     </div>
   );
 }
