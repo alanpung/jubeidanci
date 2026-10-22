@@ -384,6 +384,43 @@ export const article = pgTable("article", {
   createdAt: timestamp("created_at").notNull().defaultNow(),
 });
 
+// ─── Per-student content access (teacher/owner → registered students) ───
+//
+// The owner grants an individual registered student access to one of their
+// private courses or standalone units. A private item is then visible to its
+// owner plus every student listed here; public items ignore these rows. Either
+// `courseId` or `unitId` is set (not both) — units inside a granted course are
+// covered by the course grant.
+
+export const studentAccess = pgTable(
+  "student_access",
+  {
+    id: text("id")
+      .primaryKey()
+      .$defaultFn(() => crypto.randomUUID()),
+    ownerId: text("owner_id")
+      .notNull()
+      .references(() => user.id, { onDelete: "cascade" }),
+    studentId: text("student_id")
+      .notNull()
+      .references(() => user.id, { onDelete: "cascade" }),
+    courseId: text("course_id").references(() => course.id, {
+      onDelete: "cascade",
+    }),
+    unitId: text("unit_id").references(() => unit.id, {
+      onDelete: "cascade",
+    }),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+  },
+  (table) => [
+    uniqueIndex("student_access_course_unique").on(
+      table.studentId,
+      table.courseId
+    ),
+    uniqueIndex("student_access_unit_unique").on(table.studentId, table.unitId),
+  ]
+);
+
 // ─── Relations ───
 
 export const courseRelations = relations(course, ({ many }) => ({

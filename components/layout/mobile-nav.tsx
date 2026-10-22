@@ -10,6 +10,7 @@ import {
   Languages,
   BarChart3,
   Settings,
+  Users,
 } from "lucide-react";
 
 const navItems = [
@@ -24,9 +25,14 @@ const navItems = [
 interface MobileNavProps {
   showChat?: boolean;
   showRead?: boolean;
+  isAdmin?: boolean;
 }
 
-export function MobileNav({ showChat = true, showRead = true }: MobileNavProps) {
+export function MobileNav({
+  showChat = true,
+  showRead = true,
+  isAdmin = false,
+}: MobileNavProps) {
   const pathname = usePathname();
   const isKeyboardOpen = useMobileKeyboardOpen();
 
@@ -38,10 +44,14 @@ export function MobileNav({ showChat = true, showRead = true }: MobileNavProps) 
     if (item.href === "/read" && !showRead) return false;
     return true;
   });
+  const adminItems = isAdmin
+    ? [{ href: "/library/students", label: "Students", icon: Users }]
+    : [];
+  const allItems = [...items, ...adminItems];
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-30 flex md:hidden border-t-2 border-lingo-border bg-white/95 backdrop-blur-md shadow-[0_-2px_10px_rgba(0,0,0,0.06)] pb-[env(safe-area-inset-bottom,4px)]">
-      {items.map((item) => {
+      {allItems.map((item) => {
         const active = pathname === item.href || pathname.startsWith(item.href + "/");
         const Icon = item.icon;
         return (

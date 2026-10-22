@@ -7,11 +7,11 @@ import {
 } from "@/lib/actions/srs";
 
 import { db, isDbAvailable } from "@/lib/db";
-import { unit, course, user, userUnitLibrary, userCourseEnrollment } from "@/lib/db/schema";
+import { unit, course, userUnitLibrary, userCourseEnrollment } from "@/lib/db/schema";
 import { eq, and, inArray, like, or } from "drizzle-orm";
 import { requireSession } from "@/lib/auth-server";
 import { revalidatePath } from "next/cache";
-import { isAdminEmail } from "@/lib/ai/models";
+import { canAccessUnit, canAccessCourse } from "@/lib/db/queries/courses";
 
 export async function addUnitToLibrary(
   unitId: string
@@ -52,39 +52,14 @@ export async function addUnitToLibrary(
     return { success: false, error: "Unit not found" };
   }
 
-  // Check if created by an admin
-  let isCreatedByAdmin = false;
-  if (existing.createdBy) {
-    const [creator] = await db
-      .select({ email: user.email })
-      .from(user)
-      .where(eq(user.id, existing.createdBy));
-    isCreatedByAdmin = creator?.email ? isAdminEmail(creator.email) : false;
-  }
-
-  // If in a course, check if parent course is public or created by admin
-  let isParentCoursePublic = false;
-  if (existing.courseId) {
-    const [parentCourse] = await db
-      .select({ visibility: course.visibility, createdBy: course.createdBy })
-      .from(course)
-      .where(eq(course.id, existing.courseId));
-    if (parentCourse) {
-      if (parentCourse.visibility === "public") isParentCoursePublic = true;
-      if (parentCourse.createdBy) {
-        const [courseCreator] = await db
-          .select({ email: user.email })
-          .from(user)
-          .where(eq(user.id, parentCourse.createdBy));
-        if (courseCreator?.email && isAdminEmail(courseCreator.email)) {
-          isCreatedByAdmin = true;
-        }
-      }
-    }
-  }
-
-  if (existing.visibility !== "public" && !isCreatedByAdmin && !isParentCoursePublic) {
-    return { success: false, error: "Unit is not public" };
+  // Access gate: a unit can be added if it is public, owned by the viewer, or
+  // (for course units) its parent course is shared with a group the viewer is
+  // in. Admins no longer get a blanket bypass. When the DB is unreachable we
+  // fall back to the previous open behaviour for public filesystem content.
+  const dbUp = await isDbAvailable();
+  const unitAccessible = !dbUp || (await canAccessUnit(unitId, userId));
+  if (!unitAccessible) {
+    return { success: false, error: "Unit is not available" };
   }
 
   if (existing.createdBy === userId) {
@@ -181,18 +156,13 @@ export async function addCourseToLibrary(
     return { success: true };
   }
 
-  // Check visibility or creator admin status
-  let isCreatedByAdmin = false;
-  if (existingCourse.createdBy) {
-    const [creator] = await db
-      .select({ email: user.email })
-      .from(user)
-      .where(eq(user.id, existingCourse.createdBy));
-    isCreatedByAdmin = creator?.email ? isAdminEmail(creator.email) : false;
-  }
-
-  if (existingCourse.visibility !== "public" && !isCreatedByAdmin) {
-    return { success: false, error: "Course is not public" };
+  // Access gate: a course can be added if it is public or shared with a group
+  // the viewer belongs to. Admins no longer get a blanket bypass. When the DB
+  // is unreachable we fall back to the previous open behaviour.
+  const dbUp = await isDbAvailable();
+  const courseAccessible = !dbUp || (await canAccessCourse(courseId, userId));
+  if (!courseAccessible) {
+    return { success: false, error: "Course is not available" };
   }
 
   // Insert into course enrollment (DB and local store)

@@ -6,6 +6,7 @@ import {
   lessonCompletion,
   userUnitLibrary,
   userCourseEnrollment,
+  studentAccess,
 } from "@/lib/db/schema";
 import {
   eq,
@@ -18,6 +19,7 @@ import {
   countDistinct,
   inArray,
   notInArray,
+  type SQL,
 } from "drizzle-orm";
 import type {
   Course,
@@ -68,6 +70,118 @@ interface CourseFilters {
   level?: string;
 }
 
+// ─── Per-student access helpers ───
+//
+// A private (visibility !== "public") course is reachable by: its owner, or any
+// registered student the owner has explicitly granted via `studentAccess`.
+// Public items are reachable by everyone. These helpers back the list/detail
+// queries and the unit/course access gates so the rule lives in exactly one place.
+
+/** Course ids the owner has granted to `userId` (owner/public added by caller). */
+export async function getGrantedCourseIds(
+  userId: string
+): Promise<Set<string>> {
+  if (!userId) return new Set();
+  if (!(await isDbAvailable())) return new Set();
+  try {
+    const rows = await db
+      .select({ courseId: studentAccess.courseId })
+      .from(studentAccess)
+      .where(
+        and(
+          eq(studentAccess.studentId, userId),
+          sql`${studentAccess.courseId} is not null`
+        )
+      );
+    return new Set(rows.map((r) => r.courseId).filter(Boolean) as string[]);
+  } catch (err) {
+    console.warn("getGrantedCourseIds failed:", err);
+    return new Set();
+  }
+}
+
+/** Standalone unit ids the owner has granted to `userId`. */
+export async function getGrantedUnitIds(
+  userId: string
+): Promise<Set<string>> {
+  if (!userId) return new Set();
+  if (!(await isDbAvailable())) return new Set();
+  try {
+    const rows = await db
+      .select({ unitId: studentAccess.unitId })
+      .from(studentAccess)
+      .where(
+        and(
+          eq(studentAccess.studentId, userId),
+          sql`${studentAccess.unitId} is not null`
+        )
+      );
+    return new Set(rows.map((r) => r.unitId).filter(Boolean) as string[]);
+  } catch (err) {
+    console.warn("getGrantedUnitIds failed:", err);
+    return new Set();
+  }
+}
+
+/**
+ * Whether `userId` may open a unit. Standalone units follow their own
+ * visibility (public, owner, or explicitly granted); course units follow the
+ * parent course's access rule (public, owner, or a granted course).
+ */
+export async function canAccessUnit(
+  unitId: string,
+  userId?: string
+): Promise<boolean> {
+  if (!(await isDbAvailable())) return false;
+  const [u] = await db
+    .select({
+      id: unit.id,
+      visibility: unit.visibility,
+      createdBy: unit.createdBy,
+      courseId: unit.courseId,
+    })
+    .from(unit)
+    .where(eq(unit.id, unitId));
+  if (!u) return false;
+
+  // Standalone unit: public, owner, or explicitly granted to this user.
+  if (!u.courseId) {
+    if (u.visibility === "public") return true;
+    if (!userId) return false;
+    if (u.createdBy === userId) return true;
+    return (await getGrantedUnitIds(userId)).has(u.id);
+  }
+
+  // Course unit: access is governed by the parent course.
+  const [c] = await db
+    .select({ visibility: course.visibility, createdBy: course.createdBy })
+    .from(course)
+    .where(eq(course.id, u.courseId));
+  if (!c) return false;
+  if (c.visibility === "public") return true;
+  if (!userId) return false;
+  if (c.createdBy === userId) return true;
+  return (await getGrantedCourseIds(userId)).has(u.courseId);
+}
+
+/** Same rule as canAccessUnit but for a course id directly. */
+export async function canAccessCourse(
+  courseId: string,
+  userId?: string
+): Promise<boolean> {
+  if (!(await isDbAvailable())) return false;
+  const [c] = await db
+    .select({ visibility: course.visibility, createdBy: course.createdBy })
+    .from(course)
+    .where(eq(course.id, courseId));
+  if (!c) return false;
+  if (c.visibility === "public") return true;
+  if (!userId) return false;
+  if (c.createdBy === userId) return true;
+  return (await getGrantedCourseIds(userId)).has(courseId);
+}
+
+
 export async function listCourses(
   filters?: CourseFilters,
   userId?: string
@@ -81,14 +195,19 @@ export async function listCourses(
   try {
     const conditions = [eq(course.published, true)];
 
-    // Course-level visibility: public OR owned by the current user
+    // Course-level visibility: public, owned by the viewer, or explicitly
+    // granted to the viewer via `studentAccess`. Admins no longer get a blanket
+    // bypass — a private course is only reachable by its owner and the students
+    // the owner has shared it with.
+    const visibilityConds = [eq(course.visibility, "public")];
     if (userId) {
-      conditions.push(
-        or(eq(course.visibility, "public"), eq(course.createdBy, userId))!
-      );
-    } else {
-      conditions.push(eq(course.visibility, "public"));
+      visibilityConds.push(eq(course.createdBy, userId));
+      const sharedCourseIds = [...(await getGrantedCourseIds(userId))];
+      if (sharedCourseIds.length) {
+        visibilityConds.push(inArray(course.id, sharedCourseIds));
+      }
     }
+    conditions.push(or(...visibilityConds)!);
 
     if (filters?.sourceLanguage) {
       conditions.push(eq(course.sourceLanguage, filters.sourceLanguage));
@@ -353,41 +472,17 @@ export async function getCourseWithContent(
 
     try {
       const courseConditions = [eq(course.id, courseId)];
-    let isEnrolled = false;
-    if (userId) {
-      try {
-        const enrollment = await db
-          .select({ id: userCourseEnrollment.id })
-          .from(userCourseEnrollment)
-          .where(
-            and(
-              eq(userCourseEnrollment.userId, userId),
-              eq(userCourseEnrollment.courseId, courseId)
-            )
-          )
-          .limit(1);
-        isEnrolled = enrollment.length > 0;
-        if (!isEnrolled) {
-          try {
-            const { getLocalCourseEnrollments } = await import("@/lib/srs-store");
-            const localEnrollments = await getLocalCourseEnrollments(userId);
-            if (localEnrollments.includes(courseId)) {
-              isEnrolled = true;
-            }
-          } catch {}
-        }
-      } catch (err) {
-        console.warn("getCourseWithContent enrollment check failed:", err);
-      }
-    }
 
-    if (userId && !isEnrolled) {
-      courseConditions.push(
-        or(eq(course.visibility, "public"), eq(course.createdBy, userId))!
-      );
-    } else if (!userId) {
-      courseConditions.push(eq(course.visibility, "public"));
-    }
+      // Access = public, owned by the viewer, or shared with a group the viewer
+      // belongs to. Enrollment no longer bypasses visibility — a private course
+      // must be explicitly shared with the viewer's group to be reachable.
+      const visibilityConds = [eq(course.visibility, "public")];
+      if (userId) {
+        visibilityConds.push(eq(course.createdBy, userId));
+        const shared = [...(await getGrantedCourseIds(userId))];
+        if (shared.length) visibilityConds.push(inArray(course.id, shared));
+      }
+      courseConditions.push(or(...visibilityConds)!);
 
     const [courseRow] = await db
       .select({
@@ -506,13 +601,15 @@ export async function getCourseWithContent(
 export async function getAvailableFilters(userId?: string) {
   try {
     const conditions = [eq(course.published, true)];
+    const visibilityConds = [eq(course.visibility, "public")];
     if (userId) {
-      conditions.push(
-        or(eq(course.visibility, "public"), eq(course.createdBy, userId))!
-      );
-    } else {
-      conditions.push(eq(course.visibility, "public"));
+      visibilityConds.push(eq(course.createdBy, userId));
+      const sharedCourseIds = [...(await getGrantedCourseIds(userId))];
+      if (sharedCourseIds.length) {
+        visibilityConds.push(inArray(course.id, sharedCourseIds));
+      }
     }
+    conditions.push(or(...visibilityConds)!);
 
     const rows = await db
       .select({
@@ -576,16 +673,18 @@ export async function getStandaloneUnits(
 
   if (dbUp) {
     try {
-      const libraryCondition =
-        libraryUnitIds.size > 0
-          ? and(
-              isNull(unit.courseId),
-              or(
-                eq(unit.createdBy, userId),
-                inArray(unit.id, [...libraryUnitIds])
-              )
-            )
-          : and(eq(unit.createdBy, userId), isNull(unit.courseId));
+      const grantedUnitIds = await getGrantedUnitIds(userId);
+      const ownershipConditions: SQL[] = [eq(unit.createdBy, userId)];
+      if (libraryUnitIds.size > 0) {
+        ownershipConditions.push(inArray(unit.id, [...libraryUnitIds]));
+      }
+      if (grantedUnitIds.size > 0) {
+        ownershipConditions.push(inArray(unit.id, [...grantedUnitIds]));
+      }
+      const libraryCondition = and(
+        isNull(unit.courseId),
+        or(...ownershipConditions)
+      )!;
 
       rows = await db
         .select({

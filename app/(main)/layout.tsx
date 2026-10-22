@@ -74,7 +74,7 @@ export default async function MainLayout({
           {children}
         </PullToRefresh>
       </div>
-      <MobileNav showChat={isAdmin} showRead={isAdmin} />
+      <MobileNav showChat={isAdmin} showRead={isAdmin} isAdmin={isAdmin} />
     </div>
   );
 }

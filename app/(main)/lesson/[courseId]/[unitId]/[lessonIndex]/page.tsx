@@ -1,4 +1,6 @@
-import { getUnitWithContent, getCourseTitle } from "@/lib/db/queries/courses";
+import { getUnitWithContent, getCourseTitle, canAccessUnit } from "@/lib/db/queries/courses";
+import { getSession } from "@/lib/auth-server";
+import { isDbAvailable } from "@/lib/db";
 import { notFound } from "next/navigation";
 import { LessonView } from "./lesson-view";
 
@@ -8,6 +10,16 @@ interface PageProps {
 
 export default async function LessonPage({ params }: PageProps) {
   const { courseId, unitId, lessonIndex } = await params;
+  const session = await getSession();
+  const userId = session?.user?.id;
+
+  // Gate the lesson behind the unit's access rule. When the DB is unreachable
+  // we skip the check to preserve the previous open behaviour for filesystem
+  // content. Admins no longer get a blanket bypass here.
+  if ((await isDbAvailable()) && !(await canAccessUnit(unitId, userId))) {
+    notFound();
+  }
+
   const [unit, courseTitle] = await Promise.all([
     getUnitWithContent(unitId),
     getCourseTitle(courseId),

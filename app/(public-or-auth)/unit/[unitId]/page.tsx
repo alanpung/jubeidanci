@@ -2,11 +2,10 @@ import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
 import { db } from "@/lib/db";
-import { user, userUnitLibrary } from "@/lib/db/schema";
+import { userUnitLibrary } from "@/lib/db/schema";
 import { eq, and } from "drizzle-orm";
-import { getUnitWithContent } from "@/lib/db/queries/courses";
+import { getUnitWithContent, canAccessUnit } from "@/lib/db/queries/courses";
 import { getUnitProgress } from "@/lib/actions/progress";
-import { isAdminEmail } from "@/lib/ai/models";
 import { StandaloneUnitPath } from "./standalone-unit-path";
 import { PublicUnitPath } from "./public-unit-path";
 import { UnitLibraryBanner } from "./unit-library-banner";
@@ -80,27 +79,16 @@ export default async function StandaloneUnitPage({ params }: PageProps) {
     redirect(`/library/${unit.courseId}?unit=${unitId}`);
   }
 
-  // Visibility check for anonymous users
+  // Access rule: a unit is reachable if it is public, owned by the viewer, or
+  // (for course units) its parent course is shared with a group the viewer is
+  // in. Admins no longer get a blanket bypass — `canAccessUnit` enforces this
+  // and falls back to the public/owner check when the DB is unavailable.
   const isPublic = unit.visibility === "public";
   const isOwner = session?.user?.id === unit.createdBy;
+  const isShared = !isPublic && !isOwner ? await canAccessUnit(unitId, session?.user?.id) : false;
+  const isAccessible = isPublic || isOwner || isShared;
 
-  // Check if created by site admin
-  let isCreatedByAdmin = false;
-  if (unit.createdBy) {
-    const [creator] = await db
-      .select({ email: user.email })
-      .from(user)
-      .where(eq(user.id, unit.createdBy));
-    isCreatedByAdmin = creator?.email ? isAdminEmail(creator.email) : false;
-  }
-
-  const isAccessible = isPublic || isCreatedByAdmin;
-
-  if (!session && !isAccessible) {
-    notFound();
-  }
-
-  if (session && !isAccessible && !isOwner) {
+  if (!isAccessible) {
     notFound();
   }
 
