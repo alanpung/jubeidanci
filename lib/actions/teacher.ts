@@ -71,21 +71,8 @@ export async function getStudentsList(): Promise<StudentSummary[]> {
 
   const dbUp = await isDbAvailable();
   if (!dbUp) {
-    // Return author as fallback preview
-    return [
-      {
-        id: session.user.id,
-        name: session.user.name || "Default Student",
-        email: session.user.email,
-        image: session.user.image,
-        createdAt: new Date(),
-        currentStreak: 1,
-        totalLessonsCompleted: 3,
-        wordsLearned: 0,
-        wordsLearning: 0,
-        targetLanguage: "en",
-      },
-    ];
+    // DB unavailable: don't surface the owner (author) as a student.
+    return [];
   }
 
   try {
@@ -118,6 +105,8 @@ export async function getStudentsList(): Promise<StudentSummary[]> {
       LEFT JOIN user_stats us ON us.user_id = u.id
       LEFT JOIN user_preferences up ON up.user_id = u.id
       LEFT JOIN srs_card sc ON (sc.user_id = u.id OR LOWER(sc.user_id) = LOWER(u.email))
+      WHERE u.id <> ${session.user.id}
+        AND LOWER(u.email) <> LOWER(${session.user.email})
       GROUP BY u.id, u.name, u.email, u.image, u.created_at, us.current_streak, us.total_lessons_completed, up.target_language
       ORDER BY u.created_at DESC
     `);

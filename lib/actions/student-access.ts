@@ -12,6 +12,7 @@ import { requireSession } from "@/lib/auth-server";
 import { isAdminEmail } from "@/lib/ai/models";
 import { revalidatePath } from "next/cache";
 import { getStudentsList, type StudentSummary } from "@/lib/actions/teacher";
+import { ensureStudentAccessTable } from "@/lib/db/ensure-student-access";
 
 // ─── Types ───
 
@@ -160,6 +161,7 @@ export async function getStudentGrants(
 ): Promise<StudentGrantSummary> {
   const session = await requireOwner();
   try {
+    await ensureStudentAccessTable();
     const rows = await db
       .select({
         courseId: studentAccess.courseId,
@@ -190,6 +192,7 @@ export async function setStudentCourseAccess(
   const session = await requireOwner();
   const ownerId = session.user.id;
   try {
+    await ensureStudentAccessTable();
     // Confirm the course belongs to the owner and is not public.
     const [c] = await db
       .select({ id: course.id, visibility: course.visibility, createdBy: course.createdBy })
@@ -245,6 +248,7 @@ export async function setStudentUnitAccess(
   const session = await requireOwner();
   const ownerId = session.user.id;
   try {
+    await ensureStudentAccessTable();
     const [u] = await db
       .select({ id: unit.id, visibility: unit.visibility, createdBy: unit.createdBy })
       .from(unit)
