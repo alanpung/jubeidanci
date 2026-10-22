@@ -14,8 +14,8 @@ interface UnitCardProps {
   action?: React.ReactNode;
   /**
    * Unit detail view. The breadcrumb above already reads "… / Unit 2", so the
-   * card drops the symbol and the "Unit N:" label and matches the breadcrumb's
-   * font size instead of shouting the same thing twice.
+   * card drops the symbol and the "Unit N:" label instead of shouting the same
+   * thing twice.
    */
   compact?: boolean;
 }
@@ -49,12 +49,12 @@ export function UnitCard({
   // The question-type badge used to sit next to the title and squeezed it
   // down to "Uni..." on mobile, and the description line added noise without
   // telling the learner anything they can't see on the path itself.
+  //
+  // The title is text-sm everywhere — the same size as the breadcrumb above
+  // it, so a learner can scan a phone screenful of units in one glance
+  // instead of reading five separate headings.
   const heading = (
-    <h3
-      className={`min-w-0 flex-1 truncate font-bold text-lingo-text ${
-        compact ? "text-sm" : "text-lg"
-      }`}
-    >
+    <h3 className="min-w-0 flex-1 truncate text-sm font-bold text-lingo-text">
       {showNumber && (
         <span className="text-lingo-text-light">Unit {unitNumber}: </span>
       )}
@@ -68,7 +68,7 @@ export function UnitCard({
 
   const symbol = (
     <div
-      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl text-2xl"
+      className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl text-xl"
       style={{ backgroundColor: color + "20" }}
     >
       {icon}
@@ -77,13 +77,13 @@ export function UnitCard({
 
   const bar = (
     <>
-      <div className="h-2 flex-1 overflow-hidden rounded-full bg-lingo-gray">
+      <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-lingo-gray">
         <div
           className="h-full rounded-full transition-all duration-500"
           style={{ width: `${progress}%`, backgroundColor: color }}
         />
       </div>
-      <span className="shrink-0 text-sm font-bold" style={{ color }}>
+      <span className="shrink-0 text-xs font-bold" style={{ color }}>
         {completedLessons}/{totalLessons}
       </span>
     </>
@@ -98,7 +98,7 @@ export function UnitCard({
         onKeyDown={(e) => {
           if (e.key === "Enter" || e.key === " ") onClick();
         }}
-        className="w-full max-w-full cursor-pointer overflow-hidden rounded-2xl border-2 border-lingo-gray bg-white p-3.5 text-left transition-transform hover:scale-[1.01] active:scale-[0.99] sm:p-4"
+        className="w-full max-w-full cursor-pointer overflow-hidden rounded-2xl border-2 border-lingo-gray bg-white px-3 py-2.5 text-left transition-transform hover:scale-[1.01] active:scale-[0.99] sm:px-4"
       >
         <div className="flex w-full min-w-0 items-center gap-3">
           {symbol}
@@ -111,7 +111,7 @@ export function UnitCard({
             )}
           </div>
         </div>
-        <div className="mt-3 flex items-center gap-3">{bar}</div>
+        <div className="mt-2.5 flex items-center gap-3">{bar}</div>
       </div>
     );
   }

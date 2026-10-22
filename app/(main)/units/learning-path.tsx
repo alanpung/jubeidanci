@@ -65,7 +65,7 @@ export function LearningPath({
     return (
       <div>
         <Breadcrumb items={crumbBase} className="mb-4" />
-        <div className="grid gap-4 w-full max-w-full overflow-hidden min-w-0">
+        <div className="grid gap-2.5 w-full max-w-full overflow-hidden min-w-0">
         {course.units.map((unit, unitIndex) => {
           if (unit.parseError) {
             return (
