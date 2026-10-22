@@ -180,7 +180,9 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
 
       {/* Lower portion: everything not yet on the top shelf */}
       <section>
-        <div className="mb-3 flex flex-wrap items-center gap-2">
+        {/* mb-8 (not mb-3): the +/× button floats 24px above the first row of
+            books, so the filter row needs clearance underneath it. */}
+        <div className="mb-8 flex flex-wrap items-center gap-2">
           <h2 className="text-base font-bold text-lingo-text">Browse All Courses</h2>
           <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
             {catalog.length}

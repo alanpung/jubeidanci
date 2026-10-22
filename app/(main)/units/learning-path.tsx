@@ -54,7 +54,9 @@ export function LearningPath({
 
   const crumbBase = [
     { label: "Library", href: "/library" },
-    { label: course.title, onClick: () => setSelectedUnitId(null) },
+    // The course name is already the page heading above, so the middle crumb
+    // names what clicking it does: go back to the full unit list.
+    { label: "All Units", onClick: () => setSelectedUnitId(null) },
   ];
 
   // Unit selector view
