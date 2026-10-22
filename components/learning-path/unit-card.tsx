@@ -12,6 +12,12 @@ interface UnitCardProps {
   onClick?: () => void;
   children?: React.ReactNode;
   action?: React.ReactNode;
+  /**
+   * Unit detail view. The breadcrumb above already reads "… / Unit 2", so the
+   * card drops the symbol and the "Unit N:" label and matches the breadcrumb's
+   * font size instead of shouting the same thing twice.
+   */
+  compact?: boolean;
 }
 
 export function UnitCard({
@@ -25,24 +31,31 @@ export function UnitCard({
   onClick,
   children,
   action,
+  compact = false,
 }: UnitCardProps) {
   const progress = totalLessons > 0 ? (completedLessons / totalLessons) * 100 : 0;
 
   // Most authored titles already carry their own label ("Unit 3: Food &
   // Dining"), so prefixing "Unit 3" again printed it twice. Drop the label
-  // from the title when we're rendering the prefix ourselves.
+  // from the title whenever the number is shown somewhere else — either as our
+  // own prefix, or (in compact mode) in the breadcrumb above.
+  const showNumber = unitNumber != null && !compact;
+  const stripped = title.replace(/^\s*unit\s*\d+\s*:?\s*/i, "").trim();
+  // Guard: a title that is *only* a label ("Unit 2") would strip to nothing.
   const titleWithoutLabel =
-    unitNumber != null
-      ? title.replace(/^\s*unit\s*\d+\s*:?\s*/i, "")
-      : title;
+    showNumber || compact ? stripped || title : title;
 
   // Kept deliberately minimal: symbol + "Unit N · title" + progress bar.
   // The question-type badge used to sit next to the title and squeezed it
   // down to "Uni..." on mobile, and the description line added noise without
   // telling the learner anything they can't see on the path itself.
   const heading = (
-    <h3 className="min-w-0 flex-1 truncate text-lg font-bold text-lingo-text">
-      {unitNumber != null && (
+    <h3
+      className={`min-w-0 flex-1 truncate font-bold text-lingo-text ${
+        compact ? "text-sm" : "text-lg"
+      }`}
+    >
+      {showNumber && (
         <span className="text-lingo-text-light">Unit {unitNumber}: </span>
       )}
       {language ? (
@@ -106,7 +119,7 @@ export function UnitCard({
   return (
     <div className="mb-8 w-full max-w-full overflow-hidden rounded-2xl border-2 border-lingo-gray bg-white p-3.5 sm:p-4">
       <div className="mb-4 flex w-full min-w-0 items-center gap-3">
-        {symbol}
+        {!compact && symbol}
         {heading}
         {action && <div className="shrink-0">{action}</div>}
       </div>

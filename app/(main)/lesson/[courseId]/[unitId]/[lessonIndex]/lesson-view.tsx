@@ -73,9 +73,8 @@ export function LessonView({
   // Authored lesson titles often repeat their own label ("Lesson 1: Everyday
   // Essentials"), and the breadcrumb already says "Lesson 1" — so drop the
   // prefix and show only the actual title, on one line.
-  const lessonHeading = lessonTitle
-    .replace(/^\s*lesson\s*\d+\s*:?\s*/i, "")
-    .trim();
+  const lessonHeading =
+    lessonTitle.replace(/^\s*lesson\s*\d+\s*:?\s*/i, "").trim() || lessonTitle;
 
   // Directory-style path bar. Everything above the current page is a link, so
   // no separate back button is needed anywhere.

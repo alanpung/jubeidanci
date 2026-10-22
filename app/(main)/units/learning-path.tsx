@@ -168,6 +168,7 @@ export function LearningPath({
         totalLessons={unit.lessons.length}
         completedLessons={completedLessons}
         language={course.targetLanguage}
+        compact
       >
         {unit.lessons.map((_lesson, lessonIndex) => {
           const completed = isLessonCompleted(completions, unit.id, lessonIndex);
