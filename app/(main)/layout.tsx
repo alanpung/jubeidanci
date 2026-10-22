@@ -11,6 +11,8 @@ import { BackgroundRoutePrefetch } from "@/components/providers/background-route
 import { PullToRefresh } from "@/components/ui/pull-to-refresh";
 import { isAdminEmail } from "@/lib/ai/models";
 import { __time, __timings } from "@/lib/debug-timings"; // TEMP DEBUG
+import { withTimeout } from "@/lib/db/timeout";
+import { runAfterResponse } from "@/lib/after-response";
 
 export const dynamic = "force-dynamic";
 
@@ -27,21 +29,37 @@ export default async function MainLayout({
     redirect(`/sign-in${redirectParam}`);
   }
 
-  // Self-heal and migrate any transient practice cards recorded under 'default_user'
-  migrateDefaultUserCards(session.user.id).catch((err) => {
-    console.warn("Transient SRS card migration warning:", err);
-  });
+  // Self-heal and migrate any transient practice cards recorded under
+  // 'default_user'. Deferred until after the response: it writes rows, and
+  // running it inline used to hold pool connections while the page below was
+  // still waiting on its own reads.
+  void runAfterResponse(() =>
+    migrateDefaultUserCards(session!.user.id).catch((err) => {
+      console.warn("Transient SRS card migration warning:", err);
+    }),
+  );
 
   let stats = null;
   try {
+    // Bounded: these are decorations in the top bar. A stalled stats query
+    // must never stop the page from rendering (the pool has no queue
+    // timeout, so an unbounded await here = a request that never returns).
     const [userStatsData, srsStats] = await Promise.all([
-      __time("layout:getUserStatsData", getUserStatsData()),
-      __time("layout:getSrsStats", getSrsStats()),
+      __time(
+        "layout:getUserStatsData",
+        withTimeout("layout:getUserStatsData", getUserStatsData(), 5000, null),
+      ),
+      __time(
+        "layout:getSrsStats",
+        withTimeout("layout:getSrsStats", getSrsStats(), 5000, null),
+      ),
     ]);
-    stats = {
-      currentStreak: userStatsData.currentStreak,
-      wordsLearned: srsStats.learned,
-    };
+    stats = userStatsData
+      ? {
+          currentStreak: userStatsData.currentStreak,
+          wordsLearned: srsStats?.learned ?? 0,
+        }
+      : null;
   } catch {
     // User may not have stats yet
   }

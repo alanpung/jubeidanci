@@ -2,6 +2,7 @@ import { db, isDbAvailable } from "./index";
 import { course, unit, user } from "./schema";
 import { getAllCourses, getAllUnits } from "../content/registry";
 import { eq, or, ilike, and, notInArray, inArray, sql } from "drizzle-orm";
+import { runAfterResponse } from "../after-response";
 
 let lastSyncedAt = 0;
 
@@ -261,18 +262,6 @@ export async function seedContentFromFilesystem() {
  * Starting it inline used to hand the sync half the request's CPU and DB
  * connections while the page was still waiting on its own queries.
  */
-async function scheduleSeedTask() {
-  try {
-    // Imported lazily: `next/server` is unavailable outside a request scope.
-    const nextServer = (await import("next/server")) as unknown as {
-      after?: (cb: () => unknown) => void;
-    };
-    if (typeof nextServer.after === "function") {
-      nextServer.after(() => startSeedTask());
-      return;
-    }
-  } catch {
-    // Not in a request context (scripts, tests) — fall through.
-  }
-  void startSeedTask();
+function scheduleSeedTask() {
+  return runAfterResponse(() => startSeedTask());
 }

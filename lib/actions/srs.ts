@@ -18,6 +18,7 @@ import {
   deleteLocalCard,
   type SrsCardRecord,
 } from "@/lib/srs-store";
+import { runAfterResponse } from "@/lib/after-response";
 
 export async function migrateDefaultUserCards(userId: string) {
   if (userId === "default_user") return;
@@ -322,7 +323,14 @@ export async function getAllCards(
   // the 60s throttle so a manual refresh always triggers a full sync. Without
   // it, a refresh landing within the throttle window would silently skip the
   // sync and the user would keep seeing a stale "New" count.
-  void syncUserCourseWordsToSrs(userId, forceSync).catch(() => {});
+  // Deferred to after the response: this sync reads every enrolled course's
+  // word list and writes/updates thousands of srs_card rows. Running it inline
+  // alongside the request's own reads used to hold most of the 5-connection
+  // pool, and because postgres.js queues (rather than fails) on an exhausted
+  // pool, the page waited indefinitely instead of erroring.
+  void runAfterResponse(() =>
+    syncUserCourseWordsToSrs(userId, forceSync).catch(() => {}),
+  );
   const aliases = language ? getLanguageAliases(language) : [];
   // Gate on hasDbConfig (DB URL present), NOT the flaky isDbAvailable()
   // cold-start probe. The probe can false-negative on a cold serverless
@@ -582,7 +590,9 @@ export async function reviewCard(
 
 export async function getSrsStats(language?: string) {
   const userId = await getSafeUserId();
-  void syncUserCourseWordsToSrs(userId).catch(() => {});
+  // See getAllCards: the sync is maintenance work, not part of answering this
+  // request, so run it once the response is on the wire.
+  void runAfterResponse(() => syncUserCourseWordsToSrs(userId).catch(() => {}));
   const dbUp = await isDbAvailable();
   const aliases = language ? getLanguageAliases(language) : [];
 
