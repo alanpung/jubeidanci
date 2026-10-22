@@ -249,6 +249,31 @@ function CourseBook({
           />
         </Link>
 
+        {/* Top-right corner of the symbol: borrow (+) / return (x).
+            Offset well clear of the square so the button never overlaps the
+            book itself — the link owns the symbol, this button owns only
+            itself, and neither can steal the other's tap. */}
+        <button
+          type="button"
+          onClick={isBorrowed ? onRemove : onBorrow}
+          disabled={pending}
+          title={isBorrowed ? "Remove from My Books" : "Add to My Books"}
+          aria-label={isBorrowed ? "Remove from My Books" : "Add to My Books"}
+          className={`absolute -right-6 -top-6 flex h-7 w-7 items-center justify-center rounded-full border-2 shadow-sm transition-all disabled:opacity-50 ${
+            isBorrowed
+              ? "border-red-300 bg-white text-red-500 hover:bg-red-50"
+              : "border-lingo-blue bg-lingo-blue text-white hover:bg-lingo-blue/90 active:scale-95"
+          }`}
+        >
+          {pending ? (
+            <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
+          ) : isBorrowed ? (
+            <X className="h-3.5 w-3.5 stroke-[3]" />
+          ) : (
+            <Plus className="h-3.5 w-3.5 stroke-[3]" />
+          )}
+        </button>
+
         {/* Bottom-left of the symbol: owner controls */}
         {isOwner && (
           <div className="absolute -bottom-2 -left-2">
@@ -319,29 +344,6 @@ function CourseBook({
       <p className="mt-2.5 line-clamp-2 min-h-[2rem] w-full px-1 text-center text-xs font-semibold leading-tight text-lingo-text">
         {course.title}
       </p>
-
-      {/* Borrow (+) / return (x), fully detached from the symbol and the title
-          link so it can never be hit by accident when opening a book. */}
-      <button
-        type="button"
-        onClick={isBorrowed ? onRemove : onBorrow}
-        disabled={pending}
-        title={isBorrowed ? "Remove from My Books" : "Add to My Books"}
-        aria-label={isBorrowed ? "Remove from My Books" : "Add to My Books"}
-        className={`mt-1.5 flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 shadow-sm transition-all disabled:opacity-50 ${
-          isBorrowed
-            ? "border-red-300 bg-white text-red-500 hover:bg-red-50"
-            : "border-lingo-blue bg-lingo-blue text-white hover:bg-lingo-blue/90 active:scale-95"
-        }`}
-      >
-        {pending ? (
-          <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
-        ) : isBorrowed ? (
-          <X className="h-3.5 w-3.5 stroke-[3]" />
-        ) : (
-          <Plus className="h-3.5 w-3.5 stroke-[3]" />
-        )}
-      </button>
     </div>
   );
 }
