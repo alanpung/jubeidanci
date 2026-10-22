@@ -151,10 +151,6 @@ export async function addCourseToLibrary(
     return { success: false, error: "Course not found" };
   }
 
-  // Check if user is owner (except for default system courses)
-  if (existingCourse.createdBy === userId && !isSystemCourse) {
-    return { success: true };
-  }
 
   // Access gate: a course can be added if it is public or shared with a group
   // the viewer belongs to. Admins no longer get a blanket bypass. When the DB

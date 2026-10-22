@@ -434,6 +434,11 @@ function CourseBook({
       <p className="mt-2.5 line-clamp-2 min-h-[2rem] w-full px-1 text-center text-xs font-semibold leading-tight text-lingo-text">
         {course.title}
       </p>
+      {!isPublic && (
+        <span className="mt-1 rounded-full bg-lingo-gray px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-lingo-text-light">
+          🔒 Private
+        </span>
+      )}
     </div>
   );
 }

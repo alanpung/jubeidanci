@@ -86,10 +86,10 @@ export default async function LearnPage() {
   const isPrivateOwn = (visibility?: string | null) => visibility !== "public";
 
   const privateCourses = allCourses.filter(
-    (c) => c.isOwner && isPrivateOwn(c.visibility),
+    (c) => c.isOwner && isPrivateOwn(c.visibility) && !c.isInLibrary,
   );
   const privateUnits = standaloneUnits.filter(
-    (u) => u.isOwner && isPrivateOwn(u.visibility),
+    (u) => u.isOwner && isPrivateOwn(u.visibility) && !u.isInLibrary,
   );
 
   const privateUnitIds = new Set(privateUnits.map((u) => u.id));

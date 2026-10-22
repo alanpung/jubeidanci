@@ -3,10 +3,11 @@
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { MoreHorizontal, Globe, Pencil, FolderOpen, Lock } from "lucide-react";
+import { MoreHorizontal, Globe, Pencil, FolderOpen, Lock, Plus } from "lucide-react";
 import type { CourseListItem, StandaloneUnitInfo } from "@/lib/content/types";
 import { CourseLevelIcon } from "@/components/library/course-level-icon";
 import { makeCoursePublic } from "@/lib/actions/units";
+import { addCourseToLibrary } from "@/lib/actions/library";
 import { StandaloneUnitCard } from "@/components/library/standalone-units";
 import {
   DeckShelf,
@@ -98,12 +99,27 @@ export function PrivateShelf({ courses, units, isAdmin }: PrivateShelfProps) {
   );
 }
 
-/** A private course as a book, minus the borrow button — you already own it.
- *  The corner menu carries the same owner controls the public shelf offers. */
+/** A private course as a book with owner controls and an option to add (+) to My Books. */
 function PrivateBook({ course }: { course: CourseListItem }) {
   const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [borrowPending, setBorrowPending] = useState(false);
   const [pending, startTransition] = useTransition();
+
+  function borrow() {
+    setBorrowPending(true);
+    startTransition(async () => {
+      try {
+        const res = await addCourseToLibrary(course.id);
+        if (!res.success) alert(res.error);
+        else router.refresh();
+      } catch (err) {
+        alert(err instanceof Error ? err.message : "Failed to add to library");
+      } finally {
+        setBorrowPending(false);
+      }
+    });
+  }
 
   function makePublic() {
     const ok = window.confirm(
@@ -134,11 +150,27 @@ function PrivateBook({ course }: { course: CourseListItem }) {
           />
         </Link>
 
+        {/* Top-right corner of the symbol: borrow (+) to My Books */}
+        <button
+          type="button"
+          onClick={borrow}
+          disabled={borrowPending || pending}
+          title="Add to My Books"
+          aria-label="Add to My Books"
+          className="absolute -right-6 -top-6 flex h-7 w-7 items-center justify-center rounded-full border-2 border-lingo-blue bg-lingo-blue text-white shadow-sm transition-all hover:bg-lingo-blue/90 active:scale-95 disabled:opacity-50"
+        >
+          {borrowPending ? (
+            <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
+          ) : (
+            <Plus className="h-3.5 w-3.5 stroke-[3]" />
+          )}
+        </button>
+
         <div className="absolute -bottom-2 -left-2">
           <button
             type="button"
             onClick={() => setMenuOpen((o) => !o)}
-            disabled={pending}
+            disabled={pending || borrowPending}
             title="Course options"
             aria-label="Course options"
             className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 disabled:opacity-50"
