@@ -10,7 +10,7 @@ import { isAdminEmail } from "@/lib/ai/models";
 import { StandaloneUnitPath } from "./standalone-unit-path";
 import { PublicUnitPath } from "./public-unit-path";
 import { UnitLibraryBanner } from "./unit-library-banner";
-import { HoverableText } from "@/components/word/hoverable-text";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { getLanguageName } from "@/lib/languages";
 import { getSession } from "@/lib/auth-server";
 
@@ -167,14 +167,15 @@ export default async function StandaloneUnitPage({ params }: PageProps) {
 
     return (
       <div className="mx-auto max-w-lg">
-        <div className="mb-4 flex items-center justify-between">
-          <Link
-            href="/library"
-            className="text-xs font-bold text-lingo-text-light hover:text-lingo-text transition-colors flex items-center gap-1"
-          >
-            &larr; Back to Library
-          </Link>
-        </div>
+        {/* Same directory bar as the lesson page below it: the unit name lives
+            here instead of in a separate centred heading. */}
+        <Breadcrumb
+          items={[
+            { label: "Library", href: "/library" },
+            { label: unit.title },
+          ]}
+          className="mb-4"
+        />
 
         {!isOwner && (
           <UnitLibraryBanner
@@ -183,17 +184,12 @@ export default async function StandaloneUnitPage({ params }: PageProps) {
           />
         )}
 
-        <div className="mb-6 text-center">
-          <h1 className="text-2xl font-black text-lingo-text">
-            <HoverableText text={unit.title} language={unit.targetLanguage} />
-          </h1>
-          {unit.sourceLanguage && (
-            <p className="text-sm text-lingo-text-light mt-1">
-              {getLanguageName(unit.sourceLanguage)} →{" "}
-              {getLanguageName(unit.targetLanguage)}
-            </p>
-          )}
-        </div>
+        {unit.sourceLanguage && (
+          <p className="mb-4 text-sm text-lingo-text-light">
+            {getLanguageName(unit.sourceLanguage)} →{" "}
+            {getLanguageName(unit.targetLanguage)}
+          </p>
+        )}
         <StandaloneUnitPath unit={unit} completions={completions} />
       </div>
     );

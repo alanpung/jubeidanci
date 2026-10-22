@@ -3,11 +3,9 @@ import { getCourseWithContent } from "@/lib/db/queries/courses";
 import { getUserProgress } from "@/lib/actions/progress";
 import { LearningPath } from "@/components/library/learning-path";
 import { getSession } from "@/lib/auth-server";
-import { isAdminEmail } from "@/lib/ai/models";
 import { db, isDbAvailable } from "@/lib/db";
 import { userUnitLibrary, userCourseEnrollment } from "@/lib/db/schema";
 import { eq, and } from "drizzle-orm";
-import { CourseTitleHeader } from "@/components/course/course-title-header";
 import { CourseLibraryBanner } from "@/components/course/course-library-banner";
 
 interface PageProps {
@@ -22,9 +20,7 @@ export default async function CourseDetailPage({ params }: PageProps) {
   if (!course) notFound();
 
   const progress = await getUserProgress(course.id);
-  const isAdmin = isAdminEmail(session?.user?.email);
   const isOwner = course.createdBy === userId;
-  const canEdit = isAdmin || (isOwner && course.visibility !== "public");
 
   let libraryUnitIds: string[] = [];
   let isCourseInLibrary = false;
@@ -71,14 +67,8 @@ export default async function CourseDetailPage({ params }: PageProps) {
 
   return (
     <div className="mx-auto w-full max-w-2xl">
-      <CourseTitleHeader
-        courseId={course.id}
-        initialTitle={course.title}
-        sourceLanguage={course.sourceLanguage}
-        targetLanguage={course.targetLanguage}
-        canEdit={canEdit}
-        creatorName={course.creatorName}
-      />
+      {/* No page heading here — the breadcrumb inside LearningPath already
+          reads "Library / <course>", so the title would be repeated. */}
       {userId && !isOwner && (
         <CourseLibraryBanner
           courseId={course.id}

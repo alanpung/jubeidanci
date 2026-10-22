@@ -58,7 +58,7 @@ export function LessonView({
   } | null>(null);
 
   const [backUrl, setBackUrl] = useState<string>(() => {
-    if (courseId) return `/units/${courseId}?unit=${unitId}`;
+    if (courseId) return `/library/${courseId}?unit=${unitId}`;
     return `/unit/${unitId}`;
   });
 
@@ -77,8 +77,10 @@ export function LessonView({
     ...(courseId
       ? [
           {
+            // Back to the course's unit list, not the current unit — the crumb
+            // after it already points at the unit itself.
             label: courseTitle ?? "Course",
-            href: `/library/${courseId}?unit=${unitId}`,
+            href: `/library/${courseId}`,
           },
           { label: unitLabel, href: backUrl },
         ]
@@ -101,8 +103,8 @@ export function LessonView({
 
   useEffect(() => {
     if (typeof window !== "undefined" && courseId) {
-      if (document.referrer.includes("/library/")) {
-        setBackUrl(`/library/${courseId}?unit=${unitId}`);
+      if (document.referrer.includes("/units/")) {
+        setBackUrl(`/units/${courseId}?unit=${unitId}`);
       }
     }
   }, [courseId, unitId]);

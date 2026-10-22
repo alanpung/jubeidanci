@@ -52,11 +52,12 @@ export function LearningPath({
     searchParams.get("unit")
   );
 
+  // Directory bar that stays put as you flip between the unit list, a unit and
+  // a lesson: Library / <course> / Unit n / Lesson n. Clicking the course name
+  // goes back to the full unit list.
   const crumbBase = [
     { label: "Library", href: "/library" },
-    // The course name is already the page heading above, so the middle crumb
-    // names what clicking it does: go back to the full unit list.
-    { label: "All Units", onClick: () => setSelectedUnitId(null) },
+    { label: course.title, onClick: () => setSelectedUnitId(null) },
   ];
 
   // Unit selector view
@@ -131,7 +132,10 @@ export function LearningPath({
   if (unit.parseError) {
     return (
       <div>
-        <Breadcrumb items={crumbBase} className="mb-4" />
+        <Breadcrumb
+          items={[...crumbBase, { label: `Unit ${unitIndex + 1}` }]}
+          className="mb-4"
+        />
         <div className="rounded-2xl border-2 border-red-200 bg-red-50 p-6 text-center">
           <div className="mb-3 text-3xl">&#9888;&#65039;</div>
           <h2 className="text-lg font-bold text-red-700 mb-2">
