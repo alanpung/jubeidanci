@@ -73,7 +73,7 @@ async function runSeedTask() {
             // `visibility` out of this update entirely: new rows get "public"
             // from the insert `values` above, and existing rows keep whatever
             // the owner set (a private course stored as NULL stays private).
-            title: sql`coalesce(${course.title}, excluded.title)`,
+            title: sql`excluded.title`,
             sourceLanguage: sql`excluded.source_language`,
             targetLanguage: sql`excluded.target_language`,
             level: sql`excluded.level`,
