@@ -341,22 +341,32 @@ async function autoAddToLibrary(
   if (unitRow.courseId) {
     // Automatically record course enrollment so course appears in user's library and stays enrolled
     try {
-      await db
-        .insert(userCourseEnrollment)
-        .values({ userId, courseId: unitRow.courseId })
-        .onConflictDoNothing();
       const { addLocalCourseEnrollment } = await import("@/lib/srs-store");
       await addLocalCourseEnrollment(userId, unitRow.courseId);
-    } catch {}
+    } catch (err) {
+      console.warn("addLocalCourseEnrollment error:", err);
+    }
+    if (await isDbAvailable()) {
+      try {
+        await db
+          .insert(userCourseEnrollment)
+          .values({ userId, courseId: unitRow.courseId })
+          .onConflictDoNothing();
+      } catch {}
+    }
     return;
   }
   // Standalone units: auto-add public, non-owned units
   if (unitRow.visibility !== "public") return;
   if (unitRow.createdBy === userId) return;
 
-  await db
-    .insert(userUnitLibrary)
-    .values({ userId, unitId: unitRow.id })
-    .onConflictDoNothing();
+  if (await isDbAvailable()) {
+    try {
+      await db
+        .insert(userUnitLibrary)
+        .values({ userId, unitId: unitRow.id })
+        .onConflictDoNothing();
+    } catch {}
+  }
 }
 
