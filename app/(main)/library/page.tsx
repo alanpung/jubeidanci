@@ -17,6 +17,7 @@ import {
 } from "@/components/library/course-book-shelf";
 import { LearnHeader } from "@/components/library/learn-header";
 import { seedDebug } from "@/lib/db/seed-content"; // TEMP DEBUG
+import { withTimeout } from "@/lib/db/timeout";
 
 export const dynamic = "force-dynamic";
 
@@ -43,10 +44,38 @@ export default async function LearnPage() {
   let targetLang: string | null = null;
 
   if (userId) {
+    // Every one of these is bounded: postgres.js queues a query forever when
+    // the pool is saturated, so an unbounded wait here is exactly what made
+    // /library hang instead of merely being slow. Rendering the shelf with a
+    // missing slice beats never rendering it at all.
     const results = await Promise.allSettled([
-      __time("standalone", getStandaloneUnits(userId)),
-      __time("courses", listCoursesWithLessonCounts(undefined, userId, false)),
-      __time("lang", getTargetLanguage(userId)),
+      __time(
+        "standalone",
+        withTimeout(
+          "library:getStandaloneUnits",
+          getStandaloneUnits(userId),
+          8000,
+          [] as StandaloneUnitInfo[],
+        ),
+      ),
+      __time(
+        "courses",
+        withTimeout(
+          "library:listCoursesWithLessonCounts",
+          listCoursesWithLessonCounts(undefined, userId, false),
+          10000,
+          [] as CourseListItem[],
+        ),
+      ),
+      __time(
+        "lang",
+        withTimeout<string | null>(
+          "library:getTargetLanguage",
+          getTargetLanguage(userId),
+          5000,
+          null as string | null,
+        ),
+      ),
     ]);
     __t.all = Date.now() - __s0;
 

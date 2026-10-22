@@ -5,6 +5,8 @@ import { eq, or, ilike, and, notInArray, inArray, sql } from "drizzle-orm";
 
 let lastSyncedAt = 0;
 
+const SYNC_INTERVAL_MS = 30 * 60_000;
+
 // TEMP DEBUG
 export const seedDebug = {
   runs: 0,
@@ -220,12 +222,17 @@ export async function seedContentFromFilesystem() {
   if (!(await isDbAvailable())) return;
 
   const now = Date.now();
-  // Throttle background syncs to max once every 5 minutes
-  if (lastSyncedAt > 0 && now - lastSyncedAt < 300000) return;
+  // Throttle background syncs. Content on disk only changes when a new build
+  // ships, so a 30-minute cadence is plenty — re-syncing every 5 minutes meant
+  // a full course/unit upsert (every markdown body) ran *concurrently with the
+  // request that triggered it*, competing for the same 5-connection pool and
+  // starving the queries the page was waiting on.
+  if (lastSyncedAt > 0 && now - lastSyncedAt < SYNC_INTERVAL_MS) return;
 
   if (lastSyncedAt > 0) {
-    // Already seeded before: run sync in background without delaying request
-    void startSeedTask();
+    // Already seeded before: sync after the response, never alongside it.
+    lastSyncedAt = now;
+    void scheduleSeedTask();
     return;
   }
 
@@ -234,7 +241,7 @@ export async function seedContentFromFilesystem() {
     const existing = await db.select({ id: course.id }).from(course).limit(1);
     if (existing.length > 0) {
       lastSyncedAt = now;
-      void startSeedTask();
+      void scheduleSeedTask();
       return;
     }
   } catch (err) {
@@ -242,7 +249,30 @@ export async function seedContentFromFilesystem() {
     return;
   }
 
-  // Initial sync in background so page rendering is never blocked
+  // Initial sync after the response so page rendering is never blocked
   lastSyncedAt = now;
+  void scheduleSeedTask();
+}
+
+/**
+ * Run the seed *after* the response when we're inside a request (Next's
+ * `after`), and fire-and-forget otherwise (scripts, background jobs).
+ *
+ * Starting it inline used to hand the sync half the request's CPU and DB
+ * connections while the page was still waiting on its own queries.
+ */
+async function scheduleSeedTask() {
+  try {
+    // Imported lazily: `next/server` is unavailable outside a request scope.
+    const nextServer = (await import("next/server")) as unknown as {
+      after?: (cb: () => unknown) => void;
+    };
+    if (typeof nextServer.after === "function") {
+      nextServer.after(() => startSeedTask());
+      return;
+    }
+  } catch {
+    // Not in a request context (scripts, tests) — fall through.
+  }
   void startSeedTask();
 }
