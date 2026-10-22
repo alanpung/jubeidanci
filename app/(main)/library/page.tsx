@@ -16,11 +16,24 @@ import {
   LibraryLegend,
 } from "@/components/library/course-book-shelf";
 import { LearnHeader } from "@/components/library/learn-header";
+import { seedDebug } from "@/lib/db/seed-content"; // TEMP DEBUG
 
 export const dynamic = "force-dynamic";
 
+// TEMP DEBUG
+const __t: Record<string, number> = {};
+function __time<T>(name: string, p: Promise<T>): Promise<T> {
+  const s = Date.now();
+  return p.then((v) => {
+    __t[name] = Date.now() - s;
+    return v;
+  });
+}
+
 export default async function LearnPage() {
-  const session = await getSession();
+  const __s0 = Date.now();
+  const session = await __time("session", getSession());
+  __t.sessionTotal = Date.now() - __s0;
 
   const userId = session?.user?.id;
   const isAdmin = isAdminEmail(session?.user?.email);
@@ -31,10 +44,11 @@ export default async function LearnPage() {
 
   if (userId) {
     const results = await Promise.allSettled([
-      getStandaloneUnits(userId),
-      listCoursesWithLessonCounts(undefined, userId, false),
-      getTargetLanguage(userId),
+      __time("standalone", getStandaloneUnits(userId)),
+      __time("courses", listCoursesWithLessonCounts(undefined, userId, false)),
+      __time("lang", getTargetLanguage(userId)),
     ]);
+    __t.all = Date.now() - __s0;
 
     if (results[0].status === "fulfilled") {
       standaloneUnits = results[0].value;
@@ -60,6 +74,12 @@ export default async function LearnPage() {
 
   return (
     <div className="mx-auto w-full max-w-6xl">
+      {/* TEMP DEBUG */}
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.__DEBUG_TIMING=${JSON.stringify({ ...__t, seed: { ...seedDebug, sinceStart: seedDebug.lastStartedAt ? Date.now() - seedDebug.lastStartedAt : 0 } })};`,
+        }}
+      />
       <div className="mb-6 text-center">
         <h1 className="text-2xl font-black text-lingo-text">My Library</h1>
       </div>
