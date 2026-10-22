@@ -197,8 +197,12 @@ export function LessonView({
         <ProgressBar value={progress} className="flex-1" />
       </div>
 
-      <p className="text-sm text-lingo-text-light mb-1"><HoverableText text={unitTitle} language={targetLanguage} /></p>
-      <h1 className="text-xl font-bold text-lingo-text mb-6"><HoverableText text={lessonTitle} language={targetLanguage} /></h1>
+      {/* Only the lesson title now — the breadcrumb above already names the
+          library, the course and the unit, so repeating the unit title here
+          just pushed the exercise down the screen. */}
+      <h1 className="mb-6 text-xl font-bold text-lingo-text">
+        <HoverableText text={lessonTitle} language={targetLanguage} />
+      </h1>
 
       {/* Exercise */}
       {!isComplete && (
