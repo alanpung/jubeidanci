@@ -46,6 +46,7 @@ export function LessonView({
 }: LessonViewProps) {
   const router = useRouter();
   const [showComplete, setShowComplete] = useState(false);
+  const [exiting, setExiting] = useState(false);
   // Only perfectScore is rendered on the completion screen; the SRS word
   // counters come back from the background action but are intentionally not
   // shown here (see LessonCompleteModal).
@@ -57,6 +58,12 @@ export function LessonView({
     if (courseId) return `/units/${courseId}?unit=${unitId}`;
     return `/unit/${unitId}`;
   });
+
+  // Authored unit titles normally start with their own label ("Unit 3: Food
+  // & Dining"), so reuse it instead of inventing a second "Unit N:".
+  const unitLabel = /unit\s*\d+/i.test(unitTitle)
+    ? (unitTitle.match(/unit\s*\d+/i)?.[0] ?? "Unit").replace(/\s+/g, " ")
+    : "Unit";
 
   // The "Next lesson" action only exists when this isn't the last lesson.
   const nextIndex = lessonIndex + 1;
@@ -114,6 +121,11 @@ export function LessonView({
     router.replace(backUrl);
   }
 
+  function handleExit() {
+    setExiting(true);
+    router.push(backUrl);
+  }
+
   function handleNextLesson() {
     router.push(nextUrl);
   }
@@ -163,13 +175,21 @@ export function LessonView({
     <div className="mx-auto w-full max-w-7xl px-3 sm:px-8 py-6">
       {/* Header */}
       <div className="mb-6 flex items-center gap-4">
+        {/* A bare × read as "broken" — nothing appeared to happen on click
+            while the next route loaded. A labelled link back to the unit is
+            unambiguous, and the spinner confirms the click registered. */}
         <button
-          onClick={() => router.push(backUrl)}
-          className="text-lingo-text-light hover:text-lingo-text"
+          onClick={handleExit}
+          disabled={exiting}
+          aria-label={`Back to ${unitLabel}`}
+          className="flex shrink-0 items-center gap-1 text-sm font-bold text-lingo-text-light transition-colors hover:text-lingo-text disabled:opacity-60"
         >
-          <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
-          </svg>
+          {exiting ? (
+            <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent" />
+          ) : (
+            <span aria-hidden>←</span>
+          )}
+          {unitLabel}
         </button>
         <ProgressBar value={progress} className="flex-1" />
       </div>

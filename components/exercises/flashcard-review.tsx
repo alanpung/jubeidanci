@@ -786,28 +786,12 @@ export function FlashcardReview({
                     )}
                   </div>
 
-                  {/* ── 2. ROW 2: Meaning / Definition (Direct text without header label) ── */}
-                  {activeMeaning && (
-                    <div
-                      onClick={handlePlayBack}
-                      className="relative mt-3 rounded-2xl bg-lingo-bg/70 dark:bg-lingo-gray/20 p-3.5 sm:p-4 border border-lingo-border/80 cursor-pointer hover:border-lingo-blue/40 transition-all select-none text-left shadow-2xs group"
-                    >
-                      {backTTS && (
-                        <div className="absolute top-2.5 right-2.5 z-10" onClick={(e) => e.stopPropagation()}>
-                          <ReplayButton onPlay={handlePlayBack} />
-                        </div>
-                      )}
-                      <div className="prose prose-sm font-bold text-lingo-text text-base leading-relaxed pr-8 [&>p]:m-0">
-                        <Markdown remarkPlugins={[remarkBreaks]}>{activeMeaning}</Markdown>
-                      </div>
-                    </div>
-                  )}
-
-                  {/* ── 3. ROW 3: Translation (Chinese) (Direct text without header label) ── */}
+                  {/* ── 2. ROW 2: Translation (Chinese) — shown first, it is the
+                        meaning a learner reaches for before the English gloss ── */}
                   {activeTranslation && (
                     <div
                       onClick={handlePlayTranslation}
-                      className="relative mt-2.5 sm:mt-3 rounded-2xl bg-lingo-card p-3.5 sm:p-4 border border-lingo-border/80 cursor-pointer hover:border-emerald-500/40 hover:bg-emerald-50/20 dark:hover:bg-emerald-950/10 transition-all select-none text-left shadow-2xs group"
+                      className="relative mt-3 rounded-2xl bg-lingo-card p-3.5 sm:p-4 border border-lingo-border/80 cursor-pointer hover:border-emerald-500/40 hover:bg-emerald-50/20 dark:hover:bg-emerald-950/10 transition-all select-none text-left shadow-2xs group"
                     >
                       {translationTTS && (
                         <div className="absolute top-2.5 right-2.5 z-10" onClick={(e) => e.stopPropagation()}>
@@ -816,6 +800,23 @@ export function FlashcardReview({
                       )}
                       <div className="prose prose-sm font-bold text-lingo-text text-base leading-relaxed pr-8 [&>p]:m-0">
                         <Markdown remarkPlugins={[remarkBreaks]}>{activeTranslation}</Markdown>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* ── 3. ROW 3: English meaning / definition ── */}
+                  {activeMeaning && (
+                    <div
+                      onClick={handlePlayBack}
+                      className="relative mt-2.5 sm:mt-3 rounded-2xl bg-lingo-bg/70 dark:bg-lingo-gray/20 p-3.5 sm:p-4 border border-lingo-border/80 cursor-pointer hover:border-lingo-blue/40 transition-all select-none text-left shadow-2xs group"
+                    >
+                      {backTTS && (
+                        <div className="absolute top-2.5 right-2.5 z-10" onClick={(e) => e.stopPropagation()}>
+                          <ReplayButton onPlay={handlePlayBack} />
+                        </div>
+                      )}
+                      <div className="prose prose-sm font-bold text-lingo-text text-base leading-relaxed pr-8 [&>p]:m-0">
+                        <Markdown remarkPlugins={[remarkBreaks]}>{activeMeaning}</Markdown>
                       </div>
                     </div>
                   )}

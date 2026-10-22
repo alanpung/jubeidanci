@@ -9,6 +9,7 @@ import {
   CourseLevelIcon,
   QUESTION_TYPE_LEGEND,
   LEVEL_LEGEND,
+  resolveCourseQuestionType,
 } from "@/components/library/course-level-icon";
 import { addCourseToLibrary, removeCourseFromLibrary } from "@/lib/actions/library";
 import { makeCoursePublic, makeCoursePrivate, deleteCourse } from "@/lib/actions/units";
@@ -31,6 +32,8 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
   );
   const [pendingId, setPendingId] = useState<string | null>(null);
   const [showCreate, setShowCreate] = useState(false);
+  const [levelFilter, setLevelFilter] = useState("");
+  const [typeFilter, setTypeFilter] = useState("");
   const [, startTransition] = useTransition();
 
   // Only the books we actually show on the top shelf are hidden below. Slicing
@@ -39,7 +42,32 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
   // than vanishing (it would be unreachable — no + on top, absent below).
   const borrowed = courses.filter((c) => borrowedIds.has(c.id)).slice(0, BORROW_CAP);
   const shownIds = new Set(borrowed.map((c) => c.id));
-  const catalog = courses.filter((c) => !shownIds.has(c.id));
+  const unfilteredCatalog = courses.filter((c) => !shownIds.has(c.id));
+
+  // Exercise type lives in the book symbol, not in a column, so derive it the
+  // same way CourseLevelIcon does — otherwise the filter and the cover could
+  // disagree about what a book is.
+  const typeOf = (c: CourseListItem) =>
+    resolveCourseQuestionType(c.title, c.id)?.label ?? "Other";
+
+  const catalog = unfilteredCatalog.filter((c) => {
+    if (levelFilter && (c.level ?? "").toUpperCase() !== levelFilter) return false;
+    if (typeFilter && typeOf(c) !== typeFilter) return false;
+    return true;
+  });
+
+  // Only offer options that actually exist in the catalog.
+  const levelOptions = [
+    ...new Set(
+      unfilteredCatalog
+        .map((c) => (c.level ?? "").toUpperCase())
+        .filter(Boolean),
+    ),
+  ].sort();
+  const typeOptions = [
+    ...new Set(unfilteredCatalog.map(typeOf)),
+  ].sort();
+  const hasFilters = Boolean(levelFilter || typeFilter);
 
   function borrow(course: CourseListItem) {
     if (borrowedIds.size >= BORROW_CAP) {
@@ -107,7 +135,9 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
 
       {/* Upper portion: My Books (borrowed, capped at BORROW_CAP) */}
       <section>
-        <div className="mb-4 flex items-center gap-2">
+        {/* mb-8 (not mb-4): the +/× button sits 24px above each book, so the
+            first row needs clearance or it collides with this heading. */}
+        <div className="mb-8 flex items-center gap-2">
           <h2 className="text-base font-bold text-lingo-text">My Books</h2>
           <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
             {borrowed.length}/{BORROW_CAP}
@@ -120,7 +150,10 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
             add it here for practice.
           </p>
         ) : (
-          <div className="grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 lg:grid-cols-5">
+          // gap-y-8: the +/× button floats 24px above each book, so rows need
+          // more than the old 20px or the next row's button lands on the
+          // previous row's title.
+          <div className="grid grid-cols-3 gap-x-3 gap-y-8 sm:grid-cols-4 lg:grid-cols-5">
             {borrowed.map((c) => (
               <CourseBook
                 key={c.id}
@@ -147,19 +180,65 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
 
       {/* Lower portion: everything not yet on the top shelf */}
       <section>
-        <div className="mb-4 flex items-center gap-2">
+        <div className="mb-3 flex flex-wrap items-center gap-2">
           <h2 className="text-base font-bold text-lingo-text">Browse All Courses</h2>
           <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
             {catalog.length}
           </span>
+
+          {/* Filters: CEFR level + the exercise type shown on each cover */}
+          <div className="ml-auto flex flex-wrap items-center gap-2">
+            <select
+              value={levelFilter}
+              onChange={(e) => setLevelFilter(e.target.value)}
+              aria-label="Filter by level"
+              className="rounded-lg border-2 border-lingo-border bg-white px-2 py-1 text-xs font-bold text-lingo-text"
+            >
+              <option value="">Level: All</option>
+              {levelOptions.map((l) => (
+                <option key={l} value={l}>
+                  {l}
+                </option>
+              ))}
+            </select>
+
+            <select
+              value={typeFilter}
+              onChange={(e) => setTypeFilter(e.target.value)}
+              aria-label="Filter by exercise type"
+              className="rounded-lg border-2 border-lingo-border bg-white px-2 py-1 text-xs font-bold text-lingo-text"
+            >
+              <option value="">Type: All</option>
+              {typeOptions.map((t) => (
+                <option key={t} value={t}>
+                  {t}
+                </option>
+              ))}
+            </select>
+
+            {hasFilters && (
+              <button
+                type="button"
+                onClick={() => {
+                  setLevelFilter("");
+                  setTypeFilter("");
+                }}
+                className="rounded-lg px-2 py-1 text-xs font-bold text-lingo-blue hover:bg-lingo-blue/10"
+              >
+                Clear
+              </button>
+            )}
+          </div>
         </div>
 
         {catalog.length === 0 ? (
           <p className="rounded-xl border-2 border-dashed border-lingo-border bg-white p-4 text-center text-sm text-lingo-text-light">
-            Every available book is already on your shelf.
+            {hasFilters
+              ? "No course matches those filters. Try clearing them."
+              : "Every available book is already on your shelf."}
           </p>
         ) : (
-          <div className="grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-4 lg:grid-cols-5">
+          <div className="grid grid-cols-3 gap-x-3 gap-y-8 sm:grid-cols-4 lg:grid-cols-5">
             {catalog.map((c) => (
               <CourseBook
                 key={c.id}

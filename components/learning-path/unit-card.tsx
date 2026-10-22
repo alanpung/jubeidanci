@@ -28,6 +28,14 @@ export function UnitCard({
 }: UnitCardProps) {
   const progress = totalLessons > 0 ? (completedLessons / totalLessons) * 100 : 0;
 
+  // Most authored titles already carry their own label ("Unit 3: Food &
+  // Dining"), so prefixing "Unit 3" again printed it twice. Drop the label
+  // from the title when we're rendering the prefix ourselves.
+  const titleWithoutLabel =
+    unitNumber != null
+      ? title.replace(/^\s*unit\s*\d+\s*:?\s*/i, "")
+      : title;
+
   // Kept deliberately minimal: symbol + "Unit N · title" + progress bar.
   // The question-type badge used to sit next to the title and squeezed it
   // down to "Uni..." on mobile, and the description line added noise without
@@ -35,9 +43,13 @@ export function UnitCard({
   const heading = (
     <h3 className="min-w-0 flex-1 truncate text-lg font-bold text-lingo-text">
       {unitNumber != null && (
-        <span className="text-lingo-text-light">Unit {unitNumber} </span>
+        <span className="text-lingo-text-light">Unit {unitNumber}: </span>
       )}
-      {language ? <HoverableText text={title} language={language} /> : title}
+      {language ? (
+        <HoverableText text={titleWithoutLabel} language={language} />
+      ) : (
+        titleWithoutLabel
+      )}
     </h3>
   );
 
