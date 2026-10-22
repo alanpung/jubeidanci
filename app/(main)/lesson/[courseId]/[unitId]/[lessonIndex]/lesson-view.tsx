@@ -70,6 +70,13 @@ export function LessonView({
 
   const lessonLabel = `Lesson ${lessonIndex + 1}`;
 
+  // Authored lesson titles often repeat their own label ("Lesson 1: Everyday
+  // Essentials"), and the breadcrumb already says "Lesson 1" — so drop the
+  // prefix and show only the actual title, on one line.
+  const lessonHeading = lessonTitle
+    .replace(/^\s*lesson\s*\d+\s*:?\s*/i, "")
+    .trim();
+
   // Directory-style path bar. Everything above the current page is a link, so
   // no separate back button is needed anywhere.
   const crumbs = [
@@ -199,11 +206,14 @@ export function LessonView({
         <ProgressBar value={progress} className="flex-1" />
       </div>
 
-      {/* Only the lesson title now — the breadcrumb above already names the
-          library, the course and the unit, so repeating the unit title here
-          just pushed the exercise down the screen. */}
-      <h1 className="mb-6 text-xl font-bold text-lingo-text">
-        <HoverableText text={lessonTitle} language={targetLanguage} />
+      {/* The lesson name only — same size as the breadcrumb above it, and one
+          line: the breadcrumb already carries "Lesson N", so this must not
+          repeat it or push the exercise further down the screen. */}
+      <h1
+        className="mb-4 truncate text-sm font-bold text-lingo-text"
+        title={lessonHeading}
+      >
+        <HoverableText text={lessonHeading} language={targetLanguage} />
       </h1>
 
       {/* Exercise */}

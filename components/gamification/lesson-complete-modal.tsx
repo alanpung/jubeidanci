@@ -159,7 +159,10 @@ export function LessonCompleteModal({
 
           {onNextLesson && nextLessonTitle && (
             <p className="text-[11px] font-semibold text-lingo-text-light/80 line-clamp-2">
-              Next: {nextLessonTitle}
+              {/* Authored titles carry their own "Lesson N:" label; the
+                  "Next:" prefix already says which lesson this is. */}
+              Next:{" "}
+              {nextLessonTitle.replace(/^\s*lesson\s*\d+\s*:?\s*/i, "").trim()}
             </p>
           )}
         </div>
