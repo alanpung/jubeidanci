@@ -31,9 +31,24 @@ function __time<T>(name: string, p: Promise<T>): Promise<T> {
   });
 }
 
-export default async function LearnPage() {
+export default async function LearnPage({
+  searchParams,
+}: {
+  searchParams?: Promise<Record<string, string | string[] | undefined>>;
+}) {
   const __s0 = Date.now();
-  const session = await __time("session", getSession());
+  // TEMP DEBUG: ?skip=session,standalone,courses,lang
+  const __sp = (await searchParams) ?? {};
+  const __skip = String(__sp.skip ?? "").split(",").filter(Boolean);
+  let session: { user?: { id?: string; email?: string | null } } | null = null;
+  if (!__skip.includes("session")) {
+    session = (await __time(
+      "session",
+      getSession(),
+    )) as unknown as typeof session;
+  } else {
+    session = { user: { id: "user_demo_123", email: null } };
+  }
   __t.sessionTotal = Date.now() - __s0;
 
   const userId = session?.user?.id;
@@ -49,33 +64,39 @@ export default async function LearnPage() {
     // /library hang instead of merely being slow. Rendering the shelf with a
     // missing slice beats never rendering it at all.
     const results = await Promise.allSettled([
-      __time(
-        "standalone",
-        withTimeout(
-          "library:getStandaloneUnits",
-          getStandaloneUnits(userId),
-          8000,
-          [] as StandaloneUnitInfo[],
-        ),
-      ),
-      __time(
-        "courses",
-        withTimeout(
-          "library:listCoursesWithLessonCounts",
-          listCoursesWithLessonCounts(undefined, userId, false),
-          10000,
-          [] as CourseListItem[],
-        ),
-      ),
-      __time(
-        "lang",
-        withTimeout<string | null>(
-          "library:getTargetLanguage",
-          getTargetLanguage(userId),
-          5000,
-          null as string | null,
-        ),
-      ),
+      __skip.includes("standalone")
+        ? Promise.resolve([] as StandaloneUnitInfo[])
+        : __time(
+            "standalone",
+            withTimeout(
+              "library:getStandaloneUnits",
+              getStandaloneUnits(userId),
+              8000,
+              [] as StandaloneUnitInfo[],
+            ),
+          ),
+      __skip.includes("courses")
+        ? Promise.resolve([] as CourseListItem[])
+        : __time(
+            "courses",
+            withTimeout(
+              "library:listCoursesWithLessonCounts",
+              listCoursesWithLessonCounts(undefined, userId, false),
+              10000,
+              [] as CourseListItem[],
+            ),
+          ),
+      __skip.includes("lang")
+        ? Promise.resolve(null as string | null)
+        : __time(
+            "lang",
+            withTimeout<string | null>(
+              "library:getTargetLanguage",
+              getTargetLanguage(userId),
+              5000,
+              null as string | null,
+            ),
+          ),
     ]);
     __t.all = Date.now() - __s0;
 
