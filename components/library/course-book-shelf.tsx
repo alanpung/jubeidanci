@@ -234,34 +234,6 @@ function CourseBook({
 
   return (
     <div className="group flex flex-col items-center">
-      {/* Action row — detached ABOVE the symbol so the book link can never be
-          mis-clicked as add/remove. It no longer overlaps any corner. */}
-      <div className="mb-1 flex h-8 items-center justify-center">
-        {pending ? (
-          <span className="h-4 w-4 animate-spin rounded-full border-2 border-lingo-blue border-t-transparent" />
-        ) : isBorrowed ? (
-          <button
-            type="button"
-            onClick={onRemove}
-            title="Remove from My Books"
-            aria-label="Remove from My Books"
-            className="inline-flex items-center gap-1 rounded-full border-2 border-red-300 bg-white px-3 py-1 text-xs font-bold text-red-500 transition-colors hover:bg-red-50 active:scale-95"
-          >
-            <X className="h-3.5 w-3.5 stroke-[2.5]" /> Remove
-          </button>
-        ) : (
-          <button
-            type="button"
-            onClick={onBorrow}
-            title="Add to My Books"
-            aria-label="Add to My Books"
-            className="inline-flex items-center gap-1 rounded-full border-2 border-lingo-blue bg-lingo-blue px-3 py-1 text-xs font-bold text-white transition-colors hover:bg-lingo-blue/90 active:scale-95"
-          >
-            <Plus className="h-3.5 w-3.5 stroke-[2.5]" /> Add
-          </button>
-        )}
-      </div>
-
       {/* Symbol zone */}
       <div className="relative">
         <Link
@@ -276,6 +248,28 @@ function CourseBook({
             size="lg"
           />
         </Link>
+
+        {/* Upper-right of the symbol: compact round borrow (+) / return (x) */}
+        <button
+          type="button"
+          onClick={isBorrowed ? onRemove : onBorrow}
+          disabled={pending}
+          title={isBorrowed ? "Remove from My Books" : "Add to My Books"}
+          aria-label={isBorrowed ? "Remove from My Books" : "Add to My Books"}
+          className={`absolute -right-1 -top-1 flex h-6 w-6 items-center justify-center rounded-full border-2 shadow-sm transition-all disabled:opacity-50 ${
+            isBorrowed
+              ? "border-red-300 bg-white text-red-500 hover:bg-red-50"
+              : "border-lingo-blue bg-lingo-blue text-white hover:bg-lingo-blue/90 active:scale-95"
+          }`}
+        >
+          {pending ? (
+            <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
+          ) : isBorrowed ? (
+            <X className="h-3.5 w-3.5 stroke-[3]" />
+          ) : (
+            <Plus className="h-3.5 w-3.5 stroke-[3]" />
+          )}
+        </button>
 
         {/* Bottom-left of the symbol: owner controls */}
         {isOwner && (
