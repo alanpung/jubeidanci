@@ -391,6 +391,14 @@ export const article = pgTable("article", {
 // owner plus every student listed here; public items ignore these rows. Either
 // `courseId` or `unitId` is set (not both) — units inside a granted course are
 // covered by the course grant.
+//
+// NOTE: these columns intentionally carry NO database-level foreign keys. The
+// referenced rows (`user`, `course`, `unit`) are validated in the application
+// layer by `lib/actions/student-access.ts` before every write. A DB-level FK
+// here is brittle in hosted Postgres setups (Supabase/Neon) where the app's
+// `search_path` and the schema that owns the FK target can differ, which made
+// valid grants fail with a foreign-key violation. Referential integrity is
+// still enforced — just in code, where it can report a helpful message.
 
 export const studentAccess = pgTable(
   "student_access",
@@ -398,18 +406,10 @@ export const studentAccess = pgTable(
     id: text("id")
       .primaryKey()
       .$defaultFn(() => crypto.randomUUID()),
-    ownerId: text("owner_id")
-      .notNull()
-      .references(() => user.id, { onDelete: "cascade" }),
-    studentId: text("student_id")
-      .notNull()
-      .references(() => user.id, { onDelete: "cascade" }),
-    courseId: text("course_id").references(() => course.id, {
-      onDelete: "cascade",
-    }),
-    unitId: text("unit_id").references(() => unit.id, {
-      onDelete: "cascade",
-    }),
+    ownerId: text("owner_id").notNull(),
+    studentId: text("student_id").notNull(),
+    courseId: text("course_id"),
+    unitId: text("unit_id"),
     createdAt: timestamp("created_at").notNull().defaultNow(),
   },
   (table) => [
@@ -418,6 +418,7 @@ export const studentAccess = pgTable(
       table.courseId
     ),
     uniqueIndex("student_access_unit_unique").on(table.studentId, table.unitId),
+    index("student_access_owner_idx").on(table.ownerId),
   ]
 );
 

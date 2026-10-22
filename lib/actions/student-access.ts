@@ -7,7 +7,7 @@ import {
   unit,
   user,
 } from "@/lib/db/schema";
-import { and, eq, isNull, desc, count } from "drizzle-orm";
+import { and, eq, or, isNull, desc, count } from "drizzle-orm";
 import { requireSession } from "@/lib/auth-server";
 import { isAdminEmail } from "@/lib/ai/models";
 import { revalidatePath } from "next/cache";
@@ -40,6 +40,55 @@ async function requireOwner() {
     throw new Error("Only the site owner can share content with students");
   }
   return session;
+}
+
+/**
+ * Resolve a user reference to a real `user.id`.
+ *
+ * The student picker passes the id shown in the students list, but ids can
+ * drift between auth providers (email-based ids in some SRS rows, generated
+ * ids in better-auth). Falling back to the email keeps grants working when
+ * the id we hold is not the primary key.
+ */
+async function resolveUserId(reference: string): Promise<string | null> {
+  if (!reference) return null;
+  try {
+    const [byId] = await db
+      .select({ id: user.id })
+      .from(user)
+      .where(eq(user.id, reference))
+      .limit(1);
+    if (byId?.id) return byId.id;
+
+    const [byEmail] = await db
+      .select({ id: user.id })
+      .from(user)
+      .where(eq(user.email, reference))
+      .limit(1);
+    return byEmail?.id ?? null;
+  } catch (err) {
+    console.warn("resolveUserId failed:", err);
+    return null;
+  }
+}
+
+/**
+ * Turn a thrown error into something actionable. Drizzle wraps the Postgres
+ * error, so the constraint name / real reason lives on `cause`.
+ */
+function describeError(err: unknown, fallback: string): string {
+  if (!(err instanceof Error)) return fallback;
+  const cause = (err as { cause?: unknown }).cause;
+  const causeMessage =
+    cause instanceof Error
+      ? cause.message
+      : typeof cause === "string"
+        ? cause
+        : "";
+  if (causeMessage && !err.message.includes(causeMessage)) {
+    return `${err.message} — ${causeMessage}`;
+  }
+  return err.message || fallback;
 }
 
 // ─── Student listing (reuses the existing teacher inspector query) ───
@@ -150,10 +199,21 @@ export async function setStudentCourseAccess(
     if (c.createdBy !== ownerId)
       return { success: false, error: "You do not own this course" };
 
+    // Resolve the student to a real `user` row — we store the primary key, so
+    // a stale id (or an email) would otherwise create an orphan grant.
+    const resolvedStudentId = await resolveUserId(studentId);
+    if (enabled && !resolvedStudentId) {
+      return {
+        success: false,
+        error: `Student "${studentId}" was not found in the user table`,
+      };
+    }
+    const targetStudentId = resolvedStudentId ?? studentId;
+
     if (enabled) {
       await db
         .insert(studentAccess)
-        .values({ ownerId, studentId, courseId })
+        .values({ ownerId, studentId: targetStudentId, courseId })
         .onConflictDoNothing();
     } else {
       await db
@@ -161,8 +221,8 @@ export async function setStudentCourseAccess(
         .where(
           and(
             eq(studentAccess.ownerId, ownerId),
-            eq(studentAccess.studentId, studentId),
-            eq(studentAccess.courseId, courseId)
+            eq(studentAccess.courseId, courseId),
+            or(eq(studentAccess.studentId, targetStudentId), eq(studentAccess.studentId, studentId))!
           )
         );
     }
@@ -170,9 +230,10 @@ export async function setStudentCourseAccess(
     return { success: true };
   } catch (err) {
     console.error("setStudentCourseAccess failed:", err);
-    const message =
-      err instanceof Error ? err.message : "Failed to update student access";
-    return { success: false, error: message };
+    return {
+      success: false,
+      error: describeError(err, "Failed to update student access"),
+    };
   }
 }
 
@@ -192,10 +253,19 @@ export async function setStudentUnitAccess(
     if (u.createdBy !== ownerId)
       return { success: false, error: "You do not own this unit" };
 
+    const resolvedStudentId = await resolveUserId(studentId);
+    if (enabled && !resolvedStudentId) {
+      return {
+        success: false,
+        error: `Student "${studentId}" was not found in the user table`,
+      };
+    }
+    const targetStudentId = resolvedStudentId ?? studentId;
+
     if (enabled) {
       await db
         .insert(studentAccess)
-        .values({ ownerId, studentId, unitId })
+        .values({ ownerId, studentId: targetStudentId, unitId })
         .onConflictDoNothing();
     } else {
       await db
@@ -203,8 +273,8 @@ export async function setStudentUnitAccess(
         .where(
           and(
             eq(studentAccess.ownerId, ownerId),
-            eq(studentAccess.studentId, studentId),
-            eq(studentAccess.unitId, unitId)
+            eq(studentAccess.unitId, unitId),
+            or(eq(studentAccess.studentId, targetStudentId), eq(studentAccess.studentId, studentId))!
           )
         );
     }
@@ -212,8 +282,9 @@ export async function setStudentUnitAccess(
     return { success: true };
   } catch (err) {
     console.error("setStudentUnitAccess failed:", err);
-    const message =
-      err instanceof Error ? err.message : "Failed to update student access";
-    return { success: false, error: message };
+    return {
+      success: false,
+      error: describeError(err, "Failed to update student access"),
+    };
   }
 }

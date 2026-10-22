@@ -64,6 +64,13 @@
       "when": 1792648458571,
       "tag": "0008_student_access",
       "breakpoints": true
+    },
+    {
+      "idx": 9,
+      "version": "7",
+      "when": 1792655094076,
+      "tag": "0009_drop_student_access_fks",
+      "breakpoints": true
     }
   ]
 }
