@@ -3,7 +3,10 @@
 import Link from "next/link";
 import type { UnitWithContent } from "@/lib/content/types";
 import { UnitCard } from "@/components/learning-path/unit-card";
-import { PathConnector } from "@/components/learning-path/path-connector";
+import {
+  LessonLadder,
+  type LadderLesson,
+} from "@/components/learning-path/lesson-ladder";
 import { getUnitColor } from "@/lib/colors";
 
 interface PublicUnitPathProps {
@@ -37,80 +40,18 @@ export function PublicUnitPath({ unit }: PublicUnitPathProps) {
         completedLessons={0}
         language={unit.targetLanguage}
       >
-        {unit.lessons.map((lesson, lessonIndex) => (
-          <div key={lessonIndex}>
-            {lessonIndex > 0 && <PathConnector color={unitColor} />}
-            <PublicLessonNode
-              index={lessonIndex}
-              color={unitColor}
-              signUpUrl={signUpUrl}
-              isCurrent={lessonIndex === 0}
-            />
-          </div>
-        ))}
+        <LessonLadder
+          color={unitColor}
+          lessons={unit.lessons.map((lesson, lessonIndex): LadderLesson => ({
+            // Nothing is unlocked for an anonymous visitor, but every bubble
+            // still leads to the sign-up page.
+            state: lessonIndex === 0 ? "current" : "locked",
+            href: signUpUrl,
+            title: lesson.title,
+            clickableWhenLocked: true,
+          }))}
+        />
       </UnitCard>
-    </div>
-  );
-}
-
-function PublicLessonNode({
-  index,
-  color,
-  signUpUrl,
-  isCurrent,
-}: {
-  index: number;
-  color: string;
-  signUpUrl: string;
-  isCurrent: boolean;
-}) {
-  const offset = index % 2 === 0 ? "-translate-x-8" : "translate-x-8";
-  const label = `Lesson ${index + 1}`;
-
-  if (!isCurrent) {
-    return (
-      <div className={`flex flex-col items-center ${offset}`}>
-        <Link href={signUpUrl}>
-          <div className="flex h-16 w-16 items-center justify-center rounded-full bg-lingo-gray border-b-4 border-lingo-gray-dark cursor-pointer opacity-60 hover:opacity-80 transition-opacity">
-            <svg
-              className="h-6 w-6 text-lingo-gray-dark"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              strokeWidth={2.5}
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
-              />
-            </svg>
-          </div>
-        </Link>
-        <span className="mt-2 text-xs font-bold text-lingo-gray-dark">
-          {label}
-        </span>
-      </div>
-    );
-  }
-
-  return (
-    <div className={`flex flex-col items-center ${offset}`}>
-      <Link href={signUpUrl} className="group">
-        <div
-          className="flex h-16 w-16 items-center justify-center rounded-full border-b-4 transition-transform group-hover:scale-110 animate-pulse-glow"
-          style={{ backgroundColor: color, borderColor: color + "cc" }}
-        >
-          <svg
-            className="h-7 w-7 text-white"
-            fill="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M8 5v14l11-7z" />
-          </svg>
-        </div>
-      </Link>
-      <span className="mt-2 text-xs font-bold text-lingo-text">{label}</span>
     </div>
   );
 }

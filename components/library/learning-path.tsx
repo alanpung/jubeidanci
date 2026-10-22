@@ -4,8 +4,10 @@ import { useState } from "react";
 import { useSearchParams } from "next/navigation";
 import type { Course } from "@/lib/content/types";
 import { UnitCard } from "@/components/learning-path/unit-card";
-import { LessonNode } from "@/components/learning-path/lesson-node";
-import { PathConnector } from "@/components/learning-path/path-connector";
+import {
+  LessonLadder,
+  type LadderLesson,
+} from "@/components/learning-path/lesson-ladder";
 import { getUnitColor } from "@/lib/colors";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 
@@ -170,36 +172,24 @@ export function LearningPath({
         language={course.targetLanguage}
         compact
       >
-        {unit.lessons.map((_lesson, lessonIndex) => {
-          const completed = isLessonCompleted(completions, unit.id, lessonIndex);
-          const isCurrent = lessonIndex === currentLessonIndex;
-          const isLocked = lessonIndex > currentLessonIndex;
+        <LessonLadder
+          color={unitColor}
+          lessons={unit.lessons.map((lesson, lessonIndex): LadderLesson => {
+            const completed = isLessonCompleted(completions, unit.id, lessonIndex);
+            const isCurrent = lessonIndex === currentLessonIndex;
+            const isLocked = lessonIndex > currentLessonIndex;
 
-          const state = completed
-            ? "completed"
-            : isCurrent
-              ? "current"
-              : isLocked
-                ? "locked"
-                : "current";
-
-          return (
-            <div key={lessonIndex}>
-              {lessonIndex > 0 && (
-                <PathConnector
-                  color={unitColor}
-                  completed={completed}
-                />
-              )}
-              <LessonNode
-                state={state}
-                href={`/lesson/${course.id}/${unit.id}/${lessonIndex}`}
-                color={unitColor}
-                index={lessonIndex}
-              />
-            </div>
-          );
-        })}
+            return {
+              state: completed
+                ? "completed"
+                : isCurrent || !isLocked
+                  ? "current"
+                  : "locked",
+              href: `/lesson/${course.id}/${unit.id}/${lessonIndex}`,
+              title: lesson.title,
+            };
+          })}
+        />
       </UnitCard>
     </div>
   );
