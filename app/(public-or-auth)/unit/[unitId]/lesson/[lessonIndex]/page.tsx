@@ -32,6 +32,8 @@ export default async function StandaloneLessonPage({ params }: PageProps) {
     <LessonView
       unitId={unitId}
       lessonIndex={li}
+      totalLessons={unit.lessons.length}
+      nextLessonTitle={unit.lessons[li + 1]?.title ?? null}
       lesson={lesson}
       lessonTitle={lesson.title}
       unitTitle={unit.title}

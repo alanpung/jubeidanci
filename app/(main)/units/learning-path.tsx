@@ -6,7 +6,6 @@ import type { Course } from "@/lib/content/types";
 import { UnitCard } from "@/components/learning-path/unit-card";
 import { LessonNode } from "@/components/learning-path/lesson-node";
 import { PathConnector } from "@/components/learning-path/path-connector";
-import { getLanguageName } from "@/lib/languages";
 import { getUnitColor } from "@/lib/colors";
 
 interface LearningPathProps {
@@ -93,20 +92,17 @@ export function LearningPath({
               (unit.createdBy === userId ||
                 (!unit.createdBy && course.createdBy === userId))
           );
-          const isInLibrary = libraryUnitIds.includes(unit.id);
 
           return (
             <UnitCard
               key={unit.id}
               title={unit.title}
-              description={unit.description}
               icon={unit.icon}
               color={getUnitColor(unitIndex)}
+              unitNumber={unitIndex + 1}
               totalLessons={unit.lessons.length}
               completedLessons={completedLessons}
               language={course.targetLanguage}
-              questionType={unit.questionType}
-              creatorName={unit.creatorName ?? course.creatorName}
               onClick={() => setSelectedUnitId(unit.id)}
             />
           );
@@ -160,16 +156,14 @@ export function LearningPath({
 
       <UnitCard
         title={unit.title}
-        description={unit.description}
         icon={unit.icon}
         color={unitColor}
+        unitNumber={unitIndex + 1}
         totalLessons={unit.lessons.length}
         completedLessons={completedLessons}
         language={course.targetLanguage}
-        questionType={unit.questionType}
-        creatorName={unit.creatorName ?? course.creatorName}
       >
-        {unit.lessons.map((lesson, lessonIndex) => {
+        {unit.lessons.map((_lesson, lessonIndex) => {
           const completed = isLessonCompleted(completions, unit.id, lessonIndex);
           const isCurrent = lessonIndex === currentLessonIndex;
           const isLocked = lessonIndex > currentLessonIndex;
@@ -191,12 +185,10 @@ export function LearningPath({
                 />
               )}
               <LessonNode
-                title={lesson.title}
                 state={state}
                 href={`/lesson/${course.id}/${unit.id}/${lessonIndex}`}
                 color={unitColor}
                 index={lessonIndex}
-                language={course.targetLanguage}
               />
             </div>
           );

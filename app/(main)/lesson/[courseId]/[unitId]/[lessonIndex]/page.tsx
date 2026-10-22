@@ -20,6 +20,8 @@ export default async function LessonPage({ params }: PageProps) {
       courseId={courseId}
       unitId={unitId}
       lessonIndex={li}
+      totalLessons={unit.lessons.length}
+      nextLessonTitle={unit.lessons[li + 1]?.title ?? null}
       lesson={lesson}
       lessonTitle={lesson.title}
       unitTitle={unit.title}

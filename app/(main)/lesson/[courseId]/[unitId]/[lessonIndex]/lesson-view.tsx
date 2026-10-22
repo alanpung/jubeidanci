@@ -23,6 +23,10 @@ interface LessonViewProps {
   courseId?: string | null;
   unitId: string;
   lessonIndex: number;
+  /** Total lessons in this unit — decides whether "Next lesson" is offered. */
+  totalLessons?: number;
+  /** Title of the following lesson, shown as a hint on the completion screen. */
+  nextLessonTitle?: string | null;
   lesson: UnitLesson;
   lessonTitle: string;
   unitTitle: string;
@@ -33,6 +37,8 @@ export function LessonView({
   courseId,
   unitId,
   lessonIndex,
+  totalLessons,
+  nextLessonTitle,
   lesson,
   lessonTitle,
   unitTitle,
@@ -51,6 +57,19 @@ export function LessonView({
     if (courseId) return `/units/${courseId}?unit=${unitId}`;
     return `/unit/${unitId}`;
   });
+
+  // The "Next lesson" action only exists when this isn't the last lesson.
+  const nextIndex = lessonIndex + 1;
+  const hasNextLesson =
+    typeof totalLessons === "number" && nextIndex < totalLessons;
+  const nextUrl = courseId
+    ? `/lesson/${courseId}/${unitId}/${nextIndex}`
+    : `/unit/${unitId}/lesson/${nextIndex}`;
+
+  // Warm the next lesson so the button is instant.
+  useEffect(() => {
+    if (hasNextLesson) router.prefetch(nextUrl);
+  }, [hasNextLesson, nextUrl, router]);
 
   useEffect(() => {
     if (typeof window !== "undefined" && courseId) {
@@ -95,6 +114,10 @@ export function LessonView({
     router.replace(backUrl);
   }
 
+  function handleNextLesson() {
+    router.push(nextUrl);
+  }
+
   // When lesson completes, trigger UI instantly & submit results in background
   useEffect(() => {
     if (isComplete && !showComplete) {
@@ -130,6 +153,8 @@ export function LessonView({
         totalExercises={totalExercises}
         mistakeCount={mistakeCount}
         onContinue={handleReturn}
+        onNextLesson={hasNextLesson ? handleNextLesson : null}
+        nextLessonTitle={hasNextLesson ? (nextLessonTitle ?? "") : undefined}
       />
     );
   }

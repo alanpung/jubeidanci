@@ -31,7 +31,6 @@ export function PublicUnitPath({ unit }: PublicUnitPathProps) {
 
       <UnitCard
         title={unit.title}
-        description={unit.description}
         icon={unit.icon}
         color={unitColor}
         totalLessons={unit.lessons.length}
@@ -42,7 +41,6 @@ export function PublicUnitPath({ unit }: PublicUnitPathProps) {
           <div key={lessonIndex}>
             {lessonIndex > 0 && <PathConnector color={unitColor} />}
             <PublicLessonNode
-              title={lesson.title}
               index={lessonIndex}
               color={unitColor}
               signUpUrl={signUpUrl}
@@ -56,19 +54,18 @@ export function PublicUnitPath({ unit }: PublicUnitPathProps) {
 }
 
 function PublicLessonNode({
-  title,
   index,
   color,
   signUpUrl,
   isCurrent,
 }: {
-  title: string;
   index: number;
   color: string;
   signUpUrl: string;
   isCurrent: boolean;
 }) {
   const offset = index % 2 === 0 ? "-translate-x-8" : "translate-x-8";
+  const label = `Lesson ${index + 1}`;
 
   if (!isCurrent) {
     return (
@@ -91,7 +88,7 @@ function PublicLessonNode({
           </div>
         </Link>
         <span className="mt-2 text-xs font-bold text-lingo-gray-dark">
-          {title}
+          {label}
         </span>
       </div>
     );
@@ -113,7 +110,7 @@ function PublicLessonNode({
           </svg>
         </div>
       </Link>
-      <span className="mt-2 text-xs font-bold text-lingo-text">{title}</span>
+      <span className="mt-2 text-xs font-bold text-lingo-text">{label}</span>
     </div>
   );
 }

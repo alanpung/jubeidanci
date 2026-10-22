@@ -51,7 +51,6 @@ export function StandaloneUnitPath({
   return (
     <UnitCard
       title={unit.title}
-      description={unit.description}
       icon={unit.icon}
       color={unitColor}
       totalLessons={unit.lessons.length}
@@ -77,12 +76,10 @@ export function StandaloneUnitPath({
               <PathConnector color={unitColor} completed={completed} />
             )}
             <LessonNode
-              title={lesson.title}
               state={state}
               href={`/unit/${unit.id}/lesson/${lessonIndex}`}
               color={unitColor}
               index={lessonIndex}
-              language={unit.targetLanguage}
             />
           </div>
         );
