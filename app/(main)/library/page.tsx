@@ -11,6 +11,7 @@ import type {
 import { isAdminEmail } from "@/lib/ai/models";
 import { getTargetLanguage } from "@/lib/actions/preferences";
 import { StandaloneUnits } from "@/components/library/standalone-units";
+import { PrivateShelf } from "@/components/library/private-shelf";
 import {
   CourseBookShelf,
   LibraryLegend,
@@ -78,6 +79,22 @@ export default async function LearnPage() {
   const isEmptyLibrary =
     allCourses.length === 0 && standaloneUnits.length === 0 && !isAdmin;
 
+  // Anything the viewer owns that is not public (visibility is null while a
+  // course/unit is private) is a draft: it gets its own shelf at the bottom of
+  // the page and is dropped from the public shelves above so a draft never
+  // appears twice.
+  const isPrivateOwn = (visibility?: string | null) => visibility !== "public";
+
+  const privateCourses = allCourses.filter(
+    (c) => c.isOwner && isPrivateOwn(c.visibility),
+  );
+  const privateUnits = standaloneUnits.filter(
+    (u) => u.isOwner && isPrivateOwn(u.visibility),
+  );
+
+  const privateUnitIds = new Set(privateUnits.map((u) => u.id));
+  const visibleUnits = standaloneUnits.filter((u) => !privateUnitIds.has(u.id));
+
   return (
     <div className="mx-auto w-full max-w-6xl">
       <div className="mb-6 text-center">
@@ -107,7 +124,12 @@ export default async function LearnPage() {
         <div className="flex flex-col gap-6 lg:flex-row">
           <div className="min-w-0 flex-1">
             <CourseBookShelf courses={allCourses} isAdmin={isAdmin} />
-            <StandaloneUnits units={standaloneUnits} isAdmin={isAdmin} />
+            <StandaloneUnits units={visibleUnits} isAdmin={isAdmin} />
+            <PrivateShelf
+              courses={privateCourses}
+              units={privateUnits}
+              isAdmin={isAdmin}
+            />
           </div>
           <aside className="hidden shrink-0 lg:block lg:w-60">
             <div className="sticky top-4">

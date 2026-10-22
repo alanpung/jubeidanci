@@ -70,7 +70,7 @@ export function StandaloneUnits({ units, isAdmin }: StandaloneUnitsProps) {
   );
 }
 
-function StandaloneUnitCard({
+export function StandaloneUnitCard({
   unit,
   isAdmin,
 }: {

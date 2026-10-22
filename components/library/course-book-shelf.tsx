@@ -42,7 +42,16 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
   // than vanishing (it would be unreachable — no + on top, absent below).
   const borrowed = courses.filter((c) => borrowedIds.has(c.id)).slice(0, BORROW_CAP);
   const shownIds = new Set(borrowed.map((c) => c.id));
-  const unfilteredCatalog = courses.filter((c) => !shownIds.has(c.id));
+  // The lower shelf sits under a "Public Books" divider, so the viewer's own
+  // private courses are withheld here — they have a dedicated shelf further
+  // down the page, and listing them twice would make a draft look like two
+  // separate books.
+  const isPrivateOwn = (c: CourseListItem) =>
+    !!c.isOwner && c.visibility !== "public";
+
+  const unfilteredCatalog = courses.filter(
+    (c) => !shownIds.has(c.id) && !isPrivateOwn(c),
+  );
 
   // Exercise type lives in the book symbol, not in a column, so derive it the
   // same way CourseLevelIcon does — otherwise the filter and the cover could
