@@ -170,7 +170,9 @@ export async function setStudentCourseAccess(
     return { success: true };
   } catch (err) {
     console.error("setStudentCourseAccess failed:", err);
-    return { success: false, error: "Failed to update student access" };
+    const message =
+      err instanceof Error ? err.message : "Failed to update student access";
+    return { success: false, error: message };
   }
 }
 
@@ -210,6 +212,8 @@ export async function setStudentUnitAccess(
     return { success: true };
   } catch (err) {
     console.error("setStudentUnitAccess failed:", err);
-    return { success: false, error: "Failed to update student access" };
+    const message =
+      err instanceof Error ? err.message : "Failed to update student access";
+    return { success: false, error: message };
   }
 }

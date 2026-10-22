@@ -100,11 +100,20 @@ export function StudentAccessManager({ students, courses, units }: Props) {
       try {
         const res = await action;
         if (!res.success) {
+          // Surface the real reason instead of silently reverting to N so the
+          // owner can tell what went wrong (e.g. the student_access table has
+          // not been migrated yet).
+          window.alert(
+            `Could not save access: ${res.error ?? "unknown error"}`,
+          );
           // Roll back and re-sync from the server.
           const g = await getStudentGrants(selectedId);
           setGrants(g);
         }
-      } catch {
+      } catch (err) {
+        const message =
+          err instanceof Error ? err.message : "unknown error";
+        window.alert(`Could not save access: ${message}`);
         const g = await getStudentGrants(selectedId);
         setGrants(g);
       } finally {

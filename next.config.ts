@@ -2,7 +2,7 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   outputFileTracingIncludes: {
-    "/*": ["./content/**/*", "./words/**/*"],
+    "/*": ["./content/**/*", "./words/**/*", "./drizzle/**/*"],
   },
   experimental: {
     staleTimes: {
