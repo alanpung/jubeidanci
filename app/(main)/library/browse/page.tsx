@@ -6,6 +6,9 @@ import {
   getAvailableFilters,
   getBrowsableUnits,
 } from "@/lib/db/queries/courses";
+import { db } from "@/lib/db";
+import { userCourseEnrollment } from "@/lib/db/schema";
+import { eq } from "drizzle-orm";
 import { CourseBrowser } from "@/components/library/course-browser";
 import { BrowseUnits } from "@/components/library/browse-units";
 
@@ -19,11 +22,15 @@ export default async function BrowsePage() {
     redirect("/sign-in?redirect=/library/browse");
   }
 
-  const [courses, filters, browsableUnits] = await Promise.all([
+  const [courses, filters, browsableUnits, enrollments] = await Promise.all([
     listCoursesWithLessonCounts(undefined, userId),
     getAvailableFilters(userId),
     getBrowsableUnits(userId),
+    db.select({ courseId: userCourseEnrollment.courseId }).from(userCourseEnrollment).where(eq(userCourseEnrollment.userId, userId)),
   ]);
+
+  const enrolledIds = new Set(enrollments.map((e) => e.courseId));
+  const filteredCourses = courses.filter((c) => !enrolledIds.has(c.id));
 
   return (
     <div className="mx-auto w-full max-w-2xl">
@@ -40,14 +47,14 @@ export default async function BrowsePage() {
       {/* Courses Section */}
       <section className="mb-10">
         <h2 className="mb-3 text-lg font-bold text-lingo-text">Public Courses</h2>
-        {courses.length === 0 ? (
+        {filteredCourses.length === 0 ? (
           <div className="rounded-2xl border-2 border-dashed border-lingo-border p-6 text-center">
             <p className="text-sm font-medium text-lingo-text-light">
               No public courses available yet.
             </p>
           </div>
         ) : (
-          <CourseBrowser courses={courses} filters={filters} />
+          <CourseBrowser courses={filteredCourses} filters={filters} />
         )}
       </section>
 
