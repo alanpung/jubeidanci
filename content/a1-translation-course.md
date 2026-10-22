@@ -5,4 +5,5 @@ targetLanguage: "en"
 sourceLanguage: "zh"
 level: "A1"
 courseId: "a1-translation-course"
+visibility: "public"
 ---
