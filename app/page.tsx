@@ -66,8 +66,9 @@ export default async function LandingPage() {
           )}
         </div>
 
-        {/* App introduction — the 8 exercise types as library book symbols */}
-        <section className="w-full">
+        {/* App introduction — the 8 exercise types as library book symbols.
+            Extra breathing room here separates the CTA from what follows. */}
+        <section className="mt-4 w-full sm:mt-8">
           <h2 className="mb-3 text-center text-xs font-black uppercase tracking-[0.2em] text-lingo-text-light">
             What you&apos;ll practise
           </h2>
