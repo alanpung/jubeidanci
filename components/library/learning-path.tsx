@@ -15,7 +15,6 @@ interface LearningPathProps {
     unitId: string;
     lessonIndex: number;
   }[];
-  libraryUnitIds?: string[];
   userId?: string;
 }
 
@@ -44,7 +43,6 @@ function findFirstIncompleteLesson(
 export function LearningPath({
   course,
   completions,
-  libraryUnitIds = [],
   userId,
 }: LearningPathProps) {
   const searchParams = useSearchParams();
