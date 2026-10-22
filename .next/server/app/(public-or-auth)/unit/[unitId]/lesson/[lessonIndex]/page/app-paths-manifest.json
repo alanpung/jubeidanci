@@ -1,3 +1,0 @@
-{
-  "/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page": "app/(public-or-auth)/unit/[unitId]/lesson/[lessonIndex]/page.js"
-}

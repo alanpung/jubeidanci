@@ -1,3 +1,0 @@
-module.exports=[500874,(a,b,c)=>{b.exports=a.x("buffer",()=>require("buffer"))},293895,a=>{"use strict";var b=a.i(330624);let c=null;function d(){return c||(c=(0,b.I)()),c}a.s(["getAllCourses",0,function(){return d().courses},"getAllUnits",0,function(){return d().units}])},10604,a=>{a.v(b=>Promise.all(["server/chunks/ssr/[root-of-the-server]__163io-mk43kq2._.js","server/chunks/ssr/_1pmlti-0ffkqv._.js"].map(b=>a.l(b))).then(()=>b(293895)))}];
-
-//# sourceMappingURL=%5Broot-of-the-server%5D__10agrybv-0aqu._.js.map

@@ -1,3 +1,0 @@
-module.exports=[500874,(e,r,s)=>{r.exports=e.x("buffer",()=>require("buffer"))},818833,e=>{"use strict";var r=e.i(876371);let s=null;function t(){return s||(s=(0,r.I)()),s}e.s(["getAllCourses",0,function(){return t().courses},"getAllUnits",0,function(){return t().units}])},594884,e=>{e.v(r=>Promise.all(["server/chunks/[root-of-the-server]__07950dtz2gcf2._.js","server/chunks/_0cog0xmul09p4._.js"].map(r=>e.l(r))).then(()=>r(818833)))}];
-
-//# sourceMappingURL=%5Broot-of-the-server%5D__0c9cdcboaix9u._.js.map

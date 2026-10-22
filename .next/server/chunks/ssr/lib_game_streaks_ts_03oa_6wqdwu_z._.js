@@ -1,3 +1,0 @@
-module.exports=[350958,a=>{"use strict";a.s(["computeStreak",0,function(a,b){if(!b)return{newStreak:1,shouldUpdate:!0};let c=new Date;c.setHours(0,0,0,0);let d=new Date(b);d.setHours(0,0,0,0);let e=Math.floor((c.getTime()-d.getTime())/864e5);return 0===e?{newStreak:a,shouldUpdate:!1}:1===e?{newStreak:a+1,shouldUpdate:!0}:{newStreak:1,shouldUpdate:!0}}])}];
-
-//# sourceMappingURL=lib_game_streaks_ts_03oa_6wqdwu_z._.js.map

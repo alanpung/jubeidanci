@@ -1,3 +1,0 @@
-module.exports=[984307,a=>{"use strict";var b=a.i(907997);a.s(["default",0,function(){return(0,b.jsx)("div",{className:"flex min-h-[60vh] items-center justify-center",children:(0,b.jsx)("div",{className:"h-12 w-12 animate-spin rounded-full border-4 border-lingo-gray border-t-lingo-green"})})}])},765471,function(a){a.n(a.i(984307))}];
-
-//# sourceMappingURL=1g5b_%28public-or-auth%29_unit_%5BunitId%5D_lesson_%5BlessonIndex%5D_loading_tsx_13q31h2ildk3w._.js.map
