@@ -7,6 +7,7 @@ import { UnitCard } from "@/components/learning-path/unit-card";
 import { LessonNode } from "@/components/learning-path/lesson-node";
 import { PathConnector } from "@/components/learning-path/path-connector";
 import { getUnitColor } from "@/lib/colors";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 
 interface LearningPathProps {
   course: Course;
@@ -51,10 +52,17 @@ export function LearningPath({
     searchParams.get("unit")
   );
 
+  const crumbBase = [
+    { label: "Library", href: "/library" },
+    { label: course.title, onClick: () => setSelectedUnitId(null) },
+  ];
+
   // Unit selector view
   if (selectedUnitId === null) {
     return (
-      <div className="grid gap-4">
+      <div>
+        <Breadcrumb items={crumbBase} className="mb-4" />
+        <div className="grid gap-4">
         {course.units.map((unit, unitIndex) => {
           if (unit.parseError) {
             return (
@@ -107,6 +115,7 @@ export function LearningPath({
             />
           );
         })}
+        </div>
       </div>
     );
   }
@@ -120,12 +129,7 @@ export function LearningPath({
   if (unit.parseError) {
     return (
       <div>
-        <button
-          onClick={() => setSelectedUnitId(null)}
-          className="mb-4 flex items-center gap-1 text-sm font-bold text-lingo-text-light hover:text-lingo-text transition-colors"
-        >
-          &larr; All units
-        </button>
+        <Breadcrumb items={crumbBase} className="mb-4" />
         <div className="rounded-2xl border-2 border-red-200 bg-red-50 p-6 text-center">
           <div className="mb-3 text-3xl">&#9888;&#65039;</div>
           <h2 className="text-lg font-bold text-red-700 mb-2">
@@ -147,12 +151,10 @@ export function LearningPath({
 
   return (
     <div>
-      <button
-        onClick={() => setSelectedUnitId(null)}
-        className="mb-4 flex items-center gap-1 text-sm font-bold text-lingo-text-light hover:text-lingo-text transition-colors"
-      >
-        ← All units
-      </button>
+      <Breadcrumb
+        items={[...crumbBase, { label: `Unit ${unitIndex + 1}` }]}
+        className="mb-4"
+      />
 
       <UnitCard
         title={unit.title}

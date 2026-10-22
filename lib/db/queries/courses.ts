@@ -246,6 +246,34 @@ export async function listCoursesWithLessonCounts(
 const unitMemoryCache = new Map<string, { data: UnitWithContent; expiresAt: number }>();
 const courseMemoryCache = new Map<string, { data: Course; expiresAt: number }>();
 
+/**
+ * Just the course title, cached for a minute.
+ *
+ * The breadcrumb on a lesson page needs the course name, but loading the whole
+ * course with all unit markdown (getCourseWithContent) for a label is wasteful
+ * on a cold instance — this is one indexed row.
+ */
+const courseTitleCache = new Map<string, { title: string | null; ts: number }>();
+
+export async function getCourseTitle(courseId: string): Promise<string | null> {
+  try {
+    const cached = courseTitleCache.get(courseId);
+    if (cached && Date.now() - cached.ts < 60_000) return cached.title;
+
+    const rows = await db
+      .select({ title: course.title })
+      .from(course)
+      .where(eq(course.id, courseId))
+      .limit(1);
+    const title = rows[0]?.title ?? null;
+    courseTitleCache.set(courseId, { title, ts: Date.now() });
+    return title;
+  } catch (err) {
+    console.warn("getCourseTitle failed:", err);
+    return null;
+  }
+}
+
 export function clearContentCache() {
   unitMemoryCache.clear();
   courseMemoryCache.clear();

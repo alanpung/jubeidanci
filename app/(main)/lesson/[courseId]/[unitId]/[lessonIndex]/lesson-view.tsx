@@ -6,6 +6,7 @@ import type { UnitLesson, Exercise } from "@/lib/content/types";
 import { exerciseSchema } from "@/lib/content/exercise-schema";
 import { useLesson } from "@/hooks/use-lesson";
 import { ProgressBar } from "@/components/ui/progress-bar";
+import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { MultipleChoice } from "@/components/exercises/multiple-choice";
 import { Translation } from "@/components/exercises/translation";
 import { FillInTheBlank } from "@/components/exercises/fill-in-the-blank";
@@ -31,6 +32,8 @@ interface LessonViewProps {
   lessonTitle: string;
   unitTitle: string;
   targetLanguage: string;
+  /** Course name for the breadcrumb; omitted for standalone units. */
+  courseTitle?: string | null;
 }
 
 export function LessonView({
@@ -43,10 +46,10 @@ export function LessonView({
   lessonTitle,
   unitTitle,
   targetLanguage,
+  courseTitle,
 }: LessonViewProps) {
   const router = useRouter();
   const [showComplete, setShowComplete] = useState(false);
-  const [exiting, setExiting] = useState(false);
   // Only perfectScore is rendered on the completion screen; the SRS word
   // counters come back from the background action but are intentionally not
   // shown here (see LessonCompleteModal).
@@ -64,6 +67,24 @@ export function LessonView({
   const unitLabel = /unit\s*\d+/i.test(unitTitle)
     ? (unitTitle.match(/unit\s*\d+/i)?.[0] ?? "Unit").replace(/\s+/g, " ")
     : "Unit";
+
+  const lessonLabel = `Lesson ${lessonIndex + 1}`;
+
+  // Directory-style path bar. Everything above the current page is a link, so
+  // no separate back button is needed anywhere.
+  const crumbs = [
+    { label: "Library", href: "/library" },
+    ...(courseId
+      ? [
+          {
+            label: courseTitle ?? "Course",
+            href: `/library/${courseId}?unit=${unitId}`,
+          },
+          { label: unitLabel, href: backUrl },
+        ]
+      : [{ label: unitLabel, href: `/unit/${unitId}` }]),
+    { label: lessonLabel },
+  ];
 
   // The "Next lesson" action only exists when this isn't the last lesson.
   const nextIndex = lessonIndex + 1;
@@ -121,11 +142,6 @@ export function LessonView({
     router.replace(backUrl);
   }
 
-  function handleExit() {
-    setExiting(true);
-    router.push(backUrl);
-  }
-
   function handleNextLesson() {
     router.push(nextUrl);
   }
@@ -173,24 +189,11 @@ export function LessonView({
 
   return (
     <div className="mx-auto w-full max-w-7xl px-3 sm:px-8 py-6">
-      {/* Header */}
+      {/* Header — directory style: Library / Course / Unit N / Lesson N.
+          No extra back button: every level above is clickable. */}
+      <Breadcrumb items={crumbs} className="mb-4" />
+
       <div className="mb-6 flex items-center gap-4">
-        {/* A bare × read as "broken" — nothing appeared to happen on click
-            while the next route loaded. A labelled link back to the unit is
-            unambiguous, and the spinner confirms the click registered. */}
-        <button
-          onClick={handleExit}
-          disabled={exiting}
-          aria-label={`Back to ${unitLabel}`}
-          className="flex shrink-0 items-center gap-1 text-sm font-bold text-lingo-text-light transition-colors hover:text-lingo-text disabled:opacity-60"
-        >
-          {exiting ? (
-            <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-current border-t-transparent" />
-          ) : (
-            <span aria-hidden>←</span>
-          )}
-          {unitLabel}
-        </button>
         <ProgressBar value={progress} className="flex-1" />
       </div>
 
