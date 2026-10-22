@@ -67,14 +67,16 @@ async function runSeedTask() {
           target: course.id,
           set: {
             // The filesystem is only the source of truth for rows that do not
-            // exist yet. Once a course is in the DB its title and visibility
-            // belong to the owner (edit title / public-private switch), so the
-            // periodic re-seed must not clobber them back.
+            // exist yet. Once a course is in the DB its title belongs to the
+            // owner (edit title); the public/private visibility the owner chose
+            // must never be clobbered by a re-seed. We therefore leave
+            // `visibility` out of this update entirely: new rows get "public"
+            // from the insert `values` above, and existing rows keep whatever
+            // the owner set (a private course stored as NULL stays private).
             title: sql`coalesce(${course.title}, excluded.title)`,
             sourceLanguage: sql`excluded.source_language`,
             targetLanguage: sql`excluded.target_language`,
             level: sql`excluded.level`,
-            visibility: sql`coalesce(${course.visibility}, excluded.visibility)`,
             published: true,
             createdBy: sql`coalesce(${course.createdBy}, excluded.created_by)`,
             updatedAt: new Date(),
@@ -162,7 +164,8 @@ async function runSeedTask() {
             sourceLanguage: sql`excluded.source_language`,
             level: sql`excluded.level`,
             // Same rule as courses: never reset a visibility the owner chose.
-            visibility: sql`coalesce(${unit.visibility}, excluded.visibility)`,
+            // Leave `visibility` out of the update so a private unit (NULL)
+            // survives every re-seed; new units inherit "public" from values.
             createdBy: sql`coalesce(${unit.createdBy}, excluded.created_by)`,
             updatedAt: new Date(),
           },

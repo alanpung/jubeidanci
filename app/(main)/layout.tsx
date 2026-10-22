@@ -67,7 +67,7 @@ export default async function MainLayout({
         name={session.user.name}
       />
       <BackgroundRoutePrefetch />
-      <Sidebar showChat={isAdmin} showRead={isAdmin} />
+      <Sidebar showChat={isAdmin} showRead={isAdmin} isAdmin={isAdmin} />
       <div className="flex flex-1 flex-col md:pl-64 min-h-0 w-full max-w-full overflow-x-hidden">
         <TopBar stats={stats} />
         <PullToRefresh className="p-3 sm:p-4 pb-36 md:p-8 md:pb-8">
