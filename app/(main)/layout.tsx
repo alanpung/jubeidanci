@@ -10,6 +10,7 @@ import { PostHogIdentify } from "@/components/providers/posthog-identify";
 import { BackgroundRoutePrefetch } from "@/components/providers/background-route-prefetch";
 import { PullToRefresh } from "@/components/ui/pull-to-refresh";
 import { isAdminEmail } from "@/lib/ai/models";
+import { __time, __timings } from "@/lib/debug-timings"; // TEMP DEBUG
 
 export const dynamic = "force-dynamic";
 
@@ -18,7 +19,7 @@ export default async function MainLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getSession();
+  const session = await __time("layout:getSession", getSession());
   if (!session) {
     const headersList = await headers();
     const pathname = headersList.get("x-pathname") || "";
@@ -34,8 +35,8 @@ export default async function MainLayout({
   let stats = null;
   try {
     const [userStatsData, srsStats] = await Promise.all([
-      getUserStatsData(),
-      getSrsStats(),
+      __time("layout:getUserStatsData", getUserStatsData()),
+      __time("layout:getSrsStats", getSrsStats()),
     ]);
     stats = {
       currentStreak: userStatsData.currentStreak,

@@ -18,6 +18,7 @@ import {
 import { LearnHeader } from "@/components/library/learn-header";
 import { seedDebug } from "@/lib/db/seed-content"; // TEMP DEBUG
 import { withTimeout } from "@/lib/db/timeout";
+import { __timings } from "@/lib/debug-timings"; // TEMP DEBUG
 
 export const dynamic = "force-dynamic";
 
@@ -127,7 +128,7 @@ export default async function LearnPage({
       {/* TEMP DEBUG */}
       <script
         dangerouslySetInnerHTML={{
-          __html: `window.__DEBUG_TIMING=${JSON.stringify({ ...__t, seed: { ...seedDebug, sinceStart: seedDebug.lastStartedAt ? Date.now() - seedDebug.lastStartedAt : 0 } })};`,
+          __html: `window.__DEBUG_TIMING=${JSON.stringify({ ...__timings, ...__t, seed: { ...seedDebug, sinceStart: seedDebug.lastStartedAt ? Date.now() - seedDebug.lastStartedAt : 0 } })};`,
         }}
       />
       <div className="mb-6 text-center">
