@@ -1,9 +1,9 @@
 ---
-title: "A1 Translation Course"
-description: "A1 Translation Practice: 10 units x 10 lessons x 10 sentences = 1000 sentences"
+id: "a1-translation-course"
+courseTitle: "A1 Translation"
+description: "A1 Elementary Sentence Translation Course (10 Units x 10 Lessons x 10 Sentences = 1000 Sentences)"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "A1"
-courseId: "a1-translation-course"
 visibility: "public"
 ---
