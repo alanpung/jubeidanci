@@ -10,7 +10,6 @@ import { PostHogIdentify } from "@/components/providers/posthog-identify";
 import { BackgroundRoutePrefetch } from "@/components/providers/background-route-prefetch";
 import { PullToRefresh } from "@/components/ui/pull-to-refresh";
 import { isAdminEmail } from "@/lib/ai/models";
-import { __time, __timings } from "@/lib/debug-timings"; // TEMP DEBUG
 import { withTimeout } from "@/lib/db/timeout";
 import { runAfterResponse } from "@/lib/after-response";
 
@@ -21,7 +20,7 @@ export default async function MainLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const session = await __time("layout:getSession", getSession());
+  const session = await getSession();
   if (!session) {
     const headersList = await headers();
     const pathname = headersList.get("x-pathname") || "";
@@ -45,14 +44,8 @@ export default async function MainLayout({
     // must never stop the page from rendering (the pool has no queue
     // timeout, so an unbounded await here = a request that never returns).
     const [userStatsData, srsStats] = await Promise.all([
-      __time(
-        "layout:getUserStatsData",
-        withTimeout("layout:getUserStatsData", getUserStatsData(), 5000, null),
-      ),
-      __time(
-        "layout:getSrsStats",
-        withTimeout("layout:getSrsStats", getSrsStats(), 5000, null),
-      ),
+      withTimeout("layout:getUserStatsData", getUserStatsData(), 5000, null),
+      withTimeout("layout:getSrsStats", getSrsStats(), 5000, null),
     ]);
     stats = userStatsData
       ? {

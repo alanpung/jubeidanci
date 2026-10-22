@@ -16,41 +16,12 @@ import {
   LibraryLegend,
 } from "@/components/library/course-book-shelf";
 import { LearnHeader } from "@/components/library/learn-header";
-import { seedDebug } from "@/lib/db/seed-content"; // TEMP DEBUG
 import { withTimeout } from "@/lib/db/timeout";
-import { __timings } from "@/lib/debug-timings"; // TEMP DEBUG
 
 export const dynamic = "force-dynamic";
 
-// TEMP DEBUG
-const __t: Record<string, number> = {};
-function __time<T>(name: string, p: Promise<T>): Promise<T> {
-  const s = Date.now();
-  return p.then((v) => {
-    __t[name] = Date.now() - s;
-    return v;
-  });
-}
-
-export default async function LearnPage({
-  searchParams,
-}: {
-  searchParams?: Promise<Record<string, string | string[] | undefined>>;
-}) {
-  const __s0 = Date.now();
-  // TEMP DEBUG: ?skip=session,standalone,courses,lang
-  const __sp = (await searchParams) ?? {};
-  const __skip = String(__sp.skip ?? "").split(",").filter(Boolean);
-  let session: { user?: { id?: string; email?: string | null } } | null = null;
-  if (!__skip.includes("session")) {
-    session = (await __time(
-      "session",
-      getSession(),
-    )) as unknown as typeof session;
-  } else {
-    session = { user: { id: "user_demo_123", email: null } };
-  }
-  __t.sessionTotal = Date.now() - __s0;
+export default async function LearnPage() {
+  const session = await getSession();
 
   const userId = session?.user?.id;
   const isAdmin = isAdminEmail(session?.user?.email);
@@ -65,41 +36,25 @@ export default async function LearnPage({
     // /library hang instead of merely being slow. Rendering the shelf with a
     // missing slice beats never rendering it at all.
     const results = await Promise.allSettled([
-      __skip.includes("standalone")
-        ? Promise.resolve([] as StandaloneUnitInfo[])
-        : __time(
-            "standalone",
-            withTimeout(
-              "library:getStandaloneUnits",
-              getStandaloneUnits(userId),
-              8000,
-              [] as StandaloneUnitInfo[],
-            ),
-          ),
-      __skip.includes("courses")
-        ? Promise.resolve([] as CourseListItem[])
-        : __time(
-            "courses",
-            withTimeout(
-              "library:listCoursesWithLessonCounts",
-              listCoursesWithLessonCounts(undefined, userId, false),
-              10000,
-              [] as CourseListItem[],
-            ),
-          ),
-      __skip.includes("lang")
-        ? Promise.resolve(null as string | null)
-        : __time(
-            "lang",
-            withTimeout<string | null>(
-              "library:getTargetLanguage",
-              getTargetLanguage(userId),
-              5000,
-              null as string | null,
-            ),
-          ),
+      withTimeout(
+        "library:getStandaloneUnits",
+        getStandaloneUnits(userId),
+        8000,
+        [] as StandaloneUnitInfo[],
+      ),
+      withTimeout(
+        "library:listCoursesWithLessonCounts",
+        listCoursesWithLessonCounts(undefined, userId, false),
+        10000,
+        [] as CourseListItem[],
+      ),
+      withTimeout<string | null>(
+        "library:getTargetLanguage",
+        getTargetLanguage(userId),
+        5000,
+        null,
+      ),
     ]);
-    __t.all = Date.now() - __s0;
 
     if (results[0].status === "fulfilled") {
       standaloneUnits = results[0].value;
@@ -125,12 +80,6 @@ export default async function LearnPage({
 
   return (
     <div className="mx-auto w-full max-w-6xl">
-      {/* TEMP DEBUG */}
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `window.__DEBUG_TIMING=${JSON.stringify({ ...__timings, ...__t, seed: { ...seedDebug, sinceStart: seedDebug.lastStartedAt ? Date.now() - seedDebug.lastStartedAt : 0 } })};`,
-        }}
-      />
       <div className="mb-6 text-center">
         <h1 className="text-2xl font-black text-lingo-text">My Library</h1>
       </div>

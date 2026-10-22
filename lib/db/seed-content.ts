@@ -8,13 +8,6 @@ let lastSyncedAt = 0;
 
 const SYNC_INTERVAL_MS = 30 * 60_000;
 
-// TEMP DEBUG
-export const seedDebug = {
-  runs: 0,
-  running: false,
-  lastStartedAt: 0,
-  lastDurationMs: 0,
-};
 /**
  * Single in-flight handle for the seed task. Callers that need the data to
  * actually be present (e.g. addCourseToLibrary inserting rows that FK to
@@ -32,10 +25,6 @@ function startSeedTask(): Promise<void> {
 }
 
 async function runSeedTask() {
-  // TEMP DEBUG
-  seedDebug.runs += 1;
-  seedDebug.running = true;
-  seedDebug.lastStartedAt = Date.now();
   try {
     // 1. Ensure Alan's user name is "Alan P"
     let alanUser = await db.query.user.findFirst({
@@ -198,9 +187,7 @@ async function runSeedTask() {
   } catch (err) {
     console.warn("seedContentFromFilesystem error:", err);
   } finally {
-    // TEMP DEBUG
-    seedDebug.running = false;
-    seedDebug.lastDurationMs = Date.now() - seedDebug.lastStartedAt;
+    // nothing to clean up; seedPromise is reset by startSeedTask()
   }
 }
 
