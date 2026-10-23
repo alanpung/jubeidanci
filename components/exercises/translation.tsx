@@ -1,12 +1,11 @@
 "use client";
 
-import { useState, useEffect, useMemo, useRef, useCallback, KeyboardEvent } from "react";
-import { Volume2 } from "lucide-react";
+import { useState, useEffect, useMemo, useCallback } from "react";
+import { Volume2, ChevronLeft, ChevronRight } from "lucide-react";
 import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
-import { checkWordMatch, generateAlternativeTranslations, WordMatchResult } from "@/lib/similarity";
-import { synonymsOf } from "@/lib/synonyms";
+import { generateAlternativeTranslations } from "@/lib/similarity";
 import { ExerciseShell } from "./exercise-shell";
 import { HoverableText } from "@/components/word/hoverable-text";
 import { detectTextLanguage } from "@/lib/language-detector";
@@ -15,6 +14,16 @@ interface Props {
   exercise: TranslationExercise;
   onResult: (correct: boolean, answer: string) => void;
   onContinue: () => void;
+  /** Go to the previous question (no-op past the first). */
+  onPrev: () => void;
+  /** Whether there is a previous question to go back to. */
+  canGoPrev: boolean;
+  /** 0-based index of this question within the lesson. */
+  exerciseIndex: number;
+  /** Total questions in the lesson — drives the "Q x / N" label. */
+  totalExercises: number;
+  /** Last navigation direction, used for the slide-in animation. */
+  direction: "forward" | "backward" | null;
   language: string;
   autoplayAudio?: boolean;
 }
@@ -106,9 +115,6 @@ const BUILTIN_WORD_DICT: Record<string, { ipa: string; meaning: string; grammarT
   sweet: { ipa: "/swiːt/", meaning: "甜的", grammarTag: "形容词" },
   something: { ipa: "/ˈsʌm.θɪŋ/", meaning: "某物/东西", grammarTag: "代词" },
   want: { ipa: "/wɒnt/", meaning: "想要", grammarTag: "动词" },
-  // "Excuse me" is a fixed polite opener — it means 打扰一下/请问, NOT the
-  // noun sense 原谅. Showing 原谅 here made the sentence "请问售票处在哪里？"
-  // look like its English answer was missing the "excuse me" politeness.
   excuse: { ipa: "/ɪkˈskjuːz/", meaning: "打扰(Excuse me)", grammarTag: "动词" },
   eat: { ipa: "/iːt/", meaning: "吃", grammarTag: "动词" },
   like: { ipa: "/laɪk/", meaning: "喜欢", grammarTag: "动词" },
@@ -290,7 +296,18 @@ function resolveGrammarTag(word: string, pos?: string): string {
   return "名词";
 }
 
-export function Translation({ exercise, onResult, onContinue, language, autoplayAudio = true }: Props) {
+export function Translation({
+  exercise,
+  onResult,
+  onContinue,
+  onPrev,
+  canGoPrev,
+  exerciseIndex,
+  totalExercises,
+  direction,
+  language,
+  autoplayAudio = true,
+}: Props) {
   const [analysis, setAnalysis] = useState<SentenceAnalysisData | null>(null);
 
   const rawAnswerTokens = useMemo(() => {
@@ -303,70 +320,15 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     return generateAlternativeTranslations(exercise.answer, [...fromProps, ...fromApi]);
   }, [exercise.answer, exercise.acceptAlso, analysis?.acceptableTranslations]);
 
-  const [inputWords, setInputWords] = useState<string[]>(() => rawAnswerTokens.map(() => ""));
-  const [bestMatchAnswer, setBestMatchAnswer] = useState<string>(exercise.answer);
-  const [similarityScore, setSimilarityScore] = useState<number | null>(null);
-  const [matchDetail, setMatchDetail] = useState<string>("");
-  const [matchedWordIndices, setMatchedWordIndices] = useState<boolean[]>([]);
-  const [activeSlot, setActiveSlot] = useState<number>(0);
-
-  const { status, checkAnswer } = useExercise();
+  // We no longer grade the translation (the Check button is gone); the exercise
+  // is a reveal-and-review deck, so `status` is only kept for the shell's API.
+  const { status } = useExercise();
   const { play, stop, prefetch } = useAudio();
-  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
-  const focusInputSlot = useCallback(
-    (idx: number = 0) => {
-      if (status !== "answering") return;
-      const targetIdx = Math.max(0, Math.min(rawAnswerTokens.length - 1, idx));
-      setActiveSlot(targetIdx);
-      requestAnimationFrame(() => {
-        const el = inputRefs.current[targetIdx] || (document.getElementById(`word-input-${targetIdx}`) as HTMLInputElement | null);
-        if (el) {
-          el.focus({ preventScroll: true });
-          try {
-            const len = el.value.length;
-            el.setSelectionRange(len, len);
-          } catch {}
-        }
-      });
-    },
-    [status, rawAnswerTokens.length]
+  const sentenceLang = useMemo(
+    () => detectTextLanguage(exercise.sentence, { targetLanguage: language }),
+    [exercise.sentence, language]
   );
-
-  // Track the previously rendered answer so we only reset state when the
-  // exercise actually changes. Without this guard, any change to `status`
-  // (e.g. "answering" → "correct" when the user clicks Check) would re-run
-  // this effect via the `focusInputSlot` callback reference, wiping out the
-  // feedback that handleCheck() just wrote (inputWords, matchDetail,
-  // matchedWordIndices, bestMatchAnswer).
-  const prevAnswerRef = useRef<string | null>(null);
-  useEffect(() => {
-    if (prevAnswerRef.current === exercise.answer) return;
-    prevAnswerRef.current = exercise.answer;
-
-    setInputWords(rawAnswerTokens.map(() => ""));
-    setSimilarityScore(null);
-    setMatchDetail("");
-    setMatchedWordIndices([]);
-    setBestMatchAnswer(exercise.answer);
-    setActiveSlot(0);
-
-    focusInputSlot(0);
-    const t1 = setTimeout(() => focusInputSlot(0), 30);
-    const t2 = setTimeout(() => focusInputSlot(0), 100);
-    const t3 = setTimeout(() => focusInputSlot(0), 250);
-    return () => {
-      clearTimeout(t1);
-      clearTimeout(t2);
-      clearTimeout(t3);
-    };
-  }, [exercise.answer, rawAnswerTokens, focusInputSlot]);
-
-  useEffect(() => {
-    if (status === "answering") {
-      focusInputSlot(0);
-    }
-  }, [status, focusInputSlot]);
 
   useEffect(() => {
     let isMounted = true;
@@ -395,24 +357,17 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     return rawAnswerTokens.map((token: string) => {
       const clean = token.toLowerCase().replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "");
       const dict = BUILTIN_WORD_DICT[clean];
-      
-      // Flatten chunks to find the word info from API analysis
-      const apiWord = analysis?.chunks?.flatMap((c) => c.words)?.find((w) => 
+
+      const apiWord = analysis?.chunks?.flatMap((c) => c.words)?.find((w) =>
         w.word.toLowerCase().replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "") === clean
       );
 
-      // Prefer API POS if in Chinese, or dict, or resolveGrammarTag
       let gTag = (apiWord?.pos && POS_BADGE_STYLES[apiWord.pos])
         ? apiWord.pos
         : (dict?.grammarTag || resolveGrammarTag(clean, apiWord?.pos));
 
-      // Meaning: must be valid Chinese.
-      // The built-in dictionary wins over the API. Its entries are hand-checked
-      // against the sentences this app actually ships, whereas the API returns
-      // the most common dictionary sense — e.g. "Excuse" came back as 原谅
-      // (the noun sense), hiding the 打扰一下/请问 sense that actually matches
-      // the Chinese prompt 请问…. IPA already preferred the dictionary; this
-      // makes the meaning follow the same rule so both come from one source.
+      // The built-in dictionary wins over the API for the Chinese meaning so the
+      // two always come from one hand-checked source.
       let meaning = "";
       if (dict?.meaning && /[\u4e00-\u9fa5]/.test(dict.meaning)) {
         meaning = dict.meaning;
@@ -420,108 +375,82 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
         meaning = apiWord.meaning;
       }
 
-      // IPA
       const ipa = dict?.ipa || apiWord?.ipa || "";
 
-      return {
-        word: token,
-        ipa,
-        meaning,
-        pos: gTag,
-        grammarTag: gTag,
-      };
+      return { word: token, ipa, meaning, pos: gTag, grammarTag: gTag };
     });
   }, [rawAnswerTokens, analysis]);
 
   const orderedAnswers = useMemo(() => {
-    if (!bestMatchAnswer) return allAnswers;
-    const matched = allAnswers.find((a) => a.toLowerCase() === bestMatchAnswer.toLowerCase());
+    const primary = allAnswers[0] || exercise.answer;
+    const matched = allAnswers.find((a) => a.toLowerCase() === primary.toLowerCase());
     if (!matched) return allAnswers;
-    return [matched, ...allAnswers.filter((a) => a.toLowerCase() !== bestMatchAnswer.toLowerCase())];
-  }, [allAnswers, bestMatchAnswer]);
-
-  const sentenceLang = useMemo(
-    () => detectTextLanguage(exercise.sentence, { targetLanguage: language }),
-    [exercise.sentence, language]
-  );
+    return [matched, ...allAnswers.filter((a) => a.toLowerCase() !== primary.toLowerCase())];
+  }, [allAnswers, exercise.answer]);
 
   useEffect(() => {
     const toFetch = [exercise.sentence, ...allAnswers].filter(Boolean);
     prefetch(toFetch, language);
   }, [exercise.sentence, allAnswers, language, prefetch]);
 
+  // Audio: read the Chinese prompt on entry, then the English answer a beat
+  // later (the answer is shown immediately, so there is no "Check" gate to wait
+  // for). Mirrors the prior "read Chinese first, English after" intent.
   useEffect(() => {
-    if (autoplayAudio && !exercise.noAudio?.includes("sentence")) {
-      play(exercise.sentence, sentenceLang);
-    }
-    return stop;
-  }, [exercise.sentence, sentenceLang, autoplayAudio, play, stop, exercise.noAudio]);
+    if (!autoplayAudio) return;
+    if (exercise.noAudio?.includes("sentence")) return stop;
+    play(exercise.sentence, sentenceLang);
+    const t = setTimeout(() => {
+      if (!exercise.noAudio?.includes("answer")) play(exercise.answer, "en");
+    }, 1200);
+    return () => {
+      clearTimeout(t);
+      stop();
+    };
+  }, [exercise.sentence, sentenceLang, exercise.answer, autoplayAudio, play, stop, exercise.noAudio]);
 
-  function handleCheck() {
-    const matchResult: WordMatchResult = checkWordMatch(inputWords, allAnswers);
+  // NEXT: record this question as viewed (so the lesson can complete) and move
+  // on. PREV: just step back — no re-recording.
+  const goNext = useCallback(() => {
+    onResult(true, exercise.answer);
+    onContinue();
+  }, [onResult, onContinue, exercise.answer]);
 
-    setSimilarityScore(matchResult.score);
-    setMatchDetail(`${matchResult.percentage}% (${matchResult.matchCount}/${matchResult.totalCount} words)`);
-    setMatchedWordIndices(matchResult.matchedWordIndices);
-    const primaryCorrect = allAnswers[0] || exercise.answer;
-    setBestMatchAnswer(primaryCorrect);
+  const goPrev = useCallback(() => {
+    if (canGoPrev) onPrev();
+  }, [canGoPrev, onPrev]);
 
-    checkAnswer(matchResult.isCorrect);
-    onResult(matchResult.isCorrect, inputWords.join(" ").trim());
-
-    if (!exercise.noAudio?.includes("sentence")) {
-      play(primaryCorrect, "en");
-    }
-  }
-
-  const handleNavigation = (i: number, e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "ArrowRight") {
-      e.preventDefault();
-      focusInputSlot(Math.min(rawAnswerTokens.length - 1, i + 1));
-    } else if (e.key === "ArrowLeft") {
-      e.preventDefault();
-      focusInputSlot(Math.max(0, i - 1));
-    } else if (e.key === " " || e.key === "Spacebar") {
-      e.preventDefault();
-      if (i + 1 < rawAnswerTokens.length) {
-        focusInputSlot(i + 1);
-      }
-    } else if (e.key === "Backspace" && (!inputWords[i] || inputWords[i].length === 0)) {
-      if (i > 0) {
-        e.preventDefault();
-        focusInputSlot(i - 1);
-      }
-    }
-  };
+  const animClass =
+    direction === "backward" ? "animate-slide-in-left" : "animate-slide-in-right";
 
   return (
     <ExerciseShell
       status={status}
-      onCheck={handleCheck}
+      onCheck={() => {}}
       onContinue={onContinue}
-      canCheck={inputWords.length === rawAnswerTokens.length && inputWords.every((w: string) => w.trim().length > 0)}
-      correctAnswer={bestMatchAnswer}
-      allAnswers={orderedAnswers}
-      language={language}
-      similarityScore={similarityScore}
-      similarityDetail={matchDetail}
-      matchedWordIndices={matchedWordIndices}
-      hideBottomFeedback
+      canCheck={false}
+      hideCheck
+      hideContinue
+      freeNav
+      onSwipeLeft={goNext}
+      onSwipeRight={goPrev}
     >
       <div className="w-full max-w-5xl mx-auto flex flex-col items-center py-2 sm:py-4">
-        {/* Chinese Sentence Prompt at the top */}
-        <div className="flex flex-col items-center mt-2 mb-4 text-center px-2">
-          <div className="flex items-center justify-center gap-2 sm:gap-3">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-800 tracking-normal select-none">
-              <HoverableText text={exercise.sentence} language={sentenceLang} />
-            </h1>
-          </div>
+        {/* Position within the lesson */}
+        <div className="mb-3 text-xs font-bold text-lingo-text-light">
+          Question {exerciseIndex + 1} / {totalExercises}
         </div>
 
-        {/* Audio output controls — centered directly below the Chinese question.
-            Both buttons show from the very start; only the Chinese prompt
-            auto-plays on load (see the effect above), and the English answer
-            auto-plays after the user clicks Check (see handleCheck). */}
+        {/* Chinese Sentence Prompt at the top */}
+        <div className="flex flex-col items-center mt-2 mb-4 text-center px-2">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-800 tracking-normal select-none">
+            <HoverableText text={exercise.sentence} language={sentenceLang} />
+          </h1>
+        </div>
+
+        {/* Audio output controls — centered below the Chinese question. Both
+            buttons are visible from the start; only Chinese auto-plays on entry,
+            English follows a beat later (see the effect above). */}
         <div className="mb-6 flex items-center justify-center gap-2.5">
           <button
             type="button"
@@ -540,7 +469,7 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
             type="button"
             onClick={(e) => {
               e.stopPropagation();
-              play(bestMatchAnswer, "en");
+              play(exercise.answer, "en");
             }}
             className="inline-flex h-10 items-center gap-1.5 rounded-full bg-lingo-blue px-3.5 text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold shadow-sm"
             aria-label="播放英文音频"
@@ -551,140 +480,34 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
           </button>
         </div>
 
-        {/* Word Input Cards Layout (without word structure/chunk labels) */}
-          <div
-            onClick={(e) => {
-              // Only jump to the first empty slot when the click lands on the
-              // wrapper background itself. If the user clicks a specific input
-              // box, let the native focus + onFocus handler select THAT box —
-              // otherwise the bubbled click would steal focus to the first
-              // empty slot and mouse selection wouldn't work (arrow keys only).
-              if (status === "answering" && e.target === e.currentTarget) {
-                const firstEmpty = inputWords.findIndex((w) => !w.trim());
-                focusInputSlot(firstEmpty === -1 ? activeSlot : firstEmpty);
-              }
-            }}
-            className="w-full flex flex-col items-center cursor-text mb-4"
+        {/* Answer deck — the "<" / ">" arrows flank it for last/next question,
+            and the same move is available by swiping left/right on touch. */}
+        <div className="flex w-full items-stretch gap-2 sm:gap-3">
+          <button
+            type="button"
+            onClick={goPrev}
+            disabled={!canGoPrev}
+            aria-label="上一题"
+            className="flex shrink-0 items-center justify-center self-center rounded-full border-2 border-lingo-border bg-white h-12 w-12 text-lingo-text shadow-sm transition-all hover:border-lingo-blue hover:text-lingo-blue active:translate-y-0.5 disabled:opacity-30 disabled:hover:border-lingo-border disabled:hover:text-lingo-text"
           >
-          <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 w-full max-w-5xl">
-            {analyzedWordList.map((item, idx) => {
-              const targetWord = item.word;
-              const typedWord = inputWords[idx] || "";
-              const isSlotActive = activeSlot === idx;
-              // Never default an unevaluated slot to "matched" — if the
-              // indices array is ever shorter than the rendered slots again,
-              // an ungraded word must read as wrong, not as a free green.
-              const isWordMatched = matchedWordIndices[idx] === true;
-              return (
+            <ChevronLeft className="h-7 w-7 stroke-[3]" />
+          </button>
+
+          <div className={`min-w-0 flex-1 ${animClass}`}>
+            {/* English answer — shown as a study card (word + POS + meaning + IPA) */}
+            <div className="flex flex-wrap items-start justify-center gap-2 sm:gap-3 lg:gap-4 w-full max-w-5xl">
+              {analyzedWordList.map((item, idx) => (
                 <div
                   key={idx}
-                  className={`bg-white rounded-2xl border-2 shadow-xs px-2 sm:px-3 lg:px-4 py-2 sm:py-3 flex flex-col items-center justify-start min-w-[62px] sm:min-w-[92px] lg:min-w-[100px] transition-all ${
-                    status !== "answering"
-                      ? isWordMatched
-                        ? "border-emerald-200 bg-emerald-50/20"
-                        : "border-red-200 bg-red-50/20"
-                      : isSlotActive
-                      ? "border-[#007a55] shadow-sm ring-2 ring-[#007a55]/20"
-                      : "border-blue-100/80 hover:border-blue-200"
-                  }`}
+                  className="bg-white rounded-2xl border-2 border-emerald-200 bg-emerald-50/20 shadow-xs px-2 sm:px-3 lg:px-4 py-2 sm:py-3 flex flex-col items-center justify-start min-w-[62px] sm:min-w-[92px] lg:min-w-[100px]"
                 >
-                  {/* After Check: for an UNMATCHED slot only, show the
-                      canonical correct word ABOVE the input line.
-                      Accepted synonyms are deliberately NOT shown here — they
-                      are rendered BELOW the answer boxes (see the "also
-                      accepted" row in the lower info stack). */}
-                  {status !== "answering" && !isWordMatched && (
-                    <div className="flex flex-col items-center justify-center mb-1 sm:mb-1.5">
-                      <span
-                        style={{ minWidth: `${Math.max(3, targetWord.length)}ch` }}
-                        className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700"
-                      >
-                        {targetWord}
-                      </span>
-                    </div>
-                  )}
-                  {/* Input line (always in its position, just below the green
-                      correct-answer when present; no grey separator anywhere). */}
-                  <div className="flex flex-col items-center justify-center my-1 sm:my-1.5 min-h-[2.25rem] sm:min-h-[3rem]">
-                    {status === "answering" ? (
-                      <input
-                        id={`word-input-${idx}`}
-                        ref={(el: HTMLInputElement | null) => {
-                          inputRefs.current[idx] = el;
-                        }}
-                        type="text"
-                        autoFocus={idx === 0}
-                        value={typedWord}
-                        onFocus={() => setActiveSlot(idx)}
-                        onChange={(e) => {
-                          const val = e.target.value;
-                          if (val.includes(" ")) {
-                            // The user pasted a whole sentence, or a space
-                            // slipped through the keydown handler, or an IME/
-                            // autocorrect inserted a space. Split into words
-                            // and DISTRIBUTE them across this slot and the
-                            // following ones — do NOT concatenate them into a
-                            // single slot. The old behaviour stripped the
-                            // spaces and jammed every word into one slot while
-                            // leaving the rest empty, so a perfectly correct
-                            // answer could score as low as 5/8.
-                            const words = val
-                              .split(/\s+/)
-                              .map((w) => w.trim())
-                              .filter(Boolean);
-                            if (words.length === 0) return;
-                            const next = [...inputWords];
-                            let slot = idx;
-                            for (const w of words) {
-                              if (slot >= rawAnswerTokens.length) break;
-                              next[slot] = w;
-                              slot++;
-                            }
-                            setInputWords(next);
-                            const lastFilled = Math.min(slot - 1, rawAnswerTokens.length - 1);
-                            const nextFocus = Math.min(slot, rawAnswerTokens.length - 1);
-                            // Keep the cursor moving forward while slots remain,
-                            // otherwise park it on the final filled slot.
-                            focusInputSlot(slot < rawAnswerTokens.length ? nextFocus : lastFilled);
-                            return;
-                          }
-                          const next = [...inputWords];
-                          next[idx] = val;
-                          setInputWords(next);
-                        }}
-                        onKeyDown={(e: KeyboardEvent<HTMLInputElement>) => handleNavigation(idx, e)}
-                        disabled={status !== "answering"}
-                        style={{ width: `${Math.max(3, targetWord.length + 1)}ch` }}
-                        className={`text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-gray-900 bg-transparent focus:outline-none pb-0.5 min-w-[2rem] sm:min-w-[2.5rem] lg:min-w-[3rem] transition-all border-b-2 ${
-                          isSlotActive
-                            ? "border-[#007a55] border-b-[3px] shadow-[0_2px_0_0_#007a55]"
-                            : "border-[#007a55]/60 hover:border-[#007a55]"
-                        }`}
-                      />
-                    ) : (
-                      <div className="flex flex-col items-center">
-                        <span
-                          style={{ minWidth: `${Math.max(3, Math.max(targetWord.length, typedWord.length))}ch` }}
-                          className={`text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight pb-0.5 border-b-2 ${
-                            isWordMatched
-                              ? "text-emerald-700 border-emerald-500 bg-emerald-50/30"
-                              : "text-red-600 border-red-500 bg-red-50/30"
-                          }`}
-                        >
-                          {typedWord || "(empty)"}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  {/* Below the input line — reveal in order:
-                      1st row: colorful oval POS badge (always shown, even while typing)
-                      2nd row: Chinese meaning (after Check, both matched/unmatched)
-                      3rd row: IPA (after Check, both matched/unmatched)
-                      4th row: "also:" accepted synonyms (after Check)
-                      The grey separator (border-t border-gray-100) is removed. */}
+                  <span
+                    style={{ minWidth: `${Math.max(3, item.word.length)}ch` }}
+                    className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700"
+                  >
+                    {item.word}
+                  </span>
                   <div className="flex flex-col items-center justify-center mt-1 sm:mt-2 w-full space-y-1 sm:space-y-1.5">
-                    {/* POS badge — always visible while typing so the user has a hint
-                        of which part-of-speech each slot expects (e.g. 代词 / 动词 / 名词). */}
                     {item.grammarTag && (
                       <div
                         className={`text-[10px] sm:text-[11px] lg:text-xs font-bold text-center px-2 sm:px-2.5 py-0.5 rounded-full border shadow-2xs tracking-wide ${
@@ -696,102 +519,46 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
                         {item.grammarTag}
                       </div>
                     )}
-                    {status !== "answering" && (
-                      <>
-                        {/* Chinese meaning */}
-                        {item.meaning && (
-                          <div className="text-xs sm:text-sm lg:text-base text-gray-800 text-center font-semibold">
-                            {item.meaning}
-                          </div>
-                        )}
-                        {/* IPA */}
-                        {item.ipa && (
-                          <div className="text-[10px] sm:text-xs lg:text-sm text-gray-500 font-mono text-center">
-                            {item.ipa}
-                          </div>
-                        )}
-                        {/* Also-accepted synonyms — shown BELOW the answer
-                            boxes (user request). For a matched slot it tells
-                            the learner "you weren't wrong, these count too";
-                            for a wrong slot it hints at valid alternatives
-                            without cluttering the area above the input. */}
-                        {(() => {
-                          const typed = (typedWord || "").toLowerCase().trim();
-                          const syns = synonymsOf(targetWord)
-                            .filter((s) => s.toLowerCase() !== typed)
-                            .slice(0, 3);
-                          if (syns.length === 0) return null;
-                          return (
-                            <div className="flex flex-wrap items-center justify-center gap-x-1 gap-y-0.5 pt-0.5">
-                              <span className="text-[9px] sm:text-[10px] font-bold uppercase tracking-wide text-gray-400">
-                                also:
-                              </span>
-                              {syns.map((s, si) => (
-                                <span
-                                  key={si}
-                                  className="text-center font-serif text-xs sm:text-sm lg:text-base font-bold tracking-tight text-emerald-600"
-                                >
-                                  {s}
-                                </span>
-                              ))}
-                            </div>
-                          );
-                        })()}
-                      </>
+                    {item.meaning && (
+                      <div className="text-xs sm:text-sm lg:text-base text-gray-800 text-center font-semibold">
+                        {item.meaning}
+                      </div>
+                    )}
+                    {item.ipa && (
+                      <div className="text-[10px] sm:text-xs lg:text-sm text-gray-500 font-mono text-center">
+                        {item.ipa}
+                      </div>
                     )}
                   </div>
                 </div>
-              );
-            })}
-          </div>
-          {/* Matching rate card (themed red/green) + alternative answers card (blue)
-              below the grid — shrink-wrapped to their own content width */}
-          {status !== "answering" && (
-            <div className="mx-auto mt-6 space-y-3 inline-flex flex-col items-stretch">
-              {/* Matching rate — theme red if <80%, green if >=80% */}
-              {matchDetail && (
-                <div
-                  className={`p-3 sm:p-4 rounded-2xl border-2 shadow-sm ${
-                    typeof similarityScore === "number" && similarityScore < 0.8
-                      ? "bg-red-50/40 border-red-200"
-                      : "bg-emerald-50/40 border-emerald-200"
-                  }`}
-                >
-                  <div className="flex items-center justify-between gap-3 text-sm sm:text-base font-bold whitespace-nowrap">
-                    <span className="text-gray-800">MATCH:</span>
-                    <span
-                      className={
-                        typeof similarityScore === "number" && similarityScore < 0.8
-                          ? "text-red-600"
-                          : "text-emerald-600"
-                      }
-                    >
-                      {matchDetail}
-                    </span>
-                  </div>
-                </div>
-              )}
-              {/* Alternative answers — blue separate card. Each alt uses the
-                  same bold blue color as the title so the two visually match. */}
-              {orderedAnswers.length > 1 && (
-                <div className="p-3 sm:p-4 bg-blue-50/40 border-2 border-blue-200 rounded-2xl shadow-sm space-y-1">
-                  <span className="block text-xs font-bold text-blue-700 uppercase tracking-wider">
-                    ALTERNATIVE ANSWERS:
-                  </span>
-                  {orderedAnswers.slice(1).map((alt, aIdx) => (
-                    <div
-                      key={aIdx}
-                      className="text-sm sm:text-base font-bold text-blue-700"
-                    >
-                      {alt}
-                    </div>
-                  ))}
-                </div>
-              )}
+              ))}
             </div>
-          )}
+
+            {/* Alternative answers — blue card, only when more than one. */}
+            {orderedAnswers.length > 1 && (
+              <div className="mx-auto mt-4 w-full max-w-2xl p-3 sm:p-4 bg-blue-50/40 border-2 border-blue-200 rounded-2xl shadow-sm space-y-1">
+                <span className="block text-xs font-bold text-blue-700 uppercase tracking-wider">
+                  ALTERNATIVE ANSWERS:
+                </span>
+                {orderedAnswers.slice(1).map((alt, aIdx) => (
+                  <div key={aIdx} className="text-sm sm:text-base font-bold text-blue-700">
+                    {alt}
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+          <button
+            type="button"
+            onClick={goNext}
+            aria-label="下一题"
+            className="flex shrink-0 items-center justify-center self-center rounded-full border-2 border-lingo-green bg-lingo-green h-12 w-12 text-white shadow-[0_4px_0_0] shadow-[#4a9e02] transition-all hover:bg-[#4a9e02] active:translate-y-0.5 active:shadow-none"
+          >
+            <ChevronRight className="h-7 w-7 stroke-[3]" />
+          </button>
         </div>
       </div>
-        </ExerciseShell>
+    </ExerciseShell>
   );
 }

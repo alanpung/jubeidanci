@@ -121,6 +121,11 @@ function ExerciseRenderer({
           exercise={exercise}
           onResult={onResult}
           onContinue={onContinue}
+          onPrev={() => {}}
+          canGoPrev={false}
+          exerciseIndex={0}
+          totalExercises={1}
+          direction={null}
           language={language}
           autoplayAudio={autoplayAudio}
         />

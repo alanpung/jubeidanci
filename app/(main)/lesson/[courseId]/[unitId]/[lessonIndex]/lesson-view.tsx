@@ -134,6 +134,9 @@ export function LessonView({
     mistakeCount,
     recordResult,
     advance,
+    goTo,
+    canGoBack,
+    direction,
   } = useLesson(lesson.exercises);
 
   const progress = ((currentIndex) / totalExercises) * 100;
@@ -144,6 +147,10 @@ export function LessonView({
 
   function handleContinue() {
     advance();
+  }
+
+  function handlePrev() {
+    goTo(currentIndex - 1);
   }
 
   function handleReturn() {
@@ -222,6 +229,11 @@ export function LessonView({
           exercise={currentExercise}
           onResult={handleResult}
           onContinue={handleContinue}
+          onPrev={handlePrev}
+          canGoPrev={canGoBack}
+          exerciseIndex={currentIndex}
+          totalExercises={totalExercises}
+          direction={direction}
           language={targetLanguage}
         />
       )}
@@ -239,11 +251,21 @@ function ExerciseRenderer({
   exercise,
   onResult,
   onContinue,
+  onPrev,
+  canGoPrev,
+  exerciseIndex,
+  totalExercises,
+  direction,
   language,
 }: {
   exercise: Exercise;
   onResult: (correct: boolean, answer: string) => void;
   onContinue: () => void;
+  onPrev?: () => void;
+  canGoPrev?: boolean;
+  exerciseIndex?: number;
+  totalExercises?: number;
+  direction?: "forward" | "backward" | null;
   language: string;
 }) {
   const parsed = exerciseSchema.safeParse(exercise);
@@ -269,6 +291,11 @@ function ExerciseRenderer({
           exercise={ex}
           onResult={onResult}
           onContinue={onContinue}
+          onPrev={onPrev ?? (() => {})}
+          canGoPrev={canGoPrev ?? false}
+          exerciseIndex={exerciseIndex ?? 0}
+          totalExercises={totalExercises ?? 1}
+          direction={direction ?? null}
           language={language}
         />
       );

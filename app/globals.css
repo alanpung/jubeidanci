@@ -87,6 +87,16 @@ a:active, button:active, [role="button"]:active {
   to { transform: translateY(0); opacity: 1; }
 }
 
+@keyframes slide-in-right {
+  from { transform: translateX(48px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes slide-in-left {
+  from { transform: translateX(-48px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
 @keyframes xp-count {
   from { transform: scale(1); }
   50% { transform: scale(1.2); }
@@ -103,6 +113,14 @@ a:active, button:active, [role="button"]:active {
 
 .animate-slide-up {
   animation: slide-up 0.3s ease-out;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.3s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.3s ease-out;
 }
 
 .animate-xp-count {

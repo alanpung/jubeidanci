@@ -331,14 +331,12 @@ function BrowseRow({
 
 /** A single book on the My Books shelf.
  *
- *  Keeps the Library folder tile's outline — same border, radius, padding and
- *  shadow — so the shelf reads as "the folders you picked".
- *
- *  The WHOLE tile is the tap target for opening the course (stretched-link
- *  pattern: a transparent <Link> fills the card), except for the round × on
- *  the right, which sits above that overlay in z-order and therefore keeps its
- *  own click to itself. Nesting the button inside the anchor would be invalid
- *  HTML and would navigate on remove, so the two are siblings instead. */
+ *  Deliberately the SAME vertical tile as a Library folder — same `p-4`, same
+ *  `h-12 w-12` symbol, same `mt-2 text-xs` title — so a My Books card is
+ *  exactly as tall as the folder it sits above. The whole tile opens the course
+ *  for study (stretched-link: a transparent <Link> fills the card); the round ×
+ *  in the top-right corner sits above that overlay in z-order and keeps its own
+ *  click, so removing a book never navigates into it. */
 function CourseBook({
   course,
   isBorrowed,
@@ -355,7 +353,7 @@ function CourseBook({
   const isPublic = course.visibility === "public";
 
   return (
-    <div className="group relative flex items-center gap-2 rounded-2xl border-2 border-lingo-border bg-white p-3 pl-2.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border">
+    <div className="group relative flex flex-col items-center rounded-2xl border-2 border-lingo-border bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border">
       {/* Stretched link: the entire tile opens the course for study. */}
       <Link
         href={`/library/${course.id}`}
@@ -364,8 +362,9 @@ function CourseBook({
         className="absolute inset-0 z-10 rounded-2xl"
       />
 
-      {/* Symbol zone — pulled slightly left to free room for the ×. */}
-      <div className="pointer-events-none relative -ml-1 shrink-0">
+      {/* Symbol zone — same size as the folder icon, with the VIP mark pinned to
+          its upper-left corner when the course is private. */}
+      <div className="relative">
         <div className="inline-block transition-transform group-hover:-translate-y-0.5">
           <CourseLevelIcon
             level={course.level}
@@ -374,18 +373,16 @@ function CourseBook({
             size="md"
           />
         </div>
-
-        {/* Small VIP lock, upper-left corner of the symbol. */}
         {!isPublic && <VipCornerBadge />}
       </div>
 
-      <p className="pointer-events-none min-w-0 flex-1 text-xs font-bold leading-tight text-lingo-text">
+      <p className="pointer-events-none mt-2 min-h-[2rem] w-full text-center text-xs font-bold leading-tight text-lingo-text">
         {course.title}
       </p>
 
-      {/* Take it off the shelf — × on the right, above the stretched link so
-          removing a book never navigates into it. */}
-      <div className="relative z-20">
+      {/* Take it off the shelf — × in the top-right corner, above the stretched
+          link so removing a book never navigates into it. */}
+      <div className="absolute right-2 top-2 z-20">
         <AddRemoveButton
           isAdded={isBorrowed}
           pending={pending}

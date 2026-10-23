@@ -12,6 +12,19 @@ interface ExerciseShellProps {
   onCheck: () => void;
   onContinue: () => void;
   canCheck: boolean;
+  /** Hide the Check button (e.g. Translation free-nav mode, where arrows/swipe
+   *  take its place and the button would only waste mobile vertical space). */
+  hideCheck?: boolean;
+  /** Hide the Continue button — used together with hideCheck for nav-only UIs. */
+  hideContinue?: boolean;
+  /** Swipe-left action. Defaults to onContinue so existing exercises keep their
+   *  "swipe to advance" behaviour untouched. */
+  onSwipeLeft?: () => void;
+  /** Swipe-right action (e.g. go to the previous question). */
+  onSwipeRight?: () => void;
+  /** Allow swipe navigation even while the user is still answering — Translation
+   *  uses this so questions can be flipped through without a Check gate. */
+  freeNav?: boolean;
   correctAnswer?: string;
   allAnswers?: string[];
   /** Correct answer with **bold** markers on differing chars */
@@ -33,6 +46,11 @@ export function ExerciseShell({
   onCheck,
   onContinue,
   canCheck,
+  hideCheck = false,
+  hideContinue = false,
+  onSwipeLeft,
+  onSwipeRight,
+  freeNav = false,
   correctAnswer,
   allAnswers,
   correctedMarkdown,
@@ -46,8 +64,10 @@ export function ExerciseShell({
   const justCheckedRef = useRef(false);
   const touchStartRef = useRef<{ x: number; y: number } | null>(null);
 
-  // Swipe-left anywhere on the exercise advances to the next question. Guarded
-  // to the result state so a stray drag while typing can't skip the exercise.
+  // Swipe anywhere on the exercise: left = next, right = previous. Guarded out
+  // of the answering state by default (so a stray drag while typing can't skip
+  // the exercise), unless `freeNav` is set — Translation flips through cards
+  // without a Check gate, so it opts in to swiping in any state.
   const handleTouchStart = useCallback((e: React.TouchEvent) => {
     const t = e.touches[0];
     touchStartRef.current = { x: t.clientX, y: t.clientY };
@@ -61,11 +81,16 @@ export function ExerciseShell({
       const t = e.changedTouches[0];
       const dx = t.clientX - start.x;
       const dy = t.clientY - start.y;
-      if (dx < -50 && Math.abs(dx) > Math.abs(dy) * 1.5 && status !== "answering") {
-        onContinue();
+      const horizontal = Math.abs(dx) > Math.abs(dy) * 1.5;
+      const canSwipe = freeNav || status !== "answering";
+      if (!horizontal || !canSwipe) return;
+      if (dx < -50) {
+        (onSwipeLeft ?? onContinue)();
+      } else if (dx > 50) {
+        onSwipeRight?.();
       }
     },
-    [status, onContinue]
+    [status, freeNav, onSwipeLeft, onSwipeRight, onContinue]
   );
 
   // When status changes away from "answering", mark that we just checked
@@ -83,15 +108,19 @@ export function ExerciseShell({
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
       if (e.key !== "Enter") return;
-      if (status === "answering" && canCheck) {
+      if (status === "answering" && canCheck && !hideCheck) {
         e.preventDefault();
         onCheck();
-      } else if ((status === "correct" || status === "incorrect") && !justCheckedRef.current) {
+      } else if (
+        (status === "correct" || status === "incorrect") &&
+        !justCheckedRef.current &&
+        !hideContinue
+      ) {
         e.preventDefault();
         onContinue();
       }
     },
-    [status, canCheck, onCheck, onContinue]
+    [status, canCheck, hideCheck, hideContinue, onCheck, onContinue]
   );
 
   useEffect(() => {
@@ -107,7 +136,7 @@ export function ExerciseShell({
     >
       <div className="flex-1">{children}</div>
 
-      {status === "answering" && (
+      {status === "answering" && !hideCheck && (
         <div className="mt-8 flex justify-center">
           <Button
             onClick={onCheck}
@@ -119,7 +148,7 @@ export function ExerciseShell({
         </div>
       )}
 
-      {(status === "correct" || status === "incorrect") && (
+      {(status === "correct" || status === "incorrect") && !hideContinue && (
         <div className="mt-6">
           {!hideBottomFeedback && (
             <div
