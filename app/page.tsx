@@ -69,10 +69,6 @@ export default async function LandingPage() {
         {/* App introduction — the 8 exercise types as library book symbols.
             Extra breathing room here separates the CTA from what follows. */}
         <section className="mt-4 w-full sm:mt-8">
-          <h2 className="mb-3 text-center text-xs font-black uppercase tracking-[0.2em] text-lingo-text-light">
-            What you&apos;ll practise
-          </h2>
-
           <ul className="grid grid-cols-4 gap-x-2 gap-y-4">
             {FEATURED_SYMBOLS.map(({ type, visual }) => {
               if (!visual) return null;
