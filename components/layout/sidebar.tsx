@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import {
   MessageSquare,
   Library,
-  BookOpen,
+  FileText,
   Languages,
   BarChart3,
   Settings,
@@ -16,7 +16,7 @@ import {
 const navItems = [
   { href: "/chat", label: "Chat", icon: MessageSquare },
   { href: "/library", label: "Library", icon: Library },
-  { href: "/read", label: "Read", icon: BookOpen },
+  { href: "/markdown", label: "Markdown", icon: FileText },
   { href: "/words", label: "Words", icon: Languages },
   { href: "/progress", label: "Progress", icon: BarChart3 },
   { href: "/settings", label: "Settings", icon: Settings },
@@ -24,19 +24,20 @@ const navItems = [
 
 interface SidebarProps {
   showChat?: boolean;
-  showRead?: boolean;
+  /** Owner-only: the markdown workspace replaces the old Read page. */
+  showMarkdown?: boolean;
   isAdmin?: boolean;
 }
 
 export function Sidebar({
   showChat = true,
-  showRead = true,
+  showMarkdown = true,
   isAdmin = false,
 }: SidebarProps) {
   const pathname = usePathname();
   const items = navItems.filter((item) => {
     if (item.href === "/chat" && !showChat) return false;
-    if (item.href === "/read" && !showRead) return false;
+    if (item.href === "/markdown" && !showMarkdown) return false;
     return true;
   });
   const adminItems = isAdmin

@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import { getSession } from "@/lib/auth-server";
 import { isAdminEmail } from "@/lib/ai/models";
 import { getCourseMarkdownForEdit } from "@/lib/db/queries/courses";
-import { CourseMarkdownEditor } from "./course-markdown-editor";
+import { CourseMarkdownEditor } from "@/components/library/course-markdown-editor";
 
 interface EditCoursePageProps {
   params: Promise<{ courseId: string }>;

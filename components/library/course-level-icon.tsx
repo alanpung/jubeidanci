@@ -212,18 +212,9 @@ export function CourseLevelIcon({
   );
 }
 
-/** The CEFR level chips in canonical order, for the legend. */
-const LEVEL_ORDER_EXPORT = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
-
 /** Stable list of every course "symbol" and what it stands for — used by the
- *  library legend so students can decode the book covers at a glance. */
+ *  library folders and browse window so students can decode the book covers. */
 export const QUESTION_TYPE_LEGEND = Object.entries(QUESTION_TYPE_VISUALS).map(
   ([id, v]) => ({ id, label: v.label, Icon: v.Icon, bg: v.bg }),
 );
-
-/** The CEFR level chips in canonical order, for the legend. */
-export const LEVEL_LEGEND = LEVEL_ORDER_EXPORT.map((level) => ({
-  level,
-  ...LEVEL_STYLES[level],
-}));
 

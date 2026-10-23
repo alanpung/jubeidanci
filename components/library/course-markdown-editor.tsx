@@ -19,6 +19,13 @@ interface CourseMarkdownEditorProps {
   courseTitle: string;
   units: UnitEntry[];
   isAdmin?: boolean;
+  /** Hide the "← Back" link — used when embedded in the /markdown workspace,
+   *  where the filter panel above already provides navigation. */
+  hideBackLink?: boolean;
+  /** Optional level pill classes shown next to the course title. */
+  levelColor?: string;
+  /** Level text for that pill (e.g. "B1"). */
+  levelLabel?: string;
 }
 
 export function CourseMarkdownEditor({
@@ -26,6 +33,9 @@ export function CourseMarkdownEditor({
   courseTitle,
   units,
   isAdmin,
+  hideBackLink = false,
+  levelColor,
+  levelLabel,
 }: CourseMarkdownEditorProps) {
   const [activeUnitId, setActiveUnitId] = useState(units[0]?.id ?? "");
   const activeUnit = units.find((u) => u.id === activeUnitId) ?? units[0];
@@ -95,23 +105,35 @@ export function CourseMarkdownEditor({
       {/* Header */}
       <div className="flex items-center justify-between gap-4">
         <div className="flex items-center gap-3 min-w-0">
-          <Link
-            href={`/library/${courseId}`}
-            className="shrink-0 text-sm font-bold text-lingo-text-light hover:text-lingo-text transition-colors"
-          >
-            &larr; Back
-          </Link>
-          <h1 className="text-lg font-bold text-lingo-text truncate">
-            Edit Course: {courseTitle}
+          {!hideBackLink && (
+            <Link
+              href={`/library/${courseId}`}
+              className="shrink-0 text-sm font-bold text-lingo-text-light hover:text-lingo-text transition-colors"
+            >
+              &larr; Back
+            </Link>
+          )}
+          <h1 className="flex min-w-0 items-center gap-2 text-lg font-bold text-lingo-text">
+            <span className="truncate">{courseTitle}</span>
+            {levelLabel && levelColor && (
+              <span
+                className={`shrink-0 rounded-md px-1.5 py-0.5 text-[10px] font-black text-white ${levelColor}`}
+              >
+                {levelLabel}
+              </span>
+            )}
+            <span className="shrink-0 rounded-md bg-lingo-gray px-1.5 py-0.5 text-[10px] font-black text-lingo-text-light">
+              {units.length} units
+            </span>
           </h1>
         </div>
       </div>
 
       <div className="rounded-xl border-2 border-amber-200 bg-amber-50 px-4 py-2">
         <p className="text-sm font-medium text-amber-700">
-          Owner edit mode — every unit and lesson in this course is editable. Pick a
-          Unit #, then use the Lesson # filter to jump straight to any lesson across
-          all {units.length} units.
+          Every unit and lesson in this course is editable. Pick a Unit #, then
+          use the Lesson # filter to jump straight to any lesson across all{" "}
+          {units.length} units.
         </p>
       </div>
 
@@ -191,11 +213,13 @@ export function CourseMarkdownEditor({
           <Button onClick={handleSave} loading={saving}>
             Save Unit
           </Button>
-          <Link href={`/library/${courseId}`}>
-            <Button variant="outline" disabled={saving}>
-              Done
-            </Button>
-          </Link>
+          {!hideBackLink && (
+            <Link href={`/library/${courseId}`}>
+              <Button variant="outline" disabled={saving}>
+                Done
+              </Button>
+            </Link>
+          )}
         </div>
         <Button
           variant="outline"

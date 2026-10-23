@@ -7,8 +7,6 @@ import { X } from "lucide-react";
 import type { CourseListItem } from "@/lib/content/types";
 import {
   CourseLevelIcon,
-  QUESTION_TYPE_LEGEND,
-  LEVEL_LEGEND,
   resolveCourseQuestionType,
 } from "@/components/library/course-level-icon";
 import { addCourseToLibrary, removeCourseFromLibrary } from "@/lib/actions/library";
@@ -334,11 +332,13 @@ function BrowseRow({
 /** A single book on the My Books shelf.
  *
  *  Keeps the Library folder tile's outline — same border, radius, padding and
- *  shadow — so the shelf reads as "the folders you picked". Inside, the layout
- *  runs left→right: symbol, title, then the × that takes the book back off the
- *  shelf. The symbol is nudged left (negative left margin) so the card's own
- *  padding, not the symbol, absorbs the extra width, leaving the × a clean
- *  slot on the right at every breakpoint. */
+ *  shadow — so the shelf reads as "the folders you picked".
+ *
+ *  The WHOLE tile is the tap target for opening the course (stretched-link
+ *  pattern: a transparent <Link> fills the card), except for the round × on
+ *  the right, which sits above that overlay in z-order and therefore keeps its
+ *  own click to itself. Nesting the button inside the anchor would be invalid
+ *  HTML and would navigate on remove, so the two are siblings instead. */
 function CourseBook({
   course,
   isBorrowed,
@@ -355,75 +355,43 @@ function CourseBook({
   const isPublic = course.visibility === "public";
 
   return (
-    <div className="group flex items-center gap-2 rounded-2xl border-2 border-lingo-border bg-white p-3 pl-2.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border">
-      {/* Symbol zone — pulled slightly left to free room for the ×. The link
-          owns the symbol and the title; the × owns only itself, so neither can
-          steal the other's tap. */}
-      <div className="relative -ml-1 shrink-0">
-        <Link
-          href={`/library/${course.id}`}
-          className="inline-block transition-transform group-hover:-translate-y-0.5"
-          title={`${course.title} · ${course.level} · ${course.unitCount} units`}
-        >
+    <div className="group relative flex items-center gap-2 rounded-2xl border-2 border-lingo-border bg-white p-3 pl-2.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border">
+      {/* Stretched link: the entire tile opens the course for study. */}
+      <Link
+        href={`/library/${course.id}`}
+        title={`${course.title} · ${course.level} · ${course.unitCount} units`}
+        aria-label={`Open ${course.title}`}
+        className="absolute inset-0 z-10 rounded-2xl"
+      />
+
+      {/* Symbol zone — pulled slightly left to free room for the ×. */}
+      <div className="pointer-events-none relative -ml-1 shrink-0">
+        <div className="inline-block transition-transform group-hover:-translate-y-0.5">
           <CourseLevelIcon
             level={course.level}
             title={course.title}
             courseId={course.id}
             size="md"
           />
-        </Link>
+        </div>
 
         {/* Small VIP lock, upper-left corner of the symbol. */}
         {!isPublic && <VipCornerBadge />}
       </div>
 
-      <p className="min-w-0 flex-1 text-xs font-bold leading-tight text-lingo-text">
+      <p className="pointer-events-none min-w-0 flex-1 text-xs font-bold leading-tight text-lingo-text">
         {course.title}
       </p>
 
-      {/* Take it off the shelf — × on the right. */}
-      <AddRemoveButton
-        isAdded={isBorrowed}
-        pending={pending}
-        onAdd={onBorrow}
-        onRemove={onRemove}
-      />
-    </div>
-  );
-}
-
-/** Right-side legend explaining each book symbol and CEFR level colour. */
-export function LibraryLegend() {
-  return (
-    <div className="rounded-2xl border-2 border-lingo-border bg-white p-4 shadow-sm">
-      <p className="mb-2 text-[11px] font-bold uppercase tracking-wide text-lingo-text-light">
-        Book type
-      </p>
-      <ul className="space-y-1.5">
-        {QUESTION_TYPE_LEGEND.map(({ id, label, Icon, bg }) => (
-          <li key={id} className="flex items-center gap-2">
-            <span
-              className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-md text-white ${bg}`}
-            >
-              <Icon className="h-3.5 w-3.5" />
-            </span>
-            <span className="text-xs font-medium text-lingo-text">{label}</span>
-          </li>
-        ))}
-      </ul>
-
-      <p className="mb-2 mt-4 text-[11px] font-bold uppercase tracking-wide text-lingo-text-light">
-        Difficulty (CEFR)
-      </p>
-      <div className="flex flex-wrap gap-1.5">
-        {LEVEL_LEGEND.map(({ level, bg }) => (
-          <span
-            key={level}
-            className={`flex h-6 w-6 items-center justify-center rounded-md text-[10px] font-black text-white ${bg}`}
-          >
-            {level}
-          </span>
-        ))}
+      {/* Take it off the shelf — × on the right, above the stretched link so
+          removing a book never navigates into it. */}
+      <div className="relative z-20">
+        <AddRemoveButton
+          isAdded={isBorrowed}
+          pending={pending}
+          onAdd={onBorrow}
+          onRemove={onRemove}
+        />
       </div>
     </div>
   );

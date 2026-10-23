@@ -43,14 +43,14 @@ export default async function PublicOrAuthLayout({
           name={session.user.name}
         />
         <BackgroundRoutePrefetch />
-        <Sidebar showChat={isAdmin} showRead={isAdmin} />
+        <Sidebar showChat={isAdmin} showMarkdown={isAdmin} />
         <div className="md:pl-64">
           <TopBar stats={stats} />
           <PullToRefresh className="p-4 pb-20 md:p-8 md:pb-8">
             {children}
           </PullToRefresh>
         </div>
-        <MobileNav showChat={isAdmin} showRead={isAdmin} />
+        <MobileNav showChat={isAdmin} showMarkdown={isAdmin} />
       </div>
     );
   }

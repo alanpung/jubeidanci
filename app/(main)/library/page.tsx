@@ -6,7 +6,6 @@ import { isAdminEmail } from "@/lib/ai/models";
 import { getTargetLanguage } from "@/lib/actions/preferences";
 import {
   CourseBookShelf,
-  LibraryLegend,
 } from "@/components/library/course-book-shelf";
 import { LearnHeader } from "@/components/library/learn-header";
 import { withTimeout } from "@/lib/db/timeout";
@@ -83,16 +82,7 @@ export default async function LearnPage() {
           </Link>
         </div>
       ) : (
-        <div className="flex flex-col gap-6 lg:flex-row">
-          <div className="min-w-0 flex-1">
-            <CourseBookShelf courses={allCourses} isAdmin={isAdmin} />
-          </div>
-          <aside className="hidden shrink-0 lg:block lg:w-60">
-            <div className="sticky top-4">
-              <LibraryLegend />
-            </div>
-          </aside>
-        </div>
+        <CourseBookShelf courses={allCourses} isAdmin={isAdmin} />
       )}
     </div>
   );
