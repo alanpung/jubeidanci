@@ -14,13 +14,20 @@ import { BrowseUnits } from "@/components/library/browse-units";
 
 export const dynamic = "force-dynamic";
 
-export default async function BrowsePage() {
+export default async function BrowsePage({
+  searchParams,
+}: {
+  searchParams: Promise<{ type?: string }>;
+}) {
   const session = await getSession();
   const userId = session?.user?.id;
 
   if (!userId) {
     redirect("/sign-in?redirect=/library/browse");
   }
+
+  const params = await searchParams;
+  const initialType = params.type ?? null;
 
   const [courses, filters, browsableUnits, enrollments] = await Promise.all([
     listCoursesWithLessonCounts(undefined, userId),
@@ -41,7 +48,9 @@ export default async function BrowsePage() {
         >
           &larr; Back to Library
         </Link>
-        <h1 className="text-2xl font-black text-lingo-text">Browse Content</h1>
+        <h1 className="text-2xl font-black text-lingo-text">
+          {initialType ? `${initialType} Courses` : "Browse Content"}
+        </h1>
       </div>
 
       {/* Courses Section */}
@@ -54,7 +63,11 @@ export default async function BrowsePage() {
             </p>
           </div>
         ) : (
-          <CourseBrowser courses={filteredCourses} filters={filters} />
+          <CourseBrowser
+            courses={filteredCourses}
+            filters={filters}
+            initialType={initialType}
+          />
         )}
       </section>
 

@@ -422,6 +422,39 @@ export const studentAccess = pgTable(
   ]
 );
 
+// ─── Per-student VIP status (teacher/owner → registered students) ───
+//
+// A lighter-weight companion to `student_access`. Where `student_access` shares
+// individual private courses/units, this flags a student as a "VIP" of the
+// owner — which grants access to ALL of the owner's private (VIP) content in
+// one switch, no per-item granularity. Students are public by default; the
+// owner flips a student to VIP here.
+//
+// Same no-FK convention as `student_access`: referential integrity for
+// `owner_id`/`student_id` is enforced in the application layer by
+// `lib/actions/student-access.ts` (user ids can drift between auth providers).
+// The table is also self-healed at runtime by `lib/db/ensure-student-vip.ts` so
+// it exists even if the migrator no-ops on hosted Postgres.
+
+export const studentVip = pgTable(
+  "student_vip",
+  {
+    id: text("id")
+      .primaryKey()
+      .$defaultFn(() => crypto.randomUUID()),
+    ownerId: text("owner_id").notNull(),
+    studentId: text("student_id").notNull(),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+  },
+  (table) => [
+    uniqueIndex("student_vip_owner_student_unique").on(
+      table.ownerId,
+      table.studentId
+    ),
+    index("student_vip_student_idx").on(table.studentId),
+  ]
+);
+
 // ─── Relations ───
 
 export const courseRelations = relations(course, ({ many }) => ({

@@ -45,7 +45,7 @@ export function MobileNav({
     return true;
   });
   const adminItems = isAdmin
-    ? [{ href: "/library/students", label: "Students", icon: Users }]
+    ? [{ href: "/library/students", label: "VIP", icon: Users }]
     : [];
   const allItems = [...items, ...adminItems];
 

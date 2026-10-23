@@ -41,14 +41,14 @@ export function PrivateShelf({ courses, units, isAdmin }: PrivateShelfProps) {
       <div className="my-7 flex items-center gap-3">
         <span className="h-px flex-1 bg-lingo-border" />
         <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-lingo-text-light">
-          <Lock className="h-3 w-3" /> Private
+          <Lock className="h-3 w-3" /> VIP
         </span>
         <span className="h-px flex-1 bg-lingo-border" />
       </div>
 
       <div className="mb-4 flex flex-wrap items-baseline gap-2">
         <h2 className="text-base font-bold text-lingo-text">
-          Private Courses &amp; Units
+          VIP Courses &amp; Units
         </h2>
         <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
           {courses.length + units.length}
@@ -140,7 +140,7 @@ function PrivateBook({ course }: { course: CourseListItem }) {
         <Link
           href={`/library/${course.id}`}
           className="inline-block transition-transform hover:-translate-y-0.5"
-          title={`${course.title} · ${course.level} · ${course.unitCount} units · private`}
+          title={`${course.title} · ${course.level} · ${course.unitCount} units · VIP`}
         >
           <CourseLevelIcon
             level={course.level}
@@ -221,7 +221,7 @@ function PrivateBook({ course }: { course: CourseListItem }) {
         {course.title}
       </p>
       <span className="mt-1 rounded-full bg-lingo-gray px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-lingo-text-light">
-        🔒 Private
+        🔒 VIP
       </span>
     </div>
   );

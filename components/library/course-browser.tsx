@@ -4,6 +4,7 @@ import { useState } from "react";
 import type { CourseListItem } from "@/lib/content/types";
 import { getLanguageName } from "@/lib/languages";
 import { CourseCard } from "@/components/library/course-card";
+import { resolveCourseQuestionType } from "@/components/library/course-level-icon";
 
 interface CourseBrowserProps {
   courses: CourseListItem[];
@@ -14,17 +15,30 @@ interface CourseBrowserProps {
   };
   initialSourceLanguage?: string | null;
   initialTargetLanguage?: string | null;
+  initialType?: string | null;
 }
 
-export function CourseBrowser({ courses, filters, initialSourceLanguage, initialTargetLanguage }: CourseBrowserProps) {
+export function CourseBrowser({ courses, filters, initialSourceLanguage, initialTargetLanguage, initialType }: CourseBrowserProps) {
   const [sourceLanguage, setSourceLanguage] = useState(initialSourceLanguage ?? "");
   const [targetLanguage, setTargetLanguage] = useState(initialTargetLanguage ?? "");
   const [level, setLevel] = useState("");
+  const [type, setType] = useState(initialType ?? "");
+
+  // The exercise type lives in the book symbol, not on the course row, so it is
+  // derived the same way CourseLevelIcon does — otherwise the filter and the
+  // cover would disagree about what a course is.
+  const typeOf = (c: CourseListItem) =>
+    resolveCourseQuestionType(c.title, c.id)?.label ?? "Other";
+
+  const typeOptions = [
+    ...new Set(courses.map(typeOf)),
+  ].sort();
 
   const filtered = courses.filter((c) => {
     if (sourceLanguage && c.sourceLanguage !== sourceLanguage) return false;
     if (targetLanguage && c.targetLanguage !== targetLanguage) return false;
     if (level && c.level !== level) return false;
+    if (type && typeOf(c) !== type) return false;
     return true;
   });
 
@@ -33,9 +47,11 @@ export function CourseBrowser({ courses, filters, initialSourceLanguage, initial
     filters.targetLanguages.length > 1 ||
     filters.levels.length > 1;
 
+  const showTypeFilter = typeOptions.length > 1 || Boolean(type);
+
   return (
     <section>
-      {hasFilters && (
+      {(hasFilters || showTypeFilter) && (
         <div className="mb-4 flex min-w-0 flex-wrap gap-2">
           {filters.sourceLanguages.length > 1 && (
             <select
@@ -75,6 +91,20 @@ export function CourseBrowser({ courses, filters, initialSourceLanguage, initial
               {filters.levels.map((l) => (
                 <option key={l} value={l}>
                   {l}
+                </option>
+              ))}
+            </select>
+          )}
+          {showTypeFilter && (
+            <select
+              value={type}
+              onChange={(e) => setType(e.target.value)}
+              className="max-w-full min-w-0 rounded-lg border-2 border-lingo-border bg-lingo-card px-3 py-2 text-sm font-bold text-lingo-text"
+            >
+              <option value="">All types</option>
+              {typeOptions.map((t) => (
+                <option key={t} value={t}>
+                  {t}
                 </option>
               ))}
             </select>

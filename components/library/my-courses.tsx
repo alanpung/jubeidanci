@@ -242,7 +242,7 @@ function OwnedCourseCard({
                         : "bg-lingo-gray text-lingo-text-light"
                     }`}
                   >
-                    {isPublic ? "Public" : "Private"}
+                    {isPublic ? "Public" : "VIP"}
                   </span>
                 ) : course.isInLibrary ? (
                   <span className="shrink-0 rounded-full bg-lingo-blue/15 text-lingo-blue px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide">
@@ -271,7 +271,7 @@ function OwnedCourseCard({
                   </button>
                 )}
 
-                {/* 2. Public / Private switch — owner only */}
+                {/* 2. Public / VIP switch — owner only */}
                 {course.isOwner && (
                   <button
                     type="button"
@@ -285,8 +285,8 @@ function OwnedCourseCard({
                       }
                     }}
                     disabled={isActionPending}
-                    title={isPublic ? "Make private" : "Make public"}
-                    aria-label={isPublic ? "Make private" : "Make public"}
+                    title={isPublic ? "Make VIP" : "Make public"}
+                    aria-label={isPublic ? "Make VIP" : "Make public"}
                     className={`inline-flex h-6 shrink-0 items-center justify-center gap-1 rounded-full border-2 px-2.5 text-[10px] font-black uppercase tracking-wide transition-colors disabled:opacity-50 cursor-pointer ${
                       isPublic
                         ? "border-lingo-green/50 text-lingo-green hover:bg-lingo-green/10"
@@ -298,7 +298,7 @@ function OwnedCourseCard({
                     ) : isPublic ? (
                       <>🌐&nbsp;Public</>
                     ) : (
-                      <>🔒&nbsp;Private</>
+                      <>🔒&nbsp;VIP</>
                     )}
                   </button>
                 )}

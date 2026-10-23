@@ -3,10 +3,12 @@
 import { db } from "@/lib/db";
 import {
   studentAccess,
+  studentVip,
   course,
   unit,
   user,
 } from "@/lib/db/schema";
+import { ensureStudentVipTable } from "@/lib/db/ensure-student-vip";
 import { and, eq, or, isNull, desc, count } from "drizzle-orm";
 import { requireSession } from "@/lib/auth-server";
 import { isAdminEmail } from "@/lib/ai/models";
@@ -289,6 +291,124 @@ export async function setStudentUnitAccess(
     return {
       success: false,
       error: describeError(err, "Failed to update student access"),
+    };
+  }
+}
+
+// ─── Per-student VIP status ───
+//
+// A single switch that grants a student access to ALL of the owner's private
+// (VIP) content — simpler than per-course/per-unit grants. Students are public
+// by default; the owner flips them to VIP here.
+
+/**
+ * Returns the set of student ids that are VIPs of `ownerId`.
+ * The owner uses this to seed the toggle state on the VIP page.
+ */
+export async function getVipStudentIds(
+  ownerId: string
+): Promise<Set<string>> {
+  try {
+    await ensureStudentVipTable();
+    const rows = await db
+      .select({ studentId: studentVip.studentId })
+      .from(studentVip)
+      .where(eq(studentVip.ownerId, ownerId));
+    return new Set(rows.map((r) => r.studentId));
+  } catch (err) {
+    console.warn("getVipStudentIds failed:", err);
+    return new Set();
+  }
+}
+
+/**
+ * Returns the set of owner ids for which `studentId` is a VIP.
+ * A student's access layer uses this to see which owners' private content
+ * they may view.
+ */
+export async function getVipOwnerIds(
+  studentId: string
+): Promise<Set<string>> {
+  try {
+    await ensureStudentVipTable();
+    const rows = await db
+      .select({ ownerId: studentVip.ownerId })
+      .from(studentVip)
+      .where(eq(studentVip.studentId, studentId));
+    return new Set(rows.map((r) => r.ownerId));
+  } catch (err) {
+    console.warn("getVipOwnerIds failed:", err);
+    return new Set();
+  }
+}
+
+/** Convenience check used by the access layer. */
+export async function isStudentVip(
+  studentId: string,
+  ownerId: string
+): Promise<boolean> {
+  try {
+    await ensureStudentVipTable();
+    const [row] = await db
+      .select({ id: studentVip.id })
+      .from(studentVip)
+      .where(
+        and(
+          eq(studentVip.ownerId, ownerId),
+          eq(studentVip.studentId, studentId)
+        )
+      )
+      .limit(1);
+    return !!row;
+  } catch (err) {
+    console.warn("isStudentVip failed:", err);
+    return false;
+  }
+}
+
+export async function setStudentVip(
+  studentId: string,
+  enabled: boolean
+): Promise<{ success: true } | { success: false; error: string }> {
+  const session = await requireOwner();
+  const ownerId = session.user.id;
+  try {
+    await ensureStudentVipTable();
+
+    const resolvedStudentId = await resolveUserId(studentId);
+    if (enabled && !resolvedStudentId) {
+      return {
+        success: false,
+        error: `Student "${studentId}" was not found in the user table`,
+      };
+    }
+    const targetStudentId = resolvedStudentId ?? studentId;
+
+    if (enabled) {
+      await db
+        .insert(studentVip)
+        .values({ ownerId, studentId: targetStudentId })
+        .onConflictDoNothing();
+    } else {
+      await db
+        .delete(studentVip)
+        .where(
+          and(
+            eq(studentVip.ownerId, ownerId),
+            or(
+              eq(studentVip.studentId, targetStudentId),
+              eq(studentVip.studentId, studentId)
+            )!
+          )
+        );
+    }
+    revalidatePath("/library/students");
+    return { success: true };
+  } catch (err) {
+    console.error("setStudentVip failed:", err);
+    return {
+      success: false,
+      error: describeError(err, "Failed to update VIP status"),
     };
   }
 }

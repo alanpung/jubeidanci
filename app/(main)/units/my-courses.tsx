@@ -213,7 +213,7 @@ function OwnedCourseCard({
                       : "bg-lingo-gray text-lingo-text-light"
                   }`}
                 >
-                  {isPublic ? "Public" : "Private"}
+                  {isPublic ? "Public" : "VIP"}
                 </span>
               ) : course.isInLibrary ? (
                 <span className="shrink-0 rounded-full bg-lingo-blue/15 text-lingo-blue px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide">
@@ -367,7 +367,7 @@ function OwnedCourseCard({
           </button>
         )}
 
-        {/* Admin: Make Private button */}
+        {/* Admin: Make VIP button */}
         {isAdmin && isPublic && (
           <button
             onClick={handleMakePrivate}
@@ -377,7 +377,7 @@ function OwnedCourseCard({
             {activeAction === "make-private" ? (
               <>
                 <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-red-500/30 border-t-red-500" />
-                Making Private...
+                Making VIP...
               </>
             ) : (
               <>
@@ -394,7 +394,7 @@ function OwnedCourseCard({
                     d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z"
                   />
                 </svg>
-                Make Private
+                Make VIP
               </>
             )}
           </button>

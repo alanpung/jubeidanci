@@ -7,6 +7,7 @@ import {
   userUnitLibrary,
   userCourseEnrollment,
   studentAccess,
+  studentVip,
 } from "@/lib/db/schema";
 import {
   eq,
@@ -124,6 +125,29 @@ export async function getGrantedUnitIds(
 }
 
 /**
+ * Owner ids for which `userId` is a VIP. A VIP student may open ALL of an
+ * owner's private (VIP) content — courses and standalone units alike — without
+ * individual per-item grants. This is the companion to `getGrantedCourseIds` /
+ * `getGrantedUnitIds` (which handle explicit, per-item sharing).
+ */
+export async function getVipOwnerIds(
+  userId: string
+): Promise<Set<string>> {
+  if (!userId) return new Set();
+  if (!(await isDbAvailable())) return new Set();
+  try {
+    const rows = await db
+      .select({ ownerId: studentVip.ownerId })
+      .from(studentVip)
+      .where(eq(studentVip.studentId, userId));
+    return new Set(rows.map((r) => r.ownerId).filter(Boolean) as string[]);
+  } catch (err) {
+    console.warn("getVipOwnerIds failed:", err);
+    return new Set();
+  }
+}
+
+/**
  * Whether `userId` may open a unit. Standalone units follow their own
  * visibility (public, owner, or explicitly granted); course units follow the
  * parent course's access rule (public, owner, or a granted course).
@@ -149,6 +173,7 @@ export async function canAccessUnit(
     if (u.visibility === "public") return true;
     if (!userId) return false;
     if (u.createdBy === userId) return true;
+    if ((await getVipOwnerIds(userId)).has(u.createdBy ?? "")) return true;
     return (await getGrantedUnitIds(userId)).has(u.id);
   }
 
@@ -161,6 +186,7 @@ export async function canAccessUnit(
   if (c.visibility === "public") return true;
   if (!userId) return false;
   if (c.createdBy === userId) return true;
+  if ((await getVipOwnerIds(userId)).has(c.createdBy ?? "")) return true;
   return (await getGrantedCourseIds(userId)).has(u.courseId);
 }
 
@@ -178,6 +204,7 @@ export async function canAccessCourse(
   if (c.visibility === "public") return true;
   if (!userId) return false;
   if (c.createdBy === userId) return true;
+  if ((await getVipOwnerIds(userId)).has(c.createdBy ?? "")) return true;
   return (await getGrantedCourseIds(userId)).has(courseId);
 }
 
@@ -481,6 +508,9 @@ export async function getCourseWithContent(
         visibilityConds.push(eq(course.createdBy, userId));
         const shared = [...(await getGrantedCourseIds(userId))];
         if (shared.length) visibilityConds.push(inArray(course.id, shared));
+        const vipOwnerIds = [...(await getVipOwnerIds(userId))];
+        if (vipOwnerIds.length)
+          visibilityConds.push(inArray(course.createdBy, vipOwnerIds));
       }
       courseConditions.push(or(...visibilityConds)!);
 
@@ -608,6 +638,10 @@ export async function getAvailableFilters(userId?: string) {
       if (sharedCourseIds.length) {
         visibilityConds.push(inArray(course.id, sharedCourseIds));
       }
+      const vipOwnerIds = [...(await getVipOwnerIds(userId))];
+      if (vipOwnerIds.length) {
+        visibilityConds.push(inArray(course.createdBy, vipOwnerIds));
+      }
     }
     conditions.push(or(...visibilityConds)!);
 
@@ -674,12 +708,16 @@ export async function getStandaloneUnits(
   if (dbUp) {
     try {
       const grantedUnitIds = await getGrantedUnitIds(userId);
+      const vipOwnerIds = await getVipOwnerIds(userId);
       const ownershipConditions: SQL[] = [eq(unit.createdBy, userId)];
       if (libraryUnitIds.size > 0) {
         ownershipConditions.push(inArray(unit.id, [...libraryUnitIds]));
       }
       if (grantedUnitIds.size > 0) {
         ownershipConditions.push(inArray(unit.id, [...grantedUnitIds]));
+      }
+      if (vipOwnerIds.size > 0) {
+        ownershipConditions.push(inArray(unit.createdBy, [...vipOwnerIds]));
       }
       const libraryCondition = and(
         isNull(unit.courseId),

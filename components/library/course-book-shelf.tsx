@@ -16,8 +16,8 @@ import { makeCoursePublic, makeCoursePrivate, deleteCourse } from "@/lib/actions
 import { CreateCourseForm } from "@/components/library/create-course-form";
 
 /** A student may keep at most this many courses "checked out" to the top
- *  (My Books) area — i.e. two rows of five. */
-const BORROW_CAP = 10;
+ *  (My Favorite) area — i.e. two rows of four. */
+const FAVORITE_CAP = 8;
 
 interface CourseBookShelfProps {
   /** Full catalog: public courses + the viewer's own. */
@@ -40,7 +40,7 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
   // first and filtering by that same set matters: if someone somehow has more
   // than BORROW_CAP saved, the overflow must still be listed underneath rather
   // than vanishing (it would be unreachable — no + on top, absent below).
-  const borrowed = courses.filter((c) => borrowedIds.has(c.id)).slice(0, BORROW_CAP);
+  const borrowed = courses.filter((c) => borrowedIds.has(c.id)).slice(0, FAVORITE_CAP);
   const shownIds = new Set(borrowed.map((c) => c.id));
   // The lower shelf sits under a "Public Books" divider, so the viewer's own
   // private courses are withheld here — they have a dedicated shelf further
@@ -79,8 +79,8 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
   const hasFilters = Boolean(levelFilter || typeFilter);
 
   function borrow(course: CourseListItem) {
-    if (borrowedIds.size >= BORROW_CAP) {
-      alert(`You can keep at most ${BORROW_CAP} books on your shelf. Remove one first.`);
+    if (borrowedIds.size >= FAVORITE_CAP) {
+      alert(`You can keep at most ${FAVORITE_CAP} books on your shelf. Remove one first.`);
       return;
     }
     setPendingId(course.id);
@@ -142,14 +142,14 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
         </div>
       )}
 
-      {/* Upper portion: My Books (borrowed, capped at BORROW_CAP) */}
+      {/* Upper portion: My Favorite (borrowed, capped at FAVORITE_CAP) */}
       <section>
         {/* mb-8 (not mb-4): the +/× button sits 24px above each book, so the
             first row needs clearance or it collides with this heading. */}
         <div className="mb-8 flex items-center gap-2">
-          <h2 className="text-base font-bold text-lingo-text">My Books</h2>
+          <h2 className="text-base font-bold text-lingo-text">My Favorite</h2>
           <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
-            {borrowed.length}/{BORROW_CAP}
+            {borrowed.length}/{FAVORITE_CAP}
           </span>
         </div>
 
@@ -161,8 +161,8 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
         ) : (
           // gap-y-8: the +/× button floats 24px above each book, so rows need
           // more than the old 20px or the next row's button lands on the
-          // previous row's title.
-          <div className="grid grid-cols-3 gap-x-3 gap-y-8 min-[480px]:grid-cols-5 lg:grid-cols-6">
+          // previous row's title. Four per row at ≥480px = 8 favorites in 2 rows.
+          <div className="grid grid-cols-2 gap-x-3 gap-y-8 min-[480px]:grid-cols-4">
             {borrowed.map((c) => (
               <CourseBook
                 key={c.id}
@@ -347,8 +347,8 @@ function CourseBook({
           type="button"
           onClick={isBorrowed ? onRemove : onBorrow}
           disabled={pending}
-          title={isBorrowed ? "Remove from My Books" : "Add to My Books"}
-          aria-label={isBorrowed ? "Remove from My Books" : "Add to My Books"}
+          title={isBorrowed ? "Remove from My Favorite" : "Add to My Favorite"}
+          aria-label={isBorrowed ? "Remove from My Favorite" : "Add to My Favorite"}
           className={`absolute -right-6 -top-6 flex h-7 w-7 items-center justify-center rounded-full border-2 shadow-sm transition-all disabled:opacity-50 ${
             isBorrowed
               ? "border-red-300 bg-white text-red-500 hover:bg-red-50"
@@ -394,7 +394,7 @@ function CourseBook({
                   >
                     {isPublic ? (
                       <>
-                        <Lock className="h-4 w-4" /> Make Private
+                        <Lock className="h-4 w-4" /> Make VIP
                       </>
                     ) : (
                       <>
@@ -436,7 +436,7 @@ function CourseBook({
       </p>
       {!isPublic && (
         <span className="mt-1 rounded-full bg-lingo-gray px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-lingo-text-light">
-          🔒 Private
+          🔒 VIP
         </span>
       )}
     </div>

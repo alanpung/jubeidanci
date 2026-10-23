@@ -2,8 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "motion/react";
-import { Button } from "@/components/ui/button";
-import { Target, Award, Loader2, ArrowRight, ArrowLeft } from "lucide-react";
+import { Target, Award, ArrowRight, ArrowLeft } from "lucide-react";
 
 interface LessonCompleteModalProps {
   perfectScore: boolean;
@@ -117,46 +116,38 @@ export function LessonCompleteModal({
             When there is no following lesson, End is the only action and stays
             full width + primary. */}
         <div className="flex flex-row gap-3">
-          <Button
+          <button
+            type="button"
             onClick={handleContinue}
             disabled={isNavigating}
             className={`${onNextLesson ? "flex-1" : "w-full"} h-12 text-base font-black uppercase tracking-wide rounded-2xl cursor-pointer disabled:opacity-80 flex items-center justify-center gap-2 transition-all ${
               onNextLesson
                 ? "bg-white text-lingo-text border-2 border-lingo-border hover:bg-lingo-gray/30 active:translate-y-[1px]"
-                : "bg-lingo-green hover:bg-lingo-green-dark border-b-4 border-lingo-green-dark active:border-b-0 active:translate-y-[2px]"
+                : "bg-lingo-green text-white hover:bg-lingo-green-dark border-b-4 border-lingo-green-dark active:border-b-0 active:translate-y-[2px]"
             }`}
           >
             {isNavigating ? (
-              <>
-                <Loader2 className="w-5 h-5 animate-spin" />
-                <span>Loading...</span>
-              </>
+              <span className="h-5 w-5 animate-spin rounded-full border-2 border-current border-t-transparent" />
             ) : (
-              <>
-                <ArrowLeft className="w-5 h-5" />
-                <span>End</span>
-              </>
+              <ArrowLeft className="w-5 h-5 shrink-0" />
             )}
-          </Button>
+            <span className="shrink-0">End</span>
+          </button>
 
           {onNextLesson && (
-            <Button
+            <button
+              type="button"
               onClick={handleNext}
               disabled={isNavigating}
-              className="flex-1 h-12 text-base font-black uppercase tracking-wide bg-lingo-green hover:bg-lingo-green-dark border-b-4 border-lingo-green-dark active:border-b-0 active:translate-y-[2px] transition-all rounded-2xl cursor-pointer disabled:opacity-80 flex items-center justify-center gap-2"
+              className="flex-1 h-12 text-base font-black uppercase tracking-wide bg-lingo-green text-white hover:bg-lingo-green-dark border-b-4 border-lingo-green-dark active:border-b-0 active:translate-y-[2px] transition-all rounded-2xl cursor-pointer disabled:opacity-80 flex items-center justify-center gap-2"
             >
               {isNavigating ? (
-                <>
-                  <Loader2 className="w-5 h-5 animate-spin" />
-                  <span>Loading...</span>
-                </>
+                <span className="h-5 w-5 animate-spin rounded-full border-2 border-current border-t-transparent" />
               ) : (
-                <>
-                  <ArrowRight className="w-5 h-5" />
-                  <span>Next Lesson</span>
-                </>
+                <ArrowRight className="w-5 h-5 shrink-0" />
               )}
-            </Button>
+              <span className="shrink-0">Next Lesson</span>
+            </button>
           )}
         </div>
 
