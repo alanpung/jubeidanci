@@ -20,9 +20,14 @@ import { LibraryFolders } from "@/components/library/library-folders";
  *  shelf. Four per row on phones = two rows; all eight on one row on desktop. */
 const MY_BOOKS_CAP = 8;
 
-/** Book grid geometry. Both the shelf and the type modal use this so a book
- *  looks identical in either place: 4 per row on mobile, 8 on desktop. */
+/** Book grid geometry for the top shelf. */
 const BOOK_GRID = "grid grid-cols-4 gap-x-3 gap-y-8 lg:grid-cols-8";
+
+/** Book grid geometry inside the type window. On phones only two columns fit
+ *  comfortably; grid columns are equal width by default and each book centres
+ *  itself inside its column, so the two columns get identical space. */
+const WINDOW_BOOK_GRID =
+  "grid grid-cols-2 gap-x-4 gap-y-8 min-[480px]:grid-cols-4 lg:grid-cols-8";
 
 interface CourseBookShelfProps {
   /** Full catalog: public courses + the viewer's own. */
@@ -158,30 +163,39 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
       </section>
 
       {/* Library — eight exercise-type folders, right below My Books. Tapping
-          one opens the small browser window (no page navigation). */}
-      <LibraryFolders onOpenType={setOpenType} />
-
-      {openType && (
-        <TypeBrowserModal
-          typeLabel={openType}
-          courses={typeCourses}
-          isAdmin={isAdmin}
-          borrowedIds={borrowedIds}
-          pendingId={pendingId}
-          onBorrow={borrow}
-          onRemove={unborrow}
-          onClose={() => setOpenType(null)}
-        />
-      )}
+          one opens the small browser window (no page navigation). The window
+          is rendered *inside* the Library section so it never covers the My
+          Books shelf above it. */}
+      <LibraryFolders
+        onOpenType={(label) =>
+          setOpenType((cur) => (cur === label ? null : label))
+        }
+        activeType={openType}
+      >
+        {openType && (
+          <TypeBrowserWindow
+            typeLabel={openType}
+            courses={typeCourses}
+            isAdmin={isAdmin}
+            borrowedIds={borrowedIds}
+            pendingId={pendingId}
+            onBorrow={borrow}
+            onRemove={unborrow}
+            onClose={() => setOpenType(null)}
+          />
+        )}
+      </LibraryFolders>
     </div>
   );
 }
 
-/** The small pop-up window opened from a Library folder. Lists every course of
- *  the chosen exercise type at the same size as the shelf books, each with a
- *  +/× toggle so the reader can add to or remove from My Books without leaving
+/** The small browser window opened from a Library folder. It sits inside the
+ *  Library section — directly under the folder grid — so the My Books shelf
+ *  above stays visible and usable while it is open. Lists every course of the
+ *  chosen exercise type at the same size as the shelf books, each with a +/×
+ *  toggle so the reader can add to or remove from My Books without leaving
  *  the library page. */
-function TypeBrowserModal({
+function TypeBrowserWindow({
   typeLabel,
   courses,
   isAdmin,
@@ -200,70 +214,64 @@ function TypeBrowserModal({
   onRemove: (c: CourseListItem) => void;
   onClose: () => void;
 }) {
-  // Escape closes; the body scroll is locked so the page behind does not move
-  // while the window is open.
+  // Escape closes the window. The page scroll stays live on purpose — the
+  // window no longer floats over the page, so locking the body would only
+  // trap the reader.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
     };
     document.addEventListener("keydown", onKey);
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prev;
-    };
+    return () => document.removeEventListener("keydown", onKey);
   }, [onClose]);
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-6"
+      className="mt-4 overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-card shadow-lg"
       role="dialog"
-      aria-modal="true"
+      aria-modal="false"
       aria-label={`${typeLabel} courses`}
     >
-      {/* Click-away backdrop */}
-      <div className="absolute inset-0 bg-black/40" onClick={onClose} aria-hidden />
+      <div className="flex items-center gap-3 border-b-2 border-lingo-border px-4 py-3 sm:px-5">
+        <h2 className="min-w-0 flex-1 truncate text-base font-black text-lingo-text">
+          {typeLabel}
+        </h2>
+        <span className="shrink-0 rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
+          {courses.length}
+        </span>
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close"
+          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text transition-colors hover:bg-lingo-gray/40"
+        >
+          <X className="h-4 w-4 stroke-[3]" />
+        </button>
+      </div>
 
-      <div className="relative flex max-h-full w-full max-w-4xl flex-col rounded-2xl border-2 border-lingo-border bg-lingo-card shadow-xl">
-        <div className="flex items-center gap-3 border-b-2 border-lingo-border px-5 py-3">
-          <h2 className="min-w-0 flex-1 truncate text-base font-black text-lingo-text">
-            {typeLabel}
-          </h2>
-          <span className="shrink-0 rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
-            {courses.length}
-          </span>
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Close"
-            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text transition-colors hover:bg-lingo-gray/40"
-          >
-            <X className="h-4 w-4 stroke-[3]" />
-          </button>
-        </div>
-
-        <div className="min-h-0 flex-1 overflow-y-auto px-5 py-6">
-          {courses.length === 0 ? (
-            <p className="py-10 text-center text-sm text-lingo-text-light">
-              No {typeLabel.toLowerCase()} courses yet.
-            </p>
-          ) : (
-            <div className={BOOK_GRID}>
-              {courses.map((c) => (
-                <CourseBook
-                  key={c.id}
-                  course={c}
-                  isAdmin={isAdmin}
-                  isBorrowed={borrowedIds.has(c.id)}
-                  pending={pendingId === c.id}
-                  onBorrow={() => onBorrow(c)}
-                  onRemove={() => onRemove(c)}
-                />
-              ))}
-            </div>
-          )}
-        </div>
+      {/* pt-10: the +/× button of the first row floats 24px above its book
+          symbol, so the row needs clearance or the button collides with the
+          header above it. */}
+      <div className="max-h-[70vh] overflow-y-auto px-4 pb-6 pt-10 sm:px-5">
+        {courses.length === 0 ? (
+          <p className="py-10 text-center text-sm text-lingo-text-light">
+            No {typeLabel.toLowerCase()} courses yet.
+          </p>
+        ) : (
+          <div className={WINDOW_BOOK_GRID}>
+            {courses.map((c) => (
+              <CourseBook
+                key={c.id}
+                course={c}
+                isAdmin={isAdmin}
+                isBorrowed={borrowedIds.has(c.id)}
+                pending={pendingId === c.id}
+                onBorrow={() => onBorrow(c)}
+                onRemove={() => onRemove(c)}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </div>
   );
