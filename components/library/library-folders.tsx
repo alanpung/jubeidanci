@@ -73,37 +73,41 @@ export function LibraryFolders({
         </span>
       </div>
 
-      <div className="grid grid-cols-2 gap-3 min-[480px]:grid-cols-4">
-        {folders.map(({ id, label, Icon, bg }) => {
-          const isActive = activeType === label;
-          return (
-            <button
-              key={id}
-              type="button"
-              onClick={() => onOpenType(label)}
-              aria-expanded={isActive}
-              className={`group flex flex-col items-center rounded-2xl border-2 bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border active:translate-y-0 ${
-                isActive
-                  ? "border-lingo-green shadow-[0_4px_0_0] shadow-lingo-border"
-                  : "border-lingo-border"
-              }`}
-            >
-              <span
-                className={`flex h-12 w-12 items-center justify-center rounded-xl text-white shadow-sm ${bg}`}
+      {/* relative: the browser window is absolutely positioned over this box on
+          phones (covering the folders), and flows inline under it on desktop. */}
+      <div className="relative">
+        <div className="grid grid-cols-2 gap-3 min-[480px]:grid-cols-4">
+          {folders.map(({ id, label, Icon, bg }) => {
+            const isActive = activeType === label;
+            return (
+              <button
+                key={id}
+                type="button"
+                onClick={() => onOpenType(label)}
+                aria-expanded={isActive}
+                className={`group flex flex-col items-center rounded-2xl border-2 bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border active:translate-y-0 ${
+                  isActive
+                    ? "border-lingo-green shadow-[0_4px_0_0] shadow-lingo-border"
+                    : "border-lingo-border"
+                }`}
               >
-                {Icon ? <Icon className="h-6 w-6 stroke-[2.25]" /> : null}
-              </span>
-              <span className="mt-2 text-center text-xs font-bold leading-tight text-lingo-text">
-                {label}
-              </span>
-            </button>
-          );
-        })}
-      </div>
+                <span
+                  className={`flex h-12 w-12 items-center justify-center rounded-xl text-white shadow-sm ${bg}`}
+                >
+                  {Icon ? <Icon className="h-6 w-6 stroke-[2.25]" /> : null}
+                </span>
+                <span className="mt-2 text-center text-xs font-bold leading-tight text-lingo-text">
+                  {label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
 
-      {/* The browser window lives here, inside the Library section — the My
-          Books shelf above stays fully visible and clickable. */}
-      {children}
+        {/* The browser window. On phones it layers over the folders above; from
+            `lg` up it settles underneath them. */}
+        {children}
+      </div>
     </section>
   );
 }

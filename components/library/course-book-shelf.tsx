@@ -3,7 +3,7 @@
 import { useState, useTransition, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { X, MoreHorizontal, Globe, Lock, Pencil, Trash2, FolderOpen } from "lucide-react";
+import { X } from "lucide-react";
 import type { CourseListItem } from "@/lib/content/types";
 import {
   CourseLevelIcon,
@@ -12,10 +12,13 @@ import {
   resolveCourseQuestionType,
 } from "@/components/library/course-level-icon";
 import { addCourseToLibrary, removeCourseFromLibrary } from "@/lib/actions/library";
-import { makeCoursePublic, makeCoursePrivate, deleteCourse } from "@/lib/actions/units";
 import { CreateCourseForm } from "@/components/library/create-course-form";
 import { LibraryFolders } from "@/components/library/library-folders";
-import { AddRemoveSwitch } from "@/components/library/add-remove-switch";
+import {
+  AddRemoveButton,
+  VipCornerBadge,
+  VisibilityToggle,
+} from "@/components/library/book-parts";
 
 /** A student may keep at most this many courses on the top ("My Books")
  *  shelf. Four per row on phones = two rows; all eight on one row on desktop. */
@@ -24,11 +27,10 @@ const MY_BOOKS_CAP = 8;
 /** Book grid geometry for the top shelf. */
 const BOOK_GRID = "grid grid-cols-4 gap-x-3 gap-y-8 lg:grid-cols-8";
 
-/** Book grid geometry inside the type window. On phones only two columns fit
- *  comfortably; grid columns are equal width by default and each book centres
- *  itself inside its column, so the two columns get identical space. */
+/** Browse-window row geometry. The window layers OVER the folder grid on
+ *  phones, so it reuses the folder's own 2-up rhythm with equal-width columns. */
 const WINDOW_BOOK_GRID =
-  "grid grid-cols-2 gap-x-4 gap-y-8 min-[480px]:grid-cols-4 lg:grid-cols-8";
+  "grid grid-cols-2 gap-x-3 gap-y-3 min-[480px]:grid-cols-3 lg:grid-cols-4";
 
 interface CourseBookShelfProps {
   /** Full catalog: public courses + the viewer's own. */
@@ -138,9 +140,9 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
         {borrowed.length === 0 ? (
           <p className="rounded-xl border-2 border-dashed border-lingo-border bg-white p-4 text-center text-sm text-lingo-text-light">
             Your shelf is empty. Open a folder under{" "}
-            <span className="font-black">Library</span> below and tap{" "}
-            <span className="font-black text-lingo-green">Add</span> on any book
-            to put it here.
+            <span className="font-black">Library</span> below and tap the{" "}
+            <span className="font-black text-lingo-blue">+</span> on any book
+            to add it here.
           </p>
         ) : (
           // gap-y-8: the +/× button floats 24px above each book, so rows need
@@ -189,12 +191,15 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
   );
 }
 
-/** The small browser window opened from a Library folder. It sits inside the
- *  Library section — directly under the folder grid — so the My Books shelf
- *  above stays visible and usable while it is open. Lists every course of the
- *  chosen exercise type at the same size as the shelf books, each with a +/×
- *  toggle so the reader can add to or remove from My Books without leaving
- *  the library page. */
+/** The browser window opened from a Library folder.
+ *
+ *  On phones it layers *over* the folder grid (absolute, exactly the grid's
+ *  own box) so the reader browses in place of the folders instead of pushing
+ *  them off-screen. From `lg` up it drops back into normal flow underneath.
+ *
+ *  Entries are browse-only rows: the symbol is deliberately NOT a link. A
+ *  course in the Library catalogue is for browsing and add/remove — only the
+ *  copies on My Books open for study. */
 function TypeBrowserWindow({
   typeLabel,
   courses,
@@ -215,8 +220,8 @@ function TypeBrowserWindow({
   onClose: () => void;
 }) {
   // Escape closes the window. The page scroll stays live on purpose — the
-  // window no longer floats over the page, so locking the body would only
-  // trap the reader.
+  // window is a bounded panel, and locking the body would only trap the
+  // reader on a phone.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -227,13 +232,13 @@ function TypeBrowserWindow({
 
   return (
     <div
-      className="mt-4 overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-card shadow-lg"
+      className="absolute inset-0 z-30 flex flex-col overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-card shadow-2xl lg:static lg:inset-auto lg:mt-4 lg:shadow-lg"
       role="dialog"
       aria-modal="false"
       aria-label={`${typeLabel} courses`}
     >
-      <div className="flex items-center gap-3 border-b-2 border-lingo-border px-4 py-3 sm:px-5">
-        <h2 className="min-w-0 flex-1 truncate text-base font-black text-lingo-text">
+      <div className="flex shrink-0 items-center gap-3 border-b-2 border-lingo-border px-3 py-2.5 sm:px-5">
+        <h2 className="min-w-0 flex-1 truncate text-sm font-black text-lingo-text sm:text-base">
           {typeLabel}
         </h2>
         <span className="shrink-0 rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
@@ -243,15 +248,13 @@ function TypeBrowserWindow({
           type="button"
           onClick={onClose}
           aria-label="Close"
-          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text transition-colors hover:bg-lingo-gray/40"
+          className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text transition-colors hover:bg-lingo-gray/40"
         >
           <X className="h-4 w-4 stroke-[3]" />
         </button>
       </div>
 
-      {/* pt-5: the add/remove control now lives at the bottom of each book, so
-          the first row only needs a little breathing room below this header. */}
-      <div className="max-h-[70vh] overflow-y-auto px-4 pb-6 pt-5 sm:px-5">
+      <div className="flex-1 overflow-y-auto p-3 sm:px-5 sm:py-4">
         {courses.length === 0 ? (
           <p className="py-10 text-center text-sm text-lingo-text-light">
             No {typeLabel.toLowerCase()} courses yet.
@@ -259,13 +262,13 @@ function TypeBrowserWindow({
         ) : (
           <div className={WINDOW_BOOK_GRID}>
             {courses.map((c) => (
-              <CourseBook
+              <BrowseRow
                 key={c.id}
                 course={c}
-                isAdmin={isAdmin}
-                isBorrowed={borrowedIds.has(c.id)}
+                isOwner={!!c.isOwner || isAdmin}
+                isAdded={borrowedIds.has(c.id)}
                 pending={pendingId === c.id}
-                onBorrow={() => onBorrow(c)}
+                onAdd={() => onBorrow(c)}
                 onRemove={() => onRemove(c)}
               />
             ))}
@@ -276,9 +279,67 @@ function TypeBrowserWindow({
   );
 }
 
-/** A single book: just the symbol (with its level badge), the title beneath it,
- *  and the owner's controls tucked into the symbol's corners. Deliberately no
- *  card/rectangle around it — the symbol is the whole visual. */
+/** One browse-only row inside the window: symbol + title, and the circular
+ *  add/remove control pinned to the right edge. Nothing here navigates — the
+ *  symbol matches the folder icon's size so the panel reads as a tray of the
+ *  same objects the folders represent. */
+function BrowseRow({
+  course,
+  isOwner,
+  isAdded,
+  pending,
+  onAdd,
+  onRemove,
+}: {
+  course: CourseListItem;
+  isOwner: boolean;
+  isAdded: boolean;
+  pending: boolean;
+  onAdd: () => void;
+  onRemove: () => void;
+}) {
+  const isPublic = course.visibility === "public";
+
+  return (
+    <div className="flex items-center gap-2 rounded-xl border-2 border-lingo-border bg-white p-2 shadow-sm">
+      <div className="relative shrink-0">
+        <div
+          title={`${course.title} · ${course.level} · ${course.unitCount} units`}
+          className="cursor-default"
+        >
+          <CourseLevelIcon
+            level={course.level}
+            title={course.title}
+            courseId={course.id}
+            size="md"
+          />
+        </div>
+        {!isPublic && <VipCornerBadge />}
+      </div>
+
+      <p className="min-w-0 flex-1 text-xs font-semibold leading-tight text-lingo-text">
+        {course.title}
+      </p>
+
+      {isOwner && (
+        <VisibilityToggle course={course} className="h-6 w-6" />
+      )}
+      <AddRemoveButton
+        isAdded={isAdded}
+        pending={pending}
+        onAdd={onAdd}
+        onRemove={onRemove}
+        placement="inline"
+      />
+    </div>
+  );
+}
+
+/** A single book on the My Books shelf: the symbol (with its level badge),
+ *  the title beneath, the circular +/× control floating off the top-right
+ *  corner, and — for the owner only — a public/VIP toggle on the left. The
+ *  VIP mark is a small lock cornered on the symbol rather than a separate
+ *  label under the title. */
 function CourseBook({
   course,
   isAdmin,
@@ -294,41 +355,8 @@ function CourseBook({
   onBorrow: () => void;
   onRemove: () => void;
 }) {
-  const router = useRouter();
-  const [menuOpen, setMenuOpen] = useState(false);
-  const [actionPending, startTransition] = useTransition();
   const isOwner = !!course.isOwner || isAdmin;
   const isPublic = course.visibility === "public";
-
-  function toggleVisibility() {
-    const action = isPublic ? makeCoursePrivate : makeCoursePublic;
-    const label = isPublic ? "private" : "public";
-    if (!isPublic) {
-      const ok = window.confirm(
-        "Make this course public?\n\nOnce public it becomes read-only for non-admins and all users can access it.",
-      );
-      if (!ok) return;
-    }
-    setMenuOpen(false);
-    startTransition(async () => {
-      const res = await action(course.id);
-      if (!res.success) alert(res.error);
-      else router.refresh();
-    });
-  }
-
-  function handleDelete() {
-    const ok = window.confirm(
-      "Delete this course?\n\nIts units become standalone units. This cannot be undone.",
-    );
-    if (!ok) return;
-    setMenuOpen(false);
-    startTransition(async () => {
-      const res = await deleteCourse(course.id);
-      if (!res.success) alert(res.error);
-      else router.refresh();
-    });
-  }
 
   return (
     <div className="group flex flex-col items-center">
@@ -347,73 +375,25 @@ function CourseBook({
           />
         </Link>
 
-        {/* Owner controls live at the bottom-left of the symbol; the add/remove
-            control moved to a toggle switch at the bottom of the book (see
-            AddRemoveSwitch below) so it never crowds the cover or this menu. */}
+        {/* Small VIP lock, upper-left corner of the symbol. */}
+        {!isPublic && <VipCornerBadge />}
 
-        {/* Bottom-left of the symbol: owner controls */}
+        {/* Top-right corner of the symbol: add (+) / remove (×). Offset clear
+            of the square so it never overlaps the cover — the link owns the
+            symbol, this button owns only itself. */}
+        <AddRemoveButton
+          isAdded={isBorrowed}
+          pending={pending}
+          onAdd={onBorrow}
+          onRemove={onRemove}
+          placement="corner"
+        />
+
+        {/* Bottom-left of the symbol: owner-only public/VIP toggle. Replaces
+            the old "…" menu (Make Public / Edit markdown / Delete) — content
+            is authored via the AI agent, so a single switch is enough. */}
         {isOwner && (
-          <div className="absolute -bottom-2 -left-2">
-            <button
-              type="button"
-              onClick={() => setMenuOpen((o) => !o)}
-              disabled={actionPending}
-              title="Course options"
-              aria-label="Course options"
-              className="flex h-6 w-6 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 disabled:opacity-50"
-            >
-              <MoreHorizontal className="h-3.5 w-3.5" />
-            </button>
-
-            {menuOpen && (
-              <>
-                {/* Click-away backdrop */}
-                <div
-                  className="fixed inset-0 z-30"
-                  onClick={() => setMenuOpen(false)}
-                  aria-hidden
-                />
-                <div className="absolute bottom-7 left-0 z-40 w-44 overflow-hidden rounded-xl border-2 border-lingo-border bg-white text-sm shadow-lg">
-                  <button
-                    type="button"
-                    onClick={toggleVisibility}
-                    className="flex w-full items-center gap-2 px-3 py-2.5 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
-                  >
-                    {isPublic ? (
-                      <>
-                        <Lock className="h-4 w-4" /> Make VIP
-                      </>
-                    ) : (
-                      <>
-                        <Globe className="h-4 w-4" /> Make Public
-                      </>
-                    )}
-                  </button>
-                  <Link
-                    href={`/library/edit-course/${course.id}`}
-                    onClick={() => setMenuOpen(false)}
-                    className="flex w-full items-center gap-2 px-3 py-2.5 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
-                  >
-                    <Pencil className="h-4 w-4" /> Edit
-                  </Link>
-                  <Link
-                    href={`/library/${course.id}`}
-                    onClick={() => setMenuOpen(false)}
-                    className="flex w-full items-center gap-2 px-3 py-2.5 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
-                  >
-                    <FolderOpen className="h-4 w-4" /> Manage
-                  </Link>
-                  <button
-                    type="button"
-                    onClick={handleDelete}
-                    className="flex w-full items-center gap-2 border-t border-lingo-border px-3 py-2.5 text-left font-bold text-red-500 hover:bg-red-50"
-                  >
-                    <Trash2 className="h-4 w-4" /> Delete
-                  </button>
-                </div>
-              </>
-            )}
-          </div>
+          <VisibilityToggle course={course} className="absolute -bottom-2 -left-2" />
         )}
       </div>
 
@@ -421,21 +401,6 @@ function CourseBook({
       <p className="mt-2.5 line-clamp-2 min-h-[2rem] w-full px-1 text-center text-xs font-semibold leading-tight text-lingo-text">
         {course.title}
       </p>
-      {!isPublic && (
-        <span className="mt-1 rounded-full bg-lingo-gray px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-lingo-text-light">
-          🔒 VIP
-        </span>
-      )}
-
-      {/* Add / remove control — a bottom toggle switch so it never overlaps the
-          cover or the owner menu. Green = Add, red = Remove. */}
-      <div className="mt-2 w-full px-1">
-        <AddRemoveSwitch
-          isAdded={isBorrowed}
-          pending={pending}
-          onToggle={isBorrowed ? onRemove : onBorrow}
-        />
-      </div>
     </div>
   );
 }
