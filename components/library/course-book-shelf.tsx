@@ -3,7 +3,7 @@
 import { useState, useTransition, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { Plus, X, MoreHorizontal, Globe, Lock, Pencil, Trash2, FolderOpen } from "lucide-react";
+import { X, MoreHorizontal, Globe, Lock, Pencil, Trash2, FolderOpen } from "lucide-react";
 import type { CourseListItem } from "@/lib/content/types";
 import {
   CourseLevelIcon,
@@ -15,6 +15,7 @@ import { addCourseToLibrary, removeCourseFromLibrary } from "@/lib/actions/libra
 import { makeCoursePublic, makeCoursePrivate, deleteCourse } from "@/lib/actions/units";
 import { CreateCourseForm } from "@/components/library/create-course-form";
 import { LibraryFolders } from "@/components/library/library-folders";
+import { AddRemoveSwitch } from "@/components/library/add-remove-switch";
 
 /** A student may keep at most this many courses on the top ("My Books")
  *  shelf. Four per row on phones = two rows; all eight on one row on desktop. */
@@ -127,9 +128,7 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
 
       {/* My Books — the reader's own picks, capped at MY_BOOKS_CAP */}
       <section>
-        {/* mb-8 (not mb-4): the +/× button sits 24px above each book, so the
-            first row needs clearance or it collides with this heading. */}
-        <div className="mb-8 flex items-center gap-2">
+        <div className="mb-6 flex items-center gap-2">
           <h2 className="text-base font-bold text-lingo-text">My Books</h2>
           <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
             {borrowed.length}/{MY_BOOKS_CAP}
@@ -139,8 +138,9 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
         {borrowed.length === 0 ? (
           <p className="rounded-xl border-2 border-dashed border-lingo-border bg-white p-4 text-center text-sm text-lingo-text-light">
             Your shelf is empty. Open a folder under{" "}
-            <span className="font-black">Library</span> below and tap the{" "}
-            <span className="font-black">+</span> on any book to add it here.
+            <span className="font-black">Library</span> below and tap{" "}
+            <span className="font-black text-lingo-green">Add</span> on any book
+            to put it here.
           </p>
         ) : (
           // gap-y-8: the +/× button floats 24px above each book, so rows need
@@ -249,10 +249,9 @@ function TypeBrowserWindow({
         </button>
       </div>
 
-      {/* pt-10: the +/× button of the first row floats 24px above its book
-          symbol, so the row needs clearance or the button collides with the
-          header above it. */}
-      <div className="max-h-[70vh] overflow-y-auto px-4 pb-6 pt-10 sm:px-5">
+      {/* pt-5: the add/remove control now lives at the bottom of each book, so
+          the first row only needs a little breathing room below this header. */}
+      <div className="max-h-[70vh] overflow-y-auto px-4 pb-6 pt-5 sm:px-5">
         {courses.length === 0 ? (
           <p className="py-10 text-center text-sm text-lingo-text-light">
             No {typeLabel.toLowerCase()} courses yet.
@@ -348,30 +347,9 @@ function CourseBook({
           />
         </Link>
 
-        {/* Top-right corner of the symbol: borrow (+) / return (x).
-            Offset well clear of the square so the button never overlaps the
-            book itself — the link owns the symbol, this button owns only
-            itself, and neither can steal the other's tap. */}
-        <button
-          type="button"
-          onClick={isBorrowed ? onRemove : onBorrow}
-          disabled={pending}
-          title={isBorrowed ? "Remove from My Books" : "Add to My Books"}
-          aria-label={isBorrowed ? "Remove from My Books" : "Add to My Books"}
-          className={`absolute -right-6 -top-6 flex h-7 w-7 items-center justify-center rounded-full border-2 shadow-sm transition-all disabled:opacity-50 ${
-            isBorrowed
-              ? "border-red-300 bg-white text-red-500 hover:bg-red-50"
-              : "border-lingo-blue bg-lingo-blue text-white hover:bg-lingo-blue/90 active:scale-95"
-          }`}
-        >
-          {pending ? (
-            <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
-          ) : isBorrowed ? (
-            <X className="h-3.5 w-3.5 stroke-[3]" />
-          ) : (
-            <Plus className="h-3.5 w-3.5 stroke-[3]" />
-          )}
-        </button>
+        {/* Owner controls live at the bottom-left of the symbol; the add/remove
+            control moved to a toggle switch at the bottom of the book (see
+            AddRemoveSwitch below) so it never crowds the cover or this menu. */}
 
         {/* Bottom-left of the symbol: owner controls */}
         {isOwner && (
@@ -395,11 +373,11 @@ function CourseBook({
                   onClick={() => setMenuOpen(false)}
                   aria-hidden
                 />
-                <div className="absolute bottom-7 left-0 z-40 w-40 overflow-hidden rounded-lg border-2 border-lingo-border bg-white text-sm shadow-lg">
+                <div className="absolute bottom-7 left-0 z-40 w-44 overflow-hidden rounded-xl border-2 border-lingo-border bg-white text-sm shadow-lg">
                   <button
                     type="button"
                     onClick={toggleVisibility}
-                    className="flex w-full items-center gap-2 px-3 py-2 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
+                    className="flex w-full items-center gap-2 px-3 py-2.5 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
                   >
                     {isPublic ? (
                       <>
@@ -414,21 +392,21 @@ function CourseBook({
                   <Link
                     href={`/library/edit-course/${course.id}`}
                     onClick={() => setMenuOpen(false)}
-                    className="flex w-full items-center gap-2 px-3 py-2 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
+                    className="flex w-full items-center gap-2 px-3 py-2.5 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
                   >
                     <Pencil className="h-4 w-4" /> Edit
                   </Link>
                   <Link
                     href={`/library/${course.id}`}
                     onClick={() => setMenuOpen(false)}
-                    className="flex w-full items-center gap-2 px-3 py-2 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
+                    className="flex w-full items-center gap-2 px-3 py-2.5 text-left font-bold text-lingo-text hover:bg-lingo-gray/30"
                   >
                     <FolderOpen className="h-4 w-4" /> Manage
                   </Link>
                   <button
                     type="button"
                     onClick={handleDelete}
-                    className="flex w-full items-center gap-2 border-t border-lingo-border px-3 py-2 text-left font-bold text-red-500 hover:bg-red-50"
+                    className="flex w-full items-center gap-2 border-t border-lingo-border px-3 py-2.5 text-left font-bold text-red-500 hover:bg-red-50"
                   >
                     <Trash2 className="h-4 w-4" /> Delete
                   </button>
@@ -448,6 +426,16 @@ function CourseBook({
           🔒 VIP
         </span>
       )}
+
+      {/* Add / remove control — a bottom toggle switch so it never overlaps the
+          cover or the owner menu. Green = Add, red = Remove. */}
+      <div className="mt-2 w-full px-1">
+        <AddRemoveSwitch
+          isAdded={isBorrowed}
+          pending={pending}
+          onToggle={isBorrowed ? onRemove : onBorrow}
+        />
+      </div>
     </div>
   );
 }

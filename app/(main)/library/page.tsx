@@ -1,16 +1,9 @@
 import Link from "next/link";
 import { getSession } from "@/lib/auth-server";
-import {
-  getStandaloneUnits,
-  listCoursesWithLessonCounts,
-} from "@/lib/db/queries/courses";
-import type {
-  StandaloneUnitInfo,
-  CourseListItem,
-} from "@/lib/content/types";
+import { listCoursesWithLessonCounts } from "@/lib/db/queries/courses";
+import type { CourseListItem } from "@/lib/content/types";
 import { isAdminEmail } from "@/lib/ai/models";
 import { getTargetLanguage } from "@/lib/actions/preferences";
-import { StandaloneUnits } from "@/components/library/standalone-units";
 import { PrivateShelf } from "@/components/library/private-shelf";
 import {
   CourseBookShelf,
@@ -27,7 +20,6 @@ export default async function LearnPage() {
   const userId = session?.user?.id;
   const isAdmin = isAdminEmail(session?.user?.email);
 
-  let standaloneUnits: StandaloneUnitInfo[] = [];
   let allCourses: CourseListItem[] = [];
   let targetLang: string | null = null;
 
@@ -37,12 +29,6 @@ export default async function LearnPage() {
     // /library hang instead of merely being slow. Rendering the shelf with a
     // missing slice beats never rendering it at all.
     const results = await Promise.allSettled([
-      withTimeout(
-        "library:getStandaloneUnits",
-        getStandaloneUnits(userId),
-        8000,
-        [] as StandaloneUnitInfo[],
-      ),
       withTimeout(
         "library:listCoursesWithLessonCounts",
         listCoursesWithLessonCounts(undefined, userId, false),
@@ -58,29 +44,22 @@ export default async function LearnPage() {
     ]);
 
     if (results[0].status === "fulfilled") {
-      standaloneUnits = results[0].value;
+      allCourses = results[0].value;
     } else {
-      console.error("LearnPage: getStandaloneUnits failed:", results[0].reason);
+      console.error("LearnPage: listCoursesWithLessonCounts failed:", results[0].reason);
     }
 
     if (results[1].status === "fulfilled") {
-      allCourses = results[1].value;
+      targetLang = results[1].value;
     } else {
-      console.error("LearnPage: listCoursesWithLessonCounts failed:", results[1].reason);
-    }
-
-    if (results[2].status === "fulfilled") {
-      targetLang = results[2].value;
-    } else {
-      console.error("LearnPage: getTargetLanguage failed:", results[2].reason);
+      console.error("LearnPage: getTargetLanguage failed:", results[1].reason);
     }
   }
 
-  const isEmptyLibrary =
-    allCourses.length === 0 && standaloneUnits.length === 0 && !isAdmin;
+  const isEmptyLibrary = allCourses.length === 0 && !isAdmin;
 
   // Anything the viewer owns that is not public (visibility is null while a
-  // course/unit is private) is a draft: it gets its own shelf at the bottom of
+  // course is private) is a draft: it gets its own shelf at the bottom of
   // the page and is dropped from the public shelves above so a draft never
   // appears twice.
   const isPrivateOwn = (visibility?: string | null) => visibility !== "public";
@@ -88,12 +67,6 @@ export default async function LearnPage() {
   const privateCourses = allCourses.filter(
     (c) => c.isOwner && isPrivateOwn(c.visibility) && !c.isInLibrary,
   );
-  const privateUnits = standaloneUnits.filter(
-    (u) => u.isOwner && isPrivateOwn(u.visibility) && !u.isInLibrary,
-  );
-
-  const privateUnitIds = new Set(privateUnits.map((u) => u.id));
-  const visibleUnits = standaloneUnits.filter((u) => !privateUnitIds.has(u.id));
 
   return (
     <div className="mx-auto w-full max-w-6xl">
@@ -111,25 +84,20 @@ export default async function LearnPage() {
             Your library is empty
           </h2>
           <p className="text-sm text-lingo-text-light mb-5">
-            Browse public courses and standalone units to start practicing!
+            Browse public courses to start practicing!
           </p>
           <Link
             href="/library/browse"
             className="inline-flex items-center gap-2 rounded-xl border-2 border-lingo-green bg-lingo-green px-5 py-2.5 text-sm font-black text-white shadow-[0_2px_0_0] shadow-green-700 transition-all hover:bg-lingo-green/90 active:translate-y-[1px]"
           >
-            <span>🔍</span> Browse Courses &amp; Units
+            <span>🔍</span> Browse Courses
           </Link>
         </div>
       ) : (
         <div className="flex flex-col gap-6 lg:flex-row">
           <div className="min-w-0 flex-1">
             <CourseBookShelf courses={allCourses} isAdmin={isAdmin} />
-            <StandaloneUnits units={visibleUnits} isAdmin={isAdmin} />
-            <PrivateShelf
-              courses={privateCourses}
-              units={privateUnits}
-              isAdmin={isAdmin}
-            />
+            <PrivateShelf courses={privateCourses} />
           </div>
           <aside className="hidden shrink-0 lg:block lg:w-60">
             <div className="sticky top-4">
