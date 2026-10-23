@@ -21,16 +21,18 @@ import {
 } from "@/components/library/book-parts";
 
 /** A student may keep at most this many courses on the top ("My Books")
- *  shelf. Four per row on phones = two rows; all eight on one row on desktop. */
+ *  shelf. The grid matches the Library folders exactly (2-up on phones, 4-up
+ *  from `min-[480px]`), so the cap of eight fills exactly two tidy rows. */
 const MY_BOOKS_CAP = 8;
 
-/** Book grid geometry for the top shelf. */
-const BOOK_GRID = "grid grid-cols-4 gap-x-3 gap-y-8 lg:grid-cols-8";
+/** My Books grid geometry — deliberately the *same* classes as the Library
+ *  folder grid, so a book tile is exactly as wide as the folder it came from. */
+const BOOK_GRID = "grid grid-cols-2 gap-3 min-[480px]:grid-cols-4";
 
 /** Browse-window row geometry. The window layers OVER the folder grid on
- *  phones, so it reuses the folder's own 2-up rhythm with equal-width columns. */
-const WINDOW_BOOK_GRID =
-  "grid grid-cols-2 gap-x-3 gap-y-3 min-[480px]:grid-cols-3 lg:grid-cols-4";
+ *  phones, so it reuses the folder grid's own 2-up / 4-up rhythm with the same
+ *  gap — every entry lines up with the folder tile above it. */
+const WINDOW_BOOK_GRID = "grid grid-cols-2 gap-3 min-[480px]:grid-cols-4";
 
 interface CourseBookShelfProps {
   /** Full catalog: public courses + the viewer's own. */
@@ -296,8 +298,8 @@ function BrowseRow({
   const isPublic = course.visibility === "public";
 
   return (
-    <div className="flex items-center gap-2 rounded-xl border-2 border-lingo-border bg-white p-2 shadow-sm">
-      <div className="relative shrink-0">
+    <div className="flex items-center gap-2 rounded-2xl border-2 border-lingo-border bg-white p-3 pl-2.5 shadow-sm">
+      <div className="relative -ml-1 shrink-0">
         <div
           title={`${course.title} · ${course.level} · ${course.unitCount} units`}
           className="cursor-default"
@@ -331,11 +333,12 @@ function BrowseRow({
 
 /** A single book on the My Books shelf.
  *
- *  Deliberately styled like a Library folder tile — same border, radius,
- *  padding and shadow — so the shelf reads as "the folders you picked", and
- *  the only difference is the × on the right taking a book back off the shelf.
- *  There is no public/VIP toggle here: the owner manages visibility from the
- *  Library browse window, where every course is listed. */
+ *  Keeps the Library folder tile's outline — same border, radius, padding and
+ *  shadow — so the shelf reads as "the folders you picked". Inside, the layout
+ *  runs left→right: symbol, title, then the × that takes the book back off the
+ *  shelf. The symbol is nudged left (negative left margin) so the card's own
+ *  padding, not the symbol, absorbs the extra width, leaving the × a clean
+ *  slot on the right at every breakpoint. */
 function CourseBook({
   course,
   isBorrowed,
@@ -352,10 +355,11 @@ function CourseBook({
   const isPublic = course.visibility === "public";
 
   return (
-    <div className="group relative flex flex-col items-center rounded-2xl border-2 border-lingo-border bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border">
-      {/* Symbol zone. The link owns the symbol and the title; the × owns only
-          itself, so neither can steal the other's tap. */}
-      <div className="relative">
+    <div className="group flex items-center gap-2 rounded-2xl border-2 border-lingo-border bg-white p-3 pl-2.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border">
+      {/* Symbol zone — pulled slightly left to free room for the ×. The link
+          owns the symbol and the title; the × owns only itself, so neither can
+          steal the other's tap. */}
+      <div className="relative -ml-1 shrink-0">
         <Link
           href={`/library/${course.id}`}
           className="inline-block transition-transform group-hover:-translate-y-0.5"
@@ -373,21 +377,17 @@ function CourseBook({
         {!isPublic && <VipCornerBadge />}
       </div>
 
-      {/* Title beneath the symbol */}
-      <p className="mt-2 line-clamp-2 min-h-[2rem] w-full px-4 text-center text-xs font-bold leading-tight text-lingo-text">
+      <p className="min-w-0 flex-1 text-xs font-bold leading-tight text-lingo-text">
         {course.title}
       </p>
 
-      {/* Take it off the shelf — × on the right, mirroring the folder tile's
-          right-hand control in the browse window. */}
-      <div className="absolute bottom-2 right-2">
-        <AddRemoveButton
-          isAdded={isBorrowed}
-          pending={pending}
-          onAdd={onBorrow}
-          onRemove={onRemove}
-        />
-      </div>
+      {/* Take it off the shelf — × on the right. */}
+      <AddRemoveButton
+        isAdded={isBorrowed}
+        pending={pending}
+        onAdd={onBorrow}
+        onRemove={onRemove}
+      />
     </div>
   );
 }
