@@ -66,7 +66,7 @@ export function PrivateShelf({ courses, units, isAdmin }: PrivateShelfProps) {
               {courses.length}
             </span>
           </div>
-          <div className="grid grid-cols-3 gap-x-3 gap-y-8 sm:grid-cols-4 lg:grid-cols-5">
+          <div className="grid grid-cols-3 gap-x-3 gap-y-8 min-[480px]:grid-cols-5 lg:grid-cols-6">
             {courses.map((c) => (
               <PrivateBook key={c.id} course={c} />
             ))}

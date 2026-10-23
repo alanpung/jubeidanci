@@ -162,7 +162,7 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
           // gap-y-8: the +/× button floats 24px above each book, so rows need
           // more than the old 20px or the next row's button lands on the
           // previous row's title.
-          <div className="grid grid-cols-3 gap-x-3 gap-y-8 sm:grid-cols-4 lg:grid-cols-5">
+          <div className="grid grid-cols-3 gap-x-3 gap-y-8 min-[480px]:grid-cols-5 lg:grid-cols-6">
             {borrowed.map((c) => (
               <CourseBook
                 key={c.id}
@@ -249,7 +249,7 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
               : "Every available book is already on your shelf."}
           </p>
         ) : (
-          <div className="grid grid-cols-3 gap-x-3 gap-y-8 sm:grid-cols-4 lg:grid-cols-5">
+          <div className="grid grid-cols-3 gap-x-3 gap-y-8 min-[480px]:grid-cols-5 lg:grid-cols-6">
             {catalog.map((c) => (
               <CourseBook
                 key={c.id}

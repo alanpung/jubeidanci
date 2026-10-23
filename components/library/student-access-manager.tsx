@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useTransition, useCallback } from "react";
-import { Check, X, Lock, Users, BookOpen, Layers } from "lucide-react";
+import { Check, Lock, Users, BookOpen, Layers } from "lucide-react";
 import type { StudentSummary } from "@/lib/actions/teacher";
 import type {
   PrivateCourseItem,
@@ -100,9 +100,8 @@ export function StudentAccessManager({ students, courses, units }: Props) {
       try {
         const res = await action;
         if (!res.success) {
-          // Surface the real reason instead of silently reverting to N so the
-          // owner can tell what went wrong (e.g. the student_access table has
-          // not been migrated yet).
+          // Surface the real reason instead of silently reverting to off so the
+          // owner can tell what went wrong (e.g. a save failure).
           window.alert(
             `Could not save access: ${res.error ?? "unknown error"}`,
           );
@@ -129,7 +128,7 @@ export function StudentAccessManager({ students, courses, units }: Props) {
   const selectedStudent = students.find((s) => s.id === selectedId) ?? null;
 
   return (
-    <div className="grid gap-4 md:grid-cols-[260px_1fr_160px]">
+    <div className="grid gap-4 md:grid-cols-[260px_1fr]">
       {/* Column 1 — Students */}
       <section className="rounded-2xl border-2 border-lingo-border bg-white p-3">
         <h2 className="mb-2 flex items-center gap-2 px-1 text-sm font-black uppercase tracking-wide text-lingo-text-light">
@@ -181,87 +180,69 @@ export function StudentAccessManager({ students, courses, units }: Props) {
         </ul>
       </section>
 
-      {/* Column 2 — Private content */}
+      {/* Column 2 — Private content with inline toggle. The icon on the left
+          is the switch: tap it to share (turns green) with the selected
+          student, tap again to revoke. */}
       <section className="rounded-2xl border-2 border-lingo-border bg-white p-3">
         <h2 className="mb-2 flex items-center gap-2 px-1 text-sm font-black uppercase tracking-wide text-lingo-text-light">
           <Lock className="h-4 w-4" /> Your private course / unit
         </h2>
+        {!selectedStudent && (
+          <p className="px-2 py-3 text-sm text-lingo-text-light">
+            Select a student on the left, then tap a book icon to share it.
+          </p>
+        )}
         {contentItems.length === 0 ? (
           <p className="px-2 py-3 text-sm text-lingo-text-light">
             You have no private content yet. Make a course or unit private first.
           </p>
         ) : (
           <ul className="space-y-1">
-            {contentItems.map((item) => (
-              <li
-                key={`${item.kind}:${item.id}`}
-                className="flex items-center gap-3 rounded-xl px-2 py-2"
-              >
-                <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-lingo-gray/60 text-lingo-text-light">
-                  {item.kind === "course" ? (
-                    <BookOpen className="h-4 w-4" />
-                  ) : (
-                    <Layers className="h-4 w-4" />
-                  )}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block truncate text-sm font-bold text-lingo-text">
-                    {item.title}
-                  </span>
-                  <span className="block text-xs text-lingo-text-light">
-                    {item.sub}
-                  </span>
-                </span>
-              </li>
-            ))}
-          </ul>
-        )}
-      </section>
-
-      {/* Column 3 — Access (Y / N) for the selected student */}
-      <section className="rounded-2xl border-2 border-lingo-border bg-white p-3">
-        <h2 className="mb-2 px-1 text-sm font-black uppercase tracking-wide text-lingo-text-light">
-          Share&nbsp;(Y/N)
-        </h2>
-        {!selectedStudent && (
-          <p className="px-2 py-3 text-sm text-lingo-text-light">
-            Select a student on the left to share.
-          </p>
-        )}
-        {selectedStudent && contentItems.length === 0 && (
-          <p className="px-2 py-3 text-sm text-lingo-text-light">
-            No private content to share.
-          </p>
-        )}
-        {selectedStudent && (
-          <ul className="space-y-1">
             {contentItems.map((item) => {
               const key = `${item.kind}:${item.id}`;
               const granted = isGranted(item);
               const busy = granting.has(key);
+              const Icon = item.kind === "course" ? BookOpen : Layers;
               return (
-                <li key={key} className="px-1 py-2">
+                <li
+                  key={key}
+                  className="flex items-center gap-3 rounded-xl px-2 py-2 hover:bg-lingo-gray/40"
+                >
                   <button
                     type="button"
-                    disabled={busy}
+                    disabled={!selectedStudent || busy}
                     onClick={() => toggle(item)}
                     aria-pressed={granted}
-                    className={`flex w-full items-center justify-center gap-1.5 rounded-xl border-2 px-2 py-2 text-sm font-black transition-colors disabled:opacity-60 ${
+                    title={
+                      granted
+                        ? "Click to revoke access"
+                        : "Click to share with this student"
+                    }
+                    className={`flex h-9 w-9 shrink-0 items-center justify-center rounded-xl border-2 transition-colors disabled:opacity-40 ${
                       granted
                         ? "border-green-500 bg-green-500 text-white"
-                        : "border-lingo-border bg-white text-lingo-text-light hover:bg-lingo-gray/50"
+                        : "border-lingo-border bg-lingo-gray/60 text-lingo-text-light hover:bg-lingo-gray"
                     }`}
                   >
                     {granted ? (
-                      <>
-                        <Check className="h-4 w-4" /> Y
-                      </>
+                      <Check className="h-5 w-5" />
                     ) : (
-                      <>
-                        <X className="h-4 w-4" /> N
-                      </>
+                      <Icon className="h-4 w-4" />
                     )}
                   </button>
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate text-sm font-bold text-lingo-text">
+                      {item.title}
+                    </span>
+                    <span className="block text-xs text-lingo-text-light">
+                      {item.sub}
+                    </span>
+                  </span>
+                  {granted && (
+                    <span className="shrink-0 rounded-full bg-green-500/15 px-2 py-0.5 text-[11px] font-bold uppercase tracking-wide text-green-600">
+                      Shared
+                    </span>
+                  )}
                 </li>
               );
             })}
