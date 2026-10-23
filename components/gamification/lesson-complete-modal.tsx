@@ -146,7 +146,7 @@ export function LessonCompleteModal({
               ) : (
                 <ArrowRight className="w-5 h-5 shrink-0" />
               )}
-              <span className="shrink-0">Next Lesson</span>
+              <span className="shrink-0">Next</span>
             </button>
           )}
         </div>

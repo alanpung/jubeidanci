@@ -2,24 +2,26 @@
 
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Globe, Lock } from "lucide-react";
+import { Globe, Crown } from "lucide-react";
 import type { CourseListItem } from "@/lib/content/types";
 import { makeCoursePublic, makeCoursePrivate } from "@/lib/actions/units";
 
-/** A small VIP lock pinned to the upper-left corner of a course symbol.
+/** A small VIP crown pinned to the upper-left corner of a course symbol.
  *
- *  VIP used to be a separate grey pill *under* the title, which pushed the
- *  whole grid down and read like a second label. Cornering it on the symbol
- *  keeps the mark attached to the book it describes and leaves the title row
- *  clean. */
+ *  Replaces the old lock glyph with a warmer, more "premium" mark: a gold
+ *  crown on a dark circle, which reads as VIP at a glance without the
+ *  "locked/forbidden" feeling a padlock carries. VIP used to be a separate
+ *  grey pill *under* the title, which pushed the whole grid down and read like
+ *  a second label — cornering it on the symbol keeps the mark attached to the
+ *  book it describes and leaves the title row clean. */
 export function VipCornerBadge() {
   return (
     <span
       title="VIP course — only you can see this"
       aria-label="VIP course"
-      className="absolute -left-1 -top-1 z-20 flex h-4 w-4 items-center justify-center rounded-full border-2 border-white bg-lingo-text text-white shadow-sm"
+      className="absolute -left-1.5 -top-1.5 z-20 flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-gradient-to-br from-amber-400 to-amber-600 text-white shadow-sm"
     >
-      <Lock className="h-2 w-2 stroke-[3]" />
+      <Crown className="h-3 w-3 fill-white stroke-[2]" />
     </span>
   );
 }
@@ -80,7 +82,7 @@ export function VisibilityToggle({
       ) : isPublic ? (
         <Globe className="h-3.5 w-3.5" />
       ) : (
-        <Lock className="h-3 w-3 stroke-[3]" />
+        <Crown className="h-3 w-3 fill-white stroke-[2]" />
       )}
     </button>
   );

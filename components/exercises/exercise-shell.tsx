@@ -44,6 +44,29 @@ export function ExerciseShell({
   hideBottomFeedback = false,
 }: ExerciseShellProps) {
   const justCheckedRef = useRef(false);
+  const touchStartRef = useRef<{ x: number; y: number } | null>(null);
+
+  // Swipe-left anywhere on the exercise advances to the next question. Guarded
+  // to the result state so a stray drag while typing can't skip the exercise.
+  const handleTouchStart = useCallback((e: React.TouchEvent) => {
+    const t = e.touches[0];
+    touchStartRef.current = { x: t.clientX, y: t.clientY };
+  }, []);
+
+  const handleTouchEnd = useCallback(
+    (e: React.TouchEvent) => {
+      const start = touchStartRef.current;
+      touchStartRef.current = null;
+      if (!start) return;
+      const t = e.changedTouches[0];
+      const dx = t.clientX - start.x;
+      const dy = t.clientY - start.y;
+      if (dx < -50 && Math.abs(dx) > Math.abs(dy) * 1.5 && status !== "answering") {
+        onContinue();
+      }
+    },
+    [status, onContinue]
+  );
 
   // When status changes away from "answering", mark that we just checked
   // and clear the flag after a short delay to allow the user to see feedback
@@ -77,7 +100,11 @@ export function ExerciseShell({
   }, [handleKeyDown]);
 
   return (
-    <div className="flex flex-col min-h-[400px] pb-12 sm:pb-6">
+    <div
+      className="flex flex-col min-h-[400px] pb-12 sm:pb-6"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="flex-1">{children}</div>
 
       {status === "answering" && (

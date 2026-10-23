@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo, useRef, useCallback, KeyboardEvent } from "react";
+import { Volume2 } from "lucide-react";
 import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
@@ -509,12 +510,45 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
     >
       <div className="w-full max-w-5xl mx-auto flex flex-col items-center py-2 sm:py-4">
         {/* Chinese Sentence Prompt at the top */}
-        <div className="flex flex-col items-center mt-2 mb-6 text-center px-2">
+        <div className="flex flex-col items-center mt-2 mb-4 text-center px-2">
           <div className="flex items-center justify-center gap-2 sm:gap-3">
             <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-800 tracking-normal select-none">
               <HoverableText text={exercise.sentence} language={sentenceLang} />
             </h1>
           </div>
+        </div>
+
+        {/* Audio output controls — centered directly below the Chinese question.
+            Both buttons show from the very start; only the Chinese prompt
+            auto-plays on load (see the effect above), and the English answer
+            auto-plays after the user clicks Check (see handleCheck). */}
+        <div className="mb-6 flex items-center justify-center gap-2.5">
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              play(exercise.sentence, sentenceLang);
+            }}
+            className="inline-flex h-10 items-center gap-1.5 rounded-full bg-lingo-blue px-3.5 text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold shadow-sm"
+            aria-label="播放中文音频"
+            title="中文音频"
+          >
+            <Volume2 className="h-4 w-4" />
+            中文
+          </button>
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              play(bestMatchAnswer, "en");
+            }}
+            className="inline-flex h-10 items-center gap-1.5 rounded-full bg-lingo-blue px-3.5 text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold shadow-sm"
+            aria-label="播放英文音频"
+            title="英文音频"
+          >
+            <Volume2 className="h-4 w-4" />
+            English
+          </button>
         </div>
 
         {/* Word Input Cards Layout (without word structure/chunk labels) */}
@@ -532,38 +566,6 @@ export function Translation({ exercise, onResult, onContinue, language, autoplay
             }}
             className="w-full flex flex-col items-center cursor-text mb-4"
           >
-          {/* Audio output controls:
-              C = play the Chinese prompt (always available)
-              E = play the English answer (only revealed after Check) */}
-          <div className="w-full flex items-center justify-end mb-3 max-w-5xl">
-            <div className="flex items-center gap-2">
-              <button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  play(exercise.sentence, sentenceLang);
-                }}
-                className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-lingo-blue text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold"
-                aria-label="Play Chinese audio"
-                title="Chinese audio"
-              >
-                C
-              </button>
-              {status !== "answering" && (
-                <button
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    play(bestMatchAnswer, "en");
-                  }}
-                  className="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-lingo-blue text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold"
-                  aria-label="Play English audio"
-                  title="English audio"
-                >
-                  E
-                </button>
-              )}
-            </div>
-          </div>
-
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 lg:gap-4 w-full max-w-5xl">
             {analyzedWordList.map((item, idx) => {
               const targetWord = item.word;
