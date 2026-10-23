@@ -130,7 +130,7 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
 
       {/* My Books — the reader's own picks, capped at MY_BOOKS_CAP */}
       <section>
-        <div className="mb-6 flex items-center gap-2">
+        <div className="mb-4 flex items-center gap-2">
           <h2 className="text-base font-bold text-lingo-text">My Books</h2>
           <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
             {borrowed.length}/{MY_BOOKS_CAP}
@@ -145,15 +145,11 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
             to add it here.
           </p>
         ) : (
-          // gap-y-8: the +/× button floats 24px above each book, so rows need
-          // more than the old 20px or the next row's button lands on the
-          // previous row's title.
           <div className={BOOK_GRID}>
             {borrowed.map((c) => (
               <CourseBook
                 key={c.id}
                 course={c}
-                isAdmin={isAdmin}
                 isBorrowed
                 pending={pendingId === c.id}
                 onBorrow={() => borrow(c)}
@@ -165,9 +161,8 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
       </section>
 
       {/* Library — eight exercise-type folders, right below My Books. Tapping
-          one opens the small browser window (no page navigation). The window
-          is rendered *inside* the Library section so it never covers the My
-          Books shelf above it. */}
+          one opens the small browser window (no page navigation). On phones the
+          window layers over the folders; from lg up it sits underneath them. */}
       <LibraryFolders
         onOpenType={(label) =>
           setOpenType((cur) => (cur === label ? null : label))
@@ -329,78 +324,70 @@ function BrowseRow({
         pending={pending}
         onAdd={onAdd}
         onRemove={onRemove}
-        placement="inline"
       />
     </div>
   );
 }
 
-/** A single book on the My Books shelf: the symbol (with its level badge),
- *  the title beneath, the circular +/× control floating off the top-right
- *  corner, and — for the owner only — a public/VIP toggle on the left. The
- *  VIP mark is a small lock cornered on the symbol rather than a separate
- *  label under the title. */
+/** A single book on the My Books shelf.
+ *
+ *  Deliberately styled like a Library folder tile — same border, radius,
+ *  padding and shadow — so the shelf reads as "the folders you picked", and
+ *  the only difference is the × on the right taking a book back off the shelf.
+ *  There is no public/VIP toggle here: the owner manages visibility from the
+ *  Library browse window, where every course is listed. */
 function CourseBook({
   course,
-  isAdmin,
   isBorrowed,
   pending,
   onBorrow,
   onRemove,
 }: {
   course: CourseListItem;
-  isAdmin: boolean;
   isBorrowed: boolean;
   pending: boolean;
   onBorrow: () => void;
   onRemove: () => void;
 }) {
-  const isOwner = !!course.isOwner || isAdmin;
   const isPublic = course.visibility === "public";
 
   return (
-    <div className="group flex flex-col items-center">
-      {/* Symbol zone */}
+    <div className="group relative flex flex-col items-center rounded-2xl border-2 border-lingo-border bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border">
+      {/* Symbol zone. The link owns the symbol and the title; the × owns only
+          itself, so neither can steal the other's tap. */}
       <div className="relative">
         <Link
           href={`/library/${course.id}`}
-          className="inline-block transition-transform hover:-translate-y-0.5"
+          className="inline-block transition-transform group-hover:-translate-y-0.5"
           title={`${course.title} · ${course.level} · ${course.unitCount} units`}
         >
           <CourseLevelIcon
             level={course.level}
             title={course.title}
             courseId={course.id}
-            size="lg"
+            size="md"
           />
         </Link>
 
         {/* Small VIP lock, upper-left corner of the symbol. */}
         {!isPublic && <VipCornerBadge />}
+      </div>
 
-        {/* Top-right corner of the symbol: add (+) / remove (×). Offset clear
-            of the square so it never overlaps the cover — the link owns the
-            symbol, this button owns only itself. */}
+      {/* Title beneath the symbol */}
+      <p className="mt-2 line-clamp-2 min-h-[2rem] w-full px-4 text-center text-xs font-bold leading-tight text-lingo-text">
+        {course.title}
+      </p>
+
+      {/* Take it off the shelf — × on the right, mirroring the folder tile's
+          right-hand control in the browse window. */}
+      <div className="absolute bottom-2 right-2">
         <AddRemoveButton
           isAdded={isBorrowed}
           pending={pending}
           onAdd={onBorrow}
           onRemove={onRemove}
-          placement="corner"
         />
-
-        {/* Bottom-left of the symbol: owner-only public/VIP toggle. Replaces
-            the old "…" menu (Make Public / Edit markdown / Delete) — content
-            is authored via the AI agent, so a single switch is enough. */}
-        {isOwner && (
-          <VisibilityToggle course={course} className="absolute -bottom-2 -left-2" />
-        )}
       </div>
-
-      {/* Title beneath the symbol */}
-      <p className="mt-2.5 line-clamp-2 min-h-[2rem] w-full px-1 text-center text-xs font-semibold leading-tight text-lingo-text">
-        {course.title}
-      </p>
     </div>
   );
 }

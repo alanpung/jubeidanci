@@ -1,7 +1,6 @@
 "use client";
 
 import type { ReactNode } from "react";
-import { Folder } from "lucide-react";
 import {
   QUESTION_TYPE_LEGEND,
   resolveCourseQuestionType,
@@ -57,20 +56,9 @@ export function LibraryFolders({
   }).filter((f) => f.Icon);
 
   return (
-    <section className="mt-10">
-      <div className="my-7 flex items-center gap-3">
-        <span className="h-px flex-1 bg-lingo-border" />
-        <span className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wide text-lingo-text-light">
-          <Folder className="h-3 w-3" /> Library
-        </span>
-        <span className="h-px flex-1 bg-lingo-border" />
-      </div>
-
-      <div className="mb-4 flex items-baseline gap-2">
-        <h2 className="text-base font-bold text-lingo-text">Browse by Type</h2>
-        <span className="text-xs text-lingo-text-light">
-          Open a folder to add or remove books.
-        </span>
+    <section className="mt-8">
+      <div className="mb-4 flex items-center gap-2">
+        <h2 className="text-base font-bold text-lingo-text">Library</h2>
       </div>
 
       {/* relative: the browser window is absolutely positioned over this box on

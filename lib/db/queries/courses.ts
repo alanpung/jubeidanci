@@ -222,16 +222,25 @@ export async function listCourses(
   try {
     const conditions = [eq(course.published, true)];
 
-    // Course-level visibility: public, owned by the viewer, or explicitly
-    // granted to the viewer via `studentAccess`. Admins no longer get a blanket
-    // bypass — a private course is only reachable by its owner and the students
-    // the owner has shared it with.
+    // Course-level visibility: public, owned by the viewer, explicitly granted
+    // to the viewer via `studentAccess`, or the viewer is VIP of the owner (so
+    // every one of that owner's private courses is reachable). Admins no longer
+    // get a blanket bypass — a private course is only reachable by its owner
+    // and the students the owner has shared it with.
+    //
+    // The VIP clause must stay in sync with getCourseWithContent below: without
+    // it a VIP student could open a private course by URL but would never see
+    // it listed on /library, which is what made B1/B2 look "missing".
     const visibilityConds = [eq(course.visibility, "public")];
     if (userId) {
       visibilityConds.push(eq(course.createdBy, userId));
       const sharedCourseIds = [...(await getGrantedCourseIds(userId))];
       if (sharedCourseIds.length) {
         visibilityConds.push(inArray(course.id, sharedCourseIds));
+      }
+      const vipOwnerIds = [...(await getVipOwnerIds(userId))];
+      if (vipOwnerIds.length) {
+        visibilityConds.push(inArray(course.createdBy, vipOwnerIds));
       }
     }
     conditions.push(or(...visibilityConds)!);

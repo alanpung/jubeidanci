@@ -88,31 +88,27 @@ export function VisibilityToggle({
 
 /** The circular add (+) / remove (×) control.
  *
- *  `placement` picks the anchor: "corner" floats it off the symbol's top-right
- *  (the shelf look), "inline" just centres it in a flex slot (the browse-row
- *  look, where the button sits on the right of the row). */
+ *  Always sits inline in a flex slot — on the right of a Library browse row,
+ *  or in the bottom-right corner of a My Books card — so the tap target is a
+ *  full-size button instead of a tiny glyph floating off the symbol. */
 export function AddRemoveButton({
   isAdded,
   pending,
   onAdd,
   onRemove,
-  placement = "corner",
   className = "",
 }: {
   isAdded: boolean;
   pending: boolean;
   onAdd: () => void;
   onRemove: () => void;
-  placement?: "corner" | "inline";
   className?: string;
 }) {
   const base =
-    "flex h-7 w-7 items-center justify-center rounded-full border-2 shadow-sm transition-all active:scale-95 disabled:opacity-50";
+    "flex h-7 w-7 shrink-0 items-center justify-center rounded-full border-2 shadow-sm transition-all active:scale-95 disabled:opacity-50";
   const tone = isAdded
     ? "border-red-300 bg-white text-red-500 hover:bg-red-50"
     : "border-lingo-blue bg-lingo-blue text-white hover:bg-lingo-blue/90";
-  const anchor =
-    placement === "corner" ? "absolute -right-6 -top-6 z-20" : "shrink-0";
 
   return (
     <button
@@ -121,7 +117,7 @@ export function AddRemoveButton({
       disabled={pending}
       title={isAdded ? "Remove from My Books" : "Add to My Books"}
       aria-label={isAdded ? "Remove from My Books" : "Add to My Books"}
-      className={`${base} ${tone} ${anchor} ${className}`}
+      className={`${base} ${tone} ${className}`}
     >
       {pending ? (
         <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
