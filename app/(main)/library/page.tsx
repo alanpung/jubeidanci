@@ -17,7 +17,6 @@ import {
   LibraryLegend,
 } from "@/components/library/course-book-shelf";
 import { LearnHeader } from "@/components/library/learn-header";
-import { LibraryFolders } from "@/components/library/library-folders";
 import { withTimeout } from "@/lib/db/timeout";
 
 export const dynamic = "force-dynamic";
@@ -131,7 +130,6 @@ export default async function LearnPage() {
               units={privateUnits}
               isAdmin={isAdmin}
             />
-            <LibraryFolders />
           </div>
           <aside className="hidden shrink-0 lg:block lg:w-60">
             <div className="sticky top-4">

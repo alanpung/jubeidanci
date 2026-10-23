@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useTransition } from "react";
+import { useState, useTransition, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Plus, X, MoreHorizontal, Globe, Lock, Pencil, Trash2, FolderOpen } from "lucide-react";
@@ -14,10 +14,15 @@ import {
 import { addCourseToLibrary, removeCourseFromLibrary } from "@/lib/actions/library";
 import { makeCoursePublic, makeCoursePrivate, deleteCourse } from "@/lib/actions/units";
 import { CreateCourseForm } from "@/components/library/create-course-form";
+import { LibraryFolders } from "@/components/library/library-folders";
 
-/** A student may keep at most this many courses "checked out" to the top
- *  (My Favorite) area — i.e. two rows of four. */
-const FAVORITE_CAP = 8;
+/** A student may keep at most this many courses on the top ("My Books")
+ *  shelf. Four per row on phones = two rows; all eight on one row on desktop. */
+const MY_BOOKS_CAP = 8;
+
+/** Book grid geometry. Both the shelf and the type modal use this so a book
+ *  looks identical in either place: 4 per row on mobile, 8 on desktop. */
+const BOOK_GRID = "grid grid-cols-4 gap-x-3 gap-y-8 lg:grid-cols-8";
 
 interface CourseBookShelfProps {
   /** Full catalog: public courses + the viewer's own. */
@@ -32,55 +37,28 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
   );
   const [pendingId, setPendingId] = useState<string | null>(null);
   const [showCreate, setShowCreate] = useState(false);
-  const [levelFilter, setLevelFilter] = useState("");
-  const [typeFilter, setTypeFilter] = useState("");
+  // Which Library folder is open, by exercise-type label. null = closed.
+  const [openType, setOpenType] = useState<string | null>(null);
   const [, startTransition] = useTransition();
 
-  // Only the books we actually show on the top shelf are hidden below. Slicing
-  // first and filtering by that same set matters: if someone somehow has more
-  // than BORROW_CAP saved, the overflow must still be listed underneath rather
-  // than vanishing (it would be unreachable — no + on top, absent below).
-  const borrowed = courses.filter((c) => borrowedIds.has(c.id)).slice(0, FAVORITE_CAP);
-  const shownIds = new Set(borrowed.map((c) => c.id));
-  // The lower shelf sits under a "Public Books" divider, so the viewer's own
-  // private courses are withheld here — they have a dedicated shelf further
-  // down the page, and listing them twice would make a draft look like two
-  // separate books.
-  const isPrivateOwn = (c: CourseListItem) =>
-    !!c.isOwner && c.visibility !== "public";
-
-  const unfilteredCatalog = courses.filter(
-    (c) => !shownIds.has(c.id) && !isPrivateOwn(c),
-  );
+  // Cap the shelf at MY_BOOKS_CAP so the top row never overflows its grid.
+  const borrowed = courses.filter((c) => borrowedIds.has(c.id)).slice(0, MY_BOOKS_CAP);
 
   // Exercise type lives in the book symbol, not in a column, so derive it the
-  // same way CourseLevelIcon does — otherwise the filter and the cover could
+  // same way CourseLevelIcon does — otherwise the folder and the cover could
   // disagree about what a book is.
   const typeOf = (c: CourseListItem) =>
     resolveCourseQuestionType(c.title, c.id)?.label ?? "Other";
 
-  const catalog = unfilteredCatalog.filter((c) => {
-    if (levelFilter && (c.level ?? "").toUpperCase() !== levelFilter) return false;
-    if (typeFilter && typeOf(c) !== typeFilter) return false;
-    return true;
-  });
-
-  // Only offer options that actually exist in the catalog.
-  const levelOptions = [
-    ...new Set(
-      unfilteredCatalog
-        .map((c) => (c.level ?? "").toUpperCase())
-        .filter(Boolean),
-    ),
-  ].sort();
-  const typeOptions = [
-    ...new Set(unfilteredCatalog.map(typeOf)),
-  ].sort();
-  const hasFilters = Boolean(levelFilter || typeFilter);
+  // The modal deliberately lists *every* course of this type — including ones
+  // already on the shelf — so the +/× toggle is what adds or removes.
+  const typeCourses = openType
+    ? courses.filter((c) => typeOf(c) === openType)
+    : [];
 
   function borrow(course: CourseListItem) {
-    if (borrowedIds.size >= FAVORITE_CAP) {
-      alert(`You can keep at most ${FAVORITE_CAP} books on your shelf. Remove one first.`);
+    if (borrowedIds.size >= MY_BOOKS_CAP) {
+      alert(`You can keep at most ${MY_BOOKS_CAP} books on your shelf. Remove one first.`);
       return;
     }
     setPendingId(course.id);
@@ -142,27 +120,28 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
         </div>
       )}
 
-      {/* Upper portion: My Favorite (borrowed, capped at FAVORITE_CAP) */}
+      {/* My Books — the reader's own picks, capped at MY_BOOKS_CAP */}
       <section>
         {/* mb-8 (not mb-4): the +/× button sits 24px above each book, so the
             first row needs clearance or it collides with this heading. */}
         <div className="mb-8 flex items-center gap-2">
-          <h2 className="text-base font-bold text-lingo-text">My Favorite</h2>
+          <h2 className="text-base font-bold text-lingo-text">My Books</h2>
           <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
-            {borrowed.length}/{FAVORITE_CAP}
+            {borrowed.length}/{MY_BOOKS_CAP}
           </span>
         </div>
 
         {borrowed.length === 0 ? (
           <p className="rounded-xl border-2 border-dashed border-lingo-border bg-white p-4 text-center text-sm text-lingo-text-light">
-            Your shelf is empty. Tap the <span className="font-black">+</span> on any book below to
-            add it here for practice.
+            Your shelf is empty. Open a folder under{" "}
+            <span className="font-black">Library</span> below and tap the{" "}
+            <span className="font-black">+</span> on any book to add it here.
           </p>
         ) : (
           // gap-y-8: the +/× button floats 24px above each book, so rows need
           // more than the old 20px or the next row's button lands on the
-          // previous row's title. Four per row at ≥480px = 8 favorites in 2 rows.
-          <div className="grid grid-cols-2 gap-x-3 gap-y-8 min-[480px]:grid-cols-4">
+          // previous row's title.
+          <div className={BOOK_GRID}>
             {borrowed.map((c) => (
               <CourseBook
                 key={c.id}
@@ -178,92 +157,114 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
         )}
       </section>
 
-      {/* Thin dividing line between borrowed books and the public catalog */}
-      <div className="my-7 flex items-center gap-3">
-        <span className="h-px flex-1 bg-lingo-border" />
-        <span className="text-[11px] font-bold uppercase tracking-wide text-lingo-text-light">
-          Public Books
-        </span>
-        <span className="h-px flex-1 bg-lingo-border" />
-      </div>
+      {/* Library — eight exercise-type folders, right below My Books. Tapping
+          one opens the small browser window (no page navigation). */}
+      <LibraryFolders onOpenType={setOpenType} />
 
-      {/* Lower portion: everything not yet on the top shelf */}
-      <section>
-        {/* mb-8 (not mb-3): the +/× button floats 24px above the first row of
-            books, so the filter row needs clearance underneath it. */}
-        <div className="mb-8 flex flex-wrap items-center gap-2">
-          <h2 className="text-base font-bold text-lingo-text">Browse All Courses</h2>
-          <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
-            {catalog.length}
+      {openType && (
+        <TypeBrowserModal
+          typeLabel={openType}
+          courses={typeCourses}
+          isAdmin={isAdmin}
+          borrowedIds={borrowedIds}
+          pendingId={pendingId}
+          onBorrow={borrow}
+          onRemove={unborrow}
+          onClose={() => setOpenType(null)}
+        />
+      )}
+    </div>
+  );
+}
+
+/** The small pop-up window opened from a Library folder. Lists every course of
+ *  the chosen exercise type at the same size as the shelf books, each with a
+ *  +/× toggle so the reader can add to or remove from My Books without leaving
+ *  the library page. */
+function TypeBrowserModal({
+  typeLabel,
+  courses,
+  isAdmin,
+  borrowedIds,
+  pendingId,
+  onBorrow,
+  onRemove,
+  onClose,
+}: {
+  typeLabel: string;
+  courses: CourseListItem[];
+  isAdmin: boolean;
+  borrowedIds: Set<string>;
+  pendingId: string | null;
+  onBorrow: (c: CourseListItem) => void;
+  onRemove: (c: CourseListItem) => void;
+  onClose: () => void;
+}) {
+  // Escape closes; the body scroll is locked so the page behind does not move
+  // while the window is open.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") onClose();
+    };
+    document.addEventListener("keydown", onKey);
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prev;
+    };
+  }, [onClose]);
+
+  return (
+    <div
+      className="fixed inset-0 z-50 flex items-start justify-center p-4 sm:p-6"
+      role="dialog"
+      aria-modal="true"
+      aria-label={`${typeLabel} courses`}
+    >
+      {/* Click-away backdrop */}
+      <div className="absolute inset-0 bg-black/40" onClick={onClose} aria-hidden />
+
+      <div className="relative flex max-h-full w-full max-w-4xl flex-col rounded-2xl border-2 border-lingo-border bg-lingo-card shadow-xl">
+        <div className="flex items-center gap-3 border-b-2 border-lingo-border px-5 py-3">
+          <h2 className="min-w-0 flex-1 truncate text-base font-black text-lingo-text">
+            {typeLabel}
+          </h2>
+          <span className="shrink-0 rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
+            {courses.length}
           </span>
-
-          {/* Filters: CEFR level + the exercise type shown on each cover */}
-          <div className="ml-auto flex flex-wrap items-center gap-2">
-            <select
-              value={levelFilter}
-              onChange={(e) => setLevelFilter(e.target.value)}
-              aria-label="Filter by level"
-              className="rounded-lg border-2 border-lingo-border bg-white px-2 py-1 text-xs font-bold text-lingo-text"
-            >
-              <option value="">Level: All</option>
-              {levelOptions.map((l) => (
-                <option key={l} value={l}>
-                  {l}
-                </option>
-              ))}
-            </select>
-
-            <select
-              value={typeFilter}
-              onChange={(e) => setTypeFilter(e.target.value)}
-              aria-label="Filter by exercise type"
-              className="rounded-lg border-2 border-lingo-border bg-white px-2 py-1 text-xs font-bold text-lingo-text"
-            >
-              <option value="">Type: All</option>
-              {typeOptions.map((t) => (
-                <option key={t} value={t}>
-                  {t}
-                </option>
-              ))}
-            </select>
-
-            {hasFilters && (
-              <button
-                type="button"
-                onClick={() => {
-                  setLevelFilter("");
-                  setTypeFilter("");
-                }}
-                className="rounded-lg px-2 py-1 text-xs font-bold text-lingo-blue hover:bg-lingo-blue/10"
-              >
-                Clear
-              </button>
-            )}
-          </div>
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close"
+            className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text transition-colors hover:bg-lingo-gray/40"
+          >
+            <X className="h-4 w-4 stroke-[3]" />
+          </button>
         </div>
 
-        {catalog.length === 0 ? (
-          <p className="rounded-xl border-2 border-dashed border-lingo-border bg-white p-4 text-center text-sm text-lingo-text-light">
-            {hasFilters
-              ? "No course matches those filters. Try clearing them."
-              : "Every available book is already on your shelf."}
-          </p>
-        ) : (
-          <div className="grid grid-cols-3 gap-x-3 gap-y-8 min-[480px]:grid-cols-5 lg:grid-cols-6">
-            {catalog.map((c) => (
-              <CourseBook
-                key={c.id}
-                course={c}
-                isAdmin={isAdmin}
-                isBorrowed={false}
-                pending={pendingId === c.id}
-                onBorrow={() => borrow(c)}
-                onRemove={() => unborrow(c)}
-              />
-            ))}
-          </div>
-        )}
-      </section>
+        <div className="min-h-0 flex-1 overflow-y-auto px-5 py-6">
+          {courses.length === 0 ? (
+            <p className="py-10 text-center text-sm text-lingo-text-light">
+              No {typeLabel.toLowerCase()} courses yet.
+            </p>
+          ) : (
+            <div className={BOOK_GRID}>
+              {courses.map((c) => (
+                <CourseBook
+                  key={c.id}
+                  course={c}
+                  isAdmin={isAdmin}
+                  isBorrowed={borrowedIds.has(c.id)}
+                  pending={pendingId === c.id}
+                  onBorrow={() => onBorrow(c)}
+                  onRemove={() => onRemove(c)}
+                />
+              ))}
+            </div>
+          )}
+        </div>
+      </div>
     </div>
   );
 }
@@ -347,8 +348,8 @@ function CourseBook({
           type="button"
           onClick={isBorrowed ? onRemove : onBorrow}
           disabled={pending}
-          title={isBorrowed ? "Remove from My Favorite" : "Add to My Favorite"}
-          aria-label={isBorrowed ? "Remove from My Favorite" : "Add to My Favorite"}
+          title={isBorrowed ? "Remove from My Books" : "Add to My Books"}
+          aria-label={isBorrowed ? "Remove from My Books" : "Add to My Books"}
           className={`absolute -right-6 -top-6 flex h-7 w-7 items-center justify-center rounded-full border-2 shadow-sm transition-all disabled:opacity-50 ${
             isBorrowed
               ? "border-red-300 bg-white text-red-500 hover:bg-red-50"
