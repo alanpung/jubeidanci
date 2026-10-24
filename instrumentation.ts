@@ -13,12 +13,17 @@
 export async function register() {
   if (process.env.NEXT_RUNTIME !== "nodejs") return;
 
-  const { hasDbConfig } = await import("@/lib/db");
-  if (!hasDbConfig) return;
+  const rawConnectionString =
+    process.env.DATABASE_URL ||
+    process.env.POSTGRES_URL ||
+    process.env.POSTGRES_PRISMA_URL;
+
+  if (!rawConnectionString) return;
 
   try {
-    const { migrate } = await import("drizzle-orm/postgres-js/migrator");
-    const { db } = await import("@/lib/db");
+    const req = eval("require");
+    const { migrate } = req("drizzle-orm/postgres-js/migrator");
+    const { db } = req("./lib/db");
     await migrate(db, { migrationsFolder: "./drizzle" });
   } catch (err) {
     // Never let a migration hiccup take the whole app down; log and continue.

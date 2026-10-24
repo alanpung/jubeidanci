@@ -1,4 +1,5 @@
 import { spawn } from "node:child_process";
+import path from "node:path";
 
 // Translate incoming CLI flags (like Vite-style --host from supervisor) into Next.js flags
 const args = [];
@@ -20,8 +21,14 @@ if (!args.includes("-H") && !args.includes("--hostname")) {
   args.unshift("-H", "0.0.0.0");
 }
 
-const nextBin = "./node_modules/.bin/next";
-const child = spawn(nextBin, ["dev", ...args], {
+// Ensure webpack dev mode for stability in AI Studio container
+if (!args.includes("--webpack") && !args.includes("--turbo")) {
+  args.push("--webpack");
+}
+
+const nextBin = path.resolve("./node_modules/next/dist/bin/next");
+
+const child = spawn(process.execPath, [nextBin, "dev", ...args], {
   stdio: "inherit",
   env: process.env,
 });
