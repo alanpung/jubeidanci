@@ -90,7 +90,7 @@ export function ExerciseShell({
         onSwipeRight?.();
       }
     },
-    [status, freeNav, onSwipeLeft, onSwipeRight, onContinue]
+    [status, freeNav, onSwipeLeft, onSwipeRight, onContinue],
   );
 
   // When status changes away from "answering", mark that we just checked
@@ -107,6 +107,34 @@ export function ExerciseShell({
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {
+      // Don't steal arrow keys while the user is typing in an input/textarea.
+      const target = e.target as HTMLElement | null;
+      const tag = target?.tagName;
+      const typing =
+        tag === "INPUT" ||
+        tag === "TEXTAREA" ||
+        target?.isContentEditable === true;
+
+      // Arrow keys → same as swipe / on-screen arrows (when freeNav or after check).
+      if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
+        const canNav = freeNav || status !== "answering";
+        if (!canNav) return;
+        // Allow arrows even while focused in the translation input when freeNav
+        // (Translation is free-nav). For other exercises, skip if typing.
+        if (typing && !freeNav) return;
+        e.preventDefault();
+        if (e.key === "ArrowRight") {
+          (onSwipeLeft ?? onContinue)(); // right arrow = next (same as swipe left on mobile metaphor…)
+          // Actually: UI chevron RIGHT = next. Keyboard Right should = next.
+          // Swipe LEFT = next (finger moves left to reveal next card).
+          // So ArrowRight → next = onSwipeLeft ?? onContinue
+          // ArrowLeft → prev = onSwipeRight
+        } else {
+          onSwipeRight?.();
+        }
+        return;
+      }
+
       if (e.key !== "Enter") return;
       if (status === "answering" && canCheck && !hideCheck) {
         e.preventDefault();
@@ -120,7 +148,17 @@ export function ExerciseShell({
         onContinue();
       }
     },
-    [status, canCheck, hideCheck, hideContinue, onCheck, onContinue]
+    [
+      status,
+      canCheck,
+      hideCheck,
+      hideContinue,
+      freeNav,
+      onCheck,
+      onContinue,
+      onSwipeLeft,
+      onSwipeRight,
+    ],
   );
 
   useEffect(() => {
@@ -168,7 +206,8 @@ export function ExerciseShell({
                     <div className="flex flex-wrap items-baseline gap-1.5">
                       {inputWords.map((word, wIdx) => {
                         const isMatched =
-                          matchedWordIndices && matchedWordIndices[wIdx] !== undefined
+                          matchedWordIndices &&
+                          matchedWordIndices[wIdx] !== undefined
                             ? matchedWordIndices[wIdx]
                             : status === "correct";
                         return (
@@ -207,7 +246,13 @@ export function ExerciseShell({
                     allAnswers.filter(
                       (a) =>
                         a.toLowerCase().trim() !==
-                        (correctAnswer || (allAnswers && allAnswers[0]) || "").toLowerCase().trim()
+                        (
+                          correctAnswer ||
+                          (allAnswers && allAnswers[0]) ||
+                          ""
+                        )
+                          .toLowerCase()
+                          .trim(),
                     ).length > 0 && (
                       <div className="pt-3 border-t border-gray-200/70 mt-3">
                         <span className="block font-bold text-gray-800 mb-1 text-sm">
@@ -218,10 +263,19 @@ export function ExerciseShell({
                             .filter(
                               (a) =>
                                 a.toLowerCase().trim() !==
-                                (correctAnswer || (allAnswers && allAnswers[0]) || "").toLowerCase().trim()
+                                (
+                                  correctAnswer ||
+                                  (allAnswers && allAnswers[0]) ||
+                                  ""
+                                )
+                                  .toLowerCase()
+                                  .trim(),
                             )
                             .map((other, oIdx) => (
-                              <div key={oIdx} className="text-gray-800 font-medium text-sm">
+                              <div
+                                key={oIdx}
+                                className="text-gray-800 font-medium text-sm"
+                              >
                                 {other}
                               </div>
                             ))}
@@ -232,10 +286,14 @@ export function ExerciseShell({
               ) : (
                 <div>
                   <div className="flex items-center gap-2 mb-2 flex-wrap">
-                    <span className="text-2xl">{status === "correct" ? "✓" : "✗"}</span>
+                    <span className="text-2xl">
+                      {status === "correct" ? "✓" : "✗"}
+                    </span>
                     <span
                       className={`font-bold ${
-                        status === "correct" ? "text-lingo-green" : "text-lingo-red"
+                        status === "correct"
+                          ? "text-lingo-green"
+                          : "text-lingo-red"
                       }`}
                     >
                       {status === "correct" ? "Correct!" : "Incorrect"}
@@ -253,7 +311,11 @@ export function ExerciseShell({
           <div className="flex justify-center">
             <Button
               onClick={onContinue}
-              variant={status === "correct" ? ("primary" as const) : ("danger" as const)}
+              variant={
+                status === "correct"
+                  ? ("primary" as const)
+                  : ("danger" as const)
+              }
               className="w-48 sm:w-64 h-12 text-base font-bold shadow-md"
             >
               Continue
