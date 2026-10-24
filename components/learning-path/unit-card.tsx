@@ -1,5 +1,3 @@
-import { HoverableText } from "@/components/word/hoverable-text";
-
 interface UnitCardProps {
   title: string;
   icon: string;
@@ -45,24 +43,13 @@ export function UnitCard({
   const titleWithoutLabel =
     showNumber || compact ? stripped || title : title;
 
-  // Kept deliberately minimal: symbol + "Unit N · title" + progress bar.
-  // The question-type badge used to sit next to the title and squeezed it
-  // down to "Uni..." on mobile, and the description line added noise without
-  // telling the learner anything they can't see on the path itself.
-  //
-  // The title is text-sm everywhere — the same size as the breadcrumb above
-  // it, so a learner can scan a phone screenful of units in one glance
-  // instead of reading five separate headings.
+  // Plain text titles — no word-check links (distracting on mobile library view).
   const heading = (
     <h3 className="min-w-0 flex-1 truncate text-sm font-bold text-lingo-text">
       {showNumber && (
         <span className="text-lingo-text-light">Unit {unitNumber}: </span>
       )}
-      {language ? (
-        <HoverableText text={titleWithoutLabel} language={language} />
-      ) : (
-        titleWithoutLabel
-      )}
+      {titleWithoutLabel}
     </h3>
   );
 
