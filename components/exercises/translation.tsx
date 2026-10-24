@@ -279,64 +279,72 @@ export function Translation({
           </button>
         </div>
 
-        {/* Word boxes: POS only before Enter; full reveal after Enter */}
-        <div className="flex flex-wrap items-start justify-center gap-2 sm:gap-3 lg:gap-4 w-full max-w-3xl mx-auto mb-4">
-          {analyzedWordList.map((item, idx) => {
-            const wordMatched = submitted ? matchedIndices[idx] === true : false;
-            const borderClass = !submitted
-              ? "border-lingo-border bg-white"
-              : wordMatched
-                ? "border-emerald-200 bg-emerald-50/20"
-                : "border-rose-200 bg-rose-50/20";
-            const wordColor = !submitted
-              ? "text-transparent select-none"
-              : wordMatched
-                ? "text-emerald-700"
-                : "text-rose-700";
+        {/* Word boxes — always one row; boxes shrink so long answers don't wrap */}
+        <div className="w-full max-w-4xl mx-auto mb-4 px-1">
+          <div className="flex flex-nowrap items-stretch justify-center gap-1.5 sm:gap-2 overflow-x-auto pb-1">
+            {analyzedWordList.map((item, idx) => {
+              const wordMatched = submitted ? matchedIndices[idx] === true : false;
+              const borderClass = !submitted
+                ? "border-lingo-border bg-white"
+                : wordMatched
+                  ? "border-emerald-200 bg-emerald-50/30"
+                  : "border-rose-200 bg-rose-50/30";
+              const wordColor = !submitted
+                ? "text-transparent select-none"
+                : wordMatched
+                  ? "text-emerald-700"
+                  : "text-rose-700";
 
-            return (
-              <div
-                key={idx}
-                className={`rounded-2xl border-2 shadow-xs px-2 sm:px-3 lg:px-4 py-2 sm:py-3 flex flex-col items-center justify-start min-w-[62px] sm:min-w-[92px] lg:min-w-[100px] ${borderClass}`}
-              >
-                {/* English word: hidden before submit (same width), revealed after */}
-                <span
-                  style={{ minWidth: `${Math.max(3, item.word.length)}ch` }}
-                  className={`text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight ${wordColor}`}
-                  aria-hidden={!submitted}
+              return (
+                <div
+                  key={idx}
+                  className={`rounded-xl border-2 shadow-xs px-1.5 sm:px-2 py-1.5 sm:py-2 flex flex-col items-center justify-center min-w-0 flex-1 basis-0 max-w-[7.5rem] sm:max-w-[9rem] ${borderClass}`}
                 >
-                  {submitted ? item.word : "·".repeat(Math.min(item.word.length, 6))}
-                </span>
+                  {/* English word: compact; truncates if very long */}
+                  <span
+                    className={`w-full text-center font-serif text-sm sm:text-base md:text-lg font-bold tracking-tight leading-tight truncate ${wordColor}`}
+                    title={submitted ? item.word : undefined}
+                    aria-hidden={!submitted}
+                  >
+                    {submitted ? item.word : "·"}
+                  </span>
 
-                <div className="flex flex-col items-center justify-center mt-1 sm:mt-2 w-full space-y-1 sm:space-y-1.5">
-                  {/* Chinese POS — always visible */}
-                  {item.grammarTag && (
-                    <div
-                      className={`text-[10px] sm:text-[11px] lg:text-xs font-bold text-center px-2 sm:px-2.5 py-0.5 rounded-full border shadow-2xs tracking-wide ${
-                        POS_BADGE_STYLES[item.grammarTag]
-                          ? `${POS_BADGE_STYLES[item.grammarTag].bg} ${POS_BADGE_STYLES[item.grammarTag].text} ${POS_BADGE_STYLES[item.grammarTag].border}`
-                          : "bg-gray-100 text-gray-600 border-gray-200"
-                      }`}
-                    >
-                      {item.grammarTag}
-                    </div>
-                  )}
+                  <div className="flex flex-col items-center justify-center mt-1 w-full gap-0.5 min-w-0">
+                    {/* Chinese POS — always visible */}
+                    {item.grammarTag && (
+                      <div
+                        className={`text-[9px] sm:text-[10px] font-bold text-center px-1.5 py-0.5 rounded-full border shadow-2xs tracking-wide whitespace-nowrap ${
+                          POS_BADGE_STYLES[item.grammarTag]
+                            ? `${POS_BADGE_STYLES[item.grammarTag].bg} ${POS_BADGE_STYLES[item.grammarTag].text} ${POS_BADGE_STYLES[item.grammarTag].border}`
+                            : "bg-gray-100 text-gray-600 border-gray-200"
+                        }`}
+                      >
+                        {item.grammarTag}
+                      </div>
+                    )}
 
-                  {/* Chinese meaning + IPA — only after Enter */}
-                  {submitted && item.meaning && (
-                    <div className="text-xs sm:text-sm lg:text-base text-gray-800 text-center font-semibold">
-                      {item.meaning}
-                    </div>
-                  )}
-                  {submitted && item.ipa && (
-                    <div className="text-[10px] sm:text-xs lg:text-sm text-gray-500 font-mono text-center">
-                      {item.ipa}
-                    </div>
-                  )}
+                    {/* Chinese meaning + IPA — only after Enter */}
+                    {submitted && item.meaning && (
+                      <div
+                        className="text-[10px] sm:text-xs text-gray-800 text-center font-semibold leading-tight truncate w-full"
+                        title={item.meaning}
+                      >
+                        {item.meaning}
+                      </div>
+                    )}
+                    {submitted && item.ipa && (
+                      <div
+                        className="text-[9px] sm:text-[10px] text-gray-500 font-mono text-center leading-tight truncate w-full"
+                        title={item.ipa}
+                      >
+                        {item.ipa}
+                      </div>
+                    )}
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
 
         {!submitted ? (
