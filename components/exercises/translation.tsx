@@ -283,36 +283,58 @@ export function Translation({
           </h1>
         </div>
 
+        {/* Nav arrows at the outer edges; audio buttons centered between them */}
         <div
-          className={`flex items-center justify-center gap-2.5 ${
+          className={`flex w-full max-w-5xl items-center justify-between gap-2 px-1 ${
             isKeyboardOpen ? "mb-2" : "mb-6"
           }`}
         >
           <button
             type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              play(exercise.sentence, sentenceLang);
-            }}
-            className="inline-flex h-10 items-center gap-1.5 rounded-full bg-lingo-blue px-3.5 text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold shadow-sm"
-            aria-label="播放中文音频"
-            title="中文音频"
+            onClick={goPrev}
+            disabled={!canGoPrev}
+            aria-label="上一题"
+            className="flex shrink-0 items-center justify-center rounded-full border-2 border-lingo-border bg-white h-11 w-11 sm:h-12 sm:w-12 text-lingo-text shadow-sm transition-all hover:border-lingo-blue hover:text-lingo-blue active:translate-y-0.5 disabled:opacity-30 disabled:hover:border-lingo-border disabled:hover:text-lingo-text"
           >
-            <Volume2 className="h-4 w-4" />
-            中文
+            <ChevronLeft className="h-6 w-6 sm:h-7 sm:w-7 stroke-[3]" />
           </button>
+
+          <div className="flex items-center justify-center gap-2.5">
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                play(exercise.sentence, sentenceLang);
+              }}
+              className="inline-flex h-10 items-center gap-1.5 rounded-full bg-lingo-blue px-3.5 text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold shadow-sm"
+              aria-label="播放中文音频"
+              title="中文音频"
+            >
+              <Volume2 className="h-4 w-4" />
+              中文
+            </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                play(exercise.answer, "en");
+              }}
+              className="inline-flex h-10 items-center gap-1.5 rounded-full bg-lingo-blue px-3.5 text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold shadow-sm"
+              aria-label="播放英文音频"
+              title="英文音频"
+            >
+              <Volume2 className="h-4 w-4" />
+              English
+            </button>
+          </div>
+
           <button
             type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              play(exercise.answer, "en");
-            }}
-            className="inline-flex h-10 items-center gap-1.5 rounded-full bg-lingo-blue px-3.5 text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold shadow-sm"
-            aria-label="播放英文音频"
-            title="英文音频"
+            onClick={goNext}
+            aria-label="下一题"
+            className="flex shrink-0 items-center justify-center rounded-full border-2 border-lingo-green bg-lingo-green h-11 w-11 sm:h-12 sm:w-12 text-white shadow-[0_4px_0_0] shadow-[#4a9e02] transition-all hover:bg-[#4a9e02] active:translate-y-0.5 active:shadow-none"
           >
-            <Volume2 className="h-4 w-4" />
-            English
+            <ChevronRight className="h-6 w-6 sm:h-7 sm:w-7 stroke-[3]" />
           </button>
         </div>
 
@@ -347,7 +369,6 @@ export function Translation({
                       : "px-1.5 sm:px-2 py-1.5 sm:py-2 flex-1 basis-0 max-w-[7.5rem] sm:max-w-[9rem]"
                   } ${isKeyboardOpen ? "py-1" : ""}`}
                 >
-                  {/* English word: compact; truncates if very long */}
                   <span
                     className={`w-full text-center font-serif font-bold tracking-tight leading-tight truncate ${wordColor} ${
                       isKeyboardOpen
@@ -361,7 +382,6 @@ export function Translation({
                   </span>
 
                   <div className="flex flex-col items-center justify-center mt-1 w-full gap-0.5 min-w-0">
-                    {/* Chinese POS — always visible */}
                     {item.grammarTag && (
                       <div
                         className={`text-[9px] sm:text-[10px] font-bold text-center px-1.5 py-0.5 rounded-full border shadow-2xs tracking-wide whitespace-nowrap ${
@@ -374,7 +394,6 @@ export function Translation({
                       </div>
                     )}
 
-                    {/* Chinese meaning + IPA — only after Enter */}
                     {submitted && item.meaning && (
                       <div
                         className="text-[10px] sm:text-xs text-gray-800 text-center font-semibold leading-tight truncate w-full"
@@ -401,21 +420,11 @@ export function Translation({
         {!submitted ? (
           <div
             ref={inputRowRef}
-            className={`flex w-full items-center gap-2 sm:gap-3 ${
+            className={`w-full ${
               isKeyboardOpen ? "sticky bottom-0 z-10 bg-lingo-bg/95 backdrop-blur-sm pt-1 pb-1" : ""
             }`}
           >
-            <button
-              type="button"
-              onClick={goPrev}
-              disabled={!canGoPrev}
-              aria-label="上一题"
-              className="flex shrink-0 items-center justify-center rounded-full border-2 border-lingo-border bg-white h-11 w-11 sm:h-12 sm:w-12 text-lingo-text shadow-sm transition-all hover:border-lingo-blue hover:text-lingo-blue active:translate-y-0.5 disabled:opacity-30 disabled:hover:border-lingo-border disabled:hover:text-lingo-text"
-            >
-              <ChevronLeft className="h-6 w-6 sm:h-7 sm:w-7 stroke-[3]" />
-            </button>
-
-            <div className={`min-w-0 flex-1 ${animClass}`}>
+            <div className={`min-w-0 w-full ${animClass}`}>
               <input
                 type="text"
                 value={userInput}
@@ -427,8 +436,6 @@ export function Translation({
                   }
                 }}
                 onFocus={() => {
-                  // Counteract browser scrolling the input to the middle of the
-                  // screen: keep the Chinese prompt visible at the top.
                   requestAnimationFrame(() => {
                     promptRef.current?.scrollIntoView({
                       block: "start",
@@ -448,19 +455,9 @@ export function Translation({
                 </p>
               )}
             </div>
-
-            <button
-              type="button"
-              onClick={goNext}
-              aria-label="下一题"
-              className="flex shrink-0 items-center justify-center rounded-full border-2 border-lingo-green bg-lingo-green h-12 w-12 text-white shadow-[0_4px_0_0] shadow-[#4a9e02] transition-all hover:bg-[#4a9e02] active:translate-y-0.5 active:shadow-none"
-            >
-              <ChevronRight className="h-7 w-7 stroke-[3]" />
-            </button>
           </div>
         ) : (
           <div className={`w-full ${animClass}`}>
-            {/* Match % banner */}
             <div
               className={`mx-auto mb-4 w-full max-w-md rounded-2xl border-2 px-4 py-3 text-center shadow-sm ${
                 isCorrect
@@ -483,45 +480,22 @@ export function Translation({
               )}
             </div>
 
-            <div className="mt-2 flex w-full items-center gap-2 sm:gap-3">
-              <button
-                type="button"
-                onClick={goPrev}
-                disabled={!canGoPrev}
-                aria-label="上一题"
-                className="flex shrink-0 items-center justify-center rounded-full border-2 border-lingo-border bg-white h-12 w-12 text-lingo-text shadow-sm transition-all hover:border-lingo-blue hover:text-lingo-blue active:translate-y-0.5 disabled:opacity-30 disabled:hover:border-lingo-border disabled:hover:text-lingo-text"
-              >
-                <ChevronLeft className="h-7 w-7 stroke-[3]" />
-              </button>
-
-              <div className="min-w-0 flex-1">
-                {orderedAnswers.length > 1 ? (
-                  <div className="mx-auto w-full max-w-2xl p-3 sm:p-4 bg-blue-50/40 border-2 border-blue-200 rounded-2xl shadow-sm space-y-1">
-                    <span className="block text-xs font-bold text-blue-700 uppercase tracking-wider">
-                      ALTERNATIVE ANSWERS:
-                    </span>
-                    {orderedAnswers.slice(1).map((alt, aIdx) => (
-                      <div
-                        key={aIdx}
-                        className="text-sm sm:text-base font-bold text-blue-700"
-                      >
-                        {alt}
-                      </div>
-                    ))}
-                  </div>
-                ) : (
-                  <div className="mx-auto w-full max-w-2xl p-3 text-center text-sm text-lingo-text-light" />
-                )}
-              </div>
-
-              <button
-                type="button"
-                onClick={goNext}
-                aria-label="下一题"
-                className="flex shrink-0 items-center justify-center rounded-full border-2 border-lingo-green bg-lingo-green h-12 w-12 text-white shadow-[0_4px_0_0] shadow-[#4a9e02] transition-all hover:bg-[#4a9e02] active:translate-y-0.5 active:shadow-none"
-              >
-                <ChevronRight className="h-7 w-7 stroke-[3]" />
-              </button>
+            <div className="mt-2 w-full">
+              {orderedAnswers.length > 1 ? (
+                <div className="mx-auto w-full max-w-2xl p-3 sm:p-4 bg-blue-50/40 border-2 border-blue-200 rounded-2xl shadow-sm space-y-1">
+                  <span className="block text-xs font-bold text-blue-700 uppercase tracking-wider">
+                    ALTERNATIVE ANSWERS:
+                  </span>
+                  {orderedAnswers.slice(1).map((alt, aIdx) => (
+                    <div
+                      key={aIdx}
+                      className="text-sm sm:text-base font-bold text-blue-700"
+                    >
+                      {alt}
+                    </div>
+                  ))}
+                </div>
+              ) : null}
             </div>
           </div>
         )}
