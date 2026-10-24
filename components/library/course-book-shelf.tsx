@@ -376,7 +376,7 @@ function CourseBook({
         {!isPublic && <VipCornerBadge />}
       </div>
 
-      <p className="pointer-events-none mt-2 min-h-[2rem] w-full text-center text-xs font-bold leading-tight text-lingo-text">
+      <p className="pointer-events-none mt-2 w-full line-clamp-2 text-center text-xs font-bold leading-tight text-lingo-text">
         {course.title}
       </p>
 
