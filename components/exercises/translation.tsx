@@ -1,10 +1,12 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback } from "react";
+import { useState, useEffect, useMemo, useCallback, useRef } from "react";
 import { Volume2, ChevronLeft, ChevronRight } from "lucide-react";
 import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
+import { useIsMobile } from "@/hooks/use-media-query";
+import { useMobileKeyboardOpen } from "@/hooks/use-mobile-keyboard-open";
 import {
   generateAlternativeTranslations,
   checkWordMatch,
@@ -63,12 +65,26 @@ export function Translation({
   const [submitted, setSubmitted] = useState(false);
   const [userInput, setUserInput] = useState("");
   const [matchResult, setMatchResult] = useState<WordMatchResult | null>(null);
+  const isMobile = useIsMobile();
+  const isKeyboardOpen = useMobileKeyboardOpen();
+  const promptRef = useRef<HTMLDivElement>(null);
+  const inputRowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setSubmitted(false);
     setUserInput("");
     setMatchResult(null);
   }, [exercise.sentence, exercise.answer]);
+
+  // When the soft keyboard opens, pin the Chinese prompt to the top of the
+  // visible area so the student can still see the question while typing.
+  useEffect(() => {
+    if (!isKeyboardOpen || !promptRef.current) return;
+    const id = requestAnimationFrame(() => {
+      promptRef.current?.scrollIntoView({ block: "start", behavior: "smooth" });
+    });
+    return () => cancelAnimationFrame(id);
+  }, [isKeyboardOpen]);
 
   const rawAnswerTokens = useMemo(() => {
     return exercise.answer.trim().split(/\s+/).filter(Boolean);
@@ -239,18 +255,39 @@ export function Translation({
       onSwipeLeft={goNext}
       onSwipeRight={goPrev}
     >
-      <div className="w-full max-w-5xl mx-auto flex flex-col items-center py-2 sm:py-4">
-        <div className="mb-3 text-xs font-bold text-lingo-text-light">
-          Question {exerciseIndex + 1} / {totalExercises}
-        </div>
+      <div
+        className={`w-full max-w-5xl mx-auto flex flex-col items-center ${
+          isKeyboardOpen ? "py-1" : "py-2 sm:py-4"
+        }`}
+      >
+        {!isKeyboardOpen && (
+          <div className="mb-3 text-xs font-bold text-lingo-text-light">
+            Question {exerciseIndex + 1} / {totalExercises}
+          </div>
+        )}
 
-        <div className="flex flex-col items-center mt-2 mb-4 text-center px-2">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-black text-gray-800 tracking-normal select-none">
+        <div
+          ref={promptRef}
+          className={`flex flex-col items-center text-center px-2 ${
+            isKeyboardOpen ? "mt-0 mb-2" : "mt-2 mb-4"
+          }`}
+        >
+          <h1
+            className={`font-black text-gray-800 tracking-normal select-none ${
+              isKeyboardOpen
+                ? "text-lg sm:text-xl leading-snug"
+                : "text-2xl sm:text-3xl md:text-4xl"
+            }`}
+          >
             <HoverableText text={exercise.sentence} language={sentenceLang} />
           </h1>
         </div>
 
-        <div className="mb-6 flex items-center justify-center gap-2.5">
+        <div
+          className={`flex items-center justify-center gap-2.5 ${
+            isKeyboardOpen ? "mb-2" : "mb-6"
+          }`}
+        >
           <button
             type="button"
             onClick={(e) => {
@@ -279,9 +316,15 @@ export function Translation({
           </button>
         </div>
 
-        {/* Word boxes — always one row; boxes shrink so long answers don't wrap */}
-        <div className="w-full max-w-4xl mx-auto mb-4 px-1">
-          <div className="flex flex-nowrap items-stretch justify-center gap-1.5 sm:gap-2 overflow-x-auto pb-1">
+        {/* Word boxes: desktop = one row; mobile = may wrap. Compact when keyboard open. */}
+        <div className={`w-full max-w-4xl mx-auto px-1 ${isKeyboardOpen ? "mb-2" : "mb-4"}`}>
+          <div
+            className={`flex items-stretch justify-center gap-1.5 sm:gap-2 pb-1 ${
+              isMobile
+                ? "flex-wrap"
+                : "flex-nowrap overflow-x-auto"
+            }`}
+          >
             {analyzedWordList.map((item, idx) => {
               const wordMatched = submitted ? matchedIndices[idx] === true : false;
               const borderClass = !submitted
@@ -298,11 +341,19 @@ export function Translation({
               return (
                 <div
                   key={idx}
-                  className={`rounded-xl border-2 shadow-xs px-1.5 sm:px-2 py-1.5 sm:py-2 flex flex-col items-center justify-center min-w-0 flex-1 basis-0 max-w-[7.5rem] sm:max-w-[9rem] ${borderClass}`}
+                  className={`rounded-xl border-2 shadow-xs flex flex-col items-center justify-center min-w-0 ${borderClass} ${
+                    isMobile
+                      ? "px-1.5 py-1 max-w-[5.5rem]"
+                      : "px-1.5 sm:px-2 py-1.5 sm:py-2 flex-1 basis-0 max-w-[7.5rem] sm:max-w-[9rem]"
+                  } ${isKeyboardOpen ? "py-1" : ""}`}
                 >
                   {/* English word: compact; truncates if very long */}
                   <span
-                    className={`w-full text-center font-serif text-sm sm:text-base md:text-lg font-bold tracking-tight leading-tight truncate ${wordColor}`}
+                    className={`w-full text-center font-serif font-bold tracking-tight leading-tight truncate ${wordColor} ${
+                      isKeyboardOpen
+                        ? "text-xs"
+                        : "text-sm sm:text-base md:text-lg"
+                    }`}
                     title={submitted ? item.word : undefined}
                     aria-hidden={!submitted}
                   >
@@ -348,15 +399,20 @@ export function Translation({
         </div>
 
         {!submitted ? (
-          <div className="flex w-full items-center gap-2 sm:gap-3">
+          <div
+            ref={inputRowRef}
+            className={`flex w-full items-center gap-2 sm:gap-3 ${
+              isKeyboardOpen ? "sticky bottom-0 z-10 bg-lingo-bg/95 backdrop-blur-sm pt-1 pb-1" : ""
+            }`}
+          >
             <button
               type="button"
               onClick={goPrev}
               disabled={!canGoPrev}
               aria-label="上一题"
-              className="flex shrink-0 items-center justify-center rounded-full border-2 border-lingo-border bg-white h-12 w-12 text-lingo-text shadow-sm transition-all hover:border-lingo-blue hover:text-lingo-blue active:translate-y-0.5 disabled:opacity-30 disabled:hover:border-lingo-border disabled:hover:text-lingo-text"
+              className="flex shrink-0 items-center justify-center rounded-full border-2 border-lingo-border bg-white h-11 w-11 sm:h-12 sm:w-12 text-lingo-text shadow-sm transition-all hover:border-lingo-blue hover:text-lingo-blue active:translate-y-0.5 disabled:opacity-30 disabled:hover:border-lingo-border disabled:hover:text-lingo-text"
             >
-              <ChevronLeft className="h-7 w-7 stroke-[3]" />
+              <ChevronLeft className="h-6 w-6 sm:h-7 sm:w-7 stroke-[3]" />
             </button>
 
             <div className={`min-w-0 flex-1 ${animClass}`}>
@@ -370,14 +426,27 @@ export function Translation({
                     handleSubmit();
                   }
                 }}
+                onFocus={() => {
+                  // Counteract browser scrolling the input to the middle of the
+                  // screen: keep the Chinese prompt visible at the top.
+                  requestAnimationFrame(() => {
+                    promptRef.current?.scrollIntoView({
+                      block: "start",
+                      behavior: "instant" as ScrollBehavior,
+                    });
+                  });
+                }}
                 placeholder="Type your translation…"
                 autoFocus
-                className="w-full rounded-2xl border-2 border-lingo-border bg-white px-4 py-3 text-center text-base sm:text-lg font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/60 focus:border-lingo-blue focus:shadow-[0_0_0_3px_rgba(28,176,246,0.15)]"
+                enterKeyHint="done"
+                className="w-full rounded-2xl border-2 border-lingo-border bg-white px-3 sm:px-4 py-2.5 sm:py-3 text-center text-base sm:text-lg font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/60 focus:border-lingo-blue focus:shadow-[0_0_0_3px_rgba(28,176,246,0.15)]"
                 aria-label="Your translation"
               />
-              <p className="mt-2 text-center text-[11px] font-medium text-lingo-text-light">
-                Press Enter to check · 80%+ word match = correct
-              </p>
+              {!isKeyboardOpen && (
+                <p className="mt-2 text-center text-[11px] font-medium text-lingo-text-light">
+                  Press Enter to check · 80%+ word match = correct
+                </p>
+              )}
             </div>
 
             <button
