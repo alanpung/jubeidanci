@@ -51,14 +51,14 @@ export function Sidebar({
         <Link href="/library" className="flex items-center gap-2.5 group">
           <Image
             src="/icon.svg"
-            alt="jubeidanci"
+            alt="句背单词"
             width={36}
             height={36}
             className="w-9 h-9 transition-transform group-hover:scale-105"
             priority
           />
           <span className="text-2xl font-black text-rainbow tracking-tight">
-            jubeidanci
+            句背单词
           </span>
         </Link>
       </div>

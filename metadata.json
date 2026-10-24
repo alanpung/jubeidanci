@@ -1,6 +1,6 @@
 {
   "name": "jubeidanci",
-  "description": "OpenSource AI connected to language learning with conversational tutor, interactive exercises, spaced repetition, and courses.",
+  "description": "句背单词 — AI-powered Chinese↔English sentence translation and vocabulary learning with interactive exercises, spaced repetition, and courses.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

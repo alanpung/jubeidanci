@@ -28,14 +28,14 @@ export default async function LandingPage() {
         <div className="flex flex-col items-center gap-2">
           <Image
             src="/icon.svg"
-            alt="jubeidanci"
+            alt="句背单词"
             width={72}
             height={72}
             className="h-16 w-16 animate-bounce-short drop-shadow-md sm:h-20 sm:w-20"
             priority
           />
           <h1 className="text-4xl font-black leading-none tracking-tight text-rainbow sm:text-5xl">
-            jubeidanci
+            句背单词
           </h1>
         </div>
 
@@ -58,7 +58,7 @@ export default async function LandingPage() {
               </Link>
               <Link
                 href="/sign-in"
-                className="inline-flex items-center justify-center rounded-2xl border-2 border-lingo-border bg-white px-7 py-2.5 text-base font-bold uppercase text-lingo-green transition-colors hover:bg-lingo-gray/30"
+                className="inline-flex items-center justify-center rounded-2xl border-2 border-lingo-border bg-white px-7 py-2.5 text-base font-bold uppercase text-lingo-green transition-colors hover:bg-lingo-green/90"
               >
                 Sign In
               </Link>

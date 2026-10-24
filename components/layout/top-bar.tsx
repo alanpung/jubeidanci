@@ -33,14 +33,14 @@ export function TopBar({ stats }: TopBarProps) {
         <Link href="/library" className="flex items-center gap-2">
           <Image
             src="/icon.svg"
-            alt="jubeidanci"
+            alt="句背单词"
             width={32}
             height={32}
             className="w-8 h-8"
             priority
           />
           <span className="text-xl font-black text-rainbow tracking-tight">
-            jubeidanci
+            句背单词
           </span>
         </Link>
       </div>

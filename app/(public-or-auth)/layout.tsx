@@ -64,7 +64,7 @@ export default async function PublicOrAuthLayout({
     <div className="min-h-screen bg-lingo-bg">
       <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b-2 border-lingo-border bg-white px-4 md:px-6">
         <Link href="/" className="text-xl font-black text-rainbow tracking-tight">
-          jubeidanci
+          句背单词
         </Link>
         <div className="flex items-center gap-3">
           <Link
