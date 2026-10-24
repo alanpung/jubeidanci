@@ -10,7 +10,6 @@ import {
   resolveCourseQuestionType,
 } from "@/components/library/course-level-icon";
 import { addCourseToLibrary, removeCourseFromLibrary } from "@/lib/actions/library";
-import { CreateCourseForm } from "@/components/library/create-course-form";
 import { LibraryFolders } from "@/components/library/library-folders";
 import {
   AddRemoveButton,
@@ -44,7 +43,6 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
     () => new Set(courses.filter((c) => c.isInLibrary).map((c) => c.id)),
   );
   const [pendingId, setPendingId] = useState<string | null>(null);
-  const [showCreate, setShowCreate] = useState(false);
   // Which Library folder is open, by exercise-type label. null = closed.
   const [openType, setOpenType] = useState<string | null>(null);
   const [, startTransition] = useTransition();
@@ -112,22 +110,6 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
 
   return (
     <div>
-      {isAdmin && (
-        <div className="mb-6">
-          <button
-            onClick={() => setShowCreate(!showCreate)}
-            className="rounded-xl border-2 border-lingo-border bg-white px-3 py-1.5 text-xs font-bold text-lingo-text shadow-[0_2px_0_0] shadow-lingo-border transition-all hover:border-lingo-green hover:bg-lingo-green/5 active:translate-y-[1px] active:shadow-none"
-          >
-            + New Course
-          </button>
-          {showCreate && (
-            <div className="mt-3">
-              <CreateCourseForm onClose={() => setShowCreate(false)} />
-            </div>
-          )}
-        </div>
-      )}
-
       {/* My Books — the reader's own picks, capped at MY_BOOKS_CAP */}
       <section>
         <div className="mb-4 flex items-center gap-2">
