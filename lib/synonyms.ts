@@ -24,7 +24,8 @@ const SYNONYM_GROUPS: string[][] = [
   ["understand", "realize"],
   ["remember", "recall"],
   ["sure", "certain"],
-  ["happy", "glad"],
+  // 高兴 / greetings: nice to meet you ≈ happy/glad/pleased to meet you
+  ["nice", "happy", "glad", "pleased"],
   ["sad", "unhappy"],
   ["angry", "mad"],
   ["afraid", "scared"],
