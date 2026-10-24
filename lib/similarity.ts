@@ -3,7 +3,7 @@
  *
  * Normalization: lowercases, strips diacritics (ä→a, é→e, ñ→n, …),
  * strips punctuation (.,;:!?¿¡), normalizes curly quotes/apostrophes,
- * collapses whitespace, and treats ß as "ss" — so "Straße" ≈ "strasse".
+ * collapses whitespace, and treats ß as "ss" — so "Strasse" ≈ "strasse".
  *
  * The correctedMarkdown bolds every character in the correct answer
  * that the user got wrong or missed.
@@ -259,10 +259,10 @@ export function checkSimilarity(
 
   for (const word of essentialWords) {
     if (correctTokens.includes(word) && !userTokens.includes(word)) {
-      return { 
-        isCorrect: false, 
-        similarity: 0, 
-        correctedMarkdown: `**Missing word:** ${word}` 
+      return {
+        isCorrect: false,
+        similarity: 0,
+        correctedMarkdown: `**Missing word:** ${word}`,
       };
     }
   }
@@ -484,13 +484,9 @@ export interface WordMatchResult {
  * "I wish …". Inflections are compared separately, so "hoping" does not
  * satisfy a slot expecting "wish".
  *
- * This guards against two failure modes that bit us before:
- *   1. The best-scoring alt answer was shorter than the primary answer, so
- *      its `matchedWordIndices` array was shorter than the UI's slot count;
- *      trailing slots fell back to `undefined` in React state and were
- *      rendered as "matched" (green) by default.
- *   2. An alt answer had a stray single-letter word that normalised to "a"
- *      and produced a single false positive, hiding the real result.
+ * Percentage reflects the **best** score across all accepted answers (not only
+ * the primary). A full match against any alternative → 100%, and every primary
+ * box is painted green so the UI matches the CORRECT banner.
  */
 export function checkWordMatch(
   userInputWords: string[] | string,
@@ -529,7 +525,7 @@ export function checkWordMatch(
   // match. Different-length alternatives are still honoured, but only through
   // the whole-sentence `fullyMatchedAnyAnswer` check below.
   const primaryTw = answerTokenLists[0];
-  const totalCount = primaryTw.length;
+  let totalCount = primaryTw.length;
   const slotComparableLists = answerTokenLists.filter(
     (tw) => tw.length === totalCount,
   );
@@ -549,15 +545,18 @@ export function checkWordMatch(
     }
   }
 
-  const score = totalCount > 0 ? matchCount / totalCount : 0;
-  const percentage = Math.round(score * 100);
+  // Primary-slot score (used for the per-box green/red UI, which is always
+  // aligned to the primary answer's word count).
+  let score = totalCount > 0 ? matchCount / totalCount : 0;
+  let percentage = Math.round(score * 100);
 
-  // Bonus credit: if the user fully matches any single accepted answer (same
-  // length, every position matches), the exercise is correct regardless of
-  // percentage — this lets a learner answer with a shorter acceptable
-  // paraphrase without being marked wrong for not typing the longer form.
+  // Full-sentence match against ANY accepted answer (same token count, every
+  // position equivalent — including synonyms via isEquivalentToken). This is
+  // how "It is nice to meet you" passes when the primary is "Nice to meet you".
   let fullyMatchedAnyAnswer = false;
-  for (const tw of answerTokenLists) {
+  let fullyMatchedAnswerIdx = -1;
+  for (let ai = 0; ai < answerTokenLists.length; ai++) {
+    const tw = answerTokenLists[ai];
     if (tw.length !== userTokens.length) continue;
     let allMatch = true;
     for (let i = 0; i < tw.length; i++) {
@@ -568,33 +567,84 @@ export function checkWordMatch(
     }
     if (allMatch) {
       fullyMatchedAnyAnswer = true;
+      fullyMatchedAnswerIdx = ai;
       break;
     }
   }
 
-  const isCorrect = fullyMatchedAnyAnswer || score >= 0.8;
-
-  // Pick the best-aligned answer as `matchedAnswer` (the one with the most
-  // token-overlap with the user, breaking ties by closeness in length to the
-  // user's input so the UI feels natural).
+  // Best bag-of-tokens score against every accepted answer (order-independent
+  // multiset match with synonym equivalence). Lets a longer/shorter paraphrase
+  // still earn a fair % even when primary-slot alignment is 0.
+  let bestBagHits = matchCount;
+  let bestBagTotal = totalCount;
+  let bestBagScore = score;
   let bestAnswer = acceptedAnswers[0];
-  let bestOverlap = -1;
-  for (let ai = 0; ai < acceptedAnswers.length; ai++) {
+  let bestAnswerIdx = 0;
+
+  for (let ai = 0; ai < answerTokenLists.length; ai++) {
     const tw = answerTokenLists[ai];
-    let overlap = 0;
-    const limit = Math.min(tw.length, userTokens.length);
-    for (let i = 0; i < limit; i++) {
-      const u = userTokens[i] || "";
-      const t = tw[i] || "";
-      if (normalize(u) && normalize(t) && isEquivalentToken(u, t)) overlap++;
+    if (tw.length === 0) continue;
+    const usedUser = new Array(userTokens.length).fill(false);
+    let hits = 0;
+    for (const t of tw) {
+      if (!normalize(t)) continue;
+      for (let ui = 0; ui < userTokens.length; ui++) {
+        if (usedUser[ui]) continue;
+        if (isEquivalentToken(userTokens[ui] || "", t)) {
+          usedUser[ui] = true;
+          hits++;
+          break;
+        }
+      }
     }
-    const lengthPenalty = Math.abs(tw.length - userTokens.length);
-    const scoreForAnswer = overlap * 1000 - lengthPenalty;
-    if (scoreForAnswer > bestOverlap) {
-      bestOverlap = scoreForAnswer;
+    // Denominator = answer length so filling every required word → 100%.
+    // Extra words the user typed don't reduce the score (they're noise, not
+    // missing content). Missing required words do.
+    const ansScore = hits / tw.length;
+    if (
+      ansScore > bestBagScore ||
+      (ansScore === bestBagScore &&
+        Math.abs(tw.length - userTokens.length) <
+          Math.abs(bestBagTotal - userTokens.length))
+    ) {
+      bestBagScore = ansScore;
+      bestBagHits = hits;
+      bestBagTotal = tw.length;
       bestAnswer = acceptedAnswers[ai];
+      bestAnswerIdx = ai;
     }
   }
+
+  // Prefer the fully-matched answer when present.
+  if (fullyMatchedAnyAnswer && fullyMatchedAnswerIdx >= 0) {
+    bestAnswer = acceptedAnswers[fullyMatchedAnswerIdx];
+    bestAnswerIdx = fullyMatchedAnswerIdx;
+    bestBagHits = answerTokenLists[fullyMatchedAnswerIdx].length;
+    bestBagTotal = bestBagHits;
+    bestBagScore = 1;
+  }
+
+  // Surface the better of primary-slot % and best bag-of-tokens %.
+  if (bestBagScore > score) {
+    score = bestBagScore;
+    percentage = Math.round(score * 100);
+    matchCount = bestBagHits;
+    totalCount = bestBagTotal;
+  }
+
+  if (fullyMatchedAnyAnswer) {
+    score = 1;
+    percentage = 100;
+    matchCount = bestBagTotal;
+    totalCount = bestBagTotal;
+    // Whole answer accepted → paint every primary box green so the UI matches
+    // the "CORRECT" banner instead of showing all-red slots at 0%.
+    for (let i = 0; i < alignedMatched.length; i++) {
+      alignedMatched[i] = true;
+    }
+  }
+
+  const isCorrect = fullyMatchedAnyAnswer || score >= 0.8;
 
   return {
     isCorrect,
@@ -606,4 +656,3 @@ export function checkWordMatch(
     matchedAnswer: bestAnswer,
   };
 }
-
