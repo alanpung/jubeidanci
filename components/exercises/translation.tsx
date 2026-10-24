@@ -76,8 +76,6 @@ export function Translation({
     setMatchResult(null);
   }, [exercise.sentence, exercise.answer]);
 
-  // When the soft keyboard opens, pin the Chinese prompt to the top of the
-  // visible area so the student can still see the question while typing.
   useEffect(() => {
     if (!isKeyboardOpen || !promptRef.current) return;
     const id = requestAnimationFrame(() => {
@@ -139,45 +137,34 @@ export function Translation({
         .toLowerCase()
         .replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "");
       const dict = BUILTIN_WORD_DICT[clean];
-
       const apiWord = analysis?.chunks
         ?.flatMap((c) => c.words)
         ?.find(
           (w) =>
             w.word
               .toLowerCase()
-              .replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "") ===
-            clean,
+              .replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "") === clean,
         );
-
       let gTag =
         apiWord?.pos && POS_BADGE_STYLES[apiWord.pos]
           ? apiWord.pos
           : dict?.grammarTag || resolveGrammarTag(clean, apiWord?.pos);
-
       let meaning = "";
       if (dict?.meaning && /[\u4e00-\u9fa5]/.test(dict.meaning)) {
         meaning = dict.meaning;
       } else if (apiWord?.meaning && /[\u4e00-\u9fa5]/.test(apiWord.meaning)) {
         meaning = apiWord.meaning;
       }
-
       const ipa = dict?.ipa || apiWord?.ipa || "";
-
       return { word: token, ipa, meaning, pos: gTag, grammarTag: gTag };
     });
   }, [rawAnswerTokens, analysis]);
 
   const orderedAnswers = useMemo(() => {
     const primary = allAnswers[0] || exercise.answer;
-    const matched = allAnswers.find(
-      (a) => a.toLowerCase() === primary.toLowerCase(),
-    );
+    const matched = allAnswers.find((a) => a.toLowerCase() === primary.toLowerCase());
     if (!matched) return allAnswers;
-    return [
-      matched,
-      ...allAnswers.filter((a) => a.toLowerCase() !== primary.toLowerCase()),
-    ];
+    return [matched, ...allAnswers.filter((a) => a.toLowerCase() !== primary.toLowerCase())];
   }, [allAnswers, exercise.answer]);
 
   useEffect(() => {
@@ -185,7 +172,6 @@ export function Translation({
     prefetch(toFetch, language);
   }, [exercise.sentence, allAnswers, language, prefetch]);
 
-  // Only auto-read Chinese; English is manual so the answer is not revealed early.
   useEffect(() => {
     if (!autoplayAudio) return;
     if (exercise.noAudio?.includes("sentence")) return stop;
@@ -193,17 +179,9 @@ export function Translation({
     return () => {
       stop();
     };
-  }, [
-    exercise.sentence,
-    sentenceLang,
-    autoplayAudio,
-    play,
-    stop,
-    exercise.noAudio,
-  ]);
+  }, [exercise.sentence, sentenceLang, autoplayAudio, play, stop, exercise.noAudio]);
 
   const goNext = useCallback(() => {
-    // If not submitted yet, treat as skip (count as incorrect for tracking)
     if (!submitted) {
       onResult(false, userInput.trim() || "");
     }
@@ -213,6 +191,20 @@ export function Translation({
   const goPrev = useCallback(() => {
     if (canGoPrev) onPrev();
   }, [canGoPrev, onPrev]);
+
+  // After answer is checked, Enter advances to the next question (same as next arrow).
+  useEffect(() => {
+    if (!submitted) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "Enter") return;
+      const tag = (e.target as HTMLElement)?.tagName;
+      if (tag === "INPUT" || tag === "TEXTAREA") return;
+      e.preventDefault();
+      goNext();
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [submitted, goNext]);
 
   const handleSubmit = useCallback(() => {
     if (submitted) return;
@@ -224,20 +216,10 @@ export function Translation({
     if (!exercise.noAudio?.includes("answer")) {
       play(exercise.answer, "en");
     }
-  }, [
-    submitted,
-    userInput,
-    allAnswers,
-    onResult,
-    exercise.answer,
-    exercise.noAudio,
-    play,
-  ]);
+  }, [submitted, userInput, allAnswers, onResult, exercise.answer, exercise.noAudio, play]);
 
   const animClass =
-    direction === "backward"
-      ? "animate-slide-in-left"
-      : "animate-slide-in-right";
+    direction === "backward" ? "animate-slide-in-left" : "animate-slide-in-right";
 
   const matchPct = matchResult?.percentage ?? 0;
   const isCorrect = matchResult?.isCorrect ?? false;
@@ -283,7 +265,6 @@ export function Translation({
           </h1>
         </div>
 
-        {/* Nav arrows at the outer edges; audio buttons centered between them */}
         <div
           className={`flex w-full max-w-5xl items-center justify-between gap-2 px-1 ${
             isKeyboardOpen ? "mb-2" : "mb-6"
@@ -338,13 +319,10 @@ export function Translation({
           </button>
         </div>
 
-        {/* Word boxes: desktop = one row; mobile = may wrap. Compact when keyboard open. */}
         <div className={`w-full max-w-4xl mx-auto px-1 ${isKeyboardOpen ? "mb-2" : "mb-4"}`}>
           <div
             className={`flex items-stretch justify-center gap-1.5 sm:gap-2 pb-1 ${
-              isMobile
-                ? "flex-wrap"
-                : "flex-nowrap overflow-x-auto"
+              isMobile ? "flex-wrap" : "flex-nowrap overflow-x-auto"
             }`}
           >
             {analyzedWordList.map((item, idx) => {
@@ -359,7 +337,6 @@ export function Translation({
                 : wordMatched
                   ? "text-emerald-700"
                   : "text-rose-700";
-
               return (
                 <div
                   key={idx}
@@ -371,16 +348,13 @@ export function Translation({
                 >
                   <span
                     className={`w-full text-center font-serif font-bold tracking-tight leading-tight truncate ${wordColor} ${
-                      isKeyboardOpen
-                        ? "text-xs"
-                        : "text-sm sm:text-base md:text-lg"
+                      isKeyboardOpen ? "text-xs" : "text-sm sm:text-base md:text-lg"
                     }`}
                     title={submitted ? item.word : undefined}
                     aria-hidden={!submitted}
                   >
                     {submitted ? item.word : "·"}
                   </span>
-
                   <div className="flex flex-col items-center justify-center mt-1 w-full gap-0.5 min-w-0">
                     {item.grammarTag && (
                       <div
@@ -393,7 +367,6 @@ export function Translation({
                         {item.grammarTag}
                       </div>
                     )}
-
                     {submitted && item.meaning && (
                       <div
                         className="text-[10px] sm:text-xs text-gray-800 text-center font-semibold leading-tight truncate w-full"
@@ -465,19 +438,19 @@ export function Translation({
                   : "border-rose-300 bg-rose-50 text-rose-800"
               }`}
             >
-              <div className="text-2xl font-black tabular-nums">
-                {matchPct}%
-              </div>
+              <div className="text-2xl font-black tabular-nums">{matchPct}%</div>
               <div className="text-xs font-bold uppercase tracking-wider mt-0.5">
                 {isCorrect ? "Correct" : "Not quite"} ·{" "}
-                {matchResult?.matchCount ?? 0}/{matchResult?.totalCount ?? 0}{" "}
-                words
+                {matchResult?.matchCount ?? 0}/{matchResult?.totalCount ?? 0} words
               </div>
               {userInput.trim() && (
                 <div className="mt-2 text-sm font-semibold opacity-80">
                   Your answer: {userInput.trim()}
                 </div>
               )}
+              <div className="mt-2 text-[11px] font-medium opacity-70">
+                Press Enter or → for next
+              </div>
             </div>
 
             <div className="mt-2 w-full">
@@ -487,10 +460,7 @@ export function Translation({
                     ALTERNATIVE ANSWERS:
                   </span>
                   {orderedAnswers.slice(1).map((alt, aIdx) => (
-                    <div
-                      key={aIdx}
-                      className="text-sm sm:text-base font-bold text-blue-700"
-                    >
+                    <div key={aIdx} className="text-sm sm:text-base font-bold text-blue-700">
                       {alt}
                     </div>
                   ))}
