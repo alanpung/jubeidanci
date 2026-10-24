@@ -5,7 +5,11 @@ import { Volume2, ChevronLeft, ChevronRight } from "lucide-react";
 import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
-import { generateAlternativeTranslations } from "@/lib/similarity";
+import {
+  generateAlternativeTranslations,
+  checkWordMatch,
+  type WordMatchResult,
+} from "@/lib/similarity";
 import { ExerciseShell } from "./exercise-shell";
 import { HoverableText } from "@/components/word/hoverable-text";
 import { detectTextLanguage } from "@/lib/language-detector";
@@ -58,10 +62,12 @@ export function Translation({
   const [analysis, setAnalysis] = useState<SentenceAnalysisData | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [userInput, setUserInput] = useState("");
+  const [matchResult, setMatchResult] = useState<WordMatchResult | null>(null);
 
   useEffect(() => {
     setSubmitted(false);
     setUserInput("");
+    setMatchResult(null);
   }, [exercise.sentence, exercise.answer]);
 
   const rawAnswerTokens = useMemo(() => {
@@ -71,7 +77,10 @@ export function Translation({
   const allAnswers = useMemo(() => {
     const fromProps = exercise.acceptAlso || [];
     const fromApi = analysis?.acceptableTranslations || [];
-    return generateAlternativeTranslations(exercise.answer, [...fromProps, ...fromApi]);
+    return generateAlternativeTranslations(exercise.answer, [
+      ...fromProps,
+      ...fromApi,
+    ]);
   }, [exercise.answer, exercise.acceptAlso, analysis?.acceptableTranslations]);
 
   const { status } = useExercise();
@@ -79,7 +88,7 @@ export function Translation({
 
   const sentenceLang = useMemo(
     () => detectTextLanguage(exercise.sentence, { targetLanguage: language }),
-    [exercise.sentence, language]
+    [exercise.sentence, language],
   );
 
   useEffect(() => {
@@ -89,7 +98,10 @@ export function Translation({
         const res = await fetch("/api/analyze-sentence", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ sentence: exercise.answer, targetLanguage: "en" }),
+          body: JSON.stringify({
+            sentence: exercise.answer,
+            targetLanguage: "en",
+          }),
         });
         if (res.ok) {
           const json = await res.json();
@@ -107,16 +119,25 @@ export function Translation({
 
   const analyzedWordList = useMemo<AnalyzedWord[]>(() => {
     return rawAnswerTokens.map((token: string) => {
-      const clean = token.toLowerCase().replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "");
+      const clean = token
+        .toLowerCase()
+        .replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "");
       const dict = BUILTIN_WORD_DICT[clean];
 
-      const apiWord = analysis?.chunks?.flatMap((c) => c.words)?.find((w) =>
-        w.word.toLowerCase().replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "") === clean
-      );
+      const apiWord = analysis?.chunks
+        ?.flatMap((c) => c.words)
+        ?.find(
+          (w) =>
+            w.word
+              .toLowerCase()
+              .replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "") ===
+            clean,
+        );
 
-      let gTag = (apiWord?.pos && POS_BADGE_STYLES[apiWord.pos])
-        ? apiWord.pos
-        : (dict?.grammarTag || resolveGrammarTag(clean, apiWord?.pos));
+      let gTag =
+        apiWord?.pos && POS_BADGE_STYLES[apiWord.pos]
+          ? apiWord.pos
+          : dict?.grammarTag || resolveGrammarTag(clean, apiWord?.pos);
 
       let meaning = "";
       if (dict?.meaning && /[\u4e00-\u9fa5]/.test(dict.meaning)) {
@@ -133,9 +154,14 @@ export function Translation({
 
   const orderedAnswers = useMemo(() => {
     const primary = allAnswers[0] || exercise.answer;
-    const matched = allAnswers.find((a) => a.toLowerCase() === primary.toLowerCase());
+    const matched = allAnswers.find(
+      (a) => a.toLowerCase() === primary.toLowerCase(),
+    );
     if (!matched) return allAnswers;
-    return [matched, ...allAnswers.filter((a) => a.toLowerCase() !== primary.toLowerCase())];
+    return [
+      matched,
+      ...allAnswers.filter((a) => a.toLowerCase() !== primary.toLowerCase()),
+    ];
   }, [allAnswers, exercise.answer]);
 
   useEffect(() => {
@@ -151,12 +177,22 @@ export function Translation({
     return () => {
       stop();
     };
-  }, [exercise.sentence, sentenceLang, autoplayAudio, play, stop, exercise.noAudio]);
+  }, [
+    exercise.sentence,
+    sentenceLang,
+    autoplayAudio,
+    play,
+    stop,
+    exercise.noAudio,
+  ]);
 
   const goNext = useCallback(() => {
-    onResult(true, exercise.answer);
+    // If not submitted yet, treat as skip (count as incorrect for tracking)
+    if (!submitted) {
+      onResult(false, userInput.trim() || "");
+    }
     onContinue();
-  }, [onResult, onContinue, exercise.answer]);
+  }, [submitted, onResult, onContinue, userInput]);
 
   const goPrev = useCallback(() => {
     if (canGoPrev) onPrev();
@@ -164,15 +200,32 @@ export function Translation({
 
   const handleSubmit = useCallback(() => {
     if (submitted) return;
+    const input = userInput.trim();
+    const result = checkWordMatch(input, allAnswers);
+    setMatchResult(result);
     setSubmitted(true);
-    onResult(true, userInput.trim() || exercise.answer);
+    onResult(result.isCorrect, input || exercise.answer);
     if (!exercise.noAudio?.includes("answer")) {
       play(exercise.answer, "en");
     }
-  }, [submitted, userInput, onResult, exercise.answer, exercise.noAudio, play]);
+  }, [
+    submitted,
+    userInput,
+    allAnswers,
+    onResult,
+    exercise.answer,
+    exercise.noAudio,
+    play,
+  ]);
 
   const animClass =
-    direction === "backward" ? "animate-slide-in-left" : "animate-slide-in-right";
+    direction === "backward"
+      ? "animate-slide-in-left"
+      : "animate-slide-in-right";
+
+  const matchPct = matchResult?.percentage ?? 0;
+  const isCorrect = matchResult?.isCorrect ?? false;
+  const matchedIndices = matchResult?.matchedWordIndices ?? [];
 
   return (
     <ExerciseShell
@@ -226,6 +279,66 @@ export function Translation({
           </button>
         </div>
 
+        {/* Word boxes: POS only before Enter; full reveal after Enter */}
+        <div className="flex flex-wrap items-start justify-center gap-2 sm:gap-3 lg:gap-4 w-full max-w-3xl mx-auto mb-4">
+          {analyzedWordList.map((item, idx) => {
+            const wordMatched = submitted ? matchedIndices[idx] === true : false;
+            const borderClass = !submitted
+              ? "border-lingo-border bg-white"
+              : wordMatched
+                ? "border-emerald-200 bg-emerald-50/20"
+                : "border-rose-200 bg-rose-50/20";
+            const wordColor = !submitted
+              ? "text-transparent select-none"
+              : wordMatched
+                ? "text-emerald-700"
+                : "text-rose-700";
+
+            return (
+              <div
+                key={idx}
+                className={`rounded-2xl border-2 shadow-xs px-2 sm:px-3 lg:px-4 py-2 sm:py-3 flex flex-col items-center justify-start min-w-[62px] sm:min-w-[92px] lg:min-w-[100px] ${borderClass}`}
+              >
+                {/* English word: hidden before submit (same width), revealed after */}
+                <span
+                  style={{ minWidth: `${Math.max(3, item.word.length)}ch` }}
+                  className={`text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight ${wordColor}`}
+                  aria-hidden={!submitted}
+                >
+                  {submitted ? item.word : "·".repeat(Math.min(item.word.length, 6))}
+                </span>
+
+                <div className="flex flex-col items-center justify-center mt-1 sm:mt-2 w-full space-y-1 sm:space-y-1.5">
+                  {/* Chinese POS — always visible */}
+                  {item.grammarTag && (
+                    <div
+                      className={`text-[10px] sm:text-[11px] lg:text-xs font-bold text-center px-2 sm:px-2.5 py-0.5 rounded-full border shadow-2xs tracking-wide ${
+                        POS_BADGE_STYLES[item.grammarTag]
+                          ? `${POS_BADGE_STYLES[item.grammarTag].bg} ${POS_BADGE_STYLES[item.grammarTag].text} ${POS_BADGE_STYLES[item.grammarTag].border}`
+                          : "bg-gray-100 text-gray-600 border-gray-200"
+                      }`}
+                    >
+                      {item.grammarTag}
+                    </div>
+                  )}
+
+                  {/* Chinese meaning + IPA — only after Enter */}
+                  {submitted && item.meaning && (
+                    <div className="text-xs sm:text-sm lg:text-base text-gray-800 text-center font-semibold">
+                      {item.meaning}
+                    </div>
+                  )}
+                  {submitted && item.ipa && (
+                    <div className="text-[10px] sm:text-xs lg:text-sm text-gray-500 font-mono text-center">
+                      {item.ipa}
+                    </div>
+                  )}
+                </div>
+              </div>
+            );
+          })}
+        </div>
+
         {!submitted ? (
           <div className="flex w-full items-center gap-2 sm:gap-3">
             <button
@@ -255,7 +368,7 @@ export function Translation({
                 aria-label="Your translation"
               />
               <p className="mt-2 text-center text-[11px] font-medium text-lingo-text-light">
-                Press Enter to reveal the answer
+                Press Enter to check · 80%+ word match = correct
               </p>
             </div>
 
@@ -270,46 +383,30 @@ export function Translation({
           </div>
         ) : (
           <div className={`w-full ${animClass}`}>
-            <div className="flex flex-wrap items-start justify-center gap-2 sm:gap-3 lg:gap-4 w-full max-w-3xl mx-auto">
-              {analyzedWordList.map((item, idx) => (
-                <div
-                  key={idx}
-                  className="bg-white rounded-2xl border-2 border-emerald-200 bg-emerald-50/20 shadow-xs px-2 sm:px-3 lg:px-4 py-2 sm:py-3 flex flex-col items-center justify-start min-w-[62px] sm:min-w-[92px] lg:min-w-[100px]"
-                >
-                  <span
-                    style={{ minWidth: `${Math.max(3, item.word.length)}ch` }}
-                    className="text-center font-serif text-lg sm:text-2xl lg:text-3xl font-bold tracking-tight text-emerald-700"
-                  >
-                    {item.word}
-                  </span>
-                  <div className="flex flex-col items-center justify-center mt-1 sm:mt-2 w-full space-y-1 sm:space-y-1.5">
-                    {item.grammarTag && (
-                      <div
-                        className={`text-[10px] sm:text-[11px] lg:text-xs font-bold text-center px-2 sm:px-2.5 py-0.5 rounded-full border shadow-2xs tracking-wide ${
-                          POS_BADGE_STYLES[item.grammarTag]
-                            ? `${POS_BADGE_STYLES[item.grammarTag].bg} ${POS_BADGE_STYLES[item.grammarTag].text} ${POS_BADGE_STYLES[item.grammarTag].border}`
-                            : "bg-gray-100 text-gray-600 border-gray-200"
-                        }`}
-                      >
-                        {item.grammarTag}
-                      </div>
-                    )}
-                    {item.meaning && (
-                      <div className="text-xs sm:text-sm lg:text-base text-gray-800 text-center font-semibold">
-                        {item.meaning}
-                      </div>
-                    )}
-                    {item.ipa && (
-                      <div className="text-[10px] sm:text-xs lg:text-sm text-gray-500 font-mono text-center">
-                        {item.ipa}
-                      </div>
-                    )}
-                  </div>
+            {/* Match % banner */}
+            <div
+              className={`mx-auto mb-4 w-full max-w-md rounded-2xl border-2 px-4 py-3 text-center shadow-sm ${
+                isCorrect
+                  ? "border-emerald-300 bg-emerald-50 text-emerald-800"
+                  : "border-rose-300 bg-rose-50 text-rose-800"
+              }`}
+            >
+              <div className="text-2xl font-black tabular-nums">
+                {matchPct}%
+              </div>
+              <div className="text-xs font-bold uppercase tracking-wider mt-0.5">
+                {isCorrect ? "Correct" : "Not quite"} ·{" "}
+                {matchResult?.matchCount ?? 0}/{matchResult?.totalCount ?? 0}{" "}
+                words
+              </div>
+              {userInput.trim() && (
+                <div className="mt-2 text-sm font-semibold opacity-80">
+                  Your answer: {userInput.trim()}
                 </div>
-              ))}
+              )}
             </div>
 
-            <div className="mt-4 flex w-full items-center gap-2 sm:gap-3">
+            <div className="mt-2 flex w-full items-center gap-2 sm:gap-3">
               <button
                 type="button"
                 onClick={goPrev}
@@ -327,7 +424,10 @@ export function Translation({
                       ALTERNATIVE ANSWERS:
                     </span>
                     {orderedAnswers.slice(1).map((alt, aIdx) => (
-                      <div key={aIdx} className="text-sm sm:text-base font-bold text-blue-700">
+                      <div
+                        key={aIdx}
+                        className="text-sm sm:text-base font-bold text-blue-700"
+                      >
                         {alt}
                       </div>
                     ))}
