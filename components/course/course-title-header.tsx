@@ -2,7 +2,6 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { HoverableText } from "@/components/word/hoverable-text";
 import { updateCourseTitle } from "@/lib/actions/units";
 
 interface CourseTitleHeaderProps {
@@ -89,9 +88,7 @@ export function CourseTitleHeader({
       ) : (
         <div className="flex flex-col items-center justify-center gap-1">
           <div className="flex items-center justify-center gap-2 flex-wrap">
-            <h1 className="text-2xl font-black text-lingo-text">
-              <HoverableText text={title} language={targetLanguage} />
-            </h1>
+            <h1 className="text-2xl font-black text-lingo-text">{title}</h1>
             {canEdit && (
               <button
                 onClick={() => setIsEditing(true)}
