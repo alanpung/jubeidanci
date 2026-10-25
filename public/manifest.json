@@ -1,7 +1,7 @@
 {
-  "name": "jubeidanci",
-  "short_name": "jubeidanci",
-  "description": "OpenSource AI connected to language learning",
+  "name": "句背单词 - jubeidanci",
+  "short_name": "句背单词",
+  "description": "句背单词 — 基于语境与句子翻译的英语词汇学习平台",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

@@ -125,7 +125,7 @@ export async function GET(
               color: "#58CC02",
             }}
           >
-            jubeidanci
+            句背单词 · jubeidanci
           </div>
         </div>
       </div>

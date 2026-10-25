@@ -92,6 +92,21 @@ export async function listEditableCourses(): Promise<
       questionTypeId: normalizeQuestionType(`${r.title} ${r.id}`)?.id ?? null,
     }));
 
+  if (isAdmin) {
+    const { getAllCourses } = await import("@/lib/content/registry");
+    const existingIds = new Set(courses.map((c) => c.id));
+    for (const fc of getAllCourses()) {
+      if (!existingIds.has(fc.id)) {
+        courses.push({
+          id: fc.id,
+          title: fc.title,
+          level: fc.level,
+          questionTypeId: normalizeQuestionType(`${fc.title} ${fc.id}`)?.id ?? null,
+        });
+      }
+    }
+  }
+
   return { success: true, courses };
 }
 
