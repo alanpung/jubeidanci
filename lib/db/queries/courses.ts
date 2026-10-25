@@ -156,38 +156,61 @@ export async function canAccessUnit(
   unitId: string,
   userId?: string
 ): Promise<boolean> {
-  if (!(await isDbAvailable())) return false;
-  const [u] = await db
-    .select({
-      id: unit.id,
-      visibility: unit.visibility,
-      createdBy: unit.createdBy,
-      courseId: unit.courseId,
-    })
-    .from(unit)
-    .where(eq(unit.id, unitId));
-  if (!u) return false;
+  if (SYSTEM_COURSE_IDS.some((id) => unitId.startsWith(id))) return true;
 
-  // Standalone unit: public, owner, or explicitly granted to this user.
-  if (!u.courseId) {
-    if (u.visibility === "public") return true;
-    if (!userId) return false;
-    if (u.createdBy === userId) return true;
-    if ((await getVipOwnerIds(userId)).has(u.createdBy ?? "")) return true;
-    return (await getGrantedUnitIds(userId)).has(u.id);
+  if (await isDbAvailable()) {
+    try {
+      const [u] = await db
+        .select({
+          id: unit.id,
+          visibility: unit.visibility,
+          createdBy: unit.createdBy,
+          courseId: unit.courseId,
+        })
+        .from(unit)
+        .where(eq(unit.id, unitId));
+
+      if (u) {
+        // Standalone unit: public, owner, or explicitly granted to this user.
+        if (!u.courseId) {
+          if (u.visibility === "public") return true;
+          if (!userId) return false;
+          if (u.createdBy === userId) return true;
+          if ((await getVipOwnerIds(userId)).has(u.createdBy ?? "")) return true;
+          return (await getGrantedUnitIds(userId)).has(u.id);
+        }
+
+        // Course unit: access is governed by the parent course.
+        const [c] = await db
+          .select({ visibility: course.visibility, createdBy: course.createdBy })
+          .from(course)
+          .where(eq(course.id, u.courseId));
+        if (!c) return false;
+        if (c.visibility === "public") return true;
+        if (!userId) return false;
+        if (c.createdBy === userId) return true;
+        if ((await getVipOwnerIds(userId)).has(c.createdBy ?? "")) return true;
+        return (await getGrantedCourseIds(userId)).has(u.courseId);
+      }
+    } catch (err) {
+      console.warn("canAccessUnit DB error:", err);
+    }
   }
 
-  // Course unit: access is governed by the parent course.
-  const [c] = await db
-    .select({ visibility: course.visibility, createdBy: course.createdBy })
-    .from(course)
-    .where(eq(course.id, u.courseId));
-  if (!c) return false;
-  if (c.visibility === "public") return true;
-  if (!userId) return false;
-  if (c.createdBy === userId) return true;
-  if ((await getVipOwnerIds(userId)).has(c.createdBy ?? "")) return true;
-  return (await getGrantedCourseIds(userId)).has(u.courseId);
+  // Filesystem fallback: any unit defined in content/ is public
+  try {
+    const { getAllUnits } = await import("@/lib/content/registry");
+    const isFs = getAllUnits().some((fu) => {
+      const p = fu.parsed;
+      const match = p.title.match(/Unit\s+(\d+)/i);
+      const unitNum = match ? parseInt(match[1], 10) : null;
+      const fsUnitId = unitNum ? `${p.courseId}-unit-${unitNum}` : `${p.courseId}-${p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+      return fsUnitId === unitId;
+    });
+    if (isFs) return true;
+  } catch {}
+
+  return false;
 }
 
 /** Same rule as canAccessUnit but for a course id directly. */
@@ -195,17 +218,33 @@ export async function canAccessCourse(
   courseId: string,
   userId?: string
 ): Promise<boolean> {
-  if (!(await isDbAvailable())) return false;
-  const [c] = await db
-    .select({ visibility: course.visibility, createdBy: course.createdBy })
-    .from(course)
-    .where(eq(course.id, courseId));
-  if (!c) return false;
-  if (c.visibility === "public") return true;
-  if (!userId) return false;
-  if (c.createdBy === userId) return true;
-  if ((await getVipOwnerIds(userId)).has(c.createdBy ?? "")) return true;
-  return (await getGrantedCourseIds(userId)).has(courseId);
+  if (SYSTEM_COURSE_IDS.includes(courseId)) return true;
+
+  if (await isDbAvailable()) {
+    try {
+      const [c] = await db
+        .select({ visibility: course.visibility, createdBy: course.createdBy })
+        .from(course)
+        .where(eq(course.id, courseId));
+      if (c) {
+        if (c.visibility === "public") return true;
+        if (!userId) return false;
+        if (c.createdBy === userId) return true;
+        if ((await getVipOwnerIds(userId)).has(c.createdBy ?? "")) return true;
+        return (await getGrantedCourseIds(userId)).has(courseId);
+      }
+    } catch (err) {
+      console.warn("canAccessCourse DB error:", err);
+    }
+  }
+
+  // Filesystem course fallback: always public
+  try {
+    const { getAllCourses } = await import("@/lib/content/registry");
+    if (getAllCourses().some((fc) => fc.id === courseId)) return true;
+  } catch {}
+
+  return false;
 }
 
 
@@ -285,6 +324,41 @@ export async function listCourses(
       .orderBy(course.title);
 
     if (rows.length > 0) {
+      const dbCourseIds = new Set(rows.map((r) => r.id));
+      const { getAllCourses, getAllUnits } = await import("@/lib/content/registry");
+      const fsCourses = getAllCourses();
+      const fsUnits = getAllUnits();
+
+      for (const fc of fsCourses) {
+        if (!dbCourseIds.has(fc.id)) {
+          if (filters?.sourceLanguage && fc.sourceLanguage !== filters.sourceLanguage) continue;
+          if (filters?.targetLanguage && fc.targetLanguage !== filters.targetLanguage) continue;
+          if (filters?.level && fc.level !== filters.level) continue;
+
+          const cUnits = fsUnits.filter((u) => u.parsed.courseId === fc.id);
+          rows.push({
+            id: fc.id,
+            title: fc.title,
+            sourceLanguage: fc.sourceLanguage,
+            targetLanguage: fc.targetLanguage,
+            level: fc.level,
+            createdBy: null,
+            creatorName: "Alan P",
+            visibility: "public",
+            unitCount: cUnits.length,
+          });
+        }
+      }
+
+      for (const r of rows) {
+        if (Number(r.unitCount) === 0) {
+          const fsMatching = fsUnits.filter((u) => u.parsed.courseId === r.id);
+          if (fsMatching.length > 0) {
+            r.unitCount = fsMatching.length;
+          }
+        }
+      }
+
       return rows.map((r) => ({
         ...r,
         creatorName: r.creatorName ?? (SYSTEM_COURSE_IDS.includes(r.id) ? "Alan P" : null),
@@ -326,12 +400,17 @@ export async function listCourses(
 
 export const SYSTEM_COURSE_IDS = [
   "a1-flashcard-course",
+  "a1-translation-course",
   "a2-flashcard-course",
   "a2-translation-course",
   "b1-flashcard-course",
+  "b1-translation-course",
   "b2-flashcard-course",
+  "b2-translation-course",
   "c1-flashcard-course",
+  "c1-translation-course",
   "c2-flashcard-course",
+  "c2-translation-course",
 ];
 
 // Separate query for accurate lesson counts.
@@ -420,12 +499,21 @@ export async function getCourseTitle(courseId: string): Promise<string | null> {
       .from(course)
       .where(eq(course.id, courseId))
       .limit(1);
-    const title = rows[0]?.title ?? null;
+    let title = rows[0]?.title ?? null;
+    if (!title) {
+      const { getAllCourses } = await import("@/lib/content/registry");
+      title = getAllCourses().find((c) => c.id === courseId)?.title ?? null;
+    }
     courseTitleCache.set(courseId, { title, ts: Date.now() });
     return title;
   } catch (err) {
-    console.warn("getCourseTitle failed:", err);
-    return null;
+    console.warn("getCourseTitle failed, falling back to filesystem:", err);
+    try {
+      const { getAllCourses } = await import("@/lib/content/registry");
+      return getAllCourses().find((c) => c.id === courseId)?.title ?? null;
+    } catch {
+      return null;
+    }
   }
 }
 
@@ -475,10 +563,32 @@ async function computeLessonCountByCourse(
         const count = getUnitLessonCountFast(u.markdown ?? "");
         map.set(u.courseId, (map.get(u.courseId) ?? 0) + count);
       }
+
+      const { getAllUnits } = await import("@/lib/content/registry");
+      const fsUnits = getAllUnits();
+      for (const cId of courseIds) {
+        if (!map.has(cId) || map.get(cId) === 0) {
+          const matching = fsUnits.filter((u) => u.parsed.courseId === cId);
+          const count = matching.reduce((sum, u) => sum + (u.parsed.lessons?.length ?? 0), 0);
+          if (count > 0) {
+            map.set(cId, count);
+          }
+        }
+      }
+
       lessonCountCache.set(key, { ts: Date.now(), value: map });
       return map;
     } catch (err) {
-      console.warn("computeLessonCountByCourse: unit query failed:", err);
+      console.warn("computeLessonCountByCourse: unit query failed, falling back to filesystem:", err);
+      const { getAllUnits } = await import("@/lib/content/registry");
+      const fsUnits = getAllUnits();
+      for (const cId of courseIds) {
+        const matching = fsUnits.filter((u) => u.parsed.courseId === cId);
+        const count = matching.reduce((sum, u) => sum + (u.parsed.lessons?.length ?? 0), 0);
+        if (count > 0) {
+          map.set(cId, count);
+        }
+      }
       return map;
     } finally {
       lessonCountInFlight.delete(key);
@@ -558,7 +668,7 @@ export async function getCourseWithContent(
         .leftJoin(user, eq(unit.createdBy, user.id))
         .where(eq(unit.courseId, courseId));
 
-      const mappedUnits = units.map((u) => {
+      let mappedUnits = units.map((u) => {
         const safeResult = getUnitLessonsSafe(u.markdown ?? "");
         const lessons = safeResult?.lessons ?? [];
         return {
@@ -575,6 +685,31 @@ export async function getCourseWithContent(
           questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
         };
       });
+
+      if (mappedUnits.length === 0) {
+        const { getAllUnits } = await import("@/lib/content/registry");
+        const fsUnits = getAllUnits().filter((u) => u.parsed.courseId === courseId);
+        mappedUnits = fsUnits.map((u) => {
+          const p = u.parsed;
+          const match = p.title.match(/Unit\s+(\d+)/i);
+          const unitNum = match ? parseInt(match[1], 10) : null;
+          const unitId = unitNum ? `${courseId}-unit-${unitNum}` : `${courseId}-${p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+          const lessons = p.lessons ?? [];
+          return {
+            id: unitId,
+            title: p.title,
+            description: p.description,
+            icon: p.icon,
+            color: p.color,
+            lessons,
+            parseError: false,
+            createdBy: null,
+            creatorName: courseCreatorName,
+            createdAt: null,
+            questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
+          };
+        });
+      }
 
       const res: Course = {
         id: courseRow.id,
@@ -1273,33 +1408,110 @@ export async function getCourseForManagement(
   userId: string,
   isAdmin: boolean
 ): Promise<CourseManagementInfo | null> {
-  const [courseRow] = await db
-    .select({
-      id: course.id,
-      title: course.title,
-      sourceLanguage: course.sourceLanguage,
-      targetLanguage: course.targetLanguage,
-      level: course.level,
-      visibility: course.visibility,
-      createdBy: course.createdBy,
-    })
-    .from(course)
-    .where(eq(course.id, courseId));
+  let courseRow: {
+    id: string;
+    title: string;
+    sourceLanguage: string;
+    targetLanguage: string;
+    level: string;
+    visibility: "public" | "private" | null;
+    createdBy: string | null;
+  } | null = null;
+
+  let units: {
+    id: string;
+    title: string | null;
+    icon: string | null;
+    visibility: "public" | "private" | null;
+    markdown: string | null;
+  }[] = [];
+
+  if (await isDbAvailable()) {
+    try {
+      const [cr] = await db
+        .select({
+          id: course.id,
+          title: course.title,
+          sourceLanguage: course.sourceLanguage,
+          targetLanguage: course.targetLanguage,
+          level: course.level,
+          visibility: course.visibility,
+          createdBy: course.createdBy,
+        })
+        .from(course)
+        .where(eq(course.id, courseId));
+
+      if (cr) {
+        if (cr.createdBy !== userId && !isAdmin) return null;
+        courseRow = cr;
+        units = await db
+          .select({
+            id: unit.id,
+            title: unit.title,
+            icon: unit.icon,
+            visibility: unit.visibility,
+            markdown: unit.markdown,
+          })
+          .from(unit)
+          .where(eq(unit.courseId, courseId));
+      }
+    } catch (err) {
+      console.warn("getCourseForManagement DB error:", err);
+    }
+  }
+
+  // Filesystem fallback for course metadata if not in DB
+  if (!courseRow && isAdmin) {
+    try {
+      const { getAllCourses } = await import("@/lib/content/registry");
+      const fc = getAllCourses().find((c) => c.id === courseId);
+      if (fc) {
+        courseRow = {
+          id: fc.id,
+          title: fc.title,
+          sourceLanguage: fc.sourceLanguage,
+          targetLanguage: fc.targetLanguage,
+          level: fc.level,
+          visibility: "public",
+          createdBy: null,
+        };
+      }
+    } catch {}
+  }
 
   if (!courseRow) return null;
 
-  if (courseRow.createdBy !== userId && !isAdmin) return null;
+  let mappedUnits = units.map((u) => {
+    const { lessons } = getUnitLessonsSafe(u.markdown ?? "");
+    return {
+      id: u.id,
+      title: u.title ?? "Untitled",
+      icon: u.icon,
+      visibility: u.visibility,
+      lessonCount: lessons.length,
+      questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
+    };
+  });
 
-  const units = await db
-    .select({
-      id: unit.id,
-      title: unit.title,
-      icon: unit.icon,
-      visibility: unit.visibility,
-      markdown: unit.markdown,
-    })
-    .from(unit)
-    .where(eq(unit.courseId, courseId));
+  if (mappedUnits.length === 0) {
+    const { getAllUnits } = await import("@/lib/content/registry");
+    const fsUnits = getAllUnits().filter((u) => u.parsed.courseId === courseId);
+    mappedUnits = fsUnits.map((u) => {
+      const p = u.parsed;
+      const match = p.title.match(/Unit\s+(\d+)/i);
+      const unitNum = match ? parseInt(match[1], 10) : null;
+      const unitId = unitNum ? `${courseId}-unit-${unitNum}` : `${courseId}-${p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+      const lessons = p.lessons ?? [];
+      return {
+        id: unitId,
+        title: p.title,
+        icon: p.icon,
+        visibility: "public",
+        lessonCount: lessons.length,
+        questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
+      };
+    });
+  }
 
   return {
     id: courseRow.id,
@@ -1309,19 +1521,7 @@ export async function getCourseForManagement(
     level: courseRow.level,
     visibility: courseRow.visibility,
     createdBy: courseRow.createdBy,
-    units: naturalSortUnits(
-      units.map((u) => {
-        const { lessons } = getUnitLessonsSafe(u.markdown ?? "");
-        return {
-          id: u.id,
-          title: u.title,
-          icon: u.icon,
-          visibility: u.visibility,
-          lessonCount: lessons.length,
-          questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
-        };
-      })
-    ),
+    units: naturalSortUnits(mappedUnits),
   };
 }
 
@@ -1381,44 +1581,97 @@ export async function getCourseMarkdownForEdit(
   userId: string,
   isAdmin: boolean,
 ): Promise<CourseMarkdownForEdit | null> {
-  if (!(await isDbAvailable())) return null;
+  let courseTitle: string | null = null;
+  let canEdit = isAdmin;
+  let unitsFromDb: { id: string; title: string | null; icon: string | null; markdown: string | null }[] = [];
 
-  const [courseRow] = await db
-    .select({
-      id: course.id,
-      title: course.title,
-      createdBy: course.createdBy,
-    })
-    .from(course)
-    .where(eq(course.id, courseId));
+  if (await isDbAvailable()) {
+    try {
+      const [courseRow] = await db
+        .select({
+          id: course.id,
+          title: course.title,
+          createdBy: course.createdBy,
+        })
+        .from(course)
+        .where(eq(course.id, courseId));
 
-  if (!courseRow) return null;
-  if (courseRow.createdBy !== userId && !isAdmin) return null;
+      if (courseRow) {
+        courseTitle = courseRow.title;
+        if (courseRow.createdBy === userId || isAdmin) {
+          canEdit = true;
+        } else {
+          return null;
+        }
 
-  const units = await db
-    .select({
-      id: unit.id,
-      title: unit.title,
-      icon: unit.icon,
-      markdown: unit.markdown,
-    })
-    .from(unit)
-    .where(eq(unit.courseId, courseId));
+        unitsFromDb = await db
+          .select({
+            id: unit.id,
+            title: unit.title,
+            icon: unit.icon,
+            markdown: unit.markdown,
+          })
+          .from(unit)
+          .where(eq(unit.courseId, courseId));
+      }
+    } catch (err) {
+      console.warn("getCourseMarkdownForEdit DB error:", err);
+    }
+  }
 
-  return {
-    id: courseRow.id,
-    title: courseRow.title,
-    units: naturalSortUnits(
-      units.map((u) => {
-        const { lessons } = getUnitLessonsSafe(u.markdown ?? "");
+  // If DB provided units
+  if (unitsFromDb.length > 0) {
+    const mappedUnits = unitsFromDb.map((u) => {
+      const { lessons } = getUnitLessonsSafe(u.markdown ?? "");
+      return {
+        id: u.id,
+        title: u.title ?? "Untitled",
+        icon: u.icon ?? null,
+        markdown: u.markdown ?? "",
+        lessonCount: lessons.length,
+      };
+    });
+
+    return {
+      id: courseId,
+      title: courseTitle ?? courseId,
+      units: naturalSortUnits(mappedUnits),
+    };
+  }
+
+  // Filesystem fallback when DB units are empty or DB is unavailable
+  if (canEdit) {
+    try {
+      const { getAllCourses, getAllUnits } = await import("@/lib/content/registry");
+      const fsCourse = getAllCourses().find((c) => c.id === courseId);
+      if (fsCourse) {
+        courseTitle = courseTitle ?? fsCourse.title;
+        const fsUnits = getAllUnits().filter((u) => u.parsed.courseId === courseId);
+        const mappedUnits = fsUnits.map((u) => {
+          const p = u.parsed;
+          const match = p.title.match(/Unit\s+(\d+)/i);
+          const unitNum = match ? parseInt(match[1], 10) : null;
+          const unitId = unitNum ? `${courseId}-unit-${unitNum}` : `${courseId}-${p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+          const { lessons } = getUnitLessonsSafe(u.markdown ?? "");
+          return {
+            id: unitId,
+            title: p.title ?? "Untitled",
+            icon: p.icon ?? null,
+            markdown: u.markdown ?? "",
+            lessonCount: lessons.length,
+          };
+        });
+
         return {
-          id: u.id,
-          title: u.title ?? "Untitled",
-          icon: u.icon ?? null,
-          markdown: u.markdown ?? "",
-          lessonCount: lessons.length,
+          id: courseId,
+          title: courseTitle,
+          units: naturalSortUnits(mappedUnits),
         };
-      }),
-    ),
-  };
+      }
+    } catch (err) {
+      console.warn("getCourseMarkdownForEdit filesystem error:", err);
+    }
+  }
+
+  return null;
 }
