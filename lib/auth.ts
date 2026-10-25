@@ -93,21 +93,12 @@ export const auth = betterAuth({
     sendResetPassword: async ({ user, url }) => {
       void sendEmail({
         to: user.email,
-<<<<<<< HEAD
-        subject: "Reset your jubeidanci password",
-        html: `
-          <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 480px; margin: 0 auto; padding: 40px 20px;">
-            <h1 style="color: #58cc02; font-size: 28px; margin-bottom: 8px;">jubeidanci</h1>
-            <p style="color: #777; font-size: 14px; margin-bottom: 32px;">Learn a language. Have fun.</p>
-            <h2 style="color: #3c3c3c; font-size: 20px; margin-bottom: 16px;">Reset your password</h2>
-=======
         subject: "重置您的 句背单词 密码",
         html: `
           <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 480px; margin: 0 auto; padding: 40px 20px;">
             <h1 style="color: #58cc02; font-size: 28px; margin-bottom: 8px;">句背单词 · jubeidanci</h1>
             <p style="color: #777; font-size: 14px; margin-bottom: 32px;">语境记词 · 句中得悟</p>
             <h2 style="color: #3c3c3c; font-size: 20px; margin-bottom: 16px;">重置您的密码</h2>
->>>>>>> 2c1df5327456bac13425315bafe7b7206562a381
             <p style="color: #3c3c3c; font-size: 16px; line-height: 1.5; margin-bottom: 24px;">
               您好 ${user.name || ""}，<br><br>
               我们收到了重置您密码的请求。请点击下方按钮设置新密码：
