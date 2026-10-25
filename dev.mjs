@@ -1,28 +1,61 @@
 import { spawn } from "node:child_process";
 import path from "node:path";
 
-// Translate incoming CLI flags (like Vite-style --host from supervisor) into Next.js flags
+const incomingArgs = process.argv.slice(2);
 const args = [];
-for (let i = 2; i < process.argv.length; i++) {
-  const arg = process.argv[i];
+
+let hasHost = false;
+let hasPort = false;
+
+for (let i = 0; i < incomingArgs.length; i++) {
+  const arg = incomingArgs[i];
+
   if (arg === "--host") {
-    args.push("-H");
+    const nextArg = incomingArgs[i + 1];
+    if (nextArg && !nextArg.startsWith("-")) {
+      args.push("-H", nextArg);
+      i++;
+    } else {
+      args.push("-H", "0.0.0.0");
+    }
+    hasHost = true;
   } else if (arg.startsWith("--host=")) {
     args.push("-H", arg.slice(7));
+    hasHost = true;
+  } else if (arg === "-H" || arg === "--hostname") {
+    const nextArg = incomingArgs[i + 1];
+    if (nextArg && !nextArg.startsWith("-")) {
+      args.push("-H", nextArg);
+      i++;
+    } else {
+      args.push("-H", "0.0.0.0");
+    }
+    hasHost = true;
+  } else if (arg === "-p" || arg === "--port") {
+    const nextArg = incomingArgs[i + 1];
+    if (nextArg && !nextArg.startsWith("-")) {
+      args.push("-p", nextArg);
+      i++;
+    } else {
+      args.push("-p", "3000");
+    }
+    hasPort = true;
+  } else if (arg.startsWith("--port=")) {
+    args.push("-p", arg.slice(7));
+    hasPort = true;
   } else {
     args.push(arg);
   }
 }
 
-if (!args.includes("-p") && !args.includes("--port")) {
+if (!hasPort) {
   args.unshift("-p", "3000");
 }
-if (!args.includes("-H") && !args.includes("--hostname")) {
+if (!hasHost) {
   args.unshift("-H", "0.0.0.0");
 }
 
-// Ensure webpack dev mode for stability in AI Studio container
-if (!args.includes("--webpack") && !args.includes("--turbo")) {
+if (!args.includes("--webpack") && !args.includes("--turbo") && !args.includes("--turbopack")) {
   args.push("--webpack");
 }
 

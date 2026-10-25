@@ -579,7 +579,16 @@ async function computeLessonCountByCourse(
       lessonCountCache.set(key, { ts: Date.now(), value: map });
       return map;
     } catch (err) {
-      console.warn("computeLessonCountByCourse: unit query failed:", err);
+      console.warn("computeLessonCountByCourse: unit query failed, falling back to filesystem:", err);
+      const { getAllUnits } = await import("@/lib/content/registry");
+      const fsUnits = getAllUnits();
+      for (const cId of courseIds) {
+        const matching = fsUnits.filter((u) => u.parsed.courseId === cId);
+        const count = matching.reduce((sum, u) => sum + (u.parsed.lessons?.length ?? 0), 0);
+        if (count > 0) {
+          map.set(cId, count);
+        }
+      }
       return map;
     } finally {
       lessonCountInFlight.delete(key);
