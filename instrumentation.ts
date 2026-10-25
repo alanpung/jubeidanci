@@ -1,3 +1,6 @@
+import { migrate } from "drizzle-orm/postgres-js/migrator";
+import { db } from "./lib/db";
+
 /**
  * Next.js instrumentation hook.
  *
@@ -21,9 +24,6 @@ export async function register() {
   if (!rawConnectionString) return;
 
   try {
-    const req = eval("require");
-    const { migrate } = req("drizzle-orm/postgres-js/migrator");
-    const { db } = req("./lib/db");
     await migrate(db, { migrationsFolder: "./drizzle" });
   } catch (err) {
     // Never let a migration hiccup take the whole app down; log and continue.
