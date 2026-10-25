@@ -125,7 +125,11 @@ export async function GET(
               color: "#58CC02",
             }}
           >
+<<<<<<< HEAD
             jubeidanci
+=======
+            句背单词 · jubeidanci
+>>>>>>> 2c1df5327456bac13425315bafe7b7206562a381
           </div>
         </div>
       </div>
