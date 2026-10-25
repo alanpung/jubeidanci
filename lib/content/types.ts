@@ -24,6 +24,7 @@ export interface Unit {
   parseError?: boolean;
   createdBy?: string | null;
   creatorName?: string | null;
+  createdAt?: Date | null;
   questionType?: QuestionTypeInfo | null;
 }
 
@@ -247,13 +248,13 @@ export interface CourseManagementInfo {
   sourceLanguage: string;
   targetLanguage: string;
   level: string;
-  visibility: string | null;
+  visibility: "public" | "private" | null;
   createdBy: string | null;
   units: {
     id: string;
     title: string;
-    icon: string;
-    visibility: string | null;
+    icon: string | null;
+    visibility: "public" | "private" | null;
     lessonCount: number;
     questionType?: QuestionTypeInfo | null;
   }[];

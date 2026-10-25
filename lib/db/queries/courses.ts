@@ -499,13 +499,14 @@ export async function getCourseTitle(courseId: string): Promise<string | null> {
       .from(course)
       .where(eq(course.id, courseId))
       .limit(1);
-    let title = rows[0]?.title ?? null;
+    let title: string | null = rows[0]?.title ?? null;
     if (!title) {
       const { getAllCourses } = await import("@/lib/content/registry");
       title = getAllCourses().find((c) => c.id === courseId)?.title ?? null;
     }
-    courseTitleCache.set(courseId, { title, ts: Date.now() });
-    return title;
+    const finalTitle: string = title ?? courseId;
+    courseTitleCache.set(courseId, { title: finalTitle, ts: Date.now() });
+    return finalTitle;
   } catch (err) {
     console.warn("getCourseTitle failed, falling back to filesystem:", err);
     try {
@@ -705,7 +706,7 @@ export async function getCourseWithContent(
             parseError: false,
             createdBy: null,
             creatorName: courseCreatorName,
-            createdAt: null,
+            createdAt: new Date(),
             questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
           };
         });
@@ -1443,8 +1444,11 @@ export async function getCourseForManagement(
 
       if (cr) {
         if (cr.createdBy !== userId && !isAdmin) return null;
-        courseRow = cr;
-        units = await db
+        courseRow = {
+          ...cr,
+          visibility: (cr.visibility as "public" | "private" | null) ?? null,
+        };
+        const dbUnits = await db
           .select({
             id: unit.id,
             title: unit.title,
@@ -1454,6 +1458,10 @@ export async function getCourseForManagement(
           })
           .from(unit)
           .where(eq(unit.courseId, courseId));
+        units = dbUnits.map((u) => ({
+          ...u,
+          visibility: (u.visibility as "public" | "private" | null) ?? null,
+        }));
       }
     } catch (err) {
       console.warn("getCourseForManagement DB error:", err);
