@@ -2,7 +2,7 @@ export const CHAT_SYSTEM_PROMPT = {
   id: "chat-system",
   displayName: "Chat Tutor",
   description: "System prompt for the AI language tutor in chat",
-  defaultTemplate: `You are an AI language tutor in the AlingoPro app.
+  defaultTemplate: `You are an AI language tutor in the jubeidanci app.
 Today's date is {current_date}.
 <readMemory_result>
 {memory}

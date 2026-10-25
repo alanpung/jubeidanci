@@ -35,7 +35,7 @@ console.log("DEBUG: Google Client Secret present:", !!googleClientSecret);
 const staticTrustedOrigins = Array.from(
   new Set([
     baseURL,
-    "https://alingopro.vercel.app",
+    "https://jubeidanci.vercel.app",
     "https://*.vercel.app",
     "https://*.run.app",
     ...(process.env.APP_URL ? [process.env.APP_URL.replace(/\/+$/, "")] : []),
@@ -93,10 +93,10 @@ export const auth = betterAuth({
     sendResetPassword: async ({ user, url }) => {
       void sendEmail({
         to: user.email,
-        subject: "Reset your AlingoPro password",
+        subject: "Reset your jubeidanci password",
         html: `
           <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 480px; margin: 0 auto; padding: 40px 20px;">
-            <h1 style="color: #58cc02; font-size: 28px; margin-bottom: 8px;">AlingoPro</h1>
+            <h1 style="color: #58cc02; font-size: 28px; margin-bottom: 8px;">jubeidanci</h1>
             <p style="color: #777; font-size: 14px; margin-bottom: 32px;">Learn a language. Have fun.</p>
             <h2 style="color: #3c3c3c; font-size: 20px; margin-bottom: 16px;">Reset your password</h2>
             <p style="color: #3c3c3c; font-size: 16px; line-height: 1.5; margin-bottom: 24px;">

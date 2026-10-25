@@ -23,13 +23,13 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || process.env.APP_URL || "https://alingopro.vercel.app"),
-  title: "AlingoPro",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || process.env.APP_URL || "https://jubeidanci.vercel.app"),
+  title: "jubeidanci",
   description: "OpenSource AI connected to language learning",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    title: "AlingoPro",
+    title: "jubeidanci",
     statusBarStyle: "default",
   },
   icons: {

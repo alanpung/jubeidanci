@@ -125,7 +125,7 @@ export async function GET(
               color: "#58CC02",
             }}
           >
-            AlingoPro
+            jubeidanci
           </div>
         </div>
       </div>
