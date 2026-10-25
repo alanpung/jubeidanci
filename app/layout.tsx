@@ -23,13 +23,16 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || process.env.APP_URL || "https://alingopro.vercel.app"),
-  title: "AlingoPro",
-  description: "OpenSource AI connected to language learning",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || process.env.APP_URL || "https://jubeidanci.vercel.app"),
+  title: {
+    default: "句背单词 - jubeidanci",
+    template: "%s | 句背单词",
+  },
+  description: "句背单词 — 基于语境与句子翻译的英语词汇学习平台",
   manifest: "/manifest.json",
   appleWebApp: {
     capable: true,
-    title: "AlingoPro",
+    title: "句背单词",
     statusBarStyle: "default",
   },
   icons: {

@@ -113,7 +113,7 @@ export function VoiceSelector({ initialSettings }: VoiceSelectorProps) {
 
     const sample =
       testText ||
-      "Hello and welcome to AlingoPro. Master new languages with confidence, intelligence, and natural cadence.";
+      "Hello and welcome to 句背单词 (jubeidanci). Master new languages with confidence, intelligence, and natural cadence.";
 
     try {
       const activeInstructions =

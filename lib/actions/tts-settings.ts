@@ -150,7 +150,7 @@ export async function previewVoiceAudio({
 
   const text =
     sampleText ||
-    "Hello! Welcome to AlingoPro. Master new languages with intelligence, confidence, and natural flow.";
+    "Hello! Welcome to 句背单词 (jubeidanci). Master vocabulary and sentence translation with confidence, intelligence, and natural cadence.";
 
   try {
     const result = await generateSpeech(text, language, {

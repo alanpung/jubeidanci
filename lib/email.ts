@@ -5,7 +5,7 @@ const resend = process.env.RESEND_API_KEY
   : null;
 
 const fromEmail =
-  process.env.RESEND_FROM_EMAIL || "AlingoPro <onboarding@resend.dev>";
+  process.env.RESEND_FROM_EMAIL || "句背单词 <onboarding@resend.dev>";
 
 interface SendEmailOptions {
   to: string;

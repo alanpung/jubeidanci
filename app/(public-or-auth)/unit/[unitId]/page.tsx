@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const unit = await getUnitWithContent(unitId);
 
   if (!unit || unit.visibility !== "public") {
-    return { title: "Unit | AlingoPro" };
+    return { title: "Unit | 句背单词" };
   }
 
   const lessonCount = unit.lessons.length;
@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? `${unit.description} — ${details}`
     : unit.description;
 
-  const title = `${unit.title} | AlingoPro`;
+  const title = `${unit.title} | 句背单词`;
 
   const url = `/unit/${unitId}`;
 
@@ -49,7 +49,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       url,
       type: "website",
-      siteName: "AlingoPro",
+      siteName: "句背单词",
       images: [
         {
           url: `/unit/${unitId}/og-image`,
