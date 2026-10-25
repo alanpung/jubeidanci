@@ -113,11 +113,7 @@ export function VoiceSelector({ initialSettings }: VoiceSelectorProps) {
 
     const sample =
       testText ||
-<<<<<<< HEAD
-      "Hello and welcome to jubeidanci. Master new languages with confidence, intelligence, and natural cadence.";
-=======
       "Hello and welcome to 句背单词 (jubeidanci). Master new languages with confidence, intelligence, and natural cadence.";
->>>>>>> 2c1df5327456bac13425315bafe7b7206562a381
 
     try {
       const activeInstructions =
