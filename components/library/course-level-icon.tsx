@@ -301,10 +301,15 @@ export const LEVEL_LABELS: Record<string, string> = {
  *  to the middle of the tile (and clear of the corner badges) and the title
  *  always reads to its right, inside the cover.
  *
- *  The fill is a *very light* tint; only the outline (border) and symbol carry
- *  the full colour. A course's CEFR level is a small round badge in the
- *  LOWER-RIGHT corner. `children` are the other corner controls (visibility
- *  badge, add/remove ×, owner edit button) rendered INSIDE the cover. */
+ *  The SYMBOL is a solid, fully-coloured tile with a white glyph — exactly the
+ *  symbols shown in the legend (blue Multiple Choice, purple Translation, …).
+ *  A *level* folder instead wears a round colour badge carrying its CEFR code
+ *  (A1–C2), so a level tile and a type tile are told apart at a glance.
+ *
+ *  The fill is a *very light* tint; only the outline (border) carries the full
+ *  colour. A course's CEFR level is a small round badge in the LOWER-RIGHT
+ *  corner. `children` are the other corner controls (visibility badge,
+ *  add/remove ×, owner edit button) rendered INSIDE the cover. */
 export function CourseCover({
   level,
   questionType,
@@ -341,20 +346,30 @@ export function CourseCover({
       className={`relative flex w-full items-center justify-center gap-2.5 rounded-2xl border-2 px-3 pt-7 pb-7 shadow-sm ${visual.light} ${visual.outline} ${className}`}
     >
       {/* Symbol — grouped with the title and centred, so it never collides with
-          the top-left visibility badge. */}
-      <span
-        className={`flex h-10 w-10 shrink-0 items-center justify-center ${visual.symbol}`}
-      >
-        {levelAsSymbol ? (
-          <span className="text-4xl font-black leading-none tracking-tight">
+          the top-left visibility badge.
+
+          A level folder wears a ROUND colour badge with its CEFR code; every
+          other cover wears the solid, filled symbol tile from the legend. */}
+      {levelAsSymbol ? (
+        <span
+          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 text-white shadow-sm ${levelStyle.bg} ${levelStyle.border}`}
+        >
+          <span className="text-2xl font-black leading-none tracking-tight">
             {cleanLevel}
           </span>
-        ) : glyph ?? <Icon className="h-9 w-9 stroke-[2.25]" />}
-      </span>
+        </span>
+      ) : (
+        <span
+          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border-2 text-white shadow-sm [&_svg]:h-6 [&_svg]:w-6 ${visual.bg} ${visual.border}`}
+        >
+          {glyph ?? <Icon className="h-6 w-6 stroke-[2.25]" />}
+        </span>
+      )}
 
-      {/* Title — inside the cover, to the right of the symbol. */}
+      {/* Title — inside the cover, to the right of the symbol. Its width is
+          capped (no flex-grow) so the symbol + title stay a centred group. */}
       {name ? (
-        <span className="line-clamp-2 min-w-0 max-w-[70%] text-[13px] font-black leading-tight text-lingo-text">
+        <span className="line-clamp-2 min-w-0 max-w-[58%] text-[13px] font-black leading-tight text-lingo-text">
           {name}
         </span>
       ) : null}
