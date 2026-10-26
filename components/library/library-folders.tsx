@@ -85,6 +85,14 @@ export function LibraryFolders({
 
   const folders = groupBy === "type" ? typeFolders : levelFolders;
 
+  // Tidy rows for both groupings: 6 CEFR levels sit 3-up on phones and 6-up
+  // from `min-[480px]`; the 8 exercise types stay 4-up so neither grouping
+  // leaves a ragged half-row.
+  const gridClass =
+    groupBy === "type"
+      ? "grid grid-cols-4 gap-2.5"
+      : "grid grid-cols-3 gap-2.5 min-[480px]:grid-cols-6";
+
   return (
     <section className="mt-8">
       <div className="mb-4 flex items-center justify-between gap-2">
@@ -116,39 +124,46 @@ export function LibraryFolders({
       {/* relative: the browser window is absolutely positioned over this box on
           phones (covering the folders), and flows inline under it on desktop. */}
       <div className="relative">
-        <div className="grid grid-cols-2 gap-2 min-[480px]:grid-cols-4">
+        <div className={gridClass}>
           {folders.map((f) => {
             const isActive = activeKey === f.key;
-            const base =
-              "group flex flex-col items-center justify-center rounded-2xl border-2 bg-white transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border active:translate-y-0";
-            const activeCls = isActive
-              ? "border-lingo-green shadow-[0_4px_0_0] shadow-lingo-border"
-              : "border-lingo-border";
-
             return (
               <button
                 key={f.key}
                 type="button"
                 onClick={() => onOpenKey(activeKey === f.key ? null : f.key)}
                 aria-expanded={isActive}
-                className={`${base} ${activeCls} p-2.5`}
+                aria-label={f.label}
+                className={`group flex flex-col items-center gap-1.5 transition-transform active:translate-y-0 ${
+                  isActive ? "scale-105" : "hover:-translate-y-0.5"
+                }`}
               >
+                {/* The colored block IS the tile — no white card behind it, so the
+                    grid reads as a row of solid level/type chips. */}
+                <span
+                  className={`flex h-12 w-12 items-center justify-center rounded-xl border-2 text-white shadow-sm transition-all group-hover:shadow-md sm:h-14 sm:w-14 ${
+                    f.bg
+                  } ${
+                    f.border
+                  } ${
+                    isActive
+                      ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
+                      : ""
+                  }`}
+                >
+                  {f.isType ? (
+                    f.Icon ? <f.Icon className="h-6 w-6 stroke-[2.25]" /> : null
+                  ) : (
+                    <span className="text-sm font-black sm:text-base">{f.label}</span>
+                  )}
+                </span>
+                {/* Level folders already spell the code inside the block, so only
+                    type folders need a caption under the glyph. */}
                 {f.isType ? (
-                  <span
-                    className={`flex h-12 w-12 items-center justify-center rounded-xl text-white shadow-sm ${f.bg}`}
-                  >
-                    {f.Icon ? <f.Icon className="h-6 w-6 stroke-[2.25]" /> : null}
-                  </span>
-                ) : (
-                  <span
-                    className={`flex h-12 w-12 items-center justify-center rounded-xl text-base font-black text-white shadow-sm ${f.bg} ${f.border}`}
-                  >
+                  <span className="text-center text-[10px] font-bold leading-tight text-lingo-text">
                     {f.label}
                   </span>
-                )}
-                <span className="mt-1.5 text-center text-[11px] font-bold leading-tight text-lingo-text">
-                  {f.label}
-                </span>
+                ) : null}
               </button>
             );
           })}

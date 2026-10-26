@@ -10,7 +10,7 @@ import { addUnitToLibrary, removeUnitFromLibrary } from "@/lib/actions/library";
 import { CreateUnitForm } from "@/components/library/create-unit-form";
 import { QuestionTypeBadge } from "@/components/units/question-type-badge";
 import { CopyLinkButton } from "@/components/ui/copy-link-button";
-import { DeckShelf, DeckStack, groupByLevel } from "@/components/library/library-deck";
+import { DeckStack, levelRank } from "@/components/library/library-deck";
 import { X, Plus } from "lucide-react";
 
 interface StandaloneUnitsProps {
@@ -55,15 +55,15 @@ export function StandaloneUnits({ units, isAdmin }: StandaloneUnitsProps) {
         </p>
       ) : (
         <div className="min-w-0">
-          {groupByLevel(units, (u) => u.level).map(({ level, items }) => (
-            <DeckShelf key={level ?? "other"} level={level} count={items.length}>
-              {items.map((u) => (
+          <div className="grid min-w-0 gap-3.5">
+            {[...units]
+              .sort((a, b) => levelRank(a.level) - levelRank(b.level))
+              .map((u) => (
                 <DeckStack key={u.id}>
                   <StandaloneUnitCard unit={u} isAdmin={isAdmin} />
                 </DeckStack>
               ))}
-            </DeckShelf>
-          ))}
+          </div>
         </div>
       )}
     </section>
