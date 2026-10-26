@@ -99,13 +99,11 @@ export function LibraryFolders({
 
   const folders = groupBy === "type" ? typeFolders : levelFolders;
 
-  // Tidy rows for both groupings: 6 CEFR levels sit 3-up on phones and 6-up
-  // from `min-[480px]`; the 8 exercise types stay 4-up so neither grouping
-  // leaves a ragged half-row.
-  const gridClass =
-    groupBy === "type"
-      ? "grid grid-cols-4 gap-2.5"
-      : "grid grid-cols-3 gap-2.5 min-[480px]:grid-cols-6";
+  // Every folder — CEFR level or exercise type — uses the *same* 2-up / 4-up
+  // grid as the course covers, so a folder tile is exactly as wide as the book
+  // cover you tap inside it. 6 levels pad to two rows of three on phones and
+  // one row of four + a pair on desktop; 8 types fill two tidy rows.
+  const gridClass = "grid grid-cols-2 gap-2.5 min-[480px]:grid-cols-4";
 
   const standaloneActive = activeKey === STANDALONE_KEY;
 

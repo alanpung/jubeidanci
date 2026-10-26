@@ -24,16 +24,18 @@ import {
 import {
   AddRemoveButton,
   VisibilityToggle,
+  VipCrownBadge,
 } from "@/components/library/book-parts";
 
 /** A student may keep at most this many courses on the top ("My Favorite")
- *  shelf. */
+ *  shelf. The grid matches the Library folders exactly (2-up on phones, 4-up
+ *  from `min-[480px]`), so the cap of eight fills exactly two tidy rows. */
 const MY_FAVORITE_CAP = 8;
 
-/** My Favorite grid geometry — 2-up on phones, 4-up from `min-[480px]`, the
- *  same rhythm the browse window uses, so a book is exactly as wide as the
- *  cover you tapped in the folder. */
-const BOOK_GRID = "grid grid-cols-2 gap-3 min-[480px]:grid-cols-4";
+/** Shared grid geometry for *every* cover on the page — My Favorite, the
+ *  Library folders, and the browse window all use these exact classes, so a
+ *  folder tile and the book cover you tap inside it are the same width. */
+const COVER_GRID = "grid grid-cols-2 gap-2.5 min-[480px]:grid-cols-4";
 
 /** One tile in the browse window.
  *
@@ -236,7 +238,7 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
             to add it here.
           </p>
         ) : (
-          <div className={BOOK_GRID}>
+          <div className={COVER_GRID}>
             {borrowed.map((c) => (
               <CourseBook
                 key={c.id}
@@ -253,8 +255,8 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
 
       {/* Library — folders grouped by CEFR Level (default) or exercise Type,
           right below My Favorite. Tapping one opens the small browser window (no
-          page navigation). On phones the window takes over the whole screen;
-          from lg up it sits underneath the folders. */}
+          page navigation). On phones the window layers over the folders; from
+          lg up it sits underneath them. */}
       <LibraryFolders
         groupBy={groupBy}
         onGroupBy={handleGroupBy}
@@ -278,10 +280,11 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
 
 /** The browser window opened from a Library folder.
  *
- *  On phones it takes over the *whole* screen — a fixed, full-height panel —
- *  so a folder shows its covers straight away instead of a sliver behind a
- *  scrollbar. From `lg` up it drops back into normal flow underneath the
- *  folders, as a bordered panel. */
+ *  On phones it layers *over* the folder grid (absolute, exactly the grid's
+ *  own box) so the reader browses in place of the folders instead of pushing
+ *  them off-screen. From `lg` up it drops back into normal flow underneath.
+ *  Every entry is a cover — the same filled tile used on My Favorite — so the
+ *  window reads as a tray of the same objects the folders represent. */
 function TypeBrowserWindow({
   title,
   entries,
@@ -308,7 +311,7 @@ function TypeBrowserWindow({
 
   return (
     <div
-      className="fixed inset-0 z-[100] flex flex-col overflow-hidden bg-lingo-card lg:static lg:inset-auto lg:z-auto lg:mt-4 lg:rounded-2xl lg:border-2 lg:border-lingo-border lg:shadow-lg"
+      className="absolute inset-0 z-30 flex flex-col overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-bg shadow-2xl lg:static lg:inset-auto lg:mt-4 lg:shadow-lg"
       role="dialog"
       aria-modal="false"
       aria-label={`${title} courses`}
@@ -336,9 +339,7 @@ function TypeBrowserWindow({
             No {title.toLowerCase()} yet.
           </p>
         ) : (
-          /* Two columns on a phone = three full rows of covers fill the
-             screen without a scrollbar; wider screens fit four. */
-          <div className="grid grid-cols-2 gap-3 min-[480px]:grid-cols-4">
+          <div className={COVER_GRID}>
             {entries.map((e) => (
               <BrowseCover
                 key={`${e.kind}-${e.id}`}
@@ -357,12 +358,18 @@ function TypeBrowserWindow({
   );
 }
 
-/** One cover inside the browse window: the cover, the title under it, and the
- *  controls that float over the cover's top corners. */
+/** One cover inside the browse window: the cover, the title + meta under it, and
+ *  the controls that float over the cover's corners.
+ *
+ *  It is the *same* tile as a My Favorite book — the only difference is the
+ *  top-right control: a + (not yet in My Library) or × (already in it). The
+ *  owner also gets the public/private/hide switch at the bottom-left. */
 function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean }) {
+  const isPublic = entry.course ? entry.course.visibility === "public" : true;
+
   return (
     <div className="group relative flex flex-col">
-      <div className="relative">
+      <div className="relative w-full">
         <Link
           href={entry.href}
           title={entry.title}
@@ -377,12 +384,22 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
           />
         </Link>
 
-        {entry.course && entry.isOwner ? (
+        {/* VIP crown — every non-public course wears one so a reader can tell
+            at a glance which books are private. */}
+        {!isPublic && (
           <div className="absolute -left-1.5 -top-1.5 z-20">
+            <VipCrownBadge />
+          </div>
+        )}
+
+        {/* Owner-only public / private / hide switch. */}
+        {entry.course && entry.isOwner ? (
+          <div className="absolute -left-1.5 -bottom-1.5 z-20">
             <VisibilityToggle course={entry.course} className="h-6 w-6" />
           </div>
         ) : null}
 
+        {/* + to add to My Library, or × to remove. */}
         {entry.showToggle ? (
           <div className="absolute -right-1.5 -top-1.5 z-20">
             <AddRemoveButton
@@ -407,13 +424,14 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
 
 /** A single book on the My Favorite shelf.
  *
- *  The cover is the tile: a big, fully coloured button with the symbol on it
- *  and the title underneath. There is no white card wrapping it, so the grid
- *  reads as a shelf of books rather than a row of small pictures in big
- *  white boxes. The whole tile opens the course for study (stretched-link: a
- *  transparent <Link> fills the tile); the round × in the top-right corner
- *  sits above that overlay in z-order and keeps its own click, so removing a
- *  book never navigates into it. */
+ *  Deliberately the SAME vertical tile as a Library folder — same grid, same
+ *  filled cover, same `mt-1.5 text-[11px]` title — so a My Favorite card is
+ *  exactly as wide as the folder it sits above and the two grids stay aligned.
+ *  The whole tile opens the course for study (stretched-link: a transparent
+ *  <Link> fills the tile); the round × in the top-right corner sits above that
+ *  overlay in z-order and keeps its own click, so removing a book never
+ *  navigates into it. A non-public book wears the VIP crown; the owner also
+ *  gets the public/private/hide switch at the bottom-left. */
 function CourseBook({
   course,
   isBorrowed,
@@ -427,6 +445,8 @@ function CourseBook({
   onBorrow: () => void;
   onRemove: () => void;
 }) {
+  const isPublic = course.visibility === "public";
+
   return (
     <div className="group relative flex flex-col items-center">
       {/* Stretched link: the entire tile opens the course for study. */}
@@ -434,32 +454,45 @@ function CourseBook({
         href={`/library/${course.id}`}
         title={`${course.title} · ${course.level} · ${course.unitCount} units`}
         aria-label={`Open ${course.title}`}
-        className="absolute inset-0 z-10"
+        className="absolute inset-0 z-10 rounded-2xl"
       />
 
-      {/* The cover — same size and shape as the folder icons above it. */}
-      <div className="w-full transition-transform group-hover:-translate-y-0.5">
+      <div className="relative w-full">
         <CourseCover
           level={course.level}
           title={course.title}
           courseId={course.id}
         />
+
+        {/* VIP crown for non-public courses. */}
+        {!isPublic && (
+          <div className="absolute -left-1.5 -top-1.5 z-20">
+            <VipCrownBadge />
+          </div>
+        )}
+
+        {/* Owner-only public / private / hide switch. */}
+        {course.isOwner && (
+          <div className="absolute -left-1.5 -bottom-1.5 z-20">
+            <VisibilityToggle course={course} className="h-6 w-6" />
+          </div>
+        )}
+
+        {/* Take it off the shelf — × in the top-right corner, above the
+            stretched link so removing a book never navigates into it. */}
+        <div className="absolute -right-1.5 -top-1.5 z-20">
+          <AddRemoveButton
+            isAdded={isBorrowed}
+            pending={pending}
+            onAdd={onBorrow}
+            onRemove={onRemove}
+          />
+        </div>
       </div>
 
       <p className="pointer-events-none mt-1.5 w-full line-clamp-2 text-center text-[11px] font-bold leading-tight text-lingo-text">
         {course.title}
       </p>
-
-      {/* Take it off the shelf — × in the top-right corner, above the stretched
-          link so removing a book never navigates into it. */}
-      <div className="absolute -right-1.5 -top-1.5 z-20">
-        <AddRemoveButton
-          isAdded={isBorrowed}
-          pending={pending}
-          onAdd={onBorrow}
-          onRemove={onRemove}
-        />
-      </div>
     </div>
   );
 }

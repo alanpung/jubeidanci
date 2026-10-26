@@ -122,8 +122,22 @@ export async function makeCoursePrivate(courseId: string): Promise<{ success: tr
   const [existing] = await db.select({ createdBy: course.createdBy, visibility: course.visibility }).from(course).where(eq(course.id, courseId));
   if (!existing) return { success: false, error: "Course not found" };
   if (existing.createdBy !== session.user.id && !admin) return { success: false, error: "You do not own this course" };
-  if (existing.visibility !== "public") return { success: false, error: "Course is already private" };
-  await db.update(course).set({ visibility: null, updatedAt: new Date() }).where(eq(course.id, courseId));
+  if (existing.visibility === "private") return { success: false, error: "Course is already private" };
+  await db.update(course).set({ visibility: "private", updatedAt: new Date() }).where(eq(course.id, courseId));
+  revalidateUnitPages(courseId);
+  return { success: true };
+}
+
+/** Hide a course: it becomes visible to its owner only (and admins). Non-owners
+ *  — including VIP students of the owner — can no longer see or open it. */
+export async function makeCourseHidden(courseId: string): Promise<{ success: true } | { success: false; error: string }> {
+  const session = await requireSession();
+  const admin = isAdminEmail(session.user.email);
+  const [existing] = await db.select({ createdBy: course.createdBy, visibility: course.visibility }).from(course).where(eq(course.id, courseId));
+  if (!existing) return { success: false, error: "Course not found" };
+  if (existing.createdBy !== session.user.id && !admin) return { success: false, error: "You do not own this course" };
+  if (existing.visibility === "hidden") return { success: false, error: "Course is already hidden" };
+  await db.update(course).set({ visibility: "hidden", updatedAt: new Date() }).where(eq(course.id, courseId));
   revalidateUnitPages(courseId);
   return { success: true };
 }

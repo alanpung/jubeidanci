@@ -2,15 +2,48 @@
 
 import { useTransition } from "react";
 import { useRouter } from "next/navigation";
-import { Globe, Crown } from "lucide-react";
+import { Globe, Crown, EyeOff } from "lucide-react";
 import type { CourseListItem } from "@/lib/content/types";
-import { makeCoursePublic, makeCoursePrivate } from "@/lib/actions/units";
-/** Owner-only public/VIP toggle, anchored to the LEFT of the course symbol.
+import { makeCoursePublic, makeCoursePrivate, makeCourseHidden } from "@/lib/actions/units";
+
+/** A small gold VIP crown pinned to the top-left corner of a course cover.
  *
- *  This replaces the old "…" menu (Make Public / Make VIP / Edit markdown /
- *  Delete). The owner edits content through the AI agent, so the menu was
- *  mostly dead weight — one direct switch does the only job that matters here.
- *  Non-owners never see it. */
+ *  Shown for every non-public course so at a glance a reader can tell which of
+ *  their books are private/VIP. It is purely decorative — the owner's real
+ *  control is the public/private/hide switch (VisibilityToggle). */
+export function VipCrownBadge() {
+  return (
+    <span
+      title="VIP course — only you can see this"
+      aria-label="VIP course"
+      className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-gradient-to-br from-amber-400 to-amber-600 text-white shadow-sm"
+    >
+      <Crown className="h-3 w-3 fill-white stroke-[2]" />
+    </span>
+  );
+}
+
+type VisState = "public" | "private" | "hidden";
+
+/** Map the stored visibility (null counts as private) to one of three states. */
+function stateOf(v: string | null | undefined): VisState {
+  if (v === "public") return "public";
+  if (v === "hidden") return "hidden";
+  return "private";
+}
+
+const NEXT: Record<VisState, VisState> = {
+  public: "private",
+  private: "hidden",
+  hidden: "public",
+};
+
+/** Owner-only public / private(VIP) / hidden switch, anchored to the
+ *  bottom-left of the course cover. Tap to cycle:
+ *    public → private(VIP) → hidden → public.
+ *  "hidden" means only the owner (and admins) can see the course. Going public
+ *  is one-way for other users, so the owner confirms first. Non-owners never
+ *  see this control. */
 export function VisibilityToggle({
   course,
   className = "",
@@ -20,48 +53,61 @@ export function VisibilityToggle({
 }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
-  const isPublic = course.visibility === "public";
+  const current = stateOf(course.visibility);
 
-  function toggle() {
-    // Going public is one-way for other users, so make the owner confirm.
-    if (!isPublic) {
+  function cycle() {
+    const next = NEXT[current];
+    if (next === "public") {
       const ok = window.confirm(
         "Make this course public?\n\nOnce public it becomes read-only for non-admins and every user can add it to My Favorite.",
       );
       if (!ok) return;
     }
     startTransition(async () => {
-      const res = isPublic
-        ? await makeCoursePrivate(course.id)
-        : await makeCoursePublic(course.id);
+      const res =
+        next === "public"
+          ? await makeCoursePublic(course.id)
+          : next === "private"
+            ? await makeCoursePrivate(course.id)
+            : await makeCourseHidden(course.id);
       if (!res.success) alert(res.error);
       else router.refresh();
     });
   }
 
+  const meta = {
+    public: {
+      Icon: Globe,
+      title: "Public — tap to make private (VIP)",
+      cls: "border-sky-300 bg-white text-sky-500 hover:bg-sky-50",
+    },
+    private: {
+      Icon: Crown,
+      title: "VIP (private) — tap to hide",
+      cls: "border-amber-300 bg-white text-amber-500 hover:bg-amber-50",
+    },
+    hidden: {
+      Icon: EyeOff,
+      title: "Hidden — tap to make public",
+      cls: "border-lingo-text bg-lingo-text text-white hover:bg-lingo-text/85",
+    },
+  }[current];
+
+  const Icon = meta.Icon;
+
   return (
     <button
       type="button"
-      onClick={toggle}
+      onClick={cycle}
       disabled={pending}
-      title={
-        isPublic
-          ? "Public — tap to make VIP (private)"
-          : "VIP (private) — tap to make public"
-      }
-      aria-label={isPublic ? "Make VIP (private)" : "Make public"}
-      className={`flex h-6 w-6 items-center justify-center rounded-full border-2 shadow-sm transition-colors disabled:opacity-50 ${
-        isPublic
-          ? "border-sky-300 bg-white text-sky-500 hover:bg-sky-50"
-          : "border-lingo-text bg-lingo-text text-white hover:bg-lingo-text/85"
-      } ${className}`}
+      title={meta.title}
+      aria-label={meta.title}
+      className={`flex h-6 w-6 items-center justify-center rounded-full border-2 shadow-sm transition-colors disabled:opacity-50 ${meta.cls} ${className}`}
     >
       {pending ? (
         <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
-      ) : isPublic ? (
-        <Globe className="h-3.5 w-3.5" />
       ) : (
-        <Crown className="h-3 w-3 fill-white stroke-[2]" />
+        <Icon className="h-3.5 w-3.5" />
       )}
     </button>
   );

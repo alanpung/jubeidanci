@@ -247,12 +247,19 @@ export function CourseCover({
   const border = typeVisual?.border ?? levelStyle.border;
 
   return (
+    // The previous-previous cover was a white rounded-2xl card with a small
+    // icon inside; we keep that exact shape and proportions but *fill* the
+    // white area with the level/type gradient, so the symbol sits directly on
+    // colour instead of floating in a white box. A book looks the same in the
+    // folders, on My Favorite, and inside the browse window.
     <div
-      className={`relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl border-2 text-white shadow-sm ${bg} ${border} ${className}`}
+      className={`relative flex w-full items-center justify-center rounded-2xl border-2 p-2.5 text-white shadow-sm ${bg} ${border} ${className}`}
     >
-      {glyph ?? <Icon className="h-9 w-9 stroke-[2.25]" />}
+      <div className="flex h-14 w-14 items-center justify-center">
+        {glyph ?? <Icon className="h-12 w-12 stroke-[2.25]" />}
+      </div>
       {showLevel && cleanLevel ? (
-        <span className="absolute bottom-1.5 right-1.5 rounded-md border border-white/40 bg-black/25 px-1.5 py-0.5 text-[10px] font-black leading-none text-white">
+        <span className="absolute bottom-1 right-1 rounded-md border border-white/40 bg-black/25 px-1.5 py-0.5 text-[10px] font-black leading-none text-white">
           {cleanLevel}
         </span>
       ) : null}
