@@ -1,21 +1,30 @@
 "use client";
 
 import type { ComponentType, ReactNode } from "react";
+import { Shuffle } from "lucide-react";
 import {
+  CourseCover,
   QUESTION_TYPE_LEGEND,
   resolveCourseQuestionType,
-  getCourseLevelStyle,
 } from "@/components/library/course-level-icon";
 
-/** One folder tile. A type folder carries an `Icon`; a level folder carries a
- *  `border` accent and renders its own CEFR code as the glyph. Keeping both on
- *  one optional-field shape (rather than a discriminated union) lets the grid
- *  below treat either grouping uniformly. */
+/** Key of the always-present folder that holds the units the AI tutor made. */
+export const STANDALONE_KEY = "standalone-units";
+
+/** The "mix" visual — the symbol every standalone unit wears. */
+const STANDALONE_VISUAL = {
+  bg: "bg-gradient-to-br from-fuchsia-500 to-purple-600",
+  border: "border-fuchsia-300/70",
+  Icon: Shuffle,
+};
+
+/** One folder tile. A type folder carries a `typeId` (the exercise type that
+ *  decides its colour + symbol); a level folder carries its CEFR code, which
+ *  is both the key and the glyph drawn inside the cover. */
 interface FolderItem {
   key: string;
   label: string;
-  bg: string;
-  border?: string;
+  typeId?: string;
   Icon?: ComponentType<{ className?: string }>;
   isType: boolean;
 }
@@ -27,11 +36,13 @@ interface FolderItem {
  *   - "By Level"  → six CEFR folders (A1–C2)  [DEFAULT]
  *   - "By Type"   → eight exercise-type folders (Flashcards, Translation, …)
  *
- * Tapping a folder does NOT navigate — it opens the small browser window
+ * Below either grid sits the "Standalone Units" folder: the units the AI tutor
+ * created. They belong to no course, so they belong to no CEFR level and no
+ * exercise type — hence their own folder, always visible in both groupings.
+ *
+ * Tapping a folder does NOT navigate — it opens the browser window
  * (`TypeBrowserWindow` in course-book-shelf) listing every course of that
- * level/type, where a +/× toggle adds to / removes from My Favorite. The window is
- * rendered *inside* this section (as children) so it never covers the My Favorite
- * shelf above it.
+ * level/type, where a +/× toggle adds to / removes from My Favorite.
  */
 
 const FOLDER_ORDER = [
@@ -58,6 +69,8 @@ interface LibraryFoldersProps {
   activeKey: string | null;
   /** Open/close the folder with this key. */
   onOpenKey: (key: string | null) => void;
+  /** How many standalone units the folder holds. */
+  standaloneCount: number;
   /** The browser window, rendered inside the Library section. */
   children?: ReactNode;
 }
@@ -67,6 +80,7 @@ export function LibraryFolders({
   onGroupBy,
   activeKey,
   onOpenKey,
+  standaloneCount,
   children,
 }: LibraryFoldersProps) {
   const typeFolders: FolderItem[] = FOLDER_ORDER.map((id) => {
@@ -74,14 +88,14 @@ export function LibraryFolders({
     const visual = resolveCourseQuestionType(undefined, undefined, id);
     const label = found?.label ?? visual?.label ?? id;
     const Icon = found?.Icon ?? visual?.Icon;
-    const bg = found?.bg ?? visual?.bg ?? "bg-lingo-gray";
-    return { key: label, label, Icon, bg, isType: true };
+    return { key: label, label, typeId: id, Icon, isType: true };
   }).filter((f) => f.Icon);
 
-  const levelFolders: FolderItem[] = LEVEL_ORDER.map((lvl) => {
-    const style = getCourseLevelStyle(lvl);
-    return { key: lvl, label: lvl, bg: style.bg, border: style.border, isType: false };
-  });
+  const levelFolders: FolderItem[] = LEVEL_ORDER.map((lvl) => ({
+    key: lvl,
+    label: lvl,
+    isType: false,
+  }));
 
   const folders = groupBy === "type" ? typeFolders : levelFolders;
 
@@ -92,6 +106,8 @@ export function LibraryFolders({
     groupBy === "type"
       ? "grid grid-cols-4 gap-2.5"
       : "grid grid-cols-3 gap-2.5 min-[480px]:grid-cols-6";
+
+  const standaloneActive = activeKey === STANDALONE_KEY;
 
   return (
     <section className="mt-8">
@@ -135,29 +151,37 @@ export function LibraryFolders({
                 aria-expanded={isActive}
                 aria-label={f.label}
                 className={`group flex flex-col items-center gap-1.5 transition-transform active:translate-y-0 ${
-                  isActive ? "scale-105" : "hover:-translate-y-0.5"
+                  isActive ? "" : "hover:-translate-y-0.5"
                 }`}
               >
-                {/* The colored block IS the tile — no white card behind it, so the
-                    grid reads as a row of solid level/type chips. */}
+                {/* The cover IS the button — the whole tile is the colour, so
+                    there is no white card and no white padding around it. */}
                 <span
-                  className={`flex h-12 w-12 items-center justify-center rounded-xl border-2 text-white shadow-sm transition-all group-hover:shadow-md sm:h-14 sm:w-14 ${
-                    f.bg
-                  } ${
-                    f.border
-                  } ${
-                    isActive
-                      ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
-                      : ""
+                  className={`block w-full transition-transform ${
+                    isActive ? "scale-[1.04]" : "group-hover:scale-[1.04]"
                   }`}
                 >
-                  {f.isType ? (
-                    f.Icon ? <f.Icon className="h-6 w-6 stroke-[2.25]" /> : null
-                  ) : (
-                    <span className="text-sm font-black sm:text-base">{f.label}</span>
-                  )}
+                  <CourseCover
+                    level={f.isType ? null : f.label}
+                    questionType={f.isType ? f.typeId : null}
+                    glyph={
+                      f.isType ? (
+                        f.Icon ? (
+                          <f.Icon className="h-7 w-7 stroke-[2.25]" />
+                        ) : null
+                      ) : (
+                        <span className="text-lg font-black">{f.label}</span>
+                      )
+                    }
+                    showLevel={false}
+                    className={
+                      isActive
+                        ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
+                        : ""
+                    }
+                  />
                 </span>
-                {/* Level folders already spell the code inside the block, so only
+                {/* Level folders already spell the code inside the cover, so only
                     type folders need a caption under the glyph. */}
                 {f.isType ? (
                   <span className="text-center text-[10px] font-bold leading-tight text-lingo-text">
@@ -168,6 +192,34 @@ export function LibraryFolders({
             );
           })}
         </div>
+
+        {/* Standalone units — the AI tutor's own units. Always listed, because
+            they belong to no CEFR level and no exercise type. */}
+        <button
+          type="button"
+          onClick={() => onOpenKey(standaloneActive ? null : STANDALONE_KEY)}
+          aria-expanded={standaloneActive}
+          className={`group mt-3 flex w-full items-center gap-3 rounded-2xl border-2 p-3 text-left shadow-sm transition-all active:translate-y-0 ${
+            STANDALONE_VISUAL.bg
+          } ${STANDALONE_VISUAL.border} ${
+            standaloneActive
+              ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
+              : ""
+          }`}
+        >
+          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/20">
+            <STANDALONE_VISUAL.Icon className="h-6 w-6 text-white stroke-[2.25]" />
+          </span>
+          <span className="min-w-0 flex-1">
+            <span className="block text-sm font-black text-white">
+              Standalone Units
+            </span>
+            <span className="block text-[11px] font-semibold text-white/80">
+              {standaloneCount} {standaloneCount === 1 ? "unit" : "units"} made
+              with the AI tutor
+            </span>
+          </span>
+        </button>
 
         {/* The browser window. On phones it layers over the folders above; from
             `lg` up it settles underneath them. */}
