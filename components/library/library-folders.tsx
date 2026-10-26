@@ -36,7 +36,7 @@ interface FolderItem {
  *
  * Tapping a folder does NOT navigate — it opens the browser window
  * (`TypeBrowserWindow` in course-book-shelf) listing every course of that
- * level/type, where a +/× toggle adds to / removes from My Favorite.
+ * level/type, where a +/× toggle adds to / removes from My Books.
  */
 
 const FOLDER_ORDER = [

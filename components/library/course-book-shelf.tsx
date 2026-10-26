@@ -27,12 +27,12 @@ import {
   CoverEditButton,
 } from "@/components/library/book-parts";
 
-/** A student may keep at most this many courses on the top ("My Favorite")
+/** A student may keep at most this many courses on the top ("My Books")
  *  shelf. The grid matches the Library folders exactly (2-up on phones, 4-up
  *  from `min-[480px]`), so the cap of eight fills exactly two tidy rows. */
-const MY_FAVORITE_CAP = 8;
+const MY_BOOKS_CAP = 8;
 
-/** Shared grid geometry for *every* cover on the page — My Favorite, the
+/** Shared grid geometry for *every* cover on the page — My Books, the
  *  Library folders, and the browse window all use these exact classes, so a
  *  folder tile and the book cover you tap inside it are the same width. */
 const COVER_GRID = "grid grid-cols-2 gap-2.5 min-[480px]:grid-cols-4";
@@ -87,10 +87,10 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     setActiveKey(null);
   }
 
-  // Cap the shelf at MY_FAVORITE_CAP so the top row never overflows its grid.
+  // Cap the shelf at MY_BOOKS_CAP so the top row never overflows its grid.
   const borrowed = courses
     .filter((c) => borrowedIds.has(c.id))
-    .slice(0, MY_FAVORITE_CAP);
+    .slice(0, MY_BOOKS_CAP);
 
   // Exercise type lives in the cover, not in a column, so derive it the same
   // way CourseCover does — otherwise the folder and the cover could disagree
@@ -144,8 +144,8 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
         : courseEntries.filter((e) => typeLabelOf(e.course!) === activeKey);
 
   function borrow(course: CourseListItem) {
-    if (borrowedIds.size >= MY_FAVORITE_CAP) {
-      alert(`You can keep at most ${MY_FAVORITE_CAP} favorites. Remove one first.`);
+    if (borrowedIds.size >= MY_BOOKS_CAP) {
+      alert(`You can keep at most ${MY_BOOKS_CAP} books. Remove one first.`);
       return;
     }
     setPendingId(course.id);
@@ -221,18 +221,18 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
 
   return (
     <div>
-      {/* My Favorite — the reader's own picks, capped at MY_FAVORITE_CAP */}
+      {/* My Books — the reader's own picks, capped at MY_BOOKS_CAP */}
       <section>
         <div className="mb-4 flex items-center gap-2">
-          <h2 className="text-base font-bold text-lingo-text">My Favorite</h2>
+          <h2 className="text-base font-bold text-lingo-text">My Books</h2>
           <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
-            {borrowed.length}/{MY_FAVORITE_CAP}
+            {borrowed.length}/{MY_BOOKS_CAP}
           </span>
         </div>
 
         {borrowed.length === 0 ? (
           <p className="rounded-xl border-2 border-dashed border-lingo-border bg-white p-4 text-center text-sm text-lingo-text-light">
-            No favorites yet. Open a folder under{" "}
+            No books yet. Open a folder under{" "}
             <span className="font-black">Library</span> below and tap the{" "}
             <span className="font-black text-lingo-blue">+</span> on any book
             to add it here.
@@ -254,7 +254,7 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
       </section>
 
       {/* Library — folders grouped by CEFR Level (default) or exercise Type,
-          right below My Favorite. Tapping one opens the small browser window (no
+          right below My Books. Tapping one opens the small browser window (no
           page navigation). On phones the window layers over the folders; from
           lg up it sits underneath them. */}
       <LibraryFolders
@@ -283,7 +283,7 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
  *  On phones it layers *over* the folder grid (absolute, exactly the grid's
  *  own box) so the reader browses in place of the folders instead of pushing
  *  them off-screen. From `lg` up it drops back into normal flow underneath.
- *  Every entry is a cover — the same filled tile used on My Favorite — so the
+ *  Every entry is a cover — the same filled tile used on My Books — so the
  *  window reads as a tray of the same objects the folders represent. */
 function TypeBrowserWindow({
   title,
@@ -361,7 +361,7 @@ function TypeBrowserWindow({
 /** One cover inside the browse window: the cover, the title + meta under it, and
  *  the controls that float over the cover's corners.
  *
- *  It is the *same* tile as a My Favorite book — the only difference is the
+ *  It is the *same* tile as a My Books book — the only difference is the
  *  top-right control: a + (not yet in My Library) or × (already in it). The
  *  owner also gets the public/private/hide switch at the bottom-left. */
 function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean }) {
@@ -417,10 +417,10 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
   );
 }
 
-/** A single book on the My Favorite shelf.
+/** A single book on the My Books shelf.
  *
  *  Deliberately the SAME vertical tile as a Library folder — same grid, same
- *  filled cover, same `mt-1.5 text-[11px]` title — so a My Favorite card is
+ *  filled cover, same `mt-1.5 text-[11px]` title — so a My Books card is
  *  exactly as wide as the folder it sits above and the two grids stay aligned.
  *  The whole tile opens the course for study (stretched-link: a transparent
  *  <Link> fills the tile); the round × in the top-right corner sits above that

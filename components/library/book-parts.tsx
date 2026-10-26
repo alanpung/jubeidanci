@@ -116,7 +116,7 @@ export function CoverEditButton({
     if (
       state === "public" &&
       !window.confirm(
-        "Make this course public? Once public every user can add it to My Favorite.",
+        "Make this course public? Once public every user can add it to My Books.",
       )
     ) {
       return;
@@ -197,7 +197,7 @@ export function CoverEditButton({
 /** The circular add (+) / remove (×) control.
  *
  *  Always sits inline in a flex slot — on the right of a Library browse row,
- *  or in the bottom-right corner of a My Favorite card — so the tap target is a
+ *  or in the bottom-right corner of a My Books card — so the tap target is a
  *  full-size button instead of a tiny glyph floating off the symbol. */
 export function AddRemoveButton({
   isAdded,
@@ -223,8 +223,8 @@ export function AddRemoveButton({
       type="button"
       onClick={isAdded ? onRemove : onAdd}
       disabled={pending}
-      title={isAdded ? "Remove from My Favorite" : "Add to My Favorite"}
-      aria-label={isAdded ? "Remove from My Favorite" : "Add to My Favorite"}
+      title={isAdded ? "Remove from My Books" : "Add to My Books"}
+      aria-label={isAdded ? "Remove from My Books" : "Add to My Books"}
       className={`${base} ${tone} ${className}`}
     >
       {pending ? (
