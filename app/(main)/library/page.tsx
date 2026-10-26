@@ -1,12 +1,17 @@
 import Link from "next/link";
 import { getSession } from "@/lib/auth-server";
-import { listCoursesWithLessonCounts } from "@/lib/db/queries/courses";
-import type { CourseListItem } from "@/lib/content/types";
+import {
+  listCoursesWithLessonCounts,
+  getStandaloneUnits,
+  getBrowsableUnits,
+} from "@/lib/db/queries/courses";
+import type { CourseListItem, StandaloneUnitInfo } from "@/lib/content/types";
 import { isAdminEmail } from "@/lib/ai/models";
 import { getTargetLanguage } from "@/lib/actions/preferences";
 import {
   CourseBookShelf,
 } from "@/components/library/course-book-shelf";
+import { StandaloneUnits } from "@/components/library/standalone-units";
 import { LearnHeader } from "@/components/library/learn-header";
 import { withTimeout } from "@/lib/db/timeout";
 
@@ -20,6 +25,7 @@ export default async function LearnPage() {
 
   let allCourses: CourseListItem[] = [];
   let targetLang: string | null = null;
+  let standaloneUnits: StandaloneUnitInfo[] = [];
 
   if (userId) {
     // Every one of these is bounded: postgres.js queues a query forever when
@@ -39,6 +45,18 @@ export default async function LearnPage() {
         5000,
         null,
       ),
+      withTimeout<StandaloneUnitInfo[]>(
+        "library:getStandaloneUnits",
+        getStandaloneUnits(userId),
+        10000,
+        [] as StandaloneUnitInfo[],
+      ),
+      withTimeout<StandaloneUnitInfo[]>(
+        "library:getBrowsableUnits",
+        getBrowsableUnits(userId),
+        10000,
+        [] as StandaloneUnitInfo[],
+      ),
     ]);
 
     if (results[0].status === "fulfilled") {
@@ -52,9 +70,38 @@ export default async function LearnPage() {
     } else {
       console.error("LearnPage: getTargetLanguage failed:", results[1].reason);
     }
+
+    if (results[2].status === "fulfilled") {
+      standaloneUnits = results[2].value;
+    } else {
+      console.error("LearnPage: getStandaloneUnits failed:", results[2].reason);
+    }
+
+    // Merge in public browsable units (AI-tutor-generated public units live
+    // here). Dedupe by id, keeping the strongest ownership/library flags.
+    if (results[3].status === "fulfilled") {
+      const byId = new Map<string, StandaloneUnitInfo>();
+      for (const u of standaloneUnits) byId.set(u.id, { ...u });
+      for (const u of results[3].value) {
+        const prev = byId.get(u.id);
+        if (!prev) {
+          byId.set(u.id, u);
+        } else {
+          byId.set(u.id, {
+            ...prev,
+            isOwner: prev.isOwner || u.isOwner,
+            isInLibrary: prev.isInLibrary || u.isInLibrary,
+            visibility: prev.visibility === "public" ? prev.visibility : u.visibility,
+          });
+        }
+      }
+      standaloneUnits = [...byId.values()];
+    } else {
+      console.error("LearnPage: getBrowsableUnits failed:", results[3].reason);
+    }
   }
 
-  const isEmptyLibrary = allCourses.length === 0 && !isAdmin;
+  const isEmptyLibrary = allCourses.length === 0 && standaloneUnits.length === 0 && !isAdmin;
 
   return (
     <div className="mx-auto w-full max-w-6xl">
@@ -82,7 +129,10 @@ export default async function LearnPage() {
           </Link>
         </div>
       ) : (
-        <CourseBookShelf courses={allCourses} isAdmin={isAdmin} />
+        <>
+          <CourseBookShelf courses={allCourses} isAdmin={isAdmin} />
+          <StandaloneUnits units={standaloneUnits} isAdmin={isAdmin} />
+        </>
       )}
     </div>
   );
