@@ -186,6 +186,47 @@ export async function getStudentGrants(
   }
 }
 
+/**
+ * Everyone who can already open one private course: the students granted this
+ * course explicitly, plus the owner's VIP students (who can see every private
+ * course, so the panel shows them as inherited rather than individually
+ * granted). One round trip for the whole panel instead of a `getStudentGrants`
+ * call per student.
+ */
+export async function listCourseStudentAccess(courseId: string): Promise<{
+  studentIds: string[];
+  vipIds: string[];
+}> {
+  const session = await requireOwner();
+  const ownerId = session.user.id;
+  try {
+    await ensureStudentAccessTable();
+    await ensureStudentVipTable();
+    const [granted, vips] = await Promise.all([
+      db
+        .select({ studentId: studentAccess.studentId })
+        .from(studentAccess)
+        .where(
+          and(
+            eq(studentAccess.ownerId, ownerId),
+            eq(studentAccess.courseId, courseId)
+          )
+        ),
+      db
+        .select({ studentId: studentVip.studentId })
+        .from(studentVip)
+        .where(eq(studentVip.ownerId, ownerId)),
+    ]);
+    return {
+      studentIds: [...new Set(granted.map((r) => r.studentId))],
+      vipIds: [...new Set(vips.map((r) => r.studentId))],
+    };
+  } catch (err) {
+    console.warn("listCourseStudentAccess failed:", err);
+    return { studentIds: [], vipIds: [] };
+  }
+}
+
 export async function setStudentCourseAccess(
   studentId: string,
   courseId: string,
