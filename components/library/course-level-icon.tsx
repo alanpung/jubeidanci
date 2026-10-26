@@ -212,6 +212,54 @@ export function CourseLevelIcon({
   );
 }
 
+/** A full-bleed course cover.
+ *
+ *  The *whole* tile is the colour — the symbol sits directly on the gradient
+ *  instead of floating inside a white card. Every surface (Library folders,
+ *  My Favorite, the browse window) draws its tiles with this one component,
+ *  so a book always looks the same wherever it shows up.
+ *
+ *  `glyph` replaces the symbol (level folders show their CEFR code instead of
+ *  a type icon); `questionType` decides the colour + symbol when the entry
+ *  has no title-derived type of its own. */
+export function CourseCover({
+  level,
+  questionType,
+  title,
+  courseId,
+  glyph,
+  showLevel = true,
+  className = "",
+}: {
+  level?: string | null;
+  questionType?: string | null;
+  title?: string | null;
+  courseId?: string | null;
+  glyph?: React.ReactNode;
+  showLevel?: boolean;
+  className?: string;
+}) {
+  const cleanLevel = (level || "").toUpperCase().trim();
+  const levelStyle = getCourseLevelStyle(cleanLevel);
+  const typeVisual = resolveCourseQuestionType(title, courseId, questionType);
+  const Icon = typeVisual?.Icon ?? BookOpen;
+  const bg = typeVisual?.bg ?? levelStyle.bg;
+  const border = typeVisual?.border ?? levelStyle.border;
+
+  return (
+    <div
+      className={`relative flex aspect-square w-full items-center justify-center overflow-hidden rounded-2xl border-2 text-white shadow-sm ${bg} ${border} ${className}`}
+    >
+      {glyph ?? <Icon className="h-9 w-9 stroke-[2.25]" />}
+      {showLevel && cleanLevel ? (
+        <span className="absolute bottom-1.5 right-1.5 rounded-md border border-white/40 bg-black/25 px-1.5 py-0.5 text-[10px] font-black leading-none text-white">
+          {cleanLevel}
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
 /** Stable list of every course "symbol" and what it stands for — used by the
  *  library folders and browse window so students can decode the book covers. */
 export const QUESTION_TYPE_LEGEND = Object.entries(QUESTION_TYPE_VISUALS).map(

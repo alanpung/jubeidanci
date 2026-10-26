@@ -11,7 +11,6 @@ import { getTargetLanguage } from "@/lib/actions/preferences";
 import {
   CourseBookShelf,
 } from "@/components/library/course-book-shelf";
-import { StandaloneUnits } from "@/components/library/standalone-units";
 import { LearnHeader } from "@/components/library/learn-header";
 import { withTimeout } from "@/lib/db/timeout";
 
@@ -130,8 +129,13 @@ export default async function LearnPage() {
         </div>
       ) : (
         <>
-          <CourseBookShelf courses={allCourses} isAdmin={isAdmin} />
-          <StandaloneUnits units={standaloneUnits} isAdmin={isAdmin} />
+          {/* The AI tutor's units are not a section of their own any more —
+              they live in the "Standalone Units" folder inside Library. */}
+          <CourseBookShelf
+            courses={allCourses}
+            units={standaloneUnits}
+            isAdmin={isAdmin}
+          />
         </>
       )}
     </div>
