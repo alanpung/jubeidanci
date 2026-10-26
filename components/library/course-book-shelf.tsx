@@ -13,7 +13,6 @@ import { addCourseToLibrary, removeCourseFromLibrary } from "@/lib/actions/libra
 import { LibraryFolders, type GroupBy } from "@/components/library/library-folders";
 import {
   AddRemoveButton,
-  VipCornerBadge,
   VisibilityToggle,
 } from "@/components/library/book-parts";
 
@@ -288,8 +287,6 @@ function BrowseRow({
   onAdd: () => void;
   onRemove: () => void;
 }) {
-  const isPublic = course.visibility === "public";
-
   return (
     <div className="flex items-center gap-2 rounded-2xl border-2 border-lingo-border bg-white p-3 pl-2.5 shadow-sm">
       <div className="relative -ml-1 shrink-0">
@@ -304,7 +301,6 @@ function BrowseRow({
             size="md"
           />
         </div>
-        {!isPublic && <VipCornerBadge />}
       </div>
 
       <p className="min-w-0 flex-1 text-xs font-semibold leading-tight text-lingo-text">
@@ -326,14 +322,13 @@ function BrowseRow({
 
 /** A single book on the My Favorite shelf.
  *
- *  Deliberately the SAME vertical tile as a Library folder — same `p-2.5`, same
- *  symbol block, same `mt-1.5 text-[11px]` title — so a My Favorite card is
- *  exactly as tall as the folder it sits above and the two grids stay aligned.
- *  Padding is kept tight so a tile is mostly symbol + title instead of a white
- *  frame. The whole tile opens the course for study (stretched-link: a
- *  transparent <Link> fills the card); the round × in the top-right corner sits
- *  above that overlay in z-order and keeps its own click, so removing a book
- *  never navigates into it. */
+ *  No white card frame: the course symbol IS the tile, sitting directly on the
+ *  page background, with the title underneath. A white wrapper around a 48px
+ *  icon was mostly empty space, so the grid read as a row of small pictures in
+ *  big white boxes. The whole tile opens the course for study (stretched-link:
+ *  a transparent <Link> fills the tile); the round × in the top-right corner
+ *  sits above that overlay in z-order and keeps its own click, so removing a
+ *  book never navigates into it. */
 function CourseBook({
   course,
   isBorrowed,
@@ -347,22 +342,19 @@ function CourseBook({
   onBorrow: () => void;
   onRemove: () => void;
 }) {
-  const isPublic = course.visibility === "public";
-
   return (
-    <div className="group relative flex flex-col items-center rounded-2xl border-2 border-lingo-border bg-white p-2.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border">
+    <div className="group relative flex flex-col items-center">
       {/* Stretched link: the entire tile opens the course for study. */}
       <Link
         href={`/library/${course.id}`}
         title={`${course.title} · ${course.level} · ${course.unitCount} units`}
         aria-label={`Open ${course.title}`}
-        className="absolute inset-0 z-10 rounded-2xl"
+        className="absolute inset-0 z-10"
       />
 
-      {/* Symbol zone — same size as the folder icon, with the VIP mark pinned to
-          its upper-left corner when the course is private. */}
+      {/* Symbol zone — same size as the folder icon. */}
       <div className="relative">
-        <div className="inline-block transition-transform group-hover:-translate-y-0.5">
+        <div className="transition-transform group-hover:-translate-y-0.5">
           <CourseLevelIcon
             level={course.level}
             title={course.title}
@@ -370,7 +362,6 @@ function CourseBook({
             size="md"
           />
         </div>
-        {!isPublic && <VipCornerBadge />}
       </div>
 
       <p className="pointer-events-none mt-1.5 w-full line-clamp-2 text-center text-[11px] font-bold leading-tight text-lingo-text">
@@ -379,7 +370,7 @@ function CourseBook({
 
       {/* Take it off the shelf — × in the top-right corner, above the stretched
           link so removing a book never navigates into it. */}
-      <div className="absolute right-1.5 top-1.5 z-20">
+      <div className="absolute right-0 top-0 z-20">
         <AddRemoveButton
           isAdded={isBorrowed}
           pending={pending}
