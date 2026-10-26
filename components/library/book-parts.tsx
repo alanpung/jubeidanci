@@ -1,50 +1,93 @@
 "use client";
 
-import { useTransition } from "react";
+import { useState, useRef, useTransition } from "react";
+import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
-import { Globe, Crown, EyeOff } from "lucide-react";
+import { Globe, Crown, EyeOff, Pencil, Check } from "lucide-react";
 import type { CourseListItem } from "@/lib/content/types";
 import { makeCoursePublic, makeCoursePrivate, makeCourseHidden } from "@/lib/actions/units";
 
-/** A small gold VIP crown pinned to the top-left corner of a course cover.
- *
- *  Shown for every non-public course so at a glance a reader can tell which of
- *  their books are private/VIP. It is purely decorative — the owner's real
- *  control is the public/private/hide switch (VisibilityToggle). */
-export function VipCrownBadge() {
+/** A small gold VIP crown pinned to a cover. Shown for every non-public course
+ *  so at a glance a reader can tell which books are private/VIP. */
+export function VipCrownBadge({ className = "" }: { className?: string }) {
   return (
     <span
       title="VIP course — only you can see this"
       aria-label="VIP course"
-      className="flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-gradient-to-br from-amber-400 to-amber-600 text-white shadow-sm"
+      className={`flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-gradient-to-br from-amber-400 to-amber-600 text-white shadow-sm ${className}`}
     >
       <Crown className="h-3 w-3 fill-white stroke-[2]" />
     </span>
   );
 }
 
+/** Public / private(VIP) / hidden indicator for the UPPER-LEFT corner of a
+ *  cover. A globe marks a public course; the crown marks a private or hidden
+ *  one. Purely decorative — the owner changes state with CoverEditButton. */
+export function VisibilityBadge({
+  visibility,
+  className = "",
+}: {
+  visibility?: string | null;
+  className?: string;
+}) {
+  if (visibility === "public") {
+    return (
+      <span
+        title="Public course"
+        aria-label="Public course"
+        className={`flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-sky-500 text-white shadow-sm ${className}`}
+      >
+        <Globe className="h-3 w-3" />
+      </span>
+    );
+  }
+  return <VipCrownBadge className={className} />;
+}
+
 type VisState = "public" | "private" | "hidden";
 
-/** Map the stored visibility (null counts as private) to one of three states. */
 function stateOf(v: string | null | undefined): VisState {
   if (v === "public") return "public";
   if (v === "hidden") return "hidden";
   return "private";
 }
 
-const NEXT: Record<VisState, VisState> = {
-  public: "private",
-  private: "hidden",
-  hidden: "public",
-};
+const OPTIONS: {
+  state: VisState;
+  label: string;
+  hint: string;
+  Icon: React.ComponentType<{ className?: string }>;
+  tone: string;
+}[] = [
+  {
+    state: "public",
+    label: "Public",
+    hint: "Everyone can see & add it",
+    Icon: Globe,
+    tone: "text-sky-500",
+  },
+  {
+    state: "private",
+    label: "VIP",
+    hint: "Private — only you",
+    Icon: Crown,
+    tone: "text-amber-500",
+  },
+  {
+    state: "hidden",
+    label: "Hide",
+    hint: "Hidden — only you",
+    Icon: EyeOff,
+    tone: "text-lingo-text",
+  },
+];
 
-/** Owner-only public / private(VIP) / hidden switch, anchored to the
- *  bottom-left of the course cover. Tap to cycle:
- *    public → private(VIP) → hidden → public.
- *  "hidden" means only the owner (and admins) can see the course. Going public
- *  is one-way for other users, so the owner confirms first. Non-owners never
- *  see this control. */
-export function VisibilityToggle({
+/** Owner-only edit control for the LOWER-LEFT corner of a cover. Tap to open a
+ *  small menu to switch the course to public / VIP(private) / hidden ("hidden"
+ *  means only the owner — and admins — can see it). The menu is a portal so it
+ *  is never clipped by the browse window's scroll box. */
+export function CoverEditButton({
   course,
   className = "",
 }: {
@@ -53,21 +96,36 @@ export function VisibilityToggle({
 }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
+  const [open, setOpen] = useState(false);
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
   const current = stateOf(course.visibility);
 
-  function cycle() {
-    const next = NEXT[current];
-    if (next === "public") {
-      const ok = window.confirm(
-        "Make this course public?\n\nOnce public it becomes read-only for non-admins and every user can add it to My Favorite.",
-      );
-      if (!ok) return;
+  function toggle() {
+    if (open) {
+      setOpen(false);
+      return;
+    }
+    const r = btnRef.current?.getBoundingClientRect();
+    if (r) setPos({ top: r.bottom + 6, left: r.left });
+    setOpen(true);
+  }
+
+  function choose(state: VisState) {
+    setOpen(false);
+    if (
+      state === "public" &&
+      !window.confirm(
+        "Make this course public? Once public every user can add it to My Favorite.",
+      )
+    ) {
+      return;
     }
     startTransition(async () => {
       const res =
-        next === "public"
+        state === "public"
           ? await makeCoursePublic(course.id)
-          : next === "private"
+          : state === "private"
             ? await makeCoursePrivate(course.id)
             : await makeCourseHidden(course.id);
       if (!res.success) alert(res.error);
@@ -75,41 +133,64 @@ export function VisibilityToggle({
     });
   }
 
-  const meta = {
-    public: {
-      Icon: Globe,
-      title: "Public — tap to make private (VIP)",
-      cls: "border-sky-300 bg-white text-sky-500 hover:bg-sky-50",
-    },
-    private: {
-      Icon: Crown,
-      title: "VIP (private) — tap to hide",
-      cls: "border-amber-300 bg-white text-amber-500 hover:bg-amber-50",
-    },
-    hidden: {
-      Icon: EyeOff,
-      title: "Hidden — tap to make public",
-      cls: "border-lingo-text bg-lingo-text text-white hover:bg-lingo-text/85",
-    },
-  }[current];
-
-  const Icon = meta.Icon;
-
   return (
-    <button
-      type="button"
-      onClick={cycle}
-      disabled={pending}
-      title={meta.title}
-      aria-label={meta.title}
-      className={`flex h-6 w-6 items-center justify-center rounded-full border-2 shadow-sm transition-colors disabled:opacity-50 ${meta.cls} ${className}`}
-    >
-      {pending ? (
-        <span className="h-3 w-3 animate-spin rounded-full border-2 border-current border-t-transparent" />
-      ) : (
-        <Icon className="h-3.5 w-3.5" />
-      )}
-    </button>
+    <>
+      <button
+        ref={btnRef}
+        type="button"
+        onClick={toggle}
+        disabled={pending}
+        title="Edit visibility"
+        aria-label="Edit visibility"
+        className={`flex h-6 w-6 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 disabled:opacity-50 ${className}`}
+      >
+        <Pencil className="h-3 w-3 stroke-[2.5]" />
+      </button>
+      {open && pos
+        ? createPortal(
+            <div
+              className="fixed z-[100]"
+              style={{ top: pos.top, left: pos.left }}
+            >
+              <div
+                className="fixed inset-0 z-[-1]"
+                onClick={() => setOpen(false)}
+                aria-hidden
+              />
+              <div className="w-44 rounded-xl border-2 border-lingo-border bg-white p-1 shadow-2xl">
+                {OPTIONS.map((o) => {
+                  const Icon = o.Icon;
+                  const active = o.state === current;
+                  return (
+                    <button
+                      key={o.state}
+                      type="button"
+                      onClick={() => choose(o.state)}
+                      className={`flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition-colors ${
+                        active ? "bg-lingo-gray/60" : "hover:bg-lingo-gray/40"
+                      }`}
+                    >
+                      <Icon className={`h-4 w-4 shrink-0 ${o.tone}`} />
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-xs font-black leading-tight text-lingo-text">
+                          {o.label}
+                        </span>
+                        <span className="block text-[10px] font-semibold leading-tight text-lingo-text-light">
+                          {o.hint}
+                        </span>
+                      </span>
+                      {active ? (
+                        <Check className="h-3.5 w-3.5 shrink-0 text-lingo-green" />
+                      ) : null}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
+    </>
   );
 }
 
