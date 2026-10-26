@@ -15,43 +15,72 @@ import { normalizeQuestionType } from "@/lib/content/question-types";
 
 const LEVEL_STYLES: Record<
   string,
-  { bg: string; border: string; text: string; pill: string }
+  {
+    bg: string;
+    border: string;
+    text: string;
+    pill: string;
+    /** Very light tint used as the cover fill. */
+    light: string;
+    /** The coloured outline (border) of the cover. */
+    outline: string;
+    /** The coloured symbol drawn on the cover. */
+    symbol: string;
+  }
 > = {
   A1: {
     bg: "bg-gradient-to-br from-emerald-400 to-emerald-600 shadow-emerald-600/30",
     border: "border-emerald-300/60",
     text: "text-white",
     pill: "bg-emerald-500 text-white",
+    light: "bg-emerald-50",
+    outline: "border-emerald-400",
+    symbol: "text-emerald-600",
   },
   A2: {
     bg: "bg-gradient-to-br from-teal-400 to-cyan-600 shadow-cyan-600/30",
     border: "border-teal-300/60",
     text: "text-white",
     pill: "bg-teal-500 text-white",
+    light: "bg-teal-50",
+    outline: "border-teal-400",
+    symbol: "text-teal-600",
   },
   B1: {
     bg: "bg-gradient-to-br from-sky-400 to-blue-600 shadow-blue-600/30",
     border: "border-sky-300/60",
     text: "text-white",
     pill: "bg-blue-500 text-white",
+    light: "bg-sky-50",
+    outline: "border-sky-400",
+    symbol: "text-sky-600",
   },
   B2: {
     bg: "bg-gradient-to-br from-indigo-400 to-violet-600 shadow-violet-600/30",
     border: "border-indigo-300/60",
     text: "text-white",
     pill: "bg-indigo-500 text-white",
+    light: "bg-indigo-50",
+    outline: "border-indigo-400",
+    symbol: "text-indigo-600",
   },
   C1: {
     bg: "bg-gradient-to-br from-purple-500 to-fuchsia-600 shadow-fuchsia-600/30",
     border: "border-purple-300/60",
     text: "text-white",
     pill: "bg-purple-600 text-white",
+    light: "bg-purple-50",
+    outline: "border-purple-400",
+    symbol: "text-purple-600",
   },
   C2: {
     bg: "bg-gradient-to-br from-rose-500 to-orange-500 shadow-rose-600/30",
     border: "border-rose-300/60",
     text: "text-white",
     pill: "bg-rose-500 text-white",
+    light: "bg-rose-50",
+    outline: "border-rose-400",
+    symbol: "text-rose-600",
   },
 };
 
@@ -60,6 +89,9 @@ const DEFAULT_STYLE = {
   border: "border-amber-300/60",
   text: "text-white",
   pill: "bg-amber-500 text-white",
+  light: "bg-amber-50",
+  outline: "border-amber-400",
+  symbol: "text-amber-600",
 };
 
 const QUESTION_TYPE_VISUALS: Record<
@@ -69,6 +101,10 @@ const QUESTION_TYPE_VISUALS: Record<
     border: string;
     label: string;
     Icon: React.ComponentType<{ className?: string }>;
+    pill: string;
+    light: string;
+    outline: string;
+    symbol: string;
   }
 > = {
   "flashcard-review": {
@@ -76,54 +112,90 @@ const QUESTION_TYPE_VISUALS: Record<
     border: "border-amber-300/70",
     label: "Flashcards",
     Icon: Layers,
+    pill: "bg-amber-500 text-white",
+    light: "bg-amber-50",
+    outline: "border-amber-400",
+    symbol: "text-amber-600",
   },
   translation: {
     bg: "bg-gradient-to-br from-indigo-500 to-violet-600 shadow-indigo-600/30",
     border: "border-indigo-300/70",
     label: "Translation",
     Icon: Languages,
+    pill: "bg-indigo-500 text-white",
+    light: "bg-indigo-50",
+    outline: "border-indigo-400",
+    symbol: "text-indigo-600",
   },
   "multiple-choice": {
     bg: "bg-gradient-to-br from-blue-400 to-blue-600 shadow-blue-600/30",
     border: "border-blue-300/70",
     label: "Multiple Choice",
     Icon: ListChecks,
+    pill: "bg-blue-500 text-white",
+    light: "bg-blue-50",
+    outline: "border-blue-400",
+    symbol: "text-blue-600",
   },
   "fill-in-the-blank": {
     bg: "bg-gradient-to-br from-purple-400 to-purple-600 shadow-purple-600/30",
     border: "border-purple-300/70",
     label: "Fill in Blank",
     Icon: PenLine,
+    pill: "bg-purple-500 text-white",
+    light: "bg-purple-50",
+    outline: "border-purple-400",
+    symbol: "text-purple-600",
   },
   "matching-pairs": {
     bg: "bg-gradient-to-br from-pink-400 to-rose-500 shadow-rose-500/30",
     border: "border-pink-300/70",
     label: "Matching Pairs",
     Icon: Puzzle,
+    pill: "bg-rose-500 text-white",
+    light: "bg-rose-50",
+    outline: "border-rose-400",
+    symbol: "text-rose-600",
   },
   listening: {
     bg: "bg-gradient-to-br from-cyan-400 to-teal-600 shadow-teal-600/30",
     border: "border-cyan-300/70",
     label: "Listening",
     Icon: Headphones,
+    pill: "bg-cyan-500 text-white",
+    light: "bg-cyan-50",
+    outline: "border-cyan-400",
+    symbol: "text-cyan-600",
   },
   "word-bank": {
     bg: "bg-gradient-to-br from-amber-500 to-yellow-600 shadow-amber-600/30",
     border: "border-amber-300/70",
     label: "Word Bank",
     Icon: LayoutGrid,
+    pill: "bg-amber-500 text-white",
+    light: "bg-amber-50",
+    outline: "border-amber-400",
+    symbol: "text-amber-600",
   },
   speaking: {
     bg: "bg-gradient-to-br from-emerald-400 to-green-600 shadow-green-600/30",
     border: "border-emerald-300/70",
     label: "Speaking",
     Icon: Mic,
+    pill: "bg-emerald-500 text-white",
+    light: "bg-emerald-50",
+    outline: "border-emerald-400",
+    symbol: "text-emerald-600",
   },
   mix: {
     bg: "bg-gradient-to-br from-fuchsia-500 to-purple-600 shadow-purple-600/30",
     border: "border-fuchsia-300/70",
     label: "Mixed Practice",
     Icon: Shuffle,
+    pill: "bg-fuchsia-500 text-white",
+    light: "bg-fuchsia-50",
+    outline: "border-fuchsia-400",
+    symbol: "text-fuchsia-600",
   },
 };
 
@@ -212,16 +284,18 @@ export function CourseLevelIcon({
   );
 }
 
-/** A full-bleed course cover.
+/** A light "book" cover.
  *
- *  The *whole* tile is the colour — the symbol sits directly on the gradient
- *  instead of floating inside a white card. Every surface (Library folders,
- *  My Favorite, the browse window) draws its tiles with this one component,
- *  so a book always looks the same wherever it shows up.
+ *  The fill is a *very light* tint of the level/type colour; only the
+ *  **outline (border)** and the **symbol** carry the full colour. This keeps
+ *  the previous-previous rounded-rectangle card proportions but stops the
+ *  whole tile from being a solid block of colour — folders and course covers
+ *  read as tidy outlined tiles instead of flat colour squares. Every surface
+ *  (Library folders, My Favorite, the browse window) draws with this one
+ *  component, so a book looks the same wherever it appears.
  *
  *  `glyph` replaces the symbol (level folders show their CEFR code instead of
- *  a type icon); `questionType` decides the colour + symbol when the entry
- *  has no title-derived type of its own. */
+ *  a type icon). */
 export function CourseCover({
   level,
   questionType,
@@ -242,24 +316,22 @@ export function CourseCover({
   const cleanLevel = (level || "").toUpperCase().trim();
   const levelStyle = getCourseLevelStyle(cleanLevel);
   const typeVisual = resolveCourseQuestionType(title, courseId, questionType);
-  const Icon = typeVisual?.Icon ?? BookOpen;
-  const bg = typeVisual?.bg ?? levelStyle.bg;
-  const border = typeVisual?.border ?? levelStyle.border;
+  const resolved = typeVisual ?? levelStyle;
+  const Icon = (typeVisual?.Icon ?? BookOpen) as React.ComponentType<{
+    className?: string;
+  }>;
 
   return (
-    // The previous-previous cover was a white rounded-2xl card with a small
-    // icon inside; we keep that exact shape and proportions but *fill* the
-    // white area with the level/type gradient, so the symbol sits directly on
-    // colour instead of floating in a white box. A book looks the same in the
-    // folders, on My Favorite, and inside the browse window.
     <div
-      className={`relative flex w-full items-center justify-center rounded-2xl border-2 p-2.5 text-white shadow-sm ${bg} ${border} ${className}`}
+      className={`relative flex w-full items-center justify-center rounded-2xl border-2 p-2.5 shadow-sm ${resolved.light} ${resolved.outline} ${resolved.symbol} ${className}`}
     >
       <div className="flex h-14 w-14 items-center justify-center">
         {glyph ?? <Icon className="h-12 w-12 stroke-[2.25]" />}
       </div>
       {showLevel && cleanLevel ? (
-        <span className="absolute bottom-1 right-1 rounded-md border border-white/40 bg-black/25 px-1.5 py-0.5 text-[10px] font-black leading-none text-white">
+        <span
+          className={`absolute bottom-1 right-1 rounded-md px-1.5 py-0.5 text-[10px] font-black leading-none text-white ${levelStyle.pill}`}
+        >
           {cleanLevel}
         </span>
       ) : null}
@@ -272,4 +344,3 @@ export function CourseCover({
 export const QUESTION_TYPE_LEGEND = Object.entries(QUESTION_TYPE_VISUALS).map(
   ([id, v]) => ({ id, label: v.label, Icon: v.Icon, bg: v.bg }),
 );
-

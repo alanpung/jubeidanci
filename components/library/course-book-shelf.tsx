@@ -384,22 +384,16 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
           />
         </Link>
 
-        {/* VIP crown — every non-public course wears one so a reader can tell
-            at a glance which books are private. */}
-        {!isPublic && (
-          <div className="absolute -left-1.5 -top-1.5 z-20">
-            <VipCrownBadge />
-          </div>
-        )}
-
-        {/* Owner-only public / private / hide switch. */}
-        {entry.course && entry.isOwner ? (
-          <div className="absolute -left-1.5 -bottom-1.5 z-20">
+        {/* Owner switch + VIP crown clustered in the UPPER-LEFT corner. The
+            lower-left corner is intentionally kept clear of any icon. */}
+        <div className="absolute -left-1.5 -top-1.5 z-20 flex items-center gap-1">
+          {entry.course && entry.isOwner ? (
             <VisibilityToggle course={entry.course} className="h-6 w-6" />
-          </div>
-        ) : null}
+          ) : null}
+          {!isPublic ? <VipCrownBadge /> : null}
+        </div>
 
-        {/* + to add to My Library, or × to remove. */}
+        {/* + to add to My Library, or × to remove — top-right. */}
         {entry.showToggle ? (
           <div className="absolute -right-1.5 -top-1.5 z-20">
             <AddRemoveButton
@@ -464,19 +458,14 @@ function CourseBook({
           courseId={course.id}
         />
 
-        {/* VIP crown for non-public courses. */}
-        {!isPublic && (
-          <div className="absolute -left-1.5 -top-1.5 z-20">
-            <VipCrownBadge />
-          </div>
-        )}
-
-        {/* Owner-only public / private / hide switch. */}
-        {course.isOwner && (
-          <div className="absolute -left-1.5 -bottom-1.5 z-20">
+        {/* Owner switch + VIP crown clustered in the UPPER-LEFT corner. The
+            lower-left corner is intentionally kept clear of any icon. */}
+        <div className="absolute -left-1.5 -top-1.5 z-20 flex items-center gap-1">
+          {course.isOwner ? (
             <VisibilityToggle course={course} className="h-6 w-6" />
-          </div>
-        )}
+          ) : null}
+          {!isPublic ? <VipCrownBadge /> : null}
+        </div>
 
         {/* Take it off the shelf — × in the top-right corner, above the
             stretched link so removing a book never navigates into it. */}
