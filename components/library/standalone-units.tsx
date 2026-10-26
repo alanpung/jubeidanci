@@ -26,9 +26,9 @@ export function StandaloneUnits({ units, isAdmin }: StandaloneUnitsProps) {
   }
 
   return (
-    <section className="mb-8">
-      <div className="mb-3 flex items-center justify-between">
-        <h2 className="text-lg font-bold text-lingo-text">
+    <section className="mt-8 mb-8">
+      <div className="mb-3 flex items-start justify-between">
+        <h2 className="text-base font-bold text-lingo-text">
           {isAdmin ? "Standalone Units" : "My Units"}
         </h2>
         {isAdmin && (

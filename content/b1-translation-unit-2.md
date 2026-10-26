@@ -1,8 +1,8 @@
 ---
-unitTitle: "Unit 2: Travel & Transportation"
-description: "Unit 2: Travel & Transportation - B1 Translation Practice (10 Lessons x 10 Sentences)"
-icon: "✈️"
-color: "#3B82F6"
+unitTitle: "Unit 2: Plant"
+description: "Unit 2: Plant - B1 Translation Practice (10 Lessons x 10 Sentences)"
+icon: "🗣️"
+color: "#6366F1"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "B1"
@@ -11,361 +11,25 @@ questionType: "translation"
 ---
 
 ---
-lessonTitle: "Lesson 1: Booking Flights"
-description: "Translate B1 sentences about Booking Flights"
-icon: "✈️"
-color: "#3B82F6"
+lessonTitle: "Lesson 1: Name"
+description: "Translate B1 sentences about Name"
+icon: "🗣️"
+color: "#6366F1"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "法国探险家和毛皮贸易商是该次区域的第一批欧洲人。"
-answer: "French explorers and fur traders were the first Europeans in the subregion."
-acceptAlso: "French explorers and fur traders were the first Europeans in the subregion."
-srsWords: "french" "explorers" "fur" "traders" "first" "europeans" "subregion"
+sentence: "以色列人必须服兵役。"
+answer: "Israelis must serve in the military."
+acceptAlso: "Israelis must serve in the military."
+srsWords: "israelis" "serve" "military"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "不同人的实际肤色受到许多物质的影响，尽管最重要的物质是黑色素。"
-answer: "The actual skin color of different humans is affected by many substances, although the single most important substance is the pigment melanin."
-acceptAlso: "The actual skin color of different humans is affected by many substances, although the single most important substance is the pigment melanin."
-srsWords: "actual" "skin" "color" "different" "humans" "affected" "many" "substances"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "食用油易燃，温度过高可能会引起火灾。"
-answer: "Cooking oil is flammable, and fires may be caused by it igniting at too high a temperature."
-acceptAlso: "Cooking oil is flammable, and fires may be caused by it igniting at too high a temperature."
-srsWords: "cooking" "oil" "flammable" "fires" "caused" "igniting" "high" "temperature"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "所有种子队都顺利通过了第一轮。"
-answer: "All the seeds made it through the first round without incident."
-acceptAlso: "All the seeds made it through the first round without incident."
-srsWords: "seeds" "made" "through" "first" "round" "without" "incident"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "雄性锹虫用下巴互相摔跤。"
-answer: "Male stag beetles use their jaws to wrestle each other."
-acceptAlso: "Male stag beetles use their jaws to wrestle each other."
-srsWords: "male" "stag" "beetles" "use" "jaws" "wrestle"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "他的第一个总统任期以严重的经济危机、社会动荡和暴力为标志。"
-answer: "His first presidential term was marked by a severe economic crisis, social unrest and violence."
-acceptAlso: "His first presidential term was marked by a severe economic crisis, social unrest and violence."
-srsWords: "first" "presidential" "term" "marked" "severe" "economic" "crisis" "social"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "许多因素都会影响扳手腕运动员的成功。"
-answer: "Many things can play a part in a player 's success in arm wrestling."
-acceptAlso: "Many things can play a part in a player 's success in arm wrestling."
-srsWords: "many" "things" "play" "part" "player" "success" "arm" "wrestling"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "每个小组的球队均以主客场循环赛的形式进行比赛。"
-answer: "In each group, teams play against each other home - and - away in a round-robin format."
-acceptAlso: "In each group, teams play against each other home - and - away in a round-robin format."
-srsWords: "group" "teams" "play" "against" "home" "away" "roundrobin" "format"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "由于需求增加和中国金属出口限制收紧，一些国家正在囤积稀土资源。"
-answer: "As a result of the increased demand and tightening restrictions on exports of the metals from China, some countries are stockpiling rare- earth resources."
-acceptAlso: "As a result of the increased demand and tightening restrictions on exports of the metals from China, some countries are stockpiling rare- earth resources."
-srsWords: "result" "increased" "demand" "tightening" "restrictions" "exports" "metals" "china"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "印度香米的颗粒比大多数其他类型的大米都长。"
-answer: "The grains of basmati rice are longer than most other types of rice."
-acceptAlso: "The grains of basmati rice are longer than most other types of rice."
-srsWords: "grains" "basmati" "rice" "longer" "types"
-
----
-lessonTitle: "Lesson 2: At the Airport"
-description: "Translate B1 sentences about At the Airport"
-icon: "✈️"
-color: "#3B82F6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "在赛季开始之前，联赛的分区进行了重新调整，以减少旅行费用。"
-answer: "Prior to the start of the season, the divisions of the league were re-aligned to reduce travel costs."
-acceptAlso: "Prior to the start of the season, the divisions of the league were re-aligned to reduce travel costs."
-srsWords: "prior" "start" "season" "divisions" "league" "realigned" "reduce" "travel"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "该书广受好评。"
-answer: "The book received critical acclaim."
-acceptAlso: "The book received critical acclaim."
-srsWords: "book" "received" "critical" "acclaim"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "各州按照联邦宪法规定的优先顺序列出。"
-answer: "The cantons are listed in their order of precedence given in the federal constitution."
-acceptAlso: "The cantons are listed in their order of precedence given in the federal constitution."
-srsWords: "cantons" "listed" "order" "precedence" "given" "federal" "constitution"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "每个目标都有具体目标以及实现这些目标的日期。"
-answer: "Each goal had specific targets, and dates for reaching those targets."
-acceptAlso: "Each goal had specific targets, and dates for reaching those targets."
-srsWords: "goal" "specific" "targets" "dates" "reaching"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "如果漏斗云接触地面，就会变成龙卷风。"
-answer: "If a funnel cloud touches the ground it becomes a tornado."
-acceptAlso: "If a funnel cloud touches the ground it becomes a tornado."
-srsWords: "funnel" "cloud" "touches" "ground" "becomes" "tornado"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "八个小组中每组的前两名球队将有资格进入淘汰赛阶段。"
-answer: "The top two placed teams from each of the eight groups will qualify for the knockout stage."
-acceptAlso: "The top two placed teams from each of the eight groups will qualify for the knockout stage."
-srsWords: "top" "placed" "teams" "eight" "groups" "qualify" "knockout" "stage"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "当人们发现比冲量时，唯一计算的燃料是火箭发射前的燃料。"
-answer: "When people find specific impulse, the only fuel counted is in the rocket before it gets fired."
-acceptAlso: "When people find specific impulse, the only fuel counted is in the rocket before it gets fired."
-srsWords: "people" "find" "specific" "impulse" "fuel" "counted" "rocket" "gets"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "尽管泥炭对人类有多种用途，但它有时也会带来严重的问题。"
-answer: "Although humans have many uses for peat, it presents severe problems at times."
-acceptAlso: "Although humans have many uses for peat, it presents severe problems at times."
-srsWords: "although" "humans" "many" "uses" "peat" "presents" "severe" "problems"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "下表列出了这里提到的大多数主要金字塔的建造年代。"
-answer: "The following table lays out the chronology of the construction of most of the major pyramids mentioned here."
-acceptAlso: "The following table lays out the chronology of the construction of most of the major pyramids mentioned here."
-srsWords: "following" "table" "lays" "chronology" "construction" "major" "pyramids" "mentioned"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "解决这个问题的唯一办法就是大家聚在一起商量。"
-answer: "The only way to solve this is to have everyone come together to talk."
-acceptAlso: "The only way to solve this is to have everyone come together to talk."
-srsWords: "way" "solve" "everyone" "come" "together" "talk"
-
----
-lessonTitle: "Lesson 3: Public Transport"
-description: "Translate B1 sentences about Public Transport"
-icon: "✈️"
-color: "#3B82F6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "许多心理健康界认为，手淫可以缓解抑郁症并带来更高的自尊感。"
-answer: "It is held in many mental health circles that masturbation can relieve depression and lead to a higher sense of self-esteem."
-acceptAlso: "It is held in many mental health circles that masturbation can relieve depression and lead to a higher sense of self-esteem."
-srsWords: "held" "many" "mental" "health" "circles" "masturbation" "relieve" "depression"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "北端有盐沼，其中包括具有国际重要性的湿地。"
-answer: "At the northern end there are salt marshes which include a wetland of international importance."
-acceptAlso: "At the northern end there are salt marshes which include a wetland of international importance."
-srsWords: "northern" "end" "salt" "marshes" "include" "wetland" "international" "importance"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "二氧化碳是一种温室气体。"
-answer: "Carbon dioxide is a greenhouse gas."
-acceptAlso: "Carbon dioxide is a greenhouse gas."
-srsWords: "carbon" "dioxide" "greenhouse" "gas"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "问题被用作修辞手段或工具。"
-answer: "The question is used as a rhetorical device or tool."
-acceptAlso: "The question is used as a rhetorical device or tool."
-srsWords: "question" "used" "rhetorical" "device" "tool"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "他昨晚忘记遛狗了，所以现在有一大堆乱七八糟的东西需要清理。"
-answer: "He forgot to walk the dog last night so now there is a big mess to clean."
-acceptAlso: "He forgot to walk the dog last night so now there is a big mess to clean."
-srsWords: "forgot" "walk" "dog" "last" "night" "big" "mess" "clean"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "Bidatsu 患有一种不知名的疾病，身上长满了疮。"
-answer: "Bidatsu suffered from an unknown disease which afflicted him with sores."
-acceptAlso: "Bidatsu suffered from an unknown disease which afflicted him with sores."
-srsWords: "bidatsu" "suffered" "unknown" "disease" "afflicted" "sores"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这样，即使博物馆无法自己进行翻译，一个二维码也可以将同一篇文章翻译成多种语言。"
-answer: "In this way, one QRcode can deliver the same article in many languages, even when the museum is unable to make its own translations."
-acceptAlso: "In this way, one QRcode can deliver the same article in many languages, even when the museum is unable to make its own translations."
-srsWords: "way" "qrcode" "deliver" "article" "many" "languages" "even" "museum"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "一位年轻女孩描述了她与祖父在四个季节中的特殊关系。"
-answer: "A young girl describes her special bond with her grandfather over four seasons."
-acceptAlso: "A young girl describes her special bond with her grandfather over four seasons."
-srsWords: "young" "girl" "describes" "special" "bond" "grandfather" "four" "seasons"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "Internet Explorer 引入了许多 DOM 扩展，这些扩展已被其他浏览器采用。"
-answer: "Internet Explorer has introduced a number of extensions to the DOM that have been adopted by other browsers."
-acceptAlso: "Internet Explorer has introduced a number of extensions to the DOM that have been adopted by other browsers."
-srsWords: "internet" "explorer" "introduced" "number" "extensions" "dom" "adopted" "browsers"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "人们对凤尾鱼的强烈口味归因于腌制过程。"
-answer: "The strong taste that people associate with anchovies is due to the curing process."
-acceptAlso: "The strong taste that people associate with anchovies is due to the curing process."
-srsWords: "strong" "taste" "people" "associate" "anchovies" "due" "curing" "process"
-
----
-lessonTitle: "Lesson 4: Renting a Car"
-description: "Translate B1 sentences about Renting a Car"
-icon: "✈️"
-color: "#3B82F6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "多年来，寻找褐矮星的努力一直没有结果。"
-answer: "For many years, efforts to discover brown dwarves were fruitless."
-acceptAlso: "For many years, efforts to discover brown dwarves were fruitless."
-srsWords: "many" "years" "efforts" "discover" "brown" "dwarves" "fruitless"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "计算比冲时，仅计算使用前车辆携带的推进剂。"
-answer: "When calculating specific impulse, only propellant carried with the vehicle before use is counted."
-acceptAlso: "When calculating specific impulse, only propellant carried with the vehicle before use is counted."
-srsWords: "calculating" "specific" "impulse" "propellant" "carried" "vehicle" "use" "counted"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "由于南方农业的发展，那里的文化得以发展。"
-answer: "As a result of the development of agriculture in the south, important cultural development was possible there."
-acceptAlso: "As a result of the development of agriculture in the south, important cultural development was possible there."
-srsWords: "result" "development" "agriculture" "south" "important" "cultural" "possible"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "工业污染造成雾霾。"
-answer: "Pollution from industries causes smog."
-acceptAlso: "Pollution from industries causes smog."
-srsWords: "pollution" "industries" "causes" "smog"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "害虫防治至少与农业一样古老，因为始终需要保持农作物免受害虫侵害。"
-answer: "Pest control is at least as old as agriculture, as there has always been a need to keep crops free from pests."
-acceptAlso: "Pest control is at least as old as agriculture, as there has always been a need to keep crops free from pests."
-srsWords: "pest" "control" "least" "old" "agriculture" "always" "need" "keep"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这是对地理物种形成过程的早期描述。"
-answer: "This was an early description of a process of geographical speciation."
-acceptAlso: "This was an early description of a process of geographical speciation."
-srsWords: "early" "description" "process" "geographical" "speciation"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "Unforgiven之后还有几场晋级赛。"
-answer: "There were several inter-promotional matches after Unforgiven."
-acceptAlso: "There were several inter-promotional matches after Unforgiven."
-srsWords: "several" "interpromotional" "matches" "unforgiven"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "佛罗里达州拥有美丽的日落天空。"
-answer: "Florida has beautiful sunsets skies."
-acceptAlso: "Florida has beautiful sunsets skies."
-srsWords: "florida" "beautiful" "sunsets" "skies"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "该物种有明显的性别二态性。"
-answer: "There is marked sexual dimorphism in this species."
-acceptAlso: "There is marked sexual dimorphism in this species."
-srsWords: "marked" "sexual" "dimorphism" "species"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "它是哀鸠和耳鸠的近亲。"
-answer: "It is a close relative of the mourning and eared doves."
-acceptAlso: "It is a close relative of the mourning and eared doves."
-srsWords: "close" "relative" "mourning" "eared" "doves"
-
----
-lessonTitle: "Lesson 5: Hotel Check-in"
-description: "Translate B1 sentences about Hotel Check-in"
-icon: "✈️"
-color: "#3B82F6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "站前所有的自行车都被锁住了，所以用工具将它们移走。"
-answer: "All the bicycles in front of the station had been locked, so they were removed using tools."
-acceptAlso: "All the bicycles in front of the station had been locked, so they were removed using tools."
-srsWords: "bicycles" "front" "station" "locked" "removed" "using" "tools"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "该市拥有专业和业余运动队，以及许多运动队所在地。"
-answer: "The city has both professional and amateur sports teams, and a number of venues where they are based."
-acceptAlso: "The city has both professional and amateur sports teams, and a number of venues where they are based."
-srsWords: "city" "professional" "amateur" "sports" "teams" "number" "venues" "based"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "从地球的角度来看，Sgr A West 具有三臂螺旋的外观。"
-answer: "Sgr A West has the appearance of a three - arm spiral, from the point of view of the Earth."
-acceptAlso: "Sgr A West has the appearance of a three - arm spiral, from the point of view of the Earth."
-srsWords: "sgr" "west" "appearance" "arm" "spiral" "point" "view" "earth"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "海山是世界上最常见的海洋生态系统之一。"
-answer: "Seamounts are one of the most common oceanic ecosystems in the world."
-acceptAlso: "Seamounts are one of the most common oceanic ecosystems in the world."
-srsWords: "seamounts" "common" "oceanic" "ecosystems" "world"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "余震是在前一次地震（主震）之后发生的地震。"
-answer: "An aftershock is an earthquake that occurs after a previous earthquake, the mainshock."
-acceptAlso: "An aftershock is an earthquake that occurs after a previous earthquake, the mainshock."
-srsWords: "aftershock" "earthquake" "occurs" "previous" "mainshock"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "在芬兰，与世隔绝的和平与安宁往往是消遣的对象。"
-answer: "In Finland, peace and quiet in isolation is often the object of the pastime."
-acceptAlso: "In Finland, peace and quiet in isolation is often the object of the pastime."
-srsWords: "finland" "peace" "quiet" "isolation" "often" "object" "pastime"
+sentence: "陷阱中含有植物自身产生的液体，可能是水状或糖浆状，用于淹死猎物。"
+answer: "The trap contains a fluid of the plant 's own production, which may be watery or syrupy, and is used to drown the prey."
+acceptAlso: "The trap contains a fluid of the plant 's own production, which may be watery or syrupy, and is used to drown the prey."
+srsWords: "trap" "contains" "fluid" "plant" "production" "watery" "syrupy" "used"
 
 [translation]
 text: "Translate this sentence into English"
@@ -376,227 +40,66 @@ srsWords: "beginning" "graphic" "designs" "used" "tell" "different" "teams" "apa
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然而，对豺狗DNA的研究表明，两个亚种之间的遗传差异很小。"
-answer: "However, studies on the dhole 's DNA show little genetic difference between the subspecies."
-acceptAlso: "However, studies on the dhole 's DNA show little genetic difference between the subspecies."
-srsWords: "however" "studies" "dhole" "dna" "show" "little" "genetic" "difference"
+sentence: "瓷器起源于中国，“瓷器”是该产品的俗称。"
+answer: "Porcelain originated in China, and ' china ' is the common name of the product."
+acceptAlso: "Porcelain originated in China, and ' china ' is the common name of the product."
+srsWords: "porcelain" "originated" "china" "common" "name" "product"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "乔迪天生失明，必须佩戴护目镜才能帮助他看见。"
-answer: "Geordi was born blind and must wear a VISOR to help him see."
-acceptAlso: "Geordi was born blind and must wear a VISOR to help him see."
-srsWords: "geordi" "born" "blind" "wear" "visor" "help" "see"
+sentence: "联盟的名称租给总赞助商并经常更改。"
+answer: "The name of the league is leased to a general sponsor and changes frequently."
+acceptAlso: "The name of the league is leased to a general sponsor and changes frequently."
+srsWords: "name" "league" "leased" "general" "sponsor" "changes" "frequently"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "天空布满闪电，美丽极了。"
-answer: "The sky streaked with lightening was beautiful."
-acceptAlso: "The sky streaked with lightening was beautiful."
-srsWords: "sky" "streaked" "lightening" "beautiful"
+sentence: "撤回军事占领可能是出于政治原因。"
+answer: "Withdrawal of a military occupation may be due to political reasons."
+acceptAlso: "Withdrawal of a military occupation may be due to political reasons."
+srsWords: "withdrawal" "military" "occupation" "due" "political" "reasons"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "正式名称的目的是为特定植物或植物群提供一个在全世界范围内被接受和使用的单一名称。"
+answer: "The purpose of a formal name is to have a single name that is accepted and used worldwide for a particular plant or plant group."
+acceptAlso: "The purpose of a formal name is to have a single name that is accepted and used worldwide for a particular plant or plant group."
+srsWords: "purpose" "formal" "name" "single" "accepted" "used" "worldwide" "particular"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "有一些常见的拉伸穿孔的方法，它们的来源不同，适用于不同的人。"
+answer: "There are some common ways used to stretch piercings, of different origins and useful for different people."
+acceptAlso: "There are some common ways used to stretch piercings, of different origins and useful for different people."
+srsWords: "common" "ways" "used" "stretch" "piercings" "different" "origins" "useful"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "用于绕圈赛的赛车通常与其他大规模公路赛事中使用的自行车没有什么不同。"
+answer: "Racing bicycles used for criteriums are typically no different than those used in other mass-start road events."
+acceptAlso: "Racing bicycles used for criteriums are typically no different than those used in other mass-start road events."
+srsWords: "racing" "bicycles" "used" "criteriums" "typically" "different" "massstart" "road"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "使用的名称通常指使用该基地的军队类型。"
+answer: "The name used generally refers to the type of military that uses the base."
+acceptAlso: "The name used generally refers to the type of military that uses the base."
+srsWords: "name" "used" "generally" "refers" "type" "military" "uses" "base"
 
 ---
-lessonTitle: "Lesson 6: Sightseeing & Tours"
-description: "Translate B1 sentences about Sightseeing & Tours"
-icon: "✈️"
-color: "#3B82F6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "公民权利受到法律的平等保护。"
-answer: "Civil rights guarantee equal protection under the law."
-acceptAlso: "Civil rights guarantee equal protection under the law."
-srsWords: "civil" "rights" "guarantee" "equal" "protection" "law"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "并非所有居住在该地区的人都需要重要的财政支持。"
-answer: "Not all of the people who live in that area need critical financial support."
-acceptAlso: "Not all of the people who live in that area need critical financial support."
-srsWords: "people" "live" "area" "need" "critical" "financial" "support"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "大麻是人类种植和使用的最古老的植物之一。"
-answer: "Hemp is one of the oldest plants humans have grown and used."
-acceptAlso: "Hemp is one of the oldest plants humans have grown and used."
-srsWords: "hemp" "oldest" "plants" "humans" "grown" "used"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "Xcelerator不会在雨中运行，这样发射轨道潮湿时就不会发生短射的情况。"
-answer: "Xcelerator will not operate in the rain so that a shortshot does not happen when the launch track is wet."
-acceptAlso: "Xcelerator will not operate in the rain so that a shortshot does not happen when the launch track is wet."
-srsWords: "xcelerator" "operate" "rain" "shortshot" "happen" "launch" "track" "wet"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "畜牧业已经创造了新物种，但这些物种的起始日期和方法尚不清楚。"
-answer: "New species have been created by animal husbandry, but the dates and methods of the initiation of such species are not clear."
-acceptAlso: "New species have been created by animal husbandry, but the dates and methods of the initiation of such species are not clear."
-srsWords: "species" "created" "animal" "husbandry" "dates" "methods" "initiation" "clear"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "百科全书有不同类型。"
-answer: "There are different types of encyclopedias."
-acceptAlso: "There are different types of encyclopedias."
-srsWords: "different" "types" "encyclopedias"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "所有防守球员都佩戴皮革或类似材料制成的守备手套。"
-answer: "All defensive players wear fielding gloves, made of leather or similar material."
-acceptAlso: "All defensive players wear fielding gloves, made of leather or similar material."
-srsWords: "defensive" "players" "wear" "fielding" "gloves" "made" "leather" "similar"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "硬腭是在出生前形成的。"
-answer: "The hard palate is formed before birth."
-acceptAlso: "The hard palate is formed before birth."
-srsWords: "hard" "palate" "formed" "birth"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "珊瑚白化的主要原因是水温上升。"
-answer: "The leading cause of coral bleaching is rising water temperatures."
-acceptAlso: "The leading cause of coral bleaching is rising water temperatures."
-srsWords: "leading" "cause" "coral" "bleaching" "rising" "water" "temperatures"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "铲鼻蛙是穴居蛙，一生的大部分时间都生活在地下。"
-answer: "The shovelnose frogs are burrowing frogs, living most of their lives underground."
-acceptAlso: "The shovelnose frogs are burrowing frogs, living most of their lives underground."
-srsWords: "shovelnose" "frogs" "burrowing" "living" "lives" "underground"
-
----
-lessonTitle: "Lesson 7: Asking for Directions"
-description: "Translate B1 sentences about Asking for Directions"
-icon: "✈️"
-color: "#3B82F6"
+lessonTitle: "Lesson 2: Women"
+description: "Translate B1 sentences about Women"
+icon: "🗣️"
+color: "#6366F1"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "此动作是对对手进行的，对手首先靠在螺丝扣上。"
-answer: "This move is performed to an opponent set up resting back first against the turnbuckle."
-acceptAlso: "This move is performed to an opponent set up resting back first against the turnbuckle."
-srsWords: "move" "performed" "opponent" "set" "resting" "back" "first" "against"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "当我把背包放在更衣室时，我想我也在那里看到了你的背包。"
-answer: "When I dropped off my backpack in the locker room, I thought I saw yours in there too."
-acceptAlso: "When I dropped off my backpack in the locker room, I thought I saw yours in there too."
-srsWords: "dropped" "off" "backpack" "locker" "room" "thought" "saw" "yours"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "纸莎草纸分为十一栏。"
-answer: "The papyrus is divided into eleven columns."
-acceptAlso: "The papyrus is divided into eleven columns."
-srsWords: "papyrus" "divided" "eleven" "columns"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "虽然有许多治疗普通感冒的替代疗法，但没有足够的科学证据支持大多数疗法的使用。"
-answer: "While there are many alternative treatments used for the common cold, there is not enough scientific evidence to support the use of most treatments."
-acceptAlso: "While there are many alternative treatments used for the common cold, there is not enough scientific evidence to support the use of most treatments."
-srsWords: "while" "many" "alternative" "treatments" "used" "common" "cold" "enough"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "二次电池是可充电的。"
-answer: "Secondary cells are rechargeable."
-acceptAlso: "Secondary cells are rechargeable."
-srsWords: "secondary" "cells" "rechargeable"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "窗户和墙壁上都挂满了孩子们色彩鲜艳的艺术品。"
-answer: "The windows and walls were covered with brightly colored art from the children."
-acceptAlso: "The windows and walls were covered with brightly colored art from the children."
-srsWords: "windows" "walls" "covered" "brightly" "colored" "art" "children"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "仍在使用的另一种更经典的扶手形式是切线法。"
-answer: "Another, more classical, form of handrailing which is still in use is the tangent method."
-acceptAlso: "Another, more classical, form of handrailing which is still in use is the tangent method."
-srsWords: "another" "classical" "form" "handrailing" "still" "use" "tangent" "method"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我们刚考完试，铃声就响了。"
-answer: "We had just finished the test when the bell rang."
-acceptAlso: "We had just finished the test when the bell rang."
-srsWords: "finished" "test" "bell" "rang"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "楔子的起源尚不清楚，因为它早在石器时代就已被使用。"
-answer: "The origin of the wedge is unknown, because it has been in use as early as the Stone Age."
-acceptAlso: "The origin of the wedge is unknown, because it has been in use as early as the Stone Age."
-srsWords: "origin" "wedge" "unknown" "because" "use" "early" "stone" "age"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "澳大利亚的许多境外领土都遵循自己的时区。"
-answer: "Australia 's many outside territories follow their own time zones."
-acceptAlso: "Australia 's many outside territories follow their own time zones."
-srsWords: "australia" "many" "outside" "territories" "follow" "time" "zones"
-
----
-lessonTitle: "Lesson 8: Travel Emergencies"
-description: "Translate B1 sentences about Travel Emergencies"
-icon: "✈️"
-color: "#3B82F6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "狂犬病作物在 11 月中旬季风降雨结束后播种，并于四月/五月开始收获。"
-answer: "The rabi crops are sown around mid-November, after the monsoon rains are over, and harvesting begins in April / May."
-acceptAlso: "The rabi crops are sown around mid-November, after the monsoon rains are over, and harvesting begins in April / May."
-srsWords: "rabi" "crops" "sown" "around" "midnovember" "monsoon" "rains" "harvesting"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "火在森林生态中发挥着重要作用，许多植物物种需要火才能再生。"
-answer: "Fire plays a major role in the ecology of the forest with many plant species needing fire to regenerate."
-acceptAlso: "Fire plays a major role in the ecology of the forest with many plant species needing fire to regenerate."
-srsWords: "fire" "plays" "major" "role" "ecology" "forest" "many" "plant"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "爆炸炮弹的发展使得在军舰上使用铁装甲板成为必要。"
-answer: "The development of explosive artillery shells made the use of iron armor plate on warships necessary."
-acceptAlso: "The development of explosive artillery shells made the use of iron armor plate on warships necessary."
-srsWords: "development" "explosive" "artillery" "shells" "made" "use" "iron" "armor"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "你能保证只要你们还活着，就会照顾她吗？"
-answer: "Do you promise to care for her as long as you both shall live?"
-acceptAlso: "Do you promise to care for her as long as you both shall live?"
-srsWords: "promise" "care" "long" "shall" "live"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "如果她发现了，她会生气的。"
-answer: "She 'll be furious if she finds out."
-acceptAlso: "She 'll be furious if she finds out."
-srsWords: "furious" "finds"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "仅使用合格的电工。"
-answer: "Only use qualified electricians."
-acceptAlso: "Only use qualified electricians."
-srsWords: "use" "qualified" "electricians"
+sentence: "Jutbring 一直是女权主义和妇女平等机会的积极支持者。"
+answer: "Jutbring has been an active supporter of feminism and equal opportunities for women."
+acceptAlso: "Jutbring has been an active supporter of feminism and equal opportunities for women."
+srsWords: "jutbring" "active" "supporter" "feminism" "equal" "opportunities" "women"
 
 [translation]
 text: "Translate this sentence into English"
@@ -607,73 +110,164 @@ srsWords: "mrs" "leader" "women" "wisest"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该部门的基本经济活动是养牛。"
-answer: "The basic economical activity of this department is the cattle breeding."
-acceptAlso: "The basic economical activity of this department is the cattle breeding."
-srsWords: "basic" "economical" "activity" "department" "cattle" "breeding"
+sentence: "许多衣冠楚楚的男女出席了这次慈善晚会。"
+answer: "The charity gala was attended by many well - dressed men and women."
+acceptAlso: "The charity gala was attended by many well - dressed men and women."
+srsWords: "charity" "gala" "attended" "many" "well" "dressed" "men" "women"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "世世代代以来，家族成员一直居住在一些著名的历史住宅中。"
-answer: "Over the generations, the family members have resided in some notable historic homes."
-acceptAlso: "Over the generations, the family members have resided in some notable historic homes."
-srsWords: "generations" "family" "members" "resided" "notable" "historic" "homes"
+sentence: "该浆果含糖量低，味道温和。"
+answer: "The berry has a low sugar content and a mildly sweet taste."
+acceptAlso: "The berry has a low sugar content and a mildly sweet taste."
+srsWords: "berry" "low" "sugar" "content" "mildly" "sweet" "taste"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这四大发现对中华文明的发展产生了重大影响。"
-answer: "These four discoveries had a big impact on the development of Chinese civilization."
-acceptAlso: "These four discoveries had a big impact on the development of Chinese civilization."
-srsWords: "four" "discoveries" "big" "impact" "development" "chinese" "civilization"
+sentence: "此外，尝试直接访问硬件的传统应用程序无法在用户模式下这样做。"
+answer: "Furthermore, legacy applications that attempt to access hardware directly cannot do so in user mode."
+acceptAlso: "Furthermore, legacy applications that attempt to access hardware directly cannot do so in user mode."
+srsWords: "furthermore" "legacy" "applications" "attempt" "access" "hardware" "directly" "cannot"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "这种武器的扩散不仅仅体现在数量上。"
+answer: "The proliferation of this weapon is reflected by more than just numbers."
+acceptAlso: "The proliferation of this weapon is reflected by more than just numbers."
+srsWords: "proliferation" "weapon" "reflected" "numbers"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "三十三首第一人称诗，描述了一个十一岁男孩在海滩度过的不同时刻。"
+answer: "Thirty three first person poems that describe various moments during an eleven-year - old boy 's day at the beach."
+acceptAlso: "Thirty three first person poems that describe various moments during an eleven-year - old boy 's day at the beach."
+srsWords: "thirty" "first" "person" "poems" "describe" "various" "moments" "during"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "对于男性和女性来说，有许多身体因素可能会导致性不适。"
+answer: "In men, as in women, there are a number of physical factors that may cause sexual discomfort."
+acceptAlso: "In men, as in women, there are a number of physical factors that may cause sexual discomfort."
+srsWords: "men" "women" "number" "physical" "factors" "cause" "sexual" "discomfort"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "较低的正常淋巴细胞浓度至较低的绝对淋巴细胞浓度与手术或创伤后感染率增加有关。"
+answer: "A low normal to low absolute lymphocyte concentration is associated with increased rates of infection after surgery or trauma."
+acceptAlso: "A low normal to low absolute lymphocyte concentration is associated with increased rates of infection after surgery or trauma."
+srsWords: "low" "normal" "absolute" "lymphocyte" "concentration" "associated" "increased" "rates"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "士兵的徽章是用彩色布料剪裁而成的，而军官的徽章是私人制作的，质量较高。"
+answer: "The badges for enlisted men were cut from colored cloth, while officer 's badges were privately made and of a higher quality."
+acceptAlso: "The badges for enlisted men were cut from colored cloth, while officer 's badges were privately made and of a higher quality."
+srsWords: "badges" "enlisted" "men" "cut" "colored" "cloth" "while" "officer"
 
 ---
-lessonTitle: "Lesson 9: Dining Abroad"
-description: "Translate B1 sentences about Dining Abroad"
-icon: "✈️"
-color: "#3B82F6"
+lessonTitle: "Lesson 3: Fishing"
+description: "Translate B1 sentences about Fishing"
+icon: "🗣️"
+color: "#6366F1"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "口吃矫正疗法的目标不是消除口吃，而是改变口吃，使口吃变得更容易、压力更小。"
-answer: "The goal of stuttering modification therapy is not to get rid of stuttering but to change it so that stuttering is easier and less stressful."
-acceptAlso: "The goal of stuttering modification therapy is not to get rid of stuttering but to change it so that stuttering is easier and less stressful."
-srsWords: "goal" "stuttering" "modification" "therapy" "get" "rid" "change" "easier"
+sentence: "该行用于表明君主已批准一项法案，使其成为法律。"
+answer: "The line is used to show that the Monarch has granted their Royal Assent to a bill in order to make it become law."
+acceptAlso: "The line is used to show that the Monarch has granted their Royal Assent to a bill in order to make it become law."
+srsWords: "line" "used" "show" "monarch" "granted" "royal" "assent" "bill"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它们的生殖系统的具体情况在该群体内差异很大，包括三种形式的雌雄同体和至少七种形式的单性生殖。"
-answer: "The specifics of their reproductive systems vary considerably within the group, including three forms of hermaphroditism and at least seven forms of parthenogenesis."
-acceptAlso: "The specifics of their reproductive systems vary considerably within the group, including three forms of hermaphroditism and at least seven forms of parthenogenesis."
-srsWords: "specifics" "reproductive" "systems" "vary" "considerably" "within" "group" "including"
+sentence: "尽管该琴键很少用于管弦乐中而不是用于调节，但它在键盘音乐中也并非完全不常见。"
+answer: "Despite the key rarely being used in orchestral music other than to modulate, it is not entirely uncommon in keyboard music."
+acceptAlso: "Despite the key rarely being used in orchestral music other than to modulate, it is not entirely uncommon in keyboard music."
+srsWords: "despite" "key" "rarely" "used" "orchestral" "music" "modulate" "entirely"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你弟弟一定有愤怒管理问题，因为他总是惹麻烦。"
-answer: "Your younger brother must have anger management problems since he is always getting into trouble."
-acceptAlso: "Your younger brother must have anger management problems since he is always getting into trouble."
-srsWords: "younger" "brother" "anger" "management" "problems" "since" "always" "getting"
+sentence: "铋用于熔点极低的合金中。"
+answer: "Bismuth is used in alloys with very low melting points."
+acceptAlso: "Bismuth is used in alloys with very low melting points."
+srsWords: "bismuth" "used" "alloys" "low" "melting" "points"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "燕麦最好生长在温带地区。"
-answer: "Oats are best grown in temperate regions."
-acceptAlso: "Oats are best grown in temperate regions."
-srsWords: "oats" "best" "grown" "temperate" "regions"
+sentence: "电弧焊使用大量电力。"
+answer: "A lot of electricity is used in arc welding."
+acceptAlso: "A lot of electricity is used in arc welding."
+srsWords: "lot" "electricity" "used" "arc" "welding"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "瓷器起源于中国，“瓷器”是该产品的俗称。"
-answer: "Porcelain originated in China, and ' china ' is the common name of the product."
-acceptAlso: "Porcelain originated in China, and ' china ' is the common name of the product."
-srsWords: "porcelain" "originated" "china" "common" "name" "product"
+sentence: "渔港是人们捕鱼时使用的港口或海港。"
+answer: "A fishing port is a port or harbor used by people who are fishing."
+acceptAlso: "A fishing port is a port or harbor used by people who are fishing."
+srsWords: "fishing" "port" "harbor" "used" "people"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "分化的植物细胞通常不能分裂或产生不同类型的细胞。"
-answer: "Plant cells which are differentiated generally cannot divide or produce cells of a different type."
-acceptAlso: "Plant cells which are differentiated generally cannot divide or produce cells of a different type."
-srsWords: "plant" "cells" "differentiated" "generally" "cannot" "divide" "produce" "different"
+sentence: "生物物理化学家利用物理化学中使用的各种技术来探测生物系统的结构。"
+answer: "Biophysical chemists employ various techniques used in physical chemistry to probe the structure of biological systems."
+acceptAlso: "Biophysical chemists employ various techniques used in physical chemistry to probe the structure of biological systems."
+srsWords: "biophysical" "chemists" "employ" "various" "techniques" "used" "physical" "chemistry"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "宇航服中使用低压氧气，用气体包围身体。"
+answer: "Low - pressure O is used in space suits, surrounding the body with the gas."
+acceptAlso: "Low - pressure O is used in space suits, surrounding the body with the gas."
+srsWords: "low" "pressure" "used" "space" "suits" "surrounding" "body" "gas"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "每年生产的聚氯乙烯树脂约有一半用于制造管道。"
+answer: "About half of the polyvinyl chloride resin manufactured each year is used to make pipes."
+acceptAlso: "About half of the polyvinyl chloride resin manufactured each year is used to make pipes."
+srsWords: "half" "polyvinyl" "chloride" "resin" "manufactured" "year" "used" "make"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我们在鱼钩上使用了蠕虫。"
+answer: "We used worms on our fishing hooks."
+acceptAlso: "We used worms on our fishing hooks."
+srsWords: "used" "worms" "fishing" "hooks"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "创作这些绘画的艺术家使用了其他洞穴艺术中罕见的技术。"
+answer: "The artists who produced these paintings used techniques rarely found in other cave art."
+acceptAlso: "The artists who produced these paintings used techniques rarely found in other cave art."
+srsWords: "artists" "produced" "paintings" "used" "techniques" "rarely" "found" "cave"
+
+---
+lessonTitle: "Lesson 4: Plant"
+description: "Translate B1 sentences about Plant"
+icon: "🗣️"
+color: "#6366F1"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "一般来说，未拼配的红茶以其产地命名。"
+answer: "Generally, unblended black teas are named after the region in which they are produced."
+acceptAlso: "Generally, unblended black teas are named after the region in which they are produced."
+srsWords: "generally" "unblended" "black" "teas" "named" "region" "produced"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "黑火药的比冲非常低。"
+answer: "Black powder had a very low specific impulse."
+acceptAlso: "Black powder had a very low specific impulse."
+srsWords: "black" "powder" "low" "specific" "impulse"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "该植物是半水生植物，主要​​生长在河岸或河床的岩石地方。"
+answer: "The plant is semi-aquatic and grows mostly on rocky places at the banks of rivers or in the riverbed."
+acceptAlso: "The plant is semi-aquatic and grows mostly on rocky places at the banks of rivers or in the riverbed."
+srsWords: "plant" "semiaquatic" "grows" "mostly" "rocky" "places" "banks" "rivers"
 
 [translation]
 text: "Translate this sentence into English"
@@ -684,98 +278,504 @@ srsWords: "dough" "ordinary" "bread" "usually" "yeast" "leavening" "agent" "baki
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "无伴奏合唱团是一种没有任何乐器伴奏的合唱团。"
-answer: "An a cappella choir is a choir which sings without any instrumental accompaniment."
-acceptAlso: "An a cappella choir is a choir which sings without any instrumental accompaniment."
-srsWords: "cappella" "choir" "sings" "without" "instrumental" "accompaniment"
+sentence: "副词有两种类型：主要副词和次要副词。"
+answer: "There are two types of adverbs, primary and secondary."
+acceptAlso: "There are two types of adverbs, primary and secondary."
+srsWords: "types" "adverbs" "primary" "secondary"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "打高尔夫球的两种常见形式是比洞赛和比杆赛。"
-answer: "The two common forms of playing golf are match play and stroke play."
-acceptAlso: "The two common forms of playing golf are match play and stroke play."
-srsWords: "common" "forms" "playing" "golf" "match" "play" "stroke"
+sentence: "革兰氏染色用于确定革兰氏状态以对细菌进行广泛分类。"
+answer: "Gram staining is used to determine gram status to classify bacteria broadly."
+acceptAlso: "Gram staining is used to determine gram status to classify bacteria broadly."
+srsWords: "gram" "staining" "used" "determine" "status" "classify" "bacteria" "broadly"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这些团体不再登记，也不能再参加选举。"
-answer: "These groups are no longer registered and can no longer take part in elections."
-acceptAlso: "These groups are no longer registered and can no longer take part in elections."
-srsWords: "groups" "longer" "registered" "take" "part" "elections"
+sentence: "残疾人高山滑雪分级旨在保证不同体能和视觉能力有限的高山滑雪运动员之间的平等竞争。"
+answer: "Para-alpine skiing classification is designed to give insurance equal competition between alpine skiers with different types of limited physical and seeing powers."
+acceptAlso: "Para-alpine skiing classification is designed to give insurance equal competition between alpine skiers with different types of limited physical and seeing powers."
+srsWords: "paraalpine" "skiing" "classification" "designed" "give" "insurance" "equal" "competition"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "莳萝油可以从植物的叶、茎和种子中提取。"
+answer: "Dill oil can be extracted from the leaves, stems and seeds of the plant."
+acceptAlso: "Dill oil can be extracted from the leaves, stems and seeds of the plant."
+srsWords: "dill" "oil" "extracted" "leaves" "stems" "seeds" "plant"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "一旦植物开花，它可能会产生含有黑色小种子的种荚，可以将其保存起来并在第二年种植。"
+answer: "Once the plant is allowed to flower, it may produce seed pods containing small black seeds, which can be saved and planted the following year."
+acceptAlso: "Once the plant is allowed to flower, it may produce seed pods containing small black seeds, which can be saved and planted the following year."
+srsWords: "once" "plant" "allowed" "flower" "produce" "seed" "pods" "containing"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "罗勒患有多种植物病害，这些病害会毁坏作物并降低产量。"
+answer: "Basil suffers from several plant diseases that can ruin the crop and reduce yield."
+acceptAlso: "Basil suffers from several plant diseases that can ruin the crop and reduce yield."
+srsWords: "basil" "suffers" "several" "plant" "diseases" "ruin" "crop" "reduce"
 
 ---
-lessonTitle: "Lesson 10: Cultural Experience"
-description: "Translate B1 sentences about Cultural Experience"
-icon: "✈️"
-color: "#3B82F6"
+lessonTitle: "Lesson 5: Boys Access"
+description: "Translate B1 sentences about Boys Access"
+icon: "🗣️"
+color: "#6366F1"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "如果你想买一把新剪刀，你应该去文具店。"
-answer: "If you want to buy a new pair of scissors, you should go to the stationery store."
-acceptAlso: "If you want to buy a new pair of scissors, you should go to the stationery store."
-srsWords: "want" "buy" "pair" "scissors" "stationery" "store"
+sentence: "燕麦有时也用于饮料中。"
+answer: "Oats are also sometimes used in drinks."
+acceptAlso: "Oats are also sometimes used in drinks."
+srsWords: "oats" "sometimes" "used" "drinks"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "合趾猿可能有两个亚种。"
-answer: "There may be two subspecies of the Siamang."
-acceptAlso: "There may be two subspecies of the Siamang."
-srsWords: "subspecies" "siamang"
+sentence: "世世代代以来，家族成员一直居住在一些著名的历史住宅中。"
+answer: "Over the generations, the family members have resided in some notable historic homes."
+acceptAlso: "Over the generations, the family members have resided in some notable historic homes."
+srsWords: "generations" "family" "members" "resided" "notable" "historic" "homes"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "奥克海姆并不是一位创作了大量音乐的作曲家，但很难说清楚，因为其中一些可能已经丢失了。"
-answer: "Ockeghem was not a composer who wrote lots of music, but it is hard to tell as some of it might have got lost."
-acceptAlso: "Ockeghem was not a composer who wrote lots of music, but it is hard to tell as some of it might have got lost."
-srsWords: "ockeghem" "composer" "wrote" "lots" "music" "hard" "tell" "got"
+sentence: "传统上，海洋用于渔业和沿海国家之间的货物运输，其珊瑚礁和岛屿是受欢迎的旅游目的地。"
+answer: "Traditionally, the sea has been used for fishery and transportation of goods between the coastal countries and its coral reefs and islands are popular tourist destinations."
+acceptAlso: "Traditionally, the sea has been used for fishery and transportation of goods between the coastal countries and its coral reefs and islands are popular tourist destinations."
+srsWords: "traditionally" "sea" "used" "fishery" "transportation" "goods" "coastal" "countries"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我只拿一份，剩下的留给你。"
-answer: "I 'll just take one and leave the rest for you."
-acceptAlso: "I 'll just take one and leave the rest for you."
-srsWords: "take" "leave" "rest"
+sentence: "男孩们悄悄地从已经睡着的父母身边走过。"
+answer: "The boys quietly walked past their parents who were already asleep."
+acceptAlso: "The boys quietly walked past their parents who were already asleep."
+srsWords: "boys" "quietly" "walked" "past" "parents" "already" "asleep"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "随着电锯雕刻变得越来越流行，电锯制造商正在制造特殊的短而窄尖的雕刻杆。"
-answer: "As chainsaw carving has become more popular, chainsaw manufacturers are making special short, narrow -tipped bars for carving."
-acceptAlso: "As chainsaw carving has become more popular, chainsaw manufacturers are making special short, narrow -tipped bars for carving."
-srsWords: "chainsaw" "carving" "become" "popular" "manufacturers" "making" "special" "short"
+sentence: "民兵成员一般无法接触到妇女，因此男孩有时会被绑架，被成年男子羞辱和强奸。"
+answer: "Militia members generally do not have access to women, so boys are sometimes kidnapped to be humiliated and raped by adult men."
+acceptAlso: "Militia members generally do not have access to women, so boys are sometimes kidnapped to be humiliated and raped by adult men."
+srsWords: "militia" "members" "generally" "access" "women" "boys" "sometimes" "kidnapped"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "在每一集中，都会有一位名人嘉宾带着一个秘密来到节目中。"
-answer: "On each usual episode, a celebrity guest came on the show with a secret."
-acceptAlso: "On each usual episode, a celebrity guest came on the show with a secret."
-srsWords: "usual" "episode" "celebrity" "guest" "came" "show" "secret"
+sentence: "一些成年人前往其他国家与儿童发生性关系，而这在他们的祖国是不可能的。"
+answer: "Some adults travel to other countries to have access to sex with children, which is unavailable in their home country."
+acceptAlso: "Some adults travel to other countries to have access to sex with children, which is unavailable in their home country."
+srsWords: "adults" "travel" "countries" "access" "sex" "children" "unavailable" "home"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我跳过水坑，以免鞋子被弄湿。"
-answer: "I jumped across the puddle to avoid my shoes getting wet."
-acceptAlso: "I jumped across the puddle to avoid my shoes getting wet."
-srsWords: "jumped" "across" "puddle" "avoid" "shoes" "getting" "wet"
+sentence: "西西莉叶有时被用作药草，具有浓郁的茴香味道。"
+answer: "Cicely leaves are sometimes used as a herb, with a strong taste of anise."
+acceptAlso: "Cicely leaves are sometimes used as a herb, with a strong taste of anise."
+srsWords: "cicely" "leaves" "sometimes" "used" "herb" "strong" "taste" "anise"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "迄今为止，尚无针对尼帕病毒感染的有效治疗方法。"
-answer: "There is no effective treatment for Nipah virus infection until now."
-acceptAlso: "There is no effective treatment for Nipah virus infection until now."
-srsWords: "effective" "treatment" "nipah" "virus" "infection" "until"
+sentence: "军人一般无法接触到妇女，而且男孩常常被绑架并被成年男子羞辱和强奸。"
+answer: "Military members generally do not have access to women, and often boys are kidnapped to be humiliated and raped by adult men."
+acceptAlso: "Military members generally do not have access to women, and often boys are kidnapped to be humiliated and raped by adult men."
+srsWords: "military" "members" "generally" "access" "women" "often" "boys" "kidnapped"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "丝兰作为花园中的观赏植物广泛种植。"
-answer: "Yuccas are widely grown as ornamental plants in gardens."
-acceptAlso: "Yuccas are widely grown as ornamental plants in gardens."
-srsWords: "yuccas" "widely" "grown" "ornamental" "plants" "gardens"
+sentence: "他的条形码充当进入他被创建和培训的设施区域的安全钥匙。"
+answer: "His barcode acts as a security key to access areas of the facility where he was created and trained."
+acceptAlso: "His barcode acts as a security key to access areas of the facility where he was created and trained."
+srsWords: "barcode" "acts" "security" "key" "access" "areas" "facility" "created"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "制作人员名单改编自专辑的内页注释。"
-answer: "Credits are adapted from the album 's liner notes."
-acceptAlso: "Credits are adapted from the album 's liner notes."
-srsWords: "credits" "adapted" "album" "liner" "notes"
+sentence: "男孩们对这名男子大喊大叫，因为他偷了他们的背包而感到不安。"
+answer: "The boys shouting at the man were upset because he had stolen their backpacks."
+acceptAlso: "The boys shouting at the man were upset because he had stolen their backpacks."
+srsWords: "boys" "shouting" "man" "upset" "because" "stolen" "backpacks"
+
+---
+lessonTitle: "Lesson 6: Cells"
+description: "Translate B1 sentences about Cells"
+icon: "🗣️"
+color: "#6366F1"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "木材的颜色一般为淡粉色至粉棕色，通常带有明显的浅灰色条纹。"
+answer: "Timber is generally pale pink to pinkish brown in color, often with distinctive light grey streaks."
+acceptAlso: "Timber is generally pale pink to pinkish brown in color, often with distinctive light grey streaks."
+srsWords: "timber" "generally" "pale" "pink" "pinkish" "brown" "color" "often"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "二次电池是可充电的。"
+answer: "Secondary cells are rechargeable."
+acceptAlso: "Secondary cells are rechargeable."
+srsWords: "secondary" "cells" "rechargeable"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "分化的植物细胞通常不能分裂或产生不同类型的细胞。"
+answer: "Plant cells which are differentiated generally cannot divide or produce cells of a different type."
+acceptAlso: "Plant cells which are differentiated generally cannot divide or produce cells of a different type."
+srsWords: "plant" "cells" "differentiated" "generally" "cannot" "divide" "produce" "different"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "艾奥拉的夏季炎热潮湿，冬季通常温和至凉爽。"
+answer: "Iola has hot, humid summers and generally mild to cool winters."
+acceptAlso: "Iola has hot, humid summers and generally mild to cool winters."
+srsWords: "iola" "hot" "humid" "summers" "generally" "mild" "cool" "winters"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "只要手指上没有开放性伤口，通常认为指交是安全的性行为。"
+answer: "Fingering is generally considered safe sex as long as there are no open wounds on the fingers."
+acceptAlso: "Fingering is generally considered safe sex as long as there are no open wounds on the fingers."
+srsWords: "fingering" "generally" "considered" "safe" "sex" "long" "open" "wounds"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "普通感冒通常是轻微的，并且会自行消失，大多数症状会在一周内改善。"
+answer: "The common cold is generally mild and goes away on its own with most symptoms improving in one week."
+acceptAlso: "The common cold is generally mild and goes away on its own with most symptoms improving in one week."
+srsWords: "common" "cold" "generally" "mild" "goes" "away" "symptoms" "improving"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "传统的西方音乐一般使用七个音，并以八度重复。"
+answer: "Traditional western music generally uses seven tones, and repeats at the octave."
+acceptAlso: "Traditional western music generally uses seven tones, and repeats at the octave."
+srsWords: "traditional" "western" "music" "generally" "uses" "seven" "tones" "repeats"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "骑师的身材一般都很矮小。"
+answer: "Jockeys are generally small in stature."
+acceptAlso: "Jockeys are generally small in stature."
+srsWords: "jockeys" "generally" "small" "stature"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "分化的植物细胞通常不能分裂或产生不同类型的细胞。"
+answer: "Differentiated plant cells generally cannot divide or produce cells of a different type."
+acceptAlso: "Differentiated plant cells generally cannot divide or produce cells of a different type."
+srsWords: "differentiated" "plant" "cells" "generally" "cannot" "divide" "produce" "different"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "钾离子对于所有活细胞的功能至关重要。"
+answer: "Potassium ions are vital for the functioning of all living cells."
+acceptAlso: "Potassium ions are vital for the functioning of all living cells."
+srsWords: "potassium" "ions" "vital" "functioning" "living" "cells"
+
+---
+lessonTitle: "Lesson 7: Wheels"
+description: "Translate B1 sentences about Wheels"
+icon: "🗣️"
+color: "#6366F1"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "问题被用作修辞手段或工具。"
+answer: "The question is used as a rhetorical device or tool."
+acceptAlso: "The question is used as a rhetorical device or tool."
+srsWords: "question" "used" "rhetorical" "device" "tool"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "水轮用于工业动力已有数百年历史。"
+answer: "Water wheels have been used for hundreds of years for industrial power."
+acceptAlso: "Water wheels have been used for hundreds of years for industrial power."
+srsWords: "water" "wheels" "used" "hundreds" "years" "industrial" "power"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我在代数中学到的大部分知识我从未使用过。"
+answer: "Most of what I learned in algebra I never used."
+acceptAlso: "Most of what I learned in algebra I never used."
+srsWords: "learned" "algebra" "never" "used"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "它也可以用作性别中立的第三人称单数代词。"
+answer: "It can also be used as a gender neutral third person singular pronoun."
+acceptAlso: "It can also be used as a gender neutral third person singular pronoun."
+srsWords: "used" "gender" "neutral" "third" "person" "singular" "pronoun"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "海马被用作公司的图标。"
+answer: "A seahorse is used as the company 's icon."
+acceptAlso: "A seahorse is used as the company 's icon."
+srsWords: "seahorse" "used" "company" "icon"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "至少有四台承包商的机车被用于施工。"
+answer: "At least four contractors ' locomotives were used for construction."
+acceptAlso: "At least four contractors ' locomotives were used for construction."
+srsWords: "least" "four" "contractors" "locomotives" "used" "construction"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "杀虫剂用于控制被认为有害的生物体。"
+answer: "Pesticides are used to control organisms that are considered to be harmful."
+acceptAlso: "Pesticides are used to control organisms that are considered to be harmful."
+srsWords: "pesticides" "used" "control" "organisms" "considered" "harmful"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "更高容量的 Zip 磁盘必须在至少具有相同容量能力的驱动器中使用。"
+answer: "Higher capacity Zip disks must be used in a drive with at least the same capacity ability."
+acceptAlso: "Higher capacity Zip disks must be used in a drive with at least the same capacity ability."
+srsWords: "higher" "capacity" "zip" "disks" "used" "drive" "least" "ability"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "锯子使用多种材料，每种材料都有自己的规格。"
+answer: "There are several materials used in saws, with each of its own specifications."
+acceptAlso: "There are several materials used in saws, with each of its own specifications."
+srsWords: "several" "materials" "used" "saws" "specifications"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "卡丁车赛车被普遍认为是四轮赛车运动中最经济的形式。"
+answer: "Kart racing is generally accepted as the most economic form of motorsport available on four wheels."
+acceptAlso: "Kart racing is generally accepted as the most economic form of motorsport available on four wheels."
+srsWords: "kart" "racing" "generally" "accepted" "economic" "form" "motorsport" "available"
+
+---
+lessonTitle: "Lesson 8: Because"
+description: "Translate B1 sentences about Because"
+icon: "🗣️"
+color: "#6366F1"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "大麻是人类种植和使用的最古老的植物之一。"
+answer: "Hemp is one of the oldest plants humans have grown and used."
+acceptAlso: "Hemp is one of the oldest plants humans have grown and used."
+srsWords: "hemp" "oldest" "plants" "humans" "grown" "used"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "VFD 的应用范围从小型电器到大型压缩机。"
+answer: "VFDs are used in applications ranging from small appliances to large compressors."
+acceptAlso: "VFDs are used in applications ranging from small appliances to large compressors."
+srsWords: "vfds" "used" "applications" "ranging" "small" "appliances" "large" "compressors"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "由于代码共享，单个航班可能会显示多个不同的航班号。"
+answer: "Because of code sharing, a single flight may be shown with many different flight numbers."
+acceptAlso: "Because of code sharing, a single flight may be shown with many different flight numbers."
+srsWords: "because" "code" "sharing" "single" "flight" "shown" "many" "different"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "最初，女性提出抗议，因为他的设计遮住了她们的腿，而由于之前对面料的限制，她们一直不习惯这样做。"
+answer: "Initially, women protested because his designs covered up their legs, which they had been unused to because of the previous limitations on fabric."
+acceptAlso: "Initially, women protested because his designs covered up their legs, which they had been unused to because of the previous limitations on fabric."
+srsWords: "initially" "women" "protested" "because" "designs" "covered" "legs" "unused"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "非接触式智能卡系统用于单程车票。"
+answer: "A touchless smart card system is used for single journey tickets."
+acceptAlso: "A touchless smart card system is used for single journey tickets."
+srsWords: "touchless" "smart" "card" "system" "used" "single" "journey" "tickets"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "梯架因其形似梯子而得名，是所有设计中最简单、最古老的。"
+answer: "Named because it resembles a ladder, the ladder frame is the simplest and oldest of all designs."
+acceptAlso: "Named because it resembles a ladder, the ladder frame is the simplest and oldest of all designs."
+srsWords: "named" "because" "resembles" "ladder" "frame" "simplest" "oldest" "designs"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "英语动漫论坛采用了可以与西方键盘上的标准 ASCII 字符一起使用的日式表情符号。"
+answer: "English - language anime forums adopted those Japanese-style emoticons that could be used with the standard ASCII characters available on Western keyboards."
+acceptAlso: "English - language anime forums adopted those Japanese-style emoticons that could be used with the standard ASCII characters available on Western keyboards."
+srsWords: "english" "language" "anime" "forums" "adopted" "japanesestyle" "emoticons" "used"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "胚胎移植可用于人类或动物。"
+answer: "Embryo transfer can be used for humans or animals."
+acceptAlso: "Embryo transfer can be used for humans or animals."
+srsWords: "embryo" "transfer" "used" "humans" "animals"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "此次选举采用补充投票制度，由选民选出第一选择和第二选择候选人。"
+answer: "The election election used the supplementary vote system, which is where the voters choose a first and a second choice of candidates."
+acceptAlso: "The election election used the supplementary vote system, which is where the voters choose a first and a second choice of candidates."
+srsWords: "election" "used" "supplementary" "vote" "system" "voters" "choose" "first"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "罗马洋甘菊可以直接涂抹在皮肤上以缓解疼痛和肿胀，并用于治疗乳头干裂。"
+answer: "Roman chamomile can be applied directly to the skin for pain and swelling and is used to treat cracked nipples."
+acceptAlso: "Roman chamomile can be applied directly to the skin for pain and swelling and is used to treat cracked nipples."
+srsWords: "roman" "chamomile" "applied" "directly" "skin" "pain" "swelling" "used"
+
+---
+lessonTitle: "Lesson 9: Kinds"
+description: "Translate B1 sentences about Kinds"
+icon: "🗣️"
+color: "#6366F1"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "百科全书有不同类型。"
+answer: "There are different types of encyclopedias."
+acceptAlso: "There are different types of encyclopedias."
+srsWords: "different" "types" "encyclopedias"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "有一百多种不同的肝脏疾病。"
+answer: "There are more than a hundred different kinds of liver disease."
+acceptAlso: "There are more than a hundred different kinds of liver disease."
+srsWords: "hundred" "different" "kinds" "liver" "disease"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "在其他文化中，一个人与他或她的父亲同名，但名字的位置不同。"
+answer: "In other cultures, a person has the same name as his or her father, but the name is in a different place."
+acceptAlso: "In other cultures, a person has the same name as his or her father, but the name is in a different place."
+srsWords: "cultures" "person" "name" "father" "different" "place"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "如今组成这个部门的城镇有着不同的起源。"
+answer: "The towns which compound this department nowadays had different origin."
+acceptAlso: "The towns which compound this department nowadays had different origin."
+srsWords: "towns" "compound" "department" "nowadays" "different" "origin"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "西班牙语国家对品种和制剂使用许多不同的名称。"
+answer: "Spanish -speaking countries use many different names for the varieties and preparations."
+acceptAlso: "Spanish -speaking countries use many different names for the varieties and preparations."
+srsWords: "spanish" "speaking" "countries" "use" "many" "different" "names" "varieties"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "盾牌由两个不同种族的伐木工支撑。"
+answer: "The shield is supported by two wood -cutters of different races."
+acceptAlso: "The shield is supported by two wood -cutters of different races."
+srsWords: "shield" "supported" "wood" "cutters" "different" "races"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "由于代码共享，一个航班可能由一系列不同的航班号表示。"
+answer: "Due to code sharing, a flight may be represented by a series of different flight numbers."
+acceptAlso: "Due to code sharing, a flight may be represented by a series of different flight numbers."
+srsWords: "due" "code" "sharing" "flight" "represented" "series" "different" "numbers"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "CPU 高速缓存通常完全由硬件管理，其他高速缓存由不同类型的软件管理。"
+answer: "CPU caches are generally managed entirely by hardware, other caches are managed by a different kinds of software."
+acceptAlso: "CPU caches are generally managed entirely by hardware, other caches are managed by a different kinds of software."
+srsWords: "cpu" "caches" "generally" "managed" "entirely" "hardware" "different" "kinds"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "三十三首第一人称诗，描述了十一岁男孩在海滩度过的不同时光。"
+answer: "Thirty three first person poems that describe different times during an eleven year old boy 's day at the beach."
+acceptAlso: "Thirty three first person poems that describe different times during an eleven year old boy 's day at the beach."
+srsWords: "thirty" "first" "person" "poems" "describe" "different" "times" "during"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "每个房间里漂亮的家具都体现了他的财富，这些家具来自世界各地。"
+answer: "His wealth was reflected by the beautiful furniture in each room, which was from different parts of the world."
+acceptAlso: "His wealth was reflected by the beautiful furniture in each room, which was from different parts of the world."
+srsWords: "wealth" "reflected" "beautiful" "furniture" "room" "different" "parts" "world"
+
+---
+lessonTitle: "Lesson 10: Long"
+description: "Translate B1 sentences about Long"
+icon: "🗣️"
+color: "#6366F1"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "毯子也可以用在野餐的地面上或其他人们想要坐着而不弄脏或弄湿衣服的地方。"
+answer: "Blankets may also be used on the ground for a picnic or other places where people want to sit without their clothing getting dirty or wet."
+acceptAlso: "Blankets may also be used on the ground for a picnic or other places where people want to sit without their clothing getting dirty or wet."
+srsWords: "blankets" "used" "ground" "picnic" "places" "people" "want" "sit"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "对于不愿意或不能定期服药的人，可以使用注射长效抗精神病药物制剂。"
+answer: "For people who are unwilling or unable to take drugs regularly, injectable long-acting preparations of antipsychotics can be used."
+acceptAlso: "For people who are unwilling or unable to take drugs regularly, injectable long-acting preparations of antipsychotics can be used."
+srsWords: "people" "unwilling" "unable" "take" "drugs" "regularly" "injectable" "longacting"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "这种技术长期以来一直用于通过将材料拉过一系列尺寸逐渐减小的孔来生产柔性金属线。"
+answer: "This technique has long been used to produce flexible metal wire by drawing the material through a series of holes of decreasing size."
+acceptAlso: "This technique has long been used to produce flexible metal wire by drawing the material through a series of holes of decreasing size."
+srsWords: "technique" "long" "used" "produce" "flexible" "metal" "wire" "drawing"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "长维修区直道也被用于飙车比赛。"
+answer: "The long pit straight has also been used for drag racing."
+acceptAlso: "The long pit straight has also been used for drag racing."
+srsWords: "long" "pit" "straight" "used" "drag" "racing"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "元素符号被早期教会广泛使用。"
+answer: "Elemental symbols were widely used by the early Church."
+acceptAlso: "Elemental symbols were widely used by the early Church."
+srsWords: "elemental" "symbols" "widely" "used" "early" "church"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "收缩发生器使用不同的技术。"
+answer: "The shrinking generator uses a different technique."
+acceptAlso: "The shrinking generator uses a different technique."
+srsWords: "shrinking" "generator" "uses" "different" "technique"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "梳子可用于固定散乱的头发和解开打结的湿发。"
+answer: "Combs can be used to fix stray hairs and untangle wet hair."
+acceptAlso: "Combs can be used to fix stray hairs and untangle wet hair."
+srsWords: "combs" "used" "fix" "stray" "hairs" "untangle" "wet" "hair"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "二十世纪初，这座城市被用作欧洲和澳大利亚之间的长途飞机的着陆和加油点。"
+answer: "In the early twentieth century, the city was used for landing and refueling by long distance airplane flights between Europe and Australia."
+acceptAlso: "In the early twentieth century, the city was used for landing and refueling by long distance airplane flights between Europe and Australia."
+srsWords: "early" "twentieth" "century" "city" "used" "landing" "refueling" "long"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "Swardspeak 是同性恋者使用的 Taglish 和 Englog 的一种。"
+answer: "Swardspeak is a kind of Taglish and Englog used by gay people."
+acceptAlso: "Swardspeak is a kind of Taglish and Englog used by gay people."
+srsWords: "swardspeak" "kind" "taglish" "englog" "used" "gay" "people"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "山毛榉可以在多种土壤类型中生长，无论是酸性还是碱性，只要它们不长期潮湿即可。"
+answer: "Beech grows on a wide range of soil types, acid or basic, provided they are not wet for long periods."
+acceptAlso: "Beech grows on a wide range of soil types, acid or basic, provided they are not wet for long periods."
+srsWords: "beech" "grows" "wide" "range" "soil" "types" "acid" "basic"

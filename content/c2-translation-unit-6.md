@@ -1,8 +1,8 @@
 ---
-unitTitle: "Unit 6: Scientific Formality & Epistemology"
-description: "Unit 6: Scientific Formality & Epistemology - C2 Translation Practice (2 Lessons x 10 Sentences)"
-icon: "🧪"
-color: "#EC4899"
+unitTitle: "Unit 6: Surface"
+description: "Unit 6: Surface - C2 Translation Practice (2 Lessons x 10 Sentences)"
+icon: "🗣️"
+color: "#F59E0B"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "C2"
@@ -11,102 +11,39 @@ questionType: "translation"
 ---
 
 ---
-lessonTitle: "Lesson 1: Rigorous Experimental Controls"
-description: "Translate C2 sentences about Rigorous Experimental Controls"
-icon: "🧪"
-color: "#EC4899"
+lessonTitle: "Lesson 1: Surface"
+description: "Translate C2 sentences about Surface"
+icon: "🗣️"
+color: "#F59E0B"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "药物流行病学连接了药理学和流行病学，并借鉴了两者的方法论。"
-answer: "Pharmacoepidemiology bridges pharmacology and epidemiology and borrows their methodology from both of them."
-acceptAlso: "Pharmacoepidemiology bridges pharmacology and epidemiology and borrows their methodology from both of them."
-srsWords: "pharmacoepidemiology" "bridges" "pharmacology" "epidemiology" "borrows" "methodology"
+sentence: "尽管金伯利岩相对稀有，但它还是引起了人们的关注，因为它是地球表面钻石和石榴石橄榄岩地幔捕虏体的载体。"
+answer: "Despite its relative rarity, kimberlite has attracted attention because it serves as a carrier of diamonds and garnet peridotite mantle xenoliths to the Earth 's surface."
+acceptAlso: "Despite its relative rarity, kimberlite has attracted attention because it serves as a carrier of diamonds and garnet peridotite mantle xenoliths to the Earth 's surface."
+srsWords: "despite" "relative" "rarity" "kimberlite" "attracted" "attention" "because" "serves"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "鼻中隔可能偏离鼻子的中心线，这种情况称为外伤引起的鼻中隔偏曲。"
-answer: "The nasal septum can depart from the center line of the nose in a condition that is known as a deviated septum caused by trauma."
-acceptAlso: "The nasal septum can depart from the center line of the nose in a condition that is known as a deviated septum caused by trauma."
-srsWords: "nasal" "septum" "depart" "center" "line" "nose" "condition" "known"
+sentence: "氯化铋用作有机合成的催化剂。"
+answer: "Bismuth chloride is used as a catalyst in organic synthesis."
+acceptAlso: "Bismuth chloride is used as a catalyst in organic synthesis."
+srsWords: "bismuth" "chloride" "used" "catalyst" "organic" "synthesis"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然后可以为这两个过程构建关联图，将反应物的分子轨道与具有相同对称性的产物的分子轨道连接起来。"
-answer: "Correlation diagrams, which connect the molecular orbitals of the reactant to those of the product having the same symmetry, can then be constructed for the two processes."
-acceptAlso: "Correlation diagrams, which connect the molecular orbitals of the reactant to those of the product having the same symmetry, can then be constructed for the two processes."
-srsWords: "correlation" "diagrams" "connect" "molecular" "orbitals" "reactant" "product" "having"
+sentence: "虎牙在可见光和近红外区域具有适度红斜的反射光谱，表明其表面富含托林等有机物质。"
+answer: "Huya has a moderately red-sloped reflectance spectrum in the visible and near-infrared, suggesting a surface rich in organic material such as tholins."
+acceptAlso: "Huya has a moderately red-sloped reflectance spectrum in the visible and near-infrared, suggesting a surface rich in organic material such as tholins."
+srsWords: "huya" "moderately" "redsloped" "reflectance" "spectrum" "visible" "nearinfrared" "suggesting"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "灰绿植物的叶绿体被称为“蓝藻”。"
-answer: "The chloroplasts of glaucophytes are known as' cyanelles '."
-acceptAlso: "The chloroplasts of glaucophytes are known as' cyanelles '."
-srsWords: "chloroplasts" "glaucophytes" "known" "cyanelles"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "流行病学实践和流行病学分析结果对新兴的基于人群的健康管理框架做出了重大贡献。"
-answer: "Epidemiological practice and the results of epidemiological analysis make a significant contribution to emerging population - based health management frameworks."
-acceptAlso: "Epidemiological practice and the results of epidemiological analysis make a significant contribution to emerging population - based health management frameworks."
-srsWords: "epidemiological" "practice" "results" "analysis" "make" "significant" "contribution" "emerging"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "鲸目动物和偶蹄目现在被归入鲸目动物目，通常仍被称为偶蹄目，其中包括鲸鱼和河马。"
-answer: "Cetaceans and artiodactyls now are classified under the order Cetartiodactyla, often still referred to as Artiodactyla, which includes both whales and hippopotamuses."
-acceptAlso: "Cetaceans and artiodactyls now are classified under the order Cetartiodactyla, often still referred to as Artiodactyla, which includes both whales and hippopotamuses."
-srsWords: "cetaceans" "artiodactyls" "classified" "order" "cetartiodactyla" "often" "still" "referred"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "光解是光合作用的光依赖性反应的一部分。"
-answer: "Photolysis is part of the light- dependent reactions of photosynthesis."
-acceptAlso: "Photolysis is part of the light- dependent reactions of photosynthesis."
-srsWords: "photolysis" "part" "light" "dependent" "reactions" "photosynthesis"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "分裂分子是指在组织中制造或煽动分裂的人或者是分裂团体的成员。"
-answer: "A schismatic is a person who creates or incites schism in an organization or who is a member of a splinter group."
-acceptAlso: "A schismatic is a person who creates or incites schism in an organization or who is a member of a splinter group."
-srsWords: "schismatic" "person" "creates" "incites" "schism" "organization" "member" "splinter"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "氧化锂是由氢氧化锂热脱水生产的。"
-answer: "Lithium oxide is produced by thermal dehydration of lithium hydroxide."
-acceptAlso: "Lithium oxide is produced by thermal dehydration of lithium hydroxide."
-srsWords: "lithium" "oxide" "produced" "thermal" "dehydration" "hydroxide"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "由硝酸铵与氢氧化钾反应制得。"
-answer: "It can be made by reacting ammonium nitrate with potassium hydroxide."
-acceptAlso: "It can be made by reacting ammonium nitrate with potassium hydroxide."
-srsWords: "made" "reacting" "ammonium" "nitrate" "potassium" "hydroxide"
-
----
-lessonTitle: "Lesson 2: Probabilistic Inference Precision"
-description: "Translate C2 sentences about Probabilistic Inference Precision"
-icon: "🧪"
-color: "#EC4899"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "棘头虫是一组寄生蠕虫，以前被认为是一个独立的门，但现在已被证明是经过改造的轮虫。"
-answer: "The Acanthocephala, a group of parasitic worms previously considered to be a separate phylum, have been shown to be modified rotifers."
-acceptAlso: "The Acanthocephala, a group of parasitic worms previously considered to be a separate phylum, have been shown to be modified rotifers."
-srsWords: "acanthocephala" "group" "parasitic" "worms" "previously" "considered" "separate" "phylum"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "溴化钡可由硫化钡或碳酸钡与氢溴酸反应制得水合溴化钡。"
-answer: "Barium bromide can be prepared from barium sulfide or barium carbonate via reaction with hydrobromic acid to give hydrated barium bromide."
-acceptAlso: "Barium bromide can be prepared from barium sulfide or barium carbonate via reaction with hydrobromic acid to give hydrated barium bromide."
-srsWords: "barium" "bromide" "prepared" "sulfide" "carbonate" "via" "reaction" "hydrobromic"
+sentence: "聚酯的合成通常通过缩聚反应来实现。"
+answer: "Synthesis of polyesters is generally achieved by a polycondensation reaction."
+acceptAlso: "Synthesis of polyesters is generally achieved by a polycondensation reaction."
+srsWords: "synthesis" "polyesters" "generally" "achieved" "polycondensation" "reaction"
 
 [translation]
 text: "Translate this sentence into English"
@@ -117,49 +54,112 @@ srsWords: "kimberlite" "attracted" "attention" "because" "serves" "carrier" "dia
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "辅因子可分为两种类型，要么是无机离子，要么是称为辅酶的复杂有机分子。"
-answer: "Cofactors can be divided into two types, either inorganic ions, or complex organic molecules called coenzymes."
-acceptAlso: "Cofactors can be divided into two types, either inorganic ions, or complex organic molecules called coenzymes."
-srsWords: "cofactors" "divided" "types" "inorganic" "ions" "complex" "organic" "molecules"
+sentence: "然而，古风暴学研究可以重建数百年至数千年时间尺度上的史前飓风活动趋势。"
+answer: "However, palaeotempestological research allows reconstruction of pre-historic hurricane activity trends on timescales of centuries to millennia."
+acceptAlso: "However, palaeotempestological research allows reconstruction of pre-historic hurricane activity trends on timescales of centuries to millennia."
+srsWords: "however" "palaeotempestological" "research" "allows" "reconstruction" "prehistoric" "hurricane" "activity"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "硬叶植物存在于世界许多地方，但在丛林生物群落中最为典型。"
-answer: "Sclerophyllous plants occur in many parts of the world, but are most typical in the chaparral biomes."
-acceptAlso: "Sclerophyllous plants occur in many parts of the world, but are most typical in the chaparral biomes."
-srsWords: "sclerophyllous" "plants" "occur" "many" "parts" "world" "typical" "chaparral"
+sentence: "地层等高线可用于说明所选地层的表面，从而说明地层的地下地形趋势。"
+answer: "Stratigraphic contour lines may be used to illustrate the surface of a selected stratum illustrating the subsurface topographic trends of the strata."
+acceptAlso: "Stratigraphic contour lines may be used to illustrate the surface of a selected stratum illustrating the subsurface topographic trends of the strata."
+srsWords: "stratigraphic" "contour" "lines" "used" "illustrate" "surface" "selected" "stratum"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "一些碳阳离子例如降冰片基阳离子表现出或多或少对称的三中心键合。"
-answer: "Some carbocations such as the norbornyl cation exhibit more or less symmetrical three center bonding."
-acceptAlso: "Some carbocations such as the norbornyl cation exhibit more or less symmetrical three center bonding."
-srsWords: "carbocations" "norbornyl" "cation" "exhibit" "less" "symmetrical" "center" "bonding"
+sentence: "然而，古风暴学研究可以重建数百年至数千年时间尺度上的史前飓风活动趋势。"
+answer: "However, paleotempestological research allows reconstruction of pre-historic hurricane activity trends on timescales of centuries to millennia."
+acceptAlso: "However, paleotempestological research allows reconstruction of pre-historic hurricane activity trends on timescales of centuries to millennia."
+srsWords: "however" "paleotempestological" "research" "allows" "reconstruction" "prehistoric" "hurricane" "activity"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "成纤维细胞与细胞自动机类似，因为每个成纤维细胞只与其相邻的成纤维细胞相互作用。"
-answer: "Fibroblasts are similar to cellular automata, as each fibroblast only interacts with its neighbors."
-acceptAlso: "Fibroblasts are similar to cellular automata, as each fibroblast only interacts with its neighbors."
-srsWords: "fibroblasts" "similar" "cellular" "automata" "fibroblast" "interacts" "neighbors"
+sentence: "苏木精和伊红染色常用于组织学检查薄组织切片。"
+answer: "Haematoxylin and eosin staining is frequently used in histology to examine thin tissue sections."
+acceptAlso: "Haematoxylin and eosin staining is frequently used in histology to examine thin tissue sections."
+srsWords: "haematoxylin" "eosin" "staining" "frequently" "used" "histology" "examine" "thin"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "在细菌鞭毛底部与细胞膜相交的地方，有一种运动蛋白充当引擎。"
-answer: "At the bottom of the bacterial flagellum, where it meets the cell membrane, a motor protein acts as an engine."
-acceptAlso: "At the bottom of the bacterial flagellum, where it meets the cell membrane, a motor protein acts as an engine."
-srsWords: "bottom" "bacterial" "flagellum" "meets" "cell" "membrane" "motor" "protein"
+sentence: "表面积分在物理学中具有应用，特别是在经典电磁学理论中。"
+answer: "Surface integrals have applications in physics, particularly with the classical theory of electromagnetism."
+acceptAlso: "Surface integrals have applications in physics, particularly with the classical theory of electromagnetism."
+srsWords: "surface" "integrals" "applications" "physics" "particularly" "classical" "theory" "electromagnetism"
+
+---
+lessonTitle: "Lesson 2: Bicarbonate"
+description: "Translate C2 sentences about Bicarbonate"
+icon: "🗣️"
+color: "#F59E0B"
+---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "根据热力学第二定律，非孤立系统的熵可能会减少。"
-answer: "It follows from the second law of thermodynamics that the entropy of a system that is not isolated may decrease."
-acceptAlso: "It follows from the second law of thermodynamics that the entropy of a system that is not isolated may decrease."
-srsWords: "follows" "second" "law" "thermodynamics" "entropy" "system" "isolated" "decrease"
+sentence: "许多有色合金、铸铁、粉末冶金和塑料用于制造齿轮。"
+answer: "Numerous nonferrous alloys, cast irons, powder-metallurgy and plastics are used in the manufacture of gears."
+acceptAlso: "Numerous nonferrous alloys, cast irons, powder-metallurgy and plastics are used in the manufacture of gears."
+srsWords: "numerous" "nonferrous" "alloys" "cast" "irons" "powdermetallurgy" "plastics" "used"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "碳酸铵是通过二氧化碳和氨水的结合产生的。"
-answer: "Ammonium carbonate is produced by combining carbon dioxide and aqueous ammonia."
-acceptAlso: "Ammonium carbonate is produced by combining carbon dioxide and aqueous ammonia."
-srsWords: "ammonium" "carbonate" "produced" "combining" "carbon" "dioxide" "aqueous" "ammonia"
+sentence: "不同的攻击模型用于其他密码系统，或者更普遍地用于所有类型的安全系统。"
+answer: "Different attack models are used for other cryptographic systems, or more generally for all kind of security systems."
+acceptAlso: "Different attack models are used for other cryptographic systems, or more generally for all kind of security systems."
+srsWords: "different" "attack" "models" "used" "cryptographic" "systems" "generally" "kind"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "有机金属配合物常用于催化。"
+answer: "Organometallic complexes are commonly used in catalysis."
+acceptAlso: "Organometallic complexes are commonly used in catalysis."
+srsWords: "organometallic" "complexes" "commonly" "used" "catalysis"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "皮质类固醇，如地塞米松和布地奈德，可用于治疗哮吼。"
+answer: "Corticosteroids, such as dexamethasone and budesonide, can be used to treat croup."
+acceptAlso: "Corticosteroids, such as dexamethasone and budesonide, can be used to treat croup."
+srsWords: "corticosteroids" "dexamethasone" "budesonide" "used" "treat" "croup"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "哌醋甲酯最常用于治疗多动症和发作性睡病。"
+answer: "Methylphenidate is most commonly used to treat ADHD and narcolepsy."
+acceptAlso: "Methylphenidate is most commonly used to treat ADHD and narcolepsy."
+srsWords: "methylphenidate" "commonly" "used" "treat" "adhd" "narcolepsy"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "碳酸氢钠可用于使光气泄漏变得无害。"
+answer: "Sodium bicarbonate may be used to make spills of phosgene harmless."
+acceptAlso: "Sodium bicarbonate may be used to make spills of phosgene harmless."
+srsWords: "sodium" "bicarbonate" "used" "make" "spills" "phosgene" "harmless"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "碳酸氢钠可用于中和液体溢出的光气。"
+answer: "Sodium bicarbonate may be used to neutralize liquid spills of phosgene."
+acceptAlso: "Sodium bicarbonate may be used to neutralize liquid spills of phosgene."
+srsWords: "sodium" "bicarbonate" "used" "neutralize" "liquid" "spills" "phosgene"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "服用碳酸钙和碳酸氢钠等抗酸剂可能会缓解症状。"
+answer: "The symptom may be helped by taking antacids, such as calcium carbonate and sodium bicarbonate."
+acceptAlso: "The symptom may be helped by taking antacids, such as calcium carbonate and sodium bicarbonate."
+srsWords: "symptom" "helped" "taking" "antacids" "calcium" "carbonate" "sodium" "bicarbonate"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "尽管已经提出了第三上磨牙的微妙特征，但Deomyines没有任何可用于将其与其他鼠类动物区分开的形态特征。"
+answer: "Deomyines share no morphological characteristics that can be used to separate them from other muroids, though subtle aspects of the third upper molar have been suggested."
+acceptAlso: "Deomyines share no morphological characteristics that can be used to separate them from other muroids, though subtle aspects of the third upper molar have been suggested."
+srsWords: "deomyines" "share" "morphological" "characteristics" "used" "separate" "muroids" "though"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "硝酸钙用于废水预处理，防止异味排放。"
+answer: "Calcium nitrate is used in waste water pre-conditioning for odor emission prevention."
+acceptAlso: "Calcium nitrate is used in waste water pre-conditioning for odor emission prevention."
+srsWords: "calcium" "nitrate" "used" "waste" "water" "preconditioning" "odor" "emission"

@@ -364,12 +364,272 @@ function esc(v) {
     .replace(/"/g, '\\"');
 }
 
-function buildUnitMarkdown(course, unit, lessonsExercises) {
+// ---------------------------------------------------------------------------
+// Topical clustering + content-derived titles
+//
+// CEFR-SP has no topical structure, so the pre-written unit/subtopic labels
+// ("Work & Career" / "Applying for Jobs") never matched the sentences we
+// randomly drew from it. Instead we cluster the selected English sentences by
+// meaning (TF-IDF + k-means) into topically coherent lessons, group those
+// lessons into 10 balanced units, and derive every title from the cluster's own
+// vocabulary. The topic therefore always describes what the lesson contains.
+// ---------------------------------------------------------------------------
+const UNIT_COLORS = [
+  "#3B82F6", "#6366F1", "#8B5CF6", "#EC4899", "#EF4444",
+  "#F59E0B", "#10B981", "#14B8A6", "#0EA5E9", "#84CC16",
+];
+const UNIT_ICON = "🗣️"; // neutral translation glyph; the title carries the topic
+
+function tokenizeEn(s) {
+  const toks = s.toLowerCase().match(/[a-z']+/g) || [];
+  return toks
+    .map((t) => t.replace(/^'+|'+$/g, "").replace(/[^a-z]/g, ""))
+    .filter((t) => t.length >= 3 && !STOPWORDS.has(t));
+}
+
+function buildTfidf(docs) {
+  const df = new Map();
+  const docToks = docs.map((d) => {
+    const toks = tokenizeEn(d);
+    const freq = new Map();
+    for (const t of toks) freq.set(t, (freq.get(t) || 0) + 1);
+    for (const t of freq.keys()) df.set(t, (df.get(t) || 0) + 1);
+    return freq;
+  });
+  const N = docs.length;
+  const idf = new Map();
+  for (const [t, d] of df) idf.set(t, Math.log((N + 1) / (d + 1)) + 1);
+  const vocab = [...idf.keys()];
+  const termIndex = new Map(vocab.map((t, i) => [t, i]));
+  const dim = vocab.length;
+  const vectors = docToks.map((freq) => {
+    const v = new Map();
+    let norm = 0;
+    for (const [t, c] of freq) {
+      const w = (1 + Math.log(c)) * idf.get(t);
+      v.set(termIndex.get(t), w);
+      norm += w * w;
+    }
+    norm = Math.sqrt(norm) || 1;
+    for (const [k, w] of v) v.set(k, w / norm);
+    return v;
+  });
+  return { vocab, termIndex, idf, vectors, dim };
+}
+
+function denseFromSparse(v, dim) {
+  const d = new Float64Array(dim);
+  for (const [k, w] of v) d[k] = w;
+  return d;
+}
+
+function dot(a, b) {
+  let s = 0;
+  for (let i = 0; i < a.length; i++) s += a[i] * b[i];
+  return s;
+}
+
+function euclid2(a, b) {
+  let s = 0;
+  for (let i = 0; i < a.length; i++) {
+    const d = a[i] - b[i];
+    s += d * d;
+  }
+  return s;
+}
+
+function computeCentroids(vectorsDense, labels, k) {
+  const dim = vectorsDense[0].length;
+  const sums = Array.from({ length: k }, () => new Float64Array(dim));
+  const counts = new Int32Array(k);
+  for (let i = 0; i < labels.length; i++) {
+    const c = labels[i];
+    counts[c]++;
+    const v = vectorsDense[i];
+    const s = sums[c];
+    for (let d = 0; d < dim; d++) s[d] += v[d];
+  }
+  return sums.map((s, c) => (counts[c] > 0 ? (s.forEach((_, d) => (s[d] /= counts[c])), s) : s));
+}
+
+function kmeans(vectorsDense, k, seed, restarts, iters) {
+  const n = vectorsDense.length;
+  const dim = vectorsDense[0].length;
+  let bestLabels = null;
+  let bestInertia = Infinity;
+  const rand = (() => {
+    let s = seed >>> 0;
+    return () => {
+      s |= 0; s = (s + 0x6d2b79f5) | 0;
+      let t = Math.imul(s ^ (s >>> 15), 1 | s);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  })();
+  for (let r = 0; r < restarts; r++) {
+    const centroids = [];
+    centroids.push(vectorsDense[Math.floor(rand() * n)].slice());
+    const d2 = new Float64Array(n).fill(Infinity);
+    for (let c = 1; c < k; c++) {
+      for (let i = 0; i < n; i++) {
+        const dd = euclid2(vectorsDense[i], centroids[centroids.length - 1]);
+        if (dd < d2[i]) d2[i] = dd;
+      }
+      let sum = 0;
+      for (let i = 0; i < n; i++) sum += d2[i];
+      let target = rand() * sum;
+      let idx = n - 1;
+      for (let i = 0; i < n; i++) {
+        target -= d2[i];
+        if (target <= 0) { idx = i; break; }
+      }
+      centroids.push(vectorsDense[idx].slice());
+    }
+    const labels = new Int32Array(n);
+    for (let it = 0; it < iters; it++) {
+      let changed = false;
+      for (let i = 0; i < n; i++) {
+        let best = 0, bestSim = -Infinity;
+        for (let c = 0; c < k; c++) {
+          const sim = dot(vectorsDense[i], centroids[c]);
+          if (sim > bestSim) { bestSim = sim; best = c; }
+        }
+        if (labels[i] !== best) { labels[i] = best; changed = true; }
+      }
+      const sums = Array.from({ length: k }, () => new Float64Array(dim));
+      const counts = new Int32Array(k);
+      for (let i = 0; i < n; i++) {
+        const c = labels[i];
+        counts[c]++;
+        const v = vectorsDense[i];
+        const s = sums[c];
+        for (let d = 0; d < dim; d++) s[d] += v[d];
+      }
+      for (let c = 0; c < k; c++) {
+        if (counts[c] > 0) { const s = sums[c]; for (let d = 0; d < dim; d++) s[d] /= counts[c]; }
+      }
+      if (!changed && it > 0) break;
+    }
+    let inertia = 0;
+    for (let i = 0; i < n; i++) inertia += euclid2(vectorsDense[i], centroids[labels[i]]);
+    if (inertia < bestInertia) { bestInertia = inertia; bestLabels = Int32Array.from(labels); }
+  }
+  return bestLabels;
+}
+
+// Group `n` lessons into `k` units of exactly `target` each, balancing by
+// proximity to the unit centroid (so units stay topically coherent).
+function balancedAssign(centroidsDense, k, target) {
+  const n = centroidsDense.length;
+  const labels = kmeans(centroidsDense, k, 4242, 3, 12);
+  const counts = new Array(k).fill(0);
+  for (const l of labels) counts[l]++;
+  let guard = 0;
+  while (guard++ < 3000) {
+    let overU = -1, underU = -1;
+    for (let u = 0; u < k; u++) if (counts[u] > target) { overU = u; break; }
+    if (overU === -1) break;
+    for (let u = 0; u < k; u++) if (counts[u] < target) { underU = u; break; }
+    if (underU === -1) break;
+    const unitCentroids = computeCentroids(centroidsDense, labels, k);
+    let bestM = -1, bestCost = Infinity;
+    for (let m = 0; m < n; m++) {
+      if (labels[m] !== overU) continue;
+      const cost = euclid2(centroidsDense[m], unitCentroids[underU]) - euclid2(centroidsDense[m], unitCentroids[overU]);
+      if (cost < bestCost) { bestCost = cost; bestM = m; }
+    }
+    if (bestM === -1) break;
+    labels[bestM] = underU;
+    counts[overU]--;
+    counts[underU]++;
+  }
+  return labels;
+}
+
+function titleCase(s) {
+  return s.split(/\s+/).map((w) => w.charAt(0).toUpperCase() + w.slice(1)).join(" ");
+}
+
+// Generic verbs/adverbs/adjectives that recur across CEFR-SP but carry no topic
+// signal — never use them as a lesson/unit title (e.g. "Used Different Generally").
+const WEAK_WORDS = new Set([
+  "used","use","uses","using","made","make","makes","making","called","call","calls",
+  "found","find","finds","finding","given","give","gives","given","taken","take",
+  "takes","set","get","gets","got","like","likes","well","often","generally","usually",
+  "different","various","small","large","little","big","other","others","new","old",
+  "high","low","many","much","also","such","still","always","never","even","around",
+  "between","within","along","across","during","through","however","therefore","thus",
+  "including","known","common","possible","able","including","part","parts","form",
+  "forms","type","types","way","ways","thing","things","area","areas","time","times",
+  "number","numbers","group","groups","example","examples","result","results","system",
+  "systems","process","processes","state","states","level","levels","case","cases",
+]);
+
+function deriveTitle(docTexts, termIndex, vocab, vectors, idxs) {
+  const nDocs = idxs.length;
+  // Per-term document frequency within the cluster + aggregate TF-IDF weight.
+  // Document frequency (how many of the lesson's sentences share the word) is the
+  // most reliable "this is what the lesson is about" signal; weight breaks ties.
+  const stats = new Map();
+  for (const i of idxs) {
+    const seen = new Set();
+    const v = vectors[i];
+    for (const [term, w] of v) {
+      let s = stats.get(term);
+      if (!s) { s = { df: 0, weight: 0 }; stats.set(term, s); }
+      s.weight += w;
+      if (!seen.has(term)) { seen.add(term); s.df++; }
+    }
+  }
+  // Proper nouns (capitalized, not sentence-initial) appearing in a good fraction
+  // of the lesson's sentences are the cleanest possible topic labels.
+  const properCount = new Map();
+  for (const i of idxs) {
+    const words = docTexts[i].split(/\s+/);
+    for (let k = 0; k < words.length; k++) {
+      const w = words[k].replace(/[^A-Za-z']/g, "");
+      if (!w) continue;
+      if ((w[0] >= "A" && w[0] <= "Z") && k > 0) {
+        const low = w.toLowerCase().replace(/^'+|'+$/g, "").replace(/[^a-z]/g, "");
+        if (low.length >= 3 && !STOPWORDS.has(low)) {
+          properCount.set(low, (properCount.get(low) || 0) + 1);
+        }
+      }
+    }
+  }
+  const properThresh = Math.max(2, Math.ceil(nDocs * 0.3));
+  const props = [];
+  for (const [t, c] of properCount) {
+    if (c >= properThresh) {
+      const st = stats.get(termIndex.get(t));
+      props.push({ t, df: c, score: st ? st.weight : 0 });
+    }
+  }
+  props.sort((a, b) => b.df - a.df || b.score - a.score);
+  if (props.length) {
+    return titleCase(props.slice(0, 2).map((p) => p.t).join(" "));
+  }
+  // Otherwise the single most recurring distinctive content word (skip weak ones).
+  const arr = [...stats.entries()]
+    .map(([term, s]) => ({ term, df: s.df, score: s.weight }))
+    .filter((x) => !WEAK_WORDS.has(vocab[x.term]))
+    .sort((a, b) => b.df - a.df || b.score - a.score);
+  if (arr.length === 0) return "Mixed Practice";
+  // A second word only joins if it, too, recurs across several sentences and is
+  // not weak — otherwise a lone strong topic reads cleaner than a keyword salad.
+  const top = [arr[0]];
+  if (arr[1] && arr[1].df >= Math.max(2, Math.ceil(nDocs * 0.4)) && !WEAK_WORDS.has(vocab[arr[1].term])) {
+    top.push(arr[1]);
+  }
+  return titleCase(top.map((x) => vocab[x.term]).join(" "));
+}
+
+function buildUnitMarkdown(course, unitObj, lessonTitles, lessonsExercises) {
   let md = `---
-unitTitle: "Unit ${unit.id}: ${unit.title}"
-description: "Unit ${unit.id}: ${unit.title} - ${course.level} Translation Practice (${lessonsExercises.length} Lessons x 10 Sentences)"
-icon: "${unit.icon}"
-color: "${course.color}"
+unitTitle: "Unit ${unitObj.id}: ${unitObj.title}"
+description: "Unit ${unitObj.id}: ${unitObj.title} - ${course.level} Translation Practice (${lessonsExercises.length} Lessons x 10 Sentences)"
+icon: "${unitObj.icon}"
+color: "${unitObj.color}"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "${course.level}"
@@ -381,12 +641,12 @@ questionType: "translation"
 
   lessonsExercises.forEach((exercises, lIdx) => {
     const lessonNum = lIdx + 1;
-    const subtopic = unit.subtopics[lIdx] ?? `Lesson ${lessonNum}`;
+    const title = lessonTitles[lIdx] || `Lesson ${lessonNum}`;
     md += `---
-lessonTitle: "Lesson ${lessonNum}: ${subtopic}"
-description: "Translate ${course.level} sentences about ${subtopic}"
-icon: "${unit.icon}"
-color: "${course.color}"
+lessonTitle: "Lesson ${lessonNum}: ${title}"
+description: "Translate ${course.level} sentences about ${title}"
+icon: "${unitObj.icon}"
+color: "${unitObj.color}"
 ---
 
 `;
@@ -413,7 +673,7 @@ function buildCourseMarkdown(course, unitCount, lessonCount, totalSentences) {
   return `---
 id: "${course.courseId}"
 courseTitle: "${course.level} 翻译${totalSentences}句"
-description: "${course.level} Translation Course — CEFR-SP authentic sentences (${unitCount} Units x ${lessonCount} Lessons = ${totalSentences} Sentences)"
+description: "${course.level} Translation Course — CEFR-SP authentic sentences (${unitCount} Units x ${lessonCount} Lessons, ${totalSentences} Sentences total)"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "${course.level}"
@@ -486,46 +746,70 @@ async function main() {
     return;
   }
 
-  // 4) Write markdown.
+  // 4) Cluster the selected English sentences into topically coherent units
+  //    (10 per level), then split each unit into topically coherent lessons, and
+  //    derive every title from the cluster's own vocabulary. The old hard-coded
+  //    "Work & Career" / "Applying for Jobs" labels were fabricated and never
+  //    matched CEFR-SP's random sentences; inverting the hierarchy (units first,
+  //    then lessons) keeps BOTH the unit and lesson topics faithful to content.
   for (const course of COURSES) {
     const level = course.level;
     const enSentences = selection[level];
     const pairs = enSentences.map((en) => ({ en, zh: cache[en] || "" }));
-    const totalLessons = level === "C2" ? 2 : 10;
-    const units = course.units;
+    const docTexts = pairs.map((p) => p.en);
+    const { vocab, termIndex, vectors, dim } = buildTfidf(docTexts);
+    const vectorsDense = vectors.map((v) => denseFromSparse(v, dim));
+    const N = pairs.length;
+    const numUnits = 10;
+    const unitTarget = Math.round(N / numUnits);
+    const unitLabels = balancedAssign(vectorsDense, numUnits, unitTarget);
+    const units = Array.from({ length: numUnits }, () => []);
+    pairs.forEach((_, i) => units[unitLabels[i]].push(i));
 
-    const lessonsExercises = [];
-    let idx = 0;
-    for (const unit of units) {
-      const unitLessons = [];
-      for (let l = 0; l < totalLessons; l++) {
-        const lesson = [];
-        for (let k = 0; k < 10; k++) {
-          if (idx >= pairs.length) break;
-          const { en, zh } = pairs[idx++];
-          lesson.push({ sentence: zh, answer: cleanEnglish(en), srsWords: extractSrsWords(en) });
-        }
-        if (lesson.length > 0) unitLessons.push(lesson);
-      }
-      if (unitLessons.length > 0) lessonsExercises.push({ unit, lessons: unitLessons });
-    }
+    let actualUnits = 0;
+    let totalLessons = 0;
+    for (let u = 0; u < numUnits; u++) {
+      if (units[u].length === 0) continue;
+      actualUnits++;
+      const uIdx = units[u];
+      const subVectors = uIdx.map((i) => vectorsDense[i]);
+      const lessonsPerUnit = Math.max(1, Math.round(uIdx.length / 10));
+      const lessonTarget = Math.round(uIdx.length / lessonsPerUnit);
+      const lessonLabels = balancedAssign(subVectors, lessonsPerUnit, lessonTarget);
+      const lessonGroups = Array.from({ length: lessonsPerUnit }, () => []);
+      uIdx.forEach((i, j) => lessonGroups[lessonLabels[j]].push(i));
+      const nonEmpty = lessonGroups.filter((g) => g.length > 0).sort((a, b) => a[0] - b[0]);
+      totalLessons += nonEmpty.length;
 
-    const actualUnits = lessonsExercises.length;
-    const actualLessons = lessonsExercises.reduce((n, u) => n + u.lessons.length, 0);
-
-    fs.writeFileSync(
-      path.join(OUT_DIR, `${level.toLowerCase()}-translation-course.md`),
-      buildCourseMarkdown(course, actualUnits, totalLessons, pairs.length),
-      "utf-8",
-    );
-    for (const { unit, lessons } of lessonsExercises) {
+      const unitTitle = deriveTitle(docTexts, termIndex, vocab, vectors, uIdx);
+      const unitObj = {
+        id: u + 1,
+        icon: UNIT_ICON,
+        title: unitTitle,
+        color: UNIT_COLORS[u % UNIT_COLORS.length],
+      };
+      const lessonsExercises = nonEmpty.map((g) =>
+        g.map((i) => ({
+          sentence: pairs[i].zh,
+          answer: cleanEnglish(pairs[i].en),
+          srsWords: extractSrsWords(pairs[i].en),
+        })),
+      );
+      const lessonTitles = nonEmpty.map((g) => deriveTitle(docTexts, termIndex, vocab, vectors, g));
       fs.writeFileSync(
-        path.join(OUT_DIR, `${level.toLowerCase()}-translation-unit-${unit.id}.md`),
-        buildUnitMarkdown(course, unit, lessons),
+        path.join(OUT_DIR, `${level.toLowerCase()}-translation-unit-${u + 1}.md`),
+        buildUnitMarkdown(course, unitObj, lessonTitles, lessonsExercises),
         "utf-8",
       );
     }
-    console.log(`✓ ${level}: wrote ${actualUnits} units, ${actualLessons} lessons, ${pairs.length} sentences`);
+
+    const avgLessonsPerUnit = Math.round(N / numUnits / 10) || 1;
+    fs.writeFileSync(
+      path.join(OUT_DIR, `${level.toLowerCase()}-translation-course.md`),
+      buildCourseMarkdown(course, actualUnits, avgLessonsPerUnit, N),
+      "utf-8",
+    );
+    console.log(`✓ ${level}: wrote ${actualUnits} units, ${totalLessons} lessons, ${N} sentences`);
   }
 
   console.log("\nDone. Re-seed the database (or redeploy) to publish the new content.");

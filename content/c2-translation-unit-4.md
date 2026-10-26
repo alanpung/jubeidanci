@@ -1,7 +1,7 @@
 ---
-unitTitle: "Unit 4: Literary Prose & Stylistic Register"
-description: "Unit 4: Literary Prose & Stylistic Register - C2 Translation Practice (2 Lessons x 10 Sentences)"
-icon: "📖"
+unitTitle: "Unit 4: Chloroplasts"
+description: "Unit 4: Chloroplasts - C2 Translation Practice (2 Lessons x 10 Sentences)"
+icon: "🗣️"
 color: "#EC4899"
 targetLanguage: "en"
 sourceLanguage: "zh"
@@ -11,137 +11,123 @@ questionType: "translation"
 ---
 
 ---
-lessonTitle: "Lesson 1: Evocative Descriptive Cadence"
-description: "Translate C2 sentences about Evocative Descriptive Cadence"
-icon: "📖"
+lessonTitle: "Lesson 1: Chloroplasts"
+description: "Translate C2 sentences about Chloroplasts"
+icon: "🗣️"
 color: "#EC4899"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "下丘脑将因子沿着垂体柄释放到垂体，在那里引起垂体激素的释放。"
-answer: "The hypothalamus releases factors down the pituitary stalk to the pituitary gland where they cause the release of pituitary hormones."
-acceptAlso: "The hypothalamus releases factors down the pituitary stalk to the pituitary gland where they cause the release of pituitary hormones."
-srsWords: "hypothalamus" "releases" "factors" "pituitary" "stalk" "gland" "cause" "release"
+sentence: "叶绿素分子排列在光系统内和周围，光系统嵌入叶绿体的类囊体膜中。"
+answer: "Chlorophyll molecules are arranged in and around photosystems that are embedded in the thylakoid membranes of chloroplasts."
+acceptAlso: "Chlorophyll molecules are arranged in and around photosystems that are embedded in the thylakoid membranes of chloroplasts."
+srsWords: "chlorophyll" "molecules" "arranged" "around" "photosystems" "embedded" "thylakoid" "membranes"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "与鳞龙类爬行动物不同，盘龙类缺乏表皮鳞片。"
-answer: "Unlike lepidosaurian reptiles, pelycosaurs lacked epidermal scales."
-acceptAlso: "Unlike lepidosaurian reptiles, pelycosaurs lacked epidermal scales."
-srsWords: "unlike" "lepidosaurian" "reptiles" "pelycosaurs" "lacked" "epidermal" "scales"
+sentence: "血清与细胞因子白血病抑制因子结合，是胚胎干细胞自我更新的重要组成部分。"
+answer: "Serum is an important part of the self-renewal of embryonic stem cells when combined with the cytokine leukemia inhibitory factor."
+acceptAlso: "Serum is an important part of the self-renewal of embryonic stem cells when combined with the cytokine leukemia inhibitory factor."
+srsWords: "serum" "important" "part" "selfrenewal" "embryonic" "stem" "cells" "combined"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "差分密码分析攻击通常是选择明文攻击，这意味着攻击者必须能够获得他选择的某些明文集的加密密文。"
-answer: "Differential cryptanalysis attacks are usually chosen plaintext attacks, meaning that the attacker must be able to obtain encrypted ciphertexts for some set of plaintexts of his choosing."
-acceptAlso: "Differential cryptanalysis attacks are usually chosen plaintext attacks, meaning that the attacker must be able to obtain encrypted ciphertexts for some set of plaintexts of his choosing."
-srsWords: "differential" "cryptanalysis" "attacks" "usually" "chosen" "plaintext" "meaning" "attacker"
+sentence: "灰绿植物的叶绿体被称为“室质体”、“蓝绿体”或“蓝藻”。"
+answer: "The chloroplasts of glaucophytes are known as' muroplasts ', ' cyanoplasts ', or'cyanelles '."
+acceptAlso: "The chloroplasts of glaucophytes are known as' muroplasts ', ' cyanoplasts ', or'cyanelles '."
+srsWords: "chloroplasts" "glaucophytes" "known" "muroplasts" "cyanoplasts" "orcyanelles"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "皮质类固醇，如地塞米松和布地奈德，可用于治疗哮吼。"
-answer: "Corticosteroids, such as dexamethasone and budesonide, can be used to treat croup."
-acceptAlso: "Corticosteroids, such as dexamethasone and budesonide, can be used to treat croup."
-srsWords: "corticosteroids" "dexamethasone" "budesonide" "used" "treat" "croup"
+sentence: "肺动脉高压患者肺动脉平滑肌细胞的异常增殖和收缩涉及三个主要途径。"
+answer: "Three major pathways are involved in abnormal proliferation and contraction of the smooth-muscle cells of the pulmonary artery in patients with pulmonary arterial hypertension."
+acceptAlso: "Three major pathways are involved in abnormal proliferation and contraction of the smooth-muscle cells of the pulmonary artery in patients with pulmonary arterial hypertension."
+srsWords: "major" "pathways" "involved" "abnormal" "proliferation" "contraction" "smoothmuscle" "cells"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "传统上，类似哺乳动物的爬行动物分为原始类和高级类，分别称为盘龙类和兽孔类。"
-answer: "The mammal - like reptiles are traditionally divided into a primitive group and an advanced group, known respectively as pelycosaurs and therapsids."
-acceptAlso: "The mammal - like reptiles are traditionally divided into a primitive group and an advanced group, known respectively as pelycosaurs and therapsids."
-srsWords: "mammal" "like" "reptiles" "traditionally" "divided" "primitive" "group" "advanced"
+sentence: "当胚胎前脑无法将大脑分成两个脑叶时，就会导致前脑无裂畸形。"
+answer: "When the embryonic forebrain fails to divide the brain into two lobes, it results in a condition known as holoprosencephaly."
+acceptAlso: "When the embryonic forebrain fails to divide the brain into two lobes, it results in a condition known as holoprosencephaly."
+srsWords: "embryonic" "forebrain" "fails" "divide" "brain" "lobes" "results" "condition"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "聚酯的合成通常通过缩聚反应来实现。"
-answer: "Synthesis of polyesters is generally achieved by a polycondensation reaction."
-acceptAlso: "Synthesis of polyesters is generally achieved by a polycondensation reaction."
-srsWords: "synthesis" "polyesters" "generally" "achieved" "polycondensation" "reaction"
+sentence: "海藻酸盐、琼脂和卡拉胶是凝胶状海藻产品，统称为亲水胶体或藻胶体。"
+answer: "Alginate, agar and carrageenan are gelatinous seaweed products collectively known as hydrocolloids or phycocolloids."
+acceptAlso: "Alginate, agar and carrageenan are gelatinous seaweed products collectively known as hydrocolloids or phycocolloids."
+srsWords: "alginate" "agar" "carrageenan" "gelatinous" "seaweed" "products" "collectively" "known"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "电环反应的一个例子是苯并环丁烷的旋转热开环。"
-answer: "An example of an electrocyclic reaction is the conrotatory thermal ring-opening of benzocyclobutane."
-acceptAlso: "An example of an electrocyclic reaction is the conrotatory thermal ring-opening of benzocyclobutane."
-srsWords: "example" "electrocyclic" "reaction" "conrotatory" "thermal" "ringopening" "benzocyclobutane"
+sentence: "克雅氏病的症状是由大脑神经细胞的逐渐死亡引起的，这与形成淀粉样蛋白的异常朊病毒蛋白分子的积累有关。"
+answer: "The symptoms of CJD are caused by the progressive death of the brain 's nerve cells, which is associated with the build - up of abnormal prion protein molecules forming amyloids."
+acceptAlso: "The symptoms of CJD are caused by the progressive death of the brain 's nerve cells, which is associated with the build - up of abnormal prion protein molecules forming amyloids."
+srsWords: "symptoms" "cjd" "caused" "progressive" "death" "brain" "nerve" "cells"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "哌醋甲酯最常用于治疗多动症和发作性睡病。"
-answer: "Methylphenidate is most commonly used to treat ADHD and narcolepsy."
-acceptAlso: "Methylphenidate is most commonly used to treat ADHD and narcolepsy."
-srsWords: "methylphenidate" "commonly" "used" "treat" "adhd" "narcolepsy"
+sentence: "人们从两处象形文字铭文中得知了他的身份。"
+answer: "He is known from two inscriptions in hieroglyphics."
+acceptAlso: "He is known from two inscriptions in hieroglyphics."
+srsWords: "known" "inscriptions" "hieroglyphics"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "菌根植物通常对疾病具有更强的抵抗力，例如由微生物土传病原体引起的疾病。"
-answer: "Mycorrhizal plants are often more resistant to diseases, such as those caused by microbial soil- borne pathogens."
-acceptAlso: "Mycorrhizal plants are often more resistant to diseases, such as those caused by microbial soil- borne pathogens."
-srsWords: "mycorrhizal" "plants" "often" "resistant" "diseases" "caused" "microbial" "soil"
+sentence: "灰绿植物的叶绿体被称为“蓝藻”。"
+answer: "The chloroplasts of glaucophytes are known as' cyanelles '."
+acceptAlso: "The chloroplasts of glaucophytes are known as' cyanelles '."
+srsWords: "chloroplasts" "glaucophytes" "known" "cyanelles"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "阿拉伯树胶是糖蛋白和多糖的复杂混合物，主要由阿拉伯糖和半乳糖组成。"
-answer: "Gum arabic is a complex mixture of glycoproteins and polysaccharides predominantly consisting of arabinose and galactose."
-acceptAlso: "Gum arabic is a complex mixture of glycoproteins and polysaccharides predominantly consisting of arabinose and galactose."
-srsWords: "gum" "arabic" "complex" "mixture" "glycoproteins" "polysaccharides" "predominantly" "consisting"
+sentence: "当胚胎前脑无法将大脑分为两个脑叶时，就会导致前脑无裂畸形。"
+answer: "When the embryonic prosencephalon fails to divide the brain into two lobes, it results in a condition known as holoprosencephaly."
+acceptAlso: "When the embryonic prosencephalon fails to divide the brain into two lobes, it results in a condition known as holoprosencephaly."
+srsWords: "embryonic" "prosencephalon" "fails" "divide" "brain" "lobes" "results" "condition"
 
 ---
-lessonTitle: "Lesson 2: Intricate Narrative Structure"
-description: "Translate C2 sentences about Intricate Narrative Structure"
-icon: "📖"
+lessonTitle: "Lesson 2: Prokaryotes"
+description: "Translate C2 sentences about Prokaryotes"
+icon: "🗣️"
 color: "#EC4899"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "大多数激素通过最初与细胞膜相关受体或细胞内受体结合来启动细胞反应。"
-answer: "Most hormones initiate a cellular response by initially binding to either cell membrane associated or intracellular receptors."
-acceptAlso: "Most hormones initiate a cellular response by initially binding to either cell membrane associated or intracellular receptors."
-srsWords: "hormones" "initiate" "cellular" "response" "initially" "binding" "cell" "membrane"
+sentence: "原核生物和真核生物的蛋白质生物合成虽然非常相似，但有所不同。"
+answer: "Protein biosynthesis, although very similar, is different for prokaryotes and eukaryotes."
+acceptAlso: "Protein biosynthesis, although very similar, is different for prokaryotes and eukaryotes."
+srsWords: "protein" "biosynthesis" "although" "similar" "different" "prokaryotes" "eukaryotes"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "苯二氮卓类药物是治疗酒精戒断最常用的药物，通常安全有效地抑制酒精戒断症状。"
-answer: "Benzodiazepines are the most commonly used medication for the treatment of alcohol withdrawal and are generally safe and effective in suppressing symptoms of alcohol withdrawal."
-acceptAlso: "Benzodiazepines are the most commonly used medication for the treatment of alcohol withdrawal and are generally safe and effective in suppressing symptoms of alcohol withdrawal."
-srsWords: "benzodiazepines" "commonly" "used" "medication" "treatment" "alcohol" "withdrawal" "generally"
+sentence: "原核生物和真核生物的蛋白质生物合成有所不同，尽管原核生物和真核生物的部分过程是相同的。"
+answer: "Protein biosynthesis differs between prokaryotes and eukaryotes, though parts of the process are the same in both."
+acceptAlso: "Protein biosynthesis differs between prokaryotes and eukaryotes, though parts of the process are the same in both."
+srsWords: "protein" "biosynthesis" "differs" "prokaryotes" "eukaryotes" "though" "parts" "process"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "其他类型的肛门癌包括腺癌、淋巴瘤、肉瘤或黑色素瘤。"
-answer: "Other types of anal carcinoma are adenocarcinoma, lymphoma, sarcoma or melanoma."
-acceptAlso: "Other types of anal carcinoma are adenocarcinoma, lymphoma, sarcoma or melanoma."
-srsWords: "types" "anal" "carcinoma" "adenocarcinoma" "lymphoma" "sarcoma" "melanoma"
+sentence: "然而，最近的研究表明，至少一些原核生物具有微区室，例如羧基体。"
+answer: "However, recent research has shown that at least some prokaryotes have microcompartments such as carboxysomes."
+acceptAlso: "However, recent research has shown that at least some prokaryotes have microcompartments such as carboxysomes."
+srsWords: "however" "recent" "research" "shown" "least" "prokaryotes" "microcompartments" "carboxysomes"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "未经治疗的链球菌性咽炎通常会在几天内消退。"
-answer: "Untreated streptococcal pharyngitis usually resolves within a few days."
-acceptAlso: "Untreated streptococcal pharyngitis usually resolves within a few days."
-srsWords: "untreated" "streptococcal" "pharyngitis" "usually" "resolves" "within" "few" "days"
+sentence: "鼠类是中小型啮齿动物，最大的有老鼠那么大。"
+answer: "Nesomyids are small - to medium-sized rodents, with the largest being the size of a rat."
+acceptAlso: "Nesomyids are small - to medium-sized rodents, with the largest being the size of a rat."
+srsWords: "nesomyids" "small" "mediumsized" "rodents" "largest" "size" "rat"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "环氧化物可以使用亲氧试剂脱氧。"
-answer: "Epoxides can be deoxygenated using oxophilic reagents."
-acceptAlso: "Epoxides can be deoxygenated using oxophilic reagents."
-srsWords: "epoxides" "deoxygenated" "using" "oxophilic" "reagents"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "由碳酸钠与硝酸银反应制得。"
-answer: "It is made by reacting sodium carbonate with silver nitrate."
-acceptAlso: "It is made by reacting sodium carbonate with silver nitrate."
-srsWords: "made" "reacting" "sodium" "carbonate" "silver" "nitrate"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这个家族的大多数成员都是伏击掠食者，因为它们通常在伪装位置一动不动，然后突然袭击路过的猎物。"
-answer: "Most members of this family are ambush predators, in that they typically remain motionless in a camouflaged position, and then strike suddenly at passing prey."
-acceptAlso: "Most members of this family are ambush predators, in that they typically remain motionless in a camouflaged position, and then strike suddenly at passing prey."
-srsWords: "members" "family" "ambush" "predators" "typically" "remain" "motionless" "camouflaged"
+sentence: "所有需氧生物体在氧化碳水化合物、脂肪酸和蛋白质时都会产生产物。"
+answer: "All aerobic organisms produce when they oxidize carbohydrates, fatty acids, and proteins."
+acceptAlso: "All aerobic organisms produce when they oxidize carbohydrates, fatty acids, and proteins."
+srsWords: "aerobic" "organisms" "produce" "oxidize" "carbohydrates" "fatty" "acids" "proteins"
 
 [translation]
 text: "Translate this sentence into English"
@@ -152,14 +138,28 @@ srsWords: "tits" "generalist" "insectivores" "consume" "wide" "range" "small" "i
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "氢溴酸在工业上通常是通过溴与硫或磷和水反应来制备的。"
-answer: "Hydrobromic acid has commonly been prepared industrially by reacting bromine with either sulfur or phosphorus and water."
-acceptAlso: "Hydrobromic acid has commonly been prepared industrially by reacting bromine with either sulfur or phosphorus and water."
-srsWords: "hydrobromic" "acid" "commonly" "prepared" "industrially" "reacting" "bromine" "sulfur"
+sentence: "成纤维细胞与细胞自动机类似，因为每个成纤维细胞只与其相邻的成纤维细胞相互作用。"
+answer: "Fibroblasts are similar to cellular automata, as each fibroblast only interacts with its neighbors."
+acceptAlso: "Fibroblasts are similar to cellular automata, as each fibroblast only interacts with its neighbors."
+srsWords: "fibroblasts" "similar" "cellular" "automata" "fibroblast" "interacts" "neighbors"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "碳酸氢钠可用于使光气泄漏变得无害。"
-answer: "Sodium bicarbonate may be used to make spills of phosgene harmless."
-acceptAlso: "Sodium bicarbonate may be used to make spills of phosgene harmless."
-srsWords: "sodium" "bicarbonate" "used" "make" "spills" "phosgene" "harmless"
+sentence: "青藻含有胞壁质体，除了具有与原核生物相似的细胞壁外，其与叶绿体相似。"
+answer: "Glaucocystophytic algae contain muroplasts, which are similar to chloroplasts except that they have a cell wall, similar to that of prokaryotes."
+acceptAlso: "Glaucocystophytic algae contain muroplasts, which are similar to chloroplasts except that they have a cell wall, similar to that of prokaryotes."
+srsWords: "glaucocystophytic" "algae" "contain" "muroplasts" "similar" "chloroplasts" "except" "cell"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "细胞质中的小颗粒含有蛋白质和酶，称为颗粒酶。"
+answer: "Small granules in their cytoplasm contain proteins and enzymes called granzymes."
+acceptAlso: "Small granules in their cytoplasm contain proteins and enzymes called granzymes."
+srsWords: "small" "granules" "cytoplasm" "contain" "proteins" "enzymes" "called" "granzymes"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "NK细胞具有细胞毒性；细胞质中的小颗粒含有穿孔素等蛋白质和称为颗粒酶的蛋白酶。"
+answer: "NK cells are cytotoxic; small granules in their cytoplasm contain proteins such as perforin and proteases known as granzymes."
+acceptAlso: "NK cells are cytotoxic; small granules in their cytoplasm contain proteins such as perforin and proteases known as granzymes."
+srsWords: "cells" "cytotoxic" "small" "granules" "cytoplasm" "contain" "proteins" "perforin"
