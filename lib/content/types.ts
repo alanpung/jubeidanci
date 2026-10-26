@@ -248,13 +248,13 @@ export interface CourseManagementInfo {
   sourceLanguage: string;
   targetLanguage: string;
   level: string;
-  visibility: "public" | "private" | null;
+  visibility: "public" | "private" | "hidden" | null;
   createdBy: string | null;
   units: {
     id: string;
     title: string;
     icon: string | null;
-    visibility: "public" | "private" | null;
+    visibility: "public" | "private" | "hidden" | null;
     lessonCount: number;
     questionType?: QuestionTypeInfo | null;
   }[];

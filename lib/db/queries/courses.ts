@@ -359,7 +359,15 @@ export async function listCourses(
         }
       }
 
-      return rows.map((r) => ({
+      // A hidden course is owner-only: drop it for everyone else (including
+      // VIP students of the owner, who would otherwise see it via the VIP
+      // clause above). The owner keeps seeing their own hidden courses so they
+      // can un-hide them.
+      const visible = rows.filter(
+        (r) => r.visibility !== "hidden" || r.createdBy === userId,
+      );
+
+      return visible.map((r) => ({
         ...r,
         creatorName: r.creatorName ?? (SYSTEM_COURSE_IDS.includes(r.id) ? "Alan P" : null),
         unitCount: Number(r.unitCount),
@@ -650,6 +658,12 @@ export async function getCourseWithContent(
       .where(and(...courseConditions));
 
     if (courseRow) {
+      // Hidden courses are owner-only: a non-owner (including a VIP student of
+      // the owner) must not be able to open one by URL.
+      if (courseRow.visibility === "hidden" && courseRow.createdBy !== userId) {
+        return null;
+      }
+
       const isSystemCourse = SYSTEM_COURSE_IDS.includes(courseRow.id);
       const courseCreatorName = courseRow.creatorName ?? (isSystemCourse ? "Alan P" : null);
 
