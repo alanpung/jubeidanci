@@ -321,17 +321,15 @@ export function Translation({
 
         <div className={`w-full max-w-4xl mx-auto px-1 ${isKeyboardOpen ? "mb-2" : "mb-4"}`}>
           <div
-            className={`flex items-stretch justify-center gap-1.5 sm:gap-2 pb-1 ${
-              isMobile ? "flex-wrap" : "flex-nowrap overflow-x-auto"
-            }`}
+            className="flex flex-wrap items-stretch justify-center gap-1.5 sm:gap-2 pb-1"
           >
             {analyzedWordList.map((item, idx) => {
               const wordMatched = submitted ? matchedIndices[idx] === true : false;
-              const borderClass = !submitted
-                ? "border-lingo-border bg-white"
+              const bgClass = !submitted
+                ? "bg-gray-50/70"
                 : wordMatched
-                  ? "border-emerald-200 bg-emerald-50/30"
-                  : "border-rose-200 bg-rose-50/30";
+                  ? "bg-emerald-50"
+                  : "bg-rose-50";
               const wordColor = !submitted
                 ? "text-transparent select-none"
                 : wordMatched
@@ -340,14 +338,14 @@ export function Translation({
               return (
                 <div
                   key={idx}
-                  className={`rounded-xl border-2 shadow-xs flex flex-col items-center justify-center min-w-0 ${borderClass} ${
+                  className={`rounded-xl flex flex-col items-center justify-center min-w-0 ${bgClass} ${
                     isMobile
-                      ? "px-1.5 py-1 max-w-[5.5rem]"
-                      : "px-1.5 sm:px-2 py-1.5 sm:py-2 flex-1 basis-0 max-w-[7.5rem] sm:max-w-[9rem]"
+                      ? "px-1.5 py-1"
+                      : "px-2 sm:px-2.5 py-1.5 sm:py-2"
                   } ${isKeyboardOpen ? "py-1" : ""}`}
                 >
                   <span
-                    className={`w-full text-center font-serif font-bold tracking-tight leading-tight truncate ${wordColor} ${
+                    className={`w-full break-words text-center font-serif font-bold tracking-tight leading-tight ${wordColor} ${
                       isKeyboardOpen ? "text-xs" : "text-sm sm:text-base md:text-lg"
                     }`}
                     title={submitted ? item.word : undefined}
@@ -369,7 +367,7 @@ export function Translation({
                     )}
                     {submitted && item.meaning && (
                       <div
-                        className="text-[10px] sm:text-xs text-gray-800 text-center font-semibold leading-tight truncate w-full"
+                        className="text-[10px] sm:text-xs text-gray-800 text-center font-semibold leading-tight break-words w-full"
                         title={item.meaning}
                       >
                         {item.meaning}
@@ -377,7 +375,7 @@ export function Translation({
                     )}
                     {submitted && item.ipa && (
                       <div
-                        className="text-[9px] sm:text-[10px] text-gray-500 font-mono text-center leading-tight truncate w-full"
+                        className="text-[9px] sm:text-[10px] text-gray-500 font-mono text-center leading-tight break-words w-full"
                         title={item.ipa}
                       >
                         {item.ipa}

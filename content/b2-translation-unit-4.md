@@ -1,8 +1,8 @@
 ---
-unitTitle: "Unit 4: Science & Modern Technology"
-description: "Unit 4: Science & Modern Technology - B2 Translation Practice (10 Lessons x 10 Sentences)"
-icon: "🔬"
-color: "#6366F1"
+unitTitle: "Unit 4: Because"
+description: "Unit 4: Because - B2 Translation Practice (10 Lessons x 10 Sentences)"
+icon: "🗣️"
+color: "#EC4899"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "B2"
@@ -11,179 +11,116 @@ questionType: "translation"
 ---
 
 ---
-lessonTitle: "Lesson 1: Artificial Intelligence Impact"
-description: "Translate B2 sentences about Artificial Intelligence Impact"
-icon: "🔬"
-color: "#6366F1"
+lessonTitle: "Lesson 1: Because"
+description: "Translate B2 sentences about Because"
+icon: "🗣️"
+color: "#EC4899"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "此外，电环反应中的扭矩选择性是指旋转方向。"
-answer: "In addition, the torquoselectivity in an electrocyclic reaction refers to the direction of rotation."
-acceptAlso: "In addition, the torquoselectivity in an electrocyclic reaction refers to the direction of rotation."
-srsWords: "addition" "torquoselectivity" "electrocyclic" "reaction" "refers" "direction" "rotation"
+sentence: "人类现在在生物圈中发挥着首要作用，地球上许多生态系统中都有大量的人口。"
+answer: "Humans now play a top role in the biosphere, with the large amount of people in many of Earth 's ecosystems."
+acceptAlso: "Humans now play a top role in the biosphere, with the large amount of people in many of Earth 's ecosystems."
+srsWords: "humans" "play" "top" "role" "biosphere" "large" "amount" "people"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该化石的大部分面部和下颌骨都有牙齿，而且独特的是，它是脑壳的天然内铸件。"
-answer: "The fossil has most of the face and mandible with teeth and, uniquely, a natural endocast of the braincase."
-acceptAlso: "The fossil has most of the face and mandible with teeth and, uniquely, a natural endocast of the braincase."
-srsWords: "fossil" "face" "mandible" "teeth" "uniquely" "natural" "endocast" "braincase"
+sentence: "大型同步加速器实验室将拥有许多光束线，每条光束线都针对特定的研究领域进行了优化。"
+answer: "A large synchrotron laboratory will have many beamlines, each optimized for a particular field of research."
+acceptAlso: "A large synchrotron laboratory will have many beamlines, each optimized for a particular field of research."
+srsWords: "large" "synchrotron" "laboratory" "many" "beamlines" "optimized" "particular" "field"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "通常情况下，大逃杀的参赛者只能玩一次。任何死亡的玩家都不允许重生。"
-answer: "Typically, battle royale contestants are only given one life to play; any players who die are not allowed to respawn."
-acceptAlso: "Typically, battle royale contestants are only given one life to play; any players who die are not allowed to respawn."
-srsWords: "typically" "battle" "royale" "contestants" "given" "life" "play" "players"
+sentence: "通常，单一当局涵盖大城镇或城市，这些城镇或城市足够大，独立于县或地区行政机构。"
+answer: "Typically unitary authorities cover large towns or cities, which are large enough to be independent of county or regional administration."
+acceptAlso: "Typically unitary authorities cover large towns or cities, which are large enough to be independent of county or regional administration."
+srsWords: "typically" "unitary" "authorities" "cover" "large" "towns" "cities" "enough"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "水轮机分为两类：反动式水轮机和脉冲式水轮机。"
-answer: "Water turbines are divided into two groups: reaction turbines and impulse turbines."
-acceptAlso: "Water turbines are divided into two groups: reaction turbines and impulse turbines."
-srsWords: "water" "turbines" "divided" "groups" "reaction" "impulse"
+sentence: "这一时期到美国的大多数爱尔兰移民都青睐大城市，因为他们可以在新的环境中创建自己的社区以获得支持和保护。"
+answer: "Most Irish immigrants to the United States during this period favored large cities because they could create their own communities for support and protection in a new environment."
+acceptAlso: "Most Irish immigrants to the United States during this period favored large cities because they could create their own communities for support and protection in a new environment."
+srsWords: "irish" "immigrants" "united" "states" "during" "period" "favored" "large"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "格兰瓦利拉河是塞格雷河的支流，而塞格雷河又是埃布罗河的支流。"
-answer: "The Gran Valira is a tributary to the Segre, which in turn is a tributary to the Ebro."
-acceptAlso: "The Gran Valira is a tributary to the Segre, which in turn is a tributary to the Ebro."
-srsWords: "gran" "valira" "tributary" "segre" "turn" "ebro"
+sentence: "开国元勋们想要共和主义，因为它的思想保证自由，并以有限的权力相互制衡。"
+answer: "The Founding Fathers wanted republicanism because its ideas guaranteed liberty, with limited powers checking and balancing each other."
+acceptAlso: "The Founding Fathers wanted republicanism because its ideas guaranteed liberty, with limited powers checking and balancing each other."
+srsWords: "founding" "fathers" "wanted" "republicanism" "because" "ideas" "guaranteed" "liberty"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "碳酸锂是通过过氧化锂与二氧化碳化合生成的。"
-answer: "Lithium carbonate is generated by combining lithium peroxide with carbon dioxide."
-acceptAlso: "Lithium carbonate is generated by combining lithium peroxide with carbon dioxide."
-srsWords: "lithium" "carbonate" "generated" "combining" "peroxide" "carbon" "dioxide"
+sentence: "易发生野火的生态系统中的植物通常通过适应当地的火灾状况而生存。"
+answer: "Plants in wildfire - prone ecosystems often survive through adaptations to their local fire regime."
+acceptAlso: "Plants in wildfire - prone ecosystems often survive through adaptations to their local fire regime."
+srsWords: "plants" "wildfire" "prone" "ecosystems" "often" "survive" "through" "adaptations"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "肥大细胞在外观和功能上与嗜碱性粒细胞（一种白细胞）非常相似。"
-answer: "The mast cell is very similar in both appearance and function to the basophil, a type of white blood cell."
-acceptAlso: "The mast cell is very similar in both appearance and function to the basophil, a type of white blood cell."
-srsWords: "mast" "cell" "similar" "appearance" "function" "basophil" "type" "white"
+sentence: "自由人通常会因为欠下巨额债务而沦为农奴。"
+answer: "A free man usually became a serf because he owed a large debt."
+acceptAlso: "A free man usually became a serf because he owed a large debt."
+srsWords: "free" "man" "usually" "became" "serf" "because" "owed" "large"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "星系的许多细节仍然是个谜，尤其是它是如何形成的。"
-answer: "Many of the details of the galaxy remain a mystery, especially how it formed."
-acceptAlso: "Many of the details of the galaxy remain a mystery, especially how it formed."
-srsWords: "many" "details" "galaxy" "remain" "mystery" "especially" "formed"
+sentence: "兰德斯认为，由于人口减少、普遍老龄化和生产率增长下降，全球国内生产总值将无法像过去那样增长。"
+answer: "Randers argues that the global gross domestic product will fail to increase as it has in the past because of population decline, general aging and declining productivity growth."
+acceptAlso: "Randers argues that the global gross domestic product will fail to increase as it has in the past because of population decline, general aging and declining productivity growth."
+srsWords: "randers" "argues" "global" "gross" "domestic" "product" "fail" "increase"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "过去，人们认识到豺狼的十个亚种。"
-answer: "In the past, ten subspecies of the dholes were recognized."
-acceptAlso: "In the past, ten subspecies of the dholes were recognized."
-srsWords: "past" "ten" "subspecies" "dholes" "recognized"
+sentence: "零票价服务可由国家、地区或地方政府通过税收或企业的商业赞助来资助。"
+answer: "Zero-fare services may be funded by national, regional or local government through taxation or by commercial sponsorship by businesses."
+acceptAlso: "Zero-fare services may be funded by national, regional or local government through taxation or by commercial sponsorship by businesses."
+srsWords: "zerofare" "services" "funded" "national" "regional" "local" "government" "through"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该亚科分布广泛，成员适应多种环境。"
-answer: "This subfamily is widely distributed and members are adapted to a wide variety of environments."
-acceptAlso: "This subfamily is widely distributed and members are adapted to a wide variety of environments."
-srsWords: "subfamily" "widely" "distributed" "members" "adapted" "wide" "variety" "environments"
+sentence: "猫的头骨在哺乳动物中很不寻常，因为它有非常大的眼窝和强大的特化下巴。"
+answer: "The cat skull is unusual among mammals in having very large eye sockets and a powerful specialized jaw."
+acceptAlso: "The cat skull is unusual among mammals in having very large eye sockets and a powerful specialized jaw."
+srsWords: "cat" "skull" "unusual" "among" "mammals" "having" "large" "eye"
 
 ---
-lessonTitle: "Lesson 2: Data Privacy & Security"
-description: "Translate B2 sentences about Data Privacy & Security"
-icon: "🔬"
-color: "#6366F1"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "尽管后来天文学家试图再次找到它，但此后就再也没有可靠地观测到过它。"
-answer: "Even though later astronomers tried to find it again, it has not been reliably seen since."
-acceptAlso: "Even though later astronomers tried to find it again, it has not been reliably seen since."
-srsWords: "even" "though" "later" "astronomers" "tried" "find" "again" "reliably"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "加拿大是发达国家，名义人均收入全球第十，人类发展指数排名第十。"
-answer: "Canada is a developed country and has the tenth highest nominal per capita income globally as well as the tenth highest ranking in the Human Development Index."
-acceptAlso: "Canada is a developed country and has the tenth highest nominal per capita income globally as well as the tenth highest ranking in the Human Development Index."
-srsWords: "canada" "developed" "country" "tenth" "highest" "nominal" "per" "capita"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "他将颜色与成盐之间的关系称为卤色学，其中孔雀石绿就是一个典型的例子。"
-answer: "He called the relationship between color and salt formation halochromy of which malachite green is a prime example."
-acceptAlso: "He called the relationship between color and salt formation halochromy of which malachite green is a prime example."
-srsWords: "called" "relationship" "color" "salt" "formation" "halochromy" "malachite" "green"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "如果我是一名工程师，我会寻找一种比水更安全的化学品来生产地热能。"
-answer: "If I were an engineer, I would look for a chemical safer than water to use for geothermal energy production."
-acceptAlso: "If I were an engineer, I would look for a chemical safer than water to use for geothermal energy production."
-srsWords: "engineer" "look" "chemical" "safer" "water" "use" "geothermal" "energy"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "镤有毒且具有高放射性。"
-answer: "Protactinium is both toxic and highly radioactive."
-acceptAlso: "Protactinium is both toxic and highly radioactive."
-srsWords: "protactinium" "toxic" "highly" "radioactive"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "罂粟种植和毒品贩运对阿富汗近25年来的政治和经济局势发挥着重要作用。"
-answer: "Opium poppy cultivation and drug trafficking have important role in the political and economic situation of Afghanistan for last twenty - five years."
-acceptAlso: "Opium poppy cultivation and drug trafficking have important role in the political and economic situation of Afghanistan for last twenty - five years."
-srsWords: "opium" "poppy" "cultivation" "drug" "trafficking" "important" "role" "political"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "上一集中关于免疫力的挑战存在一些争议。"
-answer: "There was some controversy about an immunity challenge in the last episode."
-acceptAlso: "There was some controversy about an immunity challenge in the last episode."
-srsWords: "controversy" "immunity" "challenge" "last" "episode"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "为了提高效率，各部门应按照距当前负责人位置较近的顺序提供服务，而不是按照收到的顺序。"
-answer: "For efficiency the sectors should be serviced in order of proximity to the current head position, rather than in the order received."
-acceptAlso: "For efficiency the sectors should be serviced in order of proximity to the current head position, rather than in the order received."
-srsWords: "efficiency" "sectors" "serviced" "order" "proximity" "current" "head" "position"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "在中性原子中，电子数量等于质子数量。"
-answer: "In a neutral atom, the number of electrons equals the number of protons."
-acceptAlso: "In a neutral atom, the number of electrons equals the number of protons."
-srsWords: "neutral" "atom" "number" "electrons" "equals" "protons"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "博伊斯以其八部交响曲、颂歌和颂歌而闻名。"
-answer: "Boyce is best known for his eight symphonies, his anthems and his odes."
-acceptAlso: "Boyce is best known for his eight symphonies, his anthems and his odes."
-srsWords: "boyce" "best" "known" "eight" "symphonies" "anthems" "odes"
-
----
-lessonTitle: "Lesson 3: Medical Breakthroughs"
-description: "Translate B2 sentences about Medical Breakthroughs"
-icon: "🔬"
-color: "#6366F1"
+lessonTitle: "Lesson 2: Fusion"
+description: "Translate B2 sentences about Fusion"
+icon: "🗣️"
+color: "#EC4899"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "蝙蝠最显着的特征是它们的前肢发育成翅膀，这使它们成为唯一能够飞行的哺乳动物。"
-answer: "The bats ' most distinguishing feature is that their forelimbs are developed as wings, making them the only mammals capable of flight."
-acceptAlso: "The bats ' most distinguishing feature is that their forelimbs are developed as wings, making them the only mammals capable of flight."
-srsWords: "bats" "distinguishing" "feature" "forelimbs" "developed" "wings" "making" "mammals"
+sentence: "静电触电的感觉是中和电流流经人体时刺激神经而产生的。"
+answer: "The feeling of a static electric shock is caused by the stimulation of nerves as the neutralizing current flows through the human body."
+acceptAlso: "The feeling of a static electric shock is caused by the stimulation of nerves as the neutralizing current flows through the human body."
+srsWords: "feeling" "static" "electric" "shock" "caused" "stimulation" "nerves" "neutralizing"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "活动宝藏是由寻宝者组织和参加的聚会。"
-answer: "An Event Cache is a gathering organized and attended by geocachers."
-acceptAlso: "An Event Cache is a gathering organized and attended by geocachers."
-srsWords: "event" "cache" "gathering" "organized" "attended" "geocachers"
+sentence: "自史前时代以来，生物从其父母那里遗传性状的观察就被用来通过选择性育种来改良农作物和动物。"
+answer: "The observation that living things inherit traits from their parents has been used since prehistoric times to improve crop plants and animals through selective breeding."
+acceptAlso: "The observation that living things inherit traits from their parents has been used since prehistoric times to improve crop plants and animals through selective breeding."
+srsWords: "observation" "living" "things" "inherit" "traits" "parents" "used" "since"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "该技术长期以来一直用于通过一系列尺寸逐渐减小的模具拉拔材料来生产柔性金属线。"
+answer: "This technique has long been used to produce flexible metal wire by drawing the material through a series of dies of decreasing size."
+acceptAlso: "This technique has long been used to produce flexible metal wire by drawing the material through a series of dies of decreasing size."
+srsWords: "technique" "long" "used" "produce" "flexible" "metal" "wire" "drawing"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "恒星凝结和点燃后，通过氢核聚变成氦，在致密的核心区域产生热能。"
+answer: "After condensation and ignition of a star, it generates thermal energy in its dense core region through nuclear fusion of hydrogen into helium."
+acceptAlso: "After condensation and ignition of a star, it generates thermal energy in its dense core region through nuclear fusion of hydrogen into helium."
+srsWords: "condensation" "ignition" "star" "generates" "thermal" "energy" "dense" "core"
 
 [translation]
 text: "Translate this sentence into English"
@@ -194,80 +131,136 @@ srsWords: "feeling" "electric" "shock" "caused" "stimulation" "nerves" "neutrali
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这部小说一直是人们解读的主题，重点关注焚书在镇压异议变革思想方面的历史作用。"
-answer: "The novel has been the subject of interpretations focusing on the historical role of book burning in suppressing dissenting ideas for change."
-acceptAlso: "The novel has been the subject of interpretations focusing on the historical role of book burning in suppressing dissenting ideas for change."
-srsWords: "novel" "subject" "interpretations" "focusing" "historical" "role" "book" "burning"
+sentence: "恒星通过氢核聚变成氦来获取能量。"
+answer: "Stars get the energy they produce through nuclear fusion of hydrogen into helium."
+acceptAlso: "Stars get the energy they produce through nuclear fusion of hydrogen into helium."
+srsWords: "stars" "get" "energy" "produce" "through" "nuclear" "fusion" "hydrogen"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "将碳酸钾溶解在过量氢氟酸中可制备氟化钾。"
-answer: "Potassium fluoride is prepared by dissolving potassium carbonate in excess hydrofluoric acid."
-acceptAlso: "Potassium fluoride is prepared by dissolving potassium carbonate in excess hydrofluoric acid."
-srsWords: "potassium" "fluoride" "prepared" "dissolving" "carbonate" "excess" "hydrofluoric" "acid"
+sentence: "桉树通过蒸腾作用从土壤中吸收大量的水分。"
+answer: "Eucalypts draw a tremendous amount of water from the soil through the process of transpiration."
+acceptAlso: "Eucalypts draw a tremendous amount of water from the soil through the process of transpiration."
+srsWords: "eucalypts" "draw" "tremendous" "amount" "water" "soil" "through" "process"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "许多传统的细木工技术利用木材独特的材料特性，通常不使用机械紧固件或粘合剂。"
-answer: "Many traditional wood joinery techniques use the distinctive material properties of wood, often without resorting to mechanical fasteners or adhesives."
-acceptAlso: "Many traditional wood joinery techniques use the distinctive material properties of wood, often without resorting to mechanical fasteners or adhesives."
-srsWords: "many" "traditional" "wood" "joinery" "techniques" "use" "distinctive" "material"
+sentence: "在生物医学研究的历史上，动物曾多次被使用。"
+answer: "Animals have repeatedly been used through the history of biomedical research."
+acceptAlso: "Animals have repeatedly been used through the history of biomedical research."
+srsWords: "animals" "repeatedly" "used" "through" "history" "biomedical" "research"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "超富营养化湖泊是营养丰富的湖泊，经常出现大量藻华，透明度较低。"
-answer: "Hypereutrophic lakes are very nutrient - rich lakes with frequent large algal blooms and low transparency."
-acceptAlso: "Hypereutrophic lakes are very nutrient - rich lakes with frequent large algal blooms and low transparency."
-srsWords: "hypereutrophic" "lakes" "nutrient" "rich" "frequent" "large" "algal" "blooms"
+sentence: "QCD中的所有夸克和胶子通过强力相互作用。"
+answer: "All quarks and gluons in QCD interact with each other through the strong force."
+acceptAlso: "All quarks and gluons in QCD interact with each other through the strong force."
+srsWords: "quarks" "gluons" "qcd" "interact" "through" "strong" "force"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "特霍夫特因其对粒子物理学规范理论发展的贡献而闻名。"
-answer: "'t Hooft is most famous for his contributions to the development of gauge theories in particle physics."
-acceptAlso: "'t Hooft is most famous for his contributions to the development of gauge theories in particle physics."
-srsWords: "hooft" "famous" "contributions" "development" "gauge" "theories" "particle" "physics"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "由于其用途广泛，氨是产量最高的无机化学品之一。"
-answer: "Because of its many uses, ammonia is one of the most highly produced inorganic chemicals."
-acceptAlso: "Because of its many uses, ammonia is one of the most highly produced inorganic chemicals."
-srsWords: "because" "many" "uses" "ammonia" "highly" "produced" "inorganic" "chemicals"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "至少有两个驰龙属具有飞行或滑翔的能力。"
-answer: "The ability to fly or glide has been suggested for at least two dromaeosaur genera."
-acceptAlso: "The ability to fly or glide has been suggested for at least two dromaeosaur genera."
-srsWords: "ability" "fly" "glide" "suggested" "least" "dromaeosaur" "genera"
+sentence: "他们骑着摩托车穿过一个危险的十字路口。"
+answer: "They raced their motorcycles through a dangerous intersection."
+acceptAlso: "They raced their motorcycles through a dangerous intersection."
+srsWords: "raced" "motorcycles" "through" "dangerous" "intersection"
 
 ---
-lessonTitle: "Lesson 4: Space Exploration"
-description: "Translate B2 sentences about Space Exploration"
-icon: "🔬"
-color: "#6366F1"
+lessonTitle: "Lesson 3: Major"
+description: "Translate B2 sentences about Major"
+icon: "🗣️"
+color: "#EC4899"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "醇和羧酸反应形成羧酸酯。"
-answer: "An alcohol and a carboxylic acid react to form a carboxylic ester."
-acceptAlso: "An alcohol and a carboxylic acid react to form a carboxylic ester."
-srsWords: "alcohol" "carboxylic" "acid" "react" "form" "ester"
+sentence: "Pi 键是由通过两个重叠区域接触的原子轨道重叠而产生的。"
+answer: "Pi bonds result from overlap of atomic orbitals that are in contact through two areas of overlap."
+acceptAlso: "Pi bonds result from overlap of atomic orbitals that are in contact through two areas of overlap."
+srsWords: "bonds" "result" "overlap" "atomic" "orbitals" "contact" "through" "areas"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "主要是由于它们的栖息地崎岖、难以接近，它们鲜为人知，传统上被认为是稀有的。"
-answer: "Largely because of their rugged, inaccessible habitat, they are very poorly known and have traditionally been considered rare."
-acceptAlso: "Largely because of their rugged, inaccessible habitat, they are very poorly known and have traditionally been considered rare."
-srsWords: "largely" "because" "rugged" "inaccessible" "habitat" "poorly" "known" "traditionally"
+sentence: "它的相对大调是E大调，平行大调是升C大调。"
+answer: "Its relative major is E major, and its parallel major is C-sharp major."
+acceptAlso: "Its relative major is E major, and its parallel major is C-sharp major."
+srsWords: "relative" "major" "parallel" "csharp"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "尽管它们的亮度极高，但其中许多恒星距离太远，无法用肉眼观察到。"
-answer: "Despite their extreme luminosity, many of these stars are too distant to be observed with the naked eye."
-acceptAlso: "Despite their extreme luminosity, many of these stars are too distant to be observed with the naked eye."
-srsWords: "despite" "extreme" "luminosity" "many" "stars" "distant" "observed" "naked"
+sentence: "世界大部分地区仍然受到基本上可预防或可治疗的传染病的困扰。"
+answer: "Large parts of the world remained plagued by largely preventable or treatable infectious diseases."
+acceptAlso: "Large parts of the world remained plagued by largely preventable or treatable infectious diseases."
+srsWords: "large" "parts" "world" "remained" "plagued" "largely" "preventable" "treatable"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "目标包括短期占领并占领一个主要港口，既是为了证明这是可能的，也是为了收集情报。"
+answer: "Objectives included seizing and holding a major port for a short period, both to prove that it was possible and to gather intelligence."
+acceptAlso: "Objectives included seizing and holding a major port for a short period, both to prove that it was possible and to gather intelligence."
+srsWords: "objectives" "included" "seizing" "holding" "major" "port" "short" "period"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "有些飞蛾，特别是它们的毛毛虫，可能是世界许多地方的主要农业害虫。"
+answer: "Some moths, particularly their caterpillars, can be major agricultural pests in many parts of the world."
+acceptAlso: "Some moths, particularly their caterpillars, can be major agricultural pests in many parts of the world."
+srsWords: "moths" "particularly" "caterpillars" "major" "agricultural" "pests" "many" "parts"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "三种主要的学习范式是监督学习、无监督学习和强化学习。"
+answer: "The three major learning paradigms are supervised learning, unsupervised learning and reinforcement learning."
+acceptAlso: "The three major learning paradigms are supervised learning, unsupervised learning and reinforcement learning."
+srsWords: "major" "learning" "paradigms" "supervised" "unsupervised" "reinforcement"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "分子伴侣的一项主要功能是防止多肽链和组装的亚基粘在一起形成不起作用的团块。"
+answer: "One major function of chaperones is to prevent polypeptide chains and assembled subunits sticking together in clumps which do not function."
+acceptAlso: "One major function of chaperones is to prevent polypeptide chains and assembled subunits sticking together in clumps which do not function."
+srsWords: "major" "function" "chaperones" "prevent" "polypeptide" "chains" "assembled" "subunits"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "飞蛾，通常是它们的毛毛虫，是世界许多地方的主要农场害虫。"
+answer: "Moths, usually their caterpillars, are a major farm pest in many parts of the world."
+acceptAlso: "Moths, usually their caterpillars, are a major farm pest in many parts of the world."
+srsWords: "moths" "usually" "caterpillars" "major" "farm" "pest" "many" "parts"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "A大调的交响曲数量没有D大调或G大调那么多，但比其他升调多。"
+answer: "There are not as many symphonies in A major as in D major or G major, but more than other sharp keys."
+acceptAlso: "There are not as many symphonies in A major as in D major or G major, but more than other sharp keys."
+srsWords: "many" "symphonies" "major" "sharp" "keys"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "中心是一把砍刀和锄头，代表了国家获得独立的革命和农业工人的重要性。"
+answer: "In the center is a machete and hoe, representing the revolution through which the nation gained independence and the importance of agricultural workers."
+acceptAlso: "In the center is a machete and hoe, representing the revolution through which the nation gained independence and the importance of agricultural workers."
+srsWords: "center" "machete" "hoe" "representing" "revolution" "through" "nation" "gained"
+
+---
+lessonTitle: "Lesson 4: Canada"
+description: "Translate B2 sentences about Canada"
+icon: "🗣️"
+color: "#EC4899"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "在加拿大和美国，社区经常通过邻里协会、邻里监督或街区监督获得官方或半官方地位。"
+answer: "In Canada and the United States, neighborhoods are often given official or semi-official status through neighborhood associations, neighborhood watches or block watches."
+acceptAlso: "In Canada and the United States, neighborhoods are often given official or semi-official status through neighborhood associations, neighborhood watches or block watches."
+srsWords: "canada" "united" "states" "neighborhoods" "often" "given" "official" "semiofficial"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "加拿大也是许多土著语言的故乡。"
+answer: "Canada is also home to many indigenous languages."
+acceptAlso: "Canada is also home to many indigenous languages."
+srsWords: "canada" "home" "many" "indigenous" "languages"
 
 [translation]
 text: "Translate this sentence into English"
@@ -278,59 +271,87 @@ srsWords: "although" "members" "order" "sparassodonta" "showed" "many" "similari
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "泥火山通常是由从地球表面或海底爆发出来的泥底辟形成的。"
-answer: "A mud volcano is usually made by mud diapir that breaks out of the surface of the Earth or on the ocean bottom."
-acceptAlso: "A mud volcano is usually made by mud diapir that breaks out of the surface of the Earth or on the ocean bottom."
-srsWords: "mud" "volcano" "usually" "made" "diapir" "breaks" "surface" "earth"
+sentence: "大多数种类的海蛇都能够通过皮肤顶部进行呼吸。"
+answer: "Most species of the sea snakes are able to respire through the top of their skin."
+acceptAlso: "Most species of the sea snakes are able to respire through the top of their skin."
+srsWords: "species" "sea" "snakes" "able" "respire" "through" "top" "skin"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "在古代日本，狐狸和人类生活得很近。这种友谊引发了有关这些生物的传说。"
-answer: "Foxes and humans lived close together in ancient Japan; this companionship gave rise to legends about the creatures."
-acceptAlso: "Foxes and humans lived close together in ancient Japan; this companionship gave rise to legends about the creatures."
-srsWords: "foxes" "humans" "lived" "close" "together" "ancient" "japan" "companionship"
+sentence: "这种矿物在古埃及的木乃伊仪式中被使用，因为它能吸收水分并起到干燥剂的作用。"
+answer: "The mineral was used during mummification ceremonies in ancient Egypt because it absorbs water and behaves as a drying agent."
+acceptAlso: "The mineral was used during mummification ceremonies in ancient Egypt because it absorbs water and behaves as a drying agent."
+srsWords: "mineral" "used" "during" "mummification" "ceremonies" "ancient" "egypt" "because"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "对男性和女性伴游者的采访揭示了这些伴游者经历中的性别差异。"
-answer: "Interviews with men and women escorts illuminate gender differences in these escorts ' experiences."
-acceptAlso: "Interviews with men and women escorts illuminate gender differences in these escorts ' experiences."
-srsWords: "interviews" "men" "women" "escorts" "illuminate" "gender" "differences" "experiences"
+sentence: "许多发展中国家的可再生能源项目通过提供创造企业和就业所需的能源来促进减贫。"
+answer: "Renewable energy projects in many developing countries contribute to poverty alleviation by providing the energy needed for creating businesses and employment."
+acceptAlso: "Renewable energy projects in many developing countries contribute to poverty alleviation by providing the energy needed for creating businesses and employment."
+srsWords: "renewable" "energy" "projects" "many" "developing" "countries" "contribute" "poverty"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他的兴趣包括语言学、考古学、生物化学和音乐。"
-answer: "His interests included linguistics, archaeology, biochemistry and music."
-acceptAlso: "His interests included linguistics, archaeology, biochemistry and music."
-srsWords: "interests" "included" "linguistics" "archaeology" "biochemistry" "music"
+sentence: "加拿大提供了热等离子体分析仪。"
+answer: "Canada provided a thermal plasma analyzer."
+acceptAlso: "Canada provided a thermal plasma analyzer."
+srsWords: "canada" "provided" "thermal" "plasma" "analyzer"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "与白尾蜂鸟一样，它有时被认为是分布更广泛的条纹尾蜂鸟的一个亚种。"
-answer: "Like the white - tailed hummingbird, it is sometimes considered a subspecies of the more widespread stripe-tailed hummingbird."
-acceptAlso: "Like the white - tailed hummingbird, it is sometimes considered a subspecies of the more widespread stripe-tailed hummingbird."
-srsWords: "like" "white" "tailed" "hummingbird" "sometimes" "considered" "subspecies" "widespread"
+sentence: "由于与巨行星的相互作用，半人马星的轨道时常发生变化。"
+answer: "The orbits of centaurs change from time to time because of interactions with the giant planets."
+acceptAlso: "The orbits of centaurs change from time to time because of interactions with the giant planets."
+srsWords: "orbits" "centaurs" "change" "time" "because" "interactions" "giant" "planets"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "有些诊所是为受伤或生病的人提供分诊护士或其他卫生工作者就诊的场所。"
-answer: "Some clinics function as a place for people with injuries or illnesses to come and be seen by a triage nurse or other health worker."
-acceptAlso: "Some clinics function as a place for people with injuries or illnesses to come and be seen by a triage nurse or other health worker."
-srsWords: "clinics" "function" "place" "people" "injuries" "illnesses" "come" "seen"
+sentence: "有许多品牌的现成切片面包可供选择，其中一些专门宣传其适合烘烤。"
+answer: "Many brands of ready sliced bread are available, some of which specifically market their suitability for toasting."
+acceptAlso: "Many brands of ready sliced bread are available, some of which specifically market their suitability for toasting."
+srsWords: "many" "brands" "ready" "sliced" "bread" "available" "specifically" "market"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我奶奶的汤很好吃，因为它不仅含有所有必需的营养成分，而且还有家的味道。"
+answer: "My grandmother 's soup is nice to eat because it not only has all the essential nutrients but also tastes like home."
+acceptAlso: "My grandmother 's soup is nice to eat because it not only has all the essential nutrients but also tastes like home."
+srsWords: "grandmother" "soup" "nice" "eat" "because" "essential" "nutrients" "tastes"
 
 ---
-lessonTitle: "Lesson 5: Automation in Industry"
-description: "Translate B2 sentences about Automation in Industry"
-icon: "🔬"
-color: "#6366F1"
+lessonTitle: "Lesson 5: Because"
+description: "Translate B2 sentences about Because"
+icon: "🗣️"
+color: "#EC4899"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "火星是一颗类地行星，由含有硅、氧、金属和其他通常构成岩石的元素的矿物组成。"
-answer: "Mars is a terrestrial planet that consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock."
-acceptAlso: "Mars is a terrestrial planet that consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock."
-srsWords: "mars" "terrestrial" "planet" "consists" "minerals" "containing" "silicon" "oxygen"
+sentence: "圈养繁殖很困难，部分原因是繁殖周期相对较少。"
+answer: "Captive breeding is difficult, partly because of the relatively infrequent breeding cycle."
+acceptAlso: "Captive breeding is difficult, partly because of the relatively infrequent breeding cycle."
+srsWords: "captive" "breeding" "difficult" "partly" "because" "relatively" "infrequent" "cycle"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "有些人认为这是因为超自然现象或外星生物。"
+answer: "Some people think this is because of paranormal or extraterrestrial beings."
+acceptAlso: "Some people think this is because of paranormal or extraterrestrial beings."
+srsWords: "people" "think" "because" "paranormal" "extraterrestrial" "beings"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "该公园经常因含硫气体而关闭。"
+answer: "The park is frequently closed because of sulphur gas."
+acceptAlso: "The park is frequently closed because of sulphur gas."
+srsWords: "park" "frequently" "closed" "because" "sulphur" "gas"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "由于硫磺气体排放，该公园经常对游客关闭。"
+answer: "The park has been frequently closed to visitors because of sulphuric gas emissions."
+acceptAlso: "The park has been frequently closed to visitors because of sulphuric gas emissions."
+srsWords: "park" "frequently" "closed" "visitors" "because" "sulphuric" "gas" "emissions"
 
 [translation]
 text: "Translate this sentence into English"
@@ -341,437 +362,360 @@ srsWords: "album" "caused" "controversy" "because" "poster" "inserted" "original
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "海藻也被收获或培养以提取藻酸盐、琼脂和角叉菜胶，这些凝胶状物质统称为亲水胶体或藻胶体。"
-answer: "Seaweeds are also harvested or cultivated for the extraction of alginate, agar and carrageenan, gelatinous substances collectively known as hydrocolloids or phycocolloids."
-acceptAlso: "Seaweeds are also harvested or cultivated for the extraction of alginate, agar and carrageenan, gelatinous substances collectively known as hydrocolloids or phycocolloids."
-srsWords: "seaweeds" "harvested" "cultivated" "extraction" "alginate" "agar" "carrageenan" "gelatinous"
+sentence: "对于矢量场的积分，事情就更复杂了，因为涉及到表面法线。"
+answer: "For integrals of vector fields, things are more complicated, because the surface normal is involved."
+acceptAlso: "For integrals of vector fields, things are more complicated, because the surface normal is involved."
+srsWords: "integrals" "vector" "fields" "things" "complicated" "because" "surface" "normal"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "伊奥卡斯特属于阿南克群，据信是捕获的小行星分解后的残余​​物。"
-answer: "Iocaste belongs to the Ananke group, believed to be the remnants of a break - up of a captured asteroid."
-acceptAlso: "Iocaste belongs to the Ananke group, believed to be the remnants of a break - up of a captured asteroid."
-srsWords: "iocaste" "belongs" "ananke" "group" "believed" "remnants" "break" "captured"
+sentence: "这个进化枝中的鸣叫本质上是领地性的，因为它向其他鸟类传达个体的身份和行踪，并且还发出性意图的信号。"
+answer: "The song in this clade is essentially territorial, because it communicates the identity and whereabouts of an individual to other birds, and also signals sexual intentions."
+acceptAlso: "The song in this clade is essentially territorial, because it communicates the identity and whereabouts of an individual to other birds, and also signals sexual intentions."
+srsWords: "song" "clade" "essentially" "territorial" "because" "communicates" "identity" "whereabouts"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "时钟信号是一种特殊的数字信号，用于同步许多数字电路。"
-answer: "The clock signal is a special digital signal that is used to synchronize many digital circuits."
-acceptAlso: "The clock signal is a special digital signal that is used to synchronize many digital circuits."
-srsWords: "clock" "signal" "special" "digital" "used" "synchronize" "many" "circuits"
+sentence: "梯子类比的出现是因为没有一种技术可以测量天文学中遇到的所有范围的距离。"
+answer: "The ladder analogy arises because no one technique can measure distances at all ranges encountered in astronomy."
+acceptAlso: "The ladder analogy arises because no one technique can measure distances at all ranges encountered in astronomy."
+srsWords: "ladder" "analogy" "arises" "because" "technique" "measure" "distances" "ranges"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "虽然她的故事的细节似乎是虚构的，但她的存在和殉难被认为是历史事实。"
-answer: "While the details of her story appear to be fictional, her existence and martyrdom are considered a historical fact."
-acceptAlso: "While the details of her story appear to be fictional, her existence and martyrdom are considered a historical fact."
-srsWords: "while" "details" "story" "appear" "fictional" "existence" "martyrdom" "considered"
+sentence: "主要是因为它们的栖息地崎岖、难以接近，所以它们鲜为人知。"
+answer: "Largely because of their rugged, inaccessible habitat, they are very poorly known."
+acceptAlso: "Largely because of their rugged, inaccessible habitat, they are very poorly known."
+srsWords: "largely" "because" "rugged" "inaccessible" "habitat" "poorly" "known"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "每个大陆都发现了人类和其他动物的木乃伊，但都是通过不寻常的条件进行自然保存的结果，并且是作为文化文物。"
-answer: "Mummies of humans and other animals have been found on every continent, but as a result of natural preservation through unusual conditions, and as cultural artifacts."
-acceptAlso: "Mummies of humans and other animals have been found on every continent, but as a result of natural preservation through unusual conditions, and as cultural artifacts."
-srsWords: "mummies" "humans" "animals" "found" "every" "continent" "result" "natural"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "火山学家是研究火山及其喷发的人。"
-answer: "A volcanologist is a person who studies volcanoes and their eruptions."
-acceptAlso: "A volcanologist is a person who studies volcanoes and their eruptions."
-srsWords: "volcanologist" "person" "studies" "volcanoes" "eruptions"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "主力进攻试图营救被困的营。"
-answer: "The main attack tried to rescue the trapped battalions."
-acceptAlso: "The main attack tried to rescue the trapped battalions."
-srsWords: "main" "attack" "tried" "rescue" "trapped" "battalions"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这种武器的扩散不仅仅体现在数字上。"
-answer: "The proliferation of this weapon is shown by more than just numbers."
-acceptAlso: "The proliferation of this weapon is shown by more than just numbers."
-srsWords: "proliferation" "weapon" "shown" "numbers"
+sentence: "瑞典是君主立宪制国家，因为它有一位国王卡尔十六世·古斯塔夫，但他没有任何实权。"
+answer: "Sweden is a constitutional monarchy because it has a king, Carl XVI Gustaf, but he does not have any real power."
+acceptAlso: "Sweden is a constitutional monarchy because it has a king, Carl XVI Gustaf, but he does not have any real power."
+srsWords: "sweden" "constitutional" "monarchy" "because" "king" "carl" "xvi" "gustaf"
 
 ---
-lessonTitle: "Lesson 6: Smartphone Addiction"
-description: "Translate B2 sentences about Smartphone Addiction"
-icon: "🔬"
-color: "#6366F1"
+lessonTitle: "Lesson 6: Role"
+description: "Translate B2 sentences about Role"
+icon: "🗣️"
+color: "#EC4899"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "统计假设检验基于对频率分布之间差异和相似性的评估。"
-answer: "Statistical hypothesis testing is based on the assessment of differences and similarities between frequency distributions."
-acceptAlso: "Statistical hypothesis testing is based on the assessment of differences and similarities between frequency distributions."
-srsWords: "statistical" "hypothesis" "testing" "based" "assessment" "differences" "similarities" "frequency"
+sentence: "许多游戏艺术家被要求为角色扮演游戏发生的环境和元素开发图形处理。"
+answer: "Many game artists are called upon to develop graphical treatments for the environments and elements in which role - playing games take place."
+acceptAlso: "Many game artists are called upon to develop graphical treatments for the environments and elements in which role - playing games take place."
+srsWords: "many" "game" "artists" "called" "upon" "develop" "graphical" "treatments"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这些有时规模巨大的聚会为海洋食物网提供了燃料。"
-answer: "These sometimes immense gatherings fuel the ocean food web."
-acceptAlso: "These sometimes immense gatherings fuel the ocean food web."
-srsWords: "sometimes" "immense" "gatherings" "fuel" "ocean" "food" "web"
+sentence: "惯用手似乎源于大脑半球的分工。"
+answer: "Handedness seems to follow from the brain hemisphere division of labor."
+acceptAlso: "Handedness seems to follow from the brain hemisphere division of labor."
+srsWords: "handedness" "seems" "follow" "brain" "hemisphere" "division" "labor"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这些斑点通常会在几天或几周内出现大量的血液渗漏，从而导致视力模糊。"
-answer: "These spots are often followed within a few days or weeks by a much greater leakage of blood, which blurs vision."
-acceptAlso: "These spots are often followed within a few days or weeks by a much greater leakage of blood, which blurs vision."
-srsWords: "spots" "often" "followed" "within" "few" "days" "weeks" "much"
+sentence: "英国首相配偶的角色不是官方职位，因此，他们没有工资或官方职责。"
+answer: "The role of the British prime minister 's spouse is not an official office and, as such, they are not given a salary or official duties."
+acceptAlso: "The role of the British prime minister 's spouse is not an official office and, as such, they are not given a salary or official duties."
+srsWords: "role" "british" "prime" "minister" "spouse" "official" "office" "given"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "土星是一颗有环的行星。"
-answer: "Saturn is a ringed planet."
-acceptAlso: "Saturn is a ringed planet."
-srsWords: "saturn" "ringed" "planet"
+sentence: "与许多议会民主国家一样，他的角色是仪式性的。"
+answer: "His role is ceremonial as in many parliamentary democracies."
+acceptAlso: "His role is ceremonial as in many parliamentary democracies."
+srsWords: "role" "ceremonial" "many" "parliamentary" "democracies"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "卫星航站楼是与其他机场建筑分离的建筑，因此飞机可以在其整个周边停泊。"
-answer: "A satellite terminal is a building detached from other airport buildings, so that aircraft can park around its entire circumference."
-acceptAlso: "A satellite terminal is a building detached from other airport buildings, so that aircraft can park around its entire circumference."
-srsWords: "satellite" "terminal" "building" "detached" "airport" "buildings" "aircraft" "park"
+sentence: "有两种物体，一种是凸面，一种是非凸面，都可以称为正二十面体。"
+answer: "There are two objects, one convex and one nonconvex, that can both be called regular icosahedra."
+acceptAlso: "There are two objects, one convex and one nonconvex, that can both be called regular icosahedra."
+srsWords: "objects" "convex" "nonconvex" "called" "regular" "icosahedra"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "它们还被用作苹果园的传粉者。"
-answer: "They are also used as pollinizers in apple orchards."
-acceptAlso: "They are also used as pollinizers in apple orchards."
-srsWords: "used" "pollinizers" "apple" "orchards"
+sentence: "许多游戏艺术家被要求开发角色扮演游戏发生的图形环境和元素。"
+answer: "Many game artists are asked to develop graphical environments and elements in which role- playing games take place."
+acceptAlso: "Many game artists are asked to develop graphical environments and elements in which role- playing games take place."
+srsWords: "many" "game" "artists" "asked" "develop" "graphical" "environments" "elements"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "护理心脏跳动尸体的程序与护理正常病人的程序相同。"
-answer: "The procedure for caring for a beating heart cadaver is the same as caring for a normal patient."
-acceptAlso: "The procedure for caring for a beating heart cadaver is the same as caring for a normal patient."
-srsWords: "procedure" "caring" "beating" "heart" "cadaver" "normal" "patient"
+sentence: "关于惯用手如何影响大脑半球的一种常见理论是大脑半球分工。"
+answer: "One common theory as to how handedness affects the hemispheres is the brain hemisphere division of labor."
+acceptAlso: "One common theory as to how handedness affects the hemispheres is the brain hemisphere division of labor."
+srsWords: "common" "theory" "handedness" "affects" "hemispheres" "brain" "hemisphere" "division"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "计算尺的宽度以刻度的标称宽度表示。"
-answer: "The width of the slide rule is quoted in terms of the nominal width of the scales."
-acceptAlso: "The width of the slide rule is quoted in terms of the nominal width of the scales."
-srsWords: "width" "slide" "rule" "quoted" "terms" "nominal" "scales"
+sentence: "社会性昆虫的种姓制度是基因相同的个体之间的劳动分工。"
+answer: "The caste system of social insects is the division of labor between genetically identical individuals."
+acceptAlso: "The caste system of social insects is the division of labor between genetically identical individuals."
+srsWords: "caste" "system" "social" "insects" "division" "labor" "genetically" "identical"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "黑火药火箭推进剂很像老式火药。"
-answer: "Black powder rocket propellant is a lot like old fashioned gunpowder."
-acceptAlso: "Black powder rocket propellant is a lot like old fashioned gunpowder."
-srsWords: "black" "powder" "rocket" "propellant" "lot" "like" "old" "fashioned"
+sentence: "与许多议会民主国家一样，总统的角色主要是仪式性的。"
+answer: "The President 's role is largely ceremonial as in many parliamentary democracies."
+acceptAlso: "The President 's role is largely ceremonial as in many parliamentary democracies."
+srsWords: "president" "role" "largely" "ceremonial" "many" "parliamentary" "democracies"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "九带犰狳有一个不同寻常的生殖系统，每窝都会产下基因相同的四胞胎。"
-answer: "The nine- banded armadillo has an unusual reproductive system, in which genetically identical quadruplets are born in each litter."
-acceptAlso: "The nine- banded armadillo has an unusual reproductive system, in which genetically identical quadruplets are born in each litter."
-srsWords: "nine" "banded" "armadillo" "unusual" "reproductive" "system" "genetically" "identical"
+sentence: "在线游戏中游戏管理员的角色是执行游戏规则并提供一般客户服务。"
+answer: "The role of a gamemaster in an online game is to enforce the game 's rules and provide general customer service."
+acceptAlso: "The role of a gamemaster in an online game is to enforce the game 's rules and provide general customer service."
+srsWords: "role" "gamemaster" "online" "game" "enforce" "rules" "provide" "general"
 
 ---
-lessonTitle: "Lesson 7: Biotechnology Progress"
-description: "Translate B2 sentences about Biotechnology Progress"
-icon: "🔬"
-color: "#6366F1"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "那些看到这个幽灵的人在雨中站了长达两个小时。"
-answer: "Those who saw the apparition stood in the rain for up to two hours."
-acceptAlso: "Those who saw the apparition stood in the rain for up to two hours."
-srsWords: "saw" "apparition" "stood" "rain" "hours"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "实验室进行的测量对于我们了解自然界中污染物和化合物的来源和汇至关重要。"
-answer: "Measurements made in the laboratory are essential to our understanding of the sources and sinks of pollutants and compounds found in nature."
-acceptAlso: "Measurements made in the laboratory are essential to our understanding of the sources and sinks of pollutants and compounds found in nature."
-srsWords: "measurements" "made" "laboratory" "essential" "understanding" "sources" "sinks" "pollutants"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "从十六进制到二进制的转换同样直接。"
-answer: "The conversion from hexadecimal to binary is equally direct."
-acceptAlso: "The conversion from hexadecimal to binary is equally direct."
-srsWords: "conversion" "hexadecimal" "binary" "equally" "direct"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "电解水是一种生产氢气的简单方法。"
-answer: "The electrolysis of water is a simple method of producing hydrogen."
-acceptAlso: "The electrolysis of water is a simple method of producing hydrogen."
-srsWords: "electrolysis" "water" "simple" "method" "producing" "hydrogen"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "鸟类以尿酸的形式排出糊状的含氮废物。"
-answer: "Birds excrete their nitrogenous wastes as uric acid in the form of a paste."
-acceptAlso: "Birds excrete their nitrogenous wastes as uric acid in the form of a paste."
-srsWords: "birds" "excrete" "nitrogenous" "wastes" "uric" "acid" "form" "paste"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "蒸发是水循环的重要组成部分。"
-answer: "Evaporation is an essential part of the water cycle."
-acceptAlso: "Evaporation is an essential part of the water cycle."
-srsWords: "evaporation" "essential" "part" "water" "cycle"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "虎猫主要在夜间活动，但有时也会在白天捕猎。"
-answer: "Margays are mainly nocturnal, but they do sometimes hunt during the day."
-acceptAlso: "Margays are mainly nocturnal, but they do sometimes hunt during the day."
-srsWords: "margays" "mainly" "nocturnal" "sometimes" "hunt" "during" "day"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "基因的结构有很多元素：实际的蛋白质编码序列只是一小部分。"
-answer: "The structure of a gene has many elements: the actual protein coding sequence is only a small part."
-acceptAlso: "The structure of a gene has many elements: the actual protein coding sequence is only a small part."
-srsWords: "structure" "gene" "many" "elements" "actual" "protein" "coding" "sequence"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "拉伸通常一次进行一点，这样刺破的孔就不会流血或感染。"
-answer: "Stretching is usually done a little bit at a time, so the pierced hole would not bleed or get infected."
-acceptAlso: "Stretching is usually done a little bit at a time, so the pierced hole would not bleed or get infected."
-srsWords: "stretching" "usually" "done" "little" "bit" "time" "pierced" "hole"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "主张这些措施的人关心的是产品生命周期的后期阶段以及整个生产过程的综合结果。"
-answer: "Those who advocate these measures are concerned with the later phases of product lifecycle and the comprehensive outcome of the whole production process."
-acceptAlso: "Those who advocate these measures are concerned with the later phases of product lifecycle and the comprehensive outcome of the whole production process."
-srsWords: "advocate" "measures" "concerned" "later" "phases" "product" "lifecycle" "comprehensive"
-
----
-lessonTitle: "Lesson 8: Cybersecurity Risks"
-description: "Translate B2 sentences about Cybersecurity Risks"
-icon: "🔬"
-color: "#6366F1"
+lessonTitle: "Lesson 7: Because"
+description: "Translate B2 sentences about Because"
+icon: "🗣️"
+color: "#EC4899"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "翅膀上侧呈深红棕色，前翅有时有白色边缘斑点。"
-answer: "The upperside of the wings is dark reddish brown with the forewing sometimes having white submarginal spots."
-acceptAlso: "The upperside of the wings is dark reddish brown with the forewing sometimes having white submarginal spots."
-srsWords: "upperside" "wings" "dark" "reddish" "brown" "forewing" "sometimes" "having"
+sentence: "卡雷拉斯因其音乐和人道主义工作而获得了许多奖项。"
+answer: "Carreras has received many awards both because of his musical and humanitarian work."
+acceptAlso: "Carreras has received many awards both because of his musical and humanitarian work."
+srsWords: "carreras" "received" "many" "awards" "because" "musical" "humanitarian" "work"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "普拉希迪克属于阿南克群，据信是捕获的小行星分解后的残余​​物。"
-answer: "Praxidike belongs to the Ananke group, believed to be the remnants of a break - up of a captured asteroid."
-acceptAlso: "Praxidike belongs to the Ananke group, believed to be the remnants of a break - up of a captured asteroid."
-srsWords: "praxidike" "belongs" "ananke" "group" "believed" "remnants" "break" "captured"
+sentence: "许多无衬线字体使用倾斜设计而不是斜体。"
+answer: "Many sans serif typefaces use oblique designs instead of italic ones."
+acceptAlso: "Many sans serif typefaces use oblique designs instead of italic ones."
+srsWords: "many" "sans" "serif" "typefaces" "use" "oblique" "designs" "instead"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "除了成功的配乐之外，他还因其背景音乐而闻名，被认为是印度最优秀的背景音乐作曲家之一。"
-answer: "Apart from successful soundtracks, he has also received notability for his background music and is considered one of the finest background music composers in India."
-acceptAlso: "Apart from successful soundtracks, he has also received notability for his background music and is considered one of the finest background music composers in India."
-srsWords: "apart" "successful" "soundtracks" "received" "notability" "background" "music" "considered"
+sentence: "许多物体无法达到负温度，因为向它们添加能量会增加它们的熵。"
+answer: "Many objects cannot achieve negative temperatures, because adding energy to them will increase their entropy."
+acceptAlso: "Many objects cannot achieve negative temperatures, because adding energy to them will increase their entropy."
+srsWords: "many" "objects" "cannot" "achieve" "negative" "temperatures" "because" "adding"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "上下文切换通常是计算密集型的，操作系统的大部分设计都是为了优化上下文切换的使用。"
-answer: "Context switches are usually computationally intensive, and much of the design of operating systems is to optimize the use of context switches."
-acceptAlso: "Context switches are usually computationally intensive, and much of the design of operating systems is to optimize the use of context switches."
-srsWords: "context" "switches" "usually" "computationally" "intensive" "much" "design" "operating"
+sentence: "对战争中伤亡总数的估计各不相同，因为许多死亡没有记录。"
+answer: "Estimates for the total number of casualties in the war vary, because many deaths went unrecorded."
+acceptAlso: "Estimates for the total number of casualties in the war vary, because many deaths went unrecorded."
+srsWords: "estimates" "total" "number" "casualties" "war" "vary" "because" "many"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "内分泌系统由身体不同部位的几个腺体组成。"
-answer: "The endocrine system consists of several glands in different parts of the body."
-acceptAlso: "The endocrine system consists of several glands in different parts of the body."
-srsWords: "endocrine" "system" "consists" "several" "glands" "different" "parts" "body"
+sentence: "由于其用途广泛，氨是产量最高的无机化学品之一。"
+answer: "Because of its many uses, ammonia is one of the most highly produced inorganic chemicals."
+acceptAlso: "Because of its many uses, ammonia is one of the most highly produced inorganic chemicals."
+srsWords: "because" "many" "uses" "ammonia" "highly" "produced" "inorganic" "chemicals"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "当用推力引发振动并允许自由振动时，就会发生自由振动。"
-answer: "Free vibration occurs when vibration is set off with a push and allowed to vibrate freely."
-acceptAlso: "Free vibration occurs when vibration is set off with a push and allowed to vibrate freely."
-srsWords: "free" "vibration" "occurs" "set" "off" "push" "allowed" "vibrate"
+sentence: "该系列中的许多反复出现的角色都获得了基于各自元素的特征。"
+answer: "Many of the recurring characters of the series have received traits based on the respective element."
+acceptAlso: "Many of the recurring characters of the series have received traits based on the respective element."
+srsWords: "many" "recurring" "characters" "series" "received" "traits" "based" "respective"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "一氧化碳还可用于水煤气变换反应来生产氢气。"
-answer: "Carbon monoxide can also be used in the water - gas shift reaction to produce hydrogen."
-acceptAlso: "Carbon monoxide can also be used in the water - gas shift reaction to produce hydrogen."
-srsWords: "carbon" "monoxide" "used" "water" "gas" "shift" "reaction" "produce"
+sentence: "对数有很多性质。"
+answer: "Logarithms have many properties."
+acceptAlso: "Logarithms have many properties."
+srsWords: "logarithms" "many" "properties"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "现在，通过分析某种类型的光束瞄准的样品的衍射图案，可以发现晶体结构。"
-answer: "Crystal structure is now found by analysis of the diffraction patterns of a sample targeted by a beam of some type."
-acceptAlso: "Crystal structure is now found by analysis of the diffraction patterns of a sample targeted by a beam of some type."
-srsWords: "crystal" "structure" "found" "analysis" "diffraction" "patterns" "sample" "targeted"
+sentence: "利用军事组织对平民进行治安在许多时期和文化中都很常见。"
+answer: "The use of military organisations to police civilian populations is common to many time periods and cultures."
+acceptAlso: "The use of military organisations to police civilian populations is common to many time periods and cultures."
+srsWords: "use" "military" "organisations" "police" "civilian" "populations" "common" "many"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "冷却是指变冷或降低温度的过程。"
-answer: "Cooling refers to the process of becoming cold, or lowering in temperature."
-acceptAlso: "Cooling refers to the process of becoming cold, or lowering in temperature."
-srsWords: "cooling" "refers" "process" "becoming" "cold" "lowering" "temperature"
+sentence: "与许多其他植物一样，一些棕榈树由于人类活动而面临灭绝的危险。"
+answer: "Like many other plants, some palms are in danger of dying out because of human activity."
+acceptAlso: "Like many other plants, some palms are in danger of dying out because of human activity."
+srsWords: "like" "many" "plants" "palms" "danger" "dying" "because" "human"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "液体的沸点随周围环境压力的变化而变化。"
-answer: "The boiling point of a liquid varies depending upon the surrounding environmental pressure."
-acceptAlso: "The boiling point of a liquid varies depending upon the surrounding environmental pressure."
-srsWords: "boiling" "point" "liquid" "varies" "depending" "upon" "surrounding" "environmental"
+sentence: "男性自慰技术还有许多其他变化。"
+answer: "There are many other variations on male masturbation techniques."
+acceptAlso: "There are many other variations on male masturbation techniques."
+srsWords: "many" "variations" "male" "masturbation" "techniques"
 
 ---
-lessonTitle: "Lesson 9: Future of Transportation"
-description: "Translate B2 sentences about Future of Transportation"
-icon: "🔬"
-color: "#6366F1"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "该地区的地质是砂砾岩层、煤层以及冰川沉积的沙子和砾石。"
-answer: "The geology of the area is layers of gritstone, coal and glacial deposits of sand and gravel."
-acceptAlso: "The geology of the area is layers of gritstone, coal and glacial deposits of sand and gravel."
-srsWords: "geology" "area" "layers" "gritstone" "coal" "glacial" "deposits" "sand"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "几个世纪以来，动物的体色一直是生物学界感兴趣和研究的话题。"
-answer: "Animal coloration has been a topic of interest and research in biology for centuries."
-acceptAlso: "Animal coloration has been a topic of interest and research in biology for centuries."
-srsWords: "animal" "coloration" "topic" "interest" "research" "biology" "centuries"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "Bad Religion 的许多歌曲都涉及不同的社会弊病，尽管他们尽量不将这些弊病的原因归咎于任何个人或群体。"
-answer: "Many of Bad Religion 's songs are about different social ills, although they try not to ascribe the causes of these ills to any single person or group."
-acceptAlso: "Many of Bad Religion 's songs are about different social ills, although they try not to ascribe the causes of these ills to any single person or group."
-srsWords: "many" "bad" "religion" "songs" "different" "social" "ills" "although"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "手榴弹爆炸将阿皮亚塔从他正在睡觉的汽车引擎盖上炸了下来。"
-answer: "A grenade explosion blew Apiata off the bonnet of his vehicle, where he had been sleeping."
-acceptAlso: "A grenade explosion blew Apiata off the bonnet of his vehicle, where he had been sleeping."
-srsWords: "grenade" "explosion" "blew" "apiata" "off" "bonnet" "vehicle" "sleeping"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "绝对值可以被认为是实数轴上数字与零的距离。"
-answer: "Absolute value may be thought of as the number 's distance from zero on the real number line."
-acceptAlso: "Absolute value may be thought of as the number 's distance from zero on the real number line."
-srsWords: "absolute" "value" "thought" "number" "distance" "zero" "real" "line"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "该教区完全是乡村性质，东北部是沼泽地，西南部是低洼农田。"
-answer: "The parish is entirely rural in character, the northeast being moorland and the southwest lower lying farmland."
-acceptAlso: "The parish is entirely rural in character, the northeast being moorland and the southwest lower lying farmland."
-srsWords: "parish" "entirely" "rural" "character" "northeast" "moorland" "southwest" "lower"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "为了让官员扣押物品，官员必须有合理的理由相信该物品是犯罪证据或违禁品。"
-answer: "In order for an officer to seize an item, the officer must have probable cause to believe the item is evidence of a crime or is contraband."
-acceptAlso: "In order for an officer to seize an item, the officer must have probable cause to believe the item is evidence of a crime or is contraband."
-srsWords: "order" "officer" "seize" "item" "probable" "cause" "believe" "evidence"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "骄傲让战士们可以自由选择服装，但必须戴上露指手套、护齿套和防护罩。"
-answer: "Pride allowed fighters latitude in their choice of attire but open finger gloves, a mouthguard and a protective cup were mandatory."
-acceptAlso: "Pride allowed fighters latitude in their choice of attire but open finger gloves, a mouthguard and a protective cup were mandatory."
-srsWords: "pride" "allowed" "fighters" "latitude" "choice" "attire" "open" "finger"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这一流派是 contradanza 的后代，也以行或方的形式跳舞。"
-answer: "This genere, the offspring of the contradanza, was also danced in lines or squares."
-acceptAlso: "This genere, the offspring of the contradanza, was also danced in lines or squares."
-srsWords: "genere" "offspring" "contradanza" "danced" "lines" "squares"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "气相色谱仪是一种用于分离复杂样品中化学物质的化学分析仪器。"
-answer: "A gas chromatograph is a chemical analysis instrument for separating chemicals in a complex sample."
-acceptAlso: "A gas chromatograph is a chemical analysis instrument for separating chemicals in a complex sample."
-srsWords: "gas" "chromatograph" "chemical" "analysis" "instrument" "separating" "chemicals" "complex"
-
----
-lessonTitle: "Lesson 10: Renewable Energy Tech"
-description: "Translate B2 sentences about Renewable Energy Tech"
-icon: "🔬"
-color: "#6366F1"
+lessonTitle: "Lesson 8: Cell"
+description: "Translate B2 sentences about Cell"
+icon: "🗣️"
+color: "#EC4899"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "手册可以涉及任何主题，并且通常是特定领域或特定技术的信息概要。"
-answer: "Handbooks may deal with any topic, and are generally compendiums of information in a particular field or about a particular technique."
-acceptAlso: "Handbooks may deal with any topic, and are generally compendiums of information in a particular field or about a particular technique."
-srsWords: "handbooks" "deal" "topic" "generally" "compendiums" "information" "particular" "field"
+sentence: "在细菌鞭毛的基部，也就是进入细胞膜的地方，马达蛋白起着旋转发动机的作用。"
+answer: "At the base of the bacterial flagellum, where it enters the cell membrane, a motor protein acts as a rotary engine."
+acceptAlso: "At the base of the bacterial flagellum, where it enters the cell membrane, a motor protein acts as a rotary engine."
+srsWords: "base" "bacterial" "flagellum" "enters" "cell" "membrane" "motor" "protein"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "雌性锹虫通常比雄性小，下颌也较小。"
-answer: "Female stag beetles are usually smaller than the males, with smaller mandibles."
-acceptAlso: "Female stag beetles are usually smaller than the males, with smaller mandibles."
-srsWords: "female" "stag" "beetles" "usually" "smaller" "males" "mandibles"
+sentence: "放射疗法用于治疗肿瘤是因为它能够控制细胞生长。"
+answer: "Radiation therapy is used on tumors because of its ability to control cell growth."
+acceptAlso: "Radiation therapy is used on tumors because of its ability to control cell growth."
+srsWords: "radiation" "therapy" "used" "tumors" "because" "ability" "control" "cell"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "大多数支石墓建筑都是用大尺寸的石板建造的。"
-answer: "Most dolmen constructions were built using stone slabs of big dimensions."
-acceptAlso: "Most dolmen constructions were built using stone slabs of big dimensions."
-srsWords: "dolmen" "constructions" "built" "using" "stone" "slabs" "big" "dimensions"
+sentence: "肥大细胞在外观和功能上与嗜碱性粒细胞（一种白细胞）非常相似。"
+answer: "The mast cell is very similar in both appearance and function to the basophil, a type of white blood cell."
+acceptAlso: "The mast cell is very similar in both appearance and function to the basophil, a type of white blood cell."
+srsWords: "mast" "cell" "similar" "appearance" "function" "basophil" "type" "white"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该作品是匿名的，人们对作者的身份存在猜测。"
-answer: "The work is anonymous, and there is speculation about the author 's identity."
-acceptAlso: "The work is anonymous, and there is speculation about the author 's identity."
-srsWords: "work" "anonymous" "speculation" "author" "identity"
+sentence: "病毒群体不通过细胞分裂生长，因为它们是无细胞的。"
+answer: "Viral populations do not grow through cell division, because they are acellular."
+acceptAlso: "Viral populations do not grow through cell division, because they are acellular."
+srsWords: "viral" "populations" "grow" "through" "cell" "division" "because" "acellular"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "该流派本身被定义为独立于后朋克的运动，因为其黑暗的音乐伴随着内省和浪漫的歌词。"
-answer: "The genre itself was defined as a separate movement from post- punk due to its darker music accompanied by introspective and romantic lyrics."
-acceptAlso: "The genre itself was defined as a separate movement from post- punk due to its darker music accompanied by introspective and romantic lyrics."
-srsWords: "genre" "itself" "defined" "separate" "movement" "post" "punk" "due"
+sentence: "顶端复合体包括在细胞前部开口的囊泡。"
+answer: "The apical complex includes vesicles which open at the front of the cell."
+acceptAlso: "The apical complex includes vesicles which open at the front of the cell."
+srsWords: "apical" "complex" "includes" "vesicles" "open" "front" "cell"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "大多数种类的海蛇都能够通过皮肤顶部进行呼吸。"
-answer: "Most species of the sea snakes are able to respire through the top of their skin."
-acceptAlso: "Most species of the sea snakes are able to respire through the top of their skin."
-srsWords: "species" "sea" "snakes" "able" "respire" "through" "top" "skin"
+sentence: "作为愈合过程的一部分，一种称为角质形成细胞的皮肤细胞通过滚动来移动自身。"
+answer: "A kind of skin cell called a keratinocyte moves itself by rolling, as part of the process of healing."
+acceptAlso: "A kind of skin cell called a keratinocyte moves itself by rolling, as part of the process of healing."
+srsWords: "kind" "skin" "cell" "called" "keratinocyte" "moves" "itself" "rolling"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然而，当他的公开种族主义遭到负面反应时，他暂时退缩了。"
-answer: "However, when once face with negative reactions to his open racism, he temporarily retreated."
-acceptAlso: "However, when once face with negative reactions to his open racism, he temporarily retreated."
-srsWords: "however" "once" "face" "negative" "reactions" "open" "racism" "temporarily"
+sentence: "当病毒复制了许多自身后，它通常就会耗尽细胞的资源。"
+answer: "After a virus has made many copies of itself, it has usually exhausted the cell of its resources."
+acceptAlso: "After a virus has made many copies of itself, it has usually exhausted the cell of its resources."
+srsWords: "virus" "made" "many" "copies" "itself" "usually" "exhausted" "cell"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "秃鹰是美国的国鸟，象征着和平与战争中的保护。"
-answer: "A bald eagle, the national bird of the United States, symbolizes protection in peace and war."
-acceptAlso: "A bald eagle, the national bird of the United States, symbolizes protection in peace and war."
-srsWords: "bald" "eagle" "national" "bird" "united" "states" "symbolizes" "protection"
+sentence: "革兰氏染色通过细菌细胞壁的化学和物理特性来区分细菌。"
+answer: "Gram staining differentiates bacteria by the chemical and physical properties of their cell walls."
+acceptAlso: "Gram staining differentiates bacteria by the chemical and physical properties of their cell walls."
+srsWords: "gram" "staining" "differentiates" "bacteria" "chemical" "physical" "properties" "cell"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这些小岛都是火山岩，只有一层薄薄的土壤和苔藓。"
-answer: "The islets are volcanic rocks, with only a thin layer of soil and moss."
-acceptAlso: "The islets are volcanic rocks, with only a thin layer of soil and moss."
-srsWords: "islets" "volcanic" "rocks" "thin" "layer" "soil" "moss"
+sentence: "血液只能通过海绵体外壁周围的静脉系统流出。"
+answer: "Blood can leave only through a system of veins around the outside wall of the corpus cavernosum."
+acceptAlso: "Blood can leave only through a system of veins around the outside wall of the corpus cavernosum."
+srsWords: "blood" "leave" "through" "system" "veins" "around" "outside" "wall"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "该公式非常重要，因为它将复数和三角学联系起来。"
+answer: "The formula is very important because it connects complex numbers and trigonometry."
+acceptAlso: "The formula is very important because it connects complex numbers and trigonometry."
+srsWords: "formula" "important" "because" "connects" "complex" "numbers" "trigonometry"
+
+---
+lessonTitle: "Lesson 9: Suited"
+description: "Translate B2 sentences about Suited"
+icon: "🗣️"
+color: "#EC4899"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "这些早期哺乳动物发展出许多特征，使它们非常适合非常活跃的生活方式。"
+answer: "These early mammals developed many traits which were to make them well - suited for a very active lifestyle."
+acceptAlso: "These early mammals developed many traits which were to make them well - suited for a very active lifestyle."
+srsWords: "early" "mammals" "developed" "many" "traits" "make" "well" "suited"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "尽管在他的统治期间遇到了许多麻烦，阿尔沙克二世还是能够使他的王国的许多部分变得更好。"
+answer: "Despite having many troubles during his reign, Arshak II was able to change many parts of his kingdom for the better."
+acceptAlso: "Despite having many troubles during his reign, Arshak II was able to change many parts of his kingdom for the better."
+srsWords: "despite" "having" "many" "troubles" "during" "reign" "arshak" "able"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "尽管它们的亮度极高，但其中许多恒星距离太远，无法用肉眼观察到。"
+answer: "Despite their extreme luminosity, many of these stars are too distant to be observed with the naked eye."
+acceptAlso: "Despite their extreme luminosity, many of these stars are too distant to be observed with the naked eye."
+srsWords: "despite" "extreme" "luminosity" "many" "stars" "distant" "observed" "naked"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "这些早期哺乳动物发展出许多特征，使它们非常适合积极的生活方式。"
+answer: "These early mammals developed many traits which made them well - suited for an active lifestyle."
+acceptAlso: "These early mammals developed many traits which made them well - suited for an active lifestyle."
+srsWords: "early" "mammals" "developed" "many" "traits" "made" "well" "suited"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "许多固体很容易与氯、碘、氧等活性气体发生反应。"
+answer: "Many solids react readily with reactive gases such as chlorine, iodine, oxygen or others."
+acceptAlso: "Many solids react readily with reactive gases such as chlorine, iodine, oxygen or others."
+srsWords: "many" "solids" "react" "readily" "reactive" "gases" "chlorine" "iodine"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "许多树蛙可以改变颜色以更好地伪装。"
+answer: "Many tree frogs can change their color for better camouflage."
+acceptAlso: "Many tree frogs can change their color for better camouflage."
+srsWords: "many" "tree" "frogs" "change" "color" "better" "camouflage"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "二十面体有无数种不相似的形状，其中一些比其他形状更对称。"
+answer: "There are infinitely many non-similar shapes of icosahedra, some of them being more symmetrical than others."
+acceptAlso: "There are infinitely many non-similar shapes of icosahedra, some of them being more symmetrical than others."
+srsWords: "infinitely" "many" "nonsimilar" "shapes" "icosahedra" "symmetrical" "others"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "现在，许多具有海绵状纹理的物体都是由并非来自孔雀类的物质制成的。"
+answer: "Many objects with sponge- like textures are now made of substances that do not come from poriferans."
+acceptAlso: "Many objects with sponge- like textures are now made of substances that do not come from poriferans."
+srsWords: "many" "objects" "sponge" "like" "textures" "made" "substances" "come"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "铜是许多类别电线中的电导体。"
+answer: "Copper is the electrical conductor in many categories of electrical wiring."
+acceptAlso: "Copper is the electrical conductor in many categories of electrical wiring."
+srsWords: "copper" "electrical" "conductor" "many" "categories" "wiring"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "恶心是一种非特异性症状，这意味着它有许多可能的原因。"
+answer: "Nausea is a non-specific symptom, which means that it has many possible causes."
+acceptAlso: "Nausea is a non-specific symptom, which means that it has many possible causes."
+srsWords: "nausea" "nonspecific" "symptom" "means" "many" "possible" "causes"
+
+---
+lessonTitle: "Lesson 10: Works"
+description: "Translate B2 sentences about Works"
+icon: "🗣️"
+color: "#EC4899"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "他在瑞士德语区和法语区创办了多家教育机构，并撰写了许多著作来解释他革命性的现代教育原则。"
+answer: "He founded several educational institutions both in German - and French-speaking regions of Switzerland and wrote many works explaining his revolutionary modern principles of education."
+acceptAlso: "He founded several educational institutions both in German - and French-speaking regions of Switzerland and wrote many works explaining his revolutionary modern principles of education."
+srsWords: "founded" "several" "educational" "institutions" "german" "frenchspeaking" "regions" "switzerland"
 
 [translation]
 text: "Translate this sentence into English"
@@ -779,3 +723,59 @@ sentence: "尽管许多著作将介形类纳入颌足目中，但普遍认为有
 answer: "Six subclasses are generally recognized, although many works have included the ostracods among the Maxillopoda."
 acceptAlso: "Six subclasses are generally recognized, although many works have included the ostracods among the Maxillopoda."
 srsWords: "six" "subclasses" "generally" "recognized" "although" "many" "works" "included"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "经典热力学系统无法达到负温度：增加热量总是会增加其熵。"
+answer: "Classical thermodynamic systems cannot achieve negative temperatures: adding heat always increases their entropy."
+acceptAlso: "Classical thermodynamic systems cannot achieve negative temperatures: adding heat always increases their entropy."
+srsWords: "classical" "thermodynamic" "systems" "cannot" "achieve" "negative" "temperatures" "adding"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "猪流感病毒在全世界猪群中很常见。"
+answer: "Swine influenza virus is common throughout pig populations worldwide."
+acceptAlso: "Swine influenza virus is common throughout pig populations worldwide."
+srsWords: "swine" "influenza" "virus" "common" "throughout" "pig" "populations" "worldwide"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "随着仪器的改进，现在可以更详细地检查远处的物体。"
+answer: "As instrumentation has improved, distant objects can now be examined in more detail."
+acceptAlso: "As instrumentation has improved, distant objects can now be examined in more detail."
+srsWords: "instrumentation" "improved" "distant" "objects" "examined" "detail"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "这项研究极大地有助于了解每个大脑半球的工作原理。"
+answer: "This research contributed greatly to understanding how each cerebral hemisphere works."
+acceptAlso: "This research contributed greatly to understanding how each cerebral hemisphere works."
+srsWords: "research" "contributed" "greatly" "understanding" "cerebral" "hemisphere" "works"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "神经网络有三种学习方式：监督学习、无监督学习和强化学习。"
+answer: "There are three ways a neural network can learn: supervised learning, unsupervised learning and reinforcement learning."
+acceptAlso: "There are three ways a neural network can learn: supervised learning, unsupervised learning and reinforcement learning."
+srsWords: "ways" "neural" "network" "learn" "supervised" "learning" "unsupervised" "reinforcement"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "随着互联网分类广告的增长，报纸的分类广告收入不断减少。"
+answer: "Newspaper 's revenue from classifieds advertisements is decreasing continually as internet classifieds grow."
+acceptAlso: "Newspaper 's revenue from classifieds advertisements is decreasing continually as internet classifieds grow."
+srsWords: "newspaper" "revenue" "classifieds" "advertisements" "decreasing" "continually" "internet" "grow"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "新西兰是一个君主立宪制国家，实行议会民主制，但其宪法尚未成文。"
+answer: "New Zealand is a constitutional monarchy with a parliamentary democracy, although its constitution is not codified."
+acceptAlso: "New Zealand is a constitutional monarchy with a parliamentary democracy, although its constitution is not codified."
+srsWords: "zealand" "constitutional" "monarchy" "parliamentary" "democracy" "although" "constitution" "codified"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "许多其他物理性质与晶体学有关。"
+answer: "A number of other physical properties are linked to crystallography."
+acceptAlso: "A number of other physical properties are linked to crystallography."
+srsWords: "number" "physical" "properties" "linked" "crystallography"

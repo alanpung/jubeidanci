@@ -1,8 +1,8 @@
 ---
-unitTitle: "Unit 8: Abstract Reasoning & Metaphysics"
-description: "Unit 8: Abstract Reasoning & Metaphysics - C2 Translation Practice (2 Lessons x 10 Sentences)"
-icon: "🌌"
-color: "#EC4899"
+unitTitle: "Unit 8: Change"
+description: "Unit 8: Change - C2 Translation Practice (2 Lessons x 10 Sentences)"
+icon: "🗣️"
+color: "#14B8A6"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "C2"
@@ -11,53 +11,32 @@ questionType: "translation"
 ---
 
 ---
-lessonTitle: "Lesson 1: Ontological Categorization"
-description: "Translate C2 sentences about Ontological Categorization"
-icon: "🌌"
-color: "#EC4899"
+lessonTitle: "Lesson 1: Change"
+description: "Translate C2 sentences about Change"
+icon: "🗣️"
+color: "#14B8A6"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "硝酸钯可以通过将氧化钯水合物溶解在稀硝酸中然后结晶来制备。"
-answer: "Palladium nitrate may be prepared by dissolving palladium oxide hydrate in dilute nitric acid followed by crystallization."
-acceptAlso: "Palladium nitrate may be prepared by dissolving palladium oxide hydrate in dilute nitric acid followed by crystallization."
-srsWords: "palladium" "nitrate" "prepared" "dissolving" "oxide" "hydrate" "dilute" "nitric"
+sentence: "黑凤头鹦鹉亚科 Nymphicinae 亚科 Calyptorhynchinae: 黑凤头鹦鹉"
+answer: "Subfamily Nymphicinae Subfamily Calyptorhynchinae: The black cockatoos."
+acceptAlso: "Subfamily Nymphicinae Subfamily Calyptorhynchinae: The black cockatoos."
+srsWords: "subfamily" "nymphicinae" "calyptorhynchinae" "black" "cockatoos"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "科学家们基于新的、更好的寻找年代的方法，利用巨型动物骨骼的光激发光和铀-钍测年法，获得了新的证据。"
-answer: "Scientists have got new evidence, based on new and better ways of finding dates, using optically stimulated luminescence and Uranium - thorium dating of megafaunal bones."
-acceptAlso: "Scientists have got new evidence, based on new and better ways of finding dates, using optically stimulated luminescence and Uranium - thorium dating of megafaunal bones."
-srsWords: "scientists" "got" "evidence" "based" "better" "ways" "finding" "dates"
+sentence: "许多鱼类在其一生中会改变性别，这种现象称为顺序雌雄同体。"
+answer: "Many fish change sex over the course of their lifespan, a phenomenon called sequential hermaphroditism."
+acceptAlso: "Many fish change sex over the course of their lifespan, a phenomenon called sequential hermaphroditism."
+srsWords: "many" "fish" "change" "sex" "course" "lifespan" "phenomenon" "called"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "有人认为，许多现有的植物和大多数动物物种在其进化史上都经历过多倍化事件。"
-answer: "It has been suggested that many of the existing plant and most animal species have undergone an event of polyploidization in their evolutionary history."
-acceptAlso: "It has been suggested that many of the existing plant and most animal species have undergone an event of polyploidization in their evolutionary history."
-srsWords: "suggested" "many" "existing" "plant" "animal" "species" "undergone" "event"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "血浆置换术是一种医学疗法，包括取出血浆、对其进行处理，然后将其放回患者体内。"
-answer: "Plasmapheresis is a medical therapy which involves taking out blood plasma, treating it, and putting it back in the patient."
-acceptAlso: "Plasmapheresis is a medical therapy which involves taking out blood plasma, treating it, and putting it back in the patient."
-srsWords: "plasmapheresis" "medical" "therapy" "involves" "taking" "blood" "plasma" "treating"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "苔藓虫的矿化骨骼首先出现在奥陶纪早期的岩石中，使其成为化石记录中最后出现的主要门。"
-answer: "Mineralized skeletons of bryozoans first appear in rocks from the Early Ordovician period, making it the last major phylum to appear in the fossil record."
-acceptAlso: "Mineralized skeletons of bryozoans first appear in rocks from the Early Ordovician period, making it the last major phylum to appear in the fossil record."
-srsWords: "mineralized" "skeletons" "bryozoans" "first" "appear" "rocks" "early" "ordovician"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "服用碳酸钙和碳酸氢钠等抗酸剂可能会缓解症状。"
-answer: "The symptom may be helped by taking antacids, such as calcium carbonate and sodium bicarbonate."
-acceptAlso: "The symptom may be helped by taking antacids, such as calcium carbonate and sodium bicarbonate."
-srsWords: "symptom" "helped" "taking" "antacids" "calcium" "carbonate" "sodium" "bicarbonate"
+sentence: "船岩由断裂的火山角砾岩和被称为“minette”或“lampophyre”的火成岩黑色岩脉组成。"
+answer: "Shiprock is composed of fractured volcanic breccia and black dikes of igneous rock called minette, or lamprophyre."
+acceptAlso: "Shiprock is composed of fractured volcanic breccia and black dikes of igneous rock called minette, or lamprophyre."
+srsWords: "shiprock" "composed" "fractured" "volcanic" "breccia" "black" "dikes" "igneous"
 
 [translation]
 text: "Translate this sentence into English"
@@ -68,17 +47,94 @@ srsWords: "skin" "covered" "chromatophores" "enable" "squid" "change" "color" "s
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "然而，古风暴学研究可以重建数百年至数千年时间尺度上的史前飓风活动趋势。"
-answer: "However, palaeotempestological research allows reconstruction of pre-historic hurricane activity trends on timescales of centuries to millennia."
-acceptAlso: "However, palaeotempestological research allows reconstruction of pre-historic hurricane activity trends on timescales of centuries to millennia."
-srsWords: "however" "palaeotempestological" "research" "allows" "reconstruction" "prehistoric" "hurricane" "activity"
+sentence: "大多数两栖动物都会经历变态，这是出生后发生显着形态变化的过程。"
+answer: "Most amphibians go through metamorphosis, a process of significant morphological change after birth."
+acceptAlso: "Most amphibians go through metamorphosis, a process of significant morphological change after birth."
+srsWords: "amphibians" "through" "metamorphosis" "process" "significant" "morphological" "change" "birth"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "地层等高线可用于说明所选地层的表面，从而说明地层的地下地形趋势。"
-answer: "Stratigraphic contour lines may be used to illustrate the surface of a selected stratum illustrating the subsurface topographic trends of the strata."
-acceptAlso: "Stratigraphic contour lines may be used to illustrate the surface of a selected stratum illustrating the subsurface topographic trends of the strata."
-srsWords: "stratigraphic" "contour" "lines" "used" "illustrate" "surface" "selected" "stratum"
+sentence: "在自然科学中，渐进主义理论认为深刻的变化是缓慢但连续的过程的累积产物，通常与灾变论形成鲜明对比。"
+answer: "In the natural sciences, gradualism is the theory which holds that profound change is the cumulative product of slow but continuous processes, often contrasted with catastrophism."
+acceptAlso: "In the natural sciences, gradualism is the theory which holds that profound change is the cumulative product of slow but continuous processes, often contrasted with catastrophism."
+srsWords: "natural" "sciences" "gradualism" "theory" "holds" "profound" "change" "cumulative"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "另一种受蜜蜂启发的 stigmergic 计算技术被称为蜂群优化，被用于互联网服务器优化。"
+answer: "Another bee-inspired stigmergic computational technique called bee colony optimization is employed in Internet Server Optimization."
+acceptAlso: "Another bee-inspired stigmergic computational technique called bee colony optimization is employed in Internet Server Optimization."
+srsWords: "another" "beeinspired" "stigmergic" "computational" "technique" "called" "bee" "colony"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "手术切除腺样体的手术称为腺样体切除术。"
+answer: "Surgical removal of the adenoid is a procedure called adenoidectomy."
+acceptAlso: "Surgical removal of the adenoid is a procedure called adenoidectomy."
+srsWords: "surgical" "removal" "adenoid" "procedure" "called" "adenoidectomy"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "循环中白细胞数量的增加称为白细胞增多。"
+answer: "An increase in the number of white blood cells in circulation is called leukocytosis."
+acceptAlso: "An increase in the number of white blood cells in circulation is called leukocytosis."
+srsWords: "increase" "number" "white" "blood" "cells" "circulation" "called" "leukocytosis"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "丙型肝炎检测通常从血液检测开始，使用一种称为酶免疫测定的技术寻找丙型肝炎病毒的抗体。"
+answer: "Hepatitis C testing usually begins with blood tests that look for antibodies to the Hepatitis C virus, using a technique called an enzyme immunoassay."
+acceptAlso: "Hepatitis C testing usually begins with blood tests that look for antibodies to the Hepatitis C virus, using a technique called an enzyme immunoassay."
+srsWords: "hepatitis" "testing" "usually" "begins" "blood" "tests" "look" "antibodies"
+
+---
+lessonTitle: "Lesson 2: Medical"
+description: "Translate C2 sentences about Medical"
+icon: "🗣️"
+color: "#14B8A6"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "幻嗅可能是由鼻部感染、鼻息肉或牙齿问题等常见疾病引起的。"
+answer: "Olfactory hallucinations can be caused by common medical conditions such as nasal infections, nasal polyps, or dental problems."
+acceptAlso: "Olfactory hallucinations can be caused by common medical conditions such as nasal infections, nasal polyps, or dental problems."
+srsWords: "olfactory" "hallucinations" "caused" "common" "medical" "conditions" "nasal" "infections"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "木材是一种天然存在的复合材料，包含木质素和半纤维素基质中的纤维素纤维。"
+answer: "Wood is a naturally occurring composite comprising cellulose fibres in a lignin and hemicellulose matrix."
+acceptAlso: "Wood is a naturally occurring composite comprising cellulose fibres in a lignin and hemicellulose matrix."
+srsWords: "wood" "naturally" "occurring" "composite" "comprising" "cellulose" "fibres" "lignin"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "血浆置换术是一种涉及血浆提取、治疗和重新融入的医学疗法。"
+answer: "Plasmapheresis is a medical therapy that involves blood plasma extraction, treatment, and reintegration."
+acceptAlso: "Plasmapheresis is a medical therapy that involves blood plasma extraction, treatment, and reintegration."
+srsWords: "plasmapheresis" "medical" "therapy" "involves" "blood" "plasma" "extraction" "treatment"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "流行病学实践和流行病学分析结果对新兴的基于人群的健康管理框架做出了重大贡献。"
+answer: "Epidemiological practice and the results of epidemiological analysis make a significant contribution to emerging population - based health management frameworks."
+acceptAlso: "Epidemiological practice and the results of epidemiological analysis make a significant contribution to emerging population - based health management frameworks."
+srsWords: "epidemiological" "practice" "results" "analysis" "make" "significant" "contribution" "emerging"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "海豹脸上有疤痕，是由一种叫做盘状红斑狼疮的狼疮引起的。"
+answer: "Seal has scarring on his face caused by a type of lupus called discoid lupus erythematosus."
+acceptAlso: "Seal has scarring on his face caused by a type of lupus called discoid lupus erythematosus."
+srsWords: "seal" "scarring" "face" "caused" "type" "lupus" "called" "discoid"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "血浆置换术是一种医学疗法，包括取出血浆、对其进行处理，然后将其放回患者体内。"
+answer: "Plasmapheresis is a medical therapy which involves taking out blood plasma, treating it, and putting it back in the patient."
+acceptAlso: "Plasmapheresis is a medical therapy which involves taking out blood plasma, treating it, and putting it back in the patient."
+srsWords: "plasmapheresis" "medical" "therapy" "involves" "taking" "blood" "plasma" "treating"
 
 [translation]
 text: "Translate this sentence into English"
@@ -87,79 +143,23 @@ answer: "The prominent scarring on Seal 's face is the result of a type of lupus
 acceptAlso: "The prominent scarring on Seal 's face is the result of a type of lupus called discoid lupus erythematosus, which affects the skin and leaves large scars."
 srsWords: "prominent" "scarring" "seal" "face" "result" "type" "lupus" "called"
 
----
-lessonTitle: "Lesson 2: Temporal Flow Paradigms"
-description: "Translate C2 sentences about Temporal Flow Paradigms"
-icon: "🌌"
-color: "#EC4899"
----
+[translation]
+text: "Translate this sentence into English"
+sentence: "真核生物学中表观遗传变化的一个例子是细胞分化过程。"
+answer: "One example of an epigenetic change in eukaryotic biology is the process of cellular differentiation."
+acceptAlso: "One example of an epigenetic change in eukaryotic biology is the process of cellular differentiation."
+srsWords: "example" "epigenetic" "change" "eukaryotic" "biology" "process" "cellular" "differentiation"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "这些酶存在于细菌和古细菌中，可以保护它们免受噬菌体等病毒的入侵。"
-answer: "These enzymes are found in bacteria and archaea and defend them against invading viruses, which are bacteriophages."
-acceptAlso: "These enzymes are found in bacteria and archaea and defend them against invading viruses, which are bacteriophages."
-srsWords: "enzymes" "found" "bacteria" "archaea" "defend" "against" "invading" "viruses"
+sentence: "另一个例子是拟议的阿诺丁（一种天然存在的氧杂苯）及其相关化合物的生物合成。"
+answer: "Another example is in the proposed biosynthesis of aranotin, a naturally occurring oxepine, and its related compounds."
+acceptAlso: "Another example is in the proposed biosynthesis of aranotin, a naturally occurring oxepine, and its related compounds."
+srsWords: "another" "example" "proposed" "biosynthesis" "aranotin" "naturally" "occurring" "oxepine"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "一些酶或酶复合物需要多种辅因子。"
-answer: "Some enzymes or enzyme complexes require several cofactors."
-acceptAlso: "Some enzymes or enzyme complexes require several cofactors."
-srsWords: "enzymes" "enzyme" "complexes" "require" "several" "cofactors"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "由于氧的电负性比碳大，因此羰基化合物通常具有影响其反应性的共振结构。"
-answer: "Because oxygen is more electronegative than carbon, carbonyl compounds often have resonance structures which affect their reactivity."
-acceptAlso: "Because oxygen is more electronegative than carbon, carbonyl compounds often have resonance structures which affect their reactivity."
-srsWords: "because" "oxygen" "electronegative" "carbon" "carbonyl" "compounds" "often" "resonance"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "在子宫内，上皮细胞和下面的间质相互作用形成毛囊。"
-answer: "In utero, the epithelium and underlying mesenchyme interact to form hair follicles."
-acceptAlso: "In utero, the epithelium and underlying mesenchyme interact to form hair follicles."
-srsWords: "utero" "epithelium" "underlying" "mesenchyme" "interact" "form" "hair" "follicles"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "一个人持续摄入危险量的酒精可能会出现记忆丧失和特殊中毒或病理性醉酒症状。"
-answer: "A person consuming a dangerous amount of alcohol persistently can develop memory blackouts and idiosyncratic intoxication or pathological drunkenness symptoms."
-acceptAlso: "A person consuming a dangerous amount of alcohol persistently can develop memory blackouts and idiosyncratic intoxication or pathological drunkenness symptoms."
-srsWords: "person" "consuming" "dangerous" "amount" "alcohol" "persistently" "develop" "memory"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "与鳞龙类爬行动物不同，盘龙类缺乏爬行动物表皮鳞片。"
-answer: "Unlike lepidosaurian reptiles, pelycosaurs lacked reptilian epidermal scales."
-acceptAlso: "Unlike lepidosaurian reptiles, pelycosaurs lacked reptilian epidermal scales."
-srsWords: "unlike" "lepidosaurian" "reptiles" "pelycosaurs" "lacked" "reptilian" "epidermal" "scales"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "大多数两栖动物都会经历变态，这是出生后发生显着形态变化的过程。"
-answer: "Most amphibians go through metamorphosis, a process of significant morphological change after birth."
-acceptAlso: "Most amphibians go through metamorphosis, a process of significant morphological change after birth."
-srsWords: "amphibians" "through" "metamorphosis" "process" "significant" "morphological" "change" "birth"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "工业中最重要的两种醛，甲醛和乙醛，由于它们易于低聚或聚合而具有复杂的行为。"
-answer: "The two aldehydes of greatest importance in industry, formaldehyde and acetaldehyde, have complicated behavior because of their tendency to oligomerize or polymerize."
-acceptAlso: "The two aldehydes of greatest importance in industry, formaldehyde and acetaldehyde, have complicated behavior because of their tendency to oligomerize or polymerize."
-srsWords: "aldehydes" "greatest" "importance" "industry" "formaldehyde" "acetaldehyde" "complicated" "behavior"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "细胞质中的小颗粒含有蛋白质和酶，称为颗粒酶。"
-answer: "Small granules in their cytoplasm contain proteins and enzymes called granzymes."
-acceptAlso: "Small granules in their cytoplasm contain proteins and enzymes called granzymes."
-srsWords: "small" "granules" "cytoplasm" "contain" "proteins" "enzymes" "called" "granzymes"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "可乐定可与苯二氮卓类药物一起使用，以帮助缓解某些戒酒症状。"
-answer: "Clonidine may be used along with benzodiazepines to help some of the symptoms of alcohol withdrawal."
-acceptAlso: "Clonidine may be used along with benzodiazepines to help some of the symptoms of alcohol withdrawal."
-srsWords: "clonidine" "used" "along" "benzodiazepines" "help" "symptoms" "alcohol" "withdrawal"
+sentence: "迄今为止，鞭毛已被区分为三种类型：细菌，古菌和真核生物。"
+answer: "Three types of flagella have so far been distinguished; bacterial, archaeal and eukaryotic."
+acceptAlso: "Three types of flagella have so far been distinguished; bacterial, archaeal and eukaryotic."
+srsWords: "types" "flagella" "far" "distinguished" "bacterial" "archaeal" "eukaryotic"
