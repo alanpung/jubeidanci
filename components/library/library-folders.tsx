@@ -11,10 +11,13 @@ import {
 /** Key of the always-present folder that holds the units the AI tutor made. */
 export const STANDALONE_KEY = "standalone-units";
 
-/** The "mix" visual — the symbol every standalone unit wears. */
+/** The "mix" visual — the symbol every standalone unit wears. Same light
+ *  cover language as the other folders: very light fill, coloured outline and
+ *  symbol. */
 const STANDALONE_VISUAL = {
-  bg: "bg-gradient-to-br from-fuchsia-500 to-purple-600",
-  border: "border-fuchsia-300/70",
+  light: "bg-fuchsia-50",
+  outline: "border-fuchsia-400",
+  symbol: "text-fuchsia-600",
   Icon: Shuffle,
 };
 
@@ -197,22 +200,20 @@ export function LibraryFolders({
           type="button"
           onClick={() => onOpenKey(standaloneActive ? null : STANDALONE_KEY)}
           aria-expanded={standaloneActive}
-          className={`group mt-3 flex w-full items-center gap-3 rounded-2xl border-2 p-3 text-left shadow-sm transition-all active:translate-y-0 ${
-            STANDALONE_VISUAL.bg
-          } ${STANDALONE_VISUAL.border} ${
+          className={`group mt-3 flex w-full items-center gap-3 rounded-2xl border-2 p-3 text-left shadow-sm transition-all active:translate-y-0 ${STANDALONE_VISUAL.light} ${STANDALONE_VISUAL.outline} ${
             standaloneActive
               ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
               : ""
           }`}
         >
-          <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-white/20">
-            <STANDALONE_VISUAL.Icon className="h-6 w-6 text-white stroke-[2.25]" />
+          <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${STANDALONE_VISUAL.light} ${STANDALONE_VISUAL.outline}`}>
+            <STANDALONE_VISUAL.Icon className={`h-6 w-6 ${STANDALONE_VISUAL.symbol} stroke-[2.25]`} />
           </span>
           <span className="min-w-0 flex-1">
-            <span className="block text-sm font-black text-white">
+            <span className="block text-sm font-black text-lingo-text">
               Standalone Units
             </span>
-            <span className="block text-[11px] font-semibold text-white/80">
+            <span className="block text-[11px] font-semibold text-lingo-text-light">
               {standaloneCount} {standaloneCount === 1 ? "unit" : "units"} made
               with the AI tutor
             </span>
