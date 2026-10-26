@@ -4,22 +4,13 @@ import type { ComponentType, ReactNode } from "react";
 import { Shuffle } from "lucide-react";
 import {
   CourseCover,
+  LEVEL_LABELS,
   QUESTION_TYPE_LEGEND,
   resolveCourseQuestionType,
 } from "@/components/library/course-level-icon";
 
 /** Key of the always-present folder that holds the units the AI tutor made. */
 export const STANDALONE_KEY = "standalone-units";
-
-/** The "mix" visual — the symbol every standalone unit wears. Same light
- *  cover language as the other folders: very light fill, coloured outline and
- *  symbol. */
-const STANDALONE_VISUAL = {
-  light: "bg-fuchsia-50",
-  outline: "border-fuchsia-400",
-  symbol: "text-fuchsia-600",
-  Icon: Shuffle,
-};
 
 /** One folder tile. A type folder carries a `typeId` (the exercise type that
  *  decides its colour + symbol); a level folder carries its CEFR code, which
@@ -83,7 +74,6 @@ export function LibraryFolders({
   onGroupBy,
   activeKey,
   onOpenKey,
-  standaloneCount,
   children,
 }: LibraryFoldersProps) {
   const typeFolders: FolderItem[] = FOLDER_ORDER.map((id) => {
@@ -156,7 +146,8 @@ export function LibraryFolders({
                 }`}
               >
                 {/* The cover IS the button — the whole tile is the colour, so
-                    there is no white card and no white padding around it. */}
+                    there is no white card and no white padding around it. The
+                    symbol sits left, the name to its right, inside the cover. */}
                 <span
                   className={`block w-full transition-transform ${
                     isActive ? "scale-[1.04]" : "group-hover:scale-[1.04]"
@@ -165,15 +156,13 @@ export function LibraryFolders({
                   <CourseCover
                     level={f.isType ? null : f.label}
                     questionType={f.isType ? f.typeId : null}
+                    levelAsSymbol={!f.isType}
                     glyph={
-                      f.isType ? (
-                        f.Icon ? (
-                          <f.Icon className="h-7 w-7 stroke-[2.25]" />
-                        ) : null
-                      ) : (
-                        <span className="text-lg font-black">{f.label}</span>
-                      )
+                      f.isType && f.Icon ? (
+                        <f.Icon className="h-9 w-9 stroke-[2.25]" />
+                      ) : undefined
                     }
+                    name={f.isType ? f.label : LEVEL_LABELS[f.label]}
                     showLevel={false}
                     className={
                       isActive
@@ -182,43 +171,42 @@ export function LibraryFolders({
                     }
                   />
                 </span>
-                {/* Level folders already spell the code inside the cover, so only
-                    type folders need a caption under the glyph. */}
-                {f.isType ? (
-                  <span className="text-center text-[10px] font-bold leading-tight text-lingo-text">
-                    {f.label}
-                  </span>
-                ) : null}
               </button>
             );
           })}
-        </div>
 
-        {/* Standalone units — the AI tutor's own units. Always listed, because
-            they belong to no CEFR level and no exercise type. */}
-        <button
-          type="button"
-          onClick={() => onOpenKey(standaloneActive ? null : STANDALONE_KEY)}
-          aria-expanded={standaloneActive}
-          className={`group mt-3 flex w-full items-center gap-3 rounded-2xl border-2 p-3 text-left shadow-sm transition-all active:translate-y-0 ${STANDALONE_VISUAL.light} ${STANDALONE_VISUAL.outline} ${
-            standaloneActive
-              ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
-              : ""
-          }`}
-        >
-          <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-xl ${STANDALONE_VISUAL.light} ${STANDALONE_VISUAL.outline}`}>
-            <STANDALONE_VISUAL.Icon className={`h-6 w-6 ${STANDALONE_VISUAL.symbol} stroke-[2.25]`} />
-          </span>
-          <span className="min-w-0 flex-1">
-            <span className="block text-sm font-black text-lingo-text">
-              Standalone Units
+          {/* Standalone units — the AI tutor's own units. Always listed because
+              they belong to no CEFR level and no exercise type. Same-size tile
+              as every other folder, wearing the "mix" symbol; the title lives
+              inside the cover, no description. */}
+          <button
+            type="button"
+            onClick={() => onOpenKey(standaloneActive ? null : STANDALONE_KEY)}
+            aria-expanded={standaloneActive}
+            aria-label="Standalone Units"
+            className={`group flex flex-col items-center gap-1.5 transition-transform active:translate-y-0 ${
+              standaloneActive ? "" : "hover:-translate-y-0.5"
+            }`}
+          >
+            <span
+              className={`block w-full transition-transform ${
+                standaloneActive ? "scale-[1.04]" : "group-hover:scale-[1.04]"
+              }`}
+            >
+              <CourseCover
+                questionType="mix"
+                glyph={<Shuffle className="h-9 w-9 stroke-[2.25]" />}
+                name="Standalone unit"
+                showLevel={false}
+                className={
+                  standaloneActive
+                    ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
+                    : ""
+                }
+              />
             </span>
-            <span className="block text-[11px] font-semibold text-lingo-text-light">
-              {standaloneCount} {standaloneCount === 1 ? "unit" : "units"} made
-              with the AI tutor
-            </span>
-          </span>
-        </button>
+          </button>
+        </div>
 
         {/* The browser window. On phones it layers over the folders above; from
             `lg` up it settles underneath them. */}

@@ -207,7 +207,7 @@ export function getCourseLevelStyle(level?: string | null) {
 export function resolveCourseQuestionType(
   title?: string | null,
   courseId?: string | null,
-  questionType?: string | null
+  questionType?: string | null,
 ) {
   if (questionType) {
     const q = normalizeQuestionType(questionType);
@@ -242,15 +242,15 @@ export function CourseLevelIcon({
     size === "sm"
       ? "h-10 w-10 rounded-xl text-sm"
       : size === "lg"
-      ? "h-14 w-14 rounded-2xl text-xl"
-      : "h-12 w-12 rounded-xl text-base";
+        ? "h-14 w-14 rounded-2xl text-xl"
+        : "h-12 w-12 rounded-xl text-base";
 
   const iconSizeClasses =
     size === "sm"
       ? "h-5 w-5"
       : size === "lg"
-      ? "h-7 w-7"
-      : "h-6 w-6";
+        ? "h-7 w-7"
+        : "h-6 w-6";
 
   if (typeVisual) {
     const IconComponent = typeVisual.Icon;
@@ -284,57 +284,92 @@ export function CourseLevelIcon({
   );
 }
 
-/** A light "book" cover.
+/** CEFR code → plain-English descriptor, drawn to the right of the code on a
+ *  level folder's cover so the tile reads "A1 · Beginner", etc. */
+export const LEVEL_LABELS: Record<string, string> = {
+  A1: "Beginner",
+  A2: "Elementary",
+  B1: "Intermediate",
+  B2: "Upper Intermediate",
+  C1: "Advanced",
+  C2: "Mastery",
+};
+
+/** A light "book" cover — ONE anatomy for every surface on /library.
  *
- *  The fill is a *very light* tint of the level/type colour; only the
- *  **outline (border)** and the **symbol** carry the full colour. This keeps
- *  the previous-previous rounded-rectangle card proportions but stops the
- *  whole tile from being a solid block of colour — folders and course covers
- *  read as tidy outlined tiles instead of flat colour squares. Every surface
- *  (Library folders, My Favorite, the browse window) draws with this one
- *  component, so a book looks the same wherever it appears.
+ *  Layout (left → right):  [symbol]  [name]  [level code]
+ *    • symbol  — a type icon, or the CEFR code itself (`levelAsSymbol`).
+ *    • name    — the title, drawn INSIDE the cover to the RIGHT of the symbol.
+ *    • level   — the CEFR code, set at the SAME font size as the symbol, so a
+ *                course cover and a folder cover read identically.
  *
- *  `glyph` replaces the symbol (level folders show their CEFR code instead of
- *  a type icon). */
+ *  The fill is a *very light* tint; only the outline (border) and symbol carry
+ *  the full colour. `children` are corner controls (VIP / × / edit) rendered
+ *  INSIDE the cover by the caller. */
 export function CourseCover({
   level,
   questionType,
   title,
   courseId,
   glyph,
+  name,
+  levelAsSymbol = false,
   showLevel = true,
   className = "",
+  children,
 }: {
   level?: string | null;
   questionType?: string | null;
   title?: string | null;
   courseId?: string | null;
   glyph?: React.ReactNode;
+  name?: string | null;
+  levelAsSymbol?: boolean;
   showLevel?: boolean;
   className?: string;
+  children?: React.ReactNode;
 }) {
   const cleanLevel = (level || "").toUpperCase().trim();
   const levelStyle = getCourseLevelStyle(cleanLevel);
   const typeVisual = resolveCourseQuestionType(title, courseId, questionType);
-  const resolved = typeVisual ?? levelStyle;
+  const visual = typeVisual ?? levelStyle;
   const Icon = (typeVisual?.Icon ?? BookOpen) as React.ComponentType<{
     className?: string;
   }>;
 
   return (
     <div
-      className={`relative flex w-full items-center justify-center rounded-2xl border-2 p-2.5 shadow-sm ${resolved.light} ${resolved.outline} ${resolved.symbol} ${className}`}
+      className={`relative flex w-full items-center gap-2.5 rounded-2xl border-2 px-3 py-5 shadow-sm ${visual.light} ${visual.outline} ${className}`}
     >
-      <div className="flex h-14 w-14 items-center justify-center">
-        {glyph ?? <Icon className="h-12 w-12 stroke-[2.25]" />}
-      </div>
-      {showLevel && cleanLevel ? (
+      {/* Symbol — slightly left-anchored, at the SAME height as the level code
+          so the two always match in size. */}
+      <span
+        className={`flex h-10 w-10 shrink-0 items-center justify-center ${visual.symbol}`}
+      >
+        {levelAsSymbol ? (
+          <span className="text-4xl font-black leading-none tracking-tight">
+            {cleanLevel}
+          </span>
+        ) : glyph ?? <Icon className="h-9 w-9 stroke-[2.25]" />}
+      </span>
+
+      {/* Title — inside the cover, to the right of the symbol. */}
+      {name ? (
+        <span className="line-clamp-2 min-w-0 flex-1 text-[13px] font-black leading-tight text-lingo-text">
+          {name}
+        </span>
+      ) : null}
+
+      {/* Level code — same size as the symbol, hugged to the right. */}
+      {showLevel && cleanLevel && !levelAsSymbol ? (
         <span
-          className={`absolute bottom-1 right-1 rounded-md px-1.5 py-0.5 text-[10px] font-black leading-none text-white ${levelStyle.pill}`}
+          className={`shrink-0 text-4xl font-black leading-none tracking-tight ${levelStyle.symbol}`}
         >
           {cleanLevel}
         </span>
       ) : null}
+
+      {children}
     </div>
   );
 }

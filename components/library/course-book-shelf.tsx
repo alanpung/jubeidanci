@@ -23,8 +23,8 @@ import {
 } from "@/components/library/library-folders";
 import {
   AddRemoveButton,
-  VisibilityToggle,
-  VipCrownBadge,
+  VisibilityBadge,
+  CoverEditButton,
 } from "@/components/library/book-parts";
 
 /** A student may keep at most this many courses on the top ("My Favorite")
@@ -365,8 +365,6 @@ function TypeBrowserWindow({
  *  top-right control: a + (not yet in My Library) or × (already in it). The
  *  owner also gets the public/private/hide switch at the bottom-left. */
 function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean }) {
-  const isPublic = entry.course ? entry.course.visibility === "public" : true;
-
   return (
     <div className="group relative flex flex-col">
       <div className="relative w-full">
@@ -381,21 +379,20 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
             questionType={entry.typeId}
             title={entry.title}
             courseId={entry.id}
+            name={entry.title}
           />
         </Link>
 
-        {/* Owner switch + VIP crown clustered in the UPPER-LEFT corner. The
-            lower-left corner is intentionally kept clear of any icon. */}
-        <div className="absolute -left-1.5 -top-1.5 z-20 flex items-center gap-1">
-          {entry.course && entry.isOwner ? (
-            <VisibilityToggle course={entry.course} className="h-6 w-6" />
-          ) : null}
-          {!isPublic ? <VipCrownBadge /> : null}
+        {/* Public / VIP indicator — INSIDE the cover, upper-left. */}
+        <div className="absolute left-1.5 top-1.5 z-20">
+          <VisibilityBadge
+            visibility={entry.course ? entry.course.visibility : "public"}
+          />
         </div>
 
-        {/* + to add to My Library, or × to remove — top-right. */}
+        {/* + to add to My Library, or × to remove — INSIDE the cover, top-right. */}
         {entry.showToggle ? (
-          <div className="absolute -right-1.5 -top-1.5 z-20">
+          <div className="absolute right-1.5 top-1.5 z-20">
             <AddRemoveButton
               isAdded={entry.isInLibrary}
               pending={pending}
@@ -404,12 +401,16 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
             />
           </div>
         ) : null}
+
+        {/* Owner-only edit (public / VIP / hide) — INSIDE the cover, lower-left. */}
+        {entry.course && entry.isOwner ? (
+          <div className="absolute left-1.5 bottom-1.5 z-20">
+            <CoverEditButton course={entry.course} />
+          </div>
+        ) : null}
       </div>
 
-      <p className="mt-1.5 line-clamp-2 text-center text-[11px] font-bold leading-tight text-lingo-text">
-        {entry.title}
-      </p>
-      <p className="text-center text-[10px] font-semibold text-lingo-text-light">
+      <p className="mt-1.5 text-center text-[10px] font-semibold text-lingo-text-light">
         {entry.meta}
       </p>
     </div>
@@ -439,8 +440,6 @@ function CourseBook({
   onBorrow: () => void;
   onRemove: () => void;
 }) {
-  const isPublic = course.visibility === "public";
-
   return (
     <div className="group relative flex flex-col items-center">
       {/* Stretched link: the entire tile opens the course for study. */}
@@ -456,20 +455,17 @@ function CourseBook({
           level={course.level}
           title={course.title}
           courseId={course.id}
+          name={course.title}
         />
 
-        {/* Owner switch + VIP crown clustered in the UPPER-LEFT corner. The
-            lower-left corner is intentionally kept clear of any icon. */}
-        <div className="absolute -left-1.5 -top-1.5 z-20 flex items-center gap-1">
-          {course.isOwner ? (
-            <VisibilityToggle course={course} className="h-6 w-6" />
-          ) : null}
-          {!isPublic ? <VipCrownBadge /> : null}
+        {/* Public / VIP indicator — INSIDE the cover, upper-left. */}
+        <div className="absolute left-1.5 top-1.5 z-20">
+          <VisibilityBadge visibility={course.visibility} />
         </div>
 
-        {/* Take it off the shelf — × in the top-right corner, above the
+        {/* Take it off the shelf — × INSIDE the cover, top-right, above the
             stretched link so removing a book never navigates into it. */}
-        <div className="absolute -right-1.5 -top-1.5 z-20">
+        <div className="absolute right-1.5 top-1.5 z-20">
           <AddRemoveButton
             isAdded={isBorrowed}
             pending={pending}
@@ -477,10 +473,17 @@ function CourseBook({
             onRemove={onRemove}
           />
         </div>
+
+        {/* Owner-only edit (public / VIP / hide) — INSIDE the cover, lower-left. */}
+        {course.isOwner ? (
+          <div className="absolute left-1.5 bottom-1.5 z-20">
+            <CoverEditButton course={course} />
+          </div>
+        ) : null}
       </div>
 
-      <p className="pointer-events-none mt-1.5 w-full line-clamp-2 text-center text-[11px] font-bold leading-tight text-lingo-text">
-        {course.title}
+      <p className="pointer-events-none mt-1.5 w-full text-center text-[10px] font-semibold text-lingo-text-light">
+        {course.unitCount} {course.unitCount === 1 ? "unit" : "units"}
       </p>
     </div>
   );
