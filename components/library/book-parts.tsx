@@ -47,7 +47,7 @@ export function VisibilityToggle({
     // Going public is one-way for other users, so make the owner confirm.
     if (!isPublic) {
       const ok = window.confirm(
-        "Make this course public?\n\nOnce public it becomes read-only for non-admins and every user can add it to My Books.",
+        "Make this course public?\n\nOnce public it becomes read-only for non-admins and every user can add it to My Favorite.",
       );
       if (!ok) return;
     }
@@ -91,7 +91,7 @@ export function VisibilityToggle({
 /** The circular add (+) / remove (×) control.
  *
  *  Always sits inline in a flex slot — on the right of a Library browse row,
- *  or in the bottom-right corner of a My Books card — so the tap target is a
+ *  or in the bottom-right corner of a My Favorite card — so the tap target is a
  *  full-size button instead of a tiny glyph floating off the symbol. */
 export function AddRemoveButton({
   isAdded,
@@ -117,8 +117,8 @@ export function AddRemoveButton({
       type="button"
       onClick={isAdded ? onRemove : onAdd}
       disabled={pending}
-      title={isAdded ? "Remove from My Books" : "Add to My Books"}
-      aria-label={isAdded ? "Remove from My Books" : "Add to My Books"}
+      title={isAdded ? "Remove from My Favorite" : "Add to My Favorite"}
+      aria-label={isAdded ? "Remove from My Favorite" : "Add to My Favorite"}
       className={`${base} ${tone} ${className}`}
     >
       {pending ? (

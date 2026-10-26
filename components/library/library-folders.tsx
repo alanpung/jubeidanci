@@ -29,8 +29,8 @@ interface FolderItem {
  *
  * Tapping a folder does NOT navigate — it opens the small browser window
  * (`TypeBrowserWindow` in course-book-shelf) listing every course of that
- * level/type, where a +/× toggle adds to / removes from My Books. The window is
- * rendered *inside* this section (as children) so it never covers the My Books
+ * level/type, where a +/× toggle adds to / removes from My Favorite. The window is
+ * rendered *inside* this section (as children) so it never covers the My Favorite
  * shelf above it.
  */
 

@@ -17,12 +17,12 @@ import {
   VisibilityToggle,
 } from "@/components/library/book-parts";
 
-/** A student may keep at most this many courses on the top ("My Books")
+/** A student may keep at most this many courses on the top ("My Favorite")
  *  shelf. The grid matches the Library folders exactly (2-up on phones, 4-up
  *  from `min-[480px]`), so the cap of eight fills exactly two tidy rows. */
-const MY_BOOKS_CAP = 8;
+const MY_FAVORITE_CAP = 8;
 
-/** My Books grid geometry — deliberately the *same* classes as the Library
+/** My Favorite grid geometry — deliberately the *same* classes as the Library
  *  folder grid, so a book tile is exactly as wide as the folder it came from. */
 const BOOK_GRID = "grid grid-cols-2 gap-2 min-[480px]:grid-cols-4";
 
@@ -54,8 +54,8 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
     setActiveKey(null);
   }
 
-  // Cap the shelf at MY_BOOKS_CAP so the top row never overflows its grid.
-  const borrowed = courses.filter((c) => borrowedIds.has(c.id)).slice(0, MY_BOOKS_CAP);
+  // Cap the shelf at MY_FAVORITE_CAP so the top row never overflows its grid.
+  const borrowed = courses.filter((c) => borrowedIds.has(c.id)).slice(0, MY_FAVORITE_CAP);
 
   // Exercise type lives in the book symbol, not in a column, so derive it the
   // same way CourseLevelIcon does — otherwise the folder and the cover could
@@ -73,8 +73,8 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
     : [];
 
   function borrow(course: CourseListItem) {
-    if (borrowedIds.size >= MY_BOOKS_CAP) {
-      alert(`You can keep at most ${MY_BOOKS_CAP} books on your shelf. Remove one first.`);
+    if (borrowedIds.size >= MY_FAVORITE_CAP) {
+      alert(`You can keep at most ${MY_FAVORITE_CAP} favorites. Remove one first.`);
       return;
     }
     setPendingId(course.id);
@@ -120,18 +120,18 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
 
   return (
     <div>
-      {/* My Books — the reader's own picks, capped at MY_BOOKS_CAP */}
+      {/* My Favorite — the reader's own picks, capped at MY_FAVORITE_CAP */}
       <section>
         <div className="mb-4 flex items-center gap-2">
-          <h2 className="text-base font-bold text-lingo-text">My Books</h2>
+          <h2 className="text-base font-bold text-lingo-text">My Favorite</h2>
           <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
-            {borrowed.length}/{MY_BOOKS_CAP}
+            {borrowed.length}/{MY_FAVORITE_CAP}
           </span>
         </div>
 
         {borrowed.length === 0 ? (
           <p className="rounded-xl border-2 border-dashed border-lingo-border bg-white p-4 text-center text-sm text-lingo-text-light">
-            Your shelf is empty. Open a folder under{" "}
+            No favorites yet. Open a folder under{" "}
             <span className="font-black">Library</span> below and tap the{" "}
             <span className="font-black text-lingo-blue">+</span> on any book
             to add it here.
@@ -153,7 +153,7 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
       </section>
 
       {/* Library — folders grouped by CEFR Level (default) or exercise Type,
-          right below My Books. Tapping one opens the small browser window (no
+          right below My Favorite. Tapping one opens the small browser window (no
           page navigation). On phones the window layers over the folders; from
           lg up it sits underneath them. */}
       <LibraryFolders
@@ -187,7 +187,7 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
  *
  *  Entries are browse-only rows: the symbol is deliberately NOT a link. A
  *  course in the Library catalogue is for browsing and add/remove — only the
- *  copies on My Books open for study. */
+ *  copies on My Favorite open for study. */
 function TypeBrowserWindow({
   title,
   courses,
@@ -324,10 +324,10 @@ function BrowseRow({
   );
 }
 
-/** A single book on the My Books shelf.
+/** A single book on the My Favorite shelf.
  *
  *  Deliberately the SAME vertical tile as a Library folder — same `p-2.5`, same
- *  symbol block, same `mt-1.5 text-[11px]` title — so a My Books card is
+ *  symbol block, same `mt-1.5 text-[11px]` title — so a My Favorite card is
  *  exactly as tall as the folder it sits above and the two grids stay aligned.
  *  Padding is kept tight so a tile is mostly symbol + title instead of a white
  *  frame. The whole tile opens the course for study (stretched-link: a
