@@ -297,15 +297,14 @@ export const LEVEL_LABELS: Record<string, string> = {
 
 /** A light "book" cover — ONE anatomy for every surface on /library.
  *
- *  Layout (left → right):  [symbol]  [name]  [level code]
- *    • symbol  — a type icon, or the CEFR code itself (`levelAsSymbol`).
- *    • name    — the title, drawn INSIDE the cover to the RIGHT of the symbol.
- *    • level   — the CEFR code, set at the SAME font size as the symbol, so a
- *                course cover and a folder cover read identically.
+ *  Layout:  [symbol]  [name]  — centred as a group, so the symbol sits closer
+ *  to the middle of the tile (and clear of the corner badges) and the title
+ *  always reads to its right, inside the cover.
  *
  *  The fill is a *very light* tint; only the outline (border) and symbol carry
- *  the full colour. `children` are corner controls (VIP / × / edit) rendered
- *  INSIDE the cover by the caller. */
+ *  the full colour. A course's CEFR level is a small round badge in the
+ *  LOWER-RIGHT corner. `children` are the other corner controls (visibility
+ *  badge, add/remove ×, owner edit button) rendered INSIDE the cover. */
 export function CourseCover({
   level,
   questionType,
@@ -339,10 +338,10 @@ export function CourseCover({
 
   return (
     <div
-      className={`relative flex w-full items-center gap-2.5 rounded-2xl border-2 px-3 py-5 shadow-sm ${visual.light} ${visual.outline} ${className}`}
+      className={`relative flex w-full items-center justify-center gap-2.5 rounded-2xl border-2 px-3 pt-7 pb-7 shadow-sm ${visual.light} ${visual.outline} ${className}`}
     >
-      {/* Symbol — slightly left-anchored, at the SAME height as the level code
-          so the two always match in size. */}
+      {/* Symbol — grouped with the title and centred, so it never collides with
+          the top-left visibility badge. */}
       <span
         className={`flex h-10 w-10 shrink-0 items-center justify-center ${visual.symbol}`}
       >
@@ -355,15 +354,15 @@ export function CourseCover({
 
       {/* Title — inside the cover, to the right of the symbol. */}
       {name ? (
-        <span className="line-clamp-2 min-w-0 flex-1 text-[13px] font-black leading-tight text-lingo-text">
+        <span className="line-clamp-2 min-w-0 max-w-[70%] text-[13px] font-black leading-tight text-lingo-text">
           {name}
         </span>
       ) : null}
 
-      {/* Level code — same size as the symbol, hugged to the right. */}
+      {/* CEFR level — a small round badge in the LOWER-RIGHT corner. */}
       {showLevel && cleanLevel && !levelAsSymbol ? (
         <span
-          className={`shrink-0 text-4xl font-black leading-none tracking-tight ${levelStyle.symbol}`}
+          className={`absolute right-1 bottom-1 flex h-6 min-w-6 items-center justify-center rounded-full px-1 text-[10px] leading-none font-black text-white shadow-sm ${levelStyle.pill}`}
         >
           {cleanLevel}
         </span>
