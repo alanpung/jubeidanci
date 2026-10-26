@@ -348,6 +348,11 @@ export function createTools(userId: string, language?: string) {
           targetLanguage,
           sourceLanguage: parsedUnit.sourceLanguage,
           level: parsedUnit.level,
+          // Units the tutor creates outside a course are "standalone": they live
+          // in the Standalone Units section and are public by default, so other
+          // learners can add them to their library. Units attached to a course
+          // inherit the course's own visibility instead.
+          visibility: courseId ? null : "public",
           createdBy: userId,
         });
 

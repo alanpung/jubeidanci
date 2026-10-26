@@ -10,7 +10,7 @@ import {
   resolveCourseQuestionType,
 } from "@/components/library/course-level-icon";
 import { addCourseToLibrary, removeCourseFromLibrary } from "@/lib/actions/library";
-import { LibraryFolders } from "@/components/library/library-folders";
+import { LibraryFolders, type GroupBy } from "@/components/library/library-folders";
 import {
   AddRemoveButton,
   VipCornerBadge,
@@ -24,12 +24,12 @@ const MY_BOOKS_CAP = 8;
 
 /** My Books grid geometry — deliberately the *same* classes as the Library
  *  folder grid, so a book tile is exactly as wide as the folder it came from. */
-const BOOK_GRID = "grid grid-cols-2 gap-3 min-[480px]:grid-cols-4";
+const BOOK_GRID = "grid grid-cols-2 gap-2 min-[480px]:grid-cols-4";
 
 /** Browse-window row geometry. The window layers OVER the folder grid on
  *  phones, so it reuses the folder grid's own 2-up / 4-up rhythm with the same
  *  gap — every entry lines up with the folder tile above it. */
-const WINDOW_BOOK_GRID = "grid grid-cols-2 gap-3 min-[480px]:grid-cols-4";
+const WINDOW_BOOK_GRID = "grid grid-cols-2 gap-2 min-[480px]:grid-cols-4";
 
 interface CourseBookShelfProps {
   /** Full catalog: public courses + the viewer's own. */
@@ -43,9 +43,16 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
     () => new Set(courses.filter((c) => c.isInLibrary).map((c) => c.id)),
   );
   const [pendingId, setPendingId] = useState<string | null>(null);
-  // Which Library folder is open, by exercise-type label. null = closed.
-  const [openType, setOpenType] = useState<string | null>(null);
+  // Which Library folder is open, by level or exercise-type label. null = closed.
+  const [groupBy, setGroupBy] = useState<GroupBy>("level");
+  const [activeKey, setActiveKey] = useState<string | null>(null);
   const [, startTransition] = useTransition();
+
+  // Switching grouping mode closes any open folder.
+  function handleGroupBy(g: GroupBy) {
+    setGroupBy(g);
+    setActiveKey(null);
+  }
 
   // Cap the shelf at MY_BOOKS_CAP so the top row never overflows its grid.
   const borrowed = courses.filter((c) => borrowedIds.has(c.id)).slice(0, MY_BOOKS_CAP);
@@ -56,10 +63,13 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
   const typeOf = (c: CourseListItem) =>
     resolveCourseQuestionType(c.title, c.id)?.label ?? "Other";
 
-  // The modal deliberately lists *every* course of this type — including ones
-  // already on the shelf — so the +/× toggle is what adds or removes.
-  const typeCourses = openType
-    ? courses.filter((c) => typeOf(c) === openType)
+  // The window deliberately lists *every* course of this level/type —
+  // including ones already on the shelf — so the +/× toggle is what adds or
+  // removes.
+  const openCourses = activeKey
+    ? groupBy === "level"
+      ? courses.filter((c) => (c.level || "").toUpperCase() === activeKey)
+      : courses.filter((c) => typeOf(c) === activeKey)
     : [];
 
   function borrow(course: CourseListItem) {
@@ -142,25 +152,26 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
         )}
       </section>
 
-      {/* Library — eight exercise-type folders, right below My Books. Tapping
-          one opens the small browser window (no page navigation). On phones the
-          window layers over the folders; from lg up it sits underneath them. */}
+      {/* Library — folders grouped by CEFR Level (default) or exercise Type,
+          right below My Books. Tapping one opens the small browser window (no
+          page navigation). On phones the window layers over the folders; from
+          lg up it sits underneath them. */}
       <LibraryFolders
-        onOpenType={(label) =>
-          setOpenType((cur) => (cur === label ? null : label))
-        }
-        activeType={openType}
+        groupBy={groupBy}
+        onGroupBy={handleGroupBy}
+        activeKey={activeKey}
+        onOpenKey={(key) => setActiveKey((cur) => (cur === key ? null : key))}
       >
-        {openType && (
+        {activeKey && (
           <TypeBrowserWindow
-            typeLabel={openType}
-            courses={typeCourses}
+            title={activeKey}
+            courses={openCourses}
             isAdmin={isAdmin}
             borrowedIds={borrowedIds}
             pendingId={pendingId}
             onBorrow={borrow}
             onRemove={unborrow}
-            onClose={() => setOpenType(null)}
+            onClose={() => setActiveKey(null)}
           />
         )}
       </LibraryFolders>
@@ -178,7 +189,7 @@ export function CourseBookShelf({ courses, isAdmin }: CourseBookShelfProps) {
  *  course in the Library catalogue is for browsing and add/remove — only the
  *  copies on My Books open for study. */
 function TypeBrowserWindow({
-  typeLabel,
+  title,
   courses,
   isAdmin,
   borrowedIds,
@@ -187,7 +198,9 @@ function TypeBrowserWindow({
   onRemove,
   onClose,
 }: {
-  typeLabel: string;
+  // Holds the folder's key: a CEFR level ("B1") when grouped by level, or an
+  // exercise-type label ("Translation") when grouped by type.
+  title: string;
   courses: CourseListItem[];
   isAdmin: boolean;
   borrowedIds: Set<string>;
@@ -212,11 +225,11 @@ function TypeBrowserWindow({
       className="absolute inset-0 z-30 flex flex-col overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-card shadow-2xl lg:static lg:inset-auto lg:mt-4 lg:shadow-lg"
       role="dialog"
       aria-modal="false"
-      aria-label={`${typeLabel} courses`}
+      aria-label={`${title} courses`}
     >
       <div className="flex shrink-0 items-center gap-3 border-b-2 border-lingo-border px-3 py-2.5 sm:px-5">
         <h2 className="min-w-0 flex-1 truncate text-sm font-black text-lingo-text sm:text-base">
-          {typeLabel}
+          {title}
         </h2>
         <span className="shrink-0 rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
           {courses.length}
@@ -234,7 +247,7 @@ function TypeBrowserWindow({
       <div className="flex-1 overflow-y-auto p-3 sm:px-5 sm:py-4">
         {courses.length === 0 ? (
           <p className="py-10 text-center text-sm text-lingo-text-light">
-            No {typeLabel.toLowerCase()} courses yet.
+            No {title.toLowerCase()} courses yet.
           </p>
         ) : (
           <div className={WINDOW_BOOK_GRID}>
@@ -313,12 +326,14 @@ function BrowseRow({
 
 /** A single book on the My Books shelf.
  *
- *  Deliberately the SAME vertical tile as a Library folder — same `p-4`, same
- *  `h-12 w-12` symbol, same `mt-2 text-xs` title — so a My Books card is
- *  exactly as tall as the folder it sits above. The whole tile opens the course
- *  for study (stretched-link: a transparent <Link> fills the card); the round ×
- *  in the top-right corner sits above that overlay in z-order and keeps its own
- *  click, so removing a book never navigates into it. */
+ *  Deliberately the SAME vertical tile as a Library folder — same `p-2.5`, same
+ *  symbol block, same `mt-1.5 text-[11px]` title — so a My Books card is
+ *  exactly as tall as the folder it sits above and the two grids stay aligned.
+ *  Padding is kept tight so a tile is mostly symbol + title instead of a white
+ *  frame. The whole tile opens the course for study (stretched-link: a
+ *  transparent <Link> fills the card); the round × in the top-right corner sits
+ *  above that overlay in z-order and keeps its own click, so removing a book
+ *  never navigates into it. */
 function CourseBook({
   course,
   isBorrowed,
@@ -335,7 +350,7 @@ function CourseBook({
   const isPublic = course.visibility === "public";
 
   return (
-    <div className="group relative flex flex-col items-center rounded-2xl border-2 border-lingo-border bg-white p-4 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border">
+    <div className="group relative flex flex-col items-center rounded-2xl border-2 border-lingo-border bg-white p-2.5 shadow-sm transition-all hover:-translate-y-0.5 hover:border-lingo-green hover:shadow-[0_4px_0_0] hover:shadow-lingo-border">
       {/* Stretched link: the entire tile opens the course for study. */}
       <Link
         href={`/library/${course.id}`}
@@ -358,13 +373,13 @@ function CourseBook({
         {!isPublic && <VipCornerBadge />}
       </div>
 
-      <p className="pointer-events-none mt-2 w-full line-clamp-2 text-center text-xs font-bold leading-tight text-lingo-text">
+      <p className="pointer-events-none mt-1.5 w-full line-clamp-2 text-center text-[11px] font-bold leading-tight text-lingo-text">
         {course.title}
       </p>
 
       {/* Take it off the shelf — × in the top-right corner, above the stretched
           link so removing a book never navigates into it. */}
-      <div className="absolute right-2 top-2 z-20">
+      <div className="absolute right-1.5 top-1.5 z-20">
         <AddRemoveButton
           isAdded={isBorrowed}
           pending={pending}

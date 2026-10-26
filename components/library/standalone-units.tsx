@@ -6,12 +6,12 @@ import Link from "next/link";
 import type { StandaloneUnitInfo } from "@/lib/content/types";
 import { getLanguageName } from "@/lib/languages";
 import { makeUnitPublic, makeUnitPrivate, deleteUnit } from "@/lib/actions/units";
-import { removeUnitFromLibrary } from "@/lib/actions/library";
+import { addUnitToLibrary, removeUnitFromLibrary } from "@/lib/actions/library";
 import { CreateUnitForm } from "@/components/library/create-unit-form";
 import { QuestionTypeBadge } from "@/components/units/question-type-badge";
 import { CopyLinkButton } from "@/components/ui/copy-link-button";
 import { DeckShelf, DeckStack, groupByLevel } from "@/components/library/library-deck";
-import { X } from "lucide-react";
+import { X, Plus } from "lucide-react";
 
 interface StandaloneUnitsProps {
   units: StandaloneUnitInfo[];
@@ -113,6 +113,22 @@ export function StandaloneUnitCard({
     });
   }
 
+  function handleAddToLibrary() {
+    setActiveAction("add");
+    startTransition(async () => {
+      try {
+        const result = await addUnitToLibrary(unit.id);
+        if (result.success) {
+          router.refresh();
+        } else {
+          alert(result.error);
+        }
+      } finally {
+        setActiveAction(null);
+      }
+    });
+  }
+
   function handleMakePublic() {
     const confirmed = window.confirm(
       "Are you sure you want to make this unit public?\n\n" +
@@ -178,6 +194,7 @@ export function StandaloneUnitCard({
 
   const showShare = isPublic || unit.isOwner || isAdmin;
   const showRemove = !unit.isOwner && unit.isInLibrary;
+  const showAdd = !unit.isOwner && !unit.isInLibrary;
 
   const cardContent = (
     <div
@@ -218,6 +235,26 @@ export function StandaloneUnitCard({
             ) : null}
           </div>
 
+          {showAdd && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.preventDefault();
+                e.stopPropagation();
+                handleAddToLibrary();
+              }}
+              disabled={isActionPending}
+              className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-lg text-lingo-green hover:bg-lingo-green/10 transition-colors disabled:opacity-50 cursor-pointer"
+              title="Add to My Library"
+              aria-label="Add to My Library"
+            >
+              {activeAction === "add" ? (
+                <span className="h-3.5 w-3.5 animate-spin rounded-full border-2 border-lingo-green/30 border-t-lingo-green" />
+              ) : (
+                <Plus className="h-4 w-4 stroke-[3]" />
+              )}
+            </button>
+          )}
           {showRemove && (
             <button
               type="button"

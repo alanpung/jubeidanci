@@ -8,3 +8,8 @@ coverage/
 *.tsbuildinfo
 .env*
 !.env.example
+
+# Transient caches for scripts/regenerate-b1-c2-cefr-sp.mjs (sentence
+# selection + EN→ZH translation). Large, machine-specific, and re-derivable.
+scripts/.cefr-selection.json
+scripts/.cefr-translate-cache.json
