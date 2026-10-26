@@ -288,7 +288,7 @@ function BrowseRow({
   onRemove: () => void;
 }) {
   return (
-    <div className="flex items-center gap-2 rounded-2xl border-2 border-lingo-border bg-white p-3 pl-2.5 shadow-sm">
+    <div className="flex items-center gap-2 rounded-xl bg-lingo-gray/70 p-3 pl-2.5">
       <div className="relative -ml-1 shrink-0">
         <div
           title={`${course.title} · ${course.level} · ${course.unitCount} units`}
