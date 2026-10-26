@@ -1,7 +1,6 @@
 "use client";
 
 import type { ComponentType, ReactNode } from "react";
-import { Shuffle } from "lucide-react";
 import {
   CourseCover,
   LEVEL_LABELS,
@@ -157,11 +156,6 @@ export function LibraryFolders({
                     level={f.isType ? null : f.label}
                     questionType={f.isType ? f.typeId : null}
                     levelAsSymbol={!f.isType}
-                    glyph={
-                      f.isType && f.Icon ? (
-                        <f.Icon className="h-9 w-9 stroke-[2.25]" />
-                      ) : undefined
-                    }
                     name={f.isType ? f.label : LEVEL_LABELS[f.label]}
                     showLevel={false}
                     className={
@@ -195,7 +189,6 @@ export function LibraryFolders({
             >
               <CourseCover
                 questionType="mix"
-                glyph={<Shuffle className="h-9 w-9 stroke-[2.25]" />}
                 name="Standalone unit"
                 showLevel={false}
                 className={
