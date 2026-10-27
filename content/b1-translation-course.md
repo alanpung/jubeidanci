@@ -1,6 +1,6 @@
 ---
 id: "b1-translation-course"
-courseTitle: "B1 翻译1000句"
+courseTitle: "B1 中英翻译"
 description: "B1 Sentence Translation Course — scaffold, content to be filled via the markdown editor"
 targetLanguage: "en"
 sourceLanguage: "zh"
