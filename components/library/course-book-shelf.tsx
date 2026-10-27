@@ -315,6 +315,9 @@ function TypeBrowserWindow({
       role="dialog"
       aria-modal="false"
       aria-label={`${title} courses`}
+      // Clicking the window's empty area (header, gaps, padding) closes it.
+      // Individual covers/controls stop this from bubbling (see BrowseCover).
+      onClick={onClose}
     >
       <div className="flex shrink-0 items-center gap-3 border-b-2 border-lingo-border px-3 py-2.5 sm:px-5">
         <h2 className="min-w-0 flex-1 truncate text-sm font-black text-lingo-text sm:text-base">
@@ -365,23 +368,39 @@ function TypeBrowserWindow({
  *  top-right control: a + (not yet in My Library) or × (already in it). The
  *  owner also gets the public/private/hide switch at the bottom-left. */
 function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean }) {
+  // A course/unit can only be opened once it is on My Books — until then the
+  // cover is inert (no navigation) and the only action is the +/× toggle.
+  const canOpen = entry.isInLibrary;
+  const cover = (
+    <CourseCover
+      level={entry.level}
+      questionType={entry.typeId}
+      title={entry.title}
+      courseId={entry.id}
+      name={entry.title}
+    />
+  );
   return (
-    <div className="group relative flex flex-col">
+    <div
+      className="group relative flex flex-col"
+      // Swallow clicks on the cover tile so they never bubble up to the
+      // window's onClick (which closes it). The toggle/edit handle their own
+      // clicks; the inert cover simply does nothing.
+      onClick={(e) => e.stopPropagation()}
+    >
       <div className="relative w-full">
-        <Link
-          href={entry.href}
-          title={entry.title}
-          aria-label={`Open ${entry.title}`}
-          className="block"
-        >
-          <CourseCover
-            level={entry.level}
-            questionType={entry.typeId}
+        {canOpen ? (
+          <Link
+            href={entry.href}
             title={entry.title}
-            courseId={entry.id}
-            name={entry.title}
-          />
-        </Link>
+            aria-label={`Open ${entry.title}`}
+            className="block"
+          >
+            {cover}
+          </Link>
+        ) : (
+          cover
+        )}
 
         {/* Public / VIP indicator — INSIDE the cover, upper-left. */}
         <div className="absolute left-1.5 top-1.5 z-20">
