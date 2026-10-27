@@ -466,12 +466,12 @@ export function Translation({
                       .join("  ·  ") || undefined
                   }
                 >
-                  {/* POS tag — always visible. Muted grey while answering
-                      (it is the hint), full colour once revealed. */}
+                  {/* POS tag — always visible, coloured from the start so the
+                      part-of-speech hint reads at a glance while answering. */}
                   {item.grammarTag ? (
                     <span
                       className={`mb-1 whitespace-nowrap rounded-full border px-1.5 py-0.5 text-[9px] sm:text-[10px] font-bold tracking-wide ${
-                        submitted && posStyle
+                        posStyle
                           ? `${posStyle.bg} ${posStyle.text} ${posStyle.border}`
                           : "bg-gray-100 text-gray-500 border-gray-200"
                       }`}
