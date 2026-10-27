@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useMemo, useCallback, useRef } from "react";
+import { useState, useEffect, useLayoutEffect, useMemo, useCallback, useRef } from "react";
 import { Volume2, ChevronLeft, ChevronRight } from "lucide-react";
 import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
@@ -177,8 +177,38 @@ export function Translation({
       const cleanLen = item.word
         .replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "")
         .length;
-      return Math.max(3.5, Math.min(16, cleanLen + 1.6));
+      return Math.max(4, Math.min(20, cleanLen * 0.85 + 2.6));
     });
+  }, [analyzedWordList]);
+
+  // Exact pixel width of every answer word, measured with the real rendered
+  // font. The "ch" estimate above is only a fallback: `ch` is the width of the
+  // "0" glyph, and in Geist that is noticeably narrower than an average
+  // lowercase letter, so long words used to overflow their box and lose the
+  // last character. Measuring the actual glyphs guarantees the word always
+  // fits with room to spare.
+  const [measuredWidths, setMeasuredWidths] = useState<number[]>([]);
+  const measureRef = useRef<HTMLSpanElement>(null);
+
+  useLayoutEffect(() => {
+    const probe = measureRef.current;
+    if (!probe) return;
+    const measure = () => {
+      const widths = analyzedWordList.map((item) => {
+        probe.textContent = item.word;
+        return probe.offsetWidth;
+      });
+      setMeasuredWidths((prev) =>
+        prev.length === widths.length && prev.every((w, i) => w === widths[i])
+          ? prev
+          : widths
+      );
+    };
+    measure();
+    // Webfonts land after the first paint — re-measure once they are ready.
+    if (typeof document !== "undefined" && document.fonts?.ready) {
+      document.fonts.ready.then(measure).catch(() => {});
+    }
   }, [analyzedWordList]);
 
   useEffect(() => {
@@ -409,8 +439,16 @@ export function Translation({
           }`}
         >
           <div
-            className="flex flex-wrap items-start justify-center gap-x-1.5 gap-y-3 sm:gap-x-2"
+            className="relative flex flex-wrap items-start justify-center gap-x-1.5 gap-y-3 sm:gap-x-2"
           >
+            {/* Off-screen probe used to measure the true pixel width of each
+                answer word in the real font. Same classes as the inputs so the
+                measurement matches exactly. */}
+            <span
+              ref={measureRef}
+              aria-hidden="true"
+              className="pointer-events-none invisible absolute whitespace-nowrap text-sm sm:text-base font-semibold"
+            />
             {analyzedWordList.map((item, idx) => {
               const wordMatched = submitted ? matchedIndices[idx] === true : false;
               const lastBox = idx === analyzedWordList.length - 1;
@@ -421,7 +459,7 @@ export function Translation({
                 <div
                   key={idx}
                   className="flex flex-col items-center"
-                  style={{ minWidth: "3.5rem" }}
+                  style={{ minWidth: "3rem" }}
                   title={
                     [item.meaning, item.ipa, item.grammarTag]
                       .filter(Boolean)
@@ -475,7 +513,16 @@ export function Translation({
                     autoFocus={!submitted && idx === 0}
                     enterKeyHint="done"
                     inputMode="text"
-                    style={{ width: `${boxWidths[idx]}ch` }}
+                    style={{
+                      // Real measured width of the word + room for the box's own
+                      // padding (8px) and border (4px), plus a little breathing
+                      // space so the word never touches the box edge.
+                      width:
+                        measuredWidths[idx] > 0
+                          ? `${Math.max(48, measuredWidths[idx] + 16)}px`
+                          : `${boxWidths[idx]}ch`,
+                      minWidth: "3rem",
+                    }}
                     className={`rounded-lg border-2 bg-white px-1 py-1.5 text-center text-sm sm:text-base font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/50 ${
                       submitted
                         ? wordMatched
