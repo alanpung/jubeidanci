@@ -1,8 +1,7 @@
 import { db, isDbAvailable } from "./index";
 import { course, unit, user } from "./schema";
 import { getAllCourses, getAllUnits } from "../content/registry";
-import { REMOVED_TRANSLATION_COURSE_IDS } from "./queries/courses";
-import { eq, or, ilike, and, notInArray, inArray, sql, count } from "drizzle-orm";
+import { eq, or, ilike, and, notInArray, sql, count } from "drizzle-orm";
 import { runAfterResponse } from "../after-response";
 
 let lastSyncedAt = 0;
@@ -114,19 +113,6 @@ async function runSeedTask() {
           ilike(course.id, "%steve-jobs-%")
         )
       );
-
-    // 4b. Purge the B1/B2/C1/C2 translation courses, which were removed from the
-    //     filesystem because their content was wrong. Any rows a previous seed
-    //     already wrote must be deleted too, or they would reappear in the
-    //     library / path views as ghost entries.
-    if (REMOVED_TRANSLATION_COURSE_IDS.length > 0) {
-      await db
-        .delete(unit)
-        .where(inArray(unit.courseId, REMOVED_TRANSLATION_COURSE_IDS));
-      await db
-        .delete(course)
-        .where(inArray(course.id, REMOVED_TRANSLATION_COURSE_IDS));
-    }
 
     // 5. Track valid unit IDs for each course and batch upsert filesystem units
     const validUnitIdsByCourse = new Map<string, string[]>();
