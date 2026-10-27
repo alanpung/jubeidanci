@@ -66,9 +66,10 @@ export function Translation({
   // One entry per answer word; the user fills in each box.
   const [userInputs, setUserInputs] = useState<string[]>([]);
   const [matchResult, setMatchResult] = useState<WordMatchResult | null>(null);
-  const isMobile = useIsMobile();
   const isKeyboardOpen = useMobileKeyboardOpen();
   const promptRef = useRef<HTMLDivElement>(null);
+  // Refs to each per-word box so Space can move focus to the next one.
+  const inputRefs = useRef<(HTMLInputElement | null)[]>([]);
 
   useEffect(() => {
     setSubmitted(false);
@@ -189,6 +190,11 @@ export function Translation({
       next[idx] = val;
       return next;
     });
+  }, []);
+
+  // Move focus to a given word box (used by Space navigation).
+  const focusBox = useCallback((idx: number) => {
+    inputRefs.current[idx]?.focus();
   }, []);
 
   const handleSubmit = useCallback(() => {
@@ -379,34 +385,39 @@ export function Translation({
           )}
         </div>
 
-        {/* Word boxes ABOVE each hint. The user types one word per box; after
+        {/* Compact per-word boxes. One small input per answer word, laid out
+            in a single wrapping row (1–2 rows for longer sentences). The user
+            presses Space to jump to the next box, Enter to check. After
             submitting, each box turns green (matched) or red (not matched) and
-            the correct answer word is revealed below it. */}
+            the correct word is shown directly beneath it. Per-word hints
+            (meaning / IPA / POS) live in the tooltip to keep boxes narrow. */}
         <div
           className={`w-full max-w-4xl mx-auto px-1 ${
             isKeyboardOpen ? "mb-2" : "mb-4"
           }`}
         >
           <div
-            className="flex flex-wrap items-stretch justify-center gap-1.5 sm:gap-2 pb-1"
+            className="flex flex-wrap items-end justify-center gap-1.5 sm:gap-2"
           >
             {analyzedWordList.map((item, idx) => {
               const wordMatched = submitted ? matchedIndices[idx] === true : false;
-              const bgClass = !submitted
-                ? "bg-gray-50/70"
-                : wordMatched
-                  ? "bg-emerald-50"
-                  : "bg-rose-50";
+              const lastBox = idx === analyzedWordList.length - 1;
               return (
                 <div
                   key={idx}
-                  className={`rounded-xl flex flex-col items-center justify-center min-w-[3.25rem] sm:min-w-[4rem] ${bgClass} ${
-                    isMobile
-                      ? "px-1.5 py-1"
-                      : "px-2 sm:px-2.5 py-1.5 sm:py-2"
-                  } ${isKeyboardOpen ? "py-1" : ""}`}
+                  className="flex flex-col items-center"
+                  title={
+                    submitted
+                      ? [item.meaning, item.ipa, item.grammarTag]
+                          .filter(Boolean)
+                          .join("  ·  ")
+                      : undefined
+                  }
                 >
                   <input
+                    ref={(el) => {
+                      inputRefs.current[idx] = el;
+                    }}
                     type="text"
                     value={userInputs[idx] ?? ""}
                     disabled={submitted}
@@ -415,6 +426,11 @@ export function Translation({
                       if (e.key === "Enter") {
                         e.preventDefault();
                         handleSubmit();
+                      } else if (e.code === "Space") {
+                        // Space moves to the next word instead of typing a space.
+                        e.preventDefault();
+                        if (!lastBox) focusBox(idx + 1);
+                        else handleSubmit();
                       }
                     }}
                     onFocus={() => {
@@ -428,7 +444,8 @@ export function Translation({
                     placeholder="…"
                     autoFocus={!submitted && idx === 0}
                     enterKeyHint="done"
-                    className={`w-full rounded-lg border-2 bg-white px-1.5 py-1.5 text-center text-sm sm:text-base font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/50 ${
+                    inputMode="text"
+                    className={`w-12 sm:w-16 rounded-lg border-2 bg-white px-1 py-1.5 text-center text-sm sm:text-base font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/50 ${
                       submitted
                         ? wordMatched
                           ? "border-emerald-400 bg-emerald-50 text-emerald-700"
@@ -437,44 +454,17 @@ export function Translation({
                     }`}
                     aria-label={`Word ${idx + 1}`}
                   />
-                  <span
-                    className={`mt-1.5 w-full break-words text-center font-serif font-bold tracking-tight leading-tight text-sm sm:text-base md:text-lg ${
-                      submitted ? "text-gray-800" : "text-transparent select-none"
-                    }`}
-                    title={submitted ? item.word : undefined}
-                    aria-hidden={!submitted}
-                  >
-                    {submitted ? item.word : "·"}
-                  </span>
-                  <div className="flex flex-col items-center justify-center mt-1 w-full gap-0.5 min-w-0">
-                    {item.grammarTag && (
-                      <div
-                        className={`text-[9px] sm:text-[10px] font-bold text-center px-1.5 py-0.5 rounded-full border shadow-2xs tracking-wide whitespace-nowrap ${
-                          POS_BADGE_STYLES[item.grammarTag]
-                            ? `${POS_BADGE_STYLES[item.grammarTag].bg} ${POS_BADGE_STYLES[item.grammarTag].text} ${POS_BADGE_STYLES[item.grammarTag].border}`
-                            : "bg-gray-100 text-gray-600 border-gray-200"
-                        }`}
-                      >
-                        {item.grammarTag}
-                      </div>
-                    )}
-                    {submitted && item.meaning && (
-                      <div
-                        className="text-[10px] sm:text-xs text-gray-800 text-center font-semibold leading-tight break-words w-full"
-                        title={item.meaning}
-                      >
-                        {item.meaning}
-                      </div>
-                    )}
-                    {submitted && item.ipa && (
-                      <div
-                        className="text-[9px] sm:text-[10px] text-gray-500 font-mono text-center leading-tight break-words w-full"
-                        title={item.ipa}
-                      >
-                        {item.ipa}
-                      </div>
-                    )}
-                  </div>
+                  {submitted ? (
+                    <span
+                      className={`mt-1 text-[11px] sm:text-xs font-bold leading-tight text-center ${
+                        wordMatched ? "text-emerald-700" : "text-rose-700"
+                      }`}
+                    >
+                      {item.word}
+                    </span>
+                  ) : (
+                    <span className="mt-1 h-3 sm:h-3.5" aria-hidden="true" />
+                  )}
                 </div>
               );
             })}
