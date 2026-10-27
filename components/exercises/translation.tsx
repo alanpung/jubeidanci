@@ -499,6 +499,15 @@ export function Translation({
                         e.preventDefault();
                         if (!lastBox) focusBox(idx + 1);
                         else handleSubmit();
+                      } else if (e.key === "ArrowRight") {
+                        // Right arrow jumps to the next word's box (not the next
+                        // question) — unless this is already the last box.
+                        e.preventDefault();
+                        if (!lastBox) focusBox(idx + 1);
+                      } else if (e.key === "ArrowLeft") {
+                        // Left arrow jumps to the previous word's box.
+                        e.preventDefault();
+                        if (idx > 0) focusBox(idx - 1);
                       }
                     }}
                     onFocus={() => {
