@@ -412,12 +412,17 @@ export const SYSTEM_COURSE_IDS = [
   "a2-flashcard-course",
   "a2-translation-course",
   "b1-flashcard-course",
-  "b1-translation-course",
   "b2-flashcard-course",
-  "b2-translation-course",
   "c1-flashcard-course",
-  "c1-translation-course",
   "c2-flashcard-course",
+];
+
+// B1/B2/C1/C2 translation courses were removed — their content was wrong.
+// Kept here so the seed can purge any rows that were already seeded.
+export const REMOVED_TRANSLATION_COURSE_IDS = [
+  "b1-translation-course",
+  "b2-translation-course",
+  "c1-translation-course",
   "c2-translation-course",
 ];
 

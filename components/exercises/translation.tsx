@@ -188,6 +188,30 @@ export function Translation({
     onContinue();
   }, [submitted, onResult, onContinue, userInput]);
 
+  const handleSubmit = useCallback(() => {
+    if (submitted) return;
+    const input = userInput.trim();
+    const result = checkWordMatch(input, allAnswers);
+    setMatchResult(result);
+    setSubmitted(true);
+    onResult(result.isCorrect, input || exercise.answer);
+    if (!exercise.noAudio?.includes("answer")) {
+      play(exercise.answer, "en");
+    }
+  }, [submitted, userInput, allAnswers, onResult, exercise.answer, exercise.noAudio, play]);
+
+  // Swipe-left mirrors the Enter key: the first swipe submits the answer
+  // (showing feedback, even if empty); a second swipe then advances. This
+  // keeps mobile swipe in step with the keyboard flow instead of skipping the
+  // feedback and jumping straight to the next question.
+  const handleSwipeLeft = useCallback(() => {
+    if (!submitted) {
+      handleSubmit();
+    } else {
+      goNext();
+    }
+  }, [submitted, handleSubmit, goNext]);
+
   const goPrev = useCallback(() => {
     if (canGoPrev) onPrev();
   }, [canGoPrev, onPrev]);
@@ -206,18 +230,6 @@ export function Translation({
     return () => window.removeEventListener("keydown", onKey);
   }, [submitted, goNext]);
 
-  const handleSubmit = useCallback(() => {
-    if (submitted) return;
-    const input = userInput.trim();
-    const result = checkWordMatch(input, allAnswers);
-    setMatchResult(result);
-    setSubmitted(true);
-    onResult(result.isCorrect, input || exercise.answer);
-    if (!exercise.noAudio?.includes("answer")) {
-      play(exercise.answer, "en");
-    }
-  }, [submitted, userInput, allAnswers, onResult, exercise.answer, exercise.noAudio, play]);
-
   const animClass =
     direction === "backward" ? "animate-slide-in-left" : "animate-slide-in-right";
 
@@ -234,7 +246,7 @@ export function Translation({
       hideCheck
       hideContinue
       freeNav
-      onSwipeLeft={goNext}
+      onSwipeLeft={handleSwipeLeft}
       onSwipeRight={goPrev}
     >
       <div

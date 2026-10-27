@@ -3,16 +3,21 @@
 import { useState, useRef, useTransition } from "react";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
-import { Globe, Crown, EyeOff, Pencil, Check } from "lucide-react";
+import { Globe, Crown, EyeOff, Pencil, Type, Check } from "lucide-react";
 import type { CourseListItem } from "@/lib/content/types";
-import { makeCoursePublic, makeCoursePrivate, makeCourseHidden } from "@/lib/actions/units";
+import {
+  makeCoursePublic,
+  makeCoursePrivate,
+  makeCourseHidden,
+  updateCourseTitle,
+} from "@/lib/actions/units";
 
 /** A small gold VIP crown pinned to a cover. Shown for every non-public course
  *  so at a glance a reader can tell which books are private/VIP. */
 export function VipCrownBadge({ className = "" }: { className?: string }) {
   return (
     <span
-      title="VIP course — only you can see this"
+      title="VIP course — only you and your VIP students can see this"
       aria-label="VIP course"
       className={`flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-gradient-to-br from-amber-400 to-amber-600 text-white shadow-sm ${className}`}
     >
@@ -22,8 +27,9 @@ export function VipCrownBadge({ className = "" }: { className?: string }) {
 }
 
 /** Public / private(VIP) / hidden indicator for the UPPER-LEFT corner of a
- *  cover. A globe marks a public course; the crown marks a private or hidden
- *  one. Purely decorative — the owner changes state with CoverEditButton. */
+ *  cover. A globe marks a public course; the crown marks a VIP one; a crossed
+ *  eye marks a hidden one. Purely decorative — the owner changes state with
+ *  CoverEditButton. */
 export function VisibilityBadge({
   visibility,
   className = "",
@@ -39,6 +45,17 @@ export function VisibilityBadge({
         className={`flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-sky-500 text-white shadow-sm ${className}`}
       >
         <Globe className="h-3 w-3" />
+      </span>
+    );
+  }
+  if (visibility === "hidden") {
+    return (
+      <span
+        title="Hidden course — only you can see this"
+        aria-label="Hidden course"
+        className={`flex h-5 w-5 items-center justify-center rounded-full border-2 border-white bg-lingo-text text-white shadow-sm ${className}`}
+      >
+        <EyeOff className="h-3 w-3" />
       </span>
     );
   }
@@ -70,7 +87,7 @@ const OPTIONS: {
   {
     state: "private",
     label: "VIP",
-    hint: "Private — only you",
+    hint: "Private — VIP students only",
     Icon: Crown,
     tone: "text-amber-500",
   },
@@ -86,7 +103,10 @@ const OPTIONS: {
 /** Owner-only edit control for the LOWER-LEFT corner of a cover. Tap to open a
  *  small menu to switch the course to public / VIP(private) / hidden ("hidden"
  *  means only the owner — and admins — can see it). The menu is a portal so it
- *  is never clipped by the browse window's scroll box. */
+ *  is never clipped by the browse window's scroll box.
+ *
+ *  The same menu also carries "Edit title", so a course cover can be renamed
+ *  without leaving the Library shelf. */
 export function CoverEditButton({
   course,
   className = "",
@@ -101,13 +121,23 @@ export function CoverEditButton({
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
   const current = stateOf(course.visibility);
 
+  // Title editing state — the menu flips into an inline editor.
+  const [editingTitle, setEditingTitle] = useState(false);
+  const [titleDraft, setTitleDraft] = useState(course.title);
+  const [titleError, setTitleError] = useState<string | null>(null);
+
   function toggle() {
     if (open) {
       setOpen(false);
+      setEditingTitle(false);
+      setTitleError(null);
       return;
     }
     const r = btnRef.current?.getBoundingClientRect();
     if (r) setPos({ top: r.bottom + 6, left: r.left });
+    setTitleDraft(course.title);
+    setEditingTitle(false);
+    setTitleError(null);
     setOpen(true);
   }
 
@@ -133,6 +163,31 @@ export function CoverEditButton({
     });
   }
 
+  function startTitleEdit() {
+    setTitleDraft(course.title);
+    setTitleError(null);
+    setEditingTitle(true);
+  }
+
+  function saveTitle() {
+    const trimmed = titleDraft.trim();
+    if (!trimmed) {
+      setTitleError("Title cannot be empty");
+      return;
+    }
+    startTransition(async () => {
+      const res = await updateCourseTitle(course.id, trimmed);
+      if (!res.success) {
+        setTitleError(res.error);
+        return;
+      }
+      setEditingTitle(false);
+      setTitleError(null);
+      setOpen(false);
+      router.refresh();
+    });
+  }
+
   return (
     <>
       <button
@@ -140,8 +195,8 @@ export function CoverEditButton({
         type="button"
         onClick={toggle}
         disabled={pending}
-        title="Edit visibility"
-        aria-label="Edit visibility"
+        title="Edit course"
+        aria-label="Edit course"
         className={`flex h-6 w-6 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 disabled:opacity-50 ${className}`}
       >
         <Pencil className="h-3 w-3 stroke-[2.5]" />
@@ -154,37 +209,120 @@ export function CoverEditButton({
             >
               <div
                 className="fixed inset-0 z-[-1]"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                  setEditingTitle(false);
+                  setTitleError(null);
+                }}
                 aria-hidden
               />
-              <div className="w-44 rounded-xl border-2 border-lingo-border bg-white p-1 shadow-2xl">
-                {OPTIONS.map((o) => {
-                  const Icon = o.Icon;
-                  const active = o.state === current;
-                  return (
-                    <button
-                      key={o.state}
-                      type="button"
-                      onClick={() => choose(o.state)}
-                      className={`flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition-colors ${
-                        active ? "bg-lingo-gray/60" : "hover:bg-lingo-gray/40"
-                      }`}
+              <div className="w-52 rounded-xl border-2 border-lingo-border bg-white p-1 shadow-2xl">
+                {editingTitle ? (
+                  <div className="p-1">
+                    <label
+                      htmlFor={`course-title-${course.id}`}
+                      className="mb-1 block text-[10px] font-black uppercase tracking-wide text-lingo-text-light"
                     >
-                      <Icon className={`h-4 w-4 shrink-0 ${o.tone}`} />
+                      Course title
+                    </label>
+                    <input
+                      id={`course-title-${course.id}`}
+                      type="text"
+                      value={titleDraft}
+                      autoFocus
+                      onChange={(e) => {
+                        setTitleDraft(e.target.value);
+                        setTitleError(null);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          e.preventDefault();
+                          saveTitle();
+                        } else if (e.key === "Escape") {
+                          e.preventDefault();
+                          setEditingTitle(false);
+                          setTitleError(null);
+                        }
+                      }}
+                      disabled={pending}
+                      className="w-full rounded-lg border-2 border-lingo-blue px-2 py-1 text-xs font-bold text-lingo-text focus:outline-none"
+                    />
+                    {titleError ? (
+                      <p className="mt-1 text-[10px] font-bold leading-tight text-red-500">
+                        {titleError}
+                      </p>
+                    ) : null}
+                    <div className="mt-2 flex gap-1.5">
+                      <button
+                        type="button"
+                        onClick={saveTitle}
+                        disabled={pending}
+                        className="flex-1 rounded-lg bg-lingo-green px-2 py-1 text-xs font-black text-white transition-colors hover:bg-lingo-green/90 disabled:opacity-50"
+                      >
+                        {pending ? "Saving…" : "Save"}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setEditingTitle(false);
+                          setTitleError(null);
+                        }}
+                        disabled={pending}
+                        className="rounded-lg border border-lingo-border bg-white px-2 py-1 text-xs font-black text-lingo-text transition-colors hover:bg-lingo-gray/40 disabled:opacity-50"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    {OPTIONS.map((o) => {
+                      const Icon = o.Icon;
+                      const active = o.state === current;
+                      return (
+                        <button
+                          key={o.state}
+                          type="button"
+                          onClick={() => choose(o.state)}
+                          className={`flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition-colors ${
+                            active ? "bg-lingo-gray/60" : "hover:bg-lingo-gray/40"
+                          }`}
+                        >
+                          <Icon className={`h-4 w-4 shrink-0 ${o.tone}`} />
+                          <span className="min-w-0 flex-1">
+                            <span className="block text-xs font-black leading-tight text-lingo-text">
+                              {o.label}
+                            </span>
+                            <span className="block text-[10px] font-semibold leading-tight text-lingo-text-light">
+                              {o.hint}
+                            </span>
+                          </span>
+                          {active ? (
+                            <Check className="h-3.5 w-3.5 shrink-0 text-lingo-green" />
+                          ) : null}
+                        </button>
+                      );
+                    })}
+
+                    <div className="my-1 border-t border-lingo-border" />
+
+                    <button
+                      type="button"
+                      onClick={startTitleEdit}
+                      className="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition-colors hover:bg-lingo-gray/40"
+                    >
+                      <Type className="h-4 w-4 shrink-0 text-lingo-blue" />
                       <span className="min-w-0 flex-1">
                         <span className="block text-xs font-black leading-tight text-lingo-text">
-                          {o.label}
+                          Edit title
                         </span>
                         <span className="block text-[10px] font-semibold leading-tight text-lingo-text-light">
-                          {o.hint}
+                          Rename this course
                         </span>
                       </span>
-                      {active ? (
-                        <Check className="h-3.5 w-3.5 shrink-0 text-lingo-green" />
-                      ) : null}
                     </button>
-                  );
-                })}
+                  </>
+                )}
               </div>
             </div>,
             document.body,
