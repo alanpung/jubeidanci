@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 1: B1 中英翻译"
-description: "Unit 1 — B1 Translation Practice (content to be filled)"
+description: "Unit 1 — B1 Translation Practice"
 icon: "📗"
 color: "#3B82F6"
 targetLanguage: "en"
