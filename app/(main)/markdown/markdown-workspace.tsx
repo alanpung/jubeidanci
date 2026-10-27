@@ -219,7 +219,7 @@ export function MarkdownWorkspace() {
               )}
               {filtered.map((c) => (
                 <option key={c.id} value={c.id}>
-                  {c.level} 
+                  {c.title} 
                 </option>
               ))}
             </select>
