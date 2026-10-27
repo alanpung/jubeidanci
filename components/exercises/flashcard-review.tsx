@@ -736,34 +736,70 @@ export function FlashcardReview({
 
       {/* ── Bottom Response Buttons ── */}
       <div className="grid grid-cols-2 gap-1.5 sm:gap-2.5 mt-1">
-        {/* NO (Rose Red / Left) */}
+        {/* NO (Lingo Red / Left) */}
         <button
           type="button"
           onClick={handleNo}
           disabled={rated}
-          className="group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl bg-rose-600 hover:bg-rose-700 active:scale-95 text-white font-black transition-all cursor-pointer disabled:opacity-50 select-none shadow-sm"
           title="Don't remember this word (Swipe Left)"
+          className="group relative flex flex-col items-center justify-center gap-1 overflow-hidden rounded-2xl border-b-4 border-lingo-red-dark bg-lingo-red py-2.5 px-1.5 text-white shadow-sm transition-all duration-100 hover:brightness-110 hover:shadow-lg active:translate-y-1 active:scale-[0.99] active:border-b-0 active:shadow-none disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer"
         >
-          <div className="flex items-center gap-1 text-xs sm:text-sm font-black">
-            <X className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
-            <span>No</span>
-          </div>
-          <ArrowLeft className="w-3.5 h-3.5 opacity-50 group-hover:opacity-80 transition-opacity" />
+          {/* Sheen + diagonal texture */}
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              backgroundImage:
+                "linear-gradient(180deg, rgba(255,255,255,0.30) 0%, rgba(255,255,255,0) 58%), repeating-linear-gradient(135deg, rgba(255,255,255,0.09) 0 8px, transparent 8px 16px)",
+            }}
+          />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/50"
+          />
+          <span className="relative flex items-center gap-2">
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/25 ring-1 ring-inset ring-white/40 transition-transform duration-150 group-hover:scale-110">
+              <X className="h-4 w-4 stroke-[3]" />
+            </span>
+            <span className="text-base sm:text-lg font-black tracking-wide">No</span>
+          </span>
+          <span className="relative flex items-center gap-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-white/80">
+            <ArrowLeft className="h-3 w-3" />
+            Swipe
+          </span>
         </button>
 
-        {/* YES (Emerald Green / Right) */}
+        {/* YES (Lingo Green / Right) */}
         <button
           type="button"
           onClick={handleYes}
           disabled={rated}
-          className="group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl bg-emerald-600 hover:bg-emerald-700 active:scale-95 text-white font-black transition-all cursor-pointer disabled:opacity-50 select-none shadow-sm"
           title="Remember this word (Swipe Right)"
+          className="group relative flex flex-col items-center justify-center gap-1 overflow-hidden rounded-2xl border-b-4 border-lingo-green-dark bg-lingo-green py-2.5 px-1.5 text-white shadow-sm transition-all duration-100 hover:brightness-105 hover:shadow-lg active:translate-y-1 active:scale-[0.99] active:border-b-0 active:shadow-none disabled:pointer-events-none disabled:opacity-50 select-none cursor-pointer"
         >
-          <div className="flex items-center gap-1 text-xs sm:text-sm font-black">
-            <Check className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
-            <span>Yes</span>
-          </div>
-          <ArrowRight className="w-3.5 h-3.5 opacity-50 group-hover:opacity-80 transition-opacity" />
+          {/* Sheen + diagonal texture */}
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-0"
+            style={{
+              backgroundImage:
+                "linear-gradient(180deg, rgba(255,255,255,0.30) 0%, rgba(255,255,255,0) 58%), repeating-linear-gradient(135deg, rgba(255,255,255,0.09) 0 8px, transparent 8px 16px)",
+            }}
+          />
+          <span
+            aria-hidden="true"
+            className="pointer-events-none absolute inset-x-0 top-0 h-px bg-white/50"
+          />
+          <span className="relative flex items-center gap-2">
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white/25 ring-1 ring-inset ring-white/40 transition-transform duration-150 group-hover:scale-110">
+              <Check className="h-4 w-4 stroke-[3]" />
+            </span>
+            <span className="text-base sm:text-lg font-black tracking-wide">Yes</span>
+          </span>
+          <span className="relative flex items-center gap-1 text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-white/80">
+            Swipe
+            <ArrowRight className="h-3 w-3" />
+          </span>
         </button>
       </div>
     </div>
