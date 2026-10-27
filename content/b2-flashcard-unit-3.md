@@ -17,61 +17,61 @@ color: "#E91E63"
 ---
 [flashcard-review]
 front: "bothersome"
-meaning: "s causing irritation or annoyance"
+meaning: "S causing irritation or annoyance"
 translation: "a. 讨厌的"
 srsWords: "bothersome"
 
 [flashcard-review]
 front: "bourbon"
-meaning: "n. a reactionary politician in the United States (usually from the South); n. whiskey distilled from a mash of corn and malt and rye and aged in charred oak barrels; n. a member of the European royal family that ruled France; n. a European royal line that ruled in France (from 1589-1793) and Spain and Naples and Sicily"
-translation: "[机] 波旁"
+meaning: "A reactionary politician in the United States (usually from the South); Whiskey distilled from a mash of corn and malt and rye and aged in charred oak barrels"
+translation: "波旁"
 srsWords: "bourbon"
 
 [flashcard-review]
 front: "boxer"
-meaning: "n. someone who fights with his fists for sport; n. a member of a nationalistic Chinese secret society that led an unsuccessful rebellion in 1900 against foreign interests in China; n. a breed of stocky medium-sized short-haired dog with a brindled coat and square-jawed muzzle developed in Germany"
+meaning: "Someone who fights with his fists for sport; A breed of stocky medium-sized short-haired dog with a brindled coat and square-jawed…"
 translation: "n. 拳师"
 srsWords: "boxer"
 
 [flashcard-review]
 front: "bracket"
-meaning: "n. a category falling within certain defined limits; n. either of two punctuation marks (`<' or `>') used in computer programming and sometimes used to enclose textual material; n. either of two punctuation marks ([ or ]) used to enclose textual material; n. a support projecting from a wall (as to hold a shelf)"
-translation: "n. 支架, 括弧, 托架；vt. 装托架, 括入括弧；[计] 方括号; 括号"
+meaning: "A category falling within certain defined limits; Either of two punctuation marks (`<' or `>') used in computer programming and…"
+translation: "n. 支架, 括弧, 托架；vt. 装托架, 括入括弧 方括号; 括号"
 srsWords: "bracket"
 
 [flashcard-review]
 front: "brag"
-meaning: "n. an instance of boastful talk"
+meaning: "An instance of boastful talk"
 translation: "n. 吹牛；v. 吹牛"
 srsWords: "brag"
 
 [flashcard-review]
 front: "bravery"
-meaning: "n a quality of spirit that enables you to face danger or pain without showing fear; n feeling no fear"
+meaning: "N a quality of spirit that enables you to face danger or pain without showing fear; N feeling no fear"
 translation: "n. 勇敢"
 srsWords: "bravery"
 
 [flashcard-review]
 front: "breakable"
-meaning: "n. an article that is fragile and easily broken; a. capable of being broken or damaged"
+meaning: "Capable of being broken or damaged; An article that is fragile and easily broken"
 translation: "a. 会破的, 易破的；n. 易破的东西, 易碎的东西"
 srsWords: "breakable"
 
 [flashcard-review]
 front: "breakdown"
-meaning: "n. a mental or physical breakdown; n. a cessation of normal operation; n. an analysis into mutually exclusive categories"
-translation: "n. 崩溃, 故障；[化] 事故; 击穿"
+meaning: "A mental or physical breakdown; A cessation of normal operation"
+translation: "n. 崩溃, 故障 事故; 击穿"
 srsWords: "breakdown"
 
 [flashcard-review]
 front: "breakup"
-meaning: "n the termination or disintegration of a relationship (between persons or nations); n coming apart"
+meaning: "N the termination or disintegration of a relationship (between persons or nations); N coming apart"
 translation: "n. 分裂, 崩溃, 解散, 解体；[电] 停止"
 srsWords: "breakup"
 
 [flashcard-review]
 front: "breathtaking"
-meaning: "s tending to cause suspension of regular breathing"
+meaning: "S tending to cause suspension of regular breathing"
 translation: "a. 惊人的, 惊险的"
 srsWords: "breathtaking"
 
@@ -83,62 +83,62 @@ color: "#E91E63"
 ---
 [flashcard-review]
 front: "breezy"
-meaning: "s. fresh and animated"
+meaning: "Fresh and animated"
 translation: "a. 有微风的, 通风好的, 活泼的"
 srsWords: "breezy"
 
 [flashcard-review]
 front: "brewery"
-meaning: "n. a plant where beer is brewed by fermentation"
-translation: "n. 啤酒厂, 酿酒厂；[经] 酿造所"
+meaning: "A plant where beer is brewed by fermentation"
+translation: "n. 啤酒厂, 酿酒厂 酿造所"
 srsWords: "brewery"
 
 [flashcard-review]
 front: "brilliantly"
-meaning: "r. with brightness; r. in an extremely intelligent way"
+meaning: "With brightness; In an extremely intelligent way"
 translation: "adv. 辉煌地, 光亮地, 灿烂地"
 srsWords: "brilliantly"
 
 [flashcard-review]
 front: "cognitive"
-meaning: "a. of or being or relating to or involving cognition"
+meaning: "Of or being or relating to or involving cognition"
 translation: "a. 认知的, 认识的"
 srsWords: "cognitive"
 
 [flashcard-review]
 front: "broadcaster"
-meaning: "n. someone who broadcasts on radio or television; n. a mechanical device for scattering something (seed or fertilizer or sand etc.) in all directions"
+meaning: "Someone who broadcasts on radio or television; A mechanical device for scattering something (seed or fertilizer or sand etc.) in all…"
 translation: "n. 播送者, 广播装置, 播种机"
 srsWords: "broadcaster"
 
 [flashcard-review]
 front: "broaden"
-meaning: "v. make broader; v. become broader"
+meaning: "Make broader; Become broader"
 translation: "vi. 变宽, 扩大；vt. 放宽, 使扩大"
 srsWords: "broaden"
 
 [flashcard-review]
 front: "broadly"
-meaning: "r. without regard to specific details or exceptions; r. in a wide fashion"
+meaning: "Without regard to specific details or exceptions; In a wide fashion"
 translation: "adv. 宽广地, 明白地, 无礼貌地"
 srsWords: "broadly"
 
 [flashcard-review]
 front: "brochure"
-meaning: "n a small book usually having a paper cover"
+meaning: "N a small book usually having a paper cover"
 translation: "n. 小册子, 小册"
 srsWords: "brochure"
 
 [flashcard-review]
 front: "psychiatry"
-meaning: "n. the branch of medicine dealing with the diagnosis and treatment of mental disorders"
-translation: "n. 精神病学, 精神病治疗；[医] 精神病学"
+meaning: "The branch of medicine dealing with the diagnosis and treatment of mental disorders"
+translation: "n. 精神病学, 精神病治疗 精神病学"
 srsWords: "psychiatry"
 
 [flashcard-review]
 front: "harassment"
-meaning: "n. a feeling of intense annoyance caused by being tormented; n. the act of tormenting by continued persistent attacks and criticism"
-translation: "n. 困扰, 烦扰, 烦恼；[法] 折磨, 骚扰, 侵扰"
+meaning: "A feeling of intense annoyance caused by being tormented; The act of tormenting by continued persistent attacks and criticism"
+translation: "n. 困扰, 烦扰, 烦恼 折磨, 骚扰, 侵扰"
 srsWords: "harassment"
 
 ---
@@ -149,62 +149,62 @@ color: "#E91E63"
 ---
 [flashcard-review]
 front: "bruise"
-meaning: "n. an injury that doesn't break the skin but results in some discoloration; v. injure the underlying soft tissue or bone of; v. break up into small pieces for food preparation; v. damage (plant tissue) by abrasion or pressure"
+meaning: "An injury that doesn't break the skin but results in some discoloration; Injure the underlying soft tissue or bone of"
 translation: "n. 青肿, 挫伤, 擦伤；vi. 受伤, 擦伤；vt. 使受伤, 研碎"
 srsWords: "bruise"
 
 [flashcard-review]
 front: "bud"
-meaning: "n. a partially opened flower; n. a swelling on a plant stem consisting of overlapping immature leaves or petals; v. develop buds; v. start to grow or develop"
+meaning: "A partially opened flower; A swelling on a plant stem consisting of overlapping immature leaves or petals"
 translation: "n. 芽, 花蕾；vi. 发芽, 萌芽；vt. 使发芽"
 srsWords: "bud"
 
 [flashcard-review]
 front: "bulimia"
-meaning: "n. a disorder of eating seen among young women who go on eating binges and then feel guilt and depression and self-condemnation; n. pathologically insatiable hunger (especially when caused by brain lesions)"
-translation: "n. 食欲过盛；[医] 善饥, 食欲过盛"
+meaning: "Pathologically insatiable hunger (especially when caused by brain lesions); A disorder of eating seen among young women who go on eating binges and then feel…"
+translation: "n. 食欲过盛 善饥, 食欲过盛"
 srsWords: "bulimia"
 
 [flashcard-review]
 front: "bully"
-meaning: "n. a cruel and brutal fellow; n. a hired thug"
+meaning: "A cruel and brutal fellow; A hired thug"
 translation: "n. 欺凌弱小者, 土霸；vt. 威胁, 恐吓, 欺负；vi. 欺负；a. 特好的, 第一流的；adv. 十分"
 srsWords: "bully"
 
 [flashcard-review]
 front: "bum"
-meaning: "v. be lazy or idle; s. of very poor quality; flimsy"
+meaning: "Of very poor quality; Flimsy"
 translation: "n. 游荡者, 懒鬼, 闹饮；a. 没有价值的；vi. 过游民生活, 乞讨, 流浪；vt. 乞讨"
 srsWords: "bum"
 
 [flashcard-review]
 front: "bumper"
-meaning: "n. a glass filled to the brim (especially as a toast); n. a mechanical device consisting of bars at either end of a vehicle to absorb shock and prevent serious damage"
+meaning: "A glass filled to the brim (especially as a toast); A mechanical device consisting of bars at either end of a vehicle to absorb shock and…"
 translation: "n. 缓冲器, 满杯；a. 大胜利的"
 srsWords: "bumper"
 
 [flashcard-review]
 front: "bun"
-meaning: "n. small rounded bread either plain or sweet"
-translation: "n. 小面包；[医] 血液尿素氮"
+meaning: "Small rounded bread either plain or sweet"
+translation: "n. 小面包 血液尿素氮"
 srsWords: "bun"
 
 [flashcard-review]
 front: "burdensome"
-meaning: "s. not easily borne; wearing; I only had to greet the guests\""
-translation: "a. 累赘的, 恼人的, 繁重的；[法] 难于负担的, 压抑的, 累赘的"
+meaning: "Not easily borne; Wearing"
+translation: "a. 累赘的, 恼人的, 繁重的 难于负担的, 压抑的, 累赘的"
 srsWords: "burdensome"
 
 [flashcard-review]
 front: "bureaucracy"
-meaning: "n. nonelective government officials; n. a government that is administered primarily by bureaus that are staffed with nonelective officials; n. any organization in which action is obstructed by insistence on unnecessary procedures and red tape"
-translation: "n. 官僚, 官吏；[法] 官僚主义, 官僚政治, 官僚机构"
+meaning: "Nonelective government officials; A government that is administered primarily by bureaus that are staffed with…"
+translation: "n. 官僚, 官吏 官僚主义, 官僚政治, 官僚机构"
 srsWords: "bureaucracy"
 
 [flashcard-review]
 front: "burglary"
-meaning: "n. entering a building unlawfully with intent to commit a felony or to steal valuable property"
-translation: "n. 夜盗行为, 盗窃, 盗窃行为；[法] 夜盗行为, 夜间入屋窃盗罪, 窃盗"
+meaning: "Entering a building unlawfully with intent to commit a felony or to steal valuable…"
+translation: "n. 夜盗行为, 盗窃, 盗窃行为 夜盗行为, 夜间入屋窃盗罪, 窃盗"
 srsWords: "burglary"
 
 ---
@@ -215,62 +215,62 @@ color: "#E91E63"
 ---
 [flashcard-review]
 front: "burgle"
-meaning: "v commit a burglary; enter and rob a dwelling"
+meaning: "V commit a burglary; Enter and rob a dwelling"
 translation: "v. 破门盗窃"
 srsWords: "burgle"
 
 [flashcard-review]
 front: "burial"
-meaning: "n. the ritual placing of a corpse in a grave"
-translation: "n. 埋葬, 葬礼；[法] 埋葬, 葬礼"
+meaning: "The ritual placing of a corpse in a grave"
+translation: "n. 埋葬, 葬礼 埋葬, 葬礼"
 srsWords: "burial"
 
 [flashcard-review]
 front: "bustle"
-meaning: "n. a rapid active commotion; n. a framework worn at the back below the waist for giving fullness to a woman's skirt; v. move or cause to move energetically or busily"
+meaning: "Move or cause to move energetically or busily; A rapid active commotion"
 translation: "n. 喧闹, 裙撑；vi. 奔忙, 喧闹；vt. 使忙碌, 催促"
 srsWords: "bustle"
 
 [flashcard-review]
 front: "bustling"
-meaning: "s. full of energetic and noisy activity"
+meaning: "Full of energetic and noisy activity"
 translation: "a. 熙熙攘攘的, 忙乱的"
 srsWords: "bustling"
 
 [flashcard-review]
 front: "buzz"
-meaning: "n. sound of rapid vibration; n. a confusion of activity and gossip; v. make a buzzing sound; v. fly low"
+meaning: "Make a buzzing sound; Fly low"
 translation: "n. 嗡嗡声, 流言；vi. 发出嗡嗡声, 说闲话；vt. 使嗡嗡叫, 散布"
 srsWords: "buzz"
 
 [flashcard-review]
 front: "calmly"
-meaning: "r. with self-possession (especially in times of stress)"
+meaning: "With self-possession (especially in times of stress)"
 translation: "adv. 平静地, 安静地, 冷静地"
 srsWords: "calmly"
 
 [flashcard-review]
 front: "cane"
-meaning: "n. a stick that people can lean on to help them walk; n. a strong slender often flexible stem as of bamboos, reeds, rattans, or sugar cane; n. a stiff switch used to hit students as punishment; v. beat with a cane"
+meaning: "A stick that people can lean on to help them walk; A strong slender often flexible stem as of bamboos, reeds, rattans, or sugar cane"
 translation: "n. 手杖, 细长的茎, 藤条；vt. 以杖击, 以藤编制"
 srsWords: "cane"
 
 [flashcard-review]
 front: "cannonball"
-meaning: "n. a solid projectile that in former times was fired from a cannon"
+meaning: "A solid projectile that in former times was fired from a cannon"
 translation: "n. 炮弹"
 srsWords: "cannonball"
 
 [flashcard-review]
 front: "sexuality"
-meaning: "n the properties that distinguish organisms on the basis of their reproductive roles"
-translation: "n. 性征, 性行为, 性欲；[医] 性别, 性欲"
+meaning: "N the properties that distinguish organisms on the basis of their reproductive roles"
+translation: "n. 性征, 性行为, 性欲 性别, 性欲"
 srsWords: "sexuality"
 
 [flashcard-review]
 front: "backward"
-meaning: "a. directed or facing toward the back or rear; a. (used of temperament or behavior) marked by a retiring nature; s. retarded in intellectual development; s. having made less than normal progress"
-translation: "adv. 向后地, 相反地；a. 向后的, 相反的；[计] 倒推"
+meaning: "Directed or facing toward the back or rear; (used of temperament or behavior) marked by a retiring nature"
+translation: "adv. 向后地, 相反地；a. 向后的, 相反的 倒推"
 srsWords: "backward"
 
 ---
@@ -281,61 +281,61 @@ color: "#E91E63"
 ---
 [flashcard-review]
 front: "caption"
-meaning: "n. taking exception; especially a quibble based on a captious argument; n. brief description accompanying an illustration; v. provide with a caption, as of a photograph or a drawing"
-translation: "n. 说明, 字幕, 标题；vt. 加上标题, 加上说明；[计] 标题"
+meaning: "Taking exception; Brief description accompanying an illustration"
+translation: "n. 说明, 字幕, 标题；vt. 加上标题, 加上说明 标题"
 srsWords: "caption"
 
 [flashcard-review]
 front: "captive"
-meaning: "n. an animal that is confined; n. a person held in the grip of a strong emotion or passion; s. being in captivity; s. giving or marked by complete attention to"
+meaning: "An animal that is confined; A person held in the grip of a strong emotion or passion"
 translation: "n. 俘虏, 迷恋者；a. 被俘的, 被迷住的"
 srsWords: "captive"
 
 [flashcard-review]
 front: "caravan"
-meaning: "n. a procession (of wagons or mules or camels) traveling together in single file; v. travel in a caravan"
-translation: "n. 旅行队, 有篷顶的大车；[经] 商队, 结队商贩"
+meaning: "A procession (of wagons or mules or camels) traveling together in single file; Travel in a caravan"
+translation: "n. 旅行队, 有篷顶的大车 商队, 结队商贩"
 srsWords: "caravan"
 
 [flashcard-review]
 front: "wraith"
-meaning: "n a mental representation of some haunting experience"
+meaning: "N a mental representation of some haunting experience"
 translation: "n. 生魂, 幻影, 幽灵"
 srsWords: "wraith"
 
 [flashcard-review]
 front: "cardboard"
-meaning: "n. a stiff moderately thick paper; s. without substance"
-translation: "n. 薄纸板；[化] 咭纸; 特等纸板; 卡纸板; 卡片纸板"
+meaning: "A stiff moderately thick paper; Without substance"
+translation: "n. 薄纸板 咭纸; 特等纸板; 卡纸板; 卡片纸板"
 srsWords: "cardboard"
 
 [flashcard-review]
 front: "cardigan"
-meaning: "n. knitted jacket that is fastened up the front with buttons or a zipper; n. slightly bowlegged variety of corgi having rounded ears and a long tail"
+meaning: "Knitted jacket that is fastened up the front with buttons or a zipper; Slightly bowlegged variety of corgi having rounded ears and a long tail"
 translation: "n. 卡迪根式开襟羊毛衫"
 srsWords: "cardigan"
 
 [flashcard-review]
 front: "carefree"
-meaning: "s. free of trouble and worry and care; s. cheerfully irresponsible"
+meaning: "Free of trouble and worry and care; Cheerfully irresponsible"
 translation: "a. 无忧无虑的, 不负责的"
 srsWords: "carefree"
 
 [flashcard-review]
 front: "caring"
-meaning: "s. feeling and exhibiting concern and empathy for others"
+meaning: "Feeling and exhibiting concern and empathy for others"
 translation: "a. 有同情心的；表示或感到关怀或关心的"
 srsWords: "caring"
 
 [flashcard-review]
 front: "carnival"
-meaning: "n. a festival marked by merrymaking and processions; n. a traveling show; having sideshows and rides and games of skill etc."
+meaning: "A festival marked by merrymaking and processions; A traveling show"
 translation: "n. 嘉年华会, 狂欢节, 饮宴狂欢"
 srsWords: "carnival"
 
 [flashcard-review]
 front: "carpool"
-meaning: "an arrangement to share private transportation"
+meaning: "An arrangement to share private transportation"
 translation: "v. 合伙使用汽车"
 srsWords: "carpool"
 
@@ -347,61 +347,61 @@ color: "#E91E63"
 ---
 [flashcard-review]
 front: "carve"
-meaning: "v. form by carving; v. engrave or cut by chipping away at a surface; v. cut to pieces"
+meaning: "Form by carving; Engrave or cut by chipping away at a surface"
 translation: "v. 雕刻, 切开"
 srsWords: "carve"
 
 [flashcard-review]
 front: "casually"
-meaning: "r. not methodically or according to plan; r. in an unconcerned manner"
+meaning: "Not methodically or according to plan; In an unconcerned manner"
 translation: "adv. 偶然地, 临时地, 随便地"
 srsWords: "casually"
 
 [flashcard-review]
 front: "catalyst"
-meaning: "n. (chemistry) a substance that initiates or accelerates a chemical reaction without itself being affected; n. something that causes an important event to happen"
-translation: "n. 触媒, 接触剂, 催化剂, 刺激因素, 促进因素；[计] 催化剂"
+meaning: "(chemistry) a substance that initiates or accelerates a chemical reaction without…; Something that causes an important event to happen"
+translation: "n. 触媒, 接触剂, 催化剂, 刺激因素, 促进因素 催化剂"
 srsWords: "catalyst"
 
 [flashcard-review]
 front: "catastrophe"
-meaning: "n. a state of extreme (usually irremediable) ruin and misfortune; n. a sudden violent change in the earth's surface"
-translation: "n. 大灾难, 大祸；[化] 突变"
+meaning: "A state of extreme (usually irremediable) ruin and misfortune; A sudden violent change in the earth's surface"
+translation: "n. 大灾难, 大祸 突变"
 srsWords: "catastrophe"
 
 [flashcard-review]
 front: "catchy"
-meaning: "s. having concealed difficulty"
+meaning: "Having concealed difficulty"
 translation: "a. 易记住的, 欺骗性的, 不规则发生的"
 srsWords: "catchy"
 
 [flashcard-review]
 front: "apt"
-meaning: "s. (usually followed by `to') naturally disposed toward; s. at risk of or subject to experiencing something usually unpleasant; s. mentally quick and resourceful"
-translation: "a. 有...倾向的, 易于的, 恰当的, 聪明的；[计] 自动数控语言, 自动图象传输, 自动程序控制, 自动程序设计工具"
+meaning: "(usually followed by `to') naturally disposed toward; At risk of or subject to experiencing something usually unpleasant"
+translation: "a. 有...倾向的, 易于的, 恰当的, 聪明的 自动数控语言, 自动图象传输, 自动程序控制, 自动程序设计工具"
 srsWords: "apt"
 
 [flashcard-review]
 front: "cathedral"
-meaning: "n. any large and important church; n. the principal Christian church building of a bishop's diocese; a. relating to or containing or issuing from a bishop's office or throne"
+meaning: "Any large and important church; The principal Christian church building of a bishop's diocese"
 translation: "n. 大教堂"
 srsWords: "cathedral"
 
 [flashcard-review]
 front: "cease"
-meaning: "n. (`cease' is a noun only in the phrase `without cease') end"
+meaning: "(`cease' is a noun only in the phrase `without cease') end"
 translation: "n. 停止；v. 停止, 终了"
 srsWords: "cease"
 
 [flashcard-review]
 front: "ceiling"
-meaning: "n. the overhead upper surface of a covered space; n. (meteorology) altitude of the lowest layer of clouds; n. an upper limit on what is allowed; n. maximum altitude at which a plane can fly (under specified conditions)"
-translation: "n. 天花板；[经] 顶点, 顶线, 上限"
+meaning: "The overhead upper surface of a covered space; (meteorology) altitude of the lowest layer of clouds"
+translation: "n. 天花板 顶点, 顶线, 上限"
 srsWords: "ceiling"
 
 [flashcard-review]
 front: "cellar"
-meaning: "n. storage space where wines are stored"
+meaning: "Storage space where wines are stored"
 translation: "n. 地窖, 地下室, 藏酒"
 srsWords: "cellar"
 
@@ -413,61 +413,61 @@ color: "#E91E63"
 ---
 [flashcard-review]
 front: "cellist"
-meaning: "n. someone who plays a violoncello"
+meaning: "Someone who plays a violoncello"
 translation: "n. 大提琴演奏家"
 srsWords: "cellist"
 
 [flashcard-review]
 front: "cello"
-meaning: "n. a large stringed instrument; seated player holds it upright while playing"
+meaning: "A large stringed instrument; Seated player holds it upright while playing"
 translation: "n. 大提琴"
 srsWords: "cello"
 
 [flashcard-review]
 front: "cemetery"
-meaning: "n. a tract of land used for burials"
-translation: "n. 墓地, 公墓；[法] 公墓, 墓地"
+meaning: "A tract of land used for burials"
+translation: "n. 墓地, 公墓 公墓, 墓地"
 srsWords: "cemetery"
 
 [flashcard-review]
 front: "centigrade"
-meaning: "a. of or relating to a temperature scale on which the freezing point of water is 0 degrees and the boiling point of water is 100 degrees"
-translation: "a. 百分度的, 摄氏的；[医] 百分度"
+meaning: "Of or relating to a temperature scale on which the freezing point of water is 0…"
+translation: "a. 百分度的, 摄氏的 百分度"
 srsWords: "centigrade"
 
 [flashcard-review]
 front: "deficit"
-meaning: "n. the property of being an amount by which something is less than expected or required; n. a deficiency or failure in neurological or mental functioning; n. (sports) the score by which a team or individual is losing; n. an excess of liabilities over assets (usually over a certain period)"
-translation: "n. 赤字, 不足额；[医] 短缺"
+meaning: "The property of being an amount by which something is less than expected or required; A deficiency or failure in neurological or mental functioning"
+translation: "n. 赤字, 不足额 短缺"
 srsWords: "deficit"
 
 [flashcard-review]
 front: "malpractice"
-meaning: "n. professional wrongdoing that results in injury or damage; n. a wrongful act that the actor had no right to do; improper professional conduct"
-translation: "n. 不当治疗, 不端行为, 渎职；[医] 疗法失当, 医疗差错"
+meaning: "Professional wrongdoing that results in injury or damage; A wrongful act that the actor had no right to do"
+translation: "n. 不当治疗, 不端行为, 渎职 疗法失当, 医疗差错"
 srsWords: "malpractice"
 
 [flashcard-review]
 front: "certify"
-meaning: "v. guarantee payment on; of checks; v. guarantee as meeting a certain standard; v. declare legally insane"
+meaning: "Guarantee payment on; Guarantee as meeting a certain standard"
 translation: "v. 证明, 保证"
 srsWords: "certify"
 
 [flashcard-review]
 front: "chancellor"
-meaning: "n. the person who is head of state (in several countries); n. the honorary or titular head of a university"
+meaning: "The person who is head of state (in several countries); The honorary or titular head of a university"
 translation: "n. 大臣, 总理, 首相, 大使馆/领事馆的一等秘书, 司法官, 大学校长"
 srsWords: "chancellor"
 
 [flashcard-review]
 front: "chaotic"
-meaning: "s. lacking a visible order or organization; s. completely unordered and unpredictable and confusing; a. of or relating to a sensitive dependence on initial conditions"
-translation: "a. 混乱的, 无秩序的；[法] 混乱的, 混沌的"
+meaning: "Lacking a visible order or organization; Completely unordered and unpredictable and confusing"
+translation: "a. 混乱的, 无秩序的 混乱的, 混沌的"
 srsWords: "chaotic"
 
 [flashcard-review]
 front: "charming"
-meaning: "s. pleasing or delighting; s. possessing or using or characteristic of or appropriate to supernatural powers"
+meaning: "Pleasing or delighting; Possessing or using or characteristic of or appropriate to supernatural powers"
 translation: "a. 迷人的, 有吸引力的"
 srsWords: "charming"
 
@@ -479,61 +479,61 @@ color: "#E91E63"
 ---
 [flashcard-review]
 front: "cheat"
-meaning: "n. a deception for profit to yourself; v. deprive somebody of something by deceit; v. defeat someone through trickery or deceit; v. engage in deceitful behavior; practice trickery or fraud"
+meaning: "Deprive somebody of something by deceit; Defeat someone through trickery or deceit"
 translation: "n. 欺骗, 作弊, 骗子；v. 欺骗, 逃脱, 骗取"
 srsWords: "cheat"
 
 [flashcard-review]
 front: "checkpoint"
-meaning: "n. a place (as at a frontier) where travellers are stopped for inspection and clearance"
-translation: "n. 检查站；[计] 检查点"
+meaning: "A place (as at a frontier) where travellers are stopped for inspection and clearance"
+translation: "n. 检查站 检查点"
 srsWords: "checkpoint"
 
 [flashcard-review]
 front: "cheeky"
-meaning: "s offensively bold"
+meaning: "S offensively bold"
 translation: "a. 厚颜的, 无耻的, 色情的"
 srsWords: "cheeky"
 
 [flashcard-review]
 front: "cheerfully"
-meaning: "r. in a cheerful manner"
+meaning: "In a cheerful manner"
 translation: "adv. 高高兴兴地"
 srsWords: "cheerfully"
 
 [flashcard-review]
 front: "cheerfulness"
-meaning: "n. the quality of being cheerful and dispelling gloom; n. a feeling of spontaneous good spirits"
+meaning: "The quality of being cheerful and dispelling gloom; A feeling of spontaneous good spirits"
 translation: "n. 高兴, 快活"
 srsWords: "cheerfulness"
 
 [flashcard-review]
 front: "chemotherapy"
-meaning: "n. the use of chemical agents to treat or control disease (or mental illness)"
-translation: "n. 化学疗法；[化] 化学疗法"
+meaning: "The use of chemical agents to treat or control disease (or mental illness)"
+translation: "n. 化学疗法 化学疗法"
 srsWords: "chemotherapy"
 
 [flashcard-review]
 front: "cherished"
-meaning: "s. characterized by feeling or showing fond affection for"
+meaning: "Characterized by feeling or showing fond affection for"
 translation: "v. 珍爱( cherish的过去式和过去分词 ); 怀有; 爱护; 抚育"
 srsWords: "cherished"
 
 [flashcard-review]
 front: "cherry"
-meaning: "n. wood of any of various cherry trees especially the black cherry; n. any of numerous trees and shrubs producing a small fleshy round fruit with a single hard stone; many also produce a valuable hardwood; n. a red fruit with a single hard stone"
-translation: "n. 樱桃, 樱桃树, 樱桃色；[医] 樱桃"
+meaning: "Wood of any of various cherry trees especially the black cherry; Any of numerous trees and shrubs producing a small fleshy round fruit with a single…"
+translation: "n. 樱桃, 樱桃树, 樱桃色 樱桃"
 srsWords: "cherry"
 
 [flashcard-review]
 front: "chew"
-meaning: "n. a wad of something chewable as tobacco; n. biting and grinding food in your mouth so it becomes soft enough to swallow; v. chew (food); to bite and grind with the teeth"
+meaning: "Chew (food); To bite and grind with the teeth"
 translation: "vt. 咀嚼, 嚼碎；vi. 咀嚼, 细想；n. 咀嚼, 咀嚼物"
 srsWords: "chew"
 
 [flashcard-review]
 front: "childish"
-meaning: "s. indicating a lack of maturity"
+meaning: "Indicating a lack of maturity"
 translation: "a. 天真的, 孩子气的"
 srsWords: "childish"
 
@@ -545,61 +545,61 @@ color: "#E91E63"
 ---
 [flashcard-review]
 front: "chimney"
-meaning: "n. a vertical flue that provides a path through which smoke from a fire is carried away through the wall or roof of a building"
+meaning: "A vertical flue that provides a path through which smoke from a fire is carried away…"
 translation: "n. 烟囱, 灯罩；[电] 烟囱"
 srsWords: "chimney"
 
 [flashcard-review]
 front: "deviant"
-meaning: "n a person whose behavior deviates from what is acceptable especially in sexual behavior; s markedly different from an accepted norm"
+meaning: "N a person whose behavior deviates from what is acceptable especially in sexual behavior; S markedly different from an accepted norm"
 translation: "a. 不正常的；n. 不正常的人(或物)"
 srsWords: "deviant"
 
 [flashcard-review]
 front: "chop"
-meaning: "n. the irregular motion of waves (usually caused by wind blowing in a direction opposite to the tide); n. a small cut of meat including part of a rib; n. a jaw; n. a tennis return made with a downward motion that puts backspin on the ball"
+meaning: "The irregular motion of waves (usually caused by wind blowing in a direction opposite…; A small cut of meat including part of a rib"
 translation: "n. 肋条肉, 排骨, 砍, 戳记, 商标；vt. 剁碎, 砍, 切击, 割断；vi. 砍, 突然转向"
 srsWords: "chop"
 
 [flashcard-review]
 front: "chunk"
-meaning: "n. a substantial amount"
-translation: "n. 大块, 矮胖的人(或物)；[经] 定样"
+meaning: "A substantial amount"
+translation: "n. 大块, 矮胖的人(或物) 定样"
 srsWords: "chunk"
 
 [flashcard-review]
 front: "circuitry"
-meaning: "n. electronic equipment consisting of a system of circuits"
+meaning: "Electronic equipment consisting of a system of circuits"
 translation: "n. 电路学, 电路系统；[电] 一环路"
 srsWords: "circuitry"
 
 [flashcard-review]
 front: "circumstance"
-meaning: "n. a condition that accompanies or influences some event or activity; n. information that should be kept in mind when making a decision; n. formal ceremony about important occasions"
+meaning: "A condition that accompanies or influences some event or activity; Information that should be kept in mind when making a decision"
 translation: "n. 环境, 状况, 事件"
 srsWords: "circumstance"
 
 [flashcard-review]
 front: "citywide"
-meaning: "s. occurring or extending throughout a city"
+meaning: "Occurring or extending throughout a city"
 translation: "a. 全市的, 全市性的"
 srsWords: "citywide"
 
 [flashcard-review]
 front: "clam"
-meaning: "n. burrowing marine mollusk living on sand or mud; the shell closes with viselike firmness; n. flesh of either hard-shell or soft-shell clams; v. gather clams, by digging in the sand by the ocean"
+meaning: "Burrowing marine mollusk living on sand or mud; Flesh of either hard-shell or soft-shell clams"
 translation: "n. 蛤, 沉默寡言的人；vi. 捞蛤"
 srsWords: "clam"
 
 [flashcard-review]
 front: "clap"
-meaning: "v. put quickly or forcibly; v. cause to strike the air in flight; v. clap one's hands together; v. strike the air in flight"
+meaning: "Put quickly or forcibly; Cause to strike the air in flight"
 translation: "n. 拍手, 拍手声, 霹雳声, 花柳病；v. 鼓掌, (使)啪地关上"
 srsWords: "clap"
 
 [flashcard-review]
 front: "clarify"
-meaning: "v. make clear and (more) comprehensible; v. make clear by removing impurities or solids, as by heating"
+meaning: "Make clear and (more) comprehensible; Make clear by removing impurities or solids, as by heating"
 translation: "vi. 澄清, 阐明；vt. 使明晰"
 srsWords: "clarify"
 
@@ -611,60 +611,60 @@ color: "#E91E63"
 ---
 [flashcard-review]
 front: "daze"
-meaning: "n. the feeling of distress and disbelief that you have when something bad happens accidentally; n. confusion characterized by lack of clarity"
+meaning: "The feeling of distress and disbelief that you have when something bad happens…; Confusion characterized by lack of clarity"
 translation: "vt. 使茫然, 使发昏, 使眼花缭乱；n. 迷乱, 眼花缭乱"
 srsWords: "daze"
 
 [flashcard-review]
 front: "indirect"
-meaning: "s. having intervening factors or persons or influences; a. not direct in spatial dimension; not leading by a straight line or course to a destination; a. extended senses; not direct in manner or language or behavior or action; s. not as a direct effect or consequence"
-translation: "a. 间接的, 非直截了当的, 不坦率的；[医] 间接的"
+meaning: "Having intervening factors or persons or influences; Not direct in spatial dimension"
+translation: "a. 间接的, 非直截了当的, 不坦率的 间接的"
 srsWords: "indirect"
 
 [flashcard-review]
 front: "clearness"
-meaning: "n. the quality of clear water"
+meaning: "The quality of clear water"
 translation: "n. 晴朗, 明白"
 srsWords: "clearness"
 
 [flashcard-review]
 front: "clerical"
-meaning: "a. of or relating to clerks; a. of or relating to the clergy; s. appropriate for or engaged in office work"
+meaning: "Appropriate for or engaged in office work"
 translation: "n. 牧师；a. 文书的, 事务上的, 抄写员的, 牧师的"
 srsWords: "clerical"
 
 [flashcard-review]
 front: "clog"
-meaning: "n. footwear usually with wooden soles; n. any object that acts as a hindrance or obstruction; v. become or cause to become obstructed; v. dance a clog dance"
+meaning: "Become or cause to become obstructed; Dance a clog dance"
 translation: "n. 障碍, 脚坠；v. 障碍, 阻塞"
 srsWords: "clog"
 
 [flashcard-review]
 front: "closure"
-meaning: "n. a rule for limiting or ending debate in a deliberative body; n. a Gestalt principle of organization holding that there is an innate tendency to perceive incomplete objects as complete and to close or fill gaps and to perceive asymmetric stimuli as symmetric; n. termination of operations; v. terminate debate by calling for a vote"
+meaning: "A rule for limiting or ending debate in a deliberative body; Termination of operations"
 translation: "n. 关闭；vt. 使终止"
 srsWords: "closure"
 
 [flashcard-review]
 front: "eagerness"
-meaning: "n. a positive feeling of wanting to push ahead with something"
+meaning: "A positive feeling of wanting to push ahead with something"
 translation: "n. 热心"
 srsWords: "eagerness"
 
 [flashcard-review]
 front: "clumsy"
-meaning: "s lacking grace in movement or posture; s not elegant or graceful in expression; s difficult to handle or manage especially because of shape; s showing lack of skill or aptitude"
+meaning: "S lacking grace in movement or posture; S not elegant or graceful in expression"
 translation: "a. 笨拙的, 不雅观的, 粗陋的"
 srsWords: "clumsy"
 
 [flashcard-review]
 front: "coaching"
-meaning: "n. the job of a professional coach"
+meaning: "The job of a professional coach"
 translation: "n. 辅导；教练技术"
 srsWords: "coaching"
 
 [flashcard-review]
 front: "coalition"
-meaning: "n. the state of being combined into one body"
-translation: "n. 结合体, 结合, 联合；[经] 联合, 联盟"
+meaning: "The state of being combined into one body"
+translation: "n. 结合体, 结合, 联合 联合, 联盟"
 srsWords: "coalition"
