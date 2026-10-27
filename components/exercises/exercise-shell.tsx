@@ -119,9 +119,10 @@ export function ExerciseShell({
       if (e.key === "ArrowLeft" || e.key === "ArrowRight") {
         const canNav = freeNav || status !== "answering";
         if (!canNav) return;
-        // Allow arrows even while focused in the translation input when freeNav
-        // (Translation is free-nav). For other exercises, skip if typing.
-        if (typing && !freeNav) return;
+        // While the user is typing in a field, leave arrow keys to the field
+        // itself (e.g. moving between per-word boxes in the translation
+        // exercise, or normal cursor movement). Never navigate questions.
+        if (typing) return;
         e.preventDefault();
         if (e.key === "ArrowRight") {
           (onSwipeLeft ?? onContinue)(); // right arrow = next (same as swipe left on mobile metaphor…)
