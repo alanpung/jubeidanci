@@ -146,11 +146,19 @@ export function CourseMarkdownEditor({
             onChange={(e) => handleUnitChange(e.target.value)}
             className="rounded-lg border-2 border-lingo-border bg-white px-3 py-2 text-sm font-medium text-lingo-text focus:border-lingo-blue focus:outline-none"
           >
-            {units.map((u, idx) => (
-              <option key={u.id} value={u.id}>
-                Unit {idx + 1}: {u.title}
-              </option>
-            ))}
+            {units.map((u, idx) => {
+              // Titles already carry their own "Unit N:" prefix (e.g.
+              // "Unit 1: Everyday Essentials"), so re-prefixing "Unit N:" here
+              // would print it twice. Strip the leading label before showing it.
+              const strippedTitle =
+                u.title.replace(/^\s*unit\s*\d+\s*:?\s*/i, "").trim() ||
+                u.title;
+              return (
+                <option key={u.id} value={u.id}>
+                  Unit {idx + 1}: {strippedTitle}
+                </option>
+              );
+            })}
           </select>
         </label>
 

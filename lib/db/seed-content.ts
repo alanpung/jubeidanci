@@ -1,7 +1,8 @@
 import { db, isDbAvailable } from "./index";
 import { course, unit, user } from "./schema";
 import { getAllCourses, getAllUnits } from "../content/registry";
-import { eq, or, ilike, and, notInArray, inArray, sql } from "drizzle-orm";
+import { REMOVED_TRANSLATION_COURSE_IDS } from "./queries/courses";
+import { eq, or, ilike, and, notInArray, inArray, sql, count } from "drizzle-orm";
 import { runAfterResponse } from "../after-response";
 
 let lastSyncedAt = 0;
@@ -73,7 +74,10 @@ async function runSeedTask() {
             // `visibility` out of this update entirely: new rows get "public"
             // from the insert `values` above, and existing rows keep whatever
             // the owner set (a private course stored as NULL stays private).
-            title: sql`excluded.title`,
+            //
+            // `title` is deliberately absent from this update too — a renamed
+            // course must survive the next background sync, otherwise the
+            // owner's edit silently reverts to the markdown front-matter title.
             sourceLanguage: sql`excluded.source_language`,
             targetLanguage: sql`excluded.target_language`,
             level: sql`excluded.level`,
@@ -111,6 +115,19 @@ async function runSeedTask() {
         )
       );
 
+    // 4b. Purge the B1/B2/C1/C2 translation courses, which were removed from the
+    //     filesystem because their content was wrong. Any rows a previous seed
+    //     already wrote must be deleted too, or they would reappear in the
+    //     library / path views as ghost entries.
+    if (REMOVED_TRANSLATION_COURSE_IDS.length > 0) {
+      await db
+        .delete(unit)
+        .where(inArray(unit.courseId, REMOVED_TRANSLATION_COURSE_IDS));
+      await db
+        .delete(course)
+        .where(inArray(course.id, REMOVED_TRANSLATION_COURSE_IDS));
+    }
+
     // 5. Track valid unit IDs for each course and batch upsert filesystem units
     const validUnitIdsByCourse = new Map<string, string[]>();
     const unitValues = [];
@@ -145,9 +162,9 @@ async function runSeedTask() {
       });
     }
 
-    // Insert units in chunks of 20
-    for (let i = 0; i < unitValues.length; i += 20) {
-      const chunk = unitValues.slice(i, i + 20);
+    // Insert units in chunks of 5 to keep request payload safe
+    for (let i = 0; i < unitValues.length; i += 5) {
+      const chunk = unitValues.slice(i, i + 5);
       await db
         .insert(unit)
         .values(chunk)
@@ -213,26 +230,26 @@ export async function seedContentFromFilesystem() {
   if (!(await isDbAvailable())) return;
 
   const now = Date.now();
-  // Throttle background syncs. Content on disk only changes when a new build
-  // ships, so a 30-minute cadence is plenty — re-syncing every 5 minutes meant
-  // a full course/unit upsert (every markdown body) ran *concurrently with the
-  // request that triggered it*, competing for the same 5-connection pool and
-  // starving the queries the page was waiting on.
-  if (lastSyncedAt > 0 && now - lastSyncedAt < SYNC_INTERVAL_MS) return;
 
-  if (lastSyncedAt > 0) {
-    // Already seeded before: sync after the response, never alongside it.
-    lastSyncedAt = now;
-    void scheduleSeedTask();
-    return;
-  }
-
-  // Check if DB already contains courses
+  // Check if DB contains all filesystem courses and units
   try {
-    const existing = await db.select({ id: course.id }).from(course).limit(1);
-    if (existing.length > 0) {
+    const dbCourses = await db.select({ id: course.id }).from(course);
+    const dbCourseIds = new Set(dbCourses.map((c) => c.id));
+    const courses = getAllCourses();
+    const hasMissingCourse = courses.some((c) => !dbCourseIds.has(c.id));
+
+    const [unitCountRow] = await db.select({ count: count() }).from(unit);
+    const totalDbUnits = Number(unitCountRow?.count ?? 0);
+    const totalFsUnits = getAllUnits().length;
+    const hasMissingUnits = totalDbUnits < totalFsUnits;
+
+    if (!hasMissingCourse && !hasMissingUnits && lastSyncedAt > 0 && now - lastSyncedAt < SYNC_INTERVAL_MS) {
+      return;
+    }
+
+    if (hasMissingCourse || hasMissingUnits) {
       lastSyncedAt = now;
-      void scheduleSeedTask();
+      await startSeedTask();
       return;
     }
   } catch (err) {
@@ -240,7 +257,7 @@ export async function seedContentFromFilesystem() {
     return;
   }
 
-  // Initial sync after the response so page rendering is never blocked
+  // Routine background sync
   lastSyncedAt = now;
   void scheduleSeedTask();
 }

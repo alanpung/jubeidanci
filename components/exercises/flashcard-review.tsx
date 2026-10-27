@@ -4,12 +4,12 @@ import { useState, useEffect, useCallback, useRef, useMemo } from "react";
 import Markdown from "react-markdown";
 import remarkBreaks from "remark-breaks";
 import { motion, AnimatePresence, useMotionValue, useTransform } from "motion/react";
-import { reviewCard, setWordStatus } from "@/lib/actions/srs";
+import { reviewCard } from "@/lib/actions/srs";
 import type { FlashcardReviewExercise } from "@/lib/content/types";
 import { useAudio } from "@/hooks/use-audio";
 import { ReplayButton } from "@/components/replay-button";
 import { AudioSpinner } from "@/components/audio-spinner";
-import { X, Check, Award, Volume2, ArrowLeft, ArrowUp, ArrowRight, ArrowDown, MessageSquareText, Sparkles } from "lucide-react";
+import { X, Check, ArrowLeft, ArrowRight, MessageSquareText } from "lucide-react";
 
 function cleanTextForTTS(raw: string, isTargetLanguageNonLatin: boolean): string {
   if (!raw) return "";
@@ -264,8 +264,7 @@ export function FlashcardReview({
   autoplayAudio?: boolean;
 }) {
   const [rated, setRated] = useState(false);
-  const [actionFeedback, setActionFeedback] = useState<"no" | "yes" | "learned" | null>(null);
-  const [showExamples, setShowExamples] = useState(false);
+  const [actionFeedback, setActionFeedback] = useState<"no" | "yes" | null>(null);
   const isHandlingRef = useRef(false);
 
   // Dynamic enrichment for word info (pos, ipa, level, meaning, translation, examples)
@@ -286,7 +285,6 @@ export function FlashcardReview({
   useEffect(() => {
     setRated(false);
     setActionFeedback(null);
-    setShowExamples(false);
     isHandlingRef.current = false;
   }, [currentKey]);
 
@@ -342,7 +340,7 @@ export function FlashcardReview({
         const exact = data.words.find((w: any) => w.word?.toLowerCase().trim() === norm) || data.words[0];
         if (exact) {
           const hasZhInExercise = /[\u4e00-\u9fa5]/.test(exercise.translation || "");
-          
+
           const collected: { en: string; zh?: string }[] = [...initExamples];
           if (exact.example_sentence_native || exact.example_sentence_english) {
             const exEn = exact.example_sentence_native || exact.example_sentence_english;
@@ -419,15 +417,12 @@ export function FlashcardReview({
   const backTTS = cleanTextForTTS(activeMeaning || exercise?.back || "", false);
   const translationTTS = cleanTextForTTS(activeTranslation || "", true);
 
-  // Motion values for swipe gestures
+  // Motion values for horizontal swipe gestures (left = No, right = Yes)
   const dragX = useMotionValue(0);
-  const dragY = useMotionValue(0);
 
-  // Opacity indicators based on drag direction
+  // Opacity indicators based on horizontal drag direction
   const noOpacity = useTransform(dragX, [-80, -20, 0], [1, 0.4, 0]);
   const yesOpacity = useTransform(dragX, [0, 20, 80], [0, 0.4, 1]);
-  const learnedOpacity = useTransform(dragY, [-80, -20, 0], [1, 0.4, 0]);
-  const examplesOpacity = useTransform(dragY, [0, 20, 80], [0, 0.4, 1]);
 
   // Card rotation during drag
   const cardRotate = useTransform(dragX, [-150, 0, 150], [-10, 0, 10]);
@@ -485,7 +480,7 @@ export function FlashcardReview({
     [translationTTS, play]
   );
 
-  // 1. NO (Left Button / Swipe Left) -> Quality = 1
+  // 1. NO (Left Button / Swipe Left)
   const handleNo = useCallback(() => {
     if (isHandlingRef.current || rated) return;
     isHandlingRef.current = true;
@@ -506,37 +501,7 @@ export function FlashcardReview({
     }, 120);
   }, [exercise, language, activeTranslation, activeMeaning, onResult, onContinue, rated]);
 
-  // 2. LEARNED (Middle Button / Swipe Up) -> Quality = 5
-  const handleLearned = useCallback(() => {
-    if (isHandlingRef.current || rated) return;
-    isHandlingRef.current = true;
-    setRated(true);
-    setActionFeedback("learned");
-
-    const words = extractTargetWords(exercise);
-    words.forEach((w) => updateLocalStorageCard(w, "learned", language, activeTranslation || activeMeaning || w));
-
-    // Async background sync without blocking UI
-    Promise.all(
-      words.map(async (w) => {
-        await setWordStatus(w, language, "learned", {
-          cefrLevel: activeLevel || "A1",
-          translation: activeTranslation || activeMeaning,
-          pos: activePos,
-        });
-        await reviewCard(w, language, 5);
-      })
-    ).catch((err) => {
-      console.error("Failed to mark card learned:", err);
-    });
-
-    onResult(true, "Learned");
-    setTimeout(() => {
-      onContinue();
-    }, 120);
-  }, [exercise, language, activeTranslation, activeMeaning, activeLevel, activePos, onResult, onContinue, rated]);
-
-  // 3. YES (Right Button / Swipe Right) -> Quality = 4
+  // 2. YES (Right Button / Swipe Right)
   const handleYes = useCallback(() => {
     if (isHandlingRef.current || rated) return;
     isHandlingRef.current = true;
@@ -566,16 +531,6 @@ export function FlashcardReview({
       if (e.key === "ArrowLeft" || e.key === "1" || e.key === "n" || e.key === "N") {
         e.preventDefault();
         handleNo();
-      } else if (e.key === "ArrowUp" || e.key === "2" || e.key === "m" || e.key === "M" || e.key === "l" || e.key === "L") {
-        e.preventDefault();
-        if (showExamples) {
-          setShowExamples(false);
-        } else {
-          handleLearned();
-        }
-      } else if (e.key === "ArrowDown" || e.key === "e" || e.key === "E" || e.key === "s" || e.key === "S") {
-        e.preventDefault();
-        setShowExamples((prev) => !prev);
       } else if (e.key === "ArrowRight" || e.key === "3" || e.key === "y" || e.key === "Y") {
         e.preventDefault();
         handleYes();
@@ -586,37 +541,35 @@ export function FlashcardReview({
     }
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [handleNo, handleLearned, handleYes, handlePlayFront, showExamples]);
+  }, [handleNo, handleYes, handlePlayFront]);
 
-  // Handle Drag / Swipe Release
+  // Handle horizontal Drag / Swipe Release only (No = left, Yes = right).
+  // The previous "swipe up = Mastered" and "swipe down = Examples" gestures
+  // were removed — examples are now shown inline, and there is no longer a
+  // "mastered" status to swipe into.
   function handleDragEnd(_: unknown, info: { offset: { x: number; y: number } }) {
     if (isHandlingRef.current || rated) return;
-    const { x, y } = info.offset;
+    const { x } = info.offset;
     const SWIPE_THRESHOLD = 50;
-
-    if (showExamples) {
-      if (y < -SWIPE_THRESHOLD && Math.abs(y) > Math.abs(x)) {
-        // Swipe Up in examples view -> Return to Front!
-        setShowExamples(false);
-      } else if (x > SWIPE_THRESHOLD) {
-        handleYes();
-      } else if (x < -SWIPE_THRESHOLD) {
-        handleNo();
-      }
-    } else {
-      if (y > SWIPE_THRESHOLD && Math.abs(y) > Math.abs(x)) {
-        // Swipe Down -> Show Examples
-        setShowExamples(true);
-      } else if (y < -SWIPE_THRESHOLD && Math.abs(y) > Math.abs(x)) {
-        // Swipe Up -> Mastered
-        handleLearned();
-      } else if (x > SWIPE_THRESHOLD) {
-        handleYes();
-      } else if (x < -SWIPE_THRESHOLD) {
-        handleNo();
-      }
+    if (x > SWIPE_THRESHOLD) {
+      handleYes();
+    } else if (x < -SWIPE_THRESHOLD) {
+      handleNo();
     }
   }
+
+  const exampleList =
+    wordMeta.examples && wordMeta.examples.length > 0
+      ? wordMeta.examples
+      : [
+          {
+            en: `This is a natural example sentence using "${exercise?.front || "this word"}".`,
+            zh:
+              activeTranslation || activeMeaning
+                ? `使用 "${exercise?.front || "单词"}" 的示例句子。`
+                : undefined,
+          },
+        ];
 
   return (
     <div className="w-full max-w-xl mx-auto select-none">
@@ -630,26 +583,22 @@ export function FlashcardReview({
               actionFeedback === "no"
                 ? { x: -350, opacity: 0, rotate: -15, scale: 0.85 }
                 : actionFeedback === "yes"
-                ? { x: 350, opacity: 0, rotate: 15, scale: 0.85 }
-                : actionFeedback === "learned"
-                ? { y: -250, opacity: 0, scale: 0.85 }
-                : { opacity: 1, scale: 1, y: 0, x: 0 }
+                  ? { x: 350, opacity: 0, rotate: 15, scale: 0.85 }
+                  : { opacity: 1, scale: 1, y: 0, x: 0 }
             }
             exit={{ opacity: 0, scale: 0.85, transition: { duration: 0.1 } }}
             transition={{ type: "spring", stiffness: 500, damping: 30 }}
-            drag={!rated}
-            dragConstraints={{ left: 0, right: 0, top: 0, bottom: 0 }}
+            drag="x"
+            dragConstraints={{ left: 0, right: 0 }}
             dragElastic={0.6}
             onDragEnd={handleDragEnd}
-            style={{ x: dragX, y: dragY, rotate: cardRotate }}
+            style={{ x: dragX, rotate: cardRotate }}
             className={`w-full relative rounded-2xl border-2 border-b-4 p-5 sm:p-7 text-center transition-colors shadow-sm bg-white touch-pan-y ${
               actionFeedback === "no"
                 ? "border-rose-500 bg-rose-50/50 dark:bg-rose-950/20"
                 : actionFeedback === "yes"
-                ? "border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20"
-                : actionFeedback === "learned"
-                ? "border-blue-600 bg-blue-50/50 dark:bg-blue-950/20"
-                : "border-lingo-border"
+                  ? "border-emerald-500 bg-emerald-50/50 dark:bg-emerald-950/20"
+                  : "border-lingo-border"
             }`}
           >
               {/* Swipe Overlays / Badges */}
@@ -667,161 +616,115 @@ export function FlashcardReview({
                 <Check className="w-4 h-4" /> YES
               </motion.div>
 
-              {showExamples ? (
-                <motion.div
-                  style={{ opacity: learnedOpacity }}
-                  className="absolute top-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none rounded-xl bg-indigo-600 text-white font-black px-3 py-1.5 text-xs sm:text-sm shadow-md flex items-center gap-1 border border-white/30"
-                >
-                  <ArrowUp className="w-4 h-4" /> FRONT CARD
-                </motion.div>
-              ) : (
-                <>
-                  <motion.div
-                    style={{ opacity: learnedOpacity }}
-                    className="absolute top-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none rounded-xl bg-blue-600 text-white font-black px-3 py-1.5 text-xs sm:text-sm shadow-md flex items-center gap-1 border border-white/30"
-                  >
-                    <Award className="w-4 h-4" /> MASTERED
-                  </motion.div>
-
-                  <motion.div
-                    style={{ opacity: examplesOpacity }}
-                    className="absolute bottom-4 left-1/2 -translate-x-1/2 z-20 pointer-events-none rounded-xl bg-indigo-600 text-white font-black px-3 py-1.5 text-xs sm:text-sm shadow-md flex items-center gap-1 border border-white/30"
-                  >
-                    <MessageSquareText className="w-4 h-4" /> EXAMPLES
-                  </motion.div>
-                </>
-              )}
-
               {/* Top bar with audio replay button and mobile swipe guide */}
               <div className="flex items-center justify-between gap-2 mb-2">
                 <span className="text-xs font-black uppercase tracking-wider text-lingo-text-light/70 flex items-center gap-1">
-                  🎴 {showExamples ? "Examples View" : "Flashcard"}
+                  🎴 Flashcard
                 </span>
                 <div className="flex items-center gap-2">
                   <span className="text-[10px] font-bold text-lingo-text-light hidden sm:inline">
-                    {showExamples ? "Swipe: ← No | ↑ Front | Yes →" : "Swipe: ← No | ↑ Mastered | ↓ Examples | Yes →"}
+                    Swipe: ← No  |  Yes →
                   </span>
                   <ReplayButton onPlay={handlePlayFront} />
                 </div>
               </div>
 
-              {showExamples ? (
-                /* ── EXAMPLES VIEW ── */
-                <div className="w-full text-left space-y-3 my-2">
-                  <div className="flex items-center justify-between gap-2 pb-2 border-b border-lingo-border/60">
-                    <span className="text-lg sm:text-xl font-black text-lingo-text">{exercise?.front}</span>
-                    <button
-                      type="button"
-                      onClick={() => setShowExamples(false)}
-                      className="text-xs font-bold text-indigo-600 dark:text-indigo-300 hover:bg-indigo-50 dark:hover:bg-indigo-950/50 px-2.5 py-1 rounded-lg transition-colors flex items-center gap-1"
-                    >
-                      <ArrowUp className="w-3.5 h-3.5" /> Front
-                    </button>
-                  </div>
+              {/* ── 1. ROW 1: Word + POS + Level + IPA (Inline on the Right Side) ── */}
+              <div className="my-3 sm:my-4 flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
+                <span className="text-2xl sm:text-3xl font-black text-lingo-text tracking-tight">
+                  {exercise?.front || ""}
+                </span>
 
-                  {/* Examples List */}
-                  <div className="space-y-2.5 max-h-[250px] overflow-y-auto pr-1">
-                    {(wordMeta.examples && wordMeta.examples.length > 0
-                      ? wordMeta.examples
-                      : [
-                          {
-                            en: `This is a natural example sentence using "${exercise?.front || "this word"}".`,
-                            zh: activeTranslation || activeMeaning ? `使用 "${exercise?.front || "单词"}" 的示例句子。` : undefined,
-                          },
-                        ]
-                    ).map((ex, idx) => (
-                      <div
-                        key={idx}
-                        onClick={() => play(cleanTextForTTS(ex.en, false), "en")}
-                        className="relative rounded-2xl border border-lingo-border/80 bg-lingo-bg/70 dark:bg-lingo-gray/20 p-3.5 sm:p-4 cursor-pointer hover:border-indigo-500/40 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/10 transition-all select-none text-left shadow-2xs group flex flex-col gap-1"
-                      >
-                        <div className="absolute top-2.5 right-2.5 z-10" onClick={(e) => e.stopPropagation()}>
-                          <ReplayButton onPlay={() => play(cleanTextForTTS(ex.en, false), "en")} />
-                        </div>
-                        <p className="text-sm sm:text-base font-bold text-lingo-text leading-snug pr-8">
-                          {ex.en}
-                        </p>
-                        {ex.zh && (
-                          <p className="text-xs sm:text-sm font-semibold text-lingo-text-light/90 pr-8">
-                            {ex.zh}
-                          </p>
-                        )}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ) : (
-                /* ── STANDARD FRONT CARD VIEW ── */
-                <>
-                  {/* ── 1. ROW 1: Word + POS + Level + IPA (Inline on the Right Side) ── */}
-                  <div className="my-3 sm:my-4 flex items-center justify-center gap-2 sm:gap-3 flex-wrap">
-                    <span className="text-2xl sm:text-3xl font-black text-lingo-text tracking-tight">
-                      {exercise?.front || ""}
-                    </span>
+                {/* POS, Level & IPA placed inline on the right side of the word */}
+                {(activeLevel || activePos || activeIpa) && (
+                  <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
+                    {/* Part of Speech (POS) */}
+                    {activePos && (
+                      <span className="text-xs font-extrabold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">
+                        {POS_LABELS[activePos.toLowerCase()] || activePos}
+                      </span>
+                    )}
 
-                    {/* POS, Level & IPA placed inline on the right side of the word */}
-                    {(activeLevel || activePos || activeIpa) && (
-                      <div className="flex items-center gap-1.5 sm:gap-2 flex-wrap">
-                        {/* Part of Speech (POS) */}
-                        {activePos && (
-                          <span className="text-xs font-extrabold text-blue-700 bg-blue-50 px-2.5 py-1 rounded-lg border border-blue-200 dark:bg-blue-950/40 dark:text-blue-200 dark:border-blue-800">
-                            {POS_LABELS[activePos.toLowerCase()] || activePos}
-                          </span>
-                        )}
+                    {/* Level Badge */}
+                    {activeLevel && (
+                      <span className={`rounded-lg px-2 py-0.5 text-xs font-black border ${levelBadge}`}>
+                        {activeLevel}
+                      </span>
+                    )}
 
-                        {/* Level Badge */}
-                        {activeLevel && (
-                          <span className={`rounded-lg px-2 py-0.5 text-xs font-black border ${levelBadge}`}>
-                            {activeLevel}
-                          </span>
-                        )}
-
-                        {/* IPA Phonetic */}
-                        {activeIpa && (
-                          <span className="text-xs font-mono text-lingo-text-light/90 bg-lingo-gray/20 px-2 py-0.5 rounded-lg border border-lingo-border/60">
-                            /{activeIpa.replace(/^\/+|\/+$/g, "")}/
-                          </span>
-                        )}
-                      </div>
+                    {/* IPA Phonetic */}
+                    {activeIpa && (
+                      <span className="text-xs font-mono text-lingo-text-light/90 bg-lingo-gray/20 px-2 py-0.5 rounded-lg border border-lingo-border/60">
+                        /{activeIpa.replace(/^\/+|\/+$/g, "")}/
+                      </span>
                     )}
                   </div>
+                )}
+              </div>
 
-                  {/* ── 2. ROW 2: Translation (Chinese) — shown first, it is the
-                        meaning a learner reaches for before the English gloss ── */}
-                  {activeTranslation && (
-                    <div
-                      onClick={handlePlayTranslation}
-                      className="relative mt-3 rounded-2xl bg-lingo-card p-3.5 sm:p-4 border border-lingo-border/80 cursor-pointer hover:border-emerald-500/40 hover:bg-emerald-50/20 dark:hover:bg-emerald-950/10 transition-all select-none text-left shadow-2xs group"
-                    >
-                      {translationTTS && (
-                        <div className="absolute top-2.5 right-2.5 z-10" onClick={(e) => e.stopPropagation()}>
-                          <ReplayButton onPlay={handlePlayTranslation} />
-                        </div>
-                      )}
-                      <div className="prose prose-sm font-bold text-lingo-text text-base leading-relaxed pr-8 [&>p]:m-0">
-                        <Markdown remarkPlugins={[remarkBreaks]}>{activeTranslation}</Markdown>
-                      </div>
+              {/* ── 2. ROW 2: Translation (Chinese) — shown first, it is the
+                    meaning a learner reaches for before the English gloss ── */}
+              {activeTranslation && (
+                <div
+                  onClick={handlePlayTranslation}
+                  className="relative mt-3 rounded-2xl bg-lingo-card p-3.5 sm:p-4 border border-lingo-border/80 cursor-pointer hover:border-emerald-500/40 hover:bg-emerald-50/20 dark:hover:bg-emerald-950/10 transition-all select-none text-left shadow-2xs group"
+                >
+                  {translationTTS && (
+                    <div className="absolute top-2.5 right-2.5 z-10" onClick={(e) => e.stopPropagation()}>
+                      <ReplayButton onPlay={handlePlayTranslation} />
                     </div>
                   )}
-
-                  {/* ── 3. ROW 3: English meaning / definition ── */}
-                  {activeMeaning && (
-                    <div
-                      onClick={handlePlayBack}
-                      className="relative mt-2.5 sm:mt-3 rounded-2xl bg-lingo-bg/70 dark:bg-lingo-gray/20 p-3.5 sm:p-4 border border-lingo-border/80 cursor-pointer hover:border-lingo-blue/40 transition-all select-none text-left shadow-2xs group"
-                    >
-                      {backTTS && (
-                        <div className="absolute top-2.5 right-2.5 z-10" onClick={(e) => e.stopPropagation()}>
-                          <ReplayButton onPlay={handlePlayBack} />
-                        </div>
-                      )}
-                      <div className="prose prose-sm font-bold text-lingo-text text-base leading-relaxed pr-8 [&>p]:m-0">
-                        <Markdown remarkPlugins={[remarkBreaks]}>{activeMeaning}</Markdown>
-                      </div>
-                    </div>
-                  )}
-                </>
+                  <div className="prose prose-sm font-bold text-lingo-text text-base leading-relaxed pr-8 [&>p]:m-0">
+                    <Markdown remarkPlugins={[remarkBreaks]}>{activeTranslation}</Markdown>
+                  </div>
+                </div>
               )}
+
+              {/* ── 3. ROW 3: English meaning / definition ── */}
+              {activeMeaning && (
+                <div
+                  onClick={handlePlayBack}
+                  className="relative mt-2.5 sm:mt-3 rounded-2xl bg-lingo-bg/70 dark:bg-lingo-gray/20 p-3.5 sm:p-4 border border-lingo-border/80 cursor-pointer hover:border-lingo-blue/40 transition-all select-none text-left shadow-2xs group"
+                >
+                  {backTTS && (
+                    <div className="absolute top-2.5 right-2.5 z-10" onClick={(e) => e.stopPropagation()}>
+                      <ReplayButton onPlay={handlePlayBack} />
+                    </div>
+                  )}
+                  <div className="prose prose-sm font-bold text-lingo-text text-base leading-relaxed pr-8 [&>p]:m-0">
+                    <Markdown remarkPlugins={[remarkBreaks]}>{activeMeaning}</Markdown>
+                  </div>
+                </div>
+              )}
+
+              {/* ── 4. ROW 4: Example sentences, shown inline below the meaning
+                    (no swipe-down reveal needed) ── */}
+              <div className="mt-2.5 sm:mt-3 space-y-2.5">
+                <div className="flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-indigo-600/80">
+                  <MessageSquareText className="w-3.5 h-3.5" /> Examples
+                </div>
+                <div className="space-y-2.5 max-h-[220px] overflow-y-auto pr-1">
+                  {exampleList.map((ex, idx) => (
+                    <div
+                      key={idx}
+                      onClick={() => play(cleanTextForTTS(ex.en, false), "en")}
+                      className="relative rounded-2xl border border-lingo-border/80 bg-lingo-bg/70 dark:bg-lingo-gray/20 p-3 sm:p-3.5 cursor-pointer hover:border-indigo-500/40 hover:bg-indigo-50/20 dark:hover:bg-indigo-950/10 transition-all select-none text-left shadow-2xs group flex flex-col gap-1"
+                    >
+                      <div className="absolute top-2 right-2 z-10" onClick={(e) => e.stopPropagation()}>
+                        <ReplayButton onPlay={() => play(cleanTextForTTS(ex.en, false), "en")} />
+                      </div>
+                      <p className="text-sm sm:text-base font-bold text-lingo-text leading-snug pr-8">
+                        {ex.en}
+                      </p>
+                      {ex.zh && (
+                        <p className="text-xs sm:text-sm font-semibold text-lingo-text-light/90 pr-8">
+                          {ex.zh}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
             </motion.div>
         </AnimatePresence>
       </div>
@@ -831,9 +734,9 @@ export function FlashcardReview({
         <AudioSpinner loading={audioLoading} />
       </div>
 
-      {/* ── 4 Bottom Response Buttons ── */}
-      <div className="grid grid-cols-4 gap-1.5 sm:gap-2.5 mt-1">
-        {/* 1. NO (Rose Red / Left) */}
+      {/* ── Bottom Response Buttons ── */}
+      <div className="grid grid-cols-2 gap-1.5 sm:gap-2.5 mt-1">
+        {/* NO (Rose Red / Left) */}
         <button
           type="button"
           onClick={handleNo}
@@ -848,41 +751,7 @@ export function FlashcardReview({
           <ArrowLeft className="w-3.5 h-3.5 opacity-50 group-hover:opacity-80 transition-opacity" />
         </button>
 
-        {/* 2. MASTERED (Blue / Middle Up) */}
-        <button
-          type="button"
-          onClick={handleLearned}
-          disabled={rated}
-          className="group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl bg-blue-600 hover:bg-blue-700 active:scale-95 text-white font-black transition-all cursor-pointer disabled:opacity-50 select-none shadow-sm"
-          title="Mark as Mastered (Swipe Up)"
-        >
-          <div className="flex items-center gap-1 text-xs sm:text-sm font-black">
-            <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
-            <span>Mastered</span>
-          </div>
-          <ArrowUp className="w-3.5 h-3.5 opacity-70 group-hover:opacity-100 transition-opacity" />
-        </button>
-
-        {/* 3. EXAMPLES (Indigo / Middle Down) */}
-        <button
-          type="button"
-          onClick={() => setShowExamples((prev) => !prev)}
-          disabled={rated}
-          className="group flex flex-col items-center justify-center gap-0.5 py-2 px-1.5 sm:px-3 rounded-2xl bg-indigo-600 hover:bg-indigo-700 active:scale-95 text-white font-black transition-all cursor-pointer disabled:opacity-50 select-none shadow-sm"
-          title="View example sentences (Swipe Down)"
-        >
-          <div className="flex items-center gap-1 text-xs sm:text-sm font-black">
-            <MessageSquareText className="w-3.5 h-3.5 sm:w-4 sm:h-4 stroke-[2.5]" />
-            <span>{showExamples ? "Front" : "Examples"}</span>
-          </div>
-          {showExamples ? (
-            <ArrowUp className="w-3.5 h-3.5 opacity-80" />
-          ) : (
-            <ArrowDown className="w-3.5 h-3.5 opacity-50 group-hover:opacity-80 transition-opacity" />
-          )}
-        </button>
-
-        {/* 4. YES (Emerald Green / Right) */}
+        {/* YES (Emerald Green / Right) */}
         <button
           type="button"
           onClick={handleYes}
