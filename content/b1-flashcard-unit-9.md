@@ -17,62 +17,62 @@ color: "#9C27B0"
 ---
 [flashcard-review]
 front: "gesture"
-meaning: "n. motion of hands or body to emphasize or help to express a thought or feeling; n. the use of movements (especially of the hands) to communicate familiar or prearranged signals; n. something done as an indication of intention"
+meaning: "Motion of hands or body to emphasize or help to express a thought or feeling; The use of movements (especially of the hands) to communicate familiar or prearranged…"
 translation: "n. 手势, 姿态；vi. 作手势, 作姿态"
 srsWords: "gesture"
 
 [flashcard-review]
 front: "giant"
-meaning: "n. any creature of exceptional size; n. an unusually large enterprise; n. a very large person; impressive in size or qualities; n. someone or something that is abnormally large and powerful"
+meaning: "Any creature of exceptional size; An unusually large enterprise"
 translation: "n. 巨人, 大力士, 巨大怪物；a. 庞大的, 巨大的"
 srsWords: "giant"
 
 [flashcard-review]
 front: "gifted"
-meaning: "v give qualities or abilities to; v give as a present; make a gift of; a endowed with talent or talents"
+meaning: "V give qualities or abilities to; V give as a present"
 translation: "a. 有天才的"
 srsWords: "gifted"
 
 [flashcard-review]
 front: "giggle"
-meaning: "n. a foolish or nervous laugh; v. laugh nervously"
+meaning: "A foolish or nervous laugh; Laugh nervously"
 translation: "v. 吃吃地笑, 咯咯地笑；n. 咯咯笑, 傻笑"
 srsWords: "giggle"
 
 [flashcard-review]
 front: "ginger"
-meaning: "n. perennial plants having thick branching aromatic rhizomes and leafy reedlike stems; n. dried ground gingerroot; n. pungent rhizome of the common ginger plant; used fresh as a seasoning especially in Asian cookery; v. add ginger to in order to add flavor"
+meaning: "Perennial plants having thick branching aromatic rhizomes and leafy reedlike stems; Dried ground gingerroot"
 translation: "n. 姜, 精力, 姜黄色；a. 姜黄色的；vt. 用姜调味, 使活泼, 使有生气"
 srsWords: "ginger"
 
 [flashcard-review]
 front: "giraffe"
-meaning: "n. tallest living quadruped; having a spotted coat and small horns and very long neck and legs; of savannahs of tropical Africa"
+meaning: "Tallest living quadruped; Having a spotted coat and small horns and very long neck and legs"
 translation: "n. 长颈鹿, 鹿豹座"
 srsWords: "giraffe"
 
 [flashcard-review]
 front: "glance"
-meaning: "n. a quick look; v. throw a glance at; take a brief look at; v. hit at an angle"
+meaning: "Throw a glance at; Hit at an angle"
 translation: "n. 一瞥, 闪光, 掠过, 辉矿类；vi. 扫视, 闪光, 掠过, 提到, 略说；vt. 扫视, 反射, 使掠过"
 srsWords: "glance"
 
 [flashcard-review]
 front: "glide"
-meaning: "n. the activity of flying a glider; v. move smoothly and effortlessly; v. fly in or as if in a glider plane; v. cause to move or pass silently, smoothly, or imperceptibly"
+meaning: "The activity of flying a glider; Move smoothly and effortlessly"
 translation: "n. 滑动, 滑过, 流水；vi. 滑动, 滑翔, 溜走, 流逝；vt. 使滑动"
 srsWords: "glide"
 
 [flashcard-review]
 front: "glimpse"
-meaning: "n. a brief or incomplete view; n. a vague indication; v. catch a glimpse of or see briefly"
+meaning: "A brief or incomplete view; A vague indication"
 translation: "n. 一瞥, 一闪；vi. 投以一瞥, 闪烁不定；vt. 瞥见"
 srsWords: "glimpse"
 
 [flashcard-review]
 front: "global"
-meaning: "s. involving the entire earth; not limited or provincial in scope"
-translation: "a. 通用的, 全球的, 球形的, 综合的, 普遍的；[计] 共用"
+meaning: "Involving the entire earth; Not limited or provincial in scope"
+translation: "a. 通用的, 全球的, 球形的, 综合的, 普遍的 共用"
 srsWords: "global"
 
 ---
@@ -83,61 +83,61 @@ color: "#9C27B0"
 ---
 [flashcard-review]
 front: "glorious"
-meaning: "a. having or deserving or conferring glory; s. having great beauty and splendor"
+meaning: "Having or deserving or conferring glory; Having great beauty and splendor"
 translation: "a. 光荣的"
 srsWords: "glorious"
 
 [flashcard-review]
 front: "glory"
-meaning: "n. a state of high honor; n. brilliant radiant beauty; v. rejoice proudly"
+meaning: "A state of high honor; Brilliant radiant beauty"
 translation: "n. 光荣, 荣耀, 荣誉, 壮丽, 繁荣；vi. 自豪"
 srsWords: "glory"
 
 [flashcard-review]
 front: "lyric"
-meaning: "n. the text of a popular song or musical-comedy number; n. a short poem of songlike quality; v. write lyrics for (a song); s. expressing deep emotion"
-translation: "n. 歌词；抒情诗 adj. 抒情的，写抒情诗的；（歌声）柔美的；适于演奏的；（感情、风格等）奔放的，不拘束的"
+meaning: "Expressing deep emotion; The text of a popular song or musical-comedy number"
+translation: "n. 抒情诗, 歌词；a. 抒情的"
 srsWords: "lyric"
 
 [flashcard-review]
 front: "goddess"
-meaning: "n. a female deity"
+meaning: "A female deity"
 translation: "n. 女神, 美女, 受崇拜的女性"
 srsWords: "goddess"
 
 [flashcard-review]
 front: "golfer"
-meaning: "n. someone who plays the game of golf"
+meaning: "Someone who plays the game of golf"
 translation: "n. 打高尔夫球的人"
 srsWords: "golfer"
 
 [flashcard-review]
 front: "goodness"
-meaning: "n that which is pleasing or valuable or useful; n moral excellence or admirableness"
+meaning: "N that which is pleasing or valuable or useful; N moral excellence or admirableness"
 translation: "n. 仁慈, 善良"
 srsWords: "goodness"
 
 [flashcard-review]
 front: "goods"
-meaning: "n benefit; n moral excellence or admirableness; n that which is pleasing or valuable or useful; n articles of commerce"
-translation: "n. 货物；[经] 货物, 商品, 动产"
+meaning: "N benefit; N moral excellence or admirableness"
+translation: "n. 货物 货物, 商品, 动产"
 srsWords: "goods"
 
 [flashcard-review]
 front: "gorgeous"
-meaning: "s. dazzlingly beautiful"
+meaning: "Dazzlingly beautiful"
 translation: "a. 华丽的, 灿烂的"
 srsWords: "gorgeous"
 
 [flashcard-review]
 front: "gorilla"
-meaning: "n. largest anthropoid ape; terrestrial and vegetarian; of forests of central west Africa"
+meaning: "Largest anthropoid ape; Terrestrial and vegetarian"
 translation: "n. 大猩猩, 残暴的男人, 歹徒"
 srsWords: "gorilla"
 
 [flashcard-review]
 front: "govern"
-meaning: "v. direct or strongly influence the behavior of; v. exercise authority over; as of nations; v. require to be in a certain grammatical case, voice, or mood"
+meaning: "Direct or strongly influence the behavior of; Exercise authority over"
 translation: "v. 统治, 支配, 管理"
 srsWords: "govern"
 
@@ -149,61 +149,61 @@ color: "#9C27B0"
 ---
 [flashcard-review]
 front: "governor"
-meaning: "n. the head of a state government; n. a control that maintains a steady speed in a machine (as by controlling the supply of fuel)"
-translation: "n. (美)州长, (英)总督, 统治者, 管理者, 理事；[医] 节制器, 调节器"
+meaning: "The head of a state government; A control that maintains a steady speed in a machine (as by controlling the supply of…"
+translation: "n. (美)州长, (英)总督, 统治者, 管理者, 理事 节制器, 调节器"
 srsWords: "governor"
 
 [flashcard-review]
 front: "gown"
-meaning: "n. a woman's dress, usually with a close-fitting bodice and a long flared skirt, often worn on formal occasions; n. the members of a university as distinguished from the other residents of the town in which the university is located; n. protective garment worn by surgeons during operations; n. outerwear consisting of a long flowing garment used for official or ceremonial occasions"
+meaning: "A woman's dress, usually with a close-fitting bodice and a long flared skirt, often…; The members of a university as distinguished from the other residents of the town in…"
 translation: "n. 睡衣, 法衣, 大学全体师生；vt. 使穿睡衣"
 srsWords: "gown"
 
 [flashcard-review]
 front: "grab"
-meaning: "n. a mechanical device for gripping an object; v. make a grasping or snatching motion with the hand; v. obtain illegally or unscrupulously; v. take or grasp suddenly"
+meaning: "Make a grasping or snatching motion with the hand; Obtain illegally or unscrupulously"
 translation: "n. 抓握, 掠夺, 强占, 东方沿岸帆船；vi. 抓取, 抢去；vt. 攫取, 捕获, 霸占"
 srsWords: "grab"
 
 [flashcard-review]
 front: "graceful"
-meaning: "a. characterized by beauty of movement, style, form, or execution"
+meaning: "Characterized by beauty of movement, style, form, or execution"
 translation: "a. 优美的"
 srsWords: "graceful"
 
 [flashcard-review]
 front: "graduation"
-meaning: "n. the successful completion of a program of study; n. a line (as on a vessel or ruler) that marks a measurement"
-translation: "n. 毕业, 得学位, 分划, 刻度, 分等级；[医] 刻度, 分度, 毕业"
+meaning: "The successful completion of a program of study; A line (as on a vessel or ruler) that marks a measurement"
+translation: "n. 毕业, 得学位, 分划, 刻度, 分等级 刻度, 分度, 毕业"
 srsWords: "graduation"
 
 [flashcard-review]
 front: "grant"
-meaning: "n. any monetary aid; n. the act of providing a subsidy; n. (law) a transfer of property by deed of conveyance; n. Scottish painter; cousin of Lytton Strachey and member of the Bloomsbury Group (1885-1978)"
-translation: "n. 授予, 授予物, 允许；vt. 允许, 承认, 授与；[计] 授权命令"
+meaning: "Cousin of Lytton Strachey and member of the Bloomsbury Group (1885-1978); Any monetary aid"
+translation: "n. 授予, 授予物, 允许；vt. 允许, 承认, 授与 授权命令"
 srsWords: "grant"
 
 [flashcard-review]
 front: "graph"
-meaning: "n. a visual representation of the relations between certain quantities plotted with reference to a set of axes; v. represent by means of a graph; v. plot upon a graph"
-translation: "n. 曲线图, 图表, 图形；[计] 图形"
+meaning: "A visual representation of the relations between certain quantities plotted with…; Represent by means of a graph"
+translation: "n. 曲线图, 图表, 图形 图形"
 srsWords: "graph"
 
 [flashcard-review]
 front: "graphic"
-meaning: "n. an image that is generated by a computer; s. written or drawn or engraved; s. describing nudity or sexual activity in graphic detail; a. of or relating to the graphic arts"
-translation: "a. 生动的, 轮廓分明的, 绘画似的, 图解的；[计] 图形的"
+meaning: "Written or drawn or engraved; Describing nudity or sexual activity in graphic detail"
+translation: "a. 生动的, 轮廓分明的, 绘画似的, 图解的 图形的"
 srsWords: "graphic"
 
 [flashcard-review]
 front: "graphics"
-meaning: "n. the drawings and photographs in the layout of a book"
-translation: "n. 制图法, 制图学, 图解算法, 图形显示；[计] 图形; DOS外部命令:打印图形方式下的屏幕内容"
+meaning: "The drawings and photographs in the layout of a book"
+translation: "n. 制图法, 制图学, 图解算法, 图形显示 图形; DOS外部命令:打印图形方式下的屏幕内容"
 srsWords: "graphics"
 
 [flashcard-review]
 front: "gratitude"
-meaning: "n. a feeling of thankfulness and appreciation"
+meaning: "A feeling of thankfulness and appreciation"
 translation: "n. 感激之情"
 srsWords: "gratitude"
 
@@ -215,62 +215,62 @@ color: "#9C27B0"
 ---
 [flashcard-review]
 front: "grave"
-meaning: "n. death of a person; n. a place for the burial of a corpse (especially beneath the ground and marked by a tombstone); s. dignified and somber in manner or character and committed to keeping promises; s. of great gravity or crucial import; requiring serious thought"
+meaning: "Death of a person; A place for the burial of a corpse (especially beneath the ground and marked by a…"
 translation: "n. 墓穴, 坟墓, 终结, 死亡；a. 庄重的, 严肃的, 重大的, 低沉的；vt. 雕刻"
 srsWords: "grave"
 
 [flashcard-review]
 front: "gravy"
-meaning: "n. a sauce made by adding stock, flour, or other ingredients to the juice and fat that drips from cooking meats; n. the seasoned but not thickened juices that drip from cooking meats; often a little water is added"
+meaning: "A sauce made by adding stock, flour, or other ingredients to the juice and fat that…; The seasoned but not thickened juices that drip from cooking meats"
 translation: "n. 肉汁, 外快"
 srsWords: "gravy"
 
 [flashcard-review]
 front: "greenhouse"
-meaning: "n. a building with glass walls and roof; for the cultivation and exhibition of plants under controlled conditions; a. of or relating to or caused by the greenhouse effect"
+meaning: "A building with glass walls and roof; For the cultivation and exhibition of plants under controlled conditions"
 translation: "n. 温室"
 srsWords: "greenhouse"
 
 [flashcard-review]
 front: "greeting"
-meaning: "n. (usually plural) an acknowledgment or expression of good will (especially on meeting)"
+meaning: "(usually plural) an acknowledgment or expression of good will (especially on meeting)"
 translation: "n. 祝贺, 问候"
 srsWords: "greeting"
 
 [flashcard-review]
 front: "grill"
-meaning: "n. a framework of metal bars used as a partition or a grate; v. cook over a grill; v. examine thoroughly"
+meaning: "Cook over a grill; Examine thoroughly"
 translation: "n. 烤架, 铁格子, 烤肉；v. 烧, 烤, 严加盘问, 给...装栅栏"
 srsWords: "grill"
 
 [flashcard-review]
 front: "groom"
-meaning: "n. a man participant in his own marriage ceremony; n. a man who has recently been married; v. care for one's external appearance"
+meaning: "A man participant in his own marriage ceremony; A man who has recently been married"
 translation: "n. 马夫, 新郎, 男仆；vt. 喂马, 使...整洁, 推荐；vi. 打扮, 穿戴"
 srsWords: "groom"
 
 [flashcard-review]
 front: "estate"
-meaning: "n. everything you own; all of your assets (whether real property or personal property) and liabilities; n. extensive landed property (especially in the country) retained by the owner for his own use"
-translation: "n. 不动产, (人生的)阶段, 阶层, 财产；[经] 房地产, 遗产, 财产"
+meaning: "Everything you own; Extensive landed property (especially in the country) retained by the owner for his…"
+translation: "n. 不动产, (人生的)阶段, 阶层, 财产 房地产, 遗产, 财产"
 srsWords: "estate"
 
 [flashcard-review]
 front: "growth"
-meaning: "n. (biology) the process of an individual organism growing organically; a purely biological unfolding of events involved in an organism changing gradually from a simple to a more complex level; n. a progression from simpler to more complex forms; n. vegetation that has grown; n. (pathology) an abnormal proliferation of tissue (as in a tumor)"
-translation: "n. 生长, 栽培, 增长；[计] 等比级数"
+meaning: "(biology) the process of an individual organism growing organically; A progression from simpler to more complex forms"
+translation: "n. 生长, 栽培, 增长 等比级数"
 srsWords: "growth"
 
 [flashcard-review]
 front: "guidance"
-meaning: "n. something that provides direction or advice as to a decision or course of action; n. the act of guiding or showing the way"
-translation: "n. 指导, 领导；[医] 导"
+meaning: "Something that provides direction or advice as to a decision or course of action; The act of guiding or showing the way"
+translation: "n. 指导, 领导 导"
 srsWords: "guidance"
 
 [flashcard-review]
 front: "guilt"
-meaning: "n. the state of having committed an offense; n. remorse caused by feeling responsible for some offense"
-translation: "n. 罪行, 内疚；[法] 罪, 犯罪, 罪行"
+meaning: "The state of having committed an offense; Remorse caused by feeling responsible for some offense"
+translation: "n. 罪行, 内疚 罪, 犯罪, 罪行"
 srsWords: "guilt"
 
 ---
@@ -281,61 +281,61 @@ color: "#9C27B0"
 ---
 [flashcard-review]
 front: "guilty"
-meaning: "a. responsible for or chargeable with a reprehensible act; s. showing a sense of guilt"
-translation: "a. 犯罪的, 有过失的, 自觉有错的, 心虚的；[法] 有罪的, 犯罪的, 自觉有罪的"
+meaning: "Responsible for or chargeable with a reprehensible act; Showing a sense of guilt"
+translation: "a. 犯罪的, 有过失的, 自觉有错的, 心虚的 有罪的, 犯罪的, 自觉有罪的"
 srsWords: "guilty"
 
 [flashcard-review]
 front: "guitarist"
-meaning: "n. a musician who plays the guitar"
+meaning: "A musician who plays the guitar"
 translation: "n. 吉他弹奏者"
 srsWords: "guitarist"
 
 [flashcard-review]
 front: "gym"
-meaning: "n athletic facility equipped for sports or physical training"
+meaning: "N athletic facility equipped for sports or physical training"
 translation: "n. +体育馆, 体育训练, 体育课, 体操"
 srsWords: "gym"
 
 [flashcard-review]
 front: "gymnastics"
-meaning: "n. a sport that involves exercises intended to display strength and balance and agility"
-translation: "n. 体操, 体育；[医] 体操, 体育"
+meaning: "A sport that involves exercises intended to display strength and balance and agility"
+translation: "n. 体操, 体育 体操, 体育"
 srsWords: "gymnastics"
 
 [flashcard-review]
 front: "habitat"
-meaning: "n. the type of environment in which an organism or group normally lives or occurs"
-translation: "n. 栖息地, 居留地, 自生地, 聚集处；[医] 习生地, 产地, 生境, 栖所"
+meaning: "The type of environment in which an organism or group normally lives or occurs"
+translation: "n. 栖息地, 居留地, 自生地, 聚集处 习生地, 产地, 生境, 栖所"
 srsWords: "habitat"
 
 [flashcard-review]
 front: "hairdresser"
-meaning: "n. someone who cuts or beautifies hair"
+meaning: "Someone who cuts or beautifies hair"
 translation: "n. 美发师, 理发师"
 srsWords: "hairdresser"
 
 [flashcard-review]
 front: "institute"
-meaning: "n. an association organized to promote art or science or education; v. advance or set forth in court"
+meaning: "Advance or set forth in court; An association organized to promote art or science or education"
 translation: "n. 学会, 学院, 协会；vt. 创立, 开始, 制定, 任命"
 srsWords: "institute"
 
 [flashcard-review]
 front: "fletcher"
-meaning: "n. prolific English dramatist who collaborated with Francis Beaumont and many other dramatists (1579-1625)"
+meaning: "Prolific English dramatist who collaborated with Francis Beaumont and many other…"
 translation: "n. 弗莱彻（姓氏, 男子名）；弗莱彻（John, 1579-1625, 英国剧作家）；弗莱彻（John Gould, 1886-1950, 美国诗人及批评家）"
 srsWords: "fletcher"
 
 [flashcard-review]
 front: "handkerchief"
-meaning: "n. a square piece of cloth used for wiping the eyes or nose or as a costume accessory"
+meaning: "A square piece of cloth used for wiping the eyes or nose or as a costume accessory"
 translation: "n. 手帕, 头巾, 围巾"
 srsWords: "handkerchief"
 
 [flashcard-review]
 front: "handshake"
-meaning: "n. grasping and shaking a person's hand (as to acknowledge an introduction or to agree on a contract)"
+meaning: "Grasping and shaking a person's hand (as to acknowledge an introduction or to agree on…"
 translation: "n. 握手"
 srsWords: "handshake"
 
@@ -347,62 +347,62 @@ color: "#9C27B0"
 ---
 [flashcard-review]
 front: "handwriting"
-meaning: "n. something written by hand; n. the activity of writing by hand"
+meaning: "Something written by hand; The activity of writing by hand"
 translation: "n. 笔迹"
 srsWords: "handwriting"
 
 [flashcard-review]
 front: "handy"
-meaning: "n. United States blues musician who transcribed and published traditional blues music (1873-1958); s. easy to reach; s. easy to use; s. skillful with the hands"
-translation: "a. 便利的, 敏捷的, 容易取得的；[化] 便于使用的; 易操作的"
+meaning: "Easy to reach; Easy to use"
+translation: "a. 便利的, 敏捷的, 容易取得的 便于使用的; 易操作的"
 srsWords: "handy"
 
 [flashcard-review]
 front: "hardship"
-meaning: "n. something that causes or entails suffering"
-translation: "n. 艰难, 辛苦, 苦难；[法] 受苦, 吃苦, 苦难"
+meaning: "Something that causes or entails suffering"
+translation: "n. 艰难, 辛苦, 苦难 受苦, 吃苦, 苦难"
 srsWords: "hardship"
 
 [flashcard-review]
 front: "harness"
-meaning: "n. a support consisting of an arrangement of straps for holding something to the body (especially one supporting a person suspended from a parachute); n. stable gear consisting of an arrangement of leather straps fitted to a draft animal so that it can be attached to and pull a cart; v. put a harness; v. exploit the power of"
+meaning: "A support consisting of an arrangement of straps for holding something to the body…; Stable gear consisting of an arrangement of leather straps fitted to a draft animal so…"
 translation: "n. 马具, 挽具状带子, 甲胄；vt. 给...上挽具, 驾驭, 披上甲胄, 利用...以产生动力"
 srsWords: "harness"
 
 [flashcard-review]
 front: "hasty"
-meaning: "s. excessively quick; s. done with very great haste and without due deliberation"
+meaning: "Excessively quick; Done with very great haste and without due deliberation"
 translation: "a. 匆匆的, 轻率的, 性怠的"
 srsWords: "hasty"
 
 [flashcard-review]
 front: "hatch"
-meaning: "n. the production of young from an egg; n. shading consisting of multiple crossing lines; n. a movable barrier covering a hatchway; v. emerge from the eggs"
+meaning: "The production of young from an egg; Shading consisting of multiple crossing lines"
 translation: "n. 孵化, 舱口；vt. 孵, 孵出, 策划；vi. 孵化"
 srsWords: "hatch"
 
 [flashcard-review]
 front: "hatred"
-meaning: "n the emotion of intense dislike; a feeling of dislike so strong that it demands action"
-translation: "n. 憎恨, 仇恨, 憎恶；[法] 敌意, 憎恨, 憎恶"
+meaning: "N the emotion of intense dislike; A feeling of dislike so strong that it demands action"
+translation: "n. 憎恨, 仇恨, 憎恶 敌意, 憎恨, 憎恶"
 srsWords: "hatred"
 
 [flashcard-review]
 front: "headline"
-meaning: "n. the heading or caption of a newspaper article; v. publicize widely or highly, as if with a headline; v. provide (a newspaper page or a story) with a headline"
+meaning: "The heading or caption of a newspaper article; Publicize widely or highly, as if with a headline"
 translation: "n. 大标题, 新闻摘要；vt. 为...做标题, 写标题"
 srsWords: "headline"
 
 [flashcard-review]
 front: "heal"
-meaning: "v. get healthy again"
+meaning: "Get healthy again"
 translation: "vi. 痊愈；vt. 使复原, 使和解, 治愈"
 srsWords: "heal"
 
 [flashcard-review]
 front: "healing"
-meaning: "n. the natural process by which the body repairs itself"
-translation: "a. 治愈的, 恢复健康的；[计] 修复, 恢复"
+meaning: "The natural process by which the body repairs itself"
+translation: "a. 治愈的, 恢复健康的 修复, 恢复"
 srsWords: "healing"
 
 ---
@@ -413,61 +413,61 @@ color: "#9C27B0"
 ---
 [flashcard-review]
 front: "hearing"
-meaning: "n. (law) a proceeding (usually by a court) where evidence is taken for the purpose of determining an issue of fact and reaching a decision based on that evidence; n. an opportunity to state your case and be heard; n. a session (of a committee or grand jury) in which witnesses are called and testimony is taken; n. the ability to hear; the auditory faculty"
-translation: "n. 听, 听觉, 听讯；[医] 听, 听觉"
+meaning: "An opportunity to state your case and be heard; A session (of a committee or grand jury) in which witnesses are called and testimony…"
+translation: "n. 听, 听觉, 听讯 听, 听觉"
 srsWords: "hearing"
 
 [flashcard-review]
 front: "hearted"
-meaning: "a. Having a heart; having (such) a heart (regarded as the; seat of the affections, disposition, or character).; a. Shaped like a heart; cordate.; a. Seated or laid up in the heart."
+meaning: "Having a heart; Shaped like a heart"
 translation: "a. 有...心(肠)的"
 srsWords: "hearted"
 
 [flashcard-review]
 front: "hearty"
-meaning: "s. showing warm and heartfelt friendliness; s. providing abundant nourishment; s. endowed with or exhibiting great bodily or mental health; s. consuming abundantly and with gusto"
+meaning: "Showing warm and heartfelt friendliness; Providing abundant nourishment"
 translation: "a. 诚恳的, 健壮的, 热烈的, 丰盛的"
 srsWords: "hearty"
 
 [flashcard-review]
 front: "heater"
-meaning: "n. device that heats water or supplies warmth to a room"
-translation: "n. 加热器, 灯丝, 加热工；[化] 加热器"
+meaning: "Device that heats water or supplies warmth to a room"
+translation: "n. 加热器, 灯丝, 加热工 加热器"
 srsWords: "heater"
 
 [flashcard-review]
 front: "heaven"
-meaning: "n. the abode of God and the angels"
+meaning: "The abode of God and the angels"
 translation: "n. 天堂, 上帝, 天空"
 srsWords: "heaven"
 
 [flashcard-review]
 front: "heavenly"
-meaning: "a. of or belonging to heaven or god"
+meaning: "Of or belonging to heaven or god"
 translation: "a. 天上的, 神圣的, 天国似的"
 srsWords: "heavenly"
 
 [flashcard-review]
 front: "heel"
-meaning: "n. the bottom of a shoe or boot; the back part of a shoe or boot that touches the ground and provides elevation; n. the back part of the human foot; n. one of the crusty ends of a loaf of bread; n. the lower end of a ship's mast"
+meaning: "The bottom of a shoe or boot; The back part of the human foot"
 translation: "n. 脚后跟, 踵, 后部, 倾侧；vt. 尾随, 装以鞋跟, 倾侧, 追赶；vi. 紧随, 用脚后跟传球"
 srsWords: "heel"
 
 [flashcard-review]
 front: "helmet"
-meaning: "n. armor plate that protects the head; n. a protective headgear made of hard material to resist blows"
+meaning: "Armor plate that protects the head; A protective headgear made of hard material to resist blows"
 translation: "n. 钢盔, 盔, 防护帽；vt. 给...戴头盔"
 srsWords: "helmet"
 
 [flashcard-review]
 front: "helpless"
-meaning: "s. lacking in or deprived of strength or power; s. unable to function; without help; s. unable to manage independently"
+meaning: "Lacking in or deprived of strength or power; Unable to function"
 translation: "a. 无助的, 无能为力的, 无依无靠的"
 srsWords: "helpless"
 
 [flashcard-review]
 front: "herd"
-meaning: "n. a group of cattle or sheep or other domestic mammals all of the same kind that are herded by humans; n. a group of wild mammals of one species that remain together: antelope or elephants or seals or whales or zebra; v. cause to herd, drive, or crowd together; v. move together, like a herd"
+meaning: "A group of cattle or sheep or other domestic mammals all of the same kind that are…; A group of wild mammals of one species that remain together: antelope or elephants or…"
 translation: "n. 兽群, 人群, 牧人；vt. 群集, 使成群, 放牧；vi. 聚在一起"
 srsWords: "herd"
 
@@ -479,61 +479,61 @@ color: "#9C27B0"
 ---
 [flashcard-review]
 front: "hesitate"
-meaning: "v. pause or hold back in uncertainty or unwillingness; v. interrupt temporarily an activity before continuing"
+meaning: "Pause or hold back in uncertainty or unwillingness; Interrupt temporarily an activity before continuing"
 translation: "vi. 犹豫, 迟疑, 踌躇, 支吾, 停顿"
 srsWords: "hesitate"
 
 [flashcard-review]
 front: "hidden"
-meaning: "s. designed to elude detection; s. difficult to find"
-translation: "a. 隐藏的；hide的过去分词；[计] 隐藏的"
+meaning: "Designed to elude detection; Difficult to find"
+translation: "a. 隐藏的；hide的过去分词 隐藏的"
 srsWords: "hidden"
 
 [flashcard-review]
 front: "highly"
-meaning: "r. to a high degree or extent; favorably or with much respect; r. at a high rate or wage; r. in a high position or level or rank"
+meaning: "To a high degree or extent; At a high rate or wage"
 translation: "adv. 非常, 非常赞许地；[电] 大大地"
 srsWords: "highly"
 
 [flashcard-review]
 front: "hip"
-meaning: "n. either side of the body below the waist and above the thigh; n. the ball-and-socket joint between the head of the femur and the acetabulum; n. (architecture) the exterior angle formed by the junction of a sloping side and a sloping end of a roof; n. the fruit of a rose plant"
+meaning: "Either side of the body below the waist and above the thigh; The ball-and-socket joint between the head of the femur and the acetabulum"
 translation: "n. 臀部, 蔷薇果, 忧郁；a. 熟悉内情的；vt. 使忧郁, 给(屋顶)造屋脊；interj. 喝彩声"
 srsWords: "hip"
 
 [flashcard-review]
 front: "hire"
-meaning: "n. a newly hired employee; n. the act of hiring something or someone; v. engage or hire for work"
+meaning: "Engage or hire for work; A newly hired employee"
 translation: "n. 租金, 租用, 雇用；vt. 雇请, 出租；vi. 受雇"
 srsWords: "hire"
 
 [flashcard-review]
 front: "historian"
-meaning: "n. a person who is an authority on history and who studies it and writes about it"
+meaning: "A person who is an authority on history and who studies it and writes about it"
 translation: "n. 历史学家, 记事者"
 srsWords: "historian"
 
 [flashcard-review]
 front: "historic"
-meaning: "s. belonging to the past; of what is important or famous in the past; s. important in history"
+meaning: "Belonging to the past; Important in history"
 translation: "a. 历史上著名的, 有历史性的"
 srsWords: "historic"
 
 [flashcard-review]
 front: "historical"
-meaning: "a. of or relating to the study of history; s. having once lived or existed or taken place in the real world as distinct from being legendary"
-translation: "a. 历史的, 史实的, 历史上的；[法] 历史性的"
+meaning: "Having once lived or existed or taken place in the real world as distinct from being…"
+translation: "a. 历史的, 史实的, 历史上的 历史性的"
 srsWords: "historical"
 
 [flashcard-review]
 front: "hiv"
-meaning: "n. infection by the human immunodeficiency virus"
+meaning: "Infection by the human immunodeficiency virus"
 translation: "abbr. 艾滋病病毒（human immunodeficiency virus）"
 srsWords: "hiv"
 
 [flashcard-review]
 front: "holy"
-meaning: "a. belonging to or derived from or associated with a divine power"
+meaning: "Belonging to or derived from or associated with a divine power"
 translation: "a. 神圣的, 圣洁的, 至善的；n. 神圣的东西"
 srsWords: "holy"
 
@@ -545,61 +545,61 @@ color: "#9C27B0"
 ---
 [flashcard-review]
 front: "homeless"
-meaning: "n. someone unfortunate without housing; n. poor people who unfortunately do not have a home to live in; s. without nationality or citizenship"
+meaning: "Without nationality or citizenship; Someone unfortunate without housing"
 translation: "a. 无家的, 无养主的"
 srsWords: "homeless"
 
 [flashcard-review]
 front: "honestly"
-meaning: "r. (used as intensives reflecting the speaker's attitude) it is sincerely the case that; r. in an honest manner"
+meaning: "(used as intensives reflecting the speaker's attitude) it is sincerely the case that; In an honest manner"
 translation: "adv. 真诚地, 公正地"
 srsWords: "honestly"
 
 [flashcard-review]
 front: "honesty"
-meaning: "n. the quality of being honest; n. southeastern European plant cultivated for its fragrant purplish flowers and round flat papery silver-white seedpods that are used for indoor decoration"
+meaning: "The quality of being honest; Southeastern European plant cultivated for its fragrant purplish flowers and round…"
 translation: "n. 诚实, 公正, 正直"
 srsWords: "honesty"
 
 [flashcard-review]
 front: "honeymoon"
-meaning: "n. a holiday taken by a newly married couple; n. the early (usually calm and harmonious) period of a relationship; business or political; v. spend a holiday after one's marriage"
+meaning: "A holiday taken by a newly married couple; The early (usually calm and harmonious) period of a relationship"
 translation: "n. 蜜月, 蜜月假期；vi. 渡蜜月"
 srsWords: "honeymoon"
 
 [flashcard-review]
 front: "hop"
-meaning: "n. the act of hopping; jumping upward or forward (especially on one foot); n. twining perennials having cordate leaves and flowers arranged in conelike spikes; the dried flowers of this plant are used in brewing to add the characteristic bitter taste to beer; n. an informal dance where popular music is played; v. jump lightly"
-translation: "n. 单脚跳, 跳跃, 舞会, 飞行；vi. 单脚跳, 跳跃；vt. 跃过, 跳上, 加蛇麻子于, 服麻醉药；[计] 跳跃式传输"
+meaning: "The act of hopping; Twining perennials having cordate leaves and flowers arranged in conelike spikes"
+translation: "n. 单脚跳, 跳跃, 舞会, 飞行；vi. 单脚跳, 跳跃；vt. 跃过, 跳上, 加蛇麻子于, 服麻醉药 跳跃式传输"
 srsWords: "hop"
 
 [flashcard-review]
 front: "hopeful"
-meaning: "a. having or manifesting hope"
+meaning: "Having or manifesting hope"
 translation: "n. 有希望之人, 有前途之人；a. 有希望的, 怀抱希望的, 保持乐观的"
 srsWords: "hopeful"
 
 [flashcard-review]
 front: "hopefully"
-meaning: "r. with hope; in a hopeful manner; r. it is hoped"
+meaning: "With hope; It is hoped"
 translation: "adv. 有希望地, 如果希望能实现的话"
 srsWords: "hopefully"
 
 [flashcard-review]
 front: "hopeless"
-meaning: "a. without hope because there seems to be no possibility of comfort or success; s. of a person unable to do something skillfully; s. certain to fail; s. (informal to emphasize how bad it is) beyond hope of management or reform"
+meaning: "Without hope because there seems to be no possibility of comfort or success; Of a person unable to do something skillfully"
 translation: "a. 无希望的, 绝望的, 不可救药的"
 srsWords: "hopeless"
 
 [flashcard-review]
 front: "horizon"
-meaning: "n. the line at which the sky and Earth appear to meet; n. the range of interest or activity that can be anticipated; n. a specific layer or stratum of soil or subsoil in a vertical cross section of land; n. the great circle on the celestial sphere whose plane passes through the sensible horizon and the center of the Earth"
+meaning: "The line at which the sky and Earth appear to meet; The range of interest or activity that can be anticipated"
 translation: "n. 地平线, 眼界, (天)视地平"
 srsWords: "horizon"
 
 [flashcard-review]
 front: "horn"
-meaning: "n. a noisemaker (as at parties or games) that makes a loud noise when you blow through it; n. one of the bony outgrowths on the heads of certain ungulates; n. a noise made by the driver of an automobile to give warning;; n. a high pommel of a Western saddle (usually metal covered with leather)"
+meaning: "A noisemaker (as at parties or games) that makes a loud noise when you blow through it; One of the bony outgrowths on the heads of certain ungulates"
 translation: "n. 角, 角质, 喇叭, 号角；a. 角制的；vt. 用角触, 长角于"
 srsWords: "horn"
 
@@ -611,60 +611,60 @@ color: "#9C27B0"
 ---
 [flashcard-review]
 front: "horrible"
-meaning: "s provoking horror"
+meaning: "S provoking horror"
 translation: "a. 可怕的, 遭透的, 极讨厌的"
 srsWords: "horrible"
 
 [flashcard-review]
 front: "horrify"
-meaning: "v fill with apprehension or alarm; cause to be unpleasantly surprised"
+meaning: "V fill with apprehension or alarm; Cause to be unpleasantly surprised"
 translation: "vt. 使恐惧, 使震惊"
 srsWords: "horrify"
 
 [flashcard-review]
 front: "hostel"
-meaning: "n. a hotel providing overnight lodging for travelers; n. inexpensive supervised lodging (especially for youths on bicycling trips)"
+meaning: "A hotel providing overnight lodging for travelers; Inexpensive supervised lodging (especially for youths on bicycling trips)"
 translation: "n. 青年招待所, 宿舍, 旅店"
 srsWords: "hostel"
 
 [flashcard-review]
 front: "household"
-meaning: "n a social unit living together"
+meaning: "N a social unit living together"
 translation: "n. 一家人, 家庭, 家族, 王室；a. 家庭的, 家常的, 王室的"
 srsWords: "household"
 
 [flashcard-review]
 front: "housework"
-meaning: "n. the work of cleaning and running a house"
+meaning: "The work of cleaning and running a house"
 translation: "n. 家事, 家务"
 srsWords: "housework"
 
 [flashcard-review]
 front: "humanity"
-meaning: "n. the quality of being humane"
+meaning: "The quality of being humane"
 translation: "n. 人性, 人类, 博爱"
 srsWords: "humanity"
 
 [flashcard-review]
 front: "humid"
-meaning: "s. containing or characterized by a great deal of water vapor"
+meaning: "Containing or characterized by a great deal of water vapor"
 translation: "a. 潮湿的, 湿润的, 多湿气的"
 srsWords: "humid"
 
 [flashcard-review]
 front: "humorous"
-meaning: "a. full of or characterized by humor"
+meaning: "Full of or characterized by humor"
 translation: "a. 富幽默感的, 滑稽的, 诙谐的"
 srsWords: "humorous"
 
 [flashcard-review]
 front: "hunger"
-meaning: "n. a physiological need for food; the consequence of food deprivation; n. strong desire for something (not food or drink); v. feel the need to eat"
+meaning: "A physiological need for food; Strong desire for something (not food or drink)"
 translation: "n. 饥饿, 渴望, 饥荒；vt. 使挨饿；vi. 挨饿, 渴望"
 srsWords: "hunger"
 
 [flashcard-review]
 front: "legacy"
-meaning: "n (law) a gift of personal property by will"
-translation: "n. 祖先传下来之物, 遗赠物；[经] 遗产, 遗赠物"
+meaning: "N (law) a gift of personal property by will"
+translation: "n. 祖先传下来之物, 遗赠物 遗产, 遗赠物"
 srsWords: "legacy"

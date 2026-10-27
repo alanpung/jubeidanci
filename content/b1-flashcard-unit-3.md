@@ -17,62 +17,62 @@ color: "#3F51B5"
 ---
 [flashcard-review]
 front: "brick"
-meaning: "n. rectangular block of clay baked by the sun or in a kiln; used as a building or paving material; n. a good fellow; helpful and trustworthy"
+meaning: "Rectangular block of clay baked by the sun or in a kiln; A good fellow"
 translation: "n. 砖块, 积木；a. 用砖做的；vt. 用砖造, 用砖砌"
 srsWords: "brick"
 
 [flashcard-review]
 front: "briefly"
-meaning: "r. for a short time"
+meaning: "For a short time"
 translation: "adv. 简短地, 扼要地, 简明地, 简单地"
 srsWords: "briefly"
 
 [flashcard-review]
 front: "brightly"
-meaning: "r with brightness"
+meaning: "R with brightness"
 translation: "adv. 生辉地, 明亮地, 鲜明地"
 srsWords: "brightly"
 
 [flashcard-review]
 front: "broad"
-meaning: "n. slang term for a woman; s. not detailed or specific; s. lacking subtlety; obvious; s. being at a peak or culminating point"
+meaning: "Not detailed or specific; Lacking subtlety"
 translation: "a. 宽广的, 辽阔的, 广大的, 显著的；adv. 宽阔地；n. 宽阔部分"
 srsWords: "broad"
 
 [flashcard-review]
 front: "broccoli"
-meaning: "n. plant with dense clusters of tight green flower buds; n. branched green undeveloped flower heads"
+meaning: "Plant with dense clusters of tight green flower buds; Branched green undeveloped flower heads"
 translation: "n. 花椰菜"
 srsWords: "broccoli"
 
 [flashcard-review]
 front: "bronze"
-meaning: "n. an alloy of copper and tin and sometimes other elements; also any copper-base alloy containing other elements in place of tin; n. a sculpture made of bronze; v. give the color and appearance of bronze to something; s. of the color of bronze"
+meaning: "An alloy of copper and tin and sometimes other elements; A sculpture made of bronze"
 translation: "n. 青铜, 铜像；a. 青铜色的"
 srsWords: "bronze"
 
 [flashcard-review]
 front: "brotherhood"
-meaning: "n. the kinship relation between a male offspring and the siblings; n. people engaged in a particular occupation; n. the feeling that men should treat one another like brothers"
+meaning: "The kinship relation between a male offspring and the siblings; People engaged in a particular occupation"
 translation: "n. 手足情谊, 兄弟关系"
 srsWords: "brotherhood"
 
 [flashcard-review]
 front: "bubble"
-meaning: "n. a hollow globule of gas (e.g., air or carbon dioxide); n. an impracticable and illusory idea; n. a dome-shaped covering made of transparent glass or plastic; v. form, produce, or emit bubbles"
+meaning: "A hollow globule of gas (e.g., air or carbon dioxide); An impracticable and illusory idea"
 translation: "n. 泡沫；vi. 冒泡, 沸腾；vt. 使冒泡, 滔滔不绝地说"
 srsWords: "bubble"
 
 [flashcard-review]
 front: "buddy"
-meaning: "n. a close friend who accompanies his buddies in their activities"
+meaning: "A close friend who accompanies his buddies in their activities"
 translation: "n. 好朋友, 伙伴"
 srsWords: "buddy"
 
 [flashcard-review]
 front: "builder"
-meaning: "n. a substance added to soaps or detergents to increase their cleansing action; n. a person who creates a business or who organizes and develops a country; n. someone who contracts for and supervises construction (as of a building)"
-translation: "n. 建立者；[机] 组份"
+meaning: "A substance added to soaps or detergents to increase their cleansing action; A person who creates a business or who organizes and develops a country"
+translation: "n. 建立者 组份"
 srsWords: "builder"
 
 ---
@@ -83,62 +83,62 @@ color: "#3F51B5"
 ---
 [flashcard-review]
 front: "bull"
-meaning: "n. uncastrated adult male of domestic cattle; n. a large and strong and heavyset man; n. a serious and ludicrous blunder; n. uncomplimentary terms for a policeman"
-translation: "n. 公牛；[法] 买方, 买空者"
+meaning: "Uncastrated adult male of domestic cattle; A large and strong and heavyset man"
+translation: "n. 公牛 买方, 买空者"
 srsWords: "bull"
 
 [flashcard-review]
 front: "bullet"
-meaning: "n. a projectile that is fired from a gun"
-translation: "n. 子弹；[医] 弹, 子弹, 距节(马)"
+meaning: "A projectile that is fired from a gun"
+translation: "n. 子弹 弹, 子弹, 距节(马)"
 srsWords: "bullet"
 
 [flashcard-review]
 front: "bulletin"
-meaning: "n. a brief report (especially an official statement issued for immediate publication or broadcast); v. make public by bulletin"
+meaning: "A brief report (especially an official statement issued for immediate publication or…; Make public by bulletin"
 translation: "n. 公告, 布告, 公报；[电] 电子布告栏"
 srsWords: "bulletin"
 
 [flashcard-review]
 front: "bump"
-meaning: "n. a lump on the body caused by a blow; v. knock against with force or violence; v. dance erotically or dance with the pelvis thrust forward"
+meaning: "Knock against with force or violence; Dance erotically or dance with the pelvis thrust forward"
 translation: "n. 撞击, 肿块；vt. 碰撞；vi. 撞, 颠簸而行"
 srsWords: "bump"
 
 [flashcard-review]
 front: "bunch"
-meaning: "n. a grouping of a number of similar things; n. any collection in its entirety; v. gather or cause to gather into a cluster"
-translation: "n. 串, 束；[医] 骨肿块(马)"
+meaning: "A grouping of a number of similar things; Any collection in its entirety"
+translation: "n. 串, 束 骨肿块(马)"
 srsWords: "bunch"
 
 [flashcard-review]
 front: "bureau"
-meaning: "n an administrative unit of government; n furniture with drawers for keeping clothes"
-translation: "n. 局, 办公处；[经] 局, 司, 处"
+meaning: "N an administrative unit of government; N furniture with drawers for keeping clothes"
+translation: "n. 局, 办公处 局, 司, 处"
 srsWords: "bureau"
 
 [flashcard-review]
 front: "burglar"
-meaning: "n. a thief who enters a building with intent to steal"
-translation: "n. 窃贼；[法] 夜盗, 窃贼, 盗窃者"
+meaning: "A thief who enters a building with intent to steal"
+translation: "n. 窃贼 夜盗, 窃贼, 盗窃者"
 srsWords: "burglar"
 
 [flashcard-review]
 front: "burning"
-meaning: "n. the act of burning something; n. execution by fire; n. a form of torture in which cigarettes or cigars or other hot implements are used to burn the victim's skin; s. of immediate import"
+meaning: "Of immediate import; The act of burning something"
 translation: "a. 燃烧的, 象燃烧一样的；n. 烧, 燃烧"
 srsWords: "burning"
 
 [flashcard-review]
 front: "bust"
-meaning: "n. a sculpture of the head and shoulders of a person; n. an occasion for excessive eating or drinking"
-translation: "n. 半身像, 胸部, 失败, 殴打；vt. 使爆裂, 使破产；vi. 爆裂, 破产；[计] 操作错"
+meaning: "A sculpture of the head and shoulders of a person; An occasion for excessive eating or drinking"
+translation: "n. 半身像, 胸部, 失败, 殴打；vt. 使爆裂, 使破产；vi. 爆裂, 破产 操作错"
 srsWords: "bust"
 
 [flashcard-review]
 front: "gnu"
-meaning: "n. large African antelope having a head with horns like an ox and a long tufted tail"
-translation: "n. 牛羚, 角马；[计] GNU 计划，又称革奴计划，是由Richard Stallman在1983年9月27日公开发起的，目标是创建一套完全自由的操作系统"
+meaning: "Large African antelope having a head with horns like an ox and a long tufted tail"
+translation: "n. 牛羚, 角马 GNU 计划，又称革奴计划，是由Richard Stallman在1983年9月27日公开发起的，目标是创建一套完全自由的操作系统"
 srsWords: "gnu"
 
 ---
@@ -149,62 +149,62 @@ color: "#3F51B5"
 ---
 [flashcard-review]
 front: "firm"
-meaning: "n. the members of a business organization that owns or operates one or more establishments; s. marked by firm determination or resolution; not shakable; s. not soft or yielding to pressure; s. strong and sure"
+meaning: "Marked by firm determination or resolution; Not shakable"
 translation: "n. 公司, 商号；a. 坚定的, 坚强的, 牢固的, 结实的, 坚硬的, 坚挺的, 严格的, 确定的；vt. 使牢固, 使坚定；vi. 变稳固, 变坚实；adv. 稳固地"
 srsWords: "firm"
 
 [flashcard-review]
 front: "buyer"
-meaning: "n. a person who buys"
-translation: "n. 买主, 买方；[经] 买主, 买方, 买手"
+meaning: "A person who buys"
+translation: "n. 买主, 买方 买主, 买方, 买手"
 srsWords: "buyer"
 
 [flashcard-review]
 front: "cabbage"
-meaning: "n. any of various types of cabbage; n. any of various cultivars of the genus Brassica oleracea grown for their edible leaves or flowers"
-translation: "n. 卷心菜；[医] 卷心菜, 甘兰"
+meaning: "Any of various types of cabbage; Any of various cultivars of the genus Brassica oleracea grown for their edible leaves…"
+translation: "n. 卷心菜 卷心菜, 甘兰"
 srsWords: "cabbage"
 
 [flashcard-review]
 front: "cabin"
-meaning: "n. small room on a ship or boat where people sleep; n. a small house built of wood; usually in a wooded area; n. the enclosed compartment of an aircraft or spacecraft where passengers are carried; v. confine to a small space, such as a cabin"
+meaning: "Small room on a ship or boat where people sleep; A small house built of wood"
 translation: "n. 小屋, 客舱；vt. 关在小屋"
 srsWords: "cabin"
 
 [flashcard-review]
 front: "cage"
-meaning: "n. an enclosure made or wire or metal bars in which birds or animals can be kept; n. something that restricts freedom as a cage restricts movement; n. United States composer of avant-garde music (1912-1992); n. the net that is the goal in ice hockey"
+meaning: "An enclosure made or wire or metal bars in which birds or animals can be kept; Something that restricts freedom as a cage restricts movement"
 translation: "n. 笼, 牢房, 战俘营；vt. 关进笼内"
 srsWords: "cage"
 
 [flashcard-review]
 front: "calculate"
-meaning: "v. make a mathematical calculation or computation; v. judge to be probable; v. specifically design a product, event, or activity for a certain public"
+meaning: "Make a mathematical calculation or computation; Judge to be probable"
 translation: "v. 计算, 预测, 计划, 打算"
 srsWords: "calculate"
 
 [flashcard-review]
 front: "calculation"
-meaning: "n. the procedure of calculating; determining something by mathematical or logical methods; n. problem solving that involves numbers or quantities; n. planning something carefully and intentionally"
-translation: "n. 计算, 考虑, 计算的结果；[经] 计算"
+meaning: "The procedure of calculating; Problem solving that involves numbers or quantities"
+translation: "n. 计算, 考虑, 计算的结果 计算"
 srsWords: "calculation"
 
 [flashcard-review]
 front: "calculator"
-meaning: "n. an expert at calculation (or at operating calculating machines); n. a small machine that is used for mathematical calculations"
-translation: "n. 计算者, 计算器；[计] 计算器"
+meaning: "An expert at calculation (or at operating calculating machines); A small machine that is used for mathematical calculations"
+translation: "n. 计算者, 计算器 计算器"
 srsWords: "calculator"
 
 [flashcard-review]
 front: "caller"
-meaning: "n. a social or business visitor; n. an investor who buys a call option; n. the bettor in a card game who matches the bet and calls for a show of hands; n. a person who announces the changes of steps during a dance"
-translation: "n. 访客, 召集员, 传唤员；a. 新鲜的；[计] 呼叫方标识"
+meaning: "A social or business visitor; An investor who buys a call option"
+translation: "n. 访客, 召集员, 传唤员；a. 新鲜的 呼叫方标识"
 srsWords: "caller"
 
 [flashcard-review]
 front: "corporation"
-meaning: "n. a business firm whose articles of incorporation have been approved in some state"
-translation: "n. 公司, 合作, 法人团体；[法] 法人团体, 社团, 法人"
+meaning: "A business firm whose articles of incorporation have been approved in some state"
+translation: "n. 公司, 合作, 法人团体 法人团体, 社团, 法人"
 srsWords: "corporation"
 
 ---
@@ -215,62 +215,62 @@ color: "#3F51B5"
 ---
 [flashcard-review]
 front: "camel"
-meaning: "n. cud-chewing mammal used as a draft or saddle animal in desert regions"
+meaning: "Cud-chewing mammal used as a draft or saddle animal in desert regions"
 translation: "n. 骆驼, 打捞浮筒"
 srsWords: "camel"
 
 [flashcard-review]
 front: "campsite"
-meaning: "n. a site where people on holiday can pitch a tent"
+meaning: "A site where people on holiday can pitch a tent"
 translation: "n. 营地"
 srsWords: "campsite"
 
 [flashcard-review]
 front: "canal"
-meaning: "n. (astronomy) an indistinct surface feature of Mars once thought to be a system of channels; they are now believed to be an optical illusion; n. long and narrow strip of water made for boats or for irrigation; v. provide (a city) with a canal"
+meaning: "(astronomy) an indistinct surface feature of Mars once thought to be a system of channels; Long and narrow strip of water made for boats or for irrigation"
 translation: "n. 运河, 水道, 管, 沟渠；vt. 开运河"
 srsWords: "canal"
 
 [flashcard-review]
 front: "cancel"
-meaning: "v. postpone indefinitely or annul something that was scheduled; v. make up for; v. declare null and void; make ineffective; v. make invalid for use"
-translation: "n. 取消, 撤消, 盖销(邮票)；vt. 取消, 删去, 抵销, 盖销；vi. 相互抵销；[计] 作废"
+meaning: "Postpone indefinitely or annul something that was scheduled; Make up for"
+translation: "n. 取消, 撤消, 盖销(邮票)；vt. 取消, 删去, 抵销, 盖销；vi. 相互抵销 作废"
 srsWords: "cancel"
 
 [flashcard-review]
 front: "candle"
-meaning: "n. stick of wax with a wick in the middle; n. the basic unit of luminous intensity adopted under the Systeme International d'Unites; equal to 1/60 of the luminous intensity per square centimeter of a black body radiating at the temperature of 2,046 degrees Kelvin; v. examine eggs for freshness by holding them against a light"
+meaning: "Stick of wax with a wick in the middle; The basic unit of luminous intensity adopted under the Systeme International d'Unites"
 translation: "n. 蜡烛；vt. 对着光检查"
 srsWords: "candle"
 
 [flashcard-review]
 front: "canned"
-meaning: "s. recorded for broadcast; s. sealed in a can or jar"
-translation: "a. 罐装的, 录音的, 一稿数用的, 刻板的, 被囚的；[机] 洋铁罐的, 罐头的"
+meaning: "Recorded for broadcast; Sealed in a can or jar"
+translation: "a. 罐装的, 录音的, 一稿数用的, 刻板的, 被囚的 洋铁罐的, 罐头的"
 srsWords: "canned"
 
 [flashcard-review]
 front: "canteen"
-meaning: "n. a flask for carrying water; used by soldiers or travelers; n. sells food and personal items to personnel at an institution or school or camp etc.; n. a restaurant outside; often for soldiers or policemen; n. a recreation room in an institution"
+meaning: "A flask for carrying water; Sells food and personal items to personnel at an institution or school or camp etc."
 translation: "n. 水壶, 军中俱乐部, 临时流动餐馆, 小卖部"
 srsWords: "canteen"
 
 [flashcard-review]
 front: "capable"
-meaning: "a. (usually followed by `of') having capacity or ability; s. possibly accepting or permitting; a. (followed by `of') having the temperament or inclination for"
+meaning: "(usually followed by `of') having capacity or ability; Possibly accepting or permitting"
 translation: "a. 有能力的, 能的, 能干的"
 srsWords: "capable"
 
 [flashcard-review]
 front: "capsule"
-meaning: "n. a small container; n. a pill in the form of a small rounded gelatinous container with medicine inside; n. a dry dehiscent seed vessel or the spore-containing structure of e.g. mosses; n. a structure that encloses a body part"
-translation: "n. 胶囊, 蒴果, 瓶帽, 航天舱；[化] 胶囊剂"
+meaning: "A small container; A pill in the form of a small rounded gelatinous container with medicine inside"
+translation: "n. 胶囊, 蒴果, 瓶帽, 航天舱 胶囊剂"
 srsWords: "capsule"
 
 [flashcard-review]
 front: "capture"
-meaning: "n. the act of forcibly dispossessing an owner of property; n. a process whereby a star or planet holds an object in its gravitational field; n. any process in which an atomic or nuclear system acquires an additional particle; n. the act of taking of a person by force"
-translation: "n. 抓取, 战利品, 捕获之物；vt. 抓取, 获得, 迷住；[计] 截获命令"
+meaning: "The act of forcibly dispossessing an owner of property; A process whereby a star or planet holds an object in its gravitational field"
+translation: "n. 抓取, 战利品, 捕获之物；vt. 抓取, 获得, 迷住 截获命令"
 srsWords: "capture"
 
 ---
@@ -281,61 +281,61 @@ color: "#3F51B5"
 ---
 [flashcard-review]
 front: "career"
-meaning: "n. the particular occupation for which you are trained; n. the general progression of your working or professional life; v. move headlong at high speed"
-translation: "n. 事业, 生涯, 成功；[法] 职业, 专业, 履历"
+meaning: "The particular occupation for which you are trained; The general progression of your working or professional life"
+translation: "n. 事业, 生涯, 成功 职业, 专业, 履历"
 srsWords: "career"
 
 [flashcard-review]
 front: "careless"
-meaning: "a. marked by lack of attention or consideration or forethought or thoroughness; not careful; s. effortless and unstudied; s. (usually followed by `of') without due thought or consideration"
+meaning: "Marked by lack of attention or consideration or forethought or thoroughness; Effortless and unstudied"
 translation: "a. 粗心的, 不关心的, 无忧无虑的"
 srsWords: "careless"
 
 [flashcard-review]
 front: "employer"
-meaning: "n. a person or firm that employs workers"
-translation: "n. 雇主, 老板；[经] 雇主, 业主"
+meaning: "A person or firm that employs workers"
+translation: "n. 雇主, 老板 雇主, 业主"
 srsWords: "employer"
 
 [flashcard-review]
 front: "businesswoman"
-meaning: "a woman who works in business"
-translation: "n. 女商人"
+meaning: "A female businessperson"
+translation: "n. 商人, 办理实务的人, 经商者"
 srsWords: "businesswoman"
 
 [flashcard-review]
 front: "carpet"
-meaning: "n. a natural object that resembles or suggests a carpet; v. form a carpet-like cover (over); v. cover completely, as if with a carpet; v. cover with a carpet"
+meaning: "A natural object that resembles or suggests a carpet; Form a carpet-like cover (over)"
 translation: "n. 地毯, 地毯状物；vt. 铺以地毯, 铺盖"
 srsWords: "carpet"
 
 [flashcard-review]
 front: "carriage"
-meaning: "n. a vehicle with wheels drawn by one or more horses; n. characteristic way of bearing one's body; n. a machine part that carries something else"
-translation: "n. 马车, 客车, 举止, 运输；[经] 搬运费, 运费"
+meaning: "A vehicle with wheels drawn by one or more horses; Characteristic way of bearing one's body"
+translation: "n. 马车, 客车, 举止, 运输 搬运费, 运费"
 srsWords: "carriage"
 
 [flashcard-review]
 front: "carton"
-meaning: "n. the quantity contained in a carton; n. a box made of cardboard; opens by flaps on top"
-translation: "n. 硬纸盒, 纸板箱；[化] 卡纸"
+meaning: "The quantity contained in a carton; A box made of cardboard"
+translation: "n. 硬纸盒, 纸板箱 卡纸"
 srsWords: "carton"
 
 [flashcard-review]
 front: "cashpoint"
-meaning: "cashpoint"
-translation: "[经] 一种电脑化的付现机"
+meaning: "Noun. cashpoint"
+translation: "一种电脑化的付现机"
 srsWords: "cashpoint"
 
 [flashcard-review]
 front: "casual"
-meaning: "s. marked by blithe unconcern; s. without or seeming to be without plan or method; offhand; s. appropriate for ordinary or routine occasions; s. occurring or appearing or singled out by chance"
+meaning: "Marked by blithe unconcern; Without or seeming to be without plan or method"
 translation: "a. 偶然的, 不经意的, 便装的；n. 临时工, 待命士兵"
 srsWords: "casual"
 
 [flashcard-review]
 front: "categorise"
-meaning: "v place into or assign to a category"
+meaning: "V place into or assign to a category"
 translation: "vt. 分类, 归类"
 srsWords: "categorise"
 
@@ -347,62 +347,62 @@ color: "#3F51B5"
 ---
 [flashcard-review]
 front: "gang"
-meaning: "n. an association of criminals; n. an organized group of workmen; n. tool consisting of a combination of implements arranged to work together; v. act as an organized group"
+meaning: "An association of criminals; An organized group of workmen"
 translation: "n. 队, 群, 帮；vi. 成群结队, 结成一伙；vt. 使成群结队"
 srsWords: "gang"
 
 [flashcard-review]
 front: "category"
-meaning: "n. a general concept that marks divisions or coordinations in a conceptual scheme"
-translation: "n. 种类, 类项；[计] 分类"
+meaning: "A general concept that marks divisions or coordinations in a conceptual scheme"
+translation: "n. 种类, 类项 分类"
 srsWords: "category"
 
 [flashcard-review]
 front: "cattle"
-meaning: "n. domesticated bovine animals as a group regardless of sex or age"
-translation: "n. 牛, 家畜；[法] 家畜"
+meaning: "Domesticated bovine animals as a group regardless of sex or age"
+translation: "n. 牛, 家畜 家畜"
 srsWords: "cattle"
 
 [flashcard-review]
 front: "caution"
-meaning: "n. the trait of being cautious; being attentive to possible danger; n. a warning against certain acts; n. judiciousness in avoiding harm or danger; v. warn strongly; put on guard"
-translation: "n. 小心, 慎重, 警示；vt. 警告；[计] 警告"
+meaning: "The trait of being cautious; A warning against certain acts"
+translation: "n. 小心, 慎重, 警示；vt. 警告 警告"
 srsWords: "caution"
 
 [flashcard-review]
 front: "cautious"
-meaning: "a. showing careful forethought; never making swift decisions\"; s. avoiding excess"
+meaning: "Showing careful forethought; Avoiding excess"
 translation: "a. 谨慎的, 小心的"
 srsWords: "cautious"
 
 [flashcard-review]
 front: "cave"
-meaning: "n. a geological formation consisting of an underground enclosure with access from the surface of the ground or from the sea; v. hollow out as if making a cave or opening; v. explore natural caves"
+meaning: "A geological formation consisting of an underground enclosure with access from the…; Hollow out as if making a cave or opening"
 translation: "n. 洞, 穴；vi. 凹陷, 塌落；vt. 挖洞, 使凹陷, 损坏...的基础"
 srsWords: "cave"
 
 [flashcard-review]
 front: "CD-ROM"
-meaning: "n a compact disk that is used with a computer (rather than with an audio system); a large amount of digital information can be stored and accessed but it cannot be altered by the user"
+meaning: "N a compact disk that is used with a computer (rather than with an audio system); A large amount of digital information can be stored and accessed but it cannot be…"
 translation: "n. 光盘驱动器"
 srsWords: "CD-ROM"
 
 [flashcard-review]
 front: "celebrity"
-meaning: "n. a widely known person"
+meaning: "A widely known person"
 translation: "n. 名声, 名人"
 srsWords: "celebrity"
 
 [flashcard-review]
 front: "cell"
-meaning: "n. any small compartment; n. (biology) the basic structural and functional unit of all organisms; they may exist as independent units of life (as in monads) or may form colonies or tissues as in higher plants and animals; n. a device that delivers an electric current as the result of a chemical reaction; n. a small unit serving as part of or as the nucleus of a larger political movement"
-translation: "n. 单元, 细胞, 电池；[计] 单元"
+meaning: "Any small compartment; (biology) the basic structural and functional unit of all organisms"
+translation: "n. 单元, 细胞, 电池 单元"
 srsWords: "cell"
 
 [flashcard-review]
 front: "central"
-meaning: "n. a workplace that serves as a telecommunications facility where lines from telephones can be connected together to permit communication; a. in or near a center or constituting a center; the inner area"
-translation: "a. 中央的, 重要的；[医] 中央的, 中心的, 中枢的"
+meaning: "In or near a center or constituting a center; The inner area"
+translation: "a. 中央的, 重要的 中央的, 中心的, 中枢的"
 srsWords: "central"
 
 ---
@@ -413,61 +413,61 @@ color: "#3F51B5"
 ---
 [flashcard-review]
 front: "ceremony"
-meaning: "n. a formal event performed on a special occasion; n. any activity that is performed in an especially solemn elaborate or formal way; n. the proper or conventional behavior on some solemn occasion"
-translation: "n. 典礼, 仪式, 礼节；[法] 典礼, 仪式"
+meaning: "A formal event performed on a special occasion; Any activity that is performed in an especially solemn elaborate or formal way"
+translation: "n. 典礼, 仪式, 礼节 典礼, 仪式"
 srsWords: "ceremony"
 
 [flashcard-review]
 front: "certainty"
-meaning: "n. the state of being certain; n. something that is certain"
-translation: "n. 确定, 确实的事情；[法] 确定, 肯定, 必然的事"
+meaning: "The state of being certain; Something that is certain"
+translation: "n. 确定, 确实的事情 确定, 肯定, 必然的事"
 srsWords: "certainty"
 
 [flashcard-review]
 front: "challenging"
-meaning: "s. stimulating interest or thought; s. disturbingly provocative"
+meaning: "Stimulating interest or thought; Disturbingly provocative"
 translation: "a. 挑战的, 引起争论的"
 srsWords: "challenging"
 
 [flashcard-review]
 front: "champion"
-meaning: "n. someone who has won first place in a competition; n. someone who fights for a cause; v. protect or fight for as a champion; s. holding first place in a contest"
+meaning: "Someone who has won first place in a competition; Someone who fights for a cause"
 translation: "n. 冠军, 拥护者, 战士；vt. 保卫, 拥护；a. 优胜的"
 srsWords: "champion"
 
 [flashcard-review]
 front: "channel"
-meaning: "n. a path over which electrical signals can pass; n. a passage for water (or other fluids) to flow through; n. a deep and relatively narrow body of water (as in a river or a harbor or a strait linking two larger bodies) that allows the best passage for vessels; n. (often plural) a means of communication or access"
-translation: "n. 海峡, 航道, 频道；vt. 引导, 在...上挖沟, 形成河道；[计] 信道, 通道"
+meaning: "A path over which electrical signals can pass; A passage for water (or other fluids) to flow through"
+translation: "n. 海峡, 航道, 频道；vt. 引导, 在...上挖沟, 形成河道 信道, 通道"
 srsWords: "channel"
 
 [flashcard-review]
 front: "chaos"
-meaning: "n. a state of extreme confusion and disorder; n. the formless and disordered state of matter before the creation of the cosmos; n. (Greek mythology) the most ancient of gods; the personification of the infinity of space preceding creation of the universe; n. (physics) a dynamical system that is extremely sensitive to its initial conditions"
-translation: "n. 大混乱, 混沌；[化] 混沌; 浑沌"
+meaning: "A state of extreme confusion and disorder; The formless and disordered state of matter before the creation of the cosmos"
+translation: "n. 大混乱, 混沌 混沌; 浑沌"
 srsWords: "chaos"
 
 [flashcard-review]
 front: "charge"
-meaning: "n. an impetuous rush toward someone or something; n. (criminal law) a pleading describing some wrong or offense; n. the price charged for some article or service; n. the quantity of unbalanced electricity in a body (either positive or negative) and construed as an excess or deficiency of electrons"
+meaning: "An impetuous rush toward someone or something; (criminal law) a pleading describing some wrong or offense"
 translation: "n. 指控, 费用, 冲锋, 电荷, 炸药, 主管, 被托管人, 命令；vt. 控诉, 加罪于, 使充满, 使充电, 使承担；vi. 冲锋, 要价, 收费"
 srsWords: "charge"
 
 [flashcard-review]
 front: "chariot"
-meaning: "n. a light four-wheel horse-drawn ceremonial carriage; n. a two-wheeled horse-drawn battle vehicle; used in war and races in ancient Egypt and Greece and Rome; v. transport in a chariot; v. ride in a chariot"
+meaning: "A light four-wheel horse-drawn ceremonial carriage; A two-wheeled horse-drawn battle vehicle"
 translation: "n. 二轮战车"
 srsWords: "chariot"
 
 [flashcard-review]
 front: "charity"
-meaning: "n. a foundation created to promote the public good (not for assistance to any particular individuals); n. a kindly and lenient attitude toward people; n. an activity or gift that benefits the public at large; n. an institution set up to provide help to the needy"
-translation: "n. 慈悲, 博爱, 慈善团体, 施舍；[法] 宽大, 宽恕, 慈善机关"
+meaning: "A foundation created to promote the public good (not for assistance to any particular…; A kindly and lenient attitude toward people"
+translation: "n. 慈悲, 博爱, 慈善团体, 施舍 宽大, 宽恕, 慈善机关"
 srsWords: "charity"
 
 [flashcard-review]
 front: "charm"
-meaning: "n. something believed to bring good luck; n. (physics) one of the six flavors of quark; v. control by magic spells, as by practicing witchcraft; v. protect through supernatural powers or charms"
+meaning: "Something believed to bring good luck; (physics) one of the six flavors of quark"
 translation: "n. 吸引力, 魔力, 符咒；vt. 迷住, 使陶醉, 行魔法；vi. 用符咒, 有魅力"
 srsWords: "charm"
 
@@ -479,62 +479,62 @@ color: "#3F51B5"
 ---
 [flashcard-review]
 front: "checkout"
-meaning: "n. the latest time for vacating a hotel room; n. a counter in a supermarket where you pay for your purchases"
-translation: "n. 结帐台；[计] 检验"
+meaning: "The latest time for vacating a hotel room; A counter in a supermarket where you pay for your purchases"
+translation: "n. 结帐台 检验"
 srsWords: "checkout"
 
 [flashcard-review]
 front: "cheerful"
-meaning: "a. being full of or promoting cheer; having or showing good spirits; s. pleasantly (even unrealistically) optimistic"
+meaning: "Being full of or promoting cheer; Pleasantly (even unrealistically) optimistic"
 translation: "a. 快活的, 高兴的, 兴高采烈的"
 srsWords: "cheerful"
 
 [flashcard-review]
 front: "chemist"
-meaning: "n. a scientist who specializes in chemistry"
-translation: "n. 化学家, 药剂师；[化] 化学家; 化学师; 化学工作者; 药剂师; 药房"
+meaning: "A scientist who specializes in chemistry"
+translation: "n. 化学家, 药剂师 化学家; 化学师; 化学工作者; 药剂师; 药房"
 srsWords: "chemist"
 
 [flashcard-review]
 front: "chemistry"
-meaning: "n. the science of matter; the branch of the natural sciences dealing with the composition of substances and their properties and reactions; n. the chemical composition and properties of a substance or object; n. the way two individuals relate to each other"
-translation: "n. 化学, 化学过程；[化] 化学"
+meaning: "The science of matter; The chemical composition and properties of a substance or object"
+translation: "n. 化学, 化学过程 化学"
 srsWords: "chemistry"
 
 [flashcard-review]
 front: "cherish"
-meaning: "v be fond of; be attached to"
+meaning: "V be fond of; Be attached to"
 translation: "vt. 珍爱, 怀有, 爱护"
 srsWords: "cherish"
 
 [flashcard-review]
 front: "choir"
-meaning: "n. a chorus that sings as part of a religious ceremony; n. a family of similar musical instrument playing together; n. the area occupied by singers; the part of the chancel between sanctuary and nave; v. sing in a choir"
+meaning: "A chorus that sings as part of a religious ceremony; A family of similar musical instrument playing together"
 translation: "n. 唱诗班, 唱诗班的席位；v. 合唱"
 srsWords: "choir"
 
 [flashcard-review]
 front: "choke"
-meaning: "n. a coil of low resistance and high inductance used in electrical circuits to pass direct current and attenuate alternating current; n. a valve that controls the flow of air into the carburetor of a gasoline engine; v. breathe with great difficulty, as when experiencing a strong emotion; v. be too tight; rub or press"
+meaning: "Breathe with great difficulty, as when experiencing a strong emotion; Be too tight"
 translation: "vt. 窒息, 阻塞, 噎, 抑制；vi. 窒息, 阻塞, 噎；n. 窒息, 噎, 阻气门"
 srsWords: "choke"
 
 [flashcard-review]
 front: "christian"
-meaning: "n. a religious person who believes Jesus is the Christ and who is a member of a Christian denomination; a. relating to or characteristic of Christianity; a. following the teachings or manifesting the qualities or spirit of Jesus Christ"
+meaning: "Relating to or characteristic of Christianity; Following the teachings or manifesting the qualities or spirit of Jesus Christ"
 translation: "n. 基督徒, 正派人；a. 基督的, 基督教的"
 srsWords: "christian"
 
 [flashcard-review]
 front: "chuckle"
-meaning: "v. laugh quietly or with restraint"
+meaning: "Laugh quietly or with restraint"
 translation: "n. 咯咯的笑声, 轻笑；vi. 咯咯的笑, 咕咕叫"
 srsWords: "chuckle"
 
 [flashcard-review]
 front: "hunting"
-meaning: "n the pursuit and killing or capture of wild animals regarded as a sport; n the activity of looking thoroughly in order to find something or someone; n the work of finding and killing or capturing animals for food or pelts; v pursue for food or sport (as of wild animals); v pursue or chase relentlessly; v chase away, with as with force; v yaw back and forth about a flight path; v oscillate about a desired speed, position, or state to an undesirable extent; v seek, search for; v search (an area) for prey"
-translation: "n. 狩猎, 猎狐, 探求；[计] 寻找平衡; 寻找"
+meaning: "N the pursuit and killing or capture of wild animals regarded as a sport; N the activity of looking thoroughly in order to find something or someone"
+translation: "n. 狩猎, 猎狐, 探求 寻找平衡; 寻找"
 srsWords: "hunting"
 
 ---
@@ -545,62 +545,62 @@ color: "#3F51B5"
 ---
 [flashcard-review]
 front: "circular"
-meaning: "n. an advertisement (usually printed on a page or in a leaflet) intended for wide distribution; s. describing a circle; moving in a circle"
-translation: "a. 圆形的, 循环的, 间接的；[医] 环状的, 循环的"
+meaning: "Describing a circle; An advertisement (usually printed on a page or in a leaflet) intended for wide…"
+translation: "a. 圆形的, 循环的, 间接的 环状的, 循环的"
 srsWords: "circular"
 
 [flashcard-review]
 front: "circus"
-meaning: "n. a travelling company of entertainers; including trained animals; n. a performance given by a traveling company of acrobats, clowns, and trained animals; n. a frenetic disorganized (and often comic) disturbance suggestive of a large public entertainment; n. (antiquity) an open-air stadium for chariot races and gladiatorial games"
+meaning: "A travelling company of entertainers; A performance given by a traveling company of acrobats, clowns, and trained animals"
 translation: "n. 马戏团, 马戏, 竞技场"
 srsWords: "circus"
 
 [flashcard-review]
 front: "citizenship"
-meaning: "n. the status of a citizen with rights and duties; n. conduct as a citizen"
-translation: "n. 国籍, 市民权, 市民的身份；[法] 公民权, 公民资格, 公民身分"
+meaning: "The status of a citizen with rights and duties; Conduct as a citizen"
+translation: "n. 国籍, 市民权, 市民的身份 公民权, 公民资格, 公民身分"
 srsWords: "citizenship"
 
 [flashcard-review]
 front: "division"
-meaning: "n. an army unit large enough to sustain combat; n. the act or process of dividing; n. an administrative unit in government or business; n. discord that splits a group"
-translation: "n. 分, 分开, 除法, 部门(如部、处、系等), 师；[计] 部分"
+meaning: "An army unit large enough to sustain combat; The act or process of dividing"
+translation: "n. 分, 分开, 除法, 部门(如部、处、系等), 师 部分"
 srsWords: "division"
 
 [flashcard-review]
 front: "classical"
-meaning: "a. of or relating to the most highly developed stage of an earlier civilisation and its culture; a. of or relating to the study of the literary works of ancient Greece and Rome; s. (language) having the form used by ancient standard authors; s. of or pertaining to or characteristic of the ancient Greek and Roman cultures"
-translation: "a. 古典的, 正统派的, 经典的；[医] 古典的; 标准的, 典型的"
+meaning: "(language) having the form used by ancient standard authors; Of or pertaining to or characteristic of the ancient Greek and Roman cultures"
+translation: "a. 古典的, 正统派的, 经典的 古典的; 标准的, 典型的"
 srsWords: "classical"
 
 [flashcard-review]
 front: "commission"
-meaning: "n. a fee for services rendered based on a percentage of an amount received or collected or agreed to be paid (as distinguished from a salary); n. the act of granting authority to undertake certain functions; n. the state of being in good working order and ready for operation; n. a formal statement of a command or injunction to do something"
+meaning: "The act of granting authority to undertake certain functions; The state of being in good working order and ready for operation"
 translation: "n. 委任状, 任官令, 所委职责, 佣金, 犯, 委托, 所托之事；vt. 委任, 委托制作, 使服役"
 srsWords: "commission"
 
 [flashcard-review]
 front: "cliff"
-meaning: "n. a steep high face of rock"
+meaning: "A steep high face of rock"
 translation: "n. 悬崖, 绝壁"
 srsWords: "cliff"
 
 [flashcard-review]
 front: "climate"
-meaning: "n. the weather in some location averaged over some long period of time; n. the prevailing psychological state"
-translation: "n. 气候, 社会趋势, 气候区；[医] 气候"
+meaning: "The weather in some location averaged over some long period of time; The prevailing psychological state"
+translation: "n. 气候, 社会趋势, 气候区 气候"
 srsWords: "climate"
 
 [flashcard-review]
 front: "climber"
-meaning: "n. a vine or climbing plant that readily grows up a support or over other plants; n. someone who climbs as a sport; especially someone who climbs mountains"
+meaning: "A vine or climbing plant that readily grows up a support or over other plants; Someone who climbs as a sport"
 translation: "n. 登山者；[电] 登杆器"
 srsWords: "climber"
 
 [flashcard-review]
 front: "clinic"
-meaning: "n. a medical establishment run by a group of medical specialists; n. meeting for diagnosis of problems and instruction or remedial work in a particular activity; n. a healthcare facility for outpatient care"
-translation: "n. 诊所, 临床教学；[医] 诊所(门诊部); 临床(讲解); 临床(学)科"
+meaning: "A medical establishment run by a group of medical specialists; Meeting for diagnosis of problems and instruction or remedial work in a particular…"
+translation: "n. 诊所, 临床教学 诊所(门诊部); 临床(讲解); 临床(学)科"
 srsWords: "clinic"
 
 ---
@@ -611,60 +611,60 @@ color: "#3F51B5"
 ---
 [flashcard-review]
 front: "clip"
-meaning: "n. any of various small fasteners used to hold loose articles together; n. an article of jewelry that can be clipped onto a hat or dress; n. the act of clipping or snipping; n. a sharp slanting blow"
+meaning: "Any of various small fasteners used to hold loose articles together; An article of jewelry that can be clipped onto a hat or dress"
 translation: "n. 修剪, 夹子, 回形针, 剪下来的东西；vt. 修剪, 痛打, 夹牢, 剪报；vi. 剪报"
 srsWords: "clip"
 
 [flashcard-review]
 front: "closely"
-meaning: "r. in a close relation or position in time or space; r. in a close manner"
+meaning: "In a close relation or position in time or space; In a close manner"
 translation: "adv. 接近地"
 srsWords: "closely"
 
 [flashcard-review]
 front: "coal"
-meaning: "n. fossil fuel consisting of carbonized vegetable matter deposited in the Carboniferous period; v. supply with coal; v. take in coal"
+meaning: "Fossil fuel consisting of carbonized vegetable matter deposited in the Carboniferous…; Supply with coal"
 translation: "n. 煤, 木炭；v. 加煤"
 srsWords: "coal"
 
 [flashcard-review]
 front: "coastal"
-meaning: "a. of or relating to a coast; a. located on or near or bordering on a coast"
-translation: "a. 海岸的, 沿海的, 沿岸的；[法] 海岸的, 沿海的"
+meaning: "Located on or near or bordering on a coast"
+translation: "a. 海岸的, 沿海的, 沿岸的 海岸的, 沿海的"
 srsWords: "coastal"
 
 [flashcard-review]
 front: "cod"
-meaning: "n. lean white flesh of important North Atlantic food fish; usually baked or poached; n. major food fish of Arctic and cold-temperate waters"
+meaning: "Lean white flesh of important North Atlantic food fish; Major food fish of Arctic and cold-temperate waters"
 translation: "n. 鳕, 欺骗, 愚弄；v. 欺骗, 愚弄"
 srsWords: "cod"
 
 [flashcard-review]
 front: "coffin"
-meaning: "n. box in which a corpse is buried or cremated; v. place into a coffin"
+meaning: "Box in which a corpse is buried or cremated; Place into a coffin"
 translation: "n. 棺材, 灵柩；vt. 把...装进棺材"
 srsWords: "coffin"
 
 [flashcard-review]
 front: "collar"
-meaning: "n. a band that fits around the neck and is usually folded over; n. (zoology) an encircling band or marking around the neck of any animal; n. anything worn or placed about the neck; n. a short ring fastened over a rod or shaft to limit, guide, or secure a machine part"
+meaning: "A band that fits around the neck and is usually folded over; (zoology) an encircling band or marking around the neck of any animal"
 translation: "n. 衣领, 颈圈；vt. 控制, 扭住衣领, 给...装上领子"
 srsWords: "collar"
 
 [flashcard-review]
 front: "template"
-meaning: "n. a model or standard for making comparisons"
-translation: "n. 样板, 模板, 垫木；[计] 模板"
+meaning: "A model or standard for making comparisons"
+translation: "n. 样板, 模板, 垫木 模板"
 srsWords: "template"
 
 [flashcard-review]
 front: "executive"
-meaning: "n. a person responsible for the administration of a business; n. persons who administer the law; a. having the function of carrying out plans or orders etc."
-translation: "n. 执行部门, 执行委员会, 执行者, 经理主管人员；a. 执行的, 善于执行的, 善于经营的；[计] 执行程序"
+meaning: "A person responsible for the administration of a business; Persons who administer the law"
+translation: "n. 执行部门, 执行委员会, 执行者, 经理主管人员；a. 执行的, 善于执行的, 善于经营的 执行程序"
 srsWords: "executive"
 
 [flashcard-review]
 front: "combination"
-meaning: "n. a collection of things that have been combined; an assemblage of separate parts or qualities; n. a coordinated sequence of chess moves; n. a sequence of numbers or letters that opens a combination lock; n. a group of people (often temporary) having a common purpose"
-translation: "n. 组合, 合并, 联合；[计] 组合图"
+meaning: "A collection of things that have been combined; A coordinated sequence of chess moves"
+translation: "n. 组合, 合并, 联合 组合图"
 srsWords: "combination"
