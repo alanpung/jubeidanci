@@ -168,7 +168,7 @@ export function Translation({
   }, [allAnswers, exercise.answer]);
 
   // The user's answer split into tokens, aligned position-by-position with the
-  // answer words so each hint card can show the user's attempt on its top line.
+  // answer words so each hint card can show the user's attempt above its line.
   const userTokens = useMemo(() => {
     if (!submitted) return [];
     return userInput.trim().split(/\s+/).filter(Boolean);
@@ -338,78 +338,87 @@ export function Translation({
           </button>
         </div>
 
-        {/* Answer box — placed ABOVE the answer hints. Before submitting it is
-            the typing input; after submitting it stays visible (disabled) as the
-            user's answer with an inline match percentage. */}
+        {/* Answer box — placed ABOVE the answer hints. It only exists while
+            typing. Once the answer is submitted the long box is removed (its
+            content is already shown word by word above each answer line) and
+            replaced by a compact result pill. */}
         <div
           className={`w-full max-w-4xl mx-auto px-1 ${
             isKeyboardOpen ? "mb-2" : "mb-4"
           }`}
         >
-          <div
-            ref={inputRowRef}
-            className={`w-full ${
-              isKeyboardOpen ? "sticky bottom-0 z-10 bg-lingo-bg/95 backdrop-blur-sm pt-1 pb-1" : ""
-            }`}
-          >
-            <div className={`min-w-0 w-full ${animClass} relative`}>
-              <input
-                type="text"
-                value={userInput}
-                disabled={submitted}
-                onChange={(e) => setUserInput(e.target.value)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") {
-                    e.preventDefault();
-                    if (!submitted) handleSubmit();
-                  }
-                }}
-                onFocus={() => {
-                  requestAnimationFrame(() => {
-                    promptRef.current?.scrollIntoView({
-                      block: "start",
-                      behavior: "instant" as ScrollBehavior,
+          {!submitted ? (
+            <div
+              ref={inputRowRef}
+              className={`w-full ${
+                isKeyboardOpen ? "sticky bottom-0 z-10 bg-lingo-bg/95 backdrop-blur-sm pt-1 pb-1" : ""
+              }`}
+            >
+              <div className={`min-w-0 w-full ${animClass}`}>
+                <input
+                  type="text"
+                  value={userInput}
+                  onChange={(e) => setUserInput(e.target.value)}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter") {
+                      e.preventDefault();
+                      handleSubmit();
+                    }
+                  }}
+                  onFocus={() => {
+                    requestAnimationFrame(() => {
+                      promptRef.current?.scrollIntoView({
+                        block: "start",
+                        behavior: "instant" as ScrollBehavior,
+                      });
                     });
-                  });
-                }}
-                placeholder="Type your translation…"
-                autoFocus={!submitted}
-                enterKeyHint="done"
-                className={`w-full rounded-2xl border-2 bg-white px-3 sm:px-4 py-2.5 sm:py-3 text-center text-base sm:text-lg font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/60 ${
-                  submitted
-                    ? isCorrect
-                      ? "border-emerald-300 bg-emerald-50/70"
-                      : "border-rose-300 bg-rose-50/70"
-                    : "border-lingo-border focus:border-lingo-blue focus:shadow-[0_0_0_3px_rgba(28,176,246,0.15)]"
+                  }}
+                  placeholder="Type your translation…"
+                  autoFocus
+                  enterKeyHint="done"
+                  className="w-full rounded-2xl border-2 border-lingo-border bg-white px-3 sm:px-4 py-2.5 sm:py-3 text-center text-base sm:text-lg font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/60 focus:border-lingo-blue focus:shadow-[0_0_0_3px_rgba(28,176,246,0.15)]"
+                  aria-label="Your translation"
+                />
+                {!isKeyboardOpen && (
+                  <p className="mt-2 text-center text-[11px] font-medium text-lingo-text-light">
+                    Press Enter to check · 80%+ word match = correct
+                  </p>
+                )}
+              </div>
+            </div>
+          ) : (
+            <div
+              className={`flex items-center justify-center gap-2 ${
+                isKeyboardOpen ? "py-0.5" : "py-1"
+              } ${animClass}`}
+            >
+              <span
+                className={`rounded-full px-2.5 py-1 text-xs font-black tabular-nums text-white shadow-sm ${
+                  isCorrect ? "bg-emerald-500" : "bg-rose-500"
                 }`}
-                aria-label="Your translation"
-              />
-              {submitted && (
-                <div
-                  className={`absolute right-3 top-1/2 -translate-y-1/2 rounded-full px-2.5 py-1 text-xs font-black tabular-nums shadow-sm ${
-                    isCorrect ? "bg-emerald-500 text-white" : "bg-rose-500 text-white"
-                  }`}
-                >
-                  {matchPct}%
-                </div>
-              )}
-              {!isKeyboardOpen && !submitted && (
-                <p className="mt-2 text-center text-[11px] font-medium text-lingo-text-light">
-                  Press Enter to check · 80%+ word match = correct
-                </p>
-              )}
-              {!isKeyboardOpen && submitted && (
-                <p className="mt-2 text-center text-[11px] font-medium text-lingo-text-light">
-                  {isCorrect ? "Correct" : "Not quite"} · Press Enter or → for next
-                </p>
+              >
+                {matchPct}%
+              </span>
+              <span
+                className={`text-xs font-bold ${
+                  isCorrect ? "text-emerald-700" : "text-rose-700"
+                }`}
+              >
+                {isCorrect ? "Correct" : "Not quite"}
+              </span>
+              {!isKeyboardOpen && (
+                <span className="text-[11px] font-medium text-lingo-text-light">
+                  Press Enter or → for next
+                </span>
               )}
             </div>
-          </div>
+          )}
         </div>
 
         {/* Answer hints — revealed BELOW the user's input after submit. Each card
-            shows the user's attempt on its top line, then the actual answer word
-            (green when matched, red when not), the POS hint, meaning and IPA. */}
+            stacks: the user's own word on top, a line under it, then the correct
+            answer word BELOW the line (green when matched, red when not),
+            followed by the POS hint, meaning and IPA. */}
         <div
           className={`w-full max-w-4xl mx-auto px-1 ${
             isKeyboardOpen ? "mb-2" : "mb-4"
@@ -440,10 +449,10 @@ export function Translation({
                       : "px-2 sm:px-2.5 py-1.5 sm:py-2"
                   } ${isKeyboardOpen ? "py-1" : ""}`}
                 >
-                  {/* Top line: the user's typed word for this slot (shown after submit) */}
+                  {/* What the user typed for this slot — same size as the answer */}
                   <span
-                    className={`w-full break-words text-center font-semibold leading-tight ${
-                      isKeyboardOpen ? "text-[11px]" : "text-[11px] sm:text-xs"
+                    className={`w-full break-words text-center font-serif font-bold tracking-tight leading-tight ${
+                      isKeyboardOpen ? "text-xs" : "text-sm sm:text-base md:text-lg"
                     } ${
                       submitted
                         ? userWord
@@ -455,6 +464,17 @@ export function Translation({
                   >
                     {submitted ? (userWord || "—") : "·"}
                   </span>
+                  {/* The line: user input above it, correct answer below it */}
+                  <div
+                    className={`w-full my-1 h-0 border-b-2 ${
+                      submitted
+                        ? wordMatched
+                          ? "border-emerald-300"
+                          : "border-rose-300"
+                        : "border-gray-300"
+                    }`}
+                    aria-hidden="true"
+                  />
                   <span
                     className={`w-full break-words text-center font-serif font-bold tracking-tight leading-tight ${wordColor} ${
                       isKeyboardOpen ? "text-xs" : "text-sm sm:text-base md:text-lg"
