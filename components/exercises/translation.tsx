@@ -63,16 +63,18 @@ export function Translation({
 }: Props) {
   const [analysis, setAnalysis] = useState<SentenceAnalysisData | null>(null);
   const [submitted, setSubmitted] = useState(false);
-  const [userInput, setUserInput] = useState("");
+  // One entry per answer word; the user fills in each box.
+  const [userInputs, setUserInputs] = useState<string[]>([]);
   const [matchResult, setMatchResult] = useState<WordMatchResult | null>(null);
   const isMobile = useIsMobile();
   const isKeyboardOpen = useMobileKeyboardOpen();
   const promptRef = useRef<HTMLDivElement>(null);
-  const inputRowRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     setSubmitted(false);
-    setUserInput("");
+    setUserInputs(
+      exercise.answer.trim().split(/\s+/).filter(Boolean).map(() => ""),
+    );
     setMatchResult(null);
   }, [exercise.sentence, exercise.answer]);
 
@@ -167,13 +169,6 @@ export function Translation({
     return [matched, ...allAnswers.filter((a) => a.toLowerCase() !== primary.toLowerCase())];
   }, [allAnswers, exercise.answer]);
 
-  // The user's answer split into tokens, aligned position-by-position with the
-  // answer words so each hint card can show the user's attempt above its line.
-  const userTokens = useMemo(() => {
-    if (!submitted) return [];
-    return userInput.trim().split(/\s+/).filter(Boolean);
-  }, [submitted, userInput]);
-
   useEffect(() => {
     const toFetch = [exercise.sentence, ...allAnswers].filter(Boolean);
     prefetch(toFetch, language);
@@ -188,29 +183,36 @@ export function Translation({
     };
   }, [exercise.sentence, sentenceLang, autoplayAudio, play, stop, exercise.noAudio]);
 
-  const goNext = useCallback(() => {
-    if (!submitted) {
-      onResult(false, userInput.trim() || "");
-    }
-    onContinue();
-  }, [submitted, onResult, onContinue, userInput]);
+  const setWordInput = useCallback((idx: number, val: string) => {
+    setUserInputs((prev) => {
+      const next = [...prev];
+      next[idx] = val;
+      return next;
+    });
+  }, []);
 
   const handleSubmit = useCallback(() => {
     if (submitted) return;
-    const input = userInput.trim();
-    const result = checkWordMatch(input, allAnswers);
+    const joined = userInputs.join(" ").trim();
+    const result = checkWordMatch(userInputs, allAnswers);
     setMatchResult(result);
     setSubmitted(true);
-    onResult(result.isCorrect, input || exercise.answer);
+    onResult(result.isCorrect, joined || exercise.answer);
     if (!exercise.noAudio?.includes("answer")) {
       play(exercise.answer, "en");
     }
-  }, [submitted, userInput, allAnswers, onResult, exercise.answer, exercise.noAudio, play]);
+  }, [submitted, userInputs, allAnswers, onResult, exercise.answer, exercise.noAudio, play]);
 
-  // Swipe-left mirrors the Enter key: the first swipe submits the answer
-  // (showing feedback, even if empty); a second swipe then advances. This
-  // keeps mobile swipe in step with the keyboard flow instead of skipping the
-  // feedback and jumping straight to the next question.
+  // First press submits (reveals per-box colour feedback); second press advances.
+  const goNext = useCallback(() => {
+    if (!submitted) {
+      handleSubmit();
+      return;
+    }
+    onContinue();
+  }, [submitted, handleSubmit, onContinue]);
+
+  // Swipe-left mirrors the Enter key: first swipe submits, second advances.
   const handleSwipeLeft = useCallback(() => {
     if (!submitted) {
       handleSubmit();
@@ -338,54 +340,16 @@ export function Translation({
           </button>
         </div>
 
-        {/* Answer box — placed ABOVE the answer hints. It only exists while
-            typing. Once the answer is submitted the long box is removed (its
-            content is already shown word by word above each answer line) and
-            replaced by a compact result pill. */}
+        {/* Helper / result strip above the word boxes */}
         <div
           className={`w-full max-w-4xl mx-auto px-1 ${
             isKeyboardOpen ? "mb-2" : "mb-4"
           }`}
         >
           {!submitted ? (
-            <div
-              ref={inputRowRef}
-              className={`w-full ${
-                isKeyboardOpen ? "sticky bottom-0 z-10 bg-lingo-bg/95 backdrop-blur-sm pt-1 pb-1" : ""
-              }`}
-            >
-              <div className={`min-w-0 w-full ${animClass}`}>
-                <input
-                  type="text"
-                  value={userInput}
-                  onChange={(e) => setUserInput(e.target.value)}
-                  onKeyDown={(e) => {
-                    if (e.key === "Enter") {
-                      e.preventDefault();
-                      handleSubmit();
-                    }
-                  }}
-                  onFocus={() => {
-                    requestAnimationFrame(() => {
-                      promptRef.current?.scrollIntoView({
-                        block: "start",
-                        behavior: "instant" as ScrollBehavior,
-                      });
-                    });
-                  }}
-                  placeholder="Type your translation…"
-                  autoFocus
-                  enterKeyHint="done"
-                  className="w-full rounded-2xl border-2 border-lingo-border bg-white px-3 sm:px-4 py-2.5 sm:py-3 text-center text-base sm:text-lg font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/60 focus:border-lingo-blue focus:shadow-[0_0_0_3px_rgba(28,176,246,0.15)]"
-                  aria-label="Your translation"
-                />
-                {!isKeyboardOpen && (
-                  <p className="mt-2 text-center text-[11px] font-medium text-lingo-text-light">
-                    Press Enter to check · 80%+ word match = correct
-                  </p>
-                )}
-              </div>
-            </div>
+            <p className="text-center text-[11px] font-medium text-lingo-text-light">
+              Type each word, then press Enter to check · 80%+ word match = correct
+            </p>
           ) : (
             <div
               className={`flex items-center justify-center gap-2 ${
@@ -415,10 +379,9 @@ export function Translation({
           )}
         </div>
 
-        {/* Answer hints — revealed BELOW the user's input after submit. Each card
-            stacks: the user's own word on top, a line under it, then the correct
-            answer word BELOW the line (green when matched, red when not),
-            followed by the POS hint, meaning and IPA. */}
+        {/* Word boxes ABOVE each hint. The user types one word per box; after
+            submitting, each box turns green (matched) or red (not matched) and
+            the correct answer word is revealed below it. */}
         <div
           className={`w-full max-w-4xl mx-auto px-1 ${
             isKeyboardOpen ? "mb-2" : "mb-4"
@@ -434,50 +397,49 @@ export function Translation({
                 : wordMatched
                   ? "bg-emerald-50"
                   : "bg-rose-50";
-              const wordColor = !submitted
-                ? "text-transparent select-none"
-                : wordMatched
-                  ? "text-emerald-700"
-                  : "text-rose-700";
-              const userWord = submitted ? userTokens[idx] ?? "" : "";
               return (
                 <div
                   key={idx}
-                  className={`rounded-xl flex flex-col items-center justify-center min-w-0 ${bgClass} ${
+                  className={`rounded-xl flex flex-col items-center justify-center min-w-[3.25rem] sm:min-w-[4rem] ${bgClass} ${
                     isMobile
                       ? "px-1.5 py-1"
                       : "px-2 sm:px-2.5 py-1.5 sm:py-2"
                   } ${isKeyboardOpen ? "py-1" : ""}`}
                 >
-                  {/* What the user typed for this slot — same size as the answer */}
-                  <span
-                    className={`w-full break-words text-center font-serif font-bold tracking-tight leading-tight ${
-                      isKeyboardOpen ? "text-xs" : "text-sm sm:text-base md:text-lg"
-                    } ${
-                      submitted
-                        ? userWord
-                          ? "text-gray-500"
-                          : "text-gray-300"
-                        : "text-transparent select-none"
-                    }`}
-                    aria-hidden={!submitted}
-                  >
-                    {submitted ? (userWord || "—") : "·"}
-                  </span>
-                  {/* The line: user input above it, correct answer below it */}
-                  <div
-                    className={`w-full my-1 h-0 border-b-2 ${
+                  <input
+                    type="text"
+                    value={userInputs[idx] ?? ""}
+                    disabled={submitted}
+                    onChange={(e) => setWordInput(idx, e.target.value)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter") {
+                        e.preventDefault();
+                        handleSubmit();
+                      }
+                    }}
+                    onFocus={() => {
+                      requestAnimationFrame(() => {
+                        promptRef.current?.scrollIntoView({
+                          block: "start",
+                          behavior: "instant" as ScrollBehavior,
+                        });
+                      });
+                    }}
+                    placeholder="…"
+                    autoFocus={!submitted && idx === 0}
+                    enterKeyHint="done"
+                    className={`w-full rounded-lg border-2 bg-white px-1.5 py-1.5 text-center text-sm sm:text-base font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/50 ${
                       submitted
                         ? wordMatched
-                          ? "border-emerald-300"
-                          : "border-rose-300"
-                        : "border-gray-300"
+                          ? "border-emerald-400 bg-emerald-50 text-emerald-700"
+                          : "border-rose-400 bg-rose-50 text-rose-700"
+                        : "border-lingo-border focus:border-lingo-blue focus:shadow-[0_0_0_3px_rgba(28,176,246,0.15)]"
                     }`}
-                    aria-hidden="true"
+                    aria-label={`Word ${idx + 1}`}
                   />
                   <span
-                    className={`w-full break-words text-center font-serif font-bold tracking-tight leading-tight ${wordColor} ${
-                      isKeyboardOpen ? "text-xs" : "text-sm sm:text-base md:text-lg"
+                    className={`mt-1.5 w-full break-words text-center font-serif font-bold tracking-tight leading-tight text-sm sm:text-base md:text-lg ${
+                      submitted ? "text-gray-800" : "text-transparent select-none"
                     }`}
                     title={submitted ? item.word : undefined}
                     aria-hidden={!submitted}
