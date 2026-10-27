@@ -5,7 +5,6 @@ import { Volume2, ChevronLeft, ChevronRight } from "lucide-react";
 import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
-import { useIsMobile } from "@/hooks/use-media-query";
 import { useMobileKeyboardOpen } from "@/hooks/use-mobile-keyboard-open";
 import {
   generateAlternativeTranslations,
@@ -169,6 +168,18 @@ export function Translation({
     if (!matched) return allAnswers;
     return [matched, ...allAnswers.filter((a) => a.toLowerCase() !== primary.toLowerCase())];
   }, [allAnswers, exercise.answer]);
+
+  // Each input box is sized to the length of the word it expects, so short
+  // words get a narrow box and long words a wide one. Measured in "ch"
+  // (width of the "0" glyph) so it scales with the responsive font size.
+  const boxWidths = useMemo(() => {
+    return analyzedWordList.map((item) => {
+      const cleanLen = item.word
+        .replace(/^[.,!?;:"'()[\]{}]+|[.,!?;:"'()[\]{}]+$/g, "")
+        .length;
+      return Math.max(3.5, Math.min(16, cleanLen + 1.6));
+    });
+  }, [analyzedWordList]);
 
   useEffect(() => {
     const toFetch = [exercise.sentence, ...allAnswers].filter(Boolean);
@@ -385,35 +396,54 @@ export function Translation({
           )}
         </div>
 
-        {/* Compact per-word boxes. One small input per answer word, laid out
-            in a single wrapping row (1–2 rows for longer sentences). The user
-            presses Space to jump to the next box, Enter to check. After
-            submitting, each box turns green (matched) or red (not matched) and
-            the correct word is shown directly beneath it. Per-word hints
-            (meaning / IPA / POS) live in the tooltip to keep boxes narrow. */}
+        {/* Compact per-word boxes. One input per answer word, sized to the
+            length of the word it expects (short word → narrow box, long word
+            → wide box), laid out in a single wrapping row (1–2 rows). The POS
+            tag is always visible above the box as a hint; Space jumps to the
+            next box, Enter checks. After submitting, each box turns green
+            (matched) or red (not matched) and the correct word, Chinese
+            meaning and IPA are revealed beneath it. */}
         <div
           className={`w-full max-w-4xl mx-auto px-1 ${
             isKeyboardOpen ? "mb-2" : "mb-4"
           }`}
         >
           <div
-            className="flex flex-wrap items-end justify-center gap-1.5 sm:gap-2"
+            className="flex flex-wrap items-start justify-center gap-x-1.5 gap-y-3 sm:gap-x-2"
           >
             {analyzedWordList.map((item, idx) => {
               const wordMatched = submitted ? matchedIndices[idx] === true : false;
               const lastBox = idx === analyzedWordList.length - 1;
+              const posStyle = item.grammarTag
+                ? POS_BADGE_STYLES[item.grammarTag]
+                : null;
               return (
                 <div
                   key={idx}
                   className="flex flex-col items-center"
+                  style={{ minWidth: "3.5rem" }}
                   title={
-                    submitted
-                      ? [item.meaning, item.ipa, item.grammarTag]
-                          .filter(Boolean)
-                          .join("  ·  ")
-                      : undefined
+                    [item.meaning, item.ipa, item.grammarTag]
+                      .filter(Boolean)
+                      .join("  ·  ") || undefined
                   }
                 >
+                  {/* POS tag — always visible. Muted grey while answering
+                      (it is the hint), full colour once revealed. */}
+                  {item.grammarTag ? (
+                    <span
+                      className={`mb-1 whitespace-nowrap rounded-full border px-1.5 py-0.5 text-[9px] sm:text-[10px] font-bold tracking-wide ${
+                        submitted && posStyle
+                          ? `${posStyle.bg} ${posStyle.text} ${posStyle.border}`
+                          : "bg-gray-100 text-gray-500 border-gray-200"
+                      }`}
+                    >
+                      {item.grammarTag}
+                    </span>
+                  ) : (
+                    <span className="mb-1 h-[1.35rem]" aria-hidden="true" />
+                  )}
+
                   <input
                     ref={(el) => {
                       inputRefs.current[idx] = el;
@@ -445,7 +475,8 @@ export function Translation({
                     autoFocus={!submitted && idx === 0}
                     enterKeyHint="done"
                     inputMode="text"
-                    className={`w-12 sm:w-16 rounded-lg border-2 bg-white px-1 py-1.5 text-center text-sm sm:text-base font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/50 ${
+                    style={{ width: `${boxWidths[idx]}ch` }}
+                    className={`rounded-lg border-2 bg-white px-1 py-1.5 text-center text-sm sm:text-base font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/50 ${
                       submitted
                         ? wordMatched
                           ? "border-emerald-400 bg-emerald-50 text-emerald-700"
@@ -454,16 +485,29 @@ export function Translation({
                     }`}
                     aria-label={`Word ${idx + 1}`}
                   />
+
                   {submitted ? (
-                    <span
-                      className={`mt-1 text-[11px] sm:text-xs font-bold leading-tight text-center ${
-                        wordMatched ? "text-emerald-700" : "text-rose-700"
-                      }`}
-                    >
-                      {item.word}
-                    </span>
+                    <div className="mt-1 flex flex-col items-center leading-tight">
+                      <span
+                        className={`text-xs sm:text-sm font-serif font-bold tracking-tight ${
+                          wordMatched ? "text-emerald-700" : "text-rose-700"
+                        }`}
+                      >
+                        {item.word}
+                      </span>
+                      {item.meaning && (
+                        <span className="text-[10px] sm:text-[11px] font-semibold text-gray-800 whitespace-nowrap">
+                          {item.meaning}
+                        </span>
+                      )}
+                      {item.ipa && (
+                        <span className="text-[9px] sm:text-[10px] font-mono text-gray-500 whitespace-nowrap">
+                          {item.ipa}
+                        </span>
+                      )}
+                    </div>
                   ) : (
-                    <span className="mt-1 h-3 sm:h-3.5" aria-hidden="true" />
+                    <span className="mt-1 h-[2.1rem]" aria-hidden="true" />
                   )}
                 </div>
               );
