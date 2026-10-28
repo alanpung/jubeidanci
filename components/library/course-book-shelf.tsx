@@ -218,37 +218,43 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
 
   return (
     <div>
-      {/* My Books — the reader's own picks, capped at MY_BOOKS_CAP */}
-      <section>
-        <div className="mb-4 flex items-center justify-center gap-2">
-          <h2 className="text-base font-bold text-lingo-text">My Books</h2>
-          <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
-            {borrowed.length}/{MY_BOOKS_CAP}
-          </span>
-        </div>
-
-        {borrowed.length === 0 ? (
-          <p className="rounded-xl border-2 border-dashed border-lingo-border bg-white p-4 text-center text-sm text-lingo-text-light">
-            No books yet. Open a folder under{" "}
-            <span className="font-black">Library</span> below and tap the{" "}
-            <span className="font-black text-lingo-blue">+</span> on any book
-            to add it here.
-          </p>
-        ) : (
-          <div className={COVER_GRID}>
-            {borrowed.map((c) => (
-              <CourseBook
-                key={c.id}
-                course={c}
-                isBorrowed
-                pending={pendingId === c.id}
-                onBorrow={() => borrow(c)}
-                onRemove={() => unborrow(c)}
-              />
-            ))}
+      {/* My Books — the reader's own picks, capped at MY_BOOKS_CAP.
+          The owner sees no "My Books" heading: every course and unit they
+          create is assigned to them automatically and already counted under
+          "My Words" on the Progress page, so a second shelf of their own
+          material would just repeat it. */}
+      {!isAdmin && (
+        <section>
+          <div className="mb-4 flex items-center justify-center gap-2">
+            <h2 className="text-base font-bold text-lingo-text">My Books</h2>
+            <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
+              {borrowed.length}/{MY_BOOKS_CAP}
+            </span>
           </div>
-        )}
-      </section>
+
+          {borrowed.length === 0 ? (
+            <p className="rounded-xl border-2 border-dashed border-lingo-border bg-white p-4 text-center text-sm text-lingo-text-light">
+              No books yet. Open a folder under{" "}
+              <span className="font-black">Library</span> below and tap the{" "}
+              <span className="font-black text-lingo-blue">+</span> on any book
+              to add it here.
+            </p>
+          ) : (
+            <div className={COVER_GRID}>
+              {borrowed.map((c) => (
+                <CourseBook
+                  key={c.id}
+                  course={c}
+                  isBorrowed
+                  pending={pendingId === c.id}
+                  onBorrow={() => borrow(c)}
+                  onRemove={() => unborrow(c)}
+                />
+              ))}
+            </div>
+          )}
+        </section>
+      )}
 
       {/* Library — folders grouped by exercise Type (default) or CEFR Level,
           right below My Books. Tapping one opens the small browser window (no
@@ -259,6 +265,8 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
         activeKey={activeKey}
         onOpenKey={(key) => setActiveKey((cur) => (cur === key ? null : key))}
         standaloneCount={units.length}
+        showTitle={!isAdmin}
+        isAdmin={isAdmin}
       >
         {activeKey && (
           <TypeBrowserWindow
@@ -267,6 +275,7 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
             pendingId={pendingId}
             pendingUnitId={pendingUnitId}
             onClose={() => setActiveKey(null)}
+            inline={isAdmin}
           />
         )}
       </LibraryFolders>
@@ -276,23 +285,29 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
 
 /** The browser window opened from a Library folder.
  *
- *  It always layers *over* the folder grid (absolute, exactly the grid's own
- *  box) so the reader browses in place of the folders instead of pushing them
- *  off-screen or dropping below them. Every entry is a cover — the same filled
- *  tile used on My Books — so the window reads as a tray of the same objects
- *  the folders represent. */
+ *  Student: it layers *over* the folder grid (absolute, exactly the grid's
+ *  own box) so the reader browses in place of the folders instead of pushing
+ *  them off-screen or dropping below them.
+ *  Owner:   it is a normal block that sits BELOW the folders — the owner has
+ *  room underneath and still wants to see which folder is open.
+ *
+ *  Every entry is a cover — the same filled tile used on My Books — so the
+ *  window reads as a tray of the same objects the folders represent. */
 function TypeBrowserWindow({
   title,
   entries,
   pendingId,
   pendingUnitId,
   onClose,
+  inline = false,
 }: {
   title: string;
   entries: BrowseEntry[];
   pendingId: string | null;
   pendingUnitId: string | null;
   onClose: () => void;
+  /** Owner mode: render in normal flow below the folders. */
+  inline?: boolean;
 }) {
   // Escape closes the window. The page scroll stays live on purpose — the
   // window is a bounded panel, and locking the body would only trap the
@@ -307,7 +322,9 @@ function TypeBrowserWindow({
 
   return (
     <div
-      className="absolute inset-0 z-30 flex flex-col overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-bg shadow-2xl"
+      className={`flex flex-col overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-bg shadow-2xl ${
+        inline ? "relative z-30 max-h-[70vh]" : "absolute inset-0 z-30"
+      }`}
       role="dialog"
       aria-modal="false"
       aria-label={`${title} courses`}

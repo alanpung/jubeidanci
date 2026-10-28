@@ -66,6 +66,13 @@ interface LibraryFoldersProps {
   standaloneCount: number;
   /** The browser window, rendered inside the Library section. */
   children?: ReactNode;
+  /** Show the "Library" heading. The owner hides it — their material is
+   *  already counted under "My Words", so a second label adds nothing. */
+  showTitle?: boolean;
+  /** Owner mode: the browser window drops BELOW the folder grid instead of
+   *  covering it. The owner has plenty of room underneath and still wants to
+   *  see which folder they are browsing. */
+  isAdmin?: boolean;
 }
 
 export function LibraryFolders({
@@ -74,6 +81,8 @@ export function LibraryFolders({
   activeKey,
   onOpenKey,
   children,
+  showTitle = true,
+  isAdmin = false,
 }: LibraryFoldersProps) {
   const typeFolders: FolderItem[] = FOLDER_ORDER.map((id) => {
     const found = QUESTION_TYPE_LEGEND.find((f) => f.id === id);
@@ -100,12 +109,13 @@ export function LibraryFolders({
   const standaloneActive = activeKey === STANDALONE_KEY;
 
   return (
-    <section className="mt-8">
-      <div className="mb-4 grid grid-cols-[1fr_auto_1fr] items-center gap-2">
-        <h2 className="col-start-2 text-base font-bold text-lingo-text">Library</h2>
-
+    <section className={showTitle ? "mt-8" : "mt-2"}>
+      {/* The grouping toggle sits on the LEFT and the section title follows
+          it. When the title is hidden (owner) the toggle simply leads the
+          row. */}
+      <div className="mb-4 flex flex-wrap items-center gap-2">
         {/* Two-button grouping toggle. Default = By Type. */}
-        <div className="col-start-3 flex shrink-0 justify-self-end rounded-xl border-2 border-lingo-border bg-white p-0.5 text-xs font-bold">
+        <div className="flex shrink-0 rounded-xl border-2 border-lingo-border bg-white p-0.5 text-xs font-bold">
           {(["level", "type"] as GroupBy[]).map((g) => {
             const active = groupBy === g;
             return (
@@ -125,10 +135,15 @@ export function LibraryFolders({
             );
           })}
         </div>
+
+        {showTitle && (
+          <h2 className="text-base font-bold text-lingo-text">Library</h2>
+        )}
       </div>
 
       {/* relative: the browser window is absolutely positioned over this box
-          (covering the folders from the top) on every screen size. */}
+          (covering the folders from the top) for students. The owner renders
+          it below the grid instead, so it is a plain block there. */}
       <div className="relative">
         <div className={gridClass}>
           {folders.map((f) => {
@@ -201,10 +216,16 @@ export function LibraryFolders({
           </button>
         </div>
 
-        {/* The browser window. It layers over the folders above on every screen
-            size (absolute inset-0), so it never settles underneath them. */}
-        {children}
+        {/* The browser window.
+            Student: rendered inside this relative box, so its absolute
+            inset-0 covers the folder grid exactly (it replaces the folders
+            rather than pushing them down).
+            Owner:    rendered after this box, in normal flow, so it drops
+            BELOW the folders instead of hiding them. */}
+        {!isAdmin && children}
       </div>
+
+      {isAdmin && <div className="mt-4">{children}</div>}
     </section>
   );
 }

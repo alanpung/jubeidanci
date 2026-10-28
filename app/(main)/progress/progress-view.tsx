@@ -112,6 +112,8 @@ export function ProgressView({
         learned: number;
         new: number;
         myWords: number;
+        /** Dictionary words not yet in the learner's deck (owner only). */
+        dict: number;
       }
     > = {};
 
@@ -124,6 +126,7 @@ export function ProgressView({
         learned: 0,
         new: 0,
         myWords: 0,
+        dict: 0,
       };
     });
 
@@ -143,6 +146,11 @@ export function ProgressView({
 
     CEFR_LEVELS.forEach((lvl) => {
       stats[lvl].myWords = stats[lvl].learned + stats[lvl].learning + stats[lvl].new;
+      // What is left of the level's dictionary once the learner's own words
+      // are taken out. Never negative: a level can hold more cards than the
+      // dictionary lists (e.g. a locally-seeded course), and a negative
+      // "remaining" would be nonsense.
+      stats[lvl].dict = Math.max(0, stats[lvl].wordCount - stats[lvl].myWords);
     });
 
     return stats;
@@ -167,6 +175,12 @@ export function ProgressView({
   const totalWordCount = useMemo(() => {
     return Object.values(levelDictionaryCounts).reduce((acc, curr) => acc + curr, 0);
   }, [levelDictionaryCounts]);
+
+  // Dictionary words the owner has not taken on yet: the whole dictionary
+  // minus the words already in their deck.
+  const totalDict = useMemo(() => {
+    return Object.values(levelStats).reduce((acc, curr) => acc + curr.dict, 0);
+  }, [levelStats]);
 
   return (
     <div className="w-full space-y-4 sm:space-y-6">
@@ -305,12 +319,13 @@ export function ProgressView({
               <table className="w-full text-left text-xs sm:text-sm table-fixed">
                 {isAdmin ? (
                   <colgroup>
-                    <col className="w-[16%]" />
-                    <col className="w-[17%]" />
-                    <col className="w-[17%]" />
-                    <col className="w-[17%]" />
-                    <col className="w-[16%]" />
-                    <col className="w-[17%]" />
+                    <col className="w-[14%]" />
+                    <col className="w-[15%]" />
+                    <col className="w-[15%]" />
+                    <col className="w-[14%]" />
+                    <col className="w-[14%]" />
+                    <col className="w-[14%]" />
+                    <col className="w-[14%]" />
                   </colgroup>
                 ) : (
                   <colgroup>
@@ -356,10 +371,21 @@ export function ProgressView({
                       </span>
                     </th>
                     {isAdmin && (
-                      <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-lingo-text-light">
-                        <span className="hidden sm:inline">Word Count</span>
-                        <span className="sm:hidden text-[10px]">Total</span>
-                      </th>
+                      <>
+                        <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-lingo-text-light">
+                          <span className="hidden sm:inline">Dict</span>
+                          <span
+                            className="sm:hidden inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-400 text-white font-black text-[11px] shadow-xs"
+                            title="Dictionary (D)"
+                          >
+                            D
+                          </span>
+                        </th>
+                        <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-lingo-text-light">
+                          <span className="hidden sm:inline">Word Count</span>
+                          <span className="sm:hidden text-[10px]">Total</span>
+                        </th>
+                      </>
                     )}
                   </tr>
                 </thead>
@@ -408,6 +434,12 @@ export function ProgressView({
                         <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
                           {stat.new.toLocaleString()}
                         </td>
+                        {/* Dict — dictionary words still untaken (owner only) */}
+                        {isAdmin && (
+                          <td className="py-2.5 px-2 text-center font-bold text-slate-600 text-xs sm:text-sm whitespace-nowrap">
+                            {stat.dict.toLocaleString()}
+                          </td>
+                        )}
                         {/* Word Count — owner only */}
                         {isAdmin && (
                           <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light/80 text-xs sm:text-sm whitespace-nowrap">
@@ -436,6 +468,11 @@ export function ProgressView({
                     <td className="py-3 px-2 text-center font-black text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
                       {totalNew.toLocaleString()}
                     </td>
+                    {isAdmin && (
+                      <td className="py-3 px-2 text-center font-black text-slate-600 text-xs sm:text-sm whitespace-nowrap">
+                        {totalDict.toLocaleString()}
+                      </td>
+                    )}
                     {isAdmin && (
                       <td className="py-3 px-2 text-center font-black text-lingo-text-light/90 text-xs sm:text-sm whitespace-nowrap">
                         {totalWordCount.toLocaleString()}

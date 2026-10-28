@@ -489,8 +489,14 @@ export function Translation({
             isKeyboardOpen ? "mb-2" : "mb-4"
           }`}
         >
+          {/* Desktop: the answer row is rendered ~25% larger so the words are
+              easy to read and type on a big screen (16px -> 20px for the
+              input, 14px -> 18px for the revealed word). Mobile keeps its
+              current, more compact sizes.
+              The vertical gap between wrapped rows is tighter on mobile
+              (gap-y-3 -> gap-y-1.5) so more of the sentence fits on a phone. */}
           <div
-            className="relative flex flex-wrap items-start justify-center gap-x-1.5 gap-y-3 sm:gap-x-2"
+            className="relative flex flex-wrap items-start justify-center gap-x-1.5 gap-y-1.5 sm:gap-x-2 sm:gap-y-3"
           >
             {/* Off-screen probe used to measure the true pixel width of each
                 answer word in the real font. Same classes as the inputs so the
@@ -498,7 +504,7 @@ export function Translation({
             <span
               ref={measureRef}
               aria-hidden="true"
-              className="pointer-events-none invisible absolute whitespace-nowrap text-sm sm:text-base font-semibold"
+              className="pointer-events-none invisible absolute whitespace-nowrap text-sm sm:text-xl font-semibold"
             />
             {analyzedWordList.map((item, idx) => {
               const boxState: SlotState | null = submitted ? slots[idx] ?? null : null;
@@ -521,7 +527,7 @@ export function Translation({
                       part-of-speech hint reads at a glance while answering. */}
                   {item.grammarTag ? (
                     <span
-                      className={`mb-1 whitespace-nowrap rounded-full border px-1.5 py-0.5 text-[9px] sm:text-[10px] font-bold tracking-wide ${
+                      className={`mb-1 whitespace-nowrap rounded-full border px-1.5 py-0.5 text-[9px] sm:text-[12px] font-bold tracking-wide ${
                         posStyle
                           ? `${posStyle.bg} ${posStyle.text} ${posStyle.border}`
                           : "bg-gray-100 text-gray-500 border-gray-200"
@@ -583,7 +589,7 @@ export function Translation({
                           : `${boxWidths[idx]}ch`,
                       minWidth: "3rem",
                     }}
-                    className={`rounded-lg border-2 bg-white px-1 py-1.5 text-center text-sm sm:text-base font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/50 ${
+                    className={`rounded-lg border-2 bg-white px-1 py-1.5 text-center text-sm sm:text-xl font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/50 ${
                       boxState
                         ? SLOT_BOX_CLASS[boxState]
                         : "border-lingo-border focus:border-lingo-blue focus:shadow-[0_0_0_3px_rgba(28,176,246,0.15)]"
@@ -594,25 +600,29 @@ export function Translation({
                   {submitted ? (
                     <div className="mt-1 flex flex-col items-center leading-tight">
                       <span
-                        className={`text-xs sm:text-sm font-serif font-bold tracking-tight ${
+                        className={`text-xs sm:text-lg font-serif font-bold tracking-tight ${
                           boxState ? SLOT_WORD_CLASS[boxState] : "text-lingo-text"
                         }`}
                       >
                         {item.word}
                       </span>
                       {item.meaning && (
-                        <span className="text-[10px] sm:text-[11px] font-semibold text-gray-800 whitespace-nowrap">
+                        <span className="text-[10px] sm:text-[14px] font-semibold text-gray-800 whitespace-nowrap">
                           {item.meaning}
                         </span>
                       )}
                       {item.ipa && (
-                        <span className="text-[9px] sm:text-[10px] font-mono text-gray-500 whitespace-nowrap">
+                        <span className="text-[9px] sm:text-[13px] font-mono text-gray-500 whitespace-nowrap">
                           {item.ipa}
                         </span>
                       )}
                     </div>
                   ) : (
-                    <span className="mt-1 h-[2.1rem]" aria-hidden="true" />
+                    // Reserves the height the revealed word + meaning + IPA
+                    // will occupy once the answer is checked, so the layout
+                    // does not jump. Taller on desktop, where the revealed
+                    // text is rendered larger.
+                    <span className="mt-1 h-[2.1rem] sm:h-[3.6rem]" aria-hidden="true" />
                   )}
                 </div>
               );
@@ -628,7 +638,7 @@ export function Translation({
                 ALTERNATIVE ANSWERS:
               </span>
               {orderedAnswers.slice(1).map((alt, aIdx) => (
-                <div key={aIdx} className="text-sm sm:text-base font-bold text-blue-700">
+                <div key={aIdx} className="text-sm sm:text-xl font-bold text-blue-700">
                   {alt}
                 </div>
               ))}
