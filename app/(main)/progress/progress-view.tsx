@@ -453,7 +453,7 @@ export function ProgressView({
             newCount={totalNew}
             learningCount={totalLearning}
             masteredCount={totalLearned}
-            showDictionary={isAdmin}
+            showDictionaryLegend={isAdmin}
           />
         </div>
       )}
