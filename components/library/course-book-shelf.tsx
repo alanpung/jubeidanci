@@ -25,11 +25,13 @@ import {
   AddRemoveButton,
   VisibilityBadge,
   CoverEditButton,
+  EditTitleButton,
 } from "@/components/library/book-parts";
 
 /** A student may keep at most this many courses on the top ("My Books")
  *  shelf. The grid matches the Library folders exactly (2-up on phones, 4-up
- *  from `min-[480px]`), so the cap of eight fills exactly two tidy rows. */
+ *  from `min-[480px]`), so the cap of eight fills exactly two tidy rows.
+ *  The owner is exempt: every course they create is theirs already. */
 const MY_BOOKS_CAP = 8;
 
 /** Shared grid geometry for *every* cover on the page — My Books, the
@@ -51,6 +53,10 @@ interface BrowseEntry {
   typeId: string | null;
   /** The course behind this entry, when there is one (owner toggle). */
   course?: CourseListItem;
+  /** The viewer CREATED this entry — so it is automatically theirs: no +/×
+   *  toggle, no shelf cap. */
+  ownsIt: boolean;
+  /** The viewer may manage this entry (creator, or the site owner). */
   isOwner: boolean;
   isInLibrary: boolean;
   /** Whether the +/× control is meaningful for this entry. */
@@ -86,10 +92,17 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     setActiveKey(null);
   }
 
-  // Cap the shelf at MY_BOOKS_CAP so the top row never overflows its grid.
-  const borrowed = courses
-    .filter((c) => borrowedIds.has(c.id))
+  // The owner's own books are already theirs — they are always on the shelf
+  // and never take a slot from the 8-book cap (which only limits books the
+  // owner *chooses* to keep). Everyone else's shelf is capped as before.
+  const ownedIds = new Set(
+    courses.filter((c) => c.isOwner).map((c) => c.id),
+  );
+  const borrowedOwn = courses.filter((c) => ownedIds.has(c.id));
+  const borrowedOther = courses
+    .filter((c) => !ownedIds.has(c.id) && borrowedIds.has(c.id))
     .slice(0, MY_BOOKS_CAP);
+  const borrowed = [...borrowedOwn, ...borrowedOther];
 
   // Exercise type lives in the cover, not in a column, so derive it the same
   // way CourseCover does — otherwise the folder and the cover could disagree
@@ -104,8 +117,11 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     level: c.level,
     typeId: normalizeQuestionType(`${c.title} ${c.id}`)?.id ?? null,
     course: c,
+    ownsIt: !!c.isOwner,
     isOwner: !!c.isOwner || isAdmin,
-    isInLibrary: borrowedIds.has(c.id),
+    // A course you created is already yours — no + needed, and its cover
+    // stays openable even if you never enrolled in it.
+    isInLibrary: borrowedIds.has(c.id) || !!c.isOwner,
     showToggle: true,
     href: `/library/${c.id}`,
     onAdd: () => borrow(c),
@@ -120,9 +136,10 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     title: u.title,
     level: u.level,
     typeId: "mix",
+    ownsIt: !!u.isOwner,
     isOwner: !!u.isOwner,
-    isInLibrary: !!u.isInLibrary,
     // Your own unit is already yours — there is nothing to add to a shelf.
+    isInLibrary: !!u.isInLibrary || !!u.isOwner,
     showToggle: !u.isOwner,
     href: `/unit/${u.id}`,
     onAdd: () => addUnit(u.id),
@@ -141,7 +158,9 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
         : courseEntries.filter((e) => typeLabelOf(e.course!) === activeKey);
 
   function borrow(course: CourseListItem) {
-    if (borrowedIds.size >= MY_BOOKS_CAP) {
+    // The owner is exempt: their own books are already theirs, so they never
+    // occupy a slot and the shelf cap cannot apply to them.
+    if (!course.isOwner && borrowedIds.size >= MY_BOOKS_CAP) {
       alert(`You can keep at most ${MY_BOOKS_CAP} books. Remove one first.`);
       return;
     }
@@ -228,7 +247,9 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
           <div className="mb-4 flex items-center justify-center gap-2">
             <h2 className="text-base font-bold text-lingo-text">My Books</h2>
             <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
-              {borrowed.length}/{MY_BOOKS_CAP}
+              {borrowedOwn.length > 0
+                ? borrowed.length
+                : `${borrowed.length}/${MY_BOOKS_CAP}`}
             </span>
           </div>
 
@@ -423,8 +444,15 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
           />
         </div>
 
-        {/* + to add to My Library, or × to remove — INSIDE the cover, top-right. */}
-        {entry.showToggle ? (
+        {/* The viewer's own book: the ×/+ "My Books" toggle is pointless
+            (it is already theirs and the shelf cap does not apply), so the
+            top-right corner becomes the rename control instead. Everyone
+            else keeps the +/× toggle. */}
+        {entry.course && entry.ownsIt ? (
+          <div className="absolute right-1.5 top-1.5 z-20">
+            <EditTitleButton course={entry.course} />
+          </div>
+        ) : entry.showToggle ? (
           <div className="absolute right-1.5 top-1.5 z-20">
             <AddRemoveButton
               isAdded={entry.isInLibrary}
@@ -493,15 +521,23 @@ function CourseBook({
         </div>
 
         {/* Take it off the shelf — × INSIDE the cover, top-right, above the
-            stretched link so removing a book never navigates into it. */}
-        <div className="absolute right-1.5 top-1.5 z-20">
-          <AddRemoveButton
-            isAdded={isBorrowed}
-            pending={pending}
-            onAdd={onBorrow}
-            onRemove={onRemove}
-          />
-        </div>
+            stretched link so removing a book never navigates into it.
+            A book you created is already yours, so it gets the rename
+            control instead of the shelf toggle. */}
+        {course.isOwner ? (
+          <div className="absolute right-1.5 top-1.5 z-20">
+            <EditTitleButton course={course} />
+          </div>
+        ) : (
+          <div className="absolute right-1.5 top-1.5 z-20">
+            <AddRemoveButton
+              isAdded={isBorrowed}
+              pending={pending}
+              onAdd={onBorrow}
+              onRemove={onRemove}
+            />
+          </div>
+        )}
 
         {/* Owner-only edit (public / VIP / hide) — INSIDE the cover, lower-left. */}
         {course.isOwner ? (
