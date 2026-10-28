@@ -5,6 +5,11 @@ interface WordStatusFlowProps {
   newCount?: number;
   learningCount?: number;
   masteredCount?: number;
+  /** Owner sees the full D → N → L → M pipeline (including the master
+   *  dictionary). A student gets only the three states they can actually reach
+   *  — New, Learning, Mastered — so the Dictionary node, its D→N arrow and the
+   *  Dictionary legend card are all dropped. */
+  showDictionary?: boolean;
 }
 
 export function WordStatusFlow({
@@ -12,7 +17,19 @@ export function WordStatusFlow({
   newCount,
   learningCount,
   masteredCount,
+  showDictionary = true,
 }: WordStatusFlowProps = {}) {
+  // The two dotted arcs both originate at (or terminate on) the Dictionary
+  // node. When the dictionary is hidden we re-anchor them to the New node so
+  // the manual-master (top) and reset (bottom) arcs still read as N/L ⇄ M
+  // instead of dangling from empty space.
+  const topArcPath = showDictionary
+    ? "M 55 46 C 95 6, 325 6, 362 44"
+    : "M 158 46 C 200 6, 325 6, 362 44";
+  const bottomArcPath = showDictionary
+    ? "M 366 108 C 320 142, 120 142, 62 108"
+    : "M 366 108 C 320 142, 200 142, 158 108";
+
   return (
     <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card px-3 py-3 sm:px-5 sm:py-4 shadow-xs">
       <p className="text-[11px] sm:text-xs font-black text-lingo-text-light uppercase tracking-wider text-center mb-1">
@@ -67,7 +84,7 @@ export function WordStatusFlow({
 
           {/* ── TOP DOTTED ARC: D / N / L -> M (Manual ✓ Master) ── */}
           <path
-            d="M 55 46 C 95 6, 325 6, 362 44"
+            d={topArcPath}
             fill="none"
             stroke="#10b981"
             strokeWidth="2"
@@ -102,16 +119,18 @@ export function WordStatusFlow({
           </text>
 
           {/* ── MAIN HORIZONTAL ARROWS: D -> N -> L -> M ── */}
-          {/* D -> N */}
-          <line
-            x1="80"
-            y1="68"
-            x2="127"
-            y2="68"
-            stroke="#64748b"
-            strokeWidth="2"
-            markerEnd="url(#arrow-main)"
-          />
+          {/* D -> N (owner only) */}
+          {showDictionary && (
+            <line
+              x1="80"
+              y1="68"
+              x2="127"
+              y2="68"
+              stroke="#64748b"
+              strokeWidth="2"
+              markerEnd="url(#arrow-main)"
+            />
+          )}
           {/* N -> L */}
           <line
             x1="184"
@@ -134,35 +153,39 @@ export function WordStatusFlow({
           />
 
           {/* ── NODES: (D), (N), (L), (M) ── */}
-          {/* Node 1: Dictionary (D) at x=54, y=68 */}
-          <circle
-            cx="54"
-            cy="68"
-            r="22"
-            fill="#f1f5f9"
-            stroke="#94a3b8"
-            strokeWidth="2"
-          />
-          <text
-            x="54"
-            y="72"
-            textAnchor="middle"
-            fill="#334155"
-            fontSize="13"
-            fontWeight="900"
-          >
-            D
-          </text>
-          <text
-            x="54"
-            y="102"
-            textAnchor="middle"
-            fill="#64748b"
-            fontSize="9.5"
-            fontWeight="700"
-          >
-            Dictionary
-          </text>
+          {/* Node 1: Dictionary (D) at x=54, y=68 (owner only) */}
+          {showDictionary && (
+            <>
+              <circle
+                cx="54"
+                cy="68"
+                r="22"
+                fill="#f1f5f9"
+                stroke="#94a3b8"
+                strokeWidth="2"
+              />
+              <text
+                x="54"
+                y="72"
+                textAnchor="middle"
+                fill="#334155"
+                fontSize="13"
+                fontWeight="900"
+              >
+                D
+              </text>
+              <text
+                x="54"
+                y="102"
+                textAnchor="middle"
+                fill="#64748b"
+                fontSize="9.5"
+                fontWeight="700"
+              >
+                Dictionary
+              </text>
+            </>
+          )}
 
           {/* Node 2: New (N) at x=158, y=68 */}
           <circle
@@ -256,7 +279,7 @@ export function WordStatusFlow({
 
           {/* ── BOTTOM DOTTED ARC: L / M -> D / N (Reset) ── */}
           <path
-            d="M 366 108 C 320 142, 120 142, 62 108"
+            d={bottomArcPath}
             fill="none"
             stroke="#f43f5e"
             strokeWidth="2"
@@ -305,30 +328,32 @@ export function WordStatusFlow({
           </span>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-2.5">
-          {/* Dictionary (D) */}
-          <div className="rounded-xl border-2 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/60 p-2.5 flex flex-col justify-between">
-            <div>
-              <div className="flex items-center justify-between gap-1 mb-1">
-                <div className="flex items-center gap-1.5">
-                  <span className="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-black text-[11px] flex items-center justify-center shrink-0">
-                    D
-                  </span>
-                  <span className="font-black text-xs text-slate-800 dark:text-slate-200">
-                    Dictionary
-                  </span>
+        <div className={`grid grid-cols-1 sm:grid-cols-2 ${showDictionary ? "lg:grid-cols-4" : "lg:grid-cols-3"} gap-2.5`}>
+          {/* Dictionary (D) — owner only */}
+          {showDictionary && (
+            <div className="rounded-xl border-2 border-slate-300 dark:border-slate-700 bg-slate-100 dark:bg-slate-800/60 p-2.5 flex flex-col justify-between">
+              <div>
+                <div className="flex items-center justify-between gap-1 mb-1">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-5 h-5 rounded-full bg-slate-200 dark:bg-slate-700 text-slate-800 dark:text-slate-200 font-black text-[11px] flex items-center justify-center shrink-0">
+                      D
+                    </span>
+                    <span className="font-black text-xs text-slate-800 dark:text-slate-200">
+                      Dictionary
+                    </span>
+                  </div>
+                  {dictionaryCount !== undefined && (
+                    <span className="px-1.5 py-0.5 rounded-full text-[10px] font-black bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200 shrink-0">
+                      {dictionaryCount.toLocaleString()}
+                    </span>
+                  )}
                 </div>
-                {dictionaryCount !== undefined && (
-                  <span className="px-1.5 py-0.5 rounded-full text-[10px] font-black bg-slate-200 text-slate-800 dark:bg-slate-800 dark:text-slate-200 shrink-0">
-                    {dictionaryCount.toLocaleString()}
-                  </span>
-                )}
+                <p className="text-[11px] text-slate-700 dark:text-slate-300 font-semibold leading-tight mt-1">
+                  Total available vocabulary across CEFR levels A1–C2 in the master dictionary.
+                </p>
               </div>
-              <p className="text-[11px] text-slate-700 dark:text-slate-300 font-semibold leading-tight mt-1">
-                Total available vocabulary across CEFR levels A1–C2 in the master dictionary.
-              </p>
             </div>
-          </div>
+          )}
 
           {/* New (N) */}
           <div className="rounded-xl border-2 border-blue-300 dark:border-blue-800 bg-blue-100 dark:bg-blue-950/50 p-2.5 flex flex-col justify-between">

@@ -303,14 +303,24 @@ export function ProgressView({
             {/* 100% Fit Responsive Table */}
             <div className="w-full overflow-x-auto">
               <table className="w-full text-left text-xs sm:text-sm table-fixed">
-                <colgroup>
-                  <col className="w-[16%]" />
-                  <col className="w-[17%]" />
-                  <col className="w-[17%]" />
-                  <col className="w-[17%]" />
-                  <col className="w-[16%]" />
-                  <col className="w-[17%]" />
-                </colgroup>
+                {isAdmin ? (
+                  <colgroup>
+                    <col className="w-[16%]" />
+                    <col className="w-[17%]" />
+                    <col className="w-[17%]" />
+                    <col className="w-[17%]" />
+                    <col className="w-[16%]" />
+                    <col className="w-[17%]" />
+                  </colgroup>
+                ) : (
+                  <colgroup>
+                    <col className="w-[22%]" />
+                    <col className="w-[19%]" />
+                    <col className="w-[19%]" />
+                    <col className="w-[19%]" />
+                    <col className="w-[21%]" />
+                  </colgroup>
+                )}
                 <thead className="bg-lingo-gray/30 text-[10px] sm:text-xs font-black text-lingo-text-light uppercase tracking-wider border-b border-lingo-border">
                   <tr>
                     <th className="py-2.5 sm:py-3 px-2 sm:px-3.5 text-left">Level</th>
@@ -345,10 +355,12 @@ export function ProgressView({
                         N
                       </span>
                     </th>
-                    <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-lingo-text-light">
-                      <span className="hidden sm:inline">Word Count</span>
-                      <span className="sm:hidden text-[10px]">Total</span>
-                    </th>
+                    {isAdmin && (
+                      <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-lingo-text-light">
+                        <span className="hidden sm:inline">Word Count</span>
+                        <span className="sm:hidden text-[10px]">Total</span>
+                      </th>
+                    )}
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-lingo-border">
@@ -396,10 +408,12 @@ export function ProgressView({
                         <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
                           {stat.new.toLocaleString()}
                         </td>
-                        {/* Word Count */}
-                        <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light/80 text-xs sm:text-sm whitespace-nowrap">
-                          {stat.wordCount.toLocaleString()}
-                        </td>
+                        {/* Word Count — owner only */}
+                        {isAdmin && (
+                          <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light/80 text-xs sm:text-sm whitespace-nowrap">
+                            {stat.wordCount.toLocaleString()}
+                          </td>
+                        )}
                       </tr>
                     );
                   })}
@@ -422,9 +436,11 @@ export function ProgressView({
                     <td className="py-3 px-2 text-center font-black text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
                       {totalNew.toLocaleString()}
                     </td>
-                    <td className="py-3 px-2 text-center font-black text-lingo-text-light/90 text-xs sm:text-sm whitespace-nowrap">
-                      {totalWordCount.toLocaleString()}
-                    </td>
+                    {isAdmin && (
+                      <td className="py-3 px-2 text-center font-black text-lingo-text-light/90 text-xs sm:text-sm whitespace-nowrap">
+                        {totalWordCount.toLocaleString()}
+                      </td>
+                    )}
                   </tr>
                 </tfoot>
               </table>
@@ -437,6 +453,7 @@ export function ProgressView({
             newCount={totalNew}
             learningCount={totalLearning}
             masteredCount={totalLearned}
+            showDictionary={isAdmin}
           />
         </div>
       )}
