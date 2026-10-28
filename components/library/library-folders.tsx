@@ -26,8 +26,8 @@ interface FolderItem {
  * The "Library" section of /library.
  *
  * Students choose how to browse with the two-button toggle:
- *   - "By Level"  → six CEFR folders (A1–C2)  [DEFAULT]
- *   - "By Type"   → eight exercise-type folders (Flashcards, Translation, …)
+ *   - "By Type"   → eight exercise-type folders (Flashcards, Translation, …)  [DEFAULT]
+ *   - "By Level"  → six CEFR folders (A1–C2)
  *
  * Below either grid sits the "Standalone Units" folder: the units the AI tutor
  * created. They belong to no course, so they belong to no CEFR level and no
@@ -101,11 +101,11 @@ export function LibraryFolders({
 
   return (
     <section className="mt-8">
-      <div className="mb-4 flex items-center justify-between gap-2">
-        <h2 className="text-base font-bold text-lingo-text">Library</h2>
+      <div className="mb-4 grid grid-cols-[1fr_auto_1fr] items-center gap-2">
+        <h2 className="col-start-2 text-base font-bold text-lingo-text">Library</h2>
 
-        {/* Two-button grouping toggle. Default = By Level. */}
-        <div className="flex shrink-0 rounded-xl border-2 border-lingo-border bg-white p-0.5 text-xs font-bold">
+        {/* Two-button grouping toggle. Default = By Type. */}
+        <div className="col-start-3 flex shrink-0 justify-self-end rounded-xl border-2 border-lingo-border bg-white p-0.5 text-xs font-bold">
           {(["level", "type"] as GroupBy[]).map((g) => {
             const active = groupBy === g;
             return (

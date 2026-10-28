@@ -77,7 +77,7 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
   const [pendingId, setPendingId] = useState<string | null>(null);
   const [pendingUnitId, setPendingUnitId] = useState<string | null>(null);
   // Which Library folder is open, by level or exercise-type label. null = closed.
-  const [groupBy, setGroupBy] = useState<GroupBy>("level");
+  const [groupBy, setGroupBy] = useState<GroupBy>("type");
   const [activeKey, setActiveKey] = useState<string | null>(null);
   const [, startTransition] = useTransition();
 
@@ -223,7 +223,7 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     <div>
       {/* My Books — the reader's own picks, capped at MY_BOOKS_CAP */}
       <section>
-        <div className="mb-4 flex items-center gap-2">
+        <div className="mb-4 flex items-center justify-center gap-2">
           <h2 className="text-base font-bold text-lingo-text">My Books</h2>
           <span className="rounded-full bg-lingo-gray px-2 py-0.5 text-xs font-bold text-lingo-text-light">
             {borrowed.length}/{MY_BOOKS_CAP}
@@ -253,7 +253,7 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
         )}
       </section>
 
-      {/* Library — folders grouped by CEFR Level (default) or exercise Type,
+      {/* Library — folders grouped by exercise Type (default) or CEFR Level,
           right below My Books. Tapping one opens the small browser window (no
           page navigation). On phones the window layers over the folders; from
           lg up it sits underneath them. */}
@@ -500,10 +500,6 @@ function CourseBook({
           </div>
         ) : null}
       </div>
-
-      <p className="pointer-events-none mt-1.5 w-full text-center text-[10px] font-semibold text-lingo-text-light">
-        {course.unitCount} {course.unitCount === 1 ? "unit" : "units"}
-      </p>
     </div>
   );
 }
