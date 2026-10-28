@@ -845,7 +845,9 @@ function WordLookupSection({
                       key: "mine" as const,
                       label: "All",
                       title: "All my words — mastered, learning and new",
-                      count: liveLearnedCount + liveLearningCount + liveNewCount,
+                      // No count: "All" is just the umbrella over M + L + N, so
+                      // a number there would just repeat the three next to it.
+                      count: null,
                       tone: "",
                     },
                     { key: "learned" as const, label: "M", title: "Mastered", count: liveLearnedCount, tone: "M" },
