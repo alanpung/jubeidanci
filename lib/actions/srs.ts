@@ -1904,35 +1904,24 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
               practisedLocally.add(lc.word.toLowerCase().trim());
             }
           }
-          if (practisedLocally.size > 0) {
-            await db.delete(srsCard).where(
-              and(
-                eq(srsCard.userId, userId),
-                eq(srsCard.status, "new"),
-                eq(srsCard.repetitions, 0),
-                notInArray(srsCard.word, Array.from(practisedLocally))
-              )
-            );
-          }
-
+          // Both guards must apply to the SAME statement. Running them as two
+          // separate deletes ORs the conditions instead of ANDing them, which
+          // means every un-practised new card gets wiped — including the words
+          // of courses still sitting on the learner's shelf. A card is only
+          // stale when it is un-practised in BOTH stores AND no longer backed
+          // by an enrolled course/unit.
+          const staleConditions = [
+            eq(srsCard.userId, userId),
+            eq(srsCard.status, "new"),
+            eq(srsCard.repetitions, 0),
+          ];
           if (activeWordsArr.length > 0) {
-            await db.delete(srsCard).where(
-              and(
-                eq(srsCard.userId, userId),
-                eq(srsCard.status, "new"),
-                eq(srsCard.repetitions, 0),
-                notInArray(srsCard.word, activeWordsArr)
-              )
-            );
-          } else {
-            await db.delete(srsCard).where(
-              and(
-                eq(srsCard.userId, userId),
-                eq(srsCard.status, "new"),
-                eq(srsCard.repetitions, 0)
-              )
-            );
+            staleConditions.push(notInArray(srsCard.word, activeWordsArr));
           }
+          if (practisedLocally.size > 0) {
+            staleConditions.push(notInArray(srsCard.word, Array.from(practisedLocally)));
+          }
+          await db.delete(srsCard).where(and(...staleConditions));
         } catch (err) {
           console.warn("Cleanup stale new words warning:", err);
         }

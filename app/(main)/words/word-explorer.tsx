@@ -55,7 +55,35 @@ interface SrsStats {
   easy: number;
 }
 
-type SrsFilter = "all" | "learned" | "learning" | "new";
+/** "all" and "remaining" read the master dictionary; the rest read only the
+ *  learner's own SRS cards. "mine" is the union of the three tracked states —
+ *  it is the student-facing default so a student never lands on the raw
+ *  dictionary (and therefore never sees a word outside their library). */
+type SrsFilter = "all" | "mine" | "learned" | "learning" | "new" | "remaining";
+
+/** Single source of truth for "which bucket does this card fall in". The
+ *  Progress page uses the exact same rules, so the counts on /words and
+ *  /progress can never disagree. */
+function isMasteredCard(c: SrsCard): boolean {
+  return (
+    c.status === "learned" ||
+    c.status === "review" ||
+    (!!c.repetitions && c.repetitions >= 3)
+  );
+}
+
+function isLearningCard(c: SrsCard): boolean {
+  return c.status === "learning" && (!c.repetitions || c.repetitions < 3);
+}
+
+function isNewCard(c: SrsCard): boolean {
+  return c.status === "new" && (!c.repetitions || c.repetitions < 3);
+}
+
+/** Any word the learner has actually taken on: new, learning or mastered. */
+function hasTrackedStatus(c: SrsCard): boolean {
+  return isMasteredCard(c) || isLearningCard(c) || isNewCard(c);
+}
 
 const CEFR_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
 
@@ -247,9 +275,11 @@ function fallbackSpeechSynthesis(text: string, lang: string = "en") {
 }
 
 export function WordExplorer({
+  isAdmin = false,
   srsCards = [],
   libraryWords = [],
   language = "en",
+  levelDictionaryCounts,
 }: {
   isAdmin?: boolean;
   words?: Word[];
@@ -260,6 +290,14 @@ export function WordExplorer({
   levelDictionaryCounts?: Record<string, number>;
 }) {
   const router = useRouter();
+
+  // Size of the master dictionary (A1–C2). Only the owner needs it: it is the
+  // base for the "Remaining" count, i.e. dictionary words that are not new,
+  // learning or mastered yet.
+  const dictionaryTotal = useMemo(() => {
+    if (!levelDictionaryCounts) return 0;
+    return Object.values(levelDictionaryCounts).reduce((acc, n) => acc + (n || 0), 0);
+  }, [levelDictionaryCounts]);
   const [selectedLevel, setSelectedLevel] = useState<string>("");
   const [cards, setCards] = useState<SrsCard[]>(srsCards);
 
@@ -357,6 +395,8 @@ export function WordExplorer({
         srsCards={cards}
         libraryWordSet={libraryWordSet}
         onCardStatusChange={handleCardStatusChange}
+        isAdmin={isAdmin}
+        dictionaryTotal={dictionaryTotal}
       />
     </div>
   );
@@ -375,6 +415,8 @@ function WordLookupSection({
   srsCards,
   libraryWordSet,
   onCardStatusChange,
+  isAdmin = false,
+  dictionaryTotal = 0,
 }: {
   selectedLevel: string;
   onSelectLevel: (lvl: string) => void;
@@ -388,8 +430,14 @@ function WordLookupSection({
     status: "new" | "learning" | "learned" | "remove",
     meta?: { cefrLevel?: string; translation?: string; pos?: string }
   ) => void;
+  isAdmin?: boolean;
+  dictionaryTotal?: number;
 }) {
-  const [statusFilter, setStatusFilter] = useState<SrsFilter>("all");
+  // The owner browses the whole dictionary by default; a student starts on
+  // "My Words" (their own new + learning + mastered) and has no entry point
+  // into the un-owned part of the dictionary at all.
+  const defaultFilter: SrsFilter = isAdmin ? "all" : "mine";
+  const [statusFilter, setStatusFilter] = useState<SrsFilter>(defaultFilter);
   const [selectedLetter, setSelectedLetter] = useState<string>("ALL");
   const [selectedPos, setSelectedPos] = useState<string>("all");
   const [search, setSearch] = useState("");
@@ -408,29 +456,36 @@ function WordLookupSection({
     return () => clearTimeout(handler);
   }, [search]);
 
+  // "mine" reads the learner's own cards too, so a student never reaches the
+  // dictionary fetch below. Only "all" and "remaining" read the dictionary.
   const isSrsSpecificFilter =
-    statusFilter === "learning" || statusFilter === "learned" || statusFilter === "new";
+    statusFilter === "learning" ||
+    statusFilter === "learned" ||
+    statusFilter === "new" ||
+    statusFilter === "mine";
 
-  const liveLearnedCount = useMemo(() => {
-    return srsCards.filter(
-      (c) =>
-        c.status === "learned" ||
-        c.status === "review" ||
-        (c.repetitions && c.repetitions >= 3)
-    ).length;
+  /** Words already in one of the three tracked states, keyed for O(1) lookup
+   *  when the "Remaining" filter walks a page of dictionary words. */
+  const trackedWordSet = useMemo(() => {
+    const set = new Set<string>();
+    srsCards.forEach((c) => {
+      if (hasTrackedStatus(c)) set.add(c.word.toLowerCase().trim());
+    });
+    return set;
   }, [srsCards]);
 
-  const liveLearningCount = useMemo(() => {
-    return srsCards.filter(
-      (c) => c.status === "learning" && (!c.repetitions || c.repetitions < 3)
-    ).length;
-  }, [srsCards]);
+  const liveLearnedCount = useMemo(() => srsCards.filter(isMasteredCard).length, [srsCards]);
 
-  const liveNewCount = useMemo(() => {
-    return srsCards.filter(
-      (c) => c.status === "new" && (!c.repetitions || c.repetitions < 3)
-    ).length;
-  }, [srsCards]);
+  const liveLearningCount = useMemo(() => srsCards.filter(isLearningCard).length, [srsCards]);
+
+  const liveNewCount = useMemo(() => srsCards.filter(isNewCard).length, [srsCards]);
+
+  /** Owner-only: dictionary words that are not new, learning or mastered yet.
+   *  Derived rather than counted, because the dictionary itself is paginated. */
+  const liveRemainingCount = useMemo(
+    () => Math.max(0, dictionaryTotal - trackedWordSet.size),
+    [dictionaryTotal, trackedWordSet],
+  );
 
   useEffect(() => {
     let cancelled = false;
@@ -446,20 +501,14 @@ function WordLookupSection({
       }
 
       if (statusFilter === "learning") {
-        cards = cards.filter(
-          (c) => c.status === "learning" && (!c.repetitions || c.repetitions < 3)
-        );
+        cards = cards.filter(isLearningCard);
       } else if (statusFilter === "learned") {
-        cards = cards.filter(
-          (c) =>
-            c.status === "learned" ||
-            c.status === "review" ||
-            (c.repetitions && c.repetitions >= 3)
-        );
+        cards = cards.filter(isMasteredCard);
       } else if (statusFilter === "new") {
-        cards = cards.filter(
-          (c) => c.status === "new" && (!c.repetitions || c.repetitions < 3)
-        );
+        cards = cards.filter(isNewCard);
+      } else if (statusFilter === "mine") {
+        // Union of the three tracked states — the student's whole owned set.
+        cards = cards.filter(hasTrackedStatus);
       }
 
       // Letter filter
@@ -548,7 +597,8 @@ function WordLookupSection({
       };
     }
 
-    // When status is "all" or "new", fetch from the full dictionary API
+    // "all" and "remaining" both read the master dictionary. "remaining" then
+    // drops every word the learner already has as new / learning / mastered.
     async function fetchFromApi() {
       setLoading(true);
       try {
@@ -566,13 +616,23 @@ function WordLookupSection({
           const data = await res.json();
           if (!cancelled) {
             const fetchedWords: Word[] = data.words || [];
+            const isRemaining = statusFilter === "remaining";
+            const shownWords = isRemaining
+              ? fetchedWords.filter((w) => !trackedWordSet.has(w.word.toLowerCase().trim()))
+              : fetchedWords;
 
             if (page === 1) {
-              setWords(fetchedWords);
+              setWords(shownWords);
             } else {
-              setWords((prev) => [...prev, ...fetchedWords]);
+              setWords((prev) => [...prev, ...shownWords]);
             }
-            setTotal(data.total || 0);
+            // For "remaining" the dictionary total is meaningless as a
+            // denominator, so the running count of kept words is shown instead.
+            if (isRemaining) {
+              setTotal((prev) => (page === 1 ? shownWords.length : prev + shownWords.length));
+            } else {
+              setTotal(data.total || 0);
+            }
             setHasMore(!!data.hasMore);
           }
         }
@@ -598,6 +658,7 @@ function WordLookupSection({
     srsCards,
     srsMap,
     isSrsSpecificFilter,
+    trackedWordSet,
   ]);
 
   function handleLevelChange(lvl: string) {
@@ -625,14 +686,14 @@ function WordLookupSection({
     selectedLevel !== "" ||
     selectedLetter !== "ALL" ||
     selectedPos !== "all" ||
-    statusFilter !== "all" ||
+    statusFilter !== defaultFilter ||
     search !== "";
 
   function clearAllFilters() {
     onClearLevels();
     setSelectedLetter("ALL");
     setSelectedPos("all");
-    setStatusFilter("all");
+    setStatusFilter(defaultFilter);
     setSearch("");
     setPage(1);
   }
@@ -728,16 +789,33 @@ function WordLookupSection({
           </div>
         </div>
 
-        {/* Status Filter (All, Mastered, Learning, New) */}
+        {/* Status filters.
+            Owner  : All / Mastered / Learning / New / Remaining
+            Student: My Words (= the three tracked states) / Mastered /
+                     Learning / New — there is no "All", so the part of the
+                     dictionary the student does not own is unreachable. */}
         <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card p-1 sm:p-1.5 shadow-xs">
           <div className="flex items-center justify-between gap-1 w-full">
             {(
-              [
-                { key: "all", label: "All", count: null, short: "" },
-                { key: "learned", label: "Mastered", count: liveLearnedCount, short: "M" },
-                { key: "learning", label: "Learning", count: liveLearningCount, short: "L" },
-                { key: "new", label: "New", count: liveNewCount, short: "N" },
-              ] as const
+              isAdmin
+                ? [
+                    { key: "all" as const, label: "All", count: null, short: "" },
+                    { key: "learned" as const, label: "Mastered", count: liveLearnedCount, short: "M" },
+                    { key: "learning" as const, label: "Learning", count: liveLearningCount, short: "L" },
+                    { key: "new" as const, label: "New", count: liveNewCount, short: "N" },
+                    { key: "remaining" as const, label: "Remaining", count: liveRemainingCount, short: "R" },
+                  ]
+                : [
+                    {
+                      key: "mine" as const,
+                      label: "My Words",
+                      count: liveLearnedCount + liveLearningCount + liveNewCount,
+                      short: "",
+                    },
+                    { key: "learned" as const, label: "Mastered", count: liveLearnedCount, short: "M" },
+                    { key: "learning" as const, label: "Learning", count: liveLearningCount, short: "L" },
+                    { key: "new" as const, label: "New", count: liveNewCount, short: "N" },
+                  ]
             ).map((f) => {
               const active = statusFilter === f.key;
               return (
@@ -760,6 +838,8 @@ function WordLookupSection({
                           ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300"
                           : f.short === "L"
                           ? "bg-amber-100 text-amber-900 dark:bg-amber-950/80 dark:text-amber-300"
+                          : f.short === "R"
+                          ? "bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300"
                           : "bg-blue-100 text-blue-800 dark:bg-blue-950/80 dark:text-blue-300"
                       }`}
                     >
@@ -791,11 +871,13 @@ function WordLookupSection({
       {/* Active Filter Summary */}
       <div className="flex items-center justify-between text-[10px] sm:text-[11px] font-bold text-lingo-text-light px-0.5">
         <p className="truncate mr-2">
-          {words.length.toLocaleString()} of {total.toLocaleString()} words
+          {statusFilter === "remaining"
+            ? `${words.length.toLocaleString()} remaining words`
+            : `${words.length.toLocaleString()} of ${total.toLocaleString()} words`}
           {selectedLevel && ` • ${selectedLevel}`}
           {selectedLetter !== "ALL" && ` • "${selectedLetter}"`}
           {selectedPos !== "all" && ` • ${selectedPos.toUpperCase()}`}
-          {statusFilter !== "all" && ` • ${statusFilter}`}
+          {statusFilter !== defaultFilter && ` • ${statusFilter}`}
           {search && ` • "${search}"`}
         </p>
 
