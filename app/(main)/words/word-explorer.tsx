@@ -118,7 +118,7 @@ function statusLabelFor(filter: SrsFilter): string {
     case "all":
       return "All";
     case "mine":
-      return "My Words";
+      return "All";
     case "learned":
       return "Mastered";
     case "learning":
@@ -460,8 +460,8 @@ function WordLookupSection({
   dictionaryTotal?: number;
 }) {
   // The owner browses the whole dictionary by default; a student starts on
-  // "My Words" (their own new + learning + mastered) and has no entry point
-  // into the un-owned part of the dictionary at all.
+  // "All" (= their own new + learning + mastered, labelled "All" in the UI)
+  // and has no entry point into the un-owned part of the dictionary at all.
   const defaultFilter: SrsFilter = isAdmin ? "all" : "mine";
   const [statusFilter, setStatusFilter] = useState<SrsFilter>(defaultFilter);
   const [selectedLetter, setSelectedLetter] = useState<string>("ALL");
@@ -817,9 +817,9 @@ function WordLookupSection({
 
         {/* Status filters.
             Owner  : All / M / L / N / D
-            Student: My Words (= the three tracked states) / M / L / N — there
-                     is no "All", so the part of the dictionary the student
-                     does not own is unreachable.
+            Student: All (= my own words: the three tracked states) / M / L / N
+                     — the "All" here means "all of MY words", so the part of
+                     the dictionary the student does not own stays unreachable.
             Labels are single letters (M = Mastered, L = Learning, N = New,
             D = Dictionary) so the row never truncates; the full name is on
             the button's tooltip. */}
@@ -843,7 +843,7 @@ function WordLookupSection({
                 : [
                     {
                       key: "mine" as const,
-                      label: "My Words",
+                      label: "All",
                       title: "All my words — mastered, learning and new",
                       count: liveLearnedCount + liveLearningCount + liveNewCount,
                       tone: "",
