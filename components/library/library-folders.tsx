@@ -127,8 +127,8 @@ export function LibraryFolders({
         </div>
       </div>
 
-      {/* relative: the browser window is absolutely positioned over this box on
-          phones (covering the folders), and flows inline under it on desktop. */}
+      {/* relative: the browser window is absolutely positioned over this box
+          (covering the folders from the top) on every screen size. */}
       <div className="relative">
         <div className={gridClass}>
           {folders.map((f) => {
@@ -201,8 +201,8 @@ export function LibraryFolders({
           </button>
         </div>
 
-        {/* The browser window. On phones it layers over the folders above; from
-            `lg` up it settles underneath them. */}
+        {/* The browser window. It layers over the folders above on every screen
+            size (absolute inset-0), so it never settles underneath them. */}
         {children}
       </div>
     </section>
