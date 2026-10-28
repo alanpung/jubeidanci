@@ -3,7 +3,7 @@
 import { useState, useRef, useTransition } from "react";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
-import { Globe, Crown, EyeOff, Pencil, Type, Check } from "lucide-react";
+import { Globe, Crown, EyeOff, Pencil, Check } from "lucide-react";
 import type { CourseListItem } from "@/lib/content/types";
 import {
   makeCoursePublic,
@@ -105,8 +105,8 @@ const OPTIONS: {
  *  means only the owner — and admins — can see it). The menu is a portal so it
  *  is never clipped by the browse window's scroll box.
  *
- *  The same menu also carries "Edit title", so a course cover can be renamed
- *  without leaving the Library shelf. */
+ *  Renaming lives in its own control (EditTitleButton) so this menu stays a
+ *  single-purpose visibility switch. */
 export function CoverEditButton({
   course,
   className = "",
@@ -121,23 +121,13 @@ export function CoverEditButton({
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
   const current = stateOf(course.visibility);
 
-  // Title editing state — the menu flips into an inline editor.
-  const [editingTitle, setEditingTitle] = useState(false);
-  const [titleDraft, setTitleDraft] = useState(course.title);
-  const [titleError, setTitleError] = useState<string | null>(null);
-
   function toggle() {
     if (open) {
       setOpen(false);
-      setEditingTitle(false);
-      setTitleError(null);
       return;
     }
     const r = btnRef.current?.getBoundingClientRect();
     if (r) setPos({ top: r.bottom + 6, left: r.left });
-    setTitleDraft(course.title);
-    setEditingTitle(false);
-    setTitleError(null);
     setOpen(true);
   }
 
@@ -163,10 +153,118 @@ export function CoverEditButton({
     });
   }
 
-  function startTitleEdit() {
+  return (
+    <>
+      <button
+        ref={btnRef}
+        type="button"
+        onClick={toggle}
+        disabled={pending}
+        title="Edit course"
+        aria-label="Edit course"
+        className={`flex h-6 w-6 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 disabled:opacity-50 ${className}`}
+      >
+        <Pencil className="h-3 w-3 stroke-[2.5]" />
+      </button>
+      {open && pos
+        ? createPortal(
+            <div
+              className="fixed z-[100]"
+              style={{ top: pos.top, left: pos.left }}
+            >
+              <div
+                className="fixed inset-0 z-[-1]"
+                onClick={() => setOpen(false)}
+                aria-hidden
+              />
+              <div className="w-52 rounded-xl border-2 border-lingo-border bg-white p-1 shadow-2xl">
+                {OPTIONS.map((o) => {
+                  const Icon = o.Icon;
+                  const active = o.state === current;
+                  return (
+                    <button
+                      key={o.state}
+                      type="button"
+                      onClick={() => choose(o.state)}
+                      className={`flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition-colors ${
+                        active ? "bg-lingo-gray/60" : "hover:bg-lingo-gray/40"
+                      }`}
+                    >
+                      <Icon className={`h-4 w-4 shrink-0 ${o.tone}`} />
+                      <span className="min-w-0 flex-1">
+                        <span className="block text-xs font-black leading-tight text-lingo-text">
+                          {o.label}
+                        </span>
+                        <span className="block text-[10px] font-semibold leading-tight text-lingo-text-light">
+                          {o.hint}
+                        </span>
+                      </span>
+                      {active ? (
+                        <Check className="h-3.5 w-3.5 shrink-0 text-lingo-green" />
+                      ) : null}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
+    </>
+  );
+}
+
+/** Owner-only RENAME control for the TOP-RIGHT corner of a cover.
+ *
+ *  A small "Edit" pill that flips into an inline title field, so a course can
+ *  be renamed without leaving the Library shelf. It is a portal so it is never
+ *  clipped by the browse window's scroll box, and the panel is pulled back
+ *  inside the viewport so it never hangs off the right edge on a phone.
+ *
+ *  This used to live as an "Edit title" row inside the visibility menu; it is
+ *  a separate button now so the visibility menu stays a one-purpose switch. */
+export function EditTitleButton({
+  course,
+  className = "",
+}: {
+  course: CourseListItem;
+  className?: string;
+}) {
+  const router = useRouter();
+  const [pending, startTransition] = useTransition();
+  const [open, setOpen] = useState(false);
+  const [editingTitle, setEditingTitle] = useState(false);
+  const [titleDraft, setTitleDraft] = useState(course.title);
+  const [titleError, setTitleError] = useState<string | null>(null);
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
+
+  function toggle() {
+    if (open) {
+      setOpen(false);
+      setEditingTitle(false);
+      setTitleError(null);
+      return;
+    }
+    const r = btnRef.current?.getBoundingClientRect();
+    if (r) {
+      // The panel is 14rem wide; keep its right edge inside the viewport.
+      const panelW = 224;
+      const panelH = 170;
+      const left = Math.max(8, Math.min(r.right - panelW, window.innerWidth - panelW - 8));
+      // Flip above the button when there is not enough room below it, so the
+      // panel never runs off the bottom of the screen.
+      const below = r.bottom + 6;
+      const top =
+        below + panelH > window.innerHeight - 8
+          ? Math.max(8, r.top - 6 - panelH)
+          : below;
+      setPos({ top, left });
+    }
     setTitleDraft(course.title);
+    setEditingTitle(false);
     setTitleError(null);
-    setEditingTitle(true);
+    setOpen(true);
   }
 
   function saveTitle() {
@@ -195,11 +293,12 @@ export function CoverEditButton({
         type="button"
         onClick={toggle}
         disabled={pending}
-        title="Edit course"
-        aria-label="Edit course"
-        className={`flex h-6 w-6 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 disabled:opacity-50 ${className}`}
+        title="Edit course title"
+        aria-label={`Edit title of ${course.title}`}
+        className={`flex h-6 items-center gap-1 rounded-full border-2 border-lingo-border bg-white px-2 text-[10px] font-black text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 disabled:opacity-50 ${className}`}
       >
         <Pencil className="h-3 w-3 stroke-[2.5]" />
+        Edit
       </button>
       {open && pos
         ? createPortal(
@@ -216,9 +315,9 @@ export function CoverEditButton({
                 }}
                 aria-hidden
               />
-              <div className="w-52 rounded-xl border-2 border-lingo-border bg-white p-1 shadow-2xl">
+              <div className="w-56 rounded-xl border-2 border-lingo-border bg-white p-2 shadow-2xl">
                 {editingTitle ? (
-                  <div className="p-1">
+                  <div className="p-0.5">
                     <label
                       htmlFor={`course-title-${course.id}`}
                       className="mb-1 block text-[10px] font-black uppercase tracking-wide text-lingo-text-light"
@@ -276,50 +375,19 @@ export function CoverEditButton({
                   </div>
                 ) : (
                   <>
-                    {OPTIONS.map((o) => {
-                      const Icon = o.Icon;
-                      const active = o.state === current;
-                      return (
-                        <button
-                          key={o.state}
-                          type="button"
-                          onClick={() => choose(o.state)}
-                          className={`flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition-colors ${
-                            active ? "bg-lingo-gray/60" : "hover:bg-lingo-gray/40"
-                          }`}
-                        >
-                          <Icon className={`h-4 w-4 shrink-0 ${o.tone}`} />
-                          <span className="min-w-0 flex-1">
-                            <span className="block text-xs font-black leading-tight text-lingo-text">
-                              {o.label}
-                            </span>
-                            <span className="block text-[10px] font-semibold leading-tight text-lingo-text-light">
-                              {o.hint}
-                            </span>
-                          </span>
-                          {active ? (
-                            <Check className="h-3.5 w-3.5 shrink-0 text-lingo-green" />
-                          ) : null}
-                        </button>
-                      );
-                    })}
-
-                    <div className="my-1 border-t border-lingo-border" />
-
+                    <div className="mb-1.5 px-1 text-[10px] font-black uppercase tracking-wide text-lingo-text-light">
+                      Course title
+                    </div>
+                    <p className="px-1 pb-2 text-xs font-bold leading-tight text-lingo-text">
+                      {course.title}
+                    </p>
                     <button
                       type="button"
-                      onClick={startTitleEdit}
-                      className="flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition-colors hover:bg-lingo-gray/40"
+                      onClick={() => setEditingTitle(true)}
+                      className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-lingo-blue px-2 py-1.5 text-xs font-black text-white transition-colors hover:bg-lingo-blue/90"
                     >
-                      <Type className="h-4 w-4 shrink-0 text-lingo-blue" />
-                      <span className="min-w-0 flex-1">
-                        <span className="block text-xs font-black leading-tight text-lingo-text">
-                          Edit title
-                        </span>
-                        <span className="block text-[10px] font-semibold leading-tight text-lingo-text-light">
-                          Rename this course
-                        </span>
-                      </span>
+                      <Pencil className="h-3.5 w-3.5 stroke-[2.5]" />
+                      Rename
                     </button>
                   </>
                 )}
