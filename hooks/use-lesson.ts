@@ -8,6 +8,8 @@ interface ExerciseResult {
   exerciseType: string;
   correct: boolean;
   userAnswer: string;
+  /** Translation-exercise score (0–100). Undefined for non-scored exercises. */
+  score?: number;
 }
 
 interface UseLessonReturn {
@@ -21,7 +23,7 @@ interface UseLessonReturn {
    *  Translation free-navigation mode remember which cards were already opened
    *  so swiping back shows the answer instead of a blank input. */
   revealed: boolean[];
-  recordResult: (correct: boolean, userAnswer: string) => void;
+  recordResult: (correct: boolean, userAnswer: string, score?: number) => void;
   revealCurrent: () => void;
   advance: () => void;
   /** Jump to an absolute exercise index; out-of-range (>= length) finishes. */
@@ -47,13 +49,14 @@ export function useLesson(exercises: Exercise[]): UseLessonReturn {
   // swipes back and forwards again) replaces the prior entry instead of
   // stacking duplicates — this is what keeps mistakeCount honest.
   const recordResult = useCallback(
-    (correct: boolean, userAnswer: string) => {
+    (correct: boolean, userAnswer: string, score?: number) => {
       setResults((prev) => {
         const entry: ExerciseResult = {
           exerciseIndex: currentIndex,
           exerciseType: exercises[currentIndex]?.type ?? "",
           correct,
           userAnswer,
+          score,
         };
         const existing = prev.findIndex((r) => r.exerciseIndex === currentIndex);
         if (existing >= 0) {

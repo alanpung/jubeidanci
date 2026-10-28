@@ -141,8 +141,8 @@ export function LessonView({
 
   const progress = ((currentIndex) / totalExercises) * 100;
 
-  function handleResult(correct: boolean, answer: string) {
-    recordResult(correct, answer);
+  function handleResult(correct: boolean, answer: string, score?: number) {
+    recordResult(correct, answer, score);
   }
 
   function handleContinue() {
@@ -177,6 +177,7 @@ export function LessonView({
           exerciseType: r.exerciseType,
           correct: r.correct,
           userAnswer: r.userAnswer,
+          score: r.score,
         })),
         mistakeCount,
       })
@@ -259,7 +260,7 @@ function ExerciseRenderer({
   language,
 }: {
   exercise: Exercise;
-  onResult: (correct: boolean, answer: string) => void;
+  onResult: (correct: boolean, answer: string, score?: number) => void;
   onContinue: () => void;
   onPrev?: () => void;
   canGoPrev?: boolean;
@@ -370,7 +371,7 @@ function SkipInvalid({
   onResult,
   onContinue,
 }: {
-  onResult: (correct: boolean, answer: string) => void;
+  onResult: (correct: boolean, answer: string, score?: number) => void;
   onContinue: () => void;
 }) {
   useEffect(() => {

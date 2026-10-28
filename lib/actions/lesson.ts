@@ -15,6 +15,7 @@ import { requireSession } from "@/lib/auth-server";
 import { computeStreak } from "@/lib/game/streaks";
 import type { Exercise } from "@/lib/content/types";
 import { recordWordPracticeBatch } from "@/lib/actions/srs";
+import { scoreToQuality } from "@/lib/marking";
 import { extractSrsWords } from "@/lib/srs-words";
 import { recordLessonDebug } from "@/lib/lesson-debug";
 import { getUnitWithContent } from "@/lib/db/queries/courses";
@@ -29,6 +30,8 @@ interface CompleteLessonInput {
     exerciseType: string;
     correct: boolean;
     userAnswer: string;
+    /** Translation score (0–100); absent for non-scored exercises. */
+    score?: number;
   }[];
   mistakeCount: number;
 }
@@ -64,7 +67,7 @@ export async function completeLesson(input: CompleteLessonInput) {
   const unitData = await getUnitWithContent(input.unitId);
 
   // 2. Extract words from exercises for this lesson index
-  const practicesToRecord: { word: string; correct: boolean }[] = [];
+  const practicesToRecord: { word: string; correct: boolean; quality?: number }[] = [];
   let skippedResults = 0;
   let missingExercises = 0;
   let zeroWordExercises = 0;
@@ -90,8 +93,14 @@ export async function completeLesson(input: CompleteLessonInput) {
       }
       const words = extractSrsWords(exercise);
       if (words.length === 0) zeroWordExercises++;
+      // Translation exercises ship a whole-sentence score; convert it to an
+      // SM-2 quality so each word in the sentence is graded, not just marked
+      // right/wrong. Other exercise types leave `quality` undefined and fall
+      // back to the binary path in recordWordPracticeBatch.
+      const quality =
+        result.score !== undefined ? scoreToQuality(result.score) : undefined;
       for (const w of words) {
-        practicesToRecord.push({ word: w, correct: result.correct });
+        practicesToRecord.push({ word: w, correct: result.correct, quality });
       }
     }
 
