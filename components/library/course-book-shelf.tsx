@@ -56,7 +56,6 @@ interface BrowseEntry {
   /** Whether the +/× control is meaningful for this entry. */
   showToggle: boolean;
   href: string;
-  meta: string;
   onAdd: () => void;
   onRemove: () => void;
 }
@@ -109,7 +108,6 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     isInLibrary: borrowedIds.has(c.id),
     showToggle: true,
     href: `/library/${c.id}`,
-    meta: `${c.unitCount} ${c.unitCount === 1 ? "unit" : "units"}`,
     onAdd: () => borrow(c),
     onRemove: () => unborrow(c),
   }));
@@ -127,7 +125,6 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     // Your own unit is already yours — there is nothing to add to a shelf.
     showToggle: !u.isOwner,
     href: `/unit/${u.id}`,
-    meta: `${u.lessonCount} ${u.lessonCount === 1 ? "lesson" : "lessons"}`,
     onAdd: () => addUnit(u.id),
     onRemove: () => removeUnit(u.id),
   }));
@@ -255,8 +252,7 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
 
       {/* Library — folders grouped by exercise Type (default) or CEFR Level,
           right below My Books. Tapping one opens the small browser window (no
-          page navigation). On phones the window layers over the folders; from
-          lg up it sits underneath them. */}
+          page navigation) that overlays the folders from the top. */}
       <LibraryFolders
         groupBy={groupBy}
         onGroupBy={handleGroupBy}
@@ -280,11 +276,11 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
 
 /** The browser window opened from a Library folder.
  *
- *  On phones it layers *over* the folder grid (absolute, exactly the grid's
- *  own box) so the reader browses in place of the folders instead of pushing
- *  them off-screen. From `lg` up it drops back into normal flow underneath.
- *  Every entry is a cover — the same filled tile used on My Books — so the
- *  window reads as a tray of the same objects the folders represent. */
+ *  It always layers *over* the folder grid (absolute, exactly the grid's own
+ *  box) so the reader browses in place of the folders instead of pushing them
+ *  off-screen or dropping below them. Every entry is a cover — the same filled
+ *  tile used on My Books — so the window reads as a tray of the same objects
+ *  the folders represent. */
 function TypeBrowserWindow({
   title,
   entries,
@@ -311,7 +307,7 @@ function TypeBrowserWindow({
 
   return (
     <div
-      className="absolute inset-0 z-30 flex flex-col overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-bg shadow-2xl lg:static lg:inset-auto lg:mt-4 lg:shadow-lg"
+      className="absolute inset-0 z-30 flex flex-col overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-bg shadow-2xl"
       role="dialog"
       aria-modal="false"
       aria-label={`${title} courses`}
@@ -361,12 +357,13 @@ function TypeBrowserWindow({
   );
 }
 
-/** One cover inside the browse window: the cover, the title + meta under it, and
- *  the controls that float over the cover's corners.
+/** One cover inside the browse window: the cover and the controls that float
+ *  over the cover's corners.
  *
- *  It is the *same* tile as a My Books book — the only difference is the
- *  top-right control: a + (not yet in My Library) or × (already in it). The
- *  owner also gets the public/private/hide switch at the bottom-left. */
+ *  It is the *same* tile as a My Books book — no caption under the cover, so
+ *  the "N units"/"N lessons" wording is gone to match My Books. The only
+ *  difference is the top-right control: a + (not yet in My Library) or × (in
+ *  it). The owner also gets the public/private/hide switch at the bottom-left. */
 function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean }) {
   // A course/unit can only be opened once it is on My Books — until then the
   // cover is inert (no navigation) and the only action is the +/× toggle.
@@ -428,10 +425,6 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
           </div>
         ) : null}
       </div>
-
-      <p className="mt-1.5 text-center text-[10px] font-semibold text-lingo-text-light">
-        {entry.meta}
-      </p>
     </div>
   );
 }
