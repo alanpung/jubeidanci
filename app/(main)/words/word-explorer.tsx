@@ -93,18 +93,44 @@ const ALPHABET_ROWS = [
   ["N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "#"],
 ] as const;
 
-// POS filter using symbols
+// POS filter using symbols. The labels are deliberately kept to 1-2 chars so
+// the whole row fits on one row without the labels truncating ("Adj" → "AJ").
 const POS_OPTIONS = [
   { key: "all", label: "All", fullName: "All Parts of Speech" },
   { key: "noun", label: "N", fullName: "Noun (名词)" },
   { key: "verb", label: "V", fullName: "Verb (动词)" },
-  { key: "adjective", label: "Adj", fullName: "Adjective (形容词)" },
-  { key: "adverb", label: "Adv", fullName: "Adverb (副词)" },
+  { key: "adjective", label: "AJ", fullName: "Adjective (形容词)" },
+  { key: "adverb", label: "AV", fullName: "Adverb (副词)" },
   { key: "preposition", label: "PP", fullName: "Preposition (介词)" },
   { key: "conjunction", label: "CJ", fullName: "Conjunction (连词)" },
   { key: "pronoun", label: "PN", fullName: "Pronoun (代词)" },
-  { key: "determiner", label: "Det", fullName: "Determiner (限定词/冠词)" },
+  { key: "determiner", label: "DT", fullName: "Determiner (限定词/冠词)" },
 ] as const;
+
+/** Short POS label for the active-filter summary line ("AJ" not "ADJECTIVE"). */
+function posLabelFor(posKey: string): string {
+  return POS_OPTIONS.find((p) => p.key === posKey)?.label || posKey.toUpperCase();
+}
+
+/** Full status name for the active-filter summary line. */
+function statusLabelFor(filter: SrsFilter): string {
+  switch (filter) {
+    case "all":
+      return "All";
+    case "mine":
+      return "My Words";
+    case "learned":
+      return "Mastered";
+    case "learning":
+      return "Learning";
+    case "new":
+      return "New";
+    case "remaining":
+      return "Dictionary";
+    default:
+      return filter;
+  }
+}
 
 const POS_ALIASES: Record<string, string[]> = {
   noun: ["noun", "n"],
@@ -292,7 +318,7 @@ export function WordExplorer({
   const router = useRouter();
 
   // Size of the master dictionary (A1–C2). Only the owner needs it: it is the
-  // base for the "Remaining" count, i.e. dictionary words that are not new,
+  // base for the "D" (dictionary) count, i.e. dictionary words that are not new,
   // learning or mastered yet.
   const dictionaryTotal = useMemo(() => {
     if (!levelDictionaryCounts) return 0;
@@ -465,7 +491,7 @@ function WordLookupSection({
     statusFilter === "mine";
 
   /** Words already in one of the three tracked states, keyed for O(1) lookup
-   *  when the "Remaining" filter walks a page of dictionary words. */
+   *  when the "D" (dictionary) filter walks a page of dictionary words. */
   const trackedWordSet = useMemo(() => {
     const set = new Set<string>();
     srsCards.forEach((c) => {
@@ -790,31 +816,41 @@ function WordLookupSection({
         </div>
 
         {/* Status filters.
-            Owner  : All / Mastered / Learning / New / Remaining
-            Student: My Words (= the three tracked states) / Mastered /
-                     Learning / New — there is no "All", so the part of the
-                     dictionary the student does not own is unreachable. */}
+            Owner  : All / M / L / N / D
+            Student: My Words (= the three tracked states) / M / L / N — there
+                     is no "All", so the part of the dictionary the student
+                     does not own is unreachable.
+            Labels are single letters (M = Mastered, L = Learning, N = New,
+            D = Dictionary) so the row never truncates; the full name is on
+            the button's tooltip. */}
         <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card p-1 sm:p-1.5 shadow-xs">
           <div className="flex items-center justify-between gap-1 w-full">
             {(
               isAdmin
                 ? [
-                    { key: "all" as const, label: "All", count: null, short: "" },
-                    { key: "learned" as const, label: "Mastered", count: liveLearnedCount, short: "M" },
-                    { key: "learning" as const, label: "Learning", count: liveLearningCount, short: "L" },
-                    { key: "new" as const, label: "New", count: liveNewCount, short: "N" },
-                    { key: "remaining" as const, label: "Remaining", count: liveRemainingCount, short: "R" },
+                    { key: "all" as const, label: "All", title: "All dictionary words", count: null, tone: "" },
+                    { key: "learned" as const, label: "M", title: "Mastered", count: liveLearnedCount, tone: "M" },
+                    { key: "learning" as const, label: "L", title: "Learning", count: liveLearningCount, tone: "L" },
+                    { key: "new" as const, label: "N", title: "New", count: liveNewCount, tone: "N" },
+                    {
+                      key: "remaining" as const,
+                      label: "D",
+                      title: "Dictionary — not yet new, learning or mastered",
+                      count: liveRemainingCount,
+                      tone: "D",
+                    },
                   ]
                 : [
                     {
                       key: "mine" as const,
                       label: "My Words",
+                      title: "All my words — mastered, learning and new",
                       count: liveLearnedCount + liveLearningCount + liveNewCount,
-                      short: "",
+                      tone: "",
                     },
-                    { key: "learned" as const, label: "Mastered", count: liveLearnedCount, short: "M" },
-                    { key: "learning" as const, label: "Learning", count: liveLearningCount, short: "L" },
-                    { key: "new" as const, label: "New", count: liveNewCount, short: "N" },
+                    { key: "learned" as const, label: "M", title: "Mastered", count: liveLearnedCount, tone: "M" },
+                    { key: "learning" as const, label: "L", title: "Learning", count: liveLearningCount, tone: "L" },
+                    { key: "new" as const, label: "N", title: "New", count: liveNewCount, tone: "N" },
                   ]
             ).map((f) => {
               const active = statusFilter === f.key;
@@ -822,6 +858,7 @@ function WordLookupSection({
                 <button
                   key={f.key}
                   onClick={() => handleStatusChange(f.key)}
+                  title={f.title}
                   className={`flex-1 h-7 sm:h-8 rounded text-[10px] sm:text-xs font-bold transition-all text-center flex items-center justify-center gap-1 min-w-0 px-1 ${
                     active
                       ? "bg-lingo-blue text-white shadow-xs font-black"
@@ -834,11 +871,11 @@ function WordLookupSection({
                       className={`px-1.5 py-0.5 rounded-full text-[9px] sm:text-[10px] font-black shrink-0 ${
                         active
                           ? "bg-white/25 text-white"
-                          : f.short === "M"
+                          : f.tone === "M"
                           ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300"
-                          : f.short === "L"
+                          : f.tone === "L"
                           ? "bg-amber-100 text-amber-900 dark:bg-amber-950/80 dark:text-amber-300"
-                          : f.short === "R"
+                          : f.tone === "D"
                           ? "bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300"
                           : "bg-blue-100 text-blue-800 dark:bg-blue-950/80 dark:text-blue-300"
                       }`}
@@ -872,12 +909,12 @@ function WordLookupSection({
       <div className="flex items-center justify-between text-[10px] sm:text-[11px] font-bold text-lingo-text-light px-0.5">
         <p className="truncate mr-2">
           {statusFilter === "remaining"
-            ? `${words.length.toLocaleString()} remaining words`
+            ? `${words.length.toLocaleString()} remaining dictionary words`
             : `${words.length.toLocaleString()} of ${total.toLocaleString()} words`}
           {selectedLevel && ` • ${selectedLevel}`}
           {selectedLetter !== "ALL" && ` • "${selectedLetter}"`}
-          {selectedPos !== "all" && ` • ${selectedPos.toUpperCase()}`}
-          {statusFilter !== defaultFilter && ` • ${statusFilter}`}
+          {selectedPos !== "all" && ` • ${posLabelFor(selectedPos)}`}
+          {statusFilter !== defaultFilter && ` • ${statusLabelFor(statusFilter)}`}
           {search && ` • "${search}"`}
         </p>
 
