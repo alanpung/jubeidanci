@@ -6,11 +6,13 @@ import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
 import { useMobileKeyboardOpen } from "@/hooks/use-mobile-keyboard-open";
+import { generateAlternativeTranslations } from "@/lib/similarity";
 import {
-  generateAlternativeTranslations,
-  checkWordMatch,
-  type WordMatchResult,
-} from "@/lib/similarity";
+  markTranslation,
+  type MarkingResult,
+  type MarkingGrade,
+  type SlotState,
+} from "@/lib/marking";
 import { ExerciseShell } from "./exercise-shell";
 import { HoverableText } from "@/components/word/hoverable-text";
 import { detectTextLanguage } from "@/lib/language-detector";
@@ -20,9 +22,46 @@ import {
   resolveGrammarTag,
 } from "./translation-helpers";
 
+// --- Grading presentation helpers -------------------------------------------
+// These mirror the bands produced by `markTranslation` in lib/marking.ts, so the
+// badge colour and the per-box colour can never disagree with the score.
+
+const GRADE_BADGE: Record<MarkingGrade, string> = {
+  perfect: "bg-emerald-500",
+  good: "bg-sky-500",
+  pass: "bg-amber-500",
+  retry: "bg-rose-500",
+};
+
+const GRADE_TEXT: Record<MarkingGrade, string> = {
+  perfect: "text-emerald-700",
+  good: "text-sky-700",
+  pass: "text-amber-700",
+  retry: "text-rose-700",
+};
+
+/** Box + revealed-word colour per per-word slot state (4-colour feedback). */
+const SLOT_BOX_CLASS: Record<SlotState, string> = {
+  hit: "border-emerald-400 bg-emerald-50 text-emerald-700",
+  moved: "border-amber-400 bg-amber-50 text-amber-700",
+  typo: "border-orange-400 bg-orange-50 text-orange-700",
+  miss: "border-rose-400 bg-rose-50 text-rose-700",
+};
+
+const SLOT_WORD_CLASS: Record<SlotState, string> = {
+  hit: "text-emerald-700",
+  moved: "text-amber-700",
+  typo: "text-orange-700",
+  miss: "text-rose-700",
+};
+
+function renderStars(stars: 0 | 1 | 2 | 3): string {
+  return "★★★".slice(0, stars).padEnd(3, "☆");
+}
+
 interface Props {
   exercise: TranslationExercise;
-  onResult: (correct: boolean, answer: string) => void;
+  onResult: (correct: boolean, answer: string, score?: number) => void;
   onContinue: () => void;
   onPrev: () => void;
   canGoPrev: boolean;
@@ -64,7 +103,7 @@ export function Translation({
   const [submitted, setSubmitted] = useState(false);
   // One entry per answer word; the user fills in each box.
   const [userInputs, setUserInputs] = useState<string[]>([]);
-  const [matchResult, setMatchResult] = useState<WordMatchResult | null>(null);
+  const [marking, setMarking] = useState<MarkingResult | null>(null);
   const isKeyboardOpen = useMobileKeyboardOpen();
   const promptRef = useRef<HTMLDivElement>(null);
   // Refs to each per-word box so Space can move focus to the next one.
@@ -75,7 +114,7 @@ export function Translation({
     setUserInputs(
       exercise.answer.trim().split(/\s+/).filter(Boolean).map(() => ""),
     );
-    setMatchResult(null);
+    setMarking(null);
   }, [exercise.sentence, exercise.answer]);
 
   useEffect(() => {
@@ -241,10 +280,10 @@ export function Translation({
   const handleSubmit = useCallback(() => {
     if (submitted) return;
     const joined = userInputs.join(" ").trim();
-    const result = checkWordMatch(userInputs, allAnswers);
-    setMatchResult(result);
+    const result = markTranslation(userInputs, allAnswers);
+    setMarking(result);
     setSubmitted(true);
-    onResult(result.isCorrect, joined || exercise.answer);
+    onResult(result.passed, joined || exercise.answer, result.score);
     if (!exercise.noAudio?.includes("answer")) {
       play(exercise.answer, "en");
     }
@@ -289,9 +328,7 @@ export function Translation({
   const animClass =
     direction === "backward" ? "animate-slide-in-left" : "animate-slide-in-right";
 
-  const matchPct = matchResult?.percentage ?? 0;
-  const isCorrect = matchResult?.isCorrect ?? false;
-  const matchedIndices = matchResult?.matchedWordIndices ?? [];
+  const slots: SlotState[] = marking?.slots ?? [];
 
   return (
     <ExerciseShell
@@ -387,7 +424,7 @@ export function Translation({
           </button>
         </div>
 
-        {/* Helper / result strip above the word boxes */}
+        {/* Result strip: score · stars · mastery label · deduction breakdown */}
         <div
           className={`w-full max-w-4xl mx-auto px-1 ${
             isKeyboardOpen ? "mb-2" : "mb-4"
@@ -395,35 +432,49 @@ export function Translation({
         >
           {!submitted ? (
             <p className="text-center text-[11px] font-medium text-lingo-text-light">
-              Type each word, then press Enter to check · 80%+ word match = correct
+              Type each word, then press Enter to check · 满分 100，60 分及格
             </p>
-          ) : (
-            <div
-              className={`flex items-center justify-center gap-2 ${
-                isKeyboardOpen ? "py-0.5" : "py-1"
-              } ${animClass}`}
-            >
-              <span
-                className={`rounded-full px-2.5 py-1 text-xs font-black tabular-nums text-white shadow-sm ${
-                  isCorrect ? "bg-emerald-500" : "bg-rose-500"
-                }`}
-              >
-                {matchPct}%
-              </span>
-              <span
-                className={`text-xs font-bold ${
-                  isCorrect ? "text-emerald-700" : "text-rose-700"
-                }`}
-              >
-                {isCorrect ? "Correct" : "Not quite"}
-              </span>
+          ) : marking ? (
+            <div className={`flex flex-col items-center gap-1.5 ${animClass}`}>
+              <div className="flex items-center justify-center gap-2">
+                <span
+                  className={`rounded-full px-3 py-1 text-sm font-black tabular-nums text-white shadow-sm ${
+                    GRADE_BADGE[marking.grade]
+                  }`}
+                >
+                  {marking.score} 分
+                </span>
+                <span
+                  className="text-amber-500 text-base leading-none tracking-tight"
+                  aria-label={`${marking.stars} / 3 stars`}
+                >
+                  {renderStars(marking.stars)}
+                </span>
+                <span
+                  className={`text-xs font-bold ${GRADE_TEXT[marking.grade]}`}
+                >
+                  {marking.label}
+                </span>
+              </div>
+              {marking.deductions.length > 0 && (
+                <div className="flex flex-wrap items-center justify-center gap-1.5">
+                  {marking.deductions.map((d, i) => (
+                    <span
+                      key={i}
+                      className="rounded-md bg-rose-50 px-2 py-0.5 text-[10px] sm:text-[11px] font-semibold text-rose-600 border border-rose-200"
+                    >
+                      {d.label} ×{d.count}（−{d.points}）
+                    </span>
+                  ))}
+                </div>
+              )}
               {!isKeyboardOpen && (
                 <span className="text-[11px] font-medium text-lingo-text-light">
                   Press Enter or → for next
                 </span>
               )}
             </div>
-          )}
+          ) : null}
         </div>
 
         {/* Compact per-word boxes. One input per answer word, sized to the
@@ -450,7 +501,7 @@ export function Translation({
               className="pointer-events-none invisible absolute whitespace-nowrap text-sm sm:text-base font-semibold"
             />
             {analyzedWordList.map((item, idx) => {
-              const wordMatched = submitted ? matchedIndices[idx] === true : false;
+              const boxState: SlotState | null = submitted ? slots[idx] ?? null : null;
               const lastBox = idx === analyzedWordList.length - 1;
               const posStyle = item.grammarTag
                 ? POS_BADGE_STYLES[item.grammarTag]
@@ -533,10 +584,8 @@ export function Translation({
                       minWidth: "3rem",
                     }}
                     className={`rounded-lg border-2 bg-white px-1 py-1.5 text-center text-sm sm:text-base font-semibold text-lingo-text shadow-sm outline-none transition-all placeholder:text-lingo-text-light/50 ${
-                      submitted
-                        ? wordMatched
-                          ? "border-emerald-400 bg-emerald-50 text-emerald-700"
-                          : "border-rose-400 bg-rose-50 text-rose-700"
+                      boxState
+                        ? SLOT_BOX_CLASS[boxState]
                         : "border-lingo-border focus:border-lingo-blue focus:shadow-[0_0_0_3px_rgba(28,176,246,0.15)]"
                     }`}
                     aria-label={`Word ${idx + 1}`}
@@ -546,7 +595,7 @@ export function Translation({
                     <div className="mt-1 flex flex-col items-center leading-tight">
                       <span
                         className={`text-xs sm:text-sm font-serif font-bold tracking-tight ${
-                          wordMatched ? "text-emerald-700" : "text-rose-700"
+                          boxState ? SLOT_WORD_CLASS[boxState] : "text-lingo-text"
                         }`}
                       >
                         {item.word}

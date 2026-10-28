@@ -1160,7 +1160,15 @@ export async function recordWordPractice(
 
 export async function recordWordPracticeBatch(
   userId: string,
-  practices: { word: string; correct: boolean; translation?: string }[],
+  practices: {
+    word: string;
+    correct: boolean;
+    translation?: string;
+    /** SM-2 quality 0–5. Present for graded (translation) exercises; absent
+     *  for binary callers (flashcard, chat) which fall back to the all-or-nothing
+     *  path. */
+    quality?: number;
+  }[],
   language: string
 ): Promise<{
   learningAdded: number;
@@ -1180,7 +1188,7 @@ export async function recordWordPracticeBatch(
   const aliases = getLanguageAliases(targetLang);
   const primaryLang = aliases[0] || targetLang;
 
-  const wordMap = new Map<string, { correctCount: number; totalCount: number; translation?: string }>();
+  const wordMap = new Map<string, { correctCount: number; totalCount: number; translation?: string; quality?: number }>();
   for (const p of practices) {
     const norm = p.word.toLowerCase().trim();
     if (!norm) continue;
@@ -1189,11 +1197,20 @@ export async function recordWordPracticeBatch(
       if (p.correct) existing.correctCount++;
       existing.totalCount++;
       if (p.translation) existing.translation = p.translation;
+      if (typeof p.quality === "number") {
+        // A word may appear in several sentences in one lesson; keep the worst
+        // (lowest) quality so a single poor attempt never gets averaged away.
+        existing.quality =
+          existing.quality === undefined
+            ? p.quality
+            : Math.min(existing.quality, p.quality);
+      }
     } else {
       wordMap.set(norm, {
         correctCount: p.correct ? 1 : 0,
         totalCount: 1,
         translation: p.translation,
+        quality: typeof p.quality === "number" ? p.quality : undefined,
       });
     }
   }
@@ -1259,15 +1276,44 @@ export async function recordWordPracticeBatch(
     const previousReps = local?.repetitions ?? dbCard?.repetitions ?? 0;
     const previousStatus = local?.status ?? dbCard?.status ?? "new";
 
-    const isAllCorrect = data.correctCount === data.totalCount;
-    let repetitions = isAllCorrect ? previousReps + 1 : previousReps;
-    let finalStatus: CardStatus = "learning";
+    // Per-word SRS update. When the practice carries a graded `quality`
+    // (translation exercises grade the whole sentence 0–100 → quality 1–5),
+    // drive the schedule with SM-2 so a low score actually demotes words
+    // (knocks a "learned" card back to "learning") instead of the
+    // all-or-nothing binary used by the flashcard / chat path.
+    let easeFactor = local?.easeFactor ?? dbCard?.easeFactor ?? 2.5;
+    let repetitions: number;
+    let finalStatus: CardStatus;
 
-    if (previousStatus === "learned" || repetitions >= 3) {
-      finalStatus = "learned";
-      repetitions = Math.max(repetitions, 3);
+    if (typeof data.quality === "number") {
+      const sm = calculateNextReview(
+        {
+          easeFactor,
+          interval: local?.interval ?? dbCard?.interval ?? 0,
+          repetitions: previousReps,
+          status: previousStatus as CardStatus,
+        },
+        data.quality as Quality
+      );
+      repetitions = sm.repetitions;
+      easeFactor = sm.easeFactor;
+      // SM-2 has a "review" state; fold it into "learned" for the store's
+      // four-state model (new / learning / learned), matching the binary path.
+      const rawStatus = sm.status;
+      finalStatus = rawStatus === "review" ? "learned" : rawStatus;
     } else {
-      finalStatus = "learning";
+      const isAllCorrect = data.correctCount === data.totalCount;
+      repetitions = isAllCorrect ? previousReps + 1 : previousReps;
+      if (previousStatus === "learned" || repetitions >= 3) {
+        finalStatus = "learned";
+        repetitions = Math.max(repetitions, 3);
+      } else {
+        finalStatus = "learning";
+      }
+    }
+
+    if (finalStatus === "learned") {
+      repetitions = Math.max(repetitions, 3);
     }
 
     // Track transitions caused by THIS lesson so the lesson-complete screen can
@@ -1295,7 +1341,7 @@ export async function recordWordPracticeBatch(
       cefrLevel,
       pos,
       status: finalStatus,
-      easeFactor: local?.easeFactor ?? dbCard?.easeFactor ?? 2.5,
+      easeFactor,
       interval: finalStatus === "learned" ? 36500 : 1,
       repetitions,
       nextReviewAt: nextReviewAt.toISOString(),
@@ -1310,7 +1356,7 @@ export async function recordWordPracticeBatch(
       cefrLevel,
       pos,
       status: finalStatus,
-      easeFactor: local?.easeFactor ?? dbCard?.easeFactor ?? 2.5,
+      easeFactor,
       interval: finalStatus === "learned" ? 36500 : 1,
       repetitions,
       nextReviewAt,
