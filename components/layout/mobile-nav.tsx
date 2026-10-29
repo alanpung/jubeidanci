@@ -11,6 +11,7 @@ import {
   BarChart3,
   Settings,
   Users,
+  Table2,
 } from "lucide-react";
 
 const navItems = [
@@ -46,7 +47,10 @@ export function MobileNav({
     return true;
   });
   const adminItems = isAdmin
-    ? [{ href: "/library/students", label: "VIP", icon: Users }]
+    ? [
+        { href: "/library/students", label: "VIP", icon: Users },
+        { href: "/library/course-stat", label: "Course Stat", icon: Table2 },
+      ]
     : [];
   const allItems = [...items, ...adminItems];
 
