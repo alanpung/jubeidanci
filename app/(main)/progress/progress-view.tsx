@@ -113,7 +113,7 @@ export function ProgressView({
         new: number;
         myWords: number;
         /** Dictionary words not yet in the learner's deck (owner only). */
-        dict: number;
+        remaining: number;
       }
     > = {};
 
@@ -126,7 +126,7 @@ export function ProgressView({
         learned: 0,
         new: 0,
         myWords: 0,
-        dict: 0,
+        remaining: 0,
       };
     });
 
@@ -150,7 +150,7 @@ export function ProgressView({
       // are taken out. Never negative: a level can hold more cards than the
       // dictionary lists (e.g. a locally-seeded course), and a negative
       // "remaining" would be nonsense.
-      stats[lvl].dict = Math.max(0, stats[lvl].wordCount - stats[lvl].myWords);
+      stats[lvl].remaining = Math.max(0, stats[lvl].wordCount - stats[lvl].myWords);
     });
 
     return stats;
@@ -178,8 +178,8 @@ export function ProgressView({
 
   // Dictionary words the owner has not taken on yet: the whole dictionary
   // minus the words already in their deck.
-  const totalDict = useMemo(() => {
-    return Object.values(levelStats).reduce((acc, curr) => acc + curr.dict, 0);
+  const totalRemaining = useMemo(() => {
+    return Object.values(levelStats).reduce((acc, curr) => acc + curr.remaining, 0);
   }, [levelStats]);
 
   return (
@@ -373,17 +373,17 @@ export function ProgressView({
                     {isAdmin && (
                       <>
                         <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-lingo-text-light">
-                          <span className="hidden sm:inline">Dict</span>
+                          <span className="hidden sm:inline">Remaining</span>
                           <span
                             className="sm:hidden inline-flex items-center justify-center w-5 h-5 rounded-full bg-slate-400 text-white font-black text-[11px] shadow-xs"
-                            title="Dictionary (D)"
+                            title="Remaining (R)"
                           >
-                            D
+                            R
                           </span>
                         </th>
                         <th className="py-2.5 sm:py-3 px-1 sm:px-2 text-center text-lingo-text-light">
-                          <span className="hidden sm:inline">Word Count</span>
-                          <span className="sm:hidden text-[10px]">Total</span>
+                          <span className="hidden sm:inline">Dictionary</span>
+                          <span className="sm:hidden text-[10px]">Dict</span>
                         </th>
                       </>
                     )}
@@ -434,15 +434,15 @@ export function ProgressView({
                         <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
                           {stat.new.toLocaleString()}
                         </td>
-                        {/* Dict — dictionary words still untaken (owner only) */}
+                        {/* Remaining — dictionary words still untaken (owner only) */}
                         {isAdmin && (
-                          <td className="py-2.5 px-2 text-center font-bold text-slate-600 text-xs sm:text-sm whitespace-nowrap">
-                            {stat.dict.toLocaleString()}
+                          <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
+                            {stat.remaining.toLocaleString()}
                           </td>
                         )}
-                        {/* Word Count — owner only */}
+                        {/* Dictionary — the master dictionary size (owner only) */}
                         {isAdmin && (
-                          <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light/80 text-xs sm:text-sm whitespace-nowrap">
+                          <td className="py-2.5 px-2 text-center font-medium text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
                             {stat.wordCount.toLocaleString()}
                           </td>
                         )}
@@ -469,12 +469,12 @@ export function ProgressView({
                       {totalNew.toLocaleString()}
                     </td>
                     {isAdmin && (
-                      <td className="py-3 px-2 text-center font-black text-slate-600 text-xs sm:text-sm whitespace-nowrap">
-                        {totalDict.toLocaleString()}
+                      <td className="py-3 px-2 text-center font-black text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
+                        {totalRemaining.toLocaleString()}
                       </td>
                     )}
                     {isAdmin && (
-                      <td className="py-3 px-2 text-center font-black text-lingo-text-light/90 text-xs sm:text-sm whitespace-nowrap">
+                      <td className="py-3 px-2 text-center font-black text-lingo-text-light text-xs sm:text-sm whitespace-nowrap">
                         {totalWordCount.toLocaleString()}
                       </td>
                     )}

@@ -126,7 +126,7 @@ function statusLabelFor(filter: SrsFilter): string {
     case "new":
       return "New";
     case "remaining":
-      return "Dictionary";
+      return "Remaining";
     default:
       return filter;
   }
@@ -315,14 +315,14 @@ export function WordExplorer({
   libraryWords?: string[];
   language?: string;
   levelDictionaryCounts?: Record<string, number>;
-  /** Exact size of the "Dictionary" (D) filter's result set, computed on the
+  /** Exact size of the "Remaining" (R) filter's result set, computed on the
    *  server the same way the API filters it. */
   remainingDictionaryCount?: number;
 }) {
   const router = useRouter();
 
   // Size of the master dictionary (A1–C2). Only the owner needs it: it is the
-  // base for the "D" (dictionary) count, i.e. dictionary words that are not new,
+  // base for the "R" (remaining) count, i.e. dictionary words that are not new,
   // learning or mastered yet.
   const dictionaryTotal = useMemo(() => {
     if (!levelDictionaryCounts) return 0;
@@ -464,7 +464,7 @@ function WordLookupSection({
   ) => void;
   isAdmin?: boolean;
   dictionaryTotal?: number;
-  /** Exact size of the "Dictionary" (D) filter's result set (server-computed). */
+  /** Exact size of the "Remaining" (R) filter's result set (server-computed). */
   remainingDictionaryCount?: number;
 }) {
   // The owner browses the whole dictionary by default; a student starts on
@@ -499,7 +499,7 @@ function WordLookupSection({
     statusFilter === "mine";
 
   /** Words already in one of the three tracked states, keyed for O(1) lookup
-   *  when the "D" (dictionary) filter walks a page of dictionary words. */
+   *  when the "R" (remaining) filter walks a page of dictionary words. */
   const trackedWordSet = useMemo(() => {
     const set = new Set<string>();
     srsCards.forEach((c) => {
@@ -516,7 +516,7 @@ function WordLookupSection({
 
   /** Owner-only: dictionary words that are not new, learning or mastered yet.
    *  The server computes the exact number (dictionary words minus the tracked
-   *  SRS words) so the D badge always matches the list behind it; the
+   *  SRS words) so the R badge always matches the list behind it; the
    *  dictionary-total estimate is only a fallback. */
   const liveRemainingCount = useMemo(() => {
     if (typeof remainingDictionaryCount === "number" && remainingDictionaryCount > 0) {
@@ -648,7 +648,7 @@ function WordLookupSection({
         if (debouncedSearch) params.set("q", debouncedSearch);
         params.set("page", String(page));
         params.set("limit", "50");
-        // The "Dictionary" (D) filter asks the server to drop every word the
+        // The "Remaining" (R) filter asks the server to drop every word the
         // learner already has in their SRS deck, so only un-studied words come
         // back. The server does the exclusion (exact + paginable); the client
         // double-checks below as a safety net.
@@ -670,7 +670,7 @@ function WordLookupSection({
               setWords((prev) => [...prev, ...shownWords]);
             }
             // The server now returns the true count of words matching the
-            // current view — including the D filter — so the denominator and
+            // current view — including the R filter — so the denominator and
             // "show more" are correct for every status, not just the dictionary.
             setTotal(data.total || 0);
             setHasMore(!!data.hasMore);
@@ -830,12 +830,12 @@ function WordLookupSection({
         </div>
 
         {/* Status filters.
-            Owner  : All / M / L / N / D
+            Owner  : All / M / L / N / R
             Student: All (= my own words: the three tracked states) / M / L / N
                      — the "All" here means "all of MY words", so the part of
                      the dictionary the student does not own stays unreachable.
             Labels are single letters (M = Mastered, L = Learning, N = New,
-            D = Dictionary) so the row never truncates; the full name is on
+            R = Remaining) so the row never truncates; the full name is on
             the button's tooltip. */}
         <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card p-1 sm:p-1.5 shadow-xs">
           <div className="flex items-center justify-between gap-1 w-full">
@@ -848,10 +848,10 @@ function WordLookupSection({
                     { key: "new" as const, label: "N", title: "New", count: liveNewCount, tone: "N" },
                     {
                       key: "remaining" as const,
-                      label: "D",
-                      title: "Dictionary — not yet new, learning or mastered",
+                      label: "R",
+                      title: "Remaining — dictionary words not yet new, learning or mastered",
                       count: liveRemainingCount,
-                      tone: "D",
+                      tone: "R",
                     },
                   ]
                 : [
@@ -891,7 +891,7 @@ function WordLookupSection({
                           ? "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/80 dark:text-emerald-300"
                           : f.tone === "L"
                           ? "bg-amber-100 text-amber-900 dark:bg-amber-950/80 dark:text-amber-300"
-                          : f.tone === "D"
+                          : f.tone === "R"
                           ? "bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300"
                           : "bg-blue-100 text-blue-800 dark:bg-blue-950/80 dark:text-blue-300"
                       }`}
@@ -925,12 +925,14 @@ function WordLookupSection({
       <div className="flex items-center justify-between text-[10px] sm:text-[11px] font-bold text-lingo-text-light px-0.5">
         <p className="truncate mr-2">
           {statusFilter === "remaining"
-            ? `${total.toLocaleString()} remaining dictionary words`
+            ? `${total.toLocaleString()} remaining words`
             : `${words.length.toLocaleString()} of ${total.toLocaleString()} words`}
           {selectedLevel && ` • ${selectedLevel}`}
           {selectedLetter !== "ALL" && ` • "${selectedLetter}"`}
           {selectedPos !== "all" && ` • ${posLabelFor(selectedPos)}`}
-          {statusFilter !== defaultFilter && ` • ${statusLabelFor(statusFilter)}`}
+          {statusFilter !== defaultFilter &&
+            statusFilter !== "remaining" &&
+            ` • ${statusLabelFor(statusFilter)}`}
           {search && ` • "${search}"`}
         </p>
 

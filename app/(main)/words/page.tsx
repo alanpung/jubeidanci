@@ -27,7 +27,7 @@ export default async function WordsPage() {
       easy: 0,
     })),
     getUserLibraryWords().catch(() => []),
-    // Exact size of the "Dictionary" (D) filter's result set, computed the same
+    // Exact size of the "Remaining" (R) filter's result set, computed the same
     // way the API filters it, so the D button's badge always matches the list.
     // Only the owner ever sees that button, so students skip the extra read.
     isAdmin

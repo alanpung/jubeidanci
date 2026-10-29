@@ -18,7 +18,7 @@ export const GRADUATION_THRESHOLD = 3;
 /**
  * Is this SRS card status one of the tracked states (new / learning / learned
  * / review)? A card in any of these states means the learner has taken the
- * word on, so it must be excluded from the "Dictionary" (D) filter. A card
+ * word on, so it must be excluded from the "Remaining" (R) filter. A card
  * with any other status (e.g. a removed one) is not in the deck for study.
  */
 export function hasTrackedSrsStatus(status: string): boolean {
