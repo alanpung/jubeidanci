@@ -46,13 +46,19 @@ export function MobileNav({
     if (item.href === "/markdown" && !showMarkdown) return false;
     return true;
   });
-  const adminItems = isAdmin
-    ? [
-        { href: "/library/students", label: "VIP", icon: Users },
-        { href: "/library/course-stat", label: "Course Stat", icon: Table2 },
-      ]
+  const vipItems = isAdmin
+    ? [{ href: "/library/students", label: "VIP", icon: Users }]
     : [];
-  const allItems = [...items, ...adminItems];
+  const statItems = isAdmin
+    ? [{ href: "/course-stat", label: "Course Stat", icon: Table2 }]
+    : [];
+  const libraryIndex = items.findIndex((i) => i.href === "/library");
+  const allItems = [
+    ...items.slice(0, libraryIndex + 1),
+    ...statItems,
+    ...items.slice(libraryIndex + 1),
+    ...vipItems,
+  ];
 
   return (
     <nav className="fixed bottom-0 left-0 right-0 z-30 flex md:hidden border-t-2 border-lingo-border bg-white/95 backdrop-blur-md shadow-[0_-2px_10px_rgba(0,0,0,0.06)] pb-[env(safe-area-inset-bottom,4px)]">

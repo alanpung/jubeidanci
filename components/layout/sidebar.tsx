@@ -41,13 +41,19 @@ export function Sidebar({
     if (item.href === "/markdown" && !showMarkdown) return false;
     return true;
   });
-  const adminItems = isAdmin
-    ? [
-        { href: "/library/students", label: "VIP", icon: Users },
-        { href: "/library/course-stat", label: "Course Stat", icon: Table2 },
-      ]
+  const vipItems = isAdmin
+    ? [{ href: "/library/students", label: "VIP", icon: Users }]
     : [];
-  const allItems = [...items, ...adminItems];
+  const statItems = isAdmin
+    ? [{ href: "/course-stat", label: "Course Stat", icon: Table2 }]
+    : [];
+  const libraryIndex = items.findIndex((i) => i.href === "/library");
+  const allItems = [
+    ...items.slice(0, libraryIndex + 1),
+    ...statItems,
+    ...items.slice(libraryIndex + 1),
+    ...vipItems,
+  ];
 
   return (
     <aside className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0 border-r-2 border-lingo-border bg-white">
