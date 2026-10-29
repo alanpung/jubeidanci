@@ -145,24 +145,9 @@ export const CEFR_OVERRIDE: Record<string, Cefr> = {
   valorisation: "C2",
   // foreign / continental-philosophy terms (no English CEFR, clearly advanced)
   "différance": "C2", gestell: "C2", jetztzeit: "C2", "sapir-whorf": "C2",
-  // remaining-69: srsWords that are NOT genuine graded English vocabulary
-  // (numbers, proper nouns, abbreviations, foreign phrases, foods). They carry
-  // no official CEFR level, so they stay here as best-effort context
-  // assignments. The genuine A1-A2-B1 lexemes were merged into
-  // words/english_merged.json as the app-wide source of truth.
-  "42": "A1", "2026": "A1",
-  // remaining-69: proper nouns / abbreviations / foreign phrases / foods.
-  // These carry NO official CEFR in any reference list, so they are assigned
-  // by domain context (best-effort): country/city/brand names ~B1, personal
-  // names ~A2, famous philosophers/scientists & foreign academic phrases ~C2,
-  // common abbreviations ~B1, Chinese festival foods ~B1.
-  china: "B1", beijing: "B1", shanghai: "B1", wechat: "B1",
-  david: "A2", li: "A2", ming: "A2", wang: "A2",
-  kant: "C2", wittgenstein: "C2", quine: "C2", putnam: "C2", toulmin: "C2",
-  mctaggart: "C2", "gödel": "C2", "schrödinger": "C2", fermi: "C2", gaia: "C2",
-  ac: "B1", pe: "B1", hd: "B1", qr: "B1", ups: "B1",
-  "lieux de mémoire": "C2", "opinio juris": "C2",
-  mooncakes: "B1", tangyuan: "B1", zongzi: "B1",
+  // The entries above are forced C2 academic / continental-philosophy terms
+  // with no official graded-vocabulary CEFR; all other srsWords now resolve
+  // from words/english_merged.json (the app-wide source of truth).
 };
 
 /**
