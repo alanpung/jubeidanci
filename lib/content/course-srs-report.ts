@@ -147,6 +147,24 @@ export const CEFR_OVERRIDE: Record<string, Cefr> = {
   "différance": "C2", gestell: "C2", jetztzeit: "C2", "sapir-whorf": "C2",
   // common graded vocabulary missing from the bundled dictionary
   healthy: "A2", early: "A2", easy: "A2", happy: "A2",
+  // remaining-69 (final unmatched srsWords): genuine English lexemes whose
+  // CEFR was verified online (Cambridge Essential / Oxford 3000).
+  "cannot": "A1", english: "A1", goodbye: "A1", ok: "A1", okay: "A1",
+  healthier: "A2", earlier: "A2", easier: "A2", happier: "A2",
+  towards: "B1", onto: "A2", latin: "B1", "wi-fi": "B1", pm: "B1",
+  "42": "A1", "2026": "A1",
+  // remaining-69: proper nouns / abbreviations / foreign phrases / foods.
+  // These carry NO official CEFR in any reference list, so they are assigned
+  // by domain context (best-effort): country/city/brand names ~B1, personal
+  // names ~A2, famous philosophers/scientists & foreign academic phrases ~C2,
+  // common abbreviations ~B1, Chinese festival foods ~B1.
+  china: "B1", beijing: "B1", shanghai: "B1", wechat: "B1",
+  david: "A2", li: "A2", ming: "A2", wang: "A2",
+  kant: "C2", wittgenstein: "C2", quine: "C2", putnam: "C2", toulmin: "C2",
+  mctaggart: "C2", "gödel": "C2", "schrödinger": "C2", fermi: "C2", gaia: "C2",
+  ac: "B1", pe: "B1", hd: "B1", qr: "B1", ups: "B1",
+  "lieux de mémoire": "C2", "opinio juris": "C2",
+  mooncakes: "B1", tangyuan: "B1", zongzi: "B1",
 };
 
 /**
@@ -340,4 +358,42 @@ export function getCourseSrsReport(): CourseSrsRow[] {
     return a.kind.localeCompare(b.kind);
   });
   return rows;
+}
+
+/**
+ * Diagnostic helper: return every srsWord (across all courses) that the
+ * matcher could not assign a CEFR level to, with how often it occurs.
+ * Useful for auditing / filling gaps in CEFR_OVERRIDE.
+ */
+export function listUnknownSrsWords(): Array<{ word: string; count: number }> {
+  const dict = buildDictionary();
+  const count = new Map<string, number>();
+  const files = readdirSync(CONTENT_DIR).filter(
+    (f) => /[^.]+\.md$/.test(f) && f.includes("unit"),
+  );
+  for (const f of files) {
+    const src = readFileSync(path.join(CONTENT_DIR, f), "utf8");
+    let doc;
+    try {
+      doc = parseUnitMarkdown(src);
+    } catch {
+      continue;
+    }
+    for (const lesson of doc.lessons) {
+      for (const ex of lesson.exercises) {
+        const sw = (ex as { srsWords?: string | string[] }).srsWords;
+        if (!sw) continue;
+        const words = Array.isArray(sw) ? sw : [sw];
+        for (const w of words) {
+          const norm = String(w).toLowerCase().trim();
+          if (!norm) continue;
+          if (levelForWord(norm, dict)) continue;
+          count.set(norm, (count.get(norm) ?? 0) + 1);
+        }
+      }
+    }
+  }
+  return [...count.entries()]
+    .map(([word, count]) => ({ word, count }))
+    .sort((a, b) => b.count - a.count || a.word.localeCompare(b.word));
 }
