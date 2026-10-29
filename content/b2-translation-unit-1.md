@@ -11,7 +11,11 @@ questionType: "translation"
 ---
 
 ---
-Lesson 1: Academic Writing & Research
+lessonTitle: "Lesson 1: Academic Writing & Research"
+description: "Discussing academic concepts and scholarly work"
+icon: "📝"
+color: "#1A237E"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -60,7 +64,13 @@ text: "把下面的句子翻译成英文"
 sentence: "这篇文章的论述逻辑严密，令人信服。"
 answer: "The argumentation in this article is logically rigorous and convincing."
 srsWords: "argumentation" "article" "logically" "rigorous" "convincing"
-Lesson 2: Business Strategy & Management
+
+---
+lessonTitle: "Lesson 2: Business Strategy & Management"
+description: "Advanced business and management vocabulary"
+icon: "📊"
+color: "#B71C1C"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -109,7 +119,13 @@ text: "把下面的句子翻译成英文"
 sentence: "利益相关者的意见在制定企业政策时必须被纳入考量。"
 answer: "The opinions of stakeholders must be taken into consideration when formulating company policies."
 srsWords: "opinions" "stakeholders" "consideration" "formulating" "policies"
-Lesson 3: Environmental Policy
+
+---
+lessonTitle: "Lesson 3: Environmental Policy"
+description: "Discussing environmental legislation and sustainability"
+icon: "🌿"
+color: "#1B5E20"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -158,7 +174,13 @@ text: "把下面的句子翻译成英文"
 sentence: "气候变化的影响正在以超出科学家预期的速度加剧。"
 answer: "The effects of climate change are intensifying at a rate that exceeds scientists' expectations."
 srsWords: "effects" "climate" "change" "intensifying" "rate" "exceeds" "expectations"
-Lesson 4: Psychology & Human Behaviour
+
+---
+lessonTitle: "Lesson 4: Psychology & Human Behaviour"
+description: "Exploring the human mind and behaviour"
+icon: "🧠"
+color: "#4A148C"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -207,7 +229,13 @@ text: "把下面的句子翻译成英文"
 sentence: "自我认知是个人成长和心理健康的重要组成部分。"
 answer: "Self-awareness is an important component of personal growth and mental health."
 srsWords: "self-awareness" "component" "personal" "growth" "mental" "health"
-Lesson 5: Political Science
+
+---
+lessonTitle: "Lesson 5: Political Science"
+description: "Discussing political systems, power and democracy"
+icon: "🏛️"
+color: "#0D47A1"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -256,7 +284,13 @@ text: "把下面的句子翻译成英文"
 sentence: "腐败问题严重损害了公众对政府的信任。"
 answer: "Corruption has seriously damaged the public's trust in the government."
 srsWords: "corruption" "seriously" "damaged" "trust" "government"
-Lesson 6: Economics & Trade
+
+---
+lessonTitle: "Lesson 6: Economics & Trade"
+description: "Advanced economic concepts and global trade"
+icon: "📈"
+color: "#004D40"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -305,7 +339,13 @@ text: "把下面的句子翻译成英文"
 sentence: "经济不平等的加剧正在引发社会动荡。"
 answer: "The widening of economic inequality is fuelling social unrest."
 srsWords: "widening" "economic" "inequality" "fuelling" "social" "unrest"
-Lesson 7: Media Literacy & Journalism
+
+---
+lessonTitle: "Lesson 7: Media Literacy & Journalism"
+description: "Critical thinking about media and information"
+icon: "📰"
+color: "#37474F"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -354,7 +394,13 @@ text: "把下面的句子翻译成英文"
 sentence: "新闻报道应该力求客观公正，避免情绪化表达。"
 answer: "News reporting should strive to be objective and impartial, avoiding emotional expression."
 srsWords: "reporting" "strive" "objective" "impartial" "avoiding" "emotional" "expression"
-Lesson 8: Philosophy & Critical Thinking
+
+---
+lessonTitle: "Lesson 8: Philosophy & Critical Thinking"
+description: "Exploring philosophical ideas and logical reasoning"
+icon: "💭"
+color: "#880E4F"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -403,7 +449,13 @@ text: "把下面的句子翻译成英文"
 sentence: "逻辑谬误是辩论中常见的思维陷阱。"
 answer: "Logical fallacies are common thinking traps in debates."
 srsWords: "logical" "fallacies" "common" "thinking" "traps" "debates"
-Lesson 9: Healthcare & Medicine
+
+---
+lessonTitle: "Lesson 9: Healthcare & Medicine"
+description: "Advanced medical and healthcare vocabulary"
+icon: "🏥"
+color: "#006064"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -452,7 +504,13 @@ text: "把下面的句子翻译成英文"
 sentence: "心理健康服务的可及性在许多国家仍然严重不足。"
 answer: "The accessibility of mental health services remains seriously inadequate in many countries."
 srsWords: "accessibility" "mental" "health" "services" "remains" "seriously" "inadequate"
-Lesson 10: Technology & Society
+
+---
+lessonTitle: "Lesson 10: Technology & Society"
+description: "The impact of technology on modern life and society"
+icon: "💻"
+color: "#1A237E"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -501,7 +559,13 @@ text: "把下面的句子翻译成英文"
 sentence: "数字鸿沟的存在加深了不同群体之间的社会不平等。"
 answer: "The existence of the digital divide deepens social inequality between different groups."
 srsWords: "existence" "digital" "divide" "deepens" "social" "inequality"
-Lesson 11: Literature & Language
+
+---
+lessonTitle: "Lesson 11: Literature & Language"
+description: "Analysing literary works and language use"
+icon: "📚"
+color: "#4E342E"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -550,7 +614,13 @@ text: "把下面的句子翻译成英文"
 sentence: "这部作品的叙事结构非线性，为读者提供了多种解读空间。"
 answer: "The narrative structure of this work is non-linear, providing readers with multiple spaces for interpretation."
 srsWords: "narrative" "structure" "non-linear" "providing" "readers" "multiple" "interpretation"
-Lesson 12: Sociology & Social Change
+
+---
+lessonTitle: "Lesson 12: Sociology & Social Change"
+description: "Understanding society, inequality and social movements"
+icon: "👥"
+color: "#BF360C"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -599,7 +669,13 @@ text: "把下面的句子翻译成英文"
 sentence: "人口老龄化正在给许多国家的福利制度带来巨大压力。"
 answer: "Population ageing is placing enormous pressure on the welfare systems of many countries."
 srsWords: "population" "ageing" "placing" "enormous" "pressure" "welfare" "systems"
-Lesson 13: Urban Planning & Architecture
+
+---
+lessonTitle: "Lesson 13: Urban Planning & Architecture"
+description: "Discussing cities, design and urban development"
+icon: "🏙️"
+color: "#006064"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -641,14 +717,20 @@ srsWords: "public" "spaces" "fully" "account" "usage" "needs" "groups"
 text: "把下面的句子翻译成英文"
 sentence: "这座城市正在推行以步行为导向的社区发展模式。"
 answer: "This city is promoting a pedestrian-oriented model of community development."
-srsWords: "promoting" "pedestrian-oriented" "pedestrian" "model" "community" "development"
+srsWords: "promoting" "pedestrian" "pedestrian-oriented" "model" "community" "development"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "绿色建筑标准的推广有助于降低建筑业的碳足迹。"
 answer: "The promotion of green building standards helps to reduce the carbon footprint of the construction industry."
 srsWords: "promotion" "green" "building" "standards" "reduce" "carbon" "footprint" "construction" "industry"
-Lesson 14: International Relations
+
+---
+lessonTitle: "Lesson 14: International Relations"
+description: "Geopolitics, diplomacy and global affairs"
+icon: "🌐"
+color: "#1A237E"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -697,7 +779,13 @@ text: "把下面的句子翻译成英文"
 sentence: "人道主义援助在冲突地区扮演着至关重要的角色。"
 answer: "Humanitarian aid plays a crucial role in conflict zones."
 srsWords: "humanitarian" "aid" "crucial" "role" "conflict" "zones"
-Lesson 15: Cultural Identity & Diversity
+
+---
+lessonTitle: "Lesson 15: Cultural Identity & Diversity"
+description: "Exploring identity, multiculturalism and belonging"
+icon: "🌍"
+color: "#4A148C"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -746,7 +834,13 @@ text: "把下面的句子翻译成英文"
 sentence: "少数民族语言的保护是维护文化多样性的重要举措。"
 answer: "The protection of minority languages is an important measure for preserving cultural diversity."
 srsWords: "protection" "minority" "languages" "measure" "preserving" "cultural" "diversity"
-Lesson 16: Science & Ethics
+
+---
+lessonTitle: "Lesson 16: Science & Ethics"
+description: "Ethical dimensions of scientific progress"
+icon: "🔬"
+color: "#B71C1C"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -782,7 +876,7 @@ srsWords: "animal" "experiments" "medical" "research" "sparked" "ongoing" "ethic
 text: "把下面的句子翻译成英文"
 sentence: "这项技术的双重用途潜力引起了安全专家的高度警觉。"
 answer: "The dual-use potential of this technology has raised serious alarm among security experts."
-srsWords: "dual-use" "dual" "potential" "technology" "raised" "serious" "alarm" "security" "experts"
+srsWords: "dual-use" "potential" "technology" "raised" "serious" "alarm" "security" "experts"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -795,7 +889,13 @@ text: "把下面的句子翻译成英文"
 sentence: "科学进步与伦理约束之间的张力是现代社会持续面临的议题。"
 answer: "The tension between scientific progress and ethical constraints is an issue that modern society continuously faces."
 srsWords: "tension" "scientific" "progress" "ethical" "constraints" "issue" "modern" "society" "continuously"
-Lesson 17: Law & Human Rights
+
+---
+lessonTitle: "Lesson 17: Law & Human Rights"
+description: "Human rights, legal systems and justice"
+icon: "⚖️"
+color: "#0D47A1"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -844,7 +944,13 @@ text: "把下面的句子翻译成英文"
 sentence: "言论自由并不意味着可以散布仇恨言论或煽动暴力。"
 answer: "Freedom of speech does not mean that one can spread hate speech or incite violence."
 srsWords: "freedom" "speech" "spread" "hate" "incite" "violence"
-Lesson 18: Energy & Sustainability
+
+---
+lessonTitle: "Lesson 18: Energy & Sustainability"
+description: "The future of energy and sustainable practices"
+icon: "⚡"
+color: "#1B5E20"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -893,7 +999,13 @@ text: "把下面的句子翻译成英文"
 sentence: "政府补贴在推动清洁能源行业发展方面发挥了关键作用。"
 answer: "Government subsidies have played a key role in driving the development of the clean energy industry."
 srsWords: "government" "subsidies" "played" "key" "role" "driving" "development" "clean" "industry"
-Lesson 19: Migration & Identity
+
+---
+lessonTitle: "Lesson 19: Migration & Identity"
+description: "Exploring migration, belonging and cultural adjustment"
+icon: "✈️"
+color: "#4E342E"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -942,7 +1054,13 @@ text: "把下面的句子翻译成英文"
 sentence: "归属感的缺失是许多移民长期面临的心理挑战。"
 answer: "The lack of a sense of belonging is a psychological challenge that many migrants face over the long term."
 srsWords: "lack" "sense" "belonging" "psychological" "challenge" "migrants" "long" "term"
-Lesson 20: Future of Work
+
+---
+lessonTitle: "Lesson 20: Future of Work"
+description: "Automation, skills and the evolving workplace"
+icon: "🚀"
+color: "#880E4F"
+---
 
 [translation]
 text: "把下面的句子翻译成英文"
