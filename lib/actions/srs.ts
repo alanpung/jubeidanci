@@ -465,7 +465,7 @@ export async function getAllCards(
 /**
  * The set of dictionary words the learner already has in their SRS deck
  * (any tracked status: new / learning / learned / review). Used by the
- * "Dictionary" (D) filter to exclude those words server-side, so the filter
+ * "Remaining" (R) filter to exclude those words server-side, so the filter
  * is exact and paginable instead of relying on the client's copy of the deck.
  *
  * Reuses the same authoritative DB+local merge as getAllCards (skipSync=true
@@ -487,9 +487,9 @@ export async function getTrackedWordSet(
 
 /**
  * The exact number of dictionary words the learner has NOT yet taken on —
- * i.e. the size of the "Dictionary" (D) filter's result set. Computed the same
+ * i.e. the size of the "Remaining" (R) filter's result set. Computed the same
  * way the /api/words SRS exclusion computes it (dictionary words minus the
- * tracked SRS words), so the badge on the D button can never disagree with the
+ * tracked SRS words), so the badge on the R button can never disagree with the
  * list behind it.
  */
 export async function getRemainingDictionaryCount(
