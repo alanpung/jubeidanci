@@ -2,6 +2,10 @@ import { NextRequest, NextResponse } from "next/server";
 import { loadEnLevelWords, getBundledWords, type WordEntry } from "@/lib/words";
 import { db, isDbAvailable } from "@/lib/db";
 import { dictionaryWord } from "@/lib/db/schema";
+import { getTrackedWordSet } from "@/lib/actions/srs";
+import { getSession } from "@/lib/auth-server";
+
+export const dynamic = "force-dynamic";
 
 const POS_ALIASES: Record<string, string[]> = {
   noun: ["noun", "n", "n."],
@@ -112,6 +116,35 @@ export async function GET(req: NextRequest) {
           w.english_translation.toLowerCase().includes(q) ||
           (Boolean(w.definition_zh) && w.definition_zh!.toLowerCase().includes(q))
       );
+    }
+
+    // ─── OPTIONAL SRS EXCLUSION (Dictionary / "not in my SRS" filter) ───
+    // When the client requests excludeInSrs, drop every word the learner
+    // already has in their SRS deck (new / learning / learned / review) so the
+    // result is exactly the dictionary words they have NOT studied yet. Done
+    // server-side against the authoritative DB+local merge, not the client's
+    // possibly-stale copy of the deck, and before pagination so the count and
+    // "show more" stay correct.
+    const excludeInSrs = searchParams.get("excludeInSrs") === "1";
+    if (excludeInSrs) {
+      try {
+        const session = await getSession();
+        const userId = session?.user?.id;
+        if (userId) {
+          const tracked = await getTrackedWordSet(
+            lang === "english" ? "en" : lang,
+            userId
+          );
+          if (tracked.size > 0) {
+            filtered = filtered.filter(
+              (w: WordEntry) => !tracked.has(w.word.toLowerCase().trim())
+            );
+          }
+        }
+      } catch {
+        // If we cannot resolve the learner's deck, fall back to the unfiltered
+        // dictionary rather than failing the whole request.
+      }
     }
 
     const total = filtered.length;

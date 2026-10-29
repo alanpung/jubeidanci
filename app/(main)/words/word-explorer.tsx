@@ -306,6 +306,7 @@ export function WordExplorer({
   libraryWords = [],
   language = "en",
   levelDictionaryCounts,
+  remainingDictionaryCount,
 }: {
   isAdmin?: boolean;
   words?: Word[];
@@ -314,6 +315,9 @@ export function WordExplorer({
   libraryWords?: string[];
   language?: string;
   levelDictionaryCounts?: Record<string, number>;
+  /** Exact size of the "Dictionary" (D) filter's result set, computed on the
+   *  server the same way the API filters it. */
+  remainingDictionaryCount?: number;
 }) {
   const router = useRouter();
 
@@ -423,6 +427,7 @@ export function WordExplorer({
         onCardStatusChange={handleCardStatusChange}
         isAdmin={isAdmin}
         dictionaryTotal={dictionaryTotal}
+        remainingDictionaryCount={remainingDictionaryCount}
       />
     </div>
   );
@@ -443,6 +448,7 @@ function WordLookupSection({
   onCardStatusChange,
   isAdmin = false,
   dictionaryTotal = 0,
+  remainingDictionaryCount,
 }: {
   selectedLevel: string;
   onSelectLevel: (lvl: string) => void;
@@ -458,6 +464,8 @@ function WordLookupSection({
   ) => void;
   isAdmin?: boolean;
   dictionaryTotal?: number;
+  /** Exact size of the "Dictionary" (D) filter's result set (server-computed). */
+  remainingDictionaryCount?: number;
 }) {
   // The owner browses the whole dictionary by default; a student starts on
   // "All" (= their own new + learning + mastered, labelled "All" in the UI)
@@ -507,11 +515,15 @@ function WordLookupSection({
   const liveNewCount = useMemo(() => srsCards.filter(isNewCard).length, [srsCards]);
 
   /** Owner-only: dictionary words that are not new, learning or mastered yet.
-   *  Derived rather than counted, because the dictionary itself is paginated. */
-  const liveRemainingCount = useMemo(
-    () => Math.max(0, dictionaryTotal - trackedWordSet.size),
-    [dictionaryTotal, trackedWordSet],
-  );
+   *  The server computes the exact number (dictionary words minus the tracked
+   *  SRS words) so the D badge always matches the list behind it; the
+   *  dictionary-total estimate is only a fallback. */
+  const liveRemainingCount = useMemo(() => {
+    if (typeof remainingDictionaryCount === "number" && remainingDictionaryCount > 0) {
+      return remainingDictionaryCount;
+    }
+    return Math.max(0, dictionaryTotal - trackedWordSet.size);
+  }, [dictionaryTotal, trackedWordSet, remainingDictionaryCount]);
 
   useEffect(() => {
     let cancelled = false;
@@ -636,6 +648,11 @@ function WordLookupSection({
         if (debouncedSearch) params.set("q", debouncedSearch);
         params.set("page", String(page));
         params.set("limit", "50");
+        // The "Dictionary" (D) filter asks the server to drop every word the
+        // learner already has in their SRS deck, so only un-studied words come
+        // back. The server does the exclusion (exact + paginable); the client
+        // double-checks below as a safety net.
+        if (statusFilter === "remaining") params.set("excludeInSrs", "1");
 
         const res = await fetch(`/api/words?${params.toString()}`);
         if (res.ok) {
@@ -652,13 +669,10 @@ function WordLookupSection({
             } else {
               setWords((prev) => [...prev, ...shownWords]);
             }
-            // For "remaining" the dictionary total is meaningless as a
-            // denominator, so the running count of kept words is shown instead.
-            if (isRemaining) {
-              setTotal((prev) => (page === 1 ? shownWords.length : prev + shownWords.length));
-            } else {
-              setTotal(data.total || 0);
-            }
+            // The server now returns the true count of words matching the
+            // current view — including the D filter — so the denominator and
+            // "show more" are correct for every status, not just the dictionary.
+            setTotal(data.total || 0);
             setHasMore(!!data.hasMore);
           }
         }
@@ -911,7 +925,7 @@ function WordLookupSection({
       <div className="flex items-center justify-between text-[10px] sm:text-[11px] font-bold text-lingo-text-light px-0.5">
         <p className="truncate mr-2">
           {statusFilter === "remaining"
-            ? `${words.length.toLocaleString()} remaining dictionary words`
+            ? `${total.toLocaleString()} remaining dictionary words`
             : `${words.length.toLocaleString()} of ${total.toLocaleString()} words`}
           {selectedLevel && ` • ${selectedLevel}`}
           {selectedLetter !== "ALL" && ` • "${selectedLetter}"`}
