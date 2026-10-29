@@ -1,4 +1,4 @@
-import { getAllCards, getSrsStats, getUserLibraryWords } from "@/lib/actions/srs";
+import { getAllCards, getSrsStats, getUserLibraryWords, getRemainingDictionaryCount } from "@/lib/actions/srs";
 import { getTargetLanguage } from "@/lib/actions/preferences";
 import { getEnLevelCounts } from "@/lib/words";
 import { getSession } from "@/lib/auth-server";
@@ -13,7 +13,7 @@ export default async function WordsPage() {
   const isAdmin = isAdminEmail(session?.user?.email);
   const language = (await getTargetLanguage()) || "en";
 
-  const [srsCards, stats, libraryWords] = await Promise.all([
+  const [srsCards, stats, libraryWords, remainingCount] = await Promise.all([
     getAllCards(language).catch(() => []),
     getSrsStats(language).catch(() => ({
       total: 0,
@@ -27,6 +27,12 @@ export default async function WordsPage() {
       easy: 0,
     })),
     getUserLibraryWords().catch(() => []),
+    // Exact size of the "Dictionary" (D) filter's result set, computed the same
+    // way the API filters it, so the D button's badge always matches the list.
+    // Only the owner ever sees that button, so students skip the extra read.
+    isAdmin
+      ? getRemainingDictionaryCount(language, session?.user?.id).catch(() => 0)
+      : Promise.resolve(0),
   ]);
 
   const levelCounts = getEnLevelCounts();
@@ -40,6 +46,7 @@ export default async function WordsPage() {
         libraryWords={libraryWords}
         language={language}
         levelDictionaryCounts={levelCounts}
+        remainingDictionaryCount={remainingCount}
       />
     </div>
   );

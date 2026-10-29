@@ -6,10 +6,10 @@ import { and, eq, lte, count, sql, asc, isNotNull, inArray, notInArray, or } fro
 import { getSession } from "@/lib/auth-server";
 import { isAdminEmail } from "@/lib/ai/models";
 import { revalidatePath } from "next/cache";
-import { calculateNextReview, GRADUATION_THRESHOLD, type Quality, type CardStatus } from "@/lib/srs";
+import { calculateNextReview, GRADUATION_THRESHOLD, hasTrackedSrsStatus, type Quality, type CardStatus } from "@/lib/srs";
 import type { Exercise } from "@/lib/content/types";
 import { extractSrsWords } from "@/lib/srs-words";
-import { getWordToLevelMap } from "@/lib/words";
+import { getWordToLevelMap, getBundledWords } from "@/lib/words";
 import {
   getLocalCards,
   getLocalCard,
@@ -311,7 +311,8 @@ export interface SrsCardItem {
 export async function getAllCards(
   language?: string,
   userIdOverride?: string,
-  forceSync = false
+  forceSync = false,
+  skipSync = false
 ): Promise<SrsCardItem[]> {
   // Prefer an explicitly resolved userId (e.g. the one the caller already
   // authenticated) over re-resolving via getSession(). In a Route Handler the
@@ -328,9 +329,14 @@ export async function getAllCards(
   // alongside the request's own reads used to hold most of the 5-connection
   // pool, and because postgres.js queues (rather than fails) on an exhausted
   // pool, the page waited indefinitely instead of erroring.
-  void runAfterResponse(() =>
-    syncUserCourseWordsToSrs(userId, forceSync).catch(() => {}),
-  );
+  // skipSync=true (used by the /api/words SRS-exclusion read) reuses the same
+  // authoritative DB+local merge WITHOUT scheduling another sync — the page
+  // load that rendered the dictionary already triggered one.
+  if (!skipSync) {
+    void runAfterResponse(() =>
+      syncUserCourseWordsToSrs(userId, forceSync).catch(() => {}),
+    );
+  }
   const aliases = language ? getLanguageAliases(language) : [];
   // Gate on hasDbConfig (DB URL present), NOT the flaky isDbAvailable()
   // cold-start probe. The probe can false-negative on a cold serverless
@@ -454,6 +460,51 @@ export async function getAllCards(
   }
 
   return cards;
+}
+
+/**
+ * The set of dictionary words the learner already has in their SRS deck
+ * (any tracked status: new / learning / learned / review). Used by the
+ * "Dictionary" (D) filter to exclude those words server-side, so the filter
+ * is exact and paginable instead of relying on the client's copy of the deck.
+ *
+ * Reuses the same authoritative DB+local merge as getAllCards (skipSync=true
+ * so we don't schedule a second background sync for a read-only request).
+ */
+export async function getTrackedWordSet(
+  language?: string,
+  userIdOverride?: string
+): Promise<Set<string>> {
+  const cards = await getAllCards(language, userIdOverride, false, true);
+  const set = new Set<string>();
+  for (const c of cards) {
+    if (hasTrackedSrsStatus(c.status)) {
+      set.add(c.word.toLowerCase().trim());
+    }
+  }
+  return set;
+}
+
+/**
+ * The exact number of dictionary words the learner has NOT yet taken on —
+ * i.e. the size of the "Dictionary" (D) filter's result set. Computed the same
+ * way the /api/words SRS exclusion computes it (dictionary words minus the
+ * tracked SRS words), so the badge on the D button can never disagree with the
+ * list behind it.
+ */
+export async function getRemainingDictionaryCount(
+  language?: string,
+  userIdOverride?: string
+): Promise<number> {
+  const normLang = language === "english" ? "en" : language || "en";
+  const words = await getBundledWords(normLang);
+  if (words.length === 0) return 0;
+  const tracked = await getTrackedWordSet(normLang, userIdOverride);
+  let remaining = 0;
+  for (const w of words) {
+    if (!tracked.has(w.word.toLowerCase().trim())) remaining++;
+  }
+  return remaining;
 }
 
 export async function reviewCard(
