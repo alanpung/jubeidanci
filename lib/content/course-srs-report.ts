@@ -145,13 +145,11 @@ export const CEFR_OVERRIDE: Record<string, Cefr> = {
   valorisation: "C2",
   // foreign / continental-philosophy terms (no English CEFR, clearly advanced)
   "différance": "C2", gestell: "C2", jetztzeit: "C2", "sapir-whorf": "C2",
-  // common graded vocabulary missing from the bundled dictionary
-  healthy: "A2", early: "A2", easy: "A2", happy: "A2",
-  // remaining-69 (final unmatched srsWords): genuine English lexemes whose
-  // CEFR was verified online (Cambridge Essential / Oxford 3000).
-  "cannot": "A1", english: "A1", goodbye: "A1", ok: "A1", okay: "A1",
-  healthier: "A2", earlier: "A2", easier: "A2", happier: "A2",
-  towards: "B1", onto: "A2", latin: "B1", "wi-fi": "B1", pm: "B1",
+  // remaining-69: srsWords that are NOT genuine graded English vocabulary
+  // (numbers, proper nouns, abbreviations, foreign phrases, foods). They carry
+  // no official CEFR level, so they stay here as best-effort context
+  // assignments. The genuine A1-A2-B1 lexemes were merged into
+  // words/english_merged.json as the app-wide source of truth.
   "42": "A1", "2026": "A1",
   // remaining-69: proper nouns / abbreviations / foreign phrases / foods.
   // These carry NO official CEFR in any reference list, so they are assigned
