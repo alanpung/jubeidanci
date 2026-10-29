@@ -18,7 +18,7 @@
  *
  * The model borrows from familiar education rubrics (research in the plan doc):
  *   - 高考 English essay: per-dimension deductions with independent caps, and a
- *     fixed pass line (9/15 ≈ 60) rather than a curve.
+ *     fixed pass line (70%) rather than a curve.
  *   - SM-2 / Anki `Quality` 0–5: the score maps onto the existing SRS quality
  *     scale, so a shaky pass and a perfect run get different memory schedules.
  *
@@ -69,7 +69,7 @@ export interface MarkingResult {
 // Tunable rules — everything that controls scoring lives here.
 // ---------------------------------------------------------------------------
 
-export const PASS_LINE = 60;
+export const PASS_LINE = 70;
 
 export const MARKING_RULES = {
   /** Omitted answer words (learner wrote fewer words than the target). */
