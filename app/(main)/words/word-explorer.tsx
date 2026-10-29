@@ -830,10 +830,12 @@ function WordLookupSection({
         </div>
 
         {/* Status filters.
-            Owner  : All / M / L / N / R
+            Owner  : All / M / L / N / R   (each with a count badge)
             Student: All (= my own words: the three tracked states) / M / L / N
-                     — the "All" here means "all of MY words", so the part of
-                     the dictionary the student does not own stays unreachable.
+                     — letters only, no count badges for students: the "All"
+                     here means "all of MY words", so the part of the dictionary
+                     the student does not own stays unreachable, and the three
+                     tracked states show just their letters.
             Labels are single letters (M = Mastered, L = Learning, N = New,
             R = Remaining) so the row never truncates; the full name is on
             the button's tooltip. */}
@@ -859,14 +861,15 @@ function WordLookupSection({
                       key: "mine" as const,
                       label: "All",
                       title: "All my words — mastered, learning and new",
-                      // No count: "All" is just the umbrella over M + L + N, so
-                      // a number there would just repeat the three next to it.
+                      // Students see letters only, no numbers: "All" is just the
+                      // umbrella over M + L + N, and the three tracked states
+                      // below carry no count either.
                       count: null,
                       tone: "",
                     },
-                    { key: "learned" as const, label: "M", title: "Mastered", count: liveLearnedCount, tone: "M" },
-                    { key: "learning" as const, label: "L", title: "Learning", count: liveLearningCount, tone: "L" },
-                    { key: "new" as const, label: "N", title: "New", count: liveNewCount, tone: "N" },
+                    { key: "learned" as const, label: "M", title: "Mastered", count: null, tone: "M" },
+                    { key: "learning" as const, label: "L", title: "Learning", count: null, tone: "L" },
+                    { key: "new" as const, label: "N", title: "New", count: null, tone: "N" },
                   ]
             ).map((f) => {
               const active = statusFilter === f.key;
