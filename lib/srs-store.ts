@@ -300,6 +300,52 @@ export async function deleteLocalCard(
   }
 }
 
+/**
+ * Bulk-prune unpractised "new" SRS cards from the local JSON store for a user.
+ *
+ * This is the local-store mirror of the Postgres stale-"new" cleanup that runs
+ * inside syncUserCourseWordsToSrs. Without it the local store keeps cards for
+ * courses the learner removed, and getAllCards' merge re-appends them (it never
+ * drops cards that exist ONLY locally) — which is exactly why the Progress page
+ * kept showing a non-zero "New" count after a course was removed from My Books.
+ *
+ * Only genuinely unpractised cards are removed: status === "new" AND
+ * repetitions === 0 AND no lastReviewedAt. Anything the learner has touched
+ * (learning/learned/review status, any repetition, or a review timestamp) is
+ * preserved regardless of keepWords, so studied progress is never lost.
+ *
+ * @returns the number of cards removed.
+ */
+export async function pruneLocalNewCards(
+  userId: string,
+  keepWords: Iterable<string>
+): Promise<number> {
+  if (!userId) return 0;
+  const cards = await ensureStore();
+  const keep = new Set<string>();
+  for (const w of keepWords) keep.add(w.toLowerCase().trim());
+
+  const before = cards.length;
+  const filtered = cards.filter((c) => {
+    const cardUser = c.userId || "default_user";
+    // Only act on this user's cards; never touch another user's rows.
+    if (userId !== "default_user" && cardUser !== userId) return true;
+
+    const norm = c.word.toLowerCase().trim();
+    const unpractised = c.status === "new" && (c.repetitions ?? 0) === 0 && !c.lastReviewedAt;
+    // Keep practised cards and any word still backed by the active library.
+    if (!unpractised) return true;
+    if (keep.has(norm)) return true;
+    // Stale, unpractised "new" card from a removed course/unit → drop it.
+    return false;
+  });
+
+  if (filtered.length !== before) {
+    await persistStore(filtered);
+  }
+  return before - filtered.length;
+}
+
 export interface LocalLessonCompletion {
   id: string;
   userId: string;
