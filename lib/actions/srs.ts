@@ -770,9 +770,18 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
     } catch {}
   }
 
-  const { getLocalCourseEnrollments } = await import("@/lib/srs-store");
-  const localEnrollments = await getLocalCourseEnrollments(userId);
-  localEnrollments.forEach((id) => enrolledCourseIds.add(id));
+  // When the DB is the source of truth, do NOT union the per-instance local
+  // enrollment file. On serverless each lambda has its own ephemeral /tmp, so a
+  // warm instance that once enrolled a course keeps a stale copy of
+  // user-enrollments.json and would otherwise keep those words in the deck —
+  // and let syncUserCourseWordsToSrs re-seed them — even after the course was
+  // removed from the DB. The local file is only a fallback for when the DB is
+  // unreachable (local-only mode).
+  if (!dbUp) {
+    const { getLocalCourseEnrollments } = await import("@/lib/srs-store");
+    const localEnrollments = await getLocalCourseEnrollments(userId);
+    localEnrollments.forEach((id) => enrolledCourseIds.add(id));
+  }
 
   const standaloneUnitIds = new Set<string>();
   if (dbUp) {
@@ -1730,7 +1739,13 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       // Pre-declared so the parallel existing-rows read can populate it.
       const existingSet = new Set<string>();
 
-      const localEnrollments = await getLocalCourseEnrollments(userId);
+      // When the DB is the source of truth we must NOT union the per-instance
+      // local enrollment file. On serverless each lambda has its own ephemeral
+      // /tmp/data, so a warm instance that previously enrolled a course keeps a
+      // stale copy of user-enrollments.json and would otherwise re-enter the
+      // seed branch below and re-create the very "new" cards the removal just
+      // pruned. Fall back to the local file only when the DB is unreachable.
+      const localEnrollments = !dbUp ? await getLocalCourseEnrollments(userId) : [];
 
       const existingRowsPromise = dbUp
         ? db
@@ -1770,7 +1785,9 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
         } catch {}
       }
 
-      localEnrollments.forEach((id) => enrolledCourseIds.add(id));
+      if (!dbUp) {
+        localEnrollments.forEach((id) => enrolledCourseIds.add(id));
+      }
 
       if (enrolledCourseIds.size === 0 && standaloneUnitIds.size === 0) {
         // Only prune Postgres if we can trust the emptiness — i.e. the DB was
