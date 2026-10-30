@@ -462,11 +462,16 @@ export async function listCoursesWithLessonCounts(
     } catch (err) {
       console.warn("listCoursesWithLessonCounts: userUnitLibrary query failed:", err);
     }
-    try {
-      const { getLocalCourseEnrollments } = await import("@/lib/srs-store");
-      const localEnrollments = await getLocalCourseEnrollments(userId);
-      localEnrollments.forEach((id) => enrolledCourseIds.add(id));
-    } catch {}
+    // Only fall back to the per-instance local enrollment file when the DB is
+    // unreachable. When the DB is the source of truth, a stale copy on another
+    // serverless instance must not re-add a course the user already removed.
+    if (!hasDbConfig) {
+      try {
+        const { getLocalCourseEnrollments } = await import("@/lib/srs-store");
+        const localEnrollments = await getLocalCourseEnrollments(userId);
+        localEnrollments.forEach((id) => enrolledCourseIds.add(id));
+      } catch {}
+    }
   }
 
   return courses.map((c) => ({
@@ -1203,13 +1208,18 @@ export async function getUserOwnedCourses(
     }
   }
 
-  try {
-    const { getLocalCourseEnrollments } = await import("@/lib/srs-store");
-    const localEnrollments = await getLocalCourseEnrollments(userId);
-    localEnrollments.forEach((id) => {
-      if (!enrolledCourseIds.includes(id)) enrolledCourseIds.push(id);
-    });
-  } catch {}
+  // Only fall back to the per-instance local enrollment file when the DB is
+  // unreachable. When the DB is the source of truth, a stale copy on another
+  // serverless instance must not re-add a course the user already removed.
+  if (!dbUp) {
+    try {
+      const { getLocalCourseEnrollments } = await import("@/lib/srs-store");
+      const localEnrollments = await getLocalCourseEnrollments(userId);
+      localEnrollments.forEach((id) => {
+        if (!enrolledCourseIds.includes(id)) enrolledCourseIds.push(id);
+      });
+    } catch {}
+  }
 
   if (dbUp) {
     try {
