@@ -1773,10 +1773,10 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       localEnrollments.forEach((id) => enrolledCourseIds.add(id));
 
       if (enrolledCourseIds.size === 0 && standaloneUnitIds.size === 0) {
-        // Only prune if we can trust the emptiness — i.e. the DB was reachable
-        // and the enrollment queries actually succeeded. A swallowed query error
-        // would otherwise look identical to "user has no courses" and wipe the
-        // user's new cards.
+        // Only prune Postgres if we can trust the emptiness — i.e. the DB was
+        // reachable and the enrollment queries actually succeeded. A swallowed
+        // query error would otherwise look identical to "user has no courses"
+        // and wipe the user's new cards.
         if (dbUp && enrollmentLookupOk) {
           try {
             await db.delete(srsCard).where(
@@ -1788,6 +1788,16 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
             );
           } catch {}
         }
+        // Local store mirror: enrolledCourseIds already folds in the local
+        // enrollment file, so an empty set here means the learner has zero
+        // courses in BOTH stores — safe to prune every unpractised "new" local
+        // card (practised ones are preserved inside pruneLocalNewCards). This is
+        // what actually clears the "New" count, since getAllCards re-appends
+        // local-only cards that are never pruned otherwise.
+        try {
+          const { pruneLocalNewCards } = await import("@/lib/srs-store");
+          await pruneLocalNewCards(userId, []);
+        } catch {}
         return;
       }
 
@@ -1941,6 +1951,8 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       }
 
       // Clean up any stale "new" cards that are NOT in activeLibraryWords (e.g. from removed courses or previous full-dictionary imports)
+      // Practised words must survive both the DB delete and the local-store prune below, so compute the set once here (outside the dbUp block) and reuse it.
+      const practisedLocally = new Set<string>();
       if (dbUp) {
         try {
           const activeWordsArr = Array.from(activeLibraryWords);
@@ -1949,7 +1961,6 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
           // the local store holds real progress for it (the Postgres write is
           // best-effort). Purging on the DB alone would destroy that progress,
           // so only words that are un-practised in BOTH stores are removed.
-          const practisedLocally = new Set<string>();
           for (const lc of await getLocalCards(userId)) {
             if (lc.status !== "new" || (lc.repetitions ?? 0) > 0 || lc.lastReviewedAt) {
               practisedLocally.add(lc.word.toLowerCase().trim());
@@ -1975,6 +1986,19 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
           await db.delete(srsCard).where(and(...staleConditions));
         } catch (err) {
           console.warn("Cleanup stale new words warning:", err);
+        }
+
+        // Mirror the DB prune into the local JSON store so the merged deck
+        // (getAllCards appends local-only cards) can't resurrect stale "new"
+        // cards for removed courses. Practised words are preserved inside
+        // pruneLocalNewCards, and active library words are kept via keepWords.
+        try {
+          const { pruneLocalNewCards } = await import("@/lib/srs-store");
+          const localKeep = new Set<string>(activeLibraryWords);
+          practisedLocally.forEach((w) => localKeep.add(w));
+          await pruneLocalNewCards(userId, localKeep);
+        } catch (err) {
+          console.warn("Cleanup stale local new words warning:", err);
         }
       }
 
@@ -2019,20 +2043,74 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
   return promise;
 }
 
-export async function cleanupUnstudiedCourseWordsFromSrs(userId: string): Promise<void> {
+/**
+ * Lightweight, two-store cleanup of stale "new" SRS cards for a user.
+ *
+ * Why this exists separately from syncUserCourseWordsToSrs: that function
+ * re-walks every enrolled course's markdown and rewrites potentially thousands
+ * of rows, and awaiting it inside a request handler is what used to make
+ * "remove course" hang. This function ONLY deletes — it never inserts — so it
+ * returns quickly (a handful of reads + one DELETE + a local JSON rewrite) and
+ * is safe to await directly in removeCourseFromLibrary / removeUnitFromLibrary.
+ *
+ * It prunes BOTH the Postgres table and the local JSON store symmetrically, so
+ * getAllCards' merge (which appends local-only cards) cannot resurrect a card
+ * that exists only in the local store. Practised words are always preserved.
+ */
+export async function pruneStaleNewCards(userId: string): Promise<void> {
   if (!userId || userId === "default_user") return;
 
-  // Let any in-flight sync finish before forcing a rebuild.
-  // syncUserCourseWordsToSrs dedupes on inFlightSync, so calling it while a
-  // sync is still running hands back that promise — computed from the
-  // before-removal library state — meaning the words of the course the user
-  // just deleted would survive the cleanup.
-  const running = inFlightSync.get(userId);
-  if (running) {
-    await running.catch(() => {});
+  const { getLocalCards, pruneLocalNewCards } = await import("@/lib/srs-store");
+  const dbUp = hasDbConfig;
+
+  // Words the learner still has in their library AFTER the removal. Resolved
+  // from the same sources the sync uses. getUserLibraryWords returns [] fast
+  // when there are no enrollments (before any markdown walk), and the caller
+  // has already invalidated the library-words cache, so this reflects the
+  // post-removal state rather than a stale snapshot.
+  let activeWords: string[] = [];
+  try {
+    activeWords = await getUserLibraryWords(userId);
+  } catch (err) {
+    console.warn("pruneStaleNewCards: failed to resolve active words:", err);
+  }
+  const activeSet = new Set(activeWords.map((w) => w.toLowerCase().trim()));
+
+  // Practised words must survive even if they're no longer in the library: a
+  // studied word shouldn't vanish just because its course left My Books.
+  const practisedLocally = new Set<string>();
+  for (const lc of await getLocalCards(userId)) {
+    if (lc.status !== "new" || (lc.repetitions ?? 0) > 0 || lc.lastReviewedAt) {
+      practisedLocally.add(lc.word.toLowerCase().trim());
+    }
   }
 
-  userSyncMap.delete(userId);
-  await syncUserCourseWordsToSrs(userId, true);
+  // 1. Postgres: drop unpractised "new" cards not backed by an active course/unit.
+  if (dbUp) {
+    try {
+      const staleConditions = [
+        eq(srsCard.userId, userId),
+        eq(srsCard.status, "new"),
+        eq(srsCard.repetitions, 0),
+      ];
+      if (activeSet.size > 0) {
+        staleConditions.push(notInArray(srsCard.word, Array.from(activeSet)));
+      }
+      if (practisedLocally.size > 0) {
+        staleConditions.push(notInArray(srsCard.word, Array.from(practisedLocally)));
+      }
+      await db.delete(srsCard).where(and(...staleConditions));
+    } catch (err) {
+      console.warn("pruneStaleNewCards: DB delete warning:", err);
+    }
+  }
+
+  // 2. Local store: prune symmetrically. keepWords = active library ∪ practised.
+  const keepWords = new Set<string>([...activeSet, ...practisedLocally]);
+  try {
+    await pruneLocalNewCards(userId, keepWords);
+  } catch (err) {
+    console.warn("pruneStaleNewCards: local prune warning:", err);
+  }
 }
 

@@ -2,7 +2,7 @@
 
 import {
   syncUserCourseWordsToSrs,
-  cleanupUnstudiedCourseWordsFromSrs,
+  pruneStaleNewCards,
   invalidateUserLibraryWordsCache,
 } from "@/lib/actions/srs";
 
@@ -107,12 +107,13 @@ export async function removeUnitFromLibrary(
     );
 
   await invalidateUserLibraryWordsCache(userId);
-  // Background-fire, same rationale as the add path. cleanupUnstudied
-  // forces a full re-walk of every enrolled course (the A2 course alone is
-  // 10 units x 100 exercises) before rewriting the deck. Awaiting it made
-  // deleting a single unit feel stuck and could blow the function limit.
-  void cleanupUnstudiedCourseWordsFromSrs(userId).catch((err) => {
-    console.warn("removeUnitFromLibrary: background SRS cleanup failed:", err);
+  // Await the lightweight, two-store prune (it only DELETES, never the heavy
+  // full-deck rebuild that re-walks every course and rewrites thousands of
+  // rows and used to make "remove" hang). This guarantees the "New" count drops
+  // to zero for the removed unit's words immediately, instead of racing the
+  // next page-load sync and persisting stale counts.
+  await pruneStaleNewCards(userId).catch((err) => {
+    console.warn("removeUnitFromLibrary: SRS prune failed:", err);
   });
 
   revalidatePath("/library", "page");
@@ -327,10 +328,14 @@ export async function removeCourseFromLibrary(
   clearContentCache();
 
   await invalidateUserLibraryWordsCache(userId).catch(() => {});
-  // Background-fire, same rationale as the add path: this is the same full
-  // deck rebuild, and awaiting it is what made "remove course" hang.
-  void cleanupUnstudiedCourseWordsFromSrs(userId).catch((err) => {
-    console.warn("removeCourseFromLibrary: background SRS cleanup failed:", err);
+  // Await the lightweight, two-store prune — NOT the full syncUserCourseWordsToSrs
+  // rebuild (which re-walks every enrolled course and rewrites thousands of rows
+  // and is what made "remove course" hang). pruneStaleNewCards only DELETES
+  // (Postgres + local store symmetrically), so it returns quickly and safely
+  // within the request and guarantees the "New" count drops to zero for the
+  // removed course instead of racing the next page-load sync.
+  await pruneStaleNewCards(userId).catch((err) => {
+    console.warn("removeCourseFromLibrary: SRS prune failed:", err);
   });
 
   revalidatePath("/", "layout");
