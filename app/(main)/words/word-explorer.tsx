@@ -118,7 +118,7 @@ function statusLabelFor(filter: SrsFilter): string {
     case "all":
       return "All";
     case "mine":
-      return "All";
+      return "My Words";
     case "learned":
       return "Mastered";
     case "learning":
@@ -860,9 +860,9 @@ function WordLookupSection({
                 : [
                     {
                       key: "mine" as const,
-                      label: "All",
+                      label: "My Words",
                       title: "All my words — mastered, learning and new",
-                      // No count: "All" is just the umbrella over M + L + N, so
+                      // No count: "My Words" is the umbrella over M + L + N, so
                       // a number there would just repeat the three next to it.
                       count: null,
                       tone: "",
