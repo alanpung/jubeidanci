@@ -28,10 +28,12 @@ import {
   EditTitleButton,
 } from "@/components/library/book-parts";
 
-/** A student may keep at most this many courses on the top ("My Books")
+/** A *student* may keep at most this many courses on the top ("My Books")
  *  shelf. The grid matches the Library folders exactly (2-up on phones, 4-up
  *  from `min-[480px]`), so the cap of eight fills exactly two tidy rows.
- *  The owner is exempt: every course they create is theirs already. */
+ *  The cap is intentionally STUDENT-ONLY: the site owner / admin
+ *  (e.g. alan.pung@gmail.com) is exempt and sees every enrolled course on
+ *  their shelf — they are never truncated to eight. */
 const MY_BOOKS_CAP = 8;
 
 /** Shared grid geometry for *every* cover on the page — My Books, the
@@ -99,9 +101,11 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     courses.filter((c) => c.isOwner).map((c) => c.id),
   );
   const borrowedOwn = courses.filter((c) => ownedIds.has(c.id));
+  // Students are truncated to MY_BOOKS_CAP; the owner/admin sees every
+  // enrolled course (no cap).
   const borrowedOther = courses
     .filter((c) => !ownedIds.has(c.id) && borrowedIds.has(c.id))
-    .slice(0, MY_BOOKS_CAP);
+    .slice(0, isAdmin ? courses.length : MY_BOOKS_CAP);
   const borrowed = [...borrowedOwn, ...borrowedOther];
 
   // Exercise type lives in the cover, not in a column, so derive it the same
@@ -164,9 +168,9 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
         : courseEntries.filter((e) => typeLabelOf(e.course!) === activeKey);
 
   function borrow(course: CourseListItem) {
-    // The owner is exempt: their own books are already theirs, so they never
-    // occupy a slot and the shelf cap cannot apply to them.
-    if (!course.isOwner && borrowedIds.size >= MY_BOOKS_CAP) {
+    // The 8-book cap is student-only. The owner/admin (and anyone viewing a
+    // course they created) is exempt, so the shelf cap can never apply to them.
+    if (!isAdmin && !course.isOwner && borrowedIds.size >= MY_BOOKS_CAP) {
       alert(`You can keep at most ${MY_BOOKS_CAP} books. Remove one first.`);
       return;
     }

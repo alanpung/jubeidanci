@@ -409,6 +409,12 @@ export async function listCourses(
 export const SYSTEM_COURSE_IDS = [
   "a1-flashcard-course",
   "a1-translation-course",
+  "a1-multiple-choice-course",
+  "a1-fill-in-the-blank-course",
+  "a1-matching-pairs-course",
+  "a1-listening-course",
+  "a1-word-bank-course",
+  "a1-speaking-course",
   "a2-flashcard-course",
   "a2-translation-course",
   "b1-flashcard-course",
