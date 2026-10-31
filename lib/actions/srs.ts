@@ -1786,6 +1786,24 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       }
 
       if (enrolledCourseIds.size === 0 && standaloneUnitIds.size === 0) {
+        // Owner guard (mirrors pruneStaleNewCards): the owner's deck is the
+        // full dictionary and they have no traditional enrollments, so an empty
+        // enrollment set here is EXPECTED — not a "remove all courses" signal.
+        // Mass-deleting the owner's new cards would wipe their seeded deck, so
+        // we skip the orphan-delete entirely for the owner. A failed session
+        // lookup falls through to the normal (student) delete below, preserving
+        // existing behaviour.
+        let isOwner = false;
+        try {
+          const { isAdminEmail } = await import("@/lib/ai/models");
+          const { getSession } = await import("@/lib/auth-server");
+          const session = await getSession().catch(() => null);
+          if (session?.user?.email && isAdminEmail(session.user.email)) {
+            isOwner = true;
+          }
+        } catch {}
+        if (isOwner) return;
+
         // The learner has zero active courses/units in My Books. With nothing
         // to seed from, every unpractised "new" card is orphaned (not backed
         // by any enrolled course/unit) and must be physically removed. This is

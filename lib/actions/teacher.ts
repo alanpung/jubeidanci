@@ -327,7 +327,33 @@ export async function getStudentSrsDeck(
     };
   }
 
-  // Compute level stats strictly from the student's personal SRS deck
+  // Compute level stats for the Student Inspector. This MUST mirror the
+  // learner's own Progress page (progress-view.tsx) so the teacher sees the
+  // exact numbers the student sees:
+  //   - Mastered / Learning come from the FULL SRS deck (M ∪ L), independent of
+  //     whether a word is still in My Books. Removing a book must NOT erase
+  //     earned progress, so previously-studied words stay counted.
+  //   - My Words = M ∪ L ∪ My Books: the union of mastered, learning and the
+  //     student's CURRENT library vocabulary.
+  //   - New = My Books words that are NOT yet mastered/learning. A My Books
+  //     word that has been studied is folded into M/L and excluded from New.
+  //     Stale "new" rows a removed course left behind are NOT part of My Books,
+  //     so they never count as New (syncUserCourseWordsToSrs physically deletes
+  //     them). This is what makes "New" drop to zero the moment My Books empties
+  //     — instead of the old behaviour where every deck row (incl. orphans)
+  //     was counted as My Words and every status='new' row as New.
+  // The inspector always views a *student* (never the owner), so we use the
+  // student branch of progress-view's logic.
+  const normalizeLevel = (level?: string | null): string => {
+    const raw = (level || "A1").toUpperCase().trim();
+    return (CEFR_LEVELS as readonly string[]).includes(raw) ? raw : "A1";
+  };
+
+  const { getLibraryWordsWithLevels } = await import("@/lib/actions/srs");
+  const libWordsWithLevels = await getLibraryWordsWithLevels(studentUserId).catch(
+    () => [] as { word: string; level: string }[],
+  );
+
   const levelStats: Record<
     string,
     {
@@ -352,36 +378,67 @@ export async function getStudentSrsDeck(
     };
   });
 
-  const now = new Date();
-  let dueCount = 0;
+  // Studied status per distinct word from the full deck (drives M/L totals).
+  const studiedByWord = new Map<string, "learned" | "learning">();
+  const learnedByLevel: Record<string, number> = {};
+  const learningByLevel: Record<string, number> = {};
+  CEFR_LEVELS.forEach((lvl) => {
+    learnedByLevel[lvl] = 0;
+    learningByLevel[lvl] = 0;
+  });
 
-  rawCards.forEach((c) => {
-    const lvl = (c.cefrLevel || "").toUpperCase().trim();
-    const targetLvl = CEFR_LEVELS.includes(lvl as (typeof CEFR_LEVELS)[number])
-      ? lvl
-      : "A1";
-
-    const isLearned =
+  for (const c of rawCards) {
+    const w = (c.word || "").toLowerCase().trim();
+    if (!w) continue;
+    const lvl = normalizeLevel(c.cefrLevel);
+    if (c.status === "learning") {
+      studiedByWord.set(w, "learning");
+      learningByLevel[lvl]++;
+    } else if (
       c.status === "learned" ||
       c.status === "review" ||
-      (c.repetitions && c.repetitions >= 3);
-
-    const isLearning =
-      c.status === "learning" ||
-      (!isLearned && c.status !== "new" && (!c.repetitions || c.repetitions < 3));
-
-    const isNew = c.status === "new";
-
-    levelStats[targetLvl].myWords++;
-
-    if (isLearned) {
-      levelStats[targetLvl].learned++;
-    } else if (isLearning) {
-      levelStats[targetLvl].learning++;
-    } else if (isNew) {
-      levelStats[targetLvl].new++;
+      (c.repetitions && c.repetitions >= 3)
+    ) {
+      studiedByWord.set(w, "learned");
+      learnedByLevel[lvl]++;
     }
+  }
 
+  // My Words = M ∪ L ∪ My Books.
+  const myWordsSets: Record<string, Set<string>> = {};
+  const newByLevel: Record<string, number> = {};
+  CEFR_LEVELS.forEach((lvl) => {
+    myWordsSets[lvl] = new Set<string>();
+    newByLevel[lvl] = 0;
+  });
+
+  // Start from My Books (current library vocabulary).
+  for (const lw of libWordsWithLevels || []) {
+    const w = (lw.word || "").toLowerCase().trim();
+    if (!w) continue;
+    const lvl = normalizeLevel(lw.level);
+    myWordsSets[lvl].add(w);
+    if (!studiedByWord.has(w)) newByLevel[lvl]++; // unstudied library word = New
+  }
+  // Fold in every Mastered/Learning word from the deck — even if its source
+  // book was removed, earned progress stays counted as "my words".
+  for (const c of rawCards) {
+    const w = (c.word || "").toLowerCase().trim();
+    if (!w || !studiedByWord.has(w)) continue;
+    const lvl = normalizeLevel(c.cefrLevel);
+    myWordsSets[lvl].add(w);
+  }
+
+  CEFR_LEVELS.forEach((lvl) => {
+    levelStats[lvl].myWords = myWordsSets[lvl].size;
+    levelStats[lvl].learned = learnedByLevel[lvl];
+    levelStats[lvl].learning = learningByLevel[lvl];
+    levelStats[lvl].new = newByLevel[lvl];
+  });
+
+  const now = new Date();
+  let dueCount = 0;
+  for (const c of rawCards) {
     if (
       (c.status === "learning" || c.status === "review") &&
       c.nextReviewAt &&
@@ -389,9 +446,9 @@ export async function getStudentSrsDeck(
     ) {
       dueCount++;
     }
-  });
+  }
 
-  const totalMyWords = rawCards.length;
+  const totalMyWords = Object.values(levelStats).reduce((a, b) => a + b.myWords, 0);
   const totalLearned = Object.values(levelStats).reduce((a, b) => a + b.learned, 0);
   const totalLearning = Object.values(levelStats).reduce((a, b) => a + b.learning, 0);
   const totalNew = Object.values(levelStats).reduce((a, b) => a + b.new, 0);
