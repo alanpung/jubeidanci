@@ -1733,9 +1733,6 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       // independent, so kick it off in parallel too.
       const enrolledCourseIds = new Set<string>();
       const standaloneUnitIds = new Set<string>();
-      // Tracks whether the enrollment lookups actually succeeded, so the
-      // destructive prune further down only runs on trustworthy emptiness.
-      let enrollmentLookupOk = false;
       // Pre-declared so the parallel existing-rows read can populate it.
       const existingSet = new Set<string>();
 
@@ -1781,7 +1778,6 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
             if (u.courseId) enrolledCourseIds.add(u.courseId);
             else standaloneUnitIds.add(u.unitId);
           });
-          enrollmentLookupOk = true;
         } catch {}
       }
 
@@ -1790,21 +1786,45 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       }
 
       if (enrolledCourseIds.size === 0 && standaloneUnitIds.size === 0) {
-        // Only prune Postgres if we can trust the emptiness — i.e. the DB was
-        // reachable and the enrollment queries actually succeeded. A swallowed
-        // query error would otherwise look identical to "user has no courses"
-        // and wipe the user's new cards.
-        if (dbUp && enrollmentLookupOk) {
+        // The learner has zero active courses/units in My Books. With nothing
+        // to seed from, every unpractised "new" card is orphaned (not backed
+        // by any enrolled course/unit) and must be physically removed. This is
+        // what drives both the "New" count and the raw DB row count (the
+        // "1022 cards" symptom) down once the last course is removed.
+        //
+        // We deliberately do NOT gate this on a separate "enrollment lookup
+        // succeeded" flag: that flag only flipped to false when one of the
+        // three concurrent enrollment reads threw, which wrongly skipped the
+        // delete and left hundreds of stale orphan "new" rows behind. An empty
+        // enrolledCourseIds *is* the trustworthy signal here — if the DB is up
+        // we attempted the reads, found nothing to seed, so deleting the
+        // unpractised orphans is correct. The delete is idempotent.
+        //
+        // Practised words are protected: a "new"-status row the learner has
+        // actually studied (reps > 0 / a review timestamp) is kept, so real
+        // progress can never be wiped by this cleanup.
+        if (dbUp) {
           try {
-            // The learner has zero courses/units in My Books. Every "new" card
-            // is now orphaned (not backed by any enrolled course/unit), so drop
-            // them all — this is what drives "New" to zero on the Progress page
-            // the moment the last course is removed. Practised words are kept
-            // by the local-store prune below (pruneLocalNewCards preserves
-            // anything with status !== "new", reps > 0, or a review timestamp).
-            await db.delete(srsCard).where(
-              and(eq(srsCard.userId, userId), eq(srsCard.status, "new"))
-            );
+            const practisedLocally = new Set<string>();
+            for (const lc of await getLocalCards(userId)) {
+              if (
+                lc.status !== "new" ||
+                (lc.repetitions ?? 0) > 0 ||
+                lc.lastReviewedAt
+              ) {
+                practisedLocally.add(lc.word.toLowerCase().trim());
+              }
+            }
+            const staleConditions = [
+              eq(srsCard.userId, userId),
+              eq(srsCard.status, "new"),
+            ];
+            if (practisedLocally.size > 0) {
+              staleConditions.push(
+                notInArray(srsCard.word, Array.from(practisedLocally)),
+              );
+            }
+            await db.delete(srsCard).where(and(...staleConditions));
           } catch {}
         }
         // Local store mirror: enrolledCourseIds already folds in the local

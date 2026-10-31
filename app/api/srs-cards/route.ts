@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getSession } from "@/lib/auth-server";
-import { getAllCards, getLibraryWordsWithLevels } from "@/lib/actions/srs";
+import { getAllCards, getLibraryWordsWithLevels, syncUserCourseWordsToSrs } from "@/lib/actions/srs";
 import { db, hasDbConfig } from "@/lib/db";
 import { srsCard } from "@/lib/db/schema";
 import { eq, sql } from "drizzle-orm";
@@ -21,9 +21,27 @@ export async function GET(request: Request) {
     );
   }
 
-  // Raw DB row count for this user (no language filter) — the ground truth we
-  // compare the merged deck against, so "0 cards" is always diagnosable.
   const dbUp = hasDbConfig;
+
+  // For an explicit Refresh we want the returned counts to reflect any cleanup
+  // (e.g. orphaned "new" cards removed for a now-empty library) immediately,
+  // so we run the sync inline — BEFORE reading the raw DB row count. Once a
+  // learner's deck already exists the sync is cheap (it mainly deletes
+  // orphaned rows); we cap it with a timeout so a slow first-time seed can
+  // never block the refresh response. getAllCards is then called with
+  // skipSync=true so it doesn't schedule a second, deferred run.
+  if (dbUp) {
+    await Promise.race([
+      syncUserCourseWordsToSrs(userId, true).catch((err) => {
+        console.warn("[srs-cards] pre-refresh sync failed:", err);
+      }),
+      new Promise((resolve) => setTimeout(resolve, 9000)),
+    ]);
+  }
+
+  // Raw DB row count for this user (no language filter) — the ground truth we
+  // compare the merged deck against, so "0 cards" is always diagnosable. Read
+  // AFTER the sync above so the cleanup is already reflected in the number.
   let dbRowCount: number | null = null;
   let dbError: string | null = null;
   if (dbUp) {
@@ -45,7 +63,7 @@ export async function GET(request: Request) {
   // mismatch returned an empty deck even though Postgres had the rows. Omitting
   // the language makes the deck authoritative and language-agnostic, so it can
   // never disagree with the page.
-  const cards = await getAllCards(undefined, userId, true).catch((err) => {
+  const cards = await getAllCards(undefined, userId, true, true).catch((err) => {
     console.error("[srs-cards] getAllCards failed:", err);
     return [] as Awaited<ReturnType<typeof getAllCards>>;
   });

@@ -122,13 +122,19 @@ export function ProgressView({
   //   - Mastered / Learning come from the FULL SRS deck, independent of
   //     whether a word is still in My Books. Removing a book must NOT erase
   //     the learner's progress — L/M "保持不变" (stay the same).
-  //   - My Words = the learner's current vocabulary (My Books). For the owner
+  //   - My Words = M ∪ L ∪ My Books (the union of Mastered, Learning and the
+  //     learner's current library vocabulary). Because removing a book must
+  //     NOT erase earned progress, Mastered/Learning words from the deck stay
+  //     counted even when their source book is gone. For the owner
   //     ("isAuthorAllWords") the whole deck is theirs, so My Words = every
-  //     deck word.
+  //     distinct deck word. This makes the Quick-Stat subtitle
+  //     "Mastered + Learning + New" exact: those three sets are pairwise
+  //     disjoint and together exhaust My Words.
   //   - New = My Books words that are not yet mastered / learning. New reaches
   //     zero the instant My Books is empty, regardless of any stale "new"
   //     cards a removed course left in the deck (those aren't part of My
-  //     Books, so they don't count).
+  //     Books, so they don't count — and the cleanup in syncUserCourseWordsToSrs
+  //     physically removes the orphaned rows).
   const levelStats = useMemo(() => {
     const stats: Record<
       string,
@@ -177,37 +183,61 @@ export function ProgressView({
       }
     }
 
-    // Count My Words and how many of them are already studied (for New). The
-    // owner's entire deck is their My Books; everyone else uses libWords.
+    // Count My Words = M ∪ L ∪ My Books and split out New.
+    //   - myWordsSets[lvl] = distinct words at that level in the union.
+    //   - myStudiedByLevel[lvl] = how many of the OWNER's deck words are
+    //     studied (only used for the owner's New = unpractised deck words).
+    //   - newByLevel[lvl] = My Books words that are NOT yet mastered/learning
+    //     (the student's New). A My Books word that is studied is folded into
+    //     M/L and so is excluded from New but still counts toward My Words.
     const myStudiedByLevel: Record<string, number> = {};
-    CEFR_LEVELS.forEach((lvl) => (myStudiedByLevel[lvl] = 0));
+    const newByLevel: Record<string, number> = {};
+    const myWordsSets: Record<string, Set<string>> = {};
+    CEFR_LEVELS.forEach((lvl) => {
+      myStudiedByLevel[lvl] = 0;
+      newByLevel[lvl] = 0;
+      myWordsSets[lvl] = new Set<string>();
+    });
 
     if (isAuthorAllWords) {
+      // Owner: the whole deck is theirs, so My Words = every distinct deck word.
       const seen = new Set<string>();
       for (const card of cards) {
         const w = (card.word || "").toLowerCase().trim();
         if (!w || seen.has(w)) continue;
         seen.add(w);
         const lvl = normalizeLevel(card.cefrLevel);
-        stats[lvl].myWords++;
+        myWordsSets[lvl].add(w);
         if (studiedByWord.has(w)) myStudiedByLevel[lvl]++;
       }
     } else {
+      // Student: start from My Books (libWords)…
       for (const lw of libWords || []) {
         const w = (lw.word || "").toLowerCase().trim();
         if (!w) continue;
         const lvl = normalizeLevel(lw.level);
-        stats[lvl].myWords++;
+        myWordsSets[lvl].add(w);
         if (studiedByWord.has(w)) myStudiedByLevel[lvl]++;
+        else newByLevel[lvl]++; // My Books word not yet mastered/learning = New
+      }
+      // …then fold in every Mastered/Learning word from the FULL deck, even
+      // ones whose source book was removed — they remain "my words".
+      for (const card of cards) {
+        const w = (card.word || "").toLowerCase().trim();
+        if (!w || !studiedByWord.has(w)) continue;
+        const lvl = normalizeLevel(card.cefrLevel);
+        myWordsSets[lvl].add(w);
       }
     }
 
     CEFR_LEVELS.forEach((lvl) => {
-      // New = My Books words − (My Books words that are mastered/learning).
-      // Only the studied *My Books* words are subtracted (the global
-      // Mastered/Learning totals may include words from removed books, which
-      // are not in My Books and so must not reduce New).
-      stats[lvl].new = Math.max(0, stats[lvl].myWords - myStudiedByLevel[lvl]);
+      stats[lvl].myWords = myWordsSets[lvl].size;
+      if (isAuthorAllWords) {
+        // Owner has no separate "library" notion: New = unpractised deck words.
+        stats[lvl].new = Math.max(0, stats[lvl].myWords - myStudiedByLevel[lvl]);
+      } else {
+        stats[lvl].new = newByLevel[lvl];
+      }
       // Dictionary words the learner has not taken on yet (owner only).
       stats[lvl].remaining = Math.max(0, stats[lvl].wordCount - stats[lvl].myWords);
     });
