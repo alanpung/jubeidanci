@@ -66,9 +66,11 @@ interface LibraryFoldersProps {
   standaloneCount: number;
   /** The browser window, rendered inside the Library section. */
   children?: ReactNode;
-  /** Show the "Library" heading. The owner hides it — their material is
-   *  already counted under "My Words", so a second label adds nothing. */
+  /** Show the section heading. The owner keeps it (relabelled "My Books"). */
   showTitle?: boolean;
+  /** Heading text. Defaults to "Library"; the owner passes "My Books" so the
+   *  folder area reads as their single unified bookshelf. */
+  title?: string;
   /** Owner mode: the browser window drops BELOW the folder grid instead of
    *  covering it. The owner has plenty of room underneath and still wants to
    *  see which folder they are browsing. */
@@ -82,6 +84,7 @@ export function LibraryFolders({
   onOpenKey,
   children,
   showTitle = true,
+  title = "Library",
   isAdmin = false,
 }: LibraryFoldersProps) {
   const typeFolders: FolderItem[] = FOLDER_ORDER.map((id) => {
@@ -137,7 +140,7 @@ export function LibraryFolders({
         </div>
 
         {showTitle && (
-          <h2 className="text-base font-bold text-lingo-text">Library</h2>
+          <h2 className="text-base font-bold text-lingo-text">{title}</h2>
         )}
       </div>
 

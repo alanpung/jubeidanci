@@ -40,7 +40,7 @@ export default async function ProgressPage() {
     <div className="w-full max-w-3xl mx-auto px-1 sm:px-4 py-4 pb-20">
       <ProgressView
         isAdmin={isAdmin}
-        isAuthorAllWords={false}
+        isAuthorAllWords={isAdmin}
         srsCards={srsCards}
         libraryWords={libraryWords}
         language={language}

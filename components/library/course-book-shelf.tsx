@@ -110,6 +110,11 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
   const typeLabelOf = (c: CourseListItem) =>
     resolveCourseQuestionType(c.title, c.id)?.label ?? "Other";
 
+  // The owner's "My Books" is the whole catalog: every course is already
+  // theirs, so it is openable and needs no +/× toggle. Students keep the
+  // enrolled/owned logic (borrowed or created → in My Books, else a toggle).
+  const isOwnerView = isAdmin;
+
   const courseEntries: BrowseEntry[] = courses.map((c) => ({
     id: c.id,
     kind: "course",
@@ -119,10 +124,10 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     course: c,
     ownsIt: !!c.isOwner,
     isOwner: !!c.isOwner || isAdmin,
-    // A course you created is already yours — no + needed, and its cover
-    // stays openable even if you never enrolled in it.
-    isInLibrary: borrowedIds.has(c.id) || !!c.isOwner,
-    showToggle: true,
+    // Owner view: every course is already in My Books — cover openable, no +.
+    // A student-created-or-enrolled course is already theirs too.
+    isInLibrary: isOwnerView ? true : (borrowedIds.has(c.id) || !!c.isOwner),
+    showToggle: isOwnerView ? false : true,
     href: `/library/${c.id}`,
     onAdd: () => borrow(c),
     onRemove: () => unborrow(c),
@@ -138,9 +143,10 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     typeId: "mix",
     ownsIt: !!u.isOwner,
     isOwner: !!u.isOwner,
-    // Your own unit is already yours — there is nothing to add to a shelf.
-    isInLibrary: !!u.isInLibrary || !!u.isOwner,
-    showToggle: !u.isOwner,
+    // Owner view: every unit is already in My Books — openable, no +. A
+    // student's own unit is already theirs too; otherwise the toggle applies.
+    isInLibrary: isOwnerView ? true : (!!u.isInLibrary || !!u.isOwner),
+    showToggle: isOwnerView ? false : !u.isOwner,
     href: `/unit/${u.id}`,
     onAdd: () => addUnit(u.id),
     onRemove: () => removeUnit(u.id),
@@ -277,16 +283,20 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
         </section>
       )}
 
-      {/* Library — folders grouped by exercise Type (default) or CEFR Level,
-          right below My Books. Tapping one opens the small browser window (no
-          page navigation) that overlays the folders from the top. */}
+      {/* Folders grouped by exercise Type (default) or CEFR Level. Students
+          see a "Library" title above the grid; the owner sees a single
+          "My Books" section holding every course — already enrolled, no +/×,
+          no 8-book cap. Tapping a folder opens the browser window:
+          overlaying the folders for students, dropping below them for the
+          owner. */}
       <LibraryFolders
         groupBy={groupBy}
         onGroupBy={handleGroupBy}
         activeKey={activeKey}
         onOpenKey={(key) => setActiveKey((cur) => (cur === key ? null : key))}
         standaloneCount={units.length}
-        showTitle={!isAdmin}
+        showTitle
+        title={isAdmin ? "My Books" : "Library"}
         isAdmin={isAdmin}
       >
         {activeKey && (

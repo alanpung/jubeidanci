@@ -29,6 +29,14 @@ interface SrsCard {
 
 const CEFR_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
 
+/** Normalize a CEFR level string to one of the known buckets (default A1). */
+function normalizeLevel(level?: string | null): string {
+  const raw = (level || "A1").toUpperCase().trim();
+  return CEFR_LEVELS.includes(raw as (typeof CEFR_LEVELS)[number])
+    ? raw
+    : "A1";
+}
+
 const LEVEL_BADGES: Record<string, string> = {
   A1: "bg-emerald-100 text-emerald-800 dark:bg-emerald-950/60 dark:text-emerald-300 border-emerald-300 dark:border-emerald-800",
   A2: "bg-teal-100 text-teal-800 dark:bg-teal-950/60 dark:text-teal-300 border-teal-300 dark:border-teal-800",
@@ -110,13 +118,17 @@ export function ProgressView({
     setLibWords(libraryWords || []);
   }, [srsCards, libraryWords]);
 
-  // Compute level statistics. Per the product rule:
-  //   New = (words in My Books) − Mastered − Learning
-  // "My Words" is the full "My Books" vocabulary (libWords). "Mastered" and
-  // "Learning" come from the deck's studied status for those library words.
-  // "New" is the remainder. This makes New reach zero the instant My Books is
-  // empty, regardless of any stale "new" cards a removed course left in the
-  // deck — those are simply not part of My Books, so they don't count.
+  // Compute level statistics. Per the product rule (d/n/L/M model):
+  //   - Mastered / Learning come from the FULL SRS deck, independent of
+  //     whether a word is still in My Books. Removing a book must NOT erase
+  //     the learner's progress — L/M "保持不变" (stay the same).
+  //   - My Words = the learner's current vocabulary (My Books). For the owner
+  //     ("isAuthorAllWords") the whole deck is theirs, so My Words = every
+  //     deck word.
+  //   - New = My Books words that are not yet mastered / learning. New reaches
+  //     zero the instant My Books is empty, regardless of any stale "new"
+  //     cards a removed course left in the deck (those aren't part of My
+  //     Books, so they don't count).
   const levelStats = useMemo(() => {
     const stats: Record<
       string,
@@ -145,46 +157,57 @@ export function ProgressView({
       };
     });
 
-    // Map each studied deck card to its word so we can tell whether a library
-    // word has been mastered / is in learning. Only the learner's own deck
-    // cards contribute here; removed-course cards are ignored because they are
-    // not in My Books.
+    // Per-word studied status from the FULL deck. Mastered/Learning tiles read
+    // the global totals; New reads only how many *My Books* words are studied.
     const studiedByWord = new Map<string, "learned" | "learning">();
     for (const card of cards) {
       const w = (card.word || "").toLowerCase().trim();
       if (!w) continue;
+      const lvl = normalizeLevel(card.cefrLevel);
       if (card.status === "learning") {
         studiedByWord.set(w, "learning");
+        stats[lvl].learning++;
       } else if (
         card.status === "learned" ||
         card.status === "review" ||
         (card.repetitions && card.repetitions >= 3)
       ) {
         studiedByWord.set(w, "learned");
+        stats[lvl].learned++;
       }
     }
 
-    // "My Words" = every word in My Books, classified as Mastered / Learning /
-    // New from the deck's studied status. Anything with no studied card (or
-    // still "new") is, by definition, New.
-    for (const lw of libWords) {
-      const rawLvl = (lw.level || "A1").toUpperCase().trim();
-      const lvl = CEFR_LEVELS.includes(rawLvl as (typeof CEFR_LEVELS)[number])
-        ? rawLvl
-        : "A1";
-      const target = stats[lvl];
-      target.myWords++;
-      const s = studiedByWord.get(lw.word.toLowerCase().trim());
-      if (s === "learning") target.learning++;
-      else if (s === "learned") target.learned++;
+    // Count My Words and how many of them are already studied (for New). The
+    // owner's entire deck is their My Books; everyone else uses libWords.
+    const myStudiedByLevel: Record<string, number> = {};
+    CEFR_LEVELS.forEach((lvl) => (myStudiedByLevel[lvl] = 0));
+
+    if (isAuthorAllWords) {
+      const seen = new Set<string>();
+      for (const card of cards) {
+        const w = (card.word || "").toLowerCase().trim();
+        if (!w || seen.has(w)) continue;
+        seen.add(w);
+        const lvl = normalizeLevel(card.cefrLevel);
+        stats[lvl].myWords++;
+        if (studiedByWord.has(w)) myStudiedByLevel[lvl]++;
+      }
+    } else {
+      for (const lw of libWords || []) {
+        const w = (lw.word || "").toLowerCase().trim();
+        if (!w) continue;
+        const lvl = normalizeLevel(lw.level);
+        stats[lvl].myWords++;
+        if (studiedByWord.has(w)) myStudiedByLevel[lvl]++;
+      }
     }
 
     CEFR_LEVELS.forEach((lvl) => {
-      // New = My Words − Mastered − Learning (never negative).
-      stats[lvl].new = Math.max(
-        0,
-        stats[lvl].myWords - stats[lvl].learned - stats[lvl].learning,
-      );
+      // New = My Books words − (My Books words that are mastered/learning).
+      // Only the studied *My Books* words are subtracted (the global
+      // Mastered/Learning totals may include words from removed books, which
+      // are not in My Books and so must not reduce New).
+      stats[lvl].new = Math.max(0, stats[lvl].myWords - myStudiedByLevel[lvl]);
       // Dictionary words the learner has not taken on yet (owner only).
       stats[lvl].remaining = Math.max(0, stats[lvl].wordCount - stats[lvl].myWords);
     });
