@@ -2084,6 +2084,17 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
 export async function pruneStaleNewCards(userId: string): Promise<void> {
   if (!userId || userId === "default_user") return;
 
+  // The owner's deck is intentionally the full dictionary (all their courses'
+  // words). They have no traditional enrollments, so the keep-set below would
+  // resolve empty and this function would mass-delete every "new" card. Never
+  // prune the owner's deck from the removal path.
+  try {
+    const { isAdminEmail } = await import("@/lib/ai/models");
+    const { getSession } = await import("@/lib/auth-server");
+    const session = await getSession().catch(() => null);
+    if (session?.user?.email && isAdminEmail(session.user.email)) return;
+  } catch {}
+
   const { getLocalCards, pruneLocalNewCards } = await import("@/lib/srs-store");
   const dbUp = hasDbConfig;
 
