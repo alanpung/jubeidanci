@@ -74,33 +74,30 @@ export function WordStatusFlow({
             </marker>
           </defs>
 
-          {/* ── TOP DOTTED ARC: D / N / L -> M (Manual ✓ Master) ── */}
+          {/* ── TOP DOTTED ARC: N / L -> M (Manual ✓ Master) ──
+              The Dictionary (D) node has NO shortcut to Mastered. A word must
+              first enter the learner's deck (N) before it can be ticked as
+              mastered, so the green arc starts at N and Learning (L) merges
+              into it on the way down to M. */}
           <path
-            d="M 55 46 C 95 6, 325 6, 362 44"
+            d="M 158 46 C 198 6, 330 6, 362 44"
             fill="none"
             stroke="#10b981"
             strokeWidth="2"
             strokeDasharray="4 3"
             markerEnd="url(#arrow-green)"
           />
-          {/* Small branch ticks from N and L into top arc */}
+          {/* Small branch tick from L into top arc (N is the arc's own start) */}
           <path
-            d="M 158 46 Q 170 25, 195 19"
+            d="M 262 46 Q 290 34, 310 21"
             fill="none"
             stroke="#10b981"
             strokeWidth="1.6"
             strokeDasharray="3 3"
           />
-          <path
-            d="M 262 46 Q 275 26, 298 22"
-            fill="none"
-            stroke="#10b981"
-            strokeWidth="1.6"
-            strokeDasharray="3 3"
-          />
-          <rect x="165" y="2" width="90" height="15" rx="7.5" fill="#d1fae5" />
+          <rect x="200" y="2" width="90" height="15" rx="7.5" fill="#d1fae5" />
           <text
-            x="210"
+            x="245"
             y="12.5"
             textAnchor="middle"
             fill="#047857"
