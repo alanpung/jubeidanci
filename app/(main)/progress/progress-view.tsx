@@ -42,18 +42,25 @@ export function ProgressView({
   isAdmin = false,
   isAuthorAllWords = false,
   srsCards = [],
+  libraryWords = [],
   language = "en",
   levelDictionaryCounts = { A1: 1000, A2: 1555, B1: 4610, B2: 8760, C1: 5127, C2: 1275 },
 }: {
   isAdmin?: boolean;
   isAuthorAllWords?: boolean;
   srsCards?: SrsCard[];
+  libraryWords?: { word: string; level: string }[];
   language?: string;
   levelDictionaryCounts?: Record<string, number>;
 }) {
   const [activeTab, setActiveTab] = useState<"author" | "inspector">("author");
   const [selectedLevel, setSelectedLevel] = useState<string>("");
   const [cards, setCards] = useState<SrsCard[]>(srsCards);
+  // "My Books" vocabulary (word + CEFR level). The source of truth for the
+  // "My Words" and "New" counts — see levelStats below.
+  const [libWords, setLibWords] = useState<{ word: string; level: string }[]>(
+    libraryWords || [],
+  );
   const [refreshing, setRefreshing] = useState(false);
   const [refreshNote, setRefreshNote] = useState<string | null>(null);
   const [refreshError, setRefreshError] = useState<string | null>(null);
@@ -75,6 +82,7 @@ export function ProgressView({
         setRefreshNote(null);
       } else {
         setCards(Array.isArray(data.cards) ? data.cards : []);
+        setLibWords(Array.isArray(data.libraryWords) ? data.libraryWords : []);
         const dbInfo = data.dbUp
           ? `DB up · ${data.dbRowCount ?? "?"} rows in Postgres`
           : "DB unreachable — reading local store only";
@@ -96,12 +104,19 @@ export function ProgressView({
     }
   }
 
-  // Sync with server cards
+  // Sync with server data (deck cards + My Books vocabulary)
   useEffect(() => {
     setCards(srsCards || []);
-  }, [srsCards]);
+    setLibWords(libraryWords || []);
+  }, [srsCards, libraryWords]);
 
-  // Compute level statistics live based on libraryWords and cards
+  // Compute level statistics. Per the product rule:
+  //   New = (words in My Books) − Mastered − Learning
+  // "My Words" is the full "My Books" vocabulary (libWords). "Mastered" and
+  // "Learning" come from the deck's studied status for those library words.
+  // "New" is the remainder. This makes New reach zero the instant My Books is
+  // empty, regardless of any stale "new" cards a removed course left in the
+  // deck — those are simply not part of My Books, so they don't count.
   const levelStats = useMemo(() => {
     const stats: Record<
       string,
@@ -130,31 +145,52 @@ export function ProgressView({
       };
     });
 
-    cards.forEach((card) => {
-      if (!card.word) return;
-      const lvl = (card.cefrLevel || "A1").toUpperCase().trim();
-      const targetLvl = CEFR_LEVELS.includes(lvl as (typeof CEFR_LEVELS)[number]) ? lvl : "A1";
-
-      if (card.status === "learned" || card.status === "review" || (card.repetitions && card.repetitions >= 3)) {
-        stats[targetLvl].learned++;
-      } else if (card.status === "learning") {
-        stats[targetLvl].learning++;
-      } else if (card.status === "new") {
-        stats[targetLvl].new++;
+    // Map each studied deck card to its word so we can tell whether a library
+    // word has been mastered / is in learning. Only the learner's own deck
+    // cards contribute here; removed-course cards are ignored because they are
+    // not in My Books.
+    const studiedByWord = new Map<string, "learned" | "learning">();
+    for (const card of cards) {
+      const w = (card.word || "").toLowerCase().trim();
+      if (!w) continue;
+      if (card.status === "learning") {
+        studiedByWord.set(w, "learning");
+      } else if (
+        card.status === "learned" ||
+        card.status === "review" ||
+        (card.repetitions && card.repetitions >= 3)
+      ) {
+        studiedByWord.set(w, "learned");
       }
-    });
+    }
+
+    // "My Words" = every word in My Books, classified as Mastered / Learning /
+    // New from the deck's studied status. Anything with no studied card (or
+    // still "new") is, by definition, New.
+    for (const lw of libWords) {
+      const rawLvl = (lw.level || "A1").toUpperCase().trim();
+      const lvl = CEFR_LEVELS.includes(rawLvl as (typeof CEFR_LEVELS)[number])
+        ? rawLvl
+        : "A1";
+      const target = stats[lvl];
+      target.myWords++;
+      const s = studiedByWord.get(lw.word.toLowerCase().trim());
+      if (s === "learning") target.learning++;
+      else if (s === "learned") target.learned++;
+    }
 
     CEFR_LEVELS.forEach((lvl) => {
-      stats[lvl].myWords = stats[lvl].learned + stats[lvl].learning + stats[lvl].new;
-      // What is left of the level's dictionary once the learner's own words
-      // are taken out. Never negative: a level can hold more cards than the
-      // dictionary lists (e.g. a locally-seeded course), and a negative
-      // "remaining" would be nonsense.
+      // New = My Words − Mastered − Learning (never negative).
+      stats[lvl].new = Math.max(
+        0,
+        stats[lvl].myWords - stats[lvl].learned - stats[lvl].learning,
+      );
+      // Dictionary words the learner has not taken on yet (owner only).
       stats[lvl].remaining = Math.max(0, stats[lvl].wordCount - stats[lvl].myWords);
     });
 
     return stats;
-  }, [cards, levelDictionaryCounts, isAuthorAllWords]);
+  }, [cards, libWords, levelDictionaryCounts, isAuthorAllWords]);
 
   const totalLearning = useMemo(() => {
     return Object.values(levelStats).reduce((acc, curr) => acc + curr.learning, 0);

@@ -1796,12 +1796,14 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
         // and wipe the user's new cards.
         if (dbUp && enrollmentLookupOk) {
           try {
+            // The learner has zero courses/units in My Books. Every "new" card
+            // is now orphaned (not backed by any enrolled course/unit), so drop
+            // them all — this is what drives "New" to zero on the Progress page
+            // the moment the last course is removed. Practised words are kept
+            // by the local-store prune below (pruneLocalNewCards preserves
+            // anything with status !== "new", reps > 0, or a review timestamp).
             await db.delete(srsCard).where(
-              and(
-                eq(srsCard.userId, userId),
-                eq(srsCard.status, "new"),
-                eq(srsCard.repetitions, 0)
-              )
+              and(eq(srsCard.userId, userId), eq(srsCard.status, "new"))
             );
           } catch {}
         }
@@ -1989,10 +1991,15 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
           // of courses still sitting on the learner's shelf. A card is only
           // stale when it is un-practised in BOTH stores AND no longer backed
           // by an enrolled course/unit.
+          //
+          // Note: we no longer require repetitions === 0. A "new" card that is
+          // not backed by an enrolled course/unit is, by definition, no longer
+          // part of the learner's vocabulary (My Books), so it must be removed
+          // regardless of how many (anomalous) reps it carries. Practised
+          // words are still protected via the practisedLocally exclusion below.
           const staleConditions = [
             eq(srsCard.userId, userId),
             eq(srsCard.status, "new"),
-            eq(srsCard.repetitions, 0),
           ];
           if (activeWordsArr.length > 0) {
             staleConditions.push(notInArray(srsCard.word, activeWordsArr));
@@ -2102,13 +2109,15 @@ export async function pruneStaleNewCards(userId: string): Promise<void> {
     }
   }
 
-  // 1. Postgres: drop unpractised "new" cards not backed by an active course/unit.
+  // 1. Postgres: drop "new" cards not backed by an active course/unit. A "new"
+  // card with no enrolled course behind it is, by definition, not in My Books,
+  // so it must go — regardless of repetitions. Practised words are excluded via
+  // the practisedLocally keep-set below.
   if (dbUp) {
     try {
       const staleConditions = [
         eq(srsCard.userId, userId),
         eq(srsCard.status, "new"),
-        eq(srsCard.repetitions, 0),
       ];
       if (activeSet.size > 0) {
         staleConditions.push(notInArray(srsCard.word, Array.from(activeSet)));
@@ -2129,5 +2138,47 @@ export async function pruneStaleNewCards(userId: string): Promise<void> {
   } catch (err) {
     console.warn("pruneStaleNewCards: local prune warning:", err);
   }
+}
+
+/**
+ * Resolve the learner's "My Books" vocabulary AS A WORD SET WITH CEFR LEVELS.
+ *
+ * This is the authoritative source for the Progress page's "My Words" and
+ * "New" counts. Per the product rule:
+ *
+ *     New = (words in My Books) − Mastered − Learning
+ *
+ * "New" is therefore derived from the LIBRARY, not from counting deck cards
+ * with status === "new". That makes "New" reach exactly zero the instant My
+ * Books becomes empty, no matter how many stale "new" cards a removed course
+ * left behind in the SRS deck. Similarly, "My Words" is the full library
+ * vocabulary, "Mastered"/"Learning" come from the deck's studied status, and
+ * "New" is the remainder.
+ */
+export async function getLibraryWordsWithLevels(
+  userIdParam?: string,
+): Promise<{ word: string; level: string }[]> {
+  const userId = userIdParam || (await getSafeUserId());
+  if (!userId || userId === "default_user") return [];
+
+  let words: string[] = [];
+  try {
+    words = await getUserLibraryWords(userId);
+  } catch (err) {
+    console.warn("getLibraryWordsWithLevels: failed to resolve library:", err);
+    return [];
+  }
+  if (words.length === 0) return [];
+
+  const dictLevelMap = (await getWordToLevelMap().catch(() => ({}))) as Record<
+    string,
+    string
+  >;
+
+  return words.map((w) => {
+    const norm = w.toLowerCase().trim();
+    const lvl = (dictLevelMap[norm] || "A1").toUpperCase().trim();
+    return { word: norm, level: lvl };
+  });
 }
 

@@ -1,4 +1,4 @@
-import { getAllCards } from "@/lib/actions/srs";
+import { getAllCards, getLibraryWordsWithLevels } from "@/lib/actions/srs";
 import { getTargetLanguage } from "@/lib/actions/preferences";
 import { getEnLevelCounts } from "@/lib/words";
 import { getSession } from "@/lib/auth-server";
@@ -12,6 +12,7 @@ export default async function ProgressPage() {
   const session = await getSession();
   const isAdmin = isAdminEmail(session?.user?.email);
   const language = (await getTargetLanguage()) || "en";
+  const userId = session?.user?.id;
 
   // Read the learner's ENTIRE deck, every language. The Progress "My Words /
   // Mastered / Learning / New" tiles are a personal total, not a per-language
@@ -20,8 +21,16 @@ export default async function ProgressPage() {
   // (used on read) — the rows were in Postgres but the UI showed 0. Reading
   // without a language filter makes the page authoritative and guarantees it
   // matches the "Refresh SRS Data" endpoint, which now reads the same way.
-  const srsCards = await getAllCards(undefined, session?.user?.id).catch((err) => {
+  const srsCards = await getAllCards(undefined, userId).catch((err) => {
     console.error("[progress] getAllCards failed, showing empty deck:", err);
+    return [];
+  });
+
+  // "My Books" vocabulary (word + CEFR level). This is the source of truth for
+  // the Progress page's "My Words" and "New" counts: New = My Books − Mastered
+  // − Learning, so it reaches zero the moment My Books is empty.
+  const libraryWords = await getLibraryWordsWithLevels(userId).catch((err) => {
+    console.error("[progress] getLibraryWordsWithLevels failed:", err);
     return [];
   });
 
@@ -33,6 +42,7 @@ export default async function ProgressPage() {
         isAdmin={isAdmin}
         isAuthorAllWords={false}
         srsCards={srsCards}
+        libraryWords={libraryWords}
         language={language}
         levelDictionaryCounts={levelCounts}
       />

@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getSession } from "@/lib/auth-server";
-import { getAllCards } from "@/lib/actions/srs";
+import { getAllCards, getLibraryWordsWithLevels } from "@/lib/actions/srs";
 import { db, hasDbConfig } from "@/lib/db";
 import { srsCard } from "@/lib/db/schema";
 import { eq, sql } from "drizzle-orm";
@@ -50,6 +50,16 @@ export async function GET(request: Request) {
     return [] as Awaited<ReturnType<typeof getAllCards>>;
   });
 
+  // "My Books" vocabulary (word + CEFR level) — the source of truth for the
+  // Progress page's "My Words" / "New" counts. Returned so the client can
+  // derive New = My Books − Mastered − Learning instead of counting deck
+  // cards with status === "new" (which would wrongly include stale cards
+  // left behind by removed courses).
+  const libraryWords = await getLibraryWordsWithLevels(userId).catch((err) => {
+    console.error("[srs-cards] getLibraryWordsWithLevels failed:", err);
+    return [] as { word: string; level: string }[];
+  });
+
   // getAllCards attaches a non-enumerable __dbReadError when the Postgres half
   // of the merge could not be read (e.g. a schema/connection error that makes
   // `.select()` throw even though count(*) still works). Surface it so the UI
@@ -67,6 +77,7 @@ export async function GET(request: Request) {
     dbRowCount,
     fetchedAt: new Date().toISOString(),
     count: cards.length,
+    libraryWords,
     cards,
   });
 }
