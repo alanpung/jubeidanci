@@ -10,6 +10,7 @@ import { calculateNextReview, GRADUATION_THRESHOLD, hasTrackedSrsStatus, type Qu
 import type { Exercise } from "@/lib/content/types";
 import { extractSrsWords } from "@/lib/srs-words";
 import { getWordToLevelMap, getBundledWords } from "@/lib/words";
+import { levelForWord, buildDictionary } from "@/lib/content/course-srs-report";
 import {
   getLocalCards,
   getLocalCard,
@@ -743,6 +744,18 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
   const userId = userIdParam || (await getSafeUserId());
   if (!userId || userId === "default_user") return [];
 
+  // Only the admin/owner's OWN library auto-includes every system course. When
+  // an explicit userId is supplied (e.g. the owner inspecting a student via the
+  // Student Inspector), we must NOT fold in system courses — that would inflate
+  // the student's deck with the owner's full dictionary.
+  let isOwner = false;
+  if (!userIdParam) {
+    try {
+      const session = await getSession().catch(() => null);
+      if (session?.user?.email && isAdminEmail(session.user.email)) isOwner = true;
+    } catch {}
+  }
+
   const cached = userLibraryWordsCache.get(userId);
   if (cached && Date.now() - cached.timestamp < 60000) {
     return cached.words;
@@ -798,6 +811,19 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
     } catch {}
   }
 
+  // Owner default: the admin's "My Books" is intended to include every system
+  // course (a1–c2 flashcard + translation). System courses have createdBy=null,
+  // so without this the owner only sees the courses they manually enrolled —
+  // leaving b1/b2/c1/c2 flashcards out of their library. Students are unaffected
+  // because this branch is guarded by the isOwner check above (which only fires
+  // for the owner's own, session-resolved library).
+  if (isOwner) {
+    try {
+      const { SYSTEM_COURSE_IDS } = await import("@/lib/db/queries/courses");
+      SYSTEM_COURSE_IDS.forEach((id) => enrolledCourseIds.add(id));
+    } catch {}
+  }
+
   if (enrolledCourseIds.size === 0 && standaloneUnitIds.size === 0) {
     userLibraryWordsCache.set(userId, { timestamp: Date.now(), words: [] });
     return [];
@@ -831,6 +857,11 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
   const { loadContentDir, getUnitLessonsSafe } = await import("@/lib/content/loader");
   const { units: fsUnits } = loadContentDir();
   const dictLevelMap = (await getWordToLevelMap().catch(() => ({}))) as Record<string, string>;
+  // Robust level lookup shared with the Course Stat report: exact dict match,
+  // CEFR_OVERRIDE, then lemma/derivation (so "reveals" -> "reveal",
+  // "systems" -> "system" count). This is what lets genuinely-graded gap words
+  // enter the library instead of being dropped by the raw merged-dictionary gate.
+  const levelDict = buildDictionary();
 
   const LEVEL_ORDER: Record<string, number> = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6 };
 
@@ -865,7 +896,7 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
         for (const w of targetWords) {
           const norm = w.toLowerCase().trim();
           if (!norm) continue;
-          const dictLvl = dictLevelMap[norm];
+          const dictLvl = levelForWord(norm, levelDict) || dictLevelMap[norm];
           if (dictLvl || frontWord === norm) {
             wordSet.add(norm);
           }
@@ -1785,6 +1816,20 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
         localEnrollments.forEach((id) => enrolledCourseIds.add(id));
       }
 
+      // Owner default: the admin's "My Books" is intended to include every
+      // system course. System courses have createdBy=null, so without this the
+      // owner only seeds the courses they manually enrolled — leaving b1/b2/c1/c2
+      // flashcards out of their deck. Folding SYSTEM_COURSE_IDS in here makes the
+      // empty-enrollment branch below a no-op for the owner (their deck always
+      // has 12 courses to seed from), and keeps students untouched.
+      try {
+        const session = await getSession().catch(() => null);
+        if (session?.user?.email && isAdminEmail(session.user.email)) {
+          const { SYSTEM_COURSE_IDS } = await import("@/lib/db/queries/courses");
+          SYSTEM_COURSE_IDS.forEach((id) => enrolledCourseIds.add(id));
+        }
+      } catch {}
+
       if (enrolledCourseIds.size === 0 && standaloneUnitIds.size === 0) {
         // Owner guard (mirrors pruneStaleNewCards): the owner's deck is the
         // full dictionary and they have no traditional enrollments, so an empty
@@ -1888,6 +1933,10 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       const { loadContentDir, getUnitLessonsSafe } = await import("@/lib/content/loader");
       const { units: fsUnits } = loadContentDir();
       const dictLevelMap = (await getWordToLevelMap().catch(() => ({}))) as Record<string, string>;
+      // Robust level lookup (shared with the Course Stat report) so inflected /
+      // derived / advanced-gap forms resolve to a CEFR level and enter the deck
+      // instead of being dropped by the raw merged-dictionary gate.
+      const levelDict = buildDictionary();
 
       const unitMap = new Map<string, { id: string; markdown: string; level: string; targetLanguage: string }>();
 
@@ -1969,7 +2018,7 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
             for (const w of targetWords) {
               const normWord = w.toLowerCase().trim();
               if (!normWord) continue;
-              const dictLvl = dictLevelMap[normWord];
+              const dictLvl = levelForWord(normWord, levelDict) || dictLevelMap[normWord];
               // Count every valid word that belongs to the enrolled course/unit:
               // a dictionary word OR an explicit flashcard/unit front word.
               // We no longer skip words whose dictionary CEFR level is above the
@@ -2223,10 +2272,19 @@ export async function getLibraryWordsWithLevels(
     string,
     string
   >;
+  // Use the robust level lookup so gap words (advanced vocabulary, derived /
+  // inflected forms) get their real CEFR grade instead of defaulting to A1.
+  const levelDict = buildDictionary();
 
   return words.map((w) => {
     const norm = w.toLowerCase().trim();
-    const lvl = (dictLevelMap[norm] || "A1").toUpperCase().trim();
+    const lvl = (
+      levelForWord(norm, levelDict) ||
+      dictLevelMap[norm] ||
+      "A1"
+    )
+      .toUpperCase()
+      .trim();
     return { word: norm, level: lvl };
   });
 }
