@@ -16,6 +16,7 @@ import {
   addUnitToLibrary,
   removeUnitFromLibrary,
 } from "@/lib/actions/library";
+import { deleteCourse, deleteUnit } from "@/lib/actions/units";
 import {
   LibraryFolders,
   STANDALONE_KEY,
@@ -26,6 +27,7 @@ import {
   VisibilityBadge,
   CoverEditButton,
   EditTitleButton,
+  UnitMenuButton,
 } from "@/components/library/book-parts";
 
 /** A *student* may keep at most this many courses on the top ("My Books")
@@ -66,6 +68,8 @@ interface BrowseEntry {
   href: string;
   onAdd: () => void;
   onRemove: () => void;
+  /** Destroy the entry for good (owner/admin only, irreversible). */
+  onDeleteForever?: () => void;
 }
 
 interface CourseBookShelfProps {
@@ -83,6 +87,13 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
   );
   const [pendingId, setPendingId] = useState<string | null>(null);
   const [pendingUnitId, setPendingUnitId] = useState<string | null>(null);
+  // Entries the viewer took out of their library (or deleted) during this
+  // session. The owner's Library lists the WHOLE catalog, so without this the
+  // removal would be invisible — the cover would simply stay put.
+  const [removedCourseIds, setRemovedCourseIds] = useState<Set<string>>(
+    new Set(),
+  );
+  const [removedUnitIds, setRemovedUnitIds] = useState<Set<string>>(new Set());
   // Which Library folder is open, by level or exercise-type label. null = closed.
   const [groupBy, setGroupBy] = useState<GroupBy>("type");
   const [activeKey, setActiveKey] = useState<string | null>(null);
@@ -100,11 +111,18 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
   const ownedIds = new Set(
     courses.filter((c) => c.isOwner).map((c) => c.id),
   );
-  const borrowedOwn = courses.filter((c) => ownedIds.has(c.id));
+  const borrowedOwn = courses.filter(
+    (c) => ownedIds.has(c.id) && !removedCourseIds.has(c.id),
+  );
   // Students are truncated to MY_BOOKS_CAP; the owner/admin sees every
   // enrolled course (no cap).
   const borrowedOther = courses
-    .filter((c) => !ownedIds.has(c.id) && borrowedIds.has(c.id))
+    .filter(
+      (c) =>
+        !ownedIds.has(c.id) &&
+        borrowedIds.has(c.id) &&
+        !removedCourseIds.has(c.id),
+    )
     .slice(0, isAdmin ? courses.length : MY_BOOKS_CAP);
   const borrowed = [...borrowedOwn, ...borrowedOther];
 
@@ -119,7 +137,17 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
   // enrolled/owned logic (borrowed or created → in My Books, else a toggle).
   const isOwnerView = isAdmin;
 
-  const courseEntries: BrowseEntry[] = courses.map((c) => ({
+  // The owner's Library IS their shelf, so an entry they took out has to
+  // leave the folder too. A student still sees it in the folder — that is
+  // the catalog they add books back from.
+  const visibleCourses = isOwnerView
+    ? courses.filter((c) => !removedCourseIds.has(c.id))
+    : courses;
+  const visibleUnits = isOwnerView
+    ? units.filter((u) => !removedUnitIds.has(u.id))
+    : units;
+
+  const courseEntries: BrowseEntry[] = visibleCourses.map((c) => ({
     id: c.id,
     kind: "course",
     title: c.title,
@@ -135,11 +163,12 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     href: `/library/${c.id}`,
     onAdd: () => borrow(c),
     onRemove: () => unborrow(c),
+    onDeleteForever: () => destroyCourse(c),
   }));
 
   // Standalone units always wear the "mix" symbol: they mix exercise types
   // by nature and the AI tutor never gives them a single type of their own.
-  const unitEntries: BrowseEntry[] = units.map((u) => ({
+  const unitEntries: BrowseEntry[] = visibleUnits.map((u) => ({
     id: u.id,
     kind: "unit",
     title: u.title,
@@ -154,6 +183,7 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     href: `/unit/${u.id}`,
     onAdd: () => addUnit(u.id),
     onRemove: () => removeUnit(u.id),
+    onDeleteForever: () => destroyUnit(u.id, u.title),
   }));
 
   // The window deliberately lists *every* entry of this folder — including the
@@ -203,6 +233,9 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
             next.delete(course.id);
             return next;
           });
+          // Remember it so the owner's own Library drops the cover right away
+          // instead of leaving it sitting in the folder.
+          setRemovedCourseIds((s) => new Set(s).add(course.id));
         } else {
           alert(res.error);
         }
@@ -235,10 +268,66 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     startTransition(async () => {
       try {
         const res = await removeUnitFromLibrary(unitId);
-        if (res.success) router.refresh();
-        else alert(res.error);
+        if (res.success) {
+          setRemovedUnitIds((s) => new Set(s).add(unitId));
+          router.refresh();
+        } else alert(res.error);
       } catch (err) {
         alert(err instanceof Error ? err.message : "Failed to remove unit");
+      } finally {
+        setPendingUnitId(null);
+      }
+    });
+  }
+
+  /** Delete a course FOR GOOD (owner/admin only).
+   *
+   *  This is the hard one: the course leaves the library for everyone, not
+   *  just the viewer. The markdown under content/ stays the source of truth,
+   *  so a later seed can bring the course back. */
+  function destroyCourse(course: CourseListItem) {
+    if (
+      !window.confirm(
+        `Delete "${course.title}" permanently?\n\nThis removes the course from the library for everyone. Its units stay, but become standalone units. This cannot be undone.`,
+      )
+    ) {
+      return;
+    }
+    setPendingId(course.id);
+    startTransition(async () => {
+      try {
+        const res = await deleteCourse(course.id);
+        if (res.success) {
+          setRemovedCourseIds((s) => new Set(s).add(course.id));
+          router.refresh();
+        } else alert(res.error);
+      } catch (err) {
+        alert(err instanceof Error ? err.message : "Failed to delete course");
+      } finally {
+        setPendingId(null);
+      }
+    });
+  }
+
+  /** Delete a standalone unit FOR GOOD (owner/admin only). */
+  function destroyUnit(unitId: string, unitTitle: string) {
+    if (
+      !window.confirm(
+        `Delete "${unitTitle}" permanently?\n\nThis removes the unit from the library for everyone. This cannot be undone.`,
+      )
+    ) {
+      return;
+    }
+    setPendingUnitId(unitId);
+    startTransition(async () => {
+      try {
+        const res = await deleteUnit(unitId);
+        if (res.success) {
+          setRemovedUnitIds((s) => new Set(s).add(unitId));
+          router.refresh();
+        } else alert(res.error);
+      } catch (err) {
+        alert(err instanceof Error ? err.message : "Failed to delete unit");
       } finally {
         setPendingUnitId(null);
       }
@@ -280,6 +369,7 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
                   pending={pendingId === c.id}
                   onBorrow={() => borrow(c)}
                   onRemove={() => unborrow(c)}
+                  onDeleteForever={() => destroyCourse(c)}
                 />
               ))}
             </div>
@@ -460,11 +550,28 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
 
         {/* The viewer's own book: the ×/+ "My Books" toggle is pointless
             (it is already theirs and the shelf cap does not apply), so the
-            top-right corner becomes the rename control instead. Everyone
-            else keeps the +/× toggle. */}
+            top-right corner becomes the rename control instead — and that
+            menu also carries the "remove from library" / "delete" rows.
+            Everyone else keeps the +/× toggle. */}
         {entry.course && entry.ownsIt ? (
           <div className="absolute right-1.5 top-1.5 z-20">
-            <EditTitleButton course={entry.course} />
+            <EditTitleButton
+              course={entry.course}
+              onRemoveFromLibrary={entry.onRemove}
+              onDeleteForever={entry.onDeleteForever}
+            />
+          </div>
+        ) : entry.kind === "unit" && entry.isOwner ? (
+          /* A standalone unit has no title to rename, so its corner carries
+             the library actions on their own. */
+          <div className="absolute right-1.5 top-1.5 z-20">
+            <UnitMenuButton
+              unitId={entry.id}
+              unitTitle={entry.title}
+              pending={pending}
+              onRemoveFromLibrary={entry.onRemove}
+              onDeleteForever={entry.onDeleteForever}
+            />
           </div>
         ) : entry.showToggle ? (
           <div className="absolute right-1.5 top-1.5 z-20">
@@ -504,12 +611,14 @@ function CourseBook({
   pending,
   onBorrow,
   onRemove,
+  onDeleteForever,
 }: {
   course: CourseListItem;
   isBorrowed: boolean;
   pending: boolean;
   onBorrow: () => void;
   onRemove: () => void;
+  onDeleteForever?: () => void;
 }) {
   return (
     <div className="group relative flex flex-col items-center">
@@ -540,7 +649,11 @@ function CourseBook({
             control instead of the shelf toggle. */}
         {course.isOwner ? (
           <div className="absolute right-1.5 top-1.5 z-20">
-            <EditTitleButton course={course} />
+            <EditTitleButton
+              course={course}
+              onRemoveFromLibrary={onRemove}
+              onDeleteForever={onDeleteForever}
+            />
           </div>
         ) : (
           <div className="absolute right-1.5 top-1.5 z-20">
