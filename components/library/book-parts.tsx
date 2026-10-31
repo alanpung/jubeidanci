@@ -3,7 +3,7 @@
 import { useState, useRef, useTransition } from "react";
 import { createPortal } from "react-dom";
 import { useRouter } from "next/navigation";
-import { Globe, Crown, EyeOff, Pencil, Check } from "lucide-react";
+import { Globe, Crown, EyeOff, Pencil, Check, Trash2, AlertTriangle } from "lucide-react";
 import type { CourseListItem } from "@/lib/content/types";
 import {
   makeCoursePublic,
@@ -214,6 +214,61 @@ export function CoverEditButton({
   );
 }
 
+/** The destructive block that sits BELOW the edit-title option inside an
+ *  upper-right cover menu.
+ *
+ *  Two distinct powers, deliberately separated:
+ *   • "Remove from My Books" — takes the book out of the viewer's library.
+ *     Reversible: the book can be added back at any time.
+ *   • "Delete permanently"   — for content the viewer owns, destroys it for
+ *     everyone. Irreversible, so it is styled as the solid-red second row and
+ *     the caller supplies its own confirmation.
+ *
+ *  Both are optional: a book that cannot be removed (and is not owned) simply
+ *  shows neither row. */
+function LibraryDeleteRows({
+  onRemoveFromLibrary,
+  onDeleteForever,
+  removeLabel,
+  deleteLabel,
+  pending = false,
+}: {
+  onRemoveFromLibrary?: () => void;
+  onDeleteForever?: () => void;
+  removeLabel: string;
+  deleteLabel?: string;
+  pending?: boolean;
+}) {
+  if (!onRemoveFromLibrary && !onDeleteForever) return null;
+  return (
+    <>
+      <div className="my-1.5 border-t border-lingo-border" />
+      {onRemoveFromLibrary ? (
+        <button
+          type="button"
+          disabled={pending}
+          onClick={onRemoveFromLibrary}
+          className="flex w-full items-center justify-center gap-1.5 rounded-lg border-2 border-red-200 bg-red-50 px-2 py-1.5 text-xs font-black text-red-600 transition-colors hover:bg-red-100 disabled:opacity-50"
+        >
+          <Trash2 className="h-3.5 w-3.5 stroke-[2.5]" />
+          {removeLabel}
+        </button>
+      ) : null}
+      {onDeleteForever ? (
+        <button
+          type="button"
+          disabled={pending}
+          onClick={onDeleteForever}
+          className="mt-1.5 flex w-full items-center justify-center gap-1.5 rounded-lg bg-red-500 px-2 py-1.5 text-xs font-black text-white transition-colors hover:bg-red-600 disabled:opacity-50"
+        >
+          <AlertTriangle className="h-3.5 w-3.5 stroke-[2.5]" />
+          {deleteLabel ?? "Delete permanently"}
+        </button>
+      ) : null}
+    </>
+  );
+}
+
 /** Owner-only RENAME control for the TOP-RIGHT corner of a cover.
  *
  *  A small "Edit" pill that flips into an inline title field, so a course can
@@ -226,9 +281,15 @@ export function CoverEditButton({
 export function EditTitleButton({
   course,
   className = "",
+  onRemoveFromLibrary,
+  onDeleteForever,
 }: {
   course: CourseListItem;
   className?: string;
+  /** Take the book out of the viewer's library (reversible). */
+  onRemoveFromLibrary?: () => void;
+  /** Destroy the book for good — owner/admin only, irreversible. */
+  onDeleteForever?: () => void;
 }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
@@ -250,7 +311,9 @@ export function EditTitleButton({
     if (r) {
       // The panel is 14rem wide; keep its right edge inside the viewport.
       const panelW = 224;
-      const panelH = 170;
+      // Tall enough for the title block + Rename + the delete rows, so the
+      // "flip above" fallback never leaves the buttons off-screen.
+      const panelH = 280;
       const left = Math.max(8, Math.min(r.right - panelW, window.innerWidth - panelW - 8));
       // Flip above the button when there is not enough room below it, so the
       // panel never runs off the bottom of the screen.
@@ -389,8 +452,109 @@ export function EditTitleButton({
                       <Pencil className="h-3.5 w-3.5 stroke-[2.5]" />
                       Rename
                     </button>
+                    <LibraryDeleteRows
+                      onRemoveFromLibrary={onRemoveFromLibrary}
+                      onDeleteForever={onDeleteForever}
+                      removeLabel="Remove from My Books"
+                      deleteLabel="Delete permanently"
+                    />
                   </>
                 )}
+              </div>
+            </div>,
+            document.body,
+          )
+        : null}
+    </>
+  );
+}
+
+/** The upper-right control for a STANDALONE UNIT in the Library.
+ *
+ *  A unit has no title to rename here, so the menu carries only the library
+ *  powers: take the unit out of the library (reversible) and — for a unit the
+ *  viewer owns — delete it for good. It mirrors the course menu's look so the
+ *  two read as the same control on the same corner of the cover. */
+export function UnitMenuButton({
+  unitId,
+  unitTitle,
+  onRemoveFromLibrary,
+  onDeleteForever,
+  pending = false,
+  className = "",
+}: {
+  unitId: string;
+  unitTitle: string;
+  onRemoveFromLibrary?: () => void;
+  onDeleteForever?: () => void;
+  pending?: boolean;
+  className?: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const btnRef = useRef<HTMLButtonElement>(null);
+  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
+
+  function toggle() {
+    if (open) {
+      setOpen(false);
+      return;
+    }
+    const r = btnRef.current?.getBoundingClientRect();
+    if (r) {
+      const panelW = 224;
+      const panelH = 150;
+      const left = Math.max(
+        8,
+        Math.min(r.right - panelW, window.innerWidth - panelW - 8),
+      );
+      const below = r.bottom + 6;
+      const top =
+        below + panelH > window.innerHeight - 8
+          ? Math.max(8, r.top - 6 - panelH)
+          : below;
+      setPos({ top, left });
+    }
+    setOpen(true);
+  }
+
+  return (
+    <>
+      <button
+        ref={btnRef}
+        type="button"
+        onClick={toggle}
+        disabled={pending}
+        title="Unit options"
+        aria-label={`Options for ${unitTitle}`}
+        className={`flex h-6 w-6 items-center justify-center rounded-full border-2 border-lingo-border bg-white text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 disabled:opacity-50 ${className}`}
+      >
+        <Trash2 className="h-3 w-3 stroke-[2.5]" />
+      </button>
+      {open && pos
+        ? createPortal(
+            <div
+              className="fixed z-[100]"
+              style={{ top: pos.top, left: pos.left }}
+            >
+              <div
+                className="fixed inset-0 z-[-1]"
+                onClick={() => setOpen(false)}
+                aria-hidden
+              />
+              <div className="w-56 rounded-xl border-2 border-lingo-border bg-white p-2 shadow-2xl">
+                <div className="mb-1.5 px-1 text-[10px] font-black uppercase tracking-wide text-lingo-text-light">
+                  Unit
+                </div>
+                <p className="px-1 pb-1 text-xs font-bold leading-tight text-lingo-text">
+                  {unitTitle}
+                </p>
+                <LibraryDeleteRows
+                  onRemoveFromLibrary={onRemoveFromLibrary}
+                  onDeleteForever={onDeleteForever}
+                  removeLabel="Remove from Library"
+                  deleteLabel="Delete permanently"
+                  pending={pending}
+                />
               </div>
             </div>,
             document.body,
