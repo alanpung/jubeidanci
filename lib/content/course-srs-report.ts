@@ -31,7 +31,16 @@ export interface CourseSrsRow {
   unknown: number;
 }
 
-function buildDictionary(): Map<string, string> {
+let _dictionaryCache: Map<string, string> | null = null;
+
+/**
+ * Build the base CEFR dictionary (word -> level) from words/english_merged.json.
+ * Cached module-level so the 8MB JSON is parsed at most once per process — this
+ * is also the single source of truth reused by the SRS library/seed paths via
+ * {@link levelForWord}.
+ */
+export function buildDictionary(): Map<string, string> {
+  if (_dictionaryCache) return _dictionaryCache;
   try {
     const raw = JSON.parse(readFileSync(DICT_PATH, "utf8")) as Array<Record<string, unknown>>;
     const m = new Map<string, string>();
@@ -44,9 +53,10 @@ function buildDictionary(): Map<string, string> {
         .trim();
       if (w && lvl && !m.has(w)) m.set(w, lvl);
     }
+    _dictionaryCache = m;
     return m;
   } catch {
-    return new Map();
+    return _dictionaryCache ?? new Map();
   }
 }
 
@@ -246,7 +256,7 @@ function lemmaCandidates(token: string): string[] {
  *    vocabulary) get a direct C2 assignment via CEFR_OVERRIDE;
  *  - if nothing is found, return null (counted as Unknown).
  */
-function levelForWord(word: string, dict: Map<string, string>): Cefr | null {
+export function levelForWord(word: string, dict: Map<string, string>): Cefr | null {
   const norm = word.toLowerCase().trim();
   if (!norm) return null;
 
@@ -282,7 +292,13 @@ function levelForWord(word: string, dict: Map<string, string>): Cefr | null {
   return null;
 }
 
-export function getCourseSrsReport(): CourseSrsRow[] {
+export interface CourseSrsUnique {
+  byLevel: Record<Cefr, number>;
+  unknown: number;
+  total: number;
+}
+
+export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsUnique } {
   const dict = buildDictionary();
 
   const files = readdirSync(CONTENT_DIR).filter(
@@ -290,6 +306,15 @@ export function getCourseSrsReport(): CourseSrsRow[] {
   );
 
   const byCourse = new Map<string, CourseSrsRow>();
+
+  // Across all courses, the per-level / unknown / total DISTINCT (de-duplicated)
+  // word sets. A word that appears in three courses, or fifty times inside one
+  // course, is counted exactly once here — this is the "non-overlapping total".
+  const uniqueByLevel: Record<Cefr, Set<string>> = {
+    A1: new Set(), A2: new Set(), B1: new Set(), B2: new Set(), C1: new Set(), C2: new Set(),
+  };
+  const uniqueUnknown = new Set<string>();
+  const uniqueAll = new Set<string>();
 
   for (const f of files) {
     const src = readFileSync(path.join(CONTENT_DIR, f), "utf8");
@@ -324,10 +349,18 @@ export function getCourseSrsReport(): CourseSrsRow[] {
         if (!sw) continue;
         const words = Array.isArray(sw) ? sw : [sw];
         for (const w of words) {
+          const norm = String(w).toLowerCase().trim();
+          if (!norm) continue;
           row.total++;
+          uniqueAll.add(norm);
           const lvl = levelForWord(w, dict);
-          if (lvl) row.byLevel[lvl]++;
-          else row.unknown++;
+          if (lvl) {
+            row.byLevel[lvl]++;
+            uniqueByLevel[lvl].add(norm);
+          } else {
+            row.unknown++;
+            uniqueUnknown.add(norm);
+          }
         }
       }
     }
@@ -340,7 +373,21 @@ export function getCourseSrsReport(): CourseSrsRow[] {
     if (la !== lb) return la - lb;
     return a.kind.localeCompare(b.kind);
   });
-  return rows;
+
+  const unique: CourseSrsUnique = {
+    byLevel: {
+      A1: uniqueByLevel.A1.size,
+      A2: uniqueByLevel.A2.size,
+      B1: uniqueByLevel.B1.size,
+      B2: uniqueByLevel.B2.size,
+      C1: uniqueByLevel.C1.size,
+      C2: uniqueByLevel.C2.size,
+    },
+    unknown: uniqueUnknown.size,
+    total: uniqueAll.size,
+  };
+
+  return { rows, unique };
 }
 
 /**

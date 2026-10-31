@@ -6,6 +6,7 @@ import {
   CEFR_ORDER,
   type Cefr,
   type CourseSrsRow,
+  type CourseSrsUnique,
 } from "@/lib/content/course-srs-report";
 
 export const dynamic = "force-dynamic";
@@ -51,25 +52,20 @@ export default async function CoursesReportPage() {
     redirect("/library");
   }
 
-  const rows = getCourseSrsReport();
+  const { rows, unique } = getCourseSrsReport();
 
-  const totals: Record<Cefr, number> & { unknown: number; total: number } = {
-    A1: 0,
-    A2: 0,
-    B1: 0,
-    B2: 0,
-    C1: 0,
-    C2: 0,
+  const totals: { byLevel: Record<Cefr, number>; unknown: number; total: number } = {
+    byLevel: { A1: 0, A2: 0, B1: 0, B2: 0, C1: 0, C2: 0 },
     unknown: 0,
     total: 0,
   };
   for (const r of rows) {
-    CEFR_ORDER.forEach((c) => (totals[c] += r.byLevel[c]));
+    CEFR_ORDER.forEach((c) => (totals.byLevel[c] += r.byLevel[c]));
     totals.unknown += r.unknown;
     totals.total += r.total;
   }
 
-  const renderBody = (list: CourseSrsRow[], strong: boolean) =>
+  const renderBody = (list: CourseSrsRow[]) =>
     list.map((r) => (
       <tr key={r.courseId} className="border-t border-lingo-border/60">
         <td className="px-3 py-2">
@@ -88,6 +84,30 @@ export default async function CoursesReportPage() {
         <NumCell value={r.total} strong />
       </tr>
     ));
+
+  // A summary row is any object with per-level counts + unknown + total.
+  type Summary = { byLevel: Record<Cefr, number>; unknown: number; total: number };
+  const renderSummaryRow = (
+    label: string,
+    data: Summary,
+    labelClass: string,
+    cellClass: string,
+  ) => (
+    <tr className="border-t-2 border-lingo-border">
+      <td className={`px-3 py-2 font-black ${labelClass}`}>{label}</td>
+      {CEFR_ORDER.map((c) => (
+        <td key={c} className={`px-2 py-2 text-right tabular-nums ${cellClass}`}>
+          {data.byLevel[c].toLocaleString()}
+        </td>
+      ))}
+      <td className={`px-2 py-2 text-right tabular-nums ${cellClass}`}>
+        {data.unknown.toLocaleString()}
+      </td>
+      <td className={`px-2 py-2 text-right tabular-nums ${cellClass}`}>
+        {data.total.toLocaleString()}
+      </td>
+    </tr>
+  );
 
   return (
     <div className="space-y-5">
@@ -117,15 +137,19 @@ export default async function CoursesReportPage() {
             </tr>
           </thead>
           <tbody>
-            {renderBody(rows, false)}
-            <tr className="border-t-2 border-lingo-border bg-gray-50">
-              <td className="px-3 py-2 font-black text-lingo-text">总计</td>
-              {CEFR_ORDER.map((c) => (
-                <NumCell key={c} value={totals[c]} strong />
-              ))}
-              <NumCell value={totals.unknown} strong />
-              <NumCell value={totals.total} strong />
-            </tr>
+            {renderBody(rows)}
+            {renderSummaryRow(
+              "去重总计（不重叠）",
+              unique,
+              "text-sky-700 bg-sky-50/60",
+              "font-bold text-sky-700 bg-sky-50/60",
+            )}
+            {renderSummaryRow(
+              "总计",
+              totals,
+              "text-lingo-text bg-gray-50",
+              "font-bold text-lingo-text bg-gray-50",
+            )}
           </tbody>
         </table>
       </div>
