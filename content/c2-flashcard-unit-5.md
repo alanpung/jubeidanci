@@ -1,8 +1,8 @@
 ---
-unitTitle: "Unit 3: Aesthetics, Artistry & Critique + Scientific Paradigms & Complexity"
-description: "Aesthetics, Artistry & Critique - 200 C2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
-icon: "🎨"
-color: "#E91E63"
+unitTitle: "Unit 5: Archaic, Formal & Erudite Register + Apex Lexical Precision & Idiom"
+description: "Archaic, Formal & Erudite Register - 200 C2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+icon: "✒️"
+color: "#673AB7"
 targetLanguage: "en"
 sourceLanguage: "en"
 level: "C2"
@@ -11,1321 +11,1321 @@ questionType: "flashcard-review"
 ---
 
 ---
-lessonTitle: "Lesson 1: Aesthetics, Artistry & Critique Part 1"
-description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
-icon: "🎨"
-color: "#E91E63"
+lessonTitle: "Lesson 1: Archaic, Formal & Erudite Register Part 1"
+description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
+icon: "✒️"
+color: "#673AB7"
 ---
 [flashcard-review]
-front: "calamity"
-meaning: "An event resulting in great loss and misfortune"
-translation: "n. 灾难, 不幸事件"
-srsWords: "calamity"
+front: "allegory"
+meaning: "An expressive style that uses fictional characters and events to describe some subject…; An extended metaphor"
+translation: "n. 寓言"
+srsWords: "allegory"
 
 [flashcard-review]
-front: "calamitous"
-meaning: "S (of events) having extremely unfortunate or dire consequences; Bringing ruin"
-translation: "a. 灾难性的, 不幸的"
-srsWords: "calamitous"
+front: "allegorical"
+meaning: "Used in or characteristic of or containing allegory"
+translation: "a. 寓言的, 讽喻的"
+srsWords: "allegorical"
 
 [flashcard-review]
-front: "calamitously"
-meaning: "Adverb. calamitously"
-translation: "adv. 灾难地;悲惨地"
-srsWords: "calamitously"
+front: "seedy"
+meaning: "Full of seeds"
+translation: "a. 多种子的, 结籽的, 破烂的, 肮脏的"
+srsWords: "seedy"
 
 [flashcard-review]
-front: "nigh"
-meaning: "A not far distant in time or space or degree or circumstances; S being on the left side"
-translation: "a. 在附近的；adv. 在附近地；prep. 近于"
-srsWords: "nigh"
+front: "punitive"
+meaning: "Inflicting punishment"
+translation: "a. 刑罚的, 惩罚性的 刑罚的, 惩罚性的, 结予惩处的"
+srsWords: "punitive"
 
 [flashcard-review]
-front: "austere"
-meaning: "Severely simple; Of a stern or strict bearing or demeanor"
-translation: "a. 严峻的, 禁欲的, 简朴的"
-srsWords: "austere"
+front: "punitively"
+meaning: "In a punishing manner"
+translation: "adv. 惩罚地；刑罚的"
+srsWords: "punitively"
 
 [flashcard-review]
-front: "austerely"
-meaning: "In an austere fashion"
-translation: "adv. 严格地；简朴地"
-srsWords: "austerely"
+front: "milieu"
+meaning: "The environmental condition"
+translation: "n. 周围, 社会环境, 环境, 表达的手法 环境"
+srsWords: "milieu"
 
 [flashcard-review]
-front: "austerity"
-meaning: "The trait of great self-denial (especially refraining from worldly pleasures)"
-translation: "n. 朴素, 苦行, 严格, 严峻"
-srsWords: "austerity"
+front: "unadulterated"
+meaning: "Not mixed with impurities"
+translation: "a. 无搀杂的, 道地的, 纯粹的, 完全的"
+srsWords: "unadulterated"
 
 [flashcard-review]
-front: "idiosyncrasy"
-meaning: "A behavioral attribute that is distinctive and peculiar to an individual"
-translation: "n. 气质, 特性, 风格 特异反应; 特异性体质"
-srsWords: "idiosyncrasy"
+front: "adulterate"
+meaning: "Mixed with impurities"
+translation: "vt. 掺杂；a. 掺假的, 假的, 通奸的"
+srsWords: "adulterate"
 
 [flashcard-review]
-front: "idiosyncratic"
-meaning: "Peculiar to the individual"
-translation: "a. 特质的, 异质的, 特殊的 特[异反]应性的, 特异体质的"
-srsWords: "idiosyncratic"
+front: "cogent"
+meaning: "Powerfully persuasive"
+translation: "a. 使人首肯的, 使人信服的, 中肯切题的 有说服力的, 无法反驳的"
+srsWords: "cogent"
 
 [flashcard-review]
-front: "idiomatic"
-meaning: "Of or relating to or conforming to idiom"
-translation: "a. 符合语言习惯的, 惯用的, 有许多习语的"
-srsWords: "idiomatic"
-
----
-lessonTitle: "Lesson 2: Aesthetics, Artistry & Critique Part 2"
-description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
-icon: "🎨"
-color: "#E91E63"
----
-[flashcard-review]
-front: "idiomatically"
-meaning: "In an idiomatic manner"
-translation: "adv. 使用习语, 惯用地"
-srsWords: "idiomatically"
-
-[flashcard-review]
-front: "kinetic"
-meaning: "Relating to the motion of material bodies and the forces associated therewith; Characterized by motion"
-translation: "a. 运动的, 运动引起的, 动力学的, 活动的 运动的, 动的, 动力的"
-srsWords: "kinetic"
-
-[flashcard-review]
-front: "kinetically"
-meaning: "Adverb. kinetically"
-translation: "n. 动力学"
-srsWords: "kinetically"
-
-[flashcard-review]
-front: "unmediated"
-meaning: "S having no intervening persons, agents, conditions"
-translation: "a. 无中介的,未经调停的"
-srsWords: "unmediated"
-
-[flashcard-review]
-front: "mediate"
-meaning: "Occupy an intermediate or middle position or form a connecting link or stage between…; Acting through or dependent on an intervening agency"
-translation: "a. 居间的, 间接的；vt. 斡旋, 调停；vi. 处于中间, 调解"
-srsWords: "mediate"
-
-[flashcard-review]
-front: "mediation"
-meaning: "A negotiation to resolve differences that is conducted by some impartial party; The act of intervening for the purpose of bringing about a settlement"
-translation: "n. 调停, 调解, 中介 间介[作用], 居间[作用]"
-srsWords: "mediation"
-
-[flashcard-review]
-front: "unharried"
-meaning: "Adjective. unharried"
-translation: "未婚"
-srsWords: "unharried"
-
-[flashcard-review]
-front: "figuratively"
-meaning: "In a figurative sense"
-translation: "adv. 象征性地；比喻地"
-srsWords: "figuratively"
-
-[flashcard-review]
-front: "exorcism"
-meaning: "Freeing from evil spirits"
-translation: "n. 驱魔, 驱邪所用的咒语"
-srsWords: "exorcism"
-
-[flashcard-review]
-front: "exorcist"
-meaning: "One of the minor orders in the unreformed Western Church but now suppressed in the…; Someone who practices exorcism"
-translation: "n. 驱魔的人, 召魂者"
-srsWords: "exorcist"
+front: "cogently"
+meaning: "In a cogent manner; Forcibly"
+translation: "adv. 痛切地, 中肯地"
+srsWords: "cogently"
 
 ---
-lessonTitle: "Lesson 3: Aesthetics, Artistry & Critique Part 3"
-description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
-icon: "🎨"
-color: "#E91E63"
+lessonTitle: "Lesson 2: Archaic, Formal & Erudite Register Part 2"
+description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
+icon: "✒️"
+color: "#673AB7"
 ---
 [flashcard-review]
-front: "mundanity"
-meaning: "N the quality of being commonplace and ordinary; N the quality or character of being intellectually sophisticated and worldly through…"
-translation: "n. 尘俗"
-srsWords: "mundanity"
+front: "incongruous"
+meaning: "Lacking in harmony or compatibility or appropriateness"
+translation: "a. 不协调的, 不一致的, 不合适的"
+srsWords: "incongruous"
 
 [flashcard-review]
-front: "mediocrity"
-meaning: "N ordinariness as a consequence of being average and not outstanding; N a person of second-rate ability or value"
-translation: "n. 平常, 平庸之才"
-srsWords: "mediocrity"
+front: "incongruously"
+meaning: "In an incongruous manner"
+translation: "adv. 不调和地"
+srsWords: "incongruously"
 
 [flashcard-review]
-front: "dubiously"
-meaning: "R in a questionable and dubious manner; R in a doubtful manner"
-translation: "adv. 怀疑地；可疑地"
-srsWords: "dubiously"
+front: "incongruity"
+meaning: "The quality of disagreeing; Being unsuitable and inappropriate"
+translation: "n. 不协调, 不一致, 不合适 异元性; 不相容性"
+srsWords: "incongruity"
 
 [flashcard-review]
-front: "curate"
-meaning: "A person authorized to conduct religious worship"
-translation: "n. 助理牧师"
-srsWords: "curate"
+front: "deaden"
+meaning: "Make vapid or deprive of spirit; Lessen the momentum or velocity of"
+translation: "vt. 使减弱, 使麻木；vi. 减弱"
+srsWords: "deaden"
 
 [flashcard-review]
-front: "curator"
-meaning: "The custodian of a collection (as a museum or library)"
-translation: "n. 管理者, 经理, 主管人, 掌管者, 馆长, 大学学监, 监护人, 保护人 临时监护人"
-srsWords: "curator"
+front: "attuned"
+meaning: "V adjust or accustom to; Bring into harmony with"
+translation: "v. 使协调( attune的过去式和过去分词 ); <音>调音"
+srsWords: "attuned"
 
 [flashcard-review]
-front: "antithesis"
-meaning: "Exact opposite; The juxtaposition of contrasting words or ideas to give a feeling of balance"
-translation: "n. 对偶, 对照, 对立面"
-srsWords: "antithesis"
+front: "attributive"
+meaning: "Of adjectives; Placed before the nouns they modify"
+translation: "a. 归属的, 属性的, 定语的；n. 定语"
+srsWords: "attributive"
 
 [flashcard-review]
-front: "antithetical"
-meaning: "S sharply contrasted in character or purpose"
-translation: "a. 对立的, 正相反的"
-srsWords: "antithetical"
+front: "ecotourism"
+meaning: "Tourism to exotic or threatened ecosystems to observe wildlife or to help preserve nature"
+translation: "n. 生态旅游"
+srsWords: "ecotourism"
 
 [flashcard-review]
-front: "scandinavian"
-meaning: "An inhabitant of Scandinavia; The northern family of Germanic languages that are spoken in Scandinavia and Iceland"
-translation: "n. 斯堪的纳维亚人, 斯堪的纳维亚语, 北欧日耳曼语系；a. 斯堪的纳维亚人的, 斯堪的纳维亚语的, 北欧日耳曼语系的"
-srsWords: "scandinavian"
+front: "farcical"
+meaning: "Broadly or extravagantly humorous; Resembling farce"
+translation: "a. 笑剧的, 滑稽的, 笑剧性的"
+srsWords: "farcical"
 
 [flashcard-review]
-front: "detract"
-meaning: "V take away a part from; Diminish"
-translation: "vi. 减去, 贬低；vt. 转移, 分散"
-srsWords: "detract"
+front: "incise"
+meaning: "Make an incision into by carving or cutting"
+translation: "vt. 切割, 雕刻 切"
+srsWords: "incise"
 
 [flashcard-review]
-front: "interrogate"
-meaning: "Transmit (a signal) for setting off an appropriate response, as in telecommunication; Pose a series of questions to"
-translation: "vt. 质问, 讯问, 审问；vi. 质问, 讯问"
-srsWords: "interrogate"
-
----
-lessonTitle: "Lesson 4: Aesthetics, Artistry & Critique Part 4"
-description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
-icon: "🎨"
-color: "#E91E63"
----
-[flashcard-review]
-front: "interrogation"
-meaning: "A transmission that will trigger an answering transmission from a transponder; Formal systematic questioning"
-translation: "n. 审问, 疑问句, 问号；[电] 询问"
-srsWords: "interrogation"
-
-[flashcard-review]
-front: "interrogative"
-meaning: "Relating to verbs in the so-called interrogative mood; Relating to the use of or having the nature of an interrogation"
-translation: "n. 疑问词, 问号；a. 疑惑的, 疑问的"
-srsWords: "interrogative"
-
-[flashcard-review]
-front: "interrogatively"
-meaning: "In the form of, or by means of, a question; An interrogative manner."
-translation: "疑问地"
-srsWords: "interrogatively"
-
-[flashcard-review]
-front: "perverse"
-meaning: "Marked by a disposition to oppose and contradict"
-translation: "a. 乖张的, 故意作对的, 有悖常情的, 执迷不悟的, 歪曲的, 错误的, 不正当的 邪恶的, 罪恶的:堕落的, 不合法的"
-srsWords: "perverse"
-
-[flashcard-review]
-front: "perversity"
-meaning: "Deliberately deviating from what is good"
-translation: "n. 乖僻, 倔强, 任性, 反常, 性变态"
-srsWords: "perversity"
-
-[flashcard-review]
-front: "opaque"
-meaning: "Not transmitting or reflecting light or radiant energy; Not clearly understood or expressed"
-translation: "n. 不透明物；a. 不透明的, 不传热的, 不传导的, 阴暗的 白底"
-srsWords: "opaque"
-
-[flashcard-review]
-front: "opacity"
-meaning: "The phenomenon of not permitting the passage of electromagnetic radiation; Incomprehensibility resulting from obscurity of meaning"
-translation: "n. 不透明, 电波不透过, 不透明体 浑浊, 不透明, 不透光, 不透明区, 浊斑"
-srsWords: "opacity"
-
-[flashcard-review]
-front: "remit"
-meaning: "Send (money) in payment; Release from (claims, debts, or taxes)"
-translation: "vt. 宽恕, 赦免, 免除, 汇出, 缓解, 减轻, 把...提交, 使恢复原状, 推迟；vi. 缓解, 汇款；n. 移交的事物"
-srsWords: "remit"
-
-[flashcard-review]
-front: "remittance"
-meaning: "A payment of money sent to a person in another place"
-translation: "n. 汇款 汇款, 寄款, 支付(金额)"
-srsWords: "remittance"
-
-[flashcard-review]
-front: "recourse"
-meaning: "Act of turning to for assistance; Something or someone turned to for assistance or security"
-translation: "n. 求援, 求助, 追索权 追索权"
-srsWords: "recourse"
+front: "incipient"
+meaning: "Only partly in existence; Imperfectly formed"
+translation: "a. 起初的, 发端的, 初期的 初发的, 初期的"
+srsWords: "incipient"
 
 ---
-lessonTitle: "Lesson 5: Aesthetics, Artistry & Critique Part 5"
-description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
-icon: "🎨"
-color: "#E91E63"
+lessonTitle: "Lesson 3: Archaic, Formal & Erudite Register Part 3"
+description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
+icon: "✒️"
+color: "#673AB7"
 ---
 [flashcard-review]
-front: "pedestal"
-meaning: "A position of great esteem (and supposed superiority); An architectural support or base (as for a column or statue)"
-translation: "n. 支柱, 基架, 基座, 基础；vt. 加座, 搁在台上, 支持, 提高...的地位"
-srsWords: "pedestal"
+front: "echolocation"
+meaning: "Determining the location of something by measuring the time it takes for an echo to…"
+translation: "回声测定"
+srsWords: "echolocation"
 
 [flashcard-review]
-front: "lurid"
-meaning: "Horrible in fierceness or savagery; Glaringly vivid and graphic"
-translation: "a. 火烧似的, 苍白的, 华丽的, 可怕的"
-srsWords: "lurid"
+front: "echolocate"
+meaning: "Verb. echolocate"
+translation: "vt.凭回声(或回波)测定…的方向(或位置)"
+srsWords: "echolocate"
 
 [flashcard-review]
-front: "luridly"
-meaning: "In a lurid manner"
-translation: "adv. 耀眼地, 骇人听闻地"
-srsWords: "luridly"
+front: "reverb"
+meaning: "T. To echo."
+translation: "vi. 混响；余响"
+srsWords: "reverb"
 
 [flashcard-review]
-front: "fallacy"
-meaning: "A misconception resulting from incorrect reasoning"
-translation: "n. 错误的观念(或信念), 谬见, 谬论 错觉, 幻觉, 虚妄"
-srsWords: "fallacy"
+front: "reverberation"
+meaning: "N the repetition of a sound resulting from reflection of the sound waves; N a remote or indirect consequence of some action"
+translation: "n. 反响, 混响, 反射；[电] 交混回响"
+srsWords: "reverberation"
 
 [flashcard-review]
-front: "rife"
-meaning: "S most frequent or common; S excessively abundant"
-translation: "a. 流行的, 盛传的, 充满的"
-srsWords: "rife"
+front: "reverberate"
+meaning: "Have a long or continuing effect; Be reflected as heat, sound, or light or shock waves"
+translation: "vi. 回响, 反响, 被反射；vt. 使反响, 使回响, 反射；a. 回响的, 反射的"
+srsWords: "reverberate"
 
 [flashcard-review]
-front: "mercenary"
-meaning: "A person hired to fight for another country than their own; Serving for wages in a foreign army"
-translation: "n. 唯利是图者, 雇佣兵；a. 为钱而工作的, 被雇的, 图利的"
-srsWords: "mercenary"
+front: "ingenuous"
+meaning: "Characterized by an inability to mask your feelings; Not devious"
+translation: "a. 坦白的, 正直的, 天真的"
+srsWords: "ingenuous"
 
 [flashcard-review]
-front: "polysyllabic"
-meaning: "Having or characterized by words of more than three syllables; (of words) long and ponderous"
-translation: "a. 多音节的"
-srsWords: "polysyllabic"
+front: "ingenuously"
+meaning: "R in an ingenuous manner"
+translation: "adv. 率直地, 正直地"
+srsWords: "ingenuously"
 
 [flashcard-review]
-front: "syllabic"
-meaning: "Consisting of or using a syllabary; (of verse) having lines based on number of syllables rather than on rhythmical…"
-translation: "n. 音节主音；a. 音节的"
-srsWords: "syllabic"
+front: "impresario"
+meaning: "N a sponsor who books and stages public entertainments"
+translation: "n. 演出者, 主持人"
+srsWords: "impresario"
 
 [flashcard-review]
-front: "superfluous"
-meaning: "S serving no useful purpose; Having no excuse for being"
-translation: "a. 多余的, 过剩的"
-srsWords: "superfluous"
+front: "elasticity"
+meaning: "The tendency of a body to return to its original shape after it has been stretched or…"
+translation: "n. 弹力, 弹性 弹性"
+srsWords: "elasticity"
 
 [flashcard-review]
-front: "superfluously"
-meaning: "R in a superfluous manner"
-translation: "adv. 过分地; 过剩地"
-srsWords: "superfluously"
-
----
-lessonTitle: "Lesson 6: Aesthetics, Artistry & Critique Part 6"
-description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
-icon: "🎨"
-color: "#E91E63"
----
-[flashcard-review]
-front: "snippet"
-meaning: "N a small piece of anything (especially a piece that has been snipped off)"
-translation: "n. 小片, 片断, 摘录"
-srsWords: "snippet"
-
-[flashcard-review]
-front: "opus"
-meaning: "N a musical work that has been created"
-translation: "n. 作品"
-srsWords: "opus"
-
-[flashcard-review]
-front: "ephemeral"
-meaning: "Lasting a very short time"
-translation: "a. 朝生暮死的, 短命的, 短暂的 暂时的"
-srsWords: "ephemeral"
-
-[flashcard-review]
-front: "ephemera"
-meaning: "Something transitory; Lasting a day"
-translation: "n. 生命短促的人(或物), 蜉蝣"
-srsWords: "ephemera"
-
-[flashcard-review]
-front: "ephemerality"
-meaning: "The property of lasting for a very short time"
-translation: "n. 朝生暮死, 短命的事物"
-srsWords: "ephemerality"
-
-[flashcard-review]
-front: "summarily"
-meaning: "Without delay; In a summary manner"
-translation: "adv. 概要地, 概略地, 立刻"
-srsWords: "summarily"
-
-[flashcard-review]
-front: "infallibly"
-meaning: "In an infallible manner; Certainly"
-translation: "adv. 绝对无误地"
-srsWords: "infallibly"
-
-[flashcard-review]
-front: "infallible"
-meaning: "Incapable of failure or error"
-translation: "a. 绝无错误的, 绝对可靠的；n. 一贯正确的人"
-srsWords: "infallible"
-
-[flashcard-review]
-front: "infallibility"
-meaning: "The quality of never making an error"
-translation: "n. 绝无错误, 绝对可靠性"
-srsWords: "infallibility"
-
-[flashcard-review]
-front: "depravity"
-meaning: "A corrupt or depraved or degenerate act or practice"
-translation: "n. 堕落, 腐败, 邪恶 堕落, 腐化, 败坏"
-srsWords: "depravity"
+front: "escrow"
+meaning: "A written agreement (or property or money) delivered to a third party or put in trust…"
+translation: "n. 附带条件实现后交付的契约 有条件转让契约, 第三者代管契约"
+srsWords: "escrow"
 
 ---
-lessonTitle: "Lesson 7: Aesthetics, Artistry & Critique Part 7"
-description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
-icon: "🎨"
-color: "#E91E63"
+lessonTitle: "Lesson 4: Archaic, Formal & Erudite Register Part 4"
+description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
+icon: "✒️"
+color: "#673AB7"
 ---
 [flashcard-review]
-front: "depraved"
-meaning: "Deviating from what is considered moral or right or proper or good"
-translation: "a. 堕落的, 腐化的, 道德败坏的 恶化的, 变坏的"
-srsWords: "depraved"
+front: "salivary"
+meaning: "Of or relating to saliva"
+translation: "a. 唾液的, 分泌唾液的 涎的, 唾液的"
+srsWords: "salivary"
 
 [flashcard-review]
-front: "deprecate"
-meaning: "Express strong disapproval of; Belittle"
-translation: "vt. 声明不赞成, 抗议, 反对 对...表示不赞成, 反对"
-srsWords: "deprecate"
+front: "hypnotherapy"
+meaning: "The use of hypnosis in psychotherapy"
+translation: "n. 催眠疗法 催眠疗法"
+srsWords: "hypnotherapy"
 
 [flashcard-review]
-front: "deprecatingly"
-meaning: "In a deprecating manner."
-translation: "adv. 不赞成地, 不以为然地"
-srsWords: "deprecatingly"
+front: "wholly"
+meaning: "To a complete degree or to the full or entire extent (`whole' is often used informally…"
+translation: "adv. 完全地, 整个, 统统, 全部 完全地, 统统地"
+srsWords: "wholly"
 
 [flashcard-review]
-front: "revile"
-meaning: "V spread negative information about"
-translation: "v. 辱骂, 斥责"
-srsWords: "revile"
+front: "remorseful"
+meaning: "S feeling or expressing pain or sorrow for sins or offenses"
+translation: "a. 极为后悔的, 懊悔的"
+srsWords: "remorseful"
 
 [flashcard-review]
-front: "revulsion"
-meaning: "N intense aversion"
-translation: "n. 剧变, 厌恶, 强烈反感 诱导法"
-srsWords: "revulsion"
+front: "remonstrate"
+meaning: "Argue in protest or opposition; Present and urge reasons in opposition"
+translation: "vi. 表示异议, 抗议, 责备；vt. 抗议地说"
+srsWords: "remonstrate"
 
 [flashcard-review]
-front: "arcane"
-meaning: "Requiring secret or mysterious knowledge"
-translation: "a. 神秘的, 晦涩难解的"
-srsWords: "arcane"
+front: "remonstrance"
+meaning: "N the act of expressing earnest opposition or protest"
+translation: "n. 抗议, 忠告, 规劝 抗议, 抗辩, 规劝"
+srsWords: "remonstrance"
 
 [flashcard-review]
-front: "arcanely"
-meaning: "Adverb. arcanely"
-translation: "arcanely；adv.；arcane的变形；arcane；[ɑ:'kein]；adj.；深奥的，晦涩难解的；神秘的；秘密的；秘传的；限于小圈子内的"
-srsWords: "arcanely"
+front: "unexcused"
+meaning: "Not excused"
+translation: "a. 未经允许的；不能原谅的"
+srsWords: "unexcused"
 
 [flashcard-review]
-front: "porten"
-meaning: "To be a sign or warning that something momentous or calamitous is likely to happen"
-translation: "vt. 预示，预兆（同 portend）；n. 征兆"
-srsWords: "porten"
+front: "unexceptionally"
+meaning: "Adverb. unexceptionally"
+translation: "毫无例外"
+srsWords: "unexceptionally"
 
 [flashcard-review]
-front: "divination"
-meaning: "Successful conjecture by unusual insight or good luck; The art or gift of prophecy (or the pretense of prophecy) by supernatural means"
-translation: "n. 占卜, 卜卦, 预测"
-srsWords: "divination"
+front: "unexceptional"
+meaning: "S not special in any way"
+translation: "a. 非例外的, 平常的, 不特别的, 不容许有例外的"
+srsWords: "unexceptional"
 
 [flashcard-review]
-front: "flit"
-meaning: "Move along rapidly and lightly; Skim or dart"
-translation: "n. 掠过, 迁徙；vi. 掠过, 迁徙"
-srsWords: "flit"
-
----
-lessonTitle: "Lesson 8: Aesthetics, Artistry & Critique Part 8"
-description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
-icon: "🎨"
-color: "#E91E63"
----
-[flashcard-review]
-front: "hitch"
-meaning: "To hook or entangle; A temporary knot"
-translation: "n. 猛拉, 急推, 蹒跚, 故障；vt. 猛拉, 系住；vi. 蹒跚, 被钩住"
-srsWords: "hitch"
-
-[flashcard-review]
-front: "prone"
-meaning: "Having a tendency (to); Lying face downward"
-translation: "a. 俯伏的, 面向下的, 有...倾向的 旋前的, 伏的, 俯的"
-srsWords: "prone"
-
-[flashcard-review]
-front: "scavenger"
-meaning: "A chemical agent that is added to a chemical mixture to counteract the effects of…; Any animal that feeds on refuse and other decaying organic matter"
-translation: "n. (英)清道夫, 清扫工, 拾垃圾的人, 清除剂, 净化剂, 食腐动物, 黄色作家 清除器"
-srsWords: "scavenger"
-
-[flashcard-review]
-front: "vermin"
-meaning: "An irritating or obnoxious person; Any of various small animals or insects that are pests"
-translation: "n. 害虫, 歹徒 虫, 体外寄生虫(如蚤、臭虫、蚤等)"
-srsWords: "vermin"
-
-[flashcard-review]
-front: "totemic"
-meaning: "Relating to totemism"
-translation: "a. 图腾的"
-srsWords: "totemic"
-
-[flashcard-review]
-front: "emulate"
-meaning: "Strive to equal or match, especially by imitating; Imitate the function of (another system), as by modifying the hardware or the software"
-translation: "vt. 效法, 尽力赶上, 同...竞争 仿真"
-srsWords: "emulate"
-
-[flashcard-review]
-front: "emulation"
-meaning: "Ambition to equal or excel; (computer science) technique of one machine obtaining the same results as another"
-translation: "n. 效法, 竞争 仿真"
-srsWords: "emulation"
-
-[flashcard-review]
-front: "avian"
-meaning: "Pertaining to or characteristic of birds"
-translation: "a. 鸟类的；n. 鸟"
-srsWords: "avian"
-
-[flashcard-review]
-front: "vestigial"
-meaning: "Not fully developed in mature animals"
-translation: "a. 残留的, 遗留的, 退化的 遗迹的, 剩余的"
-srsWords: "vestigial"
-
-[flashcard-review]
-front: "vestigially"
-meaning: "Adverb. vestigially"
-translation: "adv. vestigial的变形"
-srsWords: "vestigially"
+front: "inexorable"
+meaning: "S not to be placated or appeased or moved by entreaty; S impervious to pleas, persuasion, requests, reason"
+translation: "a. 无情的, 冷酷的"
+srsWords: "inexorable"
 
 ---
-lessonTitle: "Lesson 9: Aesthetics, Artistry & Critique Part 9"
-description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
-icon: "🎨"
-color: "#E91E63"
+lessonTitle: "Lesson 5: Archaic, Formal & Erudite Register Part 5"
+description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
+icon: "✒️"
+color: "#673AB7"
 ---
 [flashcard-review]
-front: "brouhaha"
-meaning: "A confused disturbance far greater than its cause merits"
-translation: "n. 吵闹, 骚动"
-srsWords: "brouhaha"
+front: "inexorably"
+meaning: "In an inexorable manner"
+translation: "adv. 冷酷地；无情地"
+srsWords: "inexorably"
 
 [flashcard-review]
-front: "magnate"
-meaning: "N a very wealthy or powerful businessman"
-translation: "n. 大官, 巨头 大官, 权贵, 大资本家"
-srsWords: "magnate"
+front: "inexorability"
+meaning: "N mercilessness characterized by an unwillingness to relent or let up"
+translation: "n. 无情, 冷酷"
+srsWords: "inexorability"
 
 [flashcard-review]
-front: "magnanimous"
-meaning: "S noble and generous in spirit; S generous and understanding and tolerant"
-translation: "a. 宽宏大量的, 有雅量的 气量大的, 宽大的, 高尚的"
-srsWords: "magnanimous"
+front: "saracen"
+meaning: "(historically) a member of the nomadic people of the Syrian and Arabian deserts at the…; (when used broadly) any Arab"
+translation: "n. 撒拉森人"
+srsWords: "saracen"
 
 [flashcard-review]
-front: "magnanimously"
-meaning: "In a magnanimous manner"
-translation: "adv. 大度宽宏地, 度量大地；高尚地"
-srsWords: "magnanimously"
+front: "anterior"
+meaning: "Of or near the head end or toward the front plane of a body; Earlier in time"
+translation: "a. 前面的, 先前的 前的"
+srsWords: "anterior"
 
 [flashcard-review]
-front: "magnanimity"
-meaning: "N liberality in bestowing gifts; Extremely liberal and generous of spirit"
-translation: "n. 宽宏大量"
-srsWords: "magnanimity"
+front: "backfire"
+meaning: "Come back to the originator of an action with an undesired effect; A loud noise made by the explosion of fuel in the manifold or exhaust of an internal…"
+translation: "n. 逆火, 回火, 放火；vi. 放逆火, 预先放火, 发生意外"
+srsWords: "backfire"
 
 [flashcard-review]
-front: "whirlwind"
-meaning: "A more or less vertical column of air whirling around itself as it moves over the…"
-translation: "n. 旋风"
-srsWords: "whirlwind"
+front: "apricot"
+meaning: "Asian tree having clusters of usually white blossoms and edible fruit resembling the peach; Downy yellow to rosy-colored fruit resembling a small peach"
+translation: "n. 杏子, 杏树, 杏黄色；a. 杏黄色的"
+srsWords: "apricot"
 
 [flashcard-review]
-front: "secular"
-meaning: "Of or relating to the doctrine that rejects religion and religious considerations; a. of or…"
-translation: "n. 修道院外的教士；a. 世俗的, 现世的, 长期的"
-srsWords: "secular"
+front: "brisk"
+meaning: "Very active; Become brisk"
+translation: "a. 强烈的, 寒冷而干燥的, 活泼的；vt. 使活泼；vi. 活跃起来"
+srsWords: "brisk"
 
 [flashcard-review]
-front: "secularly"
-meaning: "In a secular or worldly manner."
-translation: "世俗地；现世地；不朽地；非宗教地"
-srsWords: "secularly"
+front: "mahogany"
+meaning: "Wood of any of various mahogany trees; Any of various tropical timber trees of the family Meliaceae especially the genus…"
+translation: "n. 桃花心木, 红褐色 桃花心木"
+srsWords: "mahogany"
 
 [flashcard-review]
-front: "euphemism"
-meaning: "An inoffensive or indirect expression that is substituted for one that is considered…"
-translation: "n. 委婉说法, 委婉语"
-srsWords: "euphemism"
+front: "microchip"
+meaning: "N electronic equipment consisting of a small crystal of a silicon semiconductor…"
+translation: "n. 微型集成电路片, 微片, 芯片 微片"
+srsWords: "microchip"
 
 [flashcard-review]
-front: "euphemistic"
-meaning: "Substituting a mild term for a harsher or distasteful one"
-translation: "a. 委婉的"
-srsWords: "euphemistic"
-
----
-lessonTitle: "Lesson 10: Aesthetics, Artistry & Critique Part 10"
-description: "Practice 10 key C2 vocabulary flashcards for Aesthetics, Artistry & Critique"
-icon: "🎨"
-color: "#E91E63"
----
-[flashcard-review]
-front: "euphemistically"
-meaning: "In a euphemistic manner"
-translation: "adv. 委婉的"
-srsWords: "euphemistically"
-
-[flashcard-review]
-front: "condensation"
-meaning: "(psychoanalysis) an unconscious process whereby two ideas or images combine into a…; The process of changing from a gaseous to a liquid or solid state"
-translation: "n. 压缩, 凝缩, 冷凝 冷凝; 冷凝作用; 缩合; 缩合作用; 凝聚; 凝聚作用; 凝结作用"
-srsWords: "condensation"
-
-[flashcard-review]
-front: "redundancy"
-meaning: "Repetition of messages to reduce the probability of errors in transmission; The attribute of being superfluous and unneeded"
-translation: "n. 过多, 冗长, 累赘, 多余, 冗余位, 冗余度, 冗余码, 多余信息 冗余"
-srsWords: "redundancy"
-
-[flashcard-review]
-front: "redundantly"
-meaning: "In a refundant manner."
-translation: "adv. 多余地, 冗余地"
-srsWords: "redundantly"
-
-[flashcard-review]
-front: "colloquial"
-meaning: "Characteristic of informal spoken language or conversation"
-translation: "a. 会话的, 口语的, 口语体的"
-srsWords: "colloquial"
-
-[flashcard-review]
-front: "colloquium"
-meaning: "An academic meeting or seminar usually led by a different lecturer and on a different…; An address to an academic meeting or seminar"
-translation: "n. 讨论会"
-srsWords: "colloquium"
-
-[flashcard-review]
-front: "colloquially"
-meaning: "With the use of colloquial expressions"
-translation: "adv. 用口语, 用通俗语"
-srsWords: "colloquially"
-
-[flashcard-review]
-front: "allusion"
-meaning: "Passing reference or indirect mention"
-translation: "n. 提及, 暗指"
-srsWords: "allusion"
-
-[flashcard-review]
-front: "allude"
-meaning: "Make a more or less disguised reference to"
-translation: "vi. 暗指, 提及"
-srsWords: "allude"
-
-[flashcard-review]
-front: "disparage"
-meaning: "Express a negative opinion of"
-translation: "vt. 蔑视, 贬损 轻视, 贬低, 诽谤"
-srsWords: "disparage"
----
-lessonTitle: "Lesson 11: Scientific Paradigms & Complexity Part 1"
-description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
-icon: "🌌"
-color: "#00BCD4"
----
-[flashcard-review]
-front: "disparaging"
-meaning: "V express a negative opinion of; S expressive of low opinion"
-translation: "a. 蔑视的, 轻视的, 毁谤的"
-srsWords: "disparaging"
-
-[flashcard-review]
-front: "disparagingly"
-meaning: "In a disparaging manner"
-translation: "adv. 以贬抑的口吻, 以轻视的态度"
-srsWords: "disparagingly"
-
-[flashcard-review]
-front: "disparagement"
-meaning: "A communication that belittles somebody or something; The act of speaking contemptuously of"
-translation: "n. 轻视, 说...坏话, 毁谤, 贬低, 轻蔑 诽谤, 不相称"
-srsWords: "disparagement"
-
-[flashcard-review]
-front: "huddle"
-meaning: "(informal) a quick private conference; A disorganized and densely packed crowd"
-translation: "n. 杂乱一团, 混乱, 拥挤；vt. 把...挤在一起, 乱堆, 草率了事, 蜷曲；vi. 挤作一团, 蜷缩"
-srsWords: "huddle"
-
-[flashcard-review]
-front: "topography"
-meaning: "The configuration of a surface and the relations among its man-made and natural features; Precise detailed study of the surface features of a region"
-translation: "n. 地志, 地形学, 地势, 局部解剖学 局部解剖, 局部记载"
-srsWords: "topography"
-
-[flashcard-review]
-front: "topographical"
-meaning: "Concerned with topography"
-translation: "a. 地形的, 地形学的, 地形测量的"
-srsWords: "topographical"
-
-[flashcard-review]
-front: "topographically"
-meaning: "With regard to topography"
-translation: "adv. 从地形上；在地形构造方面"
-srsWords: "topographically"
-
-[flashcard-review]
-front: "confabulate"
-meaning: "Unconsciously replace fact with fantasy in one's memory"
-translation: "vi. 交谈, 闲谈, 谈话"
-srsWords: "confabulate"
-
-[flashcard-review]
-front: "confabulation"
-meaning: "(psychiatry) a plausible but imagined memory that fills in gaps in what is remembered"
-translation: "n. 交谈, 闲谈 虚谈症, 虚构症"
-srsWords: "confabulation"
-
-[flashcard-review]
-front: "surrealist"
-meaning: "An artist who is a member of the movement called surrealism"
-translation: "n. 超现实主义者"
-srsWords: "surrealist"
+front: "spar"
+meaning: "Furnish with spars; A part of training for a boxer"
+translation: "n. 晶石, 圆材, 拳斗, 争论；vt. 装圆材于；vi. 拳斗, 争论"
+srsWords: "spar"
 
 ---
-lessonTitle: "Lesson 12: Scientific Paradigms & Complexity Part 2"
-description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
-icon: "🌌"
-color: "#00BCD4"
+lessonTitle: "Lesson 6: Archaic, Formal & Erudite Register Part 6"
+description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
+icon: "✒️"
+color: "#673AB7"
 ---
 [flashcard-review]
-front: "surrealism"
-meaning: "A 20th century movement of artists and writers (developing out of dadaism) who used…"
-translation: "n. 超现实主义 超现实主义"
-srsWords: "surrealism"
+front: "ardent"
+meaning: "Characterized by intense emotion; Characterized by strong enthusiasm"
+translation: "a. 热心的, 激动的, 燃烧般的 灼热的; 热心的"
+srsWords: "ardent"
 
 [flashcard-review]
-front: "contrive"
-meaning: "V make or work out a plan for; Devise"
-translation: "v. 发明, 设计, 图谋"
-srsWords: "contrive"
+front: "jumpsuit"
+meaning: "N one-piece garment fashioned after a parachutist's uniform"
+translation: "n. 连衣裤, （尤指女式）连衣裤"
+srsWords: "jumpsuit"
 
 [flashcard-review]
-front: "malice"
-meaning: "Feeling a need to see others suffer"
-translation: "n. 恶意, 蓄意害人, 怨恨 预谋, 蓄意, 恶意"
-srsWords: "malice"
+front: "clitoris"
+meaning: "A female sexual organ homologous to the penis"
+translation: "n. 阴核, 阴蒂 阴蒂"
+srsWords: "clitoris"
 
 [flashcard-review]
-front: "malicious"
-meaning: "Having the nature of or resulting from malice"
-translation: "a. 怀恶意的, 恶毒的"
-srsWords: "malicious"
+front: "admissible"
+meaning: "Deserving to be admitted"
+translation: "a. 可进入的, 可容许的"
+srsWords: "admissible"
 
 [flashcard-review]
-front: "maliciously"
-meaning: "With malice; In a malicious manner"
-translation: "adv. 有敌意地, 恶意地"
-srsWords: "maliciously"
+front: "poppa"
+meaning: "Father (informal)"
+translation: "n. 爸爸, 大伯"
+srsWords: "poppa"
 
 [flashcard-review]
-front: "cinematography"
-meaning: "N the act of making a film"
-translation: "n. 电影制片术 [外科手术]电影照相术"
-srsWords: "cinematography"
+front: "patronizing/patronising"
+meaning: "Apparently kind or helpful but betraying a feeling of superiority; Condescending"
+translation: "adj. 居高临下的，摆架子的，傲慢俯就的"
+srsWords: "patronizing/patronising"
 
 [flashcard-review]
-front: "cinematographer"
-meaning: "N a photographer who operates a movie camera"
-translation: "n. 电影摄影技师, 放映技师"
-srsWords: "cinematographer"
+front: "standoff"
+meaning: "N the finish of a contest in which the score is tied and the winner is undecided; N the act of repulsing or repelling an attack"
+translation: "a. 冷淡的, 有支架的；n. 冷淡, 平衡, 和局"
+srsWords: "standoff"
 
 [flashcard-review]
-front: "maverick"
-meaning: "Someone who exhibits great independence in thought and action; An unbranded range animal (especially a stray calf)"
-translation: "n. 未烙饲主印记的小牛, 持不同意见的人；vi. 迷路"
-srsWords: "maverick"
+front: "transducer"
+meaning: "An electrical device that converts one form of energy into another"
+translation: "n. 换能器, 变换器 传感器; 翻译机; 变换器; 换能器"
+srsWords: "transducer"
 
 [flashcard-review]
-front: "diligently"
-meaning: "With diligence; In a diligent manner"
-translation: "adv. 勤奋地；勤勉地"
-srsWords: "diligently"
+front: "breakout"
+meaning: "N an escape from jail"
+translation: "n. 爆发, 越狱, 突围 中断, 断裂"
+srsWords: "breakout"
 
 [flashcard-review]
-front: "turret"
-meaning: "A small tower extending above a building"
-translation: "n. 塔楼, 角楼, 攻城用仰冲车 转塔, 多角刀架"
-srsWords: "turret"
-
----
-lessonTitle: "Lesson 13: Scientific Paradigms & Complexity Part 3"
-description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
-icon: "🌌"
-color: "#00BCD4"
----
-[flashcard-review]
-front: "impressionistic"
-meaning: "Of or relating to or based on an impression rather than on facts or reasoning"
-translation: "a. 印象主义的, 印象派的, 仅凭印象的"
-srsWords: "impressionistic"
-
-[flashcard-review]
-front: "impressionistically"
-meaning: "Adverb. impressionistically"
-translation: "仅凭印象地, 主观地"
-srsWords: "impressionistically"
-
-[flashcard-review]
-front: "snobbery"
-meaning: "The trait of condescending to those of lower social status"
-translation: "n. 谄上欺下, 势利"
-srsWords: "snobbery"
-
-[flashcard-review]
-front: "parochial"
-meaning: "Relating to or supported by or located in a parish"
-translation: "a. 教区的, 地方性的, 目光偏狭的"
-srsWords: "parochial"
-
-[flashcard-review]
-front: "gravitate"
-meaning: "Move toward; Be attracted to"
-translation: "vi. 被重力吸引, 沉下, 下降；vt. 使受重力吸引"
-srsWords: "gravitate"
-
-[flashcard-review]
-front: "gravitational"
-meaning: "Of or relating to or caused by gravitation"
-translation: "a. 重力的"
-srsWords: "gravitational"
-
-[flashcard-review]
-front: "gravitationally"
-meaning: "With respect to gravitation"
-translation: "adv. gravitational（万有引力的）的变形"
-srsWords: "gravitationally"
-
-[flashcard-review]
-front: "consternation"
-meaning: "N fear resulting from the awareness of danger"
-translation: "n. 惊愕, 恐怖, 惊惶失措"
-srsWords: "consternation"
-
-[flashcard-review]
-front: "haughty"
-meaning: "S having or showing arrogant superiority to and disdain of those one views as unworthy"
-translation: "a. 傲慢的, 骄傲的, 崇高的"
-srsWords: "haughty"
-
-[flashcard-review]
-front: "haughtily"
-meaning: "In a haughty manner"
-translation: "adv. 傲慢地, 骄傲地"
-srsWords: "haughtily"
+front: "tangerine"
+meaning: "A variety of mandarin orange; Any of various deep orange mandarins grown in the United States and southern Africa"
+translation: "n. 柑橘"
+srsWords: "tangerine"
 
 ---
-lessonTitle: "Lesson 14: Scientific Paradigms & Complexity Part 4"
-description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
-icon: "🌌"
-color: "#00BCD4"
+lessonTitle: "Lesson 7: Archaic, Formal & Erudite Register Part 7"
+description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
+icon: "✒️"
+color: "#673AB7"
 ---
 [flashcard-review]
-front: "axiom"
-meaning: "(logic) a proposition that is not susceptible of proof or disproof; Its truth is assumed to be self-evident"
-translation: "n. 自明之理, 公理, 原理, 格言 公理, 原理, 原则"
-srsWords: "axiom"
+front: "insidious"
+meaning: "Beguiling but harmful; Intended to entrap"
+translation: "a. 隐伏的, 阴险的, 狡猾的 隐袭的"
+srsWords: "insidious"
 
 [flashcard-review]
-front: "axiomatic"
-meaning: "Evident without proof or argument; Containing aphorisms or maxims"
-translation: "a. 自明的"
-srsWords: "axiomatic"
+front: "gumbo"
+meaning: "Any of various fine-grained silty soils that become waxy and very sticky mud when…; Long mucilaginous green pods"
+translation: "n. 大杂烩"
+srsWords: "gumbo"
 
 [flashcard-review]
-front: "attrition"
-meaning: "Sorrow for sin arising from fear of damnation; A wearing down to weaken or destroy"
-translation: "n. 摩擦, 磨损 擦除术; 磨耗"
-srsWords: "attrition"
+front: "crucifixion"
+meaning: "The act of executing by a method widespread in the ancient world; The death of Jesus by crucifixion"
+translation: "n. 在十字架上钉死的刑罚, 酷刑, 苦难, 折磨"
+srsWords: "crucifixion"
 
 [flashcard-review]
-front: "enduringly"
-meaning: "In an enduring manner"
-translation: "adv. 耐久地, 永久地"
-srsWords: "enduringly"
+front: "piranha"
+meaning: "Small voraciously carnivorous freshwater fishes of South America that attack and…"
+translation: "n. 水虎鱼(南美产)"
+srsWords: "piranha"
 
 [flashcard-review]
-front: "reissue"
-meaning: "Issue (a new version of); A publication (such as a book) that is reprinted without changes or editing and…"
-translation: "vt. 再发给, 重新发行；vi. 再发给；n. 重新发行, 再版物"
-srsWords: "reissue"
+front: "scrappy"
+meaning: "Full of fighting spirit"
+translation: "a. 杂凑的, 不连贯的, 爱打架的, 坚决的"
+srsWords: "scrappy"
 
 [flashcard-review]
-front: "sulphur"
-meaning: "Treat with sulphur in order to preserve"
-translation: "n. 硫, 硫磺 硫"
-srsWords: "sulphur"
+front: "decorum"
+meaning: "Propriety in manners and conduct"
+translation: "n. 端正, 礼貌, 合宜, 礼仪"
+srsWords: "decorum"
 
 [flashcard-review]
-front: "sulphuric"
-meaning: "Of or relating to or containing sulfur"
-translation: "a. 硫的"
-srsWords: "sulphuric"
+front: "voucher"
+meaning: "Someone who vouches for another or for the correctness of a statement; A document that serves as evidence of some expenditure"
+translation: "n. 证人, 保证人, 证明者, 凭证, 凭单；vt. 证实...的可靠性"
+srsWords: "voucher"
 
 [flashcard-review]
-front: "moor"
-meaning: "One of the Muslim people of north Africa; Open land usually with peaty soil covered with heather and bracken and moss"
-translation: "n.荒野；旷野；Moor: 摩尔人.；v.系住；停泊"
-srsWords: "moor"
+front: "converge"
+meaning: "Be adjacent or come together; Approach a limit as the number of terms increases without limit"
+translation: "vi. 聚合, 集中于一点；vt. 使集合"
+srsWords: "converge"
 
 [flashcard-review]
-front: "solitary"
-meaning: "N confinement of a prisoner in isolation from other prisoners; N one who lives in solitude"
-translation: "n. 独居者；a. 孤独的, 独居的"
-srsWords: "solitary"
+front: "paisley"
+meaning: "A soft wool fabric with a colorful swirled pattern of curved shapes"
+translation: "(苏格兰)佩斯利涡纹旋花呢(的)"
+srsWords: "paisley"
 
 [flashcard-review]
-front: "solitariness"
-meaning: "Condition of being solitary."
-translation: "n. 隐居；单独"
-srsWords: "solitariness"
-
----
-lessonTitle: "Lesson 15: Scientific Paradigms & Complexity Part 5"
-description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
-icon: "🌌"
-color: "#00BCD4"
----
-[flashcard-review]
-front: "solitude"
-meaning: "A state of social isolation; The state or situation of being alone"
-translation: "n. 孤独, 单独, 孤寂"
-srsWords: "solitude"
-
-[flashcard-review]
-front: "adhere"
-meaning: "Be compatible or in accordance with; Follow through or carry out a plan without deviation"
-translation: "vi. 依附, 粘着, 坚持, 追随, 拥护；vt. 使粘附"
-srsWords: "adhere"
-
-[flashcard-review]
-front: "adhesion"
-meaning: "Abnormal union of bodily tissues; A fibrous band of scar tissue that binds together normally separate anatomical structures"
-translation: "n. 附着, 粘着, 支持, 追随 粘合; 粘附; 附着; 粘合力; 粘附力; 附着力"
-srsWords: "adhesion"
-
-[flashcard-review]
-front: "proscribe"
-meaning: "V command against"
-translation: "vt. 剥夺...的公民权, 使失去法律保护, 把...充军, 把...放逐, 排斥, 禁止"
-srsWords: "proscribe"
-
-[flashcard-review]
-front: "proscription"
-meaning: "N a decree that prohibits something; N rejection by means of an act of banishing or proscribing someone"
-translation: "n. 剥夺人权, 放逐 剥夺, 剥夺公权, 禁止"
-srsWords: "proscription"
-
-[flashcard-review]
-front: "crony"
-meaning: "N a close friend who accompanies his buddies in their activities"
-translation: "n. 密友, 亲密伙伴, 好朋友"
-srsWords: "crony"
-
-[flashcard-review]
-front: "dribble"
-meaning: "The propulsion of a ball by repeated taps or kicks; Let or cause to fall in drops"
-translation: "vi. 流口水, 滴下；vt. 使滴下, 运球；n. 点滴, 口水, 少量"
-srsWords: "dribble"
-
-[flashcard-review]
-front: "ingrate"
-meaning: "A person who shows no gratitude"
-translation: "n. 忘恩者；a. 不知恩的, 忘恩的"
-srsWords: "ingrate"
-
-[flashcard-review]
-front: "prise"
-meaning: "V to move or force, especially in an effort to get something open; V make an uninvited or presumptuous inquiry"
-translation: "vt. 撬, 撬开, 撬动"
-srsWords: "prise"
-
-[flashcard-review]
-front: "rickety"
-meaning: "Inclined to shake as from weakness or defect; Affected with, suffering from, or characteristic of rickets"
-translation: "a. 患佝偻病的, 虚弱的, 摇摆的 佝偻病的"
-srsWords: "rickety"
+front: "chipmunk"
+meaning: "A burrowing ground squirrel of western America and Asia; Has cheek pouches and a light and dark stripe running down the body"
+translation: "n. 金花鼠"
+srsWords: "chipmunk"
 
 ---
-lessonTitle: "Lesson 16: Scientific Paradigms & Complexity Part 6"
-description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
-icon: "🌌"
-color: "#00BCD4"
+lessonTitle: "Lesson 8: Archaic, Formal & Erudite Register Part 8"
+description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
+icon: "✒️"
+color: "#673AB7"
 ---
 [flashcard-review]
-front: "consign"
-meaning: "Commit forever; Give over to another for care or safekeeping"
-translation: "vt. 交付, 储蓄, 委托, 寄存 托卖, 寄存, 寄销"
-srsWords: "consign"
+front: "bloc"
+meaning: "A group of countries in special alliance"
+translation: "n. 集团"
+srsWords: "bloc"
 
 [flashcard-review]
-front: "consignment"
-meaning: "The delivery of goods for sale or disposal"
-translation: "n. 委托 委托, 寄销, 寄销品"
-srsWords: "consignment"
+front: "airstrip"
+meaning: "An airfield without normal airport facilities"
+translation: "n. 飞机跑道"
+srsWords: "airstrip"
 
 [flashcard-review]
-front: "fete"
-meaning: "An elaborate party (often outdoors)"
-translation: "n. 庆祝, 祭祀, 节日；vt. 宴请, 招待"
-srsWords: "fete"
+front: "tinder"
+meaning: "N material for starting a fire"
+translation: "n. 火绒盒"
+srsWords: "tinder"
 
 [flashcard-review]
-front: "opulent"
-meaning: "S rich and superior in quality"
-translation: "a. 富裕的, 豪华的, 奢侈的, 丰富的, 大量的"
-srsWords: "opulent"
+front: "lien"
+meaning: "The right to take another's property if an obligation is not discharged"
+translation: "n. 留置权, 扣押权 脾"
+srsWords: "lien"
 
 [flashcard-review]
-front: "opulence"
-meaning: "N wealth as evidenced by sumptuous living"
-translation: "n. 富裕, 丰富, 大量"
-srsWords: "opulence"
+front: "pester"
+meaning: "V annoy persistently"
+translation: "vt. 不断打扰, 纠缠"
+srsWords: "pester"
 
 [flashcard-review]
-front: "opulently"
-meaning: "R in a sumptuous and opulent manner"
-translation: "adv. 富裕地; 豪华地; 丰裕地"
-srsWords: "opulently"
+front: "backdrop"
+meaning: "Scenery hung at back of stage"
+translation: "n. 背景幕, 背景"
+srsWords: "backdrop"
 
 [flashcard-review]
-front: "plutocrat"
-meaning: "Someone who exercises power by virtue of wealth"
-translation: "n. 富豪, 财阀"
-srsWords: "plutocrat"
+front: "deport"
+meaning: "V behave in a certain manner; V hand over to the authorities of another country"
+translation: "vt. 举止, 驱逐出境 放逐, 驱逐, 递解"
+srsWords: "deport"
 
 [flashcard-review]
-front: "averse"
-meaning: "S (usually followed by `to') strongly opposed"
-translation: "a. 不愿意的, 反对的"
-srsWords: "averse"
+front: "rosebud"
+meaning: "The bud of a rose; (a literary reference to) a pretty young girl"
+translation: "n. 蔷薇花蕾, 妙龄少女"
+srsWords: "rosebud"
 
 [flashcard-review]
-front: "edify"
-meaning: "V make understand"
-translation: "vt. 启迪, 熏陶, 教诲"
-srsWords: "edify"
+front: "molasses"
+meaning: "Thick dark syrup produced by boiling down juice from sugar cane; Especially during sugar refining"
+translation: "n. 糖蜜 糖蜜; 废糖蜜"
+srsWords: "molasses"
 
 [flashcard-review]
-front: "edification"
-meaning: "Uplifting enlightenment"
-translation: "n. 启迪, 熏陶"
-srsWords: "edification"
-
----
-lessonTitle: "Lesson 17: Scientific Paradigms & Complexity Part 7"
-description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
-icon: "🌌"
-color: "#00BCD4"
----
-[flashcard-review]
-front: "sterility"
-meaning: "The state of being unable to produce offspring; In a woman it is an inability to conceive"
-translation: "n. 不毛, 不孕, 内容贫乏 不育, 不孕; 无菌"
-srsWords: "sterility"
-
-[flashcard-review]
-front: "rhetoric"
-meaning: "Using language effectively to please or persuade; Study of the technique and rules for using language effectively (especially in public…"
-translation: "n. 修辞, 修辞学, 雄辩(术)"
-srsWords: "rhetoric"
-
-[flashcard-review]
-front: "rhetorical"
-meaning: "Given to rhetoric, emphasizing style at the expense of thought"
-translation: "a. 修辞学的, 符合修辞学的, 修辞的"
-srsWords: "rhetorical"
-
-[flashcard-review]
-front: "rhetorically"
-meaning: "In a rhetorical manner"
-translation: "adv. 在修辞学上, 讲究修辞地"
-srsWords: "rhetorically"
-
-[flashcard-review]
-front: "flighty"
-meaning: "Guided by whim and fancy"
-translation: "a. 轻浮的, 轻狂的, 心情浮动的"
-srsWords: "flighty"
-
-[flashcard-review]
-front: "flightiness"
-meaning: "The trait of acting unpredictably and more from whim or caprice than from reason or…"
-translation: "n. 轻浮, 疯狂"
-srsWords: "flightiness"
-
-[flashcard-review]
-front: "brimstone"
-meaning: "An old name for sulfur"
-translation: "n. 硫磺 硫黄"
-srsWords: "brimstone"
-
-[flashcard-review]
-front: "impeccable"
-meaning: "Not capable of sin"
-translation: "a. 无懈可击的, 勿容置疑的, 无瑕疵的, 不会做坏事的"
-srsWords: "impeccable"
-
-[flashcard-review]
-front: "impeccably"
-meaning: "Flawlessly"
-translation: "完美地; 毋庸置疑地; 无瑕疵地"
-srsWords: "impeccably"
-
-[flashcard-review]
-front: "romp"
-meaning: "Run easily and fairly fast; Win easily"
-translation: "n. 喧闹游玩, 顽皮女孩；vi. 喧闹玩耍, 轻快奔跑"
-srsWords: "romp"
+front: "haw"
+meaning: "The nictitating membrane of a horse; Utter `haw'"
+translation: "n. 山楂, 吆喝牲畜左转, 呃, 瞬膜；vt. 使向左转；vi. 向左转"
+srsWords: "haw"
 
 ---
-lessonTitle: "Lesson 18: Scientific Paradigms & Complexity Part 8"
-description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
-icon: "🌌"
-color: "#00BCD4"
+lessonTitle: "Lesson 9: Archaic, Formal & Erudite Register Part 9"
+description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
+icon: "✒️"
+color: "#673AB7"
 ---
 [flashcard-review]
-front: "romper"
-meaning: "A person who romps or frolics; A one-piece garment for children to wear at play"
-translation: "n. 喧闹的嬉戏者, 连衫裤"
-srsWords: "romper"
+front: "feasible"
+meaning: "Capable of being done with means at hand and circumstances as they are"
+translation: "a. 能实行的, 可行的, 适宜的 可行的, 可执行的, 可完成的"
+srsWords: "feasible"
 
 [flashcard-review]
-front: "meticulous"
-meaning: "Marked by precise accordance with details; Marked by extreme care in treatment of details"
-translation: "a. 一丝不苟的, 精确的, 过细的"
-srsWords: "meticulous"
+front: "cranial"
+meaning: "Of or relating to the cranium which encloses the brain"
+translation: "a. 头盖的, 颅侧的 颅的, 颅侧的"
+srsWords: "cranial"
 
 [flashcard-review]
-front: "meticulously"
-meaning: "In a meticulous manner"
-translation: "adv. 过细地, 细致地"
-srsWords: "meticulously"
+front: "nonexistent"
+meaning: "Not having existence or being or actuality"
+translation: "a. 不存在的"
+srsWords: "nonexistent"
 
 [flashcard-review]
-front: "ingratiate"
-meaning: "Gain favor with somebody by deliberate efforts"
-translation: "vt. 使迎合, 使讨好"
-srsWords: "ingratiate"
+front: "poncho"
+meaning: "A blanket-like cloak with a hole in the center for the head"
+translation: "n. 南美披风, 雨披"
+srsWords: "poncho"
 
 [flashcard-review]
-front: "ingratiating"
-meaning: "Capable of winning favor; Calculated to please or gain favor"
-translation: "a. 逢迎的, 迎合的"
-srsWords: "ingratiating"
+front: "outsmart"
+meaning: "V beat through cleverness and wit; V defeat by more skillful maneuvering"
+translation: "vt. 比...更聪明, 打败, 瞒过"
+srsWords: "outsmart"
 
 [flashcard-review]
-front: "ingratiatingly"
-meaning: "In a flattering and ingratiating manner"
-translation: "adv. 讨好地；奉承地"
-srsWords: "ingratiatingly"
+front: "undying"
+meaning: "S never dying"
+translation: "a. 不死的, 不灭的, 不朽的"
+srsWords: "undying"
 
 [flashcard-review]
-front: "shimmer"
-meaning: "Shine with a weak or fitful light; Give off a shimmering reflection, as of silk"
-translation: "n. 微光, 闪光；vi. 闪烁；vt. 使闪烁"
-srsWords: "shimmer"
+front: "stony"
+meaning: "S abounding in rocks or stones; S showing unfeeling resistance to tender feelings"
+translation: "a. 多石的, 无情的"
+srsWords: "stony"
 
 [flashcard-review]
-front: "wrought"
-meaning: "V exert oneself by doing mental or physical work for a purpose or out of necessity; V be employed"
-translation: "a. 制成的, 精细的；work的过去式和过去分词"
-srsWords: "wrought"
+front: "trouser"
+meaning: "(usually in the plural) a garment extending from the waist to the knee or ankle…; A garment (or part of a garment) designed for or relating to trousers"
+translation: "a. 裤子的"
+srsWords: "trouser"
 
 [flashcard-review]
-front: "cull"
-meaning: "Remove something that has been rejected; The person or thing that is rejected or set aside as inferior in quality"
-translation: "vt. 采, 摘, 拣；n. 拣出的等外品, 被剔出的动物"
-srsWords: "cull"
+front: "twentieth"
+meaning: "Position 20 in a countable series of things; Coming next after the nineteenth in position"
+translation: "num. 第二十, 二十分之一"
+srsWords: "twentieth"
 
 [flashcard-review]
-front: "swivel"
-meaning: "A coupling (as in a chain) that has one end that turns on a headed pin"
-translation: "n. 转环, 旋转轴承, 转椅座架；v. (使)旋转"
-srsWords: "swivel"
-
----
-lessonTitle: "Lesson 19: Scientific Paradigms & Complexity Part 9"
-description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
-icon: "🌌"
-color: "#00BCD4"
----
-[flashcard-review]
-front: "quiver"
-meaning: "Case for holding arrows; Shake with fast, tremulous movements"
-translation: "n. 震动, 颤抖, 箭袋；vi. 颤抖, 振动；vt. 使颤动；a. 敏捷的"
-srsWords: "quiver"
-
-[flashcard-review]
-front: "sandwiched"
-meaning: "Imp. & p. p. of Sandwich"
-translation: "v. 插入( sandwich的过去式和过去分词 ); 把…夹在…之间; 挤在…中间; 把…夹在面包片中"
-srsWords: "sandwiched"
-
-[flashcard-review]
-front: "mottled"
-meaning: "V mark with spots or blotches of different color or shades of color as if stained; V colour with streaks or blotches of different shades"
-translation: "a. 杂色的, 斑驳的 斑色的, 斑状的"
-srsWords: "mottled"
-
-[flashcard-review]
-front: "epoxy"
-meaning: "A thermosetting resin; Used chiefly in strong adhesives and coatings and laminates"
-translation: "a. 环氧的 环氧; 表氧; 桥氧"
-srsWords: "epoxy"
-
-[flashcard-review]
-front: "angular"
-meaning: "Measured by an angle or by the rate of change of an angle; Having angles or an angular shape"
-translation: "a. 有角的, 消瘦的, 有尖角的, 生硬的 角的, 角形的"
-srsWords: "angular"
-
-[flashcard-review]
-front: "angularity"
-meaning: "The property possessed by a shape that has angles"
-translation: "n. 有角, 角状, 生硬 倾斜度"
-srsWords: "angularity"
-
-[flashcard-review]
-front: "dampen"
-meaning: "Reduce the amplitude (of oscillations or waves); Make vague or obscure or make (an image) less visible"
-translation: "vt. 弄湿, 使沮丧；vi. 变湿, 丧气"
-srsWords: "dampen"
-
-[flashcard-review]
-front: "buccaneer"
-meaning: "Live like a buccaneer"
-translation: "n. 海盗；vi. 做海盗"
-srsWords: "buccaneer"
-
-[flashcard-review]
-front: "conglomerate"
-meaning: "A group of diverse companies under common ownership and run as a single organization; Composed of heterogeneous elements gathered into a mass"
-translation: "a. 聚成球形的, 砾岩性的；n. 集成物, 混合体, 砾岩；v. (使)凝聚成团"
-srsWords: "conglomerate"
-
-[flashcard-review]
-front: "cay"
-meaning: "N a coral reef off the southern coast of Florida"
-translation: "n. 沙礁, 珊瑚礁, 沙洲"
-srsWords: "cay"
+front: "p.m"
+meaning: "Afternoon/evening"
+translation: "abbr. 下午（post meridiem）"
+srsWords: "p.m"
 
 ---
-lessonTitle: "Lesson 20: Scientific Paradigms & Complexity Part 10"
-description: "Practice 10 key C2 vocabulary flashcards for Scientific Paradigms & Complexity"
-icon: "🌌"
-color: "#00BCD4"
+lessonTitle: "Lesson 10: Archaic, Formal & Erudite Register Part 10"
+description: "Practice 10 key C2 vocabulary flashcards for Archaic, Formal & Erudite Register"
+icon: "✒️"
+color: "#673AB7"
 ---
 [flashcard-review]
-front: "singe"
-meaning: "Burn superficially or lightly"
-translation: "v. 烧焦, 烤焦"
-srsWords: "singe"
+front: "centimeter"
+meaning: "A metric unit of length equal to one hundredth of a meter"
+translation: "n. 厘米 厘米"
+srsWords: "centimeter"
 
 [flashcard-review]
-front: "cordon"
-meaning: "A series of sentinels or of military posts enclosing or guarding some place or thing; Cord or ribbon worn as an insignia of honor or rank"
-translation: "n. 哨兵线, 非常警戒线, 饰带；vt. 用警戒线围住"
-srsWords: "cordon"
+front: "ecclesiastical"
+meaning: "Of or associated with a church (especially a Christian Church)"
+translation: "a. 教会的, 神职的, 牧师的"
+srsWords: "ecclesiastical"
 
 [flashcard-review]
-front: "fabled"
-meaning: "Celebrated in fable or legend"
-translation: "a. 寓言(或传说、神话)中的, 虚构的"
-srsWords: "fabled"
+front: "quasi"
+meaning: "Having some resemblance"
+translation: "a. 类似的, 准的 半, 准; 类似的"
+srsWords: "quasi"
 
 [flashcard-review]
-front: "infernal"
-meaning: "Characteristic of or resembling Hell; Of or pertaining to or characteristic of a very uncontrolled and intense fire"
-translation: "a. 阴间的, 恶魔的"
-srsWords: "infernal"
+front: "kilometre"
+meaning: "N a metric unit of length equal to 1000 meters (or 0.621371 miles)"
+translation: "n. 公里, 千米"
+srsWords: "kilometre"
 
 [flashcard-review]
-front: "infernally"
-meaning: "In an infernal manner; Diabolically."
-translation: "adv. 恶魔似地, 可憎地"
-srsWords: "infernally"
+front: "bbq"
+meaning: "Barbecue"
+translation: "abbr. 野外烧烤（barbecue）；烧烤炉"
+srsWords: "bbq"
 
 [flashcard-review]
-front: "presentational"
-meaning: "Of or relating to a presentation (especially in psychology or philosophy)"
-translation: "a. 表象的, 上演的, 演出的, 本身有意义的, 描述性的"
-srsWords: "presentational"
+front: "smartphone"
+meaning: "A mobile phone that performs many of the functions of a computer"
+translation: "n. 智能手机"
+srsWords: "smartphone"
 
 [flashcard-review]
-front: "embed"
-meaning: "Attach to, as a journalist to a military unit when reporting on a war"
-translation: "vt. 使插入, 使嵌入, 使深留脑中 嵌入"
-srsWords: "embed"
+front: "easygoing"
+meaning: "Relaxed and informal in attitude or standards"
+translation: "a. 脾气随和的, 逍遥自在的, 悠闲的, 懒散的"
+srsWords: "easygoing"
 
 [flashcard-review]
-front: "plume"
-meaning: "Anything that resembles a feather in shape or lightness; A feather or cluster of feathers worn as an ornament"
-translation: "n. 羽毛, 羽毛装饰, 羽状的；vt. 用羽毛装饰, 整理羽毛, 使成羽毛状"
-srsWords: "plume"
+front: "kilogram"
+meaning: "One thousand grams; The basic unit of mass adopted under the Systeme International d'Unites"
+translation: "n. 千克, 公斤 千克, 公斤"
+srsWords: "kilogram"
 
 [flashcard-review]
-front: "happenstance"
-meaning: "N an event that might have been arranged although it was really accidental"
-translation: "n. 偶然事件"
-srsWords: "happenstance"
+front: "nineteenth"
+meaning: "Position 19 in a countable series of things; Coming next after the eighteenth in position"
+translation: "num. 第十九, 十九分之一"
+srsWords: "nineteenth"
 
 [flashcard-review]
-front: "reconcile"
-meaning: "Come to terms"
-translation: "vt. 使和解, 调停, 使和谐, 使一致, 使听从 对帐, 使一致"
-srsWords: "reconcile"
+front: "categorize"
+meaning: "Place into or assign to a category"
+translation: "vt. 分类, 归类"
+srsWords: "categorize"
+---
+lessonTitle: "Lesson 11: Apex Lexical Precision & Idiom Part 1"
+description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
+icon: "👑"
+color: "#009688"
+---
+[flashcard-review]
+front: "glory in"
+meaning: "Verb. glory in"
+translation: "狂喜, 得意"
+srsWords: "glory in"
+
+[flashcard-review]
+front: "ad lib"
+meaning: "Adjective. ad lib"
+translation: "没有限制地"
+srsWords: "ad lib"
+
+[flashcard-review]
+front: "stabilize/stabilise"
+meaning: "Make stable and keep from fluctuating or put into an equilibrium; Become stable or more stable"
+translation: "vt. 使安定, 使稳固；vi. 稳定, 安定"
+srsWords: "stabilize/stabilise"
+
+[flashcard-review]
+front: "armory/armoury"
+meaning: "A collection of resources; A place where arms are manufactured"
+translation: "n. 纹章, 纹章学, 军械库, 兵工厂 军械库"
+srsWords: "armory/armoury"
+
+[flashcard-review]
+front: "annal"
+meaning: "See Annals."
+translation: "n. 记录；编年史"
+srsWords: "annal"
+
+[flashcard-review]
+front: "dole out"
+meaning: "Verb. dole out"
+translation: "少量地发放（食物、救济金等）"
+srsWords: "dole out"
+
+[flashcard-review]
+front: "oncology"
+meaning: "The branch of medicine concerned with the study and treatment of tumors"
+translation: "n. 肿瘤学 肿瘤学"
+srsWords: "oncology"
+
+[flashcard-review]
+front: "appellate"
+meaning: "Of or relating to or taking account of appeals (usually legal appeals)"
+translation: "a. 上诉的, 有权受理上诉的 受理上诉的, 上诉的, 控诉的"
+srsWords: "appellate"
+
+[flashcard-review]
+front: "patronize/patronise"
+meaning: "Do one's shopping at; Treat condescendingly"
+translation: "vt. 保护, 支援, 赞助, 庇护, 惠顾"
+srsWords: "patronize/patronise"
+
+[flashcard-review]
+front: "misdemeanor/misdemanour"
+meaning: "A crime less serious than a felony"
+translation: "n. 行为不检, 品行不良, 轻罪, 不端行为"
+srsWords: "misdemeanor/misdemanour"
+
+---
+lessonTitle: "Lesson 12: Apex Lexical Precision & Idiom Part 2"
+description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
+icon: "👑"
+color: "#009688"
+---
+[flashcard-review]
+front: "bona fide"
+meaning: "In or with good faith; Without fraud or deceit"
+translation: "真诚地(的), 真实地(的) 真诚的"
+srsWords: "bona fide"
+
+[flashcard-review]
+front: "peptide"
+meaning: "Amide combining the amino group of one amino acid with the carboxyl group of another; Usually obtained by partial hydrolysis of protein"
+translation: "n. 肽, 缩氨酸 肽; 缩氨酸"
+srsWords: "peptide"
+
+[flashcard-review]
+front: "sclerosis"
+meaning: "Any pathological hardening or thickening of tissue"
+translation: "n. 硬化症, 硬化, 僵化 硬化"
+srsWords: "sclerosis"
+
+[flashcard-review]
+front: "methylation"
+meaning: "The addition of a methyl group to a substrate"
+translation: "甲基化作用(指加甲基作用和加甲醇使酒精变性的作用) 甲基化[作用]"
+srsWords: "methylation"
+
+[flashcard-review]
+front: "entropy"
+meaning: "N (communication theory) a numerical measure of the uncertainty of an outcome; N (thermodynamics) a thermodynamic quantity representing the amount of energy in a…"
+translation: "n. 熵 熵"
+srsWords: "entropy"
+
+[flashcard-review]
+front: "lymphoma"
+meaning: "A neoplasm of lymph tissue that is usually malignant; One of the four major types of cancer"
+translation: "n. 淋巴瘤, 淋巴组织瘤, 淋巴腺瘤 淋巴[组织]瘤"
+srsWords: "lymphoma"
+
+[flashcard-review]
+front: "mitochondrial"
+meaning: "Relating to mitochondria"
+translation: "线粒体的"
+srsWords: "mitochondrial"
+
+[flashcard-review]
+front: "seminal"
+meaning: "Pertaining to or containing or consisting of semen"
+translation: "a. 精液的, 种子的, 生殖的 种子的; 精液的"
+srsWords: "seminal"
+
+[flashcard-review]
+front: "pectoral"
+meaning: "Either of two large muscles of the chest; An adornment worn on the chest or breast"
+translation: "a. 胸的, 治疗胸科病的, 戴在胸前的, 出自内心的, 发自胸腔的；n. 胸饰, 胸部器官, 遮胸, 祛痰药"
+srsWords: "pectoral"
+
+[flashcard-review]
+front: "nomenclature"
+meaning: "N a system of words used to name things in a particular discipline"
+translation: "n. 命名法, 专门语, 术语 命名法; 命名原则"
+srsWords: "nomenclature"
+
+---
+lessonTitle: "Lesson 13: Apex Lexical Precision & Idiom Part 3"
+description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
+icon: "👑"
+color: "#009688"
+---
+[flashcard-review]
+front: "therefor"
+meaning: "(in formal usage, especially legal usage) for that or for it"
+translation: "adv. 为此, 因之"
+srsWords: "therefor"
+
+[flashcard-review]
+front: "topology"
+meaning: "Topographic study of a given place (especially the history of the place as indicated…; The configuration of a communication network"
+translation: "n. 地志学, 拓扑学, 局部解剖学 拓扑结构, 网络的布局"
+srsWords: "topology"
+
+[flashcard-review]
+front: "fibrosis"
+meaning: "Development of excess fibrous connective tissue in an organ"
+translation: "n. 纤维变性, 纤维化 纤维变性, 纤维化"
+srsWords: "fibrosis"
+
+[flashcard-review]
+front: "oculus"
+meaning: "N the organ of sight"
+translation: "眼"
+srsWords: "oculus"
+
+[flashcard-review]
+front: "stratigraphic"
+meaning: "Alt. of Stratigraphical; Alt. of -ical"
+translation: "a. 地层学的"
+srsWords: "stratigraphic"
+
+[flashcard-review]
+front: "taxonomic"
+meaning: "Of or relating to taxonomy"
+translation: "a. 分类学的, 分类的 分类的"
+srsWords: "taxonomic"
+
+[flashcard-review]
+front: "esoteric"
+meaning: "Confined to and understandable by only an enlightened inner circle"
+translation: "a. 秘教的, 奥秘的, 秘传的 体内的, 内部的, 隐的"
+srsWords: "esoteric"
+
+[flashcard-review]
+front: "adsorption"
+meaning: "The accumulation of molecules of a gas to form a thin film on the surface of a solid"
+translation: "n. 吸附 吸附"
+srsWords: "adsorption"
+
+[flashcard-review]
+front: "electrochemical"
+meaning: "Of or involving electrochemistry"
+translation: "a. 电气化学的 电化学的"
+srsWords: "electrochemical"
+
+[flashcard-review]
+front: "amyloid"
+meaning: "A non-nitrogenous food substance consisting chiefly of starch; (pathology) a waxy translucent complex protein resembling starch that results from…"
+translation: "a. 淀粉的, 含淀粉的；n. 淀粉质食物, 淀粉状蛋白"
+srsWords: "amyloid"
+
+---
+lessonTitle: "Lesson 14: Apex Lexical Precision & Idiom Part 4"
+description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
+icon: "👑"
+color: "#009688"
+---
+[flashcard-review]
+front: "isotope"
+meaning: "One of two or more atoms with the same atomic number but with different numbers of…"
+translation: "n. 同位素 同位素"
+srsWords: "isotope"
+
+[flashcard-review]
+front: "morphological"
+meaning: "A relating to or concerned with the formation of admissible words in a language; A pertaining to geological structure"
+translation: "a. 形态的, 形态学的, 词法的 词法的"
+srsWords: "morphological"
+
+[flashcard-review]
+front: "genotype"
+meaning: "A group of organisms sharing a specific genetic constitution; The particular alleles at specified loci present in an organism"
+translation: "n. 基因型, 遗传型 遗传型, 基因型"
+srsWords: "genotype"
+
+[flashcard-review]
+front: "jurisprudence"
+meaning: "The branch of philosophy concerned with the law and the principles that lead courts to…"
+translation: "n. 法律学, 法律体系 法学, 法律学"
+srsWords: "jurisprudence"
+
+[flashcard-review]
+front: "glycol"
+meaning: "N a sweet but poisonous syrupy liquid used as an antifreeze and solvent; N any of a class of alcohols having 2 hydroxyl groups in each molecule"
+translation: "n. 乙二醇 二醇; 乙二醇"
+srsWords: "glycol"
+
+[flashcard-review]
+front: "hegemony"
+meaning: "The dominance or leadership of one social group or nation over others"
+translation: "n. 霸权, 领导权, 支配权, 拥有支配权的政府 霸权, 盟主权"
+srsWords: "hegemony"
+
+[flashcard-review]
+front: "ischemic"
+meaning: "Relating to or affected by ischemia"
+translation: "a. 局部出血的, 局部贫血的 局部缺血的"
+srsWords: "ischemic"
+
+[flashcard-review]
+front: "phylogenetic"
+meaning: "Of or relating to the evolutionary development of organisms"
+translation: "a. 种系发生的, 系统发育的 种系发生的, 种族发育的"
+srsWords: "phylogenetic"
+
+[flashcard-review]
+front: "vitriol"
+meaning: "(H2SO4) a highly corrosive acid made from sulfur dioxide; Widely used in the chemical industry"
+translation: "n. 硫酸盐, 矾油, 矾, 语言尖刻；vt. 用硫酸处理"
+srsWords: "vitriol"
+
+[flashcard-review]
+front: "burgh"
+meaning: "A borough in Scotland"
+translation: "n. 自治市"
+srsWords: "burgh"
+
+---
+lessonTitle: "Lesson 15: Apex Lexical Precision & Idiom Part 5"
+description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
+icon: "👑"
+color: "#009688"
+---
+[flashcard-review]
+front: "mora"
+meaning: "A game of guessing the number of fingers extended in a quick; A leguminous tree of Guiana and Trinidad (Dimorphandra"
+translation: "迟延, 非法延误, 疏忽"
+srsWords: "mora"
+
+[flashcard-review]
+front: "pneumatic"
+meaning: "Of or relating to or using air (or a similar gas)"
+translation: "a. 充气的, 空气的, 有气胎的, 气动的, 灵魂的；n. 充气轮胎"
+srsWords: "pneumatic"
+
+[flashcard-review]
+front: "polynomial"
+meaning: "A mathematical function that is the sum of a number of terms; Having the character of a polynomial"
+translation: "a. 多项式的, 多词学名的；n. 多项式, 多词学名 多项式"
+srsWords: "polynomial"
+
+[flashcard-review]
+front: "stochastic"
+meaning: "Being or having a random variable"
+translation: "a. 随机的 随机的"
+srsWords: "stochastic"
+
+[flashcard-review]
+front: "egregious"
+meaning: "S conspicuously and outrageously bad or reprehensible"
+translation: "a. 异乎寻常的, 过分的, 惊人的"
+srsWords: "egregious"
+
+[flashcard-review]
+front: "pedophilia"
+meaning: "A sexual attraction to children"
+translation: "n. 恋童癖 爱童癖"
+srsWords: "pedophilia"
+
+[flashcard-review]
+front: "coptic"
+meaning: "The liturgical language of the Coptic Church used in Egypt and Ethiopia; Written in the Greek alphabet"
+translation: "a. 科普特人的, 科普特语的, 科普特基督教徒的；n. 科普特语"
+srsWords: "coptic"
+
+[flashcard-review]
+front: "cutaneous"
+meaning: "Relating to or existing on or affecting the skin"
+translation: "a. 皮肤上的, 影响皮肤的 皮的"
+srsWords: "cutaneous"
+
+[flashcard-review]
+front: "mitochondrion"
+meaning: "An organelle containing enzymes responsible for producing energy"
+translation: "n. 线粒体"
+srsWords: "mitochondrion"
+
+[flashcard-review]
+front: "archdiocese"
+meaning: "The diocese of an archbishop"
+translation: "n. 大主教之管区"
+srsWords: "archdiocese"
+
+---
+lessonTitle: "Lesson 16: Apex Lexical Precision & Idiom Part 6"
+description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
+icon: "👑"
+color: "#009688"
+---
+[flashcard-review]
+front: "metabolite"
+meaning: "Any substance involved in metabolism (either as a product of metabolism or as…"
+translation: "n. 代谢物 代谢物"
+srsWords: "metabolite"
+
+[flashcard-review]
+front: "oxidative"
+meaning: "Taking place in the presence of oxygen"
+translation: "a. 氧化的"
+srsWords: "oxidative"
+
+[flashcard-review]
+front: "pedagogical"
+meaning: "Of or relating to pedagogy"
+translation: "a. 教师的, 教学法的, 适宜于教师的"
+srsWords: "pedagogical"
+
+[flashcard-review]
+front: "planar"
+meaning: "Involving two dimensions"
+translation: "a. 平面的, 在同一平面上的, 二维的；[电] 平面"
+srsWords: "planar"
+
+[flashcard-review]
+front: "aegis"
+meaning: "N kindly endorsement and guidance; N armor plate that protects the chest"
+translation: "n. 羊皮盾, 保护, 庇护, 赞助, 支持 庇护, 保护"
+srsWords: "aegis"
+
+[flashcard-review]
+front: "hepatic"
+meaning: "Pertaining to or affecting the liver"
+translation: "a. 肝脏的, 治肝病的, 肝脏色的 肝的"
+srsWords: "hepatic"
+
+[flashcard-review]
+front: "fiduciary"
+meaning: "Relating to or of the nature of a legal trust (i.e. the holding of something in trust…; A person who holds assets in trust for a beneficiary"
+translation: "a. 基于信用的, 信托的, 受信托的；n. 被信托者, 受托人"
+srsWords: "fiduciary"
+
+[flashcard-review]
+front: "rheumatoid"
+meaning: "S of or pertaining to arthritis"
+translation: "a. 类风湿病的 风湿病样的"
+srsWords: "rheumatoid"
+
+[flashcard-review]
+front: "ammonium"
+meaning: "The ion NH4 derived from ammonia; Behaves in many respects like an alkali metal ion"
+translation: "n. 铵 铵"
+srsWords: "ammonium"
+
+[flashcard-review]
+front: "scion"
+meaning: "A descendent or heir"
+translation: "n. 接穗, 子孙 嫩枝, 接穗"
+srsWords: "scion"
+
+---
+lessonTitle: "Lesson 17: Apex Lexical Precision & Idiom Part 7"
+description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
+icon: "👑"
+color: "#009688"
+---
+[flashcard-review]
+front: "hydrolysis"
+meaning: "A chemical reaction in which water reacts with a compound to produce other compounds; Involves the splitting of a bond and the addition of the hydrogen cation and the…"
+translation: "n. 水解(作用) 水解作用"
+srsWords: "hydrolysis"
+
+[flashcard-review]
+front: "tomography"
+meaning: "N (medicine) obtaining pictures of the interior of the body"
+translation: "n. X线断层摄影术 X线体层照相术, X线断层照相术"
+srsWords: "tomography"
+
+[flashcard-review]
+front: "anarchism"
+meaning: "A political theory favoring the abolition of governments"
+translation: "n. 无政府主义 无政府主义"
+srsWords: "anarchism"
+
+[flashcard-review]
+front: "multivariate"
+meaning: "Pertaining to any procedure involving two or more variables"
+translation: "多元"
+srsWords: "multivariate"
+
+[flashcard-review]
+front: "glaucoma"
+meaning: "An eye disease that damages the optic nerve and impairs vision (sometimes progressing…"
+translation: "n. 绿内障, 青光眼 青光眼(绿内障)"
+srsWords: "glaucoma"
+
+[flashcard-review]
+front: "smite"
+meaning: "Inflict a heavy blow on, with the hand, a tool, or a weapon; Affect suddenly with deep feeling"
+translation: "vt. 重击, 打, 击败, 毁灭, 侵袭, 打动；vi. 重击, 打；n. 重击, 打"
+srsWords: "smite"
+
+[flashcard-review]
+front: "superannuation"
+meaning: "The act of discharging someone because of age (especially to cause someone to retire…"
+translation: "n. 年老退休, 退职, 体弱退休, 淘汰, 废弃, 退休金"
+srsWords: "superannuation"
+
+[flashcard-review]
+front: "endothelial"
+meaning: "Of or relating to or located in the endothelium"
+translation: "a. 内皮的 内皮的"
+srsWords: "endothelial"
+
+[flashcard-review]
+front: "nucleotide"
+meaning: "A phosphoric ester of a nucleoside; The basic structural unit of nucleic acids (DNA or RNA)"
+translation: "n. 核苷酸 核苷酸"
+srsWords: "nucleotide"
+
+[flashcard-review]
+front: "transcendental"
+meaning: "Of or characteristic of a system of philosophy emphasizing the intuitive and spiritual…"
+translation: "a. 卓越的, 超凡的, 先验的"
+srsWords: "transcendental"
+
+---
+lessonTitle: "Lesson 18: Apex Lexical Precision & Idiom Part 8"
+description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
+icon: "👑"
+color: "#009688"
+---
+[flashcard-review]
+front: "dielectric"
+meaning: "N a material such as glass or porcelain with negligible electrical or thermal conductivity"
+translation: "n. 电介质, 绝缘体；a. 非传导性的"
+srsWords: "dielectric"
+
+[flashcard-review]
+front: "endogenous"
+meaning: "Of or resembling an endogen; Derived or originating internally"
+translation: "a. 内源的 内生的, 内原的"
+srsWords: "endogenous"
+
+[flashcard-review]
+front: "ethnographic"
+meaning: "Of or relating to ethnography"
+translation: "a. 人种志的"
+srsWords: "ethnographic"
+
+[flashcard-review]
+front: "tyrosine"
+meaning: "An amino acid found in most proteins; A precursor of several hormones"
+translation: "n. 酪氨酸 酪氨酸; 3-对羟苯基丙氨酸"
+srsWords: "tyrosine"
+
+[flashcard-review]
+front: "ambulatory"
+meaning: "Relating to or adapted for walking; A covered walkway (as in a cloister)"
+translation: "a. 步行的, 走动的, 流动的, 非固定的；n. 回廊"
+srsWords: "ambulatory"
+
+[flashcard-review]
+front: "nous"
+meaning: "Common sense"
+translation: "n. 精神, 常识 智力, 理智"
+srsWords: "nous"
+
+[flashcard-review]
+front: "tuff"
+meaning: "Hard volcanic rock composed of compacted volcanic ash"
+translation: "n. 凝灰岩；a. 第一流的"
+srsWords: "tuff"
+
+[flashcard-review]
+front: "volta"
+meaning: "Italian physicist after whom the volt is named; A river in Ghana that flows south to the Bight of Benin"
+translation: "[电] 伏打"
+srsWords: "volta"
+
+[flashcard-review]
+front: "amortization"
+meaning: "The reduction of the value of an asset by prorating its cost over a period of years; Payment of an obligation in a series of installments or transfers"
+translation: "分期付款 缓冲作用"
+srsWords: "amortization"
+
+[flashcard-review]
+front: "methamphetamine"
+meaning: "An amphetamine derivative (trade name Methedrine) used in the form of a crystalline…; Used as a stimulant to the nervous system and as an appetite suppressant"
+translation: "脱氧麻黄碱"
+srsWords: "methamphetamine"
+
+---
+lessonTitle: "Lesson 19: Apex Lexical Precision & Idiom Part 9"
+description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
+icon: "👑"
+color: "#009688"
+---
+[flashcard-review]
+front: "atrial"
+meaning: "Of or relating to a cavity or chamber in the body (especially one of the upper…"
+translation: "a. 门廊, 心房 房的, 前房的"
+srsWords: "atrial"
+
+[flashcard-review]
+front: "impotence"
+meaning: "An inability (usually of the male animal) to copulate"
+translation: "n. 无力, 虚弱, 无效, 阳萎 阳萎, 无能力"
+srsWords: "impotence"
+
+[flashcard-review]
+front: "juxtaposition"
+meaning: "The act of positioning close together (or side by side); A side-by-side position"
+translation: "n. 并排, 并置, 并列 并列, 并置, 对合"
+srsWords: "juxtaposition"
+
+[flashcard-review]
+front: "polymerase"
+meaning: "An enzyme that catalyzes the formation of new DNA and RNA from an existing strand of…"
+translation: "n. 聚合酶 聚合酶"
+srsWords: "polymerase"
+
+[flashcard-review]
+front: "spectrometry"
+meaning: "N the use of spectroscopes to analyze spectra"
+translation: "分光术, 光谱测定法"
+srsWords: "spectrometry"
+
+[flashcard-review]
+front: "chromatography"
+meaning: "A process used for separating mixtures by virtue of differences in absorbency"
+translation: "n. 色谱法 色谱法; 层析法"
+srsWords: "chromatography"
+
+[flashcard-review]
+front: "edema"
+meaning: "Swelling from excessive accumulation of watery fluid in cells, tissues, or serous cavities"
+translation: "n. 水肿, 浮肿 水肿"
+srsWords: "edema"
+
+[flashcard-review]
+front: "topological"
+meaning: "Of or relating to topology"
+translation: "a. 地志学, 拓扑学, 局部解剖学 布局的"
+srsWords: "topological"
+
+[flashcard-review]
+front: "recombinant"
+meaning: "A cell or organism in which genetic recombination has occurred"
+translation: "n. 重组, 重组物"
+srsWords: "recombinant"
+
+[flashcard-review]
+front: "interpolation"
+meaning: "A message (spoken or written) that is introduced or inserted; (mathematics) calculation of the value of a function between the values already known"
+translation: "n. 篡改, 添写, 插补 内推法; 内插法"
+srsWords: "interpolation"
+
+---
+lessonTitle: "Lesson 20: Apex Lexical Precision & Idiom Part 10"
+description: "Practice 10 key C2 vocabulary flashcards for Apex Lexical Precision & Idiom"
+icon: "👑"
+color: "#009688"
+---
+[flashcard-review]
+front: "apostasy"
+meaning: "The act of abandoning a party for cause; The state of having rejected your religious beliefs or your political party or a cause…"
+translation: "n. 叛教, 变节, 脱党 叛教, 背教, 脱党"
+srsWords: "apostasy"
+
+[flashcard-review]
+front: "necrosis"
+meaning: "The localized death of living cells (as from infection or the interruption of blood…"
+translation: "n. 坏死, 枯斑 坏死"
+srsWords: "necrosis"
+
+[flashcard-review]
+front: "pharmacological"
+meaning: "Of or relating to pharmacology"
+translation: "a. 药理学的, 药物学的 药理学的"
+srsWords: "pharmacological"
+
+[flashcard-review]
+front: "selenium"
+meaning: "A toxic nonmetallic element related to sulfur and tellurium; Occurs in several allotropic forms"
+translation: "n. 硒 硒Se"
+srsWords: "selenium"
+
+[flashcard-review]
+front: "sulfide"
+meaning: "A compound of sulphur and some other element that is more electropositive"
+translation: "n. 硫化物 硫化物"
+srsWords: "sulfide"
+
+[flashcard-review]
+front: "taxon"
+meaning: "N animal or plant group having natural relations"
+translation: "n. 分类单元；分类学"
+srsWords: "taxon"
+
+[flashcard-review]
+front: "allele"
+meaning: "(genetics) either of a pair (or series) of alternative forms of a gene that can occupy…"
+translation: "等位基因, 对偶基因"
+srsWords: "allele"
+
+[flashcard-review]
+front: "hydroxide"
+meaning: "A compound of an oxide with water; A chemical compound containing the hydroxyl group"
+translation: "n. 氢氧化物 氢氧化物"
+srsWords: "hydroxide"
+
+[flashcard-review]
+front: "inertial"
+meaning: "Of or relating to inertia"
+translation: "a. 惯性的"
+srsWords: "inertial"
+
+[flashcard-review]
+front: "magus"
+meaning: "A magician or sorcerer of ancient times; A member of the Zoroastrian priesthood of the ancient Persians"
+translation: "n. 魔术家, 占星家"
+srsWords: "magus"
 
