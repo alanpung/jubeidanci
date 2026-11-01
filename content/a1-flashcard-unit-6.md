@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 6: Everyday Vocabulary (Extra)"
-description: "Everyday Vocabulary (Extra) - 82 A1 Flashcard Vocabulary Words"
+unitTitle: "Unit 6: Everyday Vocabulary"
+description: "A1 Flashcard Vocabulary Words"
 icon: "🌟"
 color: "#FF9800"
 targetLanguage: "en"
