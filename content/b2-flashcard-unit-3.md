@@ -1,5 +1,5 @@
 ---
-unitTitle: "Unit 3: Psychology, Emotion & Behavior + Science, Research & Discovery"
+unitTitle: "Unit 2: Psychology, Emotion & Behavior + Science, Research & Discovery"
 description: "Psychology, Emotion & Behavior - 200 B2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🧠"
 color: "#E91E63"
