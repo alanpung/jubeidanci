@@ -1,11 +1,13 @@
 ---
-unitTitle: "Everyday English: A1 Essentials Vol. 5"
-description: "10 single-topic lessons covering core A1 vocabulary through multiple-choice questions"
-icon: "⭐"
-color: "#B71C1C"
+unitTitle: "Unit 5: Everyday English"
+description: "Unit 5: 10 lessons x 20 questions"
+icon: "🎯"
+color: "#4CAF50"
 targetLanguage: "en"
-sourceLanguage: "zh"
+sourceLanguage: "en"
 level: "A1"
+courseId: "a1-multiple-choice-course"
+questionType: "multiple-choice"
 ---
 
 ---
