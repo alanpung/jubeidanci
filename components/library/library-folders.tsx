@@ -144,91 +144,102 @@ export function LibraryFolders({
         )}
       </div>
 
-      {/* relative: the browser window is absolutely positioned over this box
-          (covering the folders from the top) for students. The owner renders
-          it below the grid instead, so it is a plain block there. */}
-      <div className="relative">
-        <div className={gridClass}>
-          {folders.map((f) => {
-            const isActive = activeKey === f.key;
-            return (
-              <button
-                key={f.key}
-                type="button"
-                onClick={() => onOpenKey(activeKey === f.key ? null : f.key)}
-                aria-expanded={isActive}
-                aria-label={f.label}
-                className={`group flex flex-col items-center gap-1.5 transition-transform active:translate-y-0 ${
-                  isActive ? "" : "hover:-translate-y-0.5"
-                }`}
-              >
-                {/* The cover IS the button — the whole tile is the colour, so
-                    there is no white card and no white padding around it. The
-                    symbol sits left, the name to its right, inside the cover. */}
-                <span
-                  className={`block w-full transition-transform ${
-                    isActive ? "scale-[1.04]" : "group-hover:scale-[1.04]"
+      {/* The folder grid — reused for both grouping modes and for the
+          owner's always-visible grid. Drawn as one block so it can be
+          swapped for the browser window below. */}
+      {(() => {
+        const folderGrid = (
+          <div className={gridClass}>
+            {folders.map((f) => {
+              const isActive = activeKey === f.key;
+              return (
+                <button
+                  key={f.key}
+                  type="button"
+                  onClick={() => onOpenKey(activeKey === f.key ? null : f.key)}
+                  aria-expanded={isActive}
+                  aria-label={f.label}
+                  className={`group flex flex-col items-center gap-1.5 transition-transform active:translate-y-0 ${
+                    isActive ? "" : "hover:-translate-y-0.5"
                   }`}
                 >
-                  <CourseCover
-                    level={f.isType ? null : f.label}
-                    questionType={f.isType ? f.typeId : null}
-                    levelAsSymbol={!f.isType}
-                    name={f.isType ? f.label : LEVEL_LABELS[f.label]}
-                    showLevel={false}
-                    className={
-                      isActive
-                        ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
-                        : ""
-                    }
-                  />
-                </span>
-              </button>
-            );
-          })}
+                  {/* The cover IS the button — the whole tile is the colour, so
+                      there is no white card and no white padding around it. The
+                      symbol sits left, the name to its right, inside the cover. */}
+                  <span
+                    className={`block w-full transition-transform ${
+                      isActive ? "scale-[1.04]" : "group-hover:scale-[1.04]"
+                    }`}
+                  >
+                    <CourseCover
+                      level={f.isType ? null : f.label}
+                      questionType={f.isType ? f.typeId : null}
+                      levelAsSymbol={!f.isType}
+                      name={f.isType ? f.label : LEVEL_LABELS[f.label]}
+                      showLevel={false}
+                      className={
+                        isActive
+                          ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
+                          : ""
+                      }
+                    />
+                  </span>
+                </button>
+              );
+            })}
 
-          {/* Standalone units — the AI tutor's own units. Always listed because
-              they belong to no CEFR level and no exercise type. Same-size tile
-              as every other folder, wearing the "mix" symbol; the title lives
-              inside the cover, no description. */}
-          <button
-            type="button"
-            onClick={() => onOpenKey(standaloneActive ? null : STANDALONE_KEY)}
-            aria-expanded={standaloneActive}
-            aria-label="Standalone Units"
-            className={`group flex flex-col items-center gap-1.5 transition-transform active:translate-y-0 ${
-              standaloneActive ? "" : "hover:-translate-y-0.5"
-            }`}
-          >
-            <span
-              className={`block w-full transition-transform ${
-                standaloneActive ? "scale-[1.04]" : "group-hover:scale-[1.04]"
+            {/* Standalone units — the AI tutor's own units. Always listed
+                because they belong to no CEFR level and no exercise type.
+                Same-size tile as every other folder, wearing the "mix"
+                symbol; the title lives inside the cover, no description. */}
+            <button
+              type="button"
+              onClick={() =>
+                onOpenKey(standaloneActive ? null : STANDALONE_KEY)
+              }
+              aria-expanded={standaloneActive}
+              aria-label="Standalone Units"
+              className={`group flex flex-col items-center gap-1.5 transition-transform active:translate-y-0 ${
+                standaloneActive ? "" : "hover:-translate-y-0.5"
               }`}
             >
-              <CourseCover
-                questionType="mix"
-                name="Standalone unit"
-                showLevel={false}
-                className={
-                  standaloneActive
-                    ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
-                    : ""
-                }
-              />
-            </span>
-          </button>
-        </div>
+              <span
+                className={`block w-full transition-transform ${
+                  standaloneActive ? "scale-[1.04]" : "group-hover:scale-[1.04]"
+                }`}
+              >
+                <CourseCover
+                  questionType="mix"
+                  name="Standalone unit"
+                  showLevel={false}
+                  className={
+                    standaloneActive
+                      ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
+                      : ""
+                  }
+                />
+              </span>
+            </button>
+          </div>
+        );
 
-        {/* The browser window.
-            Student: rendered inside this relative box, so its absolute
-            inset-0 covers the folder grid exactly (it replaces the folders
-            rather than pushing them down).
-            Owner:    rendered after this box, in normal flow, so it drops
-            BELOW the folders instead of hiding them. */}
-        {!isAdmin && children}
-      </div>
+        // Owner: the window drops BELOW the folders in normal flow — the owner
+        // has room underneath and still wants to see which folder is open.
+        if (isAdmin) {
+          return (
+            <>
+              {folderGrid}
+              {children && <div className="mt-4">{children}</div>}
+            </>
+          );
+        }
 
-      {isAdmin && <div className="mt-4">{children}</div>}
+        // Student: opening a folder REPLACES the grid with the browser window.
+        // No overlay, no inner scrollbar — the window grows into the page and
+        // uses all the vertical space below the Library section. The window's
+        // own header (title + count + ×) shows which folder is open.
+        return activeKey ? <div>{children}</div> : folderGrid;
+      })()}
     </section>
   );
 }

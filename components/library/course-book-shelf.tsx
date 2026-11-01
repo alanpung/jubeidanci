@@ -532,7 +532,6 @@ export function CourseBookShelf({
             pendingId={pendingId}
             pendingUnitId={pendingUnitId}
             onClose={() => setActiveKey(null)}
-            inline={isAdmin}
           />
         )}
       </LibraryFolders>
@@ -542,9 +541,12 @@ export function CourseBookShelf({
 
 /** The browser window opened from a Library folder.
  *
- *  Student: it layers *over* the folder grid (absolute, exactly the grid's
- *  own box) so the reader browses in place of the folders instead of pushing
- *  them off-screen or dropping below them.
+ *  Student: opening a folder REPLACES the folder grid with this window (the
+ *  parent hides the grid while a folder is open). There is no overlay and no
+ *  inner scrollbar — the window is as tall as its content and simply grows
+ *  into the page, using all the vertical space below the Library section. The
+ *  window header (title + count + ×) shows which folder is open; × or Escape
+ *  or a click on the window's empty area returns to the folders.
  *  Owner:   it is a normal block that sits BELOW the folders — the owner has
  *  room underneath and still wants to see which folder is open.
  *
@@ -556,15 +558,12 @@ function TypeBrowserWindow({
   pendingId,
   pendingUnitId,
   onClose,
-  inline = false,
 }: {
   title: string;
   entries: BrowseEntry[];
   pendingId: string | null;
   pendingUnitId: string | null;
   onClose: () => void;
-  /** Owner mode: render in normal flow below the folders. */
-  inline?: boolean;
 }) {
   // Escape closes the window. The page scroll stays live on purpose — the
   // window is a bounded panel, and locking the body would only trap the
@@ -579,9 +578,7 @@ function TypeBrowserWindow({
 
   return (
     <div
-      className={`flex flex-col overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-bg shadow-2xl ${
-        inline ? "relative z-30 max-h-[70vh]" : "absolute inset-0 z-30"
-      }`}
+      className="relative z-30 flex w-full flex-col overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-bg shadow-2xl"
       role="dialog"
       aria-modal="false"
       aria-label={`${title} courses`}
@@ -606,7 +603,10 @@ function TypeBrowserWindow({
         </button>
       </div>
 
-      <div className="flex-1 overflow-y-auto p-3 sm:px-5 sm:py-4">
+      {/* No internal scrollbar: the window is as tall as its content, so every
+          cover is visible at once. It simply grows into the empty space
+          below the Library section. */}
+      <div className="flex-1 p-3 sm:px-5 sm:py-4">
         {entries.length === 0 ? (
           <p className="py-10 text-center text-sm text-lingo-text-light">
             No {title.toLowerCase()} yet.
