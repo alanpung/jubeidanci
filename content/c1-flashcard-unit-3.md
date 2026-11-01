@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 3: Scientific Inquiry & Ethics + Philosophy, Cognition & Mind"
-description: "Scientific Inquiry & Ethics - 200 C1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 3: Scientific Inquiry, Ethics, Philosophy, Cognition & Mind"
+description: "200 C1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🧬"
 color: "#00BCD4"
 targetLanguage: "en"
