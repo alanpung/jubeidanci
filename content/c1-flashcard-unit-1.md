@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 1: Academic Research & Methodology + Rhetoric, Persuasion & Debate"
-description: "Academic Research & Methodology - 200 C1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 1: Academic Research, Methodology, Rhetoric, Persuasion & Debate"
+description: "200 C1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🏛️"
 color: "#673AB7"
 targetLanguage: "en"
