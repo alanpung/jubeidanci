@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 1: Everyday Conversations & Routines + Travel, Transport & Directions"
-description: "Unit 1: Everyday Conversations & Routines - A2 Translation Practice (Unit 1, 20 Lessons x 10 Sentences)"
+unitTitle: "Unit 1: Everyday Conversations, Routines, Travel, Transport & Directions"
+description: "A2 Translation Practice (20 Lessons x 10 Sentences)"
 icon: "🌐"
 color: "#6366F1"
 targetLanguage: "en"
