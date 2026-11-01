@@ -8,6 +8,10 @@ import {
 import { getAudio } from "@/lib/r2";
 import { getSession } from "@/lib/auth-server";
 
+// Gemini TTS can take several seconds (and retries on transient 503s), so allow
+// up to 60s before Vercel's function timeout kills the request.
+export const maxDuration = 60;
+
 /**
  * Creates an audio response with full HTTP 206 Partial Content (Range) support.
  * This is strictly required by iOS Safari and mobile browsers to play audio properly.
