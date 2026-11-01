@@ -583,8 +583,10 @@ export async function generateSpeech(
       } catch (err: unknown) {
         lastError = err;
         const errMsg = err instanceof Error ? err.message : String(err);
-        // Retry on transient errors (500 INTERNAL / 503 / 429 / quota); stop on hard errors.
-        if (!/500|INTERNAL|503|UNAVAILABLE|429|rate.?limit|RESOURCE_EXHAUSTED/i.test(errMsg)) break;
+        // Retry only on transient SERVER errors (500 INTERNAL / 503). Stop on
+        // quota (429 / RESOURCE_EXHAUSTED) so we don't burn the Free-Tier limit
+        // and let the client fall back to browser speech synthesis instead.
+        if (!/500|INTERNAL|503|UNAVAILABLE/i.test(errMsg)) break;
         console.warn(`Gemini TTS attempt ${attempt} failed (${errMsg}), retrying...`);
       }
 
