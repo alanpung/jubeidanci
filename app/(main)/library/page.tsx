@@ -7,7 +7,7 @@ import {
 } from "@/lib/db/queries/courses";
 import type { CourseListItem, StandaloneUnitInfo } from "@/lib/content/types";
 import { isAdminEmail } from "@/lib/ai/models";
-import { getTargetLanguage } from "@/lib/actions/preferences";
+import { getTargetLanguage, getMyBooksOrder } from "@/lib/actions/preferences";
 import {
   CourseBookShelf,
 } from "@/components/library/course-book-shelf";
@@ -25,6 +25,9 @@ export default async function LearnPage() {
   let allCourses: CourseListItem[] = [];
   let targetLang: string | null = null;
   let standaloneUnits: StandaloneUnitInfo[] = [];
+  // The reader's own "My Books" shelf order (course ids). Empty simply means
+  // "no order saved yet" — the shelf then uses the catalog order.
+  let myBooksOrder: string[] = [];
 
   if (userId) {
     // Every one of these is bounded: postgres.js queues a query forever when
@@ -55,6 +58,12 @@ export default async function LearnPage() {
         getBrowsableUnits(userId),
         10000,
         [] as StandaloneUnitInfo[],
+      ),
+      withTimeout<string[]>(
+        "library:getMyBooksOrder",
+        getMyBooksOrder(userId),
+        5000,
+        [] as string[],
       ),
     ]);
 
@@ -98,6 +107,12 @@ export default async function LearnPage() {
     } else {
       console.error("LearnPage: getBrowsableUnits failed:", results[3].reason);
     }
+
+    if (results[4].status === "fulfilled") {
+      myBooksOrder = results[4].value;
+    } else {
+      console.error("LearnPage: getMyBooksOrder failed:", results[4].reason);
+    }
   }
 
   const isEmptyLibrary = allCourses.length === 0 && standaloneUnits.length === 0 && !isAdmin;
@@ -135,6 +150,7 @@ export default async function LearnPage() {
             courses={allCourses}
             units={standaloneUnits}
             isAdmin={isAdmin}
+            bookOrder={myBooksOrder}
           />
         </>
       )}

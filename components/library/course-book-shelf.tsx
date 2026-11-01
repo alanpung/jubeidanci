@@ -1,9 +1,16 @@
 "use client";
 
-import { useState, useTransition, useEffect } from "react";
+import {
+  useState,
+  useTransition,
+  useEffect,
+  useRef,
+  useCallback,
+  type PointerEvent as ReactPointerEvent,
+} from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
-import { X } from "lucide-react";
+import { X, GripVertical } from "lucide-react";
 import type { CourseListItem, StandaloneUnitInfo } from "@/lib/content/types";
 import {
   CourseCover,
@@ -17,6 +24,7 @@ import {
   removeUnitFromLibrary,
 } from "@/lib/actions/library";
 import { deleteCourse, deleteUnit } from "@/lib/actions/units";
+import { saveMyBooksOrder } from "@/lib/actions/preferences";
 import {
   LibraryFolders,
   STANDALONE_KEY,
@@ -78,9 +86,18 @@ interface CourseBookShelfProps {
   /** Units the AI tutor made — they live in their own Library folder. */
   units: StandaloneUnitInfo[];
   isAdmin: boolean;
+  /** The reader's saved "My Books" order: course ids, first id first. Empty
+   *  (or absent) simply means "no order saved yet" — the shelf then shows
+   *  the catalog order until they drag something. */
+  bookOrder?: string[];
 }
 
-export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProps) {
+export function CourseBookShelf({
+  courses,
+  units,
+  isAdmin,
+  bookOrder = [],
+}: CourseBookShelfProps) {
   const router = useRouter();
   const [borrowedIds, setBorrowedIds] = useState<Set<string>>(
     () => new Set(courses.filter((c) => c.isInLibrary).map((c) => c.id)),
@@ -125,6 +142,110 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
     )
     .slice(0, isAdmin ? courses.length : MY_BOOKS_CAP);
   const borrowed = [...borrowedOwn, ...borrowedOther];
+
+  // ── "My Books" ordering — drag a book to sort the shelf ──
+  // The order lives in two places: whatever the reader dragged to (kept in
+  // state so a reorder is instant and survives the router.refresh() that
+  // add/remove triggers) and, behind that, the order the server sent.
+  const [shelfOrder, setShelfOrder] = useState<string[] | null>(null);
+  const [dragId, setDragId] = useState<string | null>(null);
+  const orderSource = shelfOrder ?? bookOrder;
+  // A book the reader has never sorted falls to the end in catalog order, so
+  // a newly added book can never vanish while waiting to be placed.
+  const rankOf = (id: string) => {
+    const i = orderSource.indexOf(id);
+    return i === -1 ? Number.MAX_SAFE_INTEGER : i;
+  };
+  const orderedBorrowed = [...borrowed].sort(
+    (a, b) => rankOf(a.id) - rankOf(b.id),
+  );
+
+  // The shelf's current order mirrored into a ref, so the drag listeners —
+  // attached once per drag — always read the newest order rather than a stale
+  // snapshot taken at the render that started the drag.
+  const idsRef = useRef<string[]>([]);
+  idsRef.current = orderedBorrowed.map((c) => c.id);
+
+  // Live boxes of the shelf tiles, used to work out which book the pointer is
+  // over. A grid has no single axis, so a hit-test — not a row/column sum —
+  // is what makes reordering work in a 2-up or 4-up layout, on a phone just
+  // as much as on a desktop.
+  const itemEls = useRef(new Map<string, HTMLElement>());
+  const registerItem = useCallback((id: string, el: HTMLElement | null) => {
+    if (el) itemEls.current.set(id, el);
+    else itemEls.current.delete(id);
+  }, []);
+
+  function hitTest(x: number, y: number): string | null {
+    for (const [id, el] of itemEls.current) {
+      const r = el.getBoundingClientRect();
+      if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) return id;
+    }
+    return null;
+  }
+
+  function startDrag(e: ReactPointerEvent, id: string) {
+    e.preventDefault();
+    e.stopPropagation();
+    // Capture the pointer so the drag keeps tracking after the finger leaves
+    // the small grip. Without this the reorder dies instantly on touch.
+    (e.currentTarget as HTMLElement).setPointerCapture?.(e.pointerId);
+    setDragId(id);
+  }
+
+  // The drag is tracked on the WINDOW, not on the grip. Reordering moves the
+  // tiles around in the DOM, and the browser drops an element's pointer
+  // capture the moment that element is moved — listening on the grip alone
+  // made the drag die after the very first swap. The window outlives every
+  // reshuffle, so the drag keeps following the finger all the way.
+  useEffect(() => {
+    if (!dragId) return;
+    // Assigned after the guard so its type is already `string` — TypeScript
+    // drops the narrowing inside the hoisted listeners below otherwise.
+    const dragging = dragId;
+
+    function onMove(e: PointerEvent) {
+      // Only act when the pointer is genuinely inside another tile: the swap
+      // then settles the moment the dragged book takes the slot, instead of
+      // oscillating back and forth between neighbours.
+      const targetId = hitTest(e.clientX, e.clientY);
+      if (!targetId || targetId === dragging) return;
+      const ids = [...idsRef.current];
+      const from = ids.indexOf(dragging);
+      const to = ids.indexOf(targetId);
+      if (from === -1 || to === -1) return;
+      ids.splice(to, 0, ids.splice(from, 1)[0]);
+      // Refresh the ref too, so a second swap in the same gesture (before
+      // React re-renders) starts from the order we just produced.
+      idsRef.current = ids;
+      setShelfOrder(ids);
+    }
+
+    function onUp() {
+      setDragId(null);
+      const ids = idsRef.current;
+      // One write per drag, not one per swap: the order is saved when the
+      // reader lets go.
+      startTransition(async () => {
+        const res = await saveMyBooksOrder(ids);
+        if (!res.success) {
+          // Almost always the `my_books_order` column has not been migrated
+          // in yet. The shelf still shows the new order — it just will not
+          // survive a reload until then.
+          console.warn("Could not save shelf order:", res.error);
+        }
+      });
+    }
+
+    window.addEventListener("pointermove", onMove);
+    window.addEventListener("pointerup", onUp);
+    window.addEventListener("pointercancel", onUp);
+    return () => {
+      window.removeEventListener("pointermove", onMove);
+      window.removeEventListener("pointerup", onUp);
+      window.removeEventListener("pointercancel", onUp);
+    };
+  }, [dragId]);
 
   // Exercise type lives in the cover, not in a column, so derive it the same
   // way CourseCover does — otherwise the folder and the cover could disagree
@@ -236,6 +357,11 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
           // Remember it so the owner's own Library drops the cover right away
           // instead of leaving it sitting in the folder.
           setRemovedCourseIds((s) => new Set(s).add(course.id));
+          // Keep the saved shelf order from carrying ids that are no longer
+          // on the shelf.
+          setShelfOrder((prev) =>
+            prev ? prev.filter((id) => id !== course.id) : prev,
+          );
         } else {
           alert(res.error);
         }
@@ -299,6 +425,9 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
         const res = await deleteCourse(course.id);
         if (res.success) {
           setRemovedCourseIds((s) => new Set(s).add(course.id));
+          setShelfOrder((prev) =>
+            prev ? prev.filter((id) => id !== course.id) : prev,
+          );
           router.refresh();
         } else alert(res.error);
       } catch (err) {
@@ -360,8 +489,8 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
               to add it here.
             </p>
           ) : (
-            <div className={COVER_GRID}>
-              {borrowed.map((c) => (
+            <div className={`${COVER_GRID} select-none`}>
+              {orderedBorrowed.map((c) => (
                 <CourseBook
                   key={c.id}
                   course={c}
@@ -370,6 +499,9 @@ export function CourseBookShelf({ courses, units, isAdmin }: CourseBookShelfProp
                   onBorrow={() => borrow(c)}
                   onRemove={() => unborrow(c)}
                   onDeleteForever={() => destroyCourse(c)}
+                  registerRef={(el) => registerItem(c.id, el)}
+                  isDragging={dragId === c.id}
+                  onDragStart={(e) => startDrag(e, c.id)}
                 />
               ))}
             </div>
@@ -612,6 +744,9 @@ function CourseBook({
   onBorrow,
   onRemove,
   onDeleteForever,
+  registerRef,
+  isDragging = false,
+  onDragStart,
 }: {
   course: CourseListItem;
   isBorrowed: boolean;
@@ -619,9 +754,18 @@ function CourseBook({
   onBorrow: () => void;
   onRemove: () => void;
   onDeleteForever?: () => void;
+  /** Hands the tile's element back to the shelf so drags can be hit-tested. */
+  registerRef?: (el: HTMLElement | null) => void;
+  isDragging?: boolean;
+  onDragStart?: (e: ReactPointerEvent) => void;
 }) {
   return (
-    <div className="group relative flex flex-col items-center">
+    <div
+      ref={registerRef}
+      className={`group relative flex flex-col items-center ${
+        isDragging ? "z-30 scale-[1.04] opacity-90" : ""
+      }`}
+    >
       {/* Stretched link: the entire tile opens the course for study. */}
       <Link
         href={`/library/${course.id}`}
@@ -671,6 +815,28 @@ function CourseBook({
           <div className="absolute left-1.5 bottom-1.5 z-20">
             <CoverEditButton course={course} />
           </div>
+        ) : null}
+
+        {/* Drag to reorder — INSIDE the cover, lower-right. Only this grip
+            starts a drag, so swiping across the cover still scrolls the page
+            and tapping it still opens the book. */}
+        {onDragStart ? (
+          <button
+            type="button"
+            aria-label={`Reorder ${course.title}`}
+            title="Drag to reorder"
+            onPointerDown={onDragStart}
+            onClick={(e) => e.preventDefault()}
+            // Let the drag own the gesture instead of the browser scrolling
+            // the page. Scoped to the grip, so the rest of the cover — and
+            // therefore page scrolling on a phone — is untouched.
+            style={{ touchAction: "none" }}
+            className={`absolute bottom-1.5 right-1.5 z-20 flex h-6 w-6 items-center justify-center rounded-full border-2 border-lingo-border bg-white/90 text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 ${
+              isDragging ? "cursor-grabbing" : "cursor-grab"
+            }`}
+          >
+            <GripVertical className="h-3.5 w-3.5 stroke-[2.5]" />
+          </button>
         ) : null}
       </div>
     </div>

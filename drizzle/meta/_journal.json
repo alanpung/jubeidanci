@@ -78,6 +78,13 @@
       "when": 1792733641320,
       "tag": "0010_student_vip",
       "breakpoints": true
+    },
+    {
+      "idx": 11,
+      "version": "7",
+      "when": 1793509866597,
+      "tag": "0011_abnormal_speedball",
+      "breakpoints": true
     }
   ]
 }

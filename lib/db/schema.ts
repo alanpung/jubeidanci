@@ -86,6 +86,13 @@ export const userPreferences = pgTable("user_preferences", {
   nativeLanguage: text("native_language"),
   targetLanguage: text("target_language"),
   preferredModel: text("preferred_model"),
+  /** The reader's own "My Books" shelf order: an array of course ids, first
+   *  id first. Anything missing from the list simply falls to the end, so a
+   *  newly added book never disappears while waiting to be sorted.
+   *  Nullable on purpose — every existing row predates the column, and
+   *  "no order saved yet" is a perfectly valid state (readers get the
+   *  catalog order until they drag something). */
+  myBooksOrder: jsonb("my_books_order").$type<string[]>(),
   updatedAt: timestamp("updated_at").notNull().defaultNow(),
 });
 
