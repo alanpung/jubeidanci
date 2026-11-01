@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 1: Social Life & Communication + Travel, Transport & Holidays"
-description: "Social Life & Communication - 200 A2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 1: Social Life, Communication, Travel, Transport & Holidays"
+description: "A2 Flashcard Vocabulary Words"
 icon: "💬"
 color: "#2196F3"
 targetLanguage: "en"
