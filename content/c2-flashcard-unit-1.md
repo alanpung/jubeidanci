@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 1: Epistemology & Abstract Thought + High Rhetoric & Oratory Mastery"
-description: "Epistemology & Abstract Thought - 200 C2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 1: Epistemology, Abstract Thought, High Rhetoric & Oratory Mastery"
+description: "200 C2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🔮"
 color: "#9C27B0"
 targetLanguage: "en"
