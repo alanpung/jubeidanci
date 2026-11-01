@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 2: Food, Dining & Groceries + Shopping, Clothes & Services"
-description: "Unit 3: Food, Dining & Groceries - A2 Translation Practice (Unit 3, 20 Lessons x 10 Sentences)"
+unitTitle: "Unit 2: Food, Dining, Groceries, Shopping, Clothes & Services"
+description: "A2 Translation Practice (20 Lessons x 10 Sentences)"
 icon: "🍲"
 color: "#EF4444"
 targetLanguage: "en"
