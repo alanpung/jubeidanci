@@ -1,7 +1,7 @@
 import { db, isDbAvailable } from "./index";
 import { course, unit, user } from "./schema";
 import { getAllCourses, getAllUnits } from "../content/registry";
-import { eq, or, ilike, and, notInArray, sql, count } from "drizzle-orm";
+import { eq, or, ilike, and, notInArray, like, sql, count } from "drizzle-orm";
 import { runAfterResponse } from "../after-response";
 
 let lastSyncedAt = 0;
@@ -175,7 +175,12 @@ async function runSeedTask() {
         });
     }
 
-    // 6. Strict cleanup of old/ghost units in DB for known courses
+    // 6. Strict cleanup of old/ghost units in DB for known courses.
+    //
+    // Only filesystem-derived units may be removed here. Units the owner
+    // created by hand (their id is a UUID, not `<courseId>-...`) belong to
+    // the course and must survive: deleting them would make "Add Unit" on the
+    // course page silently revert on the next background sync.
     for (const [courseId, validIds] of validUnitIdsByCourse.entries()) {
       if (validIds.length > 0) {
         await db
@@ -183,7 +188,10 @@ async function runSeedTask() {
           .where(
             and(
               eq(unit.courseId, courseId),
-              notInArray(unit.id, validIds)
+              notInArray(unit.id, validIds),
+              // Filesystem ids all start with the course id; a hand-made unit
+              // never does.
+              like(unit.id, `${courseId}-%`)
             )
           );
       }

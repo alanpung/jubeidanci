@@ -2,7 +2,7 @@
 
 import { db } from "@/lib/db";
 import { unit, course, userUnitLibrary } from "@/lib/db/schema";
-import { and, eq, isNull } from "drizzle-orm";
+import { and, eq, isNull, count } from "drizzle-orm";
 import { requireSession } from "@/lib/auth-server";
 import { parseUnitMarkdown } from "@/lib/content/unit-parser";
 import { revalidatePath } from "next/cache";
@@ -248,16 +248,46 @@ export async function createManualUnit(data: {
   questionType?: string;
 }): Promise<{ success: true; unitId: string } | { success: false; error: string }> {
   const session = await requireSession();
-  if (!isAdminEmail(session.user.email)) return { success: false, error: "Only the site owner can create units" };
+  const admin = isAdminEmail(session.user.email);
   if (!data.title?.trim()) return { success: false, error: "Title is required" };
   if (!data.targetLanguage) return { success: false, error: "Target language is required" };
+
+  const courseId = data.courseId || null;
+
+  // Admins may create units anywhere. A non-admin may only create a unit for a
+  // course they own — and a public course is locked for non-admins, matching
+  // the rule `updateCourseTitle` already enforces.
+  if (!admin) {
+    if (!courseId) {
+      return {
+        success: false,
+        error: "Only the site owner can create standalone units",
+      };
+    }
+    const [ownerCourse] = await db
+      .select({ createdBy: course.createdBy, visibility: course.visibility })
+      .from(course)
+      .where(eq(course.id, courseId));
+    if (!ownerCourse) {
+      return { success: false, error: "Course not found" };
+    }
+    if (ownerCourse.createdBy !== session.user.id) {
+      return { success: false, error: "You do not own this course" };
+    }
+    if (ownerCourse.visibility === "public") {
+      return {
+        success: false,
+        error:
+          "This course is public and can no longer be modified. Only admins can make changes to public content.",
+      };
+    }
+  }
 
   const unitId = crypto.randomUUID();
   const title = data.title.trim();
   const targetLanguage = data.targetLanguage;
   const sourceLanguage = data.sourceLanguage || "en";
   const level = data.level || "A1";
-  const courseId = data.courseId || null;
   const qType = data.questionType || "multiple-choice";
 
   let exerciseBlock = "";
@@ -303,9 +333,26 @@ export async function createManualUnit(data: {
       break;
   }
 
+  // Units are ordered by the "Unit N:" prefix in their title (see
+  // `naturalSortUnits`). A hand-made unit without that prefix would sort
+  // alphabetically and land in the wrong place, so number it for the course
+  // it is being added to.
+  let finalTitle = title;
+  if (courseId && !/^\s*unit\s*\d+\s*:/i.test(title)) {
+    const [row] = await db
+      .select({ count: count() })
+      .from(unit)
+      .where(eq(unit.courseId, courseId));
+    finalTitle = `Unit ${Number(row?.count ?? 0) + 1}: ${title}`;
+  }
+
+  // A double quote inside the title would break the YAML front-matter below.
+  const yamlSafeTitle = finalTitle.replace(/"/g, "'");
+  const yamlSafeDesc = `Practice exercises for ${finalTitle}`.replace(/"/g, "'");
+
   const initialMarkdown = `---
-unitTitle: "${title}"
-description: "Practice exercises for ${title}"
+unitTitle: "${yamlSafeTitle}"
+description: "${yamlSafeDesc}"
 icon: "${icon}"
 color: "#4CAF50"
 targetLanguage: "${targetLanguage}"
@@ -327,8 +374,8 @@ ${exerciseBlock}
   await db.insert(unit).values({
     id: unitId,
     courseId,
-    title,
-    description: `Practice exercises for ${title}`,
+    title: finalTitle,
+    description: `Practice exercises for ${finalTitle}`,
     icon,
     color: "#4CAF50",
     markdown: initialMarkdown,
