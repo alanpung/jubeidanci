@@ -1,5 +1,5 @@
 ---
-unitTitle: "Unit 3: Food & Dining + Home & Daily Life"
+unitTitle: "Unit 2: Food, Dining, Home & Daily Life"
 description: "Food & Dining - 200 A1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🍎"
 color: "#FF9800"
