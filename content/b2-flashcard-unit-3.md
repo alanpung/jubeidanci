@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 3: Media, Journalism & Ethics + Law, Crime & Justice"
-description: "Media, Journalism & Ethics - 200 B2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 3: Media, Journalism, Ethics, Law, Crime & Justice"
+description: "200 B2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🎙️"
 color: "#FF9800"
 targetLanguage: "en"
