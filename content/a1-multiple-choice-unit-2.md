@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 2: Everyday English"
-description: "Unit 2: 10 lessons x 20 questions"
+description: "10 lessons x 20 questions"
 icon: "🎯"
 color: "#4CAF50"
 targetLanguage: "en"
