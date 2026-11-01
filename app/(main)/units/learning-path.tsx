@@ -10,7 +10,7 @@ import {
 } from "@/components/learning-path/lesson-ladder";
 import { getUnitColor } from "@/lib/colors";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
-import { CourseDetailActions } from "@/components/library/course-detail-actions";
+import { UnitOwnerControls } from "@/components/library/unit-owner-controls";
 
 interface LearningPathProps {
   course: Course;
@@ -75,15 +75,6 @@ export function LearningPath({
     return (
       <div>
         <Breadcrumb items={crumbBase} className="mb-4" />
-        {canEditCourse && (
-          <CourseDetailActions
-            courseId={course.id}
-            courseTitle={course.title}
-            sourceLanguage={course.sourceLanguage}
-            targetLanguage={course.targetLanguage}
-            level={course.level}
-          />
-        )}
         <div className="grid gap-2.5 w-full max-w-full overflow-hidden min-w-0">
         {course.units.map((unit, unitIndex) => {
           if (unit.parseError) {
@@ -122,6 +113,7 @@ export function LearningPath({
               (unit.createdBy === userId ||
                 (!unit.createdBy && course.createdBy === userId))
           );
+          const canManageUnit = canEditCourse || isOwner;
 
           return (
             <UnitCard
@@ -134,6 +126,7 @@ export function LearningPath({
               completedLessons={completedLessons}
               language={course.targetLanguage}
               onClick={() => setSelectedUnitId(unit.id)}
+              action={canManageUnit ? <UnitOwnerControls unitId={unit.id} /> : undefined}
             />
           );
         })}
