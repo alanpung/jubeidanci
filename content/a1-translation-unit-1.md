@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 1: Greetings & Personal Information + Food & Drinks"
-description: "Unit 1: Greetings & Personal Information - A1 Translation Practice (20 Lessons x 10 Sentences)"
+unitTitle: "Unit 1: Greetings, Personal Information, Food & Drinks"
+description: "A1 Translation Practice"
 icon: "👋"
 color: "#10B981"
 targetLanguage: "en"
