@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 4: Environment, Sustainability & Energy + Culture, Heritage & Philosophy"
-description: "Environment, Sustainability & Energy - 200 B2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 4: Environment, Sustainability, Energy, Culture, Heritage & Philosophy"
+description: "200 B2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "♻️"
 color: "#009688"
 targetLanguage: "en"
