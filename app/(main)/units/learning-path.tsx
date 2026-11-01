@@ -10,6 +10,7 @@ import {
 } from "@/components/learning-path/lesson-ladder";
 import { getUnitColor } from "@/lib/colors";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
+import { CourseDetailActions } from "@/components/library/course-detail-actions";
 
 interface LearningPathProps {
   course: Course;
@@ -18,6 +19,8 @@ interface LearningPathProps {
     lessonIndex: number;
   }[];
   userId?: string;
+  /** Site owner — may edit public content other owners cannot touch. */
+  isAdmin?: boolean;
 }
 
 function isLessonCompleted(
@@ -46,11 +49,18 @@ export function LearningPath({
   course,
   completions,
   userId,
+  isAdmin = false,
 }: LearningPathProps) {
   const searchParams = useSearchParams();
   const [selectedUnitId, setSelectedUnitId] = useState<string | null>(
     searchParams.get("unit")
   );
+
+  // Owner-only editing. A public course is locked for everyone but the site
+  // owner, mirroring the rule `updateCourseTitle` enforces on the server.
+  const isCourseOwner = Boolean(userId && course.createdBy === userId);
+  const canEditCourse =
+    isAdmin || (isCourseOwner && course.visibility !== "public");
 
   // Directory bar that stays put as you flip between the unit list, a unit and
   // a lesson: Library / <course> / Unit n / Lesson n. Clicking the course name
@@ -65,6 +75,15 @@ export function LearningPath({
     return (
       <div>
         <Breadcrumb items={crumbBase} className="mb-4" />
+        {canEditCourse && (
+          <CourseDetailActions
+            courseId={course.id}
+            courseTitle={course.title}
+            sourceLanguage={course.sourceLanguage}
+            targetLanguage={course.targetLanguage}
+            level={course.level}
+          />
+        )}
         <div className="grid gap-2.5 w-full max-w-full overflow-hidden min-w-0">
         {course.units.map((unit, unitIndex) => {
           if (unit.parseError) {
