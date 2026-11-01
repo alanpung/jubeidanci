@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 5: People, Relationships, Nature & Environment"
-description: "Unit 5: People, Relationships - A1 Translation Practice (20 Lessons x 10 Sentences)"
+description: "A1 Translation Practice"
 icon: "🤝"
 color: "#EC4899"
 targetLanguage: "en"
