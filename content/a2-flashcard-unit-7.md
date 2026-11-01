@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 7: Health, Body, Work & Career"
-description: "200 A2 Flashcard Vocabulary Words"
+description: "A2 Flashcard Vocabulary Words"
 icon: "💚"
 color: "#43A047"
 targetLanguage: "en"
