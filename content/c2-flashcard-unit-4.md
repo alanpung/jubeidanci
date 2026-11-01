@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 4: Socio-Economic Theory & Institutions + Psychological Nuance & Temperament"
-description: "Socio-Economic Theory & Institutions - 200 C2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 4: Socio-Economic Theory, Institutions, Psychological Nuance & Temperament"
+description: "200 C2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🏦"
 color: "#4CAF50"
 targetLanguage: "en"
