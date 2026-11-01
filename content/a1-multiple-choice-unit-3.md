@@ -1,11 +1,13 @@
 ---
-unitTitle: "Everyday English: A1 Essentials Vol. 3"
-description: "10 single-topic lessons covering core A1 vocabulary through multiple-choice questions"
-icon: "🌻"
-color: "#E65100"
+unitTitle: "Unit 3: Everyday English"
+description: "Unit 3: 10 lessons x 20 questions"
+icon: "🎯"
+color: "#4CAF50"
 targetLanguage: "en"
-sourceLanguage: "zh"
+sourceLanguage: "en"
 level: "A1"
+courseId: "a1-multiple-choice-course"
+questionType: "multiple-choice"
 ---
 
 ---
