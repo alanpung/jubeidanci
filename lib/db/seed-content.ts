@@ -97,7 +97,8 @@ async function runSeedTask() {
           ilike(unit.title, "%Steve Jobs%"),
           ilike(unit.title, "%Testing Unit%"),
           ilike(unit.id, "%testing-%"),
-          ilike(unit.id, "%steve-jobs-%")
+          ilike(unit.id, "%steve-jobs-%"),
+          ilike(unit.id, "%a1-matching-pairs-%")
         )
       );
 
@@ -110,7 +111,8 @@ async function runSeedTask() {
           ilike(course.title, "%Steve Jobs%"),
           ilike(course.title, "%Testing%"),
           ilike(course.id, "%testing-%"),
-          ilike(course.id, "%steve-jobs-%")
+          ilike(course.id, "%steve-jobs-%"),
+          ilike(course.id, "%a1-matching-pairs-%")
         )
       );
 

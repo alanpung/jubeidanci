@@ -1,12 +1,17 @@
 import { NextRequest, NextResponse } from "next/server";
 import OpenAI from "openai";
+import { GoogleGenAI } from "@google/genai";
 
-function getOpenAIClient() {
+function getOpenAIClient(): OpenAI | null {
   const apiKey = process.env.OPENAI_API_KEY;
-  if (!apiKey) {
-    throw new Error("OPENAI_API_KEY environment variable is required for Whisper STT");
-  }
+  if (!apiKey) return null;
   return new OpenAI({ apiKey });
+}
+
+function getGeminiClient(): GoogleGenAI | null {
+  const apiKey = process.env.GEMINI_API_KEY;
+  if (!apiKey) return null;
+  return new GoogleGenAI({ apiKey });
 }
 
 // Convert language codes/names to ISO 639-1 format expected by OpenAI Whisper
@@ -25,6 +30,50 @@ function toIso6391(lang: string): string {
   return l.slice(0, 2);
 }
 
+async function transcribeWithOpenAI(audio: Blob, language: string): Promise<string> {
+  const openai = getOpenAIClient();
+  if (!openai) throw new Error("OPENAI_API_KEY not configured");
+  const file = new File([audio], "recording.webm", { type: audio.type || "audio/webm" });
+  const transcription = await openai.audio.transcriptions.create({
+    model: "whisper-1",
+    file,
+    language: toIso6391(language),
+  });
+  return transcription.text;
+}
+
+async function transcribeWithGemini(audio: Blob, language: string): Promise<string> {
+  const ai = getGeminiClient();
+  if (!ai) throw new Error("GEMINI_API_KEY not configured");
+
+  const arrayBuffer = await audio.arrayBuffer();
+  const base64 = Buffer.from(arrayBuffer).toString("base64");
+  const langHint = language || "the target language";
+
+  const response = await ai.models.generateContent({
+    model: "gemini-2.5-flash",
+    contents: [
+      {
+        parts: [
+          {
+            text: `Transcribe the spoken audio clip into ${langHint}. Respond with only the transcribed text and no additional commentary.`,
+          },
+          {
+            inlineData: {
+              mimeType: audio.type || "audio/webm",
+              data: base64,
+            },
+          },
+        ],
+      },
+    ],
+  });
+
+  const text = response.text;
+  if (!text) throw new Error("Gemini returned empty transcription");
+  return text.trim();
+}
+
 export async function POST(request: NextRequest) {
   try {
     const formData = await request.formData();
@@ -38,19 +87,43 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Language is required" }, { status: 400 });
     }
 
-    const file = new File([audio], "recording.webm", { type: audio.type || "audio/webm" });
+    let text: string | null = null;
+    const errors: string[] = [];
 
-    const openai = getOpenAIClient();
-    const transcription = await openai.audio.transcriptions.create({
-      model: "whisper-1",
-      file,
-      language: toIso6391(language),
-    });
+    // 1. Primary: OpenAI Whisper (best accuracy for short spoken sentences).
+    if (process.env.OPENAI_API_KEY) {
+      try {
+        text = await transcribeWithOpenAI(audio, language);
+      } catch (err) {
+        const message = err instanceof Error ? err.message : "OpenAI Whisper failed";
+        errors.push(`OpenAI: ${message}`);
+        console.warn("OpenAI Whisper STT failed, falling back to Gemini...", err);
+      }
+    }
 
-    return NextResponse.json({ text: transcription.text });
+    // 2. Fallback: Gemini speech-to-text. Lets the speaking exercise work even
+    //    when only GEMINI_API_KEY is configured (mirrors the TTS fallback).
+    if (!text && process.env.GEMINI_API_KEY) {
+      try {
+        text = await transcribeWithGemini(audio, language);
+      } catch (err) {
+        const message = err instanceof Error ? err.message : "Gemini STT failed";
+        errors.push(`Gemini: ${message}`);
+        console.warn("Gemini STT failed", err);
+      }
+    }
+
+    if (!text) {
+      const detail = errors.length
+        ? errors.join("; ")
+        : "No speech provider configured — set OPENAI_API_KEY or GEMINI_API_KEY";
+      return NextResponse.json({ error: `Speech-to-text failed. ${detail}` }, { status: 500 });
+    }
+
+    return NextResponse.json({ text });
   } catch (err: unknown) {
     const message = err instanceof Error ? err.message : "Speech-to-text transcription failed";
-    console.error("OpenAI Whisper STT error:", err);
+    console.error("STT error:", err);
     return NextResponse.json({ error: message }, { status: 500 });
   }
 }
