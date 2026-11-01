@@ -6,6 +6,8 @@ color: "#FF5722"
 targetLanguage: "en"
 sourceLanguage: "en"
 level: "A1"
+courseId: "a1-fill-in-the-blank-course"
+questionType: "fill-in-the-blank"
 ---
 
 ---
