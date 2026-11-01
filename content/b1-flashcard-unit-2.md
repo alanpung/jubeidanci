@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 2: Work, Business & Ambition + Education, Learning & Skills"
-description: "Work, Business & Ambition - 200 B1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 2: Work, Business, Ambition, Education, Learning & Skills"
+description: "200 B1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "💼"
 color: "#3F51B5"
 targetLanguage: "en"
