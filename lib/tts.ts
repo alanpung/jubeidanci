@@ -562,7 +562,10 @@ export async function generateSpeech(
   }
 
   // 6. Secondary Fallback: Gemini Neural TTS
-  const geminiModels = ["gemini-2.5-flash-preview-tts", "gemini-2.5-flash"];
+  // gemini-2.5-flash / gemini-2.5-flash-preview-tts were discontinued (404).
+  // gemini-3.8-flash is Google's recommended replacement; gemini-3.5-flash is a
+  // proven-working secondary.
+  const geminiModels = ["gemini-3.8-flash", "gemini-3.5-flash"];
   let lastError: unknown = null;
 
   try {
