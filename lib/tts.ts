@@ -583,8 +583,8 @@ export async function generateSpeech(
       } catch (err: unknown) {
         lastError = err;
         const errMsg = err instanceof Error ? err.message : String(err);
-        // Retry only on transient errors (503 / 429 / quota); stop on hard errors.
-        if (!/503|UNAVAILABLE|429|rate.?limit|RESOURCE_EXHAUSTED/i.test(errMsg)) break;
+        // Retry on transient errors (500 INTERNAL / 503 / 429 / quota); stop on hard errors.
+        if (!/500|INTERNAL|503|UNAVAILABLE|429|rate.?limit|RESOURCE_EXHAUSTED/i.test(errMsg)) break;
         console.warn(`Gemini TTS attempt ${attempt} failed (${errMsg}), retrying...`);
       }
 
