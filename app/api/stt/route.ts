@@ -51,7 +51,7 @@ async function transcribeWithGemini(audio: Blob, language: string): Promise<stri
   const langHint = language || "the target language";
 
   const response = await ai.models.generateContent({
-    model: "gemini-2.5-flash",
+    model: "gemini-3.5-flash",
     contents: [
       {
         parts: [
@@ -90,26 +90,27 @@ export async function POST(request: NextRequest) {
     let text: string | null = null;
     const errors: string[] = [];
 
-    // 1. Primary: OpenAI Whisper (best accuracy for short spoken sentences).
-    if (process.env.OPENAI_API_KEY) {
-      try {
-        text = await transcribeWithOpenAI(audio, language);
-      } catch (err) {
-        const message = err instanceof Error ? err.message : "OpenAI Whisper failed";
-        errors.push(`OpenAI: ${message}`);
-        console.warn("OpenAI Whisper STT failed, falling back to Gemini...", err);
-      }
-    }
-
-    // 2. Fallback: Gemini speech-to-text. Lets the speaking exercise work even
-    //    when only GEMINI_API_KEY is configured (mirrors the TTS fallback).
-    if (!text && process.env.GEMINI_API_KEY) {
+    // 1. Primary: Gemini speech-to-text. Gemini is the only provider with active
+    //    credits on this deployment (OpenAI returns 429 "no credits remaining").
+    if (process.env.GEMINI_API_KEY) {
       try {
         text = await transcribeWithGemini(audio, language);
       } catch (err) {
         const message = err instanceof Error ? err.message : "Gemini STT failed";
         errors.push(`Gemini: ${message}`);
-        console.warn("Gemini STT failed", err);
+        console.warn("Gemini STT failed, falling back to OpenAI Whisper...", err);
+      }
+    }
+
+    // 2. Fallback: OpenAI Whisper (used if GEMINI is unavailable or the user
+    //    later adds OpenAI credits).
+    if (!text && process.env.OPENAI_API_KEY) {
+      try {
+        text = await transcribeWithOpenAI(audio, language);
+      } catch (err) {
+        const message = err instanceof Error ? err.message : "OpenAI Whisper failed";
+        errors.push(`OpenAI: ${message}`);
+        console.warn("OpenAI Whisper STT failed", err);
       }
     }
 
