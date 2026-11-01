@@ -1,5 +1,5 @@
 ---
-unitTitle: "Unit 3: Geopolitics & Statecraft + Jurisprudence, Equity & Doctrine"
+unitTitle: "Unit 2: Geopolitics & Statecraft + Jurisprudence, Equity & Doctrine"
 description: "Geopolitics & Statecraft - 200 C2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "♟️"
 color: "#607D8B"
