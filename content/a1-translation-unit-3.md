@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 3: Transportation, Travel, Health & Body"
-description: "Unit 3: Transportation & Travel - A1 Translation Practice (20 Lessons x 10 Sentences)"
+description: "A1 Translation Practice"
 icon: "🚌"
 color: "#10B981"
 targetLanguage: "en"
