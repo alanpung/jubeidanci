@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 3: Aesthetics, Artistry & Critique + Scientific Paradigms & Complexity"
-description: "Aesthetics, Artistry & Critique - 200 C2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 3: Aesthetics, Artistry, Critique, Scientific Paradigms & Complexity"
+description: "200 C2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🎨"
 color: "#E91E63"
 targetLanguage: "en"
