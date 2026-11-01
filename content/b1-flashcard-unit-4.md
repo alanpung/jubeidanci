@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 4: Environment, Climate & Nature + Science, Technology & Innovation"
-description: "Environment, Climate & Nature - 200 B1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 4: Environment, Climate, Nature, Science, Technology & Innovation"
+description: "200 B1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🌱"
 color: "#009688"
 targetLanguage: "en"
