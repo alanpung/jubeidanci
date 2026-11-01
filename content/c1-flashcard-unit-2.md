@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 2: Macroeconomics & Global Markets + Diplomacy, Governance & Policy"
-description: "Macroeconomics & Global Markets - 200 C1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 2: Macroeconomics, Global Markets, Diplomacy, Governance & Policy"
+description: "200 C1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "💹"
 color: "#4CAF50"
 targetLanguage: "en"
