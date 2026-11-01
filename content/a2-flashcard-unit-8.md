@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 8: Everyday Vocabulary"
-description: "Everyday Vocabulary (Extra) - 84 A2 Flashcard Vocabulary Words"
+description: "A2 Flashcard Vocabulary Words"
 icon: "🌐"
 color: "#26A69A"
 targetLanguage: "en"
