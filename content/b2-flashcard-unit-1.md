@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 1: Global Issues & Politics + Economy, Finance & Trade"
-description: "Global Issues & Politics - 200 B2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 1: Global Issues, Politics, Economy, Finance & Trade"
+description: "200 B2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🌐"
 color: "#3F51B5"
 targetLanguage: "en"
