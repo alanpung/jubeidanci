@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 4: Hobbies, Free Time, School & Work"
-description: "Unit 4: Hobbies & Free Time - A1 Translation Practice (20 Lessons x 10 Sentences)"
+description: "A1 Translation Practice"
 icon: "⚽"
 color: "#F59E0B"
 targetLanguage: "en"
