@@ -43,7 +43,6 @@ const FOLDER_ORDER = [
   "translation",
   "multiple-choice",
   "fill-in-the-blank",
-  "matching-pairs",
   "listening",
   "word-bank",
   "speaking",

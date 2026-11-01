@@ -411,7 +411,6 @@ export const SYSTEM_COURSE_IDS = [
   "a1-translation-course",
   "a1-multiple-choice-course",
   "a1-fill-in-the-blank-course",
-  "a1-matching-pairs-course",
   "a1-listening-course",
   "a1-word-bank-course",
   "a1-speaking-course",
