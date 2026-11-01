@@ -509,72 +509,22 @@ export async function generateSpeech(
     }
   }
 
-  // 5. Primary Default: OpenAI TTS (gpt-4o-mini / tts-1)
-  if (process.env.OPENAI_API_KEY) {
-    try {
-      const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-      const openAiVoice = GEMINI_TO_OPENAI_VOICE[effectiveVoice] || "alloy";
-      const mp3Response = await openai.audio.speech.create({
-        model: "tts-1",
-        voice: openAiVoice,
-        input: normalized,
-        speed: 1.15,
-      });
-
-      const arrayBuffer = await mp3Response.arrayBuffer();
-      const mp3Buffer = Buffer.from(arrayBuffer);
-
-      memoryAudioCache.set(cacheKey, {
-        buffer: mp3Buffer,
-        mimeType: "audio/mpeg",
-      });
-
-      // Cache audio to Cloudflare R2
-      await uploadAudio(cacheKey, mp3Buffer, "audio/mpeg");
-
-      // Persist permanently in database
-      try {
-        if (await isDbAvailable()) {
-          await db
-            .insert(audioCache)
-            .values({
-              text: cacheKey,
-              language: resolvedLang,
-              r2Key: `base64:mp3:${mp3Buffer.toString("base64")}`,
-            })
-            .onConflictDoUpdate({
-              target: [audioCache.text, audioCache.language],
-              set: { r2Key: `base64:mp3:${mp3Buffer.toString("base64")}` },
-            });
-        }
-      } catch (dbErr) {
-        console.warn("Could not write audio to database cache:", dbErr);
-      }
-
-      return {
-        url: `/api/tts?key=${encodeURIComponent(cacheKey)}`,
-        buffer: mp3Buffer,
-        mimeType: "audio/mpeg",
-      };
-    } catch (openAiErr) {
-      console.warn("Primary OpenAI TTS failed, trying Gemini Neural TTS fallback...", openAiErr);
-    }
-  }
-
-  // 6. Secondary Fallback: Gemini Neural TTS
-  // gemini-2.5-flash / gemini-2.5-flash-preview-tts were discontinued (404).
-  // gemini-3.8-flash is Google's recommended replacement; gemini-3.5-flash is a
-  // proven-working secondary.
-  const geminiModels = ["gemini-3.8-flash", "gemini-3.5-flash"];
+  // 5. Primary: Gemini Neural TTS.
+  // OpenAI has no credits on this deployment (429), so Gemini is the working path.
+  // gemini-2.5-flash-preview-tts is the ONLY Gemini model that emits raw PCM audio via
+  // responseModalities:[AUDIO] (the base gemini-2.5-flash / gemini-3.x text models do
+  // not produce audio and were either discontinued or return no audio).
+  // It can intermittently return 503 "high demand", so we retry a few times.
+  const geminiTtsModel = "gemini-2.5-flash-preview-tts";
   let lastError: unknown = null;
 
   try {
     const ai = getGeminiClient();
 
-    for (const model of geminiModels) {
+    for (let attempt = 1; attempt <= 3; attempt++) {
       try {
         const response = await ai.models.generateContent({
-          model,
+          model: geminiTtsModel,
           contents: normalized,
           config: {
             systemInstruction: customInstructions,
@@ -627,20 +577,82 @@ export async function generateSpeech(
             mimeType: "audio/wav",
           };
         }
+
+        // Got a response but no audio payload — retry.
+        lastError = new Error("Gemini returned no audio data");
       } catch (err: unknown) {
         lastError = err;
         const errMsg = err instanceof Error ? err.message : String(err);
-        console.warn(`TTS attempt with model ${model} failed (${errMsg}), trying next...`);
+        // Retry only on transient errors (503 / 429 / quota); stop on hard errors.
+        if (!/503|UNAVAILABLE|429|rate.?limit|RESOURCE_EXHAUSTED/i.test(errMsg)) break;
+        console.warn(`Gemini TTS attempt ${attempt} failed (${errMsg}), retrying...`);
+      }
+
+      if (attempt < 3) {
+        await new Promise((r) => setTimeout(r, 700 * attempt));
       }
     }
   } catch (geminiInitErr) {
     console.warn("Gemini client init failed:", geminiInitErr);
   }
 
+  // 6. Fallback: OpenAI TTS (used only if GEMINI is unavailable or the user
+  //    later adds OpenAI credits).
+  if (process.env.OPENAI_API_KEY) {
+    try {
+      const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+      const openAiVoice = GEMINI_TO_OPENAI_VOICE[effectiveVoice] || "alloy";
+      const mp3Response = await openai.audio.speech.create({
+        model: "tts-1",
+        voice: openAiVoice,
+        input: normalized,
+        speed: 1.15,
+      });
+
+      const arrayBuffer = await mp3Response.arrayBuffer();
+      const mp3Buffer = Buffer.from(arrayBuffer);
+
+      memoryAudioCache.set(cacheKey, {
+        buffer: mp3Buffer,
+        mimeType: "audio/mpeg",
+      });
+
+      // Cache audio to Cloudflare R2
+      await uploadAudio(cacheKey, mp3Buffer, "audio/mpeg");
+
+      // Persist permanently in database
+      try {
+        if (await isDbAvailable()) {
+          await db
+            .insert(audioCache)
+            .values({
+              text: cacheKey,
+              language: resolvedLang,
+              r2Key: `base64:mp3:${mp3Buffer.toString("base64")}`,
+            })
+            .onConflictDoUpdate({
+              target: [audioCache.text, audioCache.language],
+              set: { r2Key: `base64:mp3:${mp3Buffer.toString("base64")}` },
+            });
+        }
+      } catch (dbErr) {
+        console.warn("Could not write audio to database cache:", dbErr);
+      }
+
+      return {
+        url: `/api/tts?key=${encodeURIComponent(cacheKey)}`,
+        buffer: mp3Buffer,
+        mimeType: "audio/mpeg",
+      };
+    } catch (openAiErr) {
+      console.warn("OpenAI TTS fallback failed:", openAiErr);
+    }
+  }
+
   // If all server TTS options fail, rethrow with descriptive message
   const message =
     lastError instanceof Error
       ? lastError.message
-      : "Audio service temporarily rate-limited. Falling back to browser speech synthesis.";
+      : "Audio service temporarily unavailable. Falling back to browser speech synthesis.";
   throw new Error(message);
 }
