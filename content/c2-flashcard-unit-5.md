@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 5: Archaic, Formal & Erudite Register + Apex Lexical Precision & Idiom"
-description: "Archaic, Formal & Erudite Register - 200 C2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 5: Archaic, Formal, Erudite Register, Apex Lexical Precision & Idiom"
+description: "200 C2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "✒️"
 color: "#673AB7"
 targetLanguage: "en"
