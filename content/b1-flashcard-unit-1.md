@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 1: Social Interactions & Opinions + Travel, Tourism & Exploration"
-description: "Social Interactions & Opinions - 200 B1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 1: Social Interactions, Opinions, Travel, Tourism & Exploration"
+description: "200 B1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🗣️"
 color: "#2196F3"
 targetLanguage: "en"
