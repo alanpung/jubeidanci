@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 3: Daily Routine & Home + Shopping & Money"
-description: "Unit 3: Daily Routine & Home - A1 Translation Practice (20 Lessons x 10 Sentences)"
+unitTitle: "Unit 2: Daily Routine, Home, Shopping & Money"
+description: "Unit 2: Daily Routine & Home - A1 Translation Practice (20 Lessons x 10 Sentences)"
 icon: "🏠"
 color: "#0EA5E9"
 targetLanguage: "en"
