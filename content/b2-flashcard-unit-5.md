@@ -1,8 +1,8 @@
 ---
-unitTitle: "Unit 3: Media, Journalism & Ethics + Law, Crime & Justice"
-description: "Media, Journalism & Ethics - 200 B2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
-icon: "🎙️"
-color: "#FF9800"
+unitTitle: "Unit 5: Workplace, Management & Strategy + Academic & Analytical Discourse"
+description: "Workplace, Management & Strategy - 200 B2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+icon: "📊"
+color: "#2196F3"
 targetLanguage: "en"
 sourceLanguage: "en"
 level: "B2"
@@ -11,1321 +11,1321 @@ questionType: "flashcard-review"
 ---
 
 ---
-lessonTitle: "Lesson 1: Media, Journalism & Ethics Part 1"
-description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
-icon: "🎙️"
-color: "#FF9800"
+lessonTitle: "Lesson 1: Workplace, Management & Strategy Part 1"
+description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
+icon: "📊"
+color: "#2196F3"
 ---
 [flashcard-review]
-front: "circulation"
-meaning: "The dissemination of copies of periodicals (as newspapers or magazines); Movement through a circuit"
-translation: "n. 流通, 循环, 发行量 环流"
-srsWords: "circulation"
+front: "globally"
+meaning: "Throughout the world"
+translation: "全局地"
+srsWords: "globally"
 
 [flashcard-review]
-front: "corridor"
-meaning: "An enclosed passageway; Rooms usually open onto it"
-translation: "n. 走廊, 回廊, 人口密集地带"
-srsWords: "corridor"
+front: "glocal"
+meaning: "Adjective. glocal"
+translation: "全球本土化；全球本地化(glocalization)；全球在地"
+srsWords: "glocal"
 
 [flashcard-review]
-front: "corrupt"
-meaning: "Lacking in integrity; Containing errors or alterations"
-translation: "a. 腐败的, 贪污的, 讹误充斥的；vt. 使腐烂, 腐蚀, 使恶化；vi. 腐烂, 堕落"
-srsWords: "corrupt"
+front: "gloomy"
+meaning: "Filled with melancholy and despondency"
+translation: "a. 抑沉的, 忧闷的, 黑暗的, 悲观的"
+srsWords: "gloomy"
 
 [flashcard-review]
-front: "corruption"
-meaning: "Decay of matter (as by rot or oxidation); Moral perversion"
-translation: "n. 腐败, 堕落, 贪污 论误"
-srsWords: "corruption"
+front: "glorify"
+meaning: "Bestow glory upon; Cause to seem more splendid"
+translation: "vt. 赞美, 美化, 赞扬, 使辉煌"
+srsWords: "glorify"
 
 [flashcard-review]
-front: "costly"
-meaning: "Having a high price"
-translation: "a. 昂贵的, 奢华的, 费用大的"
-srsWords: "costly"
+front: "glow"
+meaning: "A feeling of considerable warmth; A steady even light without flames"
+translation: "n. 赤热, 光辉, 热情, 热烈, 红光；vi. 发红光, 红光焕发, 发热, 洋溢, 激动"
+srsWords: "glow"
 
 [flashcard-review]
-front: "costume"
-meaning: "The attire worn in a play or at a fancy dress ball; Unusual or period attire not characteristic of or appropriate to the time and place"
-translation: "n. 装束, 服装"
-srsWords: "costume"
+front: "goat"
+meaning: "Any of numerous agile ruminants related to sheep but having a beard and straight horns"
+translation: "n. 山羊, 替罪羊, 色鬼"
+srsWords: "goat"
 
 [flashcard-review]
-front: "cottage"
-meaning: "N a small house with a single story"
-translation: "n. 小屋, 茅舍"
-srsWords: "cottage"
+front: "god"
+meaning: "The supernatural being conceived as the perfect and omnipotent and omniscient…; A man of such superior qualities that he seems like a deity to other people"
+translation: "n. 上帝, 神像, 偶像；vt. 使神化"
+srsWords: "god"
 
 [flashcard-review]
-front: "countryman"
-meaning: "A man from your own country; A man who lives in the country and has country ways"
-translation: "n. 同胞, 乡下人, 国民"
-srsWords: "countryman"
+front: "godly"
+meaning: "Showing great reverence for god"
+translation: "a. 敬神的, 虔诚的, 神的"
+srsWords: "godly"
 
 [flashcard-review]
-front: "countrywide"
-meaning: "Occurring or extending throughout a country or nation"
-translation: "a. 全国范围的"
-srsWords: "countrywide"
+front: "goodwill"
+meaning: "N the friendly hope that something will succeed; N a disposition to kindness and compassion"
+translation: "n. 友好, 好意, 善意, 亲善, (企业享有的)信誉, 声誉 (企业的)商誉, 信誉"
+srsWords: "goodwill"
 
 [flashcard-review]
-front: "courtesy"
-meaning: "A courteous or respectful or considerate act; A courteous or respectful or considerate remark"
-translation: "n. 礼貌, 谦恭, 好意 优待, 礼貌, 恩惠"
-srsWords: "courtesy"
-
----
-lessonTitle: "Lesson 2: Media, Journalism & Ethics Part 2"
-description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
-icon: "🎙️"
-color: "#FF9800"
----
-[flashcard-review]
-front: "coward"
-meaning: "A person who shows fear or timidity; English dramatist and actor and composer noted for his witty and sophisticated…"
-translation: "n. 懦弱的人, 胆小的人"
-srsWords: "coward"
-
-[flashcard-review]
-front: "cowardly"
-meaning: "Lacking courage; Ignobly timid and faint-hearted"
-translation: "a. 怯懦的, 懦弱的；胆小的"
-srsWords: "cowardly"
-
-[flashcard-review]
-front: "crab"
-meaning: "A quarrelsome grouch; The edible flesh of any of various crabs"
-translation: "n. 螃蟹, 偏航, 脾气乖戾的人, 沙果；vi. 捕蟹, 偏航, 发牢骚；vt. 使偏航, 抱怨, 破坏"
-srsWords: "crab"
-
-[flashcard-review]
-front: "herald"
-meaning: "(formal) a person who announces important news"
-translation: "n. 使者, 传令官, 先驱；vt. 预报, 宣布, 传达, 欢呼"
-srsWords: "herald"
-
-[flashcard-review]
-front: "craftsman"
-meaning: "A professional whose work is consistently of high quality; A creator of great skill in the manual arts"
-translation: "n. 工匠, 技工, 手艺人"
-srsWords: "craftsman"
-
-[flashcard-review]
-front: "crater"
-meaning: "A faint constellation in the southern hemisphere near Hydra and Corvus; A bowl-shaped depression formed by the impact of a meteorite or bomb"
-translation: "n. 火山口, 环行山, 弹坑 焊口; 火山石; 弧坑; 焰口"
-srsWords: "crater"
-
-[flashcard-review]
-front: "crawl"
-meaning: "Move slowly; Arms are moved alternately overhead accompanied by a flutter kick"
-translation: "n. 爬行, 匍匐而行, 养鱼池；v. 爬行"
-srsWords: "crawl"
-
-[flashcard-review]
-front: "crease"
-meaning: "N an angular or rounded shape made by folding; N a slight depression in the smoothness of a surface"
-translation: "n. 皱痕, 折痕；v. (使)起皱痕"
-srsWords: "crease"
-
-[flashcard-review]
-front: "creatively"
-meaning: "In a creative manner"
-translation: "adv. 创造性地；有创造力地"
-srsWords: "creatively"
-
-[flashcard-review]
-front: "tract"
-meaning: "An extended area of land; A system of body parts that together serve some particular purpose"
-translation: "n. 大片土地, 地带, 小册子 束, 道"
-srsWords: "tract"
+front: "gook"
+meaning: "(slang) a disparaging term for an Asian person (especially for North Vietnamese…"
+translation: "n. 污物, 粘性物质, 畸形人, 亚洲佬(对韩、日等国人的轻蔑称呼)"
+srsWords: "gook"
 
 ---
-lessonTitle: "Lesson 3: Media, Journalism & Ethics Part 3"
-description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
-icon: "🎙️"
-color: "#FF9800"
+lessonTitle: "Lesson 2: Workplace, Management & Strategy Part 2"
+description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
+icon: "📊"
+color: "#2196F3"
 ---
 [flashcard-review]
-front: "creepy"
-meaning: "Annoying and unpleasant; Causing a sensation as of things crawling on your skin"
-translation: "a. 爬行的, 令人毛骨悚然的"
-srsWords: "creepy"
+front: "gorge"
+meaning: "A deep ravine (usually with a river running through it); Make a pig of oneself"
+translation: "n. 峡谷, 凹槽, 塞饱, 咽喉；vi. 狼吞虎咽；vt. 塞饱, 狼吞虎咽地吃"
+srsWords: "gorge"
 
 [flashcard-review]
-front: "cripple"
-meaning: "Someone who is unable to walk normally because of an injury or disability to the legs…; Make useless or worthless"
-translation: "n. 跛者, 残废；vt. 使跛, 使成残废, 削弱；a. 跛的, 残废的"
-srsWords: "cripple"
+front: "governmental"
+meaning: "Relating to or dealing with the affairs or structure of government or politics or the…"
+translation: "a. 政治的, 统治上的, 政府的 政府的, 统治的, 政治上的"
+srsWords: "governmental"
 
 [flashcard-review]
-front: "critically"
-meaning: "In a critical manner"
-translation: "adv. 批评性地, 审慎地, 精密地"
-srsWords: "critically"
+front: "gracefulness"
+meaning: "Beautiful carriage"
+translation: "n. 温文, 优雅；优美"
+srsWords: "gracefulness"
 
 [flashcard-review]
-front: "criticism"
-meaning: "Disapproval expressed by pointing out faults or shortcomings; A serious examination and judgment of something"
-translation: "n. 批评, 评论, 非难 批判, 批评, 评论"
-srsWords: "criticism"
+front: "gradual"
+meaning: "Proceeding in small stages; (of a topographical gradient) not steep or abrupt"
+translation: "a. 逐渐的, 渐增的；n. 弥撒升阶圣歌"
+srsWords: "gradual"
 
 [flashcard-review]
-front: "crocodile"
-meaning: "Large voracious aquatic reptile having a long snout with massive jaws and sharp teeth…; Of sluggish tropical waters"
-translation: "n. 鳄鱼"
-srsWords: "crocodile"
+front: "grain"
+meaning: "A relatively small granular particle of a substance; Foodstuff prepared from the starchy grains of cereal grasses"
+translation: "n. 谷粒, 颗粒, 谷类, 纹理, 本质；v. (使)成谷粒"
+srsWords: "grain"
 
 [flashcard-review]
-front: "crossly"
-meaning: "In an ill-natured manner"
-translation: "adv. 横地, 相反地, 故意为难地"
-srsWords: "crossly"
+front: "occupational"
+meaning: "Of or relating to the activity or business for which you are trained"
+translation: "a. 职业的, 军事占领的 职业的"
+srsWords: "occupational"
 
 [flashcard-review]
-front: "crucial"
-meaning: "Of extreme importance; Having crucial relevance"
-translation: "a. 决定性的, 重要的, 严厉的 十字形的; 决断的, 定局的"
-srsWords: "crucial"
+front: "graphically"
+meaning: "With respect to graphic aspects; In a graphic way"
+translation: "adv. 生动地, 活灵活现地, (正式)用图表表示, 以图显示"
+srsWords: "graphically"
 
 [flashcard-review]
-front: "cruelly"
-meaning: "Excessively; With cruelty"
-translation: "adv. 残忍地, 残酷地, 极"
-srsWords: "cruelly"
+front: "grasp"
+meaning: "Hold firmly"
+translation: "n. 把握, 抓紧, 理解, 抓, 柄, 控制；vt. 抓住, 紧握, 领会；vi. 抓"
+srsWords: "grasp"
 
 [flashcard-review]
-front: "cruelty"
-meaning: "A cruel act; Feelings of extreme heartlessness"
-translation: "n. 残酷, 野蛮, 残酷行为 残酷, 残忍, 虐待"
-srsWords: "cruelty"
+front: "gravestone"
+meaning: "A stone that is used to mark a grave"
+translation: "n. 墓石, 墓碑"
+srsWords: "gravestone"
 
 [flashcard-review]
-front: "cube"
-meaning: "A hexahedron with six equal squares as faces; The product of three equal terms"
-translation: "n. 立方体, 立方 立方体, 立方"
-srsWords: "cube"
-
----
-lessonTitle: "Lesson 4: Media, Journalism & Ethics Part 4"
-description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
-icon: "🎙️"
-color: "#FF9800"
----
-[flashcard-review]
-front: "cubism"
-meaning: "An artistic movement in France beginning in 1907 that featured surfaces of geometrical…"
-translation: "n. 立体派"
-srsWords: "cubism"
-
-[flashcard-review]
-front: "cuff"
-meaning: "The lap consisting of a turned-back hem encircling the end of the sleeve or leg; Hit with the hand"
-translation: "n. 袖口, 一巴掌；vt. 用巴掌打；vi. 殴斗"
-srsWords: "cuff"
-
-[flashcard-review]
-front: "culmination"
-meaning: "(astronomy) a heavenly body's highest celestial point above an observer's horizon"
-translation: "n. 顶点, 高潮, 最高点"
-srsWords: "culmination"
-
-[flashcard-review]
-front: "culturally"
-meaning: "With regard to a culture"
-translation: "adv. 从文化角度, 文化意义上；在人文学方面"
-srsWords: "culturally"
-
-[flashcard-review]
-front: "curl"
-meaning: "American chemist who with Richard Smalley and Harold Kroto discovered fullerenes and…; Form a curl, curve, or kink"
-translation: "n. 拳曲, 鬈发；vt. 弄卷；vi. 拳曲, 弯曲"
-srsWords: "curl"
-
-[flashcard-review]
-front: "cursor"
-meaning: "(computer science) indicator consisting of a movable spot of light (an icon) on a…; Moving it allows the user to point to commands or screen positions"
-translation: "n. 游标, 光标 光标"
-srsWords: "cursor"
-
-[flashcard-review]
-front: "cyberaddict"
-meaning: "Noun. cyberaddict"
-translation: "n. 网迷，网络瘾患者。亦写作：cyber addict"
-srsWords: "cyberaddict"
-
-[flashcard-review]
-front: "cybercrime"
-meaning: "Crime committed using a computer and the internet to steal a person's identity or sell…"
-translation: "n. 网络犯罪"
-srsWords: "cybercrime"
-
-[flashcard-review]
-front: "cyberpet"
-meaning: "Noun. cyberpet"
-translation: "n. 电子宠物"
-srsWords: "cyberpet"
-
-[flashcard-review]
-front: "cyberschool"
-meaning: "Noun. cyberschool"
-translation: "电脑学校；网校；网络学校"
-srsWords: "cyberschool"
+front: "gravitation"
+meaning: "Movement downward resulting from gravitational attraction; A figurative movement toward some attraction"
+translation: "n. 引力, 重力, 沉下 引力"
+srsWords: "gravitation"
 
 ---
-lessonTitle: "Lesson 5: Media, Journalism & Ethics Part 5"
-description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
-icon: "🎙️"
-color: "#FF9800"
+lessonTitle: "Lesson 3: Workplace, Management & Strategy Part 3"
+description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
+icon: "📊"
+color: "#2196F3"
 ---
 [flashcard-review]
-front: "cyberspace"
-meaning: "N a computer network consisting of a worldwide network of computer networks that use…"
-translation: "空间, 网控空间"
-srsWords: "cyberspace"
+front: "greatness"
+meaning: "The property possessed by something or someone of outstanding importance or eminence"
+translation: "n. 大, 巨大, 广大"
+srsWords: "greatness"
 
 [flashcard-review]
-front: "cyclist"
-meaning: "A person who rides a bicycle"
-translation: "n. 骑脚踏车的人"
-srsWords: "cyclist"
+front: "grief"
+meaning: "Intense sorrow caused by loss of a loved one (especially by death); Something that causes great unhappiness"
+translation: "n. 伤心, 忧愁, 悲痛, 不幸, 灾难"
+srsWords: "grief"
 
 [flashcard-review]
-front: "daft"
-meaning: "S informal or slang terms for mentally irregular"
-translation: "a. 愚笨的, 癫狂的, 狂闹的"
-srsWords: "daft"
+front: "grieve"
+meaning: "Feel grief; Cause to feel sorrow"
+translation: "vt. 使悲伤；vi. 悲痛, 伤心"
+srsWords: "grieve"
 
 [flashcard-review]
-front: "damn"
-meaning: "Something of little value; Used as expletives"
-translation: "n. 一点, 诅咒, 丝毫；interj. 该死, 该死的；vt. 诅咒, 罚...下地狱；vi. 指责, 谴责, 骂...该死, 证明...有罪"
-srsWords: "damn"
+front: "grim"
+meaning: "Not to be placated or appeased or moved by entreaty"
+translation: "a. 冷酷的, 坚强的, 残忍的, 可怕的, 讨厌的"
+srsWords: "grim"
 
 [flashcard-review]
-front: "dandelion"
-meaning: "Any of several herbs of the genus Taraxacum having long tap roots and deeply notched…"
-translation: "n. 药蒲公英 蒲公英"
-srsWords: "dandelion"
+front: "grin"
+meaning: "To draw back the lips and reveal the teeth, in a smile, grimace, or snarl"
+translation: "n. 露齿笑；v. 露齿而笑"
+srsWords: "grin"
 
 [flashcard-review]
-front: "darling"
-meaning: "A special loved one; An Australian river"
-translation: "n. 亲爱的, 可爱的人, 可爱的物；a. 可爱的, 亲爱的"
-srsWords: "darling"
+front: "grip"
+meaning: "Hold fast or firmly; The friction between a body and the surface on which it moves (as between an…"
+translation: "n. 紧握, 柄, 握力, 握手方式, 手提包, 掌握, 支配, 控制；vt. 抓紧, 抱住, 吸住, 掌握；vi. 握牢, 有吸引力"
+srsWords: "grip"
 
 [flashcard-review]
-front: "dash"
-meaning: "Distinctive and stylish elegance; A quick run"
-translation: "n. 冲撞, 破折号, 短跑；vi. 猛冲, 冲撞；vt. 泼溅, 使猛撞, 搀和, 使破灭, 使沮丧"
-srsWords: "dash"
+front: "appliance"
+meaning: "A device or control that is very useful for a particular job; Durable goods for home or office use"
+translation: "n. 器械, 用具, 应用 矫正器; 器"
+srsWords: "appliance"
 
 [flashcard-review]
-front: "columnist"
-meaning: "A journalist who writes editorials"
-translation: "n. 专栏作家"
-srsWords: "columnist"
+front: "ensemble"
+meaning: "A group of musicians playing or singing together; A cast other than the principals"
+translation: "n. 全体, 合唱曲, (女人的)全套服装 总体; 整体; 系综"
+srsWords: "ensemble"
 
 [flashcard-review]
-front: "plumbing"
-meaning: "The occupation of a plumber (installing and repairing pipes and fixtures for water or…; Utility consisting of the pipes and fixtures for the distribution of water or gas in a…"
-translation: "n. 测深, 管子工行业, 管道设备"
-srsWords: "plumbing"
+front: "guerrilla"
+meaning: "A member of an irregular armed force that fights a stronger force by sabotage and…"
+translation: "n. 游击队"
+srsWords: "guerrilla"
 
 [flashcard-review]
-front: "dated"
-meaning: "Marked by features of the immediate and usually discounted past"
-translation: "a. 有日期的, 陈旧的"
-srsWords: "dated"
-
----
-lessonTitle: "Lesson 6: Media, Journalism & Ethics Part 6"
-description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
-icon: "🎙️"
-color: "#FF9800"
----
-[flashcard-review]
-front: "dawn"
-meaning: "The first light of day; The earliest period"
-translation: "n. 破晓, 黎明；vi. 破晓"
-srsWords: "dawn"
-
-[flashcard-review]
-front: "daytime"
-meaning: "N the time after sunrise and before sunset while it is light outside"
-translation: "n. 白天, 日间"
-srsWords: "daytime"
-
-[flashcard-review]
-front: "dearly"
-meaning: "In a sincere and heartfelt manner; At a great cost"
-translation: "adv. 深深地, 昂贵地"
-srsWords: "dearly"
-
-[flashcard-review]
-front: "debit"
-meaning: "Enter as debit; An accounting entry acknowledging sums that are owing"
-translation: "n. 借方, 借；vt. 记入借方"
-srsWords: "debit"
-
-[flashcard-review]
-front: "decay"
-meaning: "As of stored charge or current; The process of gradually becoming inferior"
-translation: "n. 衰退, 腐败；v. (使)衰退, (使)腐败"
-srsWords: "decay"
-
-[flashcard-review]
-front: "deceive"
-meaning: "Be false to; Cause someone to believe an untruth"
-translation: "v. 欺骗, 行骗"
-srsWords: "deceive"
-
-[flashcard-review]
-front: "decent"
-meaning: "Socially or conventionally correct; Conforming to conventions of sexual behavior"
-translation: "a. 有分寸的, 得体的, 大方的"
-srsWords: "decent"
-
-[flashcard-review]
-front: "deceptive"
-meaning: "Causing one to believe what is not true or fail to believe what is true; Designed to deceive or mislead either deliberately or inadvertently"
-translation: "a. 迷惑的, 虚伪的, 欺诈的"
-srsWords: "deceptive"
-
-[flashcard-review]
-front: "decisive"
-meaning: "Determining or having the power to determine an outcome; Unmistakable"
-translation: "a. 决定性的, 坚定的, 果断的"
-srsWords: "decisive"
-
-[flashcard-review]
-front: "serum"
-meaning: "An amber, watery fluid, rich in proteins, that separates out when blood coagulates"
-translation: "n. 浆液, 血清, 乳清 血清; 浆液"
-srsWords: "serum"
+front: "guideline"
+meaning: "A light line that is used in lettering to help align the letters"
+translation: "n. 指导路线, 方针, 指标 指导路线, 方针, 准则"
+srsWords: "guideline"
 
 ---
-lessonTitle: "Lesson 7: Media, Journalism & Ethics Part 7"
-description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
-icon: "🎙️"
-color: "#FF9800"
+lessonTitle: "Lesson 4: Workplace, Management & Strategy Part 4"
+description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
+icon: "📊"
+color: "#2196F3"
 ---
 [flashcard-review]
-front: "decomposition"
-meaning: "The analysis of a vector field; In a decomposed state"
-translation: "n. 分解, 腐败, 变质 分解; 裂解"
-srsWords: "decomposition"
+front: "gulp"
+meaning: "A large and hurried swallow; A spasmodic reflex of the throat made as if in swallowing"
+translation: "vt. 吞, 大口大口地吸气, 吸收, 抑制；vi. 吞咽；n. 吞咽 字节组"
+srsWords: "gulp"
 
 [flashcard-review]
-front: "decorate"
-meaning: "Make more attractive by adding ornament, colour, etc.; Award a mark of honor, such as a medal, to"
-translation: "v. 装饰"
-srsWords: "decorate"
+front: "gum"
+meaning: "Any of various substances (soluble in water) that exude from certain plants; They are gelatinous when moist but harden on drying"
+translation: "n. 树胶, 橡皮, 橡皮糖, 牙床, 老天；vt. 涂以树胶, 用胶粘, 使有粘性；vi. 分泌树胶, 发粘"
+srsWords: "gum"
 
 [flashcard-review]
-front: "decoration"
-meaning: "Something used to beautify; An award for winning a championship or commemorating some other event"
-translation: "n. 装饰, 装饰品"
-srsWords: "decoration"
+front: "gunshot"
+meaning: "N the act of shooting a gun"
+translation: "n. 枪弹, (枪炮)射击, 炮击, 射程；a. 射击的"
+srsWords: "gunshot"
 
 [flashcard-review]
-front: "decorative"
-meaning: "S serving an esthetic rather than a useful purpose"
-translation: "a. 装饰性的"
-srsWords: "decorative"
+front: "guts"
+meaning: "N fortitude and determination; N the part of the alimentary canal between the stomach and the anus"
+translation: "n. 飞碟游戏（比赛双方每组5人, 相距15码, 互相掷接飞碟）；内脏；狭道；[口语]贪食者（gut的复数）"
+srsWords: "guts"
 
 [flashcard-review]
-front: "dedication"
-meaning: "Complete and wholehearted fidelity; A ceremony in which something (as a building) is dedicated to some goal or purpose"
-translation: "n. 奉献, 献身, 献辞 专用"
-srsWords: "dedication"
+front: "gymnastic"
+meaning: "Of or relating to or used in exercises intended to develop strength and agility"
+translation: "a. 体操的, 体育的"
+srsWords: "gymnastic"
 
 [flashcard-review]
-front: "deduce"
-meaning: "Reason by deduction; Conclude by reasoning"
-translation: "vt. 推论, 演绎出 推断, 推出, 演绎"
-srsWords: "deduce"
+front: "habitant"
+meaning: "N a person who inhabits a particular place"
+translation: "n. 居住者, 居民"
+srsWords: "habitant"
 
 [flashcard-review]
-front: "deduction"
-meaning: "An amount or percentage deducted; Something that is inferred (deduced or entailed or implied)"
-translation: "n. 减除, 扣除, 减除额, 推论 演绎, 推论"
-srsWords: "deduction"
+front: "hail"
+meaning: "Be a native of; Precipitation of ice pellets when there are strong rising air currents"
+translation: "n. 冰雹, 致敬, 欢呼, 招呼；vt. 向...欢呼, 致敬, 招呼, 使象下雹样落下；vi. 招呼, 下雹；interj. 万岁, 欢迎"
+srsWords: "hail"
 
 [flashcard-review]
-front: "deem"
-meaning: "Keep in mind or convey as a conviction or view"
-translation: "v. 认为, 相信"
-srsWords: "deem"
+front: "firewall"
+meaning: "(colloquial) the application of maximum thrust; A fireproof (or fire-resistant) wall designed to prevent the spread of fire through a…"
+translation: "放火墙, 隔离"
+srsWords: "firewall"
 
 [flashcard-review]
-front: "deer"
-meaning: "Distinguished from Bovidae by the male's having solid deciduous antlers"
-translation: "n. 鹿"
-srsWords: "deer"
+front: "handicap"
+meaning: "Advantage given to a competitor to equalize chances of winning; Attempt to forecast the winner (especially in a horse race) and assign odds for or…"
+translation: "n. 障碍, 困难, 不利条件；vt. 加障碍于, 妨碍"
+srsWords: "handicap"
 
 [flashcard-review]
-front: "deforestation"
-meaning: "The state of being clear of trees; The removal of trees"
-translation: "n. 采伐森林, 森林开伐 砍伐森森"
-srsWords: "deforestation"
-
----
-lessonTitle: "Lesson 8: Media, Journalism & Ethics Part 8"
-description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
-icon: "🎙️"
-color: "#FF9800"
----
-[flashcard-review]
-front: "defy"
-meaning: "Resist or confront with resistance; Elude, especially in a baffling way"
-translation: "vt. 藐视, 挑衅, 使落空；n. 挑战"
-srsWords: "defy"
-
-[flashcard-review]
-front: "delegate"
-meaning: "A person appointed or elected to represent others; Transfer power to someone"
-translation: "n. 代表；vt. 委派...为代表"
-srsWords: "delegate"
-
-[flashcard-review]
-front: "deliberately"
-meaning: "R with intention; In an intentional manner"
-translation: "adv. 故意地"
-srsWords: "deliberately"
-
-[flashcard-review]
-front: "delicacy"
-meaning: "Refined taste; Smallness of stature"
-translation: "n. 细软, 精致, 精美的食品, 娇气, 微妙, 棘手, 娇弱, 灵敏, 灵巧"
-srsWords: "delicacy"
-
-[flashcard-review]
-front: "delicately"
-meaning: "R in a delicate manner"
-translation: "adv. 优美地；微妙地；精致地"
-srsWords: "delicately"
-
-[flashcard-review]
-front: "demanding"
-meaning: "Requiring more than usually expected or thought due; Especially great patience and effort and skill"
-translation: "a. 要求高的, 费力的"
-srsWords: "demanding"
-
-[flashcard-review]
-front: "demolish"
-meaning: "Destroy completely; Defeat soundly"
-translation: "vt. 毁坏, 破坏, 粉碎"
-srsWords: "demolish"
-
-[flashcard-review]
-front: "denim"
-meaning: "A coarse durable twill-weave cotton fabric"
-translation: "n. 斜纹粗棉布, 牛仔布, 劳动布, (非正式)工作服, 工装裤"
-srsWords: "denim"
-
-[flashcard-review]
-front: "dense"
-meaning: "Permitting little if any light to pass through because of denseness of matter; Hard to pass through because of dense growth"
-translation: "a. 密集的, 浓厚的"
-srsWords: "dense"
-
-[flashcard-review]
-front: "densely"
-meaning: "In a concentrated manner"
-translation: "adv. 浓密地, 浓厚地"
-srsWords: "densely"
+front: "handicraft"
+meaning: "A work produced by hand labor; A craft that requires skillful hands"
+translation: "n. 手工艺, 手艺 手工业, 手工"
+srsWords: "handicraft"
 
 ---
-lessonTitle: "Lesson 9: Media, Journalism & Ethics Part 9"
-description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
-icon: "🎙️"
-color: "#FF9800"
+lessonTitle: "Lesson 5: Workplace, Management & Strategy Part 5"
+description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
+icon: "📊"
+color: "#2196F3"
 ---
 [flashcard-review]
-front: "cub"
-meaning: "An awkward and inexperienced youth; A male child (a familiar term of address to a boy)"
-translation: "n. 幼兽, 年轻人"
-srsWords: "cub"
+front: "handout"
+meaning: "An announcement distributed to members of the press in order to supplement or replace…; Giving money or food or clothing to a needy person"
+translation: "n. 施舍物, 救济品, 分发的印刷品资料, 广告物品"
+srsWords: "handout"
 
 [flashcard-review]
-front: "dependable"
-meaning: "Worthy of being depended on; Consistent in performance or behavior"
-translation: "a. 可信任的, 可靠的, 可信赖的"
-srsWords: "dependable"
+front: "handrail"
+meaning: "N a railing at the side of a staircase or balcony to prevent people from falling"
+translation: "n. 栏杆, 扶手"
+srsWords: "handrail"
 
 [flashcard-review]
-front: "plum"
-meaning: "Any of several trees producing edible oval fruit having a smooth skin and a single…; Any of numerous varieties of small to medium-sized round or oval fruit having a smooth…"
-translation: "n. 李子"
-srsWords: "plum"
+front: "practitioner"
+meaning: "Someone who practices a learned profession"
+translation: "n. 从业者, 开业者 行医者, 医师"
+srsWords: "practitioner"
 
 [flashcard-review]
-front: "descend"
-meaning: "Move downward and lower, but not necessarily all the way"
-translation: "vi. 下降, 世代相传, 屈尊, 袭击；vt. 下降"
-srsWords: "descend"
+front: "harmless"
+meaning: "Not causing or capable of causing harm"
+translation: "a. 无害处的, 未受损害的, 无辜的, 无恶意的 无害的, 无恶意的, 无损害的"
+srsWords: "harmless"
 
 [flashcard-review]
-front: "descriptive"
-meaning: "Serving to describe or inform or characterized by description; Describing the structure of a language"
-translation: "a. 描述的, 叙述的"
-srsWords: "descriptive"
+front: "harrow"
+meaning: "A cultivator that pulverizes or smooths the soil; Draw a harrow over (land)"
+translation: "n. 哈罗公学, 耙；vt. 耙掘, 伤害, 使苦恼；vi. 被耙松"
+srsWords: "harrow"
 
 [flashcard-review]
-front: "desirable"
-meaning: "Worth having or seeking or achieving; Worthy of being chosen especially as a spouse"
-translation: "a. 令人想望的, 可取的"
-srsWords: "desirable"
+front: "haste"
+meaning: "Overly eager speed (and possible carelessness); The act of moving hurriedly and in a careless manner"
+translation: "n. 匆忙, 急忙"
+srsWords: "haste"
 
 [flashcard-review]
-front: "colorful"
-meaning: "Having striking color; Striking in variety and interest"
-translation: "a. 华美的, 富有色彩的, 有趣的"
-srsWords: "colorful"
+front: "hastily"
+meaning: "R in a hurried or hasty manner"
+translation: "adv. 匆忙地, 急速地, 急躁地"
+srsWords: "hastily"
 
 [flashcard-review]
-front: "desolation"
-meaning: "N the state of being decayed or destroyed; N a bleak and desolate atmosphere"
-translation: "n. 荒芜, 荒废, 荒凉"
-srsWords: "desolation"
+front: "hatching"
+meaning: "N the production of young from an egg; N shading consisting of multiple crossing lines"
+translation: "n. 阴影, 影线 剖面线"
+srsWords: "hatching"
 
 [flashcard-review]
-front: "desperately"
-meaning: "In intense despair"
-translation: "adv. 拼命地；绝望地；极度地"
-srsWords: "desperately"
+front: "haunting"
+meaning: "Continually recurring to the mind; Having a deeply disquieting or disturbing effect"
+translation: "a. 常浮现于脑海中的, 不易忘怀的"
+srsWords: "haunting"
 
 [flashcard-review]
-front: "desperation"
-meaning: "Desperate recklessness"
-translation: "n. 绝望"
-srsWords: "desperation"
-
----
-lessonTitle: "Lesson 10: Media, Journalism & Ethics Part 10"
-description: "Practice 10 key B2 vocabulary flashcards for Media, Journalism & Ethics"
-icon: "🎙️"
-color: "#FF9800"
----
-[flashcard-review]
-front: "despise"
-meaning: "V look down on with disdain"
-translation: "vt. 轻视"
-srsWords: "despise"
-
-[flashcard-review]
-front: "destiny"
-meaning: "An event (or a course of events) that will inevitably happen in the future; The ultimate agency regarded as predetermining the course of events (often personified…"
-translation: "n. 命运, 定数"
-srsWords: "destiny"
-
-[flashcard-review]
-front: "detach"
-meaning: "Cause to become detached or separated; Separate (a small unit) from a larger, especially for a special assignment"
-translation: "vt. 使分离, 分遣 摘下, 分离, 卸下"
-srsWords: "detach"
-
-[flashcard-review]
-front: "detachment"
-meaning: "The act of releasing from an attachment or connection; A small unit of troops of special composition"
-translation: "n. 分离, 分遣, 分遣队 脱离, 分离, 支队"
-srsWords: "detachment"
-
-[flashcard-review]
-front: "fossil"
-meaning: "The remains (or an impression) of a plant or animal that existed in a past geological…; Characteristic of a fossil"
-translation: "n. 化石, 古物；a. 化石的, 陈腐的, 守旧的"
-srsWords: "fossil"
-
-[flashcard-review]
-front: "detect"
-meaning: "Discover or determine the existence, presence, or fact of"
-translation: "vt. 发现, 察觉, 探测 发现, 查明, 探测"
-srsWords: "detect"
-
-[flashcard-review]
-front: "fusion"
-meaning: "An occurrence that involves the production of a union; The merging of adjacent sounds or syllables or words"
-translation: "n. 熔合物, 结合, 熔合 熔融; 熔化; 聚变"
-srsWords: "fusion"
-
-[flashcard-review]
-front: "determiner"
-meaning: "One of a limited class of noun modifiers that determine the referents of noun phrases"
-translation: "n. 限定词 定子, 决定因素"
-srsWords: "determiner"
-
-[flashcard-review]
-front: "dairy"
-meaning: "A farm where dairy products are produced"
-translation: "n. 牛奶公司, 乳品店, 乳牛场"
-srsWords: "dairy"
-
-[flashcard-review]
-front: "devil"
-meaning: "An evil supernatural being; A word used in exclamations of confusion"
-translation: "n. 魔鬼；vt. 折磨, 戏弄"
-srsWords: "devil"
----
-lessonTitle: "Lesson 11: Law, Crime & Justice Part 1"
-description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
-icon: "🏛️"
-color: "#607D8B"
----
-[flashcard-review]
-front: "devote"
-meaning: "Set aside or apart for a specific purpose or use"
-translation: "vt. 投入于, 献身"
-srsWords: "devote"
-
-[flashcard-review]
-front: "devoted"
-meaning: "Zealous in devotion or affection; (followed by `to') dedicated exclusively to a purpose or use"
-translation: "a. 投入的, 深爱的"
-srsWords: "devoted"
-
-[flashcard-review]
-front: "dictator"
-meaning: "A speaker who dictates to a secretary or a recording machine; A ruler who is unconstrained by law"
-translation: "n. 命令者, 独裁者"
-srsWords: "dictator"
-
-[flashcard-review]
-front: "paste"
-meaning: "Any mixture of a soft and malleable consistency; A hard, brilliant lead glass that is used in making artificial jewelry"
-translation: "n. 面团, 面食, 浆糊, 糊状物, 粘贴, 用拳重击；vt. 用浆糊粘, 张贴, 狠狠地打 粘贴"
-srsWords: "paste"
-
-[flashcard-review]
-front: "dignify"
-meaning: "Raise the status of"
-translation: "vt. 增威严, 使高贵, 故作显贵"
-srsWords: "dignify"
-
-[flashcard-review]
-front: "dignity"
-meaning: "The quality of being worthy of esteem or respect; Formality in bearing and appearance"
-translation: "n. 尊严, 高贵 尊严, 高位, 高贵"
-srsWords: "dignity"
-
-[flashcard-review]
-front: "dilemma"
-meaning: "State of uncertainty or perplexity especially as requiring a choice between equally…"
-translation: "n. 困境, (进退两难的)窘境"
-srsWords: "dilemma"
-
-[flashcard-review]
-front: "dim"
-meaning: "Lacking in light; Not bright or harsh"
-translation: "a. 暗淡的, 模糊的；vt. 使暗淡 数据解释模块"
-srsWords: "dim"
-
-[flashcard-review]
-front: "dime"
-meaning: "A United States coin worth one tenth of a dollar"
-translation: "n. 10分硬币(美、加)"
-srsWords: "dime"
-
-[flashcard-review]
-front: "dimension"
-meaning: "The magnitude of something in a particular direction (especially length or width or…; One of three Cartesian coordinates that determine a position in space"
-translation: "n. 尺寸, 次元, 面积, 维数；vt. 标出尺寸"
-srsWords: "dimension"
+front: "hay"
+meaning: "Grass mowed and cured for use as fodder; Convert (plant material) into hay"
+translation: "n. 干草；vt. 制干草, 供给干草；vi. 晒干草"
+srsWords: "hay"
 
 ---
-lessonTitle: "Lesson 12: Law, Crime & Justice Part 2"
-description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
-icon: "🏛️"
-color: "#607D8B"
+lessonTitle: "Lesson 6: Workplace, Management & Strategy Part 6"
+description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
+icon: "📊"
+color: "#2196F3"
 ---
 [flashcard-review]
-front: "dip"
-meaning: "A depression in an otherwise level surface; (physics) the angle that a magnetic needle makes with the plane of the horizon"
-translation: "v. 浸, 降下, 把(手、勺等)伸入, 舀取；n. 浸, 涉猎 双列直插式组件, 分布式输入输出系统, 双排直插封装"
-srsWords: "dip"
+front: "hazardous"
+meaning: "Involving risk or danger"
+translation: "a. 危险的, 冒险的, 碰运气的 危险的, 冒险的, 碰运气的"
+srsWords: "hazardous"
 
 [flashcard-review]
-front: "diphtheria"
-meaning: "Acute contagious infection caused by the bacterium Corynebacterium diphtheriae; Marked by the formation of a false membrane in the throat and other air passages…"
-translation: "n. 白喉 白喉"
-srsWords: "diphtheria"
+front: "headquarters"
+meaning: "(usually plural) the office that serves as the administrative center of an enterprise; The military installation from which a commander performs the functions of command"
+translation: "n. 总部, 司令部, 总部人员 本部, 总部, 总署"
+srsWords: "headquarters"
 
 [flashcard-review]
-front: "diploma"
-meaning: "A document certifying the successful completion of a course of study"
-translation: "n. 文凭, 毕业证书 文凭"
-srsWords: "diploma"
+front: "heap"
+meaning: "Bestow in large quantities; Fill to overflow"
+translation: "n. 堆, 许多, 累积；vt. 堆积, 装满 堆"
+srsWords: "heap"
 
 [flashcard-review]
-front: "diplomat"
-meaning: "An official engaged in international negotiations; A person who deals tactfully with others"
-translation: "n. 外交官, 有外交手腕的人 外交家, 外交官, 有权谋的人"
-srsWords: "diplomat"
+front: "heartbreaking"
+meaning: "S causing or marked by grief or anguish"
+translation: "a. 令人悲伤的, 极其累人的, 令人动情的"
+srsWords: "heartbreaking"
 
 [flashcard-review]
-front: "disappearance"
-meaning: "The act of leaving secretly or without explanation; The event of passing out of sight"
-translation: "n. 看不见, 失踪, 消失"
-srsWords: "disappearance"
+front: "hedge"
+meaning: "A fence formed by a row of closely planted shrubs or bushes; Any technique designed to reduce or eliminate financial risk"
+translation: "n. 树篱, 障碍, 套头交易；vt. 用树篱围, 套期保值, 妨碍, 两面下注以防...的损失；vi. 筑树篱, 躲闪, 两面下注以防损失；a. 树篱的, 偷偷摸摸的"
+srsWords: "hedge"
 
 [flashcard-review]
-front: "disapproval"
-meaning: "A feeling of disliking something or what someone is doing; The expression of disapproval"
-translation: "n. 不赞成"
-srsWords: "disapproval"
+front: "helicopter"
+meaning: "An aircraft without wings that obtains its lift from the rotation of overhead blades"
+translation: "n. 直升机；vt. 由直升机运送；vi. 乘直升机"
+srsWords: "helicopter"
 
 [flashcard-review]
-front: "disapprove"
-meaning: "Consider bad or wrong; Deem wrong or inappropriate"
-translation: "v. 不赞成"
-srsWords: "disapprove"
+front: "hell"
+meaning: "Any place of pain and turmoil; A cause of difficulty and suffering"
+translation: "n. 地狱, 邪恶势力, 苦境, 阴间, 毁坏, 训斥；vi. 狂饮, 飞驰"
+srsWords: "hell"
 
 [flashcard-review]
-front: "discharge"
-meaning: "The sudden giving off of energy; The act of venting"
-translation: "vt. 卸下, 放出, 解雇, 拔染, 履行, 放电；vi. 卸货, 流出；n. 卸货, 流出, 放电"
-srsWords: "discharge"
+front: "helper"
+meaning: "N a person who contributes to the fulfillment of a need or furtherance of an effort or…; N a person who helps people or institutions (especially with financial help)"
+translation: "n. 帮忙者, 有益的东西 助手"
+srsWords: "helper"
 
 [flashcard-review]
-front: "disciple"
-meaning: "Someone who believes and helps to spread the doctrine of another"
-translation: "n. 弟子, 门徒"
-srsWords: "disciple"
+front: "hemp"
+meaning: "A plant fiber"
+translation: "n. 大麻烟卷, 大麻, 麻类植物 大麻"
+srsWords: "hemp"
 
 [flashcard-review]
-front: "discipline"
-meaning: "A branch of knowledge; A system of rules of conduct or method of practice"
-translation: "n. 训练, 纪律；vt. 训练, 惩罚"
-srsWords: "discipline"
-
----
-lessonTitle: "Lesson 13: Law, Crime & Justice Part 3"
-description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
-icon: "🏛️"
-color: "#607D8B"
----
-[flashcard-review]
-front: "disconnect"
-meaning: "Make disconnected, disjoin or unfasten"
-translation: "vt. 使分离, 使不相连, 拆开；vi. 断开 断开"
-srsWords: "disconnect"
-
-[flashcard-review]
-front: "discredit"
-meaning: "Cause to be distrusted or disbelieved; Damage the reputation of"
-translation: "n. 无信用, 丢脸, 不名誉；vt. 不信, 怀疑, 使丢脸"
-srsWords: "discredit"
-
-[flashcard-review]
-front: "discriminate"
-meaning: "Recognize or perceive the difference; Treat differently on the basis of sex or race"
-translation: "v. 区别, 差别待遇"
-srsWords: "discriminate"
-
-[flashcard-review]
-front: "disgrace"
-meaning: "N a state of dishonor; V bring shame or dishonor upon"
-translation: "n. 耻辱, 不名誉；vt. 使受耻辱, 使失体面"
-srsWords: "disgrace"
-
-[flashcard-review]
-front: "disguise"
-meaning: "Make unrecognizable; An outward semblance that misrepresents the true nature of something"
-translation: "n. 假面目, 假装；vt. 假装, 隐瞒"
-srsWords: "disguise"
-
-[flashcard-review]
-front: "dishonesty"
-meaning: "The quality of being dishonest; Lack of honesty"
-translation: "n. 不诚实 不诚实, 诈欺, 不正"
-srsWords: "dishonesty"
-
-[flashcard-review]
-front: "disillusion"
-meaning: "N freeing from false belief or illusions; V free from enchantment"
-translation: "n. 觉醒, 幻灭；vt. 使醒悟, 使幻想破灭"
-srsWords: "disillusion"
-
-[flashcard-review]
-front: "dismiss"
-meaning: "Bar from attention or consideration; Cease to consider"
-translation: "vt. 解散, 开除, 解职；vi. 解散 解散"
-srsWords: "dismiss"
-
-[flashcard-review]
-front: "disorder"
-meaning: "A physical condition in which there is a disturbance of normal functioning; A disturbance of the peace or of public order"
-translation: "n. 杂乱, 混乱；vt. 扰乱, 使失调"
-srsWords: "disorder"
-
-[flashcard-review]
-front: "disorderly"
-meaning: "Undisciplined and unruly; In utter disorder"
-translation: "a. 无秩序的, 乱的, 骚乱的 妨害治安的, 骚乱的, 无法无天的"
-srsWords: "disorderly"
+front: "herb"
+meaning: "A plant lacking a permanent woody stem; Aromatic potherb used in cookery for its savory qualities"
+translation: "n. 药草, 香草 草, 草本, 草药"
+srsWords: "herb"
 
 ---
-lessonTitle: "Lesson 14: Law, Crime & Justice Part 4"
-description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
-icon: "🏛️"
-color: "#607D8B"
+lessonTitle: "Lesson 7: Workplace, Management & Strategy Part 7"
+description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
+icon: "📊"
+color: "#2196F3"
 ---
 [flashcard-review]
-front: "displace"
-meaning: "Cause to move, usually with force or pressure; Terminate the employment of"
-translation: "vt. 移置, 替换, 转移"
-srsWords: "displace"
+front: "arbitration"
+meaning: "The act of deciding as an arbiter; (law) the hearing and determination of a dispute by an impartial referee agreed to by…"
+translation: "n. 仲裁, 公断 仲裁"
+srsWords: "arbitration"
 
 [flashcard-review]
-front: "displeasure"
-meaning: "The feeling of being displeased or annoyed or dissatisfied with someone or something"
-translation: "n. 不愉快, 生气, 不满"
-srsWords: "displeasure"
+front: "hesitation"
+meaning: "Indecision in speech or action; The act of pausing uncertainly"
+translation: "n. 犹豫, 踌躇, 含糊, 口吃, 暂停 暂停"
+srsWords: "hesitation"
 
 [flashcard-review]
-front: "disposal"
-meaning: "The power to use something or someone; The act or means of getting rid of something"
-translation: "n. 丢掉, 处理, 排列, 销毁, 布置 处理, 处置"
-srsWords: "disposal"
+front: "hijack"
+meaning: "Seize control of; Seizure of a vehicle in transit either to rob it or divert it to an alternate destination"
+translation: "vt. 抢劫, 劫持, 敲诈 挡路抢劫, 抢劫, 绑架"
+srsWords: "hijack"
 
 [flashcard-review]
-front: "disposition"
-meaning: "Your usual mood; A natural or acquired habit or characteristic tendency in a person or thing"
-translation: "n. 性情, 处置, 处理, 布置 素因, 性情"
-srsWords: "disposition"
+front: "hilarious"
+meaning: "Marked by or causing boisterous merriment or convulsive laughter"
+translation: "a. 喜不自禁的, 欢闹的, 引人发笑的"
+srsWords: "hilarious"
 
 [flashcard-review]
-front: "dispute"
-meaning: "A disagreement or argument about something important; Coming into conflict with"
-translation: "n. 争论；v. 争论"
-srsWords: "dispute"
+front: "hint"
+meaning: "An indirect suggestion; A slight indication"
+translation: "n. 暗示, 提示；v. 暗示, 示意"
+srsWords: "hint"
 
 [flashcard-review]
-front: "disqualify"
-meaning: "Make unfit or unsuitable; Declare unfit"
-translation: "vt. 使不适合, 取消...资格"
-srsWords: "disqualify"
+front: "wifi"
+meaning: "Uses ethernet protocol; N a local area network that uses high frequency radio signals to transmit and receive…"
+translation: "abbr. 基于IEEE 802.11b标准的无线局域网（Wireless Fidelity）；无线网络模块"
+srsWords: "wifi"
 
 [flashcard-review]
-front: "disregard"
-meaning: "Lack of attention and due care; Willful lack of care and attention"
-translation: "n. 忽视, 漠视；vt. 忽视, 不顾"
-srsWords: "disregard"
+front: "hollow"
+meaning: "Not solid; A cavity or space in something"
+translation: "n. 洞, 窟窿, 山谷；a. 空的, 虚伪的, 空腹的, 凹的；vi. 形成空洞；vt. 挖空"
+srsWords: "hollow"
 
 [flashcard-review]
-front: "disrupt"
-meaning: "Throw into disorder"
-translation: "a. 分裂的, 中断的；vt. 使分裂, 使瓦解"
-srsWords: "disrupt"
+front: "holocaust"
+meaning: "An act of mass destruction and loss of life (especially in war or by fire); The mass murder of Jews under the German Nazi regime from 1941 until 1945"
+translation: "n. 大屠杀, 大火灾, 毁灭, 大规模烧杀"
+srsWords: "holocaust"
 
 [flashcard-review]
-front: "dissatisfaction"
-meaning: "The feeling of being displeased and discontent"
-translation: "n. 不满, 不平"
-srsWords: "dissatisfaction"
+front: "homeward"
+meaning: "Oriented toward home; Toward home"
+translation: "a. 在归途上的, 向家的；adv. 在归途上, 向家地"
+srsWords: "homeward"
 
 [flashcard-review]
-front: "dissatisfied"
-meaning: "V fail to satisfy; S in a state of sulky dissatisfaction"
-translation: "a. 不满的, 显出不满的"
-srsWords: "dissatisfied"
-
----
-lessonTitle: "Lesson 15: Law, Crime & Justice Part 5"
-description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
-icon: "🏛️"
-color: "#607D8B"
----
-[flashcard-review]
-front: "dissident"
-meaning: "Characterized by departure from accepted beliefs or standards"
-translation: "a. 意见不同的, 持不同政见的；n. 意见不同的人, 持不同政见者"
-srsWords: "dissident"
-
-[flashcard-review]
-front: "distinguished"
-meaning: "(used of persons) standing above others in character or attainment or reputation; Used of a person's appearance or behavior"
-translation: "a. 卓著的, 著名的"
-srsWords: "distinguished"
-
-[flashcard-review]
-front: "distortion"
-meaning: "A change for the worse; A change (usually undesired) in the waveform of an acoustic or analog electrical signal"
-translation: "n. 扭曲, 变形, 曲解 畸变; 失真"
-srsWords: "distortion"
-
-[flashcard-review]
-front: "distract"
-meaning: "Draw someone's attention away from something"
-translation: "vt. 转移, 分心, 使发狂"
-srsWords: "distract"
-
-[flashcard-review]
-front: "distraction"
-meaning: "Mental turmoil; An obstacle to attention"
-translation: "n. 娱乐, 分心的事物, 分心 注意力分散, 内脱位, 牙弓过宽"
-srsWords: "distraction"
-
-[flashcard-review]
-front: "distressing"
-meaning: "Causing distress or worry or anxiety"
-translation: "a. 使痛苦的, 使烦恼的"
-srsWords: "distressing"
-
-[flashcard-review]
-front: "distributor"
-meaning: "Someone who markets merchandise; A company that markets merchandise"
-translation: "n. 分发者, 分布者, 散布者, 分配者, 销售者, 分配器, 配电盘, 自动拆版机 分配器"
-srsWords: "distributor"
-
-[flashcard-review]
-front: "diversion"
-meaning: "An activity that diverts or amuses or stimulates; A turning aside (of your course or attention or concern)"
-translation: "n. 转移 转向"
-srsWords: "diversion"
-
-[flashcard-review]
-front: "divert"
-meaning: "Send on a course or in a direction different from the planned or intended one; Withdraw (money) and move into a different location, often secretly and with dishonest…"
-translation: "vt. 转移, 使欢娱；vi. 转移"
-srsWords: "divert"
-
-[flashcard-review]
-front: "indulge"
-meaning: "Give free rein to; Enjoy to excess"
-translation: "vt. 纵情于, 使高兴, 放任, 迁就；vi. 沉溺"
-srsWords: "indulge"
+front: "hone"
+meaning: "A whetstone made of fine gritstone; Used for sharpening razors"
+translation: "n. 磨刀石, 抱怨, 想念；vt. 用磨刀石磨, 磨练"
+srsWords: "hone"
 
 ---
-lessonTitle: "Lesson 16: Law, Crime & Justice Part 6"
-description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
-icon: "🏛️"
-color: "#607D8B"
+lessonTitle: "Lesson 8: Workplace, Management & Strategy Part 8"
+description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
+icon: "📊"
+color: "#2196F3"
 ---
 [flashcard-review]
-front: "consultancy"
-meaning: "The practice of giving expert advice within a particular field"
-translation: "n. 商量, 协商, 磋商, 会诊, 与...商量, 咨询, 请教, 找(医生)看病, 查阅, 考虑 咨询业务, 咨询服务"
-srsWords: "consultancy"
+front: "hood"
+meaning: "An aggressive and violent young criminal; A protective covering that is part of a plant"
+translation: "n. 头巾, 兜帽, 覆盖, 强盗；vt. 罩上, 覆盖"
+srsWords: "hood"
 
 [flashcard-review]
-front: "scroll"
-meaning: "A document that can be rolled up (as for storage); Move through text or graphics in order to display parts that do not fit on the screen"
-translation: "n. 卷轴, 画卷, 名册, 条幅, 滚动；v. (使)成卷形 滚动"
-srsWords: "scroll"
+front: "hook"
+meaning: "A shape resembling a hook; A catch for locking a door"
+translation: "n. 钩, 钩状, 镰刀, 陷阱；vt. 挂...于钩上, 钩住, 引上钩, 偷窃；vi. 弯成钩状, 钩紧 钩"
+srsWords: "hook"
 
 [flashcard-review]
-front: "deliberate"
-meaning: "Carefully thought out in advance"
-translation: "a. 深思熟虑的, 故意的, 从容的；v. 仔细考虑"
-srsWords: "deliberate"
+front: "hospice"
+meaning: "A lodging for travelers (especially one kept by a monastic order); A program of medical and emotional care for the terminally ill"
+translation: "n. 旅客住宿处, 收容所"
+srsWords: "hospice"
 
 [flashcard-review]
-front: "dock"
-meaning: "An enclosure in a court of law where the defendant sits during the trial; Any of certain coarse weedy plants with long taproots, sometimes used as table greens…"
-translation: "n. 码头, 船坞, 被告席, 尾巴的骨肉部分；vt. 使靠码头, 使(船)进港, 剪短；vi. 进港"
-srsWords: "dock"
+front: "hospitable"
+meaning: "Favorable to life and growth; Disposed to treat guests and strangers with cordiality and generosity"
+translation: "a. 好客的, 招待周到的"
+srsWords: "hospitable"
 
 [flashcard-review]
-front: "marvel"
-meaning: "Express astonishment or surprise about something"
-translation: "n. 奇异事物, 罕见例子；vt. 惊异于；vi. 惊异"
-srsWords: "marvel"
+front: "hospitality"
+meaning: "N kindness in welcoming guests or strangers"
+translation: "n. 款待, 亲切, 殷勤"
+srsWords: "hospitality"
 
 [flashcard-review]
-front: "dominate"
-meaning: "Be in control; Have dominance or the power to defeat over"
-translation: "v. 支配, 占优势"
-srsWords: "dominate"
+front: "hourly"
+meaning: "Occurring every hour or payable by the hour; Every hour"
+translation: "a. 每小时的, 以小时计的, 频繁的；adv. 每小时地, 频繁地, 不绝地"
+srsWords: "hourly"
 
 [flashcard-review]
-front: "formidable"
-meaning: "Extremely impressive in strength or excellence; Inspiring fear"
-translation: "a. 巨大的, 优秀的, 可怕的, 艰难的"
-srsWords: "formidable"
+front: "housekeeper"
+meaning: "A servant who is employed to perform domestic task in a household"
+translation: "n. 主妇, 女管家"
+srsWords: "housekeeper"
 
 [flashcard-review]
-front: "donation"
-meaning: "N a voluntary gift (as of money or service or ideas) made to some worthwhile cause; N act of giving in common with others for a common purpose especially to a charity"
-translation: "n. 捐赠物, 捐款, 捐赠 赠品, 捐款, 捐赠"
-srsWords: "donation"
+front: "housemaster"
+meaning: "Teacher in charge of a school boardinghouse"
+translation: "n. 男舍监"
+srsWords: "housemaster"
 
 [flashcard-review]
-front: "donkey"
-meaning: "The symbol of the Democratic Party; Introduced in cartoons by Thomas Nast in 1874"
-translation: "n. 驴子, 笨蛋, 顽固者, 辅助发动机, 辅助泵"
-srsWords: "donkey"
+front: "housewife"
+meaning: "A wife who manages a household while her husband earns the family income"
+translation: "n. 主妇, 家庭妇女"
+srsWords: "housewife"
 
 [flashcard-review]
-front: "doom"
-meaning: "An unpleasant or disastrous destiny; Make certain of the failure or destruction of"
-translation: "n. 厄运, 不幸, 法律, 宣告, 判决, 死亡；vt. 命中注定, 判决"
-srsWords: "doom"
-
----
-lessonTitle: "Lesson 17: Law, Crime & Justice Part 7"
-description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
-icon: "🏛️"
-color: "#607D8B"
----
-[flashcard-review]
-front: "doorkeeper"
-meaning: "The lowest of the minor Holy Orders in the unreformed Western Church but now…; Someone who guards an entrance"
-translation: "n. 看门人, 门卫"
-srsWords: "doorkeeper"
-
-[flashcard-review]
-front: "doorway"
-meaning: "The entrance (the space in a wall) through which you enter or leave a room or building; The space that a door can close"
-translation: "n. 门口, 途径"
-srsWords: "doorway"
-
-[flashcard-review]
-front: "dorm"
-meaning: "N a college or university building containing living quarters for students"
-translation: "n. 宿舍"
-srsWords: "dorm"
-
-[flashcard-review]
-front: "dormitory"
-meaning: "A college or university building containing living quarters for students; A large sleeping room containing several beds"
-translation: "n. 宿舍"
-srsWords: "dormitory"
-
-[flashcard-review]
-front: "moo"
-meaning: "The sound made by a cow or bull; Make a low noise, characteristic of bovines"
-translation: "vi. 发哞声；n. 牛叫声"
-srsWords: "moo"
-
-[flashcard-review]
-front: "doubly"
-meaning: "To double the degree; In a twofold manner"
-translation: "adv. 加倍地, 双重地 双地"
-srsWords: "doubly"
-
-[flashcard-review]
-front: "doubtful"
-meaning: "Open to doubt or suspicion; Fraught with uncertainty or doubt"
-translation: "a. 可疑的, 疑心的, 不明确的 怀疑的, 有疑问的, 未确的"
-srsWords: "doubtful"
-
-[flashcard-review]
-front: "dove"
-meaning: "Any of numerous small pigeons; Someone who prefers negotiations to armed conflict in the conduct of foreign relations"
-translation: "n. 鸽子；dive的过去式"
-srsWords: "dove"
-
-[flashcard-review]
-front: "downfall"
-meaning: "Failure that results in a loss of position or reputation"
-translation: "n. 衰败, 大雨"
-srsWords: "downfall"
-
-[flashcard-review]
-front: "downsize"
-meaning: "Dismiss from work; Make in a smaller size"
-translation: "vt. 以较小尺寸设计；缩小尺寸；裁减人数"
-srsWords: "downsize"
+front: "hugely"
+meaning: "R extremely"
+translation: "adv. 巨大地, 非常地"
+srsWords: "hugely"
 
 ---
-lessonTitle: "Lesson 18: Law, Crime & Justice Part 8"
-description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
-icon: "🏛️"
-color: "#607D8B"
+lessonTitle: "Lesson 9: Workplace, Management & Strategy Part 9"
+description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
+icon: "📊"
+color: "#2196F3"
 ---
 [flashcard-review]
-front: "dowry"
-meaning: "Money or property brought by a woman to her husband at marriage"
-translation: "n. 嫁妆 陪嫁物, 嫁妆"
-srsWords: "dowry"
+front: "humane"
+meaning: "Marked or motivated by concern with the alleviation of suffering; Showing evidence of moral and intellectual advancement"
+translation: "a. 有人情的, 人道的, 仁慈的"
+srsWords: "humane"
 
 [flashcard-review]
-front: "drain"
-meaning: "Emptying something accomplished by allowing liquid to run out of it; Tube inserted into a body cavity (as during surgery) to remove unwanted material"
-translation: "n. 排水沟, 消耗, 排水；vt. 排出, 喝光, 耗尽；vi. 排水, 流干"
-srsWords: "drain"
+front: "humanist"
+meaning: "A classical scholar or student of the liberal arts; An advocate of the principles of humanism"
+translation: "n. 人道主义者, 人文学者"
+srsWords: "humanist"
 
 [flashcard-review]
-front: "dramatically"
-meaning: "In a very impressive manner; In a dramatic manner"
-translation: "adv. 戏剧地, 引人注目地, 突然地"
-srsWords: "dramatically"
+front: "humbug"
+meaning: "Communication (written or spoken) intended to deceive; Trick or deceive"
+translation: "vt. 欺骗, 哄骗；vi. 行骗；n. 骗子, 欺骗, 欺诈"
+srsWords: "humbug"
 
 [flashcard-review]
-front: "drapery"
-meaning: "Cloth gracefully draped and arranged in loose folds"
-translation: "n. 帏帐, 布料"
-srsWords: "drapery"
+front: "humiliate"
+meaning: "Cause to feel shame; Hurt the pride of"
+translation: "vt. 使丢脸, 使蒙羞, 屈辱"
+srsWords: "humiliate"
 
 [flashcard-review]
-front: "dread"
-meaning: "N fearful expectation or anticipation; V be afraid or scared of"
-translation: "n. 恐惧, 可怕的人(或事)；a. 可怕的, 可怖的；v. 恐惧, 害怕"
-srsWords: "dread"
+front: "humiliating"
+meaning: "V cause to feel shame; Hurt the pride of"
+translation: "a. 丢脸的, 耻辱的, 羞愧的"
+srsWords: "humiliating"
 
 [flashcard-review]
-front: "dreadful"
-meaning: "Very unpleasant"
-translation: "a. 可怕的"
-srsWords: "dreadful"
+front: "humiliation"
+meaning: "State of disgrace or loss of self-respect; An instance in which you are caused to lose your prestige or self-respect"
+translation: "n. 耻辱, 丢脸, 谦卑"
+srsWords: "humiliation"
 
 [flashcard-review]
-front: "dreamy"
-meaning: "Dreamy in mood or nature; Lacking spirit or liveliness"
-translation: "a. 空幻的, 梦想的"
-srsWords: "dreamy"
+front: "vocational"
+meaning: "Especially providing or undergoing training in special skills"
+translation: "a. 职业的 职业上的, 天职的"
+srsWords: "vocational"
 
 [flashcard-review]
-front: "drinkable"
-meaning: "Suitable for drinking"
-translation: "a. 可以喝的, 饮用的；n. 饮料"
-srsWords: "drinkable"
+front: "hush"
+meaning: "Become quiet or still; Cause to be quiet or not talk"
+translation: "n. 肃静, 安静, 沉默；vt. (使)肃静, (使)安静, (使)缄默；interj. 嘘, 别作声"
+srsWords: "hush"
 
 [flashcard-review]
-front: "droop"
-meaning: "Hang loosely or laxly"
-translation: "vi. 下垂, 消沉；vt. 使下垂；n. 低垂, 消沉"
-srsWords: "droop"
+front: "friendliness"
+meaning: "A feeling of liking for another person; A friendly disposition"
+translation: "n. 友谊, 亲切, 亲密"
+srsWords: "friendliness"
 
 [flashcard-review]
-front: "dropout"
-meaning: "Someone who quits school before graduation; Someone who withdraws from a social group or environment"
-translation: "n. 退学学生, 中途退学；[电] 离去"
-srsWords: "dropout"
-
----
-lessonTitle: "Lesson 19: Law, Crime & Justice Part 9"
-description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
-icon: "🏛️"
-color: "#607D8B"
----
-[flashcard-review]
-front: "drought"
-meaning: "A shortage of rainfall; A prolonged shortage"
-translation: "n. 干旱, 缺乏"
-srsWords: "drought"
-
-[flashcard-review]
-front: "duel"
-meaning: "Any struggle between two skillful opponents (individuals or groups); A prearranged fight with deadly weapons by two people (accompanied by seconds) in…"
-translation: "n. 决斗, 斗争；vi. 决斗"
-srsWords: "duel"
-
-[flashcard-review]
-front: "duplicate"
-meaning: "A copy that corresponds to an original exactly; Identically copied from an original"
-translation: "n. 副本, 复本, 复制品；a. 复制的, 二重的；vt. 复制, 使加倍 复制"
-srsWords: "duplicate"
-
-[flashcard-review]
-front: "duplication"
-meaning: "The act of copying or making a duplicate (or duplicates) of something"
-translation: "n. 副本, 复制 重迭, 双折, 复制"
-srsWords: "duplication"
-
-[flashcard-review]
-front: "dye"
-meaning: "A usually soluble substance for staining or coloring e.g. fabrics or hair; Color with dye"
-translation: "n. 颜料, 染料；vt. 染, 染色；vi. 被着色"
-srsWords: "dye"
-
-[flashcard-review]
-front: "pluck"
-meaning: "The act of pulling and releasing a taut cord; Pull or pull out sharply"
-translation: "n. 勇气, 猛拉, 动物内脏；vt. 摘, 猛拉, 拔, 拉, 扯, 采；vi. 拉, 拽"
-srsWords: "pluck"
-
-[flashcard-review]
-front: "eagerly"
-meaning: "With eagerness; In an eager manner"
-translation: "adv. 渴望, 热衷于, 热切"
-srsWords: "eagerly"
-
-[flashcard-review]
-front: "surge"
-meaning: "A sudden or abrupt strong increase; See one's performance improve"
-translation: "n. 巨涌, 汹涌, 澎湃；vi. 汹涌, 澎湃, 颠簸, 猛冲, 突然放松；vt. 使汹涌奔腾, 急放 电压尖峰"
-srsWords: "surge"
-
-[flashcard-review]
-front: "terrain"
-meaning: "A piece of ground having specific characteristics or military potential"
-translation: "n. 地带, 地区, 地形, 领域, 范围"
-srsWords: "terrain"
-
-[flashcard-review]
-front: "neural"
-meaning: "Of or relating to neurons"
-translation: "a. 神经的, 神经系统的, 神经中枢的, 背的 神经的"
-srsWords: "neural"
+front: "hygiene"
+meaning: "A condition promoting sanitary practices; The science concerned with the prevention of illness and maintenance of health"
+translation: "n. 卫生保健, 卫生学, 保健法 卫生, 卫生学"
+srsWords: "hygiene"
 
 ---
-lessonTitle: "Lesson 20: Law, Crime & Justice Part 10"
-description: "Practice 10 key B2 vocabulary flashcards for Law, Crime & Justice"
-icon: "🏛️"
-color: "#607D8B"
+lessonTitle: "Lesson 10: Workplace, Management & Strategy Part 10"
+description: "Practice 10 key B2 vocabulary flashcards for Workplace, Management & Strategy"
+icon: "📊"
+color: "#2196F3"
 ---
 [flashcard-review]
-front: "eastward"
-meaning: "Toward the east"
-translation: "n. 朝东方向；a. 向东方的；adv. 向东"
-srsWords: "eastward"
+front: "hyperbole"
+meaning: "Extravagant exaggeration"
+translation: "n. 夸张法"
+srsWords: "hyperbole"
 
 [flashcard-review]
-front: "ecologically"
-meaning: "With respect to ecology; Economically, it is a disaster\""
-translation: "adv. 从生态学的观点看"
-srsWords: "ecologically"
+front: "hyphen"
+meaning: "A punctuation mark (-) used between parts of a compound word or between the syllables…"
+translation: "n. 连字符；vt. 用连字符连接"
+srsWords: "hyphen"
 
 [flashcard-review]
-front: "ecologist"
-meaning: "A biologist who studies the relation between organisms and their environment"
-translation: "n. 生态学者"
-srsWords: "ecologist"
+front: "iceman"
+meaning: "Someone who cuts and delivers ice"
+translation: "n. 零售冰的人, 制冰的人"
+srsWords: "iceman"
 
 [flashcard-review]
-front: "economical"
-meaning: "Avoiding waste"
-translation: "a. 节俭的, 经济的, 合算的 经济的, 节约的"
-srsWords: "economical"
+front: "acoustic"
+meaning: "A remedy for hearing loss or deafness"
+translation: "a. 听觉的, 声学的, 音响的 听的; 声学的"
+srsWords: "acoustic"
 
 [flashcard-review]
-front: "economist"
-meaning: "An expert in the science of economics"
-translation: "n. 经济学者, 经济家 经济学家"
-srsWords: "economist"
+front: "icy"
+meaning: "Covered with or containing or consisting of ice; Shiny and slick as with a thin coating of ice"
+translation: "a. 冰的, 冰冷的, 冷淡的, 滑溜的"
+srsWords: "icy"
 
 [flashcard-review]
-front: "dominant"
-meaning: "Exercising influence or control; (of genes) producing the same phenotype whether its allele is identical or dissimilar"
-translation: "a. 占优势的, 支配的 优性的, 显性的"
-srsWords: "dominant"
+front: "ideally"
+meaning: "In an ideal manner"
+translation: "adv. 完美地, 理想地"
+srsWords: "ideally"
 
 [flashcard-review]
-front: "doggie"
-meaning: "N informal terms for dogs"
-translation: "n. 小狗, 狗儿(对狗的爱称)"
-srsWords: "doggie"
+front: "identical"
+meaning: "Exactly alike; Being the exact same one"
+translation: "a. 同一的, 恒等的, 完全相同的 同一的, 同等的"
+srsWords: "identical"
 
 [flashcard-review]
-front: "educated"
-meaning: "Possessing an education (especially having more than average knowledge); Characterized by full comprehension of the problem involved"
-translation: "a. 受过教育的, 有教养的"
-srsWords: "educated"
+front: "complimentary"
+meaning: "Conveying or resembling a compliment; Costing nothing"
+translation: "a. 问候的, 称赞的, 夸奖的"
+srsWords: "complimentary"
 
 [flashcard-review]
-front: "educator"
-meaning: "Someone who educates young people"
-translation: "n. 教育家"
-srsWords: "educator"
+front: "likelihood"
+meaning: "The probability of a specified outcome"
+translation: "n. 可能, 可能性"
+srsWords: "likelihood"
 
 [flashcard-review]
-front: "hypothesis"
-meaning: "A proposal intended to explain certain facts or observations; A tentative insight into the natural world"
-translation: "n. 假设 假设"
-srsWords: "hypothesis"
+front: "ideology"
+meaning: "Imaginary or visionary theorization"
+translation: "n. 思想体系, 意识形态, 观念学, 空论 观念学, 观念形态"
+srsWords: "ideology"
+---
+lessonTitle: "Lesson 11: Academic & Analytical Discourse Part 1"
+description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
+icon: "📑"
+color: "#673AB7"
+---
+[flashcard-review]
+front: "idiot"
+meaning: "A person of subnormal intelligence"
+translation: "n. 白痴, 极蠢之人 白痴者, 痴子"
+srsWords: "idiot"
+
+[flashcard-review]
+front: "ignorance"
+meaning: "The lack of knowledge or education"
+translation: "n. 无知, 愚味 无知, 不知情, 愚昧"
+srsWords: "ignorance"
+
+[flashcard-review]
+front: "ignorant"
+meaning: "Uneducated in general; Uneducated in the fundamentals of a given art or branch of learning"
+translation: "a. 无知识的, 不知道的, 由无知产生的 无知的, 愚昧的, 不知情的"
+srsWords: "ignorant"
+
+[flashcard-review]
+front: "illustrate"
+meaning: "Depict with an illustration; Supply with illustrations"
+translation: "vt. 举例说明, 作图解, 阐明；vi. 举例说明"
+srsWords: "illustrate"
+
+[flashcard-review]
+front: "illustration"
+meaning: "Artwork that helps make something clear or attractive; A visual representation (a picture or diagram) that is used make some subject more…"
+translation: "n. 例证, 插图 插图"
+srsWords: "illustration"
+
+[flashcard-review]
+front: "imagery"
+meaning: "N the ability to form mental images of things or events"
+translation: "n. 肖像, 比喻, 雕刻 成像"
+srsWords: "imagery"
+
+[flashcard-review]
+front: "imitation"
+meaning: "The doctrine that representations of nature or human behavior should be accurate…; Something copied or derived from an original"
+translation: "n. 模仿, 效法, 冒充, 赝品 模仿, 仿制, 仿制品"
+srsWords: "imitation"
+
+[flashcard-review]
+front: "immerse"
+meaning: "Thrust or throw into; Enclose or envelop completely, as if by swallowing"
+translation: "vt. 沉浸, 使陷入 浸[入]"
+srsWords: "immerse"
+
+[flashcard-review]
+front: "immigrant"
+meaning: "A person who comes to a country where they were not born in order to settle there"
+translation: "n. 移民；a. 移入的, 移民的"
+srsWords: "immigrant"
+
+[flashcard-review]
+front: "immoral"
+meaning: "Deliberately violating accepted principles of right and wrong"
+translation: "a. 不道德的, 邪恶的, 放荡的 不道德的, 道德败坏的, 邪恶的"
+srsWords: "immoral"
+
+---
+lessonTitle: "Lesson 12: Academic & Analytical Discourse Part 2"
+description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
+icon: "📑"
+color: "#673AB7"
+---
+[flashcard-review]
+front: "immortal"
+meaning: "Not subject to death; A person (such as an author) of enduring fame"
+translation: "n. 不朽人物, 神仙；a. 永远的, 不死的, 长久的"
+srsWords: "immortal"
+
+[flashcard-review]
+front: "immortality"
+meaning: "The quality or state of being immortal; Perpetual life after death"
+translation: "n. 不朽, 不灭的声望"
+srsWords: "immortality"
+
+[flashcard-review]
+front: "impartial"
+meaning: "Showing lack of favoritism"
+translation: "a. 公平的, 不偏不倚的 公正无私的, 不偏袒的, 公平的"
+srsWords: "impartial"
+
+[flashcard-review]
+front: "impatiently"
+meaning: "With impatience; In an impatient manner"
+translation: "adv. 不耐烦, 忍受不了, 急躁, [表]急欲, 急切"
+srsWords: "impatiently"
+
+[flashcard-review]
+front: "impermanent"
+meaning: "Not permanent; Existing or enduring for a limited time only"
+translation: "a. 暂时的, 非永久的"
+srsWords: "impermanent"
+
+[flashcard-review]
+front: "analyze"
+meaning: "Consider in detail and subject to an analysis in order to discover essential features…; Make a mathematical, chemical, or grammatical analysis of"
+translation: "vt. 分析, 细察, 分解 分析"
+srsWords: "analyze"
+
+[flashcard-review]
+front: "implication"
+meaning: "An accusation that brings into intimate and usually incriminating connection; A logical relation between propositions p and q of the form `if p then q'"
+translation: "n. 牵连, 含义, 暗示 推断, 含蓄之意, 暗示"
+srsWords: "implication"
+
+[flashcard-review]
+front: "imply"
+meaning: "Express or state indirectly; Suggest as a logically necessary consequence"
+translation: "vt. 暗示, 意味 隐含"
+srsWords: "imply"
+
+[flashcard-review]
+front: "impolite"
+meaning: "Not polite"
+translation: "a. 无礼的, 粗鲁的"
+srsWords: "impolite"
+
+[flashcard-review]
+front: "impolitely"
+meaning: "R in an impolite manner"
+translation: "adv. 无礼地, 没规矩地"
+srsWords: "impolitely"
+
+---
+lessonTitle: "Lesson 13: Academic & Analytical Discourse Part 3"
+description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
+icon: "📑"
+color: "#673AB7"
+---
+[flashcard-review]
+front: "synopsis"
+meaning: "N a sketchy summary of the main points of an argument or theory"
+translation: "n. 概要, 摘要, 大意 一览表; 提要"
+srsWords: "synopsis"
+
+[flashcard-review]
+front: "impose"
+meaning: "V compel to behave in a certain way; V impose something unpleasant"
+translation: "vt. 征(税), 把...强加于, 以...欺骗；vi. 利用, 欺骗, 施加影响"
+srsWords: "impose"
+
+[flashcard-review]
+front: "impossibility"
+meaning: "Incapability of existing or occurring; An alternative that is not available"
+translation: "n. 不可能之事, 不可能 不可能性, 不可能的事"
+srsWords: "impossibility"
+
+[flashcard-review]
+front: "impractical"
+meaning: "Not practical; Not workable or not given to practical matters"
+translation: "a. 不切实际的, 不能实行的, 不现实的, 不合情理的"
+srsWords: "impractical"
+
+[flashcard-review]
+front: "impressed"
+meaning: "Deeply or markedly affected or influenced"
+translation: "a. 外加的；印象深刻的；了不起的；受感动的"
+srsWords: "impressed"
+
+[flashcard-review]
+front: "impressionism"
+meaning: "A school of late 19th century French painters who pictured appearances by strokes of…"
+translation: "n. 印象主义, 印象派"
+srsWords: "impressionism"
+
+[flashcard-review]
+front: "impressionist"
+meaning: "A painter who follows the theories of Impressionism; Relating to or characteristic of Impressionism"
+translation: "n. 印象主义者, 印象派作家"
+srsWords: "impressionist"
+
+[flashcard-review]
+front: "imprison"
+meaning: "Lock up or confine, in or as in a jail; Confine as if in a prison"
+translation: "vt. 使下狱, 关闭, 拘禁, 限制 关押, 监禁, 限制"
+srsWords: "imprison"
+
+[flashcard-review]
+front: "imprisonment"
+meaning: "Putting someone in prison or in jail as lawful punishment; The act of confining someone in a prison (or as if in a prison)"
+translation: "n. 监禁, 下狱, 坐牢 监禁, 徒刑, 拘禁"
+srsWords: "imprisonment"
+
+[flashcard-review]
+front: "improbable"
+meaning: "Not likely to be true or to occur or to have occurred; Having a probability too low to inspire belief"
+translation: "a. 不大可能的, 不象发生的, 荒谬可笑的 未必会的, 不大可能发生的, 未必确实的"
+srsWords: "improbable"
+
+---
+lessonTitle: "Lesson 14: Academic & Analytical Discourse Part 4"
+description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
+icon: "📑"
+color: "#673AB7"
+---
+[flashcard-review]
+front: "improperly"
+meaning: "In an improper way"
+translation: "不适当地"
+srsWords: "improperly"
+
+[flashcard-review]
+front: "crude"
+meaning: "Not carefully or expertly made; Conspicuously and tastelessly indecent"
+translation: "a. 天然的, 未成熟的, 粗糙的, 粗鲁的；n. 天然的物质"
+srsWords: "crude"
+
+[flashcard-review]
+front: "impulse"
+meaning: "The act of applying force suddenly"
+translation: "n. 冲动, 驱使, 刺激, 推动, 冲力, 建议, 脉冲；vt. 推动"
+srsWords: "impulse"
+
+[flashcard-review]
+front: "impulsive"
+meaning: "Proceeding from natural feeling or impulse without external stimulus; Without forethought"
+translation: "a. 冲动的, 受感情驱使的, 任性的 冲动的"
+srsWords: "impulsive"
+
+[flashcard-review]
+front: "inaccurate"
+meaning: "Not exact"
+translation: "a. 错误的, 不准确的 不精确"
+srsWords: "inaccurate"
+
+[flashcard-review]
+front: "inadequate"
+meaning: "Lacking the requisite qualities or resources to meet a task; Not sufficient to meet a need"
+translation: "a. 不充分的, 不适当的 不充分的, 不适当的"
+srsWords: "inadequate"
+
+[flashcard-review]
+front: "inanimate"
+meaning: "Belonging to the class of nouns denoting nonliving things; Not endowed with life"
+translation: "a. 失去知觉的, 没生命的, 无精打采的 无生命的, 无生机的"
+srsWords: "inanimate"
+
+[flashcard-review]
+front: "inborn"
+meaning: "S present at birth but not necessarily hereditary; Acquired during fetal development"
+translation: "a. 天生的；先天的"
+srsWords: "inborn"
+
+[flashcard-review]
+front: "incense"
+meaning: "A substance that produces a fragrant odor when burned; The pleasing scent produced when incense is burned"
+translation: "n. 香, 香气, 奉承；vi. 焚香；vt. 用香焚, 使发怒"
+srsWords: "incense"
+
+[flashcard-review]
+front: "incentive"
+meaning: "A positive motivational influence"
+translation: "n. 动机；a. 激励的"
+srsWords: "incentive"
+
+---
+lessonTitle: "Lesson 15: Academic & Analytical Discourse Part 5"
+description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
+icon: "📑"
+color: "#673AB7"
+---
+[flashcard-review]
+front: "incur"
+meaning: "Make oneself subject to; Bring upon oneself"
+translation: "vt. 招致, 蒙受, 遭遇 招致, 蒙受, 担负"
+srsWords: "incur"
+
+[flashcard-review]
+front: "incurable"
+meaning: "Incapable of being cured; Unalterable in disposition or habits"
+translation: "a. 不能医治的, 不能矫正的, 无救的；n. 不治的病人, 无救的人"
+srsWords: "incurable"
+
+[flashcard-review]
+front: "indebted"
+meaning: "Owing gratitude or recognition to another for help or favors etc; Under a legal obligation to someone"
+translation: "a. 负债的, 受惠的 负债的, 法律上有义务偿还的"
+srsWords: "indebted"
+
+[flashcard-review]
+front: "indent"
+meaning: "Set in from the margin; Cut or tear along an irregular line so that the parts can later be matched for…"
+translation: "n. 契约, 订货单, 凹痕；vi. 切割成锯齿状；vt. 缩排, 定货, 印凹痕 缩进"
+srsWords: "indent"
+
+[flashcard-review]
+front: "independently"
+meaning: "On your own; Apart from others"
+translation: "adv. 独立地, 自立地"
+srsWords: "independently"
+
+[flashcard-review]
+front: "indescribable"
+meaning: "S defying expression or description"
+translation: "a. 不能用语言表达的, 不可名状的, 莫名其妙的"
+srsWords: "indescribable"
+
+[flashcard-review]
+front: "synthetic"
+meaning: "Involving or of the nature of synthesis (combining separate elements to form a…; Systematic combining of root and modifying elements into single words"
+translation: "n. 合成物质；a. 综合(性)的, 人造的, 合成的"
+srsWords: "synthetic"
+
+[flashcard-review]
+front: "indifferent"
+meaning: "Showing no care or concern in attitude or action; Fairly poor to not very good"
+translation: "a. 漠不关心的, 无重要性的, 中立的 中性的, 无作用的, 无亲和力的, 淡漠的"
+srsWords: "indifferent"
+
+[flashcard-review]
+front: "indignity"
+meaning: "An affront to one's dignity or self-esteem"
+translation: "n. 侮辱 侮辱的言行, 无礼, 有伤尊严"
+srsWords: "indignity"
+
+[flashcard-review]
+front: "indulgent"
+meaning: "Characterized by or given to yielding to the wishes of someone; Tolerant or lenient"
+translation: "a. 纵容的, 任性的, 宽容的"
+srsWords: "indulgent"
+
+---
+lessonTitle: "Lesson 16: Academic & Analytical Discourse Part 6"
+description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
+icon: "📑"
+color: "#673AB7"
+---
+[flashcard-review]
+front: "ineffective"
+meaning: "Not producing an intended effect; Lacking in power or forcefulness"
+translation: "a. 无效的 失效的, 无效的, 效率低的"
+srsWords: "ineffective"
+
+[flashcard-review]
+front: "inexperienced"
+meaning: "Lacking practical experience or training"
+translation: "a. 无经验的, 不熟练的"
+srsWords: "inexperienced"
+
+[flashcard-review]
+front: "infant"
+meaning: "N a very young child (birth to 1 year) who has not yet begun to walk or talk"
+translation: "n. 婴儿, 儿童, 初学者；a. 婴儿的, 幼稚的"
+srsWords: "infant"
+
+[flashcard-review]
+front: "infect"
+meaning: "Communicate a disease to; Contaminate with a disease or microorganism"
+translation: "vt. 传染, 感染 传染, 感染"
+srsWords: "infect"
+
+[flashcard-review]
+front: "infected"
+meaning: "V communicate a disease to; V contaminate with a disease or microorganism"
+translation: "a. 被感染的 被感染的"
+srsWords: "infected"
+
+[flashcard-review]
+front: "infectious"
+meaning: "Caused by infection or capable of causing infection; Easily spread"
+translation: "a. 有传染性的, 易传染的 传染性的"
+srsWords: "infectious"
+
+[flashcard-review]
+front: "infer"
+meaning: "V reason by deduction; Establish by deduction"
+translation: "vt. 推论出, 推断；vi. 作推论"
+srsWords: "infer"
+
+[flashcard-review]
+front: "inference"
+meaning: "The reasoning involved in drawing a conclusion or making a logical judgment on the…"
+translation: "n. 推论 推论, 推理, 推断"
+srsWords: "inference"
+
+[flashcard-review]
+front: "inflammation"
+meaning: "A response of body tissues to injury or irritation; Arousal to violent emotion"
+translation: "n. 怒火, 发火, 燃烧, 发炎 炎[症]"
+srsWords: "inflammation"
+
+[flashcard-review]
+front: "inflammatory"
+meaning: "Characterized or caused by inflammation"
+translation: "a. 激动的, 煽动的, 炎症性的 炎的, 炎性的"
+srsWords: "inflammatory"
+
+---
+lessonTitle: "Lesson 17: Academic & Analytical Discourse Part 7"
+description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
+icon: "📑"
+color: "#673AB7"
+---
+[flashcard-review]
+front: "inflate"
+meaning: "Exaggerate or make bigger; Fill with gas or air"
+translation: "vt. 使膨胀, 使得意, 使通货膨胀, 使充气；vi. 充气, 膨胀"
+srsWords: "inflate"
+
+[flashcard-review]
+front: "inflation"
+meaning: "A general and progressive increase in prices; The act of filling something with air"
+translation: "n. 胀大, 夸张, 通货膨胀 充气吹胀; 膨胀"
+srsWords: "inflation"
+
+[flashcard-review]
+front: "influential"
+meaning: "Having or exercising influence or power"
+translation: "a. 有影响的, 有势力的"
+srsWords: "influential"
+
+[flashcard-review]
+front: "influenza"
+meaning: "An acute febrile highly contagious viral disease"
+translation: "n. 流行性感冒 流行性感冒, 流感"
+srsWords: "influenza"
+
+[flashcard-review]
+front: "informal"
+meaning: "Not formal; Not officially recognized or controlled"
+translation: "a. 非正式的, 不拘礼的, 通俗的 非正式的, 日常使用的"
+srsWords: "informal"
+
+[flashcard-review]
+front: "infringe"
+meaning: "V go against, as of rules and laws; V advance beyond the usual limit"
+translation: "v. 破坏, 侵犯, 违反"
+srsWords: "infringe"
+
+[flashcard-review]
+front: "infringement"
+meaning: "N an act that disregards an agreement or a right; N a crime less serious than a felony"
+translation: "n. 违犯, 侵害, 违反, 侵犯 违反, 侵犯, 侵权, 侵犯"
+srsWords: "infringement"
+
+[flashcard-review]
+front: "inhabit"
+meaning: "Be present in"
+translation: "vt. 居住于, 占据, 栖息"
+srsWords: "inhabit"
+
+[flashcard-review]
+front: "inherit"
+meaning: "Obtain from someone after their death; Receive from a predecessor"
+translation: "vt. 继承, 遗传；vi. 接受遗产"
+srsWords: "inherit"
+
+[flashcard-review]
+front: "sap"
+meaning: "A watery solution of sugars, salts, and minerals that circulates through the vascular…; Excavate the earth beneath"
+translation: "n. 树液, 体液, 活力, 坑道, 消弱, 警棍；vt. 使排出体液, 使伤元气, 使衰竭, 挖坑道逼近, 逐渐侵蚀；vi. 挖坑道, 消弱 共享汇编程序, 结构分析程序, 符号汇编程序, 服务器广告协议"
+srsWords: "sap"
+
+---
+lessonTitle: "Lesson 18: Academic & Analytical Discourse Part 8"
+description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
+icon: "📑"
+color: "#673AB7"
+---
+[flashcard-review]
+front: "injection"
+meaning: "The forceful insertion of a substance under pressure; Any solution that is injected (as into the skin)"
+translation: "n. 注射, 注射剂 注入; 注射"
+srsWords: "injection"
+
+[flashcard-review]
+front: "injured"
+meaning: "Harmed"
+translation: "a. 受伤的, 受损害的, 被触怒的 受害的, 被害的"
+srsWords: "injured"
+
+[flashcard-review]
+front: "innate"
+meaning: "A not established by conditioning or learning; S being talented through inherited qualities"
+translation: "a. 先天的, 天生的 先天的, 生来的"
+srsWords: "innate"
+
+[flashcard-review]
+front: "innocently"
+meaning: "In a not unlawful manner; In a naively innocent manner"
+translation: "adv. 纯洁地；无罪地"
+srsWords: "innocently"
+
+[flashcard-review]
+front: "methodology"
+meaning: "The branch of philosophy that analyzes the principles and procedures of inquiry in a…; The system of methods followed in a particular discipline"
+translation: "n. 方法学, 方法论 操作法; 工艺"
+srsWords: "methodology"
+
+[flashcard-review]
+front: "inseparable"
+meaning: "Not capable of being separated"
+translation: "a. 不能分的 不可分的"
+srsWords: "inseparable"
+
+[flashcard-review]
+front: "inspect"
+meaning: "Look over carefully"
+translation: "vt. 检查, 检阅, 检验；vi. 检查"
+srsWords: "inspect"
+
+[flashcard-review]
+front: "inspector"
+meaning: "A high ranking police officer"
+translation: "n. 检查员, 巡视员 检查员"
+srsWords: "inspector"
+
+[flashcard-review]
+front: "inspirational"
+meaning: "Imparting a divine influence on the mind and soul"
+translation: "a. 凭灵感的, 鼓舞人心的, 神感的"
+srsWords: "inspirational"
+
+[flashcard-review]
+front: "instantly"
+meaning: "R without delay or hesitation; With no time intervening"
+translation: "adv. 立即地, 即刻地"
+srsWords: "instantly"
+
+---
+lessonTitle: "Lesson 19: Academic & Analytical Discourse Part 9"
+description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
+icon: "📑"
+color: "#673AB7"
+---
+[flashcard-review]
+front: "instinct"
+meaning: "Inborn pattern of behavior often responsive to specific stimuli; (followed by `with')deeply filled or permeated"
+translation: "n. 本能, 直觉；a. 充满着的"
+srsWords: "instinct"
+
+[flashcard-review]
+front: "empirical"
+meaning: "Derived from experiment and observation rather than theory"
+translation: "a. 完全跟据经验的, 经验主义的 经验主义的"
+srsWords: "empirical"
+
+[flashcard-review]
+front: "instruct"
+meaning: "Give instructions or directions for some task; Make aware of"
+translation: "vt. 教, 教育, 命令, 通知 托办, 指导, 指示"
+srsWords: "instruct"
+
+[flashcard-review]
+front: "insufficient"
+meaning: "Of a quantity not able to fulfill a need or requirement"
+translation: "a. 不够的, 不能胜任的, 不充足的 不足的, 不充分的, 不能胜任的"
+srsWords: "insufficient"
+
+[flashcard-review]
+front: "insult"
+meaning: "A deliberately offensive act or something producing the effect of deliberate disrespect"
+translation: "n. 侮辱, 无礼, 损害；vt. 损害, 侮辱, 攻击"
+srsWords: "insult"
+
+[flashcard-review]
+front: "integrate"
+meaning: "Make into a whole or make part of a whole; Become one"
+translation: "vt. 综合, 使完整, 使成整体；vi. 成一体；a. 完整的, 完全的"
+srsWords: "integrate"
+
+[flashcard-review]
+front: "clan"
+meaning: "N group of people related by blood or marriage"
+translation: "n. 氏族, 宗族, 集团 支"
+srsWords: "clan"
+
+[flashcard-review]
+front: "intent"
+meaning: "The intended meaning of a communication"
+translation: "n. 意图, 含义, 故意；a. 专心的, 决心的, 热心的"
+srsWords: "intent"
+
+[flashcard-review]
+front: "grounds"
+meaning: "A tract of land cleared for some special purposes (recreation or burial etc.); Dregs consisting of solid particles (especially of coffee) that form a residue"
+translation: "n. 场地, 庭院, 理由, 渣滓, 沉淀物"
+srsWords: "grounds"
+
+[flashcard-review]
+front: "interfere"
+meaning: "Come between so as to be hindrance or obstacle"
+translation: "vi. 妨碍, 冲突, 干涉, 抵触 干扰, 干涉, 阻碍, 碰腿(马)"
+srsWords: "interfere"
+
+---
+lessonTitle: "Lesson 20: Academic & Analytical Discourse Part 10"
+description: "Practice 10 key B2 vocabulary flashcards for Academic & Analytical Discourse"
+icon: "📑"
+color: "#673AB7"
+---
+[flashcard-review]
+front: "gig"
+meaning: "Long and light rowing boat; A cluster of hooks (without barbs) that is drawn through a school of fish to hook…"
+translation: "n. 旋转物, 轻便双轮马车, 赛艇, 鱼叉, 记过, 爵士乐演奏会；vi. 乘轻便双轮马车, 乘快艇, (用鱼叉)叉鱼；vt. (用鱼叉)叉, 刺激, 记过"
+srsWords: "gig"
+
+[flashcard-review]
+front: "interpersonal"
+meaning: "Occurring among or involving several people"
+translation: "a. 人与人之间的, 人际(关系)的 人与人之间的, 需要与他人接触的"
+srsWords: "interpersonal"
+
+[flashcard-review]
+front: "interpret"
+meaning: "Make sense of; Give an interpretation or rendition of"
+translation: "vt. 解释, 演出, 翻译, 理解；vi. 翻译, 解释"
+srsWords: "interpret"
+
+[flashcard-review]
+front: "ally"
+meaning: "Become an ally or associate, as by a treaty or marriage; A friendly nation"
+translation: "n. 同盟者, 同盟国, 助手；vt. 使联盟, 使联合, 使有关系；vi. 结盟"
+srsWords: "ally"
+
+[flashcard-review]
+front: "interpreter"
+meaning: "Someone who mediates between speakers of different languages; Someone who uses art to represent something"
+translation: "n. 直译程序, 解释者, 口译者, 注释器 注释器"
+srsWords: "interpreter"
+
+[flashcard-review]
+front: "interruption"
+meaning: "Some abrupt occurrence that interrupts an ongoing activity"
+translation: "n. 打扰, 中断, 障碍物 间断, 阻断, 中止"
+srsWords: "interruption"
+
+[flashcard-review]
+front: "intersection"
+meaning: "A point where lines intersect; A junction where one street or road crosses another"
+translation: "n. 交集, 十字路口, 交叉点 逻辑乘; 与"
+srsWords: "intersection"
+
+[flashcard-review]
+front: "intimate"
+meaning: "Marked by close acquaintance, association, or familiarity; Involved in a sexual relationship"
+translation: "a. 亲密的, 私人的, 秘密的；vt. 暗示, 通知, 告诉；n. 至交"
+srsWords: "intimate"
+
+[flashcard-review]
+front: "intransitive"
+meaning: "Designating a verb that does not require or cannot take a direct object"
+translation: "a. 不及物的；n. 不及物动词"
+srsWords: "intransitive"
+
+[flashcard-review]
+front: "intravenous"
+meaning: "Within or by means of a vein"
+translation: "a. 静脉内的 静脉内的"
+srsWords: "intravenous"
 

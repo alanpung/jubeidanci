@@ -1,8 +1,8 @@
 ---
-unitTitle: "Unit 3: School, Education, Work & Professions"
-description: "School & Education - 200 A1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
-icon: "📚"
-color: "#E91E63"
+unitTitle: "Unit 5: Shopping, Clothes, Money, Hobbies, Health & Nature"
+description: "Shopping, Clothes & Money - 200 A1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+icon: "🛍️"
+color: "#FF5722"
 targetLanguage: "en"
 sourceLanguage: "en"
 level: "A1"
@@ -11,1321 +11,1321 @@ questionType: "flashcard-review"
 ---
 
 ---
-lessonTitle: "Lesson 1: School & Education Part 1"
-description: "Practice 10 key vocabulary flashcards for School & Education"
-icon: "📚"
-color: "#E91E63"
+lessonTitle: "Lesson 1: Shopping, Clothes & Money Part 1"
+description: "Practice 10 key vocabulary flashcards for Shopping, Clothes & Money"
+icon: "🛍️"
+color: "#FF5722"
 ---
 [flashcard-review]
-front: "train"
-meaning: "rail transport; teach"
-translation: "n. 火车, 列车, 行列, 长队, 一连串的后果, 顺序；vt. 训练, 教育, 对准；vi. 受训练, 锻炼"
-srsWords: "train"
+front: "glad"
+meaning: "Showing or causing joy and pleasure; Eagerly disposed to act or to be of service"
+translation: "a. 高兴的, 喜欢的, 情愿的"
+srsWords: "glad"
 
 [flashcard-review]
-front: "mother"
-meaning: "female parent"
-translation: "n. 母亲, 修女院长；vt. 产生, 照看, 收养"
-srsWords: "mother"
+front: "machine"
+meaning: "An efficient person; An intricate organization that accomplishes its goals efficiently"
+translation: "n. 机器, 机械装置, 机构, 自动售货机, 机械般工作的人；vt. 以机器制造"
+srsWords: "machine"
 
 [flashcard-review]
-front: "mountain"
-meaning: "very high hill"
-translation: "n. 山, 山脉, 大堆"
-srsWords: "mountain"
+front: "olympics"
+meaning: "N the modern revival of the ancient games held once every 4 years in a selected country"
+translation: "n. 奥林匹克运动会"
+srsWords: "olympics"
 
 [flashcard-review]
-front: "purple"
-meaning: "A purple color or pigment; Of imperial status"
-translation: "n. 紫色, 帝位；a. 紫色的, 帝王的, 华而不实的；v. (使)成紫色"
-srsWords: "purple"
+front: "on"
+meaning: "on top of; about a topic"
+translation: "prep. 在...之上；adv. ...上去；a. 正起作用的 打开"
+srsWords: "on"
 
 [flashcard-review]
-front: "mouse"
-meaning: "Person who is quiet or timid; Any of numerous small rodents typically resembling diminutive rats having pointed…"
-translation: "n. 老鼠, 胆小羞怯的人, 鼠标；vi. 捕鼠, 窥探；vt. 探出 鼠标"
-srsWords: "mouse"
+front: "or"
+meaning: "used to link alternatives"
+translation: "conj. 或, 或者 或"
+srsWords: "or"
 
 [flashcard-review]
-front: "mouth"
-meaning: "The opening through which food is taken in and vocalizations emerge; The externally visible part of the oral cavity on the face and the system of organs…"
-translation: "n. 嘴, 口, 口腔, 口状物；vi. 装腔作势说话, 做鬼脸；vt. 说出, 做作地说"
-srsWords: "mouth"
+front: "our"
+meaning: "belonging to us"
+translation: "pron. 我们的"
+srsWords: "our"
 
 [flashcard-review]
-front: "movie"
-meaning: "film"
-translation: "n. 电影"
-srsWords: "movie"
+front: "ours"
+meaning: "Pl.  of I; Possessive pron. See Note under Our."
+translation: "pron. 我们的"
+srsWords: "ours"
 
 [flashcard-review]
-front: "mr"
-meaning: "title for a man"
-translation: "先生 存储器回收程序, 多重请求"
-srsWords: "mr"
+front: "over"
+meaning: "above; finished; more than"
+translation: "adv. 结束, 越过, 从头到尾；prep. 在...之上, 遍于...之上, 越过；a. 上面的；vt. 越过"
+srsWords: "over"
 
 [flashcard-review]
-front: "mama"
-meaning: "A name under which Ninkhursag was worshipped"
-translation: "n. 妈妈"
-srsWords: "mama"
+front: "hall"
+meaning: "A large room for gatherings or entertainment; English writer whose novel about a lesbian relationship was banned in Britain for many…"
+translation: "n. 门厅, 走廊, 会堂"
+srsWords: "hall"
 
 [flashcard-review]
-front: "order"
-meaning: "(often plural) a command given by a superior (e.g., a military or law enforcement…; A degree in a continuum of size or quantity"
-translation: "n. 次序, 规则, 命令；vi. 命令, 定货；vt. 整理, 命令, 定购；n. 顺序, 阶数 顺序, 阶数"
-srsWords: "order"
-
----
-lessonTitle: "Lesson 2: School & Education Part 2"
-description: "Practice 10 key vocabulary flashcards for School & Education"
-icon: "📚"
-color: "#E91E63"
----
-[flashcard-review]
-front: "mum"
-meaning: "Secrecy; Failing to speak or communicate etc when expected to"
-translation: "n. 菊花, 沉默；a. 沉默的；vi. 演哑剧；interj. 别说话"
-srsWords: "mum"
-
-[flashcard-review]
-front: "shorts"
-meaning: "N trousers that end at or above the knee; N underpants worn by men"
-translation: "n. 短裤, (美)男人的短衬裤 空头户, 空头, 短期债券"
-srsWords: "shorts"
-
-[flashcard-review]
-front: "musician"
-meaning: "Someone who plays a musical instrument (as a profession); Artist who composes or conducts music as a profession"
-translation: "n. 音乐家, 乐师, 作曲家"
-srsWords: "musician"
-
-[flashcard-review]
-front: "book"
-meaning: "pages bound together; reserve"
-translation: "n. 书, 书籍, 帐簿, 名册, 工作簿；v. 登记, 预订 工作簿"
-srsWords: "book"
-
-[flashcard-review]
-front: "song"
-meaning: "piece of music with words"
-translation: "n. 歌, 曲, 鸣声, 歌唱, 歌曲, 诗歌"
-srsWords: "song"
-
-[flashcard-review]
-front: "red"
-meaning: "color of blood"
-translation: "a. 红的, 红色的, 红肿的, 流血的；n. 红色, 红颜料, 赤字 简化, 减少"
-srsWords: "red"
-
-[flashcard-review]
-front: "study"
-meaning: "learn from books etc."
-translation: "n. 学习, 研究, 学科, 论文, 求学, 书房, 试作；vt. 学习, 读书, 研究, 考虑, 计划；vi. 学习, 思索"
-srsWords: "study"
-
-[flashcard-review]
-front: "word"
-meaning: "unit of language"
-translation: "n. 话, 消息, 词, 诺言, 命令；vt. 用言辞表达 字"
-srsWords: "word"
-
-[flashcard-review]
-front: "drive"
-meaning: "control a vehicle"
-translation: "n. 驾车, 快车道, 推进力, 驱动, 动力, 击球, 驱动器；vt. 开车, 驱使, 推动, 驾驶；vi. 开车, 猛击, 飞跑 驱动器"
-srsWords: "drive"
-
-[flashcard-review]
-front: "never"
-meaning: "not at any time"
-translation: "adv. 从不, 决不, 不曾 永不, 决不, 从来没有"
-srsWords: "never"
+front: "p.m./p.m./pm/pm"
+meaning: "In the afternoon or evening (post meridiem)"
+translation: "abbr. 下午（post meridiem）"
+srsWords: "p.m./p.m./pm/pm"
 
 ---
-lessonTitle: "Lesson 3: School & Education Part 3"
-description: "Practice 10 key vocabulary flashcards for School & Education"
-icon: "📚"
-color: "#E91E63"
+lessonTitle: "Lesson 2: Shopping, Clothes & Money Part 2"
+description: "Practice 10 key vocabulary flashcards for Shopping, Clothes & Money"
+icon: "🛍️"
+color: "#FF5722"
 ---
 [flashcard-review]
-front: "papa"
-meaning: "N an informal term for a father; Probably derived from baby talk"
-translation: "n. 爸爸"
-srsWords: "papa"
+front: "pants"
+meaning: "N underpants worn by women; N the noise made by a short puff of steam (as from an engine)"
+translation: "n. 裤子, 长裤, 短衬裤, 女式运动短裤"
+srsWords: "pants"
 
 [flashcard-review]
-front: "dream"
-meaning: "images in sleep; hope"
-translation: "n. 梦, 空想, 愿望；v. 做梦, 想象, 梦想"
-srsWords: "dream"
+front: "practice/practise"
+meaning: "A customary way of operation or behavior; Translating an idea into action"
+translation: "n. 实践, 练习, 实行, 惯例, 习惯, 开业；v. 实践, 实行, 练习, 实习, 业务"
+srsWords: "practice/practise"
 
 [flashcard-review]
-front: "newspaper"
-meaning: "A daily or weekly publication on folded sheets; A business firm that publishes newspapers"
-translation: "n. 报纸"
-srsWords: "newspaper"
+front: "'re"
+meaning: "Short form of are"
+translation: "v. are 的缩写（是，常用于 you're, we're, they're）"
+srsWords: "'re"
 
 [flashcard-review]
-front: "throw"
-meaning: "The act of throwing (propelling something with a rapid movement of the arm and wrist); A single chance or instance"
-translation: "vt. 投, 掷, 抛, 发射, 摔下, 匆匆穿上(或脱下), 抛弃, 摆脱；vi. 丢, 掷, 抛；n. 投掷, 掷骰子, 冒险"
-srsWords: "throw"
+front: "'s"
+meaning: "Short form of is or has, or possessive marker"
+translation: "v. is / has 的缩写，或表示名词所有格（…的）"
+srsWords: "'s"
 
 [flashcard-review]
-front: "action"
-meaning: "Something done (usually as opposed to something said); The state of being active"
-translation: "n. 行动, 活动, 动作, 作用, 战斗, 行为, 诉讼；vt. 对...起诉 方式"
-srsWords: "action"
+front: "engineer"
+meaning: "Design as an engineer; A person who uses scientific knowledge to solve practical problems"
+translation: "n. 工程师, 工兵；vt. 设计, 监造, 精明地处理, 策划"
+srsWords: "engineer"
 
 [flashcard-review]
-front: "night"
-meaning: "time when it is dark"
-translation: "n. 夜, 夜晚, 晚上, 黑暗, 夜晚的工作 夜, 黑夜, 黑暗"
-srsWords: "night"
+front: "surf"
+meaning: "Switch channels, on television; Waves breaking on the shore"
+translation: "n. 海浪, 拍岸浪；vi. 作冲浪运动"
+srsWords: "surf"
 
 [flashcard-review]
-front: "nine"
-meaning: "the number 9"
-translation: "num. 九, 九个"
-srsWords: "nine"
+front: "mobile"
+meaning: "A river in southwestern Alabama; A port in southwestern Alabama on Mobile Bay"
+translation: "a. 移动的, 易变的, 机动的；n. 活动物体"
+srsWords: "mobile"
 
 [flashcard-review]
-front: "middle"
-meaning: "An intermediate part or section; The middle area of the human torso (usually in front)"
-translation: "n. 中央, 中间, 腰部；a. 中央的, 中庸的, 中间的"
-srsWords: "middle"
+front: "ride"
+meaning: "travel on a bike/horse/vehicle"
+translation: "n. 骑马, 乘坐, 乘车, 搭便车；vt. 骑, 乘坐, 压迫, 控制；vi. 骑马, 乘车, 漂游"
+srsWords: "ride"
 
 [flashcard-review]
-front: "fair"
-meaning: "Gathering of producers to promote business; A competitive exhibition of farm products"
-translation: "n. 展览会, 市集, 美好的事物；a. 公平的, 按规则进行的, 不好不坏的, 晴朗的, 美丽的；adv. 公平地, 正面地, 有教养地, 清楚地；vi. 转晴"
-srsWords: "fair"
+front: "speech"
+meaning: "(language) communication by word of mouth; Something spoken"
+translation: "n. 演讲, 说话, 谈话, 言语, 引语, 民族语言 言语, 语言"
+srsWords: "speech"
 
 [flashcard-review]
-front: "gold"
-meaning: "Coins made of gold; A soft yellow malleable ductile (trivalent and univalent) metallic element"
-translation: "n. 黄金, 钱财, 金块, 金色, 宝贵；a. 金的, 似金的, 金色的, 金制的"
-srsWords: "gold"
-
----
-lessonTitle: "Lesson 4: School & Education Part 4"
-description: "Practice 10 key vocabulary flashcards for School & Education"
-icon: "📚"
-color: "#E91E63"
----
-[flashcard-review]
-front: "noise"
-meaning: "Sound of any kind (especially unintelligible or dissonant sound); The auditory experience of sound that lacks musical quality"
-translation: "n. 噪音, 杂音, 响声, 喧闹；vt. 谣传；vi. 喧闹 噪声"
-srsWords: "noise"
-
-[flashcard-review]
-front: "self"
-meaning: "Your consciousness of your own identity; A person considered as a unique individual"
-translation: "n. 自己, 自我, 本性, 本质, 私心, 本人；vt. 使近亲繁殖, 使自花授精；vi. 自花授精；a. 同一的"
-srsWords: "self"
-
-[flashcard-review]
-front: "nose"
-meaning: "The organ of smell and entrance to the respiratory tract; A front that resembles a human nose (especially the front of an aircraft)"
-translation: "n. 鼻子, 突出部分, 嗅觉；vt. 嗅到, 探出, 用鼻子触；vi. 闻, 嗅, 探听, 告密"
-srsWords: "nose"
-
-[flashcard-review]
-front: "park"
-meaning: "public green space"
-translation: "n. 公园, 停车处；vt. 停车, 置于；vi. 停车"
-srsWords: "park"
-
-[flashcard-review]
-front: "notebook"
-meaning: "A book with blank pages for recording notes or memoranda; A small compact portable computer"
-translation: "n. 笔记本, 手册, 期票簿"
-srsWords: "notebook"
-
-[flashcard-review]
-front: "student"
-meaning: "person who studies"
-translation: "n. 学生, 研究者, 学者"
-srsWords: "student"
-
-[flashcard-review]
-front: "november"
-meaning: "eleventh month"
-translation: "n. 十一月"
-srsWords: "november"
-
-[flashcard-review]
-front: "cut"
-meaning: "divide with a knife etc."
-translation: "n. 切口, 割伤, 降低, 切, 割, 砍, 削, 伤口, 削减, 缩短, 删节, 通路；a. 经切割的, 缩减的；vt. 切, 割, 减少, 刺痛, 开辟, 雕刻, 删节, 缩短, 停止, 排斥, 切断, 关, 显出；vi. 切, 割, 砍, 刺痛, 相交, 抄近路, 剪辑 剪切"
-srsWords: "cut"
-
-[flashcard-review]
-front: "number"
-meaning: "a numeral; amount"
-translation: "n. 数, 数字, 数目, 号码；vt. 数, 计算, 共计；vi. 计算, 报数 数字"
-srsWords: "number"
-
-[flashcard-review]
-front: "field"
-meaning: "A piece of land cleared of trees and usually enclosed; Somewhere (away from a studio or office or library or laboratory) where practical work…"
-translation: "n. 领域, 田地, 场地, 战场, 场, 域；vt. 使...晒在场上, 使上场；a. 田间的, 野生的, 野外的, 田赛的 域, 字段"
-srsWords: "field"
+front: "she"
+meaning: "female person (subject)"
+translation: "pron. 她"
+srsWords: "she"
 
 ---
-lessonTitle: "Lesson 5: School & Education Part 5"
-description: "Practice 10 key vocabulary flashcards for School & Education"
-icon: "📚"
-color: "#E91E63"
+lessonTitle: "Lesson 3: Shopping, Clothes & Money Part 3"
+description: "Practice 10 key vocabulary flashcards for Shopping, Clothes & Money"
+icon: "🛍️"
+color: "#FF5722"
 ---
 [flashcard-review]
-front: "moment"
-meaning: "a very short time"
-translation: "n. 片刻, 瞬间, 重要, 阶段, 力矩 片刻, 瞬间, 时机, 因素, 矩"
-srsWords: "moment"
+front: "wonderful"
+meaning: "S extraordinarily good or great"
+translation: "a. 令人惊奇的, 奇妙的, 极好的"
+srsWords: "wonderful"
 
 [flashcard-review]
-front: "rich"
-meaning: "having much money"
-translation: "a. 富裕的, 富饶的, 浓厚的, 贵重的"
-srsWords: "rich"
+front: "shopping"
+meaning: "Searching for or buying goods or services; The commodities purchased from stores"
+translation: "n. 买东西, 购物 购物, 买东西"
+srsWords: "shopping"
 
 [flashcard-review]
-front: "dress"
-meaning: "Put on clothes; Provide with clothes or put clothes on"
-translation: "n. 服装, 覆盖物；vi. 穿着；vt. 给...穿衣, 整理"
-srsWords: "dress"
+front: "should"
+meaning: "ought to; advice"
+translation: "aux. 应该, 将要"
+srsWords: "should"
 
 [flashcard-review]
-front: "lieutenant"
-meaning: "A commissioned military officer; An officer in a police force"
-translation: "n. 中尉, 助理人员, 副官"
-srsWords: "lieutenant"
+front: "bottom"
+meaning: "The lower side of anything; The lowest part of anything"
+translation: "n. 底部；a. 底部的；vt. 给...装底, 查明真相；vi. 到达底部, 建立基础"
+srsWords: "bottom"
 
 [flashcard-review]
-front: "town"
-meaning: "smaller than a city"
-translation: "n. 城镇, 市, 镇 城镇, 城市, 闹市"
-srsWords: "town"
+front: "famous"
+meaning: "known by many people"
+translation: "a. 出名的, 极好的"
+srsWords: "famous"
 
 [flashcard-review]
-front: "summer"
-meaning: "hottest season"
-translation: "n. 夏季, 全盛时期；vi. 避暑, 过夏天 加法器"
-srsWords: "summer"
+front: "partner"
+meaning: "A person who is a member of a partnership; Provide with a partner"
+translation: "n. 合伙人, 股东, 伙伴, 伴侣；vt. 与...合伙, 组成一对；vi. 做伙伴, 当助手"
+srsWords: "partner"
 
 [flashcard-review]
-front: "old"
-meaning: "having lived a long time; not new"
-translation: "n. 以前, 往昔；a. 老的, 旧的, 古老的, 年长的, 老练的"
-srsWords: "old"
+front: "six"
+meaning: "the number 6"
+translation: "num. 六, 六个"
+srsWords: "six"
 
 [flashcard-review]
-front: "wife"
-meaning: "A married woman; A man's partner in marriage"
-translation: "n. 妻子, 太太, 夫人 妻子, 已婚妇女"
-srsWords: "wife"
+front: "sixty"
+meaning: "The cardinal number that is the product of ten and six; Being ten more than fifty"
+translation: "num. 六十, 六十个"
+srsWords: "sixty"
 
 [flashcard-review]
-front: "realize"
-meaning: "Make real or concrete; Convert into cash"
-translation: "vt. 了解, 实现, 使显得逼真, 变卖；vi. 变卖"
-srsWords: "realize"
+front: "smith"
+meaning: "Rhodesian statesman who declared independence of Zimbabwe from Great Britain (born in…; United States sculptor (1906-1965)"
+translation: "n. 铁匠, 金属品工匠 锻造工, 上手"
+srsWords: "smith"
 
 [flashcard-review]
-front: "cry"
-meaning: "Often in protest or opposition; A loud utterance"
-translation: "n. 叫声, 哭声, 大叫；vi. 哭, 叫, 喊；vt. 叫喊, 大声说, 哭出"
-srsWords: "cry"
-
----
-lessonTitle: "Lesson 6: School & Education Part 6"
-description: "Practice 10 key vocabulary flashcards for School & Education"
-icon: "📚"
-color: "#E91E63"
----
-[flashcard-review]
-front: "opera"
-meaning: "A drama set to music; A commercial browser"
-translation: "n. 歌剧"
-srsWords: "opera"
-
-[flashcard-review]
-front: "green"
-meaning: "color of grass"
-translation: "n. 绿色, 绿色颜料；a. 绿色的, 未成熟的, 新鲜的, 青春的, 无经验的, 脸色发青的"
-srsWords: "green"
-
-[flashcard-review]
-front: "orange"
-meaning: "color; fruit"
-translation: "n. 柑橘, 桔子, 橘色；a. 橘色的"
-srsWords: "orange"
-
-[flashcard-review]
-front: "kill"
-meaning: "Cause to die; Thwart the passage of"
-translation: "n. 杀, 杀戮, 小河；vt. 杀, 破坏, 消灭, 使终止, 抵消, 否决；vi. 杀死 删除"
-srsWords: "kill"
-
-[flashcard-review]
-front: "miss"
-meaning: "Fail to perceive or to catch with the senses or the mind; Feel or suffer from the lack of"
-translation: "n. 失误, 避免, 失败, 小姐；vt. 未得到, 未达到, 未听到, 未觉察, 逃脱, 遗漏, 错过, 思念；vi. 失败, 击不中"
-srsWords: "miss"
-
-[flashcard-review]
-front: "site"
-meaning: "The piece of land on which something is located (or is to be located); Physical position in relation to the surroundings"
-translation: "n. 位置, 场所, 地点；vt. 给...择址"
-srsWords: "site"
-
-[flashcard-review]
-front: "plane"
-meaning: "aircraft; flat surface"
-translation: "n. 平面, 扁平物, 机翼, 飞机, 水准, 地位；a. 平的, 平面的；vt. 将...刨平, 刨平, 掠过水面；vi. 翱翔, 乘飞机旅行, 刨掉"
-srsWords: "plane"
-
-[flashcard-review]
-front: "page"
-meaning: "side of a sheet of paper"
-translation: "n. 页, 记录, 事件, 专栏, 男侍；vt. 标明...的页数, 翻...的书页, 分页排版, 呼叫, 侍候；vi. 翻书页, 侍侯 页; 页面"
-srsWords: "page"
-
-[flashcard-review]
-front: "palace"
-meaning: "A large and stately mansion; The governing group of a kingdom"
-translation: "n. 宫, 宫殿, 华丽大厦"
-srsWords: "palace"
-
-[flashcard-review]
-front: "strong"
-meaning: "having power"
-translation: "a. 强壮的, 坚固的, 坚强的, 强烈的, 有力的, 优良的；adv. 强劲地, 有力地, 猛烈地"
-srsWords: "strong"
+front: "owner"
+meaning: "(law) someone who owns (is legal possessor of) a business; A person who owns something"
+translation: "n. 拥有者, 物主, 所有人 所有者, 物主, 业主"
+srsWords: "owner"
 
 ---
-lessonTitle: "Lesson 7: School & Education Part 7"
-description: "Practice 10 key vocabulary flashcards for School & Education"
-icon: "📚"
-color: "#E91E63"
+lessonTitle: "Lesson 4: Shopping, Clothes & Money Part 4"
+description: "Practice 10 key vocabulary flashcards for Shopping, Clothes & Money"
+icon: "🛍️"
+color: "#FF5722"
 ---
 [flashcard-review]
-front: "paper"
-meaning: "material for writing"
-translation: "n. 纸, 文件, 文章, 报纸, 证券, 证件；vt. 用纸糊, 贴壁纸于, 用纸包装；vi. 贴壁纸；a. 纸做的, 纸上的"
-srsWords: "paper"
+front: "smart"
+meaning: "Showing mental alertness and calculation and resourcefulness; Painfully severe"
+translation: "a. 聪明的, 漂亮的, 刺痛的, 剧烈的, 敏捷的, 巧妙的, 伶俐的, 潇洒的；n. 刺痛, 痛苦；vi. 刺痛"
+srsWords: "smart"
 
 [flashcard-review]
-front: "bear"
-meaning: "Have; Move while holding up or supporting"
-translation: "n. 熊；vt. 忍受, 支承, 产生, 怀有, 通过卖空使跌价；vi. 忍受, 结果实, 压挤, 行进, 转向"
-srsWords: "bear"
+front: "hill"
+meaning: "A local and well-defined elevation of the land; United States railroad tycoon (1838-1916)"
+translation: "n. 小山, 丘陵, 小土堆；vt. 作成土堆, 堆成小丘"
+srsWords: "hill"
 
 [flashcard-review]
-front: "parent"
-meaning: "A father or mother; An organism (plant or animal) from which younger ones are obtained"
-translation: "n. 父母, 父母亲, 根源 父亲, 母亲, 根源"
-srsWords: "parent"
+front: "push"
+meaning: "Move with force,; The act of applying force in order to move something away"
+translation: "n. 推, 推动, 奋斗, 攻击, 进取心；vt. 推, 推动, 使伸出, 推行, 逼迫, 增加；vi. 推, 推进, 增加, 努力争取"
+srsWords: "push"
 
 [flashcard-review]
-front: "smoke"
-meaning: "A cloud of fine particles suspended in a gas; A hot vapor containing fine particles of carbon being produced by combustion"
-translation: "n. 烟, 雾气, 烟熏剂, 抽烟, 烟色；vi. 吸烟, 冒烟, 弥漫；vt. 以烟熏, 抽烟而导致..."
-srsWords: "smoke"
+front: "rose"
+meaning: "Any of many shrubs of the genus Rosa that bear roses; A dusty pink color"
+translation: "n. 玫瑰, 蔷薇, 玫瑰色；a. 玫瑰色的, 玫瑰花的；vt. 使成玫瑰色；rise的过去式"
+srsWords: "rose"
 
 [flashcard-review]
-front: "pen"
-meaning: "writing tool with ink"
-translation: "n. 钢笔, 笔, 笔调, 笔杆子, 作家, 围栏, 栅栏, 禽畜；vt. 写, 关入栏中, 囚禁；vi. 动笔, 写作"
-srsWords: "pen"
+front: "smoking"
+meaning: "Emitting smoke in great volume"
+translation: "n. 抽烟, 冒烟 烟熏; 吸烟"
+srsWords: "smoking"
 
 [flashcard-review]
-front: "pencil"
-meaning: "writing tool with graphite"
-translation: "n. 铅笔, 色笔, 眉笔, 画笔, 光线束；vt. 用铅笔写或涂, 草拟"
-srsWords: "pencil"
+front: "draw"
+meaning: "A gully that is shallower than a ravine; The finish of a contest in which the score is tied and the winner is undecided"
+translation: "vi. 拉, 拖, 拔剑；vt. 拖拉, 挨近, 领取, 打成平局, 引导, 抽签决定, 画, 描写, 制订, 草拟, 吸引；n. 拉, 拖, 拔出, 抽签, 平局 翻牌, 绘图"
+srsWords: "draw"
 
 [flashcard-review]
-front: "men"
-meaning: "N the force of workers available; N an adult person who is male (as opposed to a woman)"
-translation: "pl. man的复数"
-srsWords: "men"
+front: "memory"
+meaning: "Something that is remembered; The cognitive processes whereby past experience is remembered"
+translation: "n. 记忆, 记忆力, 回忆, 纪念, 存储；n. 内存 存储器, 内存, 查看内存实用程序"
+srsWords: "memory"
 
 [flashcard-review]
-front: "favor"
-meaning: "An act of gracious kindness; An advantage to the benefit of someone or something"
-translation: "n. 好意, 喜爱；vt. 赐予, 支持, 喜欢, 证实"
-srsWords: "favor"
+front: "ring"
+meaning: "A characteristic sound; A toroidal shape"
+translation: "n. 环, 环形物, 拳击场, 戒指, 角逐, 小集团, 铃声, 钟声, 声调；vt. 包围, 套住, 按铃, 敲钟；vi. 成环形, 响, 鸣, 按铃, 敲钟, 回响"
+srsWords: "ring"
 
 [flashcard-review]
-front: "arm"
-meaning: "Prepare oneself for a military confrontation; A human limb"
-translation: "n. 手臂, 袖子, 狭长港湾, 武器；vt. 武装, 装备；vi. 武装起来 ARM 处理器；异步应答方式; 自动货品销路管理"
-srsWords: "arm"
+front: "someone"
+meaning: "an unspecified person"
+translation: "pron. 有人, 某人"
+srsWords: "someone"
 
 [flashcard-review]
-front: "favorite"
-meaning: "Appealing to the general public; Something regarded with special favor or liking"
-translation: "n. 喜欢的事物, 幸运儿；a. 特别受喜爱的, 喜爱的, 宠爱的, 中意的"
-srsWords: "favorite"
-
----
-lessonTitle: "Lesson 8: School & Education Part 8"
-description: "Practice 10 key vocabulary flashcards for School & Education"
-icon: "📚"
-color: "#E91E63"
----
-[flashcard-review]
-front: "pet"
-meaning: "A domesticated animal kept for companionship or amusement; A fit of petulance or sulkiness (especially at what is felt to be a slight)"
-translation: "n. 宠物, 受宠爱的人, 宠坏的孩子, 不悦, 生气；a. 宠爱的, 表示亲昵的, 养着观赏的, 特别珍爱的, 格外的；vt. 宠爱, 溺爱, 抚摸；vi. 拥抱, 爱抚, 生气, 发脾气"
-srsWords: "pet"
-
-[flashcard-review]
-front: "camp"
-meaning: "Temporary living quarters specially built by the army for soldiers; A group of people living together in a camp"
-translation: "n. 露营, 帐篷；vi. 露营, 扎营；vt. 使扎营"
-srsWords: "camp"
-
-[flashcard-review]
-front: "centimetre"
-meaning: "N a metric unit of length equal to one hundredth of a meter"
-translation: "n. 厘米, 公分"
-srsWords: "centimetre"
-
-[flashcard-review]
-front: "photo"
-meaning: "photograph"
-translation: "n. 相片, 照片, 逼真的描绘；v. 照相；a. 照相的, 摄影用的, 详细记录的, 逼真的, 酷似的"
-srsWords: "photo"
-
-[flashcard-review]
-front: "piano"
-meaning: "A keyboard instrument that is played by depressing keys that cause hammers to strike…; (music) low loudness"
-translation: "n. 钢琴"
-srsWords: "piano"
-
-[flashcard-review]
-front: "period"
-meaning: "The interval taken to complete one cycle of a regularly repeating phenomenon; (ice hockey) one of three divisions into which play is divided in hockey games"
-translation: "n. 时期, 节段, 节, 句点, 学时, 周期；a. 当时特有的, 过去某段时期的；interj. 就是这话, 就是这么回事"
-srsWords: "period"
-
-[flashcard-review]
-front: "picnic"
-meaning: "Any informal meal eaten outside or on an excursion; Eat alfresco, in the open air"
-translation: "n. 野餐, 远足, 愉快的经历；vi. 去野餐, 远足"
-srsWords: "picnic"
-
-[flashcard-review]
-front: "pig"
-meaning: "A crude block of metal (lead or iron) poured from a smelting furnace; Live like a pig, in squalor"
-translation: "n. 猪, 猪肉, 贪婪的人, 猪一样的人；v. 生小猪, 象猪般地生活"
-srsWords: "pig"
-
-[flashcard-review]
-front: "pizza"
-meaning: "Italian open pie made of thin bread dough spread with a spiced mixture of e.g. tomato…"
-translation: "n. 比萨饼"
-srsWords: "pizza"
-
-[flashcard-review]
-front: "play"
-meaning: "do games/sports; perform music/drama"
-translation: "n. 游戏, 游玩, 玩笑, 运动, 比赛, 赌博, 跳动, 表演, 剧本；v. 玩, 游戏, 假装, 开玩笑, 比赛, 扮演, 演奏, 演戏, 传摇曳, (使)跳动 播放"
-srsWords: "play"
+front: "stone"
+meaning: "Building material consisting of a piece of rock hewn in a definite shape for a special…; An avoirdupois unit used to measure the weight of a human body"
+translation: "n. 石头, 宝石, 果核, 纪念碑, 结石；vt. 投扔石子, 铺石头；a. 石的, 石制的, 完全的"
+srsWords: "stone"
 
 ---
-lessonTitle: "Lesson 9: School & Education Part 9"
-description: "Practice 10 key vocabulary flashcards for School & Education"
-icon: "📚"
-color: "#E91E63"
+lessonTitle: "Lesson 5: Shopping, Clothes & Money Part 5"
+description: "Practice 10 key vocabulary flashcards for Shopping, Clothes & Money"
+icon: "🛍️"
+color: "#FF5722"
 ---
 [flashcard-review]
-front: "club"
-meaning: "A formal association of people with similar interests; Stout stick that is larger at one end"
-translation: "n. 俱乐部, 木棍, 球棒；vt. 用棍棒打, 缴纳；vi. 联合起来；a. 俱乐部的"
-srsWords: "club"
+front: "something"
+meaning: "an unspecified thing"
+translation: "pron. 某事, 某物"
+srsWords: "something"
 
 [flashcard-review]
-front: "apologize"
-meaning: "Acknowledge faults or shortcomings or failing; Defend, explain, clear away, or make excuses for by reasoning"
-translation: "vi. 道歉, 辩解"
-srsWords: "apologize"
-
-[flashcard-review]
-front: "poem"
-meaning: "A composition written in metrical feet forming rhythmical lines"
-translation: "n. 诗, 诗般美的事物"
-srsWords: "poem"
-
-[flashcard-review]
-front: "copy"
-meaning: "Copy down as is; Exclusive of graphical materials"
-translation: "n. 副本, 摹仿, 一册；v. 复印, 抄袭, 复制 副本; 复制; DOS内部命令:复制文件；将几个文件合并成一个文件, 以及将文件传至外设或在设备之间传送"
-srsWords: "copy"
-
-[flashcard-review]
-front: "personal"
-meaning: "Concerning or affecting a particular person or his or her private life and personality; Particular to a given individual"
-translation: "a. 私人的, 涉及隐私的, 有人性的, 人称的, 亲自的, 身体的 人的; 个人的, 自身的"
-srsWords: "personal"
-
-[flashcard-review]
-front: "poster"
-meaning: "A sign posted in a public place as an advertisement"
-translation: "n. 海报, 招贴, 驿马"
-srsWords: "poster"
-
-[flashcard-review]
-front: "share"
-meaning: "Have in common; Use jointly or in common"
-translation: "n. 部分, 参与, 一份, 参股, 份额；vt. 均分, 分担, 分享, 分配, 共有；vi. 分享 共享; DOS外部命令:在网络或多工系统中提供文件共享；文件锁定及检测磁盘更动和对超过32MB硬盘分区的支持"
-srsWords: "share"
-
-[flashcard-review]
-front: "potato"
-meaning: "An edible tuber native to South America; Annual native to South America having underground stolons bearing edible starchy tubers"
-translation: "n. 马铃薯"
-srsWords: "potato"
-
-[flashcard-review]
-front: "tv"
-meaning: "television"
-translation: "电视 电视, 转移向量"
-srsWords: "tv"
-
-[flashcard-review]
-front: "pray"
-meaning: "Address a deity, a prophet, a saint or an object of worship; Say a prayer"
-translation: "v. 祈祷, 恳求, 请"
-srsWords: "pray"
-
----
-lessonTitle: "Lesson 10: School & Education Part 10"
-description: "Practice 10 key vocabulary flashcards for School & Education"
-icon: "📚"
-color: "#E91E63"
----
-[flashcard-review]
-front: "brown"
-meaning: "color of wood/coffee"
-translation: "n. 褐色；a. 褐色的；v. (使)变褐色"
-srsWords: "brown"
-
-[flashcard-review]
-front: "put"
-meaning: "place something somewhere"
-translation: "vt. 放, 摆, 安置, 移动, 发射, 投掷, 写上, 表达, 使从事, 使受到, 驱使, 赋予；vi. 出发, 航行, 发芽；n. 掷, 股票出售权, 笨蛋；a. 固定不动的 发送文件"
-srsWords: "put"
-
-[flashcard-review]
-front: "rabbit"
-meaning: "Any of various burrowing animals of the family Leporidae having long ears and short tails; Flesh of any of various rabbits or hares (wild or domesticated) eaten as food"
-translation: "n. 兔子；vi. 猎兔；vt. 让...见鬼去"
-srsWords: "rabbit"
-
-[flashcard-review]
-front: "radio"
-meaning: "Medium for communication; A communication system based on broadcasting electromagnetic waves"
-translation: "n. 无线电, 收音机, 无线电报, 无线电广播, 无线电台；v. 用无线电发送"
-srsWords: "radio"
-
-[flashcard-review]
-front: "rain"
-meaning: "water from clouds"
-translation: "n. 雨, 下雨, 雨天；vi. 下雨；vt. 使大量落下"
-srsWords: "rain"
-
-[flashcard-review]
-front: "recognize"
-meaning: "Be fully aware or cognizant of; Perceive to be the same"
-translation: "vt. 认出, 认可, 承认, 公认, 识别, 赏识；vi. 承认, 具结"
-srsWords: "recognize"
-
-[flashcard-review]
-front: "rat"
-meaning: "Any of various long-tailed rodents similar to but larger than a mouse; A pad (usually made of hair) worn as part of a woman's coiffure"
-translation: "n. 鼠, 卑鄙的人, 破坏者, 变节者；vi. 捕鼠, 变节；vt. 弄蓬松"
-srsWords: "rat"
-
-[flashcard-review]
-front: "fell"
-meaning: "Cause to fall by or as if by delivering a blow; Sew a seam by folding the edges"
-translation: "vt. 击倒；n. 一季所伐的木材, 折缝；a. 凶猛的, 可怕的；fall的过去式"
-srsWords: "fell"
-
-[flashcard-review]
-front: "dry"
-meaning: "Remove the moisture from and make dry; Become dry or drier"
-translation: "a. 干的, 无酒的, 枯燥无味的, 干燥的；vt. 把...弄干；vi. 变干；n. 干, 干涸"
-srsWords: "dry"
-
-[flashcard-review]
-front: "reading"
-meaning: "The cognitive process of understanding a written linguistic message; A particular interpretation or performance"
-translation: "n. 阅读, 知识, 读物；a. 阅读的"
-srsWords: "reading"
----
-lessonTitle: "Lesson 11: Work & Professions Part 1"
-description: "Practice 10 key vocabulary flashcards for Work & Professions"
-icon: "💼"
-color: "#3F51B5"
----
-[flashcard-review]
-front: "more"
-meaning: "English statesman who opposed Henry VIII's divorce from Catherine of Aragon and was…; Recalled for his concept of Utopia, the ideal state"
-translation: "n. 更多；a. 多的, 程度较大的, 更大的；adv. 多, 更多, 进一步 DOS外部命令:显示满屏后自动暂停, 并显示:\"--More--\", 按任意键继续"
-srsWords: "more"
-
-[flashcard-review]
-front: "really"
-meaning: "in fact; very"
-translation: "adv. 实际上, 真实地, 实在"
-srsWords: "really"
-
-[flashcard-review]
-front: "design"
-meaning: "The act of working out the form of something (as by making a sketch or outline or plan); An arrangement scheme"
-translation: "n. 设计, 图样, 方案, 企图；v. 设计, 计划"
-srsWords: "design"
-
-[flashcard-review]
-front: "reporter"
-meaning: "A person who investigates and reports or edits news stories"
-translation: "n. 记者, 报告者 指示器"
-srsWords: "reporter"
-
-[flashcard-review]
-front: "restaurant"
-meaning: "A building where people go to eat"
-translation: "n. 餐馆, 饭店"
-srsWords: "restaurant"
-
-[flashcard-review]
-front: "snow"
-meaning: "frozen white flakes"
-translation: "n. 雪, 积雪, 下雪, 雪花形干扰；vi. 下雪, 似雪般落下；vt. 使雪白, 用雪覆盖, 使像雪般落下"
-srsWords: "snow"
-
-[flashcard-review]
-front: "rice"
-meaning: "Grains used as food either unpolished or more often polished; Annual or perennial rhizomatous marsh grasses"
-translation: "n. 米, 米饭, 稻；vt. 将...压成米粒状"
-srsWords: "rice"
-
-[flashcard-review]
-front: "river"
-meaning: "large natural stream of water"
-translation: "n. 河, 江 河流, 江河, 内河"
-srsWords: "river"
-
-[flashcard-review]
-front: "rude"
-meaning: "S socially incorrect in behavior; S (of persons) lacking in refinement or grace"
-translation: "a. 粗鲁无礼的, 粗陋的, 粗暴的, 原始的, 未开化的, 大略的, 崎岖不平的, 狂暴的"
-srsWords: "rude"
-
-[flashcard-review]
-front: "inside"
-meaning: "in the interior"
-translation: "n. 内部, 内脏, 内幕；a. 内部的, 秘密的, 户内的；adv. 在里面；prep. 在...之内"
-srsWords: "inside"
-
----
-lessonTitle: "Lesson 12: Work & Professions Part 2"
-description: "Practice 10 key vocabulary flashcards for Work & Professions"
-icon: "💼"
-color: "#3F51B5"
----
-[flashcard-review]
-front: "ruler"
-meaning: "A person who rules or commands"
-translation: "n. 统治者, 管理者, 尺, 直尺；n. 划线板 标尺"
-srsWords: "ruler"
-
-[flashcard-review]
-front: "post"
-meaning: "The position where someone (as a guard or sentry) stands or is assigned to stand; An upright consisting of a piece of timber or metal fixed firmly in an upright position"
-translation: "n. 柱, 杆, 准星, 邮件, 邮政, 标竿, 职位, 岗位, 哨所, 兵营；vt. 张帖, 邮递, 公布, 登入帐, 使熟悉, 布置；vi. 快速行进；adv. 急速地 记入; 登记, 上电自检"
-srsWords: "post"
-
-[flashcard-review]
-front: "russian"
-meaning: "Of or pertaining to or characteristic of Russia or its people or culture or language; A native or inhabitant of Russia"
-translation: "n. 俄国人, 俄语；a. 俄国的, 俄语的"
-srsWords: "russian"
-
-[flashcard-review]
-front: "sad"
-meaning: "unhappy"
-translation: "a. 忧愁的, 悲哀的"
-srsWords: "sad"
-
-[flashcard-review]
-front: "sailor"
-meaning: "Any member of a ship's crew"
-translation: "n. 水手, 船员, 海员 水手, 船员, 海员"
-srsWords: "sailor"
-
-[flashcard-review]
-front: "salad"
-meaning: "Food mixtures either arranged on a plate or tossed and served with a moist dressing; Usually consisting of or including greens"
-translation: "n. 色拉"
-srsWords: "salad"
-
-[flashcard-review]
-front: "same"
-meaning: "not different; identical"
-translation: "a. 相同的, 同样的；pron. 相同的人(或事物)；adv. 同样地"
-srsWords: "same"
-
-[flashcard-review]
-front: "sandwich"
-meaning: "Two (or more) slices of bread with a filling between them; Make into a sandwich"
-translation: "n. 三明治, 夹心面包, 夹层板；vt. 插入, 夹入, 把...制成三明治"
-srsWords: "sandwich"
-
-[flashcard-review]
-front: "break"
-meaning: "damage so it doesn't work; pause"
-translation: "n. 休息, 中断, 破裂处, 绝交, 破晓, 突变；vt. 打破, 弄破, 弄坏, 破坏, 违反, 打断, 削弱, 放弃；vi. 破碎, 决裂, 破晓, 突变, 变弱, 暂停；n. 分隔符 分隔符; 中断; DOS内部命令:设定扫描中断按键的时机"
-srsWords: "break"
-
-[flashcard-review]
-front: "saturday"
+front: "sunday"
 meaning: "day of the week"
-translation: "n. 星期六"
-srsWords: "saturday"
+translation: "n. 星期日；a. 星期日的, 业余的；vi. 度星期日"
+srsWords: "sunday"
+
+[flashcard-review]
+front: "swimming"
+meaning: "The act of swimming"
+translation: "n. 游泳, 眩晕"
+srsWords: "swimming"
+
+[flashcard-review]
+front: "leaf"
+meaning: "The main organ of photosynthesis and transpiration in higher plants; A sheet of any written or printed material (especially in a manuscript or book)"
+translation: "n. 叶, 树叶, 花瓣, 页；vi. 生叶, 翻书页；vt. 在...上长叶, 翻...的页"
+srsWords: "leaf"
+
+[flashcard-review]
+front: "swimming pool"
+meaning: "Noun. swimming pool"
+translation: "n. 游泳池"
+srsWords: "swimming pool"
+
+[flashcard-review]
+front: "than"
+meaning: "used in comparisons"
+translation: "conj. 比, 除...外；prep. 比"
+srsWords: "than"
+
+[flashcard-review]
+front: "thanks"
+meaning: "expression of gratitude"
+translation: "n. 感谢, 谢意, 谢忱；interj. 谢谢, 谢谢你"
+srsWords: "thanks"
+
+[flashcard-review]
+front: "that"
+meaning: "the one farther away; used to link clauses"
+translation: "a. 那, 那个；conj. 以致, 因为；pron. 那；adv. 那么, 那样"
+srsWords: "that"
+
+[flashcard-review]
+front: "gift"
+meaning: "present"
+translation: "n. 礼物, 赠予, 天才；vt. 赋予"
+srsWords: "gift"
+
+[flashcard-review]
+front: "item"
+meaning: "A distinct part that can be specified separately in a group of things that could be…; A whole individual unit"
+translation: "n. 项目, 条款, 一则, 项 项"
+srsWords: "item"
 
 ---
-lessonTitle: "Lesson 13: Work & Professions Part 3"
-description: "Practice 10 key vocabulary flashcards for Work & Professions"
-icon: "💼"
-color: "#3F51B5"
+lessonTitle: "Lesson 6: Shopping, Clothes & Money Part 6"
+description: "Practice 10 key vocabulary flashcards for Shopping, Clothes & Money"
+icon: "🛍️"
+color: "#FF5722"
 ---
 [flashcard-review]
-front: "school"
-meaning: "place for learning"
-translation: "n. 学校, 鱼群, 门派, 学派；vt. 教育, 训练, 培养；vi. 成群地游"
-srsWords: "school"
+front: "birth"
+meaning: "The time when something begins (especially life); The event of being born"
+translation: "n. 出生, 起源 生产, 分娩"
+srsWords: "birth"
 
 [flashcard-review]
-front: "sea"
-meaning: "large body of salt water"
-translation: "n. 海, 海洋, 海浪, 大量 海, 海洋"
-srsWords: "sea"
+front: "bridge"
+meaning: "structure over water/road"
+translation: "n. 桥, 舰桥, 桥梁, 桥牌；vt. 架桥于, 跨越 桥, 网桥, 桥接器"
+srsWords: "bridge"
 
 [flashcard-review]
-front: "event"
-meaning: "Something that happens at a given place and time; A special set of circumstances"
-translation: "n. 事件, 结果, 事情的进程, 竞赛项目 事件"
-srsWords: "event"
+front: "the"
+meaning: "definite article"
+translation: "art. 那"
+srsWords: "the"
 
 [flashcard-review]
-front: "seat"
-meaning: "A space reserved for sitting (as in a theater or on a train or airplane); Furniture that is designed for sitting on"
-translation: "n. 座, 座位, 位子, 席位, 所在地；vt. 使坐下, 使就座, 为...设座于, 使就职；vi. 安装在底座上"
-srsWords: "seat"
+front: "lucky"
+meaning: "Occurring by chance; Having or bringing good fortune"
+translation: "a. 幸运的, 吉祥的, 好运的, 侥幸的"
+srsWords: "lucky"
 
 [flashcard-review]
-front: "dig"
-meaning: "Turn up, loosen, or remove earth; The site of an archeological exploration"
-translation: "vt. 挖, 翻土, 发掘；vi. 挖掘；n. 挖掘 数字, 数位"
-srsWords: "dig"
+front: "skill"
+meaning: "An ability that has been acquired by training; Ability to produce solutions in some problem domain"
+translation: "n. 技术, 技巧, 技能, 熟练, 熟练工人 技能"
+srsWords: "skill"
 
 [flashcard-review]
-front: "september"
-meaning: "ninth month"
-translation: "n. 九月"
-srsWords: "september"
+front: "theater/theatre"
+meaning: "A building where theatrical performances or motion-picture shows can be presented"
+translation: "n. 戏院, 电影院, 剧场, 全体观众, 戏剧, 戏剧效果, 阶梯式讲堂, 场所"
+srsWords: "theater/theatre"
 
 [flashcard-review]
-front: "sorry"
-meaning: "apology; regret"
-translation: "a. 难过的, 悲哀的, 遗憾的"
-srsWords: "sorry"
+front: "their"
+meaning: "belonging to them"
+translation: "pron. 他们的"
+srsWords: "their"
 
 [flashcard-review]
-front: "seven"
-meaning: "the number 7"
-translation: "num. 七, 七个"
-srsWords: "seven"
+front: "them"
+meaning: "people or things (object)"
+translation: "pron. 他们, 她们, 它们"
+srsWords: "them"
 
 [flashcard-review]
-front: "saving"
-meaning: "Characterized by thriftiness"
-translation: "n. 存款, 挽救, 节约；a. 搭救的, 节约的, 保留的, 补偿的；prep. 除...之外"
-srsWords: "saving"
+front: "these"
+meaning: "plural of this"
+translation: "pron. 这些"
+srsWords: "these"
 
 [flashcard-review]
-front: "climb"
-meaning: "Go upward with gradual or continuous progress; Move with difficulty, by grasping"
-translation: "v. 攀登, 上升, 爬；n. 攀登, 爬升"
-srsWords: "climb"
-
----
-lessonTitle: "Lesson 14: Work & Professions Part 4"
-description: "Practice 10 key vocabulary flashcards for Work & Professions"
-icon: "💼"
-color: "#3F51B5"
----
-[flashcard-review]
-front: "guess"
-meaning: "Put forward, of a guess, in spite of possible refutation; Guess correctly"
-translation: "n. 猜测, 臆测；v. 猜测, 臆测"
-srsWords: "guess"
-
-[flashcard-review]
-front: "king"
-meaning: "A male sovereign; A competitor who holds a preeminent position"
-translation: "n. 国王, 君主；vt. 使...成为君主；vi. 君临, 统治"
-srsWords: "king"
-
-[flashcard-review]
-front: "sheep"
-meaning: "Woolly usually horned ruminant mammal related to the goat; A timid defenseless simpleton who is readily preyed upon"
-translation: "n. 羊, 胆小者"
-srsWords: "sheep"
-
-[flashcard-review]
-front: "shelf"
-meaning: "A support that consists of a horizontal surface for holding objects"
-translation: "n. 架子, 搁板 架子"
-srsWords: "shelf"
-
-[flashcard-review]
-front: "a"
-meaning: "indefinite article (before consonant sound)"
-translation: "art. 一（个，件…）；任一"
-srsWords: "a"
-
-[flashcard-review]
-front: "shirt"
-meaning: "A garment worn on the upper half of the body; Put a shirt on"
-translation: "n. 衬衫, 内衣, 汗衫"
-srsWords: "shirt"
-
-[flashcard-review]
-front: "shoe"
-meaning: "(card games) a case from which playing cards are dealt one at a time; Footwear shaped to fit the foot (below the ankle) with a flexible upper of leather or…"
-translation: "n. 鞋, 靴, 外胎；vt. 给...穿鞋, 为马钉蹄铁"
-srsWords: "shoe"
-
-[flashcard-review]
-front: "a.m./a.m./am/am"
-meaning: "In the morning, before noon (ante meridiem)"
-translation: "abbr. 上午，午前（ante meridiem）"
-srsWords: "a.m./a.m./am/am"
-
-[flashcard-review]
-front: "alone"
-meaning: "without other people"
-translation: "a. 孤独的, 单独的, 独自的；adv. 独自地"
-srsWords: "alone"
-
-[flashcard-review]
-front: "church"
-meaning: "One of the groups of Christians who have their own beliefs and forms of worship; A place for public (especially Christian) worship"
-translation: "n. 教堂, 礼拜, 教会；vt. 使人接受宗教仪式；a. 教堂的"
-srsWords: "church"
+front: "they"
+meaning: "people or things (subject)"
+translation: "pron. 他们, 它们"
+srsWords: "they"
 
 ---
-lessonTitle: "Lesson 15: Work & Professions Part 5"
-description: "Practice 10 key vocabulary flashcards for Work & Professions"
-icon: "💼"
-color: "#3F51B5"
+lessonTitle: "Lesson 7: Shopping, Clothes & Money Part 7"
+description: "Practice 10 key vocabulary flashcards for Shopping, Clothes & Money"
+icon: "🛍️"
+color: "#FF5722"
 ---
 [flashcard-review]
-front: "about"
-meaning: "concerning; approximately"
-translation: "prep. 在...周围, 大约, 有关, 关于；adv. 大约, 四处, 在附近, 周围"
-srsWords: "about"
+front: "conversation"
+meaning: "The use of speech for informal exchange of views or ideas or information etc."
+translation: "n. 会话, 说话, 交谈 交谈, 社交, 性交"
+srsWords: "conversation"
 
 [flashcard-review]
-front: "shy"
-meaning: "Short; A quick throw"
-translation: "n. 惊跳, 惊避；a. 胆怯的, 畏缩的, 迟疑的, 羞怯的；vi. 惊退, 乱投, 乱掷, 厌恶, 避开；vt. 乱投, 乱掷"
-srsWords: "shy"
+front: "thirty"
+meaning: "The cardinal number that is the product of ten and three; Being ten more than twenty"
+translation: "num. 三十, 三十个"
+srsWords: "thirty"
 
 [flashcard-review]
-front: "sick"
-meaning: "Deeply affected by a strong feeling; People who are sick"
-translation: "n. 病人；a. 不舒服, 有病的, 恶心的, 厌恶的, 渴望的, 病态的；vt. 呕吐, 追击, 使(狗)去攻击"
-srsWords: "sick"
+front: "driver"
+meaning: "The operator of a motor vehicle; Someone who drives animals that pull a vehicle"
+translation: "n. 驾驶员, 驱动器, 驱动程序 驱动器"
+srsWords: "driver"
 
 [flashcard-review]
-front: "sing"
-meaning: "Deliver by singing; Produce tones with the voice"
-translation: "vi. 唱, 唱歌, 演唱, 鸣, 啼；vt. 唱, 歌颂；n. 嗖嗖声"
-srsWords: "sing"
+front: "this"
+meaning: "the one near you"
+translation: "pron. 这, 本；a. 这, 本；adv. 这么"
+srsWords: "this"
 
 [flashcard-review]
-front: "singer"
-meaning: "A person who sings; United States inventor of an improved chain-stitch sewing machine (1811-1875)"
-translation: "n. 歌手"
-srsWords: "singer"
+front: "fly"
+meaning: "Two-winged insects characterized by active flight; An opening in a garment that is closed by a zipper or by buttons concealed under a…"
+translation: "n. 苍蝇, 两翼昆虫, 飞行；vi. 飞, 飞翔, 飘扬, 逃走；vt. 飞, 飞越, 使飘扬, 逃出；a. 敏捷的"
+srsWords: "fly"
 
 [flashcard-review]
-front: "above"
-meaning: "higher than"
-translation: "prep. 在上方, 超出；adv. 在上面；a. 上述的, 上面的"
-srsWords: "above"
+front: "lovely"
+meaning: "Appealing to the emotions as well as the eye"
+translation: "a. 可爱的, 有趣的"
+srsWords: "lovely"
 
 [flashcard-review]
-front: "sir"
-meaning: "Term of address for a man; A title used before the name of knight or baronet"
-translation: "n. 先生, 阁下"
-srsWords: "sir"
+front: "magazine"
+meaning: "Product consisting of a paperback periodic publication as a physical object; A business firm that publishes magazines"
+translation: "n. 杂志, 仓库, 弹盒, 胶卷盒 卡片箱, 介质装卸程序"
+srsWords: "magazine"
 
 [flashcard-review]
-front: "sister"
-meaning: "female sibling"
-translation: "n. 姐妹, 姐, 妹, 护士, 修女；vt. 姐妹般对待"
-srsWords: "sister"
+front: "excellent"
+meaning: "Very good; Of the highest quality"
+translation: "a. 优良的, 杰出的, 出色的"
+srsWords: "excellent"
 
 [flashcard-review]
-front: "sit"
-meaning: "rest on a seat"
-translation: "vi. 坐, 就座, 坐落；vt. 使就座, 骑；n. 坐, 衣服合身"
-srsWords: "sit"
+front: "medicine"
+meaning: "drug; science of healing"
+translation: "n. 药, 医学, 内科；vt. 给...用药"
+srsWords: "medicine"
 
 [flashcard-review]
-front: "role"
-meaning: "Normal or customary activity of a person in a particular social setting"
-translation: "n. 角色, 职责, 任务 作用, 功用"
-srsWords: "role"
-
----
-lessonTitle: "Lesson 16: Work & Professions Part 6"
-description: "Practice 10 key vocabulary flashcards for Work & Professions"
-icon: "💼"
-color: "#3F51B5"
----
-[flashcard-review]
-front: "sixteen"
-meaning: "The cardinal number that is the sum of fifteen and one; Being one more than fifteen"
-translation: "num. 十六, 十六个"
-srsWords: "sixteen"
-
-[flashcard-review]
-front: "meeting"
-meaning: "A formally arranged gathering; A small informal social gathering"
-translation: "n. 会议, 会面 会议, 会谈, 集会"
-srsWords: "meeting"
-
-[flashcard-review]
-front: "after"
-meaning: "later than"
-translation: "prep. 在...之后, 由于；conj. 在...之后；adv. 后来"
-srsWords: "after"
-
-[flashcard-review]
-front: "size"
-meaning: "how big something is"
-translation: "n. 大小, 尺寸, 规模, 尺码, 能力, 浆料；vt. 上浆, 依大小排列；vi. 可比拟；a. 一定大小的, 一定尺寸的"
-srsWords: "size"
-
-[flashcard-review]
-front: "usually"
-meaning: "most of the time"
-translation: "adv. 通常, 大抵"
-srsWords: "usually"
-
-[flashcard-review]
-front: "skirt"
-meaning: "Cloth covering that forms the part of a garment below the waist; A garment hanging from the waist"
-translation: "n. 裙子, 下摆, 边缘, 郊区；vt. 位于...边缘, 绕过, 回避；vi. 位于边缘"
-srsWords: "skirt"
-
-[flashcard-review]
-front: "save"
-meaning: "To keep up and reserve for personal or special use; Bring into safety"
-translation: "n. 救球；vt. 解救, 挽救, 储蓄, 保存, 节省, 保留；vi. 挽救, 节省, 救球；prep. 除...之外 保存"
-srsWords: "save"
-
-[flashcard-review]
-front: "sky"
-meaning: "space above the earth"
-translation: "n. 天空, 天色, 天堂；vt. 击向空中, 挂在高处；vi. 高涨"
-srsWords: "sky"
-
-[flashcard-review]
-front: "airplane/aeroplane"
-meaning: "An aircraft that has a fixed wing and is powered by propellers or jets"
-translation: "n. 飞机 飞机"
-srsWords: "airplane/aeroplane"
-
-[flashcard-review]
-front: "all right"
-meaning: "Adverb. all right"
-translation: "好, 顺利, 良好的, 正确的"
-srsWords: "all right"
+front: "those"
+meaning: "plural of that"
+translation: "pron. 那些"
+srsWords: "those"
 
 ---
-lessonTitle: "Lesson 17: Work & Professions Part 7"
-description: "Practice 10 key vocabulary flashcards for Work & Professions"
-icon: "💼"
-color: "#3F51B5"
+lessonTitle: "Lesson 8: Shopping, Clothes & Money Part 8"
+description: "Practice 10 key vocabulary flashcards for Shopping, Clothes & Money"
+icon: "🛍️"
+color: "#FF5722"
 ---
 [flashcard-review]
-front: "am"
-meaning: "before midday (time); form of be"
-translation: "be的单数第一人称 存取管理程序, 寻址方式, 地址标记, 变址数, 调幅, 辅助存储器"
-srsWords: "am"
+front: "three"
+meaning: "the number 3"
+translation: "num. 三, 三个"
+srsWords: "three"
 
 [flashcard-review]
-front: "an"
-meaning: "indefinite article (before vowel sound)"
-translation: "art. 一"
-srsWords: "an"
+front: "through"
+meaning: "from one end to the other"
+translation: "adv. 穿越, 从头至尾, 到底, 因为；prep. 经过, 穿过；a. 对穿的, 直达的, 完结的"
+srsWords: "through"
 
 [flashcard-review]
-front: "snake"
-meaning: "Limbless scaly elongate reptile; A deceitful or treacherous person"
-translation: "n. 蛇, 阴险的人；vi. 曲折行进；vt. 迂回, 拉, 急抽"
-srsWords: "snake"
+front: "tired"
+meaning: "needing rest"
+translation: "a. 疲累的, 疲乏的, 厌倦的"
+srsWords: "tired"
 
 [flashcard-review]
-front: "and"
-meaning: "connecting words; also"
-translation: "conj. 和, 与 与"
-srsWords: "and"
+front: "to"
+meaning: "toward; used with verbs (to go)"
+translation: "prep. 到, 向, 趋于；adv. 向前"
+srsWords: "to"
 
 [flashcard-review]
-front: "cutting"
-meaning: "A part (sometimes a root or leaf or bud) removed from a plant to propagate a new plant…; A piece cut off from the main part of something"
-translation: "n. 切断, 切下, 路堑 切屑"
-srsWords: "cutting"
+front: "trousers"
+meaning: "N (usually in the plural) a garment extending from the waist to the knee or ankle…; N a garment (or part of a garment) designed for or relating to trousers"
+translation: "pl. 裤子, 长裤"
+srsWords: "trousers"
 
 [flashcard-review]
-front: "soccer"
-meaning: "A football game in which two teams of 11 players try to kick or head a ball into the…"
-translation: "n. 英式足球"
-srsWords: "soccer"
+front: "festival"
+meaning: "A day or period of time set aside for feasting and celebration; An organized series of acts and performances (usually in one place)"
+translation: "a. 节日的, 喜庆的, 快乐的；n. 节日, 庆祝, 欢宴"
+srsWords: "festival"
 
 [flashcard-review]
-front: "sofa"
-meaning: "An upholstered seat for more than one person"
-translation: "n. 沙发"
-srsWords: "sofa"
+front: "flat"
+meaning: "A level tract of land; A shallow box in which seedlings are started"
+translation: "a. 平坦的, 单调的, 无力的, 浅的, 萧条的, 干脆的, 无聊的；adv. 平直地, 断然地；n. 扁平物, 平面, 平地, 平原, 平板车；v. (使)变平"
+srsWords: "flat"
 
 [flashcard-review]
-front: "step"
-meaning: "The act of changing location by raising the foot and setting it down; Support consisting of a place to rest the foot while ascending or descending a stairway"
-translation: "n. 步骤, 步, 步幅, 脚步声, 踏级, 步伐, 短距离, 步态, 手段, 等级；vt. 踏, 以步测量, 跨步, 使成阶梯状；vi. 跨步, 轻快地走, 跳舞, 踩, 踏上, 行走 步骤"
-srsWords: "step"
+front: "t-shirt/tee-shirt"
+meaning: "N a close-fitting pullover shirt"
+translation: "n. 圆领汗衫, T恤"
+srsWords: "t-shirt/tee-shirt"
 
 [flashcard-review]
-front: "solve"
-meaning: "Find the solution to (a problem or question) or understand the meaning of"
-translation: "vt. 解决, 付给, 溶解；vt. 求解；vi. 求解 求解"
-srsWords: "solve"
+front: "introduce"
+meaning: "Cause to come to know personally; Bring something new to an environment"
+translation: "vt. 介绍, 引入, 采用, 输入 引进, 输入, 介绍"
+srsWords: "introduce"
 
 [flashcard-review]
-front: "anybody"
-meaning: "Any one out of an indefinite number of persons; Anyone"
-translation: "pron. 任何人；n. 重要人物"
-srsWords: "anybody"
-
----
-lessonTitle: "Lesson 18: Work & Professions Part 8"
-description: "Practice 10 key vocabulary flashcards for Work & Professions"
-icon: "💼"
-color: "#3F51B5"
----
-[flashcard-review]
-front: "anyone"
-meaning: "any person"
-translation: "pron. 任何人"
-srsWords: "anyone"
-
-[flashcard-review]
-front: "anything"
-meaning: "any thing (in questions/negatives)"
-translation: "pron. 任何事"
-srsWords: "anything"
-
-[flashcard-review]
-front: "april"
-meaning: "fourth month"
-translation: "n. 四月"
-srsWords: "april"
-
-[flashcard-review]
-front: "are"
-meaning: "form of be (you/we/they)"
-translation: "be的现在时复数或第二人称单数"
-srsWords: "are"
-
-[flashcard-review]
-front: "as"
-meaning: "in the role of; while; because"
-translation: "adv. 同样地, 例如；prep. 做为, 当作；conj. 当...之时, 以...的方式, 像...一样, 因为 高级系统, 先进系统, 辅助存储器, 自治系统"
-srsWords: "as"
-
-[flashcard-review]
-front: "at"
-meaning: "in a place or time"
-translation: "prep. 在, 向, 对 地址转换器, 异常传输, 自动订票"
-srsWords: "at"
-
-[flashcard-review]
-front: "august"
-meaning: "eighth month"
-translation: "n. 八月；a. 威严的, 令人敬畏的"
-srsWords: "august"
-
-[flashcard-review]
-front: "soup"
-meaning: "Liquid food especially of meat or fish or vegetable stock often containing pieces of…; Any composition having a consistency suggestive of soup"
-translation: "n. 汤, 马力；vt. 加速, 增加马力"
-srsWords: "soup"
-
-[flashcard-review]
-front: "speak"
-meaning: "say words; talk a language"
-translation: "vi. 说, 说话, 演说, 发言；vt. 说, 讲, 说出"
-srsWords: "speak"
-
-[flashcard-review]
-front: "spend"
-meaning: "Pass time in a specific way; Pay out"
-translation: "vt. 花费, 浪费, 度过, 消耗, 消磨；vi. 花费, 用尽"
-srsWords: "spend"
+front: "kick"
+meaning: "Drive or propel with the foot; The act of delivering a blow with the foot"
+translation: "n. 踢, 反冲, 后座力, 凹底；vi. 踢, 反抗, 反冲；vt. 踢, 反冲"
+srsWords: "kick"
 
 ---
-lessonTitle: "Lesson 19: Work & Professions Part 9"
-description: "Practice 10 key vocabulary flashcards for Work & Professions"
-icon: "💼"
-color: "#3F51B5"
+lessonTitle: "Lesson 9: Shopping, Clothes & Money Part 9"
+description: "Practice 10 key vocabulary flashcards for Shopping, Clothes & Money"
+icon: "🛍️"
+color: "#FF5722"
 ---
 [flashcard-review]
-front: "sport"
-meaning: "physical game or competition"
-translation: "n. 运动, 游戏, 娱乐, 消遣, 玩笑；a. 运动的, 户外穿戴的；vi. 游戏, 参加体育运动, 戏弄, 产生变种；vt. 炫耀, 使产生变种"
-srsWords: "sport"
+front: "pair"
+meaning: "A set of two similar things considered as a unit; Two people considered as a unit"
+translation: "n. 一双, 一对, 一副；v. (使)成对"
+srsWords: "pair"
 
 [flashcard-review]
-front: "spy"
-meaning: "A secret watcher; (military) a secret agent hired by a state to obtain information about its enemies or…"
-translation: "n. 间谍, 侦探, 侦察；vt. 侦察, 找出, 发现；vi. 做密探, 侦查"
-srsWords: "spy"
+front: "prince"
+meaning: "A male member of a royal family other than the sovereign (especially the son of a…"
+translation: "n. 王子, 亲王, 国君, 贵族, 诸侯, 有权势的大人物"
+srsWords: "prince"
 
 [flashcard-review]
-front: "because"
-meaning: "By or for the cause that; On this account that"
-translation: "conj. 因为"
-srsWords: "because"
+front: "twelve"
+meaning: "The cardinal number that is the sum of eleven and one; Denoting a quantity consisting of 12 items or units"
+translation: "num. 十二, 十二个"
+srsWords: "twelve"
 
 [flashcard-review]
-front: "station"
-meaning: "A facility equipped with special equipment and personnel for a particular purpose; (nautical) the location to which a ship or fleet is assigned for duty"
-translation: "n. 车站, 站, 局, 驻地, 位置, 身分, 地位；vt. 安置, 配置, 驻扎 站"
-srsWords: "station"
+front: "quarter"
+meaning: "one of four equal parts; 15 minutes"
+translation: "n. 四分之一, 一刻钟, 季度, 地区；vt. 四等分, 肢解；vi. 驻扎, 住宿"
+srsWords: "quarter"
 
 [flashcard-review]
-front: "got"
-meaning: "V come into the possession of something concrete or abstract; V enter or assume a certain state or condition"
-translation: "get的过去式和过去分词 谷草转氨酶; 谷氨酸草酰乙酸转氨酶"
-srsWords: "got"
+front: "twenty"
+meaning: "The cardinal number that is the sum of nineteen and one; Denoting a quantity consisting of 20 items or units"
+translation: "num. 二十, 二十个"
+srsWords: "twenty"
 
 [flashcard-review]
-front: "before"
-meaning: "earlier than"
-translation: "prep. 在...之前；conj. 在...之前；adv. 在前"
-srsWords: "before"
+front: "under"
+meaning: "below"
+translation: "prep. 在...之下, 低于；a. 下面的, 从属的；adv. 在下面"
+srsWords: "under"
 
 [flashcard-review]
-front: "below"
-meaning: "lower than"
-translation: "prep. 在下面；adv. 在下面"
-srsWords: "below"
+front: "until"
+meaning: "up to a time"
+translation: "prep. 直到, 在...以前；conj. 直到...时, 在...以前"
+srsWords: "until"
 
 [flashcard-review]
-front: "beside"
-meaning: "At the side of; On one side of."
-translation: "prep. 在旁边"
-srsWords: "beside"
+front: "us"
+meaning: "the speaker and others (object)"
+translation: "pron. 我们 美国"
+srsWords: "us"
 
 [flashcard-review]
-front: "strict"
-meaning: "S rigidly accurate; Allowing no deviation from a standard"
-translation: "a. 严厉的, 绝对的, 详尽的, 严格的, 精确的 严格的, 精确的, 绝对的"
-srsWords: "strict"
+front: "was"
+meaning: "past of is/am"
+translation: "be的过去式"
+srsWords: "was"
 
 [flashcard-review]
-front: "between"
-meaning: "in the middle of two"
-translation: "prep. 在...之间"
-srsWords: "between"
+front: "we"
+meaning: "the speaker and others"
+translation: "pron. 我们"
+srsWords: "we"
 
 ---
-lessonTitle: "Lesson 20: Work & Professions Part 10"
-description: "Practice 10 key vocabulary flashcards for Work & Professions"
-icon: "💼"
-color: "#3F51B5"
+lessonTitle: "Lesson 10: Shopping, Clothes & Money Part 10"
+description: "Practice 10 key vocabulary flashcards for Shopping, Clothes & Money"
+icon: "🛍️"
+color: "#FF5722"
 ---
 [flashcard-review]
-front: "science"
-meaning: "study of the natural world"
-translation: "n. 科学, 学科, 学问, 自然科学 科学"
-srsWords: "science"
+front: "feeling"
+meaning: "The experiencing of affective and emotional states; A physical sensation that you experience"
+translation: "n. 摸, 触觉, 知觉, 感觉, 情绪, 同情；a. 有同情心的, 有感觉的, 仁慈的, 动人的"
+srsWords: "feeling"
 
 [flashcard-review]
-front: "subway"
-meaning: "N an electric railway operating below the surface of the ground (usually in a city); N an underground tunnel or passage enabling pedestrians to cross a road or railway"
-translation: "n. 地铁, 地道；vi. 乘地铁"
-srsWords: "subway"
+front: "wednesday"
+meaning: "day of the week"
+translation: "n. 星期三"
+srsWords: "wednesday"
 
 [flashcard-review]
-front: "sugar"
-meaning: "A white crystalline carbohydrate used as a sweetener and preservative; Sweeten with sugar"
-translation: "n. 糖, 糖块, 甜言蜜语；vt. 加糖于, 使甜蜜, 粉饰, 美化；vi. 制成糖"
-srsWords: "sugar"
+front: "terrible"
+meaning: "S causing fear or dread or terror; S exceptionally bad or displeasing"
+translation: "a. 可怕的, 令人恐惧的, 极坏的"
+srsWords: "terrible"
 
 [flashcard-review]
-front: "suggestion"
-meaning: "An idea that is suggested; A proposal offered for acceptance or rejection"
-translation: "n. 提议, 意见 暗示"
-srsWords: "suggestion"
+front: "pleasure"
+meaning: "A fundamental feeling that is hard to define but that people desire to experience; A formal expression"
+translation: "n. 快乐, 愉快, 令人高兴的事, 娱乐, 希望；v. (使)高兴"
+srsWords: "pleasure"
 
 [flashcard-review]
-front: "boring"
-meaning: "So lacking in interest as to cause mental weariness; The act of drilling a hole in the earth in the hope of producing petroleum"
-translation: "a. 烦人的, 无聊的, 无趣的 成孔期, 搪孔"
-srsWords: "boring"
+front: "afraid"
+meaning: "Filled with fear or apprehension; Filled with regret or concern"
+translation: "a. 害怕的, 恐怕的, 遗憾的"
+srsWords: "afraid"
 
 [flashcard-review]
-front: "sum"
-meaning: "A quantity of money; A quantity obtained by the addition of a group of numbers"
-translation: "n. 总数, 总和, 金额, 概要, 顶点；vt. 总计, 概括；vi. 合计 系统实用程序和维护"
-srsWords: "sum"
+front: "fill"
+meaning: "Make full, also in a metaphorical sense; Become full"
+translation: "vt. 装满, 填充, 弥漫, 供给, 满足, 供应；vi. 充满, 变得沉重；n. 满足, 装满, 充分, 填方；vt. 填充；vi. 填充 填充"
+srsWords: "fill"
 
 [flashcard-review]
-front: "character"
-meaning: "The inherent complex of attributes that determines a persons moral and ethical actions…; An actor's portrayal of someone in a play"
-translation: "n. 个性, 字符, 人物, 性质, 品格, 资格 字符"
-srsWords: "character"
+front: "were"
+meaning: "past of are"
+translation: "be的过去式"
+srsWords: "were"
 
 [flashcard-review]
-front: "both"
-meaning: "the two together"
-translation: "a. 两者的；adv. 两者都；pron. 两者"
-srsWords: "both"
+front: "moon"
+meaning: "The natural satellite of the Earth; Any object resembling a moon"
+translation: "n. 月亮, 月球, 月光；vi. 闲荡；vt. 虚度"
+srsWords: "moon"
 
 [flashcard-review]
-front: "sun"
-meaning: "star that gives light; sunlight"
-translation: "n. 太阳, 日, 日光, 阳光；vt. 晒；vi. 晒太阳"
-srsWords: "sun"
+front: "what"
+meaning: "asking for information"
+translation: "pron. 什么；interj. 怎么, 多么；a. 什么的；adv. 到什么程度"
+srsWords: "what"
 
 [flashcard-review]
-front: "broken"
-meaning: "Physically and forcibly separated into pieces or cracked or split; Not continuous in space, time, or sequence or varying abruptly"
-translation: "a. 坏掉的, 打破的, 断掉的；break的过去分词"
-srsWords: "broken"
+front: "which"
+meaning: "asking about choice; relative pronoun"
+translation: "pron. 哪一个, 那一个"
+srsWords: "which"
+---
+lessonTitle: "Lesson 11: Hobbies, Health & Nature Part 1"
+description: "Practice 10 key vocabulary flashcards for Hobbies, Health & Nature"
+icon: "🌿"
+color: "#8BC34A"
+---
+[flashcard-review]
+front: "who"
+meaning: "what person; relative pronoun"
+translation: "pron. 谁"
+srsWords: "who"
+
+[flashcard-review]
+front: "make"
+meaning: "create or produce; cause to be"
+translation: "vt. 制造, 安排, 创造, 构成, 使得, 产生, 造成, 整理, 布置, 引起, 到达, 进行；vi. 开始, 前进, 增大, 被制造, 被处理；n. 制造, 构造, 性情"
+srsWords: "make"
+
+[flashcard-review]
+front: "whose"
+meaning: "The possessive case of who or which. See Who, and Which."
+translation: "pron. 谁的"
+srsWords: "whose"
+
+[flashcard-review]
+front: "scientist"
+meaning: "A person with advanced knowledge of one or more sciences"
+translation: "n. 科学家 科学家"
+srsWords: "scientist"
+
+[flashcard-review]
+front: "with"
+meaning: "together with; using"
+translation: "prep. 和...在一起, 以, 由于"
+srsWords: "with"
+
+[flashcard-review]
+front: "would"
+meaning: "past of will; polite request"
+translation: "aux. 将, 愿意"
+srsWords: "would"
+
+[flashcard-review]
+front: "yes"
+meaning: "affirmative answer"
+translation: "adv. 是；n. 是, 同意；v. 同意"
+srsWords: "yes"
+
+[flashcard-review]
+front: "ground"
+meaning: "A position to be won or defended in battle (or as if in battle); A relatively homogeneous percept extending back of the figure on which attention is…"
+translation: "n. 土地, 战场, 场地, 地面, 范围；a. 土地的, 地面上的；vt. 放在地上, 使搁浅, 打基础, 给...以训练；vi. 搁浅, 落地, 根据, 基于；a. 磨过的；grind的过去式和过去分词"
+srsWords: "ground"
+
+[flashcard-review]
+front: "want"
+meaning: "wish to have or do"
+translation: "n. 需要的东西, 缺乏, 贫困, 需要；vt. 要, 希望, 应该, 缺少；vi. 生活困苦, 需要, 缺少"
+srsWords: "want"
+
+[flashcard-review]
+front: "go"
+meaning: "move or travel; leave"
+translation: "vi. 去, 走, 达到, 运转, 查阅, 消失, 结束, 放弃, 花费, 流传, 趋于, 打算, 剩下；vt. 以...打赌, 对付, 忍受, 出产, 为被捕者出(保释金)；n. 去, 尝试, 进行"
+srsWords: "go"
+
+---
+lessonTitle: "Lesson 12: Hobbies, Health & Nature Part 2"
+description: "Practice 10 key vocabulary flashcards for Hobbies, Health & Nature"
+icon: "🌿"
+color: "#8BC34A"
+---
+[flashcard-review]
+front: "you"
+meaning: "the person spoken to"
+translation: "pron. 你, 你们"
+srsWords: "you"
+
+[flashcard-review]
+front: "your"
+meaning: "belonging to you"
+translation: "pron. 你的, 你们的"
+srsWords: "your"
+
+[flashcard-review]
+front: "shoulder"
+meaning: "The part of the body between the neck and the upper arm; A cut of meat including the upper joint of the foreleg"
+translation: "n. 肩, 肩膀, 衣肩；vt. 肩负, 负担, 担任；vi. 用肩推挤"
+srsWords: "shoulder"
+
+[flashcard-review]
+front: "say"
+meaning: "speak words; express"
+translation: "vt. 说, 讲, 念, 说明, 指明；vi. 说, 讲；n. 意见, 发言权"
+srsWords: "say"
+
+[flashcard-review]
+front: "yours"
+meaning: "See the Note under Your."
+translation: "pron. 你的(东西), 你们的(东西)"
+srsWords: "yours"
+
+[flashcard-review]
+front: "sight"
+meaning: "An instance of visual perception; Anything that is seen"
+translation: "n. 景观, 视力, 眼界, 阅读, 见解, 意见；vt. 看见, 瞄准；vi. 瞄准, 观看；a. 即席的, 见票即付的"
+srsWords: "sight"
+
+[flashcard-review]
+front: "yourself"
+meaning: "reflexive form of you"
+translation: "pron. 你自己"
+srsWords: "yourself"
+
+[flashcard-review]
+front: "bank"
+meaning: "Sloping land (especially the slope beside a body of water); A long ridge or pile"
+translation: "n. 银行, 堤, 岸 库"
+srsWords: "bank"
+
+[flashcard-review]
+front: "can"
+meaning: "be able to; metal container"
+translation: "vt. 装罐；n. 罐头, 容器；aux. 能, 可以"
+srsWords: "can"
+
+[flashcard-review]
+front: "very"
+meaning: "to a high degree"
+translation: "a. 真正的, 恰好的, 十足的, 特有的；adv. 非常, 完全"
+srsWords: "very"
+
+---
+lessonTitle: "Lesson 13: Hobbies, Health & Nature Part 3"
+description: "Practice 10 key vocabulary flashcards for Hobbies, Health & Nature"
+icon: "🌿"
+color: "#8BC34A"
+---
+[flashcard-review]
+front: "back"
+meaning: "to the rear; return"
+translation: "a. 后面的；vt. 使后退, 支持；vi. 倒退, 背靠；adv. 向后地；n. 背部, 后面"
+srsWords: "back"
+
+[flashcard-review]
+front: "please"
+meaning: "polite request; make happy"
+translation: "adv. 请；vt. 使高兴, 合...的心意, 取悦；vi. 使人满意, 讨好, 愿意, 敬请"
+srsWords: "please"
+
+[flashcard-review]
+front: "fine"
+meaning: "Minutely precise especially in differences in meaning; Thin in thickness or diameter"
+translation: "n. 罚款, 罚金, 晴天, 精细；a. 好的, 晴朗的, 健康的, 细小的, 精细的；vt. 罚款, 精炼, 澄清；vi. 变清, 变细；adv. 很好 精细"
+srsWords: "fine"
+
+[flashcard-review]
+front: "coming"
+meaning: "N the act of drawing spatially closer to something; N arrival that has been awaited (especially of something momentous)"
+translation: "n. 来临；a. 就要来的, 接着的"
+srsWords: "coming"
+
+[flashcard-review]
+front: "left"
+meaning: "opposite of right; remaining"
+translation: "a. 左边的, 左倾的, 左侧的, 左派的；adv. 在左面；n. 左, 左面, 左派；leave的过去式和过去分词"
+srsWords: "left"
+
+[flashcard-review]
+front: "telephone"
+meaning: "Transmitting speech at a distance; Electronic equipment that converts sound into electrical signals that can be…"
+translation: "n. 电话, 电话机；v. 打电话"
+srsWords: "telephone"
+
+[flashcard-review]
+front: "try"
+meaning: "attempt"
+translation: "n. 尝试, 试验, 审理, 审判；vt. 试, 尝试, 试验, 考验, 审问, 提炼；vi. 尝试, 试图"
+srsWords: "try"
+
+[flashcard-review]
+front: "hope"
+meaning: "want something to happen"
+translation: "n. 希望, 信心, 期待；v. 希望, 期望, 信赖"
+srsWords: "hope"
+
+[flashcard-review]
+front: "hand"
+meaning: "end of the arm; give"
+translation: "n. 手, 爪, 指针, 掌握, 协助, 人手, 手艺, 手迹, 支配, 插手；vt. 交给, 支持, 搀扶"
+srsWords: "hand"
+
+[flashcard-review]
+front: "check"
+meaning: "A written order directing a bank to pay money; The bill in a restaurant"
+translation: "n. 检查, 支票, 阻止物, 寄物牌, 象棋中将军；vt. 检查, 阻止, 核对, 寄存, 托运；vi. 逐项相符, 开支票 复选"
+srsWords: "check"
+
+---
+lessonTitle: "Lesson 14: Hobbies, Health & Nature Part 4"
+description: "Practice 10 key vocabulary flashcards for Hobbies, Health & Nature"
+icon: "🌿"
+color: "#8BC34A"
+---
+[flashcard-review]
+front: "class"
+meaning: "group of students; lesson"
+translation: "n. 班级, 阶级, 种类, 课；vt. 分类 类别; 类; 种类; 类程"
+srsWords: "class"
+
+[flashcard-review]
+front: "fish"
+meaning: "animal that lives in water"
+translation: "n. 鱼, 鱼肉, 鱼类, 接合板；vt. 钓, 钓鱼, 查出, 用接合板连接；vi. 捕鱼, 钓鱼, 用钩捞取, 摸索寻找"
+srsWords: "fish"
+
+[flashcard-review]
+front: "cover"
+meaning: "The act of concealing the existence of something by obstructing the view of it; Fire that makes it difficult for the enemy to fire on your own individuals or formations"
+translation: "n. 盖子, 封面, 藉口；vt. 覆盖, 掩饰, 保护, 掩护, 包括；vi. 覆盖"
+srsWords: "cover"
+
+[flashcard-review]
+front: "pink"
+meaning: "light red color"
+translation: "n. 粉红色, 石竹花, 化身, 典范, 头面人物, 极度；a. 粉红的, 石竹科的, 比较激进的, 脸色发红的, 精致的, 有点下流的；vt. 刺, 扎, 刺痛, 射伤, 使面红耳赤, 使变粉红色；vi. 变粉红色"
+srsWords: "pink"
+
+[flashcard-review]
+front: "take"
+meaning: "get hold of; accept"
+translation: "vt. 拿, 取, 抓, 带领, 获得, 就座, 接受, 吃, 吸引, 采取, 乘, 需要, 花费；vi. 吃掉对方棋子, 抓住, 起作用, 依法获得财产；n. 拿, 取, 收成, 奏效"
+srsWords: "take"
+
+[flashcard-review]
+front: "don"
+meaning: "A Spanish gentleman or nobleman; The head of an organized crime family"
+translation: "n. 西班牙贵族(或绅士), 先生, 阁下；vt. 穿上"
+srsWords: "don"
+
+[flashcard-review]
+front: "but"
+meaning: "however; except"
+translation: "prep. 除了；conj. 但是；adv. 仅仅"
+srsWords: "but"
+
+[flashcard-review]
+front: "strange"
+meaning: "Being definitely out of the ordinary and unexpected; Not known before"
+translation: "a. 奇怪的, 陌生的, 生疏的, 不熟悉的, 不可思议的, 外行的, 外地的, 异乡的"
+srsWords: "strange"
+
+[flashcard-review]
+front: "right"
+meaning: "correct; opposite of left"
+translation: "n. 权利, 右边, 正义, 右派, 公正；a. 正确的, 对的, 恰当的, 正常的, 正直的, 正面的, 右方的；adv. 正确地, 以有利结果, 一直, 直接, 向右；vt. 扶直, 整理, 纠正, 伸冤, 使昭雪；vi. 恢复平衡 右, 权利"
+srsWords: "right"
+
+[flashcard-review]
+front: "now"
+meaning: "at the present moment"
+translation: "adv. 现在, 刚才, 目前；n. 现在；a. 现在的；conj. 由于"
+srsWords: "now"
+
+---
+lessonTitle: "Lesson 15: Hobbies, Health & Nature Part 5"
+description: "Practice 10 key vocabulary flashcards for Hobbies, Health & Nature"
+icon: "🌿"
+color: "#8BC34A"
+---
+[flashcard-review]
+front: "one"
+meaning: "the number 1; a single person or thing"
+translation: "n. 一(个)；pron. 一, 任何人；num. 一, 一个；a. 一致的, 完整的"
+srsWords: "one"
+
+[flashcard-review]
+front: "will"
+meaning: "future auxiliary; determination"
+translation: "n. 意志, 决心, 意愿, 意向, 干劲, 遗嘱；vt. 用意志的力量驱使, 决意, 愿意, 立遗嘱；vi. 下决心, 愿意；aux. 将, 愿意, 必须"
+srsWords: "will"
+
+[flashcard-review]
+front: "good"
+meaning: "of high quality; pleasant"
+translation: "n. 善行, 好处, 利益；a. 好的, 优良的, 上等的, 愉快的, 有益的, 好心的, 慈善的, 虔诚的"
+srsWords: "good"
+
+[flashcard-review]
+front: "going"
+meaning: "Advancing toward a goal; In full operation"
+translation: "n. 去, 离去, 工作情况, 地面状况, 行为；a. 进行中的, 流行的, 成功的, 现存的"
+srsWords: "going"
+
+[flashcard-review]
+front: "time"
+meaning: "hours/days/years; an occasion"
+translation: "n. 时间, 时侯, 时机, 时期, 期限, 次数, 节拍, 暂停, 规定时间；vt. 测定...的时间, 记录...的时间, 计时, 定时；a. 时间的, 记时的, 定时的, 定期的, 分期的 DOS内部命令:用于显示或设定系统的时间"
+srsWords: "time"
+
+[flashcard-review]
+front: "survey"
+meaning: "A detailed critical inspection; For statistical purposes"
+translation: "n. 纵览, 视察, 测量, 俯瞰, 调查；vt. 审视, 视察, 俯瞰, 通盘考虑；vi. 测量土地"
+srsWords: "survey"
+
+[flashcard-review]
+front: "spell"
+meaning: "Orally recite the letters of or give the spelling of; Indicate or signify"
+translation: "n. 符咒, 魅力, 轮值, 轮班, 工作时间, 一次发作；vt. 拼写, 拼成, 琢磨, 理解, 招致, 轮换, 迷住；vi. 轮换, 拼字"
+srsWords: "spell"
+
+[flashcard-review]
+front: "team"
+meaning: "group working together"
+translation: "n. 队, 组；vt. 把马(牛)套在同一辆车上, 把...编成一组；vi. 驾驶卡车, 协作"
+srsWords: "team"
+
+[flashcard-review]
+front: "man"
+meaning: "adult male; human being"
+translation: "n. 男人, 人类, 人；vt. 为...配备人手, 操纵, 使振奋 城域网, 手册"
+srsWords: "man"
+
+[flashcard-review]
+front: "need"
+meaning: "require; something necessary"
+translation: "n. 需要, 必须, 缺乏；vt. 需要, 必需；vi. 贫困, 有必要；aux. 需要"
+srsWords: "need"
+
+---
+lessonTitle: "Lesson 16: Hobbies, Health & Nature Part 6"
+description: "Practice 10 key vocabulary flashcards for Hobbies, Health & Nature"
+icon: "🌿"
+color: "#8BC34A"
+---
+[flashcard-review]
+front: "down"
+meaning: "to a lower place; sad"
+translation: "a. 向下的；adv. 下, 下去, 降下；prep. 往下, 沿着；n. 丘陵, 软毛, 开阔的高地 向下, 退下命令"
+srsWords: "down"
+
+[flashcard-review]
+front: "home"
+meaning: "the place you live"
+translation: "n. 家, 避难所, 故乡；a. 家庭的, 国内的, 打中目标的；adv. 在家, 在本国, 打中目标地 返回始位"
+srsWords: "home"
+
+[flashcard-review]
+front: "little"
+meaning: "small; not much"
+translation: "n. 一点点, 少许, 一会儿, 短时间；a. 小的, 很少的, 幼小的, 琐碎的, 短暂的, 矮小的；adv. 很少, 稍微, 完全不"
+srsWords: "little"
+
+[flashcard-review]
+front: "use"
+meaning: "employ for a purpose"
+translation: "n. 使用, 习惯, 使用价值, 用法, 使用权；vt. 使用, 利用, 运用, 耗费；vi. 惯常"
+srsWords: "use"
+
+[flashcard-review]
+front: "off"
+meaning: "not on; away from"
+translation: "a. 关着的, 不再生效的, 处于...境况的, 休假的, 空闲的；adv. 走开, ...掉, ...下, 休息, 出发, 隔断；prep. 离开, 脱落, 不在从事......, 在...之外；vi. 离开, 滚开；vt. 杀死；n. 关闭状态 关闭, 清屏命令"
+srsWords: "off"
+
+[flashcard-review]
+front: "sure"
+meaning: "certain; yes"
+translation: "a. 确信, 必然的, 必定的；adv. 当然, 确实地, 无疑地"
+srsWords: "sure"
+
+[flashcard-review]
+front: "still"
+meaning: "continuing; even so"
+translation: "n. 蒸馏室, 寂静, 剧照；v. 蒸馏, (使)平静, (使)静止；a. 静止的, 不动的, 静寂的, 不起泡的, 静物摄影的；adv. 仍然, 更, 静止地；conj. 然而, 但是"
+srsWords: "still"
+
+[flashcard-review]
+front: "tool"
+meaning: "An implement used in the practice of a vocation; Drive"
+translation: "n. 工具, 机床, 傀儡；vt. 用工具加工；vi. 使用工具"
+srsWords: "tool"
+
+[flashcard-review]
+front: "topic"
+meaning: "Some situation or event that is thought about"
+translation: "n. 主题, 论题, 话题"
+srsWords: "topic"
+
+[flashcard-review]
+front: "around"
+meaning: "in a circle; nearby"
+translation: "prep. 包围, 在...周围, 四处；adv. 兜着圈子, 在附近, 到处"
+srsWords: "around"
+
+---
+lessonTitle: "Lesson 17: Hobbies, Health & Nature Part 7"
+description: "Practice 10 key vocabulary flashcards for Hobbies, Health & Nature"
+icon: "🌿"
+color: "#8BC34A"
+---
+[flashcard-review]
+front: "tower"
+meaning: "A structure taller than its diameter; Can stand alone or be attached to a larger building"
+translation: "n. 塔, 高楼, 堡垒；vi. 高耸, 翱翔"
+srsWords: "tower"
+
+[flashcard-review]
+front: "other"
+meaning: "different; remaining"
+translation: "a. 其他的, 另外的, 从前的；pron. 其他的, 他人, 另外一个"
+srsWords: "other"
+
+[flashcard-review]
+front: "call"
+meaning: "phone; name; shout"
+translation: "n. 呼叫, 访问, 打电话, 号召, 召集, 要求；vt. 呼叫, 召集, 打电话；vi. 叫喊, 访问, 叫牌 调用; 呼叫; DOS内部命令:在批处理文件中调用另一个批处理文件"
+srsWords: "call"
+
+[flashcard-review]
+front: "help"
+meaning: "make it easier for someone"
+translation: "n. 帮忙, 帮助者, 补救办法, 有益的东西；vt. 帮助, 帮忙, 接济, 治疗, 款待；vi. 有用, 救命, 招待 帮助, 帮助程序; DOS外部命令: DOS命令的电子文件帮助程序"
+srsWords: "help"
+
+[flashcard-review]
+front: "turkey"
+meaning: "Large gallinaceous bird with fan-shaped tail; A Eurasian republic in Asia Minor and the Balkans"
+translation: "n. 火鸡, 无用的家伙, 土耳其"
+srsWords: "turkey"
+
+[flashcard-review]
+front: "better"
+meaning: "Surpass in excellence; Something superior in quality or condition or effect"
+translation: "a. 较好的；adv. 比较好"
+srsWords: "better"
+
+[flashcard-review]
+front: "long"
+meaning: "great in length or time"
+translation: "a. 长的, 长久的, 冗长的, 做多头的；vi. 渴望, 热望, 极想；adv. 长久, 始终；n. 长时间, 长信号, 长整型 长, 长整型"
+srsWords: "long"
+
+[flashcard-review]
+front: "name"
+meaning: "what someone/something is called"
+translation: "n. 名字, 名称, 姓名, 名义, 名誉, 文件名；vt. 命名, 称呼, 任命, 提名, 列举；a. 姓名的, 据以取名的 名称, 文件名, 姓名"
+srsWords: "name"
+
+[flashcard-review]
+front: "place"
+meaning: "a location; put somewhere"
+translation: "n. 地方, 地点, 位置, 住所, 座位, 地位, 处境, 特权, 空间, 余地, 职务, 位；vt. 放置, 寄予, 认出, 评定, 任命；vi. 名次列前"
+srsWords: "place"
+
+[flashcard-review]
+front: "every time"
+meaning: "On every occasion"
+translation: "每次; 每当; 每到"
+srsWords: "every time"
+
+---
+lessonTitle: "Lesson 18: Hobbies, Health & Nature Part 8"
+description: "Practice 10 key vocabulary flashcards for Hobbies, Health & Nature"
+icon: "🌿"
+color: "#8BC34A"
+---
+[flashcard-review]
+front: "wrong"
+meaning: "not correct"
+translation: "a. 错误的, 不正当的, 失常的；adv. 错误地"
+srsWords: "wrong"
+
+[flashcard-review]
+front: "another"
+meaning: "one more; a different one"
+translation: "a. 另外的, 再一的, 不同的；pron. 又一个, 另一个, 类似的另一个"
+srsWords: "another"
+
+[flashcard-review]
+front: "own"
+meaning: "belonging to you; possess"
+translation: "n. 自己的；a. 自己的, 嫡亲的, 同胞的；vt. 拥有, 支配, 自认, 承认, 顺从于；vi. 承认, 供认"
+srsWords: "own"
+
+[flashcard-review]
+front: "care"
+meaning: "look after; be concerned"
+translation: "n. 小心, 照料, 忧虑；vi. 关心, 介意；vt. 在意, 喜欢"
+srsWords: "care"
+
+[flashcard-review]
+front: "wheel"
+meaning: "Forces that provide energy and direction; A circular helm to control the rudder of a vessel"
+translation: "n. 轮子, 车轮, 轮, 方向盘, 旋转, 机构, 重要人物；vt. 使旋转, 转动, 使转向；vi. 旋转, 转弯, 盘旋"
+srsWords: "wheel"
+
+[flashcard-review]
+front: "mind"
+meaning: "The seat of the faculty of reason; What you intend to do"
+translation: "n. 思想, 愿望, 智力, 记忆, 心理, 情绪, 理智, 主意, 心意；vi. 介意, 注意, 留心；vt. 注意, 留意, 专心于, 照看, 介意"
+srsWords: "mind"
+
+[flashcard-review]
+front: "saw"
+meaning: "Cut with a saw; Hand tool having a toothed blade for cutting"
+translation: "n. 锯子, 谚语；vt. 锯, 锯开, 来回移动；vi. 拉锯, 移动；see的过去式"
+srsWords: "saw"
+
+[flashcard-review]
+front: "show"
+meaning: "let someone see; a performance"
+translation: "n. 显示, 表现, 展览, 卖弄, 炫耀, 外观, 演出, 洋相；vt. 表示, 显示, 展现, 陈列, 演出, 表明, 指出, 带领；vi. 露面, 显现, 演出 显示"
+srsWords: "show"
+
+[flashcard-review]
+front: "room"
+meaning: "space in a building"
+translation: "n. 房间, 空位, 场所；vi. 住宿, 居住；vt. 留宿"
+srsWords: "room"
+
+[flashcard-review]
+front: "most"
+meaning: "(superlative of `many' used with count nouns and often preceded by `the') quantifier…; The superlative of `much' that can be used with mass nouns and is usually preceded by…"
+translation: "n. 最多, 最大；a. 大多数的, 几乎全部的, 最多的；adv. 最, 最多, 极其"
+srsWords: "most"
+
+---
+lessonTitle: "Lesson 19: Hobbies, Health & Nature Part 9"
+description: "Practice 10 key vocabulary flashcards for Hobbies, Health & Nature"
+icon: "🌿"
+color: "#8BC34A"
+---
+[flashcard-review]
+front: "once"
+meaning: "one time; formerly"
+translation: "adv. 一次, 曾经, 一旦；conj. 一旦, 一经；n. 一次；a. 从前的"
+srsWords: "once"
+
+[flashcard-review]
+front: "writer"
+meaning: "Writes (books or stories or articles or the like) professionally (for pay); A person who is able to write and has written something"
+translation: "n. 作家, 撰稿者, 抄写员 记录器"
+srsWords: "writer"
+
+[flashcard-review]
+front: "feel"
+meaning: "experience an emotion or touch"
+translation: "vt. 感觉, 觉得, 触摸, 以为；vi. 有知觉, 摸索, 同情；n. 感觉, 觉得, 触摸"
+srsWords: "feel"
+
+[flashcard-review]
+front: "hold"
+meaning: "keep in your hand; contain"
+translation: "n. 把握, 把持力, 柄, 控制, 掌握, 监禁；vt. 保存, 握住, 拿住, 占据, 持有, 拥有；vi. 支持, 持续, 有效；n. 保留 保留"
+srsWords: "hold"
+
+[flashcard-review]
+front: "pretty"
+meaning: "attractive; fairly"
+translation: "a. 漂亮的, 优美的, 机灵的, 狡猾的, 恰当的；adv. 相当, 颇"
+srsWords: "pretty"
+
+[flashcard-review]
+front: "keep"
+meaning: "continue to have; stay in a state"
+translation: "n. 生计, 维持, 保持；vt. 保持, 保存, 遵守, 看守, 整理, 维持, 履行, 经营, 拘留, 记帐；vi. 保持, 继续不断"
+srsWords: "keep"
+
+[flashcard-review]
+front: "yet"
+meaning: "up to now; still; but"
+translation: "adv. 还, 尚, 仍然, 已经, 然而；conj. 然而"
+srsWords: "yet"
+
+[flashcard-review]
+front: "matter"
+meaning: "A vaguely specified concern; That which has mass and occupies space"
+translation: "n. 事件, 物质, 原因, 素材, 实体, 重要；vi. 有关系"
+srsWords: "matter"
+
+[flashcard-review]
+front: "tonight"
+meaning: "The present or immediately coming night; During the night of the present day"
+translation: "n. 今晚, 今夜；adv. 今晚, 今夜"
+srsWords: "tonight"
+
+[flashcard-review]
+front: "away"
+meaning: "to another place; not here"
+translation: "adv. 离去"
+srsWords: "away"
+
+---
+lessonTitle: "Lesson 20: Hobbies, Health & Nature Part 10"
+description: "Practice 10 key vocabulary flashcards for Hobbies, Health & Nature"
+icon: "🌿"
+color: "#8BC34A"
+---
+[flashcard-review]
+front: "end"
+meaning: "finish; the last part"
+translation: "n. 结束, 终点, 目标, 末端, 梢, 死亡, 残余；v. 结束, 终结, 终止 端; 结束"
+srsWords: "end"
+
+[flashcard-review]
+front: "saying"
+meaning: "A word or phrase that particular people use in particular situations"
+translation: "n. 叙述, 话, 说, 言论"
+srsWords: "saying"
+
+[flashcard-review]
+front: "lot"
+meaning: "a large amount; a plot of land"
+translation: "n. 运气, 签, 抽签, 份额, 许多, 一堆；vt. 划分；vi. 抽签, 抓阄"
+srsWords: "lot"
+
+[flashcard-review]
+front: "face"
+meaning: "front of the head"
+translation: "n. 脸, 面容, 正面, 外观；vt. 面对, 朝, 正视, 面临；vi. 朝, 向 现场可改变的控制元件"
+srsWords: "face"
+
+[flashcard-review]
+front: "excuse"
+meaning: "Accept an excuse for; Grant exemption or release to"
+translation: "vt. 原谅, 申辩, 做为...的托辞；n. 致歉, 理由, 饶恕, 借口"
+srsWords: "excuse"
+
+[flashcard-review]
+front: "o'clock"
+meaning: "used when saying the hour"
+translation: "adv. …点钟"
+srsWords: "o'clock"
+
+[flashcard-review]
+front: "worry"
+meaning: "Be worried, concerned, anxious, troubled, or uneasy; Be concerned with"
+translation: "n. 担心, 烦恼, 忧虑, 苦恼, 撕咬；vt. 使烦恼, 使焦虑, 使苦恼, 困扰, 折磨, 撕咬；vi. 烦恼, 担心, 撕咬"
+srsWords: "worry"
+
+[flashcard-review]
+front: "real"
+meaning: "true; not fake"
+translation: "a. 真的, 真实的, 实际的, 实在的, 不动(产)的, 实数的；n. 实数, 现实；adv. 真正地"
+srsWords: "real"
+
+[flashcard-review]
+front: "different"
+meaning: "not the same"
+translation: "a. 不同的 差动, 微分的, 差速器"
+srsWords: "different"
+
+[flashcard-review]
+front: "set"
+meaning: "put in place; a group of things"
+translation: "n. 日落, 同伙, 组合, 集合, 装置；vt. 放, 安置, 放置, 设定, 使凝结, 点燃, 确定, 点缀, 使就位, 树立, 分配, 调整；vi. 日落, 凝固, 定型, 搁住, 结果, 适合；a. 决心的, 规定的, 故意的, 持久的, 固定的, 老套的, 准备好的 设置; DOS内部命令:改变或显示分配给环境变量的值"
+srsWords: "set"
 

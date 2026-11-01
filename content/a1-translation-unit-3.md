@@ -1,8 +1,8 @@
 ---
-unitTitle: "Unit 2: Daily Routine, Home, Shopping & Money"
-description: "Unit 2: Daily Routine & Home - A1 Translation Practice (20 Lessons x 10 Sentences)"
-icon: "🏠"
-color: "#0EA5E9"
+unitTitle: "Unit 3: Transportation, Travel, Health & Body"
+description: "Unit 3: Transportation & Travel - A1 Translation Practice (20 Lessons x 10 Sentences)"
+icon: "🚌"
+color: "#10B981"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "A1"
@@ -12,1561 +12,1561 @@ questionType: "translation"
 
 
 ---
-lessonTitle: "Lesson 1: Morning Routine"
-description: "Translate A1 sentences about Morning Routine"
-icon: "🌅"
-color: "#0EA5E9"
+lessonTitle: "Lesson 1: By Bus"
+description: "Translate A1 sentences about By Bus"
+icon: "🚌"
+color: "#10B981"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我早上七点起床。"
-answer: "I get up at seven in the morning."
-acceptAlso: "I wake up at 7 a.m."
-srsWords: "get" "seven" "morning"
+sentence: "我坐公交车上学。"
+answer: "I take the bus to school."
+acceptAlso: "I go to school by bus."
+srsWords: "take" "bus" "school"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他每天跑步。"
-answer: "He runs every day."
-acceptAlso: "He jogs daily."
-srsWords: "runs" "day"
+sentence: "公交车晚点了。"
+answer: "The bus is late."
+acceptAlso: "The bus is delayed."
+srsWords: "bus" "late"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你刷牙了吗？"
-answer: "Did you brush your teeth."
-acceptAlso: "Have you brushed your teeth?"
-srsWords: "brush" "teeth"
+sentence: "下一班几点来？"
+answer: "When does the next one come."
+acceptAlso: "When is the next bus?"
+srsWords: "next" "one" "come"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我洗了个澡。"
-answer: "I took a shower."
-acceptAlso: "I had a shower."
-srsWords: "took" "shower"
+sentence: "请在前一站下车。"
+answer: "Please get off at the stop before."
+acceptAlso: "Get off one stop early."
+srsWords: "please" "get" "stop"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "她在梳头。"
-answer: "She is combing her hair."
-acceptAlso: "She is brushing her hair."
-srsWords: "combing" "hair"
+sentence: "车费是两元。"
+answer: "The fare is two yuan."
+acceptAlso: "The ticket is two yuan."
+srsWords: "fare" "two" "yuan"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们吃早餐。"
-answer: "We eat breakfast."
-acceptAlso: "We have breakfast."
-srsWords: "eat" "breakfast"
+sentence: "我错过了公交车。"
+answer: "I missed the bus."
+acceptAlso: "I didn't catch the bus."
+srsWords: "missed" "bus"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "请关掉闹钟。"
-answer: "Please turn off the alarm."
-acceptAlso: "Turn off the alarm."
-srsWords: "please" "turn" "alarm"
+sentence: "请让一让。"
+answer: "Please make way."
+acceptAlso: "Move aside, please."
+srsWords: "please" "make" "way"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "今天我要早起。"
-answer: "I will get up early today."
-acceptAlso: "I need to wake up early."
-srsWords: "get" "early"
+sentence: "公交车很挤。"
+answer: "The bus is crowded."
+acceptAlso: "The bus is full."
+srsWords: "bus" "crowded"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "咖啡让我清醒。"
-answer: "Coffee keeps me awake."
-acceptAlso: "Coffee wakes me up."
-srsWords: "coffee" "keeps" "awake"
+sentence: "到站请提醒我。"
+answer: "Please remind me when we arrive."
+acceptAlso: "Tell me when we get there."
+srsWords: "please" "remind" "arrive"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我准备好去上班了。"
-answer: "I am ready to go to work."
-acceptAlso: "I am ready for work."
-srsWords: "ready" "go" "work"
+sentence: "我换乘地铁。"
+answer: "I transfer to the subway."
+acceptAlso: "I change to the metro."
+srsWords: "transfer" "subway"
 
 
 ---
-lessonTitle: "Lesson 2: Household Chores"
-description: "Translate A1 sentences about Household Chores"
-icon: "🧹"
-color: "#0EA5E9"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我打扫了房间。"
-answer: "I cleaned the room."
-acceptAlso: "I tidied the room."
-srsWords: "cleaned" "room"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "他正在洗碗。"
-answer: "He is washing the dishes."
-acceptAlso: "He is doing the dishes."
-srsWords: "washing" "dishes"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "请你倒垃圾。"
-answer: "Please take out the trash."
-acceptAlso: "Please throw away the garbage."
-srsWords: "please" "take" "trash"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "她每天扫地。"
-answer: "She sweeps the floor every day."
-acceptAlso: "She mops daily."
-srsWords: "sweeps" "floor" "day"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "床还没整理。"
-answer: "The bed is not made yet."
-acceptAlso: "The bed is unmade."
-srsWords: "bed" "made" "yet"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我吸尘了客厅。"
-answer: "I vacuumed the living room."
-acceptAlso: "I cleaned the living room."
-srsWords: "vacuumed" "living" "room"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "窗户很脏。"
-answer: "The window is dirty."
-acceptAlso: "The windows are dirty."
-srsWords: "window" "dirty"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "谁在洗衣服？"
-answer: "Who is doing the laundry."
-acceptAlso: "Who is washing clothes?"
-srsWords: "doing" "laundry"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "请把桌子擦干净。"
-answer: "Please wipe the table clean."
-acceptAlso: "Clean the table, please."
-srsWords: "please" "wipe" "table" "clean"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "家务很多。"
-answer: "There is a lot of housework."
-acceptAlso: "There are many chores."
-srsWords: "lot" "housework"
-
-
----
-lessonTitle: "Lesson 3: In the Kitchen"
-description: "Translate A1 sentences about In the Kitchen"
-icon: "🍲"
-color: "#0EA5E9"
+lessonTitle: "Lesson 2: By Train"
+description: "Translate A1 sentences about By Train"
+icon: "🚆"
+color: "#10B981"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "冰箱空了。"
-answer: "The fridge is empty."
-acceptAlso: "The refrigerator is empty."
-srsWords: "fridge" "empty"
+sentence: "火车很快。"
+answer: "The train is fast."
+acceptAlso: "The train is quick."
+srsWords: "train" "fast"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "杯子在橱柜里。"
-answer: "The cups are in the cupboard."
-acceptAlso: "The glasses are in the cabinet."
-srsWords: "cups" "cupboard"
+sentence: "我在火车站等。"
+answer: "I am waiting at the train station."
+acceptAlso: "I wait at the railway station."
+srsWords: "waiting" "train" "station"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "水开了。"
-answer: "The water is boiling."
-acceptAlso: "The water is boiling."
-srsWords: "water" "boiling"
+sentence: "几点发车？"
+answer: "What time does it depart."
+acceptAlso: "When does it leave?"
+srsWords: "time" "depart"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "刀很锋利。"
-answer: "The knife is sharp."
-acceptAlso: "The knife is sharp."
-srsWords: "knife" "sharp"
+sentence: "我要去北京。"
+answer: "I am going to Beijing."
+acceptAlso: "I want to go to Beijing."
+srsWords: "going" "beijing"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "请把碗拿来。"
-answer: "Please bring the bowl."
-acceptAlso: "Bring the bowl, please."
-srsWords: "please" "bring" "bowl"
+sentence: "请给我一张票。"
+answer: "Please give me a ticket."
+acceptAlso: "A ticket, please."
+srsWords: "please" "give" "ticket"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "锅在炉子上。"
-answer: "The pot is on the stove."
-acceptAlso: "The pan is on the stove."
-srsWords: "pot" "stove"
+sentence: "座位是靠窗的。"
+answer: "The seat is by the window."
+acceptAlso: "I have a window seat."
+srsWords: "seat" "window"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我找不到开瓶器。"
-answer: "I cannot find the bottle opener."
-acceptAlso: "I can't find the opener."
-srsWords: "cannot" "find" "bottle" "opener"
+sentence: "火车晚点了。"
+answer: "The train is delayed."
+acceptAlso: "The train is late."
+srsWords: "train" "delayed"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "微波炉坏了。"
-answer: "The microwave is broken."
-acceptAlso: "The microwave is not working."
-srsWords: "microwave" "broken"
+sentence: "行李放在哪里？"
+answer: "Where do I put the luggage."
+acceptAlso: "Where does the bag go?"
+srsWords: "put" "luggage"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "桌子上有盐。"
-answer: "There is salt on the table."
-acceptAlso: "The salt is on the table."
-srsWords: "salt" "table"
+sentence: "请对号入座。"
+answer: "Please sit in your assigned seat."
+acceptAlso: "Take your assigned seat."
+srsWords: "please" "sit" "assigned" "seat"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们喝完这瓶水。"
-answer: "We finished this bottle of water."
-acceptAlso: "We drank the whole bottle."
-srsWords: "finished" "bottle" "water"
+sentence: "我们到站了。"
+answer: "We have arrived."
+acceptAlso: "We are at the station."
+srsWords: "arrived"
 
 
 ---
-lessonTitle: "Lesson 4: Rooms of the House"
-description: "Translate A1 sentences about Rooms of the House"
-icon: "🏠"
-color: "#0EA5E9"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这是我的卧室。"
-answer: "This is my bedroom."
-acceptAlso: "This is my room."
-srsWords: "bedroom"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "客厅很大。"
-answer: "The living room is big."
-acceptAlso: "The living room is large."
-srsWords: "living" "room" "big"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我们在厨房吃饭。"
-answer: "We eat in the kitchen."
-acceptAlso: "We have meals in the kitchen."
-srsWords: "eat" "kitchen"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "浴室在二楼。"
-answer: "The bathroom is on the second floor."
-acceptAlso: "The bathroom is upstairs."
-srsWords: "bathroom" "second" "floor"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "书房很安静。"
-answer: "The study is quiet."
-acceptAlso: "The office is quiet."
-srsWords: "study" "quiet"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "花园里有花。"
-answer: "There are flowers in the garden."
-acceptAlso: "The garden has flowers."
-srsWords: "flowers" "garden"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "阳台可以看到海。"
-answer: "The balcony has a sea view."
-acceptAlso: "You can see the sea from the balcony."
-srsWords: "balcony" "sea" "view"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "地下室很暗。"
-answer: "The basement is dark."
-acceptAlso: "The cellar is dark."
-srsWords: "basement" "dark"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "门是开着的。"
-answer: "The door is open."
-acceptAlso: "The door is opened."
-srsWords: "door" "open"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "钥匙在哪儿？"
-answer: "Where are the keys."
-acceptAlso: "Where is the key?"
-srsWords: "keys"
-
-
----
-lessonTitle: "Lesson 5: Furniture & Bedroom"
-description: "Translate A1 sentences about Furniture & Bedroom"
-icon: "🛏️"
-color: "#0EA5E9"
+lessonTitle: "Lesson 3: By Taxi / Car"
+description: "Translate A1 sentences about By Taxi / Car"
+icon: "🚕"
+color: "#10B981"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "床上有一只猫。"
-answer: "There is a cat on the bed."
-acceptAlso: "A cat is on the bed."
-srsWords: "cat" "bed"
+sentence: "请打车去机场。"
+answer: "Please take a taxi to the airport."
+acceptAlso: "Get a cab to the airport."
+srsWords: "please" "take" "taxi" "airport"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "椅子坏了。"
-answer: "The chair is broken."
-acceptAlso: "The chair is damaged."
-srsWords: "chair" "broken"
+sentence: "司机开得很快。"
+answer: "The driver is driving fast."
+acceptAlso: "The cabbie drives quickly."
+srsWords: "driver" "driving" "fast"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "桌子是木头做的。"
-answer: "The table is made of wood."
-acceptAlso: "The desk is wooden."
-srsWords: "table" "made" "wood"
+sentence: "请在这里停。"
+answer: "Please stop here."
+acceptAlso: "Pull over here."
+srsWords: "please" "stop"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我把书放在书架上。"
-answer: "I put the books on the shelf."
-acceptAlso: "I placed the books on the bookshelf."
-srsWords: "put" "books" "shelf"
+sentence: "到目的地了。"
+answer: "We have reached the destination."
+acceptAlso: "We are at the destination."
+srsWords: "reached" "destination"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "灯亮着。"
-answer: "The light is on."
-acceptAlso: "The lamp is on."
-srsWords: "light"
+sentence: "多少钱车费？"
+answer: "How much is the fare."
+acceptAlso: "What is the taxi fare?"
+srsWords: "fare"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "窗帘是蓝色的。"
-answer: "The curtains are blue."
-acceptAlso: "The drapes are blue."
-srsWords: "curtains" "blue"
+sentence: "请系好安全带。"
+answer: "Please fasten your seat belt."
+acceptAlso: "Buckle up, please."
+srsWords: "please" "fasten" "seat" "belt"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我需要一张新床。"
-answer: "I need a new bed."
-acceptAlso: "I want a new bed."
-srsWords: "need" "new" "bed"
+sentence: "我迷路了。"
+answer: "I am lost."
+acceptAlso: "I lost my way."
+srsWords: "lost"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "镜子在哪里？"
-answer: "Where is the mirror."
-acceptAlso: "Where is the looking glass?"
-srsWords: "mirror"
+sentence: "请把空调关小。"
+answer: "Please turn the AC down."
+acceptAlso: "Lower the air conditioning."
+srsWords: "please" "turn" "ac"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "沙发很舒服。"
-answer: "The sofa is comfortable."
-acceptAlso: "The couch is cozy."
-srsWords: "sofa" "comfortable"
+sentence: "走高速吧。"
+answer: "Let us take the highway."
+acceptAlso: "Take the expressway."
+srsWords: "let" "take" "highway"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "请把被子叠好。"
-answer: "Please fold the quilt."
-acceptAlso: "Fold the blanket, please."
-srsWords: "please" "fold" "quilt"
+sentence: "红灯停。"
+answer: "Stop at the red light."
+acceptAlso: "Stop for the red light."
+srsWords: "stop" "red" "light"
 
 
 ---
-lessonTitle: "Lesson 6: Doing Laundry"
-description: "Translate A1 sentences about Doing Laundry"
-icon: "🧺"
-color: "#0EA5E9"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "衣服脏了。"
-answer: "The clothes are dirty."
-acceptAlso: "The laundry is dirty."
-srsWords: "clothes" "dirty"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我把衬衫洗干净了。"
-answer: "I washed the shirt clean."
-acceptAlso: "I cleaned the shirt."
-srsWords: "washed" "shirt" "clean"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "洗衣机在转。"
-answer: "The washing machine is spinning."
-acceptAlso: "The washer is running."
-srsWords: "washing" "machine" "spinning"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "请把衣服晾起来。"
-answer: "Please hang the clothes up."
-acceptAlso: "Hang the laundry, please."
-srsWords: "please" "hang" "clothes"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这件袜子破了。"
-answer: "This sock is torn."
-acceptAlso: "The sock is broken."
-srsWords: "sock" "torn"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我用熨斗熨衣服。"
-answer: "I iron the clothes."
-acceptAlso: "I use an iron."
-srsWords: "iron" "clothes"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "如何去掉污渍？"
-answer: "How do I remove the stain."
-acceptAlso: "How to get out the stain?"
-srsWords: "remove" "stain"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "晾衣绳断了。"
-answer: "The clothesline broke."
-acceptAlso: "The drying line snapped."
-srsWords: "clothesline" "broke"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "干衣机坏了。"
-answer: "The dryer is broken."
-acceptAlso: "The tumble dryer is not working."
-srsWords: "dryer" "broken"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "明天衣服会干。"
-answer: "The clothes will be dry tomorrow."
-acceptAlso: "The laundry will dry tomorrow."
-srsWords: "clothes" "dry"
-
-
----
-lessonTitle: "Lesson 7: Grocery Shopping"
-description: "Translate A1 sentences about Grocery Shopping"
-icon: "🛒"
-color: "#0EA5E9"
+lessonTitle: "Lesson 4: At the Airport"
+description: "Translate A1 sentences about At the Airport"
+icon: "✈️"
+color: "#10B981"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们去超市吧。"
-answer: "Let us go to the supermarket."
-acceptAlso: "Let's go to the grocery store."
-srsWords: "let" "go" "supermarket"
+sentence: "我在办登机牌。"
+answer: "I am checking in."
+acceptAlso: "I am getting my boarding pass."
+srsWords: "checking"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "购物车满了。"
-answer: "The shopping cart is full."
-acceptAlso: "The trolley is full."
-srsWords: "shopping" "cart" "full"
+sentence: "航班延误了。"
+answer: "The flight is delayed."
+acceptAlso: "The plane is late."
+srsWords: "flight" "delayed"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "牛奶卖完了。"
-answer: "The milk is sold out."
-acceptAlso: "There is no milk left."
-srsWords: "milk" "sold"
+sentence: "我的行李超重了。"
+answer: "My luggage is overweight."
+acceptAlso: "My bag is too heavy."
+srsWords: "luggage" "overweight"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "请拿一袋米。"
-answer: "Please get a bag of rice."
-acceptAlso: "Grab a bag of rice, please."
-srsWords: "please" "get" "bag" "rice"
+sentence: "请出示护照。"
+answer: "Please show your passport."
+acceptAlso: "Your passport, please."
+srsWords: "please" "show" "passport"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "鸡蛋在打折。"
-answer: "The eggs are on sale."
-acceptAlso: "Eggs are discounted."
-srsWords: "eggs" "sale"
+sentence: "安检在哪里？"
+answer: "Where is security."
+acceptAlso: "Where is the security check?"
+srsWords: "security"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我忘了买面包。"
-answer: "I forgot to buy bread."
-acceptAlso: "I didn't buy bread."
-srsWords: "forgot" "buy" "bread"
+sentence: "登机口是几号？"
+answer: "What is the gate number."
+acceptAlso: "Which gate is it?"
+srsWords: "gate" "number"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "排队的人很多。"
-answer: "There are many people in line."
-acceptAlso: "The queue is long."
-srsWords: "people" "line"
+sentence: "飞机起飞了。"
+answer: "The plane took off."
+acceptAlso: "The flight departed."
+srsWords: "plane" "took"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我付现金。"
-answer: "I pay with cash."
-acceptAlso: "I pay in cash."
-srsWords: "pay" "cash"
+sentence: "请系好安全带。"
+answer: "Please fasten your seat belt."
+acceptAlso: "Buckle up, please."
+srsWords: "please" "fasten" "seat" "belt"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "袋子太重了。"
-answer: "The bag is too heavy."
-acceptAlso: "The bag is very heavy."
-srsWords: "bag" "heavy"
+sentence: "我要靠窗座位。"
+answer: "I want a window seat."
+acceptAlso: "I'd like a window seat."
+srsWords: "want" "window" "seat"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "收据在哪里？"
-answer: "Where is the receipt."
-acceptAlso: "Where is the bill?"
-srsWords: "receipt"
+sentence: "免税店在二楼。"
+answer: "The duty-free shop is on the second floor."
+acceptAlso: "The tax-free store is upstairs."
+srsWords: "duty-free" "shop" "second" "floor"
 
 
 ---
-lessonTitle: "Lesson 8: Phone & Messages"
-description: "Translate A1 sentences about Phone & Messages"
-icon: "📱"
-color: "#0EA5E9"
+lessonTitle: "Lesson 5: At the Station"
+description: "Translate A1 sentences about At the Station"
+icon: "🚉"
+color: "#10B981"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我的手机没电了。"
-answer: "My phone is out of battery."
-acceptAlso: "My phone has no power."
-srsWords: "phone" "battery"
+sentence: "售票处在哪里？"
+answer: "Where is the ticket office."
+acceptAlso: "Where is the box office?"
+srsWords: "ticket" "office"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "请给我回短信。"
-answer: "Please reply to my text."
-acceptAlso: "Text me back, please."
-srsWords: "please" "reply" "text"
+sentence: "我买了往返票。"
+answer: "I bought a round-trip ticket."
+acceptAlso: "I got a return ticket."
+srsWords: "bought" "round-trip" "ticket"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我在打电话。"
-answer: "I am on the phone."
-acceptAlso: "I am making a call."
-srsWords: "phone"
+sentence: "站台在左边。"
+answer: "The platform is on the left."
+acceptAlso: "The platform is to the left."
+srsWords: "platform" "left"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "信号不好。"
-answer: "The signal is weak."
-acceptAlso: "The reception is poor."
-srsWords: "signal" "weak"
+sentence: "请检票。"
+answer: "Please check the ticket."
+acceptAlso: "Ticket check, please."
+srsWords: "please" "check" "ticket"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "你收到我的消息了吗？"
-answer: "Did you get my message."
-acceptAlso: "Did you receive my text?"
-srsWords: "get" "message"
+sentence: "火车进来了。"
+answer: "The train is coming in."
+acceptAlso: "The train is arriving."
+srsWords: "train" "coming"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "请调高音量。"
-answer: "Please turn up the volume."
-acceptAlso: "Increase the volume, please."
-srsWords: "please" "turn" "volume"
+sentence: "请站在黄线后。"
+answer: "Please stand behind the yellow line."
+acceptAlso: "Stay behind the yellow line."
+srsWords: "please" "stand" "behind" "yellow" "line"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我加了你的微信。"
-answer: "I added you on WeChat."
-acceptAlso: "I sent you a friend request."
-srsWords: "added" "wechat"
+sentence: "末班车是几点？"
+answer: "What time is the last train."
+acceptAlso: "When is the last service?"
+srsWords: "time" "last" "train"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "电池充满了。"
-answer: "The battery is full."
-acceptAlso: "The battery is charged."
-srsWords: "battery" "full"
+sentence: "我赶上了车。"
+answer: "I caught the train."
+acceptAlso: "I made the train."
+srsWords: "caught" "train"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "充电器不见了。"
-answer: "The charger is missing."
-acceptAlso: "I lost the charger."
-srsWords: "charger" "missing"
+sentence: "候车室很干净。"
+answer: "The waiting room is clean."
+acceptAlso: "The lounge is clean."
+srsWords: "waiting" "room" "clean"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "请帮我拍张照。"
-answer: "Please take a photo for me."
-acceptAlso: "Take a picture of me, please."
+sentence: "广播在播报。"
+answer: "The announcement is playing."
+acceptAlso: "They are making an announcement."
+srsWords: "announcement" "playing"
+
+
+---
+lessonTitle: "Lesson 6: Directions"
+description: "Translate A1 sentences about Directions"
+icon: "🧭"
+color: "#10B981"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "洗手间在哪里？"
+answer: "Where is the restroom."
+acceptAlso: "Where is the toilet?"
+srsWords: "restroom"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "直走然后左转。"
+answer: "Go straight then turn left."
+acceptAlso: "Walk straight and turn left."
+srsWords: "go" "straight" "turn" "left"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "银行在拐角处。"
+answer: "The bank is on the corner."
+acceptAlso: "The bank is at the corner."
+srsWords: "bank" "corner"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "离这里远吗？"
+answer: "Is it far from here."
+acceptAlso: "Is it far?"
+srsWords: "far"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请用地图指给我。"
+answer: "Please point it out on the map."
+acceptAlso: "Show me on the map."
+srsWords: "please" "point" "map"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "对面是邮局。"
+answer: "The post office is opposite."
+acceptAlso: "The post office is across."
+srsWords: "post" "office" "opposite"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "过马路要小心。"
+answer: "Be careful crossing the road."
+acceptAlso: "Cross the street carefully."
+srsWords: "careful" "crossing" "road"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "最近的地铁站？"
+answer: "The nearest subway station."
+acceptAlso: "Where is the closest metro?"
+srsWords: "nearest" "subway" "station"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "你走错方向了。"
+answer: "You are going the wrong way."
+acceptAlso: "You are headed the wrong direction."
+srsWords: "going" "wrong" "way"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "谢谢你的帮助。"
+answer: "Thank you for your help."
+acceptAlso: "Thanks for helping."
+srsWords: "thank" "help"
+
+
+---
+lessonTitle: "Lesson 7: Buying Tickets"
+description: "Translate A1 sentences about Buying Tickets"
+icon: "🎫"
+color: "#10B981"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我想订一张票。"
+answer: "I want to book a ticket."
+acceptAlso: "I would like to reserve a seat."
+srsWords: "want" "book" "ticket"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "还有票吗？"
+answer: "Are there any tickets left."
+acceptAlso: "Are tickets available?"
+srsWords: "tickets" "left"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "学生票有折扣吗？"
+answer: "Is there a student discount."
+acceptAlso: "Student discount?"
+srsWords: "student" "discount"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我要两张成人票。"
+answer: "I want two adult tickets."
+acceptAlso: "Two adult tickets, please."
+srsWords: "want" "two" "adult" "tickets"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "演出几点开始？"
+answer: "What time does the show start."
+acceptAlso: "When does it begin?"
+srsWords: "time" "show" "start"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "座位是连着的吗？"
+answer: "Are the seats together."
+acceptAlso: "Are the seats adjacent?"
+srsWords: "seats" "together"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "可以用手机票吗？"
+answer: "Can I use a mobile ticket."
+acceptAlso: "Is an e-ticket okay?"
+srsWords: "use" "mobile" "ticket"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "退票要收费吗？"
+answer: "Is there a fee to refund."
+acceptAlso: "Is there a cancellation charge?"
+srsWords: "fee" "refund"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请发电子票。"
+answer: "Please send the e-ticket."
+acceptAlso: "Send the e-ticket, please."
+srsWords: "please" "send" "e-ticket"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "票已确认。"
+answer: "The ticket is confirmed."
+acceptAlso: "The booking is confirmed."
+srsWords: "ticket" "confirmed"
+
+
+---
+lessonTitle: "Lesson 8: Hotels"
+description: "Translate A1 sentences about Hotels"
+icon: "🏨"
+color: "#10B981"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我有预订。"
+answer: "I have a reservation."
+acceptAlso: "I booked a room."
+srsWords: "reservation"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请给我房间钥匙。"
+answer: "Please give me the room key."
+acceptAlso: "The room key, please."
+srsWords: "please" "give" "room" "key"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "房价含早餐吗？"
+answer: "Does the rate include breakfast."
+acceptAlso: "Is breakfast included?"
+srsWords: "rate" "include" "breakfast"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我要一间双人房。"
+answer: "I want a double room."
+acceptAlso: "I need a twin room."
+srsWords: "want" "double" "room"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: " Wi-Fi 密码是多少？"
+answer: "What is the Wi-Fi password."
+acceptAlso: "What is the wifi code?"
+srsWords: "wi-fi" "password"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "空调不工作了。"
+answer: "The air conditioning is not working."
+acceptAlso: "The AC is broken."
+srsWords: "air" "conditioning" "working"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请帮我叫出租车。"
+answer: "Please call a taxi for me."
+acceptAlso: "Get me a cab, please."
+srsWords: "please" "call" "taxi"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "几点退房？"
+answer: "What time is checkout."
+acceptAlso: "When do I check out?"
+srsWords: "time" "checkout"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我多住一晚。"
+answer: "I will stay one more night."
+acceptAlso: "I'll extend one night."
+srsWords: "stay" "one" "night"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "前台在楼下。"
+answer: "The front desk is downstairs."
+acceptAlso: "Reception is below."
+srsWords: "front" "desk" "downstairs"
+
+
+---
+lessonTitle: "Lesson 9: Sightseeing"
+description: "Translate A1 sentences about Sightseeing"
+icon: "🗺️"
+color: "#10B981"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我们去观光吧。"
+answer: "Let us go sightseeing."
+acceptAlso: "Let's tour the city."
+srsWords: "let" "go" "sightseeing"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "这是著名的景点。"
+answer: "This is a famous attraction."
+acceptAlso: "This is a well known spot."
+srsWords: "famous" "attraction"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "门票免费吗？"
+answer: "Is the entrance free."
+acceptAlso: "Is admission free?"
+srsWords: "entrance" "free"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请给我们拍照。"
+answer: "Please take a photo of us."
+acceptAlso: "Take our picture, please."
 srsWords: "please" "take" "photo"
 
-
----
-lessonTitle: "Lesson 9: Evening Routine"
-description: "Translate A1 sentences about Evening Routine"
-icon: "🌙"
-color: "#0EA5E9"
----
+[translation]
+text: "Translate this sentence into English"
+sentence: "风景很美。"
+answer: "The scenery is beautiful."
+acceptAlso: "The view is gorgeous."
+srsWords: "scenery" "beautiful"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我晚上看电视。"
-answer: "I watch TV in the evening."
-acceptAlso: "I watch television at night."
-srsWords: "watch" "tv" "evening"
+sentence: "我买了一张明信片。"
+answer: "I bought a postcard."
+acceptAlso: "I got a postcard."
+srsWords: "bought" "postcard"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他正在写作业。"
-answer: "He is doing homework."
-acceptAlso: "He is writing homework."
-srsWords: "doing" "homework"
+sentence: "博物馆周一闭馆。"
+answer: "The museum is closed on Monday."
+acceptAlso: "The museum shuts on Mondays."
+srsWords: "museum" "closed" "monday"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们散步吧。"
-answer: "Let us take a walk."
-acceptAlso: "Let's go for a walk."
-srsWords: "let" "take" "walk"
+sentence: "我们跟团游。"
+answer: "We are on a group tour."
+acceptAlso: "We joined a tour."
+srsWords: "group" "tour"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "孩子睡着了。"
-answer: "The child fell asleep."
-acceptAlso: "The kid is asleep."
-srsWords: "child" "fell" "asleep"
+sentence: "地图很有用。"
+answer: "The map is useful."
+acceptAlso: "The map helps."
+srsWords: "map" "useful"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我把灯关了。"
-answer: "I turned off the light."
-acceptAlso: "I switched off the light."
-srsWords: "turned" "light"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "你明天早起吗？"
-answer: "Are you getting up early tomorrow."
-acceptAlso: "Will you wake up early?"
-srsWords: "getting" "early"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我读了一本书。"
-answer: "I read a book."
-acceptAlso: "I read a book."
-srsWords: "read" "book"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "请锁好门。"
-answer: "Please lock the door."
-acceptAlso: "Lock the door, please."
-srsWords: "please" "lock" "door"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我设置了闹钟。"
-answer: "I set the alarm."
-acceptAlso: "I set my alarm clock."
-srsWords: "set" "alarm"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "晚安，做个好梦。"
-answer: "Good night, sweet dreams."
-acceptAlso: "Good night, sleep well."
-srsWords: "good" "night" "sweet" "dreams"
+sentence: "今天玩得很开心。"
+answer: "We had a lot of fun today."
+acceptAlso: "We enjoyed today."
+srsWords: "lot" "fun"
 
 
 ---
-lessonTitle: "Lesson 10: Weekend at Home"
-description: "Translate A1 sentences about Weekend at Home"
-icon: "🛋️"
-color: "#0EA5E9"
+lessonTitle: "Lesson 10: Lost & Help"
+description: "Translate A1 sentences about Lost & Help"
+icon: "🆘"
+color: "#10B981"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "周末我睡懒觉。"
-answer: "I sleep in on weekends."
-acceptAlso: "I sleep late on the weekend."
-srsWords: "sleep" "weekends"
+sentence: "我迷路了。"
+answer: "I am lost."
+acceptAlso: "I lost my way."
+srsWords: "lost"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我们在家看电影。"
-answer: "We watch movies at home."
-acceptAlso: "We watch films at home."
-srsWords: "watch" "movies" "home"
+sentence: "我的包不见了。"
+answer: "My bag is missing."
+acceptAlso: "My bag is gone."
+srsWords: "bag" "missing"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "他打扫了车库。"
-answer: "He cleaned the garage."
-acceptAlso: "He tidied the garage."
-srsWords: "cleaned" "garage"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我们一起做饭。"
-answer: "We cook together."
-acceptAlso: "We make food together."
-srsWords: "cook" "together"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "花园需要浇水。"
-answer: "The garden needs watering."
-acceptAlso: "The plants need water."
-srsWords: "garden" "needs" "watering"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我整理了我的书桌。"
-answer: "I organized my desk."
-acceptAlso: "I tidied my desk."
-srsWords: "organized" "desk"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "邻居来串门。"
-answer: "The neighbor came over."
-acceptAlso: "The neighbour visited."
-srsWords: "neighbor" "came"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我泡了个热水澡。"
-answer: "I took a hot bath."
-acceptAlso: "I had a warm bath."
-srsWords: "took" "hot" "bath"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "宠物狗在睡觉。"
-answer: "The pet dog is sleeping."
-acceptAlso: "The dog is asleep."
-srsWords: "pet" "dog" "sleeping"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这周末很放松。"
-answer: "This weekend is relaxing."
-acceptAlso: "The weekend is peaceful."
-srsWords: "weekend" "relaxing"
----
-lessonTitle: "Lesson 11: In a Shop"
-description: "Translate A1 sentences about In a Shop"
-icon: "🛍️"
-color: "#8B5CF6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我想买这件衬衫。"
-answer: "I want to buy this shirt."
-acceptAlso: "I would like this shirt."
-srsWords: "want" "buy" "shirt"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "可以试穿吗？"
-answer: "Can I try it on."
-acceptAlso: "May I try this on?"
-srsWords: "try"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这件太贵了。"
-answer: "This is too expensive."
-acceptAlso: "This costs too much."
-srsWords: "expensive"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "有更便宜的吗？"
-answer: "Do you have anything cheaper."
-acceptAlso: "Is there a cheaper one?"
-srsWords: "anything" "cheaper"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "尺码合适。"
-answer: "The size fits."
-acceptAlso: "The size is right."
-srsWords: "size" "fits"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "请帮我包起来。"
-answer: "Please wrap it for me."
-acceptAlso: "Please gift wrap it."
-srsWords: "please" "wrap"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我在找礼物。"
-answer: "I am looking for a gift."
-acceptAlso: "I am searching for a present."
-srsWords: "looking" "gift"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "商店几点关门？"
-answer: "What time does the shop close."
-acceptAlso: "When does the store close?"
-srsWords: "time" "shop" "close"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "今天有折扣。"
-answer: "There is a discount today."
-acceptAlso: "It is on sale today."
-srsWords: "discount"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我在排队结账。"
-answer: "I am lining up to pay."
-acceptAlso: "I am waiting to check out."
-srsWords: "lining" "pay"
-
-
----
-lessonTitle: "Lesson 12: Clothes"
-description: "Translate A1 sentences about Clothes"
-icon: "👕"
-color: "#8B5CF6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这件外套很暖和。"
-answer: "This coat is very warm."
-acceptAlso: "The jacket is warm."
-srsWords: "coat" "warm"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我喜欢这条裤子。"
-answer: "I like these pants."
-acceptAlso: "I like this pair of trousers."
-srsWords: "like" "pants"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "裙子很漂亮。"
-answer: "The dress is beautiful."
-acceptAlso: "The skirt is pretty."
-srsWords: "dress" "beautiful"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "帽子是红色的。"
-answer: "The hat is red."
-acceptAlso: "The cap is red."
-srsWords: "hat" "red"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "手套在哪里？"
-answer: "Where are the gloves."
-acceptAlso: "Where are the mittens?"
-srsWords: "gloves"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这件毛衣太小了。"
-answer: "This sweater is too small."
-acceptAlso: "The jumper is too small."
-srsWords: "sweater" "small"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我需要一件雨衣。"
-answer: "I need a raincoat."
-acceptAlso: "I need a waterproof jacket."
-srsWords: "need" "raincoat"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "围巾很柔软。"
-answer: "The scarf is soft."
-acceptAlso: "The scarf is smooth."
-srsWords: "scarf" "soft"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这件衣服褪色了。"
-answer: "This clothing faded."
-acceptAlso: "The shirt lost its color."
-srsWords: "clothing" "faded"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "你穿多大码？"
-answer: "What size do you wear."
-acceptAlso: "What is your size?"
-srsWords: "size" "wear"
-
-
----
-lessonTitle: "Lesson 13: Shoes & Sizes"
-description: "Translate A1 sentences about Shoes & Sizes"
-icon: "👟"
-color: "#8B5CF6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我的鞋坏了。"
-answer: "My shoes are broken."
-acceptAlso: "My shoes are worn out."
-srsWords: "shoes" "broken"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这双鞋很舒服。"
-answer: "These shoes are comfortable."
-acceptAlso: "These sneakers are comfy."
-srsWords: "shoes" "comfortable"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "请给我一双42码。"
-answer: "Please give me a size 42."
-acceptAlso: "A size 42, please."
-srsWords: "please" "give" "size" "42"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "凉鞋适合夏天。"
-answer: "Sandals are good for summer."
-acceptAlso: "Sandals suit summer."
-srsWords: "sandals" "good" "summer"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "靴子很防水。"
-answer: "The boots are waterproof."
-acceptAlso: "The boots keep out water."
-srsWords: "boots" "waterproof"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "袜子在哪里买？"
-answer: "Where can I buy socks."
-acceptAlso: "Where do I get socks?"
-srsWords: "buy" "socks"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "试穿一下吧。"
-answer: "Try them on."
-acceptAlso: "Give them a try."
-srsWords: "try"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "右脚有点紧。"
-answer: "The right foot is a bit tight."
-acceptAlso: "The right shoe is tight."
-srsWords: "right" "foot" "bit" "tight"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这双鞋打折了。"
-answer: "These shoes are discounted."
-acceptAlso: "These are on sale."
-srsWords: "shoes" "discounted"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我要运动鞋。"
-answer: "I want sneakers."
-acceptAlso: "I need running shoes."
-srsWords: "want" "sneakers"
-
-
----
-lessonTitle: "Lesson 14: Paying"
-description: "Translate A1 sentences about Paying"
-icon: "💳"
-color: "#8B5CF6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我可以用卡吗？"
-answer: "Can I use a card."
-acceptAlso: "May I pay by card?"
-srsWords: "use" "card"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "请刷我的信用卡。"
-answer: "Please swipe my credit card."
-acceptAlso: "Charge my credit card, please."
-srsWords: "please" "swipe" "credit" "card"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我付现金。"
-answer: "I pay in cash."
-acceptAlso: "I pay with cash."
-srsWords: "pay" "cash"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "一共多少钱？"
-answer: "How much is it altogether."
-acceptAlso: "What is the total?"
-srsWords: "altogether"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "找零给你。"
-answer: "Here is your change."
-acceptAlso: "Here is the change."
-srsWords: "change"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "可以开发票吗？"
-answer: "Can I get a receipt."
-acceptAlso: "May I have an invoice?"
-srsWords: "get" "receipt"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "手机支付可以吗？"
-answer: "Is mobile payment okay."
-acceptAlso: "Can I pay with my phone?"
-srsWords: "mobile" "payment" "okay"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我没带钱包。"
-answer: "I did not bring my wallet."
-acceptAlso: "I left my wallet at home."
-srsWords: "bring" "wallet"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "价格包含税吗？"
-answer: "Does the price include tax."
-acceptAlso: "Is tax included?"
-srsWords: "price" "include" "tax"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我用二维码付款。"
-answer: "I paid with a QR code."
-acceptAlso: "I scanned to pay."
-srsWords: "paid" "qr" "code"
-
-
----
-lessonTitle: "Lesson 15: Prices & Bargaining"
-description: "Translate A1 sentences about Prices & Bargaining"
-icon: "🏷️"
-color: "#8B5CF6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "太贵了，便宜点吧。"
-answer: "It is too expensive, make it cheaper."
-acceptAlso: "Give me a discount."
-srsWords: "expensive" "make" "cheaper"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "最低多少钱？"
-answer: "What is the lowest price."
-acceptAlso: "What is your best price?"
-srsWords: "lowest" "price"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "两个一起买有优惠吗？"
-answer: "Is there a deal for two."
-acceptAlso: "Discount for two?"
-srsWords: "deal" "two"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我给你九折。"
-answer: "I will give you ten percent off."
-acceptAlso: "I'll take ten percent off."
-srsWords: "give" "ten" "percent"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "不贵，质量很好。"
-answer: "It is not expensive, the quality is good."
-acceptAlso: "Good quality for the price."
-srsWords: "expensive" "quality" "good"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我再看看别的。"
-answer: "I will look at others."
-acceptAlso: "Let me check elsewhere."
-srsWords: "look" "others"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "成交。"
-answer: "Deal."
-acceptAlso: "It is a deal."
-srsWords: "deal"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "免费送货吗？"
-answer: "Is delivery free."
-acceptAlso: "Is shipping free?"
-srsWords: "delivery" "free"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这是原价。"
-answer: "This is the original price."
-acceptAlso: "This is the list price."
-srsWords: "original" "price"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我买两个。"
-answer: "I will buy two."
-acceptAlso: "I'll take two."
-srsWords: "buy" "two"
-
-
----
-lessonTitle: "Lesson 16: Supermarket"
-description: "Translate A1 sentences about Supermarket"
-icon: "🛒"
-color: "#8B5CF6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "购物车在哪里？"
-answer: "Where is the shopping cart."
-acceptAlso: "Where are the trolleys?"
-srsWords: "shopping" "cart"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我在找牛奶。"
-answer: "I am looking for milk."
-acceptAlso: "I am searching for milk."
-srsWords: "looking" "milk"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "面包在几区？"
-answer: "Which aisle is the bread in."
-acceptAlso: "Where is the bread section?"
-srsWords: "aisle" "bread"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这个牌子不错。"
-answer: "This brand is good."
-acceptAlso: "This brand is nice."
-srsWords: "brand" "good"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "保质期到明天。"
-answer: "The expiry date is tomorrow."
-acceptAlso: "It expires tomorrow."
-srsWords: "expiry" "date"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "请给我一个塑料袋。"
-answer: "Please give me a plastic bag."
-acceptAlso: "A bag, please."
-srsWords: "please" "give" "plastic" "bag"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我忘记拿会员卡。"
-answer: "I forgot my membership card."
-acceptAlso: "I left my loyalty card."
-srsWords: "forgot" "membership" "card"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "称重在哪里？"
-answer: "Where is the weighing scale."
-acceptAlso: "Where do I weigh this?"
-srsWords: "weighing" "scale"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "冷冻食品在左边。"
-answer: "The frozen food is on the left."
-acceptAlso: "The freezer is on the left."
-srsWords: "frozen" "food" "left"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "出口在那边。"
-answer: "The exit is over there."
-acceptAlso: "The way out is there."
-srsWords: "exit"
-
-
----
-lessonTitle: "Lesson 17: Bookstore"
-description: "Translate A1 sentences about Bookstore"
-icon: "📚"
-color: "#8B5CF6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我想买一本词典。"
-answer: "I want to buy a dictionary."
-acceptAlso: "I would like a dictionary."
-srsWords: "want" "buy" "dictionary"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这本小说很有名。"
-answer: "This novel is famous."
-acceptAlso: "This fiction book is well known."
-srsWords: "novel" "famous"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "儿童书籍在二楼。"
-answer: "Children's books are on the second floor."
-acceptAlso: "Kids' books are upstairs."
-srsWords: "children" "books" "second" "floor"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "有地图册吗？"
-answer: "Do you have an atlas."
-acceptAlso: "Is there a map book?"
-srsWords: "atlas"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这本太难了。"
-answer: "This one is too difficult."
-acceptAlso: "This is too hard."
-srsWords: "one" "difficult"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "可以退货吗？"
-answer: "Can I return it."
-acceptAlso: "May I get a refund?"
-srsWords: "return"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我用书券付款。"
-answer: "I paid with a book voucher."
-acceptAlso: "I used a gift card."
-srsWords: "paid" "book" "voucher"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "请问收银台在哪？"
-answer: "Where is the checkout, please."
-acceptAlso: "Where do I pay?"
-srsWords: "checkout" "please"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这是畅销书。"
-answer: "This is a bestseller."
-acceptAlso: "This book sells well."
-srsWords: "bestseller"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我买三本。"
-answer: "I will buy three books."
-acceptAlso: "I'll take three."
-srsWords: "buy" "three" "books"
-
-
----
-lessonTitle: "Lesson 18: Gifts"
-description: "Translate A1 sentences about Gifts"
-icon: "🎁"
-color: "#8B5CF6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这是给你的礼物。"
-answer: "This is a gift for you."
-acceptAlso: "Here is a present for you."
-srsWords: "gift"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "你喜欢这个吗？"
-answer: "Do you like this."
-acceptAlso: "Do you like it?"
-srsWords: "like"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "他送了花。"
-answer: "He gave flowers."
-acceptAlso: "He sent flowers."
-srsWords: "gave" "flowers"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "生日礼物打开了。"
-answer: "The birthday gift is opened."
-acceptAlso: "The present is unwrapped."
-srsWords: "birthday" "gift" "opened"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "谢谢你的礼物。"
-answer: "Thank you for the gift."
-acceptAlso: "Thanks for the present."
-srsWords: "thank" "gift"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我包好了礼物。"
-answer: "I wrapped the gift."
-acceptAlso: "I gift-wrapped it."
-srsWords: "wrapped" "gift"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "卡片上写了什么？"
-answer: "What is written on the card."
-acceptAlso: "What does the card say?"
-srsWords: "written" "card"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "她喜欢惊喜。"
-answer: "She likes surprises."
-acceptAlso: "She enjoys surprises."
-srsWords: "likes" "surprises"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我们交换礼物。"
-answer: "We exchange gifts."
-acceptAlso: "We swap presents."
-srsWords: "exchange" "gifts"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "礼物很贴心。"
-answer: "The gift is thoughtful."
-acceptAlso: "The present is sweet."
-srsWords: "gift" "thoughtful"
-
-
----
-lessonTitle: "Lesson 19: Returns & Exchange"
-description: "Translate A1 sentences about Returns & Exchange"
-icon: "🔁"
-color: "#8B5CF6"
----
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我想退货。"
-answer: "I want to return it."
-acceptAlso: "I would like a refund."
-srsWords: "want" "return"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "可以换一个吗？"
-answer: "Can I exchange it for another."
-acceptAlso: "May I swap it?"
-srsWords: "exchange"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "尺寸不对。"
-answer: "The size is wrong."
-acceptAlso: "The size does not fit."
-srsWords: "size" "wrong"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "有收据吗？"
-answer: "Do you have the receipt."
-acceptAlso: "Do you have the bill?"
-srsWords: "receipt"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "七天可以退。"
-answer: "You can return it within seven days."
-acceptAlso: "Returns allowed in a week."
-srsWords: "return" "seven" "days"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "这个有瑕疵。"
-answer: "This one has a defect."
-acceptAlso: "This is flawed."
-srsWords: "one" "defect"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "我要退款。"
-answer: "I want a refund."
-acceptAlso: "I need my money back."
-srsWords: "want" "refund"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "换货要等多久？"
-answer: "How long for the exchange."
-acceptAlso: "When will the swap be ready?"
-srsWords: "long" "exchange"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "标签还在。"
-answer: "The tag is still on."
-acceptAlso: "The label is intact."
-srsWords: "tag" "still"
-
-[translation]
-text: "Translate this sentence into English"
-sentence: "请帮我处理。"
-answer: "Please help me with this."
-acceptAlso: "Please handle this for me."
+sentence: "请帮帮我。"
+answer: "Please help me."
+acceptAlso: "Help me, please."
 srsWords: "please" "help"
 
+[translation]
+text: "Translate this sentence into English"
+sentence: "你会说中文吗？"
+answer: "Do you speak Chinese."
+acceptAlso: "Can you speak Mandarin?"
+srsWords: "speak" "chinese"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我在找警察。"
+answer: "I am looking for the police."
+acceptAlso: "I need the police."
+srsWords: "looking" "police"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请叫救护车。"
+answer: "Please call an ambulance."
+acceptAlso: "Call an ambulance, please."
+srsWords: "please" "call" "ambulance"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我丢了护照。"
+answer: "I lost my passport."
+acceptAlso: "My passport is lost."
+srsWords: "lost" "passport"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "这是我的地址。"
+answer: "This is my address."
+acceptAlso: "Here is my address."
+srsWords: "address"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "附近有医院吗？"
+answer: "Is there a hospital nearby."
+acceptAlso: "Is there a hospital close?"
+srsWords: "hospital" "nearby"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "谢谢你的好心。"
+answer: "Thank you for your kindness."
+acceptAlso: "Thanks for your help."
+srsWords: "thank" "kindness"
+---
+lessonTitle: "Lesson 11: Parts of Body"
+description: "Translate A1 sentences about Parts of Body"
+icon: "🧍"
+color: "#EF4444"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我的头很疼。"
+answer: "My head hurts."
+acceptAlso: "I have a headache."
+srsWords: "head" "hurts"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "他受伤了腿。"
+answer: "He hurt his leg."
+acceptAlso: "His leg is injured."
+srsWords: "hurt" "leg"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请张开嘴。"
+answer: "Please open your mouth."
+acceptAlso: "Open your mouth, please."
+srsWords: "please" "open" "mouth"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我的手很冷。"
+answer: "My hands are cold."
+acceptAlso: "My hand is cold."
+srsWords: "hands" "cold"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "眼睛是棕色的。"
+answer: "The eyes are brown."
+acceptAlso: "The eye is brown."
+srsWords: "eyes" "brown"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我挠了挠背。"
+answer: "I scratched my back."
+acceptAlso: "I itched my back."
+srsWords: "scratched" "back"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "脚踝肿了。"
+answer: "The ankle is swollen."
+acceptAlso: "The ankle is puffy."
+srsWords: "ankle" "swollen"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请用右手。"
+answer: "Please use your right hand."
+acceptAlso: "Use the right hand."
+srsWords: "please" "use" "right" "hand"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "耳朵在听。"
+answer: "The ears are listening."
+acceptAlso: "The ear hears."
+srsWords: "ears" "listening"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "鼻子不通气。"
+answer: "The nose is blocked."
+acceptAlso: "My nose is stuffy."
+srsWords: "nose" "blocked"
+
 
 ---
-lessonTitle: "Lesson 20: Online Shopping"
-description: "Translate A1 sentences about Online Shopping"
-icon: "💻"
-color: "#8B5CF6"
+lessonTitle: "Lesson 12: Feeling Sick"
+description: "Translate A1 sentences about Feeling Sick"
+icon: "🤒"
+color: "#EF4444"
 ---
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我在网上买的。"
-answer: "I bought it online."
-acceptAlso: "I ordered it online."
-srsWords: "bought" "online"
+sentence: "我感冒了。"
+answer: "I have a cold."
+acceptAlso: "I caught a cold."
+srsWords: "cold"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "快递什么时候到？"
-answer: "When does the delivery arrive."
-acceptAlso: "When will the package come?"
-srsWords: "delivery" "arrive"
+sentence: "他发烧了。"
+answer: "He has a fever."
+acceptAlso: "He is running a fever."
+srsWords: "fever"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "快递员按门铃了。"
-answer: "The courier rang the bell."
-acceptAlso: "The delivery person knocked."
-srsWords: "courier" "rang" "bell"
+sentence: "我觉得恶心。"
+answer: "I feel sick."
+acceptAlso: "I feel nauseous."
+srsWords: "feel" "sick"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "包裹已经发货。"
-answer: "The package has shipped."
-acceptAlso: "The parcel has been sent."
-srsWords: "package" "shipped"
+sentence: "我咳嗽了。"
+answer: "I am coughing."
+acceptAlso: "I have a cough."
+srsWords: "coughing"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "请放在门口。"
-answer: "Please leave it at the door."
-acceptAlso: "Leave it by the door."
-srsWords: "please" "leave" "door"
+sentence: "她嗓子疼。"
+answer: "Her throat hurts."
+acceptAlso: "She has a sore throat."
+srsWords: "throat" "hurts"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "我要退货退款。"
-answer: "I want to return and refund."
-acceptAlso: "I need a return and refund."
-srsWords: "want" "return" "refund"
+sentence: "我浑身酸痛。"
+answer: "My whole body aches."
+acceptAlso: "I ache all over."
+srsWords: "whole" "body" "aches"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "评价很好。"
-answer: "The reviews are good."
-acceptAlso: "The ratings are positive."
-srsWords: "reviews" "good"
+sentence: "你量体温了吗？"
+answer: "Did you take your temperature."
+acceptAlso: "Have you checked your fever?"
+srsWords: "take" "temperature"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "运费多少？"
-answer: "How much is the shipping."
-acceptAlso: "What is the delivery fee?"
-srsWords: "shipping"
+sentence: "我流鼻涕。"
+answer: "My nose is running."
+acceptAlso: "I have a runny nose."
+srsWords: "nose" "running"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "下单成功。"
-answer: "The order is successful."
-acceptAlso: "The order went through."
-srsWords: "order" "successful"
+sentence: "我头晕。"
+answer: "I feel dizzy."
+acceptAlso: "I am lightheaded."
+srsWords: "feel" "dizzy"
 
 [translation]
 text: "Translate this sentence into English"
-sentence: "密码支付失败。"
-answer: "The payment password failed."
-acceptAlso: "The payment was declined."
-srsWords: "payment" "password" "failed"
+sentence: "需要休息。"
+answer: "I need to rest."
+acceptAlso: "Rest is needed."
+srsWords: "need" "rest"
+
+
+---
+lessonTitle: "Lesson 13: At the Doctor"
+description: "Translate A1 sentences about At the Doctor"
+icon: "🩺"
+color: "#EF4444"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我预约了医生。"
+answer: "I made a doctor's appointment."
+acceptAlso: "I booked the doctor."
+srsWords: "made" "doctor" "appointment"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "哪里不舒服？"
+answer: "Where does it hurt."
+acceptAlso: "What is the problem?"
+srsWords: "hurt"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请躺下。"
+answer: "Please lie down."
+acceptAlso: "Lie down, please."
+srsWords: "please" "lie"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我需要吃药。"
+answer: "I need to take medicine."
+acceptAlso: "I must take medication."
+srsWords: "need" "take" "medicine"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "多久会好？"
+answer: "How long until I recover."
+acceptAlso: "When will I get better?"
+srsWords: "long" "until" "recover"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "化验结果出来了。"
+answer: "The test results are out."
+acceptAlso: "The lab results came."
+srsWords: "test" "results"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请深呼吸。"
+answer: "Please take a deep breath."
+acceptAlso: "Breathe deeply, please."
+srsWords: "please" "take" "deep" "breath"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我过敏了。"
+answer: "I am allergic."
+acceptAlso: "I have an allergy."
+srsWords: "allergic"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "需要打针吗？"
+answer: "Do I need an injection."
+acceptAlso: "Do I need a shot?"
+srsWords: "need" "injection"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我好了很多。"
+answer: "I am much better."
+acceptAlso: "I feel a lot better."
+srsWords: "better"
+
+
+---
+lessonTitle: "Lesson 14: At the Pharmacy"
+description: "Translate A1 sentences about At the Pharmacy"
+icon: "💊"
+color: "#EF4444"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我要买感冒药。"
+answer: "I want to buy cold medicine."
+acceptAlso: "I need flu medicine."
+srsWords: "want" "buy" "cold" "medicine"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "这药怎么吃？"
+answer: "How do I take this medicine."
+acceptAlso: "How should I take this?"
+srsWords: "take" "medicine"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "一天三次。"
+answer: "Three times a day."
+acceptAlso: "Take it thrice daily."
+srsWords: "three" "times" "day"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "饭后服用。"
+answer: "Take it after meals."
+acceptAlso: "Take with food."
+srsWords: "take" "meals"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "有副作用吗？"
+answer: "Are there side effects."
+acceptAlso: "Any side effects?"
+srsWords: "side" "effects"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请给我创可贴。"
+answer: "Please give me a band-aid."
+acceptAlso: "A plaster, please."
+srsWords: "please" "give" "band-aid"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "体温计在哪里？"
+answer: "Where is the thermometer."
+acceptAlso: "Where is the fever gauge?"
+srsWords: "thermometer"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "维生素有帮助。"
+answer: "Vitamins help."
+acceptAlso: "Vitamins are useful."
+srsWords: "vitamins" "help"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请给我收据。"
+answer: "Please give me the receipt."
+acceptAlso: "The receipt, please."
+srsWords: "please" "give" "receipt"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "这药过期了吗？"
+answer: "Is this medicine expired."
+acceptAlso: "Is this drug expired?"
+srsWords: "medicine" "expired"
+
+
+---
+lessonTitle: "Lesson 15: Teeth & Dentist"
+description: "Translate A1 sentences about Teeth & Dentist"
+icon: "🦷"
+color: "#EF4444"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我牙疼。"
+answer: "I have a toothache."
+acceptAlso: "My tooth hurts."
+srsWords: "toothache"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请刷牙两次。"
+answer: "Please brush your teeth twice."
+acceptAlso: "Brush teeth twice a day."
+srsWords: "please" "brush" "teeth" "twice"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "他用牙线。"
+answer: "He uses dental floss."
+acceptAlso: "He flosses."
+srsWords: "uses" "dental" "floss"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "去看牙医吧。"
+answer: "Go to the dentist."
+acceptAlso: "See the dentist."
+srsWords: "go" "dentist"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "补牙很贵。"
+answer: "Filling a tooth is expensive."
+acceptAlso: "A filling costs a lot."
+srsWords: "filling" "tooth" "expensive"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "别吃太多糖。"
+answer: "Do not eat too much sugar."
+acceptAlso: "Avoid too much sugar."
+srsWords: "eat" "sugar"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "漱口水在哪？"
+answer: "Where is the mouthwash."
+acceptAlso: "Where is the rinse?"
+srsWords: "mouthwash"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "拔牙很疼。"
+answer: "Pulling a tooth hurts."
+acceptAlso: "Tooth extraction is painful."
+srsWords: "pulling" "tooth" "hurts"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "牙齿很白。"
+answer: "The teeth are white."
+acceptAlso: "The tooth is white."
+srsWords: "teeth" "white"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "定期检查口腔。"
+answer: "Check your teeth regularly."
+acceptAlso: "Get regular dental checkups."
+srsWords: "check" "teeth" "regularly"
+
+
+---
+lessonTitle: "Lesson 16: Exercise"
+description: "Translate A1 sentences about Exercise"
+icon: "🏃"
+color: "#EF4444"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我每天锻炼。"
+answer: "I exercise every day."
+acceptAlso: "I work out daily."
+srsWords: "exercise" "day"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "他喜欢跑步。"
+answer: "He likes to run."
+acceptAlso: "He enjoys running."
+srsWords: "likes" "run"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请做伸展运动。"
+answer: "Please do stretching."
+acceptAlso: "Stretch, please."
+srsWords: "please" "stretching"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "瑜伽很放松。"
+answer: "Yoga is relaxing."
+acceptAlso: "Yoga calms me."
+srsWords: "yoga" "relaxing"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我去健身房。"
+answer: "I go to the gym."
+acceptAlso: "I work out at the gym."
+srsWords: "go" "gym"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "游泳有益健康。"
+answer: "Swimming is good for health."
+acceptAlso: "Swimming is healthy."
+srsWords: "swimming" "good" "health"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我举重。"
+answer: "I lift weights."
+acceptAlso: "I do weight training."
+srsWords: "lift" "weights"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "出汗了。"
+answer: "I am sweating."
+acceptAlso: "I broke a sweat."
+srsWords: "sweating"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "别太累。"
+answer: "Do not overdo it."
+acceptAlso: "Don't push too hard."
+srsWords: "overdo"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "运动后要喝水。"
+answer: "Drink water after exercise."
+acceptAlso: "Hydrate after working out."
+srsWords: "drink" "water" "exercise"
+
+
+---
+lessonTitle: "Lesson 17: Sleep"
+description: "Translate A1 sentences about Sleep"
+icon: "😴"
+color: "#EF4444"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我昨晚没睡好。"
+answer: "I did not sleep well last night."
+acceptAlso: "I slept badly."
+srsWords: "sleep" "well" "last" "night"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我失眠了。"
+answer: "I have insomnia."
+acceptAlso: "I can't sleep."
+srsWords: "insomnia"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "你睡了几小时？"
+answer: "How many hours did you sleep."
+acceptAlso: "How long did you sleep?"
+srsWords: "hours" "sleep"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "午觉很重要。"
+answer: "The nap is important."
+acceptAlso: "Naps matter."
+srsWords: "nap" "important"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我做了个梦。"
+answer: "I had a dream."
+acceptAlso: "I dreamed."
+srsWords: "dream"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "床很舒服。"
+answer: "The bed is comfortable."
+acceptAlso: "The bed is cozy."
+srsWords: "bed" "comfortable"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "别熬夜。"
+answer: "Do not stay up late."
+acceptAlso: "Don't burn the midnight oil."
+srsWords: "stay" "late"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我打鼾。"
+answer: "I snore."
+acceptAlso: "I saw logs."
+srsWords: "snore"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "窗帘挡光。"
+answer: "The curtains block the light."
+acceptAlso: "The drapes block light."
+srsWords: "curtains" "block" "light"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我精神很好。"
+answer: "I feel energetic."
+acceptAlso: "I am full of energy."
+srsWords: "feel" "energetic"
+
+
+---
+lessonTitle: "Lesson 18: Injuries"
+description: "Translate A1 sentences about Injuries"
+icon: "🩹"
+color: "#EF4444"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我割伤了手指。"
+answer: "I cut my finger."
+acceptAlso: "I sliced my finger."
+srsWords: "cut" "finger"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请止血。"
+answer: "Please stop the bleeding."
+acceptAlso: "Stop the blood, please."
+srsWords: "please" "stop" "bleeding"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "他扭伤了脚。"
+answer: "He sprained his foot."
+acceptAlso: "He twisted his ankle."
+srsWords: "sprained" "foot"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我烫伤了。"
+answer: "I burned myself."
+acceptAlso: "I scalded myself."
+srsWords: "burned" "myself"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "冰敷一下。"
+answer: "Apply an ice pack."
+acceptAlso: "Ice it."
+srsWords: "apply" "ice" "pack"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "需要缝针吗？"
+answer: "Do I need stitches."
+acceptAlso: "Do I need sutures?"
+srsWords: "need" "stitches"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "小心台阶。"
+answer: "Be careful of the step."
+acceptAlso: "Watch the stairs."
+srsWords: "careful" "step"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我贴了创可贴。"
+answer: "I put on a band-aid."
+acceptAlso: "I used a plaster."
+srsWords: "put" "band-aid"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "伤口感染了。"
+answer: "The wound is infected."
+acceptAlso: "The cut is infected."
+srsWords: "wound" "infected"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "去医院吧。"
+answer: "Let us go to the hospital."
+acceptAlso: "Go to the hospital."
+srsWords: "let" "go" "hospital"
+
+
+---
+lessonTitle: "Lesson 19: Healthy Habits"
+description: "Translate A1 sentences about Healthy Habits"
+icon: "🥦"
+color: "#EF4444"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "早睡早起。"
+answer: "Sleep early and wake early."
+acceptAlso: "Early to bed, early to rise."
+srsWords: "sleep" "early" "wake"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "多吃水果蔬菜。"
+answer: "Eat more fruit and vegetables."
+acceptAlso: "Have more produce."
+srsWords: "eat" "fruit" "vegetables"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "少喝含糖饮料。"
+answer: "Drink fewer sugary drinks."
+acceptAlso: "Cut back on soda."
+srsWords: "drink" "fewer" "sugary" "drinks"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "每天走一万步。"
+answer: "Walk ten thousand steps a day."
+acceptAlso: "Walk ten k steps daily."
+srsWords: "walk" "ten" "thousand" "steps" "day"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "勤洗手。"
+answer: "Wash your hands often."
+acceptAlso: "Wash hands frequently."
+srsWords: "wash" "hands" "often"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "定期体检。"
+answer: "Get regular checkups."
+acceptAlso: "Have regular exams."
+srsWords: "get" "regular" "checkups"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "保持心情好。"
+answer: "Stay in a good mood."
+acceptAlso: "Keep a happy mood."
+srsWords: "stay" "good" "mood"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "不抽烟。"
+answer: "Do not smoke."
+acceptAlso: "Avoid smoking."
+srsWords: "smoke"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "喝水充足。"
+answer: "Drink enough water."
+acceptAlso: "Stay hydrated."
+srsWords: "drink" "enough" "water"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "健康第一。"
+answer: "Health comes first."
+acceptAlso: "Health is the top priority."
+srsWords: "health" "comes" "first"
+
+
+---
+lessonTitle: "Lesson 20: Rest & Recovery"
+description: "Translate A1 sentences about Rest & Recovery"
+icon: "🛌"
+color: "#EF4444"
+---
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "你需要休息。"
+answer: "You need to rest."
+acceptAlso: "You should rest."
+srsWords: "need" "rest"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "请躺下放松。"
+answer: "Please lie down and relax."
+acceptAlso: "Lie down and unwind."
+srsWords: "please" "lie" "relax"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "病假一天。"
+answer: "Take a sick day."
+acceptAlso: "A day off for illness."
+srsWords: "take" "sick" "day"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "回家睡觉吧。"
+answer: "Go home and sleep."
+acceptAlso: "Go home to bed."
+srsWords: "go" "home" "sleep"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "慢慢来。"
+answer: "Take it slow."
+acceptAlso: "Go slowly."
+srsWords: "take" "slow"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "别担心。"
+answer: "Do not worry."
+acceptAlso: "Don't worry."
+srsWords: "worry"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "我请假了。"
+answer: "I took leave."
+acceptAlso: "I asked for time off."
+srsWords: "took" "leave"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "康复中。"
+answer: "Recovering."
+acceptAlso: "Getting better."
+srsWords: "recovering"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "喝热汤。"
+answer: "Drink hot soup."
+acceptAlso: "Have warm soup."
+srsWords: "drink" "hot" "soup"
+
+[translation]
+text: "Translate this sentence into English"
+sentence: "很快就会好。"
+answer: "You will be better soon."
+acceptAlso: "You'll recover soon."
+srsWords: "better" "soon"
 
 
 
