@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 5: Arts, Literature & Entertainment + Society, Law & Community"
-description: "Arts, Literature & Entertainment - 200 B1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 5: Arts, Literature, Entertainment, Society, Law & Community"
+description: "200 B1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "🎭"
 color: "#9C27B0"
 targetLanguage: "en"
