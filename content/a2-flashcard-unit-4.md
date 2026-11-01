@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 4: Home, Neighborhood, Community, Education, Science & Nature"
-description: "Home, Neighborhood & Community - 200 A2 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+description: "A2 Flashcard Vocabulary Words"
 icon: "🏡"
 color: "#9C27B0"
 targetLanguage: "en"
