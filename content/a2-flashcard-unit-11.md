@@ -1,5 +1,5 @@
 ---
-unitTitle: "Unit 11: Travel & Places (Extra) + Food & Dining (Extra)"
+unitTitle: "Unit 6: Travel, Places, Food & Dining"
 description: "Travel & Places (Extra) - 200 A2 Flashcard Vocabulary Words"
 icon: "✈️"
 color: "#03A9F4"
