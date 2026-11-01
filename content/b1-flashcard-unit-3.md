@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 3: Media, News & Communication + Health, Lifestyle & Well-being"
-description: "Media, News & Communication - 200 B1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+unitTitle: "Unit 3: Media, News, Communication, Health, Lifestyle & Well-being"
+description: "200 B1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
 icon: "📰"
 color: "#FF9800"
 targetLanguage: "en"
