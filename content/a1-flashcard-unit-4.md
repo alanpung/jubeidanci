@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 4: Travel, Places, City, Time, Seasons & Weather"
-description: "Travel, Places & City - 200 A1 Flashcard Vocabulary Words (20 Lessons x 10 Words)"
+description: "A1 Flashcard Vocabulary Words"
 icon: "✈️"
 color: "#00BCD4"
 targetLanguage: "en"
