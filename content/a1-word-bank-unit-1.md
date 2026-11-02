@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 1: Sentences"
-description: "Unit 1: Sentences - A1 Word Bank Practice (1 Lesson x 1 Question)"
+description: "A1 Word Bank Practice"
 icon: "🧱"
 color: "#009688"
 targetLanguage: "en"
