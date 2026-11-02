@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 2: Daily Life"
-description: "Unit 2: Daily Life - A1 Word Bank Practice (1 Lesson x 1 Question)"
+unitTitle: "Unit 2: Sentences"
+description: "A1 Word Bank Practice"
 icon: "🧱"
 color: "#009688"
 targetLanguage: "en"
