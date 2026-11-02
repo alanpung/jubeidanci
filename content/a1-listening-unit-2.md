@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 2: Numbers"
-description: "Unit 2: Numbers - A1 Listening Practice (1 Lesson x 1 Question)"
+description: "A1 Listening Practice"
 icon: "🎧"
 color: "#FF5722"
 targetLanguage: "en"
