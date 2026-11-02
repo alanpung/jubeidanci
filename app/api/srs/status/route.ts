@@ -13,10 +13,19 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    // "new" is no longer a storable state — New is derived from the learner's
+    // library. Reject it here so a stale client can't re-grow the legacy rows.
+    if (status === "new") {
+      return NextResponse.json(
+        { error: 'status "new" is derived and cannot be written; use "remove"' },
+        { status: 400 },
+      );
+    }
+
     const updated = await setWordStatus(
       word,
       language,
-      status as "new" | "learning" | "learned",
+      status as "learning" | "learned",
       { cefrLevel, translation, pos }
     );
 

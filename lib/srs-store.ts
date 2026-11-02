@@ -346,6 +346,59 @@ export async function pruneLocalNewCards(
   return before - filtered.length;
 }
 
+/**
+ * One-off purge of EVERY legacy "new" card in the local JSON store.
+ *
+ * New is DERIVED from the learner's library (catalog − mastered − learning), so
+ * the store should never hold a status="new" row again. Unlike
+ * pruneLocalNewCards — which keeps whatever the learner's library still backs —
+ * this removes all of them:
+ *   - unpractised (repetitions === 0 and no lastReviewedAt) → deleted
+ *   - practised despite sitting at status="new" → converted to "learning", so
+ *     real progress is never thrown away with the row
+ *
+ * Pass `userId` to restrict the purge to one learner; omit it to process every
+ * user in the store. Idempotent: a second run finds nothing left to do.
+ */
+export async function purgeAllLocalNewCards(
+  userId?: string
+): Promise<{ deleted: number; converted: number }> {
+  const cards = await ensureStore();
+  const kept: SrsCardRecord[] = [];
+  let deleted = 0;
+  let converted = 0;
+
+  for (const c of cards) {
+    if (c.status !== "new") {
+      kept.push(c);
+      continue;
+    }
+    if (userId && (c.userId || "default_user") !== userId) {
+      kept.push(c);
+      continue;
+    }
+
+    const practised = (c.repetitions ?? 0) > 0 || Boolean(c.lastReviewedAt);
+    if (!practised) {
+      deleted++;
+      continue;
+    }
+
+    kept.push({
+      ...c,
+      status: "learning",
+      interval: c.interval || 1,
+      nextReviewAt: c.nextReviewAt || new Date().toISOString(),
+    });
+    converted++;
+  }
+
+  if (deleted > 0 || converted > 0) {
+    await persistStore(kept);
+  }
+  return { deleted, converted };
+}
+
 export interface LocalLessonCompletion {
   id: string;
   userId: string;

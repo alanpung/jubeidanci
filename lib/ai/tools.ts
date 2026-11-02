@@ -504,7 +504,10 @@ export function createTools(userId: string, language?: string) {
           };
         }
 
-        // Save to local store
+        // Save to local store.
+        // "learning", not "new": New is derived (library − mastered −
+        // learning) and never stored, so an explicitly added word has to land
+        // straight in the learning queue rather than as an invisible "new" row.
         for (const w of wordsList) {
           await upsertLocalCard({
             word: w.word.toLowerCase(),
@@ -514,8 +517,8 @@ export function createTools(userId: string, language?: string) {
             cefrLevel: w.cefrLevel,
             pos: w.pos,
             gender: w.gender,
-            status: "new",
-            nextReviewAt: null,
+            status: "learning",
+            nextReviewAt: new Date().toISOString(),
           });
         }
 
@@ -537,8 +540,10 @@ export function createTools(userId: string, language?: string) {
                   gender: w.gender,
                   exampleNative: w.exampleNative,
                   exampleEnglish: w.exampleEnglish,
-                  status: "new" as const,
-                  nextReviewAt: null,
+                  // See the local-store write above: added words start in the
+                  // learning queue, never as a stored "new" row.
+                  status: "learning" as const,
+                  nextReviewAt: new Date(),
                 })),
               )
               .onConflictDoNothing();

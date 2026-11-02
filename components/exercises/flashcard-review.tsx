@@ -488,7 +488,9 @@ export function FlashcardReview({
     setActionFeedback("no");
 
     const words = extractTargetWords(exercise);
-    words.forEach((w) => updateLocalStorageCard(w, "new", language, activeTranslation || activeMeaning || w));
+    // "learning", not "new": the word has been shown and rated, so it belongs
+    // in the learning queue. New is derived from the library and never stored.
+    words.forEach((w) => updateLocalStorageCard(w, "learning", language, activeTranslation || activeMeaning || w));
 
     // Async background sync without blocking UI
     Promise.all(words.map((w) => reviewCard(w, language, 1))).catch((err) => {
