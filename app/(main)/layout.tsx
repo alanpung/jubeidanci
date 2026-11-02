@@ -45,7 +45,7 @@ export default async function MainLayout({
     // timeout, so an unbounded await here = a request that never returns).
     const [userStatsData, srsStats] = await Promise.all([
       withTimeout("layout:getUserStatsData", getUserStatsData(), 5000, null),
-      withTimeout("layout:getSrsStats", getSrsStats(), 5000, null),
+      withTimeout("layout:getSrsStats", getSrsStats(undefined, session.user.email), 5000, null),
     ]);
     stats = userStatsData
       ? {

@@ -32,6 +32,7 @@ import type {
   AvailableUnitForCourse,
 } from "@/lib/content/types";
 import { getUnitLessonsSafe, getUnitLessonCountFast } from "@/lib/content/loader";
+import { withTimeout } from "@/lib/db/timeout";
 import { getUnitQuestionType } from "@/lib/content/question-types";
 import { seedContentFromFilesystem } from "@/lib/db/seed-content";
 
@@ -640,28 +641,50 @@ export async function getCourseWithContent(
       const visibilityConds = [eq(course.visibility, "public")];
       if (userId) {
         visibilityConds.push(eq(course.createdBy, userId));
-        const shared = [...(await getGrantedCourseIds(userId))];
+        // Bounded: a saturated pool queues forever (no driver queue timeout),
+        // so an unbounded lookup would hang the whole page. On timeout we get
+        // an empty set and the course simply isn't matched via share/VIP.
+        const shared = [
+          ...(await withTimeout(
+            "course:getGrantedCourseIds",
+            getGrantedCourseIds(userId),
+            4000,
+            new Set<string>(),
+          )),
+        ];
         if (shared.length) visibilityConds.push(inArray(course.id, shared));
-        const vipOwnerIds = [...(await getVipOwnerIds(userId))];
+        const vipOwnerIds = [
+          ...(await withTimeout(
+            "course:getVipOwnerIds",
+            getVipOwnerIds(userId),
+            4000,
+            new Set<string>(),
+          )),
+        ];
         if (vipOwnerIds.length)
           visibilityConds.push(inArray(course.createdBy, vipOwnerIds));
       }
       courseConditions.push(or(...visibilityConds)!);
 
-    const [courseRow] = await db
-      .select({
-        id: course.id,
-        title: course.title,
-        sourceLanguage: course.sourceLanguage,
-        targetLanguage: course.targetLanguage,
-        level: course.level,
-        visibility: course.visibility,
-        createdBy: course.createdBy,
-        creatorName: user.name,
-      })
-      .from(course)
-      .leftJoin(user, eq(course.createdBy, user.id))
-      .where(and(...courseConditions));
+    const [courseRow] = await withTimeout(
+      "course:selectCourse",
+      db
+        .select({
+          id: course.id,
+          title: course.title,
+          sourceLanguage: course.sourceLanguage,
+          targetLanguage: course.targetLanguage,
+          level: course.level,
+          visibility: course.visibility,
+          createdBy: course.createdBy,
+          creatorName: user.name,
+        })
+        .from(course)
+        .leftJoin(user, eq(course.createdBy, user.id))
+        .where(and(...courseConditions)),
+      5000,
+      [],
+    );
 
     if (courseRow) {
       // Hidden courses are owner-only: a non-owner (including a VIP student of
@@ -673,21 +696,26 @@ export async function getCourseWithContent(
       const isSystemCourse = SYSTEM_COURSE_IDS.includes(courseRow.id);
       const courseCreatorName = courseRow.creatorName ?? (isSystemCourse ? "Alan P" : null);
 
-      const units = await db
-        .select({
-          id: unit.id,
-          title: unit.title,
-          description: unit.description,
-          icon: unit.icon,
-          color: unit.color,
-          markdown: unit.markdown,
-          createdBy: unit.createdBy,
-          createdAt: unit.createdAt,
-          creatorName: user.name,
-        })
-        .from(unit)
-        .leftJoin(user, eq(unit.createdBy, user.id))
-        .where(eq(unit.courseId, courseId));
+      const units = await withTimeout(
+        "course:selectUnits",
+        db
+          .select({
+            id: unit.id,
+            title: unit.title,
+            description: unit.description,
+            icon: unit.icon,
+            color: unit.color,
+            markdown: unit.markdown,
+            createdBy: unit.createdBy,
+            createdAt: unit.createdAt,
+            creatorName: user.name,
+          })
+          .from(unit)
+          .leftJoin(user, eq(unit.createdBy, user.id))
+          .where(eq(unit.courseId, courseId)),
+        5000,
+        [],
+      );
 
       let mappedUnits = units.map((u) => {
         const safeResult = getUnitLessonsSafe(u.markdown ?? "");

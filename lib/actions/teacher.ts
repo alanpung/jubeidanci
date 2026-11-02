@@ -167,7 +167,7 @@ export async function getStudentSrsDeck(
 
   try {
     const { syncUserCourseWordsToSrs } = await import("@/lib/actions/srs");
-    await syncUserCourseWordsToSrs(studentUserId, true);
+    await syncUserCourseWordsToSrs(studentUserId, true, session.user.email);
   } catch (err) {
     console.warn("getStudentSrsDeck sync warning:", err);
   }

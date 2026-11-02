@@ -1,6 +1,6 @@
 "use server";
 
-import { db, isDbAvailable, hasDbConfig } from "@/lib/db";
+import { db, dbBackground, isDbAvailable, hasDbConfig } from "@/lib/db";
 import { srsCard, dictionaryWord, userCourseEnrollment, userUnitLibrary, course, unit, user } from "@/lib/db/schema";
 import { and, eq, lte, count, sql, asc, isNotNull, inArray, notInArray, or } from "drizzle-orm";
 import { getSession } from "@/lib/auth-server";
@@ -23,6 +23,10 @@ import { runAfterResponse } from "@/lib/after-response";
 
 export async function migrateDefaultUserCards(userId: string) {
   if (userId === "default_user") return;
+  // Also deferred work (runs in `after()`), and its DELETE ... EXISTS / UPDATE
+  // pair can touch the whole srs_card table. Keep it off the pool that page
+  // renders need — see lib/db/index.ts.
+  const db = dbBackground;
   if (await isDbAvailable()) {
     try {
       const defaultRows = await db.execute(sql`SELECT 1 FROM srs_card WHERE user_id = 'default_user' LIMIT 1`);
@@ -313,7 +317,8 @@ export async function getAllCards(
   language?: string,
   userIdOverride?: string,
   forceSync = false,
-  skipSync = false
+  skipSync = false,
+  overrideEmail?: string
 ): Promise<SrsCardItem[]> {
   // Prefer an explicitly resolved userId (e.g. the one the caller already
   // authenticated) over re-resolving via getSession(). In a Route Handler the
@@ -335,7 +340,7 @@ export async function getAllCards(
   // load that rendered the dictionary already triggered one.
   if (!skipSync) {
     void runAfterResponse(() =>
-      syncUserCourseWordsToSrs(userId, forceSync).catch(() => {}),
+      syncUserCourseWordsToSrs(userId, forceSync, overrideEmail).catch(() => {}),
     );
   }
   const aliases = language ? getLanguageAliases(language) : [];
@@ -640,11 +645,13 @@ export async function reviewCard(
   return result;
 }
 
-export async function getSrsStats(language?: string) {
+export async function getSrsStats(language?: string, overrideEmail?: string) {
   const userId = await getSafeUserId();
   // See getAllCards: the sync is maintenance work, not part of answering this
-  // request, so run it once the response is on the wire.
-  void runAfterResponse(() => syncUserCourseWordsToSrs(userId).catch(() => {}));
+  // request, so run it once the response is on the wire. The session email is
+  // threaded in (NOT re-resolved via getSession, which is forbidden inside
+  // after()) so the owner guard in syncUserCourseWordsToSrs still works.
+  void runAfterResponse(() => syncUserCourseWordsToSrs(userId, false, overrideEmail).catch(() => {}));
   const dbUp = await isDbAvailable();
   const aliases = language ? getLanguageAliases(language) : [];
 
@@ -1722,6 +1729,11 @@ const inFlightSync = new Map<string, Promise<void>>();
 export async function syncUserCourseWordsToSrs(userId: string, force = false, overrideEmail?: string): Promise<void> {
   if (!userId || userId === "default_user") return;
 
+  // This is deferred, bulk work (thousands of row upserts). Run it on the
+  // background pool so it cannot starve the 5 connections that page renders —
+  // and therefore sign-in — depend on. See lib/db/index.ts.
+  const db = dbBackground;
+
   // Deduplicate concurrent calls (e.g. from Promise.all([getAllCards, getSrsStats]))
   if (inFlightSync.has(userId)) {
     return inFlightSync.get(userId);
@@ -1822,31 +1834,27 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       // flashcards out of their deck. Folding SYSTEM_COURSE_IDS in here makes the
       // empty-enrollment branch below a no-op for the owner (their deck always
       // has 12 courses to seed from), and keeps students untouched.
-      try {
-        const session = await getSession().catch(() => null);
-        if (session?.user?.email && isAdminEmail(session.user.email)) {
-          const { SYSTEM_COURSE_IDS } = await import("@/lib/db/queries/courses");
-          SYSTEM_COURSE_IDS.forEach((id) => enrolledCourseIds.add(id));
-        }
-      } catch {}
+      //
+      // We use `overrideEmail` (the request-scoped session email threaded in from
+      // the caller) instead of calling getSession() here. This function is
+      // invoked from inside a Next.js `after()` callback, where `headers()` is
+      // forbidden; calling getSession() there throws DYNAMIC_SERVER_USAGE, which
+      // both floods the console with errors AND makes the owner unrecognised, so
+      // the orphan-delete below would then wipe the owner's seeded deck.
+      if (overrideEmail && isAdminEmail(overrideEmail)) {
+        const { SYSTEM_COURSE_IDS } = await import("@/lib/db/queries/courses");
+        SYSTEM_COURSE_IDS.forEach((id) => enrolledCourseIds.add(id));
+      }
 
       if (enrolledCourseIds.size === 0 && standaloneUnitIds.size === 0) {
         // Owner guard (mirrors pruneStaleNewCards): the owner's deck is the
         // full dictionary and they have no traditional enrollments, so an empty
         // enrollment set here is EXPECTED — not a "remove all courses" signal.
         // Mass-deleting the owner's new cards would wipe their seeded deck, so
-        // we skip the orphan-delete entirely for the owner. A failed session
-        // lookup falls through to the normal (student) delete below, preserving
-        // existing behaviour.
-        let isOwner = false;
-        try {
-          const { isAdminEmail } = await import("@/lib/ai/models");
-          const { getSession } = await import("@/lib/auth-server");
-          const session = await getSession().catch(() => null);
-          if (session?.user?.email && isAdminEmail(session.user.email)) {
-            isOwner = true;
-          }
-        } catch {}
+        // we skip the orphan-delete entirely for the owner. We recognise the
+        // owner via `overrideEmail` (see note on the block above) rather than
+        // getSession(), which is illegal inside this `after()` callback.
+        const isOwner = overrideEmail ? isAdminEmail(overrideEmail) : false;
         if (isOwner) return;
 
         // The learner has zero active courses/units in My Books. With nothing

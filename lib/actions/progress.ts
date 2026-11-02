@@ -5,6 +5,7 @@ import { userStats, lessonCompletion, unit } from "@/lib/db/schema";
 import { eq, and, inArray } from "drizzle-orm";
 import { requireSession } from "@/lib/auth-server";
 import { getLocalLessonCompletions, getLocalUserStats } from "@/lib/srs-store";
+import { withTimeout } from "@/lib/db/timeout";
 
 export async function getUserProgress(courseId: string) {
   const session = await requireSession();

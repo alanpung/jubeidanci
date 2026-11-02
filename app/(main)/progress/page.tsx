@@ -21,7 +21,7 @@ export default async function ProgressPage() {
   // (used on read) — the rows were in Postgres but the UI showed 0. Reading
   // without a language filter makes the page authoritative and guarantees it
   // matches the "Refresh SRS Data" endpoint, which now reads the same way.
-  const srsCards = await getAllCards(undefined, userId).catch((err) => {
+  const srsCards = await getAllCards(undefined, userId, false, false, session?.user?.email).catch((err) => {
     console.error("[progress] getAllCards failed, showing empty deck:", err);
     return [];
   });
