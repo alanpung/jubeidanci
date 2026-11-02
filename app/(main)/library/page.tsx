@@ -1,16 +1,13 @@
-import Link from "next/link";
 import { getSession } from "@/lib/auth-server";
 import {
   listCoursesWithLessonCounts,
   getStandaloneUnits,
-  getBrowsableUnits,
+  getVipOwnerIds,
 } from "@/lib/db/queries/courses";
 import type { CourseListItem, StandaloneUnitInfo } from "@/lib/content/types";
 import { isAdminEmail } from "@/lib/ai/models";
-import { getTargetLanguage, getMyBooksOrder } from "@/lib/actions/preferences";
-import {
-  CourseBookShelf,
-} from "@/components/library/course-book-shelf";
+import { getTargetLanguage } from "@/lib/actions/preferences";
+import { CourseBookShelf } from "@/components/library/course-book-shelf";
 import { LearnHeader } from "@/components/library/learn-header";
 import { withTimeout } from "@/lib/db/timeout";
 
@@ -25,9 +22,9 @@ export default async function LearnPage() {
   let allCourses: CourseListItem[] = [];
   let targetLang: string | null = null;
   let standaloneUnits: StandaloneUnitInfo[] = [];
-  // The reader's own "My Books" shelf order (course ids). Empty simply means
-  // "no order saved yet" — the shelf then uses the catalog order.
-  let myBooksOrder: string[] = [];
+  // Owner ids for which the viewer is a VIP — grants access to the owner's
+  // private/VIP content without owning it. Drives the per-tile open gate.
+  let vipOwnerIds: string[] = [];
 
   if (userId) {
     // Every one of these is bounded: postgres.js queues a query forever when
@@ -53,15 +50,9 @@ export default async function LearnPage() {
         10000,
         [] as StandaloneUnitInfo[],
       ),
-      withTimeout<StandaloneUnitInfo[]>(
-        "library:getBrowsableUnits",
-        getBrowsableUnits(userId),
-        10000,
-        [] as StandaloneUnitInfo[],
-      ),
       withTimeout<string[]>(
-        "library:getMyBooksOrder",
-        getMyBooksOrder(userId),
+        "library:getVipOwnerIds",
+        getVipOwnerIds(userId).then((s) => [...s]),
         5000,
         [] as string[],
       ),
@@ -85,37 +76,14 @@ export default async function LearnPage() {
       console.error("LearnPage: getStandaloneUnits failed:", results[2].reason);
     }
 
-    // Merge in public browsable units (AI-tutor-generated public units live
-    // here). Dedupe by id, keeping the strongest ownership/library flags.
     if (results[3].status === "fulfilled") {
-      const byId = new Map<string, StandaloneUnitInfo>();
-      for (const u of standaloneUnits) byId.set(u.id, { ...u });
-      for (const u of results[3].value) {
-        const prev = byId.get(u.id);
-        if (!prev) {
-          byId.set(u.id, u);
-        } else {
-          byId.set(u.id, {
-            ...prev,
-            isOwner: prev.isOwner || u.isOwner,
-            isInLibrary: prev.isInLibrary || u.isInLibrary,
-            visibility: prev.visibility === "public" ? prev.visibility : u.visibility,
-          });
-        }
-      }
-      standaloneUnits = [...byId.values()];
+      vipOwnerIds = results[3].value;
     } else {
-      console.error("LearnPage: getBrowsableUnits failed:", results[3].reason);
-    }
-
-    if (results[4].status === "fulfilled") {
-      myBooksOrder = results[4].value;
-    } else {
-      console.error("LearnPage: getMyBooksOrder failed:", results[4].reason);
+      console.error("LearnPage: getVipOwnerIds failed:", results[3].reason);
     }
   }
 
-  const isEmptyLibrary = allCourses.length === 0 && standaloneUnits.length === 0 && !isAdmin;
+  const isEmptyLibrary = allCourses.length === 0 && standaloneUnits.length === 0;
 
   return (
     <div className="mx-auto w-full max-w-6xl">
@@ -133,24 +101,18 @@ export default async function LearnPage() {
             Your library is empty
           </h2>
           <p className="text-sm text-lingo-text-light mb-5">
-            Browse public courses to start practicing!
+            No courses or units have been published yet.
           </p>
-          <Link
-            href="/library/browse"
-            className="inline-flex items-center gap-2 rounded-xl border-2 border-lingo-green bg-lingo-green px-5 py-2.5 text-sm font-black text-white shadow-[0_2px_0_0] shadow-green-700 transition-all hover:bg-lingo-green/90 active:translate-y-[1px]"
-          >
-            <span>🔍</span> Browse Courses
-          </Link>
         </div>
       ) : (
         <>
           {/* The AI tutor's units are not a section of their own any more —
-              they live in the "Standalone Units" folder inside Library. */}
+              they live in the "Standalone Units" folder inside My Books. */}
           <CourseBookShelf
             courses={allCourses}
             units={standaloneUnits}
             isAdmin={isAdmin}
-            bookOrder={myBooksOrder}
+            vipOwnerIds={vipOwnerIds}
           />
         </>
       )}

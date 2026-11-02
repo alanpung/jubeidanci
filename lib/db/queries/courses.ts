@@ -20,7 +20,6 @@ import {
   countDistinct,
   inArray,
   notInArray,
-  type SQL,
 } from "drizzle-orm";
 import type {
   Course,
@@ -277,17 +276,13 @@ export async function listCourses(
     // The VIP clause must stay in sync with getCourseWithContent below: without
     // it a VIP student could open a private course by URL but would never see
     // it listed on /library, which is what made B1/B2 look "missing".
-    const visibilityConds = [eq(course.visibility, "public")];
+    // List EVERY non-hidden course for everyone so the catalog (and the browse
+    // filters) reflect the full library. The open-permission gate (public →
+    // all; private/VIP → owner + the owner's VIP students; hidden → owner
+    // only) is enforced separately when a course is actually opened.
+    const visibilityConds = [ne(course.visibility, "hidden")];
     if (userId) {
       visibilityConds.push(eq(course.createdBy, userId));
-      const sharedCourseIds = [...(await getGrantedCourseIds(userId))];
-      if (sharedCourseIds.length) {
-        visibilityConds.push(inArray(course.id, sharedCourseIds));
-      }
-      const vipOwnerIds = [...(await getVipOwnerIds(userId))];
-      if (vipOwnerIds.length) {
-        visibilityConds.push(inArray(course.createdBy, vipOwnerIds));
-      }
     }
     conditions.push(or(...visibilityConds)!);
 
@@ -830,17 +825,13 @@ export async function getCourseWithContent(
 export async function getAvailableFilters(userId?: string) {
   try {
     const conditions = [eq(course.published, true)];
-    const visibilityConds = [eq(course.visibility, "public")];
+    // List EVERY non-hidden course for everyone so the catalog (and the browse
+    // filters) reflect the full library. The open-permission gate (public →
+    // all; private/VIP → owner + the owner's VIP students; hidden → owner
+    // only) is enforced separately when a course is actually opened.
+    const visibilityConds = [ne(course.visibility, "hidden")];
     if (userId) {
       visibilityConds.push(eq(course.createdBy, userId));
-      const sharedCourseIds = [...(await getGrantedCourseIds(userId))];
-      if (sharedCourseIds.length) {
-        visibilityConds.push(inArray(course.id, sharedCourseIds));
-      }
-      const vipOwnerIds = [...(await getVipOwnerIds(userId))];
-      if (vipOwnerIds.length) {
-        visibilityConds.push(inArray(course.createdBy, vipOwnerIds));
-      }
     }
     conditions.push(or(...visibilityConds)!);
 
@@ -906,21 +897,12 @@ export async function getStandaloneUnits(
 
   if (dbUp) {
     try {
-      const grantedUnitIds = await getGrantedUnitIds(userId);
-      const vipOwnerIds = await getVipOwnerIds(userId);
-      const ownershipConditions: SQL[] = [eq(unit.createdBy, userId)];
-      if (libraryUnitIds.size > 0) {
-        ownershipConditions.push(inArray(unit.id, [...libraryUnitIds]));
-      }
-      if (grantedUnitIds.size > 0) {
-        ownershipConditions.push(inArray(unit.id, [...grantedUnitIds]));
-      }
-      if (vipOwnerIds.size > 0) {
-        ownershipConditions.push(inArray(unit.createdBy, [...vipOwnerIds]));
-      }
+      // List EVERY non-hidden standalone unit for everyone (same catalog model
+      // as courses): the open gate is enforced per-tile in the UI. The owner
+      // still sees their own hidden units so they can un-hide them.
       const libraryCondition = and(
         isNull(unit.courseId),
-        or(...ownershipConditions)
+        or(ne(unit.visibility, "hidden"), eq(unit.createdBy, userId))!
       )!;
 
       rows = await db
@@ -1019,6 +1001,7 @@ export async function getStandaloneUnits(
       lessonCount: lessons.length,
       completedLessons: completionMap.get(u.id) ?? 0,
       visibility: u.visibility ?? "private",
+      createdBy: u.createdBy,
       creatorName: u.creatorName ?? null,
       isOwner: u.createdBy === userId,
       isInLibrary: libraryUnitIds.has(u.id),
@@ -1091,6 +1074,7 @@ export async function getBrowsableUnits(
       lessonCount: lessons.length,
       completedLessons: 0,
       visibility: u.visibility ?? u.courseVisibility ?? "public",
+      createdBy: u.createdBy,
       creatorName: u.creatorName ?? null,
       isOwner: u.createdBy === userId,
       isInLibrary: libraryUnitIds.has(u.id),

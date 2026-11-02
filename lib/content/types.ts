@@ -198,6 +198,7 @@ export interface StandaloneUnitInfo {
   lessonCount: number;
   completedLessons: number;
   visibility: string | null;
+  createdBy?: string | null;
   creatorName: string | null;
   isOwner: boolean;
   isInLibrary?: boolean;

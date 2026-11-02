@@ -65,15 +65,14 @@ interface LibraryFoldersProps {
   standaloneCount: number;
   /** The browser window, rendered inside the Library section. */
   children?: ReactNode;
-  /** Show the section heading. The owner keeps it (relabelled "My Books"). */
+  /** Show the section heading. */
   showTitle?: boolean;
-  /** Heading text. Defaults to "Library"; the owner passes "My Books" so the
-   *  folder area reads as their single unified bookshelf. */
+  /** Heading text. Defaults to "Library". */
   title?: string;
-  /** Owner mode: the browser window drops BELOW the folder grid instead of
-   *  covering it. The owner has plenty of room underneath and still wants to
-   *  see which folder they are browsing. */
-  isAdmin?: boolean;
+  /** Large desktop viewport: the browser window drops BELOW the folder grid.
+   *  Small/mobile viewport: it overlays (replaces) the folders. Driven by the
+   *  actual viewport width, not by who is viewing. */
+  isLargeViewport?: boolean;
 }
 
 export function LibraryFolders({
@@ -84,7 +83,7 @@ export function LibraryFolders({
   children,
   showTitle = true,
   title = "Library",
-  isAdmin = false,
+  isLargeViewport = false,
 }: LibraryFoldersProps) {
   const typeFolders: FolderItem[] = FOLDER_ORDER.map((id) => {
     const found = QUESTION_TYPE_LEGEND.find((f) => f.id === id);
@@ -222,21 +221,22 @@ export function LibraryFolders({
           </div>
         );
 
-        // Owner: the window drops BELOW the folders in normal flow — the owner
-        // has room underneath and still wants to see which folder is open.
-        if (isAdmin) {
+        // Large desktop: the window drops BELOW the folders in normal flow, so
+        // the reader still sees which folder is open underneath it.
+        if (isLargeViewport) {
           return (
             <>
               {folderGrid}
-              {children && <div className="mt-4">{children}</div>}
+              {activeKey && children ? (
+                <div className="mt-4">{children}</div>
+              ) : null}
             </>
           );
         }
 
-        // Student: opening a folder REPLACES the grid with the browser window.
-        // No overlay, no inner scrollbar — the window grows into the page and
-        // uses all the vertical space below the Library section. The window's
-        // own header (title + count + ×) shows which folder is open.
+        // Small / mobile viewport: opening a folder REPLACES the grid with the
+        // browser window — overlaying the folders. No overlay element, no inner
+        // scrollbar — the window grows into the page.
         return activeKey ? <div>{children}</div> : folderGrid;
       })()}
     </section>

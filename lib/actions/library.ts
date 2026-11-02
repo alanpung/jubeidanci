@@ -80,7 +80,6 @@ export async function addUnitToLibrary(
   });
 
   revalidatePath("/library", "page");
-  revalidatePath("/library/browse", "page");
   revalidatePath("/units", "page");
   revalidatePath("/units/browse", "page");
   if (existing.courseId) {
@@ -247,7 +246,6 @@ export async function addCourseToLibrary(
   clearContentCache();
 
   revalidatePath("/library", "page");
-  revalidatePath("/library/browse", "page");
   revalidatePath(`/library/${courseId}`, "page");
   revalidatePath("/units", "page");
   revalidatePath("/units/browse", "page");
@@ -340,7 +338,6 @@ export async function removeCourseFromLibrary(
 
   revalidatePath("/", "layout");
   revalidatePath("/library", "page");
-  revalidatePath("/library/browse", "page");
   revalidatePath(`/library/${courseId}`, "page");
   revalidatePath("/units", "page");
   revalidatePath("/units/browse", "page");
