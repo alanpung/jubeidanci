@@ -253,11 +253,17 @@ export async function listCourses(
   filters?: CourseFilters,
   userId?: string
 ): Promise<CourseListItem[]> {
-  try {
-    await seedContentFromFilesystem();
-  } catch (err) {
-    console.warn("listCourses seed warning:", err);
-  }
+  // Do NOT await the seed here. On a cold DB the upsert walks ~20 sequential
+  // chunked inserts (plus deletes) that can run past the 10s render-path
+  // timeout, which made withTimeout() abort the whole listCourses() and render
+  // an empty library. The database is only an optimization for
+  // visibility/enrollment; listCourses() has a filesystem fallback
+  // (getAllCourses) that returns courses immediately, so the page never needs
+  // to wait on the seed — it runs in the background and the DB path is used on
+  // later (warm) requests once it has caught up.
+  void seedContentFromFilesystem().catch((err) =>
+    console.warn("listCourses background seed warning:", err),
+  );
 
   try {
     const conditions = [eq(course.published, true)];

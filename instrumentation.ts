@@ -5,6 +5,7 @@ import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { db } from "./lib/db";
 import { loadContentDir } from "./lib/content/loader";
+import { seedContentFromFilesystem } from "./lib/db/seed-content";
 
 const MIGRATIONS_SCHEMA = "drizzle";
 const MIGRATIONS_TABLE = "__drizzle_migrations";
@@ -82,6 +83,16 @@ export async function register() {
   } catch (err) {
     console.warn("[instrumentation] content pre-warm skipped:", err);
   }
+
+  // Kick off the filesystem->DB seed at boot (fire-and-forget). It must not be
+  // awaited here (it does many sequential upserts and would stall cold start),
+  // and it must not be awaited inside request paths either — that is what made
+  // /library render empty. Running it once at boot means the course/unit tables
+  // are populated before the first request, so warm requests take the (richer)
+  // DB path instead of the filesystem fallback.
+  void seedContentFromFilesystem().catch((err) =>
+    console.warn("[instrumentation] background seed skipped:", err),
+  );
 }
 
 /**
