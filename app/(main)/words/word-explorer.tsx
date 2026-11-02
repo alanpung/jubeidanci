@@ -84,9 +84,12 @@ function isNewCard(c: SrsCard): boolean {
   return c.status === "new" && (!c.repetitions || c.repetitions < 3);
 }
 
-/** Any word the learner has actually taken on: new, learning or mastered. */
+/** Any word the learner has actually started: learning or mastered.
+ *  New is DERIVED from the library and never stored, so a stored "new" row is
+ *  deliberately not part of the tracked set — "mine" and the "R" (remaining)
+ *  filter must keep offering the learner every word they have not taken on. */
 function hasTrackedStatus(c: SrsCard): boolean {
-  return isMasteredCard(c) || isLearningCard(c) || isNewCard(c);
+  return isMasteredCard(c) || isLearningCard(c);
 }
 
 const CEFR_LEVELS = ["A1", "A2", "B1", "B2", "C1", "C2"] as const;
@@ -502,20 +505,19 @@ function WordLookupSection({
     statusFilter === "new" ||
     statusFilter === "mine";
 
-  // Students no longer hold traditional enrolments (the +/× library toggles
-  // were removed), so their M / L / N / My-Words sets are DERIVED from the
-  // full course catalog rather than read from the bare SRS deck — the deck
-  // only physically stores the words they have actually started (M/L).
+  // Nobody holds traditional enrolments any more (the +/× library toggles were
+  // removed), so everyone's M / L / N / My-Words sets are DERIVED from the full
+  // course catalog rather than read off the bare SRS deck — the deck only
+  // physically stores the words the learner has actually started (M/L).
   // Those tabs therefore read the dictionary scoped to the learner's library
-  // ("libraryOnly"), which is exactly the set /progress reports as "All".
-  // The owner keeps the client-side deck filter, because for them the deck
-  // IS the source of truth.
+  // ("libraryOnly"), which is exactly the set /progress reports as "All". The
+  // owner now takes this path too: their deck used to be the source of truth,
+  // but with "new" derived there is no longer an owner-only deck state to read.
   const useLibraryApi =
-    !isAdmin &&
-    (statusFilter === "mine" ||
-      statusFilter === "new" ||
-      statusFilter === "learned" ||
-      statusFilter === "learning");
+    statusFilter === "mine" ||
+    statusFilter === "new" ||
+    statusFilter === "learned" ||
+    statusFilter === "learning";
 
   /** Words already in one of the three tracked states, keyed for O(1) lookup
    *  when the "R" (remaining) filter walks a page of dictionary words. */
@@ -531,17 +533,16 @@ function WordLookupSection({
 
   const liveLearningCount = useMemo(() => srsCards.filter(isLearningCard).length, [srsCards]);
 
-  // For the owner, "new" is a real deck state (rows seeded from the courses
-  // they enrolled in). For a student, "new" is DERIVED: every library word
-  // they have not yet mastered or started learning. That is exactly the set
-  // /progress reports as New, so the two pages can never disagree.
+  // New is DERIVED for everyone: every library word the learner has not yet
+  // mastered or started learning. That is exactly the set /progress reports as
+  // New, so the two pages can never disagree — and it no longer depends on
+  // whether a stored "new" row happens to exist for the word.
   const liveNewCount = useMemo(() => {
-    if (isAdmin) return srsCards.filter(isNewCard).length;
     return Math.max(
       0,
       (libraryWordSet?.size || 0) - liveLearnedCount - liveLearningCount
     );
-  }, [srsCards, isAdmin, libraryWordSet, liveLearnedCount, liveLearningCount]);
+  }, [libraryWordSet, liveLearnedCount, liveLearningCount]);
 
   /** Owner-only: dictionary words that are not new, learning or mastered yet.
    *  The server computes the exact number (dictionary words minus the tracked
@@ -1047,7 +1048,6 @@ function WordLookupSection({
                   word={w}
                   card={card}
                   language={language}
-                  libraryWordSet={libraryWordSet}
                   onStatusChange={onCardStatusChange}
                 />
               );
@@ -1087,13 +1087,11 @@ function WordLookupCard({
   word: w,
   card,
   language,
-  libraryWordSet,
   onStatusChange,
 }: {
   word: Word;
   card?: SrsCard;
   language: string;
-  libraryWordSet?: Set<string>;
   onStatusChange?: (
     word: string,
     status: "new" | "learning" | "learned" | "remove",
@@ -1154,7 +1152,6 @@ function WordLookupCard({
   const posList = getAllPosLabels(w);
 
   const isMastered = currentStatus === "learned" || currentStatus === "review";
-  const isInLibrary = Boolean(libraryWordSet && libraryWordSet.has(w.word.toLowerCase().trim()));
   const hasStatus = isMastered || currentStatus === "learning" || currentStatus === "new";
   // A derived "new" word has no SRS deck row, so there is nothing to reset —
   // clicking reset would only insert a redundant row.
@@ -1162,13 +1159,12 @@ function WordLookupCard({
 
   async function handleClearStatus() {
     if (!hasStatus) return;
-    // Words that belong to a course/unit the user is still enrolled in must
-    // remain in SRS as "new" — otherwise the reset wipes the card and the
-    // Words page status counters go to 0 even though the library still owns
-    // the word. Only out-of-library cards (added ad‑hoc, not tied to any
-    // course) get fully removed.
-    const nextAction = isInLibrary ? "new" : "remove";
-    setCurrentStatus(nextAction === "remove" ? "" : nextAction);
+    // Reset always removes the row. New is DERIVED from the library, so a word
+    // that still belongs to a course/unit reappears as New the moment its row
+    // is gone — there is no need to keep a placeholder "new" row behind, and
+    // writing one would only re-grow the legacy rows this change removes.
+    const nextAction = "remove";
+    setCurrentStatus("");
     onStatusChange?.(w.word, nextAction, {
       cefrLevel: w.cefr_level,
       translation: w.definition_zh || w.english_translation,
