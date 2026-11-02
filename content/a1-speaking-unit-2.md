@@ -1,6 +1,6 @@
 ---
-unitTitle: "Unit 2: Daily Life"
-description: "Unit 2: Daily Life - A1 Speaking Practice (1 Lesson x 1 Question)"
+unitTitle: "Unit 2: Greetings"
+description: "A1 Speaking Practice"
 icon: "🎙️"
 color: "#E91E63"
 targetLanguage: "en"
