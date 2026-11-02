@@ -2,7 +2,7 @@
 
 import { db, dbBackground, isDbAvailable, hasDbConfig } from "@/lib/db";
 import { srsCard, dictionaryWord, userCourseEnrollment, userUnitLibrary, course, unit, user } from "@/lib/db/schema";
-import { and, eq, lte, count, sql, asc, isNotNull, inArray, notInArray, or } from "drizzle-orm";
+import { and, eq, lte, count, sql, asc, isNotNull, inArray, notInArray, or, gte } from "drizzle-orm";
 import { getSession } from "@/lib/auth-server";
 import { isAdminEmail } from "@/lib/ai/models";
 import { revalidatePath } from "next/cache";
@@ -742,122 +742,115 @@ export async function getSrsStats(language?: string, overrideEmail?: string) {
 
 const userLibraryWordsCache = new Map<string, { timestamp: number; words: string[] }>();
 
+/**
+ * Cache key for the SHARED catalog word universe. The universe is the set of
+ * SRS words across every non-hidden course/unit — it is identical for all
+ * users, so it lives under one key instead of one entry per learner.
+ */
+const CATALOG_WORDS_CACHE_KEY = "__catalog__";
+const CATALOG_WORDS_CACHE_TTL_MS = 60_000;
+
 export async function invalidateUserLibraryWordsCache(userId?: string) {
-  if (userId) userLibraryWordsCache.delete(userId);
-  else userLibraryWordsCache.clear();
+  // The catalog universe is shared by every user, so it MUST be dropped
+  // whenever the content changes — a per-user delete alone would leave every
+  // learner looking at a stale universe until the TTL expires.
+  userLibraryWordsCache.delete(CATALOG_WORDS_CACHE_KEY);
+  if (userId) {
+    // Drop both the (legacy) per-user catalog entry and the per-user learned
+    // (M/L orphan) entry so a learner who just reviewed a word — or who just
+    // had content change beneath them — sees a fresh "All" immediately.
+    userLibraryWordsCache.delete(userId);
+    userLibraryWordsCache.delete(`learned:${userId}`);
+  } else {
+    userLibraryWordsCache.clear();
+  }
 }
 
-export async function getUserLibraryWords(userIdParam?: string): Promise<string[]> {
-  const userId = userIdParam || (await getSafeUserId());
-  if (!userId || userId === "default_user") return [];
+/**
+ * The SRS "All" universe for a student is the UNION of:
+ *   1. the current catalog — every SRS word across all non-hidden courses and
+ *      standalone units (identical for every student, content-driven), and
+ *   2. that student's own PRACTICED words — every word they have pushed to a
+ *      non-"new" state (learning / learned / review, or graduated via
+ *      GRADUATION_THRESHOLD repetitions) in their deck.
+ *
+ * Why the union and not just the catalog? When the owner edits a course and
+ * swaps its words, the catalog shrinks. A long-time student who already
+ * mastered/learned the old words keeps them in their deck (status M/L), so they
+ * must remain in that student's "All" — whereas a brand-new student who never
+ * touched those words correctly has them missing from their "All". That is
+ * exactly the per-student divergence the owner wants: All = New + M + L, where
+ * M and L are the student's own, and New is DERIVED (catalog − M − L).
+ *
+ * Unpractised "new" cards are deliberately NOT added here: a fresh "new" card
+ * from a since-deleted word is not yet learned, so it should disappear from a
+ * student's universe along with the catalog — only practiced (M/L) words are
+ * sticky orphans.
+ */
+const LEARNED_WORDS_TTL_MS = 60_000;
 
-  // Only the admin/owner's OWN library auto-includes every system course. When
-  // an explicit userId is supplied (e.g. the owner inspecting a student via the
-  // Student Inspector), we must NOT fold in system courses — that would inflate
-  // the student's deck with the owner's full dictionary.
-  let isOwner = false;
-  if (!userIdParam) {
-    try {
-      const session = await getSession().catch(() => null);
-      if (session?.user?.email && isAdminEmail(session.user.email)) isOwner = true;
-    } catch {}
-  }
-
-  const cached = userLibraryWordsCache.get(userId);
-  if (cached && Date.now() - cached.timestamp < 60000) {
+/** Content-driven catalog of SRS words across all non-hidden courses/units. */
+async function getCatalogWords(): Promise<string[]> {
+  const cached = userLibraryWordsCache.get(CATALOG_WORDS_CACHE_KEY);
+  if (cached && Date.now() - cached.timestamp < CATALOG_WORDS_CACHE_TTL_MS) {
     return cached.words;
   }
+  const words = await computeCatalogWords();
+  userLibraryWordsCache.set(CATALOG_WORDS_CACHE_KEY, {
+    timestamp: Date.now(),
+    words,
+  });
+  return words;
+}
 
+/** Scan courses/units (DB + filesystem) for the shared catalog word set. */
+async function computeCatalogWords(): Promise<string[]> {
   const dbUp = await isDbAvailable();
-  const enrolledCourseIds = new Set<string>();
+  // Hidden courses/units are excluded from the shared universe so it stays
+  // identical for every student. A null visibility means "not set" and counts
+  // as visible (the column is nullable).
+  const hiddenCourseIds = new Set<string>();
+  const unitMap = new Map<string, { id: string; markdown: string; level: string }>();
 
   if (dbUp) {
     try {
-      const enrollments = await db
-        .select({ courseId: userCourseEnrollment.courseId })
-        .from(userCourseEnrollment)
-        .where(eq(userCourseEnrollment.userId, userId));
-      enrollments.forEach((e) => enrolledCourseIds.add(e.courseId));
-
-      const { SYSTEM_COURSE_IDS } = await import("@/lib/db/queries/courses");
-      const createdCourses = await db
-        .select({ id: course.id })
-        .from(course)
-        .where(eq(course.createdBy, userId));
-      createdCourses.forEach((c) => {
-        if (!SYSTEM_COURSE_IDS.includes(c.id)) enrolledCourseIds.add(c.id);
-      });
-    } catch {}
-  }
-
-  // When the DB is the source of truth, do NOT union the per-instance local
-  // enrollment file. On serverless each lambda has its own ephemeral /tmp, so a
-  // warm instance that once enrolled a course keeps a stale copy of
-  // user-enrollments.json and would otherwise keep those words in the deck —
-  // and let syncUserCourseWordsToSrs re-seed them — even after the course was
-  // removed from the DB. The local file is only a fallback for when the DB is
-  // unreachable (local-only mode).
-  if (!dbUp) {
-    const { getLocalCourseEnrollments } = await import("@/lib/srs-store");
-    const localEnrollments = await getLocalCourseEnrollments(userId);
-    localEnrollments.forEach((id) => enrolledCourseIds.add(id));
-  }
-
-  const standaloneUnitIds = new Set<string>();
-  if (dbUp) {
-    try {
-      const libraryUnitRows = await db
-        .select({ unitId: userUnitLibrary.unitId, courseId: unit.courseId })
-        .from(userUnitLibrary)
-        .innerJoin(unit, eq(unit.id, userUnitLibrary.unitId))
-        .where(eq(userUnitLibrary.userId, userId));
-      for (const u of libraryUnitRows) {
-        if (u.courseId) enrolledCourseIds.add(u.courseId);
-        else standaloneUnitIds.add(u.unitId);
+      const courseRows = await db
+        .select({ id: course.id, visibility: course.visibility })
+        .from(course);
+      for (const c of courseRows) {
+        if (c.visibility === "hidden") hiddenCourseIds.add(c.id);
       }
-    } catch {}
-  }
+    } catch (err) {
+      console.warn("getUserLibraryWords: course query failed:", err);
+    }
 
-  // Owner default: the admin's "My Books" is intended to include every system
-  // course (a1–c2 flashcard + translation). System courses have createdBy=null,
-  // so without this the owner only sees the courses they manually enrolled —
-  // leaving b1/b2/c1/c2 flashcards out of their library. Students are unaffected
-  // because this branch is guarded by the isOwner check above (which only fires
-  // for the owner's own, session-resolved library).
-  if (isOwner) {
     try {
-      const { SYSTEM_COURSE_IDS } = await import("@/lib/db/queries/courses");
-      SYSTEM_COURSE_IDS.forEach((id) => enrolledCourseIds.add(id));
-    } catch {}
-  }
-
-  if (enrolledCourseIds.size === 0 && standaloneUnitIds.size === 0) {
-    userLibraryWordsCache.set(userId, { timestamp: Date.now(), words: [] });
-    return [];
-  }
-
-  const unitConditions = [];
-  if (enrolledCourseIds.size > 0) {
-    unitConditions.push(inArray(unit.courseId, Array.from(enrolledCourseIds)));
-  }
-  if (standaloneUnitIds.size > 0) {
-    unitConditions.push(inArray(unit.id, Array.from(standaloneUnitIds)));
-  }
-
-  let activeUnits: { id: string; markdown: string; level: string | null; targetLanguage: string | null }[] = [];
-  if (dbUp && unitConditions.length > 0) {
-    try {
-      activeUnits = await db
+      // LEFT JOIN the parent course so a unit's visibility can be judged
+      // against BOTH its own flag and its course's flag.
+      const unitRows = await db
         .select({
           id: unit.id,
           markdown: unit.markdown,
           level: unit.level,
-          targetLanguage: unit.targetLanguage,
+          courseId: unit.courseId,
+          unitVisibility: unit.visibility,
+          courseVisibility: course.visibility,
         })
         .from(unit)
-        .where(or(...unitConditions));
+        .leftJoin(course, eq(unit.courseId, course.id));
+
+      for (const u of unitRows) {
+        if (!u.id || !u.markdown) continue;
+        if (u.unitVisibility === "hidden") continue;
+        if (u.courseId && u.courseVisibility === "hidden") continue;
+        unitMap.set(u.id, {
+          id: u.id,
+          markdown: u.markdown,
+          level: u.level || "A2",
+        });
+      }
     } catch (err) {
-      console.warn("Error fetching units from DB in getUserLibraryWords:", err);
+      console.warn("getUserLibraryWords: unit query failed:", err);
     }
   }
 
@@ -870,30 +863,36 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
   // enter the library instead of being dropped by the raw merged-dictionary gate.
   const levelDict = buildDictionary();
 
-  const LEVEL_ORDER: Record<string, number> = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6 };
-
-  const unitMap = new Map<string, { id: string; markdown: string; level: string }>();
-  for (const u of activeUnits) {
-    if (u.id && u.markdown) {
-      unitMap.set(u.id, { id: u.id, markdown: u.markdown, level: u.level || "A2" });
-    }
-  }
+  // Filesystem units are the shipped content and are public by definition, so
+  // they belong to the universe even before the DB seed catches up. They
+  // override the DB copy for the same unit id, so an updated srsWords list is
+  // always reflected. A course the owner has hidden stays excluded.
   for (const fsu of fsUnits) {
     const cId = fsu.parsed.courseId;
-    if (cId && enrolledCourseIds.has(cId)) {
+    if (cId && hiddenCourseIds.has(cId)) continue;
+    let uId: string;
+    if (cId) {
       const match = fsu.parsed.title.match(/Unit\s+(\d+)/i);
       const unitNum = match ? parseInt(match[1], 10) : null;
-      const uId = unitNum ? `${cId}-unit-${unitNum}` : `${cId}-${fsu.parsed.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
-      // Prefer filesystem markdown for system courses so updated srsWords are always reflected
-      unitMap.set(uId, { id: uId, markdown: fsu.markdown, level: fsu.parsed.level || "A2" });
+      uId = unitNum
+        ? `${cId}-unit-${unitNum}`
+        : `${cId}-${fsu.parsed.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+    } else {
+      uId =
+        fsu.parsed.id ??
+        fsu.parsed.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
     }
+    unitMap.set(uId, {
+      id: uId,
+      markdown: fsu.markdown,
+      level: fsu.parsed.level || "A2",
+    });
   }
 
   const wordSet = new Set<string>();
   for (const u of unitMap.values()) {
     if (!u.markdown) continue;
     const { lessons } = getUnitLessonsSafe(u.markdown);
-    const maxLvlRank = LEVEL_ORDER[(u.level || "C2").toUpperCase().trim()] || 6;
     for (const lesson of lessons) {
       for (const ex of lesson.exercises) {
         const exAny = ex as unknown as Record<string, unknown>;
@@ -912,9 +911,91 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
     }
   }
 
-  const result = Array.from(wordSet);
-  userLibraryWordsCache.set(userId, { timestamp: Date.now(), words: result });
-  return result;
+  return Array.from(wordSet);
+}
+
+/**
+ * A student's own PRACTICED words — every word they have pushed to a non-"new"
+ * state (learning / learned / review, or graduated via >= GRADUATION_THRESHOLD
+ * repetitions). These are the sticky orphans: when the owner deletes a word
+ * from a course, this set keeps it in the student's "All" because they already
+ * learned it, while students who never practiced it lose it (it's not in their
+ * deck and not in the catalog).
+ */
+async function getUserLearnedWords(userId: string): Promise<string[]> {
+  const cacheKey = `learned:${userId}`;
+  const cached = userLibraryWordsCache.get(cacheKey);
+  if (cached && Date.now() - cached.timestamp < LEARNED_WORDS_TTL_MS) {
+    return cached.words;
+  }
+  const words = await computeUserLearnedWords(userId);
+  userLibraryWordsCache.set(cacheKey, { timestamp: Date.now(), words });
+  return words;
+}
+
+async function computeUserLearnedWords(userId: string): Promise<string[]> {
+  const dbUp = await isDbAvailable();
+  if (dbUp) {
+    try {
+      const rows = await db
+        .selectDistinct({ word: srsCard.word })
+        .from(srsCard)
+        .where(
+          and(
+            eq(srsCard.userId, userId),
+            or(
+              inArray(srsCard.status, ["learning", "review", "learned"]),
+              gte(srsCard.repetitions, GRADUATION_THRESHOLD)
+            )!
+          )
+        );
+      const set = new Set<string>();
+      for (const r of rows) {
+        const w = r.word?.toLowerCase().trim();
+        if (w) set.add(w);
+      }
+      return Array.from(set);
+    } catch (err) {
+      console.warn("getUserLearnedWords: DB query failed:", err);
+    }
+  }
+
+  // Local fallback (DB unreachable): scan this user's local card store.
+  const { getLocalCards } = await import("@/lib/srs-store");
+  const local = await getLocalCards(userId);
+  const set = new Set<string>();
+  for (const c of local) {
+    const practiced =
+      c.status === "learning" ||
+      c.status === "review" ||
+      c.status === "learned" ||
+      (c.repetitions ?? 0) >= GRADUATION_THRESHOLD;
+    if (practiced) {
+      const w = c.word.toLowerCase().trim();
+      if (w) set.add(w);
+    }
+  }
+  return Array.from(set);
+}
+
+export async function getUserLibraryWords(userIdParam?: string): Promise<string[]> {
+  const userId = userIdParam || (await getSafeUserId());
+  if (!userId || userId === "default_user") return [];
+
+  // All = catalog (content-driven, identical for everyone) UNION the student's
+  // own practiced words (per-student orphans that survive course deletions).
+  const [catalog, learned] = await Promise.all([
+    getCatalogWords(),
+    getUserLearnedWords(userId),
+  ]);
+
+  // Fast paths: when either side is empty the union is just the other side.
+  if (catalog.length === 0) return learned;
+  if (learned.length === 0) return catalog;
+
+  const set = new Set(catalog);
+  for (const w of learned) set.add(w);
+  return Array.from(set);
 }
 
 export async function setWordStatus(

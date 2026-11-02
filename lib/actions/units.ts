@@ -8,6 +8,7 @@ import { parseUnitMarkdown } from "@/lib/content/unit-parser";
 import { revalidatePath } from "next/cache";
 import { isAdminEmail } from "@/lib/ai/models";
 import { getCourseForManagement, getUserOwnedStandaloneUnits, clearContentCache } from "@/lib/db/queries/courses";
+import { invalidateUserLibraryWordsCache } from "@/lib/actions/srs";
 import matter from "gray-matter";
 import type { CourseManagementInfo, AvailableUnitForCourse } from "@/lib/content/types";
 
@@ -17,6 +18,10 @@ function slugify(text: string): string {
 
 function revalidateUnitPages(courseId?: string | null) {
   clearContentCache();
+  // The catalog word universe ("My Words") is derived from course/unit
+  // content, so any content change must drop it — otherwise the Progress and
+  // Words pages would keep showing the previous word set until the TTL expires.
+  invalidateUserLibraryWordsCache().catch(() => {});
   // Use layout-level revalidation recursively in the background to avoid blocking the user action response
   setTimeout(() => {
     try {
