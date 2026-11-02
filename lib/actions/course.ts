@@ -44,7 +44,6 @@ export async function renameCourse(
     .where(eq(course.id, courseId));
 
   revalidatePath("/library", "page");
-  revalidatePath("/library/browse", "page");
   revalidatePath(`/library/${courseId}`, "page");
   revalidatePath("/units", "page");
   revalidatePath("/units/browse", "page");
