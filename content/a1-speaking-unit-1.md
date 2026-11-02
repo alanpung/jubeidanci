@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 1: Greetings"
-description: "Unit 1: Greetings - A1 Speaking Practice (1 Lesson x 1 Question)"
+description: "A1 Speaking Practice"
 icon: "🎙️"
 color: "#E91E63"
 targetLanguage: "en"
