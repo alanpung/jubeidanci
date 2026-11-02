@@ -14,8 +14,8 @@ export default async function WordsPage() {
   const language = (await getTargetLanguage()) || "en";
 
   const [srsCards, stats, libraryWords, remainingCount] = await Promise.all([
-    getAllCards(language).catch(() => []),
-    getSrsStats(language).catch(() => ({
+    getAllCards(language, undefined, false, false, session?.user?.email).catch(() => []),
+    getSrsStats(language, session?.user?.email).catch(() => ({
       total: 0,
       due: 0,
       new: 0,

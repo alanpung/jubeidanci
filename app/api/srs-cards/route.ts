@@ -32,7 +32,7 @@ export async function GET(request: Request) {
   // skipSync=true so it doesn't schedule a second, deferred run.
   if (dbUp) {
     await Promise.race([
-      syncUserCourseWordsToSrs(userId, true).catch((err) => {
+      syncUserCourseWordsToSrs(userId, true, session.user.email).catch((err) => {
         console.warn("[srs-cards] pre-refresh sync failed:", err);
       }),
       new Promise((resolve) => setTimeout(resolve, 9000)),
@@ -63,7 +63,7 @@ export async function GET(request: Request) {
   // mismatch returned an empty deck even though Postgres had the rows. Omitting
   // the language makes the deck authoritative and language-agnostic, so it can
   // never disagree with the page.
-  const cards = await getAllCards(undefined, userId, true, true).catch((err) => {
+  const cards = await getAllCards(undefined, userId, true, true, session.user.email).catch((err) => {
     console.error("[srs-cards] getAllCards failed:", err);
     return [] as Awaited<ReturnType<typeof getAllCards>>;
   });

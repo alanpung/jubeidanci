@@ -75,7 +75,7 @@ export async function addUnitToLibrary(
   await invalidateUserLibraryWordsCache(userId);
   // Same background-fire rationale as addCourseToLibrary — keeping the action
   // responsive even for users whose library implies thousands of SRS words.
-  void syncUserCourseWordsToSrs(userId, true).catch((err) => {
+  void syncUserCourseWordsToSrs(userId, true, session.user.email).catch((err) => {
     console.warn("addUnitToLibrary: background SRS sync failed:", err);
   });
 
@@ -239,7 +239,7 @@ export async function addCourseToLibrary(
   // this can mean thousands of srs_card rows. Run in background so the UI
   // returns immediately rather than waiting on long-running DB writes that
   // previously pushed the action over Vercel's function limit.
-  void syncUserCourseWordsToSrs(userId, true).catch((err) => {
+  void syncUserCourseWordsToSrs(userId, true, session.user.email).catch((err) => {
     console.warn("addCourseToLibrary: background SRS sync failed:", err);
   });
 

@@ -87,6 +87,31 @@ export const auth = betterAuth({
   plugins: [],
   advanced: {
     cookiePrefix: "openlingo",
+    // Rate limiting is keyed by client IP. better-auth only reads
+    // `x-forwarded-for` by default, and when that header holds more than one
+    // address (always true behind Vercel's proxy) it refuses to guess and
+    // returns null — which silently collapses EVERY visitor into one shared
+    // "no-trusted-ip" bucket. With the default rule of 3 requests / 10s on
+    // /sign-in*, three sign-in attempts anywhere in the world then 429
+    // everyone else. `x-real-ip` carries a single address on Vercel, so
+    // listing it first restores per-visitor buckets.
+    ipAddress: {
+      ipAddressHeaders: ["x-real-ip", "x-forwarded-for"],
+    },
+  },
+  // The built-in special rule for /sign-in* is 3 requests / 10s. Combined with
+  // the shared bucket above that was far too tight: a slow sign-in (the first
+  // attempt takes seconds on a cold instance) invites a second click, and the
+  // user gets "Too many requests". These limits still stop credential stuffing
+  // while leaving room for real retries.
+  rateLimit: {
+    enabled: true,
+    window: 60,
+    max: 100,
+    customRules: {
+      "/sign-in/email": { window: 60, max: 30 },
+      "/sign-up/email": { window: 60, max: 15 },
+    },
   },
   emailAndPassword: {
     enabled: true,

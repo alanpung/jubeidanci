@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { signIn } from "@/lib/auth-client";
 import { Button } from "@/components/ui/button";
@@ -33,6 +33,21 @@ export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
   const [googleLoading, setGoogleLoading] = useState(false);
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const turnstileRef = useRef<TurnstileRef>(null);
+  // Sign-in can legitimately take several seconds on a cold instance. Without
+  // any feedback a slow server is indistinguishable from a dead one, and users
+  // click again — which only burns the rate-limit budget. `slow` surfaces
+  // "still waiting" after 15s; `redirecting` keeps the spinner running while
+  // the destination page renders, so the form never looks frozen.
+  const [slow, setSlow] = useState(false);
+  const [redirecting, setRedirecting] = useState(false);
+  const slowTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  useEffect(
+    () => () => {
+      if (slowTimerRef.current) clearTimeout(slowTimerRef.current);
+    },
+    [],
+  );
 
   const destination = redirectUrl || DEFAULT_PATH;
 
@@ -48,6 +63,9 @@ export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
     e.preventDefault();
     setError("");
     setLoading(true);
+    setSlow(false);
+    setRedirecting(false);
+    slowTimerRef.current = setTimeout(() => setSlow(true), 15000);
 
     try {
       const cleanEmail = email.trim().toLowerCase();
@@ -59,12 +77,18 @@ export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
             : undefined,
         }
       );
-      setLoading(false);
+      if (slowTimerRef.current) {
+        clearTimeout(slowTimerRef.current);
+        slowTimerRef.current = null;
+      }
 
       if (result.error) {
+        setLoading(false);
         let errorMsg =
           result.error.status === 500
             ? "Server error (500). Please check that your PostgreSQL database is connected and migrated."
+            : result.error.status === 429
+            ? "Too many sign-in attempts. Please wait about a minute, then try again once."
             : result.error.message || "Sign in failed. Please check your credentials.";
 
         if (
@@ -79,9 +103,17 @@ export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
         setTurnstileToken(null);
         turnstileRef.current?.reset();
       } else {
+        // Keep the spinner running. The destination is server-rendered and can
+        // take several seconds; stopping here left the form sitting unchanged
+        // with no feedback, which is what made sign-in look like it hung.
+        setRedirecting(true);
         router.push(destination);
       }
     } catch (err: unknown) {
+      if (slowTimerRef.current) {
+        clearTimeout(slowTimerRef.current);
+        slowTimerRef.current = null;
+      }
       setLoading(false);
       const msg =
         err instanceof Error
@@ -161,10 +193,20 @@ export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
         {error && (
           <p className="text-sm text-lingo-red font-medium">{error}</p>
         )}
+        {!error && (slow || redirecting) && (
+          <p className="text-sm text-lingo-text-light font-medium">
+            {redirecting
+              ? "Signed in — opening your library…"
+              : "Still waiting for the server… no need to click again."}
+          </p>
+        )}
         <Button
           type="submit"
-          loading={loading}
-          disabled={turnstileToken === null && !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY}
+          loading={loading || redirecting}
+          disabled={
+            redirecting ||
+            (turnstileToken === null && !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY)
+          }
           className="w-full"
         >
           Sign In
