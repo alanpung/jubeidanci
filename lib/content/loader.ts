@@ -11,7 +11,14 @@ const CONTENT_DIR = path.join(process.cwd(), "content");
 
 // Cached result of loadContentDir() — see that function for why.
 let contentDirCache: { ts: number; value: { courses: LoadedCourse[]; units: LoadedUnit[] } } | null = null;
-const CONTENT_DIR_CACHE_TTL_MS = 60_000;
+// 24h. The content directory is bundled at build time and only changes on
+// deploy (which gives every instance a fresh module cache anyway), so there is
+// no reason to re-scan and re-parse every markdown file every 60s. A periodic
+// re-scan is a synchronous, event-loop-blocking parse that used to land in the
+// middle of live traffic and defeat every timeout we had (the request then hung
+// until the parse finished). Cache it for a day; an explicit invalidateCache()
+// still forces a refresh when needed.
+const CONTENT_DIR_CACHE_TTL_MS = 24 * 60 * 60 * 1000;
 
 // ---------------------------------------------------------------------------
 // Convenience helpers (used by read paths that store markdown in DB)
