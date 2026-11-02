@@ -11,6 +11,14 @@ import { userCourseEnrollment } from "@/lib/db/schema";
 import { eq } from "drizzle-orm";
 import { CourseBrowser } from "@/components/library/course-browser";
 import { BrowseUnits } from "@/components/library/browse-units";
+import { withTimeout } from "@/lib/db/timeout";
+import type { CourseListItem, StandaloneUnitInfo } from "@/lib/content/types";
+
+// postgres.js has no queue timeout: a query that never finishes holds the
+// request open until the serverless function is killed. Every read below is
+// therefore bounded so a stalled DB degrades to an empty section instead of a
+// page that never responds (this page used to hang past 45s).
+const EMPTY_FILTERS = { sourceLanguages: [], targetLanguages: [], levels: [] };
 
 export const dynamic = "force-dynamic";
 
@@ -30,10 +38,33 @@ export default async function BrowsePage({
   const initialType = params.type ?? null;
 
   const [courses, filters, browsableUnits, enrollments] = await Promise.all([
-    listCoursesWithLessonCounts(undefined, userId),
-    getAvailableFilters(userId),
-    getBrowsableUnits(userId),
-    db.select({ courseId: userCourseEnrollment.courseId }).from(userCourseEnrollment).where(eq(userCourseEnrollment.userId, userId)),
+    withTimeout<CourseListItem[]>(
+      "browse:listCoursesWithLessonCounts",
+      listCoursesWithLessonCounts(undefined, userId),
+      8000,
+      [],
+    ),
+    withTimeout(
+      "browse:getAvailableFilters",
+      getAvailableFilters(userId),
+      8000,
+      EMPTY_FILTERS,
+    ),
+    withTimeout<StandaloneUnitInfo[]>(
+      "browse:getBrowsableUnits",
+      getBrowsableUnits(userId),
+      8000,
+      [],
+    ),
+    withTimeout<{ courseId: string }[]>(
+      "browse:enrollments",
+      db
+        .select({ courseId: userCourseEnrollment.courseId })
+        .from(userCourseEnrollment)
+        .where(eq(userCourseEnrollment.userId, userId)),
+      8000,
+      [],
+    ),
   ]);
 
   const enrolledIds = new Set(enrollments.map((e) => e.courseId));
