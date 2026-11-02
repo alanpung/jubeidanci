@@ -48,14 +48,12 @@ const LEVEL_BADGES: Record<string, string> = {
 
 export function ProgressView({
   isAdmin = false,
-  isAuthorAllWords = false,
   srsCards = [],
   libraryWords = [],
   language = "en",
   levelDictionaryCounts = { A1: 1000, A2: 1555, B1: 4610, B2: 8760, C1: 5127, C2: 1275 },
 }: {
   isAdmin?: boolean;
-  isAuthorAllWords?: boolean;
   srsCards?: SrsCard[];
   libraryWords?: { word: string; level: string }[];
   language?: string;
@@ -125,11 +123,10 @@ export function ProgressView({
   //   - My Words = M ∪ L ∪ My Books (the union of Mastered, Learning and the
   //     learner's current library vocabulary). Because removing a book must
   //     NOT erase earned progress, Mastered/Learning words from the deck stay
-  //     counted even when their source book is gone. For the owner
-  //     ("isAuthorAllWords") the whole deck is theirs, so My Words = every
-  //     distinct deck word. This makes the Quick-Stat subtitle
-  //     "Mastered + Learning + New" exact: those three sets are pairwise
-  //     disjoint and together exhaust My Words.
+  //     counted even when their source book is gone. There is no owner-only
+  //     branch any more: "My Books" is the derived catalog for everyone, which
+  //     makes the Quick-Stat subtitle "Mastered + Learning + New" exact —
+  //     those three sets are pairwise disjoint and together exhaust My Words.
   //   - New = My Books words that are not yet mastered / learning. New reaches
   //     zero the instant My Books is empty, regardless of any stale "new"
   //     cards a removed course left in the deck (those aren't part of My
@@ -193,16 +190,17 @@ export function ProgressView({
     // One canonical level per word keeps that identity exact: MY WORDS =
     // MASTERED + LEARNING + NEW, on every row and in TOTAL.
     //
-    //   - Owner  : the whole deck is theirs → union = every distinct deck
-    //              word, filed under the level on its card (unchanged).
-    //   - Student: My Books (the catalog) decides the level, because that is
-    //              the level the course/unit actually teaches the word at.
-    //              Mastered/Learning words whose book was removed are folded
-    //              in afterwards under their card's level — the catalog no
-    //              longer knows them, but they remain "my words". Un-studied
-    //              deck rows are deliberately NOT folded in: they belong to no
-    //              course/unit and were never practised, so they are not part
-    //              of "All".
+    //   My Books (the catalog) decides the level, because that is the level
+    //   the course/unit actually teaches the word at. Mastered/Learning words
+    //   whose book was removed are folded in afterwards under their card's
+    //   level — the catalog no longer knows them, but they remain "my words".
+    //   Un-studied deck rows are deliberately NOT folded in: they belong to no
+    //   course/unit and were never practised, so they are not part of "All".
+    //
+    //   This used to have an owner-only branch ("the whole deck is theirs"),
+    //   but with "new" derived from the catalog the owner's deck no longer
+    //   holds their un-started vocabulary, so owner and student now resolve
+    //   "All" from exactly the same union.
     const cardLevelByWord = new Map<string, string>();
     for (const card of cards) {
       const w = (card.word || "").toLowerCase().trim();
@@ -211,19 +209,15 @@ export function ProgressView({
     }
 
     const unionLevel = new Map<string, string>();
-    if (isAuthorAllWords) {
-      for (const [w, lvl] of cardLevelByWord) unionLevel.set(w, lvl);
-    } else {
-      for (const lw of libWords || []) {
-        const w = (lw.word || "").toLowerCase().trim();
-        if (!w || unionLevel.has(w)) continue;
-        unionLevel.set(w, normalizeLevel(lw.level));
-      }
-      for (const [w, lvl] of cardLevelByWord) {
-        if (unionLevel.has(w)) continue;
-        if (!studiedByWord.has(w)) continue; // un-studied orphan rows aren't "mine"
-        unionLevel.set(w, lvl);
-      }
+    for (const lw of libWords || []) {
+      const w = (lw.word || "").toLowerCase().trim();
+      if (!w || unionLevel.has(w)) continue;
+      unionLevel.set(w, normalizeLevel(lw.level));
+    }
+    for (const [w, lvl] of cardLevelByWord) {
+      if (unionLevel.has(w)) continue;
+      if (!studiedByWord.has(w)) continue; // un-studied orphan rows aren't "mine"
+      unionLevel.set(w, lvl);
     }
 
     // Count My Words = M ∪ L ∪ My Books and split out New, all from the SAME
@@ -254,7 +248,7 @@ export function ProgressView({
     });
 
     return stats;
-  }, [cards, libWords, levelDictionaryCounts, isAuthorAllWords]);
+  }, [cards, libWords, levelDictionaryCounts]);
 
   const totalLearning = useMemo(() => {
     return Object.values(levelStats).reduce((acc, curr) => acc + curr.learning, 0);
