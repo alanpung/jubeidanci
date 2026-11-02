@@ -169,75 +169,86 @@ export function ProgressView({
     for (const card of cards) {
       const w = (card.word || "").toLowerCase().trim();
       if (!w) continue;
-      const lvl = normalizeLevel(card.cefrLevel);
-      if (card.status === "learning") {
-        studiedByWord.set(w, "learning");
-        stats[lvl].learning++;
-      } else if (
+      // Mastered wins over Learning when both apply (a card can be left at
+      // status "learning" after it already graduated). The same precedence is
+      // used by the Words page and by /api/words, so all three agree.
+      if (
         card.status === "learned" ||
         card.status === "review" ||
         (card.repetitions && card.repetitions >= 3)
       ) {
         studiedByWord.set(w, "learned");
-        stats[lvl].learned++;
+      } else if (card.status === "learning") {
+        studiedByWord.set(w, "learning");
       }
     }
 
-    // Count My Words = M ∪ L ∪ My Books and split out New.
-    //   - myWordsSets[lvl] = distinct words at that level in the union.
-    //   - myStudiedByLevel[lvl] = how many of the OWNER's deck words are
-    //     studied (only used for the owner's New = unpractised deck words).
-    //   - newByLevel[lvl] = My Books words that are NOT yet mastered/learning
-    //     (the student's New). A My Books word that is studied is folded into
-    //     M/L and so is excluded from New but still counts toward My Words.
-    const myStudiedByLevel: Record<string, number> = {};
-    const newByLevel: Record<string, number> = {};
+    // The union of "my words", and the level each word is FILED UNDER.
+    //
+    // Every word must land in EXACTLY ONE level bucket. When the same word was
+    // filed twice — once under the level the course teaches it at (My Books /
+    // the catalog) and once under the level on its SRS deck card — it was
+    // counted twice in MY WORDS while only its M/L bucket moved, so MY WORDS
+    // drifted above MASTERED + LEARNING + NEW (the "10,169 vs 10,165" gap).
+    // One canonical level per word keeps that identity exact: MY WORDS =
+    // MASTERED + LEARNING + NEW, on every row and in TOTAL.
+    //
+    //   - Owner  : the whole deck is theirs → union = every distinct deck
+    //              word, filed under the level on its card (unchanged).
+    //   - Student: My Books (the catalog) decides the level, because that is
+    //              the level the course/unit actually teaches the word at.
+    //              Mastered/Learning words whose book was removed are folded
+    //              in afterwards under their card's level — the catalog no
+    //              longer knows them, but they remain "my words". Un-studied
+    //              deck rows are deliberately NOT folded in: they belong to no
+    //              course/unit and were never practised, so they are not part
+    //              of "All".
+    const cardLevelByWord = new Map<string, string>();
+    for (const card of cards) {
+      const w = (card.word || "").toLowerCase().trim();
+      if (!w || cardLevelByWord.has(w)) continue;
+      cardLevelByWord.set(w, normalizeLevel(card.cefrLevel));
+    }
+
+    const unionLevel = new Map<string, string>();
+    if (isAuthorAllWords) {
+      for (const [w, lvl] of cardLevelByWord) unionLevel.set(w, lvl);
+    } else {
+      for (const lw of libWords || []) {
+        const w = (lw.word || "").toLowerCase().trim();
+        if (!w || unionLevel.has(w)) continue;
+        unionLevel.set(w, normalizeLevel(lw.level));
+      }
+      for (const [w, lvl] of cardLevelByWord) {
+        if (unionLevel.has(w)) continue;
+        if (!studiedByWord.has(w)) continue; // un-studied orphan rows aren't "mine"
+        unionLevel.set(w, lvl);
+      }
+    }
+
+    // Count My Words = M ∪ L ∪ My Books and split out New, all from the SAME
+    // union map so the three buckets are pairwise disjoint and exhaust it.
     const myWordsSets: Record<string, Set<string>> = {};
     CEFR_LEVELS.forEach((lvl) => {
-      myStudiedByLevel[lvl] = 0;
-      newByLevel[lvl] = 0;
       myWordsSets[lvl] = new Set<string>();
     });
 
-    if (isAuthorAllWords) {
-      // Owner: the whole deck is theirs, so My Words = every distinct deck word.
-      const seen = new Set<string>();
-      for (const card of cards) {
-        const w = (card.word || "").toLowerCase().trim();
-        if (!w || seen.has(w)) continue;
-        seen.add(w);
-        const lvl = normalizeLevel(card.cefrLevel);
-        myWordsSets[lvl].add(w);
-        if (studiedByWord.has(w)) myStudiedByLevel[lvl]++;
-      }
-    } else {
-      // Student: start from My Books (libWords)…
-      for (const lw of libWords || []) {
-        const w = (lw.word || "").toLowerCase().trim();
-        if (!w) continue;
-        const lvl = normalizeLevel(lw.level);
-        myWordsSets[lvl].add(w);
-        if (studiedByWord.has(w)) myStudiedByLevel[lvl]++;
-        else newByLevel[lvl]++; // My Books word not yet mastered/learning = New
-      }
-      // …then fold in every Mastered/Learning word from the FULL deck, even
-      // ones whose source book was removed — they remain "my words".
-      for (const card of cards) {
-        const w = (card.word || "").toLowerCase().trim();
-        if (!w || !studiedByWord.has(w)) continue;
-        const lvl = normalizeLevel(card.cefrLevel);
-        myWordsSets[lvl].add(w);
-      }
+    for (const [w, lvl] of unionLevel) {
+      myWordsSets[lvl].add(w);
+      const st = studiedByWord.get(w);
+      if (st === "learned") stats[lvl].learned++;
+      else if (st === "learning") stats[lvl].learning++;
     }
 
     CEFR_LEVELS.forEach((lvl) => {
       stats[lvl].myWords = myWordsSets[lvl].size;
-      if (isAuthorAllWords) {
-        // Owner has no separate "library" notion: New = unpractised deck words.
-        stats[lvl].new = Math.max(0, stats[lvl].myWords - myStudiedByLevel[lvl]);
-      } else {
-        stats[lvl].new = newByLevel[lvl];
-      }
+      // New = the union words that are not yet mastered / learning. For the
+      // owner that is their un-practised deck words; for a student it is the
+      // catalog words they have not started. Both are the same computation.
+      stats[lvl].new = Math.max(
+        0,
+        stats[lvl].myWords - stats[lvl].learned - stats[lvl].learning
+      );
       // Dictionary words the learner has not taken on yet (owner only).
       stats[lvl].remaining = Math.max(0, stats[lvl].wordCount - stats[lvl].myWords);
     });

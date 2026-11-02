@@ -2,7 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { loadEnLevelWords, getBundledWords, type WordEntry } from "@/lib/words";
 import { db, isDbAvailable } from "@/lib/db";
 import { dictionaryWord } from "@/lib/db/schema";
-import { getTrackedWordSet } from "@/lib/actions/srs";
+import { getTrackedWordSet, getUserLibraryWords, getAllCards } from "@/lib/actions/srs";
+import { buildDictionary, levelForWord } from "@/lib/content/course-srs-report";
 import { getSession } from "@/lib/auth-server";
 
 export const dynamic = "force-dynamic";
@@ -77,9 +78,94 @@ export async function GET(req: NextRequest) {
       filtered = filtered.filter((w) => targetSet.has(w.word.toLowerCase().trim()));
     }
 
-    // Filter by CEFR Level
-    if (level && allWords.length > 0 && allWords[0]?.cefr_level !== level) {
-      filtered = filtered.filter((w: WordEntry) => w.cefr_level?.toUpperCase() === level.toUpperCase());
+    // ─── LIBRARY-SCOPED FILTER (student "My Words" / M / L / N) ───
+    // Serves exactly the learner's library — the derived union of the full
+    // course catalog and their own practised (orphan) words — which is the
+    // same set /progress reports as "All". This keeps /words and /progress
+    // perfectly consistent, and lets a student browse and study every one of
+    // their ~10k words even though the SRS deck only stores the words they
+    // have actually started (M/L plus any surviving "new" rows).
+    // When `srsStatus` is set we additionally keep only words whose derived
+    // status (catalog ⇒ new, unless the deck says mastered/learning) matches —
+    // so the M / L / N tabs are exact and paginable server-side.
+    const libraryOnly = searchParams.get("libraryOnly") === "1";
+    const srsStatus = (searchParams.get("srsStatus") || "").trim().toLowerCase();
+    if (libraryOnly) {
+      try {
+        const session = await getSession();
+        const userId = session?.user?.id;
+        if (!userId) {
+          filtered = [];
+        } else {
+          const lib = await getUserLibraryWords(userId);
+          if (lib.length === 0) {
+            filtered = [];
+          } else {
+            // The library IS the list — not the dictionary narrowed to it. A
+            // course's vocabulary legitimately contains inflected forms
+            // ("brushes", "travels") that have no entry in the master
+            // dictionary, so filtering the dictionary by membership would drop
+            // ~2.2k real vocabulary items and make /words disagree with
+            // /progress. Build the list from the library and enrich it with
+            // the dictionary wherever an entry exists.
+            const dictByWord = new Map<string, WordEntry>();
+            for (const w of allWords) dictByWord.set(w.word.toLowerCase().trim(), w);
+
+            const levelDict = buildDictionary();
+            const entries: WordEntry[] = [];
+            for (const lw of lib) {
+              const norm = lw.toLowerCase().trim();
+              if (!norm) continue;
+              const d = dictByWord.get(norm);
+              if (d) {
+                entries.push(d);
+                continue;
+              }
+              entries.push({
+                word: norm,
+                cefr_level: levelForWord(norm, levelDict) || "A1",
+                english_translation: "",
+                definition_zh: "",
+                pos: "",
+                example_sentence_native: "",
+                example_sentence_english: "",
+                gender: "",
+              } as WordEntry);
+            }
+            filtered = entries;
+
+            if (srsStatus === "new" || srsStatus === "learned" || srsStatus === "learning") {
+              const langKey = lang === "english" ? "en" : lang;
+              const cards = await getAllCards(langKey, userId, false, true);
+              const statusMap = new Map<string, "new" | "learning" | "learned">();
+              for (const c of cards) {
+                const norm = c.word.toLowerCase().trim();
+                const mastered =
+                  c.status === "learned" || c.status === "review" || (c.repetitions ?? 0) >= 3;
+                const learning = c.status === "learning" && (c.repetitions ?? 0) < 3;
+                statusMap.set(norm, mastered ? "learned" : learning ? "learning" : "new");
+              }
+              filtered = filtered.filter((w) => {
+                const st = statusMap.get(w.word.toLowerCase().trim()) || "new";
+                return st === srsStatus;
+              });
+            }
+          }
+        }
+      } catch {
+        // On any failure, fall back to the unfiltered dictionary rather than
+        // failing the whole request.
+      }
+    }
+
+    // Filter by CEFR Level. The dictionary path can skip the filter when the
+    // list was already pre-loaded for that level; the library-scoped list is
+    // built from the learner's own vocabulary and always spans every level,
+    // so it is always filtered.
+    if (level && (libraryOnly || (allWords.length > 0 && allWords[0]?.cefr_level !== level))) {
+      filtered = filtered.filter(
+        (w: WordEntry) => (w.cefr_level || "").toUpperCase() === level.toUpperCase()
+      );
     }
 
     // Filter by A-Z Letter

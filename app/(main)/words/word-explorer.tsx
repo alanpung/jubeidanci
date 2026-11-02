@@ -41,6 +41,10 @@ interface SrsCard {
   lastReviewedAt: Date | null;
   lastRating?: string | null;
   createdAt: Date;
+  /** True for the synthetic card attached to a library word the learner has
+   *  not started yet: its "new" status is DERIVED from the catalog, not
+   *  stored in the SRS deck. Such a word has no deck row to reset. */
+  derived?: boolean;
 }
 
 interface SrsStats {
@@ -498,6 +502,21 @@ function WordLookupSection({
     statusFilter === "new" ||
     statusFilter === "mine";
 
+  // Students no longer hold traditional enrolments (the +/× library toggles
+  // were removed), so their M / L / N / My-Words sets are DERIVED from the
+  // full course catalog rather than read from the bare SRS deck — the deck
+  // only physically stores the words they have actually started (M/L).
+  // Those tabs therefore read the dictionary scoped to the learner's library
+  // ("libraryOnly"), which is exactly the set /progress reports as "All".
+  // The owner keeps the client-side deck filter, because for them the deck
+  // IS the source of truth.
+  const useLibraryApi =
+    !isAdmin &&
+    (statusFilter === "mine" ||
+      statusFilter === "new" ||
+      statusFilter === "learned" ||
+      statusFilter === "learning");
+
   /** Words already in one of the three tracked states, keyed for O(1) lookup
    *  when the "R" (remaining) filter walks a page of dictionary words. */
   const trackedWordSet = useMemo(() => {
@@ -512,7 +531,17 @@ function WordLookupSection({
 
   const liveLearningCount = useMemo(() => srsCards.filter(isLearningCard).length, [srsCards]);
 
-  const liveNewCount = useMemo(() => srsCards.filter(isNewCard).length, [srsCards]);
+  // For the owner, "new" is a real deck state (rows seeded from the courses
+  // they enrolled in). For a student, "new" is DERIVED: every library word
+  // they have not yet mastered or started learning. That is exactly the set
+  // /progress reports as New, so the two pages can never disagree.
+  const liveNewCount = useMemo(() => {
+    if (isAdmin) return srsCards.filter(isNewCard).length;
+    return Math.max(
+      0,
+      (libraryWordSet?.size || 0) - liveLearnedCount - liveLearningCount
+    );
+  }, [srsCards, isAdmin, libraryWordSet, liveLearnedCount, liveLearningCount]);
 
   /** Owner-only: dictionary words that are not new, learning or mastered yet.
    *  The server computes the exact number (dictionary words minus the tracked
@@ -528,7 +557,7 @@ function WordLookupSection({
   useEffect(() => {
     let cancelled = false;
 
-    if (isSrsSpecificFilter) {
+    if (isSrsSpecificFilter && !useLibraryApi) {
       setLoading(true);
       let cards = srsCards;
 
@@ -637,6 +666,8 @@ function WordLookupSection({
 
     // "all" and "remaining" both read the master dictionary. "remaining" then
     // drops every word the learner already has as new / learning / mastered.
+    // A student's "My Words" / M / L / N also read the dictionary, but scoped
+    // to their library (libraryOnly) so the list matches /progress exactly.
     async function fetchFromApi() {
       setLoading(true);
       try {
@@ -653,6 +684,14 @@ function WordLookupSection({
         // back. The server does the exclusion (exact + paginable); the client
         // double-checks below as a safety net.
         if (statusFilter === "remaining") params.set("excludeInSrs", "1");
+        // Student library scope: the server builds the list from the learner's
+        // library (the derived catalog union) and, for M / L / N, keeps only
+        // the matching derived status. The server filters before pagination,
+        // so the count and "show more" stay exact.
+        if (useLibraryApi) {
+          params.set("libraryOnly", "1");
+          if (statusFilter !== "mine") params.set("srsStatus", statusFilter);
+        }
 
         const res = await fetch(`/api/words?${params.toString()}`);
         if (res.ok) {
@@ -664,10 +703,39 @@ function WordLookupSection({
               ? fetchedWords.filter((w) => !trackedWordSet.has(w.word.toLowerCase().trim()))
               : fetchedWords;
 
+            // A library word that is not in the learner's deck is a DERIVED
+            // "new" word: it belongs to a course/unit they can see but have
+            // not started yet. Give it a synthetic "new" card so the status
+            // badge reads N (instead of "not in SRS"). The synthetic card is
+            // flagged `derived`, so the reset button stays disabled — there
+            // is no deck row to reset.
+            const mappedWords = useLibraryApi
+              ? shownWords.map((w) => ({
+                  ...w,
+                  _card:
+                    srsMap.get(w.word.toLowerCase().trim()) ||
+                    ({
+                      word: w.word,
+                      language,
+                      translation: w.english_translation || "",
+                      cefrLevel: w.cefr_level || "A1",
+                      pos: w.pos || "noun",
+                      status: "new",
+                      easeFactor: 2.5,
+                      interval: 0,
+                      repetitions: 0,
+                      nextReviewAt: null,
+                      lastReviewedAt: null,
+                      createdAt: new Date(),
+                      derived: true,
+                    } as SrsCard),
+                }))
+              : shownWords;
+
             if (page === 1) {
-              setWords(shownWords);
+              setWords(mappedWords);
             } else {
-              setWords((prev) => [...prev, ...shownWords]);
+              setWords((prev) => [...prev, ...mappedWords]);
             }
             // The server now returns the true count of words matching the
             // current view — including the R filter — so the denominator and
@@ -698,6 +766,7 @@ function WordLookupSection({
     srsCards,
     srsMap,
     isSrsSpecificFilter,
+    useLibraryApi,
     trackedWordSet,
   ]);
 
@@ -1087,6 +1156,9 @@ function WordLookupCard({
   const isMastered = currentStatus === "learned" || currentStatus === "review";
   const isInLibrary = Boolean(libraryWordSet && libraryWordSet.has(w.word.toLowerCase().trim()));
   const hasStatus = isMastered || currentStatus === "learning" || currentStatus === "new";
+  // A derived "new" word has no SRS deck row, so there is nothing to reset —
+  // clicking reset would only insert a redundant row.
+  const canReset = hasStatus && !card?.derived;
 
   async function handleClearStatus() {
     if (!hasStatus) return;
@@ -1232,17 +1304,17 @@ function WordLookupCard({
           {/* 2nd Icon: Reset Word Status Button */}
           <button
             type="button"
-            disabled={isUpdating || !hasStatus}
+            disabled={isUpdating || !canReset}
             onClick={(e) => {
               e.stopPropagation();
               handleClearStatus();
             }}
             className={`w-7 h-7 rounded-full transition-all flex items-center justify-center shadow-xs shrink-0 ${
-              hasStatus
+              canReset
                 ? "bg-white text-lingo-text-light border-2 border-lingo-border hover:border-rose-500 hover:text-rose-600 hover:bg-rose-50 cursor-pointer"
                 : "bg-slate-50 text-slate-300 border-2 border-slate-200 cursor-not-allowed opacity-60"
             }`}
-            title={hasStatus ? "Reset word status" : "No status to reset"}
+            title={canReset ? "Reset word status" : "No status to reset"}
           >
             <RotateCcw className="w-3.5 h-3.5 stroke-[2.5]" />
           </button>
