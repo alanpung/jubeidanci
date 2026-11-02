@@ -10,31 +10,25 @@ Practice through interactive translation exercises, spaced-repetition flashcards
 
 Pre-built courses at CEFR levels A1, A2, B1, B2, C1, C2:
 
-- **10 units × 10 lessons × 10 sentences = 1000 sentences** per course
+- Over 1000 words per course
 - Chinese → English translation with accepted variants and SRS word tagging
 - Progressive difficulty and thematic units (work, travel, academic, etc.)
 
 ### Spaced Repetition (SRS)
 
-SM-2 scheduling. Cards move through `new → learning → review`. Words can be added during exercises or bulk-imported from frequency dictionaries.
+SM-2 scheduling. Cards move through `New → Learning → Mastered`. New words can be added via adding course/unit to "My books", removing it will only reset the new word count, Learning/Mastered count will be remained
 
 ### Interactive Exercises
 
 Multiple exercise types:
 
 - Translation
+- Flashcard
 - Multiple choice
 - Fill in the blank
-- Matching pairs
-- Listening (TTS)
 - Word bank
+- Listening (TTS)
 - Speaking (STT)
-- Free-text writing
-- Flashcard review
-
-### AI Tools
-
-Optional AI tutor tools for generating units, managing SRS, and more.
 
 ## Tech Stack
 
