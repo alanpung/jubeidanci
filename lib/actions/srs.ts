@@ -651,6 +651,8 @@ export async function getSrsStats(language?: string, overrideEmail?: string) {
         dueCount++;
       }
     } else if (c.status === "new") {
+      // Only legacy rows land here: New is derived, never stored, so this is
+      // expected to be 0 once the purge has run (same as the DB branch above).
       newCount++;
     }
 
