@@ -37,7 +37,18 @@ const globalForDb = globalThis as unknown as {
 // 120s). A server-side statement_timeout makes Postgres itself abort any query
 // that runs too long, which releases the connection back to the pool. The
 // request still degrades via withTimeout(); the pool recovers either way.
-const STATEMENT_TIMEOUT_MS = isProduction ? 20000 : 30000;
+// 4500ms in production: this must sit *below* the smallest withTimeout bound
+// used on render paths (5000ms). withTimeout() only stops *our* await — the
+// abandoned query keeps its connection until Postgres itself aborts it. If
+// statement_timeout were larger than withTimeout, a stalled query would hold a
+// connection for the longer window and the pool would stay saturated, so the
+// NEXT request's (unwrapped) getSession() queues behind it and the page hangs
+// for the full window instead of degrading. Keeping it below 5000ms means a
+// connection is always freed before the render-path guard fires, so the worst
+// case is a fast "no data" response, never a hang. Reads are indexed and
+// normally sub-second, so 4.5s is generous headroom; a genuinely slow read is
+// killed and the page degrades rather than blocking.
+const STATEMENT_TIMEOUT_MS = isProduction ? 4500 : 15000;
 
 export const client =
   globalForDb.__pgClient ??

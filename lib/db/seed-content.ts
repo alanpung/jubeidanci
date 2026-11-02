@@ -1,4 +1,4 @@
-import { db, isDbAvailable } from "./index";
+import { dbBackground, isDbAvailable } from "./index";
 import { course, unit, user } from "./schema";
 import { getAllCourses, getAllUnits } from "../content/registry";
 import { eq, or, ilike, and, notInArray, like, sql, count } from "drizzle-orm";
@@ -27,18 +27,18 @@ function startSeedTask(): Promise<void> {
 async function runSeedTask() {
   try {
     // 1. Ensure Alan's user name is "Alan P"
-    let alanUser = await db.query.user.findFirst({
+    let alanUser = await dbBackground.query.user.findFirst({
       where: ilike(user.email, "alan.pung@gmail.com"),
     });
 
     if (!alanUser) {
-      alanUser = await db.query.user.findFirst({
+      alanUser = await dbBackground.query.user.findFirst({
         where: ilike(user.name, "%alan%"),
       });
     }
 
     if (alanUser && alanUser.name !== "Alan P") {
-      await db.update(user).set({ name: "Alan P" }).where(eq(user.id, alanUser.id));
+      await dbBackground.update(user).set({ name: "Alan P" }).where(eq(user.id, alanUser.id));
     }
 
     const creatorId = alanUser ? alanUser.id : null;
@@ -60,7 +60,7 @@ async function runSeedTask() {
         createdBy: creatorId,
       }));
 
-      await db
+      await dbBackground
         .insert(course)
         .values(courseValues)
         .onConflictDoUpdate({
@@ -88,7 +88,7 @@ async function runSeedTask() {
     }
 
     // 4. Delete unwanted German / test courses and units
-    await db
+    await dbBackground
       .delete(unit)
       .where(
         or(
@@ -102,7 +102,7 @@ async function runSeedTask() {
         )
       );
 
-    await db
+    await dbBackground
       .delete(course)
       .where(
         or(
@@ -153,7 +153,7 @@ async function runSeedTask() {
     // Insert units in chunks of 5 to keep request payload safe
     for (let i = 0; i < unitValues.length; i += 5) {
       const chunk = unitValues.slice(i, i + 5);
-      await db
+      await dbBackground
         .insert(unit)
         .values(chunk)
         .onConflictDoUpdate({
@@ -185,7 +185,7 @@ async function runSeedTask() {
     // course page silently revert on the next background sync.
     for (const [courseId, validIds] of validUnitIdsByCourse.entries()) {
       if (validIds.length > 0) {
-        await db
+        await dbBackground
           .delete(unit)
           .where(
             and(
@@ -229,12 +229,12 @@ export async function seedContentFromFilesystem() {
 
   // Check if DB contains all filesystem courses and units
   try {
-    const dbCourses = await db.select({ id: course.id }).from(course);
+    const dbCourses = await dbBackground.select({ id: course.id }).from(course);
     const dbCourseIds = new Set(dbCourses.map((c) => c.id));
     const courses = getAllCourses();
     const hasMissingCourse = courses.some((c) => !dbCourseIds.has(c.id));
 
-    const [unitCountRow] = await db.select({ count: count() }).from(unit);
+    const [unitCountRow] = await dbBackground.select({ count: count() }).from(unit);
     const totalDbUnits = Number(unitCountRow?.count ?? 0);
     const totalFsUnits = getAllUnits().length;
     const hasMissingUnits = totalDbUnits < totalFsUnits;

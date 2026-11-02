@@ -4,6 +4,7 @@ import crypto from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { join } from "node:path";
 import { db } from "./lib/db";
+import { loadContentDir } from "./lib/content/loader";
 
 const MIGRATIONS_SCHEMA = "drizzle";
 const MIGRATIONS_TABLE = "__drizzle_migrations";
@@ -66,6 +67,20 @@ export async function register() {
     } else {
       console.error("[instrumentation] database migration failed:", err);
     }
+  }
+
+  // Pre-warm the filesystem content cache at boot. loadContentDir() scans and
+  // parses every markdown unit/course synchronously and is memoized at the
+  // module level, so its first call blocks the Node event loop for several
+  // seconds. When that happened inside a request it defeated every timeout we
+  // had — withTimeout()'s setTimeout and even Postgres's server-side
+  // statement_timeout can't fire while the event loop is blocked — so the page
+  // hung until the parse finished. Warming it here moves that cost to instance
+  // startup, so requests never pay it (the cache also now lives for 24h).
+  try {
+    loadContentDir();
+  } catch (err) {
+    console.warn("[instrumentation] content pre-warm skipped:", err);
   }
 }
 
