@@ -2,11 +2,11 @@
 
 import { db, dbBackground, isDbAvailable, hasDbConfig } from "@/lib/db";
 import { srsCard, dictionaryWord, userCourseEnrollment, userUnitLibrary, course, unit, user } from "@/lib/db/schema";
-import { and, eq, lte, count, sql, asc, isNotNull, inArray, notInArray, or, gte } from "drizzle-orm";
+import { and, eq, count, sql, inArray, notInArray, or, gte } from "drizzle-orm";
 import { getSession } from "@/lib/auth-server";
 import { isAdminEmail } from "@/lib/ai/models";
 import { revalidatePath } from "next/cache";
-import { calculateNextReview, GRADUATION_THRESHOLD, hasTrackedSrsStatus, type Quality, type CardStatus } from "@/lib/srs";
+import { calculateNextReview, GRADUATION_THRESHOLD, hasTrackedSrsStatus, normalizePersistedStatus, type Quality, type CardStatus } from "@/lib/srs";
 import type { Exercise } from "@/lib/content/types";
 import { extractSrsWords } from "@/lib/srs-words";
 import { getWordToLevelMap, getBundledWords } from "@/lib/words";
@@ -116,40 +116,6 @@ function getLanguageAliases(lang?: string): string[] {
   return Array.from(set);
 }
 
-export async function addWordToSrs(
-  word: string,
-  language: string,
-  translation: string
-) {
-  const userId = await getSafeUserId();
-  const normalized = word.toLowerCase().trim();
-
-  await upsertLocalCard({
-    word: normalized,
-    language,
-    userId,
-    translation,
-    status: "new",
-    nextReviewAt: null,
-  });
-
-  if (await isDbAvailable()) {
-    try {
-      await db
-        .insert(srsCard)
-        .values({
-          word: normalized,
-          language,
-          userId,
-          translation,
-          status: "new",
-          nextReviewAt: null,
-        })
-        .onConflictDoNothing();
-    } catch {}
-  }
-}
-
 export async function addOrFailWord(
   word: string,
   language: string,
@@ -248,51 +214,6 @@ export async function addOrFailWord(
   }
 
   return "failed";
-}
-
-export async function getDueCards(language: string, limit = 20) {
-  const userId = await getSafeUserId();
-  const now = new Date();
-  const aliases = getLanguageAliases(language);
-
-  if (await isDbAvailable()) {
-    try {
-      const conditions = [
-        eq(srsCard.userId, userId),
-        inArray(srsCard.status, ["learning", "review"]),
-        isNotNull(srsCard.nextReviewAt),
-        lte(srsCard.nextReviewAt, now),
-      ];
-
-      if (aliases.length > 0) {
-        conditions.push(inArray(srsCard.language, aliases));
-      }
-
-      return await db
-        .select()
-        .from(srsCard)
-        .where(and(...conditions))
-        .orderBy(srsCard.nextReviewAt)
-        .limit(limit);
-    } catch {}
-  }
-
-  const local = await getLocalCards(userId, aliases);
-  return local
-    .filter(
-      (c) =>
-        (c.status === "learning" || c.status === "review") &&
-        c.nextReviewAt &&
-        new Date(c.nextReviewAt) <= now
-    )
-    .sort((a, b) => (a.nextReviewAt! > b.nextReviewAt! ? 1 : -1))
-    .slice(0, limit)
-    .map((c) => ({
-      ...c,
-      createdAt: new Date(c.createdAt),
-      nextReviewAt: c.nextReviewAt ? new Date(c.nextReviewAt) : null,
-      lastReviewedAt: c.lastReviewedAt ? new Date(c.lastReviewedAt) : null,
-    }));
 }
 
 export interface SrsCardItem {
@@ -553,7 +474,9 @@ export async function reviewCard(
     }
   }
 
-  const initialStatus: CardStatus = card ? (card.status as CardStatus) : "new";
+  // "new" is derived, never stored: a word being reviewed for the first time
+  // starts at "learning", so the write below can never resurrect a "new" row.
+  const initialStatus: CardStatus = normalizePersistedStatus(card?.status ?? "new");
 
   const result = calculateNextReview(
     {
@@ -566,7 +489,12 @@ export async function reviewCard(
   );
 
   const rawStatus = result.status;
-  const cardStatus = rawStatus === "review" ? "learned" : rawStatus;
+  // Fold SM-2's "review" into "learned" for the store's four-state model, and
+  // normalise any residual "new" (a failed first attempt stays "new" in SM-2)
+  // to "learning" so it never lands in the deck as an unpractised row.
+  const cardStatus = normalizePersistedStatus(
+    rawStatus === "review" ? "learned" : rawStatus,
+  );
 
   const ratingStr: "hard" | "ok" | "easy" =
     quality === 5 ? "easy" : quality === 4 ? "ok" : "hard";
@@ -665,6 +593,10 @@ export async function getSrsStats(language?: string, overrideEmail?: string) {
         learned_count: number;
       };
 
+      // NOTE: new_count counts STORED status='new' rows. New is now DERIVED
+      // (library − mastered − learning) and never written, so this is expected
+      // to be 0 once the legacy rows are purged — the Progress and Words pages
+      // both derive New themselves and no longer read this field.
       const rows = await db.execute<StatRow>(sql`
         SELECT
           COUNT(*)::int AS total,
@@ -1001,7 +933,9 @@ export async function getUserLibraryWords(userIdParam?: string): Promise<string[
 export async function setWordStatus(
   word: string,
   language: string,
-  status: "new" | "learning" | "learned" | "remove" | "unmaster",
+  /** "new" is accepted only so legacy callers keep compiling; it is always
+   *  downgraded to "remove" below, because New is derived and never stored. */
+  status: "learning" | "learned" | "remove" | "unmaster" | "new",
   metadata?: { translation?: string; cefrLevel?: string; pos?: string }
 ) {
   const userId = await getSafeUserId();
@@ -1010,12 +944,16 @@ export async function setWordStatus(
   const aliases = getLanguageAliases(langKey);
   const dbUp = await isDbAvailable();
 
-  // If status is "unmaster", check if the word is in the user's active library courses/units
-  let effectiveStatus = status;
-  if (status === "unmaster") {
-    const libraryWords = await getUserLibraryWords(userId);
-    const inLibrary = libraryWords.some((w) => w.toLowerCase().trim() === normalizedWord);
-    effectiveStatus = inLibrary ? "new" : "remove";
+  // "unmaster" (the Words-page reset button) now always removes the row. New
+  // is DERIVED from the library (catalog − mastered − learning), so a word that
+  // still belongs to a course/unit reappears as New the instant its row is gone
+  // — there is no longer any reason to keep a placeholder "new" row behind.
+  //
+  // A stray caller still asking for "new" (the HTTP route takes a raw string)
+  // gets the same treatment for exactly the same reason.
+  let effectiveStatus: string = status;
+  if (status === "unmaster" || status === "new") {
+    effectiveStatus = "remove";
   }
 
   if (effectiveStatus === "remove") {
@@ -1149,82 +1087,6 @@ export async function setWordStatus(
   } catch {}
 
   return { success: true, word: normalizedWord, status: effectiveStatus };
-}
-
-export async function getNewCards(language: string, limit = 20) {
-  const userId = await getSafeUserId();
-  const aliases = getLanguageAliases(language);
-
-  if (await isDbAvailable()) {
-    try {
-      return await db
-        .select()
-        .from(srsCard)
-        .where(
-          and(
-            eq(srsCard.userId, userId),
-            inArray(srsCard.language, aliases),
-            eq(srsCard.status, "new")
-          )
-        )
-        .orderBy(asc(srsCard.createdAt))
-        .limit(limit);
-    } catch {}
-  }
-
-  const local = await getLocalCards(userId, aliases);
-  return local
-    .filter((c) => c.status === "new")
-    .slice(0, limit)
-    .map((c) => ({
-      ...c,
-      createdAt: new Date(c.createdAt),
-      nextReviewAt: null,
-      lastReviewedAt: null,
-    }));
-}
-
-export async function introduceNewCards(language: string, count_: number) {
-  const userId = await getSafeUserId();
-  const aliases = getLanguageAliases(language);
-  const now = new Date();
-
-  const cards = await getNewCards(language, count_);
-  if (cards.length === 0) return [];
-
-  for (const card of cards) {
-    await upsertLocalCard({
-      word: card.word,
-      language: card.language,
-      userId,
-      status: "learning",
-      nextReviewAt: now.toISOString(),
-    });
-  }
-
-  if (await isDbAvailable()) {
-    try {
-      await db
-        .update(srsCard)
-        .set({
-          status: "learning",
-          nextReviewAt: now,
-        })
-        .where(
-          and(
-            eq(srsCard.userId, userId),
-            inArray(srsCard.language, aliases),
-            eq(srsCard.status, "new"),
-            inArray(
-              srsCard.word,
-              cards.map((c) => c.word)
-            )
-          )
-        );
-    } catch {}
-  }
-
-  return cards.map((c) => ({ ...c, status: "learning" as const, nextReviewAt: now }));
 }
 
 export async function recordWordPractice(
@@ -1477,9 +1339,15 @@ export async function recordWordPracticeBatch(
       repetitions = sm.repetitions;
       easeFactor = sm.easeFactor;
       // SM-2 has a "review" state; fold it into "learned" for the store's
-      // four-state model (new / learning / learned), matching the binary path.
+      // four-state model, matching the binary path. normalizePersistedStatus
+      // then turns a residual "new" into "learning": SM-2 keeps an unstarted
+      // card at "new" when the graded quality is below the pass mark, and a
+      // stored "new" row is no longer meaningful — the learner has just been
+      // shown the word, so it belongs in the learning queue.
       const rawStatus = sm.status;
-      finalStatus = rawStatus === "review" ? "learned" : rawStatus;
+      finalStatus = normalizePersistedStatus(
+        rawStatus === "review" ? "learned" : rawStatus,
+      );
     } else {
       const isAllCorrect = data.correctCount === data.totalCount;
       repetitions = isAllCorrect ? previousReps + 1 : previousReps;
@@ -1751,59 +1619,6 @@ export async function recordChatExerciseResult(
   }
 }
 
-export async function syncOwnerLibraryToSrs(userId: string) {
-  const { loadLanguageRaw } = await import("@/lib/words");
-  const allDictWords = await loadLanguageRaw("en");
-  if (!allDictWords || allDictWords.length === 0) return;
-
-  const aliases = getLanguageAliases("en");
-  const dbUp = await isDbAvailable();
-  if (!dbUp) return;
-
-  try {
-    // 1. Fetch all words already in Alan's SRS deck
-    const existingRows = await db
-      .select({ word: srsCard.word })
-      .from(srsCard)
-      .where(and(eq(srsCard.userId, userId), inArray(srsCard.language, aliases)));
-
-    const existingSet = new Set(existingRows.map((r) => r.word.toLowerCase().trim()));
-
-    // 2. Identify newly added words from english_merged.json
-    const missingWords = allDictWords.filter(
-      (w) => !existingSet.has(w.word.toLowerCase().trim())
-    );
-
-    if (missingWords.length === 0) return;
-
-    // 3. Batch insert missing words with status: "new"
-    const now = new Date();
-    const recordsToInsert = missingWords.map((w) => ({
-      word: w.word.toLowerCase().trim(),
-      language: "en",
-      userId,
-      translation: w.english_translation || w.definition_zh || w.word,
-      cefrLevel: (w.cefr_level || "A1").toUpperCase().trim(),
-      pos: w.pos || "noun",
-      status: "new",
-      easeFactor: 2.5,
-      interval: 0,
-      repetitions: 0,
-      nextReviewAt: null,
-      createdAt: now,
-    }));
-
-    const CHUNK_SIZE = 500;
-    for (let i = 0; i < recordsToInsert.length; i += CHUNK_SIZE) {
-      const chunk = recordsToInsert.slice(i, i + CHUNK_SIZE);
-      await db.insert(srsCard).values(chunk).onConflictDoNothing();
-    }
-  } catch (err) {
-    console.error("syncOwnerLibraryToSrs error:", err);
-  }
-}
-
-
 const userSyncMap = new Map<string, number>();
 const inFlightSync = new Map<string, Promise<void>>();
 
@@ -1828,7 +1643,7 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
 
   const promise = (async () => {
     try {
-      const { getLocalCourseEnrollments, addLocalCourseEnrollment, upsertLocalCardsBatch } = await import("@/lib/srs-store");
+      const { getLocalCourseEnrollments } = await import("@/lib/srs-store");
       // Gate on hasDbConfig, NOT the isDbAvailable() probe. A cold-start
       // false-negative here used to make dbUp=false, which pushed this function
       // down the "no enrollments" branch and DELETED the user's new/0-rep
@@ -1849,6 +1664,38 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
         }
       }
 
+      // ─── This function now only PURGES legacy "new" cards ───
+      // "new" is no longer a seeded state: New is DERIVED from the learner's
+      // library (catalog − mastered − learning), so the deck only ever holds
+      // words the learner has actually started. The seeding that used to write
+      // one "new" row per library word (thousands of rows per learner) is gone,
+      // and everything below is the orphan cleanup that removes the rows that
+      // seeding left behind.
+      //
+      // Because the cleanup only ever touches status='new' rows, a deck with
+      // none left has nothing to do — so return immediately instead of
+      // re-reading every enrolled course's markdown on every page load.
+      if (dbUp) {
+        try {
+          const [leftover] = await db
+            .select({ word: srsCard.word })
+            .from(srsCard)
+            .where(and(eq(srsCard.userId, userId), eq(srsCard.status, "new")))
+            .limit(1);
+          const leftoverLocal = (await getLocalCards(userId)).some(
+            (c) => c.status === "new",
+          );
+          if (!leftover && !leftoverLocal) {
+            // Remember we looked, so a burst of page loads doesn't re-probe.
+            userSyncMap.set(userId, Date.now());
+            return;
+          }
+        } catch {
+          // A failed probe must not disable the cleanup — fall through and
+          // let the logic below decide.
+        }
+      }
+
       // 1. Resolve the user's enrolled courses + standalone units. These three
       // DB reads are independent, so run them concurrently — on a cold
       // serverless instance the old serial round-trips added up and the
@@ -1857,8 +1704,6 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       // independent, so kick it off in parallel too.
       const enrolledCourseIds = new Set<string>();
       const standaloneUnitIds = new Set<string>();
-      // Pre-declared so the parallel existing-rows read can populate it.
-      const existingSet = new Set<string>();
 
       // When the DB is the source of truth we must NOT union the per-instance
       // local enrollment file. On serverless each lambda has its own ephemeral
@@ -1867,14 +1712,6 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       // seed branch below and re-create the very "new" cards the removal just
       // pruned. Fall back to the local file only when the DB is unreachable.
       const localEnrollments = !dbUp ? await getLocalCourseEnrollments(userId) : [];
-
-      const existingRowsPromise = dbUp
-        ? db
-            .select({ word: srsCard.word })
-            .from(srsCard)
-            .where(eq(srsCard.userId, userId))
-            .catch(() => [])
-        : Promise.resolve([] as { word: string }[]);
 
       if (dbUp) {
         try {
@@ -2058,44 +1895,14 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
       const allActiveUnits = Array.from(unitMap.values());
       if (allActiveUnits.length === 0) return;
 
-      // Resolve the existing-card read we kicked off in parallel above, then
-      // fold in the local store so cards written there (but not yet replicated
-      // to Postgres) still count.
-      if (dbUp) {
-        try {
-          const existingRows = await existingRowsPromise;
-          existingRows.forEach((r) => existingSet.add(r.word.toLowerCase().trim()));
-        } catch {}
-      }
-
-      const localCards = await getLocalCards(userId);
-      localCards.forEach((c) => existingSet.add(c.word.toLowerCase().trim()));
-
+      // The words the learner's library (enrolled courses + standalone units)
+      // still backs. It is only used to decide which legacy "new" rows are
+      // orphans — nothing is seeded from it any more, because New is derived.
       const activeLibraryWords = new Set<string>();
-      const now = new Date();
-      const recordsToInsert: {
-        word: string;
-        language: string;
-        userId: string;
-        translation: string;
-        cefrLevel: string;
-        pos: string;
-        status: "new";
-        easeFactor: number;
-        interval: number;
-        repetitions: number;
-        nextReviewAt: null;
-        createdAt: Date;
-      }[] = [];
-
-      const LEVEL_ORDER: Record<string, number> = { A1: 1, A2: 2, B1: 3, B2: 4, C1: 5, C2: 6 };
 
       for (const u of allActiveUnits) {
         if (!u.markdown) continue;
         const { lessons } = getUnitLessonsSafe(u.markdown);
-        const unitLvl = (u.level || "A1").toUpperCase().trim();
-        const maxLvlRank = LEVEL_ORDER[unitLvl] || 6;
-        const lang = u.targetLanguage || "en";
 
         for (const lesson of lessons) {
           for (const ex of lesson.exercises) {
@@ -2118,28 +1925,6 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
                 continue;
               }
               activeLibraryWords.add(normWord);
-              if (!existingSet.has(normWord)) {
-                existingSet.add(normWord);
-                const translationStr = typeof exAny.translation === "string" ? exAny.translation : typeof exAny.meaning === "string" ? exAny.meaning : normWord;
-                const rawCefrLevel = typeof exAny.cefrLevel === "string" ? exAny.cefrLevel.toUpperCase().trim() : unitLvl;
-                const cefrLevelStr = dictLvl || rawCefrLevel;
-                const posStr = typeof exAny.pos === "string" ? exAny.pos : "noun";
-
-                recordsToInsert.push({
-                  word: normWord,
-                  language: lang,
-                  userId,
-                  translation: translationStr,
-                  cefrLevel: cefrLevelStr,
-                  pos: posStr,
-                  status: "new",
-                  easeFactor: 2.5,
-                  interval: 0,
-                  repetitions: 0,
-                  nextReviewAt: null,
-                  createdAt: now,
-                });
-              }
             }
           }
         }
@@ -2199,35 +1984,6 @@ export async function syncUserCourseWordsToSrs(userId: string, force = false, ov
           await pruneLocalNewCards(userId, localKeep);
         } catch (err) {
           console.warn("Cleanup stale local new words warning:", err);
-        }
-      }
-
-      if (recordsToInsert.length > 0) {
-        if (dbUp) {
-          try {
-            // Larger chunks = fewer round-trips. 500 rows × ~11 cols stays well
-            // under Postgres' parameter limit, so the full 2412-word insert
-            // finishes in ~5 statements instead of ~12.
-            const CHUNK_SIZE = 500;
-            for (let i = 0; i < recordsToInsert.length; i += CHUNK_SIZE) {
-              const chunk = recordsToInsert.slice(i, i + CHUNK_SIZE);
-              await db.insert(srsCard).values(chunk).onConflictDoNothing();
-            }
-          } catch (err) {
-            console.error("Error inserting cards to Postgres:", err);
-          }
-        }
-
-        // Always save to local store as well so cards are accessible offline/in preview
-        try {
-          await upsertLocalCardsBatch(
-            recordsToInsert.map((r) => ({
-              ...r,
-              createdAt: r.createdAt.toISOString(),
-            }))
-          );
-        } catch (err) {
-          console.error("Error inserting cards to local store:", err);
         }
       }
 

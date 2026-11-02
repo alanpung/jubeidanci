@@ -205,9 +205,10 @@ export async function GET(req: NextRequest) {
     }
 
     // ─── OPTIONAL SRS EXCLUSION (Dictionary / "not in my SRS" filter) ───
-    // When the client requests excludeInSrs, drop every word the learner
-    // already has in their SRS deck (new / learning / learned / review) so the
-    // result is exactly the dictionary words they have NOT studied yet. Done
+    // When the client requests excludeInSrs, drop every word the learner has
+    // actually started (learning / learned / review). A stored "new" row no
+    // longer counts as owned — New is derived from the library — so the result
+    // is exactly the dictionary words they have NOT studied yet. Done
     // server-side against the authoritative DB+local merge, not the client's
     // possibly-stale copy of the deck, and before pagination so the count and
     // "show more" stay correct.
