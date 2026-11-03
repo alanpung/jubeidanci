@@ -21,6 +21,7 @@ import {
   STANDALONE_KEY,
   type GroupBy,
 } from "@/components/library/library-folders";
+import { levelRank } from "@/components/library/library-deck";
 import {
   VisibilityBadge,
   CoverEditButton,
@@ -166,6 +167,17 @@ export function CourseBookShelf({
           )
         : courseEntries.filter((e) => typeLabelOf(e.course!) === activeKey);
 
+  // Sort the window's entries by CEFR level (A1 → C2), then by title. Without
+  // this the grid keeps the raw catalog order, which is title-ordered from the
+  // DB — so a "Translation" folder could read A1, B1, B2, C1, C2, A2 with A2
+  // stranded at the end. Level order is the spine of every library surface,
+  // so it wins; title is only the tie-breaker inside one level.
+  const sortedOpenEntries = [...openEntries].sort((a, b) => {
+    const byLevel = levelRank(a.level) - levelRank(b.level);
+    if (byLevel !== 0) return byLevel;
+    return a.title.localeCompare(b.title, undefined, { numeric: true });
+  });
+
   /** Delete a course FOR GOOD (owner/admin only). */
   function destroyCourse(course: CourseListItem) {
     if (
@@ -235,7 +247,7 @@ export function CourseBookShelf({
         {activeKey && (
           <TypeBrowserWindow
             title={activeKey === STANDALONE_KEY ? "Standalone Units" : activeKey}
-            entries={openEntries}
+            entries={sortedOpenEntries}
             pendingId={pendingId}
             pendingUnitId={pendingUnitId}
             onClose={() => setActiveKey(null)}
