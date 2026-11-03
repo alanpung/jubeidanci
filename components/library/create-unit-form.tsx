@@ -2,7 +2,6 @@
 
 import { useState, useTransition } from "react";
 import { useRouter } from "next/navigation";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { getLanguageName } from "@/lib/languages";
@@ -199,16 +198,6 @@ export function CreateUnitForm({
         >
           Cancel
         </Button>
-      </div>
-
-      <div className="border-t border-lingo-border pt-3">
-        <p className="text-xs text-lingo-text-light">
-          Or generate units with AI in the{" "}
-          <Link href="/chat" className="font-bold text-lingo-blue hover:underline">
-            Chat
-          </Link>
-          .
-        </p>
       </div>
     </form>
   );
