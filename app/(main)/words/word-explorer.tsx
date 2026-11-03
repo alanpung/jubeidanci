@@ -10,7 +10,7 @@ import {
   RotateCcw,
   ListChecks,
 } from "lucide-react";
-import { setWordStatus } from "@/lib/actions/srs";
+import { setWordStatusesBulk } from "@/lib/actions/srs";
 
 interface Word {
   word: string;
@@ -511,6 +511,7 @@ function WordLookupSection({
      filtering / searching silently drops anything scrolled out of view. */
   const [selectedKeys, setSelectedKeys] = useState<Set<string>>(new Set());
   const [bulkBusy, setBulkBusy] = useState(false);
+  const [bulkError, setBulkError] = useState<string | null>(null);
 
   useEffect(() => {
     setSelectedKeys((prev) => {
@@ -531,6 +532,7 @@ function WordLookupSection({
   const allOnScreenSelected = words.length > 0 && selectedOnScreen.length === words.length;
 
   const toggleSelect = useCallback((key: string) => {
+    setBulkError(null);
     setSelectedKeys((prev) => {
       const next = new Set(prev);
       if (next.has(key)) next.delete(key);
@@ -540,32 +542,57 @@ function WordLookupSection({
   }, []);
 
   /** 1st button = Reset (remove SRS status), 2nd = Master (mark learned).
-      Both act on every selected word currently on screen. */
+      Both act on every selected word currently on screen.
+
+      ONE server action handles the whole selection. Firing one request per
+      word saturated the 5-connection Postgres pool on Vercel and the page
+      hung on "Updating…" forever (postgres.js has no queue timeout, so the
+      queued requests never came back). */
   const applyBulk = useCallback(
     async (action: "learned" | "remove") => {
       if (bulkBusy || selectedOnScreen.length === 0) return;
       setBulkBusy(true);
+      setBulkError(null);
+      const targets = selectedOnScreen.map((w) => ({
+        word: w.word,
+        cefrLevel: w.cefr_level,
+        translation: w.definition_zh || w.english_translation,
+        pos: w.pos,
+      }));
+
+      // Hard safety net: if the server never answers, release the UI instead
+      // of leaving it stuck on "Updating…" forever.
+      let timedOut = false;
+      const timer = setTimeout(() => {
+        timedOut = true;
+        setBulkError("Timed out — please try again.");
+        setBulkBusy(false);
+      }, 30000);
+
       try {
-        const results = await Promise.allSettled(
-          selectedOnScreen.map(async (w) => {
-            const meta = {
-              cefrLevel: w.cefr_level,
-              translation: w.definition_zh || w.english_translation,
-              pos: w.pos,
-            };
-            await setWordStatus(w.word, language, action, meta);
-            onCardStatusChange?.(w.word, action, meta);
+        const result = await setWordStatusesBulk(targets, language, action);
+        if (timedOut) return;
+        // Mirror the change into the local card list so the badges update
+        // immediately, without waiting for the server round-trip.
+        targets.forEach((t) =>
+          onCardStatusChange?.(t.word, action === "remove" ? "remove" : "learned", {
+            cefrLevel: t.cefrLevel,
+            translation: t.translation,
+            pos: t.pos,
           })
         );
-        const failed = results.filter((r) => r.status === "rejected").length;
-        if (failed > 0) {
-          console.error(`Bulk "${action}": ${failed} of ${results.length} words failed`);
+        if (result?.failed > 0) {
+          console.error(`Bulk "${action}": ${result.failed} word(s) failed`);
+          setBulkError(`${result.failed} of ${targets.length} word(s) failed.`);
         }
         setSelectedKeys(new Set());
       } catch (err) {
+        if (timedOut) return;
         console.error("Bulk status update failed:", err);
+        setBulkError("Update failed — please try again.");
       } finally {
-        setBulkBusy(false);
+        clearTimeout(timer);
+        if (!timedOut) setBulkBusy(false);
       }
     },
     [bulkBusy, selectedOnScreen, language, onCardStatusChange]
@@ -1104,8 +1131,14 @@ function WordLookupSection({
       {/* ── BULK ACTION BAR: 1. Reset  2. Master  3. Select All ──
           Acts on every word ticked with the round button on its row. */}
       <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card p-1.5 sm:p-2 shadow-xs flex items-center gap-1.5 sm:gap-2">
-        <span className="pl-1 text-[10px] sm:text-[11px] font-black text-lingo-text-light shrink-0 tabular-nums">
-          {bulkBusy
+        <span
+          className={`pl-1 text-[10px] sm:text-[11px] font-black shrink-0 tabular-nums ${
+            bulkError ? "text-rose-500" : "text-lingo-text-light"
+          }`}
+        >
+          {bulkError
+            ? bulkError
+            : bulkBusy
             ? "Updating..."
             : selectedOnScreen.length > 0
             ? `${selectedOnScreen.length} selected`

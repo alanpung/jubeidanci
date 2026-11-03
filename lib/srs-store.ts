@@ -301,6 +301,38 @@ export async function deleteLocalCard(
 }
 
 /**
+ * Bulk variant of {@link deleteLocalCard}: removes every card whose word is in
+ * `words` (same language + user scope as the single-word version).
+ *
+ * The bulk Words-page action deletes dozens of cards at once; doing that with
+ * the single-word helper meant dozens of read-modify-write cycles over the
+ * whole JSON file, each one persisting it. This does one pass and one write.
+ */
+export async function deleteLocalCards(
+  words: string[],
+  languageAliases?: string[],
+  userId?: string
+): Promise<number> {
+  if (!words || words.length === 0) return 0;
+  const cards = await ensureStore();
+  const wordSet = new Set(words.map((w) => w.toLowerCase().trim()));
+  const aliasSet = new Set((languageAliases || []).map((a) => a.toLowerCase().trim()));
+
+  const filtered = cards.filter((c) => {
+    const matchWord = wordSet.has(c.word.toLowerCase().trim());
+    const matchLang = aliasSet.size === 0 || aliasSet.has(c.language.toLowerCase().trim());
+    const matchUser = !userId || (c.userId || "default_user") === userId;
+    return !(matchWord && matchLang && matchUser);
+  });
+
+  const removed = cards.length - filtered.length;
+  if (removed > 0) {
+    await persistStore(filtered);
+  }
+  return removed;
+}
+
+/**
  * Bulk-prune unpractised "new" SRS cards from the local JSON store for a user.
  *
  * This is the local-store mirror of the Postgres stale-"new" cleanup that runs
