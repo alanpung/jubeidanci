@@ -1,12 +1,7 @@
-import { listConversations } from "@/lib/actions/chat";
-import { ChatLayout } from "@/components/chat/chat-layout";
+import { redirect } from "next/navigation";
 
-export default async function ChatRouteLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
-  const conversations = await listConversations();
-
-  return <ChatLayout conversations={conversations}>{children}</ChatLayout>;
+// The owner no longer uses the AI Chat page. Redirect both /chat and nested
+// conversation URLs to the Library without loading chat history or UI.
+export default function ChatRouteLayout() {
+  redirect("/library");
 }
