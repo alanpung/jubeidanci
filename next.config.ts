@@ -1,6 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "standalone",
   outputFileTracingIncludes: {
     "/*": ["./content/**/*", "./words/**/*", "./drizzle/**/*"],
   },
@@ -20,6 +21,26 @@ const nextConfig: NextConfig = {
       {
         source: "/units/:path*",
         destination: "/library/:path*",
+        permanent: true,
+      },
+      {
+        source: "/chat",
+        destination: "/library",
+        permanent: true,
+      },
+      {
+        source: "/chat/:path*",
+        destination: "/library",
+        permanent: true,
+      },
+      {
+        source: "/markdown",
+        destination: "/library",
+        permanent: true,
+      },
+      {
+        source: "/markdown/:path*",
+        destination: "/library",
         permanent: true,
       },
     ];
