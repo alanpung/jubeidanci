@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo, useEffect, useCallback } from "react";
+import { useState, useMemo, useEffect, useCallback, useRef } from "react";
 import { useRouter } from "next/navigation";
 import {
   BookOpen,
@@ -8,6 +8,7 @@ import {
   Search,
   Check,
   RotateCcw,
+  ListChecks,
 } from "lucide-react";
 import { setWordStatus } from "@/lib/actions/srs";
 
@@ -328,6 +329,21 @@ export function WordExplorer({
 }) {
   const router = useRouter();
 
+  /** A bulk action touches dozens of words at once; collapsing the resulting
+   *  router.refresh() calls into one keeps Next from refetching the server
+   *  tree once per word. */
+  const refreshTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const scheduleRefresh = useCallback(() => {
+    if (refreshTimer.current) clearTimeout(refreshTimer.current);
+    refreshTimer.current = setTimeout(() => {
+      refreshTimer.current = null;
+      router.refresh();
+    }, 250);
+  }, [router]);
+  useEffect(() => () => {
+    if (refreshTimer.current) clearTimeout(refreshTimer.current);
+  }, []);
+
   // Size of the master dictionary (A1–C2). Only the owner needs it: it is the
   // base for the "R" (remaining) count, i.e. dictionary words that are not new,
   // learning or mastered yet.
@@ -404,9 +420,9 @@ export function WordExplorer({
         }
       });
       // Refresh Next.js Server Components (TopBar layout stats)
-      router.refresh();
+      scheduleRefresh();
     },
-    [language, router]
+    [language, scheduleRefresh]
   );
 
   return (
@@ -488,6 +504,72 @@ function WordLookupSection({
   const [total, setTotal] = useState(0);
   const [hasMore, setHasMore] = useState(false);
   const [loading, setLoading] = useState(false);
+
+  /* ── Bulk selection ──────────────────────────────────────────────
+     Keys are normalized words, so a word keeps its selection while the
+     list re-renders. Selection is scoped to what is currently on screen:
+     filtering / searching silently drops anything scrolled out of view. */
+  const [selectedKeys, setSelectedKeys] = useState<Set<string>>(new Set());
+  const [bulkBusy, setBulkBusy] = useState(false);
+
+  useEffect(() => {
+    setSelectedKeys((prev) => {
+      if (prev.size === 0) return prev;
+      const onScreen = new Set(words.map((w) => w.word.toLowerCase().trim()));
+      const next = new Set<string>();
+      prev.forEach((k) => {
+        if (onScreen.has(k)) next.add(k);
+      });
+      return next.size === prev.size ? prev : next;
+    });
+  }, [words]);
+
+  const selectedOnScreen = useMemo(
+    () => words.filter((w) => selectedKeys.has(w.word.toLowerCase().trim())),
+    [words, selectedKeys]
+  );
+  const allOnScreenSelected = words.length > 0 && selectedOnScreen.length === words.length;
+
+  const toggleSelect = useCallback((key: string) => {
+    setSelectedKeys((prev) => {
+      const next = new Set(prev);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
+    });
+  }, []);
+
+  /** 1st button = Reset (remove SRS status), 2nd = Master (mark learned).
+      Both act on every selected word currently on screen. */
+  const applyBulk = useCallback(
+    async (action: "learned" | "remove") => {
+      if (bulkBusy || selectedOnScreen.length === 0) return;
+      setBulkBusy(true);
+      try {
+        const results = await Promise.allSettled(
+          selectedOnScreen.map(async (w) => {
+            const meta = {
+              cefrLevel: w.cefr_level,
+              translation: w.definition_zh || w.english_translation,
+              pos: w.pos,
+            };
+            await setWordStatus(w.word, language, action, meta);
+            onCardStatusChange?.(w.word, action, meta);
+          })
+        );
+        const failed = results.filter((r) => r.status === "rejected").length;
+        if (failed > 0) {
+          console.error(`Bulk "${action}": ${failed} of ${results.length} words failed`);
+        }
+        setSelectedKeys(new Set());
+      } catch (err) {
+        console.error("Bulk status update failed:", err);
+      } finally {
+        setBulkBusy(false);
+      }
+    },
+    [bulkBusy, selectedOnScreen, language, onCardStatusChange]
+  );
 
   useEffect(() => {
     const handler = setTimeout(() => {
@@ -1019,6 +1101,82 @@ function WordLookupSection({
         )}
       </div>
 
+      {/* ── BULK ACTION BAR: 1. Reset  2. Master  3. Select All ──
+          Acts on every word ticked with the round button on its row. */}
+      <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card p-1.5 sm:p-2 shadow-xs flex items-center gap-1.5 sm:gap-2">
+        <span className="pl-1 text-[10px] sm:text-[11px] font-black text-lingo-text-light shrink-0 tabular-nums">
+          {bulkBusy
+            ? "Updating..."
+            : selectedOnScreen.length > 0
+            ? `${selectedOnScreen.length} selected`
+            : "Tick words to edit"}
+        </span>
+
+        <div className="flex-1" />
+
+        {/* 1st: Reset selected words */}
+        <button
+          type="button"
+          onClick={() => applyBulk("remove")}
+          disabled={bulkBusy || selectedOnScreen.length === 0}
+          title="Reset status of all selected words"
+          className={`inline-flex items-center gap-1 rounded-lg px-2 sm:px-2.5 py-1.5 text-[10px] sm:text-[11px] font-black transition-all ${
+            bulkBusy || selectedOnScreen.length === 0
+              ? "bg-slate-100 dark:bg-slate-800 text-slate-300 cursor-not-allowed"
+              : "bg-white text-rose-600 border-2 border-rose-200 hover:bg-rose-50 hover:border-rose-400 cursor-pointer shadow-xs"
+          }`}
+        >
+          <RotateCcw className="w-3 h-3 stroke-[2.5]" />
+          <span className="hidden sm:inline">Reset</span>
+        </button>
+
+        {/* 2nd: Master selected words */}
+        <button
+          type="button"
+          onClick={() => applyBulk("learned")}
+          disabled={bulkBusy || selectedOnScreen.length === 0}
+          title="Mark all selected words as Mastered"
+          className={`inline-flex items-center gap-1 rounded-lg px-2 sm:px-2.5 py-1.5 text-[10px] sm:text-[11px] font-black transition-all ${
+            bulkBusy || selectedOnScreen.length === 0
+              ? "bg-slate-100 dark:bg-slate-800 text-slate-300 cursor-not-allowed"
+              : "bg-white text-emerald-600 border-2 border-emerald-200 hover:bg-emerald-50 hover:border-emerald-400 cursor-pointer shadow-xs"
+          }`}
+        >
+          <Check className="w-3 h-3 stroke-[3]" />
+          <span className="hidden sm:inline">Master</span>
+        </button>
+
+        {/* 3rd: Select / Deselect everything on screen */}
+        <button
+          type="button"
+          onClick={() =>
+            setSelectedKeys((prev) =>
+              allOnScreenSelected
+                ? new Set()
+                : new Set(words.map((w) => w.word.toLowerCase().trim()))
+            )
+          }
+          disabled={bulkBusy || words.length === 0}
+          title={
+            allOnScreenSelected
+              ? "Deselect all words on screen"
+              : "Select all words on screen"
+          }
+          className={`inline-flex items-center gap-1 rounded-lg px-2 sm:px-2.5 py-1.5 text-[10px] sm:text-[11px] font-black transition-all ${
+            bulkBusy || words.length === 0
+              ? "bg-slate-100 dark:bg-slate-800 text-slate-300 cursor-not-allowed"
+              : allOnScreenSelected
+              ? "bg-lingo-blue text-white border-2 border-lingo-blue hover:bg-lingo-blue-dark cursor-pointer shadow-xs"
+              : "bg-white text-lingo-blue border-2 border-lingo-blue/40 hover:bg-lingo-blue/5 hover:border-lingo-blue cursor-pointer shadow-xs"
+          }`}
+        >
+          <ListChecks className="w-3 h-3 stroke-[2.5]" />
+          <span className="hidden sm:inline">
+            {allOnScreenSelected ? "Clear" : "Select All"}
+          </span>
+        </button>
+      </div>
+
       {/* Word Cards List (Spans full width) ── */}
       {loading && words.length === 0 ? (
         <div className="py-8 text-center text-lingo-text-light font-bold text-xs">
@@ -1049,6 +1207,8 @@ function WordLookupSection({
                   card={card}
                   language={language}
                   onStatusChange={onCardStatusChange}
+                  selected={selectedKeys.has(w.word.toLowerCase().trim())}
+                  onToggleSelect={toggleSelect}
                 />
               );
             })}
@@ -1088,6 +1248,8 @@ function WordLookupCard({
   card,
   language,
   onStatusChange,
+  selected = false,
+  onToggleSelect,
 }: {
   word: Word;
   card?: SrsCard;
@@ -1097,6 +1259,9 @@ function WordLookupCard({
     status: "new" | "learning" | "learned" | "remove",
     meta?: { cefrLevel?: string; translation?: string; pos?: string }
   ) => void;
+  /** Bulk-edit: is this word part of the current screen selection? */
+  selected?: boolean;
+  onToggleSelect?: (key: string) => void;
 }) {
   const [expanded, setExpanded] = useState(false);
   const resolvedStatus =
@@ -1108,7 +1273,6 @@ function WordLookupCard({
       ? "new"
       : "";
   const [currentStatus, setCurrentStatus] = useState<string>(resolvedStatus);
-  const [isUpdating, setIsUpdating] = useState(false);
 
   useEffect(() => {
     setCurrentStatus(
@@ -1152,69 +1316,18 @@ function WordLookupCard({
   const posList = getAllPosLabels(w);
 
   const isMastered = currentStatus === "learned" || currentStatus === "review";
-  const hasStatus = isMastered || currentStatus === "learning" || currentStatus === "new";
-  // A derived "new" word has no SRS deck row, so there is nothing to reset —
-  // clicking reset would only insert a redundant row.
-  const canReset = hasStatus && !card?.derived;
-
-  async function handleClearStatus() {
-    if (!hasStatus) return;
-    // Reset always removes the row. New is DERIVED from the library, so a word
-    // that still belongs to a course/unit reappears as New the moment its row
-    // is gone — there is no need to keep a placeholder "new" row behind, and
-    // writing one would only re-grow the legacy rows this change removes.
-    const nextAction = "remove";
-    setCurrentStatus("");
-    onStatusChange?.(w.word, nextAction, {
-      cefrLevel: w.cefr_level,
-      translation: w.definition_zh || w.english_translation,
-      pos: w.pos,
-    });
-
-    setIsUpdating(true);
-    try {
-      await setWordStatus(w.word, language, nextAction, {
-        cefrLevel: w.cefr_level,
-        translation: w.definition_zh || w.english_translation,
-        pos: w.pos,
-      });
-    } catch (err) {
-      console.error("Failed to reset word status:", err);
-    } finally {
-      setIsUpdating(false);
-    }
-  }
-
-  async function handleSetMastered() {
-    if (isMastered) return;
-    const nextAction = "learned";
-    setCurrentStatus(nextAction);
-    onStatusChange?.(w.word, nextAction, {
-      cefrLevel: w.cefr_level,
-      translation: w.definition_zh || w.english_translation,
-      pos: w.pos,
-    });
-
-    setIsUpdating(true);
-    try {
-      await setWordStatus(w.word, language, nextAction, {
-        cefrLevel: w.cefr_level,
-        translation: w.definition_zh || w.english_translation,
-        pos: w.pos,
-      });
-    } catch (err) {
-      console.error("Failed to set mastered status:", err);
-    } finally {
-      setIsUpdating(false);
-    }
-  }
+  const selectKey = w.word.toLowerCase().trim();
 
   return (
     <div
       onClick={() => setExpanded(!expanded)}
-      className="w-full rounded-xl border-2 border-lingo-border bg-lingo-card hover:border-lingo-gray-dark transition-all overflow-hidden shadow-xs cursor-pointer"
+      className={`w-full rounded-xl border-2 transition-all overflow-hidden shadow-xs cursor-pointer ${
+        selected
+          ? "border-lingo-blue bg-lingo-blue/5 dark:bg-lingo-blue/10"
+          : "border-lingo-border bg-lingo-card hover:border-lingo-gray-dark"
+      }`}
     >
-      {/* ── TOP BAR (Word, Multi-POS, English Meaning Preview, 3 Right Icons: Status, Reset, Mastered) ── */}
+      {/* ── TOP BAR (Word, Multi-POS, English Meaning Preview, Status + Select) ── */}
       <div className="flex items-center justify-between p-2.5 sm:p-3 gap-2">
         {/* Left: Pronounce, Level Badge, Word, IPA, Multi-POS */}
         <div className="flex items-center gap-1.5 sm:gap-2 min-w-0 shrink-0 max-w-[38%] sm:max-w-[44%]">
@@ -1270,9 +1383,9 @@ function WordLookupCard({
           </p>
         </div>
 
-        {/* Right: 3 Icons — 1. Current Status Badge (display only), 2. Reset Button, 3. Mastered Button */}
+        {/* Right: Status Badge (display only) + Round Select Button (bulk edit) */}
         <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
-          {/* 1st Icon: Current Status Indicator (display only, does not trigger actions) */}
+          {/* Status Indicator (display only, does not trigger actions) */}
           <span
             onClick={(e) => e.stopPropagation()}
             className={`inline-flex items-center justify-center w-6 h-6 rounded-full text-[11px] font-black shadow-xs shrink-0 select-none cursor-default ${
@@ -1297,40 +1410,27 @@ function WordLookupCard({
             {isMastered ? "M" : currentStatus === "learning" ? "L" : currentStatus === "new" ? "N" : "–"}
           </span>
 
-          {/* 2nd Icon: Reset Word Status Button */}
+          {/* Round Select Button — picks this word for the Reset / Master
+              buttons in the bulk bar above the list. */}
           <button
             type="button"
-            disabled={isUpdating || !canReset}
             onClick={(e) => {
               e.stopPropagation();
-              handleClearStatus();
+              onToggleSelect?.(selectKey);
             }}
+            aria-pressed={selected}
             className={`w-7 h-7 rounded-full transition-all flex items-center justify-center shadow-xs shrink-0 ${
-              canReset
-                ? "bg-white text-lingo-text-light border-2 border-lingo-border hover:border-rose-500 hover:text-rose-600 hover:bg-rose-50 cursor-pointer"
-                : "bg-slate-50 text-slate-300 border-2 border-slate-200 cursor-not-allowed opacity-60"
+              selected
+                ? "bg-lingo-blue text-white ring-2 ring-lingo-blue/30 cursor-pointer"
+                : "bg-white text-lingo-text-light border-2 border-lingo-border hover:border-lingo-blue hover:text-lingo-blue hover:bg-lingo-blue/5 cursor-pointer"
             }`}
-            title={canReset ? "Reset word status" : "No status to reset"}
+            title={selected ? "Deselect this word" : "Select this word"}
           >
-            <RotateCcw className="w-3.5 h-3.5 stroke-[2.5]" />
-          </button>
-
-          {/* 3rd Icon: Set as Mastered Button */}
-          <button
-            type="button"
-            disabled={isUpdating || isMastered}
-            onClick={(e) => {
-              e.stopPropagation();
-              handleSetMastered();
-            }}
-            className={`w-7 h-7 rounded-full transition-all flex items-center justify-center shadow-xs shrink-0 ${
-              isMastered
-                ? "bg-emerald-500 text-white ring-2 ring-emerald-300 cursor-default"
-                : "bg-white text-lingo-text-light border-2 border-lingo-border hover:border-emerald-500 hover:text-emerald-600 hover:bg-emerald-50 cursor-pointer"
-            }`}
-            title={isMastered ? "Already Mastered" : "Set as Mastered"}
-          >
-            <Check className="w-3.5 h-3.5 stroke-[3]" />
+            <Check
+              className={`w-3.5 h-3.5 stroke-[3] transition-opacity ${
+                selected ? "opacity-100" : "opacity-25"
+              }`}
+            />
           </button>
         </div>
       </div>
