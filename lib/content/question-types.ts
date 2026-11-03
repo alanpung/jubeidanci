@@ -134,6 +134,27 @@ export const QUESTION_TYPE_LIST = [
   QUESTION_TYPES["mix"],
 ];
 
+/**
+ * The canonical exercise-type sequence — the order the Library's own folders
+ * use (Flashcards → Translation → Multiple Choice → …).
+ *
+ * Both surfaces read this one list so they can never drift apart: the Library
+ * builds its folder grid from it, and the landing page teaches the same
+ * sequence so a learner meets the same order before and after signing in.
+ *
+ * A type with no library folder of its own (e.g. Matching pairs) simply has no
+ * entry here; callers that need to place it put it after the listed ones.
+ */
+export const LIBRARY_TYPE_ORDER: readonly string[] = [
+  "flashcard-review",
+  "translation",
+  "multiple-choice",
+  "fill-in-the-blank",
+  "listening",
+  "word-bank",
+  "speaking",
+];
+
 export function normalizeQuestionType(
   input?: string | number | null
 ): QuestionTypeInfo | null {

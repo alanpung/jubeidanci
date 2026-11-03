@@ -7,6 +7,7 @@ import {
   QUESTION_TYPE_LEGEND,
   resolveCourseQuestionType,
 } from "@/components/library/course-level-icon";
+import { LIBRARY_TYPE_ORDER } from "@/lib/content/question-types";
 
 /** Key of the always-present folder that holds the units the AI tutor made. */
 export const STANDALONE_KEY = "standalone-units";
@@ -38,15 +39,10 @@ interface FolderItem {
  * level/type, where a +/× toggle adds to / removes from My Books.
  */
 
-const FOLDER_ORDER = [
-  "flashcard-review",
-  "translation",
-  "multiple-choice",
-  "fill-in-the-blank",
-  "listening",
-  "word-bank",
-  "speaking",
-];
+// The folder grid reads the SAME shared order the landing page teaches, so
+// the two surfaces can never drift apart. "Matching pairs" has no folder of
+// its own, so it is not part of the sequence.
+const FOLDER_ORDER = LIBRARY_TYPE_ORDER;
 
 const LEVEL_ORDER = ["A1", "A2", "B1", "B2", "C1", "C2"];
 
