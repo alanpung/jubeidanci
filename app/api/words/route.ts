@@ -8,40 +8,44 @@ import { getSession } from "@/lib/auth-server";
 
 export const dynamic = "force-dynamic";
 
+// POS tags are compared as complete tokens. Never use substring matching here:
+// the one-letter adverb alias "r", for example, occurs inside "verb".
 const POS_ALIASES: Record<string, string[]> = {
-  noun: ["noun", "n", "n."],
-  verb: ["verb", "v", "v.", "vt.", "vi.", "be-verb", "have-verb", "do-verb", "modal", "auxiliary", "aux."],
-  adjective: ["adjective", "adj", "adj.", "a", "a.", "s."],
-  adverb: ["adverb", "adv", "adv.", "r", "r."],
-  preposition: ["preposition", "prep", "prep.", "pp"],
-  conjunction: ["conjunction", "conj", "conj.", "cj"],
-  pronoun: ["pronoun", "pron", "pron.", "pn"],
-  determiner: ["determiner", "det", "det.", "article", "art", "art."],
-  numeral: ["numeral", "num", "num.", "number"],
-  interjection: ["interjection", "intj", "int", "interj."],
+  noun: ["noun", "n"],
+  verb: ["verb", "v", "vt", "vi", "be-verb", "have-verb", "do-verb", "modal", "auxiliary", "aux"],
+  adjective: ["adjective", "adj", "a", "s"],
+  adverb: ["adverb", "adv", "r"],
+  preposition: ["preposition", "prep", "pp"],
+  conjunction: ["conjunction", "conj", "cj"],
+  pronoun: ["pronoun", "pron", "pn"],
+  determiner: ["determiner", "det", "article", "art"],
+  numeral: ["numeral", "num", "number"],
+  interjection: ["interjection", "intj", "int", "interj"],
 };
+
+function normalizePosToken(raw: string): string {
+  return raw.toLowerCase().trim().replace(/\.$/, "");
+}
 
 function extractPosSet(w: WordEntry): Set<string> {
   const set = new Set<string>();
-  const rawPos = (w.pos || "").toLowerCase().trim();
-  if (rawPos) {
+  const addToken = (raw: string) => {
+    const token = normalizePosToken(raw);
     for (const [key, aliases] of Object.entries(POS_ALIASES)) {
-      if (aliases.includes(rawPos) || rawPos.split(/[,/;\s]+/).some((p) => aliases.includes(p))) {
-        set.add(key);
-      }
+      if (aliases.includes(token)) set.add(key);
     }
-  }
+  };
 
+  // Dictionary POS fields may list multiple tags (e.g. "n. v." or
+  // "noun/verb"). Treat each complete tag as a token.
+  (w.pos || "").split(/[,/;·\s]+/).filter(Boolean).forEach(addToken);
+
+  // Some entries store POS only as a prefix in their gloss/translation.
   const combinedText = `${w.english_translation || ""} ； ${w.definition_zh || ""}`;
   const regex = /(?:^|[；;]\s*|\s+)([a-z]+)\./gi;
   let match: RegExpExecArray | null;
   while ((match = regex.exec(combinedText)) !== null) {
-    const token = `${match[1].toLowerCase()}.`;
-    for (const [key, aliases] of Object.entries(POS_ALIASES)) {
-      if (aliases.includes(token)) {
-        set.add(key);
-      }
-    }
+    addToken(match[1]);
   }
   return set;
 }
@@ -183,15 +187,10 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    // Filter by Part of Speech (POS)
+    // Filter by Part of Speech using exact normalized tags; substring checks
+    // incorrectly classified verbs as adverbs because "verb" contains "r".
     if (pos && pos !== "all") {
-      filtered = filtered.filter((w: WordEntry) => {
-        const posSet = extractPosSet(w);
-        if (posSet.has(pos)) return true;
-        const validAliases = POS_ALIASES[pos] || [pos];
-        const itemPos = (w.pos || "").toLowerCase().trim();
-        return validAliases.some((alias) => itemPos.includes(alias));
-      });
+      filtered = filtered.filter((w: WordEntry) => extractPosSet(w).has(pos));
     }
 
     // Filter by Search Query
