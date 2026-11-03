@@ -17,6 +17,7 @@ import {
   upsertLocalCard,
   upsertLocalCardsBatch,
   deleteLocalCard,
+  deleteLocalCards,
   type SrsCardRecord,
 } from "@/lib/srs-store";
 import { runAfterResponse } from "@/lib/after-response";
@@ -1089,6 +1090,202 @@ export async function setWordStatus(
   } catch {}
 
   return { success: true, word: normalizedWord, status: effectiveStatus };
+}
+
+/**
+ * Bulk status update for the Words page.
+ *
+ * The Words page lets the learner tick many words and then Reset or Master
+ * them in one go. Doing that with N calls to {@link setWordStatus} means N
+ * concurrent server-action requests, and each one runs a session lookup, a DB
+ * probe, its own SELECT/INSERT and a `revalidatePath("/words")` (which
+ * re-renders the whole page). On Vercel the Postgres pool holds 5 connections
+ * in production and postgres.js has NO queue timeout — so a burst of parallel
+ * server actions saturates the pool and every queued request waits forever.
+ * That is exactly what the bulk bar hit: the UI sat on "Updating…" and never
+ * came back.
+ *
+ * This does the whole batch in ONE server action: one session lookup, one DB
+ * probe, one local-store write, one set of bulk SQL statements (chunked) and
+ * ONE revalidation at the end. Same semantics as calling setWordStatus per
+ * word, just without the request storm.
+ */
+export async function setWordStatusesBulk(
+  words: {
+    word: string;
+    translation?: string;
+    cefrLevel?: string;
+    pos?: string;
+  }[],
+  language: string,
+  status: "learned" | "remove",
+  metadata?: { translation?: string; cefrLevel?: string; pos?: string }
+) {
+  if (!words || words.length === 0) {
+    return { success: true, updated: 0, failed: 0 };
+  }
+
+  const userId = await getSafeUserId();
+  const langKey = (language || "en").toLowerCase().trim();
+  const aliases = getLanguageAliases(langKey);
+  const primaryLang = aliases[0] || langKey;
+
+  // Dedupe + normalize once; the same word can only be touched once.
+  const seen = new Set<string>();
+  const targets = words
+    .map((w) => ({
+      word: (w.word || "").toLowerCase().trim(),
+      translation: w.translation || metadata?.translation || w.word,
+      cefrLevel: w.cefrLevel || metadata?.cefrLevel || null,
+      pos: w.pos || metadata?.pos || null,
+    }))
+    .filter((w) => {
+      if (!w.word || seen.has(w.word)) return false;
+      seen.add(w.word);
+      return true;
+    });
+
+  if (targets.length === 0) {
+    return { success: true, updated: 0, failed: 0 };
+  }
+
+  const dbUp = await isDbAvailable();
+  const now = new Date();
+
+  // ── "remove" (Reset): drop the deck rows ────────────────────────────
+  if (status === "remove") {
+    try {
+      await deleteLocalCards(
+        targets.map((t) => t.word),
+        aliases,
+        userId
+      );
+    } catch (err) {
+      console.error("setWordStatusesBulk local delete error:", err);
+    }
+
+    if (dbUp) {
+      try {
+        await db
+          .delete(srsCard)
+          .where(
+            and(
+              inArray(srsCard.word, targets.map((t) => t.word)),
+              inArray(srsCard.language, aliases),
+              eq(srsCard.userId, userId)
+            )
+          );
+      } catch (err) {
+        console.error("setWordStatusesBulk delete DB error:", err);
+      }
+    }
+
+    try {
+      revalidatePath("/progress");
+      revalidatePath("/words");
+    } catch {}
+
+    return { success: true, updated: targets.length, failed: 0 };
+  }
+
+  // ── "learned" (Master) ──────────────────────────────────────────────
+  const reps = 10;
+  const interval = 36500;
+
+  // Local store first (instant, single write over the whole JSON file).
+  try {
+    await upsertLocalCardsBatch(
+      targets.map((t) => ({
+        word: t.word,
+        language: primaryLang,
+        userId,
+        status: "learned",
+        translation: t.translation,
+        cefrLevel: t.cefrLevel,
+        pos: t.pos,
+        nextReviewAt: null,
+        lastReviewedAt: now.toISOString(),
+        interval,
+        repetitions: reps,
+      }))
+    );
+  } catch (err) {
+    console.error("setWordStatusesBulk local store error:", err);
+  }
+
+  // Then Postgres. Gate on hasDbConfig (not the flaky probe) so a cold
+  // serverless instance still attempts the write — same reasoning as
+  // recordWordPracticeBatch.
+  let updated = 0;
+  let failed = 0;
+  if (hasDbConfig) {
+    const rows = targets.map((t) => ({
+      word: t.word,
+      language: primaryLang,
+      userId,
+      translation: t.translation,
+      cefrLevel: t.cefrLevel,
+      pos: t.pos,
+      status: "learned",
+      nextReviewAt: null,
+      lastReviewedAt: now,
+      interval,
+      repetitions: reps,
+    }));
+
+    const upsertRows = async (batch: (typeof srsCard.$inferInsert)[]) => {
+      await db
+        .insert(srsCard)
+        .values(batch)
+        .onConflictDoUpdate({
+          target: [srsCard.word, srsCard.language, srsCard.userId],
+          set: {
+            status: sql`excluded.status`,
+            translation: sql`excluded.translation`,
+            cefrLevel: sql`COALESCE(excluded.cefr_level, ${srsCard.cefrLevel})`,
+            pos: sql`COALESCE(excluded.pos, ${srsCard.pos})`,
+            nextReviewAt: sql`excluded.next_review_at`,
+            lastReviewedAt: sql`excluded.last_review_at`,
+            interval: sql`excluded.interval`,
+            repetitions: sql`excluded.repetitions`,
+          },
+        });
+    };
+
+    try {
+      // Chunk so a huge selection cannot build one giant statement.
+      const CHUNK_SIZE = 100;
+      for (let i = 0; i < rows.length; i += CHUNK_SIZE) {
+        await upsertRows(rows.slice(i, i + CHUNK_SIZE));
+      }
+      updated = rows.length;
+    } catch (err) {
+      // A single bad row used to discard the whole batch. Retry row-by-row so
+      // the rest survive, and report the real count.
+      console.warn(
+        `[srs] setWordStatusesBulk: batch upsert failed for ${rows.length} card(s):`,
+        err
+      );
+      for (const row of rows) {
+        try {
+          await upsertRows([row]);
+          updated += 1;
+        } catch (rowErr) {
+          failed += 1;
+          console.error("setWordStatusesBulk row failed:", rowErr);
+        }
+      }
+    }
+  } else {
+    updated = targets.length;
+  }
+
+  try {
+    revalidatePath("/progress");
+    revalidatePath("/words");
+  } catch {}
+
+  return { success: true, updated, failed };
 }
 
 export async function recordWordPractice(
