@@ -13,6 +13,7 @@ import {
   Users,
   Table2,
 } from "lucide-react";
+import { SITE_URL } from "@/lib/constants";
 
 const navItems = [
   { href: "/chat", label: "Chat", icon: MessageSquare },
@@ -58,7 +59,15 @@ export function Sidebar({
   return (
     <aside className="hidden md:flex md:w-64 md:flex-col md:fixed md:inset-y-0 border-r-2 border-lingo-border bg-white">
       <div className="flex h-16 items-center px-6">
-        <Link href="/library" className="flex items-center gap-2.5 group">
+        {/* The brand mark points at the site's own URL (the live home page),
+            so the logo always carries the jubeidanci.vercel.app address. */}
+        <a
+          href={SITE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={SITE_URL}
+          className="flex items-center gap-2.5 group"
+        >
           <Image
             src="/icon.svg"
             alt="句背单词"
@@ -70,7 +79,7 @@ export function Sidebar({
           <span className="text-2xl font-black text-rainbow tracking-tight">
             句背单词
           </span>
-        </Link>
+        </a>
       </div>
       <nav className="flex-1 px-3 py-4 space-y-1">
         {allItems.map((item) => {

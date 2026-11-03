@@ -1,9 +1,9 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { signOut, useSession } from "@/lib/auth-client";
+import { SITE_URL } from "@/lib/constants";
 
 interface TopBarProps {
   stats?: {
@@ -30,7 +30,14 @@ export function TopBar({ stats }: TopBarProps) {
   return (
     <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b-2 border-lingo-border bg-white px-4 md:px-6">
       <div className="md:hidden">
-        <Link href="/library" className="flex items-center gap-2">
+        {/* Same as the sidebar mark: the logo carries the site URL. */}
+        <a
+          href={SITE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={SITE_URL}
+          className="flex items-center gap-2"
+        >
           <Image
             src="/icon.svg"
             alt="句背单词"
@@ -42,7 +49,7 @@ export function TopBar({ stats }: TopBarProps) {
           <span className="text-xl font-black text-rainbow tracking-tight">
             句背单词
           </span>
-        </Link>
+        </a>
       </div>
 
 

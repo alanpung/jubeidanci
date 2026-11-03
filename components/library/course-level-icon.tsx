@@ -307,7 +307,7 @@ export const LEVEL_LABELS: Record<string, string> = {
  *  (A1–C2), so a level tile and a type tile are told apart at a glance.
  *
  *  The fill is a *very light* tint; only the outline (border) carries the full
- *  colour. A course's CEFR level is a small round badge in the LOWER-RIGHT
+ *  colour. A course's CEFR level is a small round badge in the UPPER-RIGHT
  *  corner. `children` are the other corner controls (visibility badge,
  *  add/remove ×, owner edit button) rendered INSIDE the cover. */
 export function CourseCover({
@@ -374,10 +374,10 @@ export function CourseCover({
         </span>
       ) : null}
 
-      {/* CEFR level — a small round badge in the LOWER-RIGHT corner. */}
+      {/* CEFR level — a small round badge in the UPPER-RIGHT corner. */}
       {showLevel && cleanLevel && !levelAsSymbol ? (
         <span
-          className={`absolute right-1 bottom-1 flex h-6 min-w-6 items-center justify-center rounded-full px-1 text-[10px] leading-none font-black text-white shadow-sm ${levelStyle.pill}`}
+          className={`absolute right-1 top-1 flex h-6 min-w-6 items-center justify-center rounded-full px-1 text-[10px] leading-none font-black text-white shadow-sm ${levelStyle.pill}`}
         >
           {cleanLevel}
         </span>

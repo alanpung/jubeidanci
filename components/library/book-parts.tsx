@@ -101,22 +101,33 @@ const OPTIONS: {
 ];
 
 /** Owner-only edit control for the LOWER-LEFT corner of a cover. Tap to open a
- *  small menu to switch the course to public / VIP(private) / hidden ("hidden"
- *  means only the owner — and admins — can see it). The menu is a portal so it
+ *  small menu that renames the course, switches it to public / VIP(private) /
+ *  hidden ("hidden" means only the owner — and admins — can see it), and — for
+ *  a course the viewer owns — destroys it for good. The menu is a portal so it
  *  is never clipped by the browse window's scroll box.
  *
- *  Renaming lives in its own control (EditTitleButton) so this menu stays a
- *  single-purpose visibility switch. */
+ *  Renaming and deletion live HERE, inside this one menu, so a course cover
+ *  carries a single owner control. That keeps the UPPER-RIGHT corner free for
+ *  the CEFR level badge, which would otherwise sit under a second button. */
 export function CoverEditButton({
   course,
+  onDeleteForever,
+  deletePending = false,
   className = "",
 }: {
   course: CourseListItem;
   className?: string;
+  /** Destroy the course for good — owner/admin only, irreversible. */
+  onDeleteForever?: () => void;
+  /** The caller's delete action is in flight — disable the destructive row. */
+  deletePending?: boolean;
 }) {
   const router = useRouter();
   const [pending, startTransition] = useTransition();
   const [open, setOpen] = useState(false);
+  const [editingTitle, setEditingTitle] = useState(false);
+  const [titleDraft, setTitleDraft] = useState(course.title);
+  const [titleError, setTitleError] = useState<string | null>(null);
   const btnRef = useRef<HTMLButtonElement>(null);
   const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
   const current = stateOf(course.visibility);
@@ -124,10 +135,30 @@ export function CoverEditButton({
   function toggle() {
     if (open) {
       setOpen(false);
+      setEditingTitle(false);
+      setTitleError(null);
       return;
     }
     const r = btnRef.current?.getBoundingClientRect();
-    if (r) setPos({ top: r.bottom + 6, left: r.left });
+    if (r) {
+      // The panel is 13rem wide; keep it inside the viewport.
+      const panelW = 208;
+      // Tall enough for the title block + the visibility options + the delete
+      // row, so the "flip above" fallback never leaves the buttons off-screen.
+      const panelH = 300;
+      const left = Math.max(8, Math.min(r.left, window.innerWidth - panelW - 8));
+      // Flip above the button when there is not enough room below it, so the
+      // panel never runs off the bottom of the screen.
+      const below = r.bottom + 6;
+      const top =
+        below + panelH > window.innerHeight - 8
+          ? Math.max(8, r.top - 6 - panelH)
+          : below;
+      setPos({ top, left });
+    }
+    setTitleDraft(course.title);
+    setEditingTitle(false);
+    setTitleError(null);
     setOpen(true);
   }
 
@@ -153,6 +184,25 @@ export function CoverEditButton({
     });
   }
 
+  function saveTitle() {
+    const trimmed = titleDraft.trim();
+    if (!trimmed) {
+      setTitleError("Title cannot be empty");
+      return;
+    }
+    startTransition(async () => {
+      const res = await updateCourseTitle(course.id, trimmed);
+      if (!res.success) {
+        setTitleError(res.error);
+        return;
+      }
+      setEditingTitle(false);
+      setTitleError(null);
+      setOpen(false);
+      router.refresh();
+    });
+  }
+
   return (
     <>
       <button
@@ -174,37 +224,134 @@ export function CoverEditButton({
             >
               <div
                 className="fixed inset-0 z-[-1]"
-                onClick={() => setOpen(false)}
+                onClick={() => {
+                  setOpen(false);
+                  setEditingTitle(false);
+                  setTitleError(null);
+                }}
                 aria-hidden
               />
               <div className="w-52 rounded-xl border-2 border-lingo-border bg-white p-1 shadow-2xl">
-                {OPTIONS.map((o) => {
-                  const Icon = o.Icon;
-                  const active = o.state === current;
-                  return (
-                    <button
-                      key={o.state}
-                      type="button"
-                      onClick={() => choose(o.state)}
-                      className={`flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition-colors ${
-                        active ? "bg-lingo-gray/60" : "hover:bg-lingo-gray/40"
-                      }`}
+                {editingTitle ? (
+                  <div className="p-0.5">
+                    <label
+                      htmlFor={`course-title-${course.id}`}
+                      className="mb-1 block text-[10px] font-black uppercase tracking-wide text-lingo-text-light"
                     >
-                      <Icon className={`h-4 w-4 shrink-0 ${o.tone}`} />
-                      <span className="min-w-0 flex-1">
-                        <span className="block text-xs font-black leading-tight text-lingo-text">
-                          {o.label}
-                        </span>
-                        <span className="block text-[10px] font-semibold leading-tight text-lingo-text-light">
-                          {o.hint}
-                        </span>
-                      </span>
-                      {active ? (
-                        <Check className="h-3.5 w-3.5 shrink-0 text-lingo-green" />
-                      ) : null}
+                      Course title
+                    </label>
+                    <input
+                      id={`course-title-${course.id}`}
+                      type="text"
+                      value={titleDraft}
+                      autoFocus
+                      onChange={(e) => {
+                        setTitleDraft(e.target.value);
+                        setTitleError(null);
+                      }}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter") {
+                          e.preventDefault();
+                          saveTitle();
+                        } else if (e.key === "Escape") {
+                          e.preventDefault();
+                          setEditingTitle(false);
+                          setTitleError(null);
+                        }
+                      }}
+                      disabled={pending}
+                      className="w-full rounded-lg border-2 border-lingo-blue px-2 py-1 text-xs font-bold text-lingo-text focus:outline-none"
+                    />
+                    {titleError ? (
+                      <p className="mt-1 text-[10px] font-bold leading-tight text-red-500">
+                        {titleError}
+                      </p>
+                    ) : null}
+                    <div className="mt-2 flex gap-1.5">
+                      <button
+                        type="button"
+                        onClick={saveTitle}
+                        disabled={pending}
+                        className="flex-1 rounded-lg bg-lingo-green px-2 py-1 text-xs font-black text-white transition-colors hover:bg-lingo-green/90 disabled:opacity-50"
+                      >
+                        {pending ? "Saving…" : "Save"}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => {
+                          setEditingTitle(false);
+                          setTitleError(null);
+                        }}
+                        disabled={pending}
+                        className="rounded-lg border border-lingo-border bg-white px-2 py-1 text-xs font-black text-lingo-text transition-colors hover:bg-lingo-gray/40 disabled:opacity-50"
+                      >
+                        Cancel
+                      </button>
+                    </div>
+                  </div>
+                ) : (
+                  <>
+                    <div className="mb-1.5 px-1 text-[10px] font-black uppercase tracking-wide text-lingo-text-light">
+                      Course title
+                    </div>
+                    <p className="px-1 pb-1.5 text-xs font-bold leading-tight text-lingo-text">
+                      {course.title}
+                    </p>
+                    <button
+                      type="button"
+                      onClick={() => setEditingTitle(true)}
+                      className="mb-1 flex w-full items-center justify-center gap-1.5 rounded-lg bg-lingo-blue px-2 py-1.5 text-xs font-black text-white transition-colors hover:bg-lingo-blue/90"
+                    >
+                      <Pencil className="h-3.5 w-3.5 stroke-[2.5]" />
+                      Rename
                     </button>
-                  );
-                })}
+
+                    <div className="my-1.5 border-t border-lingo-border" />
+
+                    {OPTIONS.map((o) => {
+                      const Icon = o.Icon;
+                      const active = o.state === current;
+                      return (
+                        <button
+                          key={o.state}
+                          type="button"
+                          onClick={() => choose(o.state)}
+                          className={`flex w-full items-center gap-2 rounded-lg px-2 py-1.5 text-left transition-colors ${
+                            active ? "bg-lingo-gray/60" : "hover:bg-lingo-gray/40"
+                          }`}
+                        >
+                          <Icon className={`h-4 w-4 shrink-0 ${o.tone}`} />
+                          <span className="min-w-0 flex-1">
+                            <span className="block text-xs font-black leading-tight text-lingo-text">
+                              {o.label}
+                            </span>
+                            <span className="block text-[10px] font-semibold leading-tight text-lingo-text-light">
+                              {o.hint}
+                            </span>
+                          </span>
+                          {active ? (
+                            <Check className="h-3.5 w-3.5 shrink-0 text-lingo-green" />
+                          ) : null}
+                        </button>
+                      );
+                    })}
+
+                    {onDeleteForever ? (
+                      <>
+                        <div className="my-1.5 border-t border-lingo-border" />
+                        <button
+                          type="button"
+                          disabled={deletePending}
+                          onClick={onDeleteForever}
+                          className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-red-500 px-2 py-1.5 text-xs font-black text-white transition-colors hover:bg-red-600 disabled:opacity-50"
+                        >
+                          <AlertTriangle className="h-3.5 w-3.5 stroke-[2.5]" />
+                          Delete permanently
+                        </button>
+                      </>
+                    ) : null}
+                  </>
+                )}
               </div>
             </div>,
             document.body,
@@ -269,207 +416,7 @@ function LibraryDeleteRows({
   );
 }
 
-/** Owner-only RENAME control for the TOP-RIGHT corner of a cover.
- *
- *  A small "Edit" pill that flips into an inline title field, so a course can
- *  be renamed without leaving the Library shelf. It is a portal so it is never
- *  clipped by the browse window's scroll box, and the panel is pulled back
- *  inside the viewport so it never hangs off the right edge on a phone.
- *
- *  This used to live as an "Edit title" row inside the visibility menu; it is
- *  a separate button now so the visibility menu stays a one-purpose switch. */
-export function EditTitleButton({
-  course,
-  className = "",
-  onRemoveFromLibrary,
-  onDeleteForever,
-}: {
-  course: CourseListItem;
-  className?: string;
-  /** Take the book out of the viewer's library (reversible). */
-  onRemoveFromLibrary?: () => void;
-  /** Destroy the book for good — owner/admin only, irreversible. */
-  onDeleteForever?: () => void;
-}) {
-  const router = useRouter();
-  const [pending, startTransition] = useTransition();
-  const [open, setOpen] = useState(false);
-  const [editingTitle, setEditingTitle] = useState(false);
-  const [titleDraft, setTitleDraft] = useState(course.title);
-  const [titleError, setTitleError] = useState<string | null>(null);
-  const btnRef = useRef<HTMLButtonElement>(null);
-  const [pos, setPos] = useState<{ top: number; left: number } | null>(null);
-
-  function toggle() {
-    if (open) {
-      setOpen(false);
-      setEditingTitle(false);
-      setTitleError(null);
-      return;
-    }
-    const r = btnRef.current?.getBoundingClientRect();
-    if (r) {
-      // The panel is 14rem wide; keep its right edge inside the viewport.
-      const panelW = 224;
-      // Tall enough for the title block + Rename + the delete rows, so the
-      // "flip above" fallback never leaves the buttons off-screen.
-      const panelH = 280;
-      const left = Math.max(8, Math.min(r.right - panelW, window.innerWidth - panelW - 8));
-      // Flip above the button when there is not enough room below it, so the
-      // panel never runs off the bottom of the screen.
-      const below = r.bottom + 6;
-      const top =
-        below + panelH > window.innerHeight - 8
-          ? Math.max(8, r.top - 6 - panelH)
-          : below;
-      setPos({ top, left });
-    }
-    setTitleDraft(course.title);
-    setEditingTitle(false);
-    setTitleError(null);
-    setOpen(true);
-  }
-
-  function saveTitle() {
-    const trimmed = titleDraft.trim();
-    if (!trimmed) {
-      setTitleError("Title cannot be empty");
-      return;
-    }
-    startTransition(async () => {
-      const res = await updateCourseTitle(course.id, trimmed);
-      if (!res.success) {
-        setTitleError(res.error);
-        return;
-      }
-      setEditingTitle(false);
-      setTitleError(null);
-      setOpen(false);
-      router.refresh();
-    });
-  }
-
-  return (
-    <>
-      <button
-        ref={btnRef}
-        type="button"
-        onClick={toggle}
-        disabled={pending}
-        title="Edit course title"
-        aria-label={`Edit title of ${course.title}`}
-        className={`flex h-6 items-center gap-1 rounded-full border-2 border-lingo-border bg-white px-2 text-[10px] font-black text-lingo-text shadow-sm transition-colors hover:bg-lingo-gray/40 disabled:opacity-50 ${className}`}
-      >
-        <Pencil className="h-3 w-3 stroke-[2.5]" />
-        Edit
-      </button>
-      {open && pos
-        ? createPortal(
-            <div
-              className="fixed z-[100]"
-              style={{ top: pos.top, left: pos.left }}
-            >
-              <div
-                className="fixed inset-0 z-[-1]"
-                onClick={() => {
-                  setOpen(false);
-                  setEditingTitle(false);
-                  setTitleError(null);
-                }}
-                aria-hidden
-              />
-              <div className="w-56 rounded-xl border-2 border-lingo-border bg-white p-2 shadow-2xl">
-                {editingTitle ? (
-                  <div className="p-0.5">
-                    <label
-                      htmlFor={`course-title-${course.id}`}
-                      className="mb-1 block text-[10px] font-black uppercase tracking-wide text-lingo-text-light"
-                    >
-                      Course title
-                    </label>
-                    <input
-                      id={`course-title-${course.id}`}
-                      type="text"
-                      value={titleDraft}
-                      autoFocus
-                      onChange={(e) => {
-                        setTitleDraft(e.target.value);
-                        setTitleError(null);
-                      }}
-                      onKeyDown={(e) => {
-                        if (e.key === "Enter") {
-                          e.preventDefault();
-                          saveTitle();
-                        } else if (e.key === "Escape") {
-                          e.preventDefault();
-                          setEditingTitle(false);
-                          setTitleError(null);
-                        }
-                      }}
-                      disabled={pending}
-                      className="w-full rounded-lg border-2 border-lingo-blue px-2 py-1 text-xs font-bold text-lingo-text focus:outline-none"
-                    />
-                    {titleError ? (
-                      <p className="mt-1 text-[10px] font-bold leading-tight text-red-500">
-                        {titleError}
-                      </p>
-                    ) : null}
-                    <div className="mt-2 flex gap-1.5">
-                      <button
-                        type="button"
-                        onClick={saveTitle}
-                        disabled={pending}
-                        className="flex-1 rounded-lg bg-lingo-green px-2 py-1 text-xs font-black text-white transition-colors hover:bg-lingo-green/90 disabled:opacity-50"
-                      >
-                        {pending ? "Saving…" : "Save"}
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => {
-                          setEditingTitle(false);
-                          setTitleError(null);
-                        }}
-                        disabled={pending}
-                        className="rounded-lg border border-lingo-border bg-white px-2 py-1 text-xs font-black text-lingo-text transition-colors hover:bg-lingo-gray/40 disabled:opacity-50"
-                      >
-                        Cancel
-                      </button>
-                    </div>
-                  </div>
-                ) : (
-                  <>
-                    <div className="mb-1.5 px-1 text-[10px] font-black uppercase tracking-wide text-lingo-text-light">
-                      Course title
-                    </div>
-                    <p className="px-1 pb-2 text-xs font-bold leading-tight text-lingo-text">
-                      {course.title}
-                    </p>
-                    <button
-                      type="button"
-                      onClick={() => setEditingTitle(true)}
-                      className="flex w-full items-center justify-center gap-1.5 rounded-lg bg-lingo-blue px-2 py-1.5 text-xs font-black text-white transition-colors hover:bg-lingo-blue/90"
-                    >
-                      <Pencil className="h-3.5 w-3.5 stroke-[2.5]" />
-                      Rename
-                    </button>
-                    <LibraryDeleteRows
-                      onRemoveFromLibrary={onRemoveFromLibrary}
-                      onDeleteForever={onDeleteForever}
-                      removeLabel="Remove from My Books"
-                      deleteLabel="Delete permanently"
-                    />
-                  </>
-                )}
-              </div>
-            </div>,
-            document.body,
-          )
-        : null}
-    </>
-  );
-}
-
-/** The upper-right control for a STANDALONE UNIT in the Library.
+/** The lower-right control for a STANDALONE UNIT in the Library.
  *
  *  A unit has no title to rename here, so the menu carries only the library
  *  powers: take the unit out of the library (reversible) and — for a unit the
