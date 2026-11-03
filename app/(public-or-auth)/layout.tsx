@@ -10,6 +10,7 @@ import { PostHogIdentify } from "@/components/providers/posthog-identify";
 import { BackgroundRoutePrefetch } from "@/components/providers/background-route-prefetch";
 import { PullToRefresh } from "@/components/ui/pull-to-refresh";
 import { isAdminEmail } from "@/lib/ai/models";
+import { SITE_URL } from "@/lib/constants";
 
 export default async function PublicOrAuthLayout({
   children,
@@ -63,9 +64,15 @@ export default async function PublicOrAuthLayout({
   return (
     <div className="min-h-screen bg-lingo-bg">
       <header className="sticky top-0 z-30 flex h-16 items-center justify-between border-b-2 border-lingo-border bg-white px-4 md:px-6">
-        <Link href="/" className="text-xl font-black text-rainbow tracking-tight">
+        <a
+          href={SITE_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          title={SITE_URL}
+          className="text-xl font-black text-rainbow tracking-tight"
+        >
           句背单词
-        </Link>
+        </a>
         <div className="flex items-center gap-3">
           <Link
             href={`/sign-in${redirectParam}`}

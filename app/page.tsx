@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getSession } from "@/lib/auth-server";
-import { DEFAULT_PATH } from "@/lib/constants";
+import { DEFAULT_PATH, SITE_URL } from "@/lib/constants";
 import {
   LIBRARY_TYPE_ORDER,
   QUESTION_TYPE_LIST,
@@ -42,14 +42,22 @@ export default async function LandingPage() {
       <main className="flex w-full max-w-3xl flex-1 flex-col items-center justify-center gap-5 sm:gap-6">
         {/* Header */}
         <div className="flex flex-col items-center gap-2">
-          <Image
-            src="/icon.svg"
-            alt="句背单词"
-            width={72}
-            height={72}
-            className="h-16 w-16 animate-bounce-short drop-shadow-md sm:h-20 sm:w-20"
-            priority
-          />
+          <a
+            href={SITE_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            title={SITE_URL}
+            className="group"
+          >
+            <Image
+              src="/icon.svg"
+              alt="句背单词"
+              width={72}
+              height={72}
+              className="h-16 w-16 animate-bounce-short drop-shadow-md transition-transform group-hover:scale-105 sm:h-20 sm:w-20"
+              priority
+            />
+          </a>
           <h1 className="text-4xl font-black leading-none tracking-tight text-rainbow sm:text-5xl">
             句背单词
           </h1>

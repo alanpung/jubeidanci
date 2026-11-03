@@ -4,7 +4,6 @@ import {
   useState,
   useTransition,
   useEffect,
-  useRef,
   type PointerEvent as ReactPointerEvent,
 } from "react";
 import { useRouter } from "next/navigation";
@@ -26,7 +25,6 @@ import { levelRank } from "@/components/library/library-deck";
 import {
   VisibilityBadge,
   CoverEditButton,
-  EditTitleButton,
   UnitMenuButton,
 } from "@/components/library/book-parts";
 
@@ -251,7 +249,6 @@ export function CourseBookShelf({
             entries={sortedOpenEntries}
             pendingId={pendingId}
             pendingUnitId={pendingUnitId}
-            isLargeViewport={isLargeViewport}
             onClose={() => setActiveKey(null)}
           />
         )}
@@ -259,6 +256,15 @@ export function CourseBookShelf({
     </div>
   );
 }
+
+/** How many card slots the browse window reserves.
+ *
+ *  The Library's own folder grid shows EIGHT tiles (seven exercise-type
+ *  folders + Standalone Units), so the window that replaces it is sized to
+ *  hold the same eight slots. Fewer entries leave empty slots — invisible,
+ *  but part of the window, so tapping one closes the popup. More entries
+ *  simply grow the window with the content. */
+const WINDOW_SLOTS = 8;
 
 /** The browser window opened from a Library folder.
  *
@@ -275,20 +281,14 @@ function TypeBrowserWindow({
   entries,
   pendingId,
   pendingUnitId,
-  isLargeViewport,
   onClose,
 }: {
   title: string;
   entries: BrowseEntry[];
   pendingId: string | null;
   pendingUnitId: string | null;
-  /** Large desktop: the window sits below the folder grid. */
-  isLargeViewport?: boolean;
   onClose: () => void;
 }) {
-  const winRef = useRef<HTMLDivElement>(null);
-  const [minHeight, setMinHeight] = useState<number | null>(null);
-
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -297,55 +297,16 @@ function TypeBrowserWindow({
     return () => document.removeEventListener("keydown", onKey);
   }, [onClose]);
 
-  // Mobile: the popup grows down to the bottom of the viewport, so the empty
-  // space under the last row of cards belongs to the WINDOW. Tapping it hits
-  // the window's own click handler and closes the popup — the area used to be
-  // bare page background that swallowed the tap.
-  //
-  // The height is measured from the live layout (the scroll container's
-  // content box and the window's own offset inside it) rather than guessed
-  // from a magic number, so it stays correct through rotation, font-size
-  // changes and a variable number of cards. Both offsets are taken in
-  // CONTENT coordinates (scroll position added back), so the result does not
-  // change while the user scrolls.
-  useEffect(() => {
-    if (isLargeViewport) {
-      setMinHeight(null);
-      return;
-    }
-    const el = winRef.current;
-    if (!el) return;
-
-    const measure = () => {
-      const scroller = el.closest<HTMLElement>(".overflow-y-auto");
-      if (!scroller) return;
-      const padTop =
-        parseFloat(getComputedStyle(scroller).paddingTop || "0") || 0;
-      const cRect = scroller.getBoundingClientRect();
-      const wRect = el.getBoundingClientRect();
-      // Where the scroll container's content box starts, in viewport pixels.
-      const contentTop = cRect.top - scroller.scrollTop + padTop;
-      // How far the window sits below that content box (scroll-independent).
-      const winTop = wRect.top - contentTop;
-      // Height that carries the window's bottom edge to the viewport bottom.
-      const target = window.innerHeight - contentTop - winTop;
-      setMinHeight(target > 0 ? Math.round(target) : null);
-    };
-
-    measure();
-    window.addEventListener("resize", measure);
-    window.addEventListener("orientationchange", measure);
-    return () => {
-      window.removeEventListener("resize", measure);
-      window.removeEventListener("orientationchange", measure);
-    };
-  }, [isLargeViewport, entries.length]);
+  // Empty slots pad the grid out to WINDOW_SLOTS. They are rendered as
+  // invisible copies of a real cover so the reserved rows are exactly as tall
+  // as the cards above them — no measuring, no resize listeners, and the
+  // window keeps the same footprint as the eight-tile folder grid it replaced.
+  const ghostCount = Math.max(0, WINDOW_SLOTS - entries.length);
+  const ghostProps = entries[entries.length - 1];
 
   return (
     <div
-      ref={winRef}
       className="relative z-30 flex w-full flex-col overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-bg shadow-2xl"
-      style={minHeight != null ? { minHeight } : undefined}
       role="dialog"
       aria-modal="false"
       aria-label={`${title} courses`}
@@ -386,6 +347,26 @@ function TypeBrowserWindow({
                 }
               />
             ))}
+
+            {/* Reserved empty slots — invisible, but they belong to the
+                window, so a tap on one closes the popup. */}
+            {ghostCount > 0 && ghostProps
+              ? Array.from({ length: ghostCount }, (_, i) => (
+                  <div
+                    key={`ghost-${i}`}
+                    aria-hidden="true"
+                    className="pointer-events-none opacity-0"
+                  >
+                    <CourseCover
+                      level={ghostProps.level}
+                      questionType={ghostProps.typeId}
+                      title={ghostProps.title}
+                      courseId={ghostProps.id}
+                      name={ghostProps.title}
+                    />
+                  </div>
+                ))
+              : null}
           </div>
         )}
       </div>
@@ -434,9 +415,10 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
         </div>
 
         {/* Lock — the viewer may see this entry but not open it (private/VIP
-            and they are not a VIP of the owner). */}
+            and they are not a VIP of the owner). It sits in the LOWER-RIGHT
+            corner, because the upper-right now carries the CEFR level badge. */}
         {!entry.canOpen ? (
-          <div className="absolute right-1.5 top-1.5 z-20">
+          <div className="absolute right-1.5 bottom-1.5 z-20">
             <span
               title="VIP only"
               aria-label="VIP only"
@@ -447,23 +429,20 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
           </div>
         ) : null}
 
-        {/* Owner-only controls. The top-right corner carries rename + delete
-            (EditTitleButton), the lower-left the visibility switch. A
-            standalone unit has no title, so its corner is the unit menu. */}
+        {/* Owner-only controls. The UPPER-RIGHT corner belongs to the CEFR
+            level badge, so the owner gets a single control in the lower-left:
+            one menu with rename + visibility + delete. A standalone unit has
+            no title to rename, so its corner is the unit menu. */}
         {entry.course && entry.isOwner ? (
-          <>
-            <div className="absolute right-1.5 top-1.5 z-20">
-              <EditTitleButton
-                course={entry.course}
-                onDeleteForever={entry.onDeleteForever}
-              />
-            </div>
-            <div className="absolute left-1.5 bottom-1.5 z-20">
-              <CoverEditButton course={entry.course} />
-            </div>
-          </>
+          <div className="absolute left-1.5 bottom-1.5 z-20">
+            <CoverEditButton
+              course={entry.course}
+              onDeleteForever={entry.onDeleteForever}
+              deletePending={pending}
+            />
+          </div>
         ) : entry.kind === "unit" && entry.isOwner ? (
-          <div className="absolute right-1.5 top-1.5 z-20">
+          <div className="absolute right-1.5 bottom-1.5 z-20">
             <UnitMenuButton
               unitId={entry.id}
               unitTitle={entry.title}
