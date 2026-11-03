@@ -2,7 +2,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { getSession } from "@/lib/auth-server";
 import { DEFAULT_PATH } from "@/lib/constants";
-import { QUESTION_TYPE_LIST } from "@/lib/content/question-types";
+import {
+  LIBRARY_TYPE_ORDER,
+  QUESTION_TYPE_LIST,
+} from "@/lib/content/question-types";
 import { resolveCourseQuestionType } from "@/components/library/course-level-icon";
 
 export const dynamic = "force-dynamic";
@@ -10,9 +13,22 @@ export const dynamic = "force-dynamic";
 // Exactly 8 exercise types, laid out as 4 columns x 2 rows.
 const FEATURED_TYPES = QUESTION_TYPE_LIST.filter((t) => t.num !== "\u2728").slice(0, 8);
 
+// The symbols follow the Library's own folder order (Flashcards → Translation
+// → Multiple Choice → …) so a learner meets the same sequence here and on the
+// shelf. A type with no folder of its own (Matching pairs) has no place in
+// that sequence, so it goes last.
+const FEATURED_TYPES_SORTED = [...FEATURED_TYPES].sort((a, b) => {
+  const ia = LIBRARY_TYPE_ORDER.indexOf(a.id);
+  const ib = LIBRARY_TYPE_ORDER.indexOf(b.id);
+  // Types outside the shared order sink to the bottom.
+  const ra = ia === -1 ? LIBRARY_TYPE_ORDER.length : ia;
+  const rb = ib === -1 ? LIBRARY_TYPE_ORDER.length : ib;
+  return ra - rb;
+});
+
 // Reuse the library's own book symbols (gradient tile + lucide glyph) so the
 // landing page teaches the same visual language students see on the shelf.
-const FEATURED_SYMBOLS = FEATURED_TYPES.map((type) => ({
+const FEATURED_SYMBOLS = FEATURED_TYPES_SORTED.map((type) => ({
   type,
   visual: resolveCourseQuestionType(null, null, type.id),
 }));
@@ -67,8 +83,9 @@ export default async function LandingPage() {
         </div>
 
         {/* App introduction — the 8 exercise types as library book symbols.
-            Extra breathing room here separates the CTA from what follows. */}
-        <section className="mt-4 w-full sm:mt-8">
+            On desktop we open up a clear gap below the CTA so the symbol grid
+            doesn't crowd the buttons; mobile keeps its current spacing. */}
+        <section className="mt-4 w-full sm:mt-12">
           <ul className="grid grid-cols-4 gap-x-2 gap-y-4">
             {FEATURED_SYMBOLS.map(({ type, visual }) => {
               if (!visual) return null;

@@ -4,6 +4,7 @@ import {
   useState,
   useTransition,
   useEffect,
+  useRef,
   type PointerEvent as ReactPointerEvent,
 } from "react";
 import { useRouter } from "next/navigation";
@@ -250,6 +251,7 @@ export function CourseBookShelf({
             entries={sortedOpenEntries}
             pendingId={pendingId}
             pendingUnitId={pendingUnitId}
+            isLargeViewport={isLargeViewport}
             onClose={() => setActiveKey(null)}
           />
         )}
@@ -273,14 +275,20 @@ function TypeBrowserWindow({
   entries,
   pendingId,
   pendingUnitId,
+  isLargeViewport,
   onClose,
 }: {
   title: string;
   entries: BrowseEntry[];
   pendingId: string | null;
   pendingUnitId: string | null;
+  /** Large desktop: the window sits below the folder grid. */
+  isLargeViewport?: boolean;
   onClose: () => void;
 }) {
+  const winRef = useRef<HTMLDivElement>(null);
+  const [minHeight, setMinHeight] = useState<number | null>(null);
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") onClose();
@@ -289,9 +297,55 @@ function TypeBrowserWindow({
     return () => document.removeEventListener("keydown", onKey);
   }, [onClose]);
 
+  // Mobile: the popup grows down to the bottom of the viewport, so the empty
+  // space under the last row of cards belongs to the WINDOW. Tapping it hits
+  // the window's own click handler and closes the popup — the area used to be
+  // bare page background that swallowed the tap.
+  //
+  // The height is measured from the live layout (the scroll container's
+  // content box and the window's own offset inside it) rather than guessed
+  // from a magic number, so it stays correct through rotation, font-size
+  // changes and a variable number of cards. Both offsets are taken in
+  // CONTENT coordinates (scroll position added back), so the result does not
+  // change while the user scrolls.
+  useEffect(() => {
+    if (isLargeViewport) {
+      setMinHeight(null);
+      return;
+    }
+    const el = winRef.current;
+    if (!el) return;
+
+    const measure = () => {
+      const scroller = el.closest<HTMLElement>(".overflow-y-auto");
+      if (!scroller) return;
+      const padTop =
+        parseFloat(getComputedStyle(scroller).paddingTop || "0") || 0;
+      const cRect = scroller.getBoundingClientRect();
+      const wRect = el.getBoundingClientRect();
+      // Where the scroll container's content box starts, in viewport pixels.
+      const contentTop = cRect.top - scroller.scrollTop + padTop;
+      // How far the window sits below that content box (scroll-independent).
+      const winTop = wRect.top - contentTop;
+      // Height that carries the window's bottom edge to the viewport bottom.
+      const target = window.innerHeight - contentTop - winTop;
+      setMinHeight(target > 0 ? Math.round(target) : null);
+    };
+
+    measure();
+    window.addEventListener("resize", measure);
+    window.addEventListener("orientationchange", measure);
+    return () => {
+      window.removeEventListener("resize", measure);
+      window.removeEventListener("orientationchange", measure);
+    };
+  }, [isLargeViewport, entries.length]);
+
   return (
     <div
+      ref={winRef}
       className="relative z-30 flex w-full flex-col overflow-hidden rounded-2xl border-2 border-lingo-border bg-lingo-bg shadow-2xl"
+      style={minHeight != null ? { minHeight } : undefined}
       role="dialog"
       aria-modal="false"
       aria-label={`${title} courses`}
