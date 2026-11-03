@@ -283,7 +283,7 @@ choices:
   - "bean"
   - "pea" 
   - "pea pod" (correct)
-srsWords: "peas"
+srsWords: "pea"
 
 [multiple-choice]
 text: "Which very small white vegetable has a strong taste?"
@@ -585,7 +585,7 @@ choices:
   - "cash"
   - "notes" (correct)
   - "bills"
-srsWords: "notes"
+srsWords: "note"
 
 [multiple-choice]
 text: "What do you call round metal money?"
@@ -594,7 +594,7 @@ choices:
   - "bills"
   - "coins" (correct)
   - "tokens"
-srsWords: "coins"
+srsWords: "coin"
 
 [multiple-choice]
 text: "What do you call all your money together?"
@@ -968,7 +968,7 @@ choices:
   - "kidneys"
   - "lungs" (correct)
   - "liver"
-srsWords: "lungs"
+srsWords: "lung"
 
 [multiple-choice]
 text: "What organ digests your food?"
@@ -995,7 +995,7 @@ choices:
   - "stomach"
   - "kidneys" (correct)
   - "liver"
-srsWords: "kidneys"
+srsWords: "kidney"
 
 [multiple-choice]
 text: "What organ processes food and cleans the blood of toxins?"
@@ -1013,7 +1013,7 @@ choices:
   - "nerves"
   - "tendons" (correct)
   - "ligaments"
-srsWords: "tendons"
+srsWords: "tendon"
 
 [multiple-choice]
 text: "What is the hard white structure inside your body that gives it shape?"
@@ -1031,7 +1031,7 @@ choices:
   - "veins"
   - "muscles" (correct)
   - "tendons"
-srsWords: "muscles"
+srsWords: "muscle"
 
 [multiple-choice]
 text: "What carries blood from your heart to your body?"
@@ -1040,7 +1040,7 @@ choices:
   - "veins"
   - "arteries" (correct)
   - "capillaries"
-srsWords: "arteries"
+srsWords: "artery"
 
 [multiple-choice]
 text: "What carries blood back to your heart from your body?"
@@ -1049,7 +1049,7 @@ choices:
   - "nerves"
   - "veins" (correct)
   - "capillaries"
-srsWords: "veins"
+srsWords: "vein"
 
 [multiple-choice]
 text: "What sends messages between your brain and body?"
@@ -1299,7 +1299,7 @@ choices:
   - "bowl"
   - "frying pan" (correct)
   - "tray"
-srsWords: "frying pan"
+srsWords: "fry pan"
 
 [multiple-choice]
 text: "What do you use to dry yourself after a shower?"
@@ -1860,7 +1860,7 @@ choices:
   - "in conclusion"
   - "in other words" (correct)
   - "furthermore"
-srsWords: "in other words"
+srsWords: "in other word"
 
 [multiple-choice]
 text: "Which word connects a condition to its result?"

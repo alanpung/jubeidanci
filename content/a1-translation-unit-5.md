@@ -44,14 +44,14 @@ text: "Translate this sentence into English"
 sentence: "朋友来家里。"
 answer: "A friend came over."
 acceptAlso: "A friend visited."
-srsWords: "friend" "came"
+srsWords: "friend" "come"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们去看电影。"
 answer: "We went to a movie."
 acceptAlso: "We saw a film."
-srsWords: "went" "movie"
+srsWords: "go" "movie"
 
 [translation]
 text: "Translate this sentence into English"
@@ -72,7 +72,7 @@ text: "Translate this sentence into English"
 sentence: "朋友之间要诚实。"
 answer: "Friends should be honest."
 acceptAlso: "Be honest with friends."
-srsWords: "friends" "honest"
+srsWords: "friend" "honest"
 
 [translation]
 text: "Translate this sentence into English"
@@ -101,28 +101,28 @@ text: "Translate this sentence into English"
 sentence: "这是我的姐姐。"
 answer: "This is my older sister."
 acceptAlso: "This is my sister."
-srsWords: "older" "sister"
+srsWords: "old" "sister"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "弟弟在上学。"
 answer: "My younger brother is at school."
 acceptAlso: "My brother is in school."
-srsWords: "younger" "brother" "school"
+srsWords: "young" "brother" "school"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "祖父母住乡下。"
 answer: "Grandparents live in the countryside."
 acceptAlso: "Grandparents live rural."
-srsWords: "grandparents" "live" "countryside"
+srsWords: "grandparent" "live" "countryside"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "叔叔来了。"
 answer: "Uncle came."
 acceptAlso: "My uncle visited."
-srsWords: "uncle" "came"
+srsWords: "uncle" "come"
 
 [translation]
 text: "Translate this sentence into English"
@@ -136,28 +136,28 @@ text: "Translate this sentence into English"
 sentence: "我们全家合影。"
 answer: "We took a family photo."
 acceptAlso: "We posed as a family."
-srsWords: "took" "family" "photo"
+srsWords: "take" "family" "photo"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "家和万事兴。"
 answer: "Harmony at home brings success."
 acceptAlso: "Family peace matters."
-srsWords: "harmony" "home" "brings" "success"
+srsWords: "harmony" "home" "bring" "success"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "他像他爸爸。"
 answer: "He looks like his father."
 acceptAlso: "He takes after his dad."
-srsWords: "looks" "like" "father"
+srsWords: "look" "like" "father"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "妈妈做饭香。"
 answer: "Mom cooks delicious food."
 acceptAlso: "Mother's food is tasty."
-srsWords: "mom" "cooks" "delicious" "food"
+srsWords: "mom" "cook" "delicious" "food"
 
 [translation]
 text: "Translate this sentence into English"
@@ -207,14 +207,14 @@ text: "Translate this sentence into English"
 sentence: "新搬来的。"
 answer: "Recently moved in."
 acceptAlso: "Newly arrived."
-srsWords: "recently" "moved"
+srsWords: "recently" "move"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请小声点。"
 answer: "Please be quieter."
 acceptAlso: "Lower your voice."
-srsWords: "please" "quieter"
+srsWords: "please" "quiet"
 
 [translation]
 text: "Translate this sentence into English"
@@ -228,7 +228,7 @@ text: "Translate this sentence into English"
 sentence: "门铃响了。"
 answer: "The doorbell rang."
 acceptAlso: "Someone rang."
-srsWords: "doorbell" "rang"
+srsWords: "doorbell" "ring"
 
 [translation]
 text: "Translate this sentence into English"
@@ -384,14 +384,14 @@ text: "Translate this sentence into English"
 sentence: "地点发你。"
 answer: "I sent you the location."
 acceptAlso: "I texted the place."
-srsWords: "sent" "location"
+srsWords: "send" "location"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "期待见面。"
 answer: "Looking forward to meeting."
 acceptAlso: "Can't wait to see you."
-srsWords: "looking" "forward" "meeting"
+srsWords: "look" "forward" "meeting"
 
 [translation]
 text: "Translate this sentence into English"
@@ -455,7 +455,7 @@ text: "Translate this sentence into English"
 sentence: "吹蜡烛。"
 answer: "Blow out the candles."
 acceptAlso: "Blow the candles."
-srsWords: "blow" "candles"
+srsWords: "blow" "candle"
 
 [translation]
 text: "Translate this sentence into English"
@@ -526,7 +526,7 @@ text: "Translate this sentence into English"
 sentence: "弄坏了你的笔。"
 answer: "I broke your pen."
 acceptAlso: "I damaged your pen."
-srsWords: "broke" "pen"
+srsWords: "break" "pen"
 
 [translation]
 text: "Translate this sentence into English"
@@ -597,7 +597,7 @@ text: "Translate this sentence into English"
 sentence: "帮了大忙。"
 answer: "You helped a lot."
 acceptAlso: "Big help."
-srsWords: "helped" "lot"
+srsWords: "help" "lot"
 
 [translation]
 text: "Translate this sentence into English"
@@ -618,7 +618,7 @@ text: "Translate this sentence into English"
 sentence: "心意到了。"
 answer: "The thought counts."
 acceptAlso: "It is the thought."
-srsWords: "thought" "counts"
+srsWords: "thought" "count"
 
 [translation]
 text: "Translate this sentence into English"
@@ -632,7 +632,7 @@ text: "Translate this sentence into English"
 sentence: "你救了我。"
 answer: "You saved me."
 acceptAlso: "You rescued me."
-srsWords: "saved"
+srsWords: "save"
 
 
 ---
@@ -668,7 +668,7 @@ text: "Translate this sentence into English"
 sentence: "你误会了。"
 answer: "You misunderstood."
 acceptAlso: "You got it wrong."
-srsWords: "misunderstood"
+srsWords: "misunderstand"
 
 [translation]
 text: "Translate this sentence into English"
@@ -710,7 +710,7 @@ text: "Translate this sentence into English"
 sentence: "友谊更长。"
 answer: "Friendship lasts longer."
 acceptAlso: "Friendship endures."
-srsWords: "friendship" "lasts" "longer"
+srsWords: "friendship" "last" "long"
 
 
 ---
@@ -808,7 +808,7 @@ text: "Translate this sentence into English"
 sentence: "外面下雨。"
 answer: "It is raining outside."
 acceptAlso: "It rains outside."
-srsWords: "raining" "outside"
+srsWords: "rain" "outside"
 
 [translation]
 text: "Translate this sentence into English"
@@ -822,14 +822,14 @@ text: "Translate this sentence into English"
 sentence: "下雪了。"
 answer: "It is snowing."
 acceptAlso: "Snow is falling."
-srsWords: "snowing"
+srsWords: "snow"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "天气变暖。"
 answer: "The weather is warming."
 acceptAlso: "It is getting warm."
-srsWords: "weather" "warming"
+srsWords: "weather" "warm"
 
 [translation]
 text: "Translate this sentence into English"
@@ -850,7 +850,7 @@ text: "Translate this sentence into English"
 sentence: "预报说有雨。"
 answer: "The forecast says rain."
 acceptAlso: "The report says rain."
-srsWords: "forecast" "says" "rain"
+srsWords: "forecast" "say" "rain"
 
 [translation]
 text: "Translate this sentence into English"
@@ -864,7 +864,7 @@ text: "Translate this sentence into English"
 sentence: "气候在变。"
 answer: "The climate is changing."
 acceptAlso: "The climate shifts."
-srsWords: "climate" "changing"
+srsWords: "climate" "change"
 
 
 ---
@@ -893,21 +893,21 @@ text: "Translate this sentence into English"
 sentence: "秋天落叶。"
 answer: "Leaves fall in autumn."
 acceptAlso: "Autumn leaves drop."
-srsWords: "leaves" "fall" "autumn"
+srsWords: "leave" "fall" "autumn"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "冬天会下雪。"
 answer: "It snows in winter."
 acceptAlso: "Winter brings snow."
-srsWords: "snows" "winter"
+srsWords: "snow" "winter"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "四季分明。"
 answer: "Four distinct seasons."
 acceptAlso: "Clear seasons."
-srsWords: "four" "distinct" "seasons"
+srsWords: "four" "distinct" "season"
 
 [translation]
 text: "Translate this sentence into English"
@@ -921,7 +921,7 @@ text: "Translate this sentence into English"
 sentence: "春暖花开。"
 answer: "Spring is warm and flowers bloom."
 acceptAlso: "Flowers open in spring."
-srsWords: "spring" "warm" "flowers" "bloom"
+srsWords: "spring" "warm" "flower" "bloom"
 
 [translation]
 text: "Translate this sentence into English"
@@ -942,7 +942,7 @@ text: "Translate this sentence into English"
 sentence: "季节循环。"
 answer: "Seasons cycle."
 acceptAlso: "Seasons rotate."
-srsWords: "seasons" "cycle"
+srsWords: "season" "cycle"
 
 
 ---
@@ -957,21 +957,21 @@ text: "Translate this sentence into English"
 sentence: "狗是忠诚的。"
 answer: "Dogs are loyal."
 acceptAlso: "Dogs are faithful."
-srsWords: "dogs" "loyal"
+srsWords: "dog" "loyal"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "猫会抓老鼠。"
 answer: "Cats catch mice."
 acceptAlso: "Cats hunt mice."
-srsWords: "cats" "catch" "mice"
+srsWords: "cat" "catch" "mouse"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "鸟在飞。"
 answer: "The bird is flying."
 acceptAlso: "Birds are flying."
-srsWords: "bird" "flying"
+srsWords: "bird" "fly"
 
 [translation]
 text: "Translate this sentence into English"
@@ -985,7 +985,7 @@ text: "Translate this sentence into English"
 sentence: "狮子很凶。"
 answer: "Lions are fierce."
 acceptAlso: "Lions are scary."
-srsWords: "lions" "fierce"
+srsWords: "lion" "fierce"
 
 [translation]
 text: "Translate this sentence into English"
@@ -999,28 +999,28 @@ text: "Translate this sentence into English"
 sentence: "蝴蝶很美。"
 answer: "Butterflies are beautiful."
 acceptAlso: "Butterflies are pretty."
-srsWords: "butterflies" "beautiful"
+srsWords: "butterfly" "beautiful"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "蜜蜂采蜜。"
 answer: "Bees collect nectar."
 acceptAlso: "Bees gather honey."
-srsWords: "bees" "collect" "nectar"
+srsWords: "bee" "collect" "nectar"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "猴子很机灵。"
 answer: "Monkeys are clever."
 acceptAlso: "Monkeys are smart."
-srsWords: "monkeys" "clever"
+srsWords: "monkey" "clever"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "动物是朋友。"
 answer: "Animals are friends."
 acceptAlso: "Animals are our friends."
-srsWords: "animals" "friends"
+srsWords: "animal" "friend"
 
 
 ---
@@ -1042,7 +1042,7 @@ text: "Translate this sentence into English"
 sentence: "花开了。"
 answer: "The flowers bloomed."
 acceptAlso: "The flowers opened."
-srsWords: "flowers" "bloomed"
+srsWords: "flower" "bloom"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1063,14 +1063,14 @@ text: "Translate this sentence into English"
 sentence: "叶子落了。"
 answer: "The leaves fell."
 acceptAlso: "Leaves dropped."
-srsWords: "leaves" "fell"
+srsWords: "leave" "fell"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "玫瑰有刺。"
 answer: "Roses have thorns."
 acceptAlso: "Roses prick."
-srsWords: "roses" "thorns"
+srsWords: "rose" "thorn"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1098,7 +1098,7 @@ text: "Translate this sentence into English"
 sentence: "绿色养眼。"
 answer: "Green is easy on the eyes."
 acceptAlso: "Green relaxes eyes."
-srsWords: "green" "easy" "eyes"
+srsWords: "green" "easy" "eye"
 
 
 ---
@@ -1127,14 +1127,14 @@ text: "Translate this sentence into English"
 sentence: "浪很大。"
 answer: "The waves are big."
 acceptAlso: "The surf is high."
-srsWords: "waves" "big"
+srsWords: "wave" "big"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "捡贝壳。"
 answer: "Collect shells."
 acceptAlso: "Gather seashells."
-srsWords: "collect" "shells"
+srsWords: "collect" "shell"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1169,7 +1169,7 @@ text: "Translate this sentence into English"
 sentence: "船出海了。"
 answer: "The boat went to sea."
 acceptAlso: "The ship sailed."
-srsWords: "boat" "went" "sea"
+srsWords: "boat" "go" "sea"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1240,7 +1240,7 @@ text: "Translate this sentence into English"
 sentence: "登顶了！"
 answer: "We reached the top."
 acceptAlso: "Summited!"
-srsWords: "reached" "top"
+srsWords: "reach" "top"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1276,7 +1276,7 @@ text: "Translate this sentence into English"
 sentence: "星星很多。"
 answer: "There are many stars."
 acceptAlso: "Lots of stars."
-srsWords: "stars"
+srsWords: "star"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1290,14 +1290,14 @@ text: "Translate this sentence into English"
 sentence: "云在飘。"
 answer: "Clouds are drifting."
 acceptAlso: "Clouds float."
-srsWords: "clouds" "drifting"
+srsWords: "cloud" "drift"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "流星划过。"
 answer: "A meteor streaked."
 acceptAlso: "A shooting star passed."
-srsWords: "meteor" "streaked"
+srsWords: "meteor" "streak"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1311,7 +1311,7 @@ text: "Translate this sentence into English"
 sentence: "日出东方。"
 answer: "The sun rises in the east."
 acceptAlso: "Sunrise in the east."
-srsWords: "sun" "rises" "east"
+srsWords: "sun" "rise" "east"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1382,7 +1382,7 @@ text: "Translate this sentence into English"
 sentence: "工厂冒烟。"
 answer: "The factory smokes."
 acceptAlso: "The plant emits smoke."
-srsWords: "factory" "smokes"
+srsWords: "factory" "smoke"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1396,14 +1396,14 @@ text: "Translate this sentence into English"
 sentence: "减少排放。"
 answer: "Reduce emissions."
 acceptAlso: "Cut emissions."
-srsWords: "reduce" "emissions"
+srsWords: "reduce" "emission"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "环保重要。"
 answer: "Environmental protection matters."
 acceptAlso: "Eco care is important."
-srsWords: "environmental" "protection" "matters"
+srsWords: "environmental" "protection" "matter"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1446,21 +1446,21 @@ text: "Translate this sentence into English"
 sentence: "玻璃瓶回收。"
 answer: "Recycle glass bottles."
 acceptAlso: "Glass is recycled."
-srsWords: "recycle" "glass" "bottles"
+srsWords: "recycle" "glass" "bottle"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "电池有害。"
 answer: "Batteries are harmful."
 acceptAlso: "Batteries are dangerous."
-srsWords: "batteries" "harmful"
+srsWords: "battery" "harmful"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "少用塑料袋。"
 answer: "Use fewer plastic bags."
 acceptAlso: "Avoid plastic bags."
-srsWords: "use" "fewer" "plastic" "bags"
+srsWords: "use" "few" "plastic" "bag"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1510,7 +1510,7 @@ text: "Translate this sentence into English"
 sentence: "种树造林。"
 answer: "Plant trees and forests."
 acceptAlso: "Afforest."
-srsWords: "plant" "trees" "forests"
+srsWords: "plant" "tree" "forest"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1524,7 +1524,7 @@ text: "Translate this sentence into English"
 sentence: "关灯省电。"
 answer: "Turn off lights to save power."
 acceptAlso: "Switch off to save energy."
-srsWords: "turn" "lights" "save" "power"
+srsWords: "turn" "light" "save" "power"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1538,7 +1538,7 @@ text: "Translate this sentence into English"
 sentence: "爱护动物。"
 answer: "Care for animals."
 acceptAlso: "Love animals."
-srsWords: "care" "animals"
+srsWords: "care" "animal"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1559,7 +1559,7 @@ text: "Translate this sentence into English"
 sentence: "从小事做起。"
 answer: "Start with small things."
 acceptAlso: "Begin small."
-srsWords: "start" "small" "things"
+srsWords: "start" "small" "thing"
 
 [translation]
 text: "Translate this sentence into English"

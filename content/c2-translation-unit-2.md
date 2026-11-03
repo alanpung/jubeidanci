@@ -21,7 +21,7 @@ color: "#1A237E"
 text: "把下面的句子翻译成英文"
 sentence: "塞尔的社会实在论通过区分施为性事实与制度性事实来揭示社会现实的独特本体论地位：它依赖于物理基础却不可还原为物理基础。"
 answer: "Searle's social ontology reveals the distinctive ontological status of social reality—dependent on but irreducible to its physical substrate—by distinguishing between brute facts and institutional facts."
-srsWords: "brute facts" "ontological" "irreducible" "substrate"
+srsWords: "brute fact" "ontological" "irreducible" "substrate"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -167,7 +167,7 @@ srsWords: "neurolinguistics" "dissociative" "phonological" "conceptual"
 text: "把下面的句子翻译成英文"
 sentence: "具身语言习得理论揭示了语言意义的获取深植于身体互动经验之中，从而挑战了将语言习得视为纯粹符号处理过程的抽象主义范式。"
 answer: "Embodied language acquisition theory reveals that the acquisition of linguistic meaning is deeply rooted in embodied interactive experience, thereby challenging the abstractionist paradigm that treats language acquisition as a purely symbolic processing process."
-srsWords: "embodied" "linguistic" "paradigm" "symbolic"
+srsWords: "embody" "linguistic" "paradigm" "symbolic"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -406,7 +406,7 @@ color: "#37474F"
 text: "把下面的句子翻译成英文"
 sentence: "伽达默尔的哲学诠释学通过揭示理解的历史性和视域融合的必然性来颠覆启蒙主义对于无偏见的客观理解的规范性理想。"
 answer: "Gadamer's philosophical hermeneutics overturns the Enlightenment normative ideal of unprejudiced objective understanding by revealing the historicity of understanding and the inevitability of the fusion of horizons."
-srsWords: "fusion of horizons" "inevitability" "revealing" "normative"
+srsWords: "fusion of horizon" "inevitability" "revealing" "normative"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -418,7 +418,7 @@ srsWords: "hermeneutic circle" "methodological" "ontological" "interpreter"
 text: "把下面的句子翻译成英文"
 sentence: "解释冲突的不可解决性问题揭示了在缺乏阿基米德式元标准的条件下，不同诠释传统之间的合理性裁定面临着深层的方法论困难。"
 answer: "The problem of the irresolvability of the conflict of interpretations reveals that, in the absence of an Archimedean meta-criterion, the rational adjudication between different interpretive traditions faces profound methodological difficulties."
-srsWords: "conflict of interpretations" "methodological" "adjudication" "profound"
+srsWords: "conflict of interpretation" "methodological" "adjudication" "profound"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -461,7 +461,7 @@ color: "#1B5E20"
 text: "把下面的句子翻译成英文"
 sentence: "选择单位争论揭示了自然选择的靶标究竟是基因、有机体还是群体这一根本性的进化生物学问题，以及这一问题对于利他主义的进化解释的深远意涵。"
 answer: "The units of selection debate reveals the fundamental evolutionary biology question of whether the target of natural selection is the gene, the organism or the group, and the far-reaching implications of this question for the evolutionary explanation of altruism."
-srsWords: "units of selection" "altruism" "evolutionary" "fundamental"
+srsWords: "unit of selection" "altruism" "evolutionary" "fundamental"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -479,7 +479,7 @@ srsWords: "pluralism" "evolutionary" "disciplinary" "distinctive"
 text: "把下面的句子翻译成英文"
 sentence: "发育系统理论通过揭示遗传、表观遗传和生态环境因素共同构成了发育的资源基础来挑战基因中心主义的遗传决定论。"
 answer: "Developmental systems theory challenges the genetic determinism of gene-centrism by revealing that genetic, epigenetic and ecological environmental factors jointly constitute the resource base for development."
-srsWords: "developmental systems" "epigenetic" "determinism" "revealing"
+srsWords: "developmental system" "epigenetic" "determinism" "revealing"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -503,7 +503,7 @@ srsWords: "evolutionary epistemology" "naturalistic" "satisfactory" "adaptation"
 text: "把下面的句子翻译成英文"
 sentence: "延展进化综合通过将发育可塑性、基因组冲突和跨代表观遗传继承纳入进化理论来挑战和扩展达尔文主义的新综合框架。"
 answer: "The extended evolutionary synthesis challenges and expands the neo-Darwinian framework by incorporating developmental plasticity, genomic conflict and transgenerational epigenetic inheritance into evolutionary theory."
-srsWords: "extended synthesis" "epigenetic" "darwinian" "genomic"
+srsWords: "extend synthesis" "epigenetic" "darwinian" "genomic"
 
 ---
 lessonTitle: "Lesson 10: Advanced Aesthetics of the Avant-Garde"
@@ -687,7 +687,7 @@ srsWords: "polyphony" "homogeneous" "unitary" "cultural"
 text: "把下面的句子翻译成英文"
 sentence: "文化研究的编码-解码模型揭示了文化消费者并非被动接受意识形态信息的受众，而是在协商性和对抗性解读中积极参与意义建构的主动主体。"
 answer: "The encoding-decoding model in cultural studies reveals that cultural consumers are not passive recipients of ideological messages but active subjects who actively participate in the construction of meaning through negotiated and oppositional readings."
-srsWords: "decoding" "ideological" "actively" "construction"
+srsWords: "decode" "ideological" "actively" "construction"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -736,7 +736,7 @@ color: "#880E4F"
 text: "把下面的句子翻译成英文"
 sentence: "梅洛-庞蒂的知觉主体理论通过揭示身体不是一个被意识所操纵的对象而是一个拥有其自身智慧的意向性主体来颠覆笛卡尔的身心二元论。"
 answer: "Merleau-Ponty's theory of the perceiving subject overturns Cartesian mind-body dualism by revealing that the body is not an object manipulated by consciousness but an intentional subject possessing its own intelligence."
-srsWords: "perceiving subject" "revealing" "cartesian" "dualism"
+srsWords: "perceive subject" "revealing" "cartesian" "dualism"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -803,7 +803,7 @@ srsWords: "explicatory" "schoolmaster" "emancipation" "hierarchical"
 text: "把下面的句子翻译成英文"
 sentence: "教育的意识形态国家机器功能揭示了学校制度如何通过将社会分工的再生产伪装为才能的公正筛选来实现社会秩序的合法性再生产。"
 answer: "The ideological state apparatus function of education reveals how the school system achieves the legitimating reproduction of social order by disguising the reproduction of the social division of labour as the just sorting of talent."
-srsWords: "legitimating" "ideological" "apparatus" "reproduction"
+srsWords: "legitimate" "ideological" "apparatus" "reproduction"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -1017,7 +1017,7 @@ srsWords: "Chinese room" "insufficient" "criterion" "demonstrate"
 text: "把下面的句子翻译成英文"
 sentence: "符号接地问题揭示了形式符号操控系统如何能够获得真正的语义内容，使得符号表征与其所指涉的世界之间建立起真实的意义联结。"
 answer: "The symbol grounding problem reveals how formal symbol manipulation systems can acquire genuine semantic content, establishing real meaning connections between symbolic representations and the world they purport to refer to."
-srsWords: "symbol grounding" "manipulation" "semantic" "purport"
+srsWords: "symbol ground" "manipulation" "semantic" "purport"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -1072,7 +1072,7 @@ srsWords: "self-reflexive" "demarcation" "discourse" "philosophical"
 text: "把下面的句子翻译成英文"
 sentence: "维特根斯坦晚期哲学通过揭示哲学问题往往源于语言的日常使用被从其自然语境中强行抽离时所产生的概念混乱来为哲学治疗提供了一种解体性策略。"
 answer: "Wittgenstein's later philosophy provides a dissolving strategy for philosophical therapy by revealing that philosophical problems often arise from the conceptual confusions produced when the everyday use of language is forcibly abstracted from its natural contexts."
-srsWords: "dissolving" "revealing" "philosophical" "conceptual"
+srsWords: "dissolve" "revealing" "philosophical" "conceptual"
 
 [translation]
 text: "把下面的句子翻译成英文"

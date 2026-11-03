@@ -100,14 +100,14 @@ text: "Translate this sentence into English"
 sentence: "我叫王明。"
 answer: "My name is Wang Ming."
 acceptAlso: "I am called Wang Ming."
-srsWords: "my" "name" "is" "wang" "ming" "i" "am" "called"
+srsWords: "my" "name" "is" "wang" "ming" "i" "am" "call"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "你叫什么名字？"
 answer: "What is your name?"
 acceptAlso: "What are you called?"
-srsWords: "what" "is" "your" "name" "are" "you" "called"
+srsWords: "what" "is" "your" "name" "are" "you" "call"
 
 [translation]
 text: "Translate this sentence into English"
@@ -121,7 +121,7 @@ text: "Translate this sentence into English"
 sentence: "他叫大卫。"
 answer: "His name is David."
 acceptAlso: "He is called David."
-srsWords: "his" "name" "is" "david" "he" "called"
+srsWords: "his" "name" "is" "david" "he" "call"
 
 [translation]
 text: "Translate this sentence into English"
@@ -149,7 +149,7 @@ text: "Translate this sentence into English"
 sentence: "我二十岁。"
 answer: "I am twenty years old."
 acceptAlso: "I am twenty."
-srsWords: "i" "am" "twenty" "years" "old"
+srsWords: "i" "am" "twenty" "year" "old"
 
 [translation]
 text: "Translate this sentence into English"
@@ -184,7 +184,7 @@ text: "Translate this sentence into English"
 sentence: "我有两个苹果。"
 answer: "I have two apples."
 acceptAlso: "I have two apples here."
-srsWords: "i" "have" "two" "apples" "here"
+srsWords: "i" "have" "two" "apple" "here"
 
 [translation]
 text: "Translate this sentence into English"
@@ -205,21 +205,21 @@ text: "Translate this sentence into English"
 sentence: "五加五等于十。"
 answer: "Five plus five equals ten."
 acceptAlso: "Five and five make ten."
-srsWords: "five" "plus" "equals" "ten" "and" "make"
+srsWords: "five" "plus" "equal" "ten" "and" "make"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我住在六号房间。"
 acceptAlso: "I am staying in room number six."
 answer: "I live in room six."
-srsWords: "i" "live" "in" "room" "six" "am" "staying" "number"
+srsWords: "i" "live" "in" "room" "six" "am" "stay" "number"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "七天是一周。"
 answer: "Seven days make a week."
 acceptAlso: "There are seven days in a week."
-srsWords: "seven" "days" "make" "a" "week" "there" "are" "in"
+srsWords: "seven" "day" "make" "a" "week" "there" "are" "in"
 
 [translation]
 text: "Translate this sentence into English"
@@ -233,14 +233,14 @@ text: "Translate this sentence into English"
 sentence: "九点半上课。"
 answer: "Class starts at nine thirty."
 acceptAlso: "The lesson begins at half past nine."
-srsWords: "class" "starts" "at" "nine" "thirty" "the" "lesson" "begins" "half" "past" "nine"
+srsWords: "class" "start" "at" "nine" "thirty" "the" "lesson" "begin" "half" "past" "nine"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "十个人在等。"
 answer: "Ten people are waiting."
 acceptAlso: "There are ten people waiting."
-srsWords: "ten" "people" "are" "waiting" "there"
+srsWords: "ten" "people" "are" "wait" "there"
 
 ---
 lessonTitle: "Lesson 4: Family"
@@ -254,7 +254,7 @@ text: "Translate this sentence into English"
 sentence: "我有一个哥哥。"
 answer: "I have one older brother."
 acceptAlso: "I have an older brother."
-srsWords: "i" "have" "one" "older" "brother" "an"
+srsWords: "i" "have" "one" "old" "brother" "an"
 
 [translation]
 text: "Translate this sentence into English"
@@ -275,21 +275,21 @@ text: "Translate this sentence into English"
 sentence: "你有姐妹吗？"
 answer: "Do you have any sisters?"
 acceptAlso: "Do you have sisters?"
-srsWords: "do" "you" "have" "any" "sisters"
+srsWords: "do" "you" "have" "any" "sister"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "他有两个孩子。"
 answer: "He has two children."
 acceptAlso: "He has two kids."
-srsWords: "he" "has" "two" "children" "kids"
+srsWords: "he" "has" "two" "child" "kid"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我是独生子。"
 answer: "I am an only child."
 acceptAlso: "I have no siblings."
-srsWords: "i" "am" "an" "only" "child" "have" "no" "siblings"
+srsWords: "i" "am" "an" "only" "child" "have" "no" "sibling"
 
 [translation]
 text: "Translate this sentence into English"
@@ -310,7 +310,7 @@ text: "Translate this sentence into English"
 sentence: "爷爷在看报纸。"
 answer: "Grandpa is reading a newspaper."
 acceptAlso: "Grandfather is looking at the newspaper."
-srsWords: "grandpa" "is" "reading" "a" "newspaper" "grandfather" "looking" "at" "the"
+srsWords: "grandpa" "is" "reading" "a" "newspaper" "grandfather" "look" "at" "the"
 
 [translation]
 text: "Translate this sentence into English"
@@ -331,7 +331,7 @@ text: "Translate this sentence into English"
 sentence: "我喜欢吃米饭。"
 answer: "I like eating rice."
 acceptAlso: "I like rice."
-srsWords: "i" "like" "eating" "rice"
+srsWords: "i" "like" "eat" "rice"
 
 [translation]
 text: "Translate this sentence into English"
@@ -352,7 +352,7 @@ text: "Translate this sentence into English"
 sentence: "这个很好吃。"
 answer: "This is delicious."
 acceptAlso: "This tastes very good."
-srsWords: "this" "is" "delicious" "tastes" "very" "good"
+srsWords: "this" "is" "delicious" "taste" "very" "good"
 
 [translation]
 text: "Translate this sentence into English"
@@ -394,7 +394,7 @@ text: "Translate this sentence into English"
 sentence: "请给我筷子。"
 answer: "Please give me chopsticks."
 acceptAlso: "Can I have chopsticks, please?"
-srsWords: "please" "give" "me" "chopsticks" "can" "i" "have"
+srsWords: "please" "give" "me" "chopstick" "can" "i" "have"
 
 ---
 lessonTitle: "Lesson 6: Daily Life"
@@ -429,7 +429,7 @@ text: "Translate this sentence into English"
 sentence: "我在听音乐。"
 answer: "I am listening to music."
 acceptAlso: "I am listening."
-srsWords: "i" "am" "listening" "to" "music"
+srsWords: "i" "am" "listen" "to" "music"
 
 [translation]
 text: "Translate this sentence into English"
@@ -457,7 +457,7 @@ text: "Translate this sentence into English"
 sentence: "我们在玩游戏。"
 answer: "We are playing a game."
 acceptAlso: "We are playing games."
-srsWords: "we" "are" "playing" "a" "game" "games"
+srsWords: "we" "are" "play" "a" "game" "game"
 
 [translation]
 text: "Translate this sentence into English"
@@ -471,7 +471,7 @@ text: "Translate this sentence into English"
 sentence: "他起得很早。"
 answer: "He gets up very early."
 acceptAlso: "He wakes up early."
-srsWords: "he" "gets" "up" "very" "early" "wakes"
+srsWords: "he" "get" "up" "very" "early" "wake"
 
 ---
 lessonTitle: "Lesson 7: Time"
@@ -548,7 +548,7 @@ text: "Translate this sentence into English"
 sentence: "时间过得很快。"
 answer: "Time passes very quickly."
 acceptAlso: "Time flies."
-srsWords: "time" "passes" "very" "quickly" "flies"
+srsWords: "time" "pass" "very" "quickly" "fly"
 
 ---
 lessonTitle: "Lesson 8: Places"
@@ -660,7 +660,7 @@ text: "Translate this sentence into English"
 sentence: "黄色很好看。"
 answer: "Yellow looks very nice."
 acceptAlso: "Yellow is beautiful."
-srsWords: "yellow" "looks" "very" "nice" "is" "beautiful"
+srsWords: "yellow" "look" "very" "nice" "is" "beautiful"
 
 [translation]
 text: "Translate this sentence into English"
@@ -688,7 +688,7 @@ text: "Translate this sentence into English"
 sentence: "他穿着紫色的衣服。"
 answer: "He is wearing purple clothes."
 acceptAlso: "He is wearing purple."
-srsWords: "he" "is" "wearing" "purple" "clothes"
+srsWords: "he" "is" "wear" "purple" "clothes"
 
 [translation]
 text: "Translate this sentence into English"
@@ -723,7 +723,7 @@ text: "Translate this sentence into English"
 sentence: "今天下雨。"
 answer: "It is raining today."
 acceptAlso: "It rains today."
-srsWords: "it" "is" "raining" "today" "rains"
+srsWords: "it" "is" "rain" "today" "rain"
 
 [translation]
 text: "Translate this sentence into English"
@@ -744,7 +744,7 @@ text: "Translate this sentence into English"
 sentence: "在下雪。"
 answer: "It is snowing."
 acceptAlso: "It is snowing now."
-srsWords: "it" "is" "snowing" "now"
+srsWords: "it" "is" "snow" "now"
 
 [translation]
 text: "Translate this sentence into English"
@@ -765,7 +765,7 @@ text: "Translate this sentence into English"
 sentence: "我不喜欢下雨。"
 answer: "I do not like raining."
 acceptAlso: "I do not like the rain."
-srsWords: "i" "do" "not" "like" "raining" "the" "rain"
+srsWords: "i" "do" "not" "like" "rain" "the" "rain"
 
 [translation]
 text: "Translate this sentence into English"
@@ -792,7 +792,7 @@ text: "Translate this sentence into English"
 sentence: "我喜欢吃苹果。"
 answer: "I like to eat apples."
 acceptAlso: "I like apples."
-srsWords: "like" "eat" "apples"
+srsWords: "like" "eat" "apple"
 
 [translation]
 text: "Translate this sentence into English"
@@ -820,14 +820,14 @@ text: "Translate this sentence into English"
 sentence: "我不喜欢吃葡萄。"
 answer: "I do not like eating grapes."
 acceptAlso: "I dislike grapes."
-srsWords: "like" "eating" "grapes"
+srsWords: "like" "eat" "grape"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "你吃草莓吗？"
 answer: "Do you eat strawberries."
 acceptAlso: "Would you like a strawberry?"
-srsWords: "eat" "strawberries"
+srsWords: "eat" "strawberry"
 
 [translation]
 text: "Translate this sentence into English"
@@ -869,21 +869,21 @@ text: "Translate this sentence into English"
 sentence: "我喜欢吃西红柿。"
 answer: "I like to eat tomatoes."
 acceptAlso: "I like tomatoes."
-srsWords: "like" "eat" "tomatoes"
+srsWords: "like" "eat" "tomato"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "胡萝卜是橙色的。"
 answer: "Carrots are orange."
 acceptAlso: "The carrot is orange."
-srsWords: "carrots" "orange"
+srsWords: "carrot" "orange"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "土豆很便宜。"
 answer: "Potatoes are cheap."
 acceptAlso: "Potatoes are inexpensive."
-srsWords: "potatoes" "cheap"
+srsWords: "potato" "cheap"
 
 [translation]
 text: "Translate this sentence into English"
@@ -897,14 +897,14 @@ text: "Translate this sentence into English"
 sentence: "洋葱味道很大。"
 answer: "Onions have a strong smell."
 acceptAlso: "Onions smell strong."
-srsWords: "onions" "strong" "smell"
+srsWords: "onion" "strong" "smell"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请给我一些黄瓜。"
 answer: "Please give me some cucumbers."
 acceptAlso: "Please give me a cucumber."
-srsWords: "please" "give" "cucumbers"
+srsWords: "please" "give" "cucumber"
 
 [translation]
 text: "Translate this sentence into English"
@@ -918,21 +918,21 @@ text: "Translate this sentence into English"
 sentence: "我不喜欢吃茄子。"
 answer: "I do not like eating eggplant."
 acceptAlso: "I dislike eggplant."
-srsWords: "like" "eating" "eggplant"
+srsWords: "like" "eat" "eggplant"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这些蘑菇很新鲜。"
 answer: "These mushrooms are fresh."
 acceptAlso: "The mushrooms are fresh."
-srsWords: "mushrooms" "fresh"
+srsWords: "mushroom" "fresh"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们种了西红柿。"
 answer: "We grew tomatoes."
 acceptAlso: "We planted tomatoes."
-srsWords: "grew" "tomatoes"
+srsWords: "grow" "tomato"
 
 ---
 lessonTitle: "Lesson 13: Meals"
@@ -946,7 +946,7 @@ text: "Translate this sentence into English"
 sentence: "我吃早餐了。"
 answer: "I ate breakfast."
 acceptAlso: "I had breakfast."
-srsWords: "ate" "breakfast"
+srsWords: "eat" "breakfast"
 
 [translation]
 text: "Translate this sentence into English"
@@ -981,7 +981,7 @@ text: "Translate this sentence into English"
 sentence: "孩子们在吃早餐。"
 answer: "The children are eating breakfast."
 acceptAlso: "The kids are having breakfast."
-srsWords: "children" "eating" "breakfast"
+srsWords: "child" "eat" "breakfast"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1009,7 +1009,7 @@ text: "Translate this sentence into English"
 sentence: "她每天都做饭。"
 answer: "She cooks every day."
 acceptAlso: "She makes food every day."
-srsWords: "cooks" "day"
+srsWords: "cook" "day"
 
 ---
 lessonTitle: "Lesson 14: Drinks"
@@ -1044,7 +1044,7 @@ text: "Translate this sentence into English"
 sentence: "他喜欢喝牛奶。"
 answer: "He likes to drink milk."
 acceptAlso: "He likes milk."
-srsWords: "likes" "drink" "milk"
+srsWords: "like" "drink" "milk"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1065,7 +1065,7 @@ text: "Translate this sentence into English"
 sentence: "我们喝了红酒。"
 answer: "We drank red wine."
 acceptAlso: "We had red wine."
-srsWords: "drank" "red" "wine"
+srsWords: "drink" "red" "wine"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1191,7 +1191,7 @@ text: "Translate this sentence into English"
 sentence: "她爱吃甜食。"
 answer: "She loves sweet food."
 acceptAlso: "She likes desserts."
-srsWords: "loves" "sweet" "food"
+srsWords: "love" "sweet" "food"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1212,7 +1212,7 @@ text: "Translate this sentence into English"
 sentence: "你试过寿司吗？"
 answer: "Have you tried sushi."
 acceptAlso: "Did you try sushi?"
-srsWords: "tried" "sushi"
+srsWords: "try" "sushi"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1261,7 +1261,7 @@ text: "Translate this sentence into English"
 sentence: "请帮我切洋葱。"
 answer: "Please help me cut the onions."
 acceptAlso: "Help me chop onions."
-srsWords: "please" "help" "cut" "onions"
+srsWords: "please" "help" "cut" "onion"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1289,7 +1289,7 @@ text: "Translate this sentence into English"
 sentence: "鸡蛋煎好了。"
 answer: "The eggs are fried."
 acceptAlso: "The eggs are done."
-srsWords: "eggs" "fried"
+srsWords: "egg" "fried"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1345,21 +1345,21 @@ text: "Translate this sentence into English"
 sentence: "你有饼干吗？"
 answer: "Do you have any cookies."
 acceptAlso: "Do you have biscuits?"
-srsWords: "cookies"
+srsWords: "cookie"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "他吃了三个甜甜圈。"
 answer: "He ate three donuts."
 acceptAlso: "He had three doughnuts."
-srsWords: "ate" "three" "donuts"
+srsWords: "eat" "three" "donut"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "冰淇淋融化了。"
 answer: "The ice cream melted."
 acceptAlso: "The ice cream is melting."
-srsWords: "ice" "cream" "melted"
+srsWords: "ice" "cream" "melt"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1373,7 +1373,7 @@ text: "Translate this sentence into English"
 sentence: "坚果对健康好。"
 answer: "Nuts are good for health."
 acceptAlso: "Nuts are healthy."
-srsWords: "nuts" "good" "health"
+srsWords: "nut" "good" "health"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1387,14 +1387,14 @@ text: "Translate this sentence into English"
 sentence: "她在烤面包。"
 answer: "She is baking bread."
 acceptAlso: "She is making bread."
-srsWords: "baking" "bread"
+srsWords: "bake" "bread"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我买了水果当零食。"
 answer: "I bought fruit for a snack."
 acceptAlso: "I got fruit as a snack."
-srsWords: "bought" "fruit" "snack"
+srsWords: "buy" "fruit" "snack"
 
 ---
 lessonTitle: "Lesson 19: Healthy Eating"
@@ -1408,7 +1408,7 @@ text: "Translate this sentence into English"
 sentence: "多吃蔬菜。"
 answer: "Eat more vegetables."
 acceptAlso: "Have more vegetables."
-srsWords: "eat" "vegetables"
+srsWords: "eat" "vegetable"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1471,7 +1471,7 @@ text: "Translate this sentence into English"
 sentence: "运动加健康饮食。"
 answer: "Exercise plus healthy eating."
 acceptAlso: "Exercise and good food."
-srsWords: "exercise" "plus" "healthy" "eating"
+srsWords: "exercise" "plus" "healthy" "eat"
 
 ---
 lessonTitle: "Lesson 20: Festival & Holiday Food"
@@ -1485,14 +1485,14 @@ text: "Translate this sentence into English"
 sentence: "春节吃饺子。"
 answer: "We eat dumplings at Spring Festival."
 acceptAlso: "We have dumplings for New Year."
-srsWords: "eat" "dumplings" "spring" "festival"
+srsWords: "eat" "dumpling" "spring" "festival"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "生日吃蛋糕。"
 answer: "We eat cake on birthdays."
 acceptAlso: "Cake for birthdays."
-srsWords: "eat" "cake" "birthdays"
+srsWords: "eat" "cake" "birthday"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1548,6 +1548,6 @@ text: "Translate this sentence into English"
 sentence: "分享美食快乐。"
 answer: "Sharing food is happy."
 acceptAlso: "Sharing food brings joy."
-srsWords: "sharing" "food" "happy"
+srsWords: "share" "food" "happy"
 
 

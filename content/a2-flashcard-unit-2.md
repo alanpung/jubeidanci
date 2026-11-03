@@ -398,7 +398,7 @@ srsWords: "convenient"
 front: "sitting room"
 meaning: "Noun. sitting room"
 translation: "起居室"
-srsWords: "sitting room"
+srsWords: "sit room"
 
 [flashcard-review]
 front: "relax"

@@ -248,7 +248,7 @@ choices:
   - "bathroom"
   - "dining room" (correct)
   - "garage"
-srsWords: "dining room"
+srsWords: "dine room"
 
 [multiple-choice]
 text: "Where do you park your car at home?"
@@ -320,7 +320,7 @@ choices:
   - "door"
   - "stairs" (correct)
   - "window"
-srsWords: "stairs"
+srsWords: "stair"
 
 [multiple-choice]
 text: "What is a long narrow space connecting rooms on the same floor?"
@@ -845,7 +845,7 @@ choices:
   - "48"
   - "24" (correct)
   - "60"
-srsWords: "hours"
+srsWords: "hour"
 
 [multiple-choice]
 text: "How many minutes are in an hour?"
@@ -854,7 +854,7 @@ choices:
   - "30"
   - "60" (correct)
   - "24"
-srsWords: "minutes"
+srsWords: "minute"
 
 [multiple-choice]
 text: "How many seconds are in a minute?"
@@ -863,7 +863,7 @@ choices:
   - "60" (correct)
   - "30"
   - "24"
-srsWords: "seconds"
+srsWords: "second"
 
 [multiple-choice]
 text: "How many days are in a week?"
@@ -881,7 +881,7 @@ choices:
   - "eleven"
   - "twelve" (correct)
   - "seven"
-srsWords: "months"
+srsWords: "month"
 
 [multiple-choice]
 text: "What do we call this present year?"
@@ -1469,7 +1469,7 @@ choices:
   - "history"
   - "maths" (correct)
   - "geography"
-srsWords: "maths"
+srsWords: "math"
 
 [multiple-choice]
 text: "What do you call the class where you learn about living things?"

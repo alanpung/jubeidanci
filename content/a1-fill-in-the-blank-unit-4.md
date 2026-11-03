@@ -101,7 +101,7 @@ srsWords: "police"
 [fill-in-the-blank]
 sentence: "She buys flowers at the ___ shop."
 blank: "flower"
-srsWords: "flowers"
+srsWords: "flower"
 
 [fill-in-the-blank]
 sentence: "He stops for petrol at the ___ station."
@@ -163,7 +163,7 @@ srsWords: "café"
 [fill-in-the-blank]
 sentence: "It is about five ___ on foot."
 blank: "minutes"
-srsWords: "minutes"
+srsWords: "minute"
 
 [fill-in-the-blank]
 sentence: "Take the first ___ on the left."
@@ -245,12 +245,12 @@ srsWords: "ticket"
 [fill-in-the-blank]
 sentence: "He missed the ___ and had to wait for another."
 blank: "bus"
-srsWords: "missed"
+srsWords: "miss"
 
 [fill-in-the-blank]
 sentence: "I book my flights on a ___ website."
 blank: "travel"
-srsWords: "flights"
+srsWords: "flight"
 
 [fill-in-the-blank]
 sentence: "She took a ___ from the airport to the hotel."
@@ -260,7 +260,7 @@ srsWords: "taxi"
 [fill-in-the-blank]
 sentence: "He rented a ___ to drive around the island."
 blank: "car"
-srsWords: "rented"
+srsWords: "rent"
 
 [fill-in-the-blank]
 sentence: "I got on the ___ at platform three."
@@ -285,7 +285,7 @@ srsWords: "window"
 [fill-in-the-blank]
 sentence: "She waited on the ___ for the train to arrive."
 blank: "platform"
-srsWords: "waited"
+srsWords: "wait"
 
 [fill-in-the-blank]
 sentence: "He put his ___ in the overhead compartment."
@@ -576,7 +576,7 @@ srsWords: "storm"
 [fill-in-the-blank]
 sentence: "It ___ heavily in winter in this country."
 blank: "snows"
-srsWords: "snows"
+srsWords: "snow"
 
 [fill-in-the-blank]
 sentence: "The weather is warm and ___ in spring."
@@ -591,7 +591,7 @@ srsWords: "hot"
 [fill-in-the-blank]
 sentence: "The sky is full of dark ___ today."
 blank: "clouds"
-srsWords: "clouds"
+srsWords: "cloud"
 
 [fill-in-the-blank]
 sentence: "There is a strong ___ blowing from the north."
@@ -611,7 +611,7 @@ srsWords: "foggy"
 [fill-in-the-blank]
 sentence: "Spring is the ___ season of the year."
 blank: "warmest"
-srsWords: "warmest"
+srsWords: "warm"
 
 [fill-in-the-blank]
 sentence: "The roads are ___ because of the ice."
@@ -621,7 +621,7 @@ srsWords: "slippery"
 [fill-in-the-blank]
 sentence: "The temperature ___ to minus five last night."
 blank: "dropped"
-srsWords: "dropped"
+srsWords: "drop"
 
 [fill-in-the-blank]
 sentence: "It is ___ today. We cannot see far."
@@ -646,7 +646,7 @@ srsWords: "summer"
 [fill-in-the-blank]
 sentence: "The roads were covered in ___ after the storm."
 blank: "snow"
-srsWords: "covered"
+srsWords: "cover"
 
 [fill-in-the-blank]
 sentence: "It is a beautiful day. The sky is clear and ___."
@@ -698,7 +698,7 @@ srsWords: "guide"
 [fill-in-the-blank]
 sentence: "She explored the old ___ on foot."
 blank: "town"
-srsWords: "explored"
+srsWords: "explore"
 
 [fill-in-the-blank]
 sentence: "He booked a boat ___ to see the island."
@@ -790,7 +790,7 @@ srsWords: "beach"
 [fill-in-the-blank]
 sentence: "She watched the waves crash against the ___."
 blank: "rocks"
-srsWords: "rocks"
+srsWords: "rock"
 
 [fill-in-the-blank]
 sentence: "He crossed the ___ on a small wooden bridge."
@@ -800,7 +800,7 @@ srsWords: "river"
 [fill-in-the-blank]
 sentence: "I sat in a green field and listened to the ___."
 blank: "birds"
-srsWords: "birds"
+srsWords: "bird"
 
 [fill-in-the-blank]
 sentence: "She enjoyed the view of the ___ from the top."
@@ -825,12 +825,12 @@ srsWords: "cliff"
 [fill-in-the-blank]
 sentence: "He explored the caves near the ___ coast."
 blank: "rocky"
-srsWords: "caves"
+srsWords: "cave"
 
 [fill-in-the-blank]
 sentence: "I picked up stones on the ___ of the river."
 blank: "bank"
-srsWords: "stones"
+srsWords: "stone"
 
 [fill-in-the-blank]
 sentence: "She sat under a big ___ and read her book."
@@ -845,7 +845,7 @@ srsWords: "waterfall"
 [fill-in-the-blank]
 sentence: "I smelled the ___ after the rain."
 blank: "flowers"
-srsWords: "flowers"
+srsWords: "flower"
 
 [fill-in-the-blank]
 sentence: "She walked on the grass in the ___."
@@ -860,12 +860,12 @@ srsWords: "deer"
 [fill-in-the-blank]
 sentence: "I love the sound of the ___ hitting the sand."
 blank: "waves"
-srsWords: "waves"
+srsWords: "wave"
 
 [fill-in-the-blank]
 sentence: "She watched the stars in the night ___."
 blank: "sky"
-srsWords: "stars"
+srsWords: "star"
 
 ---
 lessonTitle: "Lesson 9: Packing & Preparation"
@@ -892,7 +892,7 @@ srsWords: "passport"
 [fill-in-the-blank]
 sentence: "I booked my ___ three months in advance."
 blank: "flights"
-srsWords: "booked"
+srsWords: "book"
 
 [fill-in-the-blank]
 sentence: "She packed ___ clothes for the warm weather."
@@ -942,12 +942,12 @@ srsWords: "navigate"
 [fill-in-the-blank]
 sentence: "She put her liquids in a small ___ bag."
 blank: "plastic"
-srsWords: "liquids"
+srsWords: "liquid"
 
 [fill-in-the-blank]
 sentence: "He arrived at the airport three ___ early."
 blank: "hours"
-srsWords: "arrived"
+srsWords: "arrive"
 
 [fill-in-the-blank]
 sentence: "I packed a light ___ for cool evenings."
@@ -1064,7 +1064,7 @@ srsWords: "cosy"
 [fill-in-the-blank]
 sentence: "The hotel room was ___ but had everything we needed."
 blank: "small"
-srsWords: "needed"
+srsWords: "need"
 
 [fill-in-the-blank]
 sentence: "The view from the top was absolutely ___."

@@ -30,7 +30,7 @@ text: "Translate this sentence into English"
 sentence: "他每天跑步。"
 answer: "He runs every day."
 acceptAlso: "He jogs daily."
-srsWords: "runs" "day"
+srsWords: "run" "day"
 
 [translation]
 text: "Translate this sentence into English"
@@ -44,14 +44,14 @@ text: "Translate this sentence into English"
 sentence: "我洗了个澡。"
 answer: "I took a shower."
 acceptAlso: "I had a shower."
-srsWords: "took" "shower"
+srsWords: "take" "shower"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "她在梳头。"
 answer: "She is combing her hair."
 acceptAlso: "She is brushing her hair."
-srsWords: "combing" "hair"
+srsWords: "comb" "hair"
 
 [translation]
 text: "Translate this sentence into English"
@@ -79,7 +79,7 @@ text: "Translate this sentence into English"
 sentence: "咖啡让我清醒。"
 answer: "Coffee keeps me awake."
 acceptAlso: "Coffee wakes me up."
-srsWords: "coffee" "keeps" "awake"
+srsWords: "coffee" "keep" "awake"
 
 [translation]
 text: "Translate this sentence into English"
@@ -101,14 +101,14 @@ text: "Translate this sentence into English"
 sentence: "我打扫了房间。"
 answer: "I cleaned the room."
 acceptAlso: "I tidied the room."
-srsWords: "cleaned" "room"
+srsWords: "clean" "room"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "他正在洗碗。"
 answer: "He is washing the dishes."
 acceptAlso: "He is doing the dishes."
-srsWords: "washing" "dishes"
+srsWords: "wash" "dish"
 
 [translation]
 text: "Translate this sentence into English"
@@ -122,21 +122,21 @@ text: "Translate this sentence into English"
 sentence: "她每天扫地。"
 answer: "She sweeps the floor every day."
 acceptAlso: "She mops daily."
-srsWords: "sweeps" "floor" "day"
+srsWords: "sweep" "floor" "day"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "床还没整理。"
 answer: "The bed is not made yet."
 acceptAlso: "The bed is unmade."
-srsWords: "bed" "made" "yet"
+srsWords: "bed" "make" "yet"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我吸尘了客厅。"
 answer: "I vacuumed the living room."
 acceptAlso: "I cleaned the living room."
-srsWords: "vacuumed" "living" "room"
+srsWords: "vacuum" "living" "room"
 
 [translation]
 text: "Translate this sentence into English"
@@ -186,7 +186,7 @@ text: "Translate this sentence into English"
 sentence: "杯子在橱柜里。"
 answer: "The cups are in the cupboard."
 acceptAlso: "The glasses are in the cabinet."
-srsWords: "cups" "cupboard"
+srsWords: "cup" "cupboard"
 
 [translation]
 text: "Translate this sentence into English"
@@ -242,7 +242,7 @@ text: "Translate this sentence into English"
 sentence: "我们喝完这瓶水。"
 answer: "We finished this bottle of water."
 acceptAlso: "We drank the whole bottle."
-srsWords: "finished" "bottle" "water"
+srsWords: "finish" "bottle" "water"
 
 
 ---
@@ -292,7 +292,7 @@ text: "Translate this sentence into English"
 sentence: "花园里有花。"
 answer: "There are flowers in the garden."
 acceptAlso: "The garden has flowers."
-srsWords: "flowers" "garden"
+srsWords: "flower" "garden"
 
 [translation]
 text: "Translate this sentence into English"
@@ -320,7 +320,7 @@ text: "Translate this sentence into English"
 sentence: "钥匙在哪儿？"
 answer: "Where are the keys."
 acceptAlso: "Where is the key?"
-srsWords: "keys"
+srsWords: "key"
 
 
 ---
@@ -349,14 +349,14 @@ text: "Translate this sentence into English"
 sentence: "桌子是木头做的。"
 answer: "The table is made of wood."
 acceptAlso: "The desk is wooden."
-srsWords: "table" "made" "wood"
+srsWords: "table" "make" "wood"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我把书放在书架上。"
 answer: "I put the books on the shelf."
 acceptAlso: "I placed the books on the bookshelf."
-srsWords: "put" "books" "shelf"
+srsWords: "put" "book" "shelf"
 
 [translation]
 text: "Translate this sentence into English"
@@ -370,7 +370,7 @@ text: "Translate this sentence into English"
 sentence: "窗帘是蓝色的。"
 answer: "The curtains are blue."
 acceptAlso: "The drapes are blue."
-srsWords: "curtains" "blue"
+srsWords: "curtain" "blue"
 
 [translation]
 text: "Translate this sentence into English"
@@ -420,14 +420,14 @@ text: "Translate this sentence into English"
 sentence: "我把衬衫洗干净了。"
 answer: "I washed the shirt clean."
 acceptAlso: "I cleaned the shirt."
-srsWords: "washed" "shirt" "clean"
+srsWords: "wash" "shirt" "clean"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "洗衣机在转。"
 answer: "The washing machine is spinning."
 acceptAlso: "The washer is running."
-srsWords: "washing" "machine" "spinning"
+srsWords: "wash" "machine" "spin"
 
 [translation]
 text: "Translate this sentence into English"
@@ -441,7 +441,7 @@ text: "Translate this sentence into English"
 sentence: "这件袜子破了。"
 answer: "This sock is torn."
 acceptAlso: "The sock is broken."
-srsWords: "sock" "torn"
+srsWords: "sock" "tear"
 
 [translation]
 text: "Translate this sentence into English"
@@ -462,7 +462,7 @@ text: "Translate this sentence into English"
 sentence: "晾衣绳断了。"
 answer: "The clothesline broke."
 acceptAlso: "The drying line snapped."
-srsWords: "clothesline" "broke"
+srsWords: "clothesline" "break"
 
 [translation]
 text: "Translate this sentence into English"
@@ -505,7 +505,7 @@ text: "Translate this sentence into English"
 sentence: "牛奶卖完了。"
 answer: "The milk is sold out."
 acceptAlso: "There is no milk left."
-srsWords: "milk" "sold"
+srsWords: "milk" "sell"
 
 [translation]
 text: "Translate this sentence into English"
@@ -519,14 +519,14 @@ text: "Translate this sentence into English"
 sentence: "鸡蛋在打折。"
 answer: "The eggs are on sale."
 acceptAlso: "Eggs are discounted."
-srsWords: "eggs" "sale"
+srsWords: "egg" "sale"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我忘了买面包。"
 answer: "I forgot to buy bread."
 acceptAlso: "I didn't buy bread."
-srsWords: "forgot" "buy" "bread"
+srsWords: "forget" "buy" "bread"
 
 [translation]
 text: "Translate this sentence into English"
@@ -611,7 +611,7 @@ text: "Translate this sentence into English"
 sentence: "我加了你的微信。"
 answer: "I added you on WeChat."
 acceptAlso: "I sent you a friend request."
-srsWords: "added" "wechat"
+srsWords: "add" "wechat"
 
 [translation]
 text: "Translate this sentence into English"
@@ -675,14 +675,14 @@ text: "Translate this sentence into English"
 sentence: "我把灯关了。"
 answer: "I turned off the light."
 acceptAlso: "I switched off the light."
-srsWords: "turned" "light"
+srsWords: "turn" "light"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "你明天早起吗？"
 answer: "Are you getting up early tomorrow."
 acceptAlso: "Will you wake up early?"
-srsWords: "getting" "early"
+srsWords: "get" "early"
 
 [translation]
 text: "Translate this sentence into English"
@@ -710,7 +710,7 @@ text: "Translate this sentence into English"
 sentence: "晚安，做个好梦。"
 answer: "Good night, sweet dreams."
 acceptAlso: "Good night, sleep well."
-srsWords: "good" "night" "sweet" "dreams"
+srsWords: "good" "night" "sweet" "dream"
 
 
 ---
@@ -725,21 +725,21 @@ text: "Translate this sentence into English"
 sentence: "周末我睡懒觉。"
 answer: "I sleep in on weekends."
 acceptAlso: "I sleep late on the weekend."
-srsWords: "sleep" "weekends"
+srsWords: "sleep" "weekend"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们在家看电影。"
 answer: "We watch movies at home."
 acceptAlso: "We watch films at home."
-srsWords: "watch" "movies" "home"
+srsWords: "watch" "movie" "home"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "他打扫了车库。"
 answer: "He cleaned the garage."
 acceptAlso: "He tidied the garage."
-srsWords: "cleaned" "garage"
+srsWords: "clean" "garage"
 
 [translation]
 text: "Translate this sentence into English"
@@ -753,35 +753,35 @@ text: "Translate this sentence into English"
 sentence: "花园需要浇水。"
 answer: "The garden needs watering."
 acceptAlso: "The plants need water."
-srsWords: "garden" "needs" "watering"
+srsWords: "garden" "need" "water"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我整理了我的书桌。"
 answer: "I organized my desk."
 acceptAlso: "I tidied my desk."
-srsWords: "organized" "desk"
+srsWords: "organize" "desk"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "邻居来串门。"
 answer: "The neighbor came over."
 acceptAlso: "The neighbour visited."
-srsWords: "neighbor" "came"
+srsWords: "neighbor" "come"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我泡了个热水澡。"
 answer: "I took a hot bath."
 acceptAlso: "I had a warm bath."
-srsWords: "took" "hot" "bath"
+srsWords: "take" "hot" "bath"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "宠物狗在睡觉。"
 answer: "The pet dog is sleeping."
 acceptAlso: "The dog is asleep."
-srsWords: "pet" "dog" "sleeping"
+srsWords: "pet" "dog" "sleep"
 
 [translation]
 text: "Translate this sentence into English"
@@ -822,14 +822,14 @@ text: "Translate this sentence into English"
 sentence: "有更便宜的吗？"
 answer: "Do you have anything cheaper."
 acceptAlso: "Is there a cheaper one?"
-srsWords: "anything" "cheaper"
+srsWords: "anything" "cheap"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "尺码合适。"
 answer: "The size fits."
 acceptAlso: "The size is right."
-srsWords: "size" "fits"
+srsWords: "size" "fit"
 
 [translation]
 text: "Translate this sentence into English"
@@ -843,7 +843,7 @@ text: "Translate this sentence into English"
 sentence: "我在找礼物。"
 answer: "I am looking for a gift."
 acceptAlso: "I am searching for a present."
-srsWords: "looking" "gift"
+srsWords: "look" "gift"
 
 [translation]
 text: "Translate this sentence into English"
@@ -907,7 +907,7 @@ text: "Translate this sentence into English"
 sentence: "手套在哪里？"
 answer: "Where are the gloves."
 acceptAlso: "Where are the mittens?"
-srsWords: "gloves"
+srsWords: "glove"
 
 [translation]
 text: "Translate this sentence into English"
@@ -935,7 +935,7 @@ text: "Translate this sentence into English"
 sentence: "这件衣服褪色了。"
 answer: "This clothing faded."
 acceptAlso: "The shirt lost its color."
-srsWords: "clothing" "faded"
+srsWords: "clothing" "fade"
 
 [translation]
 text: "Translate this sentence into English"
@@ -957,14 +957,14 @@ text: "Translate this sentence into English"
 sentence: "我的鞋坏了。"
 answer: "My shoes are broken."
 acceptAlso: "My shoes are worn out."
-srsWords: "shoes" "broken"
+srsWords: "shoe" "broken"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这双鞋很舒服。"
 answer: "These shoes are comfortable."
 acceptAlso: "These sneakers are comfy."
-srsWords: "shoes" "comfortable"
+srsWords: "shoe" "comfortable"
 
 [translation]
 text: "Translate this sentence into English"
@@ -978,21 +978,21 @@ text: "Translate this sentence into English"
 sentence: "凉鞋适合夏天。"
 answer: "Sandals are good for summer."
 acceptAlso: "Sandals suit summer."
-srsWords: "sandals" "good" "summer"
+srsWords: "sandal" "good" "summer"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "靴子很防水。"
 answer: "The boots are waterproof."
 acceptAlso: "The boots keep out water."
-srsWords: "boots" "waterproof"
+srsWords: "boot" "waterproof"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "袜子在哪里买？"
 answer: "Where can I buy socks."
 acceptAlso: "Where do I get socks?"
-srsWords: "buy" "socks"
+srsWords: "buy" "sock"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1013,14 +1013,14 @@ text: "Translate this sentence into English"
 sentence: "这双鞋打折了。"
 answer: "These shoes are discounted."
 acceptAlso: "These are on sale."
-srsWords: "shoes" "discounted"
+srsWords: "shoe" "discount"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我要运动鞋。"
 answer: "I want sneakers."
 acceptAlso: "I need running shoes."
-srsWords: "want" "sneakers"
+srsWords: "want" "sneaker"
 
 
 ---
@@ -1113,14 +1113,14 @@ text: "Translate this sentence into English"
 sentence: "太贵了，便宜点吧。"
 answer: "It is too expensive, make it cheaper."
 acceptAlso: "Give me a discount."
-srsWords: "expensive" "make" "cheaper"
+srsWords: "expensive" "make" "cheap"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "最低多少钱？"
 answer: "What is the lowest price."
 acceptAlso: "What is your best price?"
-srsWords: "lowest" "price"
+srsWords: "low" "price"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1148,7 +1148,7 @@ text: "Translate this sentence into English"
 sentence: "我再看看别的。"
 answer: "I will look at others."
 acceptAlso: "Let me check elsewhere."
-srsWords: "look" "others"
+srsWords: "look" "other"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1198,7 +1198,7 @@ text: "Translate this sentence into English"
 sentence: "我在找牛奶。"
 answer: "I am looking for milk."
 acceptAlso: "I am searching for milk."
-srsWords: "looking" "milk"
+srsWords: "look" "milk"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1233,14 +1233,14 @@ text: "Translate this sentence into English"
 sentence: "我忘记拿会员卡。"
 answer: "I forgot my membership card."
 acceptAlso: "I left my loyalty card."
-srsWords: "forgot" "membership" "card"
+srsWords: "forget" "membership" "card"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "称重在哪里？"
 answer: "Where is the weighing scale."
 acceptAlso: "Where do I weigh this?"
-srsWords: "weighing" "scale"
+srsWords: "weigh" "scale"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1283,7 +1283,7 @@ text: "Translate this sentence into English"
 sentence: "儿童书籍在二楼。"
 answer: "Children's books are on the second floor."
 acceptAlso: "Kids' books are upstairs."
-srsWords: "children" "books" "second" "floor"
+srsWords: "child" "book" "second" "floor"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1332,7 +1332,7 @@ text: "Translate this sentence into English"
 sentence: "我买三本。"
 answer: "I will buy three books."
 acceptAlso: "I'll take three."
-srsWords: "buy" "three" "books"
+srsWords: "buy" "three" "book"
 
 
 ---
@@ -1361,14 +1361,14 @@ text: "Translate this sentence into English"
 sentence: "他送了花。"
 answer: "He gave flowers."
 acceptAlso: "He sent flowers."
-srsWords: "gave" "flowers"
+srsWords: "give" "flower"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "生日礼物打开了。"
 answer: "The birthday gift is opened."
 acceptAlso: "The present is unwrapped."
-srsWords: "birthday" "gift" "opened"
+srsWords: "birthday" "gift" "open"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1382,7 +1382,7 @@ text: "Translate this sentence into English"
 sentence: "我包好了礼物。"
 answer: "I wrapped the gift."
 acceptAlso: "I gift-wrapped it."
-srsWords: "wrapped" "gift"
+srsWords: "wrap" "gift"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1396,14 +1396,14 @@ text: "Translate this sentence into English"
 sentence: "她喜欢惊喜。"
 answer: "She likes surprises."
 acceptAlso: "She enjoys surprises."
-srsWords: "likes" "surprises"
+srsWords: "like" "surprise"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们交换礼物。"
 answer: "We exchange gifts."
 acceptAlso: "We swap presents."
-srsWords: "exchange" "gifts"
+srsWords: "exchange" "gift"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1453,7 +1453,7 @@ text: "Translate this sentence into English"
 sentence: "七天可以退。"
 answer: "You can return it within seven days."
 acceptAlso: "Returns allowed in a week."
-srsWords: "return" "seven" "days"
+srsWords: "return" "seven" "day"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1503,7 +1503,7 @@ text: "Translate this sentence into English"
 sentence: "我在网上买的。"
 answer: "I bought it online."
 acceptAlso: "I ordered it online."
-srsWords: "bought" "online"
+srsWords: "buy" "online"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1517,14 +1517,14 @@ text: "Translate this sentence into English"
 sentence: "快递员按门铃了。"
 answer: "The courier rang the bell."
 acceptAlso: "The delivery person knocked."
-srsWords: "courier" "rang" "bell"
+srsWords: "courier" "ring" "bell"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "包裹已经发货。"
 answer: "The package has shipped."
 acceptAlso: "The parcel has been sent."
-srsWords: "package" "shipped"
+srsWords: "package" "ship"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1545,7 +1545,7 @@ text: "Translate this sentence into English"
 sentence: "评价很好。"
 answer: "The reviews are good."
 acceptAlso: "The ratings are positive."
-srsWords: "reviews" "good"
+srsWords: "review" "good"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1566,7 +1566,7 @@ text: "Translate this sentence into English"
 sentence: "密码支付失败。"
 answer: "The payment password failed."
 acceptAlso: "The payment was declined."
-srsWords: "payment" "password" "failed"
+srsWords: "payment" "password" "fail"
 
 
 

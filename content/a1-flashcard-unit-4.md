@@ -236,7 +236,7 @@ srsWords: "foreign"
 front: "dining room"
 meaning: "Noun. dining room"
 translation: "饭厅"
-srsWords: "dining room"
+srsWords: "dine room"
 
 [flashcard-review]
 front: "pick"
