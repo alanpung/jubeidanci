@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { loadEnLevelWords, getBundledWords, type WordEntry } from "@/lib/words";
+import { matchesPosFilter } from "@/lib/pos";
 import { db, isDbAvailable } from "@/lib/db";
 import { dictionaryWord } from "@/lib/db/schema";
 import { getTrackedWordSet, getUserLibraryWords, getAllCards } from "@/lib/actions/srs";
@@ -7,48 +8,6 @@ import { buildDictionary, levelForWord } from "@/lib/content/course-srs-report";
 import { getSession } from "@/lib/auth-server";
 
 export const dynamic = "force-dynamic";
-
-// POS tags are compared as complete tokens. Never use substring matching here:
-// the one-letter adverb alias "r", for example, occurs inside "verb".
-const POS_ALIASES: Record<string, string[]> = {
-  noun: ["noun", "n"],
-  verb: ["verb", "v", "vt", "vi", "be-verb", "have-verb", "do-verb", "modal", "auxiliary", "aux"],
-  adjective: ["adjective", "adj", "a", "s"],
-  adverb: ["adverb", "adv", "r"],
-  preposition: ["preposition", "prep", "pp"],
-  conjunction: ["conjunction", "conj", "cj"],
-  pronoun: ["pronoun", "pron", "pn"],
-  determiner: ["determiner", "det", "article", "art"],
-  numeral: ["numeral", "num", "number"],
-  interjection: ["interjection", "intj", "int", "interj"],
-};
-
-function normalizePosToken(raw: string): string {
-  return raw.toLowerCase().trim().replace(/\.$/, "");
-}
-
-function extractPosSet(w: WordEntry): Set<string> {
-  const set = new Set<string>();
-  const addToken = (raw: string) => {
-    const token = normalizePosToken(raw);
-    for (const [key, aliases] of Object.entries(POS_ALIASES)) {
-      if (aliases.includes(token)) set.add(key);
-    }
-  };
-
-  // Dictionary POS fields may list multiple tags (e.g. "n. v." or
-  // "noun/verb"). Treat each complete tag as a token.
-  (w.pos || "").split(/[,/;·\s]+/).filter(Boolean).forEach(addToken);
-
-  // Some entries store POS only as a prefix in their gloss/translation.
-  const combinedText = `${w.english_translation || ""} ； ${w.definition_zh || ""}`;
-  const regex = /(?:^|[；;]\s*|\s+)([a-z]+)\./gi;
-  let match: RegExpExecArray | null;
-  while ((match = regex.exec(combinedText)) !== null) {
-    addToken(match[1]);
-  }
-  return set;
-}
 
 export async function GET(req: NextRequest) {
   try {
@@ -187,10 +146,12 @@ export async function GET(req: NextRequest) {
       }
     }
 
-    // Filter by Part of Speech using exact normalized tags; substring checks
-    // incorrectly classified verbs as adverbs because "verb" contains "r".
+    // POS aliases are normalized as complete tokens, never substrings. This
+    // prevents the adverb shorthand "r" from matching the "r" in "verb".
     if (pos && pos !== "all") {
-      filtered = filtered.filter((w: WordEntry) => extractPosSet(w).has(pos));
+      filtered = filtered.filter((w: WordEntry) =>
+        matchesPosFilter(pos, w.pos, w.english_translation, w.definition_zh)
+      );
     }
 
     // Filter by Search Query
