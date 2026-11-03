@@ -685,7 +685,7 @@ choices:
   - "chips" (correct)
   - "pasta"
   - "bread"
-srsWords: "chips"
+srsWords: "chip"
 
 [multiple-choice]
 text: "Which food is a green vegetable that is long and thin?"
@@ -773,7 +773,7 @@ choices:
   - "nose"
   - "eyes" (correct)
   - "mouth"
-srsWords: "eyes"
+srsWords: "eye"
 
 [multiple-choice]
 text: "What do you use to hear?"
@@ -782,7 +782,7 @@ choices:
   - "mouth"
   - "ears" (correct)
   - "hands"
-srsWords: "ears"
+srsWords: "ear"
 
 [multiple-choice]
 text: "What do you use to smell?"
@@ -818,7 +818,7 @@ choices:
   - "arms"
   - "feet" (correct)
   - "knees"
-srsWords: "feet"
+srsWords: "foot"
 
 [multiple-choice]
 text: "What connects your head to your body?"
@@ -854,7 +854,7 @@ choices:
   - "knees"
   - "hands" (correct)
   - "shoulders"
-srsWords: "hands"
+srsWords: "hand"
 
 [multiple-choice]
 text: "What part of your face holds your teeth?"
@@ -917,7 +917,7 @@ choices:
   - "elbows"
   - "fingers" (correct)
   - "toes"
-srsWords: "fingers"
+srsWords: "finger"
 
 [multiple-choice]
 text: "What bends in the middle of your arm?"
@@ -1309,7 +1309,7 @@ choices:
   - "relatives"
   - "parents" (correct)
   - "adults"
-srsWords: "parents"
+srsWords: "parent"
 
 [multiple-choice]
 text: "What do you call a brother or sister?"
@@ -1521,7 +1521,7 @@ choices:
   - "socks" (correct)
   - "boots"
   - "sandals"
-srsWords: "socks"
+srsWords: "sock"
 
 [multiple-choice]
 text: "What do you wear on your upper body to keep warm?"
@@ -1557,7 +1557,7 @@ choices:
   - "socks"
   - "hat"
   - "shoes" (correct)
-srsWords: "shoes"
+srsWords: "shoe"
 
 [multiple-choice]
 text: "What do you wear around your neck in winter?"
@@ -1602,7 +1602,7 @@ choices:
   - "scarf"
   - "hat"
   - "gloves" (correct)
-srsWords: "gloves"
+srsWords: "glove"
 
 [multiple-choice]
 text: "What do you wear in summer instead of trousers?"
@@ -1620,7 +1620,7 @@ choices:
   - "shoes"
   - "socks"
   - "boots" (correct)
-srsWords: "boots"
+srsWords: "boot"
 
 [multiple-choice]
 text: "What do you wear around your waist to hold up trousers?"
@@ -1638,7 +1638,7 @@ choices:
   - "socks"
   - "sandals" (correct)
   - "gloves"
-srsWords: "sandals"
+srsWords: "sandal"
 
 [multiple-choice]
 text: "What do you wear when you exercise or play sport?"

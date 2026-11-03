@@ -37,49 +37,49 @@ text: "Translate this sentence into English"
 sentence: "这个应用很好用。"
 answer: "This app is very easy to use."
 acceptAlso: "The app works well."
-srsWords: "this" "app" "is" "very" "easy" "to" "use" "the" "works" "well"
+srsWords: "this" "app" "is" "very" "easy" "to" "use" "the" "work" "well"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我每天用这个软件记笔记。"
 answer: "I use this app to take notes every day."
 acceptAlso: "Notes go into this app daily."
-srsWords: "i" "use" "this" "app" "to" "take" "notes" "every" "day" "go" "into" "daily"
+srsWords: "i" "use" "this" "app" "to" "take" "note" "every" "day" "go" "into" "daily"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请更新到最新版本。"
 answer: "Please update to the latest version."
 acceptAlso: "Get the newest version, please."
-srsWords: "please" "update" "to" "the" "latest" "version" "get" "newest"
+srsWords: "please" "update" "to" "the" "latest" "version" "get" "new"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这个应用占了很多存储空间。"
 answer: "This app takes up a lot of storage."
 acceptAlso: "The app uses too much space."
-srsWords: "this" "app" "takes" "up" "a" "lot" "of" "storage" "the" "uses" "too" "much" "space"
+srsWords: "this" "app" "take" "up" "a" "lot" "of" "storage" "the" "use" "too" "much" "space"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我删掉了一些没用的应用。"
 answer: "I deleted some useless apps."
 acceptAlso: "A few apps I never use are gone."
-srsWords: "i" "deleted" "some" "useless" "apps" "a" "few" "never" "use" "are" "gone"
+srsWords: "i" "delete" "some" "useless" "apps" "a" "few" "never" "use" "are" "go"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请打开通知。"
 answer: "Please turn on notifications."
 acceptAlso: "Switch the notifications on, please."
-srsWords: "please" "turn" "on" "notifications" "switch" "the"
+srsWords: "please" "turn" "on" "notification" "switch" "the"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我用地图应用找路。"
 answer: "I use a map app to find my way."
 acceptAlso: "A maps app helps me get around."
-srsWords: "i" "use" "a" "map" "app" "to" "find" "my" "way" "maps" "helps" "me" "get" "around"
+srsWords: "i" "use" "a" "map" "app" "to" "find" "my" "way" "map" "help" "me" "get" "around"
 
 [translation]
 text: "Translate this sentence into English"
@@ -100,7 +100,7 @@ text: "Translate this sentence into English"
 sentence: "我每天看社交媒体。"
 answer: "I check social media every day."
 acceptAlso: "Social networks are part of my day."
-srsWords: "i" "check" "social" "media" "every" "day" "networks" "are" "part" "of" "my"
+srsWords: "i" "check" "social" "media" "every" "day" "network" "are" "part" "of" "my"
 
 [translation]
 text: "Translate this sentence into English"
@@ -114,14 +114,14 @@ text: "Translate this sentence into English"
 sentence: "他发了一条新帖子。"
 answer: "He posted something new."
 acceptAlso: "A new post came from him."
-srsWords: "he" "posted" "something" "new" "a" "post" "came" "from" "him"
+srsWords: "he" "post" "something" "new" "a" "post" "come" "from" "him"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我关注了很多账号。"
 answer: "I follow many accounts."
 acceptAlso: "There are lots of accounts I follow."
-srsWords: "i" "follow" "many" "accounts" "there" "are" "lots" "of"
+srsWords: "i" "follow" "many" "account" "there" "are" "lot" "of"
 
 [translation]
 text: "Translate this sentence into English"
@@ -142,14 +142,14 @@ text: "Translate this sentence into English"
 sentence: "这个视频有很多点赞。"
 answer: "This video has a lot of likes."
 acceptAlso: "Many people liked the video."
-srsWords: "this" "video" "has" "a" "lot" "of" "likes" "many" "people" "liked" "the"
+srsWords: "this" "video" "has" "a" "lot" "of" "like" "many" "people" "like" "the"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我减少了上网时间。"
 answer: "I reduced my time online."
 acceptAlso: "I spend less time on social media now."
-srsWords: "i" "reduced" "my" "time" "online" "spend" "less" "on" "social" "media" "now"
+srsWords: "i" "reduce" "my" "time" "online" "spend" "less" "on" "social" "media" "now"
 
 [translation]
 text: "Translate this sentence into English"
@@ -163,7 +163,7 @@ text: "Translate this sentence into English"
 sentence: "社交媒体让我和朋友保持联系。"
 answer: "Social media keeps me in touch with friends."
 acceptAlso: "I stay close to friends through social media."
-srsWords: "social" "media" "keeps" "me" "in" "touch" "with" "friends" "i" "stay" "close" "to" "through"
+srsWords: "social" "media" "keep" "me" "in" "touch" "with" "friend" "i" "stay" "close" "to" "through"
 
 ---
 lessonTitle: "Lesson 3: Computers"
@@ -177,7 +177,7 @@ text: "Translate this sentence into English"
 sentence: "我的电脑很慢。"
 answer: "My computer is very slow."
 acceptAlso: "The laptop runs slowly."
-srsWords: "my" "computer" "is" "very" "slow" "the" "laptop" "runs" "slowly"
+srsWords: "my" "computer" "is" "very" "slow" "the" "laptop" "run" "slowly"
 
 [translation]
 text: "Translate this sentence into English"
@@ -191,7 +191,7 @@ text: "Translate this sentence into English"
 sentence: "键盘上有几个键坏了。"
 answer: "A few keys on the keyboard are broken."
 acceptAlso: "Some keys do not work."
-srsWords: "a" "few" "keys" "on" "the" "keyboard" "are" "broken" "some" "do" "not" "work"
+srsWords: "a" "few" "key" "on" "the" "keyboard" "are" "broken" "some" "do" "not" "work"
 
 [translation]
 text: "Translate this sentence into English"
@@ -205,7 +205,7 @@ text: "Translate this sentence into English"
 sentence: "屏幕太亮了。"
 answer: "The screen is too bright."
 acceptAlso: "The display hurts my eyes."
-srsWords: "the" "screen" "is" "too" "bright" "display" "hurts" "my" "eyes"
+srsWords: "the" "screen" "is" "too" "bright" "display" "hurt" "my" "eye"
 
 [translation]
 text: "Translate this sentence into English"
@@ -219,14 +219,14 @@ text: "Translate this sentence into English"
 sentence: "我把它备份到硬盘上。"
 answer: "I backed it up on the hard drive."
 acceptAlso: "A copy is on my external disk."
-srsWords: "i" "backed" "it" "up" "on" "the" "hard" "drive" "a" "copy" "is" "my" "external" "disk"
+srsWords: "i" "back" "it" "up" "on" "the" "hard" "drive" "a" "copy" "is" "my" "external" "disk"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "电脑死机了。"
 answer: "The computer has frozen."
 acceptAlso: "My machine stopped working."
-srsWords: "the" "computer" "has" "frozen" "my" "machine" "stopped" "working"
+srsWords: "the" "computer" "has" "frozen" "my" "machine" "stop" "working"
 
 [translation]
 text: "Translate this sentence into English"
@@ -282,7 +282,7 @@ text: "Translate this sentence into English"
 sentence: "我关掉了移动数据。"
 answer: "I turned off mobile data."
 acceptAlso: "My phone data is off."
-srsWords: "i" "turned" "off" "mobile" "data" "my" "phone" "is"
+srsWords: "i" "turn" "off" "mobile" "data" "my" "phone" "is"
 
 [translation]
 text: "Translate this sentence into English"
@@ -296,7 +296,7 @@ text: "Translate this sentence into English"
 sentence: "我换了另一个网络。"
 answer: "I changed to another network."
 acceptAlso: "Another wifi is being used now."
-srsWords: "i" "changed" "to" "another" "network" "is" "being" "used" "now"
+srsWords: "i" "change" "to" "another" "network" "is" "being" "used" "now"
 
 [translation]
 text: "Translate this sentence into English"
@@ -310,14 +310,14 @@ text: "Translate this sentence into English"
 sentence: "我用的是流量套餐。"
 answer: "I use a data plan."
 acceptAlso: "My phone plan gives me data."
-srsWords: "i" "use" "a" "data" "plan" "my" "phone" "gives" "me"
+srsWords: "i" "use" "a" "data" "plan" "my" "phone" "give" "me"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "网络今天断了两次。"
 answer: "The internet went down twice today."
 acceptAlso: "We lost connection two times today."
-srsWords: "the" "internet" "went" "down" "twice" "today" "we" "lost" "connection" "two" "times"
+srsWords: "the" "internet" "go" "down" "twice" "today" "we" "lost" "connection" "two" "times"
 
 ---
 lessonTitle: "Lesson 5: Streaming"
@@ -331,14 +331,14 @@ text: "Translate this sentence into English"
 sentence: "我在网上看剧。"
 answer: "I watch series online."
 acceptAlso: "Streaming shows is what I do online."
-srsWords: "i" "watch" "series" "online" "streaming" "shows" "is" "what" "do"
+srsWords: "i" "watch" "series" "online" "stream" "show" "is" "what" "do"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "视频一直在缓冲。"
 answer: "The video keeps buffering."
 acceptAlso: "The film stops and starts."
-srsWords: "the" "video" "keeps" "buffering" "film" "stops" "and" "starts"
+srsWords: "the" "video" "keep" "buffer" "film" "stop" "and" "start"
 
 [translation]
 text: "Translate this sentence into English"
@@ -352,28 +352,28 @@ text: "Translate this sentence into English"
 sentence: "我订阅了一个视频平台。"
 answer: "I subscribed to a video platform."
 acceptAlso: "I pay for a streaming service."
-srsWords: "i" "subscribed" "to" "a" "video" "platform" "pay" "for" "streaming" "service"
+srsWords: "i" "subscribe" "to" "a" "video" "platform" "pay" "for" "stream" "service"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这部剧一共八集。"
 answer: "This series has eight episodes in total."
 acceptAlso: "There are eight episodes of the show."
-srsWords: "this" "series" "has" "eight" "episodes" "in" "total" "there" "are" "of" "the" "show"
+srsWords: "this" "series" "has" "eight" "episode" "in" "total" "there" "are" "of" "the" "show"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请等一下，正在加载。"
 answer: "Please wait, it is loading."
 acceptAlso: "Give it a moment to load."
-srsWords: "please" "wait" "it" "is" "loading" "give" "a" "moment" "to" "load"
+srsWords: "please" "wait" "it" "is" "load" "give" "a" "moment" "to" "load"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我下载下来晚上看。"
 answer: "I downloaded it to watch tonight."
 acceptAlso: "It is saved for this evening."
-srsWords: "i" "downloaded" "it" "to" "watch" "tonight" "is" "saved" "for" "this" "evening"
+srsWords: "i" "download" "it" "to" "watch" "tonight" "is" "save" "for" "this" "evening"
 
 [translation]
 text: "Translate this sentence into English"
@@ -394,7 +394,7 @@ text: "Translate this sentence into English"
 sentence: "我喜欢边吃饭边看视频。"
 answer: "I like watching videos while I eat."
 acceptAlso: "Videos keep me company at meals."
-srsWords: "i" "like" "watching" "videos" "while" "eat" "keep" "me" "company" "at" "meals"
+srsWords: "i" "like" "watch" "video" "while" "eat" "keep" "me" "company" "at" "meal"
 
 ---
 lessonTitle: "Lesson 6: Online Security"
@@ -415,14 +415,14 @@ text: "Translate this sentence into English"
 sentence: "我改了所有密码。"
 answer: "I changed all my passwords."
 acceptAlso: "Every password of mine is new."
-srsWords: "i" "changed" "all" "my" "passwords" "every" "password" "of" "mine" "is" "new"
+srsWords: "i" "change" "all" "my" "password" "every" "password" "of" "mine" "is" "new"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请不要点击陌生链接。"
 answer: "Please do not click on strange links."
 acceptAlso: "Avoid links you do not know."
-srsWords: "please" "do" "not" "click" "on" "strange" "links" "avoid" "you" "know"
+srsWords: "please" "do" "not" "click" "on" "strange" "link" "avoid" "you" "know"
 
 [translation]
 text: "Translate this sentence into English"
@@ -443,21 +443,21 @@ text: "Translate this sentence into English"
 sentence: "我安装了一个杀毒软件。"
 answer: "I put a program on my computer to stop viruses."
 acceptAlso: "Antivirus software is on my computer."
-srsWords: "i" "put" "a" "program" "on" "my" "computer" "to" "stop" "viruses"
+srsWords: "i" "put" "a" "program" "on" "my" "computer" "to" "stop" "virus"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "不要在公共电脑上登录。"
 answer: "Do not log in on a public computer."
 acceptAlso: "Never sign in on shared machines."
-srsWords: "do" "not" "log" "in" "on" "a" "public" "computer" "never" "sign" "shared" "machines"
+srsWords: "do" "not" "log" "in" "on" "a" "public" "computer" "never" "sign" "share" "machine"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这条信息看起来像诈骗。"
 answer: "This message looks like a scam."
 acceptAlso: "It seems to be a fraud message."
-srsWords: "this" "message" "looks" "like" "a" "scam" "it" "seems" "to" "be" "fraud"
+srsWords: "this" "message" "look" "like" "a" "scam" "it" "seem" "to" "be" "fraud"
 
 [translation]
 text: "Translate this sentence into English"
@@ -471,7 +471,7 @@ text: "Translate this sentence into English"
 sentence: "我定期更新系统。"
 answer: "I update my system regularly."
 acceptAlso: "My software is kept up to date."
-srsWords: "i" "update" "my" "system" "regularly" "software" "is" "kept" "up" "to" "date"
+srsWords: "i" "update" "my" "system" "regularly" "software" "is" "keep" "up" "to" "date"
 
 ---
 lessonTitle: "Lesson 7: Smart Home"
@@ -485,42 +485,42 @@ text: "Translate this sentence into English"
 sentence: "我家里有一个智能音箱。"
 answer: "I have a smart speaker at home."
 acceptAlso: "A smart speaker sits in my living room."
-srsWords: "i" "have" "a" "smart" "speaker" "at" "home" "sits" "in" "my" "living" "room"
+srsWords: "i" "have" "a" "smart" "speaker" "at" "home" "sit" "in" "my" "living" "room"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我用手机控制家里的灯。"
 answer: "I control the lights at home with my phone."
 acceptAlso: "My phone switches the lights on and off."
-srsWords: "i" "control" "the" "lights" "at" "home" "with" "my" "phone" "switches" "on" "and" "off"
+srsWords: "i" "control" "the" "light" "at" "home" "with" "my" "phone" "switch" "on" "and" "off"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "空调可以定时。"
 answer: "The air conditioner can be set on a timer."
 acceptAlso: "You can programme the air conditioning."
-srsWords: "the" "air" "conditioner" "can" "be" "set" "on" "a" "timer" "you" "programme" "conditioning"
+srsWords: "the" "air" "conditioner" "can" "be" "set" "on" "a" "timer" "you" "programme" "condition"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请打开窗帘。"
 answer: "Please open the curtains."
 acceptAlso: "Let the curtains open, please."
-srsWords: "please" "open" "the" "curtains" "let"
+srsWords: "please" "open" "the" "curtain" "let"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "传感器检测到有人。"
 answer: "The machine saw someone."
 acceptAlso: "Something moved and the sensor knows."
-srsWords: "the" "machine" "saw" "someone" "something" "moved" "and" "knows"
+srsWords: "the" "machine" "saw" "someone" "something" "move" "and" "know"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我设置了早上七点的闹钟。"
 answer: "I set the alarm for seven in the morning."
 acceptAlso: "The alarm goes off at seven am."
-srsWords: "i" "set" "the" "alarm" "for" "seven" "in" "morning" "goes" "off" "at" "am"
+srsWords: "i" "set" "the" "alarm" "for" "seven" "in" "morning" "go" "off" "at" "am"
 
 [translation]
 text: "Translate this sentence into English"
@@ -541,14 +541,14 @@ text: "Translate this sentence into English"
 sentence: "我可以用语音控制它。"
 answer: "I can control it with my voice."
 acceptAlso: "Voice commands work on it."
-srsWords: "i" "can" "control" "it" "with" "my" "voice" "commands" "work" "on"
+srsWords: "i" "can" "control" "it" "with" "my" "voice" "command" "work" "on"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "智能家居很方便。"
 answer: "A smart home is very convenient."
 acceptAlso: "Smart devices make life easier."
-srsWords: "a" "smart" "home" "is" "very" "convenient" "devices" "make" "life" "easier"
+srsWords: "a" "smart" "home" "is" "very" "convenient" "device" "make" "life" "easier"
 
 ---
 lessonTitle: "Lesson 8: Customer Support"
@@ -569,7 +569,7 @@ text: "Translate this sentence into English"
 sentence: "我打了好几次客服电话。"
 answer: "I called customer service several times."
 acceptAlso: "I rang the support line more than once."
-srsWords: "i" "called" "customer" "service" "several" "times" "rang" "the" "support" "line" "more" "than" "once"
+srsWords: "i" "call" "customer" "service" "several" "times" "ring" "the" "support" "line" "more" "than" "once"
 
 [translation]
 text: "Translate this sentence into English"
@@ -583,7 +583,7 @@ text: "Translate this sentence into English"
 sentence: "我把订单号告诉了他。"
 answer: "I gave him my order number."
 acceptAlso: "He has my order number now."
-srsWords: "i" "gave" "him" "my" "order" "number" "he" "has" "now"
+srsWords: "i" "give" "him" "my" "order" "number" "he" "has" "now"
 
 [translation]
 text: "Translate this sentence into English"
@@ -604,14 +604,14 @@ text: "Translate this sentence into English"
 sentence: "我等了二十分钟。"
 answer: "I waited for twenty minutes."
 acceptAlso: "My wait lasted twenty minutes."
-srsWords: "i" "waited" "for" "twenty" "minutes" "my" "wait" "lasted"
+srsWords: "i" "wait" "for" "twenty" "minute" "my" "wait" "last"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "他们答应退款。"
 answer: "They promised a refund."
 acceptAlso: "A refund was offered by them."
-srsWords: "they" "promised" "a" "refund" "was" "offered" "by" "them"
+srsWords: "they" "promise" "a" "refund" "was" "offer" "by" "them"
 
 [translation]
 text: "Translate this sentence into English"
@@ -625,7 +625,7 @@ text: "Translate this sentence into English"
 sentence: "问题已经解决了。"
 answer: "The problem has been solved."
 acceptAlso: "It is all fixed now."
-srsWords: "the" "problem" "has" "been" "solved" "it" "is" "all" "fixed" "now"
+srsWords: "the" "problem" "has" "been" "solve" "it" "is" "all" "fixed" "now"
 
 ---
 lessonTitle: "Lesson 9: Gadgets"
@@ -639,7 +639,7 @@ text: "Translate this sentence into English"
 sentence: "我买了一块智能手表。"
 answer: "I bought a smart watch."
 acceptAlso: "A smartwatch is my new gadget."
-srsWords: "i" "bought" "a" "smart" "watch" "is" "my" "new"
+srsWords: "i" "buy" "a" "smart" "watch" "is" "my" "new"
 
 [translation]
 text: "Translate this sentence into English"
@@ -653,35 +653,35 @@ text: "Translate this sentence into English"
 sentence: "电池能用一整天。"
 answer: "The battery lasts all day."
 acceptAlso: "One charge is enough for a day."
-srsWords: "the" "battery" "lasts" "all" "day" "one" "charge" "is" "enough" "for" "a"
+srsWords: "the" "battery" "last" "all" "day" "one" "charge" "is" "enough" "for" "a"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请看一下说明书。"
 answer: "Please read the instructions."
 acceptAlso: "Check the manual, please."
-srsWords: "please" "read" "the" "instructions" "check" "manual"
+srsWords: "please" "read" "the" "instruction" "check" "manual"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "充电需要一个小时。"
 answer: "Charging takes one hour."
 acceptAlso: "It needs an hour on the charger."
-srsWords: "charging" "takes" "one" "hour" "it" "needs" "an" "on" "the" "charger"
+srsWords: "charge" "take" "one" "hour" "it" "need" "an" "on" "the" "charger"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我把它和手机配对。"
 answer: "I paired it with my phone."
 acceptAlso: "Phone and gadget are connected."
-srsWords: "i" "paired" "it" "with" "my" "phone" "and" "are" "connected"
+srsWords: "i" "pair" "it" "with" "my" "phone" "and" "are" "connect"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这个功能很有用。"
 answer: "This function is very useful."
 acceptAlso: "The feature comes in handy."
-srsWords: "this" "function" "is" "very" "useful" "the" "feature" "comes" "in" "handy"
+srsWords: "this" "function" "is" "very" "useful" "the" "feature" "come" "in" "handy"
 
 [translation]
 text: "Translate this sentence into English"
@@ -695,14 +695,14 @@ text: "Translate this sentence into English"
 sentence: "我买了一个保护壳。"
 answer: "I bought a protective case."
 acceptAlso: "A case keeps it safe."
-srsWords: "i" "bought" "a" "protective" "case" "keeps" "it" "safe"
+srsWords: "i" "buy" "a" "protective" "case" "keep" "it" "safe"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这个牌子保修两年。"
 answer: "This brand has a two-year warranty."
 acceptAlso: "You get two years of guarantee."
-srsWords: "this" "brand" "has" "a" "two" "year" "warranty" "you" "get" "years" "of" "guarantee"
+srsWords: "this" "brand" "has" "a" "two" "year" "warranty" "you" "get" "year" "of" "guarantee"
 
 ---
 lessonTitle: "Lesson 10: News"
@@ -723,14 +723,14 @@ text: "Translate this sentence into English"
 sentence: "这条新闻很重要。"
 answer: "This news is very important."
 acceptAlso: "The story matters a lot."
-srsWords: "this" "news" "is" "very" "important" "the" "story" "matters" "a" "lot"
+srsWords: "this" "news" "is" "very" "important" "the" "story" "matter" "a" "lot"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我在收音机里听到的。"
 answer: "I heard it on the radio."
 acceptAlso: "It came over the radio."
-srsWords: "i" "heard" "it" "on" "the" "radio" "came" "over"
+srsWords: "i" "hear" "it" "on" "the" "radio" "come" "over"
 
 [translation]
 text: "Translate this sentence into English"
@@ -744,21 +744,21 @@ text: "Translate this sentence into English"
 sentence: "报纸上说会下雨。"
 answer: "The newspaper says it will rain."
 acceptAlso: "Rain is in today's paper."
-srsWords: "the" "newspaper" "says" "it" "will" "rain" "is" "in" "today's" "paper"
+srsWords: "the" "newspaper" "say" "it" "will" "rain" "is" "in" "today's" "paper"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我关注国际新闻。"
 answer: "I follow international news."
 acceptAlso: "World news interests me."
-srsWords: "i" "follow" "international" "news" "world" "interests" "me"
+srsWords: "i" "follow" "international" "news" "world" "interest" "me"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这个消息还没有被证实。"
 answer: "This news has not been confirmed."
 acceptAlso: "Nobody has confirmed the report yet."
-srsWords: "this" "news" "has" "not" "been" "confirmed" "nobody" "the" "report" "yet"
+srsWords: "this" "news" "has" "not" "been" "confirm" "nobody" "the" "report" "yet"
 
 [translation]
 text: "Translate this sentence into English"
@@ -772,14 +772,14 @@ text: "Translate this sentence into English"
 sentence: "请不要相信谣言。"
 answer: "Please do not believe the stories."
 acceptAlso: "Stay away from rumours, please."
-srsWords: "please" "do" "not" "believe" "the" "stories" "stay" "away" "from"
+srsWords: "please" "do" "not" "believe" "the" "story" "stay" "away" "from"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "新闻让我了解世界。"
 answer: "The news helps me understand the world."
 acceptAlso: "Reading news teaches me about the world."
-srsWords: "the" "news" "helps" "me" "understand" "world" "reading" "teaches" "about"
+srsWords: "the" "news" "help" "me" "understand" "world" "reading" "teach" "about"
 ---
 lessonTitle: "Lesson 11: Expressing Joy"
 description: "Translate A2 sentences about Expressing Joy"
@@ -806,21 +806,21 @@ text: "Translate this sentence into English"
 sentence: "听到这个我很高兴。"
 answer: "I am glad to hear that."
 acceptAlso: "That makes me happy to hear."
-srsWords: "i" "am" "glad" "to" "hear" "that" "makes" "me" "happy"
+srsWords: "i" "am" "glad" "to" "hear" "that" "make" "me" "happy"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "她笑得很开心。"
 answer: "She is smiling happily."
 acceptAlso: "She has a big smile on her face."
-srsWords: "she" "is" "smiling" "happily" "has" "a" "big" "smile" "on" "her" "face"
+srsWords: "she" "is" "smile" "happily" "has" "a" "big" "smile" "on" "her" "face"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我激动得睡不着。"
 answer: "I am too excited to sleep."
 acceptAlso: "Excitement kept me awake."
-srsWords: "i" "am" "too" "excited" "to" "sleep" "excitement" "kept" "me" "awake"
+srsWords: "i" "am" "too" "excited" "to" "sleep" "excitement" "keep" "me" "awake"
 
 [translation]
 text: "Translate this sentence into English"
@@ -834,7 +834,7 @@ text: "Translate this sentence into English"
 sentence: "我为我的朋友感到高兴。"
 answer: "I am happy for my friend."
 acceptAlso: "My friend's success makes me glad."
-srsWords: "i" "am" "happy" "for" "my" "friend" "friend's" "success" "makes" "me" "glad"
+srsWords: "i" "am" "happy" "for" "my" "friend" "friend's" "success" "make" "me" "glad"
 
 [translation]
 text: "Translate this sentence into English"
@@ -869,21 +869,21 @@ text: "Translate this sentence into English"
 sentence: "她是我最好的朋友。"
 answer: "She is my best friend."
 acceptAlso: "My closest friend is her."
-srsWords: "she" "is" "my" "best" "friend" "closest" "her"
+srsWords: "she" "is" "my" "best" "friend" "close" "her"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们认识十年了。"
 answer: "We have known each other for ten years."
 acceptAlso: "Our friendship is ten years old."
-srsWords: "we" "have" "known" "each" "other" "for" "ten" "years" "our" "friendship" "is" "old"
+srsWords: "we" "have" "known" "each" "other" "for" "ten" "year" "our" "friendship" "is" "old"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "朋友对我很重要。"
 answer: "Friends are very important to me."
 acceptAlso: "My friends mean a lot to me."
-srsWords: "friends" "are" "very" "important" "to" "me" "my" "mean" "a" "lot"
+srsWords: "friend" "are" "very" "important" "to" "me" "my" "mean" "a" "lot"
 
 [translation]
 text: "Translate this sentence into English"
@@ -897,7 +897,7 @@ text: "Translate this sentence into English"
 sentence: "我们互相帮助。"
 answer: "We help each other."
 acceptAlso: "Helping one another is what we do."
-srsWords: "we" "help" "each" "other" "helping" "one" "another" "is" "what" "do"
+srsWords: "we" "help" "each" "other" "help" "one" "another" "is" "what" "do"
 
 [translation]
 text: "Translate this sentence into English"
@@ -911,21 +911,21 @@ text: "Translate this sentence into English"
 sentence: "我朋友总是支持我。"
 answer: "My friends always support me."
 acceptAlso: "I can count on my friends."
-srsWords: "my" "friends" "always" "support" "me" "i" "can" "count" "on"
+srsWords: "my" "friend" "always" "support" "me" "i" "can" "count" "on"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们很久没见面了。"
 answer: "We have not seen each other for a long time."
 acceptAlso: "It has been ages since we met."
-srsWords: "we" "have" "not" "seen" "each" "other" "for" "a" "long" "time" "it" "has" "been" "ages" "since" "met"
+srsWords: "we" "have" "not" "see" "each" "other" "for" "a" "long" "time" "it" "has" "been" "age" "since" "meet"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "好朋友会说实话。"
 answer: "A good friend tells the truth."
 acceptAlso: "True friends are honest with you."
-srsWords: "a" "good" "friend" "tells" "the" "truth" "true" "friends" "are" "honest" "with" "you"
+srsWords: "a" "good" "friend" "tell" "the" "truth" "true" "friend" "are" "honest" "with" "you"
 
 [translation]
 text: "Translate this sentence into English"
@@ -960,7 +960,7 @@ text: "Translate this sentence into English"
 sentence: "我们昨天吵了一架。"
 answer: "We had an argument yesterday."
 acceptAlso: "Yesterday we quarrelled with each other."
-srsWords: "we" "had" "an" "argument" "yesterday" "quarrelled" "with" "each" "other"
+srsWords: "we" "had" "an" "argument" "yesterday" "quarrel" "with" "each" "other"
 
 [translation]
 text: "Translate this sentence into English"
@@ -974,7 +974,7 @@ text: "Translate this sentence into English"
 sentence: "我觉得你误会我了。"
 answer: "I think you misunderstood me."
 acceptAlso: "That is not what I meant."
-srsWords: "i" "think" "you" "misunderstood" "me" "that" "is" "not" "what" "meant"
+srsWords: "i" "think" "you" "misunderstand" "me" "that" "is" "not" "what" "mean"
 
 [translation]
 text: "Translate this sentence into English"
@@ -988,7 +988,7 @@ text: "Translate this sentence into English"
 sentence: "双方都有道理。"
 answer: "Both sides have a point."
 acceptAlso: "Each of you is partly right."
-srsWords: "both" "sides" "have" "a" "point" "each" "of" "you" "is" "partly" "right"
+srsWords: "both" "side" "have" "a" "point" "each" "of" "you" "is" "partly" "right"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1002,14 +1002,14 @@ text: "Translate this sentence into English"
 sentence: "我们最后和好了。"
 answer: "We made up in the end."
 acceptAlso: "In the end we became friends again."
-srsWords: "we" "made" "up" "in" "the" "end" "became" "friends" "again"
+srsWords: "we" "make" "up" "in" "the" "end" "become" "friend" "again"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "吵架解决不了问题。"
 answer: "Arguing does not solve the problem."
 acceptAlso: "Fighting will not fix anything."
-srsWords: "arguing" "does" "not" "solve" "the" "problem" "fighting" "will" "fix" "anything"
+srsWords: "argue" "does" "not" "solve" "the" "problem" "fighting" "will" "fix" "anything"
 
 ---
 lessonTitle: "Lesson 14: Making Plans"
@@ -1037,7 +1037,7 @@ text: "Translate this sentence into English"
 sentence: "我们把时间定在三点。"
 answer: "Let us set the time at three."
 acceptAlso: "Three o'clock works for us."
-srsWords: "let" "us" "set" "the" "time" "at" "three" "o'clock" "works" "for"
+srsWords: "let" "us" "set" "the" "time" "at" "three" "o'clock" "work" "for"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1051,14 +1051,14 @@ text: "Translate this sentence into English"
 sentence: "我改变计划了。"
 answer: "I have changed my plan."
 acceptAlso: "My plans are different now."
-srsWords: "i" "have" "changed" "my" "plan" "plans" "are" "different" "now"
+srsWords: "i" "have" "change" "my" "plan" "plan" "are" "different" "now"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "如果下雨我们就不去。"
 answer: "If it rains, we will not go."
 acceptAlso: "Rain means we stay home."
-srsWords: "if" "it" "rains" "we" "will" "not" "go" "rain" "means" "stay" "home"
+srsWords: "if" "it" "rain" "we" "will" "not" "go" "rain" "means" "stay" "home"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1086,7 +1086,7 @@ text: "Translate this sentence into English"
 sentence: "这个计划听起来不错。"
 answer: "The plan sounds good."
 acceptAlso: "That is a good idea."
-srsWords: "the" "plan" "sounds" "good" "that" "is" "a" "idea"
+srsWords: "the" "plan" "sound" "good" "that" "is" "a" "idea"
 
 ---
 lessonTitle: "Lesson 15: Giving Advice"
@@ -1114,7 +1114,7 @@ text: "Translate this sentence into English"
 sentence: "我建议你早点出发。"
 answer: "I suggest you leave early."
 acceptAlso: "Leaving early would be better."
-srsWords: "i" "suggest" "you" "leave" "early" "leaving" "would" "be" "better"
+srsWords: "i" "suggest" "you" "leave" "early" "leave" "would" "be" "better"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1177,7 +1177,7 @@ text: "Translate this sentence into English"
 sentence: "非常感谢你的帮助。"
 answer: "Thank you very much for your help."
 acceptAlso: "Thanks a lot for helping me."
-srsWords: "thank" "you" "very" "much" "for" "your" "help" "thanks" "a" "lot" "helping" "me"
+srsWords: "thank" "you" "very" "much" "for" "your" "help" "thanks" "a" "lot" "help" "me"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1191,7 +1191,7 @@ text: "Translate this sentence into English"
 sentence: "谢谢你给我这个机会。"
 answer: "Thank you for giving me this chance."
 acceptAlso: "I am thankful for this opportunity."
-srsWords: "thank" "you" "for" "giving" "me" "this" "chance" "i" "am" "thankful" "opportunity"
+srsWords: "thank" "you" "for" "give" "me" "this" "chance" "i" "am" "thankful" "opportunity"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1282,7 +1282,7 @@ text: "Translate this sentence into English"
 sentence: "我向你道歉。"
 answer: "I apologise to you."
 acceptAlso: "My apologies to you."
-srsWords: "i" "apologise" "to" "you" "my" "apologies"
+srsWords: "i" "apologise" "to" "you" "my" "apology"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1296,14 +1296,14 @@ text: "Translate this sentence into English"
 sentence: "抱歉打扰你了。"
 answer: "Sorry to disturb you."
 acceptAlso: "I am sorry for interrupting you."
-srsWords: "sorry" "to" "disturb" "you" "i" "am" "for" "interrupting"
+srsWords: "sorry" "to" "disturb" "you" "i" "am" "for" "interrupt"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我说错话了。"
 answer: "I said the wrong thing."
 acceptAlso: "My words came out wrong."
-srsWords: "i" "said" "the" "wrong" "thing" "my" "words" "came" "out"
+srsWords: "i" "say" "the" "wrong" "thing" "my" "word" "come" "out"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1338,42 +1338,42 @@ text: "Translate this sentence into English"
 sentence: "我的梦想是环游世界。"
 answer: "My dream is to travel around the world."
 acceptAlso: "I dream of seeing the whole world."
-srsWords: "my" "dream" "is" "to" "travel" "around" "the" "world" "i" "of" "seeing" "whole"
+srsWords: "my" "dream" "is" "to" "travel" "around" "the" "world" "i" "of" "see" "whole"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我打算明年换工作。"
 answer: "I plan to change jobs next year."
 acceptAlso: "Next year I will look for a new job."
-srsWords: "i" "plan" "to" "change" "jobs" "next" "year" "will" "look" "for" "a" "new" "job"
+srsWords: "i" "plan" "to" "change" "job" "next" "year" "will" "look" "for" "a" "new" "job"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我想开一家自己的店。"
 answer: "I want to open my own shop."
 acceptAlso: "Having my own store is my plan."
-srsWords: "i" "want" "to" "open" "my" "own" "shop" "having" "store" "is" "plan"
+srsWords: "i" "want" "to" "open" "my" "own" "shop" "have" "store" "is" "plan"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我希望五年内到国外工作。"
 answer: "I hope to work abroad within five years."
 acceptAlso: "Working overseas in five years is my hope."
-srsWords: "i" "hope" "to" "work" "abroad" "within" "five" "years" "working" "overseas" "in" "is" "my"
+srsWords: "i" "hope" "to" "work" "abroad" "within" "five" "year" "working" "overseas" "in" "is" "my"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请为未来做计划。"
 answer: "Please make plans for the future."
 acceptAlso: "Plan ahead for your future, please."
-srsWords: "please" "make" "plans" "for" "the" "future" "plan" "ahead" "your"
+srsWords: "please" "make" "plan" "for" "the" "future" "plan" "ahead" "your"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我正在存钱买房子。"
 answer: "I am saving money to buy a house."
 acceptAlso: "Money is being saved for a home."
-srsWords: "i" "am" "saving" "money" "to" "buy" "a" "house" "is" "being" "saved" "for" "home"
+srsWords: "i" "am" "saving" "money" "to" "buy" "a" "house" "is" "being" "save" "for" "home"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1387,14 +1387,14 @@ text: "Translate this sentence into English"
 sentence: "我每天朝目标努力一点。"
 answer: "I work a little towards my goal every day."
 acceptAlso: "Each day I move closer to my goal."
-srsWords: "i" "work" "a" "little" "towards" "my" "goal" "every" "day" "each" "move" "closer" "to"
+srsWords: "i" "work" "a" "little" "towards" "my" "goal" "every" "day" "each" "move" "close" "to"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我相信未来会更好。"
 answer: "I believe the future will be better."
 acceptAlso: "Things will get better, I am sure."
-srsWords: "i" "believe" "the" "future" "will" "be" "better" "things" "get" "am" "sure"
+srsWords: "i" "believe" "the" "future" "will" "be" "better" "thing" "get" "am" "sure"
 
 ---
 lessonTitle: "Lesson 19: Childhood Memories"
@@ -1408,21 +1408,21 @@ text: "Translate this sentence into English"
 sentence: "我小时候住在乡下。"
 answer: "I lived in the countryside when I was a child."
 acceptAlso: "As a child I grew up in the country."
-srsWords: "i" "lived" "in" "the" "countryside" "when" "was" "a" "child" "as" "grew" "up" "country"
+srsWords: "i" "live" "in" "the" "countryside" "when" "was" "a" "child" "as" "grow" "up" "country"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我记得我的第一位老师。"
 answer: "I remember my first teacher."
 acceptAlso: "My first teacher stays in my memory."
-srsWords: "i" "remember" "my" "first" "teacher" "stays" "in" "memory"
+srsWords: "i" "remember" "my" "first" "teacher" "stay" "in" "memory"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们以前常常在河边玩。"
 answer: "We used to play by the river."
 acceptAlso: "Playing by the river was our childhood."
-srsWords: "we" "used" "to" "play" "by" "the" "river" "playing" "was" "our" "childhood"
+srsWords: "we" "used" "to" "play" "by" "the" "river" "play" "was" "our" "childhood"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1443,7 +1443,7 @@ text: "Translate this sentence into English"
 sentence: "那些照片让我想起了往事。"
 answer: "Those photos remind me of the past."
 acceptAlso: "The pictures bring back old memories."
-srsWords: "those" "photos" "remind" "me" "of" "the" "past" "pictures" "bring" "back" "old" "memories"
+srsWords: "those" "photo" "remind" "me" "of" "the" "past" "picture" "bring" "back" "old" "memory"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1464,14 +1464,14 @@ text: "Translate this sentence into English"
 sentence: "时间过得真快。"
 answer: "Time passes very quickly."
 acceptAlso: "How time flies."
-srsWords: "time" "passes" "very" "quickly" "how" "flies"
+srsWords: "time" "pass" "very" "quickly" "how" "fly"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我很想念那些日子。"
 answer: "I miss those days very much."
 acceptAlso: "Those times are deeply missed."
-srsWords: "i" "miss" "those" "days" "very" "much" "times" "are" "deeply" "missed"
+srsWords: "i" "miss" "those" "day" "very" "much" "times" "are" "deeply" "miss"
 
 ---
 lessonTitle: "Lesson 20: Celebrations"
@@ -1492,14 +1492,14 @@ text: "Translate this sentence into English"
 sentence: "我们为你准备了一个蛋糕。"
 answer: "We prepared a cake for you."
 acceptAlso: "There is a cake waiting for you."
-srsWords: "we" "prepared" "a" "cake" "for" "you" "there" "is" "waiting"
+srsWords: "we" "prepared" "a" "cake" "for" "you" "there" "is" "wait"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请吹蜡烛。"
 answer: "Please blow out the candles."
 acceptAlso: "Blow the candles out, please."
-srsWords: "please" "blow" "out" "the" "candles"
+srsWords: "please" "blow" "out" "the" "candle"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1513,28 +1513,28 @@ text: "Translate this sentence into English"
 sentence: "我邀请了很多朋友。"
 answer: "I invited many friends."
 acceptAlso: "A lot of friends were invited by me."
-srsWords: "i" "invited" "many" "friends" "a" "lot" "of" "were" "by" "me"
+srsWords: "i" "invite" "many" "friend" "a" "lot" "of" "were" "by" "me"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "大家一起唱了歌。"
 answer: "Everyone sang together."
 acceptAlso: "We all joined in the singing."
-srsWords: "everyone" "sang" "together" "we" "all" "joined" "in" "the" "singing"
+srsWords: "everyone" "sing" "together" "we" "all" "join" "in" "the" "singing"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "春节是中国最重要的节日。"
 answer: "Spring Festival is the most important festival in China."
 acceptAlso: "Chinese New Year matters most in China."
-srsWords: "spring" "festival" "is" "the" "most" "important" "in" "china" "chinese" "new" "year" "matters"
+srsWords: "spring" "festival" "is" "the" "most" "important" "in" "china" "chinese" "new" "year" "matter"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们互相送礼物。"
 answer: "We give each other gifts."
 acceptAlso: "Presents are exchanged among us."
-srsWords: "we" "give" "each" "other" "gifts" "presents" "are" "exchanged" "among" "us"
+srsWords: "we" "give" "each" "other" "gift" "present" "are" "exchange" "among" "us"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1548,5 +1548,5 @@ text: "Translate this sentence into English"
 sentence: "这是一个值得纪念的日子。"
 answer: "This is a day worth remembering."
 acceptAlso: "We will remember this day."
-srsWords: "this" "is" "a" "day" "worth" "remembering" "we" "will" "remember"
+srsWords: "this" "is" "a" "day" "worth" "remember" "we" "will" "remember"
 

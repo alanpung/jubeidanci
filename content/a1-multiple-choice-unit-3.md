@@ -373,7 +373,7 @@ choices:
   - "polo"
   - "horse riding" (correct)
   - "skiing"
-srsWords: "horse riding"
+srsWords: "horse ride"
 
 [multiple-choice]
 text: "Which sport involves climbing up a rock face?"
@@ -497,7 +497,7 @@ choices:
   - "moons"
   - "stars" (correct)
   - "clouds"
-srsWords: "stars"
+srsWords: "star"
 
 [multiple-choice]
 text: "What falls down from a cliff or mountain as water?"
@@ -889,7 +889,7 @@ choices:
   - "dryer"
   - "washing machine" (correct)
   - "vacuum cleaner"
-srsWords: "washing machine"
+srsWords: "wash machine"
 
 [multiple-choice]
 text: "What do you use to clean floors by sucking up dirt?"
@@ -1281,7 +1281,7 @@ choices:
   - "microphone"
   - "headphones" (correct)
   - "earrings"
-srsWords: "headphones"
+srsWords: "headphone"
 
 [multiple-choice]
 text: "What is the global network of computers?"
@@ -1378,7 +1378,7 @@ choices:
   - "shopping"
   - "baking" (correct)
   - "frying"
-srsWords: "baking"
+srsWords: "bake"
 
 [multiple-choice]
 text: "What do you do when you travel to new places?"
@@ -1387,7 +1387,7 @@ choices:
   - "camping"
   - "travelling" (correct)
   - "exploring"
-srsWords: "travelling"
+srsWords: "travel"
 
 [multiple-choice]
 text: "What do you do when you walk in the countryside for fun?"
@@ -1405,7 +1405,7 @@ choices:
   - "weaving"
   - "sewing" (correct)
   - "crafting"
-srsWords: "sewing"
+srsWords: "sew"
 
 [multiple-choice]
 text: "What do you do when you make wool into clothes using needles?"
@@ -1450,7 +1450,7 @@ choices:
   - "drawing"
   - "visiting" (correct)
   - "reading"
-srsWords: "visiting"
+srsWords: "visit"
 
 [multiple-choice]
 text: "What do you call playing video games?"
@@ -1459,7 +1459,7 @@ choices:
   - "reading"
   - "gaming" (correct)
   - "computing"
-srsWords: "gaming"
+srsWords: "game"
 
 [multiple-choice]
 text: "What do you call looking for things to buy in shops?"
@@ -1477,7 +1477,7 @@ choices:
   - "reading"
   - "watching films" (correct)
   - "listening"
-srsWords: "films"
+srsWords: "film"
 
 [multiple-choice]
 text: "What do you do when you write words in a creative way?"
@@ -1504,7 +1504,7 @@ choices:
   - "drawing"
   - "puzzles" (correct)
   - "crafting"
-srsWords: "puzzles"
+srsWords: "puzzle"
 
 ---
 lessonTitle: "Lesson 9: Describing People"
@@ -1797,7 +1797,7 @@ choices:
   - "paying"
   - "browsing" (correct)
   - "returning"
-srsWords: "browsing"
+srsWords: "browse"
 
 [multiple-choice]
 text: "What do you call a person who buys things in a shop?"

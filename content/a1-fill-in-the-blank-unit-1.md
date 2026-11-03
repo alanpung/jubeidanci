@@ -26,7 +26,7 @@ srsWords: "wake"
 [fill-in-the-blank]
 sentence: "She ___ her teeth after breakfast."
 blank: "brushes"
-srsWords: "brushes"
+srsWords: "brush"
 
 [fill-in-the-blank]
 sentence: "He takes a ___ every morning."
@@ -41,12 +41,12 @@ srsWords: "eat"
 [fill-in-the-blank]
 sentence: "She ___ orange juice with her breakfast."
 blank: "drinks"
-srsWords: "drinks"
+srsWords: "drink"
 
 [fill-in-the-blank]
 sentence: "He ___ his bag before school."
 blank: "packs"
-srsWords: "packs"
+srsWords: "pack"
 
 [fill-in-the-blank]
 sentence: "I ___ dressed in the morning."
@@ -56,12 +56,12 @@ srsWords: "get"
 [fill-in-the-blank]
 sentence: "She ___ her hair every morning."
 blank: "combs"
-srsWords: "combs"
+srsWords: "comb"
 
 [fill-in-the-blank]
 sentence: "He ___ to school by bus."
 blank: "goes"
-srsWords: "goes"
+srsWords: "go"
 
 [fill-in-the-blank]
 sentence: "I ___ coffee before work."
@@ -71,37 +71,37 @@ srsWords: "drink"
 [fill-in-the-blank]
 sentence: "She ___ her alarm at six thirty."
 blank: "sets"
-srsWords: "sets"
+srsWords: "set"
 
 [fill-in-the-blank]
 sentence: "He ___ up late on weekends."
 blank: "wakes"
-srsWords: "wakes"
+srsWords: "wake"
 
 [fill-in-the-blank]
 sentence: "I wash my ___ before eating."
 blank: "hands"
-srsWords: "hands"
+srsWords: "hand"
 
 [fill-in-the-blank]
 sentence: "She ___ breakfast with her family."
 blank: "eats"
-srsWords: "eats"
+srsWords: "eat"
 
 [fill-in-the-blank]
 sentence: "He ___ his face every morning."
 blank: "washes"
-srsWords: "washes"
+srsWords: "wash"
 
 [fill-in-the-blank]
 sentence: "I put on my ___ before I go out."
 blank: "shoes"
-srsWords: "shoes"
+srsWords: "shoe"
 
 [fill-in-the-blank]
 sentence: "She ___ to work by train."
 blank: "travels"
-srsWords: "travels"
+srsWords: "travel"
 
 [fill-in-the-blank]
 sentence: "He makes his ___ every morning."
@@ -116,7 +116,7 @@ srsWords: "check"
 [fill-in-the-blank]
 sentence: "She ___ her coat before going outside."
 blank: "wears"
-srsWords: "wears"
+srsWords: "wear"
 
 ---
 lessonTitle: "Lesson 2: At School"
@@ -138,7 +138,7 @@ srsWords: "does"
 [fill-in-the-blank]
 sentence: "He ___ in the front row of the classroom."
 blank: "sits"
-srsWords: "sits"
+srsWords: "sit"
 
 [fill-in-the-blank]
 sentence: "I ___ my notebook and pen."
@@ -148,12 +148,12 @@ srsWords: "open"
 [fill-in-the-blank]
 sentence: "She ___ questions in class."
 blank: "asks"
-srsWords: "asks"
+srsWords: "ask"
 
 [fill-in-the-blank]
 sentence: "He ___ the teacher carefully."
 blank: "listens"
-srsWords: "listens"
+srsWords: "listen"
 
 [fill-in-the-blank]
 sentence: "I ___ notes during the lesson."
@@ -163,12 +163,12 @@ srsWords: "take"
 [fill-in-the-blank]
 sentence: "She ___ the answers on the board."
 blank: "writes"
-srsWords: "writes"
+srsWords: "write"
 
 [fill-in-the-blank]
 sentence: "He ___ lunch at the school canteen."
 blank: "eats"
-srsWords: "eats"
+srsWords: "eat"
 
 [fill-in-the-blank]
 sentence: "I ___ with my friends at break time."
@@ -178,12 +178,12 @@ srsWords: "play"
 [fill-in-the-blank]
 sentence: "She ___ a book in the library."
 blank: "reads"
-srsWords: "reads"
+srsWords: "read"
 
 [fill-in-the-blank]
 sentence: "He ___ his test to the teacher."
 blank: "gives"
-srsWords: "gives"
+srsWords: "give"
 
 [fill-in-the-blank]
 sentence: "I ___ my bag at the end of school."
@@ -193,12 +193,12 @@ srsWords: "pack"
 [fill-in-the-blank]
 sentence: "She ___ home after school."
 blank: "walks"
-srsWords: "walks"
+srsWords: "walk"
 
 [fill-in-the-blank]
 sentence: "He ___ his friends in the playground."
 blank: "meets"
-srsWords: "meets"
+srsWords: "meet"
 
 [fill-in-the-blank]
 sentence: "I ___ the classroom at the end of class."
@@ -208,12 +208,12 @@ srsWords: "leave"
 [fill-in-the-blank]
 sentence: "She ___ her pencil case in her bag."
 blank: "puts"
-srsWords: "puts"
+srsWords: "put"
 
 [fill-in-the-blank]
 sentence: "He ___ English on Monday and Thursday."
 blank: "studies"
-srsWords: "studies"
+srsWords: "study"
 
 [fill-in-the-blank]
 sentence: "I ___ my homework after dinner."
@@ -223,7 +223,7 @@ srsWords: "finish"
 [fill-in-the-blank]
 sentence: "She ___ to the teacher when she needs help."
 blank: "talks"
-srsWords: "talks"
+srsWords: "talk"
 
 ---
 lessonTitle: "Lesson 3: Meals & Food"
@@ -245,7 +245,7 @@ srsWords: "has"
 [fill-in-the-blank]
 sentence: "He ___ dinner with his family."
 blank: "eats"
-srsWords: "eats"
+srsWords: "eat"
 
 [fill-in-the-blank]
 sentence: "I ___ hungry after school."
@@ -270,17 +270,17 @@ srsWords: "fruit"
 [fill-in-the-blank]
 sentence: "She ___ water with every meal."
 blank: "drinks"
-srsWords: "drinks"
+srsWords: "drink"
 
 [fill-in-the-blank]
 sentence: "He ___ rice for dinner."
 blank: "cooks"
-srsWords: "cooks"
+srsWords: "cook"
 
 [fill-in-the-blank]
 sentence: "I always ___ vegetables at lunch."
 blank: "eat"
-srsWords: "vegetables"
+srsWords: "vegetable"
 
 [fill-in-the-blank]
 sentence: "She ___ an apple as a snack."
@@ -290,12 +290,12 @@ srsWords: "apple"
 [fill-in-the-blank]
 sentence: "He ___ the table before dinner."
 blank: "sets"
-srsWords: "sets"
+srsWords: "set"
 
 [fill-in-the-blank]
 sentence: "I ___ the dishes after every meal."
 blank: "wash"
-srsWords: "dishes"
+srsWords: "dish"
 
 [fill-in-the-blank]
 sentence: "She ___ hungry at three o'clock."
@@ -315,7 +315,7 @@ srsWords: "snack"
 [fill-in-the-blank]
 sentence: "She ___ eggs for breakfast."
 blank: "fries"
-srsWords: "eggs"
+srsWords: "egg"
 
 [fill-in-the-blank]
 sentence: "He ___ full after a big meal."
@@ -367,7 +367,7 @@ srsWords: "taxi"
 [fill-in-the-blank]
 sentence: "He ___ his car to work."
 blank: "drives"
-srsWords: "drives"
+srsWords: "drive"
 
 [fill-in-the-blank]
 sentence: "I wait for the bus at the ___ stop."
@@ -382,7 +382,7 @@ srsWords: "subway"
 [fill-in-the-blank]
 sentence: "He ___ his bike to school."
 blank: "rides"
-srsWords: "rides"
+srsWords: "ride"
 
 [fill-in-the-blank]
 sentence: "I ___ off the bus near my house."
@@ -397,7 +397,7 @@ srsWords: "traffic"
 [fill-in-the-blank]
 sentence: "He ___ his seat on the train."
 blank: "finds"
-srsWords: "finds"
+srsWords: "find"
 
 [fill-in-the-blank]
 sentence: "I ___ the door open for other passengers."
@@ -422,12 +422,12 @@ srsWords: "travel"
 [fill-in-the-blank]
 sentence: "She ___ her bag under the seat."
 blank: "puts"
-srsWords: "puts"
+srsWords: "put"
 
 [fill-in-the-blank]
 sentence: "He ___ off the bike carefully."
 blank: "gets"
-srsWords: "gets"
+srsWords: "get"
 
 [fill-in-the-blank]
 sentence: "I ___ the bus every morning at half past seven."
@@ -437,7 +437,7 @@ srsWords: "catch"
 [fill-in-the-blank]
 sentence: "She ___ the window seat on the train."
 blank: "prefers"
-srsWords: "prefers"
+srsWords: "prefer"
 
 ---
 lessonTitle: "Lesson 5: Work & Jobs"
@@ -459,7 +459,7 @@ srsWords: "teacher"
 [fill-in-the-blank]
 sentence: "He ___ emails at his desk every morning."
 blank: "reads"
-srsWords: "emails"
+srsWords: "email"
 
 [fill-in-the-blank]
 sentence: "I have a ___ at lunchtime."
@@ -489,7 +489,7 @@ srsWords: "break"
 [fill-in-the-blank]
 sentence: "He ___ with his colleagues every day."
 blank: "talks"
-srsWords: "colleagues"
+srsWords: "colleague"
 
 [fill-in-the-blank]
 sentence: "I ___ work at five o'clock."
@@ -509,7 +509,7 @@ srsWords: "uniform"
 [fill-in-the-blank]
 sentence: "I ___ customers at a shop."
 blank: "help"
-srsWords: "customers"
+srsWords: "customer"
 
 [fill-in-the-blank]
 sentence: "She ___ her boss every morning."
@@ -544,7 +544,7 @@ srsWords: "salary"
 [fill-in-the-blank]
 sentence: "She ___ her desk at the end of the day."
 blank: "tidies"
-srsWords: "tidies"
+srsWords: "tidy"
 
 ---
 lessonTitle: "Lesson 6: Leisure & Hobbies"
@@ -566,7 +566,7 @@ srsWords: "guitar"
 [fill-in-the-blank]
 sentence: "He ___ in the park on weekends."
 blank: "runs"
-srsWords: "runs"
+srsWords: "run"
 
 [fill-in-the-blank]
 sentence: "I ___ books before I go to sleep."
@@ -576,7 +576,7 @@ srsWords: "read"
 [fill-in-the-blank]
 sentence: "She ___ photos with her camera."
 blank: "takes"
-srsWords: "photos"
+srsWords: "photo"
 
 [fill-in-the-blank]
 sentence: "He ___ to music on his phone."
@@ -591,12 +591,12 @@ srsWords: "swimming"
 [fill-in-the-blank]
 sentence: "She ___ pictures in her sketchbook."
 blank: "draws"
-srsWords: "draws"
+srsWords: "draw"
 
 [fill-in-the-blank]
 sentence: "He ___ video games with his brother."
 blank: "plays"
-srsWords: "games"
+srsWords: "game"
 
 [fill-in-the-blank]
 sentence: "I ___ my friends at the weekend."
@@ -631,7 +631,7 @@ srsWords: "chess"
 [fill-in-the-blank]
 sentence: "I ___ online videos in the evening."
 blank: "watch"
-srsWords: "videos"
+srsWords: "video"
 
 [fill-in-the-blank]
 sentence: "She ___ her dog in the park every day."
@@ -641,7 +641,7 @@ srsWords: "dog"
 [fill-in-the-blank]
 sentence: "He ___ stamps as a hobby."
 blank: "collects"
-srsWords: "stamps"
+srsWords: "stamp"
 
 [fill-in-the-blank]
 sentence: "I ___ for a walk after dinner."
@@ -683,7 +683,7 @@ srsWords: "clean"
 [fill-in-the-blank]
 sentence: "She ___ the dishes after dinner."
 blank: "washes"
-srsWords: "washes"
+srsWords: "wash"
 
 [fill-in-the-blank]
 sentence: "He ___ the vacuum cleaner in the living room."
@@ -693,27 +693,27 @@ srsWords: "vacuum"
 [fill-in-the-blank]
 sentence: "I ___ the plants every two days."
 blank: "water"
-srsWords: "plants"
+srsWords: "plant"
 
 [fill-in-the-blank]
 sentence: "She ___ the groceries at the supermarket."
 blank: "buys"
-srsWords: "groceries"
+srsWords: "grocery"
 
 [fill-in-the-blank]
 sentence: "He ___ the bed before he leaves the house."
 blank: "makes"
-srsWords: "makes"
+srsWords: "make"
 
 [fill-in-the-blank]
 sentence: "I ___ the windows on the weekend."
 blank: "clean"
-srsWords: "windows"
+srsWords: "window"
 
 [fill-in-the-blank]
 sentence: "She ___ the clothes after she washes them."
 blank: "folds"
-srsWords: "folds"
+srsWords: "fold"
 
 [fill-in-the-blank]
 sentence: "He ___ dinner for the family."
@@ -728,7 +728,7 @@ srsWords: "set"
 [fill-in-the-blank]
 sentence: "She ___ the lights when she leaves a room."
 blank: "turns off"
-srsWords: "lights"
+srsWords: "light"
 
 [fill-in-the-blank]
 sentence: "He ___ the garden on Sunday afternoons."
@@ -743,7 +743,7 @@ srsWords: "bathroom"
 [fill-in-the-blank]
 sentence: "She ___ the sofa cushions every morning."
 blank: "straightens"
-srsWords: "straightens"
+srsWords: "straighten"
 
 [fill-in-the-blank]
 sentence: "He ___ the food in the fridge."
@@ -758,7 +758,7 @@ srsWords: "mop"
 [fill-in-the-blank]
 sentence: "She ___ the cat every day."
 blank: "feeds"
-srsWords: "feeds"
+srsWords: "feed"
 
 ---
 lessonTitle: "Lesson 8: Evening Routine"
@@ -775,12 +775,12 @@ srsWords: "arrive"
 [fill-in-the-blank]
 sentence: "She ___ dinner for the family."
 blank: "cooks"
-srsWords: "cooks"
+srsWords: "cook"
 
 [fill-in-the-blank]
 sentence: "He ___ television after dinner."
 blank: "watches"
-srsWords: "watches"
+srsWords: "watch"
 
 [fill-in-the-blank]
 sentence: "I ___ a bath before bed."
@@ -790,12 +790,12 @@ srsWords: "bath"
 [fill-in-the-blank]
 sentence: "She ___ her teeth before sleeping."
 blank: "brushes"
-srsWords: "brushes"
+srsWords: "brush"
 
 [fill-in-the-blank]
 sentence: "He ___ his clothes for the next day."
 blank: "prepares"
-srsWords: "prepares"
+srsWords: "prepare"
 
 [fill-in-the-blank]
 sentence: "I ___ a book before I fall asleep."
@@ -805,7 +805,7 @@ srsWords: "read"
 [fill-in-the-blank]
 sentence: "She ___ the dishes after the evening meal."
 blank: "washes"
-srsWords: "dishes"
+srsWords: "dish"
 
 [fill-in-the-blank]
 sentence: "He ___ the news on TV every evening."
@@ -825,7 +825,7 @@ srsWords: "alarm"
 [fill-in-the-blank]
 sentence: "He ___ the doors and windows at night."
 blank: "locks"
-srsWords: "locks"
+srsWords: "lock"
 
 [fill-in-the-blank]
 sentence: "I ___ my phone on charge before sleeping."
@@ -845,7 +845,7 @@ srsWords: "tired"
 [fill-in-the-blank]
 sentence: "I ___ the lights before I sleep."
 blank: "turn off"
-srsWords: "lights"
+srsWords: "light"
 
 [fill-in-the-blank]
 sentence: "She ___ her diary before bed."
@@ -855,7 +855,7 @@ srsWords: "diary"
 [fill-in-the-blank]
 sentence: "He ___ his shoes by the door."
 blank: "leaves"
-srsWords: "shoes"
+srsWords: "shoe"
 
 [fill-in-the-blank]
 sentence: "I ___ goodnight to my family."
@@ -865,7 +865,7 @@ srsWords: "goodnight"
 [fill-in-the-blank]
 sentence: "She ___ asleep quickly after a busy day."
 blank: "falls"
-srsWords: "falls"
+srsWords: "fall"
 
 ---
 lessonTitle: "Lesson 9: Time & Days"
@@ -942,7 +942,7 @@ srsWords: "Tuesday"
 [fill-in-the-blank]
 sentence: "She visits her grandparents ___ month."
 blank: "every"
-srsWords: "grandparents"
+srsWords: "grandparent"
 
 [fill-in-the-blank]
 sentence: "He runs in the park ___ morning."
@@ -984,7 +984,7 @@ color: "#E91E63"
 [fill-in-the-blank]
 sentence: "I feel ___ after a good night's sleep."
 blank: "rested"
-srsWords: "rested"
+srsWords: "rest"
 
 [fill-in-the-blank]
 sentence: "She ___ tired when she wakes up too early."
@@ -994,7 +994,7 @@ srsWords: "tired"
 [fill-in-the-blank]
 sentence: "He drinks water to stay ___."
 blank: "hydrated"
-srsWords: "hydrated"
+srsWords: "hydrate"
 
 [fill-in-the-blank]
 sentence: "I feel ___ when I skip breakfast."
@@ -1019,12 +1019,12 @@ srsWords: "energetic"
 [fill-in-the-blank]
 sentence: "She takes ___ when she has a headache."
 blank: "tablets"
-srsWords: "tablets"
+srsWords: "tablet"
 
 [fill-in-the-blank]
 sentence: "He ___ well when he eats healthy food."
 blank: "sleeps"
-srsWords: "sleeps"
+srsWords: "sleep"
 
 [fill-in-the-blank]
 sentence: "I feel ___ when I have too much work."
@@ -1034,7 +1034,7 @@ srsWords: "stressed"
 [fill-in-the-blank]
 sentence: "She ___ her hands often to avoid getting sick."
 blank: "washes"
-srsWords: "washes"
+srsWords: "wash"
 
 [fill-in-the-blank]
 sentence: "He feels ___ after playing sports."

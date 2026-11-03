@@ -308,7 +308,7 @@ srsWords: "being-in-the-world" "totality" "replete" "isolated"
 text: "把下面的句子翻译成英文"
 sentence: "萨特的存在先于本质命题将人的彻底自由与不可回避的责任联结为一体，从根本上拒绝了任何形式的本质主义人性论。"
 answer: "Sartre's proposition that existence precedes essence links radical human freedom with unavoidable responsibility into an inseparable unity, fundamentally rejecting any form of essentialist theory of human nature."
-srsWords: "existence precedes" "unavoidable" "proposition" "inseparable"
+srsWords: "existence precede" "unavoidable" "proposition" "inseparable"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -338,7 +338,7 @@ srsWords: "temporality" "primordial" "unitary" "present"
 text: "把下面的句子翻译成英文"
 sentence: "存在的遗忘作为西方形而上学历史的主线，表现为对存在本身的追问被对存在者的追问所遮蔽和取代。"
 answer: "The forgetting of Being, as the main thread of the history of Western metaphysics, manifests itself as the concealment and replacement of the question of Being itself by the question of beings."
-srsWords: "forgetting of Being" "metaphysics" "concealment" "replacement"
+srsWords: "forget of Being" "metaphysics" "concealment" "replacement"
 
 ---
 lessonTitle: "Lesson 7: Rhetoric & Ideology Critique"
@@ -363,13 +363,13 @@ srsWords: "hegemonic" "subordinate" "participation" "particular"
 text: "把下面的句子翻译成英文"
 sentence: "话语霸权的建立依赖于特定的关键漂浮能指围绕哪一意识形态节点来固定其流动意义的政治性争夺。"
 answer: "The establishment of discursive hegemony depends on the political struggle over which ideological nodal point will fix the floating meaning of particular key empty signifiers."
-srsWords: "floating signifier" "hegemony" "ideological" "establishment"
+srsWords: "float signifier" "hegemony" "ideological" "establishment"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "修辞分析的意识形态维度要求我们追问文本的隐含受众是谁，以及文本为其理想读者构建了怎样的主体位置。"
 answer: "The ideological dimension of rhetorical analysis requires us to ask who the implied audience of a text is and what subject position the text constructs for its ideal reader."
-srsWords: "implied audience" "rhetorical" "ideological" "dimension"
+srsWords: "imply audience" "rhetorical" "ideological" "dimension"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -442,7 +442,7 @@ srsWords: "meta-theoretical" "inherent" "hyper" "premises"
 text: "把下面的句子翻译成英文"
 sentence: "文化编码与解码之间的不对称性揭示了意义不是由生产者植入文本的固定内容，而是在接受实践中被积极建构的产物。"
 answer: "The asymmetry between cultural encoding and decoding reveals that meaning is not fixed content implanted into a text by its producer but a product actively constructed in the practice of reception."
-srsWords: "encoding" "asymmetry" "actively" "reception"
+srsWords: "encode" "asymmetry" "actively" "reception"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -485,7 +485,7 @@ srsWords: "meta-induction" "realism" "subsequently" "pessimistic"
 text: "把下面的句子翻译成英文"
 sentence: "理论间的还原关系通过桥接规律将高层次科学理论的本体论统一于低层次理论的本体论，但多重可实现性论题挑战了强还原论的可行性。"
 answer: "Intertheoretic reduction unifies the ontology of higher-level scientific theories with that of lower-level theories through bridge laws, but the multiple realisability thesis challenges the viability of strong reductionism."
-srsWords: "bridge laws" "viability" "ontology" "thesis"
+srsWords: "bridge law" "viability" "ontology" "thesis"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -662,7 +662,7 @@ srsWords: "lifeworld" "normative" "communicative" "colonisation"
 text: "把下面的句子翻译成英文"
 sentence: "情感社会学通过分析情感结构和感受结构如何作为意识形态的感性材料来揭示文化霸权的情动基础。"
 answer: "The sociology of affect reveals the affective foundations of cultural hegemony by analysing how structures of feeling and affective structures function as the sensory material of ideology."
-srsWords: "structures of feeling" "hegemony" "affective" "sensory"
+srsWords: "structure of feeling" "hegemony" "affective" "sensory"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -870,7 +870,7 @@ srsWords: "circumvent" "subordinate" "dominant" "resistance"
 text: "把下面的句子翻译成英文"
 sentence: "交叉性权力矩阵的分析要求我们理解不同的压迫轴线如何在特定的主体位置上相互构成而产生独特的支配与抵抗形式。"
 answer: "Analysis of the intersecting matrix of power requires us to understand how different axes of oppression mutually constitute each other at particular subject positions to produce distinctive forms of domination and resistance."
-srsWords: "intersecting" "domination" "mutually" "distinctive"
+srsWords: "intersect" "domination" "mutually" "distinctive"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -937,7 +937,7 @@ srsWords: "second-order" "quantification" "inherent" "philosophical"
 text: "把下面的句子翻译成英文"
 sentence: "悖论的认识论价值在于它们揭示了我们的概念系统在承载极端情形时所显现的内在裂缝和意想不到的不一致性。"
 answer: "The epistemological value of paradoxes lies in their revelation of the inherent fissures and unexpected inconsistencies that our conceptual systems display when subjected to extreme cases."
-srsWords: "fissures" "inherent" "revelation" "conceptual"
+srsWords: "fissure" "inherent" "revelation" "conceptual"
 
 [translation]
 text: "把下面的句子翻译成英文"

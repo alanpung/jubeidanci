@@ -25,7 +25,7 @@ srsWords: "apple"
 [fill-in-the-blank]
 sentence: "She puts ___ in her fruit salad."
 blank: "strawberries"
-srsWords: "strawberries"
+srsWords: "strawberry"
 
 [fill-in-the-blank]
 sentence: "He drinks fresh ___ juice every morning."
@@ -35,7 +35,7 @@ srsWords: "orange"
 [fill-in-the-blank]
 sentence: "I like eating ___ because they are sweet."
 blank: "grapes"
-srsWords: "grapes"
+srsWords: "grape"
 
 [fill-in-the-blank]
 sentence: "She buys a ___ at the market every week."
@@ -50,17 +50,17 @@ srsWords: "banana"
 [fill-in-the-blank]
 sentence: "I add ___ to my salad for extra flavour."
 blank: "tomatoes"
-srsWords: "tomatoes"
+srsWords: "tomato"
 
 [fill-in-the-blank]
 sentence: "She roasts ___ in the oven for dinner."
 blank: "carrots"
-srsWords: "carrots"
+srsWords: "carrot"
 
 [fill-in-the-blank]
 sentence: "He grows ___ in his garden."
 blank: "potatoes"
-srsWords: "potatoes"
+srsWords: "potato"
 
 [fill-in-the-blank]
 sentence: "I steam ___ as a side dish."
@@ -70,7 +70,7 @@ srsWords: "broccoli"
 [fill-in-the-blank]
 sentence: "She chops ___ for the soup."
 blank: "onions"
-srsWords: "onions"
+srsWords: "onion"
 
 [fill-in-the-blank]
 sentence: "He adds ___ to his pasta sauce."
@@ -100,7 +100,7 @@ srsWords: "spinach"
 [fill-in-the-blank]
 sentence: "She puts ___ on top of her pizza."
 blank: "peppers"
-srsWords: "peppers"
+srsWords: "pepper"
 
 [fill-in-the-blank]
 sentence: "He eats a ___ before lunch as a snack."
@@ -115,7 +115,7 @@ srsWords: "kiwi"
 [fill-in-the-blank]
 sentence: "She stirs fried ___ into the rice."
 blank: "mushrooms"
-srsWords: "mushrooms"
+srsWords: "mushroom"
 
 ---
 lessonTitle: "Lesson 2: Meat & Proteins"
@@ -172,17 +172,17 @@ srsWords: "cheese"
 [fill-in-the-blank]
 sentence: "I cook ___ in a curry sauce."
 blank: "prawns"
-srsWords: "prawns"
+srsWords: "prawn"
 
 [fill-in-the-blank]
 sentence: "She buys ___ sausages at the butcher."
 blank: "pork"
-srsWords: "sausages"
+srsWords: "sausage"
 
 [fill-in-the-blank]
 sentence: "He eats ___ beans on toast for lunch."
 blank: "baked"
-srsWords: "beans"
+srsWords: "bean"
 
 [fill-in-the-blank]
 sentence: "I add ___ to my salads for protein."
@@ -202,12 +202,12 @@ srsWords: "ham"
 [fill-in-the-blank]
 sentence: "I make scrambled ___ for breakfast."
 blank: "eggs"
-srsWords: "eggs"
+srsWords: "egg"
 
 [fill-in-the-blank]
 sentence: "She roasts a whole ___ for Sunday dinner."
 blank: "chicken"
-srsWords: "roasts"
+srsWords: "roast"
 
 [fill-in-the-blank]
 sentence: "He eats ___ every Friday as a tradition."
@@ -294,7 +294,7 @@ srsWords: "apple"
 [fill-in-the-blank]
 sentence: "I drink ___ water after exercising."
 blank: "cold"
-srsWords: "exercising"
+srsWords: "exercise"
 
 [fill-in-the-blank]
 sentence: "She has hot ___ with lemon when she is sick."
@@ -314,7 +314,7 @@ srsWords: "honey"
 [fill-in-the-blank]
 sentence: "She makes iced ___ in summer."
 blank: "coffee"
-srsWords: "iced"
+srsWords: "ice"
 
 [fill-in-the-blank]
 sentence: "He drinks ___ beer at the pub with friends."
@@ -346,12 +346,12 @@ srsWords: "fry"
 [fill-in-the-blank]
 sentence: "She ___ the chicken in the oven for an hour."
 blank: "roasts"
-srsWords: "roasts"
+srsWords: "roast"
 
 [fill-in-the-blank]
 sentence: "He ___ pasta in a large pot of water."
 blank: "boils"
-srsWords: "boils"
+srsWords: "boil"
 
 [fill-in-the-blank]
 sentence: "I ___ fish on the grill for dinner."
@@ -361,12 +361,12 @@ srsWords: "grill"
 [fill-in-the-blank]
 sentence: "She ___ the bread in the toaster."
 blank: "toasts"
-srsWords: "toasts"
+srsWords: "toast"
 
 [fill-in-the-blank]
 sentence: "He ___ the soup on the stove for thirty minutes."
 blank: "simmers"
-srsWords: "simmers"
+srsWords: "simmer"
 
 [fill-in-the-blank]
 sentence: "I ___ broccoli to keep the nutrients in."
@@ -376,7 +376,7 @@ srsWords: "steam"
 [fill-in-the-blank]
 sentence: "She ___ eggs in a hot pan with butter."
 blank: "scrambles"
-srsWords: "scrambles"
+srsWords: "scramble"
 
 [fill-in-the-blank]
 sentence: "He ___ potatoes in the microwave."
@@ -391,12 +391,12 @@ srsWords: "chop"
 [fill-in-the-blank]
 sentence: "She ___ the onions until they are soft."
 blank: "fries"
-srsWords: "onions"
+srsWords: "onion"
 
 [fill-in-the-blank]
 sentence: "He ___ the sauce for five minutes."
 blank: "stirs"
-srsWords: "stirs"
+srsWords: "stir"
 
 [fill-in-the-blank]
 sentence: "I ___ the fish in flour before frying it."
@@ -411,7 +411,7 @@ srsWords: "dough"
 [fill-in-the-blank]
 sentence: "He ___ the meat before cooking it."
 blank: "marinates"
-srsWords: "marinates"
+srsWords: "marinate"
 
 [fill-in-the-blank]
 sentence: "I ___ milk in a pot before adding cocoa."
@@ -421,7 +421,7 @@ srsWords: "heat"
 [fill-in-the-blank]
 sentence: "She ___ the carrots into small pieces."
 blank: "cuts"
-srsWords: "cuts"
+srsWords: "cut"
 
 [fill-in-the-blank]
 sentence: "He ___ the sauce with a wooden spoon."
@@ -431,7 +431,7 @@ srsWords: "wooden"
 [fill-in-the-blank]
 sentence: "I ___ the biscuits in the oven at 180 degrees."
 blank: "bake"
-srsWords: "biscuits"
+srsWords: "biscuit"
 
 [fill-in-the-blank]
 sentence: "She ___ the steak for two minutes on each side."
@@ -528,7 +528,7 @@ srsWords: "medium"
 [fill-in-the-blank]
 sentence: "I looked at the daily ___ on the board."
 blank: "specials"
-srsWords: "specials"
+srsWords: "special"
 
 [fill-in-the-blank]
 sentence: "She asked the waiter to ___ the meal."
@@ -570,7 +570,7 @@ srsWords: "roll"
 [fill-in-the-blank]
 sentence: "I make ___ with syrup and berries."
 blank: "pancakes"
-srsWords: "pancakes"
+srsWords: "pancake"
 
 [fill-in-the-blank]
 sentence: "She has a soft-boiled ___ every morning."
@@ -610,7 +610,7 @@ srsWords: "yoghurt"
 [fill-in-the-blank]
 sentence: "He makes fried ___ with tomatoes and mushrooms."
 blank: "eggs"
-srsWords: "mushrooms"
+srsWords: "mushroom"
 
 [fill-in-the-blank]
 sentence: "I add some ___ to my cereal for sweetness."
@@ -692,7 +692,7 @@ srsWords: "scoop"
 [fill-in-the-blank]
 sentence: "I snack on a handful of ___ at my desk."
 blank: "nuts"
-srsWords: "nuts"
+srsWords: "nut"
 
 [fill-in-the-blank]
 sentence: "She makes a warm ___ pudding in winter."
@@ -702,12 +702,12 @@ srsWords: "pudding"
 [fill-in-the-blank]
 sentence: "He eats a bag of ___ while watching TV."
 blank: "crisps"
-srsWords: "crisps"
+srsWords: "crisp"
 
 [fill-in-the-blank]
 sentence: "I bake ___ every Sunday afternoon."
 blank: "cookies"
-srsWords: "cookies"
+srsWords: "cookie"
 
 [fill-in-the-blank]
 sentence: "She orders a strawberry ___ at the café."
@@ -747,7 +747,7 @@ srsWords: "hummus"
 [fill-in-the-blank]
 sentence: "He buys a ___ from the vending machine."
 blank: "snack"
-srsWords: "vending"
+srsWords: "vend"
 
 [fill-in-the-blank]
 sentence: "I eat a small piece of ___ after my meal."
@@ -814,12 +814,12 @@ srsWords: "salt"
 [fill-in-the-blank]
 sentence: "I think this pizza is the best I have ever ___."
 blank: "tasted"
-srsWords: "tasted"
+srsWords: "taste"
 
 [fill-in-the-blank]
 sentence: "She ___ vegetables but loves fruit."
 blank: "dislikes"
-srsWords: "dislikes"
+srsWords: "dislike"
 
 [fill-in-the-blank]
 sentence: "He says the soup needs more ___."
@@ -864,7 +864,7 @@ srsWords: "smooth"
 [fill-in-the-blank]
 sentence: "She avoids food with a strong ___."
 blank: "smell"
-srsWords: "avoids"
+srsWords: "avoid"
 
 ---
 lessonTitle: "Lesson 9: Recipes & Ingredients"
@@ -896,7 +896,7 @@ srsWords: "pasta"
 [fill-in-the-blank]
 sentence: "She beats three ___ and adds them to the bowl."
 blank: "eggs"
-srsWords: "beats"
+srsWords: "beat"
 
 [fill-in-the-blank]
 sentence: "He adds a teaspoon of ___ for flavour."
@@ -911,7 +911,7 @@ srsWords: "garlic"
 [fill-in-the-blank]
 sentence: "She adds fresh ___ to the salad."
 blank: "herbs"
-srsWords: "herbs"
+srsWords: "herb"
 
 [fill-in-the-blank]
 sentence: "He reads the ___ carefully before cooking."
@@ -921,7 +921,7 @@ srsWords: "recipe"
 [fill-in-the-blank]
 sentence: "I mix the ___ together in a large bowl."
 blank: "ingredients"
-srsWords: "ingredients"
+srsWords: "ingredient"
 
 [fill-in-the-blank]
 sentence: "She pours the ___ into the greased tin."
@@ -961,7 +961,7 @@ srsWords: "honey"
 [fill-in-the-blank]
 sentence: "He follows the recipe step by ___."
 blank: "step"
-srsWords: "follows"
+srsWords: "follow"
 
 [fill-in-the-blank]
 sentence: "I use a sharp ___ to chop the onions."
@@ -971,7 +971,7 @@ srsWords: "knife"
 [fill-in-the-blank]
 sentence: "She adds grated ___ on top of the pasta."
 blank: "cheese"
-srsWords: "grated"
+srsWords: "grate"
 
 ---
 lessonTitle: "Lesson 10: Food & Culture"
@@ -993,12 +993,12 @@ srsWords: "pasta"
 [fill-in-the-blank]
 sentence: "In Mexico, people eat ___ with every meal."
 blank: "tortillas"
-srsWords: "tortillas"
+srsWords: "tortilla"
 
 [fill-in-the-blank]
 sentence: "In England, people enjoy fish and ___ on Fridays."
 blank: "chips"
-srsWords: "chips"
+srsWords: "chip"
 
 [fill-in-the-blank]
 sentence: "In India, ___ is a popular spice in cooking."
@@ -1008,7 +1008,7 @@ srsWords: "turmeric"
 [fill-in-the-blank]
 sentence: "In China, people often use ___ instead of a fork."
 blank: "chopsticks"
-srsWords: "chopsticks"
+srsWords: "chopstick"
 
 [fill-in-the-blank]
 sentence: "In France, people eat fresh ___ every day."
@@ -1023,7 +1023,7 @@ srsWords: "Spain"
 [fill-in-the-blank]
 sentence: "In Greece, ___ and feta are used in many dishes."
 blank: "olives"
-srsWords: "olives"
+srsWords: "olive"
 
 [fill-in-the-blank]
 sentence: "In the USA, ___ is a very popular fast food."

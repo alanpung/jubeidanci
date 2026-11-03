@@ -23,7 +23,7 @@ text: "Translate this sentence into English"
 sentence: "我订了一张两个人的桌子。"
 answer: "I booked a table for two."
 acceptAlso: "I reserved a table for two people."
-srsWords: "i" "booked" "a" "table" "for" "two" "reserved" "people"
+srsWords: "i" "book" "a" "table" "for" "two" "reserve" "people"
 
 [translation]
 text: "Translate this sentence into English"
@@ -44,7 +44,7 @@ text: "Translate this sentence into English"
 sentence: "服务员很友好。"
 answer: "The waiter is very friendly."
 acceptAlso: "The waiters here are friendly."
-srsWords: "the" "waiter" "is" "very" "friendly" "waiters" "here" "are"
+srsWords: "the" "waiter" "is" "very" "friendly" "waiter" "here" "are"
 
 [translation]
 text: "Translate this sentence into English"
@@ -65,7 +65,7 @@ text: "Translate this sentence into English"
 sentence: "我们等了很久才上菜。"
 answer: "We waited a long time for our food."
 acceptAlso: "Our food took a long time to arrive."
-srsWords: "we" "waited" "a" "long" "time" "for" "our" "food" "took" "to" "arrive"
+srsWords: "we" "wait" "a" "long" "time" "for" "our" "food" "take" "to" "arrive"
 
 [translation]
 text: "Translate this sentence into English"
@@ -79,14 +79,14 @@ text: "Translate this sentence into English"
 sentence: "我们坐在靠窗的位置。"
 answer: "We are sitting by the window."
 acceptAlso: "Our table is next to the window."
-srsWords: "we" "are" "sitting" "by" "the" "window" "our" "table" "is" "next" "to"
+srsWords: "we" "are" "sit" "by" "the" "window" "our" "table" "is" "next" "to"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这家餐厅周末很忙。"
 answer: "This restaurant is very busy at weekends."
 acceptAlso: "The restaurant gets busy on weekends."
-srsWords: "this" "restaurant" "is" "very" "busy" "at" "weekends" "the" "gets" "on"
+srsWords: "this" "restaurant" "is" "very" "busy" "at" "weekend" "the" "get" "on"
 
 ---
 lessonTitle: "Lesson 2: Ordering Food"
@@ -121,7 +121,7 @@ text: "Translate this sentence into English"
 sentence: "这道菜是什么做的？"
 answer: "What is this dish made of?"
 acceptAlso: "What ingredients are in this dish?"
-srsWords: "what" "is" "this" "dish" "made" "of" "ingredients" "are" "in"
+srsWords: "what" "is" "this" "dish" "make" "of" "ingredient" "are" "in"
 
 [translation]
 text: "Translate this sentence into English"
@@ -156,7 +156,7 @@ text: "Translate this sentence into English"
 sentence: "我点了一份牛排。"
 answer: "I ordered a steak."
 acceptAlso: "I asked for a steak."
-srsWords: "i" "ordered" "a" "steak" "asked" "for"
+srsWords: "i" "order" "a" "steak" "ask" "for"
 
 [translation]
 text: "Translate this sentence into English"
@@ -177,14 +177,14 @@ text: "Translate this sentence into English"
 sentence: "我妈妈每天做饭。"
 answer: "My mother cooks every day."
 acceptAlso: "My mom makes meals every day."
-srsWords: "my" "mother" "cooks" "every" "day" "mom" "makes" "meals"
+srsWords: "my" "mother" "cook" "every" "day" "mom" "make" "meal"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我正在切洋葱。"
 answer: "I am cutting onions."
 acceptAlso: "I am chopping up some onions."
-srsWords: "i" "am" "cutting" "onions" "chopping" "up" "some"
+srsWords: "i" "am" "cutting" "onion" "chop" "up" "some"
 
 [translation]
 text: "Translate this sentence into English"
@@ -205,21 +205,21 @@ text: "Translate this sentence into English"
 sentence: "这道菜要煮二十分钟。"
 answer: "This dish needs to cook for twenty minutes."
 acceptAlso: "You cook this for twenty minutes."
-srsWords: "this" "dish" "needs" "to" "cook" "for" "twenty" "minutes" "you"
+srsWords: "this" "dish" "need" "to" "cook" "for" "twenty" "minute" "you"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我在学做中国菜。"
 answer: "I am learning to cook Chinese food."
 acceptAlso: "I am learning how to make Chinese dishes."
-srsWords: "i" "am" "learning" "to" "cook" "chinese" "food" "how" "make" "dishes"
+srsWords: "i" "am" "learning" "to" "cook" "chinese" "food" "how" "make" "dish"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们用平底锅煎鸡蛋。"
 answer: "We fry eggs in a pan."
 acceptAlso: "We cook eggs in a frying pan."
-srsWords: "we" "fry" "eggs" "in" "a" "pan" "cook" "frying"
+srsWords: "we" "fry" "egg" "in" "a" "pan" "cook" "fry"
 
 [translation]
 text: "Translate this sentence into English"
@@ -233,14 +233,14 @@ text: "Translate this sentence into English"
 sentence: "我把蔬菜洗干净。"
 answer: "I wash the vegetables."
 acceptAlso: "I clean the vegetables with water."
-srsWords: "i" "wash" "the" "vegetables" "clean" "with" "water"
+srsWords: "i" "wash" "the" "vegetable" "clean" "with" "water"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "厨房里有一股香味。"
 answer: "There is a nice smell in the kitchen."
 acceptAlso: "The kitchen smells very good."
-srsWords: "there" "is" "a" "nice" "smell" "in" "the" "kitchen" "smells" "very" "good"
+srsWords: "there" "is" "a" "nice" "smell" "in" "the" "kitchen" "smell" "very" "good"
 
 ---
 lessonTitle: "Lesson 4: Supermarket"
@@ -261,35 +261,35 @@ text: "Translate this sentence into English"
 sentence: "蔬菜在入口旁边。"
 answer: "The vegetables are next to the entrance."
 acceptAlso: "You can find vegetables by the door."
-srsWords: "the" "vegetables" "are" "next" "to" "entrance" "you" "can" "find" "by" "door"
+srsWords: "the" "vegetable" "are" "next" "to" "entrance" "you" "can" "find" "by" "door"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这盒鸡蛋多少钱？"
 answer: "How much is this box of eggs?"
 acceptAlso: "What does this carton of eggs cost?"
-srsWords: "how" "much" "is" "this" "box" "of" "eggs" "what" "does" "carton" "cost"
+srsWords: "how" "much" "is" "this" "box" "of" "egg" "what" "does" "carton" "cost"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我在收银台排队。"
 answer: "I am waiting in line at the shop."
 acceptAlso: "I am waiting in line at the cashier."
-srsWords: "i" "am" "waiting" "in" "line" "at" "the" "shop"
+srsWords: "i" "am" "wait" "in" "line" "at" "the" "shop"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我忘了带购物袋。"
 answer: "I forgot my shopping bag."
 acceptAlso: "I did not bring a bag for shopping."
-srsWords: "i" "forgot" "my" "shopping" "bag" "did" "not" "bring" "a" "for"
+srsWords: "i" "forget" "my" "shopping" "bag" "did" "not" "bring" "a" "for"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这个牌子比那个贵。"
 answer: "This brand is more expensive than that one."
 acceptAlso: "This brand costs more than that brand."
-srsWords: "this" "brand" "is" "more" "expensive" "than" "that" "one" "costs"
+srsWords: "this" "brand" "is" "more" "expensive" "than" "that" "one" "cost"
 
 [translation]
 text: "Translate this sentence into English"
@@ -303,7 +303,7 @@ text: "Translate this sentence into English"
 sentence: "我用现金付款。"
 answer: "I pay with cash."
 acceptAlso: "I am paying in cash."
-srsWords: "i" "pay" "with" "cash" "am" "paying" "in"
+srsWords: "i" "pay" "with" "cash" "am" "pay" "in"
 
 [translation]
 text: "Translate this sentence into English"
@@ -317,7 +317,7 @@ text: "Translate this sentence into English"
 sentence: "我买了面包和黄油。"
 answer: "I bought bread and butter."
 acceptAlso: "I got some bread and butter."
-srsWords: "i" "bought" "bread" "and" "butter" "got" "some"
+srsWords: "i" "buy" "bread" "and" "butter" "got" "some"
 
 ---
 lessonTitle: "Lesson 5: Coffee Shop"
@@ -352,7 +352,7 @@ text: "Translate this sentence into English"
 sentence: "我在这里等朋友。"
 answer: "I am waiting for a friend here."
 acceptAlso: "I am meeting a friend at this cafe."
-srsWords: "i" "am" "waiting" "for" "a" "friend" "here" "meeting" "at" "this" "cafe"
+srsWords: "i" "am" "wait" "for" "a" "friend" "here" "meeting" "at" "this" "cafe"
 
 [translation]
 text: "Translate this sentence into English"
@@ -415,7 +415,7 @@ text: "Translate this sentence into English"
 sentence: "我对花生过敏。"
 answer: "I am allergic to peanuts."
 acceptAlso: "Peanuts make me sick."
-srsWords: "i" "am" "allergic" "to" "peanuts" "make" "me" "sick"
+srsWords: "i" "am" "allergic" "to" "peanut" "make" "me" "sick"
 
 [translation]
 text: "Translate this sentence into English"
@@ -457,7 +457,7 @@ text: "Translate this sentence into English"
 sentence: "你有什么忌口的吗？"
 answer: "Are there any foods you cannot eat?"
 acceptAlso: "Do you have any special diet?"
-srsWords: "are" "there" "any" "foods" "you" "cannot" "eat" "do" "have" "special" "diet"
+srsWords: "are" "there" "any" "food" "you" "cannot" "eat" "do" "have" "special" "diet"
 
 [translation]
 text: "Translate this sentence into English"
@@ -471,7 +471,7 @@ text: "Translate this sentence into English"
 sentence: "医生让我少吃盐。"
 answer: "The doctor told me to eat less salt."
 acceptAlso: "My doctor said I should cut down on salt."
-srsWords: "the" "doctor" "told" "me" "to" "eat" "less" "salt" "my" "said" "i" "should" "cut" "down" "on"
+srsWords: "the" "doctor" "tell" "me" "to" "eat" "less" "salt" "my" "say" "i" "should" "cut" "down" "on"
 
 ---
 lessonTitle: "Lesson 7: Recipes"
@@ -492,7 +492,7 @@ text: "Translate this sentence into English"
 sentence: "我们需要两个鸡蛋。"
 answer: "We need two eggs."
 acceptAlso: "Two eggs are needed for this."
-srsWords: "we" "need" "two" "eggs" "are" "needed" "for" "this"
+srsWords: "we" "need" "two" "egg" "are" "need" "for" "this"
 
 [translation]
 text: "Translate this sentence into English"
@@ -513,14 +513,14 @@ text: "Translate this sentence into English"
 sentence: "用小火煮十分钟。"
 answer: "Cook it on a low heat for ten minutes."
 acceptAlso: "Simmer it gently for ten minutes."
-srsWords: "cook" "it" "on" "a" "low" "heat" "for" "ten" "minutes"
+srsWords: "cook" "it" "on" "a" "low" "heat" "for" "ten" "minute"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "搅拌到面团变光滑。"
 answer: "Stir until the dough is smooth."
 acceptAlso: "Mix it until the dough feels smooth."
-srsWords: "stir" "until" "the" "dough" "is" "smooth" "mix" "it" "feels"
+srsWords: "stir" "until" "the" "dough" "is" "smooth" "mix" "it" "feel"
 
 [translation]
 text: "Translate this sentence into English"
@@ -534,7 +534,7 @@ text: "Translate this sentence into English"
 sentence: "这个蛋糕要烤四十分钟。"
 answer: "This cake needs to bake for forty minutes."
 acceptAlso: "You bake the cake for forty minutes."
-srsWords: "this" "cake" "needs" "to" "bake" "for" "forty" "minutes" "you" "the"
+srsWords: "this" "cake" "need" "to" "bake" "for" "forty" "minute" "you" "the"
 
 [translation]
 text: "Translate this sentence into English"
@@ -569,21 +569,21 @@ text: "Translate this sentence into English"
 sentence: "他每天早上吃两片吐司。"
 answer: "He eats two pieces of toast every morning."
 acceptAlso: "He has two slices of toast each morning."
-srsWords: "he" "eats" "two" "pieces" "of" "toast" "every" "morning" "has" "slices" "each"
+srsWords: "he" "eat" "two" "piece" "of" "toast" "every" "morning" "has" "slice" "each"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我煎了一个鸡蛋。"
 answer: "I fried an egg."
 acceptAlso: "I cooked one egg in the pan."
-srsWords: "i" "fried" "an" "egg" "cooked" "one" "in" "the" "pan"
+srsWords: "i" "fried" "an" "egg" "cook" "one" "in" "the" "pan"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "早饭是一天中最重要的一餐。"
 answer: "Breakfast is the most important meal of the day."
 acceptAlso: "Breakfast matters most of all meals."
-srsWords: "breakfast" "is" "the" "most" "important" "meal" "of" "day" "matters" "all" "meals"
+srsWords: "breakfast" "is" "the" "most" "important" "meal" "of" "day" "matter" "all" "meal"
 
 [translation]
 text: "Translate this sentence into English"
@@ -611,7 +611,7 @@ text: "Translate this sentence into English"
 sentence: "我妈妈做了粥。"
 answer: "My mother made soup."
 acceptAlso: "Mom cooked some rice porridge."
-srsWords: "my" "mother" "made" "soup" "mom" "cooked"
+srsWords: "my" "mother" "make" "soup" "mom" "cook"
 
 [translation]
 text: "Translate this sentence into English"
@@ -625,7 +625,7 @@ text: "Translate this sentence into English"
 sentence: "早饭以后我刷碗。"
 answer: "I wash the dishes after breakfast."
 acceptAlso: "I do the dishes after breakfast."
-srsWords: "i" "wash" "the" "dishes" "after" "breakfast" "do"
+srsWords: "i" "wash" "the" "dish" "after" "breakfast" "do"
 
 ---
 lessonTitle: "Lesson 9: Dinner"
@@ -646,7 +646,7 @@ text: "Translate this sentence into English"
 sentence: "今晚我们吃鱼。"
 answer: "We are having fish tonight."
 acceptAlso: "We will eat fish this evening."
-srsWords: "we" "are" "having" "fish" "tonight" "will" "eat" "this" "evening"
+srsWords: "we" "are" "have" "fish" "tonight" "will" "eat" "this" "evening"
 
 [translation]
 text: "Translate this sentence into English"
@@ -667,21 +667,21 @@ text: "Translate this sentence into English"
 sentence: "我请了朋友来吃晚饭。"
 answer: "I invited a friend to dinner."
 acceptAlso: "I asked a friend over for dinner."
-srsWords: "i" "invited" "a" "friend" "to" "dinner" "asked" "over" "for"
+srsWords: "i" "invite" "a" "friend" "to" "dinner" "ask" "over" "for"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这道菜里有很多蔬菜。"
 answer: "There are many vegetables in this dish."
 acceptAlso: "This dish has a lot of vegetables in it."
-srsWords: "there" "are" "many" "vegetables" "in" "this" "dish" "has" "a" "lot" "of" "it"
+srsWords: "there" "are" "many" "vegetable" "in" "this" "dish" "has" "a" "lot" "of" "it"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我吃得太多了。"
 answer: "I ate too much."
 acceptAlso: "I have eaten far too much."
-srsWords: "i" "ate" "too" "much" "have" "eaten" "far"
+srsWords: "i" "eat" "too" "much" "have" "eat" "far"
 
 [translation]
 text: "Translate this sentence into English"
@@ -702,7 +702,7 @@ text: "Translate this sentence into English"
 sentence: "我们在餐厅吃了晚饭。"
 answer: "We had dinner at a restaurant."
 acceptAlso: "We ate out at a restaurant."
-srsWords: "we" "had" "dinner" "at" "a" "restaurant" "ate" "out"
+srsWords: "we" "had" "dinner" "at" "a" "restaurant" "eat" "out"
 
 ---
 lessonTitle: "Lesson 10: Snacks"
@@ -716,35 +716,35 @@ text: "Translate this sentence into English"
 sentence: "我下午喜欢吃点零食。"
 answer: "I like to eat a snack in the afternoon."
 acceptAlso: "I enjoy having a snack in the afternoon."
-srsWords: "i" "like" "to" "eat" "a" "snack" "in" "the" "afternoon" "enjoy" "having"
+srsWords: "i" "like" "to" "eat" "a" "snack" "in" "the" "afternoon" "enjoy" "have"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这些饼干很好吃。"
 answer: "These biscuits are very tasty."
 acceptAlso: "These cookies taste really good."
-srsWords: "these" "biscuits" "are" "very" "tasty" "cookies" "taste" "really" "good"
+srsWords: "these" "biscuit" "are" "very" "tasty" "cookie" "taste" "really" "good"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我买了一包薯片。"
 answer: "I bought a packet of crisps."
 acceptAlso: "I got a bag of potato chips."
-srsWords: "i" "bought" "a" "packet" "of" "crisps" "got" "bag" "potato" "chips"
+srsWords: "i" "buy" "a" "packet" "of" "crisp" "got" "bag" "potato" "chip"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "不要吃太多甜食。"
 answer: "Do not eat too many sweets."
 acceptAlso: "You should not have too much candy."
-srsWords: "do" "not" "eat" "too" "many" "sweets" "you" "should" "have" "much" "candy"
+srsWords: "do" "not" "eat" "too" "many" "sweet" "you" "should" "have" "much" "candy"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这个苹果很新鲜。"
 answer: "This apple is very fresh."
 acceptAlso: "These apples taste fresh."
-srsWords: "this" "apple" "is" "very" "fresh" "these" "apples" "taste"
+srsWords: "this" "apple" "is" "very" "fresh" "these" "apple" "taste"
 
 [translation]
 text: "Translate this sentence into English"
@@ -765,21 +765,21 @@ text: "Translate this sentence into English"
 sentence: "孩子们喜欢吃冰淇淋。"
 answer: "Children like eating ice cream."
 acceptAlso: "Kids love ice cream."
-srsWords: "children" "like" "eating" "ice" "cream" "kids" "love"
+srsWords: "child" "like" "eat" "ice" "cream" "kid" "love"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我把巧克力分给朋友。"
 answer: "I share the chocolate with my friends."
 acceptAlso: "I give some chocolate to my friends."
-srsWords: "i" "share" "the" "chocolate" "with" "my" "friends" "give" "some" "to"
+srsWords: "i" "share" "the" "chocolate" "with" "my" "friend" "give" "some" "to"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "睡前不要吃零食。"
 answer: "Do not eat snacks before bed."
 acceptAlso: "No snacks before you go to sleep."
-srsWords: "do" "not" "eat" "snacks" "before" "bed" "no" "you" "go" "to" "sleep"
+srsWords: "do" "not" "eat" "snack" "before" "bed" "no" "you" "go" "to" "sleep"
 ---
 lessonTitle: "Lesson 11: Clothing Store"
 description: "Translate A2 sentences about Clothing Store"
@@ -799,7 +799,7 @@ text: "Translate this sentence into English"
 sentence: "我在找一件蓝色的外套。"
 answer: "I am looking for a blue coat."
 acceptAlso: "I want to find a blue jacket."
-srsWords: "i" "am" "looking" "for" "a" "blue" "coat" "want" "to" "find" "jacket"
+srsWords: "i" "am" "look" "for" "a" "blue" "coat" "want" "to" "find" "jacket"
 
 [translation]
 text: "Translate this sentence into English"
@@ -820,28 +820,28 @@ text: "Translate this sentence into English"
 sentence: "店员帮了我很多。"
 answer: "The shop assistant helped me a lot."
 acceptAlso: "The salesperson was very helpful."
-srsWords: "the" "shop" "assistant" "helped" "me" "a" "lot" "was" "very" "helpful"
+srsWords: "the" "shop" "assistant" "help" "me" "a" "lot" "was" "very" "helpful"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这件毛衣是羊毛做的。"
 answer: "This sweater is made of wool."
 acceptAlso: "The jumper is wool."
-srsWords: "this" "sweater" "is" "made" "of" "wool" "the" "jumper"
+srsWords: "this" "sweater" "is" "make" "of" "wool" "the" "jumper"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我买了一条新牛仔裤。"
 answer: "I bought a new pair of jeans."
 acceptAlso: "I got some new jeans."
-srsWords: "i" "bought" "a" "new" "pair" "of" "jeans" "got" "some"
+srsWords: "i" "buy" "a" "new" "pair" "of" "jeans" "got" "some"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这里的选择很多。"
 answer: "There are many choices here."
 acceptAlso: "You have a lot of choice in this shop."
-srsWords: "there" "are" "many" "choices" "here" "you" "have" "a" "lot" "of" "choice" "in" "this" "shop"
+srsWords: "there" "are" "many" "choice" "here" "you" "have" "a" "lot" "of" "choice" "in" "this" "shop"
 
 [translation]
 text: "Translate this sentence into English"
@@ -855,7 +855,7 @@ text: "Translate this sentence into English"
 sentence: "这家店九点开门。"
 answer: "This shop opens at nine."
 acceptAlso: "The store is open from nine o'clock."
-srsWords: "this" "shop" "opens" "at" "nine" "the" "store" "is" "open" "from" "o'clock"
+srsWords: "this" "shop" "open" "at" "nine" "the" "store" "is" "open" "from" "o'clock"
 
 ---
 lessonTitle: "Lesson 12: Trying on Clothes"
@@ -890,14 +890,14 @@ text: "Translate this sentence into English"
 sentence: "这件很合身。"
 answer: "This one fits well."
 acceptAlso: "It fits me perfectly."
-srsWords: "this" "one" "fits" "well" "it" "me" "perfectly"
+srsWords: "this" "one" "fit" "well" "it" "me" "perfectly"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "有大一号的吗？"
 answer: "Do you have a bigger size?"
 acceptAlso: "Is there one size up?"
-srsWords: "do" "you" "have" "a" "bigger" "size" "is" "there" "one" "up"
+srsWords: "do" "you" "have" "a" "big" "size" "is" "there" "one" "up"
 
 [translation]
 text: "Translate this sentence into English"
@@ -918,21 +918,21 @@ text: "Translate this sentence into English"
 sentence: "我在镜子里看了看。"
 answer: "I looked at myself in the mirror."
 acceptAlso: "I checked how it looked in the mirror."
-srsWords: "i" "looked" "at" "myself" "in" "the" "mirror" "checked" "how" "it"
+srsWords: "i" "look" "at" "myself" "in" "the" "mirror" "check" "how" "it"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这件外套很暖和。"
 answer: "This coat is very warm."
 acceptAlso: "The jacket feels really warm."
-srsWords: "this" "coat" "is" "very" "warm" "the" "jacket" "feels" "really"
+srsWords: "this" "coat" "is" "very" "warm" "the" "jacket" "feel" "really"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我决定买这两件。"
 answer: "I decided to buy these two."
 acceptAlso: "I will take both of these."
-srsWords: "i" "decided" "to" "buy" "these" "two" "will" "take" "both" "of"
+srsWords: "i" "decide" "to" "buy" "these" "two" "will" "take" "both" "of"
 
 ---
 lessonTitle: "Lesson 13: Prices & Payment"
@@ -953,28 +953,28 @@ text: "Translate this sentence into English"
 sentence: "太贵了。"
 answer: "That is too expensive."
 acceptAlso: "It costs too much."
-srsWords: "that" "is" "too" "expensive" "it" "costs" "much"
+srsWords: "that" "is" "too" "expensive" "it" "cost" "much"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "可以用信用卡付款吗？"
 answer: "Can I pay by credit card?"
 acceptAlso: "Do you take credit cards?"
-srsWords: "can" "i" "pay" "by" "credit" "card" "do" "you" "take" "cards"
+srsWords: "can" "i" "pay" "by" "credit" "card" "do" "you" "take" "card"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我只带了现金。"
 answer: "I only have cash with me."
 acceptAlso: "I am carrying cash only."
-srsWords: "i" "only" "have" "cash" "with" "me" "am" "carrying"
+srsWords: "i" "only" "have" "cash" "with" "me" "am" "carry"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "一共是五十元。"
 answer: "That is fifty yuan in total."
 acceptAlso: "The total comes to fifty yuan."
-srsWords: "that" "is" "fifty" "yuan" "in" "total" "the" "comes" "to"
+srsWords: "that" "is" "fifty" "yuan" "in" "total" "the" "come" "to"
 
 [translation]
 text: "Translate this sentence into English"
@@ -988,7 +988,7 @@ text: "Translate this sentence into English"
 sentence: "这里可以扫码支付吗？"
 answer: "Can I pay by scanning a code here?"
 acceptAlso: "Do you accept mobile payment?"
-srsWords: "can" "i" "pay" "by" "scanning" "a" "code" "here" "do" "you" "accept" "mobile" "payment"
+srsWords: "can" "i" "pay" "by" "scan" "a" "code" "here" "do" "you" "accept" "mobile" "payment"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1002,7 +1002,7 @@ text: "Translate this sentence into English"
 sentence: "打折以后便宜多了。"
 answer: "It is much cheaper after the discount."
 acceptAlso: "With the discount it costs much less."
-srsWords: "it" "is" "much" "cheaper" "after" "the" "discount" "with" "costs" "less"
+srsWords: "it" "is" "much" "cheap" "after" "the" "discount" "with" "cost" "less"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1023,14 +1023,14 @@ text: "Translate this sentence into English"
 sentence: "我去买些水果和蔬菜。"
 answer: "I am going to buy some fruit and vegetables."
 acceptAlso: "I will get fruit and vegetables."
-srsWords: "i" "am" "going" "to" "buy" "some" "fruit" "and" "vegetables" "will" "get"
+srsWords: "i" "am" "going" "to" "buy" "some" "fruit" "and" "vegetable" "will" "get"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这些西红柿很新鲜。"
 answer: "These tomatoes are very fresh."
 acceptAlso: "The tomatoes look fresh."
-srsWords: "these" "tomatoes" "are" "very" "fresh" "the" "look"
+srsWords: "these" "tomato" "are" "very" "fresh" "the" "look"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1051,14 +1051,14 @@ text: "Translate this sentence into English"
 sentence: "苹果多少钱一公斤？"
 answer: "How much is a kilo of these apples?"
 acceptAlso: "What is the price per kilo for apples?"
-srsWords: "how" "much" "is" "a" "kilo" "of" "these" "apples" "what" "the" "price" "per" "for"
+srsWords: "how" "much" "is" "a" "kilo" "of" "these" "apple" "what" "the" "price" "per" "for"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我自己带了一个袋子。"
 answer: "I brought my own bag."
 acceptAlso: "I have my own shopping bag with me."
-srsWords: "i" "brought" "my" "own" "bag" "have" "shopping" "with" "me"
+srsWords: "i" "bring" "my" "own" "bag" "have" "shopping" "with" "me"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1086,7 +1086,7 @@ text: "Translate this sentence into English"
 sentence: "我买东西前先看价格。"
 answer: "I check the price before I buy something."
 acceptAlso: "I always look at prices first."
-srsWords: "i" "check" "the" "price" "before" "buy" "something" "always" "look" "at" "prices" "first"
+srsWords: "i" "check" "the" "price" "before" "buy" "something" "always" "look" "at" "price" "first"
 
 ---
 lessonTitle: "Lesson 15: Electronics"
@@ -1114,7 +1114,7 @@ text: "Translate this sentence into English"
 sentence: "保修期是两年。"
 answer: "The warranty is two years."
 acceptAlso: "You get a two-year guarantee."
-srsWords: "the" "warranty" "is" "two" "years" "you" "get" "a" "year" "guarantee"
+srsWords: "the" "warranty" "is" "two" "year" "you" "get" "a" "year" "guarantee"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1135,7 +1135,7 @@ text: "Translate this sentence into English"
 sentence: "我的耳机坏了。"
 answer: "My headphones are broken."
 acceptAlso: "My earphones do not work."
-srsWords: "my" "headphones" "are" "broken" "earphones" "do" "not" "work"
+srsWords: "my" "headphone" "are" "broken" "earphone" "do" "not" "work"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1149,21 +1149,21 @@ text: "Translate this sentence into English"
 sentence: "我把它连上了无线网络。"
 answer: "I connected it to the internet."
 acceptAlso: "I got it onto the wireless network."
-srsWords: "i" "connected" "it" "to" "the" "internet" "got" "onto" "wireless" "network"
+srsWords: "i" "connect" "it" "to" "the" "internet" "got" "onto" "wireless" "network"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请帮我装好电池。"
 answer: "Please put the batteries in for me."
 acceptAlso: "Can you install the battery, please?"
-srsWords: "please" "put" "the" "batteries" "in" "for" "me" "can" "you" "install" "battery"
+srsWords: "please" "put" "the" "battery" "in" "for" "me" "can" "you" "install" "battery"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这台相机拍照很清楚。"
 answer: "This camera takes very clear photos."
 acceptAlso: "Pictures from this camera are clear."
-srsWords: "this" "camera" "takes" "very" "clear" "photos" "pictures" "from" "are"
+srsWords: "this" "camera" "take" "very" "clear" "photo" "picture" "from" "are"
 
 ---
 lessonTitle: "Lesson 16: Bargaining"
@@ -1177,21 +1177,21 @@ text: "Translate this sentence into English"
 sentence: "能便宜一点吗？"
 answer: "Can you make it a little cheaper?"
 acceptAlso: "Could you lower the price a bit?"
-srsWords: "can" "you" "make" "it" "a" "little" "cheaper" "could" "lower" "the" "price" "bit"
+srsWords: "can" "you" "make" "it" "a" "little" "cheap" "could" "lower" "the" "price" "bit"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这是最低价了。"
 answer: "This is the lowest price."
 acceptAlso: "I cannot go lower than this."
-srsWords: "this" "is" "the" "lowest" "price" "i" "cannot" "go" "lower" "than"
+srsWords: "this" "is" "the" "low" "price" "i" "cannot" "go" "lower" "than"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我买两个，能打折吗？"
 answer: "If I buy two, can I get a discount?"
 acceptAlso: "Do I get a discount for buying two?"
-srsWords: "if" "i" "buy" "two" "can" "get" "a" "discount" "do" "for" "buying"
+srsWords: "if" "i" "buy" "two" "can" "get" "a" "discount" "do" "for" "buy"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1212,7 +1212,7 @@ text: "Translate this sentence into English"
 sentence: "别的地方更便宜。"
 answer: "It is cheaper in other shops."
 acceptAlso: "Other stores sell it for less."
-srsWords: "it" "is" "cheaper" "in" "other" "shops" "stores" "sell" "for" "less"
+srsWords: "it" "is" "cheap" "in" "other" "shop" "store" "sell" "for" "less"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1233,7 +1233,7 @@ text: "Translate this sentence into English"
 sentence: "我等打折的时候再买。"
 answer: "I buy things when they are on sale."
 acceptAlso: "I wait for sales before buying."
-srsWords: "i" "buy" "things" "when" "they" "are" "on" "sale" "wait" "for" "sales" "before" "buying"
+srsWords: "i" "buy" "thing" "when" "they" "are" "on" "sale" "wait" "for" "sale" "before" "buy"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1254,7 +1254,7 @@ text: "Translate this sentence into English"
 sentence: "我在给我妹妹挑礼物。"
 answer: "I am choosing a gift for my sister."
 acceptAlso: "I am picking a present for my sister."
-srsWords: "i" "am" "choosing" "a" "gift" "for" "my" "sister" "picking" "present"
+srsWords: "i" "am" "choose" "a" "gift" "for" "my" "sister" "picking" "present"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1310,14 +1310,14 @@ text: "Translate this sentence into English"
 sentence: "我送了她一束花。"
 answer: "I gave her some flowers."
 acceptAlso: "She got a bouquet of flowers from me."
-srsWords: "i" "gave" "her" "some" "flowers"
+srsWords: "i" "give" "her" "some" "flower"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "她很喜欢这份礼物。"
 answer: "She likes the gift very much."
 acceptAlso: "She was very happy with the present."
-srsWords: "she" "likes" "the" "gift" "very" "much" "was" "happy" "with" "present"
+srsWords: "she" "like" "the" "gift" "very" "much" "was" "happy" "with" "present"
 
 ---
 lessonTitle: "Lesson 18: Refunds"
@@ -1359,21 +1359,21 @@ text: "Translate this sentence into English"
 sentence: "退款要等三天。"
 answer: "The refund takes three days."
 acceptAlso: "You will get your money back in three days."
-srsWords: "the" "refund" "takes" "three" "days" "you" "will" "get" "your" "money" "back" "in"
+srsWords: "the" "refund" "take" "three" "day" "you" "will" "get" "your" "money" "back" "in"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "没有小票不能退货。"
 answer: "You cannot return it without a receipt."
 acceptAlso: "No refunds without the receipt."
-srsWords: "you" "cannot" "return" "it" "without" "a" "receipt" "no" "refunds" "the"
+srsWords: "you" "cannot" "return" "it" "without" "a" "receipt" "no" "refund" "the"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我上周买了这件衣服。"
 answer: "I bought this piece of clothing last week."
 acceptAlso: "I got this last week."
-srsWords: "i" "bought" "this" "piece" "of" "clothing" "last" "week" "got"
+srsWords: "i" "buy" "this" "piece" "of" "clothing" "last" "week" "got"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1387,14 +1387,14 @@ text: "Translate this sentence into English"
 sentence: "商店给了我一张代金券。"
 answer: "The shop gave me a gift card."
 acceptAlso: "They offered me a store coupon."
-srsWords: "the" "shop" "gave" "me" "a" "gift" "card" "they" "offered" "store"
+srsWords: "the" "shop" "give" "me" "a" "gift" "card" "they" "offer" "store"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "退货期限是一个月。"
 answer: "The return period is one month."
 acceptAlso: "You have a month to return items."
-srsWords: "the" "return" "period" "is" "one" "month" "you" "have" "a" "to" "items"
+srsWords: "the" "return" "period" "is" "one" "month" "you" "have" "a" "to" "item"
 
 ---
 lessonTitle: "Lesson 19: Sizes & Colors"
@@ -1415,7 +1415,7 @@ text: "Translate this sentence into English"
 sentence: "我穿中号。"
 answer: "I wear a medium."
 acceptAlso: "Medium fits me."
-srsWords: "i" "wear" "a" "medium" "fits" "me"
+srsWords: "i" "wear" "a" "medium" "fit" "me"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1443,21 +1443,21 @@ text: "Translate this sentence into English"
 sentence: "这双鞋是三十八码。"
 answer: "These shoes are size thirty-eight."
 acceptAlso: "The shoes are a thirty-eight."
-srsWords: "these" "shoes" "are" "size" "thirty" "eight" "the" "a"
+srsWords: "these" "shoe" "are" "size" "thirty" "eight" "the" "a"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "大号已经卖完了。"
 answer: "The large size is sold out."
 acceptAlso: "Large is out of stock."
-srsWords: "the" "large" "size" "is" "sold" "out" "of" "stock"
+srsWords: "the" "large" "size" "is" "sell" "out" "of" "stock"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这条裙子和你的包很配。"
 answer: "This dress matches your bag well."
 acceptAlso: "The dress goes well with your bag."
-srsWords: "this" "dress" "matches" "your" "bag" "well" "the" "goes" "with"
+srsWords: "this" "dress" "match" "your" "bag" "well" "the" "go" "with"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1485,14 +1485,14 @@ text: "Translate this sentence into English"
 sentence: "我网购了一件外套。"
 answer: "I bought a coat online."
 acceptAlso: "I ordered a jacket on the internet."
-srsWords: "i" "bought" "a" "coat" "online" "ordered" "jacket" "on" "the" "internet"
+srsWords: "i" "buy" "a" "coat" "online" "order" "jacket" "on" "the" "internet"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "送货要三天。"
 answer: "Delivery takes three days."
 acceptAlso: "It will arrive in three days."
-srsWords: "delivery" "takes" "three" "days" "it" "will" "arrive" "in"
+srsWords: "delivery" "take" "three" "day" "it" "will" "arrive" "in"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1506,35 +1506,35 @@ text: "Translate this sentence into English"
 sentence: "我可以货到付款吗？"
 answer: "Can I pay when it arrives?"
 acceptAlso: "Do you accept cash on delivery?"
-srsWords: "can" "i" "pay" "when" "it" "arrives" "do" "you" "accept" "cash" "on" "delivery"
+srsWords: "can" "i" "pay" "when" "it" "arrive" "do" "you" "accept" "cash" "on" "delivery"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我查了一下顾客评价。"
 answer: "I checked the customer reviews."
 acceptAlso: "I read what other buyers said."
-srsWords: "i" "checked" "the" "customer" "reviews" "read" "what" "other" "buyers" "said"
+srsWords: "i" "check" "the" "customer" "review" "read" "what" "other" "buyer" "say"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这家网站经常打折。"
 answer: "This website often has sales."
 acceptAlso: "The site has discounts quite often."
-srsWords: "this" "website" "often" "has" "sales" "the" "site" "discounts" "quite"
+srsWords: "this" "website" "often" "has" "sale" "the" "site" "discount" "quite"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我把东西放进购物车。"
 answer: "I put the item in the shopping cart."
 acceptAlso: "I added it to my basket."
-srsWords: "i" "put" "the" "item" "in" "shopping" "cart" "added" "it" "to" "my" "basket"
+srsWords: "i" "put" "the" "item" "in" "shopping" "cart" "add" "it" "to" "my" "basket"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "包裹今天早上到了。"
 answer: "The parcel arrived this morning."
 acceptAlso: "My package came this morning."
-srsWords: "the" "parcel" "arrived" "this" "morning" "my" "package" "came"
+srsWords: "the" "parcel" "arrive" "this" "morning" "my" "package" "come"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1548,5 +1548,5 @@ text: "Translate this sentence into English"
 sentence: "网上买东西很方便。"
 answer: "Buying things online is very convenient."
 acceptAlso: "Shopping on the internet is handy."
-srsWords: "buying" "things" "online" "is" "very" "convenient" "shopping" "on" "the" "internet" "handy"
+srsWords: "buy" "thing" "online" "is" "very" "convenient" "shopping" "on" "the" "internet" "handy"
 

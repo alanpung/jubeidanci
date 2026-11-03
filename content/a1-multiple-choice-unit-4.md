@@ -187,7 +187,7 @@ choices:
   - "Is it cheap?"
   - "Does it contain nuts?" (correct)
   - "Who cooked it?"
-srsWords: "contains"
+srsWords: "contain"
 
 [multiple-choice]
 text: "What do you say when the food is delicious?"
@@ -221,7 +221,7 @@ choices:
   - "receipt"
   - "boarding pass" (correct)
   - "visa"
-srsWords: "boarding pass"
+srsWords: "board pass"
 
 [multiple-choice]
 text: "What do you call your bags and cases when you travel?"
@@ -293,7 +293,7 @@ choices:
   - "departing"
   - "boarding" (correct)
   - "checking in"
-srsWords: "boarding"
+srsWords: "board"
 
 [multiple-choice]
 text: "What is the number of your seat on a plane?"
@@ -631,7 +631,7 @@ choices:
   - "three"
   - "four" (correct)
   - "six"
-srsWords: "seasons"
+srsWords: "season"
 
 [multiple-choice]
 text: "What do flowers do in spring?"
@@ -960,7 +960,7 @@ choices:
   - "She going to school."
   - "She goes to school." (correct)
   - "She goed to school."
-srsWords: "goes"
+srsWords: "go"
 
 [multiple-choice]
 text: "Which sentence uses 'am' correctly?"
@@ -1023,7 +1023,7 @@ choices:
   - "She walk to school."
   - "She walked to school." (correct)
   - "She is walking to school."
-srsWords: "walked"
+srsWords: "walk"
 
 [multiple-choice]
 text: "Which sentence is in the future tense?"
@@ -1041,7 +1041,7 @@ choices:
   - "He ate breakfast."
   - "He is eating breakfast." (correct)
   - "He will eat breakfast."
-srsWords: "eating"
+srsWords: "eat"
 
 [multiple-choice]
 text: "Which word comes before a noun to describe it?"
@@ -1593,7 +1593,7 @@ choices:
   - "signals"
   - "traffic lights" (correct)
   - "road signs"
-srsWords: "traffic lights"
+srsWords: "traffic light"
 
 [multiple-choice]
 text: "What do you call the path on the side of the road for walking?"

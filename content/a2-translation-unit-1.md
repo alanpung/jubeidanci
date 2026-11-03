@@ -30,7 +30,7 @@ text: "Translate this sentence into English"
 sentence: "我起床后先刷牙。"
 answer: "I brush my teeth after I get up."
 acceptAlso: "I brush my teeth first after getting up."
-srsWords: "i" "brush" "my" "teeth" "after" "get" "up" "first" "getting"
+srsWords: "i" "brush" "my" "teeth" "after" "get" "up" "first" "get"
 
 [translation]
 text: "Translate this sentence into English"
@@ -79,14 +79,14 @@ text: "Translate this sentence into English"
 sentence: "我午饭后休息二十分钟。"
 answer: "I rest for twenty minutes after lunch."
 acceptAlso: "I take a twenty-minute break after lunch."
-srsWords: "i" "rest" "for" "twenty" "minutes" "after" "lunch" "take" "a" "minute" "break"
+srsWords: "i" "rest" "for" "twenty" "minute" "after" "lunch" "take" "a" "minute" "break"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我的日常生活很有规律。"
 answer: "My daily routine is very regular."
 acceptAlso: "My everyday life follows a fixed routine."
-srsWords: "my" "daily" "routine" "is" "very" "regular" "everyday" "life" "follows" "a" "fixed"
+srsWords: "my" "daily" "routine" "is" "very" "regular" "everyday" "life" "follow" "a" "fixed"
 
 ---
 lessonTitle: "Lesson 2: Greetings"
@@ -114,7 +114,7 @@ text: "Translate this sentence into English"
 sentence: "我们握手并互相介绍。"
 answer: "We shake hands and introduce ourselves."
 acceptAlso: "We shake hands and tell each other our names."
-srsWords: "we" "shake" "hands" "and" "introduce" "ourselves" "tell" "each" "other" "our" "names"
+srsWords: "we" "shake" "hand" "and" "introduce" "ourselves" "tell" "each" "other" "our" "name"
 
 [translation]
 text: "Translate this sentence into English"
@@ -128,7 +128,7 @@ text: "Translate this sentence into English"
 sentence: "他笑着跟我说再见。"
 answer: "He smiled and said goodbye to me."
 acceptAlso: "He said goodbye to me with a smile."
-srsWords: "he" "smiled" "and" "said" "goodbye" "to" "me" "with" "a" "smile"
+srsWords: "he" "smile" "and" "say" "goodbye" "to" "me" "with" "a" "smile"
 
 [translation]
 text: "Translate this sentence into English"
@@ -156,7 +156,7 @@ text: "Translate this sentence into English"
 sentence: "好久不见，你最近好吗？"
 answer: "Long time no see, how have you been?"
 acceptAlso: "I have not seen you for a long time, how are you?"
-srsWords: "long" "time" "no" "see" "how" "have" "you" "been" "i" "not" "seen" "for" "a" "are"
+srsWords: "long" "time" "no" "see" "how" "have" "you" "been" "i" "not" "see" "for" "a" "are"
 
 [translation]
 text: "Translate this sentence into English"
@@ -177,7 +177,7 @@ text: "Translate this sentence into English"
 sentence: "我六点半被闹钟叫醒。"
 answer: "My alarm wakes me up at half past six."
 acceptAlso: "I am woken up by my alarm at six thirty."
-srsWords: "my" "alarm" "wakes" "me" "up" "at" "half" "past" "six" "i" "am" "woken" "by" "thirty"
+srsWords: "my" "alarm" "wake" "me" "up" "at" "half" "past" "six" "i" "am" "wake" "by" "thirty"
 
 [translation]
 text: "Translate this sentence into English"
@@ -219,7 +219,7 @@ text: "Translate this sentence into English"
 sentence: "我洗脸后梳头。"
 answer: "I comb my hair after I wash my face."
 acceptAlso: "After washing my face I brush my hair."
-srsWords: "i" "comb" "my" "hair" "after" "wash" "face" "washing" "brush"
+srsWords: "i" "comb" "my" "hair" "after" "wash" "face" "wash" "brush"
 
 [translation]
 text: "Translate this sentence into English"
@@ -240,7 +240,7 @@ text: "Translate this sentence into English"
 sentence: "我早上给花浇水。"
 answer: "I water the plants in the morning."
 acceptAlso: "I water my flowers every morning."
-srsWords: "i" "water" "the" "plants" "in" "morning" "my" "flowers" "every"
+srsWords: "i" "water" "the" "plant" "in" "morning" "my" "flower" "every"
 
 ---
 lessonTitle: "Lesson 4: Family"
@@ -261,7 +261,7 @@ text: "Translate this sentence into English"
 sentence: "我父母住在乡下。"
 answer: "My parents live in the countryside."
 acceptAlso: "My mother and father live in the country."
-srsWords: "my" "parents" "live" "in" "the" "countryside" "mother" "and" "father" "country"
+srsWords: "my" "parent" "live" "in" "the" "countryside" "mother" "and" "father" "country"
 
 [translation]
 text: "Translate this sentence into English"
@@ -275,28 +275,28 @@ text: "Translate this sentence into English"
 sentence: "我妹妹比我小三岁。"
 answer: "My sister is three years younger than me."
 acceptAlso: "My little sister is three years younger than I am."
-srsWords: "my" "sister" "is" "three" "years" "younger" "than" "me" "little" "i" "am"
+srsWords: "my" "sister" "is" "three" "year" "young" "than" "me" "little" "i" "am"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们全家一起吃晚饭。"
 answer: "The whole family eats dinner together."
 acceptAlso: "My whole family has dinner together."
-srsWords: "the" "whole" "family" "eats" "dinner" "together" "my" "has"
+srsWords: "the" "whole" "family" "eat" "dinner" "together" "my" "has"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我妈妈在医院工作。"
 answer: "My mother works in a hospital."
 acceptAlso: "My mom works at a hospital."
-srsWords: "my" "mother" "works" "in" "a" "hospital" "mom" "at"
+srsWords: "my" "mother" "work" "in" "a" "hospital" "mom" "at"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我哥哥已经结婚了。"
 answer: "My brother is already married."
 acceptAlso: "My older brother has got married."
-srsWords: "my" "brother" "is" "already" "married" "older" "has" "got"
+srsWords: "my" "brother" "is" "already" "married" "old" "has" "got"
 
 [translation]
 text: "Translate this sentence into English"
@@ -310,14 +310,14 @@ text: "Translate this sentence into English"
 sentence: "我叔叔有两个孩子。"
 answer: "My uncle has two children."
 acceptAlso: "My uncle has got two kids."
-srsWords: "my" "uncle" "has" "two" "children" "got" "kids"
+srsWords: "my" "uncle" "has" "two" "child" "got" "kid"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们每年一起过生日。"
 answer: "We celebrate birthdays together every year."
 acceptAlso: "Every year we spend our birthdays together."
-srsWords: "we" "celebrate" "birthdays" "together" "every" "year" "spend" "our"
+srsWords: "we" "celebrate" "birthday" "together" "every" "year" "spend" "our"
 
 ---
 lessonTitle: "Lesson 5: Home Life"
@@ -338,14 +338,14 @@ text: "Translate this sentence into English"
 sentence: "我们的房子有三个卧室。"
 answer: "Our house has three bedrooms."
 acceptAlso: "There are three bedrooms in our house."
-srsWords: "our" "house" "has" "three" "bedrooms" "there" "are" "in"
+srsWords: "our" "house" "has" "three" "bedroom" "there" "are" "in"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我晚上喜欢坐在沙发上。"
 answer: "I like sitting on the sofa in the evening."
 acceptAlso: "I enjoy sitting on the couch at night."
-srsWords: "i" "like" "sitting" "on" "the" "sofa" "in" "evening" "enjoy" "couch" "at" "night"
+srsWords: "i" "like" "sit" "on" "the" "sofa" "in" "evening" "enjoy" "couch" "at" "night"
 
 [translation]
 text: "Translate this sentence into English"
@@ -359,7 +359,7 @@ text: "Translate this sentence into English"
 sentence: "我弟弟在房间里听音乐。"
 answer: "My brother listens to music in his room."
 acceptAlso: "My younger brother is listening to music in his room."
-srsWords: "my" "brother" "listens" "to" "music" "in" "his" "room" "younger" "is" "listening"
+srsWords: "my" "brother" "listen" "to" "music" "in" "his" "room" "young" "is" "listen"
 
 [translation]
 text: "Translate this sentence into English"
@@ -415,7 +415,7 @@ text: "Translate this sentence into English"
 sentence: "请你帮我洗碗。"
 answer: "Please help me wash the dishes."
 acceptAlso: "Can you help me do the dishes?"
-srsWords: "please" "help" "me" "wash" "the" "dishes" "can" "you" "do"
+srsWords: "please" "help" "me" "wash" "the" "dish" "can" "you" "do"
 
 [translation]
 text: "Translate this sentence into English"
@@ -429,7 +429,7 @@ text: "Translate this sentence into English"
 sentence: "我把衣服放进洗衣机。"
 answer: "I put the clothes in the washing machine."
 acceptAlso: "I put my laundry into the washing machine."
-srsWords: "i" "put" "the" "clothes" "in" "washing" "machine" "into"
+srsWords: "i" "put" "the" "clothes" "in" "wash" "machine" "into"
 
 [translation]
 text: "Translate this sentence into English"
@@ -443,14 +443,14 @@ text: "Translate this sentence into English"
 sentence: "她正在擦桌子。"
 answer: "She is cleaning the table."
 acceptAlso: "She is wiping the table now."
-srsWords: "she" "is" "cleaning" "the" "table" "now"
+srsWords: "she" "is" "clean" "the" "table" "now"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们每个月擦一次窗户。"
 answer: "We clean the windows once a month."
 acceptAlso: "We wash our windows once every month."
-srsWords: "we" "clean" "the" "windows" "once" "a" "month" "wash" "our" "every"
+srsWords: "we" "clean" "the" "window" "once" "a" "month" "wash" "our" "every"
 
 [translation]
 text: "Translate this sentence into English"
@@ -471,7 +471,7 @@ text: "Translate this sentence into English"
 sentence: "打扫完以后房间很干净。"
 answer: "The room is very clean after cleaning."
 acceptAlso: "The room looks clean after we tidy it."
-srsWords: "the" "room" "is" "very" "clean" "after" "cleaning" "looks" "we" "tidy" "it"
+srsWords: "the" "room" "is" "very" "clean" "after" "clean" "look" "we" "tidy" "it"
 
 ---
 lessonTitle: "Lesson 7: Time Management"
@@ -485,7 +485,7 @@ text: "Translate this sentence into English"
 sentence: "我用一个本子记下要做的事。"
 answer: "I write down my tasks in a notebook."
 acceptAlso: "I keep a list of my tasks in a notebook."
-srsWords: "i" "write" "down" "my" "tasks" "in" "a" "notebook" "keep" "list" "of"
+srsWords: "i" "write" "down" "my" "task" "in" "a" "notebook" "keep" "list" "of"
 
 [translation]
 text: "Translate this sentence into English"
@@ -513,14 +513,14 @@ text: "Translate this sentence into English"
 sentence: "我迟到了十分钟。"
 answer: "I was ten minutes late."
 acceptAlso: "I arrived ten minutes late."
-srsWords: "i" "was" "ten" "minutes" "late" "arrived"
+srsWords: "i" "was" "ten" "minute" "late" "arrive"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "会议从九点开到十点。"
 answer: "The meeting lasts from nine to ten."
 acceptAlso: "The meeting runs from nine o'clock until ten."
-srsWords: "the" "meeting" "lasts" "from" "nine" "to" "ten" "runs" "o'clock" "until"
+srsWords: "the" "meeting" "last" "from" "nine" "to" "ten" "run" "o'clock" "until"
 
 [translation]
 text: "Translate this sentence into English"
@@ -541,14 +541,14 @@ text: "Translate this sentence into English"
 sentence: "我按时完成了作业。"
 answer: "I finished my homework on time."
 acceptAlso: "I completed my homework in time."
-srsWords: "i" "finished" "my" "homework" "on" "time" "completed" "in"
+srsWords: "i" "finish" "my" "homework" "on" "time" "complete" "in"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这项工作花了两个小时。"
 answer: "This work took two hours."
 acceptAlso: "The job took me two hours."
-srsWords: "this" "work" "took" "two" "hours" "the" "job" "me"
+srsWords: "this" "work" "take" "two" "hour" "the" "job" "me"
 
 ---
 lessonTitle: "Lesson 8: Rest & Sleep"
@@ -562,7 +562,7 @@ text: "Translate this sentence into English"
 sentence: "我每晚睡八个小时。"
 answer: "I sleep eight hours every night."
 acceptAlso: "I get eight hours of sleep every night."
-srsWords: "i" "sleep" "eight" "hours" "every" "night" "get" "of"
+srsWords: "i" "sleep" "eight" "hour" "every" "night" "get" "of"
 
 [translation]
 text: "Translate this sentence into English"
@@ -597,7 +597,7 @@ text: "Translate this sentence into English"
 sentence: "我昨晚做了一个奇怪的梦。"
 answer: "I had a strange dream last night."
 acceptAlso: "Last night I dreamt something strange."
-srsWords: "i" "had" "a" "strange" "dream" "last" "night" "dreamt" "something"
+srsWords: "i" "had" "a" "strange" "dream" "last" "night" "dream" "something"
 
 [translation]
 text: "Translate this sentence into English"
@@ -618,7 +618,7 @@ text: "Translate this sentence into English"
 sentence: "我睡觉前不看手机。"
 answer: "I do not look at my phone before bed."
 acceptAlso: "I never use my phone before sleeping."
-srsWords: "i" "do" "not" "look" "at" "my" "phone" "before" "bed" "never" "use" "sleeping"
+srsWords: "i" "do" "not" "look" "at" "my" "phone" "before" "bed" "never" "use" "sleep"
 
 [translation]
 text: "Translate this sentence into English"
@@ -653,7 +653,7 @@ text: "Translate this sentence into English"
 sentence: "我们周日去公园野餐。"
 answer: "We are having a picnic in the park on Sunday."
 acceptAlso: "We will have a picnic in the park on Sunday."
-srsWords: "we" "are" "having" "a" "picnic" "in" "the" "park" "on" "sunday" "will" "have"
+srsWords: "we" "are" "have" "a" "picnic" "in" "the" "park" "on" "sunday" "will" "have"
 
 [translation]
 text: "Translate this sentence into English"
@@ -674,7 +674,7 @@ text: "Translate this sentence into English"
 sentence: "如果下雨，我们就待在家里。"
 answer: "If it rains, we will stay at home."
 acceptAlso: "We will stay home if it rains."
-srsWords: "if" "it" "rains" "we" "will" "stay" "at" "home"
+srsWords: "if" "it" "rain" "we" "will" "stay" "at" "home"
 
 [translation]
 text: "Translate this sentence into English"
@@ -688,21 +688,21 @@ text: "Translate this sentence into English"
 sentence: "我们约好九点见面。"
 answer: "We agreed to meet at nine."
 acceptAlso: "We arranged to meet at nine o'clock."
-srsWords: "we" "agreed" "to" "meet" "at" "nine" "arranged" "o'clock"
+srsWords: "we" "agree" "to" "meet" "at" "nine" "arrange" "o'clock"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我周末常常去购物。"
 answer: "I often go shopping at the weekend."
 acceptAlso: "I usually do my shopping on weekends."
-srsWords: "i" "often" "go" "shopping" "at" "the" "weekend" "usually" "do" "my" "on" "weekends"
+srsWords: "i" "often" "go" "shopping" "at" "the" "weekend" "usually" "do" "my" "on" "weekend"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我必须取消我们的计划。"
 answer: "I have to cancel our plan."
 acceptAlso: "I must call off our plans."
-srsWords: "i" "have" "to" "cancel" "our" "plan" "must" "call" "off" "plans"
+srsWords: "i" "have" "to" "cancel" "our" "plan" "must" "call" "off" "plan"
 
 ---
 lessonTitle: "Lesson 10: Pet Care"
@@ -730,14 +730,14 @@ text: "Translate this sentence into English"
 sentence: "我的猫很喜欢玩球。"
 answer: "My cat likes playing with a ball very much."
 acceptAlso: "My cat really enjoys playing with balls."
-srsWords: "my" "cat" "likes" "playing" "with" "a" "ball" "very" "much" "really" "enjoys" "balls"
+srsWords: "my" "cat" "like" "play" "with" "a" "ball" "very" "much" "really" "enjoy" "ball"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们每年带宠物去看兽医。"
 answer: "We take our pet to the vet every year."
 acceptAlso: "Our pet visits the vet once a year."
-srsWords: "we" "take" "our" "pet" "to" "the" "vet" "every" "year" "visits" "once" "a"
+srsWords: "we" "take" "our" "pet" "to" "the" "vet" "every" "year" "visit" "once" "a"
 
 [translation]
 text: "Translate this sentence into English"
@@ -758,14 +758,14 @@ text: "Translate this sentence into English"
 sentence: "我的狗在门口等我。"
 answer: "My dog waits for me at the door."
 acceptAlso: "My dog is waiting for me by the door."
-srsWords: "my" "dog" "waits" "for" "me" "at" "the" "door" "is" "waiting" "by"
+srsWords: "my" "dog" "wait" "for" "me" "at" "the" "door" "is" "wait" "by"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "养宠物需要很多时间。"
 answer: "Keeping a pet needs a lot of time."
 acceptAlso: "Taking care of a pet takes much time."
-srsWords: "keeping" "a" "pet" "needs" "lot" "of" "time" "taking" "care" "takes" "much"
+srsWords: "keep" "a" "pet" "need" "lot" "of" "time" "taking" "care" "take" "much"
 
 [translation]
 text: "Translate this sentence into English"
@@ -779,7 +779,7 @@ text: "Translate this sentence into English"
 sentence: "我妹妹害怕大狗。"
 answer: "My sister is afraid of big dogs."
 acceptAlso: "My little sister fears large dogs."
-srsWords: "my" "sister" "is" "afraid" "of" "big" "dogs" "little" "fears" "large"
+srsWords: "my" "sister" "is" "afraid" "of" "big" "dog" "little" "fear" "large"
 ---
 lessonTitle: "Lesson 11: Train Station"
 description: "Translate A2 sentences about Train Station"
@@ -820,14 +820,14 @@ text: "Translate this sentence into English"
 sentence: "这趟火车晚点了二十分钟。"
 answer: "This train is twenty minutes late."
 acceptAlso: "The train is delayed by twenty minutes."
-srsWords: "this" "train" "is" "twenty" "minutes" "late" "the" "delayed" "by"
+srsWords: "this" "train" "is" "twenty" "minute" "late" "the" "delay" "by"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我在候车室等你。"
 answer: "I am waiting for you in the waiting room."
 acceptAlso: "I will wait for you inside the station hall."
-srsWords: "i" "am" "waiting" "for" "you" "in" "the" "room" "will" "wait" "inside" "station" "hall"
+srsWords: "i" "am" "wait" "for" "you" "in" "the" "room" "will" "wait" "inside" "station" "hall"
 
 [translation]
 text: "Translate this sentence into English"
@@ -848,14 +848,14 @@ text: "Translate this sentence into English"
 sentence: "这趟车中途要换车吗？"
 answer: "Do I have to change trains on the way?"
 acceptAlso: "Must I change trains during the trip?"
-srsWords: "do" "i" "have" "to" "change" "trains" "on" "the" "way" "must" "during" "trip"
+srsWords: "do" "i" "have" "to" "change" "train" "on" "the" "way" "must" "during" "trip"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "车厢里有很多空座位。"
 answer: "There are many empty seats in the carriage."
 acceptAlso: "The carriage has a lot of free seats."
-srsWords: "there" "are" "many" "empty" "seats" "in" "the" "carriage" "has" "a" "lot" "of" "free"
+srsWords: "there" "are" "many" "empty" "seat" "in" "the" "carriage" "has" "a" "lot" "of" "free"
 
 ---
 lessonTitle: "Lesson 12: Airport"
@@ -869,7 +869,7 @@ text: "Translate this sentence into English"
 sentence: "我明天早上坐飞机去上海。"
 answer: "I am flying to Shanghai tomorrow morning."
 acceptAlso: "I will take a plane to Shanghai tomorrow morning."
-srsWords: "i" "am" "flying" "to" "shanghai" "tomorrow" "morning" "will" "take" "a" "plane"
+srsWords: "i" "am" "fly" "to" "shanghai" "tomorrow" "morning" "will" "take" "a" "plane"
 
 [translation]
 text: "Translate this sentence into English"
@@ -883,28 +883,28 @@ text: "Translate this sentence into English"
 sentence: "请出示你的护照和登机牌。"
 answer: "Please show your passport and boarding pass."
 acceptAlso: "Show me your passport and boarding pass, please."
-srsWords: "please" "show" "your" "passport" "and" "boarding" "pass" "me"
+srsWords: "please" "show" "your" "passport" "and" "board" "pass" "me"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "飞机将在十分钟后起飞。"
 answer: "The plane will take off in ten minutes."
 acceptAlso: "The aircraft is leaving in ten minutes."
-srsWords: "the" "plane" "will" "take" "off" "in" "ten" "minutes" "aircraft" "is" "leaving"
+srsWords: "the" "plane" "will" "take" "off" "in" "ten" "minute" "aircraft" "is" "leave"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们的航班被取消了。"
 answer: "Our flight has been cancelled."
 acceptAlso: "They cancelled our flight."
-srsWords: "our" "flight" "has" "been" "cancelled" "they"
+srsWords: "our" "flight" "has" "been" "cancel" "they"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我在机场免税店买了礼物。"
 answer: "I bought gifts at the airport duty-free shop."
 acceptAlso: "I got some presents in the duty-free store."
-srsWords: "i" "bought" "gifts" "at" "the" "airport" "duty" "free" "shop" "got" "some" "presents" "in" "store"
+srsWords: "i" "buy" "gift" "at" "the" "airport" "duty" "free" "shop" "got" "some" "present" "in" "store"
 
 [translation]
 text: "Translate this sentence into English"
@@ -918,14 +918,14 @@ text: "Translate this sentence into English"
 sentence: "我的航班延误了两个小时。"
 answer: "My flight is delayed by two hours."
 acceptAlso: "My plane was two hours late."
-srsWords: "my" "flight" "is" "delayed" "by" "two" "hours" "plane" "was" "late"
+srsWords: "my" "flight" "is" "delay" "by" "two" "hour" "plane" "was" "late"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请到三号门登机。"
 answer: "Please board at gate three."
 acceptAlso: "Boarding is at gate number three, please."
-srsWords: "please" "board" "at" "gate" "three" "boarding" "is" "number"
+srsWords: "please" "board" "at" "gate" "three" "board" "is" "number"
 
 [translation]
 text: "Translate this sentence into English"
@@ -981,14 +981,14 @@ text: "Translate this sentence into English"
 sentence: "步行大约需要十分钟。"
 answer: "It takes about ten minutes on foot."
 acceptAlso: "It is about a ten-minute walk."
-srsWords: "it" "takes" "about" "ten" "minutes" "on" "foot" "is" "a" "minute" "walk"
+srsWords: "it" "take" "about" "ten" "minute" "on" "foot" "is" "a" "minute" "walk"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "在第二个红绿灯处左转。"
 answer: "Turn left at the second traffic light."
 acceptAlso: "Take the second left at the lights."
-srsWords: "turn" "left" "at" "the" "second" "traffic" "light" "take" "lights"
+srsWords: "turn" "left" "at" "the" "second" "traffic" "light" "take" "light"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1009,7 +1009,7 @@ text: "Translate this sentence into English"
 sentence: "请带我去最近的地铁站。"
 answer: "Please take me to the nearest subway station."
 acceptAlso: "Can you direct me to the closest metro station?"
-srsWords: "please" "take" "me" "to" "the" "nearest" "subway" "station" "can" "you" "direct" "closest" "metro"
+srsWords: "please" "take" "me" "to" "the" "near" "subway" "station" "can" "you" "direct" "close" "metro"
 
 ---
 lessonTitle: "Lesson 14: Hotel Check-in"
@@ -1023,14 +1023,14 @@ text: "Translate this sentence into English"
 sentence: "我订了一间双人房。"
 answer: "I have booked a double room."
 acceptAlso: "I reserved a room for two people."
-srsWords: "i" "have" "booked" "a" "double" "room" "reserved" "for" "two" "people"
+srsWords: "i" "have" "book" "a" "double" "room" "reserve" "for" "two" "people"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我今晚要住两个晚上。"
 answer: "I am staying for two nights."
 acceptAlso: "I will stay two nights here."
-srsWords: "i" "am" "staying" "for" "two" "nights" "will" "stay" "here"
+srsWords: "i" "am" "stay" "for" "two" "night" "will" "stay" "here"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1044,7 +1044,7 @@ text: "Translate this sentence into English"
 sentence: "房费包含早餐吗？"
 answer: "Is breakfast included in the price?"
 acceptAlso: "Does the room price include breakfast?"
-srsWords: "is" "breakfast" "included" "in" "the" "price" "does" "room" "include"
+srsWords: "is" "breakfast" "include" "in" "the" "price" "does" "room" "include"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1065,7 +1065,7 @@ text: "Translate this sentence into English"
 sentence: "我明天早上八点退房。"
 answer: "I am checking out at eight tomorrow morning."
 acceptAlso: "I will leave the hotel at eight tomorrow morning."
-srsWords: "i" "am" "checking" "out" "at" "eight" "tomorrow" "morning" "will" "leave" "the" "hotel"
+srsWords: "i" "am" "check" "out" "at" "eight" "tomorrow" "morning" "will" "leave" "the" "hotel"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1079,7 +1079,7 @@ text: "Translate this sentence into English"
 sentence: "我可以把行李寄存在这里吗？"
 answer: "Can I leave my luggage here?"
 acceptAlso: "May I store my bags here?"
-srsWords: "can" "i" "leave" "my" "luggage" "here" "may" "store" "bags"
+srsWords: "can" "i" "leave" "my" "luggage" "here" "may" "store" "bag"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1128,7 +1128,7 @@ text: "Translate this sentence into English"
 sentence: "你能开快一点吗？"
 answer: "Can you drive a little faster?"
 acceptAlso: "Could you please hurry up?"
-srsWords: "can" "you" "drive" "a" "little" "faster" "could" "please" "hurry" "up"
+srsWords: "can" "you" "drive" "a" "little" "fast" "could" "please" "hurry" "up"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1149,14 +1149,14 @@ text: "Translate this sentence into English"
 sentence: "这个城市的出租车很干净。"
 answer: "The taxis in this city are very clean."
 acceptAlso: "Taxis here are quite clean."
-srsWords: "the" "taxis" "in" "this" "city" "are" "very" "clean" "here" "quite"
+srsWords: "the" "taxi" "in" "this" "city" "are" "very" "clean" "here" "quite"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "司机帮我把行李放进后备箱。"
 answer: "The driver helped me put my luggage in the boot."
 acceptAlso: "The driver put my bags in the trunk for me."
-srsWords: "the" "driver" "helped" "me" "put" "my" "luggage" "in" "boot" "bags" "for"
+srsWords: "the" "driver" "help" "me" "put" "my" "luggage" "in" "boot" "bag" "for"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1177,7 +1177,7 @@ text: "Translate this sentence into English"
 sentence: "哪路公交车去市中心？"
 answer: "Which bus goes to the city centre?"
 acceptAlso: "Which bus should I take downtown?"
-srsWords: "which" "bus" "goes" "to" "the" "city" "centre" "should" "i" "take" "downtown"
+srsWords: "which" "bus" "go" "to" "the" "city" "centre" "should" "i" "take" "downtown"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1198,7 +1198,7 @@ text: "Translate this sentence into English"
 sentence: "这辆车每十五分钟一班。"
 answer: "This bus comes every fifteen minutes."
 acceptAlso: "There is a bus every quarter of an hour."
-srsWords: "this" "bus" "comes" "every" "fifteen" "minutes" "there" "is" "a" "quarter" "of" "an" "hour"
+srsWords: "this" "bus" "come" "every" "fifteen" "minute" "there" "is" "a" "quarter" "of" "an" "hour"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1219,7 +1219,7 @@ text: "Translate this sentence into English"
 sentence: "车上没有座位了。"
 answer: "There are no seats left on the bus."
 acceptAlso: "The bus has no free seats."
-srsWords: "there" "are" "no" "seats" "left" "on" "the" "bus" "has" "free"
+srsWords: "there" "are" "no" "seat" "left" "on" "the" "bus" "has" "free"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1233,14 +1233,14 @@ text: "Translate this sentence into English"
 sentence: "下一站是人民公园。"
 answer: "The next stop is People's Park."
 acceptAlso: "We are arriving at People's Park next."
-srsWords: "the" "next" "stop" "is" "people's" "park" "we" "are" "arriving" "at"
+srsWords: "the" "next" "stop" "is" "people's" "park" "we" "are" "arrive" "at"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "末班车是晚上十点。"
 answer: "The last bus is at ten in the evening."
 acceptAlso: "The final bus leaves at ten at night."
-srsWords: "the" "last" "bus" "is" "at" "ten" "in" "evening" "final" "leaves" "night"
+srsWords: "the" "last" "bus" "is" "at" "ten" "in" "evening" "final" "leave" "night"
 
 ---
 lessonTitle: "Lesson 17: Sightseeing"
@@ -1254,7 +1254,7 @@ text: "Translate this sentence into English"
 sentence: "我们今天去参观古城。"
 answer: "We are visiting the old town today."
 acceptAlso: "Today we will see the old city."
-srsWords: "we" "are" "visiting" "the" "old" "town" "today" "will" "see" "city"
+srsWords: "we" "are" "visit" "the" "old" "town" "today" "will" "see" "city"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1268,7 +1268,7 @@ text: "Translate this sentence into English"
 sentence: "我们可以在这里拍照吗？"
 answer: "Can we take photos here?"
 acceptAlso: "Is it allowed to take pictures here?"
-srsWords: "can" "we" "take" "photos" "here" "is" "it" "allowed" "to" "pictures"
+srsWords: "can" "we" "take" "photo" "here" "is" "it" "allow" "to" "picture"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1282,7 +1282,7 @@ text: "Translate this sentence into English"
 sentence: "导游给我们讲了很多故事。"
 answer: "The guide told us many stories."
 acceptAlso: "Our guide shared a lot of stories with us."
-srsWords: "the" "guide" "told" "us" "many" "stories" "our" "shared" "a" "lot" "of" "with"
+srsWords: "the" "guide" "tell" "us" "many" "story" "our" "share" "a" "lot" "of" "with"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1296,21 +1296,21 @@ text: "Translate this sentence into English"
 sentence: "博物馆九点开门。"
 answer: "The museum opens at nine."
 acceptAlso: "The museum is open from nine o'clock."
-srsWords: "the" "museum" "opens" "at" "nine" "is" "open" "from" "o'clock"
+srsWords: "the" "museum" "open" "at" "nine" "is" "open" "from" "o'clock"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我买了一张城市地图。"
 answer: "I bought a map of the city."
 acceptAlso: "I got a city map."
-srsWords: "i" "bought" "a" "map" "of" "the" "city" "got"
+srsWords: "i" "buy" "a" "map" "of" "the" "city" "got"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们排队等了半个小时。"
 answer: "We waited in line for half an hour."
 acceptAlso: "We queued for thirty minutes."
-srsWords: "we" "waited" "in" "line" "for" "half" "an" "hour" "queued" "thirty" "minutes"
+srsWords: "we" "wait" "in" "line" "for" "half" "an" "hour" "queue" "thirty" "minute"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1331,7 +1331,7 @@ text: "Translate this sentence into English"
 sentence: "我的行李箱很重。"
 answer: "My suitcase is very heavy."
 acceptAlso: "My luggage weighs a lot."
-srsWords: "my" "suitcase" "is" "very" "heavy" "luggage" "weighs" "a" "lot"
+srsWords: "my" "suitcase" "is" "very" "heavy" "luggage" "weigh" "a" "lot"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1345,21 +1345,21 @@ text: "Translate this sentence into English"
 sentence: "请把行李放在秤上。"
 answer: "Please put your luggage on the scale."
 acceptAlso: "Put your bag on the scales, please."
-srsWords: "please" "put" "your" "luggage" "on" "the" "scale" "bag" "scales"
+srsWords: "please" "put" "your" "luggage" "on" "the" "scale" "bag" "scale"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我的行李超重了。"
 answer: "My luggage is overweight."
 acceptAlso: "My bags weigh too much."
-srsWords: "my" "luggage" "is" "overweight" "bags" "weigh" "too" "much"
+srsWords: "my" "luggage" "is" "overweight" "bag" "weigh" "too" "much"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我丢了一只手提箱。"
 answer: "I lost a suitcase."
 acceptAlso: "One of my cases is missing."
-srsWords: "i" "lost" "a" "suitcase" "one" "of" "my" "cases" "is" "missing"
+srsWords: "i" "lost" "a" "suitcase" "one" "of" "my" "case" "is" "missing"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1373,28 +1373,28 @@ text: "Translate this sentence into English"
 sentence: "我打包了三件衬衫。"
 answer: "I put three shirts in my bag."
 acceptAlso: "I put three shirts in my case."
-srsWords: "i" "put" "three" "shirts" "in" "my" "bag"
+srsWords: "i" "put" "three" "shirt" "in" "my" "bag"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请帮我拿一下行李。"
 answer: "Please help me with my luggage."
 acceptAlso: "Could you carry my bags for me?"
-srsWords: "please" "help" "me" "with" "my" "luggage" "could" "you" "carry" "bags" "for"
+srsWords: "please" "help" "me" "with" "my" "luggage" "could" "you" "carry" "bag" "for"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我把行李锁好了。"
 answer: "I locked my suitcase."
 acceptAlso: "My luggage is locked now."
-srsWords: "i" "locked" "my" "suitcase" "luggage" "is" "now"
+srsWords: "i" "lock" "my" "suitcase" "luggage" "is" "now"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "贵重物品请随身带。"
 answer: "Please keep your valuables with you."
 acceptAlso: "Carry your valuable things yourself, please."
-srsWords: "please" "keep" "your" "valuables" "with" "you" "carry" "valuable" "things" "yourself"
+srsWords: "please" "keep" "your" "valuable" "with" "you" "carry" "valuable" "thing" "yourself"
 
 ---
 lessonTitle: "Lesson 19: Tickets"
@@ -1408,7 +1408,7 @@ text: "Translate this sentence into English"
 sentence: "我想买两张往返票。"
 answer: "I want to buy two return tickets."
 acceptAlso: "I would like two round-trip tickets."
-srsWords: "i" "want" "to" "buy" "two" "return" "tickets" "would" "like" "round" "trip"
+srsWords: "i" "want" "to" "buy" "two" "return" "ticket" "would" "like" "round" "trip"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1422,21 +1422,21 @@ text: "Translate this sentence into English"
 sentence: "学生可以打折吗？"
 answer: "Do students get a discount?"
 acceptAlso: "Is there a student discount?"
-srsWords: "do" "students" "get" "a" "discount" "is" "there" "student"
+srsWords: "do" "student" "get" "a" "discount" "is" "there" "student"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我可以在网上订票吗？"
 answer: "Can I book tickets online?"
 acceptAlso: "Is it possible to book a ticket on the internet?"
-srsWords: "can" "i" "book" "tickets" "online" "is" "it" "possible" "to" "a" "ticket" "on" "the" "internet"
+srsWords: "can" "i" "book" "ticket" "online" "is" "it" "possible" "to" "a" "ticket" "on" "the" "internet"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这个座位已经有人了。"
 answer: "This seat is already taken."
 acceptAlso: "Someone is sitting in this seat."
-srsWords: "this" "seat" "is" "already" "taken" "someone" "sitting" "in"
+srsWords: "this" "seat" "is" "already" "take" "someone" "sit" "in"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1450,7 +1450,7 @@ text: "Translate this sentence into English"
 sentence: "请提前半小时取票。"
 answer: "Please collect your ticket half an hour early."
 acceptAlso: "Pick up your ticket thirty minutes before, please."
-srsWords: "please" "collect" "your" "ticket" "half" "an" "hour" "early" "pick" "up" "thirty" "minutes" "before"
+srsWords: "please" "collect" "your" "ticket" "half" "an" "hour" "early" "pick" "up" "thirty" "minute" "before"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1464,14 +1464,14 @@ text: "Translate this sentence into English"
 sentence: "我把票忘在家里了。"
 answer: "I left my ticket at home."
 acceptAlso: "I forgot my ticket at home."
-srsWords: "i" "left" "my" "ticket" "at" "home" "forgot"
+srsWords: "i" "left" "my" "ticket" "at" "home" "forget"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "检票处在二楼。"
 answer: "The ticket check is on the second floor."
 acceptAlso: "Tickets are checked upstairs on the second floor."
-srsWords: "the" "ticket" "check" "is" "on" "second" "floor" "tickets" "are" "checked" "upstairs"
+srsWords: "the" "ticket" "check" "is" "on" "second" "floor" "ticket" "are" "check" "upstairs"
 
 ---
 lessonTitle: "Lesson 20: Car Rental"
@@ -1499,7 +1499,7 @@ text: "Translate this sentence into English"
 sentence: "我需要出示驾照吗？"
 answer: "Do I need to show my driving licence?"
 acceptAlso: "Must I show a driver's license?"
-srsWords: "do" "i" "need" "to" "show" "my" "driving" "licence" "must" "a" "driver's" "license"
+srsWords: "do" "i" "need" "to" "show" "my" "drive" "licence" "must" "a" "driver's" "license"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1534,14 +1534,14 @@ text: "Translate this sentence into English"
 sentence: "合同上写着还车时间。"
 answer: "The return time is written in the contract."
 acceptAlso: "The contract shows when to bring the car back."
-srsWords: "the" "return" "time" "is" "written" "in" "contract" "shows" "when" "to" "bring" "car" "back"
+srsWords: "the" "return" "time" "is" "written" "in" "contract" "show" "when" "to" "bring" "car" "back"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "车子里有两个安全座椅。"
 answer: "There are two child seats in the car."
 acceptAlso: "The car comes with two safety seats."
-srsWords: "there" "are" "two" "child" "seats" "in" "the" "car" "comes" "with" "safety"
+srsWords: "there" "are" "two" "child" "seat" "in" "the" "car" "come" "with" "safety"
 
 [translation]
 text: "Translate this sentence into English"

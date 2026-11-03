@@ -20,4 +20,4 @@ color: "#FF9600"
 [listening]
 text: "I have two cats."
 ttsLang: en-US
-srsWords: "two" "cats"
+srsWords: "two" "cat"

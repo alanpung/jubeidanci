@@ -22,13 +22,13 @@ color: "#1565C0"
 text: "把下面的句子翻译成英文"
 sentence: "她向经理申请了一个新职位。"
 answer: "She applied for a new position with the manager."
-srsWords: "applied" "position" "manager"
+srsWords: "apply" "position" "manager"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他决定换一份新工作来发展自己的职业生涯。"
 answer: "He decided to change jobs to develop his career."
-srsWords: "decided" "change" "develop" "career"
+srsWords: "decide" "change" "develop" "career"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -40,13 +40,13 @@ srsWords: "objective" "meeting" "develop" "strategic" "plan"
 text: "把下面的句子翻译成英文"
 sentence: "她在面试中表现得非常出色。"
 answer: "She performed excellently in the interview."
-srsWords: "performed" "excellently" "interview"
+srsWords: "perform" "excellently" "interview"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他们设法在截止日期前完成了项目。"
 answer: "They managed to complete the project before the deadline."
-srsWords: "managed" "complete" "project" "deadline"
+srsWords: "manage" "complete" "project" "deadline"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -58,7 +58,7 @@ srsWords: "contribute" "team"
 text: "把下面的句子翻译成英文"
 sentence: "这项任务需要团队成员之间的紧密合作。"
 answer: "This task requires close cooperation between team members."
-srsWords: "task" "requires" "close" "cooperation" "members"
+srsWords: "task" "require" "close" "cooperation" "member"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -77,43 +77,43 @@ color: "#6A1B9A"
 text: "把下面的句子翻译成英文"
 sentence: "我们需要找到一个双方都能接受的解决方案。"
 answer: "We need to find a solution that both sides can accept."
-srsWords: "solution" "sides" "accept"
+srsWords: "solution" "side" "accept"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他们尝试通过对话来解决这个问题。"
 answer: "They tried to resolve the issue through dialogue."
-srsWords: "tried" "resolve" "issue" "dialogue"
+srsWords: "try" "resolve" "issue" "dialogue"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "我们应该采取措施防止事故发生。"
 answer: "We should take measures to prevent accidents from happening."
-srsWords: "measures" "prevent" "accidents" "happening"
+srsWords: "measure" "prevent" "accident" "happening"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "她通过努力克服了许多困难。"
 answer: "She overcame many difficulties through hard work."
-srsWords: "overcame" "difficulties" "hard work"
+srsWords: "overcome" "difficulty" "hard work"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这个问题需要立即得到处理。"
 answer: "This problem needs to be dealt with immediately."
-srsWords: "problem" "dealt" "immediately"
+srsWords: "problem" "deal" "immediately"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "我们需要仔细考虑所有可能的后果。"
 answer: "We need to carefully consider all possible consequences."
-srsWords: "carefully" "consider" "possible" "consequences"
+srsWords: "carefully" "consider" "possible" "consequence"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他们通过谈判解决了这个争端。"
 answer: "They resolved the dispute through negotiation."
-srsWords: "resolved" "dispute" "negotiation"
+srsWords: "resolve" "dispute" "negotiation"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -132,25 +132,25 @@ color: "#F57C00"
 text: "把下面的句子翻译成英文"
 sentence: "大多数学生都通过了这次考试。"
 answer: "The majority of students passed this exam."
-srsWords: "majority" "students" "passed" "exam"
+srsWords: "majority" "student" "pass" "exam"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他花了很多时间来扩展自己的知识。"
 answer: "He spent a lot of time expanding his knowledge."
-srsWords: "spent" "expanding" "knowledge"
+srsWords: "spend" "expand" "knowledge"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "所有学生都被鼓励参与课堂讨论。"
 answer: "All students are encouraged to participate in class discussions."
-srsWords: "encouraged" "participate" "discussions"
+srsWords: "encourage" "participate" "discussion"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "她意识到自己需要改变学习方式。"
 answer: "She realized she needed to change her way of studying."
-srsWords: "realized" "needed" "change" "studying"
+srsWords: "realize" "need" "change" "study"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -168,13 +168,13 @@ srsWords: "skill" "important" "modern" "workplace"
 text: "把下面的句子翻译成英文"
 sentence: "这个理论已经被许多科学家所证实。"
 answer: "This theory has been confirmed by many scientists."
-srsWords: "theory" "confirmed" "scientists"
+srsWords: "theory" "confirm" "scientist"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他通过努力取得了令人满意的成绩。"
 answer: "He achieved satisfying results through hard work."
-srsWords: "achieved" "satisfying" "results"
+srsWords: "achieve" "satisfy" "result"
 
 ---
 lessonTitle: "Lesson 4: Science & Research"
@@ -187,13 +187,13 @@ color: "#00695C"
 text: "把下面的句子翻译成英文"
 sentence: "这个实验的结果令科学家们感到惊喜。"
 answer: "The results of the experiment surprised the scientists."
-srsWords: "results" "experiment" "surprised" "scientists"
+srsWords: "result" "experiment" "surprised" "scientist"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "警察找到了证明他无罪的证据。"
 answer: "The police found evidence proving his innocence."
-srsWords: "police" "evidence" "proving" "innocence"
+srsWords: "police" "evidence" "prove" "innocence"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -205,7 +205,7 @@ srsWords: "data" "support" "argument"
 text: "把下面的句子翻译成英文"
 sentence: "这项研究证明了锻炼对健康的益处。"
 answer: "This research proves the benefits of exercise for health."
-srsWords: "research" "proves" "benefits" "exercise" "health"
+srsWords: "research" "prove" "benefit" "exercise" "health"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -217,19 +217,19 @@ srsWords: "phenomenon" "difficult" "explain" "science"
 text: "把下面的句子翻译成英文"
 sentence: "这项发明彻底改变了现代医学。"
 answer: "This invention completely changed modern medicine."
-srsWords: "invention" "completely" "changed" "modern" "medicine"
+srsWords: "invention" "completely" "change" "modern" "medicine"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这份报告提供了全面的分析。"
 answer: "This report provides a comprehensive analysis."
-srsWords: "report" "provides" "comprehensive" "analysis"
+srsWords: "report" "provide" "comprehensive" "analysis"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这项技术的发展改变了人们的生活方式。"
 answer: "The development of this technology has changed people's way of life."
-srsWords: "development" "technology" "changed" "way"
+srsWords: "development" "technology" "change" "way"
 
 ---
 lessonTitle: "Lesson 5: Society & Culture"
@@ -242,19 +242,19 @@ color: "#C62828"
 text: "把下面的句子翻译成英文"
 sentence: "这个文化活动吸引了很多游客。"
 answer: "This cultural event attracted many tourists."
-srsWords: "cultural" "event" "attracted" "tourists"
+srsWords: "cultural" "event" "attract" "tourist"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这个社会问题需要政府的关注。"
 answer: "This social issue requires the government's attention."
-srsWords: "social" "issue" "requires" "government" "attention"
+srsWords: "social" "issue" "require" "government" "attention"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "我们应该尊重不同文化之间的差异。"
 answer: "We should respect the differences between different cultures."
-srsWords: "respect" "differences" "cultures"
+srsWords: "respect" "difference" "culture"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -284,7 +284,7 @@ srsWords: "trend" "evident" "global" "scale"
 text: "把下面的句子翻译成英文"
 sentence: "政府宣布了一项新政策。"
 answer: "The government announced a new policy."
-srsWords: "government" "announced" "policy"
+srsWords: "government" "announce" "policy"
 
 ---
 lessonTitle: "Lesson 6: Environment & Nature"
@@ -297,31 +297,31 @@ color: "#2E7D32"
 text: "把下面的句子翻译成英文"
 sentence: "保护环境是每个公民的责任。"
 answer: "Protecting the environment is every citizen's responsibility."
-srsWords: "protecting" "environment" "citizen" "responsibility"
+srsWords: "protect" "environment" "citizen" "responsibility"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这种动物只存在于热带雨林中。"
 answer: "This animal only exists in tropical rainforests."
-srsWords: "animal" "exists" "tropical" "rainforests"
+srsWords: "animal" "exist" "tropical" "rainforest"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "气候变化对全球生态系统产生了深远影响。"
 answer: "Climate change has had a profound impact on global ecosystems."
-srsWords: "climate" "change" "profound" "impact" "global" "ecosystems"
+srsWords: "climate" "change" "profound" "impact" "global" "ecosystem"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他们探索了这片未知的土地。"
 answer: "They explored this unknown land."
-srsWords: "explored" "unknown" "land"
+srsWords: "explore" "unknown" "land"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "人们越来越倾向于使用可再生能源。"
 answer: "People are increasingly tending to use renewable energy."
-srsWords: "increasingly" "tending" "renewable" "energy"
+srsWords: "increasingly" "tend" "renewable" "energy"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -339,7 +339,7 @@ srsWords: "natural" "disaster" "serious" "damage" "local" "community"
 text: "把下面的句子翻译成英文"
 sentence: "减少碳排放是应对气候变化的关键。"
 answer: "Reducing carbon emissions is key to addressing climate change."
-srsWords: "reducing" "carbon" "emissions" "addressing" "climate" "change"
+srsWords: "reduce" "carbon" "emission" "address" "climate" "change"
 
 ---
 lessonTitle: "Lesson 7: Personal Growth"
@@ -358,7 +358,7 @@ srsWords: "ability" "solve" "problem"
 text: "把下面的句子翻译成英文"
 sentence: "她花时间反思了自己过去的错误。"
 answer: "She took time to reflect on her past mistakes."
-srsWords: "reflect" "past" "mistakes"
+srsWords: "reflect" "past" "mistake"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -376,7 +376,7 @@ srsWords: "motivation" "desire" "success"
 text: "把下面的句子翻译成英文"
 sentence: "这个挑战需要很大的勇气。"
 answer: "This challenge requires a great deal of courage."
-srsWords: "challenge" "requires" "courage"
+srsWords: "challenge" "require" "courage"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -388,13 +388,13 @@ srsWords: "experience" "perspective" "life"
 text: "把下面的句子翻译成英文"
 sentence: "她愿意为了理想而做出牺牲。"
 answer: "She is willing to make sacrifices for her ideals."
-srsWords: "willing" "sacrifices" "ideals"
+srsWords: "willing" "sacrifice" "ideal"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这个问题的解决需要大量的努力。"
 answer: "Solving this problem requires a great deal of effort."
-srsWords: "solving" "requires" "effort"
+srsWords: "solve" "require" "effort"
 
 ---
 lessonTitle: "Lesson 8: Relationships & Communication"
@@ -407,7 +407,7 @@ color: "#4527A0"
 text: "把下面的句子翻译成英文"
 sentence: "建立良好的人际关系需要时间和努力。"
 answer: "Building good relationships takes time and effort."
-srsWords: "building" "relationships" "effort"
+srsWords: "building" "relationship" "effort"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -425,7 +425,7 @@ srsWords: "effective" "communicate"
 text: "把下面的句子翻译成英文"
 sentence: "两个人争论了很长时间。"
 answer: "The two people argued for a very long time."
-srsWords: "argued"
+srsWords: "argue"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -437,19 +437,19 @@ srsWords: "reach" "consensus" "negotiation"
 text: "把下面的句子翻译成英文"
 sentence: "父母对孩子的教育方式有很大的影响。"
 answer: "Parents have a great influence on their children's education."
-srsWords: "parents" "influence" "children" "education"
+srsWords: "parent" "influence" "child" "education"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "我们必须努力维持良好的人际关系。"
 answer: "We must work hard to maintain good relationships."
-srsWords: "maintain" "relationships"
+srsWords: "maintain" "relationship"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他们讨论了这项计划的细节。"
 answer: "They discussed the details of the plan."
-srsWords: "discussed" "details" "plan"
+srsWords: "discuss" "detail" "plan"
 
 ---
 lessonTitle: "Lesson 9: News & Media"
@@ -462,37 +462,37 @@ color: "#4E342E"
 text: "把下面的句子翻译成英文"
 sentence: "这个报告揭示了一些令人担忧的趋势。"
 answer: "This report revealed some worrying trends."
-srsWords: "report" "revealed" "worrying" "trends"
+srsWords: "report" "reveal" "worrying" "trend"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这项调查的结果令人惊讶。"
 answer: "The results of this survey were surprising."
-srsWords: "results" "survey" "surprising"
+srsWords: "result" "survey" "surprising"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这些谣言破坏了她的声誉。"
 answer: "These rumours undermined her reputation."
-srsWords: "rumours" "undermined" "reputation"
+srsWords: "rumour" "undermine" "reputation"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这个故事强调了诚实的重要性。"
 answer: "This story emphasizes the importance of honesty."
-srsWords: "emphasizes" "importance" "honesty"
+srsWords: "emphasize" "importance" "honesty"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "她在职场上展示出了非凡的领导能力。"
 answer: "She demonstrated remarkable leadership skills in the workplace."
-srsWords: "demonstrated" "remarkable" "leadership" "skills" "workplace"
+srsWords: "demonstrate" "remarkable" "leadership" "skill" "workplace"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这两个国家之间的冲突持续了多年。"
 answer: "The conflict between the two countries lasted for many years."
-srsWords: "conflict" "countries" "lasted"
+srsWords: "conflict" "country" "last"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -504,7 +504,7 @@ srsWords: "historically" "significant" "event"
 text: "把下面的句子翻译成英文"
 sentence: "这个组织帮助了数千名难民。"
 answer: "This organization has helped thousands of refugees."
-srsWords: "organization" "thousands" "refugees"
+srsWords: "organization" "thousand" "refugee"
 
 ---
 lessonTitle: "Lesson 10: Business & Economy"
@@ -523,19 +523,19 @@ srsWords: "plan" "expand" "business" "scale"
 text: "把下面的句子翻译成英文"
 sentence: "这项研究的好处显而易见。"
 answer: "The benefits of this research are obvious."
-srsWords: "benefits" "research" "obvious"
+srsWords: "benefit" "research" "obvious"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他们对未来的计划充满了不确定性。"
 answer: "Their plans for the future are full of uncertainty."
-srsWords: "plans" "future" "uncertainty"
+srsWords: "plan" "future" "uncertainty"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "最终，他们达成了一项协议。"
 answer: "Ultimately, they reached an agreement."
-srsWords: "ultimately" "reached" "agreement"
+srsWords: "ultimately" "reach" "agreement"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -553,13 +553,13 @@ srsWords: "once-in-a-lifetime" "opportunity"
 text: "把下面的句子翻译成英文"
 sentence: "这个项目的进展非常令人满意。"
 answer: "The progress of this project is very satisfying."
-srsWords: "progress" "project" "satisfying"
+srsWords: "progress" "project" "satisfy"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这家公司的利润比去年增长了百分之二十。"
 answer: "The company's profit increased by twenty percent compared to last year."
-srsWords: "company" "profit" "increased" "percent"
+srsWords: "company" "profit" "increase" "percent"
 
 ---
 lessonTitle: "Lesson 11: Health & Wellbeing"
@@ -572,25 +572,25 @@ color: "#00838F"
 text: "把下面的句子翻译成英文"
 sentence: "他在巨大的压力下仍然保持冷静。"
 answer: "He remained calm under great pressure."
-srsWords: "remained" "calm" "pressure"
+srsWords: "remain" "calm" "pressure"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "定期锻炼对保持身体健康非常重要。"
 answer: "Regular exercise is very important for maintaining physical health."
-srsWords: "regular" "exercise" "maintaining" "physical" "health"
+srsWords: "regular" "exercise" "maintain" "physical" "health"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "医生建议她减少压力并保证充足的睡眠。"
 answer: "The doctor advised her to reduce stress and get enough sleep."
-srsWords: "doctor" "advised" "reduce" "stress" "sleep"
+srsWords: "doctor" "advise" "reduce" "stress" "sleep"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这种治疗方法对许多病人都非常有效。"
 answer: "This treatment method is very effective for many patients."
-srsWords: "treatment" "method" "effective" "patients"
+srsWords: "treatment" "method" "effective" "patient"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -602,19 +602,19 @@ srsWords: "stuck" "position" "change" "mind"
 text: "把下面的句子翻译成英文"
 sentence: "保持积极的心态有助于克服困难。"
 answer: "Maintaining a positive attitude helps to overcome difficulties."
-srsWords: "maintaining" "positive" "attitude" "overcome" "difficulties"
+srsWords: "maintain" "positive" "attitude" "overcome" "difficulty"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "均衡饮食是保持健康的关键因素之一。"
 answer: "A balanced diet is one of the key factors in maintaining good health."
-srsWords: "balanced" "diet" "factors" "maintaining" "health"
+srsWords: "balanced" "diet" "factor" "maintain" "health"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他观察到了一些不寻常的症状。"
 answer: "He observed some unusual symptoms."
-srsWords: "observed" "unusual" "symptoms"
+srsWords: "observe" "unusual" "symptom"
 
 ---
 lessonTitle: "Lesson 12: Technology & Innovation"
@@ -627,25 +627,25 @@ color: "#1565C0"
 text: "把下面的句子翻译成英文"
 sentence: "他们创造了一种全新的学习方法。"
 answer: "They created a completely new learning method."
-srsWords: "created" "completely" "learning" "method"
+srsWords: "create" "completely" "learning" "method"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这项发明彻底改变了人们的通讯方式。"
 answer: "This invention completely changed the way people communicate."
-srsWords: "invention" "completely" "changed" "communicate"
+srsWords: "invention" "completely" "change" "communicate"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "人工智能正在迅速改变各个行业。"
 answer: "Artificial intelligence is rapidly transforming various industries."
-srsWords: "artificial" "intelligence" "rapidly" "transforming" "industries"
+srsWords: "artificial" "intelligence" "rapidly" "transform" "industry"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这个软件的更新版本修复了许多漏洞。"
 answer: "The updated version of this software fixed many bugs."
-srsWords: "updated" "version" "software" "fixed" "bugs"
+srsWords: "update" "version" "software" "fixed" "bug"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -663,7 +663,7 @@ srsWords: "unique" "individual" "style"
 text: "把下面的句子翻译成英文"
 sentence: "这件事涉及到很多复杂的法律问题。"
 answer: "This matter involves many complex legal issues."
-srsWords: "involves" "complex" "legal" "issues"
+srsWords: "involve" "complex" "legal" "issue"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -688,25 +688,25 @@ srsWords: "trip" "provided" "valuable" "experience"
 text: "把下面的句子翻译成英文"
 sentence: "他想象着自己有一天会环游世界。"
 answer: "He imagined that one day he would travel around the world."
-srsWords: "imagined" "travel" "world"
+srsWords: "imagine" "travel" "world"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他们探索了这个古老城市的每一个角落。"
 answer: "They explored every corner of this ancient city."
-srsWords: "explored" "corner" "ancient" "city"
+srsWords: "explore" "corner" "ancient" "city"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "旅行让人们更好地理解不同的文化。"
 answer: "Travelling helps people better understand different cultures."
-srsWords: "travelling" "understand" "cultures"
+srsWords: "travel" "understand" "culture"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他在出发前仔细规划了整个行程。"
 answer: "He carefully planned the entire itinerary before departure."
-srsWords: "carefully" "planned" "entire" "itinerary" "departure"
+srsWords: "carefully" "plan" "entire" "itinerary" "departure"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -724,7 +724,7 @@ srsWords: "excited" "nervous" "adventure"
 text: "把下面的句子翻译成英文"
 sentence: "他们在旅途中遇到了一些意想不到的困难。"
 answer: "They encountered some unexpected difficulties during the journey."
-srsWords: "encountered" "unexpected" "difficulties" "journey"
+srsWords: "encounter" "unexpected" "difficulty" "journey"
 
 ---
 lessonTitle: "Lesson 14: Ideas & Opinions"
@@ -749,25 +749,25 @@ srsWords: "painting" "artist" "view" "life"
 text: "把下面的句子翻译成英文"
 sentence: "她对这个话题有很强烈的个人看法。"
 answer: "She has very strong personal opinions on this topic."
-srsWords: "strong" "personal" "opinions" "topic"
+srsWords: "strong" "personal" "opinion" "topic"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这项政策受到了公众的广泛支持。"
 answer: "This policy has received widespread public support."
-srsWords: "policy" "received" "widespread" "public" "support"
+srsWords: "policy" "receive" "widespread" "public" "support"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这个问题需要从不同角度来分析。"
 answer: "This problem needs to be analyzed from different angles."
-srsWords: "analyzed" "different" "angles"
+srsWords: "analyze" "different" "angle"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他认为这项计划会成功。"
 answer: "He assumes that this plan will succeed."
-srsWords: "assumes" "plan" "succeed"
+srsWords: "assume" "plan" "succeed"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -798,19 +798,19 @@ srsWords: "equal" "law"
 text: "把下面的句子翻译成英文"
 sentence: "他被指控犯有欺诈罪。"
 answer: "He was accused of committing fraud."
-srsWords: "accused" "committing" "fraud"
+srsWords: "accuse" "commit" "fraud"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "法院判决他无罪。"
 answer: "The court ruled him not guilty."
-srsWords: "court" "ruled" "guilty"
+srsWords: "court" "rule" "guilty"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这项法律旨在保护消费者的权益。"
 answer: "This law aims to protect consumer rights."
-srsWords: "law" "aims" "protect" "consumer" "rights"
+srsWords: "law" "aim" "protect" "consumer" "right"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -822,19 +822,19 @@ srsWords: "witness" "provided" "crucial" "testimony"
 text: "把下面的句子翻译成英文"
 sentence: "政府决定修改这项有争议的法规。"
 answer: "The government decided to amend this controversial regulation."
-srsWords: "decided" "amend" "controversial" "regulation"
+srsWords: "decide" "amend" "controversial" "regulation"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这起案件引起了社会的广泛关注。"
 answer: "This case attracted widespread attention from society."
-srsWords: "case" "attracted" "widespread" "attention" "society"
+srsWords: "case" "attract" "widespread" "attention" "society"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他们要求对这项决定进行独立调查。"
 answer: "They demanded an independent investigation into this decision."
-srsWords: "demanded" "independent" "investigation" "decision"
+srsWords: "demand" "independent" "investigation" "decision"
 
 ---
 lessonTitle: "Lesson 16: Food & Dining"
@@ -847,7 +847,7 @@ color: "#E65100"
 text: "把下面的句子翻译成英文"
 sentence: "这道菜的食材都是新鲜的本地产品。"
 answer: "The ingredients of this dish are all fresh local produce."
-srsWords: "ingredients" "dish" "fresh" "local" "produce"
+srsWords: "ingredient" "dish" "fresh" "local" "produce"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -859,31 +859,31 @@ srsWords: "restaurant" "famous" "unique" "cooking" "style"
 text: "把下面的句子翻译成英文"
 sentence: "她对食物过敏，所以在点菜时非常小心。"
 answer: "She is allergic to certain foods, so she is very careful when ordering."
-srsWords: "allergic" "certain" "careful" "ordering"
+srsWords: "allergic" "certain" "careful" "order"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这道传统菜肴代表了当地的饮食文化。"
 answer: "This traditional dish represents the local food culture."
-srsWords: "traditional" "dish" "represents" "local" "culture"
+srsWords: "traditional" "dish" "represent" "local" "culture"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "厨师建议我们尝试今天的特色菜。"
 answer: "The chef recommended we try today's special dish."
-srsWords: "chef" "recommended" "special" "dish"
+srsWords: "chef" "recommend" "special" "dish"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "均衡的饮食对维持健康体重非常重要。"
 answer: "A balanced diet is very important for maintaining a healthy weight."
-srsWords: "balanced" "diet" "maintaining" "healthy" "weight"
+srsWords: "balanced" "diet" "maintain" "healthy" "weight"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "他们在一家气氛很好的餐厅庆祝了周年纪念日。"
 answer: "They celebrated their anniversary at a restaurant with a great atmosphere."
-srsWords: "celebrated" "anniversary" "restaurant" "atmosphere"
+srsWords: "celebrate" "anniversary" "restaurant" "atmosphere"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -902,7 +902,7 @@ color: "#6A1B9A"
 text: "把下面的句子翻译成英文"
 sentence: "这位艺术家用颜色来表达自己的情感。"
 answer: "This artist uses colour to express his emotions."
-srsWords: "artist" "colour" "express" "emotions"
+srsWords: "artist" "colour" "express" "emotion"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -914,7 +914,7 @@ srsWords: "inspiration" "painting" "nature"
 text: "把下面的句子翻译成英文"
 sentence: "这首音乐作品感动了无数听众。"
 answer: "This musical piece moved countless listeners."
-srsWords: "musical" "piece" "moved" "countless" "listeners"
+srsWords: "musical" "piece" "move" "countless" "listener"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -926,13 +926,13 @@ srsWords: "director" "film" "known" "unique" "style"
 text: "把下面的句子翻译成英文"
 sentence: "创意思维在解决问题中起着重要作用。"
 answer: "Creative thinking plays an important role in solving problems."
-srsWords: "creative" "thinking" "important" "role" "solving"
+srsWords: "creative" "think" "important" "role" "solve"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这本小说描述了一段复杂的人生经历。"
 answer: "This novel describes a complex life experience."
-srsWords: "novel" "describes" "complex" "experience"
+srsWords: "novel" "describe" "complex" "experience"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -944,7 +944,7 @@ srsWords: "performance" "passion" "appeal"
 text: "把下面的句子翻译成英文"
 sentence: "这个展览展示了来自世界各地的艺术作品。"
 answer: "This exhibition displayed artworks from all over the world."
-srsWords: "exhibition" "displayed" "artworks"
+srsWords: "exhibition" "display" "artwork"
 
 ---
 lessonTitle: "Lesson 18: Politics & Government"
@@ -957,13 +957,13 @@ color: "#1A237E"
 text: "把下面的句子翻译成英文"
 sentence: "公民有权参与民主选举。"
 answer: "Citizens have the right to participate in democratic elections."
-srsWords: "citizens" "right" "participate" "democratic" "elections"
+srsWords: "citizen" "right" "participate" "democratic" "election"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "政府制定了新的经济刺激政策。"
 answer: "The government introduced new economic stimulus policies."
-srsWords: "government" "introduced" "economic" "stimulus" "policies"
+srsWords: "government" "introduce" "economic" "stimulus" "policy"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -975,19 +975,19 @@ srsWords: "leader" "respected" "decisive" "decision-making"
 text: "把下面的句子翻译成英文"
 sentence: "两国之间的外交关系正在逐步改善。"
 answer: "The diplomatic relations between the two countries are gradually improving."
-srsWords: "diplomatic" "relations" "countries" "gradually" "improving"
+srsWords: "diplomatic" "relation" "country" "gradually" "improve"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这项改革旨在提高政府的透明度。"
 answer: "This reform aims to improve government transparency."
-srsWords: "reform" "aims" "improve" "transparency"
+srsWords: "reform" "aim" "improve" "transparency"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "反对党对这项提案提出了强烈批评。"
 answer: "The opposition party strongly criticized this proposal."
-srsWords: "opposition" "party" "strongly" "criticized" "proposal"
+srsWords: "opposition" "party" "strongly" "criticize" "proposal"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -999,7 +999,7 @@ srsWords: "voter" "turnout" "election" "historic"
 text: "把下面的句子翻译成英文"
 sentence: "国会正在审议一项新的预算方案。"
 answer: "Parliament is reviewing a new budget proposal."
-srsWords: "parliament" "reviewing" "budget" "proposal"
+srsWords: "parliament" "review" "budget" "proposal"
 
 ---
 lessonTitle: "Lesson 19: Sport & Competition"
@@ -1012,31 +1012,31 @@ color: "#BF360C"
 text: "把下面的句子翻译成英文"
 sentence: "她经过多年的训练终于赢得了冠军。"
 answer: "After years of training, she finally won the championship."
-srsWords: "training" "finally" "won" "championship"
+srsWords: "training" "finally" "win" "championship"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这支队伍在本赛季表现非常出色。"
 answer: "This team has performed very well this season."
-srsWords: "team" "performed" "season"
+srsWords: "team" "perform" "season"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "运动员必须遵守比赛的规则和规定。"
 answer: "Athletes must comply with the rules and regulations of the competition."
-srsWords: "athletes" "comply" "rules" "regulations" "competition"
+srsWords: "athletes" "comply" "rule" "regulation" "competition"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "教练鼓励队员们发挥出最好的水平。"
 answer: "The coach encouraged the team members to perform at their best."
-srsWords: "coach" "encouraged" "members" "perform"
+srsWords: "coach" "encourage" "member" "perform"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "这场比赛的结果出乎所有人的意料。"
 answer: "The outcome of this match was beyond everyone's expectations."
-srsWords: "outcome" "match" "beyond" "expectations"
+srsWords: "outcome" "match" "beyond" "expectation"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -1048,7 +1048,7 @@ srsWords: "perseverance" "determination" "outstanding" "athlete"
 text: "把下面的句子翻译成英文"
 sentence: "这项运动在全世界拥有数百万粉丝。"
 answer: "This sport has millions of fans all over the world."
-srsWords: "sport" "millions" "fans"
+srsWords: "sport" "million" "fan"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -1073,25 +1073,25 @@ srsWords: "determined" "finish" "project"
 text: "把下面的句子翻译成英文"
 sentence: "这项政策将对未来一代人产生深远的影响。"
 answer: "This policy will have a profound impact on future generations."
-srsWords: "policy" "profound" "impact" "future" "generations"
+srsWords: "policy" "profound" "impact" "future" "generation"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "她转变了自己对这个问题的看法。"
 answer: "She transformed her view on this issue."
-srsWords: "transformed" "view" "issue"
+srsWords: "transform" "view" "issue"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "科技的进步将继续改变我们的生活方式。"
 answer: "Advances in technology will continue to change our way of life."
-srsWords: "advances" "technology" "continue" "change"
+srsWords: "advance" "technology" "continue" "change"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "我们必须为未来可能面临的挑战做好准备。"
 answer: "We must prepare for the challenges we may face in the future."
-srsWords: "prepare" "challenges" "face" "future"
+srsWords: "prepare" "challenge" "face" "future"
 
 [translation]
 text: "把下面的句子翻译成英文"
@@ -1103,10 +1103,10 @@ srsWords: "long-term" "development" "goal" "smart"
 text: "把下面的句子翻译成英文"
 sentence: "下一代将继承我们今天所做的决定的后果。"
 answer: "The next generation will inherit the consequences of the decisions we make today."
-srsWords: "generation" "inherit" "consequences" "decisions"
+srsWords: "generation" "inherit" "consequence" "decision"
 
 [translation]
 text: "把下面的句子翻译成英文"
 sentence: "持续的创新是保持竞争力的关键。"
 answer: "Continuous innovation is the key to staying competitive."
-srsWords: "continuous" "innovation" "staying" "competitive"
+srsWords: "continuous" "innovation" "stay" "competitive"

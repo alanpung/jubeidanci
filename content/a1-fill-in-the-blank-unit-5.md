@@ -65,7 +65,7 @@ srsWords: "tape"
 [fill-in-the-blank]
 sentence: "He sharpens his ___ before the lesson."
 blank: "pencil"
-srsWords: "sharpens"
+srsWords: "sharpen"
 
 [fill-in-the-blank]
 sentence: "I use a ___ to cut paper."
@@ -127,7 +127,7 @@ color: "#2196F3"
 [fill-in-the-blank]
 sentence: "I study ___ and solve equations."
 blank: "maths"
-srsWords: "maths"
+srsWords: "math"
 
 [fill-in-the-blank]
 sentence: "She enjoys ___ and reads many books."
@@ -212,7 +212,7 @@ srsWords: "business"
 [fill-in-the-blank]
 sentence: "He studies world ___ in social studies."
 blank: "issues"
-srsWords: "issues"
+srsWords: "issue"
 
 [fill-in-the-blank]
 sentence: "I learn new words in ___ class."
@@ -222,7 +222,7 @@ srsWords: "French"
 [fill-in-the-blank]
 sentence: "She practises writing ___ in Chinese class."
 blank: "characters"
-srsWords: "characters"
+srsWords: "character"
 
 ---
 lessonTitle: "Lesson 3: Classroom Actions"
@@ -234,17 +234,17 @@ color: "#FF9800"
 [fill-in-the-blank]
 sentence: "The teacher ___ the lesson with a question."
 blank: "starts"
-srsWords: "starts"
+srsWords: "start"
 
 [fill-in-the-blank]
 sentence: "She ___ her hand to answer."
 blank: "raises"
-srsWords: "raises"
+srsWords: "raise"
 
 [fill-in-the-blank]
 sentence: "He ___ the answer on the board."
 blank: "writes"
-srsWords: "writes"
+srsWords: "write"
 
 [fill-in-the-blank]
 sentence: "I ___ the question again because I did not understand."
@@ -254,12 +254,12 @@ srsWords: "ask"
 [fill-in-the-blank]
 sentence: "She ___ the chapter for homework."
 blank: "reads"
-srsWords: "reads"
+srsWords: "read"
 
 [fill-in-the-blank]
 sentence: "He ___ the new words in his notebook."
 blank: "copies"
-srsWords: "copies"
+srsWords: "copy"
 
 [fill-in-the-blank]
 sentence: "I ___ to the teacher's instructions."
@@ -269,12 +269,12 @@ srsWords: "listen"
 [fill-in-the-blank]
 sentence: "She ___ her work before handing it in."
 blank: "checks"
-srsWords: "checks"
+srsWords: "check"
 
 [fill-in-the-blank]
 sentence: "He ___ in pairs with his classmate."
 blank: "works"
-srsWords: "pairs"
+srsWords: "pair"
 
 [fill-in-the-blank]
 sentence: "I ___ a diagram to explain my answer."
@@ -319,7 +319,7 @@ srsWords: "summary"
 [fill-in-the-blank]
 sentence: "He ___ to find more information online."
 blank: "searches"
-srsWords: "searches"
+srsWords: "search"
 
 [fill-in-the-blank]
 sentence: "I ___ the key points in my textbook."
@@ -329,7 +329,7 @@ srsWords: "underline"
 [fill-in-the-blank]
 sentence: "She ___ the question and explains her answer."
 blank: "answers"
-srsWords: "explains"
+srsWords: "explain"
 
 ---
 lessonTitle: "Lesson 4: Teachers & School Staff"
@@ -381,7 +381,7 @@ srsWords: "canteen"
 [fill-in-the-blank]
 sentence: "My English ___ corrects our writing."
 blank: "teacher"
-srsWords: "corrects"
+srsWords: "correct"
 
 [fill-in-the-blank]
 sentence: "The ___ helps students with additional needs."
@@ -401,12 +401,12 @@ srsWords: "attendance"
 [fill-in-the-blank]
 sentence: "My ___ marks our homework every week."
 blank: "teacher"
-srsWords: "marks"
+srsWords: "mark"
 
 [fill-in-the-blank]
 sentence: "The ___ organises school trips."
 blank: "coordinator"
-srsWords: "organises"
+srsWords: "organise"
 
 [fill-in-the-blank]
 sentence: "The art ___ taught us how to mix colours."
@@ -421,7 +421,7 @@ srsWords: "counsellor"
 [fill-in-the-blank]
 sentence: "The maths ___ wrote the problems on the board."
 blank: "teacher"
-srsWords: "problems"
+srsWords: "problem"
 
 [fill-in-the-blank]
 sentence: "The ___ reads to the class every Friday."
@@ -453,12 +453,12 @@ srsWords: "homework"
 [fill-in-the-blank]
 sentence: "She ___ for the test the night before."
 blank: "revises"
-srsWords: "revises"
+srsWords: "revise"
 
 [fill-in-the-blank]
 sentence: "He reads through his ___ before an exam."
 blank: "notes"
-srsWords: "notes"
+srsWords: "note"
 
 [fill-in-the-blank]
 sentence: "I make ___ cards to remember new words."
@@ -473,17 +473,17 @@ srsWords: "planner"
 [fill-in-the-blank]
 sentence: "He ___ a quiet place to study without distractions."
 blank: "finds"
-srsWords: "distractions"
+srsWords: "distraction"
 
 [fill-in-the-blank]
 sentence: "I take ___ breaks when studying for a long time."
 blank: "short"
-srsWords: "breaks"
+srsWords: "break"
 
 [fill-in-the-blank]
 sentence: "She ___ her essay three times before submitting."
 blank: "rereads"
-srsWords: "submitting"
+srsWords: "submit"
 
 [fill-in-the-blank]
 sentence: "He uses the ___ to look up facts."
@@ -518,7 +518,7 @@ srsWords: "summary"
 [fill-in-the-blank]
 sentence: "He plans his ___ before starting to write."
 blank: "essay"
-srsWords: "plans"
+srsWords: "plan"
 
 [fill-in-the-blank]
 sentence: "I ___ new words ten times to help me remember them."
@@ -560,7 +560,7 @@ srsWords: "exam"
 [fill-in-the-blank]
 sentence: "She got full ___ on her maths test."
 blank: "marks"
-srsWords: "marks"
+srsWords: "mark"
 
 [fill-in-the-blank]
 sentence: "He was ___ when he failed the test."
@@ -575,7 +575,7 @@ srsWords: "improve"
 [fill-in-the-blank]
 sentence: "She always gets top ___ in science."
 blank: "grades"
-srsWords: "grades"
+srsWords: "grade"
 
 [fill-in-the-blank]
 sentence: "He studied hard so he could ___ the exam."
@@ -590,7 +590,7 @@ srsWords: "pleased"
 [fill-in-the-blank]
 sentence: "She received a ___ report from her teacher."
 blank: "good"
-srsWords: "received"
+srsWords: "receive"
 
 [fill-in-the-blank]
 sentence: "He had to ___ the test after he was ill."
@@ -625,7 +625,7 @@ srsWords: "teacher"
 [fill-in-the-blank]
 sentence: "He worked hard and his ___ improved a lot."
 blank: "results"
-srsWords: "results"
+srsWords: "result"
 
 [fill-in-the-blank]
 sentence: "I was nervous during the exam because of the ___."
@@ -635,7 +635,7 @@ srsWords: "pressure"
 [fill-in-the-blank]
 sentence: "She studied every day and ___ the exam."
 blank: "passed"
-srsWords: "studied"
+srsWords: "study"
 
 [fill-in-the-blank]
 sentence: "He sat at a separate desk to take his ___ exam."
@@ -645,7 +645,7 @@ srsWords: "final"
 [fill-in-the-blank]
 sentence: "I practised past ___ to prepare for the test."
 blank: "papers"
-srsWords: "papers"
+srsWords: "paper"
 
 [fill-in-the-blank]
 sentence: "She got a ___ for good behaviour this month."
@@ -667,7 +667,7 @@ srsWords: "arrive"
 [fill-in-the-blank]
 sentence: "We are not ___ to use phones in class."
 blank: "allowed"
-srsWords: "allowed"
+srsWords: "allow"
 
 [fill-in-the-blank]
 sentence: "He got a ___ for not doing his homework."
@@ -687,7 +687,7 @@ srsWords: "uniform"
 [fill-in-the-blank]
 sentence: "He was ___ from school for bad behaviour."
 blank: "suspended"
-srsWords: "suspended"
+srsWords: "suspend"
 
 [fill-in-the-blank]
 sentence: "I must always ___ my teacher and classmates."
@@ -712,7 +712,7 @@ srsWords: "detention"
 [fill-in-the-blank]
 sentence: "I always put my ___ away after class."
 blank: "books"
-srsWords: "books"
+srsWords: "book"
 
 [fill-in-the-blank]
 sentence: "She was asked to ___ in the corridor."
@@ -737,7 +737,7 @@ srsWords: "permission"
 [fill-in-the-blank]
 sentence: "She always ___ her classmates with their work."
 blank: "helps"
-srsWords: "helps"
+srsWords: "help"
 
 [fill-in-the-blank]
 sentence: "We are not allowed to ___ during lessons."
@@ -747,7 +747,7 @@ srsWords: "eat"
 [fill-in-the-blank]
 sentence: "He was ___ for being the best student this term."
 blank: "awarded"
-srsWords: "awarded"
+srsWords: "award"
 
 [fill-in-the-blank]
 sentence: "I take care of the school ___ and keep it clean."
@@ -779,7 +779,7 @@ srsWords: "drama"
 [fill-in-the-blank]
 sentence: "He takes guitar ___ on Wednesdays."
 blank: "lessons"
-srsWords: "lessons"
+srsWords: "lesson"
 
 [fill-in-the-blank]
 sentence: "I attend a science ___ every Friday."
@@ -809,17 +809,17 @@ srsWords: "ballet"
 [fill-in-the-blank]
 sentence: "He volunteers at the school ___ every week."
 blank: "library"
-srsWords: "volunteers"
+srsWords: "volunteer"
 
 [fill-in-the-blank]
 sentence: "I join a debating ___ to practise speaking."
 blank: "club"
-srsWords: "debating"
+srsWords: "debate"
 
 [fill-in-the-blank]
 sentence: "She goes to a coding ___ every Thursday."
 blank: "workshop"
-srsWords: "coding"
+srsWords: "code"
 
 [fill-in-the-blank]
 sentence: "He is part of the school ___ team."
@@ -839,7 +839,7 @@ srsWords: "garden"
 [fill-in-the-blank]
 sentence: "He practises for the school ___ every evening."
 blank: "play"
-srsWords: "practises"
+srsWords: "practise"
 
 [fill-in-the-blank]
 sentence: "I take karate ___ after school on Mondays."
@@ -886,7 +886,7 @@ srsWords: "degree"
 [fill-in-the-blank]
 sentence: "I applied to three ___ for a place."
 blank: "universities"
-srsWords: "applied"
+srsWords: "apply"
 
 [fill-in-the-blank]
 sentence: "She lives in student ___ near the campus."
@@ -921,7 +921,7 @@ srsWords: "assignment"
 [fill-in-the-blank]
 sentence: "She ___ with honours after four years of study."
 blank: "graduated"
-srsWords: "graduated"
+srsWords: "graduate"
 
 [fill-in-the-blank]
 sentence: "He did a ___ year abroad in France."
@@ -966,7 +966,7 @@ srsWords: "entrance"
 [fill-in-the-blank]
 sentence: "She studied abroad and improved her language ___."
 blank: "skills"
-srsWords: "skills"
+srsWords: "skill"
 
 [fill-in-the-blank]
 sentence: "He was proud on his ___ day when he got his degree."
@@ -998,12 +998,12 @@ srsWords: "podcasts"
 [fill-in-the-blank]
 sentence: "I make mistakes when I ___ but that is normal."
 blank: "speak"
-srsWords: "mistakes"
+srsWords: "mistake"
 
 [fill-in-the-blank]
 sentence: "She reads simple ___ to build her reading skills."
 blank: "stories"
-srsWords: "stories"
+srsWords: "story"
 
 [fill-in-the-blank]
 sentence: "He repeats new words ___ to help him remember."
@@ -1013,7 +1013,7 @@ srsWords: "aloud"
 [fill-in-the-blank]
 sentence: "I watch ___ films with subtitles to learn."
 blank: "English"
-srsWords: "subtitles"
+srsWords: "subtitle"
 
 [fill-in-the-blank]
 sentence: "She writes in a ___ every day to practise."
@@ -1048,7 +1048,7 @@ srsWords: "pronunciation"
 [fill-in-the-blank]
 sentence: "She translates ___ from her native language."
 blank: "sentences"
-srsWords: "translates"
+srsWords: "translate"
 
 [fill-in-the-blank]
 sentence: "He joins a conversation ___ to practise speaking."
@@ -1063,7 +1063,7 @@ srsWords: "goal"
 [fill-in-the-blank]
 sentence: "She improves her ___ by reading books."
 blank: "reading"
-srsWords: "improves"
+srsWords: "improve"
 
 [fill-in-the-blank]
 sentence: "He is not afraid to make ___ when speaking."

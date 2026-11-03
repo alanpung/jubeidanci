@@ -67,12 +67,12 @@ srsWords: "cousin"
 [fill-in-the-blank]
 sentence: "Her ___ are very kind to her."
 blank: "parents"
-srsWords: "parents"
+srsWords: "parent"
 
 [fill-in-the-blank]
 sentence: "My ___ have a small farm in the countryside."
 blank: "grandparents"
-srsWords: "grandparents"
+srsWords: "grandparent"
 
 [fill-in-the-blank]
 sentence: "He is an only ___. He has no brothers or sisters."
@@ -82,7 +82,7 @@ srsWords: "child"
 [fill-in-the-blank]
 sentence: "They have two ___: a boy and a girl."
 blank: "children"
-srsWords: "children"
+srsWords: "child"
 
 [fill-in-the-blank]
 sentence: "My ___ is married to a teacher."
@@ -97,7 +97,7 @@ srsWords: "funny"
 [fill-in-the-blank]
 sentence: "My ___ lives with us. She is very old."
 blank: "grandmother"
-srsWords: "lives"
+srsWords: "life"
 
 [fill-in-the-blank]
 sentence: "His ___ is a nurse at the local hospital."
@@ -107,7 +107,7 @@ srsWords: "nurse"
 [fill-in-the-blank]
 sentence: "We visit our ___ every Christmas."
 blank: "relatives"
-srsWords: "relatives"
+srsWords: "relative"
 
 [fill-in-the-blank]
 sentence: "My ___ and I share a bedroom."
@@ -117,7 +117,7 @@ srsWords: "share"
 [fill-in-the-blank]
 sentence: "Her ___ teaches her how to cook."
 blank: "mother"
-srsWords: "teaches"
+srsWords: "teach"
 
 ---
 lessonTitle: "Lesson 2: Describing People"
@@ -139,7 +139,7 @@ srsWords: "tall"
 [fill-in-the-blank]
 sentence: "My sister is ___ than me."
 blank: "shorter"
-srsWords: "shorter"
+srsWords: "short"
 
 [fill-in-the-blank]
 sentence: "He has ___ eyes and a big smile."
@@ -224,7 +224,7 @@ srsWords: "grey"
 [fill-in-the-blank]
 sentence: "She is the ___ girl in her class."
 blank: "tallest"
-srsWords: "tallest"
+srsWords: "tall"
 
 ---
 lessonTitle: "Lesson 3: Personality & Character"
@@ -348,7 +348,7 @@ srsWords: "friend"
 [fill-in-the-blank]
 sentence: "They are ___ and they live next door to each other."
 blank: "neighbours"
-srsWords: "neighbours"
+srsWords: "neighbour"
 
 [fill-in-the-blank]
 sentence: "He met his ___ at university."
@@ -373,7 +373,7 @@ srsWords: "colleague"
 [fill-in-the-blank]
 sentence: "She has many ___ but only a few close ones."
 blank: "friends"
-srsWords: "friends"
+srsWords: "friend"
 
 [fill-in-the-blank]
 sentence: "They have been ___ for ten years."
@@ -413,7 +413,7 @@ srsWords: "polite"
 [fill-in-the-blank]
 sentence: "She ___ her old friends every summer."
 blank: "visits"
-srsWords: "visits"
+srsWords: "visit"
 
 [fill-in-the-blank]
 sentence: "They often ___ each other for dinner."
@@ -423,17 +423,17 @@ srsWords: "invite"
 [fill-in-the-blank]
 sentence: "He always ___ his friends when they are in trouble."
 blank: "helps"
-srsWords: "helps"
+srsWords: "help"
 
 [fill-in-the-blank]
 sentence: "She ___ in touch with her school friends online."
 blank: "keeps"
-srsWords: "keeps"
+srsWords: "keep"
 
 [fill-in-the-blank]
 sentence: "They met as ___ and became good friends."
 blank: "strangers"
-srsWords: "strangers"
+srsWords: "stranger"
 
 [fill-in-the-blank]
 sentence: "He is very ___ to his younger sister."
@@ -480,7 +480,7 @@ srsWords: "forties"
 [fill-in-the-blank]
 sentence: "She ___ her fiftieth birthday last month."
 blank: "celebrated"
-srsWords: "celebrated"
+srsWords: "celebrate"
 
 [fill-in-the-blank]
 sentence: "He retired at the ___ of sixty-five."
@@ -490,12 +490,12 @@ srsWords: "retired"
 [fill-in-the-blank]
 sentence: "She is ___ than her brother by two years."
 blank: "older"
-srsWords: "older"
+srsWords: "old"
 
 [fill-in-the-blank]
 sentence: "He was ___ in the year 2000."
 blank: "born"
-srsWords: "born"
+srsWords: "bear"
 
 [fill-in-the-blank]
 sentence: "She started ___ school at the age of five."
@@ -729,12 +729,12 @@ srsWords: "goodbye"
 [fill-in-the-blank]
 sentence: "He ___ to his new neighbour with a smile."
 blank: "waved"
-srsWords: "waved"
+srsWords: "wave"
 
 [fill-in-the-blank]
 sentence: "She ___ her name on the form."
 blank: "wrote"
-srsWords: "wrote"
+srsWords: "write"
 
 [fill-in-the-blank]
 sentence: "He said ___ when he answered the phone."
@@ -816,7 +816,7 @@ srsWords: "far"
 [fill-in-the-blank]
 sentence: "He bought a ___ house last year."
 blank: "new"
-srsWords: "bought"
+srsWords: "buy"
 
 [fill-in-the-blank]
 sentence: "We moved to a ___ neighbourhood last summer."
@@ -826,7 +826,7 @@ srsWords: "neighbourhood"
 [fill-in-the-blank]
 sentence: "She lives ___ her parents until she finds a job."
 blank: "with"
-srsWords: "parents"
+srsWords: "parent"
 
 [fill-in-the-blank]
 sentence: "He has a small ___ outside his flat."
@@ -836,12 +836,12 @@ srsWords: "balcony"
 [fill-in-the-blank]
 sentence: "We have two ___ in our house."
 blank: "bathrooms"
-srsWords: "bathrooms"
+srsWords: "bathroom"
 
 [fill-in-the-blank]
 sentence: "She decorates her ___ with plants and pictures."
 blank: "room"
-srsWords: "decorates"
+srsWords: "decorate"
 
 [fill-in-the-blank]
 sentence: "He lives in a ___ by the sea."
@@ -883,7 +883,7 @@ srsWords: "shopping"
 [fill-in-the-blank]
 sentence: "She ___ a new dress at the market."
 blank: "bought"
-srsWords: "bought"
+srsWords: "buy"
 
 [fill-in-the-blank]
 sentence: "How much does this ___?"
@@ -943,7 +943,7 @@ srsWords: "basket"
 [fill-in-the-blank]
 sentence: "She tried ___ the shoes before buying them."
 blank: "on"
-srsWords: "tried"
+srsWords: "try"
 
 [fill-in-the-blank]
 sentence: "I want to ___ money for a new laptop."
@@ -1010,7 +1010,7 @@ srsWords: "arm"
 [fill-in-the-blank]
 sentence: "He sneezes a lot because of his ___."
 blank: "allergies"
-srsWords: "allergies"
+srsWords: "allergy"
 
 [fill-in-the-blank]
 sentence: "I go to the ___ for a check-up every year."
@@ -1055,12 +1055,12 @@ srsWords: "tea"
 [fill-in-the-blank]
 sentence: "He needed ___ after his operation."
 blank: "stitches"
-srsWords: "stitches"
+srsWords: "stitch"
 
 [fill-in-the-blank]
 sentence: "I wash my hands to avoid ___ germs."
 blank: "spreading"
-srsWords: "germs"
+srsWords: "germ"
 
 [fill-in-the-blank]
 sentence: "She put a ___ on her cut finger."

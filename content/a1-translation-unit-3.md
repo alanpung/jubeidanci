@@ -58,7 +58,7 @@ text: "Translate this sentence into English"
 sentence: "我错过了公交车。"
 answer: "I missed the bus."
 acceptAlso: "I didn't catch the bus."
-srsWords: "missed" "bus"
+srsWords: "miss" "bus"
 
 [translation]
 text: "Translate this sentence into English"
@@ -108,7 +108,7 @@ text: "Translate this sentence into English"
 sentence: "我在火车站等。"
 answer: "I am waiting at the train station."
 acceptAlso: "I wait at the railway station."
-srsWords: "waiting" "train" "station"
+srsWords: "wait" "train" "station"
 
 [translation]
 text: "Translate this sentence into English"
@@ -143,7 +143,7 @@ text: "Translate this sentence into English"
 sentence: "火车晚点了。"
 answer: "The train is delayed."
 acceptAlso: "The train is late."
-srsWords: "train" "delayed"
+srsWords: "train" "delay"
 
 [translation]
 text: "Translate this sentence into English"
@@ -157,14 +157,14 @@ text: "Translate this sentence into English"
 sentence: "请对号入座。"
 answer: "Please sit in your assigned seat."
 acceptAlso: "Take your assigned seat."
-srsWords: "please" "sit" "assigned" "seat"
+srsWords: "please" "sit" "assign" "seat"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们到站了。"
 answer: "We have arrived."
 acceptAlso: "We are at the station."
-srsWords: "arrived"
+srsWords: "arrive"
 
 
 ---
@@ -186,7 +186,7 @@ text: "Translate this sentence into English"
 sentence: "司机开得很快。"
 answer: "The driver is driving fast."
 acceptAlso: "The cabbie drives quickly."
-srsWords: "driver" "driving" "fast"
+srsWords: "driver" "drive" "fast"
 
 [translation]
 text: "Translate this sentence into English"
@@ -200,7 +200,7 @@ text: "Translate this sentence into English"
 sentence: "到目的地了。"
 answer: "We have reached the destination."
 acceptAlso: "We are at the destination."
-srsWords: "reached" "destination"
+srsWords: "reach" "destination"
 
 [translation]
 text: "Translate this sentence into English"
@@ -257,14 +257,14 @@ text: "Translate this sentence into English"
 sentence: "我在办登机牌。"
 answer: "I am checking in."
 acceptAlso: "I am getting my boarding pass."
-srsWords: "checking"
+srsWords: "check"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "航班延误了。"
 answer: "The flight is delayed."
 acceptAlso: "The plane is late."
-srsWords: "flight" "delayed"
+srsWords: "flight" "delay"
 
 [translation]
 text: "Translate this sentence into English"
@@ -299,7 +299,7 @@ text: "Translate this sentence into English"
 sentence: "飞机起飞了。"
 answer: "The plane took off."
 acceptAlso: "The flight departed."
-srsWords: "plane" "took"
+srsWords: "plane" "take"
 
 [translation]
 text: "Translate this sentence into English"
@@ -342,7 +342,7 @@ text: "Translate this sentence into English"
 sentence: "我买了往返票。"
 answer: "I bought a round-trip ticket."
 acceptAlso: "I got a return ticket."
-srsWords: "bought" "round-trip" "ticket"
+srsWords: "buy" "round-trip" "ticket"
 
 [translation]
 text: "Translate this sentence into English"
@@ -384,21 +384,21 @@ text: "Translate this sentence into English"
 sentence: "我赶上了车。"
 answer: "I caught the train."
 acceptAlso: "I made the train."
-srsWords: "caught" "train"
+srsWords: "catch" "train"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "候车室很干净。"
 answer: "The waiting room is clean."
 acceptAlso: "The lounge is clean."
-srsWords: "waiting" "room" "clean"
+srsWords: "wait" "room" "clean"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "广播在播报。"
 answer: "The announcement is playing."
 acceptAlso: "They are making an announcement."
-srsWords: "announcement" "playing"
+srsWords: "announcement" "play"
 
 
 ---
@@ -462,7 +462,7 @@ text: "Translate this sentence into English"
 sentence: "最近的地铁站？"
 answer: "The nearest subway station."
 acceptAlso: "Where is the closest metro?"
-srsWords: "nearest" "subway" "station"
+srsWords: "near" "subway" "station"
 
 [translation]
 text: "Translate this sentence into English"
@@ -498,7 +498,7 @@ text: "Translate this sentence into English"
 sentence: "还有票吗？"
 answer: "Are there any tickets left."
 acceptAlso: "Are tickets available?"
-srsWords: "tickets" "left"
+srsWords: "ticket" "left"
 
 [translation]
 text: "Translate this sentence into English"
@@ -512,7 +512,7 @@ text: "Translate this sentence into English"
 sentence: "我要两张成人票。"
 answer: "I want two adult tickets."
 acceptAlso: "Two adult tickets, please."
-srsWords: "want" "two" "adult" "tickets"
+srsWords: "want" "two" "adult" "ticket"
 
 [translation]
 text: "Translate this sentence into English"
@@ -526,7 +526,7 @@ text: "Translate this sentence into English"
 sentence: "座位是连着的吗？"
 answer: "Are the seats together."
 acceptAlso: "Are the seats adjacent?"
-srsWords: "seats" "together"
+srsWords: "seat" "together"
 
 [translation]
 text: "Translate this sentence into English"
@@ -554,7 +554,7 @@ text: "Translate this sentence into English"
 sentence: "票已确认。"
 answer: "The ticket is confirmed."
 acceptAlso: "The booking is confirmed."
-srsWords: "ticket" "confirmed"
+srsWords: "ticket" "confirm"
 
 
 ---
@@ -604,7 +604,7 @@ text: "Translate this sentence into English"
 sentence: "空调不工作了。"
 answer: "The air conditioning is not working."
 acceptAlso: "The AC is broken."
-srsWords: "air" "conditioning" "working"
+srsWords: "air" "condition" "working"
 
 [translation]
 text: "Translate this sentence into English"
@@ -682,7 +682,7 @@ text: "Translate this sentence into English"
 sentence: "我买了一张明信片。"
 answer: "I bought a postcard."
 acceptAlso: "I got a postcard."
-srsWords: "bought" "postcard"
+srsWords: "buy" "postcard"
 
 [translation]
 text: "Translate this sentence into English"
@@ -753,7 +753,7 @@ text: "Translate this sentence into English"
 sentence: "我在找警察。"
 answer: "I am looking for the police."
 acceptAlso: "I need the police."
-srsWords: "looking" "police"
+srsWords: "look" "police"
 
 [translation]
 text: "Translate this sentence into English"
@@ -801,7 +801,7 @@ text: "Translate this sentence into English"
 sentence: "我的头很疼。"
 answer: "My head hurts."
 acceptAlso: "I have a headache."
-srsWords: "head" "hurts"
+srsWords: "head" "hurt"
 
 [translation]
 text: "Translate this sentence into English"
@@ -822,21 +822,21 @@ text: "Translate this sentence into English"
 sentence: "我的手很冷。"
 answer: "My hands are cold."
 acceptAlso: "My hand is cold."
-srsWords: "hands" "cold"
+srsWords: "hand" "cold"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "眼睛是棕色的。"
 answer: "The eyes are brown."
 acceptAlso: "The eye is brown."
-srsWords: "eyes" "brown"
+srsWords: "eye" "brown"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我挠了挠背。"
 answer: "I scratched my back."
 acceptAlso: "I itched my back."
-srsWords: "scratched" "back"
+srsWords: "scratch" "back"
 
 [translation]
 text: "Translate this sentence into English"
@@ -857,14 +857,14 @@ text: "Translate this sentence into English"
 sentence: "耳朵在听。"
 answer: "The ears are listening."
 acceptAlso: "The ear hears."
-srsWords: "ears" "listening"
+srsWords: "ear" "listen"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "鼻子不通气。"
 answer: "The nose is blocked."
 acceptAlso: "My nose is stuffy."
-srsWords: "nose" "blocked"
+srsWords: "nose" "block"
 
 
 ---
@@ -900,21 +900,21 @@ text: "Translate this sentence into English"
 sentence: "我咳嗽了。"
 answer: "I am coughing."
 acceptAlso: "I have a cough."
-srsWords: "coughing"
+srsWords: "cough"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "她嗓子疼。"
 answer: "Her throat hurts."
 acceptAlso: "She has a sore throat."
-srsWords: "throat" "hurts"
+srsWords: "throat" "hurt"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我浑身酸痛。"
 answer: "My whole body aches."
 acceptAlso: "I ache all over."
-srsWords: "whole" "body" "aches"
+srsWords: "whole" "body" "ache"
 
 [translation]
 text: "Translate this sentence into English"
@@ -957,7 +957,7 @@ text: "Translate this sentence into English"
 sentence: "我预约了医生。"
 answer: "I made a doctor's appointment."
 acceptAlso: "I booked the doctor."
-srsWords: "made" "doctor" "appointment"
+srsWords: "make" "doctor" "appointment"
 
 [translation]
 text: "Translate this sentence into English"
@@ -992,7 +992,7 @@ text: "Translate this sentence into English"
 sentence: "化验结果出来了。"
 answer: "The test results are out."
 acceptAlso: "The lab results came."
-srsWords: "test" "results"
+srsWords: "test" "result"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1056,14 +1056,14 @@ text: "Translate this sentence into English"
 sentence: "饭后服用。"
 answer: "Take it after meals."
 acceptAlso: "Take with food."
-srsWords: "take" "meals"
+srsWords: "take" "meal"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "有副作用吗？"
 answer: "Are there side effects."
 acceptAlso: "Any side effects?"
-srsWords: "side" "effects"
+srsWords: "side" "effect"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1084,7 +1084,7 @@ text: "Translate this sentence into English"
 sentence: "维生素有帮助。"
 answer: "Vitamins help."
 acceptAlso: "Vitamins are useful."
-srsWords: "vitamins" "help"
+srsWords: "vitamin" "help"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1098,7 +1098,7 @@ text: "Translate this sentence into English"
 sentence: "这药过期了吗？"
 answer: "Is this medicine expired."
 acceptAlso: "Is this drug expired?"
-srsWords: "medicine" "expired"
+srsWords: "medicine" "expire"
 
 
 ---
@@ -1127,7 +1127,7 @@ text: "Translate this sentence into English"
 sentence: "他用牙线。"
 answer: "He uses dental floss."
 acceptAlso: "He flosses."
-srsWords: "uses" "dental" "floss"
+srsWords: "use" "dental" "floss"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1162,7 +1162,7 @@ text: "Translate this sentence into English"
 sentence: "拔牙很疼。"
 answer: "Pulling a tooth hurts."
 acceptAlso: "Tooth extraction is painful."
-srsWords: "pulling" "tooth" "hurts"
+srsWords: "pull" "tooth" "hurt"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1198,7 +1198,7 @@ text: "Translate this sentence into English"
 sentence: "他喜欢跑步。"
 answer: "He likes to run."
 acceptAlso: "He enjoys running."
-srsWords: "likes" "run"
+srsWords: "like" "run"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1233,14 +1233,14 @@ text: "Translate this sentence into English"
 sentence: "我举重。"
 answer: "I lift weights."
 acceptAlso: "I do weight training."
-srsWords: "lift" "weights"
+srsWords: "lift" "weight"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "出汗了。"
 answer: "I am sweating."
 acceptAlso: "I broke a sweat."
-srsWords: "sweating"
+srsWords: "sweat"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1283,7 +1283,7 @@ text: "Translate this sentence into English"
 sentence: "你睡了几小时？"
 answer: "How many hours did you sleep."
 acceptAlso: "How long did you sleep?"
-srsWords: "hours" "sleep"
+srsWords: "hour" "sleep"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1325,7 +1325,7 @@ text: "Translate this sentence into English"
 sentence: "窗帘挡光。"
 answer: "The curtains block the light."
 acceptAlso: "The drapes block light."
-srsWords: "curtains" "block" "light"
+srsWords: "curtain" "block" "light"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1354,21 +1354,21 @@ text: "Translate this sentence into English"
 sentence: "请止血。"
 answer: "Please stop the bleeding."
 acceptAlso: "Stop the blood, please."
-srsWords: "please" "stop" "bleeding"
+srsWords: "please" "stop" "bleed"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "他扭伤了脚。"
 answer: "He sprained his foot."
 acceptAlso: "He twisted his ankle."
-srsWords: "sprained" "foot"
+srsWords: "sprain" "foot"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我烫伤了。"
 answer: "I burned myself."
 acceptAlso: "I scalded myself."
-srsWords: "burned" "myself"
+srsWords: "burn" "myself"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1382,7 +1382,7 @@ text: "Translate this sentence into English"
 sentence: "需要缝针吗？"
 answer: "Do I need stitches."
 acceptAlso: "Do I need sutures?"
-srsWords: "need" "stitches"
+srsWords: "need" "stitch"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1432,35 +1432,35 @@ text: "Translate this sentence into English"
 sentence: "多吃水果蔬菜。"
 answer: "Eat more fruit and vegetables."
 acceptAlso: "Have more produce."
-srsWords: "eat" "fruit" "vegetables"
+srsWords: "eat" "fruit" "vegetable"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "少喝含糖饮料。"
 answer: "Drink fewer sugary drinks."
 acceptAlso: "Cut back on soda."
-srsWords: "drink" "fewer" "sugary" "drinks"
+srsWords: "drink" "few" "sugary" "drink"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "每天走一万步。"
 answer: "Walk ten thousand steps a day."
 acceptAlso: "Walk ten k steps daily."
-srsWords: "walk" "ten" "thousand" "steps" "day"
+srsWords: "walk" "ten" "thousand" "step" "day"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "勤洗手。"
 answer: "Wash your hands often."
 acceptAlso: "Wash hands frequently."
-srsWords: "wash" "hands" "often"
+srsWords: "wash" "hand" "often"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "定期体检。"
 answer: "Get regular checkups."
 acceptAlso: "Have regular exams."
-srsWords: "get" "regular" "checkups"
+srsWords: "get" "regular" "checkup"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1488,7 +1488,7 @@ text: "Translate this sentence into English"
 sentence: "健康第一。"
 answer: "Health comes first."
 acceptAlso: "Health is the top priority."
-srsWords: "health" "comes" "first"
+srsWords: "health" "come" "first"
 
 
 ---
@@ -1545,14 +1545,14 @@ text: "Translate this sentence into English"
 sentence: "我请假了。"
 answer: "I took leave."
 acceptAlso: "I asked for time off."
-srsWords: "took" "leave"
+srsWords: "take" "leave"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "康复中。"
 answer: "Recovering."
 acceptAlso: "Getting better."
-srsWords: "recovering"
+srsWords: "recover"
 
 [translation]
 text: "Translate this sentence into English"

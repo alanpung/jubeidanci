@@ -37,7 +37,7 @@ text: "Translate this sentence into English"
 sentence: "气温是二十五度。"
 answer: "The temperature is twenty-five degrees."
 acceptAlso: "It is twenty-five degrees outside."
-srsWords: "the" "temperature" "is" "twenty" "five" "degrees" "it" "outside"
+srsWords: "the" "temperature" "is" "twenty" "five" "degree" "it" "outside"
 
 [translation]
 text: "Translate this sentence into English"
@@ -58,21 +58,21 @@ text: "Translate this sentence into English"
 sentence: "天气预报说会下雪。"
 answer: "The weather forecast says it will snow."
 acceptAlso: "They say snow is coming."
-srsWords: "the" "weather" "forecast" "says" "it" "will" "snow" "they" "say" "is" "coming"
+srsWords: "the" "weather" "forecast" "say" "it" "will" "snow" "they" "say" "is" "coming"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "今天多云。"
 answer: "It is cloudy today."
 acceptAlso: "There are a lot of clouds today."
-srsWords: "it" "is" "cloudy" "today" "there" "are" "a" "lot" "of" "clouds"
+srsWords: "it" "is" "cloudy" "today" "there" "are" "a" "lot" "of" "cloud"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "昨天下了一整天雨。"
 answer: "It rained all day yesterday."
 acceptAlso: "The rain lasted all day yesterday."
-srsWords: "it" "rained" "all" "day" "yesterday" "the" "rain" "lasted"
+srsWords: "it" "rain" "all" "day" "yesterday" "the" "rain" "last"
 
 [translation]
 text: "Translate this sentence into English"
@@ -86,7 +86,7 @@ text: "Translate this sentence into English"
 sentence: "周末会变暖和。"
 answer: "It will get warmer at the weekend."
 acceptAlso: "The weather turns warm on the weekend."
-srsWords: "it" "will" "get" "warmer" "at" "the" "weekend" "weather" "turns" "warm" "on"
+srsWords: "it" "will" "get" "warmer" "at" "the" "weekend" "weather" "turn" "warm" "on"
 
 ---
 lessonTitle: "Lesson 2: Seasons"
@@ -107,42 +107,42 @@ text: "Translate this sentence into English"
 sentence: "春天天气很暖和。"
 answer: "The weather is very warm in spring."
 acceptAlso: "It gets warm during spring."
-srsWords: "the" "weather" "is" "very" "warm" "in" "spring" "it" "gets" "during"
+srsWords: "the" "weather" "is" "very" "warm" "in" "spring" "it" "get" "during"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "夏天白天很长。"
 answer: "The days are very long in summer."
 acceptAlso: "Summer days last a long time."
-srsWords: "the" "days" "are" "very" "long" "in" "summer" "last" "a" "time"
+srsWords: "the" "day" "are" "very" "long" "in" "summer" "last" "a" "time"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "冬天这里很冷。"
 answer: "It is very cold here in winter."
 acceptAlso: "Winters are cold in this place."
-srsWords: "it" "is" "very" "cold" "here" "in" "winter" "winters" "are" "this" "place"
+srsWords: "it" "is" "very" "cold" "here" "in" "winter" "winter" "are" "this" "place"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "树叶在秋天变黄。"
 answer: "The leaves turn yellow in autumn."
 acceptAlso: "Leaves become yellow in fall."
-srsWords: "the" "leaves" "turn" "yellow" "in" "autumn" "become" "fall"
+srsWords: "the" "leave" "turn" "yellow" "in" "autumn" "become" "fall"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "一年有四个季节。"
 answer: "There are four seasons in a year."
 acceptAlso: "A year has four seasons."
-srsWords: "there" "are" "four" "seasons" "in" "a" "year" "has"
+srsWords: "there" "are" "four" "season" "in" "a" "year" "has"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "春天经常下雨。"
 answer: "It often rains in spring."
 acceptAlso: "Spring is usually rainy."
-srsWords: "it" "often" "rains" "in" "spring" "is" "usually" "rainy"
+srsWords: "it" "often" "rain" "in" "spring" "is" "usually" "rainy"
 
 [translation]
 text: "Translate this sentence into English"
@@ -163,7 +163,7 @@ text: "Translate this sentence into English"
 sentence: "这个季节最适合旅行。"
 answer: "This season is best for travelling."
 acceptAlso: "It is the best time of year to travel."
-srsWords: "this" "season" "is" "best" "for" "travelling" "it" "the" "time" "of" "year" "to" "travel"
+srsWords: "this" "season" "is" "best" "for" "travel" "it" "the" "time" "of" "year" "to" "travel"
 
 ---
 lessonTitle: "Lesson 3: Nature Parks"
@@ -177,28 +177,28 @@ text: "Translate this sentence into English"
 sentence: "我们周末去了森林公园。"
 answer: "We went to the forest park at the weekend."
 acceptAlso: "We visited the nature park on the weekend."
-srsWords: "we" "went" "to" "the" "forest" "park" "at" "weekend" "visited" "nature" "on"
+srsWords: "we" "go" "to" "the" "forest" "park" "at" "weekend" "visit" "nature" "on"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "公园里有很多树。"
 answer: "There are many trees in the park."
 acceptAlso: "The park is full of trees."
-srsWords: "there" "are" "many" "trees" "in" "the" "park" "is" "full" "of"
+srsWords: "there" "are" "many" "tree" "in" "the" "park" "is" "full" "of"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请不要摘花。"
 answer: "Please do not pick the flowers."
 acceptAlso: "Leave the flowers in the park, please."
-srsWords: "please" "do" "not" "pick" "the" "flowers" "leave" "in" "park"
+srsWords: "please" "do" "not" "pick" "the" "flower" "leave" "in" "park"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们在湖边散步。"
 answer: "We walked by the lake."
 acceptAlso: "We took a walk near the lake."
-srsWords: "we" "walked" "by" "the" "lake" "took" "a" "walk" "near"
+srsWords: "we" "walk" "by" "the" "lake" "take" "a" "walk" "near"
 
 [translation]
 text: "Translate this sentence into English"
@@ -212,14 +212,14 @@ text: "Translate this sentence into English"
 sentence: "公园早上六点开门。"
 answer: "The park opens at six in the morning."
 acceptAlso: "You can enter the park from six am."
-srsWords: "the" "park" "opens" "at" "six" "in" "morning" "you" "can" "enter" "from" "am"
+srsWords: "the" "park" "open" "at" "six" "in" "morning" "you" "can" "enter" "from" "am"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我看到了几只鸟。"
 answer: "I saw a few birds."
 acceptAlso: "There were some birds to see."
-srsWords: "i" "saw" "a" "few" "birds" "there" "were" "some" "to" "see"
+srsWords: "i" "saw" "a" "few" "bird" "there" "were" "some" "to" "see"
 
 [translation]
 text: "Translate this sentence into English"
@@ -233,7 +233,7 @@ text: "Translate this sentence into English"
 sentence: "孩子们在草地上跑。"
 answer: "The children are running on the grass."
 acceptAlso: "Kids run around on the lawn."
-srsWords: "the" "children" "are" "running" "on" "grass" "kids" "run" "around"
+srsWords: "the" "child" "are" "running" "on" "grass" "kid" "run" "around"
 
 [translation]
 text: "Translate this sentence into English"
@@ -261,21 +261,21 @@ text: "Translate this sentence into English"
 sentence: "公园里有很多鸽子。"
 answer: "There are many birds in the park."
 acceptAlso: "The park is full of pigeons."
-srsWords: "there" "are" "many" "birds" "in" "the" "park" "is" "full" "of"
+srsWords: "there" "are" "many" "bird" "in" "the" "park" "is" "full" "of"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "狗很聪明。"
 answer: "Dogs are very smart."
 acceptAlso: "A dog is a clever animal."
-srsWords: "dogs" "are" "very" "smart" "a" "dog" "is" "clever" "animal"
+srsWords: "dog" "are" "very" "smart" "a" "dog" "is" "clever" "animal"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我害怕蜘蛛。"
 answer: "I am afraid of spiders."
 acceptAlso: "Spiders scare me."
-srsWords: "i" "am" "afraid" "of" "spiders" "scare" "me"
+srsWords: "i" "am" "afraid" "of" "spider" "scare" "me"
 
 [translation]
 text: "Translate this sentence into English"
@@ -289,21 +289,21 @@ text: "Translate this sentence into English"
 sentence: "鸟儿在树上唱歌。"
 answer: "The birds are singing in the tree."
 acceptAlso: "Birds sing up in the trees."
-srsWords: "the" "birds" "are" "singing" "in" "tree" "sing" "up" "trees"
+srsWords: "the" "bird" "are" "singing" "in" "tree" "sing" "up" "tree"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请不要喂动物。"
 answer: "Please do not feed the animals."
 acceptAlso: "No feeding the animals, please."
-srsWords: "please" "do" "not" "feed" "the" "animals" "no" "feeding"
+srsWords: "please" "do" "not" "feed" "the" "animal" "no" "feed"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "熊猫吃竹子。"
 answer: "Pandas eat plants."
 acceptAlso: "Bamboo is what pandas eat."
-srsWords: "pandas" "eat" "plants"
+srsWords: "panda" "eat" "plant"
 
 [translation]
 text: "Translate this sentence into English"
@@ -317,7 +317,7 @@ text: "Translate this sentence into English"
 sentence: "我们应该保护野生动物。"
 answer: "We should protect wild animals."
 acceptAlso: "Wild animals need our protection."
-srsWords: "we" "should" "protect" "wild" "animals" "need" "our" "protection"
+srsWords: "we" "should" "protect" "wild" "animal" "need" "our" "protection"
 
 ---
 lessonTitle: "Lesson 5: Gardening"
@@ -331,70 +331,70 @@ text: "Translate this sentence into English"
 sentence: "我在花园里种了花。"
 answer: "I planted flowers in the garden."
 acceptAlso: "I put some flowers into the garden."
-srsWords: "i" "planted" "flowers" "in" "the" "garden" "put" "some" "into"
+srsWords: "i" "plant" "flower" "in" "the" "garden" "put" "some" "into"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请每天给植物浇水。"
 answer: "Please water the plants every day."
 acceptAlso: "The plants need water daily."
-srsWords: "please" "water" "the" "plants" "every" "day" "need" "daily"
+srsWords: "please" "water" "the" "plant" "every" "day" "need" "daily"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这些树需要更多阳光。"
 answer: "These trees need more sunlight."
 acceptAlso: "The trees want more sun."
-srsWords: "these" "trees" "need" "more" "sunlight" "the" "want" "sun"
+srsWords: "these" "tree" "need" "more" "sunlight" "the" "want" "sun"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我周末修剪草坪。"
 answer: "I cut the grass at the weekend."
 acceptAlso: "I mow the lawn on weekends."
-srsWords: "i" "cut" "the" "grass" "at" "weekend" "on" "weekends"
+srsWords: "i" "cut" "the" "grass" "at" "weekend" "on" "weekend"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "花园里有两只蝴蝶。"
 answer: "There are two butterflies in the garden."
 acceptAlso: "Two butterflies are in our garden."
-srsWords: "there" "are" "two" "butterflies" "in" "the" "garden" "our"
+srsWords: "there" "are" "two" "butterfly" "in" "the" "garden" "our"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "土壤很干。"
 answer: "The soil is very dry."
 acceptAlso: "The ground feels dry."
-srsWords: "the" "soil" "is" "very" "dry" "ground" "feels"
+srsWords: "the" "soil" "is" "very" "dry" "ground" "feel"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我给花施了肥。"
 answer: "I gave the flowers some food."
 acceptAlso: "I fed the plants with plant food."
-srsWords: "i" "gave" "the" "flowers" "some" "food" "fed" "plants" "with"
+srsWords: "i" "give" "the" "flower" "some" "food" "fed" "plant" "with"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这些花春天开。"
 answer: "These flowers bloom in spring."
 acceptAlso: "They flower during spring."
-srsWords: "these" "flowers" "bloom" "in" "spring" "they" "flower" "during"
+srsWords: "these" "flower" "bloom" "in" "spring" "they" "flower" "during"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我把枯叶清理了。"
 answer: "I cleared away the dead leaves."
 acceptAlso: "The dry leaves were cleaned up by me."
-srsWords: "i" "cleared" "away" "the" "dead" "leaves" "dry" "were" "cleaned" "up" "by" "me"
+srsWords: "i" "clear" "away" "the" "dead" "leave" "dry" "were" "clean" "up" "by" "me"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "种菜很有意思。"
 answer: "Growing vegetables is very interesting."
 acceptAlso: "It is fun to grow your own food."
-srsWords: "growing" "vegetables" "is" "very" "interesting" "it" "fun" "to" "grow" "your" "own" "food"
+srsWords: "growing" "vegetable" "is" "very" "interesting" "it" "fun" "to" "grow" "your" "own" "food"
 
 ---
 lessonTitle: "Lesson 6: Environmental Protection"
@@ -436,7 +436,7 @@ text: "Translate this sentence into English"
 sentence: "请关掉不必要的灯。"
 answer: "Please turn off unnecessary lights."
 acceptAlso: "Switch off lights you do not need."
-srsWords: "please" "turn" "off" "unnecessary" "lights" "switch" "you" "do" "not" "need"
+srsWords: "please" "turn" "off" "unnecessary" "light" "switch" "you" "do" "not" "need"
 
 [translation]
 text: "Translate this sentence into English"
@@ -450,21 +450,21 @@ text: "Translate this sentence into English"
 sentence: "我们骑自行车代替开车。"
 answer: "We ride bikes instead of driving."
 acceptAlso: "Cycling replaces driving for us."
-srsWords: "we" "ride" "bikes" "instead" "of" "driving" "cycling" "replaces" "for" "us"
+srsWords: "we" "ride" "bike" "instead" "of" "drive" "cycling" "replace" "for" "us"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "塑料袋对环境有害。"
 answer: "Plastic bags are bad for the environment."
 acceptAlso: "Plastic harms the environment."
-srsWords: "plastic" "bags" "are" "bad" "for" "the" "environment" "harms"
+srsWords: "plastic" "bag" "are" "bad" "for" "the" "environment" "harm"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们每年种树。"
 answer: "We plant trees every year."
 acceptAlso: "Trees are planted by us each year."
-srsWords: "we" "plant" "trees" "every" "year" "are" "planted" "by" "us" "each"
+srsWords: "we" "plant" "tree" "every" "year" "are" "plant" "by" "us" "each"
 
 [translation]
 text: "Translate this sentence into English"
@@ -492,7 +492,7 @@ text: "Translate this sentence into English"
 sentence: "雨太大，路上积水了。"
 answer: "The rain was so heavy that the road flooded."
 acceptAlso: "Heavy rain flooded the streets."
-srsWords: "the" "rain" "was" "so" "heavy" "that" "road" "flooded" "streets"
+srsWords: "the" "rain" "was" "so" "heavy" "that" "road" "flood" "street"
 
 [translation]
 text: "Translate this sentence into English"
@@ -513,7 +513,7 @@ text: "Translate this sentence into English"
 sentence: "大风把树吹倒了。"
 answer: "The strong wind blew the tree down."
 acceptAlso: "A tree fell because of the wind."
-srsWords: "the" "strong" "wind" "blew" "tree" "down" "a" "fell" "because" "of"
+srsWords: "the" "strong" "wind" "blow" "tree" "down" "a" "fell" "because" "of"
 
 [translation]
 text: "Translate this sentence into English"
@@ -527,28 +527,28 @@ text: "Translate this sentence into English"
 sentence: "政府发出了警报。"
 answer: "The government sent out a warning."
 acceptAlso: "There is a warning from the government."
-srsWords: "the" "government" "sent" "out" "a" "warning" "there" "is" "from"
+srsWords: "the" "government" "send" "out" "a" "warning" "there" "is" "from"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "地震时请躲在桌子下面。"
 answer: "Hide under the table during an earthquake."
 acceptAlso: "Get under a desk if the ground shakes."
-srsWords: "hide" "under" "the" "table" "during" "an" "earthquake" "get" "a" "desk" "if" "ground" "shakes"
+srsWords: "hide" "under" "the" "table" "during" "an" "earthquake" "get" "a" "desk" "if" "ground" "shake"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这场洪水损坏了很多房子。"
 answer: "This flood damaged many houses."
 acceptAlso: "A lot of homes were hurt by the flood."
-srsWords: "this" "flood" "damaged" "many" "houses" "a" "lot" "of" "homes" "were" "hurt" "by" "the"
+srsWords: "this" "flood" "damaged" "many" "house" "a" "lot" "of" "home" "were" "hurt" "by" "the"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "救援队很快就到了。"
 answer: "The rescue team arrived very quickly."
 acceptAlso: "Help came soon after."
-srsWords: "the" "rescue" "team" "arrived" "very" "quickly" "help" "came" "soon" "after"
+srsWords: "the" "rescue" "team" "arrive" "very" "quickly" "help" "come" "soon" "after"
 
 ---
 lessonTitle: "Lesson 8: Camping"
@@ -576,14 +576,14 @@ text: "Translate this sentence into English"
 sentence: "我带了睡袋。"
 answer: "I brought a sleeping bag."
 acceptAlso: "My sleeping bag is with me."
-srsWords: "i" "brought" "a" "sleeping" "bag" "my" "is" "with" "me"
+srsWords: "i" "bring" "a" "sleep" "bag" "my" "is" "with" "me"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们晚上生了一堆火。"
 answer: "We made a fire in the evening."
 acceptAlso: "A campfire was lit at night."
-srsWords: "we" "made" "a" "fire" "in" "the" "evening" "was" "lit" "at" "night"
+srsWords: "we" "make" "a" "fire" "in" "the" "evening" "was" "light" "at" "night"
 
 [translation]
 text: "Translate this sentence into English"
@@ -597,28 +597,28 @@ text: "Translate this sentence into English"
 sentence: "夜里很冷。"
 answer: "It is very cold at night."
 acceptAlso: "Nights are cold out here."
-srsWords: "it" "is" "very" "cold" "at" "night" "nights" "are" "out" "here"
+srsWords: "it" "is" "very" "cold" "at" "night" "night" "are" "out" "here"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们睡在帐篷里。"
 answer: "We sleep in the tent."
 acceptAlso: "Our beds are inside the tent."
-srsWords: "we" "sleep" "in" "the" "tent" "our" "beds" "are" "inside"
+srsWords: "we" "sleep" "in" "the" "tent" "our" "bed" "are" "inside"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我在河边洗了手。"
 answer: "I washed my hands by the river."
 acceptAlso: "There is a river to wash in."
-srsWords: "i" "washed" "my" "hands" "by" "the" "river" "there" "is" "a" "to" "wash" "in"
+srsWords: "i" "wash" "my" "hand" "by" "the" "river" "there" "is" "a" "to" "wash" "in"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "早上我听到了鸟叫。"
 answer: "I heard birds in the morning."
 acceptAlso: "Birds woke me up early."
-srsWords: "i" "heard" "birds" "in" "the" "morning" "woke" "me" "up" "early"
+srsWords: "i" "hear" "bird" "in" "the" "morning" "wake" "me" "up" "early"
 
 [translation]
 text: "Translate this sentence into English"
@@ -639,14 +639,14 @@ text: "Translate this sentence into English"
 sentence: "我们周六去了海滩。"
 answer: "We went to the beach on Saturday."
 acceptAlso: "Saturday we spent at the seaside."
-srsWords: "we" "went" "to" "the" "beach" "on" "saturday" "spent" "at" "seaside"
+srsWords: "we" "go" "to" "the" "beach" "on" "saturday" "spend" "at" "seaside"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "海水很温暖。"
 answer: "The sea water is very warm."
 acceptAlso: "The water feels warm."
-srsWords: "the" "sea" "water" "is" "very" "warm" "feels"
+srsWords: "the" "sea" "water" "is" "very" "warm" "feel"
 
 [translation]
 text: "Translate this sentence into English"
@@ -660,28 +660,28 @@ text: "Translate this sentence into English"
 sentence: "孩子们在沙滩上玩。"
 answer: "The children are playing on the sand."
 acceptAlso: "Kids play on the beach."
-srsWords: "the" "children" "are" "playing" "on" "sand" "kids" "play" "beach"
+srsWords: "the" "child" "are" "play" "on" "sand" "kid" "play" "beach"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我涂了防晒霜。"
 answer: "I put on sun cream."
 acceptAlso: "Sunscreen protects my skin."
-srsWords: "i" "put" "on" "sun" "cream" "protects" "my" "skin"
+srsWords: "i" "put" "on" "sun" "cream" "protect" "my" "skin"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们捡了几个贝壳。"
 answer: "We collected a few shells."
 acceptAlso: "Some shells were picked up by us."
-srsWords: "we" "collected" "a" "few" "shells" "some" "were" "picked" "up" "by" "us"
+srsWords: "we" "collect" "a" "few" "shell" "some" "were" "pick" "up" "by" "us"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "今天浪很大。"
 answer: "The waves are very big today."
 acceptAlso: "There are huge waves today."
-srsWords: "the" "waves" "are" "very" "big" "today" "there" "huge"
+srsWords: "the" "wave" "are" "very" "big" "today" "there" "huge"
 
 [translation]
 text: "Translate this sentence into English"
@@ -702,7 +702,7 @@ text: "Translate this sentence into English"
 sentence: "我在海边看了日落。"
 answer: "I watched the sunset by the sea."
 acceptAlso: "We saw the sun go down at the beach."
-srsWords: "i" "watched" "the" "sunset" "by" "sea" "we" "saw" "sun" "go" "down" "at" "beach"
+srsWords: "i" "watch" "the" "sunset" "by" "sea" "we" "saw" "sun" "go" "down" "at" "beach"
 
 ---
 lessonTitle: "Lesson 10: Mountains"
@@ -716,7 +716,7 @@ text: "Translate this sentence into English"
 sentence: "我们爬上了山顶。"
 answer: "We climbed to the top of the mountain."
 acceptAlso: "We reached the mountain top."
-srsWords: "we" "climbed" "to" "the" "top" "of" "mountain" "reached"
+srsWords: "we" "climb" "to" "the" "top" "of" "mountain" "reach"
 
 [translation]
 text: "Translate this sentence into English"
@@ -730,7 +730,7 @@ text: "Translate this sentence into English"
 sentence: "这条路很陡。"
 answer: "This hill is very high."
 acceptAlso: "The trail goes up sharply."
-srsWords: "this" "hill" "is" "very" "high" "the" "road" "goes" "up"
+srsWords: "this" "hill" "is" "very" "high" "the" "road" "go" "up"
 
 [translation]
 text: "Translate this sentence into English"
@@ -744,14 +744,14 @@ text: "Translate this sentence into English"
 sentence: "山里空气很清新。"
 answer: "The air in the mountains is very fresh."
 acceptAlso: "Mountain air feels clean."
-srsWords: "the" "air" "in" "mountains" "is" "very" "fresh" "mountain" "feels" "clean"
+srsWords: "the" "air" "in" "mountain" "is" "very" "fresh" "mountain" "feel" "clean"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们走了三个小时。"
 answer: "We walked for three hours."
 acceptAlso: "Our walk lasted three hours."
-srsWords: "we" "walked" "for" "three" "hours" "our" "walk" "lasted"
+srsWords: "we" "walk" "for" "three" "hour" "our" "walk" "last"
 
 [translation]
 text: "Translate this sentence into English"
@@ -765,21 +765,21 @@ text: "Translate this sentence into English"
 sentence: "我拍了很多照片。"
 answer: "I took a lot of photos."
 acceptAlso: "Many pictures were taken by me."
-srsWords: "i" "took" "a" "lot" "of" "photos" "many" "pictures" "were" "taken" "by" "me"
+srsWords: "i" "take" "a" "lot" "of" "photo" "many" "picture" "were" "take" "by" "me"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请穿舒服的鞋。"
 answer: "Please wear comfortable shoes."
 acceptAlso: "Good shoes are important here."
-srsWords: "please" "wear" "comfortable" "shoes" "good" "are" "important" "here"
+srsWords: "please" "wear" "comfortable" "shoe" "good" "are" "important" "here"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我喜欢在山里散步。"
 answer: "I like walking in the mountains."
 acceptAlso: "Walking in the hills is something I enjoy."
-srsWords: "i" "like" "walking" "in" "the" "mountains" "hills" "is" "something" "enjoy"
+srsWords: "i" "like" "walking" "in" "the" "mountain" "hill" "is" "something" "enjoy"
 ---
 lessonTitle: "Lesson 11: Playing Football"
 description: "Translate A2 sentences about Playing Football"
@@ -799,14 +799,14 @@ text: "Translate this sentence into English"
 sentence: "我们队赢了比赛。"
 answer: "Our team won the match."
 acceptAlso: "We were the winners of the game."
-srsWords: "our" "team" "won" "the" "match" "we" "were" "winners" "of" "game"
+srsWords: "our" "team" "win" "the" "match" "we" "were" "winner" "of" "game"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "他踢进了一个球。"
 answer: "He scored a goal."
 acceptAlso: "A goal was scored by him."
-srsWords: "he" "scored" "a" "goal" "was" "by" "him"
+srsWords: "he" "score" "a" "goal" "was" "by" "him"
 
 [translation]
 text: "Translate this sentence into English"
@@ -827,28 +827,28 @@ text: "Translate this sentence into English"
 sentence: "请穿运动鞋。"
 answer: "Please wear sports shoes."
 acceptAlso: "Put on trainers, please."
-srsWords: "please" "wear" "sports" "shoes" "put" "on"
+srsWords: "please" "wear" "sports" "shoe" "put" "on"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "比赛下午三点开始。"
 answer: "The match starts at three in the afternoon."
 acceptAlso: "Kick-off is at three pm."
-srsWords: "the" "match" "starts" "at" "three" "in" "afternoon" "kick" "off" "is" "pm"
+srsWords: "the" "match" "start" "at" "three" "in" "afternoon" "kick" "off" "is" "pm"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们输了，但很开心。"
 answer: "We lost, but we were happy."
 acceptAlso: "Losing did not spoil our fun."
-srsWords: "we" "lost" "but" "were" "happy" "losing" "did" "not" "spoil" "our" "fun"
+srsWords: "we" "lost" "but" "were" "happy" "lose" "did" "not" "spoil" "our" "fun"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我受伤了，要休息一周。"
 answer: "I am hurt and need to rest for a week."
 acceptAlso: "An injury keeps me out for a week."
-srsWords: "i" "am" "hurt" "and" "need" "to" "rest" "for" "a" "week" "an" "keeps" "me" "out"
+srsWords: "i" "am" "hurt" "and" "need" "to" "rest" "for" "a" "week" "an" "keep" "me" "out"
 
 [translation]
 text: "Translate this sentence into English"
@@ -883,28 +883,28 @@ text: "Translate this sentence into English"
 sentence: "我从图书馆借了两本书。"
 answer: "I borrowed two books from the library."
 acceptAlso: "Two library books are with me."
-srsWords: "i" "borrowed" "two" "books" "from" "the" "library" "are" "with" "me"
+srsWords: "i" "borrow" "two" "book" "from" "the" "library" "are" "with" "me"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我喜欢看小说。"
 answer: "I like reading novels."
 acceptAlso: "Novels are my favourite kind of book."
-srsWords: "i" "like" "reading" "novels" "are" "my" "favourite" "kind" "of" "book"
+srsWords: "i" "like" "reading" "novel" "are" "my" "favourite" "kind" "of" "book"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这本书有二百页。"
 answer: "This book has two hundred pages."
 acceptAlso: "It is a two-hundred-page book."
-srsWords: "this" "book" "has" "two" "hundred" "pages" "it" "is" "a" "page"
+srsWords: "this" "book" "has" "two" "hundred" "page" "it" "is" "a" "page"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我读完了第一章。"
 answer: "I finished the first chapter."
 acceptAlso: "Chapter one is done."
-srsWords: "i" "finished" "the" "first" "chapter" "one" "is" "done"
+srsWords: "i" "finish" "the" "first" "chapter" "one" "is" "done"
 
 [translation]
 text: "Translate this sentence into English"
@@ -932,7 +932,7 @@ text: "Translate this sentence into English"
 sentence: "读书让我放松。"
 answer: "Reading helps me relax."
 acceptAlso: "Books make me feel calm."
-srsWords: "reading" "helps" "me" "relax" "books" "make" "feel" "calm"
+srsWords: "reading" "help" "me" "relax" "book" "make" "feel" "calm"
 
 ---
 lessonTitle: "Lesson 13: Photography"
@@ -946,7 +946,7 @@ text: "Translate this sentence into English"
 sentence: "我喜欢拍照。"
 answer: "I like taking photos."
 acceptAlso: "Photography is a hobby of mine."
-srsWords: "i" "like" "taking" "photos" "photography" "is" "a" "hobby" "of" "mine"
+srsWords: "i" "like" "taking" "photo" "photography" "is" "a" "hobby" "of" "mine"
 
 [translation]
 text: "Translate this sentence into English"
@@ -960,7 +960,7 @@ text: "Translate this sentence into English"
 sentence: "这张照片很漂亮。"
 answer: "This photo is very beautiful."
 acceptAlso: "The picture looks great."
-srsWords: "this" "photo" "is" "very" "beautiful" "the" "picture" "looks" "great"
+srsWords: "this" "photo" "is" "very" "beautiful" "the" "picture" "look" "great"
 
 [translation]
 text: "Translate this sentence into English"
@@ -981,21 +981,21 @@ text: "Translate this sentence into English"
 sentence: "请把照片发给我。"
 answer: "Please send me the photos."
 acceptAlso: "Can you share the pictures with me?"
-srsWords: "please" "send" "me" "the" "photos" "can" "you" "share" "pictures" "with"
+srsWords: "please" "send" "me" "the" "photo" "can" "you" "share" "picture" "with"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我把照片存在电脑里。"
 answer: "I keep the photos on my computer."
 acceptAlso: "My pictures are saved on the computer."
-srsWords: "i" "keep" "the" "photos" "on" "my" "computer" "pictures" "are" "saved"
+srsWords: "i" "keep" "the" "photo" "on" "my" "computer" "picture" "are" "save"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "他拍了很多风景照。"
 answer: "He took many landscape photos."
 acceptAlso: "A lot of scenery shots were taken by him."
-srsWords: "he" "took" "many" "landscape" "photos" "a" "lot" "of" "scenery" "shots" "were" "taken" "by" "him"
+srsWords: "he" "take" "many" "landscape" "photo" "a" "lot" "of" "scenery" "shot" "were" "take" "by" "him"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1030,7 +1030,7 @@ text: "Translate this sentence into English"
 sentence: "她唱歌很好听。"
 answer: "She sings very well."
 acceptAlso: "Her voice is lovely."
-srsWords: "she" "sings" "very" "well" "her" "voice" "is" "lovely"
+srsWords: "she" "sing" "very" "well" "her" "voice" "is" "lovely"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1044,7 +1044,7 @@ text: "Translate this sentence into English"
 sentence: "请小声一点。"
 answer: "Please be a little quieter."
 acceptAlso: "Turn the volume down, please."
-srsWords: "please" "be" "a" "little" "quieter" "turn" "the" "volume" "down"
+srsWords: "please" "be" "a" "little" "quiet" "turn" "the" "volume" "down"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1058,21 +1058,21 @@ text: "Translate this sentence into English"
 sentence: "音乐让我心情好。"
 answer: "Music puts me in a good mood."
 acceptAlso: "Listening to music makes me happy."
-srsWords: "music" "puts" "me" "in" "a" "good" "mood" "listening" "to" "makes" "happy"
+srsWords: "music" "put" "me" "in" "a" "good" "mood" "listen" "to" "make" "happy"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "他加入了学校的乐队。"
 answer: "He joined the school band."
 acceptAlso: "He plays in a band at school."
-srsWords: "he" "joined" "the" "school" "band" "plays" "in" "a" "at"
+srsWords: "he" "join" "the" "school" "band" "play" "in" "a" "at"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我每天练习半小时。"
 answer: "I study for half an hour every day."
 acceptAlso: "Practice takes thirty minutes a day."
-srsWords: "i" "study" "for" "half" "an" "hour" "every" "day" "takes" "thirty" "minutes" "a"
+srsWords: "i" "study" "for" "half" "an" "hour" "every" "day" "take" "thirty" "minute" "a"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1100,7 +1100,7 @@ text: "Translate this sentence into English"
 sentence: "我们今晚看一部电影。"
 answer: "We are watching a film tonight."
 acceptAlso: "A movie is on our plan this evening."
-srsWords: "we" "are" "watching" "a" "film" "tonight" "movie" "is" "on" "our" "plan" "this" "evening"
+srsWords: "we" "are" "watch" "a" "film" "tonight" "movie" "is" "on" "our" "plan" "this" "evening"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1114,7 +1114,7 @@ text: "Translate this sentence into English"
 sentence: "我喜欢看喜剧片。"
 answer: "I like watching comedies."
 acceptAlso: "Comedy films are my favourite."
-srsWords: "i" "like" "watching" "comedies" "comedy" "films" "are" "my" "favourite"
+srsWords: "i" "like" "watch" "comedy" "comedy" "film" "are" "my" "favourite"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1128,7 +1128,7 @@ text: "Translate this sentence into English"
 sentence: "请给我两张票。"
 answer: "Please give me two tickets."
 acceptAlso: "Two tickets, please."
-srsWords: "please" "give" "me" "two" "tickets"
+srsWords: "please" "give" "me" "two" "ticket"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1149,14 +1149,14 @@ text: "Translate this sentence into English"
 sentence: "电影八点开始。"
 answer: "The film starts at eight."
 acceptAlso: "The movie begins at eight o'clock."
-srsWords: "the" "film" "starts" "at" "eight" "movie" "begins" "o'clock"
+srsWords: "the" "film" "start" "at" "eight" "movie" "begin" "o'clock"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我看了两遍才明白。"
 answer: "I watched it twice before I understood."
 acceptAlso: "It took two watches to get it."
-srsWords: "i" "watched" "it" "twice" "before" "understood" "took" "two" "watches" "to" "get"
+srsWords: "i" "watch" "it" "twice" "before" "understand" "take" "two" "watch" "to" "get"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1177,7 +1177,7 @@ text: "Translate this sentence into English"
 sentence: "我周末玩电子游戏。"
 answer: "I play video games at the weekend."
 acceptAlso: "Gaming is my weekend hobby."
-srsWords: "i" "play" "video" "games" "at" "the" "weekend" "gaming" "is" "my" "hobby"
+srsWords: "i" "play" "video" "game" "at" "the" "weekend" "game" "is" "my" "hobby"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1191,7 +1191,7 @@ text: "Translate this sentence into English"
 sentence: "我和朋友一起联网玩。"
 answer: "I play online with my friends."
 acceptAlso: "My friends and I game together online."
-srsWords: "i" "play" "online" "with" "my" "friends" "and" "game" "together"
+srsWords: "i" "play" "online" "with" "my" "friend" "and" "game" "together"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1205,28 +1205,28 @@ text: "Translate this sentence into English"
 sentence: "我赢了这一关。"
 answer: "I won this level."
 acceptAlso: "I beat this stage of the game."
-srsWords: "i" "won" "this" "level" "beat" "stage" "of" "the" "game"
+srsWords: "i" "win" "this" "level" "beat" "stage" "of" "the" "game"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "不要玩太久。"
 answer: "Do not play for too long."
 acceptAlso: "You should not game for hours."
-srsWords: "do" "not" "play" "for" "too" "long" "you" "should" "game" "hours"
+srsWords: "do" "not" "play" "for" "too" "long" "you" "should" "game" "hour"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "游戏画面很漂亮。"
 answer: "The graphics of the game are beautiful."
 acceptAlso: "The game looks great."
-srsWords: "the" "graphics" "of" "game" "are" "beautiful" "looks" "great"
+srsWords: "the" "graphics" "of" "game" "are" "beautiful" "look" "great"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我注册了一个账号。"
 answer: "I registered an account."
 acceptAlso: "I signed up for a game account."
-srsWords: "i" "registered" "an" "account" "signed" "up" "for" "a" "game"
+srsWords: "i" "register" "an" "account" "sign" "up" "for" "a" "game"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1240,7 +1240,7 @@ text: "Translate this sentence into English"
 sentence: "玩游戏让我放松。"
 answer: "Playing games helps me relax."
 acceptAlso: "Gaming makes me feel calm."
-srsWords: "playing" "games" "helps" "me" "relax" "gaming" "makes" "feel" "calm"
+srsWords: "play" "game" "help" "me" "relax" "game" "make" "feel" "calm"
 
 ---
 lessonTitle: "Lesson 17: Painting"
@@ -1261,7 +1261,7 @@ text: "Translate this sentence into English"
 sentence: "她画了一幅风景画。"
 answer: "She painted a landscape."
 acceptAlso: "A picture of the countryside was painted by her."
-srsWords: "she" "painted" "a" "landscape" "picture" "of" "the" "countryside" "was" "by" "her"
+srsWords: "she" "paint" "a" "landscape" "picture" "of" "the" "countryside" "was" "by" "her"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1275,21 +1275,21 @@ text: "Translate this sentence into English"
 sentence: "这些颜色很鲜艳。"
 answer: "These colours are very bright."
 acceptAlso: "The colors are really vivid."
-srsWords: "these" "colours" "are" "very" "bright" "the" "colors" "really" "vivid"
+srsWords: "these" "colour" "are" "very" "bright" "the" "color" "really" "vivid"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我在学水彩画。"
 answer: "I am learning watercolour painting."
 acceptAlso: "Watercolors are what I am studying now."
-srsWords: "i" "am" "learning" "watercolour" "painting" "watercolors" "are" "what" "studying" "now"
+srsWords: "i" "am" "learning" "watercolour" "painting" "watercolor" "are" "what" "study" "now"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "这幅画挂在墙上。"
 answer: "The painting hangs on the wall."
 acceptAlso: "There is a picture on the wall."
-srsWords: "the" "painting" "hangs" "on" "wall" "there" "is" "a" "picture"
+srsWords: "the" "painting" "hang" "on" "wall" "there" "is" "a" "picture"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1303,7 +1303,7 @@ text: "Translate this sentence into English"
 sentence: "我用了一个小时画完。"
 answer: "It took me one hour to finish it."
 acceptAlso: "I spent an hour painting it."
-srsWords: "it" "took" "me" "one" "hour" "to" "finish" "i" "spent" "an" "painting"
+srsWords: "it" "take" "me" "one" "hour" "to" "finish" "i" "spend" "an" "painting"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1317,7 +1317,7 @@ text: "Translate this sentence into English"
 sentence: "他想成为一名画家。"
 answer: "He wants to become a painter."
 acceptAlso: "Being an artist is his dream."
-srsWords: "he" "wants" "to" "become" "a" "painter" "being" "an" "artist" "is" "his" "dream"
+srsWords: "he" "want" "to" "become" "a" "painter" "being" "an" "artist" "is" "his" "dream"
 
 ---
 lessonTitle: "Lesson 18: Hiking"
@@ -1338,28 +1338,28 @@ text: "Translate this sentence into English"
 sentence: "这条路很长。"
 answer: "This trail is very long."
 acceptAlso: "The path goes on for miles."
-srsWords: "this" "trail" "is" "very" "long" "the" "path" "goes" "on" "for" "miles"
+srsWords: "this" "trail" "is" "very" "long" "the" "path" "go" "on" "for" "mile"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请穿舒服的鞋。"
 answer: "Please wear comfortable shoes."
 acceptAlso: "Good walking shoes are needed."
-srsWords: "please" "wear" "comfortable" "shoes" "good" "walking" "are" "needed"
+srsWords: "please" "wear" "comfortable" "shoe" "good" "walking" "are" "need"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我带了一些水和零食。"
 answer: "I brought some water and snacks."
 acceptAlso: "Water and snacks are in my bag."
-srsWords: "i" "brought" "some" "water" "and" "snacks" "are" "in" "my" "bag"
+srsWords: "i" "bring" "some" "water" "and" "snack" "are" "in" "my" "bag"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "山里的空气很好。"
 answer: "The air in the mountains is very good."
 acceptAlso: "Mountain air is fresh."
-srsWords: "the" "air" "in" "mountains" "is" "very" "good" "mountain" "fresh"
+srsWords: "the" "air" "in" "mountain" "is" "very" "good" "mountain" "fresh"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1373,21 +1373,21 @@ text: "Translate this sentence into English"
 sentence: "请跟着路标走。"
 answer: "Please follow the signs."
 acceptAlso: "Stay on the marked path, please."
-srsWords: "please" "follow" "the" "signs" "stay" "on" "marked" "path"
+srsWords: "please" "follow" "the" "sign" "stay" "on" "marked" "path"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我走了两个小时。"
 answer: "I walked for two hours."
 acceptAlso: "My walk took two hours."
-srsWords: "i" "walked" "for" "two" "hours" "my" "walk" "took"
+srsWords: "i" "walk" "for" "two" "hour" "my" "walk" "take"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我的脚很疼。"
 answer: "My feet hurt a lot."
 acceptAlso: "My feet are sore after walking."
-srsWords: "my" "feet" "hurt" "a" "lot" "are" "sore" "after" "walking"
+srsWords: "my" "foot" "hurt" "a" "lot" "are" "sore" "after" "walking"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1415,14 +1415,14 @@ text: "Translate this sentence into English"
 sentence: "游泳池很干净。"
 answer: "The swimming pool is very clean."
 acceptAlso: "The pool is well kept."
-srsWords: "the" "swimming" "pool" "is" "very" "clean" "well" "kept"
+srsWords: "the" "swimming" "pool" "is" "very" "clean" "well" "keep"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我六岁学会游泳。"
 answer: "I learned to swim when I was six."
 acceptAlso: "At six years old I could swim."
-srsWords: "i" "learned" "to" "swim" "when" "was" "six" "at" "years" "old" "could"
+srsWords: "i" "learn" "to" "swim" "when" "was" "six" "at" "year" "old" "could"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1436,21 +1436,21 @@ text: "Translate this sentence into English"
 sentence: "水有点凉。"
 answer: "The water is a little cold."
 acceptAlso: "It feels cool in the water."
-srsWords: "the" "water" "is" "a" "little" "cold" "it" "feels" "cool" "in"
+srsWords: "the" "water" "is" "a" "little" "cold" "it" "feel" "cool" "in"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我游了十个来回。"
 answer: "I swam ten times."
 acceptAlso: "Ten laps were swum by me."
-srsWords: "i" "swam" "ten" "times" "were" "swum" "by" "me"
+srsWords: "i" "swim" "ten" "times" "were" "swim" "by" "me"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "请戴上泳帽。"
 answer: "Please put on a swimming cap."
 acceptAlso: "A swim cap is needed here."
-srsWords: "please" "put" "on" "a" "swimming" "cap" "swim" "is" "needed" "here"
+srsWords: "please" "put" "on" "a" "swimming" "cap" "swim" "is" "need" "here"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1464,14 +1464,14 @@ text: "Translate this sentence into English"
 sentence: "游泳后我很饿。"
 answer: "I am very hungry after swimming."
 acceptAlso: "Swimming makes me hungry."
-srsWords: "i" "am" "very" "hungry" "after" "swimming" "makes" "me"
+srsWords: "i" "am" "very" "hungry" "after" "swimming" "make" "me"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "游泳对全身都有好处。"
 answer: "Swimming is good for the whole body."
 acceptAlso: "It exercises your entire body."
-srsWords: "swimming" "is" "good" "for" "the" "whole" "body" "it" "exercises" "your" "entire"
+srsWords: "swimming" "is" "good" "for" "the" "whole" "body" "it" "exercise" "your" "entire"
 
 ---
 lessonTitle: "Lesson 20: Dancing"
@@ -1506,7 +1506,7 @@ text: "Translate this sentence into English"
 sentence: "她跳得很优美。"
 answer: "She dances very gracefully."
 acceptAlso: "Her dancing is beautiful."
-srsWords: "she" "dances" "very" "gracefully" "her" "dancing" "is" "beautiful"
+srsWords: "she" "dance" "very" "gracefully" "her" "dancing" "is" "beautiful"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1541,12 +1541,12 @@ text: "Translate this sentence into English"
 sentence: "我们跳了一整晚。"
 answer: "We danced all evening."
 acceptAlso: "The dancing lasted the whole night."
-srsWords: "we" "danced" "all" "evening" "the" "dancing" "lasted" "whole" "night"
+srsWords: "we" "dance" "all" "evening" "the" "dancing" "last" "whole" "night"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "跳舞让我很开心。"
 answer: "Dancing makes me very happy."
 acceptAlso: "I feel happy when I dance."
-srsWords: "dancing" "makes" "me" "very" "happy" "i" "feel" "when" "dance"
+srsWords: "dancing" "make" "me" "very" "happy" "i" "feel" "when" "dance"
 

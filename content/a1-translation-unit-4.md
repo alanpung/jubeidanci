@@ -23,14 +23,14 @@ text: "Translate this sentence into English"
 sentence: "我喜欢踢足球。"
 answer: "I like playing soccer."
 acceptAlso: "I enjoy football."
-srsWords: "like" "playing" "soccer"
+srsWords: "like" "play" "soccer"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "他打篮球。"
 answer: "He plays basketball."
 acceptAlso: "He plays hoops."
-srsWords: "plays" "basketball"
+srsWords: "play" "basketball"
 
 [translation]
 text: "Translate this sentence into English"
@@ -65,14 +65,14 @@ text: "Translate this sentence into English"
 sentence: "比赛开始了。"
 answer: "The match has started."
 acceptAlso: "The game began."
-srsWords: "match" "started"
+srsWords: "match" "start"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我们队赢了。"
 answer: "Our team won."
 acceptAlso: "My team won."
-srsWords: "team" "won"
+srsWords: "team" "win"
 
 [translation]
 text: "Translate this sentence into English"
@@ -101,7 +101,7 @@ text: "Translate this sentence into English"
 sentence: "我喜欢听音乐。"
 answer: "I like listening to music."
 acceptAlso: "I enjoy music."
-srsWords: "like" "listening" "music"
+srsWords: "like" "listen" "music"
 
 [translation]
 text: "Translate this sentence into English"
@@ -129,7 +129,7 @@ text: "Translate this sentence into English"
 sentence: "我们去看演唱会。"
 answer: "We went to a concert."
 acceptAlso: "We saw a live show."
-srsWords: "went" "concert"
+srsWords: "go" "concert"
 
 [translation]
 text: "Translate this sentence into English"
@@ -150,7 +150,7 @@ text: "Translate this sentence into English"
 sentence: "鼓声很大。"
 answer: "The drums are loud."
 acceptAlso: "The drum is loud."
-srsWords: "drums" "loud"
+srsWords: "drum" "loud"
 
 [translation]
 text: "Translate this sentence into English"
@@ -200,7 +200,7 @@ text: "Translate this sentence into English"
 sentence: "漫画很受欢迎。"
 answer: "Comics are popular."
 acceptAlso: "Manga is popular."
-srsWords: "comics" "popular"
+srsWords: "comic" "popular"
 
 [translation]
 text: "Translate this sentence into English"
@@ -221,14 +221,14 @@ text: "Translate this sentence into English"
 sentence: "故事感人。"
 answer: "The story is touching."
 acceptAlso: "The tale is moving."
-srsWords: "story" "touching"
+srsWords: "story" "touch"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我读完了。"
 answer: "I finished reading."
 acceptAlso: "I completed it."
-srsWords: "finished" "reading"
+srsWords: "finish" "reading"
 
 [translation]
 text: "Translate this sentence into English"
@@ -242,7 +242,7 @@ text: "Translate this sentence into English"
 sentence: "阅读开阔视野。"
 answer: "Reading broadens the mind."
 acceptAlso: "Reading widens horizons."
-srsWords: "reading" "broadens" "mind"
+srsWords: "reading" "broaden" "mind"
 
 
 ---
@@ -271,7 +271,7 @@ text: "Translate this sentence into English"
 sentence: "你看过这部剧吗？"
 answer: "Have you seen this drama."
 acceptAlso: "Did you watch this series?"
-srsWords: "seen" "drama"
+srsWords: "see" "drama"
 
 [translation]
 text: "Translate this sentence into English"
@@ -299,7 +299,7 @@ text: "Translate this sentence into English"
 sentence: "字幕是中文。"
 answer: "The subtitles are in Chinese."
 acceptAlso: "The captions are Chinese."
-srsWords: "subtitles" "chinese"
+srsWords: "subtitle" "chinese"
 
 [translation]
 text: "Translate this sentence into English"
@@ -320,7 +320,7 @@ text: "Translate this sentence into English"
 sentence: "我们订了会员。"
 answer: "We subscribed to the service."
 acceptAlso: "We got a membership."
-srsWords: "subscribed" "service"
+srsWords: "subscribe" "service"
 
 
 ---
@@ -335,7 +335,7 @@ text: "Translate this sentence into English"
 sentence: "我玩游戏。"
 answer: "I play games."
 acceptAlso: "I game."
-srsWords: "play" "games"
+srsWords: "play" "game"
 
 [translation]
 text: "Translate this sentence into English"
@@ -356,7 +356,7 @@ text: "Translate this sentence into English"
 sentence: "你赢了这一局。"
 answer: "You won this round."
 acceptAlso: "You won the game."
-srsWords: "won" "round"
+srsWords: "win" "round"
 
 [translation]
 text: "Translate this sentence into English"
@@ -370,7 +370,7 @@ text: "Translate this sentence into English"
 sentence: "牌分好了。"
 answer: "The cards are dealt."
 acceptAlso: "The cards are sorted."
-srsWords: "cards" "dealt"
+srsWords: "card" "deal"
 
 [translation]
 text: "Translate this sentence into English"
@@ -413,7 +413,7 @@ text: "Translate this sentence into English"
 sentence: "我喜欢拍照。"
 answer: "I like taking photos."
 acceptAlso: "I enjoy photography."
-srsWords: "like" "taking" "photos"
+srsWords: "like" "taking" "photo"
 
 [translation]
 text: "Translate this sentence into English"
@@ -455,28 +455,28 @@ text: "Translate this sentence into English"
 sentence: "我把照片存起来。"
 answer: "I saved the photos."
 acceptAlso: "I stored the pictures."
-srsWords: "saved" "photos"
+srsWords: "save" "photo"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "滤镜很好看。"
 answer: "The filter looks nice."
 acceptAlso: "The filter is pretty."
-srsWords: "filter" "looks" "nice"
+srsWords: "filter" "look" "nice"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "你会修图吗？"
 answer: "Can you edit photos."
 acceptAlso: "Do you retouch pictures?"
-srsWords: "edit" "photos"
+srsWords: "edit" "photo"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "回忆很珍贵。"
 answer: "Memories are precious."
 acceptAlso: "Memories are valuable."
-srsWords: "memories" "precious"
+srsWords: "memory" "precious"
 
 
 ---
@@ -519,7 +519,7 @@ text: "Translate this sentence into English"
 sentence: "颜色很丰富。"
 answer: "The colors are rich."
 acceptAlso: "The colors are vivid."
-srsWords: "colors" "rich"
+srsWords: "color" "rich"
 
 [translation]
 text: "Translate this sentence into English"
@@ -554,7 +554,7 @@ text: "Translate this sentence into English"
 sentence: "艺术让人快乐。"
 answer: "Art makes people happy."
 acceptAlso: "Art brings joy."
-srsWords: "art" "makes" "people" "happy"
+srsWords: "art" "make" "people" "happy"
 
 
 ---
@@ -569,14 +569,14 @@ text: "Translate this sentence into English"
 sentence: "我喜欢烘焙。"
 answer: "I like baking."
 acceptAlso: "I enjoy baking."
-srsWords: "like" "baking"
+srsWords: "like" "bake"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我做了蛋糕。"
 answer: "I made a cake."
 acceptAlso: "I baked a cake."
-srsWords: "made" "cake"
+srsWords: "make" "cake"
 
 [translation]
 text: "Translate this sentence into English"
@@ -604,7 +604,7 @@ text: "Translate this sentence into English"
 sentence: "我加了香料。"
 answer: "I added spices."
 acceptAlso: "I put in seasoning."
-srsWords: "added" "spices"
+srsWords: "add" "spice"
 
 [translation]
 text: "Translate this sentence into English"
@@ -654,7 +654,7 @@ text: "Translate this sentence into English"
 sentence: "去过很多国家。"
 answer: "Been to many countries."
 acceptAlso: "Visited many nations."
-srsWords: "countries"
+srsWords: "country"
 
 [translation]
 text: "Translate this sentence into English"
@@ -668,7 +668,7 @@ text: "Translate this sentence into English"
 sentence: "我拍了很多照片。"
 answer: "I took many photos."
 acceptAlso: "I shot lots of pictures."
-srsWords: "took" "photos"
+srsWords: "take" "photo"
 
 [translation]
 text: "Translate this sentence into English"
@@ -739,7 +739,7 @@ text: "Translate this sentence into English"
 sentence: "狗在摇尾巴。"
 answer: "The dog is wagging its tail."
 acceptAlso: "The dog wags its tail."
-srsWords: "dog" "wagging" "its" "tail"
+srsWords: "dog" "wag" "its" "tail"
 
 [translation]
 text: "Translate this sentence into English"
@@ -753,7 +753,7 @@ text: "Translate this sentence into English"
 sentence: "宠物需要照顾。"
 answer: "Pets need care."
 acceptAlso: "Animals need attention."
-srsWords: "pets" "need" "care"
+srsWords: "pet" "need" "care"
 
 [translation]
 text: "Translate this sentence into English"
@@ -767,7 +767,7 @@ text: "Translate this sentence into English"
 sentence: "兔子吃胡萝卜。"
 answer: "The rabbit eats carrots."
 acceptAlso: "Bunnies eat carrots."
-srsWords: "rabbit" "eats" "carrots"
+srsWords: "rabbit" "eat" "carrot"
 
 [translation]
 text: "Translate this sentence into English"
@@ -822,7 +822,7 @@ text: "Translate this sentence into English"
 sentence: "老师进来了。"
 answer: "The teacher came in."
 acceptAlso: "The teacher entered."
-srsWords: "teacher" "came"
+srsWords: "teacher" "come"
 
 [translation]
 text: "Translate this sentence into English"
@@ -836,7 +836,7 @@ text: "Translate this sentence into English"
 sentence: "上课了。"
 answer: "Class has started."
 acceptAlso: "Class begins."
-srsWords: "class" "started"
+srsWords: "class" "start"
 
 [translation]
 text: "Translate this sentence into English"
@@ -864,7 +864,7 @@ text: "Translate this sentence into English"
 sentence: "我参加了俱乐部。"
 answer: "I joined a club."
 acceptAlso: "I joined a society."
-srsWords: "joined" "club"
+srsWords: "join" "club"
 
 
 ---
@@ -900,7 +900,7 @@ text: "Translate this sentence into English"
 sentence: "科学实验好玩。"
 answer: "Science experiments are fun."
 acceptAlso: "The lab is fun."
-srsWords: "science" "experiments" "fun"
+srsWords: "science" "experiment" "fun"
 
 [translation]
 text: "Translate this sentence into English"
@@ -921,28 +921,28 @@ text: "Translate this sentence into English"
 sentence: "音乐课唱歌。"
 answer: "Music class sings."
 acceptAlso: "We sing in music."
-srsWords: "music" "class" "sings"
+srsWords: "music" "class" "sing"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "美术课画画。"
 answer: "Art class draws."
 acceptAlso: "We draw in art."
-srsWords: "art" "class" "draws"
+srsWords: "art" "class" "draw"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "地理讲地图。"
 answer: "Geography talks about maps."
 acceptAlso: "We study maps in geography."
-srsWords: "geography" "talks" "maps"
+srsWords: "geography" "talk" "map"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "考试考这些。"
 answer: "The exam covers these."
 acceptAlso: "The test includes this."
-srsWords: "exam" "covers"
+srsWords: "exam" "cover"
 
 
 ---
@@ -971,7 +971,7 @@ text: "Translate this sentence into English"
 sentence: "我写完了作文。"
 answer: "I finished the essay."
 acceptAlso: "I completed the composition."
-srsWords: "finished" "essay"
+srsWords: "finish" "essay"
 
 [translation]
 text: "Translate this sentence into English"
@@ -992,7 +992,7 @@ text: "Translate this sentence into English"
 sentence: "我忘了带书。"
 answer: "I forgot my book."
 acceptAlso: "I left my book."
-srsWords: "forgot" "book"
+srsWords: "forget" "book"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1020,7 +1020,7 @@ text: "Translate this sentence into English"
 sentence: "我上网查资料。"
 answer: "I looked up information online."
 acceptAlso: "I searched online."
-srsWords: "looked" "information" "online"
+srsWords: "look" "information" "online"
 
 
 ---
@@ -1042,7 +1042,7 @@ text: "Translate this sentence into English"
 sentence: "他解释得很清楚。"
 answer: "He explains clearly."
 acceptAlso: "He is clear."
-srsWords: "explains" "clearly"
+srsWords: "explain" "clearly"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1056,14 +1056,14 @@ text: "Translate this sentence into English"
 sentence: "老师批改作业。"
 answer: "The teacher grades homework."
 acceptAlso: "The teacher marks work."
-srsWords: "teacher" "grades" "homework"
+srsWords: "teacher" "grade" "homework"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我请教问题。"
 answer: "I asked a question."
 acceptAlso: "I sought help."
-srsWords: "asked" "question"
+srsWords: "ask" "question"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1084,7 +1084,7 @@ text: "Translate this sentence into English"
 sentence: "老师鼓励我。"
 answer: "The teacher encourages me."
 acceptAlso: "The teacher motivates me."
-srsWords: "teacher" "encourages"
+srsWords: "teacher" "encourage"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1148,7 +1148,7 @@ text: "Translate this sentence into English"
 sentence: "文件在这里。"
 answer: "The documents are here."
 acceptAlso: "The files are here."
-srsWords: "documents"
+srsWords: "document"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1169,14 +1169,14 @@ text: "Translate this sentence into English"
 sentence: "我加班了。"
 answer: "I worked overtime."
 acceptAlso: "I stayed late."
-srsWords: "worked" "overtime"
+srsWords: "work" "overtime"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "同事很友好。"
 answer: "Colleagues are friendly."
 acceptAlso: "Coworkers are nice."
-srsWords: "colleagues" "friendly"
+srsWords: "colleague" "friendly"
 
 
 ---
@@ -1198,7 +1198,7 @@ text: "Translate this sentence into English"
 sentence: "他想当医生。"
 answer: "He wants to be a doctor."
 acceptAlso: "He aims to be a doctor."
-srsWords: "wants" "doctor"
+srsWords: "want" "doctor"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1254,7 +1254,7 @@ text: "Translate this sentence into English"
 sentence: "职业很重要。"
 answer: "Career matters."
 acceptAlso: "A job is important."
-srsWords: "career" "matters"
+srsWords: "career" "matter"
 
 
 ---
@@ -1269,7 +1269,7 @@ text: "Translate this sentence into English"
 sentence: "会议开始了。"
 answer: "The meeting started."
 acceptAlso: "The meeting began."
-srsWords: "meeting" "started"
+srsWords: "meeting" "start"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1290,7 +1290,7 @@ text: "Translate this sentence into English"
 sentence: "请做笔记。"
 answer: "Please take notes."
 acceptAlso: "Write notes, please."
-srsWords: "please" "take" "notes"
+srsWords: "please" "take" "note"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1318,14 +1318,14 @@ text: "Translate this sentence into English"
 sentence: "决定已作出。"
 answer: "The decision is made."
 acceptAlso: "The call is made."
-srsWords: "decision" "made"
+srsWords: "decision" "make"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "会议取消了。"
 answer: "The meeting is canceled."
 acceptAlso: "The meeting is off."
-srsWords: "meeting" "canceled"
+srsWords: "meeting" "cancel"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1347,7 +1347,7 @@ text: "Translate this sentence into English"
 sentence: "电脑死机了。"
 answer: "The computer froze."
 acceptAlso: "The PC crashed."
-srsWords: "computer" "froze"
+srsWords: "computer" "freeze"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1368,7 +1368,7 @@ text: "Translate this sentence into English"
 sentence: "我发了邮件。"
 answer: "I sent an email."
 acceptAlso: "I emailed."
-srsWords: "sent" "email"
+srsWords: "send" "email"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1382,7 +1382,7 @@ text: "Translate this sentence into English"
 sentence: "我下载了软件。"
 answer: "I downloaded the software."
 acceptAlso: "I got the app."
-srsWords: "downloaded" "software"
+srsWords: "download" "software"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1410,7 +1410,7 @@ text: "Translate this sentence into English"
 sentence: "我学会了打字。"
 answer: "I learned to type."
 acceptAlso: "I can type now."
-srsWords: "learned" "type"
+srsWords: "learn" "type"
 
 
 ---
@@ -1425,7 +1425,7 @@ text: "Translate this sentence into English"
 sentence: "你会几种语言？"
 answer: "How many languages do you speak."
 acceptAlso: "What languages do you know?"
-srsWords: "languages" "speak"
+srsWords: "language" "speak"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1510,7 +1510,7 @@ text: "Translate this sentence into English"
 sentence: "我复习了。"
 answer: "I reviewed."
 acceptAlso: "I studied again."
-srsWords: "reviewed"
+srsWords: "review"
 
 [translation]
 text: "Translate this sentence into English"
@@ -1524,14 +1524,14 @@ text: "Translate this sentence into English"
 sentence: "我通过了。"
 answer: "I passed."
 acceptAlso: "I cleared it."
-srsWords: "passed"
+srsWords: "pass"
 
 [translation]
 text: "Translate this sentence into English"
 sentence: "我没及格。"
 answer: "I failed."
 acceptAlso: "I did not pass."
-srsWords: "failed"
+srsWords: "fail"
 
 [translation]
 text: "Translate this sentence into English"
