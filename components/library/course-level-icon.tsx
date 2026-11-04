@@ -170,7 +170,17 @@ const QUESTION_TYPE_VISUALS: Record<
   "word-bank": {
     bg: "bg-gradient-to-br from-amber-500 to-yellow-600 shadow-amber-600/30",
     border: "border-amber-300/70",
-    label: "Word Bank",
+    label: "Word Order",
+    Icon: LayoutGrid,
+    pill: "bg-amber-500 text-white",
+    light: "bg-amber-50",
+    outline: "border-amber-400",
+    symbol: "text-amber-600",
+  },
+  "word-order": {
+    bg: "bg-gradient-to-br from-amber-500 to-yellow-600 shadow-amber-600/30",
+    border: "border-amber-300/70",
+    label: "Word Order",
     Icon: LayoutGrid,
     pill: "bg-amber-500 text-white",
     light: "bg-amber-50",

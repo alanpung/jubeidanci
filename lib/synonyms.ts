@@ -161,21 +161,21 @@ function norm(token: string): string {
 function splitInflection(token: string): [string, string] {
   const t = norm(token);
   if (!t) return ["", ""];
-  if (t.endsWith("ies") && t.length > 4) return [t.slice(0, -3) + "y", "ies"];
-  if (t.endsWith("ing") && t.length > 5) return [t.slice(0, -3), "ing"];
-  if (t.endsWith("ed") && t.length > 4) return [t.slice(0, -2), "ed"];
-  if (t.endsWith("ses") || t.endsWith("xes") || t.endsWith("ches") || t.endsWith("shes")) {
+  if (t.endsWith("ies") && t.length >= 4) return [t.slice(0, -3) + "y", "ies"];
+  if (t.endsWith("ing") && t.length >= 5) return [t.slice(0, -3), "ing"];
+  if (t.endsWith("ed") && t.length >= 4) return [t.slice(0, -2), "ed"];
+  if (t.endsWith("ses") || t.endsWith("xes") || t.endsWith("ches") || t.endsWith("shes") || t.endsWith("oes")) {
     return [t.slice(0, -2), "es"];
   }
-  if (t.endsWith("es") && t.length > 4) return [t.slice(0, -2), "es"];
-  if (t.endsWith("s") && t.length > 3) return [t.slice(0, -1), "s"];
+  if (t.endsWith("es") && t.length >= 4) return [t.slice(0, -2), "es"];
+  if (t.endsWith("s") && t.length >= 3) return [t.slice(0, -1), "s"];
   return [t, ""];
 }
 
 /** Regular inflections of a base form, bucketed by kind. */
 function inflections(word: string): Record<string, string> {
   const w = word;
-  const s = /(s|x|z|ch|sh)$/.test(w) ? `${w}es` : `${w}s`;
+  const s = /(s|x|z|ch|sh|o)$/.test(w) ? `${w}es` : `${w}s`;
   const ed = w.endsWith("e")
     ? `${w}d`
     : /[^aeiou]y$/.test(w)

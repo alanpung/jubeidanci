@@ -72,6 +72,7 @@ export function parseExercise(block: string): Exercise {
       exercise = parseListening(lines);
       break;
     case "word-bank":
+    case "word-order":
       exercise = parseWordBank(lines);
       break;
     case "speaking":
@@ -366,14 +367,22 @@ function parseFillInTheBlank(lines: string[]): FillInTheBlankExercise {
 
   const lowerBlank = blank.toLowerCase().trim();
   if (commonSynonyms[lowerBlank]) {
-    for (const alt of commonSynonyms[lowerBlank]) {
+    for (let alt of commonSynonyms[lowerBlank]) {
       const altWords = alt.split(/\s+/);
       if (nextWord && altWords.length > 1 && altWords[altWords.length - 1].toLowerCase() === nextWord) {
-        continue;
+        alt = altWords.slice(0, -1).join(" ");
       }
       if (!acceptAlso.some(a => a.toLowerCase() === alt.toLowerCase()) && alt.toLowerCase() !== lowerBlank) {
         acceptAlso.push(alt);
       }
+    }
+  }
+
+  // Clean up any existing acceptAlso entries if particle matches nextWord
+  for (let i = 0; i < acceptAlso.length; i++) {
+    const aWords = acceptAlso[i].split(/\s+/);
+    if (nextWord && aWords.length > 1 && aWords[aWords.length - 1].toLowerCase() === nextWord) {
+      acceptAlso[i] = aWords.slice(0, -1).join(" ");
     }
   }
 
