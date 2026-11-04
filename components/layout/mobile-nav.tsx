@@ -10,6 +10,7 @@ import {
   Settings,
   Users,
   Table2,
+  MessageSquareText,
 } from "lucide-react";
 
 const navItems = [
@@ -33,7 +34,10 @@ export function MobileNav({
   if (isKeyboardOpen) return null;
 
   const vipItems = isAdmin
-    ? [{ href: "/library/students", label: "VIP", icon: Users }]
+    ? [
+        { href: "/library/students", label: "VIP", icon: Users },
+        { href: "/admin/feedback", label: "Feedback", icon: MessageSquareText },
+      ]
     : [];
   const statItems = isAdmin
     ? [{ href: "/course-stat", label: "Course Stat", icon: Table2 }]
