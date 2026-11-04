@@ -29,26 +29,31 @@ srsWords: "tree" "flower" "sea" "mountain" "river"
 [fill-in-the-blank]
 sentence: "We sat under a big ___."
 blank: "tree"
+translation: "我们坐在一棵大树下。"
 srsWords: "tree"
 
 [fill-in-the-blank]
 sentence: "She picked a ___ from the garden."
 blank: "flower"
+translation: "她从花园里摘了一朵花。"
 srsWords: "flower"
 
 [fill-in-the-blank]
 sentence: "We swim in the ___ in summer."
 blank: "sea"
+translation: "夏天我们在海里游泳。"
 srsWords: "sea"
 
 [fill-in-the-blank]
 sentence: "We hiked up the ___."
 blank: "mountain"
+translation: "我们爬上了那座山。"
 srsWords: "mountain"
 
 [fill-in-the-blank]
 sentence: "Fish live in the ___."
 blank: "river"
+translation: "鱼住在河里。"
 srsWords: "river"
 
 ---
@@ -70,26 +75,31 @@ srsWords: "sky" "moon" "star" "earth" "fire"
 [fill-in-the-blank]
 sentence: "The ___ is very blue today."
 blank: "sky"
+translation: "今天的天空很蓝。"
 srsWords: "sky"
 
 [fill-in-the-blank]
 sentence: "The ___ is full and bright tonight."
 blank: "moon"
+translation: "今晚的月亮又圆又亮。"
 srsWords: "moon"
 
 [fill-in-the-blank]
 sentence: "I can see a ___ shining in the sky."
 blank: "star"
+translation: "我能看到一颗星星在天空闪烁。"
 srsWords: "star"
 
 [fill-in-the-blank]
 sentence: "We live on planet ___."
 blank: "earth"
+translation: "我们住在地球上。"
 srsWords: "earth"
 
 [fill-in-the-blank]
 sentence: "Be careful — do not touch the ___!"
 blank: "fire"
+translation: "小心——不要碰火！"
 srsWords: "fire"
 
 ---
@@ -111,26 +121,31 @@ srsWords: "sport" "ball" "game" "team" "win"
 [fill-in-the-blank]
 sentence: "Football is my favourite ___."
 blank: "sport"
+translation: "足球是我最喜欢的运动。"
 srsWords: "sport"
 
 [fill-in-the-blank]
 sentence: "He kicked the ___ into the goal."
 blank: "ball"
+translation: "他把球踢进了球门。"
 srsWords: "ball"
 
 [fill-in-the-blank]
 sentence: "We played a ___ of chess."
 blank: "game"
+translation: "我们下了一盘国际象棋。"
 srsWords: "game"
 
 [fill-in-the-blank]
 sentence: "Our ___ won the match."
 blank: "team"
+translation: "我们队赢了比赛。"
 srsWords: "team"
 
 [fill-in-the-blank]
 sentence: "I always try to ___."
 blank: "win"
+translation: "我总是努力去赢。"
 srsWords: "win"
 
 ---
@@ -152,26 +167,31 @@ srsWords: "breakfast" "lunch" "dinner" "rice" "bread"
 [fill-in-the-blank]
 sentence: "I eat ___ at seven in the morning."
 blank: "breakfast"
+translation: "我早上七点吃早饭。"
 srsWords: "breakfast"
 
 [fill-in-the-blank]
 sentence: "I have ___ at school with my friends."
 blank: "lunch"
+translation: "我和朋友们在学校吃午饭。"
 srsWords: "lunch"
 
 [fill-in-the-blank]
 sentence: "My family eats ___ together every night."
 blank: "dinner"
+translation: "我家人每晚一起吃晚饭。"
 srsWords: "dinner"
 
 [fill-in-the-blank]
 sentence: "I eat ___ with vegetables."
 blank: "rice"
+translation: "我吃米饭配蔬菜。"
 srsWords: "rice"
 
 [fill-in-the-blank]
 sentence: "I eat ___ and butter for breakfast."
 blank: "bread"
+translation: "我早餐吃面包抹黄油。"
 srsWords: "bread"
 
 ---
@@ -193,26 +213,31 @@ srsWords: "milk" "juice" "tea" "coffee" "egg"
 [fill-in-the-blank]
 sentence: "Children drink ___ every morning."
 blank: "milk"
+translation: "孩子们每天早上喝牛奶。"
 srsWords: "milk"
 
 [fill-in-the-blank]
 sentence: "I drink orange ___ for breakfast."
 blank: "juice"
+translation: "我早餐喝橙汁。"
 srsWords: "juice"
 
 [fill-in-the-blank]
 sentence: "My grandmother drinks ___ every afternoon."
 blank: "tea"
+translation: "我奶奶每天下午喝茶。"
 srsWords: "tea"
 
 [fill-in-the-blank]
 sentence: "My father drinks ___ before work."
 blank: "coffee"
+translation: "我爸爸上班前喝咖啡。"
 srsWords: "coffee"
 
 [fill-in-the-blank]
 sentence: "I eat a boiled ___ for breakfast."
 blank: "egg"
+translation: "我早餐吃一个水煮蛋。"
 srsWords: "egg"
 
 ---
@@ -234,26 +259,31 @@ srsWords: "pen" "pencil" "paper" "bag" "class"
 [fill-in-the-blank]
 sentence: "I write with a ___."
 blank: "pen"
+translation: "我用钢笔写字。"
 srsWords: "pen"
 
 [fill-in-the-blank]
 sentence: "I draw with a ___."
 blank: "pencil"
+translation: "我用铅笔画画。"
 srsWords: "pencil"
 
 [fill-in-the-blank]
 sentence: "Please write your name on the ___."
 blank: "paper"
+translation: "请在纸上写下你的名字。"
 srsWords: "paper"
 
 [fill-in-the-blank]
 sentence: "I carry my books in my ___."
 blank: "bag"
+translation: "我把书装在书包里。"
 srsWords: "bag"
 
 [fill-in-the-blank]
 sentence: "English ___ starts at nine."
 blank: "class"
+translation: "英语课九点开始。"
 srsWords: "class"
 
 ---
@@ -275,26 +305,31 @@ srsWords: "January" "February" "March" "April" "June"
 [fill-in-the-blank]
 sentence: "The new year starts in ___."
 blank: "January"
+translation: "新年从一月开始。"
 srsWords: "January"
 
 [fill-in-the-blank]
 sentence: "Valentine's Day is in ___."
 blank: "February"
+translation: "情人节在二月。"
 srsWords: "February"
 
 [fill-in-the-blank]
 sentence: "Spring begins in ___."
 blank: "March"
+translation: "春天从三月开始。"
 srsWords: "March"
 
 [fill-in-the-blank]
 sentence: "Flowers bloom in ___."
 blank: "April"
+translation: "花在四月开放。"
 srsWords: "April"
 
 [fill-in-the-blank]
 sentence: "School ends in ___."
 blank: "June"
+translation: "学校在六月放假。"
 srsWords: "June"
 
 ---
@@ -316,26 +351,31 @@ srsWords: "July" "August" "September" "October" "December"
 [fill-in-the-blank]
 sentence: "Summer holidays are in ___."
 blank: "July"
+translation: "暑假在七月。"
 srsWords: "July"
 
 [fill-in-the-blank]
 sentence: "It is very hot in ___."
 blank: "August"
+translation: "八月非常热。"
 srsWords: "August"
 
 [fill-in-the-blank]
 sentence: "School starts again in ___."
 blank: "September"
+translation: "学校在九月开学。"
 srsWords: "September"
 
 [fill-in-the-blank]
 sentence: "Halloween is in ___."
 blank: "October"
+translation: "万圣节在十月。"
 srsWords: "October"
 
 [fill-in-the-blank]
 sentence: "Christmas is in ___."
 blank: "December"
+translation: "圣诞节在十二月。"
 srsWords: "December"
 
 ---
@@ -357,26 +397,31 @@ srsWords: "kitchen" "bathroom" "garden" "floor" "wall"
 [fill-in-the-blank]
 sentence: "We cook food in the ___."
 blank: "kitchen"
+translation: "我们在厨房做饭。"
 srsWords: "kitchen"
 
 [fill-in-the-blank]
 sentence: "I shower in the ___."
 blank: "bathroom"
+translation: "我在浴室洗澡。"
 srsWords: "bathroom"
 
 [fill-in-the-blank]
 sentence: "My mother grows flowers in the ___."
 blank: "garden"
+translation: "我妈妈在花园里种花。"
 srsWords: "garden"
 
 [fill-in-the-blank]
 sentence: "Please sweep the ___ clean."
 blank: "floor"
+translation: "请把地板扫干净。"
 srsWords: "floor"
 
 [fill-in-the-blank]
 sentence: "There is a picture on the ___."
 blank: "wall"
+translation: "墙上有一幅画。"
 srsWords: "wall"
 
 ---
@@ -398,24 +443,29 @@ srsWords: "answer" "question" "story" "word" "language"
 [fill-in-the-blank]
 sentence: "I know the ___ to this question."
 blank: "answer"
+translation: "我知道这个问题的答案。"
 srsWords: "answer"
 
 [fill-in-the-blank]
 sentence: "The teacher asks a ___ every day."
 blank: "question"
+translation: "老师每天提一个问题。"
 srsWords: "question"
 
 [fill-in-the-blank]
 sentence: "My grandmother tells me a ___ every night."
 blank: "story"
+translation: "我奶奶每晚给我讲一个故事。"
 srsWords: "story"
 
 [fill-in-the-blank]
 sentence: "I learned a new English ___ today."
 blank: "word"
+translation: "我今天学会了一个新英语单词。"
 srsWords: "word"
 
 [fill-in-the-blank]
 sentence: "English is an international ___."
 blank: "language"
+translation: "英语是一门国际语言。"
 srsWords: "language"
