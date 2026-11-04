@@ -224,6 +224,7 @@ function parseFillInTheBlank(lines: string[]): FillInTheBlankExercise {
   const rawSentence = stripNoAudio(getField(lines, "sentence"));
   if (rawSentence.flagged) noAudio.push("sentence");
   const blank = getField(lines, "blank");
+  const translation = getOptionalField(lines, "translation");
 
   const acceptAlsoLine = lines.find((l) => l.startsWith("acceptAlso:"));
   const acceptAlso: string[] = [];
@@ -233,7 +234,15 @@ function parseFillInTheBlank(lines: string[]): FillInTheBlankExercise {
   }
 
   const srsWords = parseSrsWords(lines) ?? "";
-  return { type: "fill-in-the-blank", sentence: rawSentence.text, blank, acceptAlso, srsWords, ...(noAudio.length && { noAudio }) };
+  return { 
+    type: "fill-in-the-blank", 
+    sentence: rawSentence.text, 
+    blank, 
+    ...(translation && { translation }),
+    acceptAlso, 
+    srsWords, 
+    ...(noAudio.length && { noAudio }) 
+  };
 }
 
 function parseMatchingPairs(lines: string[]): MatchingPairsExercise {

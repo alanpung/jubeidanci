@@ -104,6 +104,7 @@ export interface FillInTheBlankExercise {
   type: "fill-in-the-blank";
   sentence: string;
   blank: string;
+  translation?: string;
   acceptAlso?: string[];
   noAudio?: string[];
   srsWords: string | string[];
