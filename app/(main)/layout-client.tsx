@@ -36,9 +36,13 @@ export default function MainLayout({
         <div className="p-6 border-b-2 border-lingo-border">
           <p className="font-bold text-lingo-text truncate">{session.user.name}</p>
           <button onClick={async () => { await signOut(); location.reload(); }} className="text-xs text-lingo-text-light hover:text-lingo-text underline cursor-pointer">Sign Out</button>
-          <button onClick={() => setFeedbackOpen(true)} className="mt-4 w-full rounded-xl bg-lingo-gray/20 py-2 text-xs font-bold text-lingo-text cursor-pointer">Feedback</button>
         </div>
-        <Sidebar isAdmin={isAdmin} />
+        <div className="flex-1">
+          <Sidebar isAdmin={isAdmin} />
+        </div>
+        <div className="p-6 border-t-2 border-lingo-border">
+          <button onClick={() => setFeedbackOpen(true)} className="w-full rounded-xl bg-lingo-gray/20 py-2 text-xs font-bold text-lingo-text cursor-pointer">Feedback</button>
+        </div>
       </div>
 
       <div className="flex flex-1 flex-col min-h-0 w-full max-w-full overflow-x-hidden">

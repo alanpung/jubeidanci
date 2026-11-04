@@ -101,7 +101,7 @@ export default async function LearnPage() {
             Your library is empty
           </h2>
           <p className="text-sm text-lingo-text-light mb-5">
-            No courses or units have been published yet.
+            Please refresh the page to view your content.
           </p>
         </div>
       ) : (
