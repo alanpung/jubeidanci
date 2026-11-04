@@ -85,6 +85,17 @@ async function runSeedTask() {
             updatedAt: new Date(),
           },
         });
+
+      // Update system course title if it was previously seeded as "A1 Word Bank"
+      await dbBackground
+        .update(course)
+        .set({ title: "A1 Word Order" })
+        .where(
+          or(
+            eq(course.id, "a1-word-bank-course"),
+            ilike(course.title, "%A1 Word Bank%")
+          )
+        );
     }
 
     // 4. Delete unwanted German / test courses and units

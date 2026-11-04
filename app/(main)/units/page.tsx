@@ -67,7 +67,7 @@ export default async function LearnPage() {
         <div className="rounded-2xl border-2 border-dashed border-lingo-border bg-white p-8 text-center shadow-sm">
           <div className="text-4xl mb-3">📚</div>
           <h2 className="text-lg font-black text-lingo-text mb-1">
-            Your library is empty
+            click refresh to load library
           </h2>
           <p className="text-sm text-lingo-text-light mb-5">
             Browse public courses and standalone units to start practicing!
