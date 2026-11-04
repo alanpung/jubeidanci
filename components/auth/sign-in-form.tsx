@@ -107,6 +107,8 @@ export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
         // take several seconds; stopping here left the form sitting unchanged
         // with no feedback, which is what made sign-in look like it hung.
         setRedirecting(true);
+        await new Promise((r) => setTimeout(r, 250));
+        router.refresh();
         window.location.href = destination;
       }
     } catch (err: unknown) {

@@ -266,7 +266,14 @@ function parseFillInTheBlank(lines: string[]): FillInTheBlankExercise {
   const rawSentence = stripNoAudio(getField(lines, "sentence"));
   if (rawSentence.flagged) noAudio.push("sentence");
   const blank = getField(lines, "blank");
-  const translation = getOptionalField(lines, "translation") || generateChineseTranslation(rawSentence.text, blank);
+  
+  let translation = getOptionalField(lines, "translation");
+  if (translation) {
+    translation = translation.replace(/\s*\(提示:.*?\)/g, "").trim();
+  }
+  if (!translation) {
+    translation = generateChineseTranslation(rawSentence.text, blank);
+  }
 
   const acceptAlsoLine = lines.find((l) => l.startsWith("acceptAlso:"));
   const acceptAlso: string[] = [];
@@ -354,9 +361,16 @@ function parseFillInTheBlank(lines: string[]): FillInTheBlankExercise {
     "falls": ["fall", "drops"]
   };
 
+  const parts = rawSentence.text.split("___");
+  const nextWord = parts[1] ? parts[1].trim().split(/\s+/)[0]?.toLowerCase().replace(/[^a-z]/g, "") : "";
+
   const lowerBlank = blank.toLowerCase().trim();
   if (commonSynonyms[lowerBlank]) {
     for (const alt of commonSynonyms[lowerBlank]) {
+      const altWords = alt.split(/\s+/);
+      if (nextWord && altWords.length > 1 && altWords[altWords.length - 1].toLowerCase() === nextWord) {
+        continue;
+      }
       if (!acceptAlso.some(a => a.toLowerCase() === alt.toLowerCase()) && alt.toLowerCase() !== lowerBlank) {
         acceptAlso.push(alt);
       }

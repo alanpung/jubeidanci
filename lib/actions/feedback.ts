@@ -1,10 +1,12 @@
 "use server";
 
-import { eq } from "drizzle-orm";
+import { eq, desc } from "drizzle-orm";
 import { db } from "@/lib/db";
-import { account } from "@/lib/db/schema";
+import { account, feedbackMessage } from "@/lib/db/schema";
 import { getSession } from "@/lib/auth-server";
 import { verifyTurnstileToken } from "@/lib/turnstile";
+import { ensureFeedbackMessagesTable } from "@/lib/db/ensure-feedback-messages";
+import { isAdminEmail } from "@/lib/ai/models";
 
 interface FeedbackInput {
   message: string;
@@ -69,6 +71,21 @@ export async function submitFeedback(
     }
   }
 
+  // Always store feedback message in database for owner view
+  try {
+    await ensureFeedbackMessagesTable();
+    await db.insert(feedbackMessage).values({
+      userId: session?.user?.id || null,
+      userEmail: senderEmail,
+      userName: senderName || null,
+      authMethod: authMethod || null,
+      message: message.trim(),
+    });
+  } catch (dbErr) {
+    console.error("Failed to store feedback message in database:", dbErr);
+    // Proceed to Slack delivery even if DB store hit an error
+  }
+
   // Build Slack message
   let slackText: string;
   if (session) {
@@ -86,10 +103,10 @@ export async function submitFeedback(
     ].join("\n");
   }
 
-  // Send to Slack
+  // Send to Slack if webhook configured
   const webhookUrl = process.env.SLACK_WEBHOOK;
   if (!webhookUrl) {
-    console.warn("SLACK_WEBHOOK not set — feedback not delivered:", slackText);
+    console.warn("SLACK_WEBHOOK not set — feedback stored in DB, skipping Slack post.");
     return { success: true };
   }
 
@@ -102,12 +119,75 @@ export async function submitFeedback(
 
     if (!response.ok) {
       console.error("Slack webhook failed:", response.status);
-      return { success: false, error: "Failed to send feedback. Please try again." };
     }
 
     return { success: true };
   } catch (err) {
     console.error("Slack webhook error:", err);
-    return { success: false, error: "Failed to send feedback. Please try again." };
+    return { success: true }; // DB saved feedback successfully
+  }
+}
+
+export type FeedbackMessageItem = {
+  id: string;
+  userId: string | null;
+  userEmail: string;
+  userName: string | null;
+  authMethod: string | null;
+  message: string;
+  createdAt: Date;
+};
+
+export async function getFeedbackMessages(): Promise<{
+  success: boolean;
+  error?: string;
+  data: FeedbackMessageItem[];
+}> {
+  const session = await getSession();
+  if (!session || !isAdminEmail(session.user.email)) {
+    return { success: false, error: "Unauthorized access", data: [] };
+  }
+
+  try {
+    await ensureFeedbackMessagesTable();
+    const rows = await db
+      .select()
+      .from(feedbackMessage)
+      .orderBy(desc(feedbackMessage.createdAt));
+
+    return {
+      success: true,
+      data: rows.map((r) => ({
+        id: r.id,
+        userId: r.userId,
+        userEmail: r.userEmail,
+        userName: r.userName,
+        authMethod: r.authMethod,
+        message: r.message,
+        createdAt: new Date(r.createdAt),
+      })),
+    };
+  } catch (err) {
+    console.error("Failed to get feedback messages:", err);
+    return { success: false, error: "Failed to retrieve feedback messages", data: [] };
+  }
+}
+
+export async function deleteFeedbackMessage(id: string): Promise<{
+  success: boolean;
+  error?: string;
+}> {
+  const session = await getSession();
+  if (!session || !isAdminEmail(session.user.email)) {
+    return { success: false, error: "Unauthorized action" };
+  }
+
+  try {
+    await ensureFeedbackMessagesTable();
+    await db.delete(feedbackMessage).where(eq(feedbackMessage.id, id));
+    return { success: true };
+  } catch (err) {
+    console.error("Failed to delete feedback message:", err);
+    return { success: false, error: "Failed to delete feedback message" };
   }
 }

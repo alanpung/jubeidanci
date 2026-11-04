@@ -462,6 +462,26 @@ export const studentVip = pgTable(
   ]
 );
 
+// ─── Feedback messages ───
+
+export const feedbackMessage = pgTable(
+  "feedback_message",
+  {
+    id: text("id")
+      .primaryKey()
+      .$defaultFn(() => crypto.randomUUID()),
+    userId: text("user_id"),
+    userEmail: text("user_email").notNull(),
+    userName: text("user_name"),
+    authMethod: text("auth_method"),
+    message: text("message").notNull(),
+    createdAt: timestamp("created_at").notNull().defaultNow(),
+  },
+  (table) => [
+    index("feedback_message_created_at_idx").on(table.createdAt),
+  ]
+);
+
 // ─── Relations ───
 
 export const courseRelations = relations(course, ({ many }) => ({
@@ -471,3 +491,4 @@ export const courseRelations = relations(course, ({ many }) => ({
 export const unitRelations = relations(unit, ({ one }) => ({
   course: one(course, { fields: [unit.courseId], references: [course.id] }),
 }));
+

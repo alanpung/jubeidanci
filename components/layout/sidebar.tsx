@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Library, Languages, BarChart3, Settings, Users, Table2 } from "lucide-react";
+import { Library, Languages, BarChart3, Settings, Users, Table2, MessageSquareText } from "lucide-react";
 
 const navItems = [
   { href: "/library", label: "Library", icon: Library },
@@ -14,7 +14,10 @@ const navItems = [
 export function Sidebar({ isAdmin = false }: { isAdmin?: boolean }) {
   const pathname = usePathname();
   const vipItems = isAdmin
-    ? [{ href: "/library/students", label: "VIP", icon: Users }]
+    ? [
+        { href: "/library/students", label: "VIP", icon: Users },
+        { href: "/admin/feedback", label: "Feedback Msgs", icon: MessageSquareText },
+      ]
     : [];
   const statItems = isAdmin
     ? [{ href: "/course-stat", label: "Course Stat", icon: Table2 }]
