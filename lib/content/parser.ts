@@ -219,12 +219,54 @@ function parseTranslation(lines: string[]): TranslationExercise {
   return { type: "translation", text: rawText.text, sentence: rawSentence.text, answer, acceptAlso, srsWords, ...(noAudio.length && { noAudio }) };
 }
 
+function generateChineseTranslation(sentence: string, blank: string): string {
+  const completed = sentence.replace("___", blank).toLowerCase();
+  const vocabMap: Record<string, string> = {
+    "wake": "醒来", "wakes": "醒来", "wake up": "醒来/起床", "wakes up": "醒来/起床",
+    "brush": "刷", "brushes": "刷", "teeth": "牙齿",
+    "shower": "淋浴", "bath": "洗澡",
+    "eat": "吃", "eats": "吃", "breakfast": "早餐", "lunch": "午餐", "dinner": "晚餐",
+    "drink": "喝", "drinks": "喝", "coffee": "咖啡", "tea": "茶", "water": "水", "juice": "果汁",
+    "pack": "收拾", "packs": "收拾", "bag": "包", "backpack": "背包",
+    "get": "得/穿", "gets": "得/穿", "dressed": "穿好衣服",
+    "comb": "梳", "combs": "梳", "hair": "头发",
+    "go": "去", "goes": "去", "school": "学校", "work": "工作", "home": "家",
+    "set": "设置", "sets": "设置", "alarm": "闹钟",
+    "wash": "洗", "washes": "洗", "face": "脸", "hands": "手",
+    "put on": "穿上", "shoes": "鞋子", "shirt": "衬衫", "pants": "裤子",
+    "father": "父亲/爸爸", "mother": "母亲/妈妈", "brother": "兄弟", "sister": "姐妹",
+    "grandfather": "爷爷/外公", "grandmother": "奶奶/外婆", "uncle": "叔叔/舅舅", "aunt": "阿姨/姑姑",
+    "apple": "苹果", "banana": "香蕉", "rice": "米饭", "noodles": "面条", "milk": "牛奶",
+    "read": "读", "reads": "读", "book": "书", "listen": "听", "music": "音乐",
+    "play": "玩/踢/打", "plays": "玩/踢/打", "football": "足球", "basketball": "篮球"
+  };
+
+  const words = completed.split(/\s+/);
+  const matchedMeanings = words.map(w => vocabMap[w.replace(/[^a-z]/g, "")]).filter(Boolean);
+
+  let pronoun = "";
+  if (completed.startsWith("i ")) pronoun = "我";
+  else if (completed.startsWith("you ")) pronoun = "你";
+  else if (completed.startsWith("he ")) pronoun = "他";
+  else if (completed.startsWith("she ")) pronoun = "她";
+  else if (completed.startsWith("we ")) pronoun = "我们";
+  else if (completed.startsWith("they ")) pronoun = "他们";
+  else if (completed.startsWith("my ")) pronoun = "我的";
+
+  if (matchedMeanings.length > 0) {
+    const action = matchedMeanings.join("");
+    return `${pronoun || ""}${action} (提示: ${sentence.replace("___", `[${blank}]`)})`;
+  }
+
+  return `请完成句子: ${sentence.replace("___", `[${blank}]`)}`;
+}
+
 function parseFillInTheBlank(lines: string[]): FillInTheBlankExercise {
   const noAudio: string[] = [];
   const rawSentence = stripNoAudio(getField(lines, "sentence"));
   if (rawSentence.flagged) noAudio.push("sentence");
   const blank = getField(lines, "blank");
-  const translation = getOptionalField(lines, "translation");
+  const translation = getOptionalField(lines, "translation") || generateChineseTranslation(rawSentence.text, blank);
 
   const acceptAlsoLine = lines.find((l) => l.startsWith("acceptAlso:"));
   const acceptAlso: string[] = [];
@@ -238,7 +280,7 @@ function parseFillInTheBlank(lines: string[]): FillInTheBlankExercise {
     type: "fill-in-the-blank", 
     sentence: rawSentence.text, 
     blank, 
-    ...(translation && { translation }),
+    translation,
     acceptAlso, 
     srsWords, 
     ...(noAudio.length && { noAudio }) 
