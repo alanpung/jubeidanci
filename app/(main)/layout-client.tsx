@@ -33,9 +33,9 @@ export default function MainLayout({
       <BackgroundRoutePrefetch />
       
       {/* Right-side Navigation */}
-      <div className="hidden md:flex md:w-64 md:flex-col border-l-2 border-lingo-border bg-white h-dvh shrink-0">
+      <div className="hidden md:flex md:w-64 md:flex-col bg-white h-dvh shrink-0">
         {/* Header: Logo */}
-        <div className="h-16 flex items-center px-6 border-b-2 border-lingo-border shrink-0">
+        <div className="h-16 flex items-center justify-center px-6 shrink-0">
           <a href="/" className="flex items-center gap-2.5">
             <Image src="/icon.svg" alt="句背单词" width={36} height={36} className="w-9 h-9" />
             <span className="text-2xl font-black text-rainbow tracking-tight">句背单词</span>
@@ -43,7 +43,7 @@ export default function MainLayout({
         </div>
         
         {/* User Info (Above Library) */}
-        <div className="px-6 py-4 border-b-2 border-lingo-border shrink-0 bg-lingo-gray/10">
+        <div className="px-6 py-4 shrink-0 bg-lingo-gray/10 text-center">
           <p className="font-bold text-lingo-text truncate text-sm">{session?.user?.name || session?.user?.email || "Learner"}</p>
           <button 
             onClick={async () => { await signOut(); location.reload(); }} 
@@ -59,10 +59,10 @@ export default function MainLayout({
         </div>
         
         {/* Footer: Feedback (At the very bottom) */}
-        <div className="p-4 border-t-2 border-lingo-border shrink-0">
+        <div className="p-4 shrink-0">
           <button 
             onClick={() => setFeedbackOpen(true)} 
-            className="w-full rounded-xl bg-lingo-gray/20 hover:bg-lingo-gray/40 py-2.5 text-xs font-bold text-lingo-text transition-colors cursor-pointer"
+            className="w-full rounded-xl bg-lingo-gray/20 hover:bg-lingo-gray/40 py-2.5 text-xs font-bold text-lingo-text transition-colors cursor-pointer text-center"
           >
             Feedback
           </button>

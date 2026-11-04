@@ -255,10 +255,10 @@ function generateChineseTranslation(sentence: string, blank: string): string {
 
   if (matchedMeanings.length > 0) {
     const action = matchedMeanings.join("");
-    return `${pronoun || ""}${action} (提示: ${sentence.replace("___", `[${blank}]`)})`;
+    return `${pronoun || ""}${action}`;
   }
 
-  return `请完成句子: ${sentence.replace("___", `[${blank}]`)}`;
+  return `请完成句子`;
 }
 
 function parseFillInTheBlank(lines: string[]): FillInTheBlankExercise {
@@ -273,6 +273,94 @@ function parseFillInTheBlank(lines: string[]): FillInTheBlankExercise {
   if (acceptAlsoLine) {
     const matches = acceptAlsoLine.match(/"([^"]+)"/g);
     if (matches) acceptAlso.push(...matches.map((m) => m.replace(/"/g, "")));
+  }
+
+  const commonSynonyms: Record<string, string[]> = {
+    "wake": ["wakes", "get up", "woke"],
+    "wakes": ["wake", "woke"],
+    "brush": ["brushes", "clean"],
+    "brushes": ["brush", "cleans"],
+    "eat": ["have", "eats", "ate"],
+    "eats": ["eat", "has"],
+    "drink": ["drinks", "have"],
+    "drinks": ["drink", "has"],
+    "get": ["gets", "receive", "obtain"],
+    "gets": ["get", "receives"],
+    "go": ["goes", "travel", "head"],
+    "goes": ["go", "travels"],
+    "watch": ["watches", "view", "see"],
+    "watches": ["watch", "views"],
+    "take": ["takes", "have", "grab"],
+    "takes": ["take", "has"],
+    "make": ["makes", "prepare"],
+    "makes": ["make", "prepares"],
+    "read": ["reads", "browse"],
+    "reads": ["read"],
+    "listen": ["listens", "hear"],
+    "listens": ["listen", "hears"],
+    "play": ["plays", "do"],
+    "plays": ["play", "does"],
+    "clean": ["cleans", "tidy"],
+    "cleans": ["clean", "tidies"],
+    "cook": ["cooks", "prepare"],
+    "cooks": ["cook", "prepares"],
+    "buy": ["buys", "purchase"],
+    "buys": ["buy", "purchases"],
+    "walk": ["walks", "stroll"],
+    "walks": ["walk"],
+    "arrive": ["arrives", "reach", "get"],
+    "arrives": ["arrive", "reaches"],
+    "leave": ["leaves", "depart"],
+    "leaves": ["leave", "departs"],
+    "start": ["starts", "begin", "begins"],
+    "starts": ["start", "begins"],
+    "finish": ["finishes", "complete", "end"],
+    "finishes": ["finish", "completes"],
+    "feel": ["feels", "experience"],
+    "feels": ["feel", "experiences"],
+    "sleep": ["sleeps", "rest"],
+    "sleeps": ["sleep", "rests"],
+    "use": ["uses", "utilize"],
+    "uses": ["use", "utilizes"],
+    "wear": ["wears", "put on"],
+    "wears": ["wear", "puts on"],
+    "check": ["checks", "inspect"],
+    "checks": ["check", "inspects"],
+    "set": ["sets", "put"],
+    "sets": ["set", "puts"],
+    "wash": ["washes", "clean"],
+    "washes": ["wash", "cleans"],
+    "write": ["writes", "jot"],
+    "writes": ["write", "jots"],
+    "sit": ["sits", "take a seat"],
+    "sits": ["sit"],
+    "meet": ["meets", "see"],
+    "meets": ["meet", "sees"],
+    "visit": ["visits", "see"],
+    "visits": ["visit", "sees"],
+    "enjoy": ["enjoys", "like"],
+    "enjoys": ["enjoy", "likes"],
+    "sweep": ["sweeps", "clean"],
+    "sweeps": ["sweep"],
+    "water": ["waters", "irrigate"],
+    "waters": ["water"],
+    "fold": ["folds", "bend"],
+    "folds": ["fold"],
+    "lock": ["locks", "secure"],
+    "locks": ["lock", "secures"],
+    "say": ["says", "tell"],
+    "says": ["say", "tells"],
+    "fall": ["falls", "drop"],
+    "falls": ["fall", "drops"]
+  };
+
+  const lowerBlank = blank.toLowerCase().trim();
+  if (commonSynonyms[lowerBlank]) {
+    for (const alt of commonSynonyms[lowerBlank]) {
+      if (!acceptAlso.some(a => a.toLowerCase() === alt.toLowerCase()) && alt.toLowerCase() !== lowerBlank) {
+        acceptAlso.push(alt);
+      }
+    }
   }
 
   const srsWords = parseSrsWords(lines) ?? "";
