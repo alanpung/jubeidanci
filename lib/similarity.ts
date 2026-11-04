@@ -279,6 +279,8 @@ export function generateAlternativeTranslations(baseAnswer: string, existingList
     // 起床 — get up ≈ wake up
     [/\bget up\b/gi, "wake up"],
     [/\bwake up\b/gi, "get up"],
+    [/\bgets up\b/gi, "wakes up"],
+    [/\bwakes up\b/gi, "gets up"],
     [/\bgetting up\b/gi, "waking up"],
     [/\bwaking up\b/gi, "getting up"],
     [/\bgot up\b/gi, "woke up"],
