@@ -3,11 +3,7 @@ import { headers } from "next/headers";
 import { getSession } from "@/lib/auth-server";
 import { getUserStatsData } from "@/lib/actions/progress";
 import { getSrsStats } from "@/lib/actions/srs";
-import { Sidebar } from "@/components/layout/sidebar";
-import { TopBar } from "@/components/layout/top-bar";
-import { MobileNav } from "@/components/layout/mobile-nav";
-import { PostHogIdentify } from "@/components/providers/posthog-identify";
-import { BackgroundRoutePrefetch } from "@/components/providers/background-route-prefetch";
+import MainLayout from "@/app/(main)/layout-client";
 import { PullToRefresh } from "@/components/ui/pull-to-refresh";
 import { isAdminEmail } from "@/lib/ai/models";
 import { SITE_URL } from "@/lib/constants";
@@ -19,7 +15,7 @@ export default async function PublicOrAuthLayout({
 }) {
   const session = await getSession();
 
-  // Authenticated: render full app layout (sidebar, topbar, mobile nav)
+  // Authenticated: render full app layout (same as main layout)
   if (session) {
     const isAdmin = isAdminEmail(session.user.email);
     let stats = null;
@@ -37,22 +33,9 @@ export default async function PublicOrAuthLayout({
     }
 
     return (
-      <div className="min-h-screen bg-lingo-bg">
-        <PostHogIdentify
-          userId={session.user.id}
-          email={session.user.email}
-          name={session.user.name}
-        />
-        <BackgroundRoutePrefetch />
-        <Sidebar isAdmin={isAdmin} />
-        <div className="md:pl-64">
-          <TopBar stats={stats} />
-          <PullToRefresh className="p-4 pb-20 md:p-8 md:pb-8">
-            {children}
-          </PullToRefresh>
-        </div>
-        <MobileNav isAdmin={isAdmin} />
-      </div>
+      <MainLayout session={session} stats={stats} isAdmin={isAdmin}>
+        {children}
+      </MainLayout>
     );
   }
 

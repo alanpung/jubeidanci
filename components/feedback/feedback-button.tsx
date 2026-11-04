@@ -26,6 +26,13 @@ export function FeedbackModal({ open, onClose }: FeedbackModalProps) {
 
   const isLoggedIn = !!session?.user;
 
+  // Prefill email if user is logged in
+  useEffect(() => {
+    if (session?.user?.email && !email) {
+      setEmail(session.user.email);
+    }
+  }, [session?.user?.email]);
+
   // Close on escape key
   useEffect(() => {
     if (!open) return;
@@ -44,7 +51,6 @@ export function FeedbackModal({ open, onClose }: FeedbackModalProps) {
         onClose();
       }
     }
-    // Delay to avoid the opening click triggering this
     const timer = setTimeout(() => {
       document.addEventListener("mousedown", handleClick);
     }, 0);
@@ -64,7 +70,11 @@ export function FeedbackModal({ open, onClose }: FeedbackModalProps) {
 
   function resetForm() {
     setMessage("");
-    setEmail("");
+    if (session?.user?.email) {
+      setEmail(session.user.email);
+    } else {
+      setEmail("");
+    }
     setTurnstileToken(null);
     setFormState("idle");
     setErrorMsg("");
@@ -73,7 +83,6 @@ export function FeedbackModal({ open, onClose }: FeedbackModalProps) {
 
   function handleClose() {
     onClose();
-    // Reset after close animation
     setTimeout(resetForm, 200);
   }
 
@@ -87,7 +96,7 @@ export function FeedbackModal({ open, onClose }: FeedbackModalProps) {
 
     const result = await submitFeedback({
       message,
-      email: isLoggedIn ? undefined : email,
+      email: email.trim() || undefined,
       turnstileToken: isLoggedIn ? undefined : (turnstileToken ?? undefined),
     });
 
@@ -96,7 +105,6 @@ export function FeedbackModal({ open, onClose }: FeedbackModalProps) {
     } else {
       setFormState("error");
       setErrorMsg(result.error || "Something went wrong");
-      // Reset turnstile on error for unauthenticated users
       if (!isLoggedIn) {
         setTurnstileToken(null);
         turnstileRef.current?.reset();
@@ -104,11 +112,10 @@ export function FeedbackModal({ open, onClose }: FeedbackModalProps) {
     }
   }
 
-  // Determine if submit should be disabled
   const submitDisabled =
     !message.trim() ||
-    (!isLoggedIn && !email.trim()) ||
     (!isLoggedIn &&
+      !isLoggedIn &&
       turnstileToken === null &&
       !!process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY);
 
@@ -162,24 +169,22 @@ export function FeedbackModal({ open, onClose }: FeedbackModalProps) {
             </div>
 
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Show email field only for unauthenticated users */}
-              {!isLoggedIn && (
-                <>
-                  <Input
-                    label="Email"
-                    type="email"
-                    placeholder="you@example.com"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                  />
-                  <Turnstile
-                    ref={turnstileRef}
-                    onVerify={handleTurnstileVerify}
-                    onExpire={handleTurnstileExpire}
-                    onError={handleTurnstileExpire}
-                  />
-                </>
+              {/* Email (Optional) */}
+              <Input
+                label="Email (Optional)"
+                type="email"
+                placeholder="you@example.com"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+              />
+
+              {!isLoggedIn && process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY && (
+                <Turnstile
+                  ref={turnstileRef}
+                  onVerify={handleTurnstileVerify}
+                  onExpire={handleTurnstileExpire}
+                  onError={handleTurnstileExpire}
+                />
               )}
 
               {/* Message */}
@@ -219,10 +224,6 @@ export function FeedbackModal({ open, onClose }: FeedbackModalProps) {
   );
 }
 
-/**
- * Inline text-button that opens the feedback modal.
- * Use this on the landing page (logged-out) and in the top bar (logged-in).
- */
 export function FeedbackButton({ className }: { className?: string }) {
   const [open, setOpen] = useState(false);
 

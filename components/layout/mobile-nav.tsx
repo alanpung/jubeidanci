@@ -4,9 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useMobileKeyboardOpen } from "@/hooks/use-mobile-keyboard-open";
 import {
-  MessageSquare,
   Library,
-  FileText,
   Languages,
   BarChart3,
   Settings,
@@ -15,24 +13,17 @@ import {
 } from "lucide-react";
 
 const navItems = [
-  { href: "/chat", label: "Chat", icon: MessageSquare },
   { href: "/library", label: "Library", icon: Library },
-  { href: "/markdown", label: "Markdown", icon: FileText },
   { href: "/words", label: "Words", icon: Languages },
   { href: "/progress", label: "Progress", icon: BarChart3 },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
 
 interface MobileNavProps {
-  showChat?: boolean;
-  /** Owner-only: the markdown workspace replaces the old Read page. */
-  showMarkdown?: boolean;
   isAdmin?: boolean;
 }
 
 export function MobileNav({
-  showChat = true,
-  showMarkdown = true,
   isAdmin = false,
 }: MobileNavProps) {
   const pathname = usePathname();
@@ -41,22 +32,17 @@ export function MobileNav({
   // Hide nav entirely when keyboard is open (resizes-content handles layout)
   if (isKeyboardOpen) return null;
 
-  const items = navItems.filter((item) => {
-    if (item.href === "/chat" && !showChat) return false;
-    if (item.href === "/markdown" && !showMarkdown) return false;
-    return true;
-  });
   const vipItems = isAdmin
     ? [{ href: "/library/students", label: "VIP", icon: Users }]
     : [];
   const statItems = isAdmin
     ? [{ href: "/course-stat", label: "Course Stat", icon: Table2 }]
     : [];
-  const libraryIndex = items.findIndex((i) => i.href === "/library");
+  const libraryIndex = navItems.findIndex((i) => i.href === "/library");
   const allItems = [
-    ...items.slice(0, libraryIndex + 1),
+    ...navItems.slice(0, libraryIndex + 1),
     ...statItems,
-    ...items.slice(libraryIndex + 1),
+    ...navItems.slice(libraryIndex + 1),
     ...vipItems,
   ];
 
