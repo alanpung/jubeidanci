@@ -70,7 +70,7 @@ export function SignUpForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
         setTurnstileToken(null);
         turnstileRef.current?.reset();
       } else {
-        router.push(destination);
+        window.location.href = destination;
       }
     } catch (err: unknown) {
       setLoading(false);
