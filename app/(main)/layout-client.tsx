@@ -9,7 +9,6 @@ import { PullToRefresh } from "@/components/ui/pull-to-refresh";
 import { FeedbackModal } from "@/components/feedback/feedback-button";
 import { signOut } from "@/lib/auth-client";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function MainLayout({
   children,
@@ -25,7 +24,7 @@ export default function MainLayout({
   const [feedbackOpen, setFeedbackOpen] = useState(false);
 
   return (
-    <div className="h-dvh bg-lingo-bg flex flex-col md:flex-row-reverse">
+    <div className="h-dvh bg-lingo-bg flex flex-col md:flex-row-reverse overflow-hidden">
       <PostHogIdentify
         userId={session.user.id}
         email={session.user.email}
@@ -34,37 +33,49 @@ export default function MainLayout({
       <BackgroundRoutePrefetch />
       
       {/* Right-side Navigation */}
-      <div className="hidden md:flex md:w-64 md:flex-col border-l-2 border-lingo-border bg-white">
+      <div className="hidden md:flex md:w-64 md:flex-col border-l-2 border-lingo-border bg-white h-dvh shrink-0">
         {/* Header: Logo */}
-        <div className="h-16 flex items-center px-6 border-b-2 border-lingo-border">
+        <div className="h-16 flex items-center px-6 border-b-2 border-lingo-border shrink-0">
           <a href="/" className="flex items-center gap-2.5">
             <Image src="/icon.svg" alt="句背单词" width={36} height={36} className="w-9 h-9" />
             <span className="text-2xl font-black text-rainbow tracking-tight">句背单词</span>
           </a>
         </div>
         
-        {/* User Info */}
-        <div className="p-6 border-b-2 border-lingo-border">
-          <p className="font-bold text-lingo-text truncate">{session.user.name}</p>
-          <button onClick={async () => { await signOut(); location.reload(); }} className="text-xs text-lingo-text-light hover:text-lingo-text underline cursor-pointer">Sign Out</button>
+        {/* User Info (Above Library) */}
+        <div className="px-6 py-4 border-b-2 border-lingo-border shrink-0 bg-lingo-gray/10">
+          <p className="font-bold text-lingo-text truncate text-sm">{session?.user?.name || session?.user?.email || "Learner"}</p>
+          <button 
+            onClick={async () => { await signOut(); location.reload(); }} 
+            className="text-xs text-lingo-text-light hover:text-lingo-text underline cursor-pointer mt-0.5"
+          >
+            Sign Out
+          </button>
         </div>
         
-        {/* Nav */}
-        <div className="flex-1">
+        {/* Nav (Library, Words, etc.) */}
+        <div className="flex-1 overflow-y-auto">
           <Sidebar isAdmin={isAdmin} />
         </div>
         
-        {/* Footer: Feedback */}
-        <div className="p-6 border-t-2 border-lingo-border">
-          <button onClick={() => setFeedbackOpen(true)} className="w-full rounded-xl bg-lingo-gray/20 py-2 text-xs font-bold text-lingo-text cursor-pointer">Feedback</button>
+        {/* Footer: Feedback (At the very bottom) */}
+        <div className="p-4 border-t-2 border-lingo-border shrink-0">
+          <button 
+            onClick={() => setFeedbackOpen(true)} 
+            className="w-full rounded-xl bg-lingo-gray/20 hover:bg-lingo-gray/40 py-2.5 text-xs font-bold text-lingo-text transition-colors cursor-pointer"
+          >
+            Feedback
+          </button>
         </div>
       </div>
 
-      <div className="flex flex-1 flex-col min-h-0 w-full max-w-full overflow-x-hidden">
+      {/* Main Content Area */}
+      <div className="flex flex-1 flex-col min-h-0 w-full max-w-full overflow-x-hidden overflow-y-auto">
         <PullToRefresh className="p-3 sm:p-4 pb-36 md:p-8 md:pb-8">
           {children}
         </PullToRefresh>
       </div>
+
       <MobileNav isAdmin={isAdmin} />
       <FeedbackModal open={feedbackOpen} onClose={() => setFeedbackOpen(false)} />
     </div>

@@ -6,6 +6,8 @@ import { PromptEditor } from "./prompt-editor";
 import { MemoryEditor } from "./memory-editor";
 import { ChangePasswordForm } from "./change-password-form";
 import { VoiceSelector } from "./voice-selector";
+import { signOut } from "@/lib/auth-client";
+import { LogOut } from "lucide-react";
 import type { PromptWithOverride } from "@/lib/actions/prompts";
 import type { VoiceSettingsData } from "@/lib/tts-config";
 
@@ -30,6 +32,17 @@ export function SettingsView({
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [deleteError, setDeleteError] = useState("");
+
+  const handleSignOut = async () => {
+    try {
+      if (typeof document !== "undefined") {
+        document.cookie = "openlingo_guest=; Max-Age=0; path=/;";
+      }
+      await signOut();
+    } catch {}
+    router.push("/sign-in");
+    router.refresh();
+  };
 
   const handleDeleteAccount = async () => {
     setIsDeleting(true);
@@ -79,6 +92,24 @@ export function SettingsView({
             </span>
           )}
         </div>
+      </div>
+
+      {/* Session / Log Out */}
+      <div className="rounded-2xl border-2 border-lingo-border bg-white p-6 shadow-sm flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 className="text-lg font-black text-lingo-text mb-1">Session</h2>
+          <p className="text-xs text-lingo-text-light font-bold">
+            Sign out of your account on this device.
+          </p>
+        </div>
+        <button
+          type="button"
+          onClick={handleSignOut}
+          className="px-5 py-2.5 text-sm font-bold text-white bg-lingo-blue hover:bg-lingo-blue/90 active:scale-95 rounded-xl border-b-4 border-blue-700 transition-all cursor-pointer whitespace-nowrap flex items-center justify-center gap-2"
+        >
+          <LogOut className="w-4 h-4" />
+          Log Out
+        </button>
       </div>
 
       {/* Voice & Audio Persona Configuration */}

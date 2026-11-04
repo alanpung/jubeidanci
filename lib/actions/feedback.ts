@@ -28,12 +28,8 @@ export async function submitFeedback(
 
   const session = await getSession();
 
-  // Unauthenticated: require turnstile and email
+  // Unauthenticated: verify turnstile if provided
   if (!session) {
-    if (!email?.trim()) {
-      return { success: false, error: "Email is required" };
-    }
-
     if (turnstileToken) {
       const result = await verifyTurnstileToken(turnstileToken);
       if (!result.success) {
@@ -48,7 +44,7 @@ export async function submitFeedback(
   // Determine auth method for authenticated users
   let authMethod = "";
   let senderName = "";
-  let senderEmail = "";
+  let senderEmail = email?.trim() || "Anonymous";
 
   if (session) {
     senderName = session.user.name;
@@ -71,8 +67,6 @@ export async function submitFeedback(
     } catch {
       authMethod = "Unknown";
     }
-  } else {
-    senderEmail = email!.trim();
   }
 
   // Build Slack message
