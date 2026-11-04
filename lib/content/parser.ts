@@ -220,7 +220,7 @@ function parseTranslation(lines: string[]): TranslationExercise {
   return { type: "translation", text: rawText.text, sentence: rawSentence.text, answer, acceptAlso, srsWords, ...(noAudio.length && { noAudio }) };
 }
 
-function generateChineseTranslation(sentence: string, blank: string): string {
+function generateChineseTranslation(sentence: string, blank: string): string | undefined {
   const completed = sentence.replace("___", blank).toLowerCase();
   const vocabMap: Record<string, string> = {
     "wake": "醒来", "wakes": "醒来", "wake up": "醒来/起床", "wakes up": "醒来/起床",
@@ -259,7 +259,11 @@ function generateChineseTranslation(sentence: string, blank: string): string {
     return `${pronoun || ""}${action}`;
   }
 
-  return `请完成句子`;
+  // No word in this sentence is in vocabMap, so no meaningful hint can be
+  // assembled. Return nothing rather than a placeholder like "请完成句子" —
+  // a missing hint is better than a misleading one. Content files should
+  // carry an explicit `translation:` line for every exercise.
+  return undefined;
 }
 
 function parseFillInTheBlank(lines: string[]): FillInTheBlankExercise {
