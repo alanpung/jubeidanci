@@ -8,6 +8,8 @@ import { BackgroundRoutePrefetch } from "@/components/providers/background-route
 import { PullToRefresh } from "@/components/ui/pull-to-refresh";
 import { FeedbackModal } from "@/components/feedback/feedback-button";
 import { signOut } from "@/lib/auth-client";
+import Image from "next/image";
+import Link from "next/link";
 
 export default function MainLayout({
   children,
@@ -33,13 +35,26 @@ export default function MainLayout({
       
       {/* Right-side Navigation */}
       <div className="hidden md:flex md:w-64 md:flex-col border-l-2 border-lingo-border bg-white">
+        {/* Header: Logo */}
+        <div className="h-16 flex items-center px-6 border-b-2 border-lingo-border">
+          <a href="/" className="flex items-center gap-2.5">
+            <Image src="/icon.svg" alt="句背单词" width={36} height={36} className="w-9 h-9" />
+            <span className="text-2xl font-black text-rainbow tracking-tight">句背单词</span>
+          </a>
+        </div>
+        
+        {/* User Info */}
         <div className="p-6 border-b-2 border-lingo-border">
           <p className="font-bold text-lingo-text truncate">{session.user.name}</p>
           <button onClick={async () => { await signOut(); location.reload(); }} className="text-xs text-lingo-text-light hover:text-lingo-text underline cursor-pointer">Sign Out</button>
         </div>
+        
+        {/* Nav */}
         <div className="flex-1">
           <Sidebar isAdmin={isAdmin} />
         </div>
+        
+        {/* Footer: Feedback */}
         <div className="p-6 border-t-2 border-lingo-border">
           <button onClick={() => setFeedbackOpen(true)} className="w-full rounded-xl bg-lingo-gray/20 py-2 text-xs font-bold text-lingo-text cursor-pointer">Feedback</button>
         </div>
