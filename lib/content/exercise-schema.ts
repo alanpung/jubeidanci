@@ -41,6 +41,7 @@ export const fillInTheBlankSchema = z.object({
     .string()
     .describe("Sentence with ___ marking the blank, e.g. 'Der ___ ist groß'"),
   blank: z.string().describe("The correct word for the blank"),
+  translation: z.string().optional().describe("Chinese translation of the sentence"),
   acceptAlso: z
     .array(z.string())
     .default([])

@@ -21,6 +21,7 @@ color: "#FF9600"
 [fill-in-the-blank]
 sentence: "I ___ up at seven o'clock every morning."
 blank: "wake"
+translation: "我每天早上七点起床。"
 srsWords: "wake"
 
 [fill-in-the-blank]

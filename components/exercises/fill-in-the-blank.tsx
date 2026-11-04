@@ -84,6 +84,11 @@ export function FillInTheBlank({ exercise, onResult, onContinue, language, autop
           <ReplayButton onPlay={() => play(blankSentence, language)} />
         )}
       </div>
+      {exercise.translation && (
+        <div className="mb-6 p-4 rounded-xl bg-lingo-blue/5 border border-lingo-blue/20 text-lingo-blue font-medium text-sm">
+          {exercise.translation}
+        </div>
+      )}
       <AudioSpinner loading={audioLoading} />
       <div className="flex flex-wrap items-center gap-2 text-2xl font-bold text-lingo-text mb-6">
         <HoverableText text={parts[0]} language={language} noAudio={exercise.noAudio?.includes("sentence")} />

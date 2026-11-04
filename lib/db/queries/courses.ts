@@ -325,6 +325,8 @@ export async function listCourses(
       )
       .orderBy(course.title);
 
+    console.log("listCourses DB rows visibility:", rows.map(r => ({ id: r.id, visibility: r.visibility })));
+
     if (rows.length > 0) {
       const dbCourseIds = new Set(rows.map((r) => r.id));
       const { getAllCourses, getAllUnits } = await import("@/lib/content/registry");
@@ -377,7 +379,7 @@ export async function listCourses(
       }));
     }
   } catch (err) {
-    console.warn("listCourses DB query failed, falling back to filesystem:", err);
+    console.error("listCourses DB query failed, falling back to filesystem. Error:", err);
   }
 
   // Filesystem fallback when DB is unavailable or empty
