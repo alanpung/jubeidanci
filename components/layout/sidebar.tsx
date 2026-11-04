@@ -36,7 +36,7 @@ export function Sidebar({ isAdmin = false }: { isAdmin?: boolean }) {
           <Link
             key={item.href}
             href={item.href}
-            className={`flex items-center gap-3 rounded-xl px-4 py-3 text-base font-bold transition-colors ${
+            className={`flex items-center justify-center gap-3 rounded-xl px-4 py-3 text-base font-bold transition-colors ${
               active
                 ? "bg-lingo-blue/10 text-lingo-blue border-2 border-lingo-blue/20"
                 : "text-lingo-text-light hover:bg-lingo-gray/50"
