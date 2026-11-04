@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 4: Sentences"
-description: "A1 Word Bank Practice"
+description: "A1 Word Order Practice"
 icon: "🧱"
 color: "#009688"
 targetLanguage: "en"

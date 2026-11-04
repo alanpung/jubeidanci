@@ -1,11 +1,6 @@
 import { migrate } from "drizzle-orm/postgres-js/migrator";
 import { sql } from "drizzle-orm";
-import crypto from "node:crypto";
-import { existsSync, readFileSync } from "node:fs";
-import { join } from "node:path";
 import { db } from "./lib/db";
-import { loadContentDir } from "./lib/content/loader";
-import { seedContentFromFilesystem } from "./lib/db/seed-content";
 
 const MIGRATIONS_SCHEMA = "drizzle";
 const MIGRATIONS_TABLE = "__drizzle_migrations";
@@ -79,44 +74,34 @@ export async function register() {
   // hung until the parse finished. Warming it here moves that cost to instance
   // startup, so requests never pay it (the cache also now lives for 24h).
   try {
+    const { loadContentDir } = await import("./lib/content/loader");
     loadContentDir();
   } catch (err) {
     console.warn("[instrumentation] content pre-warm skipped:", err);
   }
 
-  // Kick off the filesystem->DB seed at boot (fire-and-forget). It must not be
-  // awaited here (it does many sequential upserts and would stall cold start),
-  // and it must not be awaited inside request paths either — that is what made
-  // /library render empty. Running it once at boot means the course/unit tables
-  // are populated before the first request, so warm requests take the (richer)
-  // DB path instead of the filesystem fallback.
-  void seedContentFromFilesystem().catch((err) =>
-    console.warn("[instrumentation] background seed skipped:", err),
-  );
+  // Kick off the filesystem->DB seed at boot (fire-and-forget).
+  try {
+    const { seedContentFromFilesystem } = await import("./lib/db/seed-content");
+    void seedContentFromFilesystem().catch((err) =>
+      console.warn("[instrumentation] background seed skipped:", err),
+    );
+  } catch (err) {
+    console.warn("[instrumentation] background seed load skipped:", err);
+  }
 }
 
-/**
- * Writes `__drizzle_migrations` bookkeeping rows for migrations whose tables
- * already exist in the database but are missing from the bookkeeping table.
- *
- * When `forceAll` is true (used on the retry path after an "already exists"
- * error) we assume the live schema is current and stamp every journal entry,
- * guaranteeing migrate() is a no-op.
- *
- * Safety: we only stamp entries when the baseline `account` table already
- * exists. `drizzle-kit push` applies the *entire* current schema in one shot,
- * so the presence of `account` means every later table/column is present too —
- * stamping all entries is then correct, never skips a needed migration. If
- * `account` is absent the schema is genuinely empty and we let migrate() build
- * it from scratch (which won't hit "already exists").
- */
 async function fastForwardMigrations(forceAll = false) {
-  const journalPath = join(process.cwd(), "drizzle", "meta", "_journal.json");
-  if (!existsSync(journalPath)) return;
+  const fs = await import("node:fs");
+  const path = await import("node:path");
+  const crypto = await import("node:crypto");
+
+  const journalPath = path.join(process.cwd(), "drizzle", "meta", "_journal.json");
+  if (!fs.existsSync(journalPath)) return;
 
   let journal: { entries?: { when: number; tag: string }[] };
   try {
-    journal = JSON.parse(readFileSync(journalPath, "utf8"));
+    journal = JSON.parse(fs.readFileSync(journalPath, "utf8"));
   } catch {
     return;
   }
@@ -154,10 +139,10 @@ async function fastForwardMigrations(forceAll = false) {
   if (!baselineExists && !forceAll) return;
 
   for (const entry of entries) {
-    const sqlPath = join(process.cwd(), "drizzle", `${entry.tag}.sql`);
+    const sqlPath = path.join(process.cwd(), "drizzle", `${entry.tag}.sql`);
     let hash = "";
     try {
-      const query = readFileSync(sqlPath).toString();
+      const query = fs.readFileSync(sqlPath).toString();
       hash = crypto.createHash("sha256").update(query).digest("hex");
     } catch {
       // If we can't read the SQL we can't compute the exact hash; a zero hash

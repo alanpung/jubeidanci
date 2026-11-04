@@ -9,6 +9,7 @@ import { isAdminEmail } from "@/lib/ai/models";
 import { getTargetLanguage } from "@/lib/actions/preferences";
 import { CourseBookShelf } from "@/components/library/course-book-shelf";
 import { LearnHeader } from "@/components/library/learn-header";
+import { RefreshLibraryButton } from "@/components/library/refresh-library-button";
 import { withTimeout } from "@/lib/db/timeout";
 
 export const dynamic = "force-dynamic";
@@ -97,12 +98,7 @@ export default async function LearnPage() {
       {isEmptyLibrary ? (
         <div className="rounded-2xl border-2 border-dashed border-lingo-border bg-white p-8 text-center shadow-sm">
           <div className="text-4xl mb-3">📚</div>
-          <h2 className="text-lg font-black text-lingo-text mb-1">
-            Your library is empty
-          </h2>
-          <p className="text-sm text-lingo-text-light mb-5">
-            Please refresh the page to view your content.
-          </p>
+          <RefreshLibraryButton />
         </div>
       ) : (
         <>
