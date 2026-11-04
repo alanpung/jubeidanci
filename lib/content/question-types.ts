@@ -62,8 +62,17 @@ export const QUESTION_TYPES: Record<string, QuestionTypeInfo> = {
     num: "5",
     icon: "🧱",
     nameZh: "单词拼句",
-    nameEn: "Word bank",
-    badgeLabel: "Word bank",
+    nameEn: "Word order",
+    badgeLabel: "Word order",
+    color: "#F59E0B",
+  },
+  "word-order": {
+    id: "word-bank",
+    num: "5",
+    icon: "🧱",
+    nameZh: "单词拼句",
+    nameEn: "Word order",
+    badgeLabel: "Word order",
     color: "#F59E0B",
   },
   "speaking": {
@@ -200,7 +209,7 @@ export function normalizeQuestionType(
   if (str.includes("listen") || str.includes("audio") || str.includes("tts") || str.includes("听力")) {
     return QUESTION_TYPES["listening"];
   }
-  if (str.includes("word-bank") || str.includes("bank") || str.includes("scramble") || str.includes("拼句") || str.includes("组句")) {
+  if (str.includes("word-bank") || str.includes("word-order") || str.includes("order") || str.includes("bank") || str.includes("scramble") || str.includes("拼句") || str.includes("组句") || str.includes("语序")) {
     return QUESTION_TYPES["word-bank"];
   }
   if (str.includes("speak") || str.includes("oral") || str.includes("stt") || str.includes("口语") || str.includes("朗读")) {

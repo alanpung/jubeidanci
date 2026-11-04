@@ -326,6 +326,18 @@ const thresholdCases: SimilarityTestCase[] = [
     correct: "ac",
     expected: { isCorrect: true },
   },
+  {
+    label: "pack vs packs is rejected as inflection mismatch",
+    input: "pack",
+    correct: "packs",
+    expected: { isCorrect: false },
+  },
+  {
+    label: "go vs goes is rejected as inflection mismatch",
+    input: "go",
+    correct: "goes",
+    expected: { isCorrect: false },
+  },
 ];
 
 // ---------------------------------------------------------------------------

@@ -155,6 +155,40 @@ function buildMarkdown(original: string, boldIndices: Set<number>): string {
   return result;
 }
 
+export function isInflectionMismatch(aRaw: string, bRaw: string): boolean {
+  const a = normalize(aRaw).trim();
+  const b = normalize(bRaw).trim();
+  if (!a || !b || a === b) return false;
+  if (a.includes(" ") || b.includes(" ")) return false;
+
+  const [shorter, longer] = a.length < b.length ? [a, b] : [b, a];
+
+  const sfxList = ["s", "es", "ed", "ing", "d", "ies", "ied", "er", "est"];
+  for (const sfx of sfxList) {
+    if (longer === shorter + sfx) return true;
+  }
+
+  if (shorter.endsWith("y")) {
+    const stem = shorter.slice(0, -1);
+    if (longer === stem + "ies" || longer === stem + "ied") return true;
+  }
+
+  if (shorter.endsWith("e")) {
+    const stem = shorter.slice(0, -1);
+    if (longer === stem + "ing" || longer === stem + "ed") return true;
+  }
+
+  if (longer.endsWith("ing") || longer.endsWith("ed")) {
+    const sfx = longer.endsWith("ing") ? "ing" : "ed";
+    const stem = longer.slice(0, -sfx.length);
+    if (stem.length > 1 && stem.slice(0, -1) === shorter && stem[stem.length - 1] === shorter[shorter.length - 1]) {
+      return true;
+    }
+  }
+
+  return false;
+}
+
 export function checkSimilarity(
   userInput: string,
   correctAnswer: string,
@@ -193,7 +227,15 @@ export function checkSimilarity(
     correctMapping.normalized,
   );
   const maxLen = Math.max(userMapping.normalized.length, correctMapping.normalized.length);
-  const similarity = maxLen === 0 ? 1 : 1 - distance / maxLen;
+  let similarity = maxLen === 0 ? 1 : 1 - distance / maxLen;
+
+  const isInflection = isInflectionMismatch(userSpaceless, correctSpaceless);
+  let isCorrect = similarity >= minSimilarity;
+  if (isInflection) {
+    isCorrect = false;
+    similarity = Math.min(similarity, 0.5);
+  }
+
   const boldIndices = new Set<number>();
   for (let k = 0; k < ops.length; k++) {
     const correctOrigIdx = correctMapping.origIndices[k];
@@ -210,7 +252,7 @@ export function checkSimilarity(
     }
   }
   return {
-    isCorrect: similarity >= minSimilarity,
+    isCorrect,
     similarity,
     correctedMarkdown: buildMarkdown(correctTrimmed, boldIndices),
   };

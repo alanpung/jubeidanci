@@ -26,7 +26,7 @@
  * same-inflection equivalence) — no new dependencies.
  */
 
-import { normalize } from "@/lib/similarity";
+import { normalize, isInflectionMismatch } from "@/lib/similarity";
 import { isEquivalentToken } from "@/lib/synonyms";
 import type { Quality } from "@/lib/srs";
 
@@ -268,11 +268,14 @@ export function markTranslation(
       continue;
     }
 
-    // 2. TYPO — close-enough word among unused user words.
+    // 2. TYPO — close-enough word among unused user words (excluding inflection mismatches).
     let typoJ = -1;
     for (let j = 0; j < userTokens.length; j++) {
       if (usedUser[j]) continue;
       const u = userTokens[j];
+      if (isInflectionMismatch(u, ansTok) || acceptable.some((a) => isInflectionMismatch(u, a))) {
+        continue;
+      }
       const sim = Math.max(
         charSim(u, ansTok),
         ...acceptable.map((a) => charSim(u, a)),

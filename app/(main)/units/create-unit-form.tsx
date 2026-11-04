@@ -22,7 +22,7 @@ const QUESTION_TYPE_OPTIONS: { id: QuestionType; label: string; icon: string }[]
   { id: "fill-in-the-blank", label: "Fill in Blank", icon: "✏️" },
   { id: "matching-pairs", label: "Matching Pairs", icon: "🧩" },
   { id: "listening", label: "Listening", icon: "🎧" },
-  { id: "word-bank", label: "Word Bank", icon: "🧱" },
+  { id: "word-bank", label: "Word Order", icon: "🧱" },
   { id: "speaking", label: "Speaking", icon: "🎙️" },
   { id: "flashcard-review", label: "Flashcards", icon: "🎴" },
   { id: "translation", label: "Translation", icon: "🌐" },
