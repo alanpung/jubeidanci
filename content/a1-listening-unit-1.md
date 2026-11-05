@@ -23,8 +23,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "I have three cats and two dogs." (correct)
-  - "I have two cats and three dogs."
   - "I have three cats and one dog."
+  - "I have two cats and three dogs."
 srsWords: "three" "cats" "two" "dogs"
 
 [listening]
@@ -32,8 +32,8 @@ text: "She has five apples in her bag."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She has five apples in her bag." (correct)
   - "She has four apples in her bag."
+  - "She has five apples in her bag." (correct)
   - "She has five oranges in her bag."
 srsWords: "five" "apples" "bag"
 
@@ -42,8 +42,8 @@ text: "There are six chairs around the table."
 ttsLang: en-US
 mode: choices
 choices:
-  - "There are six chairs around the table." (correct)
   - "There are seven chairs around the table."
+  - "There are six chairs around the table." (correct)
   - "There are six tables in the room."
 srsWords: "six" "chairs" "table"
 
@@ -52,9 +52,9 @@ text: "He has four brothers."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He has four brothers." (correct)
   - "He has three brothers."
   - "She has four brothers."
+  - "He has four brothers." (correct)
 srsWords: "four" "brothers"
 
 [listening]
@@ -62,9 +62,9 @@ text: "I need eight eggs for this recipe."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I need eight eggs for this recipe." (correct)
-  - "I need six eggs for this recipe."
   - "I need eight eggs for the cake."
+  - "I need six eggs for this recipe."
+  - "I need eight eggs for this recipe." (correct)
 srsWords: "eight" "eggs" "recipe"
 
 [listening]
@@ -82,9 +82,9 @@ text: "I drink one cup of coffee in the morning."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I drink one cup of coffee in the morning." (correct)
   - "I drink two cups of coffee in the morning."
   - "I drink one glass of coffee in the morning."
+  - "I drink one cup of coffee in the morning." (correct)
 srsWords: "one" "cup" "coffee"
 
 [listening]
@@ -92,9 +92,9 @@ text: "There are ten students in the class today."
 ttsLang: en-US
 mode: choices
 choices:
-  - "There are ten students in the class today." (correct)
   - "There are twelve students in the class today."
   - "There are ten teachers in the class today."
+  - "There are ten students in the class today." (correct)
 srsWords: "ten" "students" "class"
 
 [listening]
@@ -103,8 +103,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "My dog has nine puppies!" (correct)
-  - "My cat has nine kittens!"
   - "My dog has six puppies!"
+  - "My cat has nine kittens!"
 srsWords: "nine" "puppies"
 
 [listening]
@@ -112,9 +112,9 @@ text: "There are two windows and one door in this room."
 ttsLang: en-US
 mode: choices
 choices:
-  - "There are two windows and one door in this room." (correct)
-  - "There are three windows and one door in this room."
   - "There are two windows and two doors in this room."
+  - "There are three windows and one door in this room."
+  - "There are two windows and one door in this room." (correct)
 srsWords: "windows" "door" "room"
 
 ---
@@ -129,9 +129,9 @@ text: "There are twenty students in my class."
 ttsLang: en-US
 mode: choices
 choices:
-  - "There are twenty students in my class." (correct)
   - "There are twelve students in my class."
   - "There are twenty teachers in my class."
+  - "There are twenty students in my class." (correct)
 srsWords: "twenty" "students" "class"
 
 [listening]
@@ -139,9 +139,9 @@ text: "She is fifty years old."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is fifty years old." (correct)
-  - "She is fifteen years old."
   - "He is fifty years old."
+  - "She is fifteen years old."
+  - "She is fifty years old." (correct)
 srsWords: "fifty" "years"
 
 [listening]
@@ -149,8 +149,8 @@ text: "I walk thirty minutes to school."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I walk thirty minutes to school." (correct)
   - "I walk thirteen minutes to school."
+  - "I walk thirty minutes to school." (correct)
   - "I walk thirty minutes to work."
 srsWords: "walk" "thirty" "minutes"
 
@@ -159,9 +159,9 @@ text: "The building has forty-five floors."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The building has forty-five floors." (correct)
-  - "The building has fourteen floors."
   - "The tower has forty-five floors."
+  - "The building has fourteen floors."
+  - "The building has forty-five floors." (correct)
 srsWords: "building" "forty-five" "floors"
 
 [listening]
@@ -169,8 +169,8 @@ text: "This book has one hundred pages."
 ttsLang: en-US
 mode: choices
 choices:
-  - "This book has one hundred pages." (correct)
   - "This book has two hundred pages."
+  - "This book has one hundred pages." (correct)
   - "This magazine has one hundred pages."
 srsWords: "hundred" "pages"
 
@@ -189,9 +189,9 @@ text: "I need seventy dollars to buy this coat."
 ttsLang: en-US
 mode: choices
 choices:
+  - "I need seventy euros to buy this coat."
   - "I need seventy dollars to buy this coat." (correct)
   - "I need seventeen dollars to buy this coat."
-  - "I need seventy euros to buy this coat."
 srsWords: "seventy" "dollars" "buy" "coat"
 
 [listening]
@@ -209,8 +209,8 @@ text: "There are ninety-nine steps to the top."
 ttsLang: en-US
 mode: choices
 choices:
-  - "There are ninety-nine steps to the top." (correct)
   - "There are ninety steps to the top."
+  - "There are ninety-nine steps to the top." (correct)
   - "There are ninety-nine stairs to the bottom."
 srsWords: "ninety-nine" "steps" "top"
 
@@ -219,9 +219,9 @@ text: "She scored eleven out of twenty on the test."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She scored eleven out of twenty on the test." (correct)
   - "She scored twelve out of twenty on the test."
   - "He scored eleven out of twenty on the test."
+  - "She scored eleven out of twenty on the test." (correct)
 srsWords: "scored" "eleven" "test"
 
 ---
@@ -237,8 +237,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "The sky is blue and the grass is green." (correct)
-  - "The sky is grey and the grass is green."
   - "The sea is blue and the grass is green."
+  - "The sky is grey and the grass is green."
 srsWords: "sky" "blue" "grass" "green"
 
 [listening]
@@ -246,9 +246,9 @@ text: "She is wearing a red jacket."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is wearing a red jacket." (correct)
   - "She is wearing an orange jacket."
   - "She is carrying a red jacket."
+  - "She is wearing a red jacket." (correct)
 srsWords: "wearing" "red" "jacket"
 
 [listening]
@@ -257,8 +257,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "The white dog is very clean." (correct)
-  - "The black dog is very clean."
   - "The white cat is very clean."
+  - "The black dog is very clean."
 srsWords: "white" "dog" "clean"
 
 [listening]
@@ -267,8 +267,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "He has a black car and a grey bicycle." (correct)
-  - "He has a blue car and a grey bicycle."
   - "He has a black car and a black bicycle."
+  - "He has a blue car and a grey bicycle."
 srsWords: "black" "car" "grey" "bicycle"
 
 [listening]
@@ -276,9 +276,9 @@ text: "The yellow sun is shining brightly."
 ttsLang: en-US
 mode: choices
 choices:
+  - "The yellow moon is shining brightly."
   - "The yellow sun is shining brightly." (correct)
   - "The orange sun is shining brightly."
-  - "The yellow moon is shining brightly."
 srsWords: "yellow" "sun" "shining"
 
 [listening]
@@ -286,8 +286,8 @@ text: "She paints her walls light blue."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She paints her walls light blue." (correct)
   - "She paints her walls dark blue."
+  - "She paints her walls light blue." (correct)
   - "She paints her ceiling light blue."
 srsWords: "paints" "walls" "light"
 
@@ -296,9 +296,9 @@ text: "The roses in the garden are pink and red."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The roses in the garden are pink and red." (correct)
   - "The flowers in the garden are pink and red."
   - "The roses in the park are pink and red."
+  - "The roses in the garden are pink and red." (correct)
 srsWords: "roses" "garden" "pink"
 
 [listening]
@@ -306,9 +306,9 @@ text: "My favourite colour is purple."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My favourite colour is purple." (correct)
   - "My favourite colour is violet."
   - "Her favourite colour is purple."
+  - "My favourite colour is purple." (correct)
 srsWords: "favourite" "colour" "purple"
 
 [listening]
@@ -316,8 +316,8 @@ text: "The brown cat is sitting on the orange sofa."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The brown cat is sitting on the orange sofa." (correct)
   - "The grey cat is sitting on the orange sofa."
+  - "The brown cat is sitting on the orange sofa." (correct)
   - "The brown cat is sleeping on the orange sofa."
 srsWords: "brown" "orange" "sofa" "sitting"
 
@@ -343,9 +343,9 @@ text: "The circle is red and the square is blue."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The circle is red and the square is blue." (correct)
-  - "The circle is blue and the square is red."
   - "The circle is red and the rectangle is blue."
+  - "The circle is blue and the square is red."
+  - "The circle is red and the square is blue." (correct)
 srsWords: "circle" "red" "square" "blue"
 
 [listening]
@@ -353,9 +353,9 @@ text: "A triangle has three sides."
 ttsLang: en-US
 mode: choices
 choices:
-  - "A triangle has three sides." (correct)
   - "A triangle has four sides."
   - "A rectangle has three sides."
+  - "A triangle has three sides." (correct)
 srsWords: "triangle" "three" "sides"
 
 [listening]
@@ -363,9 +363,9 @@ text: "The room has a rectangular shape."
 ttsLang: en-US
 mode: choices
 choices:
+  - "The hall has a rectangular shape."
   - "The room has a rectangular shape." (correct)
   - "The room has a square shape."
-  - "The hall has a rectangular shape."
 srsWords: "room" "rectangular" "shape"
 
 [listening]
@@ -373,8 +373,8 @@ text: "She drew a big yellow star."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She drew a big yellow star." (correct)
   - "She drew a small yellow star."
+  - "She drew a big yellow star." (correct)
   - "He drew a big yellow star."
 srsWords: "drew" "star" "yellow"
 
@@ -393,9 +393,9 @@ text: "A rectangle is longer than it is wide."
 ttsLang: en-US
 mode: choices
 choices:
-  - "A rectangle is longer than it is wide." (correct)
-  - "A rectangle is shorter than it is wide."
   - "A square is longer than it is wide."
+  - "A rectangle is shorter than it is wide."
+  - "A rectangle is longer than it is wide." (correct)
 srsWords: "rectangle" "longer" "wide"
 
 [listening]
@@ -403,8 +403,8 @@ text: "Can you draw a circle and a triangle?"
 ttsLang: en-US
 mode: choices
 choices:
-  - "Can you draw a circle and a triangle?" (correct)
   - "Can you draw a circle and a rectangle?"
+  - "Can you draw a circle and a triangle?" (correct)
   - "Can you paint a circle and a triangle?"
 srsWords: "draw" "circle" "triangle"
 
@@ -413,9 +413,9 @@ text: "The clock is round. The door is rectangular."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The clock is round. The door is rectangular." (correct)
   - "The clock is square. The door is rectangular."
   - "The clock is round. The window is rectangular."
+  - "The clock is round. The door is rectangular." (correct)
 srsWords: "clock" "round" "door"
 
 [listening]
@@ -423,9 +423,9 @@ text: "The diamond shape has four equal sides."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The diamond shape has four equal sides." (correct)
-  - "The diamond shape has three equal sides."
   - "The square shape has four equal sides."
+  - "The diamond shape has three equal sides."
+  - "The diamond shape has four equal sides." (correct)
 srsWords: "diamond" "four" "equal"
 
 [listening]
@@ -433,9 +433,9 @@ text: "She is cutting the pizza into eight triangles."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is cutting the pizza into eight triangles." (correct)
-  - "She is cutting the pizza into six triangles."
   - "He is cutting the pizza into eight triangles."
+  - "She is cutting the pizza into six triangles."
+  - "She is cutting the pizza into eight triangles." (correct)
 srsWords: "cutting" "pizza" "eight"
 
 ---
@@ -451,8 +451,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "I need a pen, a pencil, and a ruler." (correct)
-  - "I need a pen, a pencil, and an eraser."
   - "I need a pen, a book, and a ruler."
+  - "I need a pen, a pencil, and an eraser."
 srsWords: "pen" "pencil" "ruler"
 
 [listening]
@@ -460,9 +460,9 @@ text: "She has a red pencil case full of pens."
 ttsLang: en-US
 mode: choices
 choices:
+  - "She has a red bag full of pens."
   - "She has a red pencil case full of pens." (correct)
   - "She has a blue pencil case full of pens."
-  - "She has a red bag full of pens."
 srsWords: "pencil case" "full" "pens"
 
 [listening]
@@ -470,9 +470,9 @@ text: "The eraser is on the desk next to the notebook."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The eraser is on the desk next to the notebook." (correct)
-  - "The eraser is in the bag next to the notebook."
   - "The pencil is on the desk next to the notebook."
+  - "The eraser is in the bag next to the notebook."
+  - "The eraser is on the desk next to the notebook." (correct)
 srsWords: "eraser" "desk" "notebook"
 
 [listening]
@@ -480,8 +480,8 @@ text: "Please open your textbooks to page twelve."
 ttsLang: en-US
 mode: choices
 choices:
-  - "Please open your textbooks to page twelve." (correct)
   - "Please close your textbooks to page twelve."
+  - "Please open your textbooks to page twelve." (correct)
   - "Please open your notebooks to page twelve."
 srsWords: "open" "textbooks" "page" "twelve"
 
@@ -490,9 +490,9 @@ text: "He uses a compass to draw a perfect circle."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He uses a compass to draw a perfect circle." (correct)
   - "She uses a compass to draw a perfect circle."
   - "He uses a compass to measure a circle."
+  - "He uses a compass to draw a perfect circle." (correct)
 srsWords: "compass" "draw" "perfect" "circle"
 
 [listening]
@@ -500,9 +500,9 @@ text: "The scissors are in the drawer."
 ttsLang: en-US
 mode: choices
 choices:
+  - "The ruler is in the drawer."
   - "The scissors are in the drawer." (correct)
   - "The scissors are on the table."
-  - "The ruler is in the drawer."
 srsWords: "scissors" "drawer"
 
 [listening]
@@ -511,8 +511,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "She is writing with a blue ballpoint pen." (correct)
-  - "She is drawing with a blue ballpoint pen."
   - "She is writing with a red ballpoint pen."
+  - "She is drawing with a blue ballpoint pen."
 srsWords: "writing" "ballpoint"
 
 [listening]
@@ -520,9 +520,9 @@ text: "We use a calculator in maths class."
 ttsLang: en-US
 mode: choices
 choices:
+  - "We use a calculator in science class."
   - "We use a calculator in maths class." (correct)
   - "We use a computer in maths class."
-  - "We use a calculator in science class."
 srsWords: "calculator" "maths" "class"
 
 [listening]
@@ -530,9 +530,9 @@ text: "Please put your books in your schoolbag."
 ttsLang: en-US
 mode: choices
 choices:
+  - "Please put your notebooks in your schoolbag."
   - "Please put your books in your schoolbag." (correct)
   - "Please take your books out of your schoolbag."
-  - "Please put your notebooks in your schoolbag."
 srsWords: "put" "books" "schoolbag"
 
 [listening]
@@ -558,8 +558,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "The spoon is in the drawer." (correct)
-  - "The fork is in the drawer."
   - "The spoon is on the counter."
+  - "The fork is in the drawer."
 srsWords: "spoon" "drawer"
 
 [listening]
@@ -577,9 +577,9 @@ text: "I need a knife to cut the bread."
 ttsLang: en-US
 mode: choices
 choices:
+  - "I need a knife to slice the cake."
   - "I need a knife to cut the bread." (correct)
   - "I need a scissors to cut the bread."
-  - "I need a knife to slice the cake."
 srsWords: "knife" "cut" "bread"
 
 [listening]
@@ -587,9 +587,9 @@ text: "The kettle is boiling. Would you like some tea?"
 ttsLang: en-US
 mode: choices
 choices:
-  - "The kettle is boiling. Would you like some tea?" (correct)
-  - "The kettle is ready. Would you like some coffee?"
   - "The pot is boiling. Would you like some tea?"
+  - "The kettle is ready. Would you like some coffee?"
+  - "The kettle is boiling. Would you like some tea?" (correct)
 srsWords: "kettle" "boiling" "tea"
 
 [listening]
@@ -597,9 +597,9 @@ text: "She puts the food in the fridge."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She puts the food in the fridge." (correct)
-  - "She takes the food from the fridge."
   - "He puts the food in the fridge."
+  - "She takes the food from the fridge."
+  - "She puts the food in the fridge." (correct)
 srsWords: "puts" "food" "fridge"
 
 [listening]
@@ -618,8 +618,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "The glasses are on the top shelf." (correct)
-  - "The cups are on the top shelf."
   - "The glasses are on the bottom shelf."
+  - "The cups are on the top shelf."
 srsWords: "glasses" "top" "shelf"
 
 [listening]
@@ -628,8 +628,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "Please dry the dishes with this cloth." (correct)
-  - "Please clean the dishes with this cloth."
   - "Please wash the dishes with this cloth."
+  - "Please clean the dishes with this cloth."
 srsWords: "dry" "dishes" "cloth"
 
 [listening]
@@ -637,9 +637,9 @@ text: "The oven is hot. Be careful!"
 ttsLang: en-US
 mode: choices
 choices:
-  - "The oven is hot. Be careful!" (correct)
-  - "The stove is hot. Be careful!"
   - "The oven is on. Watch out!"
+  - "The stove is hot. Be careful!"
+  - "The oven is hot. Be careful!" (correct)
 srsWords: "oven" "hot" "careful"
 
 [listening]
@@ -647,9 +647,9 @@ text: "She pours the juice into two glasses."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She pours the juice into two glasses." (correct)
   - "She pours the water into two glasses."
   - "She pours the juice into one glass."
+  - "She pours the juice into two glasses." (correct)
 srsWords: "pours" "juice" "glasses"
 
 ---
@@ -664,9 +664,9 @@ text: "My bed is next to the window."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My bed is next to the window." (correct)
   - "My desk is next to the window."
   - "My bed is opposite the window."
+  - "My bed is next to the window." (correct)
 srsWords: "bed" "next" "window"
 
 [listening]
@@ -674,9 +674,9 @@ text: "She has a large wardrobe full of clothes."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She has a large wardrobe full of clothes." (correct)
   - "She has a small wardrobe full of clothes."
   - "She has a large drawer full of clothes."
+  - "She has a large wardrobe full of clothes." (correct)
 srsWords: "wardrobe" "full" "clothes"
 
 [listening]
@@ -684,9 +684,9 @@ text: "He is looking in the mirror."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He is looking in the mirror." (correct)
-  - "She is looking in the mirror."
   - "He is cleaning the mirror."
+  - "She is looking in the mirror."
+  - "He is looking in the mirror." (correct)
 srsWords: "looking" "mirror"
 
 [listening]
@@ -694,9 +694,9 @@ text: "The towel is on the hook near the shower."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The towel is on the hook near the shower." (correct)
-  - "The towel is on the floor near the shower."
   - "The robe is on the hook near the shower."
+  - "The towel is on the floor near the shower."
+  - "The towel is on the hook near the shower." (correct)
 srsWords: "towel" "hook" "shower"
 
 [listening]
@@ -715,8 +715,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "The alarm clock wakes me up at seven." (correct)
-  - "The alarm clock wakes me up at six."
   - "My phone wakes me up at seven."
+  - "The alarm clock wakes me up at six."
 srsWords: "alarm clock" "wakes" "seven"
 
 [listening]
@@ -724,9 +724,9 @@ text: "I put my dirty clothes in the laundry basket."
 ttsLang: en-US
 mode: choices
 choices:
+  - "I put my dirty clothes in the wardrobe."
   - "I put my dirty clothes in the laundry basket." (correct)
   - "I put my clean clothes in the laundry basket."
-  - "I put my dirty clothes in the wardrobe."
 srsWords: "dirty" "clothes" "laundry"
 
 [listening]
@@ -744,9 +744,9 @@ text: "She reads a book in bed every night."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She reads a book in bed every night." (correct)
   - "She watches TV in bed every night."
   - "He reads a book in bed every night."
+  - "She reads a book in bed every night." (correct)
 srsWords: "reads" "book" "bed" "night"
 
 [listening]
@@ -754,8 +754,8 @@ text: "The pillow is very soft and comfortable."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The pillow is very soft and comfortable." (correct)
   - "The blanket is very soft and comfortable."
+  - "The pillow is very soft and comfortable." (correct)
   - "The pillow is very hard and comfortable."
 srsWords: "pillow" "soft" "comfortable"
 
@@ -771,9 +771,9 @@ text: "She is wearing a white blouse and black trousers."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is wearing a white blouse and black trousers." (correct)
-  - "She is wearing a white shirt and black trousers."
   - "She is wearing a white blouse and grey trousers."
+  - "She is wearing a white shirt and black trousers."
+  - "She is wearing a white blouse and black trousers." (correct)
 srsWords: "blouse" "trousers"
 
 [listening]
@@ -791,9 +791,9 @@ text: "I bought a new pair of trainers."
 ttsLang: en-US
 mode: choices
 choices:
+  - "She bought a new pair of trainers."
   - "I bought a new pair of trainers." (correct)
   - "I bought a new pair of boots."
-  - "She bought a new pair of trainers."
 srsWords: "bought" "pair" "trainers"
 
 [listening]
@@ -811,9 +811,9 @@ text: "He is wearing a tie and a smart jacket."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He is wearing a tie and a smart jacket." (correct)
-  - "He is wearing a tie and a casual jacket."
   - "She is wearing a tie and a smart jacket."
+  - "He is wearing a tie and a casual jacket."
+  - "He is wearing a tie and a smart jacket." (correct)
 srsWords: "wearing" "tie" "smart"
 
 [listening]
@@ -831,9 +831,9 @@ text: "She is wearing a beautiful silver necklace."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is wearing a beautiful silver necklace." (correct)
-  - "She is wearing a beautiful gold necklace."
   - "She is carrying a beautiful silver necklace."
+  - "She is wearing a beautiful gold necklace."
+  - "She is wearing a beautiful silver necklace." (correct)
 srsWords: "silver" "necklace" "beautiful"
 
 [listening]
@@ -841,9 +841,9 @@ text: "He always wears a watch on his left wrist."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He always wears a watch on his left wrist." (correct)
-  - "He always wears a watch on his right wrist."
   - "She always wears a watch on her left wrist."
+  - "He always wears a watch on his right wrist."
+  - "He always wears a watch on his left wrist." (correct)
 srsWords: "wears" "watch" "wrist"
 
 [listening]
@@ -852,8 +852,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "My coat has big pockets. Very useful!" (correct)
-  - "My jacket has big pockets. Very useful!"
   - "My coat has small pockets. Very useful!"
+  - "My jacket has big pockets. Very useful!"
 srsWords: "coat" "pockets" "useful"
 
 [listening]
@@ -878,9 +878,9 @@ text: "My phone battery is low. I need to charge it."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My phone battery is low. I need to charge it." (correct)
   - "My phone battery is dead. I need to charge it."
   - "My laptop battery is low. I need to charge it."
+  - "My phone battery is low. I need to charge it." (correct)
 srsWords: "phone" "battery" "charge"
 
 [listening]
@@ -888,9 +888,9 @@ text: "She is typing an email on her laptop."
 ttsLang: en-US
 mode: choices
 choices:
+  - "She is reading an email on her laptop."
   - "She is typing an email on her laptop." (correct)
   - "She is writing an email on her laptop."
-  - "She is reading an email on her laptop."
 srsWords: "typing" "email" "laptop"
 
 [listening]
@@ -898,9 +898,9 @@ text: "The television is on the wall."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The television is on the wall." (correct)
   - "The television is in the cabinet."
   - "The screen is on the wall."
+  - "The television is on the wall." (correct)
 srsWords: "television" "wall"
 
 [listening]
@@ -908,8 +908,8 @@ text: "He is listening to music on his headphones."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He is listening to music on his headphones." (correct)
   - "She is listening to music on her headphones."
+  - "He is listening to music on his headphones." (correct)
   - "He is listening to a podcast on his headphones."
 srsWords: "listening" "music" "headphones"
 
@@ -919,8 +919,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "The printer is out of ink." (correct)
-  - "The scanner is out of ink."
   - "The printer is out of paper."
+  - "The scanner is out of ink."
 srsWords: "printer" "ink"
 
 [listening]
@@ -938,9 +938,9 @@ text: "Can I use your charger? My phone is dead."
 ttsLang: en-US
 mode: choices
 choices:
-  - "Can I use your charger? My phone is dead." (correct)
   - "Can I borrow your charger? My phone is dead."
   - "Can I use your charger? My laptop is dead."
+  - "Can I use your charger? My phone is dead." (correct)
 srsWords: "use" "charger" "dead"
 
 [listening]
@@ -949,8 +949,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "He is playing a video game on his tablet." (correct)
-  - "He is watching a video on his tablet."
   - "She is playing a video game on her tablet."
+  - "He is watching a video on his tablet."
 srsWords: "playing" "video game" "tablet"
 
 [listening]
@@ -959,8 +959,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "The Wi-Fi is not working. I can't connect." (correct)
-  - "The internet is slow. I can't connect."
   - "The Wi-Fi is not working. I can't log in."
+  - "The internet is slow. I can't connect."
 srsWords: "Wi-Fi" "working" "connect"
 
 [listening]
@@ -968,9 +968,9 @@ text: "She uses a smart speaker to play music."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She uses a smart speaker to play music." (correct)
   - "He uses a smart speaker to play music."
   - "She uses a speaker to listen to music."
+  - "She uses a smart speaker to play music." (correct)
 srsWords: "smart" "speaker" "play" "music"
 
 ---
@@ -995,9 +995,9 @@ text: "The bookshelf is full of books and magazines."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The bookshelf is full of books and magazines." (correct)
   - "The bookshelf is full of books and newspapers."
   - "The shelves are full of books and magazines."
+  - "The bookshelf is full of books and magazines." (correct)
 srsWords: "bookshelf" "full" "magazines"
 
 [listening]
@@ -1005,8 +1005,8 @@ text: "There is a lamp on the bedside table."
 ttsLang: en-US
 mode: choices
 choices:
-  - "There is a lamp on the bedside table." (correct)
   - "There is an alarm on the bedside table."
+  - "There is a lamp on the bedside table." (correct)
   - "There is a lamp under the bedside table."
 srsWords: "lamp" "bedside" "table"
 
@@ -1025,9 +1025,9 @@ text: "The curtains are blue and very long."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The curtains are blue and very long." (correct)
-  - "The curtains are green and very long."
   - "The blinds are blue and very long."
+  - "The curtains are green and very long."
+  - "The curtains are blue and very long." (correct)
 srsWords: "curtains" "blue" "long"
 
 [listening]
@@ -1035,9 +1035,9 @@ text: "She puts her keys on the small table by the door."
 ttsLang: en-US
 mode: choices
 choices:
+  - "She puts her bag on the small table by the door."
   - "She puts her keys on the small table by the door." (correct)
   - "She hangs her keys on the small table by the door."
-  - "She puts her bag on the small table by the door."
 srsWords: "puts" "keys" "door"
 
 [listening]
@@ -1045,9 +1045,9 @@ text: "The dining table is round and wooden."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The dining table is round and wooden." (correct)
-  - "The coffee table is round and wooden."
   - "The dining table is square and wooden."
+  - "The coffee table is round and wooden."
+  - "The dining table is round and wooden." (correct)
 srsWords: "dining" "round" "wooden"
 
 [listening]
@@ -1055,9 +1055,9 @@ text: "The carpet in the living room is soft and dark."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The carpet in the living room is soft and dark." (correct)
-  - "The rug in the living room is soft and dark."
   - "The carpet in the bedroom is soft and dark."
+  - "The rug in the living room is soft and dark."
+  - "The carpet in the living room is soft and dark." (correct)
 srsWords: "carpet" "soft" "dark"
 
 [listening]
@@ -1065,9 +1065,9 @@ text: "He fixed the broken chair leg."
 ttsLang: en-US
 mode: choices
 choices:
+  - "He replaced the broken chair leg."
   - "He fixed the broken chair leg." (correct)
   - "She fixed the broken chair leg."
-  - "He replaced the broken chair leg."
 srsWords: "fixed" "broken" "chair"
 
 [listening]
@@ -1092,9 +1092,9 @@ text: "He kicks the ball into the goal."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He kicks the ball into the goal." (correct)
   - "He throws the ball into the goal."
   - "She kicks the ball into the goal."
+  - "He kicks the ball into the goal." (correct)
 srsWords: "kicks" "ball" "goal"
 
 [listening]
@@ -1102,9 +1102,9 @@ text: "She is swimming with her goggles and cap."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is swimming with her goggles and cap." (correct)
   - "She is diving with her goggles and cap."
   - "He is swimming with his goggles and cap."
+  - "She is swimming with her goggles and cap." (correct)
 srsWords: "swimming" "goggles" "cap"
 
 [listening]
@@ -1112,9 +1112,9 @@ text: "He hits the tennis ball with his racket."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He hits the tennis ball with his racket." (correct)
   - "She hits the tennis ball with her racket."
   - "He throws the tennis ball with his racket."
+  - "He hits the tennis ball with his racket." (correct)
 srsWords: "hits" "tennis" "racket"
 
 [listening]
@@ -1122,9 +1122,9 @@ text: "I go for a run with my trainers every day."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I go for a run with my trainers every day." (correct)
   - "I go for a walk with my trainers every day."
   - "I go for a run in my boots every day."
+  - "I go for a run with my trainers every day." (correct)
 srsWords: "run" "trainers"
 
 [listening]
@@ -1132,9 +1132,9 @@ text: "The basketball court is behind the school."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The basketball court is behind the school." (correct)
   - "The football pitch is behind the school."
   - "The basketball court is next to the school."
+  - "The basketball court is behind the school." (correct)
 srsWords: "basketball" "court" "behind"
 
 [listening]
@@ -1142,8 +1142,8 @@ text: "She lifts weights at the gym three times a week."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She lifts weights at the gym three times a week." (correct)
   - "He lifts weights at the gym three times a week."
+  - "She lifts weights at the gym three times a week." (correct)
   - "She lifts weights at home three times a week."
 srsWords: "lifts" "weights" "gym" "times"
 
@@ -1163,8 +1163,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "She is doing yoga in the garden." (correct)
-  - "She is doing yoga in the park."
   - "He is doing yoga in the garden."
+  - "She is doing yoga in the park."
 srsWords: "doing" "yoga" "garden"
 
 [listening]
@@ -1173,8 +1173,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "The swimming pool is fifty metres long." (correct)
-  - "The swimming pool is thirty metres long."
   - "The running track is fifty metres long."
+  - "The swimming pool is thirty metres long."
 srsWords: "swimming pool" "fifty" "metres"
 
 [listening]
@@ -1182,9 +1182,9 @@ text: "He wears a helmet when he rides his bike."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He wears a helmet when he rides his bike." (correct)
   - "She wears a helmet when she rides her bike."
   - "He wears a helmet when he drives his car."
+  - "He wears a helmet when he rides his bike." (correct)
 srsWords: "wears" "helmet" "rides" "bike"
 
 ---
@@ -1199,9 +1199,9 @@ text: "The river flows through the middle of the city."
 ttsLang: en-US
 mode: choices
 choices:
+  - "The river flows near the edge of the city."
   - "The river flows through the middle of the city." (correct)
   - "The river runs through the middle of the city."
-  - "The river flows near the edge of the city."
 srsWords: "river" "flows" "middle" "city"
 
 [listening]
@@ -1219,9 +1219,9 @@ text: "The mountain is covered in snow."
 ttsLang: en-US
 mode: choices
 choices:
+  - "The mountain is covered in ice."
   - "The mountain is covered in snow." (correct)
   - "The hill is covered in snow."
-  - "The mountain is covered in ice."
 srsWords: "mountain" "covered" "snow"
 
 [listening]
@@ -1229,9 +1229,9 @@ text: "She is picking flowers in the field."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is picking flowers in the field." (correct)
-  - "He is picking flowers in the field."
   - "She is planting flowers in the field."
+  - "He is picking flowers in the field."
+  - "She is picking flowers in the field." (correct)
 srsWords: "picking" "flowers" "field"
 
 [listening]
@@ -1239,8 +1239,8 @@ text: "The beach is beautiful in summer."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The beach is beautiful in summer." (correct)
   - "The seaside is beautiful in summer."
+  - "The beach is beautiful in summer." (correct)
   - "The beach is quiet in summer."
 srsWords: "beach" "beautiful" "summer"
 
@@ -1249,8 +1249,8 @@ text: "There is a lake in the middle of the park."
 ttsLang: en-US
 mode: choices
 choices:
-  - "There is a lake in the middle of the park." (correct)
   - "There is a pond in the middle of the park."
+  - "There is a lake in the middle of the park." (correct)
   - "There is a lake at the edge of the park."
 srsWords: "lake" "middle" "park"
 
@@ -1259,8 +1259,8 @@ text: "The sun sets behind the mountains in the evening."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The sun sets behind the mountains in the evening." (correct)
   - "The sun rises behind the mountains in the evening."
+  - "The sun sets behind the mountains in the evening." (correct)
   - "The sun sets over the ocean in the evening."
 srsWords: "sun" "sets" "mountains" "evening"
 
@@ -1270,8 +1270,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "Wild flowers grow along the path." (correct)
-  - "Wild grass grows along the path."
   - "Wild flowers grow beside the road."
+  - "Wild grass grows along the path."
 srsWords: "wild" "grow" "path"
 
 [listening]
@@ -1279,9 +1279,9 @@ text: "The sea is rough today. Don't swim."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The sea is rough today. Don't swim." (correct)
   - "The sea is calm today. Don't swim."
   - "The ocean is rough today. Don't swim."
+  - "The sea is rough today. Don't swim." (correct)
 srsWords: "sea" "rough" "swim"
 
 [listening]
@@ -1289,9 +1289,9 @@ text: "She likes to walk in the countryside at weekends."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She likes to walk in the countryside at weekends." (correct)
-  - "He likes to walk in the countryside at weekends."
   - "She likes to run in the countryside at weekends."
+  - "He likes to walk in the countryside at weekends."
+  - "She likes to walk in the countryside at weekends." (correct)
 srsWords: "walk" "countryside" "weekends"
 
 ---
@@ -1306,8 +1306,8 @@ text: "She is making a sandwich with cheese and tomato."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is making a sandwich with cheese and tomato." (correct)
   - "She is eating a sandwich with cheese and tomato."
+  - "She is making a sandwich with cheese and tomato." (correct)
   - "She is making a sandwich with ham and tomato."
 srsWords: "making" "sandwich" "cheese" "tomato"
 
@@ -1316,9 +1316,9 @@ text: "I drink a glass of orange juice every morning."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I drink a glass of orange juice every morning." (correct)
-  - "I drink a cup of orange juice every morning."
   - "I drink a glass of apple juice every morning."
+  - "I drink a cup of orange juice every morning."
+  - "I drink a glass of orange juice every morning." (correct)
 srsWords: "glass" "orange" "juice" "morning"
 
 [listening]
@@ -1326,9 +1326,9 @@ text: "He eats a bowl of cereal for breakfast."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He eats a bowl of cereal for breakfast." (correct)
   - "She eats a bowl of cereal for breakfast."
   - "He eats a bowl of porridge for breakfast."
+  - "He eats a bowl of cereal for breakfast." (correct)
 srsWords: "bowl" "cereal" "breakfast"
 
 [listening]
@@ -1336,8 +1336,8 @@ text: "The soup is hot. Please be careful."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The soup is hot. Please be careful." (correct)
   - "The soup is cold. Please be careful."
+  - "The soup is hot. Please be careful." (correct)
   - "The stew is hot. Please be careful."
 srsWords: "soup" "hot" "careful"
 
@@ -1367,8 +1367,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "He is grilling fish for dinner tonight." (correct)
-  - "He is frying fish for dinner tonight."
   - "She is grilling fish for dinner tonight."
+  - "He is frying fish for dinner tonight."
 srsWords: "grilling" "fish" "dinner" "tonight"
 
 [listening]
@@ -1376,8 +1376,8 @@ text: "She buys fresh fruit and vegetables every week."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She buys fresh fruit and vegetables every week." (correct)
   - "He buys fresh fruit and vegetables every week."
+  - "She buys fresh fruit and vegetables every week." (correct)
   - "She buys fresh fruit and vegetables every day."
 srsWords: "buys" "fresh" "fruit" "vegetables"
 
@@ -1386,9 +1386,9 @@ text: "I want a hot chocolate with cream on top."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I want a hot chocolate with cream on top." (correct)
   - "I want a hot coffee with cream on top."
   - "I want a cold chocolate with cream on top."
+  - "I want a hot chocolate with cream on top." (correct)
 srsWords: "chocolate" "cream" "top"
 
 [listening]
@@ -1397,8 +1397,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "This cake is delicious! Did you bake it?" (correct)
-  - "This pie is delicious! Did you bake it?"
   - "This cake is amazing! Did you make it?"
+  - "This pie is delicious! Did you bake it?"
 srsWords: "cake" "delicious" "bake"
 
 ---
@@ -1413,9 +1413,9 @@ text: "Excuse me, where is the bread section?"
 ttsLang: en-US
 mode: choices
 choices:
+  - "Sorry, where is the bread section?"
   - "Excuse me, where is the bread section?" (correct)
   - "Excuse me, where is the fruit section?"
-  - "Sorry, where is the bread section?"
 srsWords: "excuse" "bread" "section"
 
 [listening]
@@ -1423,9 +1423,9 @@ text: "How much does this shirt cost?"
 ttsLang: en-US
 mode: choices
 choices:
-  - "How much does this shirt cost?" (correct)
   - "How much is this shirt?"
   - "What is the price of this shirt?"
+  - "How much does this shirt cost?" (correct)
 srsWords: "shirt" "cost"
 
 [listening]
@@ -1434,8 +1434,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "I am looking for size medium in this jacket." (correct)
-  - "I am looking for size large in this jacket."
   - "I am searching for size medium in this jacket."
+  - "I am looking for size large in this jacket."
 srsWords: "looking" "size" "medium" "jacket"
 
 [listening]
@@ -1443,9 +1443,9 @@ text: "The shop has a big sale today."
 ttsLang: en-US
 mode: choices
 choices:
+  - "The shop has a big sale tomorrow."
   - "The shop has a big sale today." (correct)
   - "The market has a big sale today."
-  - "The shop has a big sale tomorrow."
 srsWords: "shop" "sale" "today"
 
 [listening]
@@ -1463,9 +1463,9 @@ text: "These apples are three for a pound."
 ttsLang: en-US
 mode: choices
 choices:
-  - "These apples are three for a pound." (correct)
-  - "These apples are two for a pound."
   - "These oranges are three for a pound."
+  - "These apples are two for a pound."
+  - "These apples are three for a pound." (correct)
 srsWords: "apples" "three" "pound"
 
 [listening]
@@ -1473,8 +1473,8 @@ text: "The changing rooms are at the back of the store."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The changing rooms are at the back of the store." (correct)
   - "The changing rooms are at the front of the store."
+  - "The changing rooms are at the back of the store." (correct)
   - "The toilets are at the back of the store."
 srsWords: "changing rooms" "back" "store"
 
@@ -1483,9 +1483,9 @@ text: "I would like to return this dress please."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I would like to return this dress please." (correct)
-  - "I would like to exchange this dress please."
   - "I want to return this jacket please."
+  - "I would like to exchange this dress please."
+  - "I would like to return this dress please." (correct)
 srsWords: "return" "dress"
 
 [listening]
@@ -1493,9 +1493,9 @@ text: "There is a discount of twenty percent today."
 ttsLang: en-US
 mode: choices
 choices:
-  - "There is a discount of twenty percent today." (correct)
   - "There is a sale of twenty percent today."
   - "There is a discount of thirty percent today."
+  - "There is a discount of twenty percent today." (correct)
 srsWords: "discount" "twenty" "percent"
 
 [listening]
@@ -1503,9 +1503,9 @@ text: "The supermarket is open until ten o'clock."
 ttsLang: en-US
 mode: choices
 choices:
+  - "The shop is open until ten o'clock."
   - "The supermarket is open until ten o'clock." (correct)
   - "The supermarket closes at ten o'clock."
-  - "The shop is open until ten o'clock."
 srsWords: "supermarket" "open" "until"
 
 ---
@@ -1520,8 +1520,8 @@ text: "The cat is under the table."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The cat is under the table." (correct)
   - "The cat is on the table."
+  - "The cat is under the table." (correct)
   - "The dog is under the table."
 srsWords: "cat" "under" "table"
 
@@ -1530,9 +1530,9 @@ text: "The keys are behind the door."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The keys are behind the door." (correct)
   - "The keys are in front of the door."
   - "The bag is behind the door."
+  - "The keys are behind the door." (correct)
 srsWords: "keys" "behind" "door"
 
 [listening]
@@ -1550,9 +1550,9 @@ text: "The lamp is next to the bed."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The lamp is next to the bed." (correct)
   - "The lamp is above the bed."
   - "The clock is next to the bed."
+  - "The lamp is next to the bed." (correct)
 srsWords: "lamp" "next" "bed"
 
 [listening]
@@ -1561,8 +1561,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "The bird is sitting on top of the tree." (correct)
-  - "The bird is flying above the tree."
   - "The cat is sitting on top of the tree."
+  - "The bird is flying above the tree."
 srsWords: "bird" "sitting" "top" "tree"
 
 [listening]
@@ -1580,9 +1580,9 @@ text: "The shop is opposite the bank."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The shop is opposite the bank." (correct)
   - "The shop is next to the bank."
   - "The café is opposite the bank."
+  - "The shop is opposite the bank." (correct)
 srsWords: "shop" "opposite" "bank"
 
 [listening]
@@ -1600,8 +1600,8 @@ text: "The children are playing in front of the school."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The children are playing in front of the school." (correct)
   - "The children are playing behind the school."
+  - "The children are playing in front of the school." (correct)
   - "The students are playing in front of the school."
 srsWords: "children" "playing" "front"
 
@@ -1610,9 +1610,9 @@ text: "The small café is at the end of the road."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The small café is at the end of the road." (correct)
-  - "The small shop is at the end of the road."
   - "The small café is at the start of the road."
+  - "The small shop is at the end of the road."
+  - "The small café is at the end of the road." (correct)
 srsWords: "café" "end" "road"
 
 ---
@@ -1627,9 +1627,9 @@ text: "This is a very large box."
 ttsLang: en-US
 mode: choices
 choices:
+  - "This is a very heavy box."
   - "This is a very large box." (correct)
   - "This is a very small box."
-  - "This is a very heavy box."
 srsWords: "large" "box"
 
 [listening]
@@ -1637,9 +1637,9 @@ text: "She has a lot of friends at school."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She has a lot of friends at school." (correct)
-  - "She has a few friends at school."
   - "He has a lot of friends at school."
+  - "She has a few friends at school."
+  - "She has a lot of friends at school." (correct)
 srsWords: "lot" "friends" "school"
 
 [listening]
@@ -1647,9 +1647,9 @@ text: "There is a little milk left in the bottle."
 ttsLang: en-US
 mode: choices
 choices:
-  - "There is a little milk left in the bottle." (correct)
   - "There is no milk left in the bottle."
   - "There is a lot of milk left in the bottle."
+  - "There is a little milk left in the bottle." (correct)
 srsWords: "little" "milk" "bottle"
 
 [listening]
@@ -1657,9 +1657,9 @@ text: "He eats a small amount of sugar."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He eats a small amount of sugar." (correct)
   - "She eats a small amount of sugar."
   - "He eats a large amount of sugar."
+  - "He eats a small amount of sugar." (correct)
 srsWords: "small" "amount" "sugar"
 
 [listening]
@@ -1668,8 +1668,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "This building is very tall and narrow." (correct)
-  - "This building is very short and narrow."
   - "This tower is very tall and narrow."
+  - "This building is very short and narrow."
 srsWords: "building" "tall" "narrow"
 
 [listening]
@@ -1678,8 +1678,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "We need fewer chairs. There are too many." (correct)
-  - "We need more chairs. There are too few."
   - "We need fewer tables. There are too many."
+  - "We need more chairs. There are too few."
 srsWords: "fewer" "chairs" "many"
 
 [listening]
@@ -1687,8 +1687,8 @@ text: "She has a huge collection of books."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She has a huge collection of books." (correct)
   - "He has a huge collection of books."
+  - "She has a huge collection of books." (correct)
   - "She has a small collection of books."
 srsWords: "huge" "collection" "books"
 
@@ -1707,9 +1707,9 @@ text: "There is enough food for everyone."
 ttsLang: en-US
 mode: choices
 choices:
+  - "There is not enough food for everyone."
   - "There is enough food for everyone." (correct)
   - "There is plenty of food for everyone."
-  - "There is not enough food for everyone."
 srsWords: "enough" "food" "everyone"
 
 [listening]
@@ -1718,8 +1718,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "He drinks too much coffee every day." (correct)
-  - "She drinks too much coffee every day."
   - "He drinks too little coffee every day."
+  - "She drinks too much coffee every day."
 srsWords: "too" "much" "coffee"
 
 ---
@@ -1734,9 +1734,9 @@ text: "Excuse me, how do I get to the station?"
 ttsLang: en-US
 mode: choices
 choices:
-  - "Excuse me, how do I get to the station?" (correct)
   - "Excuse me, where is the station?"
   - "Pardon me, how do I get to the station?"
+  - "Excuse me, how do I get to the station?" (correct)
 srsWords: "excuse" "station" "get"
 
 [listening]
@@ -1744,9 +1744,9 @@ text: "Turn right at the next corner."
 ttsLang: en-US
 mode: choices
 choices:
+  - "Go straight at the next corner."
   - "Turn right at the next corner." (correct)
   - "Turn left at the next corner."
-  - "Go straight at the next corner."
 srsWords: "turn" "right" "corner"
 
 [listening]
@@ -1754,9 +1754,9 @@ text: "Go straight ahead for two hundred metres."
 ttsLang: en-US
 mode: choices
 choices:
+  - "Walk straight ahead for two hundred metres."
   - "Go straight ahead for two hundred metres." (correct)
   - "Go straight ahead for one hundred metres."
-  - "Walk straight ahead for two hundred metres."
 srsWords: "straight" "ahead" "metres"
 
 [listening]
@@ -1764,9 +1764,9 @@ text: "The hospital is on your left."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The hospital is on your left." (correct)
-  - "The hospital is on your right."
   - "The school is on your left."
+  - "The hospital is on your right."
+  - "The hospital is on your left." (correct)
 srsWords: "hospital" "left"
 
 [listening]
@@ -1774,9 +1774,9 @@ text: "Take the second street on the right."
 ttsLang: en-US
 mode: choices
 choices:
+  - "Take the second street on the left."
   - "Take the second street on the right." (correct)
   - "Take the first street on the right."
-  - "Take the second street on the left."
 srsWords: "take" "second" "street" "right"
 
 [listening]
@@ -1784,8 +1784,8 @@ text: "It is about a ten-minute walk from here."
 ttsLang: en-US
 mode: choices
 choices:
-  - "It is about a ten-minute walk from here." (correct)
   - "It is about a twenty-minute walk from here."
+  - "It is about a ten-minute walk from here." (correct)
   - "It is about a ten-minute drive from here."
 srsWords: "ten-minute" "walk" "here"
 
@@ -1794,8 +1794,8 @@ text: "The market is just around the corner."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The market is just around the corner." (correct)
   - "The bakery is just around the corner."
+  - "The market is just around the corner." (correct)
   - "The market is just down the road."
 srsWords: "market" "around" "corner"
 
@@ -1804,9 +1804,9 @@ text: "Cross the bridge and then turn left."
 ttsLang: en-US
 mode: choices
 choices:
+  - "Go over the bridge and then turn left."
   - "Cross the bridge and then turn left." (correct)
   - "Cross the bridge and then turn right."
-  - "Go over the bridge and then turn left."
 srsWords: "cross" "bridge" "turn" "left"
 
 [listening]
@@ -1814,9 +1814,9 @@ text: "I am sorry, I don't know this area."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I am sorry, I don't know this area." (correct)
-  - "I am sorry, I don't live near here."
   - "Excuse me, I don't know this area."
+  - "I am sorry, I don't live near here."
+  - "I am sorry, I don't know this area." (correct)
 srsWords: "sorry" "know" "area"
 
 [listening]
@@ -1824,9 +1824,9 @@ text: "You can't miss it. It's a big red building."
 ttsLang: en-US
 mode: choices
 choices:
-  - "You can't miss it. It's a big red building." (correct)
   - "You can't miss it. It's a tall white building."
   - "You won't miss it. It's a big red building."
+  - "You can't miss it. It's a big red building." (correct)
 srsWords: "miss" "big" "red" "building"
 
 ---
@@ -1842,8 +1842,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "This book is very interesting." (correct)
-  - "This book is very boring."
   - "This film is very interesting."
+  - "This book is very boring."
 srsWords: "interesting" "book"
 
 [listening]
@@ -1861,9 +1861,9 @@ text: "She is a very kind and patient person."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is a very kind and patient person." (correct)
-  - "She is a very kind and gentle person."
   - "He is a very kind and patient person."
+  - "She is a very kind and gentle person."
+  - "She is a very kind and patient person." (correct)
 srsWords: "kind" "patient" "person"
 
 [listening]
@@ -1871,9 +1871,9 @@ text: "The weather is very nice today."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The weather is very nice today." (correct)
-  - "The weather is very good today."
   - "The temperature is very nice today."
+  - "The weather is very good today."
+  - "The weather is very nice today." (correct)
 srsWords: "weather" "nice" "today"
 
 [listening]
@@ -1881,9 +1881,9 @@ text: "He is an honest and hardworking man."
 ttsLang: en-US
 mode: choices
 choices:
+  - "She is an honest and hardworking woman."
   - "He is an honest and hardworking man." (correct)
   - "He is a kind and hardworking man."
-  - "She is an honest and hardworking woman."
 srsWords: "honest" "hardworking" "man"
 
 [listening]
@@ -1891,9 +1891,9 @@ text: "This problem is quite difficult."
 ttsLang: en-US
 mode: choices
 choices:
-  - "This problem is quite difficult." (correct)
   - "This problem is very easy."
   - "This question is quite difficult."
+  - "This problem is quite difficult." (correct)
 srsWords: "problem" "difficult"
 
 [listening]
@@ -1921,9 +1921,9 @@ text: "The old castle is dark and mysterious."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The old castle is dark and mysterious." (correct)
-  - "The old house is dark and mysterious."
   - "The old castle is cold and mysterious."
+  - "The old house is dark and mysterious."
+  - "The old castle is dark and mysterious." (correct)
 srsWords: "castle" "dark" "mysterious"
 
 [listening]
@@ -1948,9 +1948,9 @@ text: "She is running in the park."
 ttsLang: en-US
 mode: choices
 choices:
+  - "He is running in the park."
   - "She is running in the park." (correct)
   - "She is jogging in the park."
-  - "He is running in the park."
 srsWords: "running" "park"
 
 [listening]
@@ -1968,9 +1968,9 @@ text: "They are dancing at the party."
 ttsLang: en-US
 mode: choices
 choices:
-  - "They are dancing at the party." (correct)
   - "They are singing at the party."
   - "We are dancing at the party."
+  - "They are dancing at the party." (correct)
 srsWords: "dancing" "party"
 
 [listening]
@@ -1978,9 +1978,9 @@ text: "She is laughing at the funny joke."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is laughing at the funny joke." (correct)
   - "She is smiling at the funny joke."
   - "He is laughing at the funny joke."
+  - "She is laughing at the funny joke." (correct)
 srsWords: "laughing" "funny" "joke"
 
 [listening]
@@ -1999,8 +1999,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "She is eating lunch at her desk." (correct)
-  - "She is having lunch at her desk."
   - "He is eating lunch at his desk."
+  - "She is having lunch at her desk."
 srsWords: "eating" "lunch" "desk"
 
 [listening]
@@ -2009,8 +2009,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "They are talking on the phone." (correct)
-  - "They are speaking on the phone."
   - "She is talking on the phone."
+  - "They are speaking on the phone."
 srsWords: "talking" "phone"
 
 [listening]
@@ -2018,9 +2018,9 @@ text: "He is painting the walls of his house."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He is painting the walls of his house." (correct)
   - "She is painting the walls of her house."
   - "He is decorating the walls of his house."
+  - "He is painting the walls of his house." (correct)
 srsWords: "painting" "walls" "house"
 
 [listening]
@@ -2028,9 +2028,9 @@ text: "She is waiting at the bus stop."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is waiting at the bus stop." (correct)
-  - "She is standing at the bus stop."
   - "He is waiting at the bus stop."
+  - "She is standing at the bus stop."
+  - "She is waiting at the bus stop." (correct)
 srsWords: "waiting" "bus stop"
 
 [listening]
@@ -2038,9 +2038,9 @@ text: "They are playing chess in the park."
 ttsLang: en-US
 mode: choices
 choices:
+  - "We are playing chess in the park."
   - "They are playing chess in the park." (correct)
   - "They are playing cards in the park."
-  - "We are playing chess in the park."
 srsWords: "playing" "chess" "park"
 
 ---
@@ -2055,9 +2055,9 @@ text: "An elephant is bigger than a cat."
 ttsLang: en-US
 mode: choices
 choices:
-  - "An elephant is bigger than a cat." (correct)
-  - "An elephant is smaller than a cat."
   - "A lion is bigger than a cat."
+  - "An elephant is smaller than a cat."
+  - "An elephant is bigger than a cat." (correct)
 srsWords: "elephant" "bigger" "cat"
 
 [listening]
@@ -2065,9 +2065,9 @@ text: "This coat is warmer than that jacket."
 ttsLang: en-US
 mode: choices
 choices:
-  - "This coat is warmer than that jacket." (correct)
-  - "This jacket is warmer than that coat."
   - "This coat is lighter than that jacket."
+  - "This jacket is warmer than that coat."
+  - "This coat is warmer than that jacket." (correct)
 srsWords: "coat" "warmer" "jacket"
 
 [listening]
@@ -2076,8 +2076,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "She is taller than her brother." (correct)
-  - "She is shorter than her brother."
   - "He is taller than his sister."
+  - "She is shorter than her brother."
 srsWords: "taller" "brother"
 
 [listening]
@@ -2085,9 +2085,9 @@ text: "This hotel is more expensive than that one."
 ttsLang: en-US
 mode: choices
 choices:
-  - "This hotel is more expensive than that one." (correct)
-  - "This hotel is cheaper than that one."
   - "That hotel is more expensive than this one."
+  - "This hotel is cheaper than that one."
+  - "This hotel is more expensive than that one." (correct)
 srsWords: "hotel" "expensive"
 
 [listening]
@@ -2095,9 +2095,9 @@ text: "Summer is hotter than winter."
 ttsLang: en-US
 mode: choices
 choices:
-  - "Summer is hotter than winter." (correct)
   - "Winter is hotter than summer."
   - "Summer is warmer than autumn."
+  - "Summer is hotter than winter." (correct)
 srsWords: "summer" "hotter" "winter"
 
 [listening]
@@ -2105,9 +2105,9 @@ text: "The blue car is faster than the red one."
 ttsLang: en-US
 mode: choices
 choices:
+  - "The blue car is slower than the red one."
   - "The blue car is faster than the red one." (correct)
   - "The red car is faster than the blue one."
-  - "The blue car is slower than the red one."
 srsWords: "car" "faster" "red"
 
 [listening]
@@ -2115,9 +2115,9 @@ text: "He is older than me by five years."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He is older than me by five years." (correct)
-  - "He is younger than me by five years."
   - "She is older than me by five years."
+  - "He is younger than me by five years."
+  - "He is older than me by five years." (correct)
 srsWords: "older" "years"
 
 [listening]
@@ -2125,9 +2125,9 @@ text: "This bag is lighter than that suitcase."
 ttsLang: en-US
 mode: choices
 choices:
-  - "This bag is lighter than that suitcase." (correct)
   - "This bag is heavier than that suitcase."
   - "This bag is smaller than that suitcase."
+  - "This bag is lighter than that suitcase." (correct)
 srsWords: "bag" "lighter" "suitcase"
 
 [listening]
@@ -2135,9 +2135,9 @@ text: "Her English is better than mine."
 ttsLang: en-US
 mode: choices
 choices:
-  - "Her English is better than mine." (correct)
-  - "His English is better than mine."
   - "Her Chinese is better than mine."
+  - "His English is better than mine."
+  - "Her English is better than mine." (correct)
 srsWords: "English" "better" "mine"
 
 [listening]
@@ -2146,8 +2146,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "The new version is much easier to use." (correct)
-  - "The old version is much easier to use."
   - "The new version is much harder to use."
+  - "The old version is much easier to use."
 srsWords: "new" "version" "easier"
 
 ---
@@ -2162,9 +2162,9 @@ text: "She wakes up at six thirty and makes breakfast."
 ttsLang: en-US
 mode: choices
 choices:
+  - "She wakes up at seven thirty and makes breakfast."
   - "She wakes up at six thirty and makes breakfast." (correct)
   - "She gets up at six thirty and makes breakfast."
-  - "She wakes up at seven thirty and makes breakfast."
 srsWords: "wakes" "six thirty" "makes" "breakfast"
 
 [listening]
@@ -2172,9 +2172,9 @@ text: "He brushes his teeth and washes his face."
 ttsLang: en-US
 mode: choices
 choices:
+  - "She brushes her teeth and washes her face."
   - "He brushes his teeth and washes his face." (correct)
   - "He cleans his teeth and washes his face."
-  - "She brushes her teeth and washes her face."
 srsWords: "brushes" "teeth" "washes" "face"
 
 [listening]
@@ -2182,9 +2182,9 @@ text: "I take the metro to work every weekday."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I take the metro to work every weekday." (correct)
-  - "I take the bus to work every weekday."
   - "I take the metro to school every weekday."
+  - "I take the bus to work every weekday."
+  - "I take the metro to work every weekday." (correct)
 srsWords: "take" "metro" "work" "weekday"
 
 [listening]
@@ -2193,8 +2193,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "She finishes work at half past five." (correct)
-  - "She starts work at half past five."
   - "He finishes work at half past five."
+  - "She starts work at half past five."
 srsWords: "finishes" "work" "five"
 
 [listening]
@@ -2202,8 +2202,8 @@ text: "I cook dinner after I come home from work."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I cook dinner after I come home from work." (correct)
   - "I eat dinner after I come home from work."
+  - "I cook dinner after I come home from work." (correct)
   - "I cook dinner before I come home from work."
 srsWords: "cook" "dinner" "home" "work"
 
@@ -2212,9 +2212,9 @@ text: "He reads the news on his phone every morning."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He reads the news on his phone every morning." (correct)
   - "She reads the news on her phone every morning."
   - "He watches the news on his phone every morning."
+  - "He reads the news on his phone every morning." (correct)
 srsWords: "reads" "news" "phone" "morning"
 
 [listening]
@@ -2222,8 +2222,8 @@ text: "She goes to the gym before work on Tuesdays."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She goes to the gym before work on Tuesdays." (correct)
   - "She goes to the gym after work on Tuesdays."
+  - "She goes to the gym before work on Tuesdays." (correct)
   - "He goes to the gym before work on Tuesdays."
 srsWords: "goes" "gym" "before" "Tuesdays"
 
@@ -2232,9 +2232,9 @@ text: "I always lock the door when I leave the house."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I always lock the door when I leave the house." (correct)
   - "I always close the door when I leave the house."
   - "I never lock the door when I leave the house."
+  - "I always lock the door when I leave the house." (correct)
 srsWords: "always" "lock" "leave" "house"
 
 [listening]
@@ -2242,9 +2242,9 @@ text: "He has a shower every morning before breakfast."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He has a shower every morning before breakfast." (correct)
   - "She has a shower every morning before breakfast."
   - "He has a bath every morning before breakfast."
+  - "He has a shower every morning before breakfast." (correct)
 srsWords: "shower" "morning" "before" "breakfast"
 
 [listening]
@@ -2252,9 +2252,9 @@ text: "We watch a film together every Friday night."
 ttsLang: en-US
 mode: choices
 choices:
+  - "We watch a film together every Saturday night."
   - "We watch a film together every Friday night." (correct)
   - "We watch TV together every Friday night."
-  - "We watch a film together every Saturday night."
 srsWords: "watch" "film" "together" "Friday"
 
 ---
@@ -2269,9 +2269,9 @@ text: "Please open the window. It is hot in here."
 ttsLang: en-US
 mode: choices
 choices:
+  - "Please open the door. It is hot in here."
   - "Please open the window. It is hot in here." (correct)
   - "Please close the window. It is hot in here."
-  - "Please open the door. It is hot in here."
 srsWords: "open" "window" "hot"
 
 [listening]
@@ -2289,9 +2289,9 @@ text: "Please write your answers in pen, not pencil."
 ttsLang: en-US
 mode: choices
 choices:
+  - "Please write your answers in pencil, not pen."
   - "Please write your answers in pen, not pencil." (correct)
   - "Please write your name in pen, not pencil."
-  - "Please write your answers in pencil, not pen."
 srsWords: "write" "answers" "pen" "pencil"
 
 [listening]
@@ -2299,8 +2299,8 @@ text: "Stand up and come to the front of the class."
 ttsLang: en-US
 mode: choices
 choices:
-  - "Stand up and come to the front of the class." (correct)
   - "Sit down and come to the front of the class."
+  - "Stand up and come to the front of the class." (correct)
   - "Stand up and go to the back of the class."
 srsWords: "stand" "front" "class"
 
@@ -2319,9 +2319,9 @@ text: "Please take your shoes off at the door."
 ttsLang: en-US
 mode: choices
 choices:
-  - "Please take your shoes off at the door." (correct)
-  - "Please put your shoes on at the door."
   - "Please leave your shoes at the door."
+  - "Please put your shoes on at the door."
+  - "Please take your shoes off at the door." (correct)
 srsWords: "take off" "shoes" "door"
 
 [listening]
@@ -2329,9 +2329,9 @@ text: "Stir the soup and add a little salt."
 ttsLang: en-US
 mode: choices
 choices:
-  - "Stir the soup and add a little salt." (correct)
-  - "Stir the sauce and add a little salt."
   - "Heat the soup and add a little salt."
+  - "Stir the sauce and add a little salt."
+  - "Stir the soup and add a little salt." (correct)
 srsWords: "stir" "soup" "add" "salt"
 
 [listening]
@@ -2339,8 +2339,8 @@ text: "Complete the exercise and check your answers."
 ttsLang: en-US
 mode: choices
 choices:
-  - "Complete the exercise and check your answers." (correct)
   - "Finish the exercise and check your answers."
+  - "Complete the exercise and check your answers." (correct)
   - "Complete the test and check your answers."
 srsWords: "complete" "exercise" "check" "answers"
 
@@ -2350,8 +2350,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "Wait here. I will be back in five minutes." (correct)
-  - "Stay here. I will be back in five minutes."
   - "Wait here. I will be back in ten minutes."
+  - "Stay here. I will be back in five minutes."
 srsWords: "wait" "here" "back" "minutes"
 
 [listening]
@@ -2359,9 +2359,9 @@ text: "Turn left here and park the car."
 ttsLang: en-US
 mode: choices
 choices:
+  - "Go straight here and park the car."
   - "Turn left here and park the car." (correct)
   - "Turn right here and park the car."
-  - "Go straight here and park the car."
 srsWords: "turn" "left" "park" "car"
 
 ---
@@ -2376,8 +2376,8 @@ text: "A: What are you doing? B: I am cooking dinner."
 ttsLang: en-US
 mode: choices
 choices:
-  - "A: What are you doing? B: I am cooking dinner." (correct)
   - "A: What are you doing? B: I am eating dinner."
+  - "A: What are you doing? B: I am cooking dinner." (correct)
   - "A: What are you making? B: I am cooking dinner."
 srsWords: "doing" "cooking" "dinner"
 
@@ -2397,8 +2397,8 @@ ttsLang: en-US
 mode: choices
 choices:
   - "A: Can I help you? B: Yes please, I need a large coffee." (correct)
-  - "A: May I help you? B: Yes please, I need a large coffee."
   - "A: Can I help you? B: Yes please, I want a small coffee."
+  - "A: May I help you? B: Yes please, I need a large coffee."
 srsWords: "help" "large" "coffee"
 
 [listening]
@@ -2406,9 +2406,9 @@ text: "A: How do you feel today? B: I feel much better, thanks."
 ttsLang: en-US
 mode: choices
 choices:
-  - "A: How do you feel today? B: I feel much better, thanks." (correct)
   - "A: How are you today? B: I feel much better, thanks."
   - "A: How do you feel today? B: I feel a little better, thanks."
+  - "A: How do you feel today? B: I feel much better, thanks." (correct)
 srsWords: "feel" "better" "today"
 
 [listening]
@@ -2416,9 +2416,9 @@ text: "A: Is this seat free? B: No, someone is sitting here."
 ttsLang: en-US
 mode: choices
 choices:
-  - "A: Is this seat free? B: No, someone is sitting here." (correct)
-  - "A: Is this seat taken? B: No, someone is sitting here."
   - "A: Is this seat free? B: Yes, please sit down."
+  - "A: Is this seat taken? B: No, someone is sitting here."
+  - "A: Is this seat free? B: No, someone is sitting here." (correct)
 srsWords: "seat" "free" "sitting"
 
 [listening]
@@ -2426,9 +2426,9 @@ text: "A: What do you like to do in your free time? B: I like reading."
 ttsLang: en-US
 mode: choices
 choices:
-  - "A: What do you like to do in your free time? B: I like reading." (correct)
-  - "A: What do you do in your free time? B: I like reading."
   - "A: What do you like to do in your free time? B: I enjoy reading."
+  - "A: What do you do in your free time? B: I like reading."
+  - "A: What do you like to do in your free time? B: I like reading." (correct)
 srsWords: "free time" "like" "reading"
 
 [listening]
@@ -2436,9 +2436,9 @@ text: "A: Do you want some help? B: Yes please, that would be great."
 ttsLang: en-US
 mode: choices
 choices:
-  - "A: Do you want some help? B: Yes please, that would be great." (correct)
   - "A: Do you need some help? B: Yes please, that would be great."
   - "A: Do you want some help? B: Yes please, that would be nice."
+  - "A: Do you want some help? B: Yes please, that would be great." (correct)
 srsWords: "want" "help" "great"
 
 [listening]
@@ -2456,9 +2456,9 @@ text: "A: Are you ready to go? B: Nearly! Give me two minutes."
 ttsLang: en-US
 mode: choices
 choices:
-  - "A: Are you ready to go? B: Nearly! Give me two minutes." (correct)
   - "A: Are you coming? B: Nearly! Give me two minutes."
   - "A: Are you ready to go? B: Not yet! Give me five minutes."
+  - "A: Are you ready to go? B: Nearly! Give me two minutes." (correct)
 srsWords: "ready" "nearly" "minutes"
 
 [listening]
@@ -2466,7 +2466,7 @@ text: "A: Thank you for your help. B: You are welcome!"
 ttsLang: en-US
 mode: choices
 choices:
-  - "A: Thank you for your help. B: You are welcome!" (correct)
   - "A: Thanks for your help. B: You are welcome!"
+  - "A: Thank you for your help. B: You are welcome!" (correct)
   - "A: Thank you for your help. B: No problem!"
 srsWords: "thank" "help" "welcome"
