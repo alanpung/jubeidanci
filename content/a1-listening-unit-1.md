@@ -1,5 +1,5 @@
 ---
-unitTitle: "Numbers, Colors & Everyday Things"
+unitTitle: "Unit 1: Numbers, Colors & Everyday Things"
 description: "Listen and understand numbers, colors, shapes, and common everyday objects."
 icon: "🔢"
 color: "#3498DB"
