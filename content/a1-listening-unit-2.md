@@ -11,10 +11,10 @@ questionType: "listening"
 ---
 
 ---
-lessonTitle: "Hello & Hi"
-description: "Basic greetings and responses"
+lessonTitle: "Basic Greetings"
+description: "Listen to common greetings and responses"
 icon: "😊"
-color: "#FF6B6B"
+color: "#E74C3C"
 ---
 
 [listening]
@@ -28,23 +28,23 @@ choices:
 srsWords: "hello" "name"
 
 [listening]
-text: "Hi there! How are you?"
+text: "Good morning! How are you?"
 ttsLang: en-US
 mode: choices
 choices:
-  - "Hi there! How are you?" (correct)
-  - "Hi there! Who are you?"
-  - "Hey there! How are you?"
-srsWords: "hi"
+  - "Good morning! How are you?" (correct)
+  - "Good evening! How are you?"
+  - "Good morning! Who are you?"
+srsWords: "morning" "good"
 
 [listening]
-text: "I am fine, thank you very much."
+text: "I am fine, thank you."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I am fine, thank you very much." (correct)
-  - "I am good, thank you very much."
-  - "I am fine, thank you so much."
+  - "I am fine, thank you." (correct)
+  - "I am five, thank you."
+  - "I am fine, goodbye."
 srsWords: "fine" "thank"
 
 [listening]
@@ -53,1039 +53,126 @@ ttsLang: en-US
 mode: choices
 choices:
   - "Nice to meet you!" (correct)
-  - "Good to meet you!"
   - "Nice to see you!"
+  - "Good to meet you!"
 srsWords: "nice" "meet"
 
 [listening]
-text: "My name is Tom. I am twelve years old."
+text: "Goodbye! See you tomorrow."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My name is Tom. I am twelve years old." (correct)
-  - "My name is Tim. I am twelve years old."
-  - "My name is Tom. I am twenty years old."
-srsWords: "twelve" "old"
+  - "Goodbye! See you tomorrow." (correct)
+  - "Goodbye! See you today."
+  - "Good night! See you tomorrow."
+srsWords: "goodbye" "tomorrow"
 
 [listening]
-text: "Hello! Are you a student?"
+text: "Good afternoon! Welcome."
 ttsLang: en-US
 mode: choices
 choices:
-  - "Hello! Are you a student?" (correct)
-  - "Hello! Are you a teacher?"
-  - "Hi! Are you a student?"
-srsWords: "student"
+  - "Good afternoon! Welcome." (correct)
+  - "Good morning! Welcome."
+  - "Good afternoon! Goodbye."
+srsWords: "afternoon" "welcome"
 
 [listening]
-text: "Yes, I am a student. I study English."
+text: "Good night! Sleep well."
 ttsLang: en-US
 mode: choices
 choices:
-  - "Yes, I am a student. I study English." (correct)
-  - "Yes, I am a student. I study Chinese."
-  - "Yes, I am a teacher. I study English."
-srsWords: "study" "English"
+  - "Good night! Sleep well." (correct)
+  - "Good night! Eat well."
+  - "Good evening! Sleep well."
+srsWords: "night" "sleep"
 
 [listening]
-text: "What is your name, please?"
-ttsLang: en-US
-mode: word-bank
-srsWords: "name" "please"
-
-[listening]
-text: "I am from China. Where are you from?"
+text: "Hi! How old are you?"
 ttsLang: en-US
 mode: choices
 choices:
-  - "I am from China. Where are you from?" (correct)
-  - "I live in China. Where are you from?"
-  - "I am from China. Where do you live?"
-srsWords: "from" "China"
+  - "Hi! How old are you?" (correct)
+  - "Hi! How are you?"
+  - "Hi! How tall are you?"
+srsWords: "old"
 
 [listening]
-text: "It is nice to meet you too!"
+text: "I am twenty years old."
 ttsLang: en-US
 mode: choices
 choices:
-  - "It is nice to meet you too!" (correct)
-  - "It is good to meet you too!"
-  - "It is great to see you too!"
-srsWords: "too"
+  - "I am twenty years old." (correct)
+  - "I am twelve years old."
+  - "I am twenty-one years old."
+srsWords: "twenty" "years"
+
+[listening]
+text: "See you later! Have a good day."
+ttsLang: en-US
+mode: choices
+choices:
+  - "See you later! Have a good day." (correct)
+  - "See you soon! Have a good day."
+  - "See you later! Have a great night."
+srsWords: "later" "day"
 
 ---
-lessonTitle: "Good Morning & Good Night"
-description: "Greetings for different times of day"
-icon: "🌅"
-color: "#FF7F7F"
----
-
-[listening]
-text: "Good morning! Did you sleep well?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "Good morning! Did you sleep well?" (correct)
-  - "Good morning! Are you sleeping well?"
-  - "Good evening! Did you sleep well?"
-srsWords: "morning" "sleep" "well"
-
-[listening]
-text: "Good afternoon! The weather is nice today."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Good afternoon! The weather is nice today." (correct)
-  - "Good morning! The weather is nice today."
-  - "Good afternoon! The weather was nice today."
-srsWords: "afternoon" "weather" "nice"
-
-[listening]
-text: "Good evening! Welcome to our home."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Good evening! Welcome to our home." (correct)
-  - "Good night! Welcome to our home."
-  - "Good evening! Welcome to my home."
-srsWords: "evening" "welcome" "home"
-
-[listening]
-text: "Good night! Sweet dreams."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Good night! Sweet dreams." (correct)
-  - "Good night! Sleep tight."
-  - "Good evening! Sweet dreams."
-srsWords: "night" "sweet" "dreams"
-
-[listening]
-text: "Good morning, everyone! Let's start the lesson."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Good morning, everyone! Let's start the lesson." (correct)
-  - "Good morning, everyone! Let's finish the lesson."
-  - "Good afternoon, everyone! Let's start the lesson."
-srsWords: "everyone" "start" "lesson"
-
-[listening]
-text: "It is midnight. Good night!"
-ttsLang: en-US
-mode: choices
-choices:
-  - "It is midnight. Good night!" (correct)
-  - "It is morning. Good night!"
-  - "It is midnight. Good evening!"
-srsWords: "midnight"
-
-[listening]
-text: "Good afternoon! How was your day?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "Good afternoon! How was your day?" (correct)
-  - "Good afternoon! How is your day?"
-  - "Good morning! How was your day?"
-srsWords: "day"
-
-[listening]
-text: "Good morning! I need a cup of coffee."
-ttsLang: en-US
-mode: word-bank
-srsWords: "coffee" "cup"
-
-[listening]
-text: "Good night! See you in the morning."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Good night! See you in the morning." (correct)
-  - "Good night! See you tomorrow morning."
-  - "Good night! I will see you in the morning."
-srsWords: "see" "morning"
-
-[listening]
-text: "Good evening! Are you hungry?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "Good evening! Are you hungry?" (correct)
-  - "Good evening! Are you thirsty?"
-  - "Good morning! Are you hungry?"
-srsWords: "hungry"
-
----
-lessonTitle: "Goodbye & See You"
-description: "Farewells and parting phrases"
-icon: "👋"
-color: "#FF5252"
----
-
-[listening]
-text: "Goodbye! Have a nice day."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Goodbye! Have a nice day." (correct)
-  - "Goodbye! Have a good day."
-  - "Bye! Have a nice day."
-srsWords: "goodbye"
-
-[listening]
-text: "See you tomorrow! Take care."
-ttsLang: en-US
-mode: choices
-choices:
-  - "See you tomorrow! Take care." (correct)
-  - "See you later! Take care."
-  - "See you tomorrow! Be safe."
-srsWords: "tomorrow" "care"
-
-[listening]
-text: "Bye bye! See you next week."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Bye bye! See you next week." (correct)
-  - "Bye bye! See you next month."
-  - "Goodbye! See you next week."
-srsWords: "next" "week"
-
-[listening]
-text: "I have to go now. Goodbye!"
-ttsLang: en-US
-mode: choices
-choices:
-  - "I have to go now. Goodbye!" (correct)
-  - "I want to go now. Goodbye!"
-  - "I have to leave now. Goodbye!"
-srsWords: "have" "go" "now"
-
-[listening]
-text: "See you later! Bye!"
-ttsLang: en-US
-mode: choices
-choices:
-  - "See you later! Bye!" (correct)
-  - "Talk to you later! Bye!"
-  - "See you soon! Bye!"
-srsWords: "later"
-
-[listening]
-text: "Goodbye everyone! It was great to see you."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Goodbye everyone! It was great to see you." (correct)
-  - "Goodbye everyone! It was nice to meet you."
-  - "Goodbye everyone! It was great to meet you."
-srsWords: "great" "everyone"
-
-[listening]
-text: "Take care and goodbye!"
-ttsLang: en-US
-mode: word-bank
-srsWords: "take" "care"
-
-[listening]
-text: "I will see you on Monday. Goodbye!"
-ttsLang: en-US
-mode: choices
-choices:
-  - "I will see you on Monday. Goodbye!" (correct)
-  - "I will see you on Tuesday. Goodbye!"
-  - "I saw you on Monday. Goodbye!"
-srsWords: "Monday" "will"
-
-[listening]
-text: "Goodbye! Don't forget to call me."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Goodbye! Don't forget to call me." (correct)
-  - "Goodbye! Don't forget to text me."
-  - "Bye! Don't forget to call me."
-srsWords: "forget" "call"
-
-[listening]
-text: "See you soon! Have fun!"
-ttsLang: en-US
-mode: choices
-choices:
-  - "See you soon! Have fun!" (correct)
-  - "See you soon! Be careful!"
-  - "See you later! Have fun!"
-srsWords: "soon" "fun"
-
----
-lessonTitle: "My Family – Parents"
-description: "Sentences about mothers and fathers"
-icon: "👨‍👩‍👦"
-color: "#E74C3C"
----
-
-[listening]
-text: "This is my mother. She is very kind."
-ttsLang: en-US
-mode: choices
-choices:
-  - "This is my mother. She is very kind." (correct)
-  - "This is my sister. She is very kind."
-  - "This is my mother. She is very smart."
-srsWords: "mother" "kind"
-
-[listening]
-text: "My father is a doctor. He works at the hospital."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My father is a doctor. He works at the hospital." (correct)
-  - "My father is a nurse. He works at the hospital."
-  - "My father is a doctor. He works at the clinic."
-srsWords: "father" "doctor" "hospital"
-
-[listening]
-text: "My mother cooks dinner every evening."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My mother cooks dinner every evening." (correct)
-  - "My mother cooks lunch every evening."
-  - "My father cooks dinner every evening."
-srsWords: "cooks" "dinner" "evening"
-
-[listening]
-text: "My parents live in a big house."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My parents live in a big house." (correct)
-  - "My parents live in a small house."
-  - "My grandparents live in a big house."
-srsWords: "parents" "live" "big"
-
-[listening]
-text: "My father drives to work every morning."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My father drives to work every morning." (correct)
-  - "My father walks to work every morning."
-  - "My mother drives to work every morning."
-srsWords: "drives" "work"
-
-[listening]
-text: "My mother is a teacher at the local school."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My mother is a teacher at the local school." (correct)
-  - "My mother is a teacher at the university."
-  - "My father is a teacher at the local school."
-srsWords: "teacher" "local" "school"
-
-[listening]
-text: "My parents are very happy together."
-ttsLang: en-US
-mode: word-bank
-srsWords: "happy" "together"
-
-[listening]
-text: "My father reads the newspaper every morning."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My father reads the newspaper every morning." (correct)
-  - "My father reads a book every morning."
-  - "My mother reads the newspaper every morning."
-srsWords: "reads" "newspaper"
-
-[listening]
-text: "My mother likes to garden on weekends."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My mother likes to garden on weekends." (correct)
-  - "My mother likes to cook on weekends."
-  - "My father likes to garden on weekends."
-srsWords: "garden" "weekends"
-
-[listening]
-text: "My parents got married twenty years ago."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My parents got married twenty years ago." (correct)
-  - "My parents got married thirty years ago."
-  - "My grandparents got married twenty years ago."
-srsWords: "married" "twenty" "ago"
-
----
-lessonTitle: "My Family – Siblings & Grandparents"
-description: "Sentences about brothers, sisters, and grandparents"
-icon: "👴"
+lessonTitle: "Introducing Yourself"
+description: "Listen to sentences about personal introductions"
+icon: "🙋"
 color: "#C0392B"
 ---
 
 [listening]
-text: "I have one brother. His name is Jack."
+text: "My name is Tom. I am from England."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I have one brother. His name is Jack." (correct)
-  - "I have one sister. His name is Jack."
-  - "I have one brother. His name is Jake."
-srsWords: "brother"
+  - "My name is Tom. I am from England." (correct)
+  - "My name is Tim. I am from England."
+  - "My name is Tom. I am from Ireland."
+srsWords: "name" "England"
 
 [listening]
-text: "My sister is three years younger than me."
+text: "I am a student. I study English."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My sister is three years younger than me." (correct)
-  - "My sister is three years older than me."
-  - "My brother is three years younger than me."
-srsWords: "sister" "younger"
+  - "I am a student. I study English." (correct)
+  - "I am a teacher. I study English."
+  - "I am a student. I teach English."
+srsWords: "student" "study" "English"
 
 [listening]
-text: "My grandmother makes delicious cookies."
+text: "I live in a small town near the city."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My grandmother makes delicious cookies." (correct)
-  - "My grandmother eats delicious cookies."
-  - "My grandfather makes delicious cookies."
-srsWords: "grandmother" "delicious" "cookies"
+  - "I live in a small town near the city." (correct)
+  - "I live in a big city near the town."
+  - "I work in a small town near the city."
+srsWords: "live" "town" "city"
 
 [listening]
-text: "My grandfather tells great stories."
+text: "I have two brothers and one sister."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My grandfather tells great stories." (correct)
-  - "My grandfather reads great stories."
-  - "My grandmother tells great stories."
-srsWords: "grandfather" "stories"
+  - "I have two brothers and one sister." (correct)
+  - "I have one brother and two sisters."
+  - "I have two brothers and two sisters."
+srsWords: "brothers" "sister"
 
 [listening]
-text: "My brother and I play football together."
+text: "My hobby is reading and playing football."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My brother and I play football together." (correct)
-  - "My sister and I play football together."
-  - "My brother and I watch football together."
-srsWords: "play" "football"
-
-[listening]
-text: "My grandparents live in the countryside."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My grandparents live in the countryside." (correct)
-  - "My grandparents live in the city."
-  - "My parents live in the countryside."
-srsWords: "grandparents" "countryside"
-
-[listening]
-text: "I have two sisters and no brothers."
-ttsLang: en-US
-mode: word-bank
-srsWords: "sisters" "brothers"
-
-[listening]
-text: "My brother is very funny and clever."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My brother is very funny and clever." (correct)
-  - "My brother is very kind and clever."
-  - "My sister is very funny and clever."
-srsWords: "funny" "clever"
-
-[listening]
-text: "My grandmother is eighty years old but very healthy."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My grandmother is eighty years old but very healthy." (correct)
-  - "My grandmother is seventy years old but very healthy."
-  - "My grandfather is eighty years old but very healthy."
-srsWords: "eighty" "healthy"
-
-[listening]
-text: "My older sister helps me with my homework."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My older sister helps me with my homework." (correct)
-  - "My younger sister helps me with my homework."
-  - "My older brother helps me with my homework."
-srsWords: "older" "helps" "homework"
-
----
-lessonTitle: "Describing Appearance"
-description: "Listening to physical descriptions of people"
-icon: "👀"
-color: "#A93226"
----
-
-[listening]
-text: "She has long black hair and brown eyes."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She has long black hair and brown eyes." (correct)
-  - "She has short black hair and brown eyes."
-  - "She has long brown hair and black eyes."
-srsWords: "long" "black" "hair" "brown" "eyes"
-
-[listening]
-text: "He is tall with short blond hair."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is tall with short blond hair." (correct)
-  - "He is short with blond hair."
-  - "He is tall with long blond hair."
-srsWords: "tall" "short" "blond"
-
-[listening]
-text: "She is wearing a blue dress and white shoes."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is wearing a blue dress and white shoes." (correct)
-  - "She is wearing a red dress and white shoes."
-  - "She is wearing a blue skirt and white shoes."
-srsWords: "wearing" "dress" "shoes"
-
-[listening]
-text: "He has a big smile and kind eyes."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He has a big smile and kind eyes." (correct)
-  - "He has a small smile and kind eyes."
-  - "He has a big smile and blue eyes."
-srsWords: "smile"
-
-[listening]
-text: "The girl has curly red hair."
-ttsLang: en-US
-mode: choices
-choices:
-  - "The girl has curly red hair." (correct)
-  - "The girl has straight red hair."
-  - "The woman has curly red hair."
-srsWords: "curly" "red"
-
-[listening]
-text: "He is wearing glasses and a grey jacket."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is wearing glasses and a grey jacket." (correct)
-  - "He is wearing glasses and a black jacket."
-  - "She is wearing glasses and a grey jacket."
-srsWords: "glasses" "grey" "jacket"
-
-[listening]
-text: "She has a round face and a small nose."
-ttsLang: en-US
-mode: word-bank
-srsWords: "round" "face" "nose"
-
-[listening]
-text: "The boy is short with dark hair and dark eyes."
-ttsLang: en-US
-mode: choices
-choices:
-  - "The boy is short with dark hair and dark eyes." (correct)
-  - "The boy is tall with dark hair and dark eyes."
-  - "The girl is short with dark hair and dark eyes."
-srsWords: "dark"
-
-[listening]
-text: "She looks young. She is about twenty years old."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She looks young. She is about twenty years old." (correct)
-  - "She looks old. She is about twenty years old."
-  - "She looks young. She is about thirty years old."
-srsWords: "looks" "young" "about"
-
-[listening]
-text: "He has a beard and short brown hair."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He has a beard and short brown hair." (correct)
-  - "He has a moustache and short brown hair."
-  - "He has a beard and long brown hair."
-srsWords: "beard"
-
----
-lessonTitle: "Describing Personality"
-description: "Listening to descriptions of character and personality"
-icon: "🧠"
-color: "#922B21"
----
-
-[listening]
-text: "She is very friendly and always smiling."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is very friendly and always smiling." (correct)
-  - "She is very shy and always smiling."
-  - "She is very friendly and always laughing."
-srsWords: "friendly" "smiling"
-
-[listening]
-text: "My teacher is strict but very fair."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My teacher is strict but very fair." (correct)
-  - "My teacher is kind but very fair."
-  - "My teacher is strict but very smart."
-srsWords: "strict" "fair"
-
-[listening]
-text: "He is very lazy. He never does his homework."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is very lazy. He never does his homework." (correct)
-  - "He is very busy. He never does his homework."
-  - "He is very lazy. He always does his homework."
-srsWords: "lazy" "never"
-
-[listening]
-text: "She is hardworking and very smart."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is hardworking and very smart." (correct)
-  - "She is hardworking and very kind."
-  - "She is lazy and very smart."
-srsWords: "hardworking" "smart"
-
-[listening]
-text: "He is very shy. He doesn't talk much."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is very shy. He doesn't talk much." (correct)
-  - "He is very quiet. He doesn't talk much."
-  - "He is very shy. He talks a lot."
-srsWords: "shy" "talk" "much"
-
-[listening]
-text: "My best friend is funny and always happy."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My best friend is funny and always happy." (correct)
-  - "My best friend is funny and always kind."
-  - "My best friend is clever and always happy."
-srsWords: "best" "friend" "happy"
-
-[listening]
-text: "She is very brave. She is not afraid of anything."
-ttsLang: en-US
-mode: word-bank
-srsWords: "brave" "afraid"
-
-[listening]
-text: "He is honest. He always tells the truth."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is honest. He always tells the truth." (correct)
-  - "He is kind. He always tells the truth."
-  - "He is honest. He sometimes tells the truth."
-srsWords: "honest" "truth"
-
-[listening]
-text: "She is a very patient person."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is a very patient person." (correct)
-  - "She is a very kind person."
-  - "He is a very patient person."
-srsWords: "patient" "person"
-
-[listening]
-text: "My brother is generous. He always shares."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My brother is generous. He always shares." (correct)
-  - "My brother is kind. He always shares."
-  - "My brother is generous. He never shares."
-srsWords: "generous" "shares"
-
----
-lessonTitle: "Jobs – Part 1"
-description: "Listening to sentences about common jobs"
-icon: "👨‍⚕️"
-color: "#FF6B6B"
----
-
-[listening]
-text: "She is a nurse. She works at the hospital."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is a nurse. She works at the hospital." (correct)
-  - "She is a doctor. She works at the hospital."
-  - "She is a nurse. She works at the clinic."
-srsWords: "nurse" "hospital"
-
-[listening]
-text: "He is a teacher. He teaches maths."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is a teacher. He teaches maths." (correct)
-  - "He is a professor. He teaches maths."
-  - "He is a teacher. He teaches science."
-srsWords: "teacher" "teaches" "maths"
-
-[listening]
-text: "My uncle is a chef. He cooks in a restaurant."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My uncle is a chef. He cooks in a restaurant." (correct)
-  - "My uncle is a baker. He cooks in a restaurant."
-  - "My uncle is a chef. He works in a hotel."
-srsWords: "chef" "restaurant"
-
-[listening]
-text: "She is a police officer. She keeps people safe."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is a police officer. She keeps people safe." (correct)
-  - "She is a soldier. She keeps people safe."
-  - "She is a police officer. She helps people."
-srsWords: "police" "officer" "safe"
-
-[listening]
-text: "He is a firefighter. He puts out fires."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is a firefighter. He puts out fires." (correct)
-  - "He is a firefighter. He fights fires."
-  - "He is a pilot. He puts out fires."
-srsWords: "firefighter" "fires"
-
-[listening]
-text: "She is a dentist. She looks after people's teeth."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is a dentist. She looks after people's teeth." (correct)
-  - "She is a doctor. She looks after people's teeth."
-  - "She is a dentist. She fixes people's teeth."
-srsWords: "dentist" "teeth"
-
-[listening]
-text: "He is a farmer. He grows vegetables and fruit."
-ttsLang: en-US
-mode: word-bank
-srsWords: "farmer" "grows" "vegetables" "fruit"
-
-[listening]
-text: "She is an engineer. She builds bridges."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is an engineer. She builds bridges." (correct)
-  - "She is an architect. She builds bridges."
-  - "She is an engineer. She designs bridges."
-srsWords: "engineer" "builds" "bridges"
-
-[listening]
-text: "He is a driver. He drives a taxi."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is a driver. He drives a taxi." (correct)
-  - "He is a driver. He drives a bus."
-  - "She is a driver. He drives a taxi."
-srsWords: "driver" "drives" "taxi"
-
-[listening]
-text: "My aunt is a lawyer. She works in a big office."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My aunt is a lawyer. She works in a big office." (correct)
-  - "My aunt is a judge. She works in a big office."
-  - "My aunt is a lawyer. She works in a courthouse."
-srsWords: "lawyer" "aunt" "office"
-
----
-lessonTitle: "Jobs – Part 2"
-description: "More jobs and workplaces"
-icon: "👩‍🎨"
-color: "#FF8C8C"
----
-
-[listening]
-text: "She is an artist. She paints pictures."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is an artist. She paints pictures." (correct)
-  - "She is a designer. She paints pictures."
-  - "She is an artist. She draws pictures."
-srsWords: "artist" "paints" "pictures"
-
-[listening]
-text: "He is a scientist. He works in a laboratory."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is a scientist. He works in a laboratory." (correct)
-  - "He is a researcher. He works in a laboratory."
-  - "He is a scientist. He works in a factory."
-srsWords: "scientist" "laboratory"
-
-[listening]
-text: "She is a journalist. She writes for a newspaper."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is a journalist. She writes for a newspaper." (correct)
-  - "She is a writer. She writes for a newspaper."
-  - "She is a journalist. She works for a television."
-srsWords: "journalist" "writes" "newspaper"
-
-[listening]
-text: "He is a musician. He plays the guitar."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is a musician. He plays the guitar." (correct)
-  - "He is a singer. He plays the guitar."
-  - "He is a musician. He plays the piano."
-srsWords: "musician" "plays" "guitar"
-
-[listening]
-text: "She is a pilot. She flies aeroplanes."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is a pilot. She flies aeroplanes." (correct)
-  - "She is a pilot. She drives aeroplanes."
-  - "He is a pilot. She flies aeroplanes."
-srsWords: "pilot" "flies" "aeroplanes"
-
-[listening]
-text: "He is an actor. He works in movies."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is an actor. He works in movies." (correct)
-  - "He is a director. He works in movies."
-  - "He is an actor. He works in theatre."
-srsWords: "actor" "movies"
-
-[listening]
-text: "She is a vet. She helps sick animals."
-ttsLang: en-US
-mode: word-bank
-srsWords: "vet" "sick" "animals"
-
-[listening]
-text: "He is a baker. He bakes bread every morning."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is a baker. He bakes bread every morning." (correct)
-  - "He is a chef. He bakes bread every morning."
-  - "He is a baker. He sells bread every morning."
-srsWords: "baker" "bakes" "bread"
-
-[listening]
-text: "She is a librarian. She works with books."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is a librarian. She works with books." (correct)
-  - "She is a teacher. She works with books."
-  - "She is a librarian. She reads many books."
-srsWords: "librarian"
-
-[listening]
-text: "He is a waiter. He serves food in a restaurant."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is a waiter. He serves food in a restaurant." (correct)
-  - "He is a chef. He serves food in a restaurant."
-  - "He is a waiter. He cooks food in a restaurant."
-srsWords: "waiter" "serves"
-
----
-lessonTitle: "Meeting New People"
-description: "Listening to introductions and small talk"
-icon: "🤝"
-color: "#FF4C4C"
----
-
-[listening]
-text: "Hi, my name is Sarah. What is your name?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "Hi, my name is Sarah. What is your name?" (correct)
-  - "Hi, my name is Sara. What is your name?"
-  - "Hello, my name is Sarah. What is your name?"
-srsWords: "name" "Sarah"
-
-[listening]
-text: "I am a student from Beijing."
-ttsLang: en-US
-mode: choices
-choices:
-  - "I am a student from Beijing." (correct)
-  - "I am a teacher from Beijing."
-  - "I am a student from Shanghai."
-srsWords: "student" "Beijing"
-
-[listening]
-text: "How old are you? I am twenty-two years old."
-ttsLang: en-US
-mode: choices
-choices:
-  - "How old are you? I am twenty-two years old." (correct)
-  - "How old are you? I am twenty years old."
-  - "How tall are you? I am twenty-two years old."
-srsWords: "old" "twenty-two"
-
-[listening]
-text: "What do you do? I am a teacher."
-ttsLang: en-US
-mode: choices
-choices:
-  - "What do you do? I am a teacher." (correct)
-  - "What do you do? I am a doctor."
-  - "Where do you work? I am a teacher."
-srsWords: "do" "teacher"
-
-[listening]
-text: "Where do you live? I live in Shanghai."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Where do you live? I live in Shanghai." (correct)
-  - "Where are you from? I live in Shanghai."
-  - "Where do you live? I live in Beijing."
-srsWords: "live" "Shanghai"
-
-[listening]
-text: "Do you have any brothers or sisters?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "Do you have any brothers or sisters?" (correct)
-  - "Do you have any friends or family?"
-  - "Do you have any brothers or cousins?"
-srsWords: "brothers" "sisters"
-
-[listening]
-text: "Nice to meet you. I hope we can be friends."
-ttsLang: en-US
-mode: word-bank
-srsWords: "meet" "hope" "friends"
-
-[listening]
-text: "I am new here. Can you help me?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "I am new here. Can you help me?" (correct)
-  - "I am lost here. Can you help me?"
-  - "I am new here. Can I help you?"
-srsWords: "new" "help"
-
-[listening]
-text: "It is a pleasure to meet you!"
-ttsLang: en-US
-mode: choices
-choices:
-  - "It is a pleasure to meet you!" (correct)
-  - "It is nice to meet you!"
-  - "It is a pleasure to see you!"
-srsWords: "pleasure"
-
-[listening]
-text: "Let me introduce myself. I am David."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Let me introduce myself. I am David." (correct)
-  - "Let me introduce myself. I am Daniel."
-  - "Allow me to introduce myself. I am David."
-srsWords: "introduce" "myself"
-
----
-lessonTitle: "Talking About Yourself"
-description: "Listening to self-descriptions and personal information"
-icon: "🙋"
-color: "#FF3333"
----
-
-[listening]
-text: "I am twenty-five years old. I live in Beijing."
-ttsLang: en-US
-mode: choices
-choices:
-  - "I am twenty-five years old. I live in Beijing." (correct)
-  - "I am thirty-five years old. I live in Beijing."
-  - "I am twenty-five years old. I work in Beijing."
-srsWords: "twenty-five" "Beijing"
-
-[listening]
-text: "I like reading books and listening to music."
-ttsLang: en-US
-mode: choices
-choices:
-  - "I like reading books and listening to music." (correct)
-  - "I like writing books and listening to music."
-  - "I like reading books and watching movies."
-srsWords: "reading" "listening" "music"
-
-[listening]
-text: "I have a cat and a small garden."
-ttsLang: en-US
-mode: choices
-choices:
-  - "I have a cat and a small garden." (correct)
-  - "I have a dog and a small garden."
-  - "I have a cat and a big garden."
-srsWords: "cat" "garden"
-
-[listening]
-text: "My hobby is painting. I paint every weekend."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My hobby is painting. I paint every weekend." (correct)
-  - "My hobby is drawing. I paint every weekend."
-  - "My hobby is painting. I paint every day."
-srsWords: "hobby" "painting" "paint"
+  - "My hobby is reading and playing football." (correct)
+  - "My hobby is writing and playing football."
+  - "My hobby is reading and watching football."
+srsWords: "hobby" "reading" "playing" "football"
 
 [listening]
 text: "I speak Chinese and a little English."
@@ -1093,885 +180,162 @@ ttsLang: en-US
 mode: choices
 choices:
   - "I speak Chinese and a little English." (correct)
-  - "I speak Chinese and a lot of English."
-  - "I study Chinese and a little English."
+  - "I speak Japanese and a little English."
+  - "I speak Chinese and a little French."
 srsWords: "speak" "Chinese" "little"
 
 [listening]
-text: "I work in an office. I start at nine."
+text: "I am a doctor. I work in a hospital."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I work in an office. I start at nine." (correct)
-  - "I work in a school. I start at nine."
-  - "I work in an office. I finish at nine."
-srsWords: "office" "start"
+  - "I am a doctor. I work in a hospital." (correct)
+  - "I am a nurse. I work in a hospital."
+  - "I am a doctor. I work in a clinic."
+srsWords: "doctor" "hospital"
 
 [listening]
-text: "I enjoy cooking and spending time with my family."
-ttsLang: en-US
-mode: word-bank
-srsWords: "enjoy" "cooking" "spending"
-
-[listening]
-text: "I am learning English because I want to travel."
+text: "My email address is tom at gmail dot com."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I am learning English because I want to travel." (correct)
-  - "I am studying English because I want to travel."
-  - "I am learning English because I like languages."
-srsWords: "learning" "travel"
+  - "My email address is tom at gmail dot com." (correct)
+  - "My phone number is tom at gmail dot com."
+  - "My email address is tim at gmail dot com."
+srsWords: "email" "address"
 
 [listening]
-text: "My favorite sport is swimming."
+text: "I am married and I have one child."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My favorite sport is swimming." (correct)
-  - "My favorite sport is running."
-  - "My favorite hobby is swimming."
-srsWords: "favorite" "sport" "swimming"
+  - "I am married and I have one child." (correct)
+  - "I am single and I have one child."
+  - "I am married and I have two children."
+srsWords: "married" "child"
 
 [listening]
-text: "I am shy at first but friendly when you know me."
+text: "Nice to meet you. Where are you from?"
 ttsLang: en-US
 mode: choices
 choices:
-  - "I am shy at first but friendly when you know me." (correct)
-  - "I am quiet at first but friendly when you know me."
-  - "I am shy at first but kind when you know me."
-srsWords: "shy" "first" "friendly"
+  - "Nice to meet you. Where are you from?" (correct)
+  - "Nice to see you. Where are you from?"
+  - "Good to meet you. Where do you live?"
+srsWords: "where" "from"
 
 ---
-lessonTitle: "Age & Numbers"
-description: "Listening to numbers and ages in sentences"
-icon: "🔢"
-color: "#FF1A1A"
+lessonTitle: "Family Members"
+description: "Listen to sentences about family"
+icon: "👨‍👩‍👧"
+color: "#E74C3C"
 ---
 
 [listening]
-text: "She is fifteen years old."
+text: "This is my mother. Her name is Linda."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is fifteen years old." (correct)
-  - "She is fifty years old."
-  - "He is fifteen years old."
-srsWords: "fifteen"
+  - "This is my mother. Her name is Linda." (correct)
+  - "This is my sister. Her name is Linda."
+  - "This is my mother. Her name is Lisa."
+srsWords: "mother"
 
 [listening]
-text: "There are thirty students in the class."
+text: "My father is a teacher. He loves his job."
 ttsLang: en-US
 mode: choices
 choices:
-  - "There are thirty students in the class." (correct)
-  - "There are thirteen students in the class."
-  - "There are thirty teachers in the class."
-srsWords: "thirty" "students" "class"
+  - "My father is a teacher. He loves his job." (correct)
+  - "My father is a driver. He loves his job."
+  - "My father is a teacher. He likes his job."
+srsWords: "father" "teacher" "job"
 
 [listening]
-text: "My grandfather is seventy-two years old."
+text: "She is my grandmother. She is very kind."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My grandfather is seventy-two years old." (correct)
-  - "My grandfather is seventy years old."
-  - "My grandmother is seventy-two years old."
-srsWords: "grandfather" "seventy-two"
+  - "She is my grandmother. She is very kind." (correct)
+  - "She is my grandfather. She is very kind."
+  - "She is my grandmother. She is very old."
+srsWords: "grandmother" "kind"
 
 [listening]
-text: "I was born in nineteen ninety-eight."
+text: "My parents live in a big house."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I was born in nineteen ninety-eight." (correct)
-  - "I was born in nineteen eighty-eight."
-  - "I was born in two thousand and eight."
-srsWords: "born" "ninety-eight"
+  - "My parents live in a big house." (correct)
+  - "My parents work in a big house."
+  - "My parents live in a small house."
+srsWords: "parents" "big" "house"
 
 [listening]
-text: "My class has eighteen girls and twelve boys."
+text: "My grandfather is seventy years old."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My class has eighteen girls and twelve boys." (correct)
-  - "My class has eight girls and twelve boys."
-  - "My class has eighteen girls and twenty boys."
-srsWords: "eighteen" "girls" "boys"
+  - "My grandfather is seventy years old." (correct)
+  - "My grandfather is seventeen years old."
+  - "My grandmother is seventy years old."
+srsWords: "grandfather" "seventy"
 
 [listening]
-text: "He is forty years old. She is thirty-five."
+text: "My baby sister is two years old."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He is forty years old. She is thirty-five." (correct)
-  - "He is forty years old. She is thirty."
-  - "He is fourteen years old. She is thirty-five."
-srsWords: "forty" "thirty-five"
+  - "My baby sister is two years old." (correct)
+  - "My baby brother is two years old."
+  - "My baby sister is twelve years old."
+srsWords: "baby" "two"
 
 [listening]
-text: "I have three cats and two dogs."
+text: "My aunt and uncle live in Beijing."
 ttsLang: en-US
-mode: word-bank
-srsWords: "cats" "dogs"
-
-[listening]
-text: "We have five minutes before the class starts."
-ttsLang: en-US
-mode: choices
-choices:
-  - "We have five minutes before the class starts." (correct)
-  - "We have fifteen minutes before the class starts."
-  - "We have five minutes after the class starts."
-srsWords: "minutes" "before"
-
-[listening]
-text: "She has two children. They are six and eight."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She has two children. They are six and eight." (correct)
-  - "She has three children. They are six and eight."
-  - "She has two children. They are seven and nine."
-srsWords: "children" "six" "eight"
-
-[listening]
-text: "My cousin is sixteen. He is in high school."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My cousin is sixteen. He is in high school." (correct)
-  - "My cousin is sixteen. He is in university."
-  - "My nephew is sixteen. He is in high school."
-srsWords: "cousin" "sixteen" "high school"
-
----
-lessonTitle: "Countries & Nationalities"
-description: "Listening to sentences about countries and where people are from"
-icon: "🌍"
-color: "#FF6B6B"
----
-
-[listening]
-text: "She is from France. She speaks French."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is from France. She speaks French." (correct)
-  - "She is from Spain. She speaks French."
-  - "She is from France. She speaks English."
-srsWords: "France" "French" "speaks"
-
-[listening]
-text: "He is Japanese. He lives in Tokyo."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is Japanese. He lives in Tokyo." (correct)
-  - "He is Chinese. He lives in Tokyo."
-  - "He is Japanese. He lives in Osaka."
-srsWords: "Japanese" "Tokyo"
-
-[listening]
-text: "I am from the United States. I am American."
-ttsLang: en-US
-mode: choices
-choices:
-  - "I am from the United States. I am American." (correct)
-  - "I am from the United Kingdom. I am American."
-  - "I am from the United States. I am Canadian."
-srsWords: "United States" "American"
-
-[listening]
-text: "She is Brazilian. She speaks Portuguese."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is Brazilian. She speaks Portuguese." (correct)
-  - "She is Brazilian. She speaks Spanish."
-  - "She is Argentine. She speaks Portuguese."
-srsWords: "Brazilian" "Portuguese"
-
-[listening]
-text: "He is from Germany. He is German."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is from Germany. He is German." (correct)
-  - "He is from Austria. He is German."
-  - "He is from Germany. He is Austrian."
-srsWords: "Germany" "German"
-
-[listening]
-text: "My friend is Korean. She loves Korean food."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My friend is Korean. She loves Korean food." (correct)
-  - "My friend is Chinese. She loves Korean food."
-  - "My friend is Korean. She loves Japanese food."
-srsWords: "Korean" "food"
-
-[listening]
-text: "He is from Italy. He is Italian."
-ttsLang: en-US
-mode: word-bank
-srsWords: "Italy" "Italian"
-
-[listening]
-text: "She is Spanish. She is from Madrid."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is Spanish. She is from Madrid." (correct)
-  - "She is Spanish. She is from Barcelona."
-  - "She is Mexican. She is from Madrid."
-srsWords: "Spanish" "Madrid"
-
-[listening]
-text: "They are Australian. They live in Sydney."
-ttsLang: en-US
-mode: choices
-choices:
-  - "They are Australian. They live in Sydney." (correct)
-  - "They are Australian. They live in Melbourne."
-  - "They are American. They live in Sydney."
-srsWords: "Australian" "Sydney"
-
-[listening]
-text: "She is Russian. She comes from Moscow."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is Russian. She comes from Moscow." (correct)
-  - "She is Russian. She comes from St. Petersburg."
-  - "He is Russian. She comes from Moscow."
-srsWords: "Russian" "Moscow"
-
----
-lessonTitle: "Friends & Social Life"
-description: "Listening to sentences about friends and social activities"
-icon: "👫"
-color: "#FF8C8C"
----
-
-[listening]
-text: "My best friend is funny and kind."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My best friend is funny and kind." (correct)
-  - "My best friend is smart and kind."
-  - "My old friend is funny and kind."
-srsWords: "best" "friend" "funny" "kind"
-
-[listening]
-text: "We go to the cinema every Friday night."
-ttsLang: en-US
-mode: choices
-choices:
-  - "We go to the cinema every Friday night." (correct)
-  - "We go to the cinema every Saturday night."
-  - "We go to the theatre every Friday night."
-srsWords: "cinema" "Friday"
-
-[listening]
-text: "I called my friend last night."
-ttsLang: en-US
-mode: choices
-choices:
-  - "I called my friend last night." (correct)
-  - "I texted my friend last night."
-  - "I visited my friend last night."
-srsWords: "called" "last"
-
-[listening]
-text: "She met her friend at the coffee shop."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She met her friend at the coffee shop." (correct)
-  - "She met her friend at the restaurant."
-  - "She saw her friend at the coffee shop."
-srsWords: "met" "coffee shop"
-
-[listening]
-text: "We play basketball together on weekends."
-ttsLang: en-US
-mode: choices
-choices:
-  - "We play basketball together on weekends." (correct)
-  - "We play football together on weekends."
-  - "We play basketball together on weekdays."
-srsWords: "basketball" "weekends" "together"
-
-[listening]
-text: "She invited me to her birthday party."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She invited me to her birthday party." (correct)
-  - "She invited him to her birthday party."
-  - "She invited me to her wedding party."
-srsWords: "invited" "birthday" "party"
-
-[listening]
-text: "We went to the park and had a picnic."
-ttsLang: en-US
-mode: word-bank
-srsWords: "went" "park" "picnic"
-
-[listening]
-text: "My friend and I talk every day."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My friend and I talk every day." (correct)
-  - "My friend and I meet every day."
-  - "My friends and I talk every day."
-srsWords: "talk" "every"
-
-[listening]
-text: "They are good friends. They help each other."
-ttsLang: en-US
-mode: choices
-choices:
-  - "They are good friends. They help each other." (correct)
-  - "They are best friends. They help each other."
-  - "They are good friends. They like each other."
-srsWords: "good" "help" "other"
-
-[listening]
-text: "I made a new friend at school today."
-ttsLang: en-US
-mode: choices
-choices:
-  - "I made a new friend at school today." (correct)
-  - "I met a new friend at school today."
-  - "I made a new friend at work today."
-srsWords: "made" "new"
-
----
-lessonTitle: "Clothes & Appearance"
-description: "Listening to sentences about what people wear"
-icon: "👗"
-color: "#FF5252"
----
-
-[listening]
-text: "She is wearing a red coat and black boots."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is wearing a red coat and black boots." (correct)
-  - "She is wearing a blue coat and black boots."
-  - "She is wearing a red jacket and black boots."
-srsWords: "wearing" "coat" "boots"
-
-[listening]
-text: "He is wearing jeans and a white T-shirt."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is wearing jeans and a white T-shirt." (correct)
-  - "He is wearing jeans and a blue T-shirt."
-  - "He is wearing trousers and a white T-shirt."
-srsWords: "jeans" "T-shirt"
-
-[listening]
-text: "She has a yellow scarf and a warm hat."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She has a yellow scarf and a warm hat." (correct)
-  - "She has an orange scarf and a warm hat."
-  - "She has a yellow scarf and a big hat."
-srsWords: "scarf" "hat"
-
-[listening]
-text: "He is wearing a suit and a tie for the meeting."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is wearing a suit and a tie for the meeting." (correct)
-  - "He is wearing a suit and a shirt for the meeting."
-  - "He is wearing a jacket and a tie for the meeting."
-srsWords: "suit" "tie" "meeting"
-
-[listening]
-text: "She put on her shoes and went outside."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She put on her shoes and went outside." (correct)
-  - "She put on her coat and went outside."
-  - "She took off her shoes and went outside."
-srsWords: "put" "shoes" "outside"
-
-[listening]
-text: "He is wearing a green sweater and grey trousers."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is wearing a green sweater and grey trousers." (correct)
-  - "He is wearing a blue sweater and grey trousers."
-  - "He is wearing a green jacket and grey trousers."
-srsWords: "sweater" "trousers"
-
-[listening]
-text: "She bought a new dress for the party."
-ttsLang: en-US
-mode: word-bank
-srsWords: "bought" "dress" "party"
-
-[listening]
-text: "It is cold today. Wear your coat!"
-ttsLang: en-US
-mode: choices
-choices:
-  - "It is cold today. Wear your coat!" (correct)
-  - "It is raining today. Wear your coat!"
-  - "It is cold today. Take your umbrella!"
-srsWords: "cold" "wear"
-
-[listening]
-text: "She is wearing a beautiful blue skirt."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is wearing a beautiful blue skirt." (correct)
-  - "She is wearing a beautiful red skirt."
-  - "She is wearing a nice blue dress."
-srsWords: "beautiful" "skirt"
-
-[listening]
-text: "He forgot his umbrella and got very wet."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He forgot his umbrella and got very wet." (correct)
-  - "He lost his umbrella and got very wet."
-  - "He forgot his coat and got very wet."
-srsWords: "forgot" "umbrella" "wet"
-
----
-lessonTitle: "Common Adjectives"
-description: "Listening to sentences using common describing words"
-icon: "✨"
-color: "#FF3333"
----
-
-[listening]
-text: "The dog is big and friendly."
-ttsLang: en-US
-mode: choices
-choices:
-  - "The dog is big and friendly." (correct)
-  - "The dog is small and friendly."
-  - "The cat is big and friendly."
-srsWords: "big" "friendly"
-
-[listening]
-text: "The room is very clean and bright."
-ttsLang: en-US
-mode: choices
-choices:
-  - "The room is very clean and bright." (correct)
-  - "The room is very dirty and bright."
-  - "The room is very clean and dark."
-srsWords: "clean" "bright"
-
-[listening]
-text: "This book is very interesting."
-ttsLang: en-US
-mode: choices
-choices:
-  - "This book is very interesting." (correct)
-  - "This book is very boring."
-  - "This film is very interesting."
-srsWords: "interesting"
-
-[listening]
-text: "The food is delicious and cheap."
-ttsLang: en-US
-mode: choices
-choices:
-  - "The food is delicious and cheap." (correct)
-  - "The food is delicious and expensive."
-  - "The drink is delicious and cheap."
-srsWords: "delicious" "cheap"
-
-[listening]
-text: "She is very tired after the long journey."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is very tired after the long journey." (correct)
-  - "She is very happy after the long journey."
-  - "She is very tired after the short journey."
-srsWords: "tired" "journey"
-
-[listening]
-text: "The weather today is warm and beautiful."
-ttsLang: en-US
-mode: choices
-choices:
-  - "The weather today is warm and beautiful." (correct)
-  - "The weather today is hot and beautiful."
-  - "The weather today is warm and perfect."
-srsWords: "warm" "beautiful"
-
-[listening]
-text: "That is a very difficult question."
-ttsLang: en-US
-mode: word-bank
-srsWords: "difficult" "question"
-
-[listening]
-text: "The new shopping center is very modern."
-ttsLang: en-US
-mode: choices
-choices:
-  - "The new shopping center is very modern." (correct)
-  - "The old shopping center is very modern."
-  - "The new shopping center is very big."
-srsWords: "modern" "shopping"
-
-[listening]
-text: "He is a very popular student."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He is a very popular student." (correct)
-  - "He is a very clever student."
-  - "She is a very popular student."
-srsWords: "popular"
-
-[listening]
-text: "The countryside is quiet and peaceful."
-ttsLang: en-US
-mode: choices
-choices:
-  - "The countryside is quiet and peaceful." (correct)
-  - "The countryside is quiet and beautiful."
-  - "The city is quiet and peaceful."
-srsWords: "quiet" "peaceful" "countryside"
-
----
-lessonTitle: "Asking Simple Questions"
-description: "Listening to common question patterns"
-icon: "❓"
-color: "#FF1A1A"
----
-
-[listening]
-text: "What is your phone number?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "What is your phone number?" (correct)
-  - "What is your email address?"
-  - "What is my phone number?"
-srsWords: "phone" "number"
-
-[listening]
-text: "Where do you work?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "Where do you work?" (correct)
-  - "Where do you live?"
-  - "Where did you work?"
-srsWords: "work"
-
-[listening]
-text: "When is your birthday?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "When is your birthday?" (correct)
-  - "When is your holiday?"
-  - "What is your birthday?"
-srsWords: "birthday" "when"
-
-[listening]
-text: "Why are you learning English?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "Why are you learning English?" (correct)
-  - "Why did you learn English?"
-  - "How are you learning English?"
-srsWords: "why" "learning"
-
-[listening]
-text: "How many people are in your family?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "How many people are in your family?" (correct)
-  - "How many friends are in your family?"
-  - "How many people were in your family?"
-srsWords: "how many" "family"
-
-[listening]
-text: "What do you like to do in your free time?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "What do you like to do in your free time?" (correct)
-  - "What do you want to do in your free time?"
-  - "What did you do in your free time?"
-srsWords: "like" "free time"
-
-[listening]
-text: "Can you speak more slowly, please?"
-ttsLang: en-US
-mode: word-bank
-srsWords: "speak" "slowly" "slowly"
-
-[listening]
-text: "Do you have any pets?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "Do you have any pets?" (correct)
-  - "Do you like any pets?"
-  - "Did you have any pets?"
-srsWords: "pets"
-
-[listening]
-text: "What is your favorite color?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "What is your favorite color?" (correct)
-  - "What is your favorite food?"
-  - "What was your favorite color?"
-srsWords: "favorite" "color"
-
-[listening]
-text: "How long have you been learning English?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "How long have you been learning English?" (correct)
-  - "How long did you learn English?"
-  - "How much have you been learning English?"
-srsWords: "long" "been"
-
----
-lessonTitle: "Simple Responses"
-description: "Listening to common responses and polite phrases"
-icon: "💬"
-color: "#FF6B6B"
----
-
-[listening]
-text: "Yes, of course! I am happy to help."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Yes, of course! I am happy to help." (correct)
-  - "Yes, of course! I am glad to help."
-  - "Sure, of course! I am happy to help."
-srsWords: "course" "happy" "help"
-
-[listening]
-text: "No, thank you. I am fine."
-ttsLang: en-US
-mode: choices
-choices:
-  - "No, thank you. I am fine." (correct)
-  - "No, thank you. I am okay."
-  - "No, thank you. I am good."
-srsWords: "thank" "fine"
-
-[listening]
-text: "Sorry, I do not understand."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Sorry, I do not understand." (correct)
-  - "Excuse me, I do not understand."
-  - "Sorry, I did not understand."
-srsWords: "sorry" "understand"
-
-[listening]
-text: "Can you repeat that, please?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "Can you repeat that, please?" (correct)
-  - "Can you say that again, please?"
-  - "Could you repeat that, please?"
-srsWords: "repeat" "please"
-
-[listening]
-text: "I don't know. I am sorry."
-ttsLang: en-US
-mode: choices
-choices:
-  - "I don't know. I am sorry." (correct)
-  - "I don't know. Excuse me."
-  - "I don't understand. I am sorry."
-srsWords: "know"
-
-[listening]
-text: "That is a great idea!"
-ttsLang: en-US
-mode: choices
-choices:
-  - "That is a great idea!" (correct)
-  - "That is a good idea!"
-  - "That was a great idea!"
-srsWords: "great" "idea"
-
-[listening]
-text: "You are welcome! It was no problem."
-ttsLang: en-US
-mode: word-bank
-srsWords: "welcome" "problem"
-
-[listening]
-text: "Excuse me! Can I ask you something?"
-ttsLang: en-US
-mode: choices
-choices:
-  - "Excuse me! Can I ask you something?" (correct)
-  - "Sorry! Can I ask you something?"
-  - "Excuse me! Can I tell you something?"
-srsWords: "excuse" "ask"
-
-[listening]
-text: "Of course! No problem at all."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Of course! No problem at all." (correct)
-  - "Of course! No worries at all."
-  - "Sure! No problem at all."
-srsWords: "problem" "all"
-
-[listening]
-text: "That sounds wonderful! Thank you."
-ttsLang: en-US
-mode: choices
-choices:
-  - "That sounds wonderful! Thank you." (correct)
-  - "That sounds great! Thank you."
-  - "That sounds wonderful! Great."
-srsWords: "sounds" "wonderful"
-
----
-lessonTitle: "People Around Us"
-description: "Listening to sentences about neighbors, classmates, and community"
-icon: "🏘️"
-color: "#FF8C8C"
----
-
-[listening]
-text: "My neighbor is very friendly and helpful."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My neighbor is very friendly and helpful." (correct)
-  - "My neighbor is very quiet and helpful."
-  - "My classmate is very friendly and helpful."
-srsWords: "neighbor" "helpful"
-
-[listening]
-text: "My classmates and I eat lunch together."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My classmates and I eat lunch together." (correct)
-  - "My classmates and I have lunch together."
-  - "My friends and I eat lunch together."
-srsWords: "classmates" "lunch" "together"
-
-[listening]
-text: "Our teacher gives us homework every day."
-ttsLang: en-US
-mode: choices
-choices:
-  - "Our teacher gives us homework every day." (correct)
-  - "Our teacher gives us a test every day."
-  - "Our teacher sends us homework every day."
-srsWords: "gives" "homework"
-
-[listening]
-text: "The man next door has a loud dog."
-ttsLang: en-US
-mode: choices
-choices:
-  - "The man next door has a loud dog." (correct)
-  - "The man next door has a big dog."
-  - "The woman next door has a loud dog."
-srsWords: "loud" "dog"
-
-[listening]
-text: "My colleague is very good at his job."
-ttsLang: en-US
-mode: choices
-choices:
-  - "My colleague is very good at his job." (correct)
-  - "My colleague is very smart at his job."
-  - "My coworker is very good at his job."
-srsWords: "colleague" "job"
-
-[listening]
-text: "The children in the park are playing football."
-ttsLang: en-US
 mode: choices
 choices:
-  - "The children in the park are playing football." (correct)
-  - "The boys in the park are playing football."
-  - "The children in the street are playing football."
-srsWords: "children" "playing" "football"
-
-[listening]
-text: "The old woman on my street always smiles."
-ttsLang: en-US
-mode: word-bank
-srsWords: "old" "woman" "street" "smiles"
+  - "My aunt and uncle live in Beijing." (correct)
+  - "My aunt and uncle live in Shanghai."
+  - "My mother and father live in Beijing."
+srsWords: "aunt" "uncle" "Beijing"
 
 [listening]
-text: "My boss is strict but fair."
+text: "We are a happy family of five."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My boss is strict but fair." (correct)
-  - "My boss is tough but fair."
-  - "My teacher is strict but fair."
-srsWords: "boss" "strict" "fair"
+  - "We are a happy family of five." (correct)
+  - "We are a big family of five."
+  - "We are a happy family of four."
+srsWords: "happy" "family" "five"
 
 [listening]
-text: "My new classmate is from Japan."
+text: "My cousin is the same age as me."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My new classmate is from Japan." (correct)
-  - "My new classmate is from China."
-  - "My old classmate is from Japan."
-srsWords: "classmate" "Japan"
+  - "My cousin is the same age as me." (correct)
+  - "My sister is the same age as me."
+  - "My cousin is older than me."
+srsWords: "cousin" "age"
 
 [listening]
-text: "The people in my town are very kind."
+text: "I love spending time with my family."
 ttsLang: en-US
 mode: choices
 choices:
-  - "The people in my town are very kind." (correct)
-  - "The people in my city are very kind."
-  - "The people in my town are very friendly."
-srsWords: "people" "town"
+  - "I love spending time with my family." (correct)
+  - "I like spending time with my family."
+  - "I love spending time with my friends."
+srsWords: "love" "spending" "time"
 
 ---
 lessonTitle: "Feelings & Emotions"
-description: "Listening to sentences about how people feel"
+description: "Listen to sentences about how people feel"
 icon: "😄"
-color: "#FF5252"
+color: "#CB4335"
 ---
 
 [listening]
@@ -1981,18 +345,18 @@ mode: choices
 choices:
   - "I am very happy today!" (correct)
   - "I am very excited today!"
-  - "I feel very happy today!"
+  - "I am very happy yesterday!"
 srsWords: "happy" "today"
 
 [listening]
-text: "She looks sad. What is wrong?"
+text: "She feels tired after work."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She looks sad. What is wrong?" (correct)
-  - "She feels sad. What is wrong?"
-  - "She looks sad. What happened?"
-srsWords: "sad" "wrong"
+  - "She feels tired after work." (correct)
+  - "She feels sleepy after work."
+  - "She feels tired before work."
+srsWords: "feels" "tired" "after" "work"
 
 [listening]
 text: "He is angry because he missed the bus."
@@ -2000,175 +364,2109 @@ ttsLang: en-US
 mode: choices
 choices:
   - "He is angry because he missed the bus." (correct)
-  - "He is upset because he missed the bus."
-  - "He is angry because he lost his keys."
-srsWords: "angry" "missed"
+  - "He is sad because he missed the bus."
+  - "He is angry because he missed the train."
+srsWords: "angry" "missed" "bus"
 
 [listening]
-text: "I am so excited about the trip!"
+text: "The children are excited about the holiday."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I am so excited about the trip!" (correct)
-  - "I am very excited about the trip!"
-  - "I am so happy about the trip!"
-srsWords: "excited" "trip"
+  - "The children are excited about the holiday." (correct)
+  - "The children are happy about the holiday."
+  - "The students are excited about the holiday."
+srsWords: "children" "excited" "holiday"
 
 [listening]
-text: "She is scared of spiders."
+text: "I feel nervous before an exam."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is scared of spiders." (correct)
-  - "She is afraid of spiders."
-  - "She is scared of snakes."
-srsWords: "scared" "spiders"
+  - "I feel nervous before an exam." (correct)
+  - "I feel scared before an exam."
+  - "I feel nervous after an exam."
+srsWords: "nervous" "exam"
 
 [listening]
-text: "I feel nervous before exams."
+text: "She is sad because her cat is sick."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I feel nervous before exams." (correct)
-  - "I feel scared before exams."
-  - "I am nervous before exams."
-srsWords: "nervous" "exams"
+  - "She is sad because her cat is sick." (correct)
+  - "She is worried because her cat is sick."
+  - "She is sad because her dog is sick."
+srsWords: "sad" "cat" "sick"
 
 [listening]
-text: "He is proud of his daughter."
-ttsLang: en-US
-mode: word-bank
-srsWords: "proud" "daughter"
-
-[listening]
-text: "I am bored. There is nothing to do."
+text: "He feels bored. He has nothing to do."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I am bored. There is nothing to do." (correct)
-  - "I am tired. There is nothing to do."
-  - "I am bored. There is nothing to see."
+  - "He feels bored. He has nothing to do." (correct)
+  - "He feels tired. He has nothing to do."
+  - "He feels bored. He has a lot to do."
 srsWords: "bored" "nothing"
 
 [listening]
-text: "She feels lonely because she has no friends here."
+text: "I am surprised! I didn't know about the party."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She feels lonely because she has no friends here." (correct)
-  - "She feels sad because she has no friends here."
-  - "She feels lonely because she knows nobody here."
-srsWords: "lonely" "friends"
+  - "I am surprised! I didn't know about the party." (correct)
+  - "I am excited! I didn't know about the party."
+  - "I am surprised! I forgot about the party."
+srsWords: "surprised" "party"
 
 [listening]
-text: "We are all very surprised by the news."
+text: "She feels proud of her test result."
 ttsLang: en-US
 mode: choices
 choices:
-  - "We are all very surprised by the news." (correct)
-  - "We are all very shocked by the news."
-  - "We are all very happy about the news."
-srsWords: "surprised" "news"
+  - "She feels proud of her test result." (correct)
+  - "She feels happy about her test result."
+  - "She feels proud of her work result."
+srsWords: "proud" "result"
+
+[listening]
+text: "Are you okay? You look worried."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Are you okay? You look worried." (correct)
+  - "Are you fine? You look worried."
+  - "Are you okay? You look tired."
+srsWords: "okay" "worried"
 
 ---
-lessonTitle: "Greetings Review & Mixed Practice"
-description: "A mixed review of all greetings and people topics"
-icon: "🔄"
-color: "#FF3333"
+lessonTitle: "Describing Appearance"
+description: "Listen to descriptions of people's looks"
+icon: "👤"
+color: "#E74C3C"
 ---
 
 [listening]
-text: "Good morning! My name is Li Wei. Nice to meet you."
+text: "She has long brown hair and blue eyes."
 ttsLang: en-US
 mode: choices
 choices:
-  - "Good morning! My name is Li Wei. Nice to meet you." (correct)
-  - "Good afternoon! My name is Li Wei. Nice to meet you."
-  - "Good morning! My name is Wei. Nice to meet you."
-srsWords: "morning" "nice" "meet"
-
-[listening]
-text: "She is my mother. She is a doctor and very kind."
-ttsLang: en-US
-mode: choices
-choices:
-  - "She is my mother. She is a doctor and very kind." (correct)
-  - "She is my aunt. She is a doctor and very kind."
-  - "She is my mother. She is a nurse and very kind."
-srsWords: "mother" "doctor" "kind"
-
-[listening]
-text: "He has short brown hair and blue eyes."
-ttsLang: en-US
-mode: choices
-choices:
-  - "He has short brown hair and blue eyes." (correct)
-  - "He has long brown hair and blue eyes."
+  - "She has long brown hair and blue eyes." (correct)
   - "She has short brown hair and blue eyes."
-srsWords: "short" "brown" "hair" "blue" "eyes"
+  - "She has long black hair and blue eyes."
+srsWords: "long" "brown" "hair" "eyes"
 
 [listening]
-text: "My best friend is from Korea. She is very funny."
+text: "He is tall and has a big smile."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My best friend is from Korea. She is very funny." (correct)
-  - "My best friend is from Japan. She is very funny."
-  - "My new friend is from Korea. She is very funny."
-srsWords: "best" "friend" "Korea" "funny"
+  - "He is tall and has a big smile." (correct)
+  - "He is short and has a big smile."
+  - "He is tall and has a kind smile."
+srsWords: "tall" "smile"
 
 [listening]
-text: "I am twenty years old and I study at university."
+text: "She is wearing a red dress and white shoes."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I am twenty years old and I study at university." (correct)
-  - "I am thirty years old and I study at university."
-  - "I am twenty years old and I work at university."
-srsWords: "twenty" "study" "university"
+  - "She is wearing a red dress and white shoes." (correct)
+  - "She is wearing a blue dress and white shoes."
+  - "She is wearing a red dress and black shoes."
+srsWords: "wearing" "dress" "shoes"
 
 [listening]
-text: "He is a musician. He plays in a band."
+text: "The old man has white hair and a beard."
 ttsLang: en-US
 mode: choices
 choices:
-  - "He is a musician. He plays in a band." (correct)
-  - "He is a singer. He plays in a band."
-  - "He is a musician. He sings in a band."
-srsWords: "musician" "band"
+  - "The old man has white hair and a beard." (correct)
+  - "The old man has grey hair and a beard."
+  - "The young man has white hair and a beard."
+srsWords: "old" "white" "beard"
 
 [listening]
-text: "Goodbye! It was great to meet you today."
-ttsLang: en-US
-mode: word-bank
-srsWords: "goodbye" "great" "meet" "today"
-
-[listening]
-text: "She is wearing a pink jacket and white jeans."
+text: "He has short black hair and dark eyes."
 ttsLang: en-US
 mode: choices
 choices:
-  - "She is wearing a pink jacket and white jeans." (correct)
-  - "She is wearing a red jacket and white jeans."
-  - "She is wearing a pink coat and white jeans."
-srsWords: "pink" "jacket" "jeans"
+  - "He has short black hair and dark eyes." (correct)
+  - "He has long black hair and dark eyes."
+  - "He has short brown hair and dark eyes."
+srsWords: "short" "black" "dark"
 
 [listening]
-text: "I am happy and excited about my new job."
+text: "She is short and very friendly."
 ttsLang: en-US
 mode: choices
 choices:
-  - "I am happy and excited about my new job." (correct)
-  - "I am nervous and excited about my new job."
-  - "I am happy and proud about my new job."
-srsWords: "happy" "excited" "job"
+  - "She is short and very friendly." (correct)
+  - "She is tall and very friendly."
+  - "She is short and very funny."
+srsWords: "friendly"
 
 [listening]
-text: "My grandfather is old but very active and healthy."
+text: "My friend is very funny and clever."
 ttsLang: en-US
 mode: choices
 choices:
-  - "My grandfather is old but very active and healthy." (correct)
-  - "My grandfather is old but very fit and healthy."
-  - "My grandmother is old but very active and healthy."
-srsWords: "grandfather" "active" "healthy"
+  - "My friend is very funny and clever." (correct)
+  - "My friend is very kind and clever."
+  - "My sister is very funny and clever."
+srsWords: "friend" "funny" "clever"
+
+[listening]
+text: "The baby has soft skin and big brown eyes."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The baby has soft skin and big brown eyes." (correct)
+  - "The baby has smooth skin and big brown eyes."
+  - "The baby has soft skin and small brown eyes."
+srsWords: "baby" "soft" "skin"
+
+[listening]
+text: "He is wearing glasses and a blue jacket."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He is wearing glasses and a blue jacket." (correct)
+  - "He is wearing glasses and a grey jacket."
+  - "She is wearing glasses and a blue jacket."
+srsWords: "glasses" "jacket" "blue"
+
+[listening]
+text: "She looks young but she is forty years old."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She looks young but she is forty years old." (correct)
+  - "She looks old but she is forty years old."
+  - "She looks young but she is fourteen years old."
+srsWords: "looks" "young" "forty"
+
+---
+lessonTitle: "Jobs & Occupations"
+description: "Listen to sentences about different jobs"
+icon: "💼"
+color: "#C0392B"
+---
+
+[listening]
+text: "She is a nurse. She works in a hospital."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She is a nurse. She works in a hospital." (correct)
+  - "She is a doctor. She works in a hospital."
+  - "She is a nurse. She works in a clinic."
+srsWords: "nurse" "works" "hospital"
+
+[listening]
+text: "He is a teacher. He teaches English."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He is a teacher. He teaches English." (correct)
+  - "He is a student. He teaches English."
+  - "He is a teacher. He teaches Chinese."
+srsWords: "teacher" "teaches"
+
+[listening]
+text: "My mother is a chef. She cooks every day."
+ttsLang: en-US
+mode: choices
+choices:
+  - "My mother is a chef. She cooks every day." (correct)
+  - "My mother is a baker. She cooks every day."
+  - "My mother is a chef. She bakes every day."
+srsWords: "chef" "cooks"
+
+[listening]
+text: "He is a police officer. He helps people."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He is a police officer. He helps people." (correct)
+  - "He is a firefighter. He helps people."
+  - "He is a police officer. He protects people."
+srsWords: "police" "officer" "helps"
+
+[listening]
+text: "She is an artist. She paints beautiful pictures."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She is an artist. She paints beautiful pictures." (correct)
+  - "She is a painter. She draws beautiful pictures."
+  - "She is an artist. She draws beautiful pictures."
+srsWords: "artist" "paints" "pictures"
+
+[listening]
+text: "He is a driver. He drives a big bus."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He is a driver. He drives a big bus." (correct)
+  - "He is a pilot. He drives a big bus."
+  - "He is a driver. He drives a small bus."
+srsWords: "driver" "drives" "bus"
+
+[listening]
+text: "She works in a shop and sells clothes."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She works in a shop and sells clothes." (correct)
+  - "She works in a market and sells clothes."
+  - "She works in a shop and buys clothes."
+srsWords: "shop" "sells" "clothes"
+
+[listening]
+text: "I want to be a scientist when I grow up."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I want to be a scientist when I grow up." (correct)
+  - "I want to be a doctor when I grow up."
+  - "I want to be a scientist when I am older."
+srsWords: "scientist" "grow"
+
+[listening]
+text: "The farmer works on a farm every morning."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The farmer works on a farm every morning." (correct)
+  - "The farmer lives on a farm every morning."
+  - "The teacher works on a farm every morning."
+srsWords: "farmer" "farm"
+
+[listening]
+text: "She is a singer. She performs on stage."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She is a singer. She performs on stage." (correct)
+  - "She is an actress. She performs on stage."
+  - "She is a singer. She dances on stage."
+srsWords: "singer" "performs" "stage"
+
+---
+lessonTitle: "Hobbies & Free Time"
+description: "Listen to sentences about free-time activities"
+icon: "🎾"
+color: "#E74C3C"
+---
+
+[listening]
+text: "I like reading books in the evening."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I like reading books in the evening." (correct)
+  - "I like watching TV in the evening."
+  - "I love reading books in the morning."
+srsWords: "reading" "books" "evening"
+
+[listening]
+text: "He plays football with his friends on Sundays."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He plays football with his friends on Sundays." (correct)
+  - "He watches football with his friends on Sundays."
+  - "He plays basketball with his friends on Sundays."
+srsWords: "plays" "football" "friends" "Sundays"
+
+[listening]
+text: "She loves painting and drawing."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She loves painting and drawing." (correct)
+  - "She loves singing and drawing."
+  - "She likes painting and drawing."
+srsWords: "loves" "painting" "drawing"
+
+[listening]
+text: "We go swimming at the pool every weekend."
+ttsLang: en-US
+mode: choices
+choices:
+  - "We go swimming at the pool every weekend." (correct)
+  - "We go swimming at the beach every weekend."
+  - "We go running at the pool every weekend."
+srsWords: "swimming" "pool" "weekend"
+
+[listening]
+text: "My hobby is cooking. I try new recipes."
+ttsLang: en-US
+mode: choices
+choices:
+  - "My hobby is cooking. I try new recipes." (correct)
+  - "My hobby is baking. I try new recipes."
+  - "My hobby is cooking. I make new recipes."
+srsWords: "hobby" "cooking" "recipes"
+
+[listening]
+text: "She plays the piano every afternoon."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She plays the piano every afternoon." (correct)
+  - "She plays the guitar every afternoon."
+  - "She practices the piano every evening."
+srsWords: "piano" "practices"
+
+[listening]
+text: "I enjoy hiking in the mountains."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I enjoy hiking in the mountains." (correct)
+  - "I enjoy cycling in the mountains."
+  - "I enjoy walking in the forest."
+srsWords: "enjoy" "hiking" "mountains"
+
+[listening]
+text: "He watches movies on his laptop at night."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He watches movies on his laptop at night." (correct)
+  - "He watches TV on his laptop at night."
+  - "He plays games on his laptop at night."
+srsWords: "watches" "movies" "laptop"
+
+[listening]
+text: "They play board games as a family."
+ttsLang: en-US
+mode: choices
+choices:
+  - "They play board games as a family." (correct)
+  - "They play card games as a family."
+  - "They watch movies as a family."
+srsWords: "board games"
+
+[listening]
+text: "She goes jogging in the park every morning."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She goes jogging in the park every morning." (correct)
+  - "She goes running on the road every morning."
+  - "She goes jogging in the park every evening."
+srsWords: "jogging" "park"
+
+---
+lessonTitle: "Clothes & Shopping"
+description: "Listen to sentences about clothes and going shopping"
+icon: "🛍️"
+color: "#C0392B"
+---
+
+[listening]
+text: "She is wearing a yellow T-shirt and blue jeans."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She is wearing a yellow T-shirt and blue jeans." (correct)
+  - "She is wearing a white T-shirt and blue jeans."
+  - "She is wearing a yellow T-shirt and black jeans."
+srsWords: "yellow" "T-shirt" "jeans"
+
+[listening]
+text: "He is wearing a grey suit and black shoes."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He is wearing a grey suit and black shoes." (correct)
+  - "He is wearing a blue suit and black shoes."
+  - "He is wearing a grey suit and brown shoes."
+srsWords: "grey" "suit" "black" "shoes"
+
+[listening]
+text: "I need to buy a new winter coat."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I need to buy a new winter coat." (correct)
+  - "I want to buy a new winter coat."
+  - "I need to find a new winter coat."
+srsWords: "buy" "winter" "coat"
+
+[listening]
+text: "How much does this dress cost?"
+ttsLang: en-US
+mode: choices
+choices:
+  - "How much does this dress cost?" (correct)
+  - "How much is this jacket?"
+  - "What is the price of this dress?"
+srsWords: "cost" "dress"
+
+[listening]
+text: "This shirt is too small. I need a bigger size."
+ttsLang: en-US
+mode: choices
+choices:
+  - "This shirt is too small. I need a bigger size." (correct)
+  - "This shirt is too big. I need a smaller size."
+  - "This jacket is too small. I need a bigger size."
+srsWords: "shirt" "small" "bigger" "size"
+
+[listening]
+text: "The shoes are on sale. They are very cheap."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The shoes are on sale. They are very cheap." (correct)
+  - "The shoes are not on sale. They are very cheap."
+  - "The boots are on sale. They are very cheap."
+srsWords: "sale" "cheap"
+
+[listening]
+text: "I am looking for a red scarf."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I am looking for a red scarf." (correct)
+  - "I am looking for a blue scarf."
+  - "I am searching for a red scarf."
+srsWords: "looking" "scarf" "red"
+
+[listening]
+text: "She tries on the dress but it doesn't fit."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She tries on the dress but it doesn't fit." (correct)
+  - "She tries on the skirt but it doesn't fit."
+  - "She buys the dress but it doesn't fit."
+srsWords: "tries" "fit"
+
+[listening]
+text: "Can I pay by card or only cash?"
+ttsLang: en-US
+mode: choices
+choices:
+  - "Can I pay by card or only cash?" (correct)
+  - "Can I pay by phone or only cash?"
+  - "Do you accept card or only cash?"
+srsWords: "pay" "card" "cash"
+
+[listening]
+text: "This bag is beautiful and very good quality."
+ttsLang: en-US
+mode: choices
+choices:
+  - "This bag is beautiful and very good quality." (correct)
+  - "This bag is nice and very good quality."
+  - "This purse is beautiful and very good quality."
+srsWords: "bag" "beautiful" "quality"
+
+---
+lessonTitle: "Health & Body"
+description: "Listen to sentences about the body and health"
+icon: "🏥"
+color: "#E74C3C"
+---
+
+[listening]
+text: "My head hurts. I need some medicine."
+ttsLang: en-US
+mode: choices
+choices:
+  - "My head hurts. I need some medicine." (correct)
+  - "My leg hurts. I need some medicine."
+  - "My head aches. I need a doctor."
+srsWords: "head" "hurts" "medicine"
+
+[listening]
+text: "She has a cold. She is coughing and sneezing."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She has a cold. She is coughing and sneezing." (correct)
+  - "She has a fever. She is coughing and sneezing."
+  - "She has a cold. She is tired and sneezing."
+srsWords: "cold" "coughing" "sneezing"
+
+[listening]
+text: "I need to see a doctor. My stomach hurts."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I need to see a doctor. My stomach hurts." (correct)
+  - "I need to see a nurse. My stomach hurts."
+  - "I need to see a doctor. My back hurts."
+srsWords: "doctor" "stomach"
+
+[listening]
+text: "Please drink more water. It is good for you."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Please drink more water. It is good for you." (correct)
+  - "Please eat more fruit. It is good for you."
+  - "Please drink less water. It is bad for you."
+srsWords: "drink" "water" "good"
+
+[listening]
+text: "He broke his right leg playing football."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He broke his right leg playing football." (correct)
+  - "He broke his left leg playing football."
+  - "He hurt his right leg playing football."
+srsWords: "broke" "right" "leg"
+
+[listening]
+text: "I exercise every day to stay healthy."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I exercise every day to stay healthy." (correct)
+  - "I eat well every day to stay healthy."
+  - "I exercise every week to stay healthy."
+srsWords: "exercise" "healthy"
+
+[listening]
+text: "She has a temperature of thirty-eight degrees."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She has a temperature of thirty-eight degrees." (correct)
+  - "She has a temperature of thirty-six degrees."
+  - "He has a temperature of thirty-eight degrees."
+srsWords: "temperature" "degrees"
+
+[listening]
+text: "I brush my teeth twice a day."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I brush my teeth twice a day." (correct)
+  - "I brush my teeth once a day."
+  - "I clean my teeth twice a day."
+srsWords: "brush" "teeth" "twice"
+
+[listening]
+text: "He is allergic to cats and dogs."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He is allergic to cats and dogs." (correct)
+  - "He is afraid of cats and dogs."
+  - "He is allergic to cats and birds."
+srsWords: "allergic" "cats" "dogs"
+
+[listening]
+text: "Sleep eight hours a night for good health."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Sleep eight hours a night for good health." (correct)
+  - "Sleep seven hours a night for good health."
+  - "Sleep eight hours a day for good health."
+srsWords: "sleep" "eight" "hours" "health"
+
+---
+lessonTitle: "School & Learning"
+description: "Listen to sentences about school subjects and learning"
+icon: "📚"
+color: "#CB4335"
+---
+
+[listening]
+text: "My favourite subject is maths."
+ttsLang: en-US
+mode: choices
+choices:
+  - "My favourite subject is maths." (correct)
+  - "My favourite subject is science."
+  - "My best subject is maths."
+srsWords: "favourite" "subject" "maths"
+
+[listening]
+text: "We have English class at nine o'clock."
+ttsLang: en-US
+mode: choices
+choices:
+  - "We have English class at nine o'clock." (correct)
+  - "We have science class at nine o'clock."
+  - "We have English class at ten o'clock."
+srsWords: "class" "nine"
+
+[listening]
+text: "She studies very hard for her exams."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She studies very hard for her exams." (correct)
+  - "She prepares very hard for her exams."
+  - "She studies very hard for her tests."
+srsWords: "studies" "hard" "exams"
+
+[listening]
+text: "The teacher writes on the whiteboard."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The teacher writes on the whiteboard." (correct)
+  - "The student writes on the whiteboard."
+  - "The teacher draws on the whiteboard."
+srsWords: "teacher" "writes" "whiteboard"
+
+[listening]
+text: "I don't understand this question. Can you help me?"
+ttsLang: en-US
+mode: choices
+choices:
+  - "I don't understand this question. Can you help me?" (correct)
+  - "I don't know this answer. Can you help me?"
+  - "I don't understand this question. Can you explain?"
+srsWords: "understand" "question" "help"
+
+[listening]
+text: "We have homework every day except Friday."
+ttsLang: en-US
+mode: choices
+choices:
+  - "We have homework every day except Friday." (correct)
+  - "We have homework every day except Saturday."
+  - "We have tests every day except Friday."
+srsWords: "homework" "except" "Friday"
+
+[listening]
+text: "The library has many books and computers."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The library has many books and computers." (correct)
+  - "The school has many books and computers."
+  - "The library has many books and magazines."
+srsWords: "library" "computers"
+
+[listening]
+text: "She got a perfect score on her test!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "She got a perfect score on her test!" (correct)
+  - "She got a good score on her test!"
+  - "He got a perfect score on his test!"
+srsWords: "perfect" "score" "test"
+
+[listening]
+text: "School starts at eight and ends at three."
+ttsLang: en-US
+mode: choices
+choices:
+  - "School starts at eight and ends at three." (correct)
+  - "School starts at nine and ends at three."
+  - "School starts at eight and ends at four."
+srsWords: "starts" "ends"
+
+[listening]
+text: "I learn ten new English words every day."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I learn ten new English words every day." (correct)
+  - "I study ten new English words every day."
+  - "I learn twenty new English words every day."
+srsWords: "learn" "words"
+
+---
+lessonTitle: "Food & Eating Habits"
+description: "Listen to sentences about food preferences and meals"
+icon: "🍽️"
+color: "#E74C3C"
+---
+
+[listening]
+text: "I eat three meals a day: breakfast, lunch, and dinner."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I eat three meals a day: breakfast, lunch, and dinner." (correct)
+  - "I eat two meals a day: breakfast, lunch, and dinner."
+  - "I eat three meals a day: breakfast, brunch, and dinner."
+srsWords: "breakfast" "lunch" "dinner" "meals"
+
+[listening]
+text: "She doesn't eat meat. She is a vegetarian."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She doesn't eat meat. She is a vegetarian." (correct)
+  - "She doesn't like meat. She is a vegetarian."
+  - "She doesn't eat fish. She is a vegetarian."
+srsWords: "meat" "vegetarian"
+
+[listening]
+text: "My favourite food is fried rice with egg."
+ttsLang: en-US
+mode: choices
+choices:
+  - "My favourite food is fried rice with egg." (correct)
+  - "My favourite food is fried noodles with egg."
+  - "My favourite meal is fried rice with egg."
+srsWords: "favourite" "food" "fried" "rice" "egg"
+
+[listening]
+text: "I always drink coffee in the morning."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I always drink coffee in the morning." (correct)
+  - "I always drink tea in the morning."
+  - "I sometimes drink coffee in the morning."
+srsWords: "always" "coffee" "morning"
+
+[listening]
+text: "He eats a lot of fruit and vegetables."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He eats a lot of fruit and vegetables." (correct)
+  - "She eats a lot of fruit and vegetables."
+  - "He eats a little fruit and vegetables."
+srsWords: "fruit" "vegetables"
+
+[listening]
+text: "The soup is too salty. I can't eat it."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The soup is too salty. I can't eat it." (correct)
+  - "The soup is too spicy. I can't eat it."
+  - "The food is too salty. I won't eat it."
+srsWords: "soup" "salty"
+
+[listening]
+text: "Can I have some more rice, please?"
+ttsLang: en-US
+mode: choices
+choices:
+  - "Can I have some more rice, please?" (correct)
+  - "Can I have some more noodles, please?"
+  - "May I have some more rice, please?"
+srsWords: "more" "rice"
+
+[listening]
+text: "I love sweet things like chocolate and cake."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I love sweet things like chocolate and cake." (correct)
+  - "I like sweet things like chocolate and cake."
+  - "I love salty things like chocolate and cake."
+srsWords: "sweet" "chocolate" "cake"
+
+[listening]
+text: "She cooks dinner for the family every evening."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She cooks dinner for the family every evening." (correct)
+  - "She makes dinner for the family every evening."
+  - "She cooks lunch for the family every evening."
+srsWords: "cooks" "family" "evening"
+
+[listening]
+text: "We ordered pizza and salad at the restaurant."
+ttsLang: en-US
+mode: choices
+choices:
+  - "We ordered pizza and salad at the restaurant." (correct)
+  - "We ate pizza and salad at the restaurant."
+  - "We ordered pasta and salad at the restaurant."
+srsWords: "ordered" "pizza" "salad" "restaurant"
+
+---
+lessonTitle: "Numbers & Prices"
+description: "Listen to sentences about numbers and money"
+icon: "💰"
+color: "#CB4335"
+---
+
+[listening]
+text: "This apple costs fifty cents."
+ttsLang: en-US
+mode: choices
+choices:
+  - "This apple costs fifty cents." (correct)
+  - "This apple costs fifteen cents."
+  - "This orange costs fifty cents."
+srsWords: "costs" "fifty" "cents"
+
+[listening]
+text: "The total is thirty-five dollars."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The total is thirty-five dollars." (correct)
+  - "The total is forty-five dollars."
+  - "The price is thirty-five dollars."
+srsWords: "total" "thirty-five" "dollars"
+
+[listening]
+text: "I have two hundred dollars in my wallet."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I have two hundred dollars in my wallet." (correct)
+  - "I have three hundred dollars in my wallet."
+  - "I have two hundred euros in my wallet."
+srsWords: "hundred" "wallet"
+
+[listening]
+text: "There are thirty students in my class."
+ttsLang: en-US
+mode: choices
+choices:
+  - "There are thirty students in my class." (correct)
+  - "There are thirteen students in my class."
+  - "There are thirty teachers in my class."
+srsWords: "thirty" "students" "class"
+
+[listening]
+text: "He runs five kilometres every morning."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He runs five kilometres every morning." (correct)
+  - "He runs three kilometres every morning."
+  - "He walks five kilometres every morning."
+srsWords: "runs" "kilometres"
+
+[listening]
+text: "The book costs twelve pounds and fifty pence."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The book costs twelve pounds and fifty pence." (correct)
+  - "The book costs twenty pounds and fifty pence."
+  - "The magazine costs twelve pounds and fifty pence."
+srsWords: "book" "pounds" "pence"
+
+[listening]
+text: "I need one thousand words to pass the test."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I need one thousand words to pass the test." (correct)
+  - "I need one hundred words to pass the test."
+  - "I need one thousand words to finish the course."
+srsWords: "thousand" "pass"
+
+[listening]
+text: "She is on the fourteenth floor."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She is on the fourteenth floor." (correct)
+  - "She is on the fourth floor."
+  - "He is on the fourteenth floor."
+srsWords: "fourteenth" "floor"
+
+[listening]
+text: "The bus comes every fifteen minutes."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The bus comes every fifteen minutes." (correct)
+  - "The bus comes every fifty minutes."
+  - "The train comes every fifteen minutes."
+srsWords: "bus" "fifteen" "minutes"
+
+[listening]
+text: "There are sixty seconds in one minute."
+ttsLang: en-US
+mode: choices
+choices:
+  - "There are sixty seconds in one minute." (correct)
+  - "There are sixty minutes in one hour."
+  - "There are thirty seconds in one minute."
+srsWords: "sixty" "seconds" "minute"
+
+---
+lessonTitle: "Colors & Objects"
+description: "Listen to sentences using colors and common objects"
+icon: "🎨"
+color: "#E74C3C"
+---
+
+[listening]
+text: "The sky is blue and the sun is yellow."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The sky is blue and the sun is yellow." (correct)
+  - "The sky is grey and the sun is yellow."
+  - "The sky is blue and the moon is yellow."
+srsWords: "sky" "blue" "sun" "yellow"
+
+[listening]
+text: "She has a green bag and a red umbrella."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She has a green bag and a red umbrella." (correct)
+  - "She has a blue bag and a red umbrella."
+  - "She has a green bag and a pink umbrella."
+srsWords: "green" "bag" "red" "umbrella"
+
+[listening]
+text: "The white car is parked near the door."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The white car is parked near the door." (correct)
+  - "The black car is parked near the door."
+  - "The white bus is parked near the door."
+srsWords: "white" "car" "parked"
+
+[listening]
+text: "My phone is on the table next to the lamp."
+ttsLang: en-US
+mode: choices
+choices:
+  - "My phone is on the table next to the lamp." (correct)
+  - "My phone is under the table next to the lamp."
+  - "My keys are on the table next to the lamp."
+srsWords: "phone" "table" "lamp"
+
+[listening]
+text: "The purple flowers look beautiful in the garden."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The purple flowers look beautiful in the garden." (correct)
+  - "The red flowers look beautiful in the garden."
+  - "The purple flowers look lovely in the park."
+srsWords: "purple" "flowers" "garden"
+
+[listening]
+text: "He put the orange box on the black shelf."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He put the orange box on the black shelf." (correct)
+  - "He put the red box on the black shelf."
+  - "She put the orange box on the black shelf."
+srsWords: "orange" "box" "shelf"
+
+[listening]
+text: "The pink notebook is mine and the blue one is hers."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The pink notebook is mine and the blue one is hers." (correct)
+  - "The pink notebook is mine and the red one is hers."
+  - "The yellow notebook is mine and the blue one is hers."
+srsWords: "pink" "notebook" "mine" "hers"
+
+[listening]
+text: "There is a grey cat sleeping on the brown sofa."
+ttsLang: en-US
+mode: choices
+choices:
+  - "There is a grey cat sleeping on the brown sofa." (correct)
+  - "There is a white cat sleeping on the brown sofa."
+  - "There is a grey cat sitting on the brown sofa."
+srsWords: "grey" "cat" "sleeping" "sofa"
+
+[listening]
+text: "She is drinking from a blue glass."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She is drinking from a blue glass." (correct)
+  - "She is drinking from a red glass."
+  - "He is drinking from a blue glass."
+srsWords: "drinking" "glass"
+
+[listening]
+text: "The yellow pencil is on the desk."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The yellow pencil is on the desk." (correct)
+  - "The yellow pen is on the desk."
+  - "The yellow pencil is in the bag."
+srsWords: "pencil" "desk"
+
+---
+lessonTitle: "Animals & Pets"
+description: "Listen to sentences about animals and pets"
+icon: "🐶"
+color: "#C0392B"
+---
+
+[listening]
+text: "I have a black cat. Her name is Luna."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I have a black cat. Her name is Luna." (correct)
+  - "I have a white cat. Her name is Luna."
+  - "I have a black dog. Her name is Luna."
+srsWords: "cat" "black" "name"
+
+[listening]
+text: "The dog is barking loudly outside."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The dog is barking loudly outside." (correct)
+  - "The dog is running loudly outside."
+  - "The cat is barking loudly outside."
+srsWords: "dog" "barking" "outside"
+
+[listening]
+text: "She has two goldfish in a glass bowl."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She has two goldfish in a glass bowl." (correct)
+  - "She has three goldfish in a glass bowl."
+  - "She has two fish in a plastic bowl."
+srsWords: "goldfish" "bowl"
+
+[listening]
+text: "The rabbit is eating a carrot."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The rabbit is eating a carrot." (correct)
+  - "The rabbit is eating a lettuce leaf."
+  - "The bunny is eating a carrot."
+srsWords: "rabbit" "eating" "carrot"
+
+[listening]
+text: "Lions are big, strong, and dangerous animals."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Lions are big, strong, and dangerous animals." (correct)
+  - "Tigers are big, strong, and dangerous animals."
+  - "Lions are big, fast, and dangerous animals."
+srsWords: "lions" "strong" "dangerous" "animals"
+
+[listening]
+text: "My dog loves to play in the park."
+ttsLang: en-US
+mode: choices
+choices:
+  - "My dog loves to play in the park." (correct)
+  - "My cat loves to play in the park."
+  - "My dog likes to run in the park."
+srsWords: "loves" "play" "park"
+
+[listening]
+text: "Birds sing early in the morning."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Birds sing early in the morning." (correct)
+  - "Birds fly early in the morning."
+  - "Birds sing late at night."
+srsWords: "birds" "sing" "early" "morning"
+
+[listening]
+text: "The elephant is the largest land animal."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The elephant is the largest land animal." (correct)
+  - "The elephant is a very big land animal."
+  - "The whale is the largest land animal."
+srsWords: "elephant" "largest" "land"
+
+[listening]
+text: "My neighbour has a very friendly horse."
+ttsLang: en-US
+mode: choices
+choices:
+  - "My neighbour has a very friendly horse." (correct)
+  - "My friend has a very friendly horse."
+  - "My neighbour has a very fast horse."
+srsWords: "neighbour" "friendly" "horse"
+
+[listening]
+text: "The fish in the lake are very colourful."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The fish in the lake are very colourful." (correct)
+  - "The fish in the sea are very colourful."
+  - "The birds in the lake are very colourful."
+srsWords: "fish" "lake" "colourful"
+
+---
+lessonTitle: "The Home"
+description: "Listen to sentences about rooms and activities at home"
+icon: "🏡"
+color: "#E74C3C"
+---
+
+[listening]
+text: "The kitchen is next to the dining room."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The kitchen is next to the dining room." (correct)
+  - "The kitchen is opposite the dining room."
+  - "The bathroom is next to the dining room."
+srsWords: "kitchen" "dining room"
+
+[listening]
+text: "She is watching TV in the living room."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She is watching TV in the living room." (correct)
+  - "She is reading in the living room."
+  - "She is watching TV in the bedroom."
+srsWords: "watching" "TV" "living room"
+
+[listening]
+text: "I sleep in the bedroom on the second floor."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I sleep in the bedroom on the second floor." (correct)
+  - "I study in the bedroom on the second floor."
+  - "I sleep in the bedroom on the first floor."
+srsWords: "bedroom" "second" "floor"
+
+[listening]
+text: "He is cleaning the bathroom."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He is cleaning the bathroom." (correct)
+  - "He is using the bathroom."
+  - "She is cleaning the bathroom."
+srsWords: "cleaning" "bathroom"
+
+[listening]
+text: "The sofa and armchair are in the living room."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The sofa and armchair are in the living room." (correct)
+  - "The sofa and armchair are in the bedroom."
+  - "The bed and armchair are in the living room."
+srsWords: "sofa" "armchair" "living room"
+
+[listening]
+text: "We eat dinner together in the dining room."
+ttsLang: en-US
+mode: choices
+choices:
+  - "We eat dinner together in the dining room." (correct)
+  - "We eat lunch together in the dining room."
+  - "We eat dinner alone in the dining room."
+srsWords: "dinner" "together"
+
+[listening]
+text: "She is washing the dishes after dinner."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She is washing the dishes after dinner." (correct)
+  - "She is drying the dishes after dinner."
+  - "She is washing the dishes before dinner."
+srsWords: "washing" "dishes"
+
+[listening]
+text: "My garden has flowers and a small pond."
+ttsLang: en-US
+mode: choices
+choices:
+  - "My garden has flowers and a small pond." (correct)
+  - "My garden has trees and a small pond."
+  - "My yard has flowers and a small pond."
+srsWords: "garden" "flowers" "pond"
+
+[listening]
+text: "He is reading a book in his bedroom."
+ttsLang: en-US
+mode: choices
+choices:
+  - "He is reading a book in his bedroom." (correct)
+  - "He is writing in his bedroom."
+  - "He is reading a book in the living room."
+srsWords: "reading" "book"
+
+[listening]
+text: "The windows are open because it is hot."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The windows are open because it is hot." (correct)
+  - "The doors are open because it is hot."
+  - "The windows are closed because it is hot."
+srsWords: "windows" "open" "hot"
+
+---
+lessonTitle: "Simple Instructions"
+description: "Listen to simple commands and instructions"
+icon: "📢"
+color: "#CB4335"
+---
+
+[listening]
+text: "Please sit down and open your book."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Please sit down and open your book." (correct)
+  - "Please stand up and open your book."
+  - "Please sit down and close your book."
+srsWords: "sit" "open" "book"
+
+[listening]
+text: "Turn off the light before you leave."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Turn off the light before you leave." (correct)
+  - "Turn on the light before you leave."
+  - "Turn off the fan before you leave."
+srsWords: "turn off" "light" "leave"
+
+[listening]
+text: "Don't forget to lock the door!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "Don't forget to lock the door!" (correct)
+  - "Don't forget to close the door!"
+  - "Remember to lock the door!"
+srsWords: "forget" "lock" "door"
+
+[listening]
+text: "Please write your name at the top of the page."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Please write your name at the top of the page." (correct)
+  - "Please write your name at the bottom of the page."
+  - "Please print your name at the top of the page."
+srsWords: "write" "top" "page"
+
+[listening]
+text: "Put your phone away during the lesson."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Put your phone away during the lesson." (correct)
+  - "Put your bag away during the lesson."
+  - "Take out your phone during the lesson."
+srsWords: "put away" "phone" "lesson"
+
+[listening]
+text: "Listen carefully and repeat after me."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Listen carefully and repeat after me." (correct)
+  - "Listen carefully and read after me."
+  - "Listen slowly and repeat after me."
+srsWords: "listen" "carefully" "repeat"
+
+[listening]
+text: "Stand up straight and look at the board."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Stand up straight and look at the board." (correct)
+  - "Sit up straight and look at the board."
+  - "Stand up straight and write on the board."
+srsWords: "stand" "straight" "board"
+
+[listening]
+text: "Close the window. It is getting cold."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Close the window. It is getting cold." (correct)
+  - "Open the window. It is getting cold."
+  - "Close the door. It is getting cold."
+srsWords: "close" "window" "cold"
+
+[listening]
+text: "Wash your hands before you eat."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Wash your hands before you eat." (correct)
+  - "Dry your hands before you eat."
+  - "Wash your hands after you eat."
+srsWords: "wash" "hands" "before" "eat"
+
+[listening]
+text: "Be quiet! The baby is sleeping."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Be quiet! The baby is sleeping." (correct)
+  - "Be careful! The baby is sleeping."
+  - "Be quiet! The child is sleeping."
+srsWords: "quiet" "baby" "sleeping"
+
+---
+lessonTitle: "Simple Questions & Answers"
+description: "Listen to common questions and short answers"
+icon: "❓"
+color: "#E74C3C"
+---
+
+[listening]
+text: "A: Where do you live? B: I live in Beijing."
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Where do you live? B: I live in Beijing." (correct)
+  - "A: Where are you from? B: I live in Beijing."
+  - "A: Where do you live? B: I live in Shanghai."
+srsWords: "live" "Beijing"
+
+[listening]
+text: "A: What time is it? B: It is half past ten."
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: What time is it? B: It is half past ten." (correct)
+  - "A: What time is it? B: It is quarter past ten."
+  - "A: What time is it? B: It is half past eleven."
+srsWords: "time" "half" "past" "ten"
+
+[listening]
+text: "A: Do you have a pen? B: Yes, here you are."
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Do you have a pen? B: Yes, here you are." (correct)
+  - "A: Do you have a pencil? B: Yes, here you are."
+  - "A: Do you have a pen? B: No, sorry."
+srsWords: "pen" "here"
+
+[listening]
+text: "A: How much is the ticket? B: It is ten dollars."
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: How much is the ticket? B: It is ten dollars." (correct)
+  - "A: How much is the ticket? B: It is twenty dollars."
+  - "A: What is the price? B: It is ten dollars."
+srsWords: "ticket" "much" "dollars"
+
+[listening]
+text: "A: Is this your bag? B: No, it is not mine."
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Is this your bag? B: No, it is not mine." (correct)
+  - "A: Is this your bag? B: Yes, it is mine."
+  - "A: Is this your book? B: No, it is not mine."
+srsWords: "bag" "mine"
+
+[listening]
+text: "A: Can I sit here? B: Yes, of course!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Can I sit here? B: Yes, of course!" (correct)
+  - "A: Can I stand here? B: Yes, of course!"
+  - "A: Can I sit here? B: Sorry, it is taken."
+srsWords: "sit" "here" "course"
+
+[listening]
+text: "A: What is your job? B: I am an engineer."
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: What is your job? B: I am an engineer." (correct)
+  - "A: What do you do? B: I am a doctor."
+  - "A: What is your job? B: I am a teacher."
+srsWords: "job" "engineer"
+
+[listening]
+text: "A: Do you like coffee? B: Yes, I love it!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Do you like coffee? B: Yes, I love it!" (correct)
+  - "A: Do you drink coffee? B: Yes, I love it!"
+  - "A: Do you like tea? B: Yes, I love it!"
+srsWords: "like" "coffee" "love"
+
+[listening]
+text: "A: Are you ready? B: Yes, let's go!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Are you ready? B: Yes, let's go!" (correct)
+  - "A: Are you tired? B: Yes, let's go!"
+  - "A: Are you ready? B: Not yet."
+srsWords: "ready"
+
+[listening]
+text: "A: What is the weather like? B: It is sunny and warm."
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: What is the weather like? B: It is sunny and warm." (correct)
+  - "A: How is the weather? B: It is hot and sunny."
+  - "A: What is the weather like? B: It is cloudy and cold."
+srsWords: "weather" "sunny" "warm"
+
+---
+lessonTitle: "Around Town"
+description: "Listen to sentences about places and locations"
+icon: "🏙️"
+color: "#C0392B"
+---
+
+[listening]
+text: "The supermarket is on the left, next to the bank."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The supermarket is on the left, next to the bank." (correct)
+  - "The supermarket is on the right, next to the bank."
+  - "The library is on the left, next to the bank."
+srsWords: "supermarket" "left" "bank"
+
+[listening]
+text: "Go straight on and turn right at the lights."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Go straight on and turn right at the lights." (correct)
+  - "Go straight on and turn left at the lights."
+  - "Go back and turn right at the lights."
+srsWords: "straight" "right" "lights"
+
+[listening]
+text: "The post office is between the school and the park."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The post office is between the school and the park." (correct)
+  - "The post office is opposite the school and the park."
+  - "The library is between the school and the park."
+srsWords: "post office" "between" "school" "park"
+
+[listening]
+text: "Is there a pharmacy near here?"
+ttsLang: en-US
+mode: choices
+choices:
+  - "Is there a pharmacy near here?" (correct)
+  - "Is there a hospital near here?"
+  - "Is there a pharmacy far from here?"
+srsWords: "pharmacy" "near"
+
+[listening]
+text: "The café is opposite the train station."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The café is opposite the train station." (correct)
+  - "The café is next to the train station."
+  - "The shop is opposite the train station."
+srsWords: "café" "opposite" "station"
+
+[listening]
+text: "I buy fresh bread from the bakery every morning."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I buy fresh bread from the bakery every morning." (correct)
+  - "I buy fresh cakes from the bakery every morning."
+  - "I get fresh bread from the shop every morning."
+srsWords: "buy" "bread" "bakery"
+
+[listening]
+text: "The park is behind the library."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The park is behind the library." (correct)
+  - "The park is in front of the library."
+  - "The garden is behind the library."
+srsWords: "park" "behind" "library"
+
+[listening]
+text: "There is a sports centre near my house."
+ttsLang: en-US
+mode: choices
+choices:
+  - "There is a sports centre near my house." (correct)
+  - "There is a gym near my house."
+  - "There is a sports centre next to my house."
+srsWords: "sports" "centre" "house"
+
+[listening]
+text: "The bus stop is at the end of the street."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The bus stop is at the end of the street." (correct)
+  - "The bus stop is at the start of the street."
+  - "The taxi stop is at the end of the street."
+srsWords: "bus stop" "end" "street"
+
+[listening]
+text: "The hotel is near the city centre."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The hotel is near the city centre." (correct)
+  - "The hotel is far from the city centre."
+  - "The hostel is near the city centre."
+srsWords: "hotel" "city" "centre"
+
+---
+lessonTitle: "Telling the Time"
+description: "Listen to sentences about time and schedules"
+icon: "🕐"
+color: "#E74C3C"
+---
+
+[listening]
+text: "It is half past three in the afternoon."
+ttsLang: en-US
+mode: choices
+choices:
+  - "It is half past three in the afternoon." (correct)
+  - "It is quarter past three in the afternoon."
+  - "It is half past four in the afternoon."
+srsWords: "half" "past" "three" "afternoon"
+
+[listening]
+text: "The film starts at eight fifteen."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The film starts at eight fifteen." (correct)
+  - "The film ends at eight fifteen."
+  - "The film starts at eight thirty."
+srsWords: "film" "starts" "eight"
+
+[listening]
+text: "What time does the shop open? At nine o'clock."
+ttsLang: en-US
+mode: choices
+choices:
+  - "What time does the shop open? At nine o'clock." (correct)
+  - "What time does the shop close? At nine o'clock."
+  - "What time does the shop open? At ten o'clock."
+srsWords: "shop" "open" "nine"
+
+[listening]
+text: "School starts at eight thirty every morning."
+ttsLang: en-US
+mode: choices
+choices:
+  - "School starts at eight thirty every morning." (correct)
+  - "School ends at eight thirty every morning."
+  - "School starts at nine thirty every morning."
+srsWords: "school" "starts" "thirty"
+
+[listening]
+text: "It is five minutes to seven."
+ttsLang: en-US
+mode: choices
+choices:
+  - "It is five minutes to seven." (correct)
+  - "It is five minutes past seven."
+  - "It is fifteen minutes to seven."
+srsWords: "five" "minutes" "seven"
+
+[listening]
+text: "She arrives at work at a quarter past eight."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She arrives at work at a quarter past eight." (correct)
+  - "She leaves work at a quarter past eight."
+  - "She arrives at school at a quarter past eight."
+srsWords: "arrives" "quarter" "eight"
+
+[listening]
+text: "The train leaves at ten to twelve."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The train leaves at ten to twelve." (correct)
+  - "The train arrives at ten to twelve."
+  - "The bus leaves at ten to twelve."
+srsWords: "train" "leaves" "twelve"
+
+[listening]
+text: "The bank is open from nine to five."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The bank is open from nine to five." (correct)
+  - "The bank is open from ten to five."
+  - "The shop is open from nine to five."
+srsWords: "bank" "open" "five"
+
+[listening]
+text: "I wake up at six o'clock every day."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I wake up at six o'clock every day." (correct)
+  - "I get up at six o'clock every day."
+  - "I wake up at seven o'clock every day."
+srsWords: "wake" "six"
+
+[listening]
+text: "We go to bed at eleven o'clock at night."
+ttsLang: en-US
+mode: choices
+choices:
+  - "We go to bed at eleven o'clock at night." (correct)
+  - "We go to bed at ten o'clock at night."
+  - "I go to bed at eleven o'clock at night."
+srsWords: "bed" "eleven" "night"
+
+---
+lessonTitle: "Days, Months & Seasons"
+description: "Listen to sentences about days, months, and seasons"
+icon: "📅"
+color: "#CB4335"
+---
+
+[listening]
+text: "Today is Tuesday the third of June."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Today is Tuesday the third of June." (correct)
+  - "Today is Thursday the third of June."
+  - "Today is Tuesday the thirteenth of June."
+srsWords: "Tuesday" "third" "June"
+
+[listening]
+text: "My birthday is on the first of January."
+ttsLang: en-US
+mode: choices
+choices:
+  - "My birthday is on the first of January." (correct)
+  - "My birthday is on the first of July."
+  - "My party is on the first of January."
+srsWords: "birthday" "first" "January"
+
+[listening]
+text: "Christmas is in December. It is very cold."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Christmas is in December. It is very cold." (correct)
+  - "Easter is in December. It is very cold."
+  - "Christmas is in November. It is very cold."
+srsWords: "Christmas" "December" "cold"
+
+[listening]
+text: "In spring, the weather gets warmer."
+ttsLang: en-US
+mode: choices
+choices:
+  - "In spring, the weather gets warmer." (correct)
+  - "In autumn, the weather gets warmer."
+  - "In spring, the weather gets colder."
+srsWords: "spring" "weather" "warmer"
+
+[listening]
+text: "Summer is my favourite season. I love sunshine."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Summer is my favourite season. I love sunshine." (correct)
+  - "Winter is my favourite season. I love sunshine."
+  - "Summer is my favourite season. I love the heat."
+srsWords: "summer" "favourite" "season" "sunshine"
+
+[listening]
+text: "The school year starts in September."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The school year starts in September." (correct)
+  - "The school year starts in October."
+  - "The new year starts in September."
+srsWords: "school" "year" "September"
+
+[listening]
+text: "There are seven days in a week."
+ttsLang: en-US
+mode: choices
+choices:
+  - "There are seven days in a week." (correct)
+  - "There are five days in a week."
+  - "There are seven weeks in a month."
+srsWords: "seven" "days" "week"
+
+[listening]
+text: "Monday is the first day of the working week."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Monday is the first day of the working week." (correct)
+  - "Sunday is the first day of the working week."
+  - "Monday is the last day of the working week."
+srsWords: "Monday" "working" "week"
+
+[listening]
+text: "February is shorter than all other months."
+ttsLang: en-US
+mode: choices
+choices:
+  - "February is shorter than all other months." (correct)
+  - "January is shorter than all other months."
+  - "February is longer than all other months."
+srsWords: "February" "shorter" "months"
+
+[listening]
+text: "In autumn, the leaves turn red and yellow."
+ttsLang: en-US
+mode: choices
+choices:
+  - "In autumn, the leaves turn red and yellow." (correct)
+  - "In spring, the leaves turn red and yellow."
+  - "In autumn, the flowers turn red and yellow."
+srsWords: "autumn" "leaves" "turn"
+
+---
+lessonTitle: "Weather"
+description: "Listen to sentences describing different types of weather"
+icon: "⛅"
+color: "#E74C3C"
+---
+
+[listening]
+text: "It is raining heavily. Take your umbrella."
+ttsLang: en-US
+mode: choices
+choices:
+  - "It is raining heavily. Take your umbrella." (correct)
+  - "It is raining lightly. Take your umbrella."
+  - "It is snowing heavily. Take your umbrella."
+srsWords: "raining" "heavily" "umbrella"
+
+[listening]
+text: "The weather is sunny and warm today."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The weather is sunny and warm today." (correct)
+  - "The weather is cloudy and warm today."
+  - "The weather is sunny and hot today."
+srsWords: "weather" "sunny" "warm"
+
+[listening]
+text: "It is very windy. The trees are moving."
+ttsLang: en-US
+mode: choices
+choices:
+  - "It is very windy. The trees are moving." (correct)
+  - "It is very stormy. The trees are moving."
+  - "It is very windy. The leaves are falling."
+srsWords: "windy" "trees" "moving"
+
+[listening]
+text: "There is snow on the ground this morning."
+ttsLang: en-US
+mode: choices
+choices:
+  - "There is snow on the ground this morning." (correct)
+  - "There is ice on the ground this morning."
+  - "There is snow on the road this morning."
+srsWords: "snow" "ground" "morning"
+
+[listening]
+text: "The temperature is minus five degrees today."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The temperature is minus five degrees today." (correct)
+  - "The temperature is five degrees today."
+  - "The temperature is minus fifteen degrees today."
+srsWords: "temperature" "minus" "degrees"
+
+[listening]
+text: "It is cloudy but it is not raining."
+ttsLang: en-US
+mode: choices
+choices:
+  - "It is cloudy but it is not raining." (correct)
+  - "It is cloudy and it is raining."
+  - "It is foggy but it is not raining."
+srsWords: "cloudy" "raining"
+
+[listening]
+text: "After the storm, there was a beautiful rainbow."
+ttsLang: en-US
+mode: choices
+choices:
+  - "After the storm, there was a beautiful rainbow." (correct)
+  - "After the rain, there was a beautiful rainbow."
+  - "After the storm, we saw a colourful rainbow."
+srsWords: "storm" "rainbow" "beautiful"
+
+[listening]
+text: "Bring a coat. It is cold outside."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Bring a coat. It is cold outside." (correct)
+  - "Wear a scarf. It is cold outside."
+  - "Bring a coat. It is warm outside."
+srsWords: "bring" "coat" "cold" "outside"
+
+[listening]
+text: "The forecast says it will snow tomorrow."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The forecast says it will snow tomorrow." (correct)
+  - "The forecast says it will rain tomorrow."
+  - "The news says it will snow tomorrow."
+srsWords: "forecast" "snow" "tomorrow"
+
+[listening]
+text: "It is very hot in summer in this country."
+ttsLang: en-US
+mode: choices
+choices:
+  - "It is very hot in summer in this country." (correct)
+  - "It is very warm in summer in this country."
+  - "It is very hot in winter in this country."
+srsWords: "hot" "summer" "country"
+
+---
+lessonTitle: "Transport & Travel"
+description: "Listen to sentences about getting around and travelling"
+icon: "✈️"
+color: "#C0392B"
+---
+
+[listening]
+text: "I take the bus to school every day."
+ttsLang: en-US
+mode: choices
+choices:
+  - "I take the bus to school every day." (correct)
+  - "I take the train to school every day."
+  - "I catch the bus to school every day."
+srsWords: "take" "bus" "school"
+
+[listening]
+text: "The flight departs at seven in the morning."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The flight departs at seven in the morning." (correct)
+  - "The flight arrives at seven in the morning."
+  - "The train departs at seven in the morning."
+srsWords: "flight" "departs" "morning"
+
+[listening]
+text: "She drives her car to work every day."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She drives her car to work every day." (correct)
+  - "She rides her car to work every day."
+  - "She drives her car to school every day."
+srsWords: "drives" "car" "work"
+
+[listening]
+text: "The train is late by twenty minutes."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The train is late by twenty minutes." (correct)
+  - "The bus is late by twenty minutes."
+  - "The train is early by twenty minutes."
+srsWords: "train" "late" "twenty" "minutes"
+
+[listening]
+text: "Turn left at the traffic lights."
+ttsLang: en-US
+mode: choices
+choices:
+  - "Turn left at the traffic lights." (correct)
+  - "Turn right at the traffic lights."
+  - "Go straight at the traffic lights."
+srsWords: "turn" "left" "traffic" "lights"
+
+[listening]
+text: "The airport is forty minutes from the city centre."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The airport is forty minutes from the city centre." (correct)
+  - "The airport is fourteen minutes from the city centre."
+  - "The station is forty minutes from the city centre."
+srsWords: "airport" "forty" "city" "centre"
+
+[listening]
+text: "She rides her bicycle to the market."
+ttsLang: en-US
+mode: choices
+choices:
+  - "She rides her bicycle to the market." (correct)
+  - "She drives her bicycle to the market."
+  - "She walks her bicycle to the market."
+srsWords: "rides" "bicycle" "market"
+
+[listening]
+text: "We are going on holiday to Japan next month."
+ttsLang: en-US
+mode: choices
+choices:
+  - "We are going on holiday to Japan next month." (correct)
+  - "We are going on a trip to Japan next month."
+  - "We are going on holiday to China next month."
+srsWords: "holiday" "Japan" "month"
+
+[listening]
+text: "The boat crosses the river in five minutes."
+ttsLang: en-US
+mode: choices
+choices:
+  - "The boat crosses the river in five minutes." (correct)
+  - "The ferry crosses the river in five minutes."
+  - "The boat crosses the river in ten minutes."
+srsWords: "boat" "crosses" "river"
+
+[listening]
+text: "Excuse me, which platform is the train to London?"
+ttsLang: en-US
+mode: choices
+choices:
+  - "Excuse me, which platform is the train to London?" (correct)
+  - "Sorry, which platform is the train to London?"
+  - "Excuse me, which track is the train to London?"
+srsWords: "platform" "train" "London"
+
+---
+lessonTitle: "Everyday Conversations"
+description: "Listen to short everyday conversations and phrases"
+icon: "💬"
+color: "#E74C3C"
+---
+
+[listening]
+text: "A: Excuse me, can you help me? B: Of course!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Excuse me, can you help me? B: Of course!" (correct)
+  - "A: Sorry, can you help me? B: Of course!"
+  - "A: Excuse me, can you help me? B: Sure!"
+srsWords: "excuse" "help" "course"
+
+[listening]
+text: "A: How was your day? B: It was great, thanks!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: How was your day? B: It was great, thanks!" (correct)
+  - "A: How was your evening? B: It was great, thanks!"
+  - "A: How was your day? B: It was good, thanks!"
+srsWords: "day" "great"
+
+[listening]
+text: "A: What would you like to drink? B: A coffee, please."
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: What would you like to drink? B: A coffee, please." (correct)
+  - "A: What do you want to drink? B: A coffee, please."
+  - "A: What would you like to eat? B: A coffee, please."
+srsWords: "drink" "coffee" "please"
+
+[listening]
+text: "A: I am sorry I am late. B: No problem at all."
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: I am sorry I am late. B: No problem at all." (correct)
+  - "A: I am sorry I am early. B: No problem at all."
+  - "A: I am sorry I am late. B: That is fine."
+srsWords: "sorry" "late" "problem"
+
+[listening]
+text: "A: Can I borrow your pen? B: Yes, of course!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Can I borrow your pen? B: Yes, of course!" (correct)
+  - "A: Can I use your pen? B: Yes, of course!"
+  - "A: Can I borrow your pencil? B: Yes, of course!"
+srsWords: "borrow" "pen"
+
+[listening]
+text: "A: Have a safe journey! B: Thank you very much!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Have a safe journey! B: Thank you very much!" (correct)
+  - "A: Have a good trip! B: Thank you very much!"
+  - "A: Have a safe journey! B: You are welcome!"
+srsWords: "safe" "journey"
+
+[listening]
+text: "A: Is the restaurant far? B: No, it is five minutes away."
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Is the restaurant far? B: No, it is five minutes away." (correct)
+  - "A: Is the hotel far? B: No, it is five minutes away."
+  - "A: Is the restaurant far? B: Yes, it is far."
+srsWords: "restaurant" "far" "minutes" "away"
+
+[listening]
+text: "A: Happy Birthday! B: Thank you so much!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Happy Birthday! B: Thank you so much!" (correct)
+  - "A: Merry Christmas! B: Thank you so much!"
+  - "A: Happy Birthday! B: You are welcome!"
+srsWords: "birthday" "happy"
+
+[listening]
+text: "A: Shall we go now? B: Yes, let's go!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: Shall we go now? B: Yes, let's go!" (correct)
+  - "A: Are we going now? B: Yes, let's go!"
+  - "A: Shall we go now? B: Not yet."
+srsWords: "shall" "now"
+
+[listening]
+text: "A: See you next week! B: Yes, see you then!"
+ttsLang: en-US
+mode: choices
+choices:
+  - "A: See you next week! B: Yes, see you then!" (correct)
+  - "A: See you tomorrow! B: Yes, see you then!"
+  - "A: See you next week! B: Okay, goodbye!"
+srsWords: "next" "week" "then"
