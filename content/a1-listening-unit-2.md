@@ -1,5 +1,5 @@
 ---
-unitTitle: "Greetings & People"
+unitTitle: "Unit 2: Greetings & People"
 description: "Listen and understand basic greetings, introductions, and people descriptions in English."
 icon: "👋"
 color: "#FF6B6B"
