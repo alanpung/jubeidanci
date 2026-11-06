@@ -114,8 +114,11 @@ export default async function CoursesReportPage() {
       <header>
         <h1 className="text-2xl font-black text-lingo-text">Course Stat</h1>
         <p className="mt-1 text-sm text-lingo-text-light">
-          各课程的 <span className="font-bold">srsWord</span> 总数，按英文词典标注的真实
-          CEFR 等级拆分（A1–C2）。<span className="font-bold">未收录</span>{" "}
+          各课程 <span className="font-bold">srsWord</span> 的
+          <span className="font-bold">去重</span>总数，按英文词典标注的真实
+          CEFR 等级拆分（A1–C2）：同一课程内重复出现的词只算一次；
+          不同课程之间的重复词各自计入。
+          <span className="font-bold">未收录</span>{" "}
           指该词（或其词素）未出现在内置词典中；所有者可见，学生不可见。
         </p>
       </header>
@@ -145,7 +148,7 @@ export default async function CoursesReportPage() {
               "font-bold text-sky-700 bg-sky-50/60",
             )}
             {renderSummaryRow(
-              "总计",
+              "各课程之和（同词跨课程重复计）",
               totals,
               "text-lingo-text bg-gray-50",
               "font-bold text-lingo-text bg-gray-50",
