@@ -12,6 +12,7 @@ import { readdirSync, readFileSync } from "fs";
 import path from "path";
 
 import { parseUnitMarkdown } from "./unit-parser";
+import { normalizeQuestionType } from "./question-types";
 
 const CONTENT_DIR = path.join(process.cwd(), "content");
 const DICT_PATH = path.join(process.cwd(), "words", "english_merged.json");
@@ -23,7 +24,14 @@ export interface CourseSrsRow {
   courseId: string;
   /** The course's own declared level (A1–C2). */
   level: string;
-  kind: "flashcard" | "translation";
+  /**
+   * The course's exercise type id (e.g. "listening", "word-bank"), resolved
+   * from the unit frontmatter `questionType`. Null when the unit declares no
+   * recognisable type (falls back to a generic label in the UI).
+   */
+  kind: string | null;
+  /** Chinese display name for {@link kind} (e.g. "听力理解"). Empty when unknown. */
+  kindLabel: string;
   /** Total srsWords across every exercise in the course. */
   total: number;
   byLevel: Record<Cefr, number>;
@@ -321,8 +329,16 @@ export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsU
 
     const cidMatch = src.match(/^courseId:\s*"([^"]+)"/m) ?? src.match(/^courseId:\s*(\S+)/m);
     const lvlMatch = src.match(/^level:\s*"([^"]+)"/m) ?? src.match(/^level:\s*(\S+)/m);
+    const qtMatch =
+      src.match(/^questionType:\s*"([^"]+)"/m) ??
+      src.match(/^questionType:\s*(\S+)/m);
     const courseId = cidMatch ? cidMatch[1] : f.replace(/\.md$/, "");
     const level = lvlMatch ? lvlMatch[1].replace(/"/g, "") : "";
+    // The unit's declared exercise type is the authoritative label source.
+    // Fall back to the course id only when the frontmatter omits it.
+    const declaredType = qtMatch
+      ? normalizeQuestionType(qtMatch[1])
+      : normalizeQuestionType(courseId);
 
     let doc;
     try {
@@ -335,7 +351,8 @@ export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsU
       byCourse.set(courseId, {
         courseId,
         level,
-        kind: courseId.includes("flashcard") ? "flashcard" : "translation",
+        kind: declaredType?.id ?? null,
+        kindLabel: declaredType?.nameZh ?? "",
         total: 0,
         byLevel: { A1: 0, A2: 0, B1: 0, B2: 0, C1: 0, C2: 0 },
         unknown: 0,
@@ -371,7 +388,7 @@ export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsU
     const la = CEFR_ORDER.indexOf(a.level as Cefr);
     const lb = CEFR_ORDER.indexOf(b.level as Cefr);
     if (la !== lb) return la - lb;
-    return a.kind.localeCompare(b.kind);
+    return (a.kind ?? "").localeCompare(b.kind ?? "");
   });
 
   const unique: CourseSrsUnique = {
