@@ -1,5 +1,5 @@
 ---
-unitTitle: "Unit 4: The World & Nature (20 Lessons)"
+unitTitle: "Unit 4: The World & Nature"
 description: "A1 Speaking Practice — nature, places, and the environment"
 icon: "🎙️"
 color: "#E91E63"

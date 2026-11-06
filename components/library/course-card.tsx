@@ -51,6 +51,9 @@ export function CourseCard({ course }: CourseCardProps) {
         <span className="text-xs text-lingo-text-light">
           {course.unitCount} {course.unitCount === 1 ? "unit" : "units"} · {course.lessonCount}{" "}
           {course.lessonCount === 1 ? "lesson" : "lessons"}
+          {course.srsWordCount
+            ? ` · ${course.srsWordCount.toLocaleString("en-US")} words`
+            : ""}
           {course.creatorName ? ` · by ${course.creatorName}` : ""}
         </span>
       </div>

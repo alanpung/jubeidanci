@@ -31,6 +31,7 @@ import type {
   AvailableUnitForCourse,
 } from "@/lib/content/types";
 import { getUnitLessonsSafe, getUnitLessonCountFast } from "@/lib/content/loader";
+import { getLessonsSrsWordSet } from "@/lib/content/srs-word-count";
 import { withTimeout } from "@/lib/db/timeout";
 import { getUnitQuestionType } from "@/lib/content/question-types";
 import { seedContentFromFilesystem } from "@/lib/db/seed-content";
@@ -447,6 +448,9 @@ export async function listCoursesWithLessonCounts(
   const lessonCountByCourse = includeLessonCounts
     ? await computeLessonCountByCourse(courseIds)
     : new Map<string, number>();
+  // The cover shows the course's SRS-word count, so this one is NOT behind
+  // `includeLessonCounts` — /library renders the covers with it switched off.
+  const srsWordCountByCourse = await computeSrsWordCountByCourse(courseIds);
 
   let enrolledCourseIds = new Set<string>();
   if (userId) {
@@ -486,6 +490,7 @@ export async function listCoursesWithLessonCounts(
   return courses.map((c) => ({
     ...c,
     lessonCount: lessonCountByCourse.get(c.id) ?? c.lessonCount ?? 0,
+    srsWordCount: srsWordCountByCourse.get(c.id) ?? 0,
     // Ownership is decided purely by createdBy, matching the server actions
     // (makeCoursePublic / updateCourseTitle / …), which only compare
     // createdBy against the session user. Excluding SYSTEM_COURSE_IDS here
@@ -618,6 +623,93 @@ async function computeLessonCountByCourse(
   return run;
 }
 
+// SRS-word count cache
+//
+// The library cover shows how many distinct SRS words a course teaches. Counting
+// them means parsing every unit's markdown, which is the same expensive work
+// lesson counts do — so the same shape applies: cache per course-set, dedupe
+// concurrent in-flight computes, and fall back to the filesystem when the DB
+// query fails.
+const SRS_WORD_COUNT_TTL_MS = 60_000;
+const srsWordCountCache = new Map<string, { ts: number; value: Map<string, number> }>();
+const srsWordCountInFlight = new Map<string, Promise<Map<string, number>>>();
+
+async function computeSrsWordCountByCourse(
+  courseIds: string[],
+): Promise<Map<string, number>> {
+  const key = [...courseIds].sort().join("|");
+  const now = Date.now();
+  const cached = srsWordCountCache.get(key);
+  if (cached && now - cached.ts < SRS_WORD_COUNT_TTL_MS) return cached.value;
+
+  const existing = srsWordCountInFlight.get(key);
+  if (existing) return existing;
+
+  const run = (async () => {
+    const map = new Map<string, number>();
+    // courseId -> the union of its units' distinct srsWords.
+    const wordSets = new Map<string, Set<string>>();
+    const addTo = (courseId: string, words: Set<string>) => {
+      let set = wordSets.get(courseId);
+      if (!set) {
+        set = new Set();
+        wordSets.set(courseId, set);
+      }
+      for (const w of words) set.add(w);
+    };
+
+    try {
+      const units = await db
+        .select({
+          id: unit.id,
+          courseId: unit.courseId,
+          markdown: unit.markdown,
+        })
+        .from(unit)
+        .where(inArray(unit.courseId, courseIds));
+
+      for (const u of units) {
+        if (!u.courseId) continue;
+        const { lessons } = getUnitLessonsSafe(u.markdown ?? "");
+        addTo(u.courseId, getLessonsSrsWordSet(lessons));
+      }
+
+      // Filesystem fallback for courses the DB has no units for yet.
+      const { getAllUnits } = await import("@/lib/content/registry");
+      const fsUnits = getAllUnits();
+      for (const cId of courseIds) {
+        const matching = fsUnits.filter((u) => u.parsed.courseId === cId);
+        for (const u of matching) {
+          addTo(cId, getLessonsSrsWordSet(u.parsed.lessons ?? []));
+        }
+      }
+
+      for (const [cId, set] of wordSets) map.set(cId, set.size);
+
+      srsWordCountCache.set(key, { ts: Date.now(), value: map });
+      return map;
+    } catch (err) {
+      console.warn("computeSrsWordCountByCourse: unit query failed, falling back to filesystem:", err);
+      const { getAllUnits } = await import("@/lib/content/registry");
+      const fsUnits = getAllUnits();
+      for (const cId of courseIds) {
+        const matching = fsUnits.filter((u) => u.parsed.courseId === cId);
+        const words = new Set<string>();
+        for (const u of matching) {
+          for (const w of getLessonsSrsWordSet(u.parsed.lessons ?? [])) words.add(w);
+        }
+        if (words.size > 0) map.set(cId, words.size);
+      }
+      return map;
+    } finally {
+      srsWordCountInFlight.delete(key);
+    }
+  })();
+
+  srsWordCountInFlight.set(key, run);
+  return run;
+}
+
 export async function getCourseWithContent(
   courseId: string,
   userId?: string
@@ -735,6 +827,7 @@ export async function getCourseWithContent(
           creatorName: u.creatorName ?? courseCreatorName,
           createdAt: u.createdAt ?? null,
           questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
+          srsWordCount: getLessonsSrsWordSet(lessons).size,
         };
       });
 
@@ -759,6 +852,7 @@ export async function getCourseWithContent(
             creatorName: courseCreatorName,
             createdAt: new Date(),
             questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
+            srsWordCount: getLessonsSrsWordSet(lessons).size,
           };
         });
       }
@@ -806,6 +900,7 @@ export async function getCourseWithContent(
       creatorName: "Alan P",
       createdAt: null,
       questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
+      srsWordCount: getLessonsSrsWordSet(lessons).size,
     };
   });
 
@@ -1010,6 +1105,7 @@ export async function getStandaloneUnits(
       parseError: safeResult?.parseError ?? false,
       createdAt: u.createdAt ?? null,
       questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
+      srsWordCount: getLessonsSrsWordSet(lessons).size,
     };
   });
 
@@ -1083,6 +1179,7 @@ export async function getBrowsableUnits(
       parseError: safeResult?.parseError ?? false,
       createdAt: u.createdAt ?? null,
       questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
+      srsWordCount: getLessonsSrsWordSet(lessons).size,
     };
   });
 

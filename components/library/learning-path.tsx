@@ -126,6 +126,7 @@ export function LearningPath({
               unitNumber={unitIndex + 1}
               totalLessons={unit.lessons.length}
               completedLessons={completedLessons}
+              srsWordCount={unit.srsWordCount}
               language={course.targetLanguage}
               onClick={() => setSelectedUnitId(unit.id)}
               action={canManageUnit ? <UnitOwnerControls unitId={unit.id} /> : undefined}
@@ -183,6 +184,7 @@ export function LearningPath({
         unitNumber={unitIndex + 1}
         totalLessons={unit.lessons.length}
         completedLessons={completedLessons}
+        srsWordCount={unit.srsWordCount}
         language={course.targetLanguage}
         compact
       >

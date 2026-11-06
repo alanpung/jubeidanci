@@ -26,6 +26,8 @@ export interface Unit {
   creatorName?: string | null;
   createdAt?: Date | null;
   questionType?: QuestionTypeInfo | null;
+  /** Distinct srsWords this unit contributes (de-duplicated within the unit). */
+  srsWordCount?: number;
 }
 
 /**
@@ -179,6 +181,8 @@ export interface CourseListItem {
   level: string;
   unitCount: number;
   lessonCount: number;
+  /** Distinct srsWords across the course's units (de-duplicated in-course). */
+  srsWordCount?: number;
   createdBy?: string | null;
   creatorName?: string | null;
   isOwner?: boolean;
@@ -198,6 +202,8 @@ export interface StandaloneUnitInfo {
   level: string | null;
   lessonCount: number;
   completedLessons: number;
+  /** Distinct srsWords this unit contributes (de-duplicated within the unit). */
+  srsWordCount?: number;
   visibility: string | null;
   createdBy?: string | null;
   creatorName: string | null;

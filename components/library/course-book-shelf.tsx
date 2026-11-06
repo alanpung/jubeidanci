@@ -50,6 +50,8 @@ interface BrowseEntry {
   level: string | null;
   /** Exercise-type id deciding the cover's colour + symbol. */
   typeId: string | null;
+  /** Distinct SRS words the entry teaches — shown on the cover. */
+  srsWordCount?: number;
   /** The course behind this entry, when there is one (owner toggle). */
   course?: CourseListItem;
   ownsIt: boolean;
@@ -129,6 +131,7 @@ export function CourseBookShelf({
     title: c.title,
     level: c.level,
     typeId: normalizeQuestionType(`${c.title} ${c.id}`)?.id ?? null,
+    srsWordCount: c.srsWordCount,
     course: c,
     ownsIt: !!c.isOwner,
     isOwner: !!c.isOwner || isAdmin,
@@ -145,6 +148,7 @@ export function CourseBookShelf({
     title: u.title,
     level: u.level,
     typeId: "mix",
+    srsWordCount: u.srsWordCount,
     ownsIt: !!u.isOwner,
     isOwner: !!u.isOwner,
     canOpen: canOpenUnit(u),
@@ -388,6 +392,7 @@ function BrowseCover({ entry, pending }: { entry: BrowseEntry; pending: boolean 
       title={entry.title}
       courseId={entry.id}
       name={entry.title}
+      srsWordCount={entry.srsWordCount}
     />
   );
   return (

@@ -1,5 +1,5 @@
 ---
-unitTitle: "Unit 1: A1 Speaking Practice (20 Lessons)"
+unitTitle: "Unit 1: A1 Speaking Practice"
 description: "A1 Speaking Practice — 20 lessons x 10 questions"
 icon: "🎙️"
 color: "#E91E63"
