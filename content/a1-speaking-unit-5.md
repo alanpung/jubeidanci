@@ -160,7 +160,7 @@ color: "#FF9600"
 
 [speaking]
 sentence: "We flew to Japan."
-srsWords: "flew" "japan"
+srsWords: "fly" "japan"
 
 [speaking]
 sentence: "The temple was calm."
@@ -219,7 +219,7 @@ srsWords: "friends" "inside"
 
 [speaking]
 sentence: "Confetti flew."
-srsWords: "confetti" "flew"
+srsWords: "confetti" "fly"
 
 [speaking]
 sentence: "I almost cried."
@@ -399,7 +399,7 @@ srsWords: "learned" "swim"
 
 [speaking]
 sentence: "At first I sank."
-srsWords: "sank"
+srsWords: "sink"
 
 [speaking]
 sentence: "Practice built confidence."
@@ -493,7 +493,7 @@ srsWords: "graduation" "arrived"
 
 [speaking]
 sentence: "Family flew in."
-srsWords: "family" "flew"
+srsWords: "family" "fly"
 
 [speaking]
 sentence: "I walked the stage."
@@ -564,7 +564,7 @@ srsWords: "owned" "error"
 
 [speaking]
 sentence: "Others forgave."
-srsWords: "forgave"
+srsWords: "forgive"
 
 [speaking]
 sentence: "Growth from failure."
@@ -583,7 +583,7 @@ color: "#FF9600"
 
 [speaking]
 sentence: "I ran a marathon."
-srsWords: "ran" "marathon"
+srsWords: "run" "marathon"
 
 [speaking]
 sentence: "Training was tough."

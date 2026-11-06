@@ -87,7 +87,7 @@ text: "他们坐下来休息。"
 words: "They" "sat" "down" "and" "rested" "but" "ran"
 answer: "They" "sat" "down" "and" "rested"
 random_order: true
-srsWords: "sat" "rested"
+srsWords: "sit" "rested"
 
 [word-order]
 text: "我洗澡然后睡觉。"
@@ -396,14 +396,14 @@ text: "他们迟到了所以他们跑。"
 words: "They" "were" "late" "so" "they" "ran" "but" "walked"
 answer: "They" "were" "late" "so" "they" "ran"
 random_order: true
-srsWords: "late" "ran"
+srsWords: "late" "run"
 
 [word-order]
 text: "我冷了所以我穿了外套。"
 words: "I" "was" "cold" "so" "I" "wore" "a" "coat" "but"
 answer: "I" "was" "cold" "so" "I" "wore" "a" "coat"
 random_order: true
-srsWords: "cold" "wore" "coat"
+srsWords: "cold" "wear" "coat"
 
 [word-order]
 text: "她不开心所以她哭了。"
@@ -610,7 +610,7 @@ text: "我穿外套因为外面很冷。"
 words: "I" "wore" "a" "coat" "because" "it" "was" "cold" "outside" "hot" "but"
 answer: "I" "wore" "a" "coat" "because" "it" "was" "cold" "outside"
 random_order: true
-srsWords: "wore" "coat" "cold" "outside"
+srsWords: "wear" "coat" "cold" "outside"
 
 ---
 lessonTitle: "Lesson 8: Sentences with 'when'"
@@ -805,7 +805,7 @@ text: "我冷了所以穿了外套。"
 words: "I" "was" "cold" "so" "I" "wore" "a" "coat" "because" "but"
 answer: "I" "was" "cold" "so" "I" "wore" "a" "coat"
 random_order: true
-srsWords: "cold" "wore" "coat"
+srsWords: "cold" "wear" "coat"
 
 [word-order]
 text: "她来了但早走了。"
@@ -1191,7 +1191,7 @@ text: "然后她坐下来。"
 words: "Then" "she" "sat" "down" "First" "Finally"
 answer: "Then" "she" "sat" "down"
 random_order: true
-srsWords: "then" "sat"
+srsWords: "then" "sit"
 
 [word-order]
 text: "最后我们说再见。"
@@ -1507,14 +1507,14 @@ text: "他冷了所以他穿了外套和帽子。"
 words: "He" "was" "cold" "so" "he" "wore" "a" "coat" "and" "a" "hat" "but"
 answer: "He" "was" "cold" "so" "he" "wore" "a" "coat" "and" "a" "hat"
 random_order: true
-srsWords: "cold" "wore" "coat" "hat"
+srsWords: "cold" "wear" "coat" "hat"
 
 [word-order]
 text: "他们迟到了所以跑了但还是错过了公车。"
 words: "They" "were" "late" "so" "they" "ran" "but" "still" "missed" "the" "bus" "and"
 answer: "They" "were" "late" "so" "they" "ran" "but" "still" "missed" "the" "bus"
 random_order: true
-srsWords: "late" "ran" "still" "missed" "bus"
+srsWords: "late" "run" "still" "missed" "bus"
 
 [word-order]
 text: "我吃喝但从不吃太多。"
@@ -1679,7 +1679,7 @@ text: "她跑了因为她迟到了。"
 words: "She" "ran" "because" "she" "was" "late" "so" "and"
 answer: "She" "ran" "because" "she" "was" "late"
 random_order: true
-srsWords: "ran" "late"
+srsWords: "run" "late"
 
 [word-order]
 text: "天冷了所以我们待在家。"

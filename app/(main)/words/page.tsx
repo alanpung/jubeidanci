@@ -4,6 +4,7 @@ import { getEnLevelCounts } from "@/lib/words";
 import { getSession } from "@/lib/auth-server";
 import { isAdminEmail } from "@/lib/ai/models";
 import { withTimeout } from "@/lib/db/timeout";
+import { getUnrecordedWordCount } from "@/lib/content/unrecorded-words";
 import { WordExplorer } from "./word-explorer";
 
 export const dynamic = "force-dynamic";
@@ -68,6 +69,11 @@ export default async function WordsPage() {
 
   const levelCounts = getEnLevelCounts();
 
+  // Exact size of the owner-only "Unrecorded" (U) filter's result set, computed
+  // from the course content scan. Only the owner sees the U button, so students
+  // skip the (cheap, cached) scan.
+  const unrecordedCount = isAdmin ? getUnrecordedWordCount() : 0;
+
   return (
     <div className="w-full max-w-3xl mx-auto px-1 sm:px-4">
       <WordExplorer
@@ -78,6 +84,7 @@ export default async function WordsPage() {
         language={language}
         levelDictionaryCounts={levelCounts}
         remainingDictionaryCount={remainingCount}
+        unrecordedWordCount={unrecordedCount}
       />
     </div>
   );

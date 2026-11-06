@@ -135,6 +135,15 @@ export const IRREGULAR: Record<string, string> = {
  * phrases are intentionally left out (no meaningful CEFR to assign).
  */
 export const CEFR_OVERRIDE: Record<string, Cefr> = {
+  // ── Proper nouns from course content ──
+  // The owner wants proper nouns recorded at A1/A2 rather than flagged as
+  // unrecorded (未收录). They carry no dictionary entry, so we assign A1 here.
+  // Keyed lower-case to match levelForWord's normalised lookup.
+  japan: "A1", paris: "A1", france: "A1", italy: "A1", italian: "A1",
+  brazil: "A1", lyon: "A1", london: "A1", england: "A1", christmas: "A1",
+  alan: "A1", tom: "A1", tokyo: "A1", tiramisu: "A1", spanish: "A1",
+  spain: "A1", mexico: "A1", maria: "A1", manchester: "A1", korean: "A1",
+  india: "A1", "hong kong": "A1", edinburgh: "A1", canada: "A1", birmingham: "A1",
   abolitionism: "C2", accelerationism: "C2", acculturation: "C2", adaptationism: "C2", affectivist: "C2", aggregative: "C2",
   agonism: "C2", akrasia: "C2", alterity: "C2", analepsis: "C2", analogical: "C2", analytic: "C2",
   anthropocene: "C2", anthropocentrism: "C2", apophatic: "C2", arbitrariness: "C2", arborescent: "C2", artworld: "C2",

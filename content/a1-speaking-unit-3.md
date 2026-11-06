@@ -658,7 +658,7 @@ srsWords: "bell" "rang"
 
 [speaking]
 sentence: "I hid in the closet."
-srsWords: "hid" "closet"
+srsWords: "hide" "closet"
 
 [speaking]
 sentence: "Birthdays were magic."

@@ -740,14 +740,14 @@ text: "他们迟到了所以他们跑因为公车很慢。"
 words: "They" "were" "late" "so" "they" "ran" "because" "the" "bus" "was" "slow" "fast" "and"
 answer: "They" "were" "late" "so" "they" "ran" "because" "the" "bus" "was" "slow"
 random_order: true
-srsWords: "late" "ran" "bus" "slow"
+srsWords: "late" "run" "bus" "slow"
 
 [word-order]
 text: "我冷了所以我穿外套因为是冬天。"
 words: "I" "was" "cold" "so" "I" "wore" "a" "coat" "because" "it" "was" "winter" "summer" "and"
 answer: "I" "was" "cold" "so" "I" "wore" "a" "coat" "because" "it" "was" "winter"
 random_order: true
-srsWords: "cold" "wore" "coat" "winter"
+srsWords: "cold" "wear" "coat" "winter"
 
 [word-order]
 text: "她很开心所以她唱歌因为她通过了考试。"
@@ -1549,7 +1549,7 @@ text: "我们乘飞机去了巴黎然后坐火车去了里昂。"
 words: "We" "flew" "to" "Paris" "then" "took" "a" "train" "to" "Lyon" "and" "drove" "bus"
 answer: "We" "flew" "to" "Paris" "then" "took" "a" "train" "to" "Lyon"
 random_order: true
-srsWords: "flew" "Paris" "then" "took" "train" "Lyon"
+srsWords: "fly" "Paris" "then" "took" "train" "Lyon"
 
 [word-order]
 text: "他旅行时总是拍很多照片。"
