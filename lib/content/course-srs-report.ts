@@ -3,6 +3,12 @@
  * real CEFR level (A1–C2) plus an "Unknown" bucket for words/phrases that are
  * not found in the bundled English dictionary.
  *
+ * Counts are de-duplicated: a word used by many exercises inside the same
+ * course is counted once for that course. The same word appearing in two
+ * different courses is counted once in each (courses are independent), so the
+ * footer rows distinguish "sum of per-course distinct" from the globally
+ * distinct total.
+ *
  * This reads the committed `content/*.md` unit files directly (the source of
  * truth for `srsWords`) rather than the DB-backed course copies, so it reflects
  * what will ship. It is gated to the owner in the page that calls it.
@@ -32,11 +38,25 @@ export interface CourseSrsRow {
   kind: string | null;
   /** Chinese display name for {@link kind} (e.g. "听力理解"). Empty when unknown. */
   kindLabel: string;
-  /** Total srsWords across every exercise in the course. */
+  /** Total DISTINCT srsWords within this course. */
   total: number;
   byLevel: Record<Cefr, number>;
-  /** srsWords (or their tokens) not found in the dictionary. */
+  /** Distinct srsWords (or their tokens) not found in the dictionary. */
   unknown: number;
+}
+
+/** Per-course accumulator for the de-duplicated word sets. */
+interface CourseAccumulator {
+  courseId: string;
+  level: string;
+  kind: string | null;
+  kindLabel: string;
+  /** Every distinct srsWord seen in this course. */
+  all: Set<string>;
+  /** Distinct words bucketed by their resolved CEFR level. */
+  byLevel: Record<Cefr, Set<string>>;
+  /** Distinct words with no CEFR level. */
+  unknown: Set<string>;
 }
 
 let _dictionaryCache: Map<string, string> | null = null;
@@ -313,7 +333,7 @@ export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsU
     (f) => /[^.]+\.md$/.test(f) && f.includes("unit"),
   );
 
-  const byCourse = new Map<string, CourseSrsRow>();
+  const byCourse = new Map<string, CourseAccumulator>();
 
   // Across all courses, the per-level / unknown / total DISTINCT (de-duplicated)
   // word sets. A word that appears in three courses, or fifty times inside one
@@ -353,9 +373,12 @@ export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsU
         level,
         kind: declaredType?.id ?? null,
         kindLabel: declaredType?.nameZh ?? "",
-        total: 0,
-        byLevel: { A1: 0, A2: 0, B1: 0, B2: 0, C1: 0, C2: 0 },
-        unknown: 0,
+        all: new Set(),
+        byLevel: {
+          A1: new Set(), A2: new Set(), B1: new Set(),
+          B2: new Set(), C1: new Set(), C2: new Set(),
+        },
+        unknown: new Set(),
       });
     }
     const row = byCourse.get(courseId)!;
@@ -368,14 +391,17 @@ export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsU
         for (const w of words) {
           const norm = String(w).toLowerCase().trim();
           if (!norm) continue;
-          row.total++;
+          // De-duplicate WITHIN the course: a word reused across many
+          // exercises of the same course counts exactly once.
+          if (row.all.has(norm)) continue;
+          row.all.add(norm);
           uniqueAll.add(norm);
           const lvl = levelForWord(w, dict);
           if (lvl) {
-            row.byLevel[lvl]++;
+            row.byLevel[lvl].add(norm);
             uniqueByLevel[lvl].add(norm);
           } else {
-            row.unknown++;
+            row.unknown.add(norm);
             uniqueUnknown.add(norm);
           }
         }
@@ -383,7 +409,22 @@ export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsU
     }
   }
 
-  const rows = Array.from(byCourse.values());
+  const rows: CourseSrsRow[] = Array.from(byCourse.values()).map((r) => ({
+    courseId: r.courseId,
+    level: r.level,
+    kind: r.kind,
+    kindLabel: r.kindLabel,
+    total: r.all.size,
+    byLevel: {
+      A1: r.byLevel.A1.size,
+      A2: r.byLevel.A2.size,
+      B1: r.byLevel.B1.size,
+      B2: r.byLevel.B2.size,
+      C1: r.byLevel.C1.size,
+      C2: r.byLevel.C2.size,
+    },
+    unknown: r.unknown.size,
+  }));
   rows.sort((a, b) => {
     const la = CEFR_ORDER.indexOf(a.level as Cefr);
     const lb = CEFR_ORDER.indexOf(b.level as Cefr);
