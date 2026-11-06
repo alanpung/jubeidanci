@@ -73,7 +73,7 @@ export default async function CoursesReportPage() {
             <LevelBadge level={r.level} />
             <span className="font-semibold text-lingo-text">{r.courseId}</span>
             <span className="text-xs text-lingo-text-light">
-              {r.kind === "flashcard" ? "闪卡" : "翻译"}
+              {r.kindLabel || "综合"}
             </span>
           </div>
         </td>
