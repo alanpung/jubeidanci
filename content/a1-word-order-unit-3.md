@@ -610,7 +610,7 @@ text: "我在2020年出生。"
 words: "I" "was" "born" "in" "2020" "on" "at"
 answer: "I" "was" "born" "in" "2020"
 random_order: true
-srsWords: "born"
+srsWords: "bear"
 
 ---
 lessonTitle: "Lesson 8: to, from, into, out of"

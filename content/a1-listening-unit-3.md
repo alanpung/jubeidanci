@@ -2031,7 +2031,7 @@ choices:
   - "He washes the spinach in boiling water."
   - "He blanches the spinach in boiling water." (correct)
   - "She blanches the spinach in boiling water."
-srsWords: "blanches" "spinach" "boiling" "water"
+srsWords: "blanch" "spinach" "boiling" "water"
 
 [listening]
 text: "Let the dough rest for one hour before baking."

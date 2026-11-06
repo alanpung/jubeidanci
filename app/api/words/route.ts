@@ -5,7 +5,9 @@ import { db, isDbAvailable } from "@/lib/db";
 import { dictionaryWord } from "@/lib/db/schema";
 import { getTrackedWordSet, getUserLibraryWords, getAllCards } from "@/lib/actions/srs";
 import { buildDictionary, levelForWord } from "@/lib/content/course-srs-report";
+import { getUnrecordedWords } from "@/lib/content/unrecorded-words";
 import { getSession } from "@/lib/auth-server";
+import { isAdminEmail } from "@/lib/ai/models";
 
 export const dynamic = "force-dynamic";
 
@@ -20,6 +22,58 @@ export async function GET(req: NextRequest) {
     const wordsParam = (searchParams.get("words") || "").trim();
     const page = Math.max(1, parseInt(searchParams.get("page") || "1", 10));
     const limit = Math.max(1, Math.min(100, parseInt(searchParams.get("limit") || "50", 10)));
+
+    // ─── UNRECORDED ("U") FILTER — owner only ───
+    // Lists the SRS words used by course content that the bundled dictionary
+    // does not know about (the Course Stat "未收录" column), together with the
+    // courses/units each word comes from. This is a completely different data
+    // shape from the dictionary list, so it returns early.
+    if (searchParams.get("unrecorded") === "1") {
+      const session = await getSession();
+      if (!session?.user?.email || !isAdminEmail(session.user.email)) {
+        return NextResponse.json(
+          { words: [], unrecorded: [], total: 0, hasMore: false },
+          { status: 403 },
+        );
+      }
+
+      const all = getUnrecordedWords();
+
+      // Apply the same auxiliary filters the dictionary list honours, so the
+      // owner can narrow the triage list down.
+      let rows = all;
+      if (letter && letter !== "ALL") {
+        rows = rows.filter((r) => {
+          const clean = r.word.trim().replace(/^['"-]/, "").toUpperCase();
+          if (letter === "#") return !/[a-zA-Z]/.test(r.word.trim().charAt(0));
+          return clean.startsWith(letter);
+        });
+      }
+      if (q) {
+        rows = rows.filter(
+          (r) =>
+            r.word.toLowerCase().includes(q) ||
+            r.sources.some((s) =>
+              `${s.courseId} ${s.unitTitle} ${s.unitId}`.toLowerCase().includes(q),
+            ),
+        );
+      }
+      if (level) {
+        // "未收录" words have no dictionary level by definition, so a level
+        // filter would empty the list. We ignore it rather than mislead.
+      }
+
+      const total = rows.length;
+      const startIndex = (page - 1) * limit;
+      const pageRows = rows.slice(startIndex, startIndex + limit);
+
+      return NextResponse.json({
+        words: [],
+        unrecorded: pageRows,
+        total,
+        hasMore: startIndex + limit < total,
+      });
+    }
 
     let allWords: WordEntry[];
     if ((lang === "en" || lang === "english") && level) {

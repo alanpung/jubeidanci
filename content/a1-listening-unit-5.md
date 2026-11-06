@@ -416,7 +416,7 @@ choices:
   - "He was born on the third of June nineteen ninety."
   - "She was born on the third of July nineteen ninety."
   - "He was born on the third of July nineteen ninety." (correct)
-srsWords: "born" "third" "July" "nineteen ninety"
+srsWords: "bear" "third" "July" "nineteen ninety"
 
 [listening]
 text: "New Year's Day is on the first of January."
