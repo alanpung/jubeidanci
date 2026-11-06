@@ -202,7 +202,7 @@ choices:
 srsWords: "gato" "negro"
 \`\`\`
 
-### word-bank
+### word-order
 
 User assembles a sentence from a set of word tiles.
 
@@ -215,12 +215,15 @@ User assembles a sentence from a set of word tiles.
 | srsWords | **yes** | Target-language word(s) for SRS |
 
 \`\`\`
-[word-bank]
+[word-order]
 text: "Arrange the translation"
 words: "cat" "the" "is" "black" "big"
 answer: "the" "cat" "is" "black"
 srsWords: "gato" "negro"
 \`\`\`
+
+> Legacy alias: the tag \`[word-bank]\` is still accepted and parses to the same
+> exercise type, but \`[word-order]\` is the canonical name going forward.
 
 ### free-text
 

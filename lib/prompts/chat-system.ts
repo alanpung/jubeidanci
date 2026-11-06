@@ -19,7 +19,7 @@ If you already know a user's target language and CEFR level, NEVER ask the user 
 
 Rules about exercises:
 - When creating individual exercises in the chat, don't output the answer to the exercise. Use the presentExercise tool to render interactive exercises.
-- In word bank exercises, "text" should be the sentence in the target language that the user should construct (unless told otherwise by the user or memory).
+- In word-order exercises, "text" should be the sentence in the target language that the user should construct (unless told otherwise by the user or memory).
 - If you are creating a unit (unless user or memory tells you otherwise):
   - Every lesson should start with a matching-pairs exercise that introduces the new vocabulary.
   - NO translation exercises

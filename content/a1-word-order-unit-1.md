@@ -26,70 +26,70 @@ pairs:
   - "We play" = "我们玩"
 srsWords: "eat" "drink" "read" "sleep" "play"
 
-[word-bank]
+[word-order]
 text: "我吃苹果。"
 words: "I" "eat" "apple" "an" "sleep"
 answer: "I" "eat" "an" "apple"
 random_order: true
 srsWords: "eat" "apple"
 
-[word-bank]
+[word-order]
 text: "你喝水。"
 words: "You" "drink" "water" "eat" "a"
 answer: "You" "drink" "water"
 random_order: true
 srsWords: "drink" "water"
 
-[word-bank]
+[word-order]
 text: "他读书。"
 words: "He" "reads" "a" "book" "plays"
 answer: "He" "reads" "a" "book"
 random_order: true
 srsWords: "reads" "book"
 
-[word-bank]
+[word-order]
 text: "她睡觉。"
 words: "She" "sleeps" "drinks" "plays"
 answer: "She" "sleeps"
 random_order: true
 srsWords: "sleeps"
 
-[word-bank]
+[word-order]
 text: "我们玩游戏。"
 words: "We" "play" "a" "game" "eat"
 answer: "We" "play" "a" "game"
 random_order: true
 srsWords: "play" "game"
 
-[word-bank]
+[word-order]
 text: "你吃面包。"
 words: "You" "eat" "bread" "drink" "a"
 answer: "You" "eat" "bread"
 random_order: true
 srsWords: "eat" "bread"
 
-[word-bank]
+[word-order]
 text: "他喝牛奶。"
 words: "He" "drinks" "milk" "reads" "some"
 answer: "He" "drinks" "milk"
 random_order: true
 srsWords: "drinks" "milk"
 
-[word-bank]
+[word-order]
 text: "她玩球。"
 words: "She" "plays" "a" "ball" "sleeps"
 answer: "She" "plays" "a" "ball"
 random_order: true
 srsWords: "plays" "ball"
 
-[word-bank]
+[word-order]
 text: "我读报纸。"
 words: "I" "read" "a" "newspaper" "drink"
 answer: "I" "read" "a" "newspaper"
 random_order: true
 srsWords: "read" "newspaper"
 
-[word-bank]
+[word-order]
 text: "我们喝茶。"
 words: "We" "drink" "tea" "eat" "some"
 answer: "We" "drink" "tea"
@@ -112,70 +112,70 @@ pairs:
   - "They laugh" = "他们笑"
 srsWords: "run" "move" "cook" "work" "laugh"
 
-[word-bank]
+[word-order]
 text: "他们跑步。"
 words: "They" "run" "it" "laughs" "fast"
 answer: "They" "run"
 random_order: true
 srsWords: "run"
 
-[word-bank]
+[word-order]
 text: "它动了。"
 words: "It" "moves" "they" "cook" "slowly"
 answer: "It" "moves"
 random_order: true
 srsWords: "moves"
 
-[word-bank]
+[word-order]
 text: "他们做饭。"
 words: "They" "cook" "food" "run" "some"
 answer: "They" "cook" "food"
 random_order: true
 srsWords: "cook" "food"
 
-[word-bank]
+[word-order]
 text: "它运作良好。"
 words: "It" "works" "well" "moves" "they"
 answer: "It" "works" "well"
 random_order: true
 srsWords: "works" "well"
 
-[word-bank]
+[word-order]
 text: "他们笑了。"
 words: "They" "laugh" "it" "cooks" "loudly"
 answer: "They" "laugh"
 random_order: true
 srsWords: "laugh"
 
-[word-bank]
+[word-order]
 text: "他们跑得快。"
 words: "They" "run" "fast" "laugh" "it"
 answer: "They" "run" "fast"
 random_order: true
 srsWords: "run" "fast"
 
-[word-bank]
+[word-order]
 text: "它移动得慢。"
 words: "It" "moves" "slowly" "works" "they"
 answer: "It" "moves" "slowly"
 random_order: true
 srsWords: "moves" "slowly"
 
-[word-bank]
+[word-order]
 text: "他们做蛋糕。"
 words: "They" "cook" "a" "cake" "run"
 answer: "They" "cook" "a" "cake"
 random_order: true
 srsWords: "cook" "cake"
 
-[word-bank]
+[word-order]
 text: "它工作得好。"
 words: "It" "works" "well" "moves" "a"
 answer: "It" "works" "well"
 random_order: true
 srsWords: "works" "well"
 
-[word-bank]
+[word-order]
 text: "他们大声笑。"
 words: "They" "laugh" "loudly" "run" "it"
 answer: "They" "laugh" "loudly"
@@ -198,70 +198,70 @@ pairs:
   - "We need" = "我们需要"
 srsWords: "buy" "carry" "see" "find" "need"
 
-[word-bank]
+[word-order]
 text: "她买花。"
 words: "She" "buys" "flowers" "carries" "some"
 answer: "She" "buys" "flowers"
 random_order: true
 srsWords: "buys" "flowers"
 
-[word-bank]
+[word-order]
 text: "他拿包。"
 words: "He" "carries" "a" "bag" "buys"
 answer: "He" "carries" "a" "bag"
 random_order: true
 srsWords: "carries" "bag"
 
-[word-bank]
+[word-order]
 text: "我看见一只猫。"
 words: "I" "see" "a" "cat" "find"
 answer: "I" "see" "a" "cat"
 random_order: true
 srsWords: "see" "cat"
 
-[word-bank]
+[word-order]
 text: "他们找到钥匙。"
 words: "They" "find" "the" "key" "need"
 answer: "They" "find" "the" "key"
 random_order: true
 srsWords: "find" "key"
 
-[word-bank]
+[word-order]
 text: "我们需要帮助。"
 words: "We" "need" "help" "find" "some"
 answer: "We" "need" "help"
 random_order: true
 srsWords: "need" "help"
 
-[word-bank]
+[word-order]
 text: "她买一本书。"
 words: "She" "buys" "a" "book" "sees"
 answer: "She" "buys" "a" "book"
 random_order: true
 srsWords: "buys" "book"
 
-[word-bank]
+[word-order]
 text: "他拿椅子。"
 words: "He" "carries" "a" "chair" "needs"
 answer: "He" "carries" "a" "chair"
 random_order: true
 srsWords: "carries" "chair"
 
-[word-bank]
+[word-order]
 text: "我看见一朵云。"
 words: "I" "see" "a" "cloud" "buy"
 answer: "I" "see" "a" "cloud"
 random_order: true
 srsWords: "see" "cloud"
 
-[word-bank]
+[word-order]
 text: "他们找到答案。"
 words: "They" "find" "the" "answer" "carry"
 answer: "They" "find" "the" "answer"
 random_order: true
 srsWords: "find" "answer"
 
-[word-bank]
+[word-order]
 text: "我们需要水。"
 words: "We" "need" "water" "see" "some"
 answer: "We" "need" "water"
@@ -284,70 +284,70 @@ pairs:
   - "We are ready" = "我们准备好了"
 srsWords: "happy" "tall" "busy" "cold" "ready"
 
-[word-bank]
+[word-order]
 text: "我很开心。"
 words: "I" "am" "happy" "is" "tall"
 answer: "I" "am" "happy"
 random_order: true
 srsWords: "happy"
 
-[word-bank]
+[word-order]
 text: "她很高。"
 words: "She" "is" "tall" "am" "busy"
 answer: "She" "is" "tall"
 random_order: true
 srsWords: "tall"
 
-[word-bank]
+[word-order]
 text: "他们很忙。"
 words: "They" "are" "busy" "is" "happy"
 answer: "They" "are" "busy"
 random_order: true
 srsWords: "busy"
 
-[word-bank]
+[word-order]
 text: "天气很冷。"
 words: "It" "is" "cold" "are" "ready"
 answer: "It" "is" "cold"
 random_order: true
 srsWords: "cold"
 
-[word-bank]
+[word-order]
 text: "我们准备好了。"
 words: "We" "are" "ready" "is" "cold"
 answer: "We" "are" "ready"
 random_order: true
 srsWords: "ready"
 
-[word-bank]
+[word-order]
 text: "他很强壮。"
 words: "He" "is" "strong" "am" "busy"
 answer: "He" "is" "strong"
 random_order: true
 srsWords: "strong"
 
-[word-bank]
+[word-order]
 text: "我很累。"
 words: "I" "am" "tired" "is" "tall"
 answer: "I" "am" "tired"
 random_order: true
 srsWords: "tired"
 
-[word-bank]
+[word-order]
 text: "天气很热。"
 words: "It" "is" "hot" "are" "ready"
 answer: "It" "is" "hot"
 random_order: true
 srsWords: "hot"
 
-[word-bank]
+[word-order]
 text: "她很聪明。"
 words: "She" "is" "smart" "am" "cold"
 answer: "She" "is" "smart"
 random_order: true
 srsWords: "smart"
 
-[word-bank]
+[word-order]
 text: "他们很开心。"
 words: "They" "are" "happy" "is" "strong"
 answer: "They" "are" "happy"
@@ -370,70 +370,70 @@ pairs:
   - "We have time" = "我们有时间"
 srsWords: "dog" "car" "money" "phone" "time"
 
-[word-bank]
+[word-order]
 text: "我有一只狗。"
 words: "I" "have" "a" "dog" "has"
 answer: "I" "have" "a" "dog"
 random_order: true
 srsWords: "have" "dog"
 
-[word-bank]
+[word-order]
 text: "她有一辆车。"
 words: "She" "has" "a" "car" "have"
 answer: "She" "has" "a" "car"
 random_order: true
 srsWords: "has" "car"
 
-[word-bank]
+[word-order]
 text: "他们有钱。"
 words: "They" "have" "money" "has" "a"
 answer: "They" "have" "money"
 random_order: true
 srsWords: "have" "money"
 
-[word-bank]
+[word-order]
 text: "他有一部手机。"
 words: "He" "has" "a" "phone" "have"
 answer: "He" "has" "a" "phone"
 random_order: true
 srsWords: "has" "phone"
 
-[word-bank]
+[word-order]
 text: "我们有时间。"
 words: "We" "have" "time" "has" "a"
 answer: "We" "have" "time"
 random_order: true
 srsWords: "have" "time"
 
-[word-bank]
+[word-order]
 text: "我有一只猫。"
 words: "I" "have" "a" "cat" "has"
 answer: "I" "have" "a" "cat"
 random_order: true
 srsWords: "have" "cat"
 
-[word-bank]
+[word-order]
 text: "她有一本书。"
 words: "She" "has" "a" "book" "have"
 answer: "She" "has" "a" "book"
 random_order: true
 srsWords: "has" "book"
 
-[word-bank]
+[word-order]
 text: "他们有问题。"
 words: "They" "have" "a" "problem" "has"
 answer: "They" "have" "a" "problem"
 random_order: true
 srsWords: "have" "problem"
 
-[word-bank]
+[word-order]
 text: "他有一辆自行车。"
 words: "He" "has" "a" "bike" "have"
 answer: "He" "has" "a" "bike"
 random_order: true
 srsWords: "has" "bike"
 
-[word-bank]
+[word-order]
 text: "我们有工作。"
 words: "We" "have" "work" "has" "a"
 answer: "We" "have" "work"
@@ -456,70 +456,70 @@ pairs:
   - "We meet upstairs" = "我们在楼上见面"
 srsWords: "works" "lives" "study" "sit" "meet"
 
-[word-bank]
+[word-order]
 text: "她在这里工作。"
 words: "She" "works" "here" "lives" "there"
 answer: "She" "works" "here"
 random_order: true
 srsWords: "works" "here"
 
-[word-bank]
+[word-order]
 text: "他住在那里。"
 words: "He" "lives" "there" "works" "here"
 answer: "He" "lives" "there"
 random_order: true
 srsWords: "lives" "there"
 
-[word-bank]
+[word-order]
 text: "他们在外面学习。"
 words: "They" "study" "outside" "sit" "inside"
 answer: "They" "study" "outside"
 random_order: true
 srsWords: "study" "outside"
 
-[word-bank]
+[word-order]
 text: "我坐在里面。"
 words: "I" "sit" "inside" "study" "outside"
 answer: "I" "sit" "inside"
 random_order: true
 srsWords: "sit" "inside"
 
-[word-bank]
+[word-order]
 text: "我们在楼上见面。"
 words: "We" "meet" "upstairs" "sit" "inside"
 answer: "We" "meet" "upstairs"
 random_order: true
 srsWords: "meet" "upstairs"
 
-[word-bank]
+[word-order]
 text: "她在家工作。"
 words: "She" "works" "at" "home" "lives"
 answer: "She" "works" "at" "home"
 random_order: true
 srsWords: "works" "home"
 
-[word-bank]
+[word-order]
 text: "他住在楼上。"
 words: "He" "lives" "upstairs" "sits" "inside"
 answer: "He" "lives" "upstairs"
 random_order: true
 srsWords: "lives" "upstairs"
 
-[word-bank]
+[word-order]
 text: "他们在教室里学习。"
 words: "They" "study" "in" "the" "classroom" "outside"
 answer: "They" "study" "in" "the" "classroom"
 random_order: true
 srsWords: "study" "classroom"
 
-[word-bank]
+[word-order]
 text: "我坐在外面。"
 words: "I" "sit" "outside" "study" "inside"
 answer: "I" "sit" "outside"
 random_order: true
 srsWords: "sit" "outside"
 
-[word-bank]
+[word-order]
 text: "我们在公园见面。"
 words: "We" "meet" "in" "the" "park" "upstairs"
 answer: "We" "meet" "in" "the" "park"
@@ -542,70 +542,70 @@ pairs:
   - "We do homework there" = "我们在那里做作业"
 srsWords: "lunch" "upstairs" "coffee" "games" "homework"
 
-[word-bank]
+[word-order]
 text: "我在这里吃午饭。"
 words: "I" "eat" "lunch" "here" "there"
 answer: "I" "eat" "lunch" "here"
 random_order: true
 srsWords: "eat" "lunch" "here"
 
-[word-bank]
+[word-order]
 text: "她在楼上看书。"
 words: "She" "reads" "books" "upstairs" "inside"
 answer: "She" "reads" "books" "upstairs"
 random_order: true
 srsWords: "reads" "books" "upstairs"
 
-[word-bank]
+[word-order]
 text: "他在外面喝咖啡。"
 words: "He" "drinks" "coffee" "outside" "here"
 answer: "He" "drinks" "coffee" "outside"
 random_order: true
 srsWords: "drinks" "coffee" "outside"
 
-[word-bank]
+[word-order]
 text: "他们在里面玩游戏。"
 words: "They" "play" "games" "inside" "upstairs"
 answer: "They" "play" "games" "inside"
 random_order: true
 srsWords: "play" "games" "inside"
 
-[word-bank]
+[word-order]
 text: "我们在那里做作业。"
 words: "We" "do" "homework" "there" "outside"
 answer: "We" "do" "homework" "there"
 random_order: true
 srsWords: "do" "homework" "there"
 
-[word-bank]
+[word-order]
 text: "我在公园吃饭。"
 words: "I" "eat" "food" "in" "the" "park" "here"
 answer: "I" "eat" "food" "in" "the" "park"
 random_order: true
 srsWords: "eat" "food" "park"
 
-[word-bank]
+[word-order]
 text: "她在卧室看书。"
 words: "She" "reads" "a" "book" "in" "the" "bedroom" "upstairs"
 answer: "She" "reads" "a" "book" "in" "the" "bedroom"
 random_order: true
 srsWords: "reads" "book" "bedroom"
 
-[word-bank]
+[word-order]
 text: "他在咖啡店喝茶。"
 words: "He" "drinks" "tea" "at" "the" "café" "outside"
 answer: "He" "drinks" "tea" "at" "the" "café"
 random_order: true
 srsWords: "drinks" "tea" "café"
 
-[word-bank]
+[word-order]
 text: "他们在家玩牌。"
 words: "They" "play" "cards" "at" "home" "inside"
 answer: "They" "play" "cards" "at" "home"
 random_order: true
 srsWords: "play" "cards" "home"
 
-[word-bank]
+[word-order]
 text: "我们在图书馆做作业。"
 words: "We" "do" "homework" "at" "the" "library" "there"
 answer: "We" "do" "homework" "at" "the" "library"
@@ -628,70 +628,70 @@ pairs:
   - "We want peace" = "我们想要和平"
 srsWords: "want" "likes" "music" "sports" "peace"
 
-[word-bank]
+[word-order]
 text: "我想要水。"
 words: "I" "want" "water" "likes" "music"
 answer: "I" "want" "water"
 random_order: true
 srsWords: "want" "water"
 
-[word-bank]
+[word-order]
 text: "她喜欢音乐。"
 words: "She" "likes" "music" "wants" "sports"
 answer: "She" "likes" "music"
 random_order: true
 srsWords: "likes" "music"
 
-[word-bank]
+[word-order]
 text: "他想要一份工作。"
 words: "He" "wants" "a" "job" "likes"
 answer: "He" "wants" "a" "job"
 random_order: true
 srsWords: "wants" "job"
 
-[word-bank]
+[word-order]
 text: "他们喜欢运动。"
 words: "They" "like" "sports" "want" "peace"
 answer: "They" "like" "sports"
 random_order: true
 srsWords: "like" "sports"
 
-[word-bank]
+[word-order]
 text: "我们想要和平。"
 words: "We" "want" "peace" "like" "music"
 answer: "We" "want" "peace"
 random_order: true
 srsWords: "want" "peace"
 
-[word-bank]
+[word-order]
 text: "我想要一杯咖啡。"
 words: "I" "want" "a" "cup" "of" "coffee" "likes"
 answer: "I" "want" "a" "cup" "of" "coffee"
 random_order: true
 srsWords: "want" "cup" "coffee"
 
-[word-bank]
+[word-order]
 text: "她喜欢跳舞。"
 words: "She" "likes" "dancing" "wants" "sports"
 answer: "She" "likes" "dancing"
 random_order: true
 srsWords: "likes" "dancing"
 
-[word-bank]
+[word-order]
 text: "他想要一辆车。"
 words: "He" "wants" "a" "car" "likes"
 answer: "He" "wants" "a" "car"
 random_order: true
 srsWords: "wants" "car"
 
-[word-bank]
+[word-order]
 text: "他们喜欢电影。"
 words: "They" "like" "movies" "want" "music"
 answer: "They" "like" "movies"
 random_order: true
 srsWords: "like" "movies"
 
-[word-bank]
+[word-order]
 text: "我们想要更多时间。"
 words: "We" "want" "more" "time" "like"
 answer: "We" "want" "more" "time"
@@ -714,70 +714,70 @@ pairs:
   - "We can help" = "我们能帮忙"
 srsWords: "swim" "sing" "drive" "dance" "help"
 
-[word-bank]
+[word-order]
 text: "我会游泳。"
 words: "I" "can" "swim" "sing" "drive"
 answer: "I" "can" "swim"
 random_order: true
 srsWords: "swim"
 
-[word-bank]
+[word-order]
 text: "她会唱歌。"
 words: "She" "can" "sing" "swim" "dance"
 answer: "She" "can" "sing"
 random_order: true
 srsWords: "sing"
 
-[word-bank]
+[word-order]
 text: "他会开车。"
 words: "He" "can" "drive" "can't" "swim"
 answer: "He" "can" "drive"
 random_order: true
 srsWords: "drive"
 
-[word-bank]
+[word-order]
 text: "他们会跳舞。"
 words: "They" "can" "dance" "sing" "help"
 answer: "They" "can" "dance"
 random_order: true
 srsWords: "dance"
 
-[word-bank]
+[word-order]
 text: "我们能帮忙。"
 words: "We" "can" "help" "drive" "dance"
 answer: "We" "can" "help"
 random_order: true
 srsWords: "help"
 
-[word-bank]
+[word-order]
 text: "我会弹钢琴。"
 words: "I" "can" "play" "the" "piano" "sing"
 answer: "I" "can" "play" "the" "piano"
 random_order: true
 srsWords: "play" "piano"
 
-[word-bank]
+[word-order]
 text: "她会说英语。"
 words: "She" "can" "speak" "English" "swim"
 answer: "She" "can" "speak" "English"
 random_order: true
 srsWords: "speak" "English"
 
-[word-bank]
+[word-order]
 text: "他会踢足球。"
 words: "He" "can" "play" "football" "drive"
 answer: "He" "can" "play" "football"
 random_order: true
 srsWords: "play" "football"
 
-[word-bank]
+[word-order]
 text: "他们会做饭。"
 words: "They" "can" "cook" "dance" "well"
 answer: "They" "can" "cook"
 random_order: true
 srsWords: "cook"
 
-[word-bank]
+[word-order]
 text: "我们能解决这个问题。"
 words: "We" "can" "solve" "this" "problem" "help"
 answer: "We" "can" "solve" "this" "problem"
@@ -800,70 +800,70 @@ pairs:
   - "We go outside" = "我们去外面"
 srsWords: "home" "school" "shopping" "outside" "work"
 
-[word-bank]
+[word-order]
 text: "我回家。"
 words: "I" "go" "home" "school" "to"
 answer: "I" "go" "home"
 random_order: true
 srsWords: "go" "home"
 
-[word-bank]
+[word-order]
 text: "她去学校。"
 words: "She" "goes" "to" "school" "home"
 answer: "She" "goes" "to" "school"
 random_order: true
 srsWords: "goes" "school"
 
-[word-bank]
+[word-order]
 text: "他去上班。"
 words: "He" "goes" "to" "work" "school"
 answer: "He" "goes" "to" "work"
 random_order: true
 srsWords: "goes" "work"
 
-[word-bank]
+[word-order]
 text: "他们去购物。"
 words: "They" "go" "shopping" "home" "outside"
 answer: "They" "go" "shopping"
 random_order: true
 srsWords: "go" "shopping"
 
-[word-bank]
+[word-order]
 text: "我们去外面。"
 words: "We" "go" "outside" "shopping" "home"
 answer: "We" "go" "outside"
 random_order: true
 srsWords: "go" "outside"
 
-[word-bank]
+[word-order]
 text: "我去超市。"
 words: "I" "go" "to" "the" "supermarket" "home"
 answer: "I" "go" "to" "the" "supermarket"
 random_order: true
 srsWords: "go" "supermarket"
 
-[word-bank]
+[word-order]
 text: "她去图书馆。"
 words: "She" "goes" "to" "the" "library" "school"
 answer: "She" "goes" "to" "the" "library"
 random_order: true
 srsWords: "goes" "library"
 
-[word-bank]
+[word-order]
 text: "他去医院。"
 words: "He" "goes" "to" "the" "hospital" "work"
 answer: "He" "goes" "to" "the" "hospital"
 random_order: true
 srsWords: "goes" "hospital"
 
-[word-bank]
+[word-order]
 text: "他们去海滩。"
 words: "They" "go" "to" "the" "beach" "outside"
 answer: "They" "go" "to" "the" "beach"
 random_order: true
 srsWords: "go" "beach"
 
-[word-bank]
+[word-order]
 text: "我们去公园。"
 words: "We" "go" "to" "the" "park" "shopping"
 answer: "We" "go" "to" "the" "park"
@@ -886,70 +886,70 @@ pairs:
   - "We like to walk" = "我们喜欢散步"
 srsWords: "read" "travel" "cook" "learn" "walk"
 
-[word-bank]
+[word-order]
 text: "我喜欢阅读。"
 words: "I" "like" "to" "read" "travel"
 answer: "I" "like" "to" "read"
 random_order: true
 srsWords: "like" "read"
 
-[word-bank]
+[word-order]
 text: "她想旅行。"
 words: "She" "wants" "to" "travel" "read"
 answer: "She" "wants" "to" "travel"
 random_order: true
 srsWords: "wants" "travel"
 
-[word-bank]
+[word-order]
 text: "他喜欢做饭。"
 words: "He" "likes" "to" "cook" "walk"
 answer: "He" "likes" "to" "cook"
 random_order: true
 srsWords: "likes" "cook"
 
-[word-bank]
+[word-order]
 text: "他们想学习。"
 words: "They" "want" "to" "learn" "travel"
 answer: "They" "want" "to" "learn"
 random_order: true
 srsWords: "want" "learn"
 
-[word-bank]
+[word-order]
 text: "我们喜欢散步。"
 words: "We" "like" "to" "walk" "learn"
 answer: "We" "like" "to" "walk"
 random_order: true
 srsWords: "like" "walk"
 
-[word-bank]
+[word-order]
 text: "我喜欢唱歌。"
 words: "I" "like" "to" "sing" "travel"
 answer: "I" "like" "to" "sing"
 random_order: true
 srsWords: "like" "sing"
 
-[word-bank]
+[word-order]
 text: "她想学中文。"
 words: "She" "wants" "to" "learn" "Chinese" "travel"
 answer: "She" "wants" "to" "learn" "Chinese"
 random_order: true
 srsWords: "wants" "learn" "Chinese"
 
-[word-bank]
+[word-order]
 text: "他喜欢踢球。"
 words: "He" "likes" "to" "play" "football" "cook"
 answer: "He" "likes" "to" "play" "football"
 random_order: true
 srsWords: "likes" "play" "football"
 
-[word-bank]
+[word-order]
 text: "他们想去旅行。"
 words: "They" "want" "to" "travel" "learn" "together"
 answer: "They" "want" "to" "travel"
 random_order: true
 srsWords: "want" "travel"
 
-[word-bank]
+[word-order]
 text: "我们喜欢在公园散步。"
 words: "We" "like" "to" "walk" "in" "the" "park" "learn"
 answer: "We" "like" "to" "walk" "in" "the" "park"
@@ -972,70 +972,70 @@ pairs:
   - "a cold drink" = "一杯冷饮"
 srsWords: "big" "small" "red" "young" "cold"
 
-[word-bank]
+[word-order]
 text: "我有一座大房子。"
 words: "I" "have" "a" "big" "house" "small"
 answer: "I" "have" "a" "big" "house"
 random_order: true
 srsWords: "big" "house"
 
-[word-bank]
+[word-order]
 text: "他有一只小狗。"
 words: "He" "has" "a" "small" "dog" "big"
 answer: "He" "has" "a" "small" "dog"
 random_order: true
 srsWords: "small" "dog"
 
-[word-bank]
+[word-order]
 text: "我看见一个红苹果。"
 words: "I" "see" "a" "red" "apple" "young"
 answer: "I" "see" "a" "red" "apple"
 random_order: true
 srsWords: "red" "apple"
 
-[word-bank]
+[word-order]
 text: "她看见一个年轻的男孩。"
 words: "She" "sees" "a" "young" "boy" "big"
 answer: "She" "sees" "a" "young" "boy"
 random_order: true
 srsWords: "young" "boy"
 
-[word-bank]
+[word-order]
 text: "他喝一杯冷饮。"
 words: "He" "drinks" "a" "cold" "drink" "small"
 answer: "He" "drinks" "a" "cold" "drink"
 random_order: true
 srsWords: "cold" "drink"
 
-[word-bank]
+[word-order]
 text: "我买了一件新衬衫。"
 words: "I" "buy" "a" "new" "shirt" "cold"
 answer: "I" "buy" "a" "new" "shirt"
 random_order: true
 srsWords: "new" "shirt"
 
-[word-bank]
+[word-order]
 text: "她有一个漂亮的包。"
 words: "She" "has" "a" "beautiful" "bag" "young"
 answer: "She" "has" "a" "beautiful" "bag"
 random_order: true
 srsWords: "beautiful" "bag"
 
-[word-bank]
+[word-order]
 text: "他骑一辆旧自行车。"
 words: "He" "rides" "an" "old" "bike" "red"
 answer: "He" "rides" "an" "old" "bike"
 random_order: true
 srsWords: "old" "bike"
 
-[word-bank]
+[word-order]
 text: "我们住在一个安静的地方。"
 words: "We" "live" "in" "a" "quiet" "place" "big"
 answer: "We" "live" "in" "a" "quiet" "place"
 random_order: true
 srsWords: "quiet" "place"
 
-[word-bank]
+[word-order]
 text: "他们玩一个有趣的游戏。"
 words: "They" "play" "a" "fun" "game" "small"
 answer: "They" "play" "a" "fun" "game"
@@ -1058,70 +1058,70 @@ pairs:
   - "no time" = "没有时间"
 srsWords: "many" "some" "few" "time" "people"
 
-[word-bank]
+[word-order]
 text: "我有两只猫。"
 words: "I" "have" "two" "cats" "many"
 answer: "I" "have" "two" "cats"
 random_order: true
 srsWords: "have" "cats"
 
-[word-bank]
+[word-order]
 text: "很多人在这里。"
 words: "Many" "people" "are" "here" "some"
 answer: "Many" "people" "are" "here"
 random_order: true
 srsWords: "many" "people"
 
-[word-bank]
+[word-order]
 text: "我想要一些水。"
 words: "I" "want" "some" "water" "few"
 answer: "I" "want" "some" "water"
 random_order: true
 srsWords: "want" "some" "water"
 
-[word-bank]
+[word-order]
 text: "她有几本书。"
 words: "She" "has" "a" "few" "books" "many"
 answer: "She" "has" "a" "few" "books"
 random_order: true
 srsWords: "has" "few" "books"
 
-[word-bank]
+[word-order]
 text: "他没有时间。"
 words: "He" "has" "no" "time" "some"
 answer: "He" "has" "no" "time"
 random_order: true
 srsWords: "has" "time"
 
-[word-bank]
+[word-order]
 text: "我们需要三把椅子。"
 words: "We" "need" "three" "chairs" "two"
 answer: "We" "need" "three" "chairs"
 random_order: true
 srsWords: "need" "chairs"
 
-[word-bank]
+[word-order]
 text: "很多孩子在玩。"
 words: "Many" "children" "are" "playing" "some"
 answer: "Many" "children" "are" "playing"
 random_order: true
 srsWords: "many" "children" "playing"
 
-[word-bank]
+[word-order]
 text: "她想要一些帮助。"
 words: "She" "wants" "some" "help" "no"
 answer: "She" "wants" "some" "help"
 random_order: true
 srsWords: "wants" "some" "help"
 
-[word-bank]
+[word-order]
 text: "他有几个朋友。"
 words: "He" "has" "a" "few" "friends" "many"
 answer: "He" "has" "a" "few" "friends"
 random_order: true
 srsWords: "has" "few" "friends"
 
-[word-bank]
+[word-order]
 text: "我们没有钱。"
 words: "We" "have" "no" "money" "some"
 answer: "We" "have" "no" "money"
@@ -1144,70 +1144,70 @@ pairs:
   - "This is our home" = "这是我们的家"
 srsWords: "bag" "car" "small" "big" "home"
 
-[word-bank]
+[word-order]
 text: "这是我的包。"
 words: "This" "is" "my" "bag" "that"
 answer: "This" "is" "my" "bag"
 random_order: true
 srsWords: "bag"
 
-[word-bank]
+[word-order]
 text: "那是她的车。"
 words: "That" "is" "her" "car" "this"
 answer: "That" "is" "her" "car"
 random_order: true
 srsWords: "car"
 
-[word-bank]
+[word-order]
 text: "这只猫很小。"
 words: "This" "cat" "is" "small" "big"
 answer: "This" "cat" "is" "small"
 random_order: true
 srsWords: "small"
 
-[word-bank]
+[word-order]
 text: "那只狗很大。"
 words: "That" "dog" "is" "big" "small"
 answer: "That" "dog" "is" "big"
 random_order: true
 srsWords: "big"
 
-[word-bank]
+[word-order]
 text: "这是我们的家。"
 words: "This" "is" "our" "home" "that"
 answer: "This" "is" "our" "home"
 random_order: true
 srsWords: "home"
 
-[word-bank]
+[word-order]
 text: "那是他的书。"
 words: "That" "is" "his" "book" "this"
 answer: "That" "is" "his" "book"
 random_order: true
 srsWords: "book"
 
-[word-bank]
+[word-order]
 text: "这杯茶很热。"
 words: "This" "tea" "is" "hot" "cold"
 answer: "This" "tea" "is" "hot"
 random_order: true
 srsWords: "hot" "tea"
 
-[word-bank]
+[word-order]
 text: "那栋楼很高。"
 words: "That" "building" "is" "tall" "small"
 answer: "That" "building" "is" "tall"
 random_order: true
 srsWords: "building" "tall"
 
-[word-bank]
+[word-order]
 text: "这是我的朋友。"
 words: "This" "is" "my" "friend" "that"
 answer: "This" "is" "my" "friend"
 random_order: true
 srsWords: "friend"
 
-[word-bank]
+[word-order]
 text: "那个男人很高。"
 words: "That" "man" "is" "tall" "short"
 answer: "That" "man" "is" "tall"
@@ -1230,70 +1230,70 @@ pairs:
   - "There is no water" = "没有水"
 srsWords: "cat" "dogs" "food" "people" "water"
 
-[word-bank]
+[word-order]
 text: "有一只猫。"
 words: "There" "is" "a" "cat" "are"
 answer: "There" "is" "a" "cat"
 random_order: true
 srsWords: "cat"
 
-[word-bank]
+[word-order]
 text: "有两只狗。"
 words: "There" "are" "two" "dogs" "is"
 answer: "There" "are" "two" "dogs"
 random_order: true
 srsWords: "dogs"
 
-[word-bank]
+[word-order]
 text: "有一些食物。"
 words: "There" "is" "some" "food" "are"
 answer: "There" "is" "some" "food"
 random_order: true
 srsWords: "food"
 
-[word-bank]
+[word-order]
 text: "有很多人。"
 words: "There" "are" "many" "people" "is"
 answer: "There" "are" "many" "people"
 random_order: true
 srsWords: "people"
 
-[word-bank]
+[word-order]
 text: "没有水。"
 words: "There" "is" "no" "water" "are"
 answer: "There" "is" "no" "water"
 random_order: true
 srsWords: "water"
 
-[word-bank]
+[word-order]
 text: "有一本书在桌上。"
 words: "There" "is" "a" "book" "on" "the" "table" "are"
 answer: "There" "is" "a" "book" "on" "the" "table"
 random_order: true
 srsWords: "book" "table"
 
-[word-bank]
+[word-order]
 text: "有三个苹果。"
 words: "There" "are" "three" "apples" "is"
 answer: "There" "are" "three" "apples"
 random_order: true
 srsWords: "apples"
 
-[word-bank]
+[word-order]
 text: "有一些椅子。"
 words: "There" "are" "some" "chairs" "is"
 answer: "There" "are" "some" "chairs"
 random_order: true
 srsWords: "chairs"
 
-[word-bank]
+[word-order]
 text: "没有问题。"
 words: "There" "is" "no" "problem" "are"
 answer: "There" "is" "no" "problem"
 random_order: true
 srsWords: "problem"
 
-[word-bank]
+[word-order]
 text: "有很多树在公园里。"
 words: "There" "are" "many" "trees" "in" "the" "park" "is"
 answer: "There" "are" "many" "trees" "in" "the" "park"
@@ -1316,70 +1316,70 @@ pairs:
   - "our car" = "我们的车"
 srsWords: "book" "house" "dog" "bag" "car"
 
-[word-bank]
+[word-order]
 text: "我的书在桌上。"
 words: "My" "book" "is" "on" "the" "table" "your"
 answer: "My" "book" "is" "on" "the" "table"
 random_order: true
 srsWords: "book" "table"
 
-[word-bank]
+[word-order]
 text: "你的房子很大。"
 words: "Your" "house" "is" "big" "my" "small"
 answer: "Your" "house" "is" "big"
 random_order: true
 srsWords: "house" "big"
 
-[word-bank]
+[word-order]
 text: "他的狗很可爱。"
 words: "His" "dog" "is" "cute" "her" "small"
 answer: "His" "dog" "is" "cute"
 random_order: true
 srsWords: "dog" "cute"
 
-[word-bank]
+[word-order]
 text: "她的包是红色的。"
 words: "Her" "bag" "is" "red" "his" "blue"
 answer: "Her" "bag" "is" "red"
 random_order: true
 srsWords: "bag" "red"
 
-[word-bank]
+[word-order]
 text: "我们的车停在外面。"
 words: "Our" "car" "is" "outside" "my" "inside"
 answer: "Our" "car" "is" "outside"
 random_order: true
 srsWords: "car" "outside"
 
-[word-bank]
+[word-order]
 text: "我的朋友很友好。"
 words: "My" "friend" "is" "friendly" "your" "kind"
 answer: "My" "friend" "is" "friendly"
 random_order: true
 srsWords: "friend" "friendly"
 
-[word-bank]
+[word-order]
 text: "你的手机在哪里？"
 words: "Where" "is" "your" "phone" "my"
 answer: "Where" "is" "your" "phone"
 random_order: true
 srsWords: "phone"
 
-[word-bank]
+[word-order]
 text: "他的工作很有趣。"
 words: "His" "job" "is" "interesting" "her" "boring"
 answer: "His" "job" "is" "interesting"
 random_order: true
 srsWords: "job" "interesting"
 
-[word-bank]
+[word-order]
 text: "她的名字是Lisa。"
 words: "Her" "name" "is" "Lisa" "his"
 answer: "Her" "name" "is" "Lisa"
 random_order: true
 srsWords: "name"
 
-[word-bank]
+[word-order]
 text: "我们的老师很好。"
 words: "Our" "teacher" "is" "great" "my" "kind"
 answer: "Our" "teacher" "is" "great"
@@ -1402,70 +1402,70 @@ pairs:
   - "a black cat" = "黑色的猫"
 srsWords: "blue" "green" "white" "yellow" "black"
 
-[word-bank]
+[word-order]
 text: "天空是蓝色的。"
 words: "The" "sky" "is" "blue" "green"
 answer: "The" "sky" "is" "blue"
 random_order: true
 srsWords: "sky" "blue"
 
-[word-bank]
+[word-order]
 text: "树是绿色的。"
 words: "The" "tree" "is" "green" "blue"
 answer: "The" "tree" "is" "green"
 random_order: true
 srsWords: "tree" "green"
 
-[word-bank]
+[word-order]
 text: "他的衬衫是白色的。"
 words: "His" "shirt" "is" "white" "yellow"
 answer: "His" "shirt" "is" "white"
 random_order: true
 srsWords: "shirt" "white"
 
-[word-bank]
+[word-order]
 text: "那朵花是黄色的。"
 words: "That" "flower" "is" "yellow" "white"
 answer: "That" "flower" "is" "yellow"
 random_order: true
 srsWords: "flower" "yellow"
 
-[word-bank]
+[word-order]
 text: "那只猫是黑色的。"
 words: "That" "cat" "is" "black" "white"
 answer: "That" "cat" "is" "black"
 random_order: true
 srsWords: "cat" "black"
 
-[word-bank]
+[word-order]
 text: "我的鞋是红色的。"
 words: "My" "shoes" "are" "red" "black"
 answer: "My" "shoes" "are" "red"
 random_order: true
 srsWords: "shoes" "red"
 
-[word-bank]
+[word-order]
 text: "她的头发是棕色的。"
 words: "Her" "hair" "is" "brown" "black"
 answer: "Her" "hair" "is" "brown"
 random_order: true
 srsWords: "hair" "brown"
 
-[word-bank]
+[word-order]
 text: "那辆车是橙色的。"
 words: "That" "car" "is" "orange" "red"
 answer: "That" "car" "is" "orange"
 random_order: true
 srsWords: "car" "orange"
 
-[word-bank]
+[word-order]
 text: "他的钱包是棕色的。"
 words: "His" "wallet" "is" "brown" "black"
 answer: "His" "wallet" "is" "brown"
 random_order: true
 srsWords: "wallet" "brown"
 
-[word-bank]
+[word-order]
 text: "那本书是紫色的。"
 words: "That" "book" "is" "purple" "blue"
 answer: "That" "book" "is" "purple"
@@ -1488,70 +1488,70 @@ pairs:
   - "We watch TV" = "我们看电视"
 srsWords: "wake" "brushes" "breakfast" "bed" "watch"
 
-[word-bank]
+[word-order]
 text: "我每天起床。"
 words: "I" "wake" "up" "every" "day" "sleep"
 answer: "I" "wake" "up" "every" "day"
 random_order: true
 srsWords: "wake" "every" "day"
 
-[word-bank]
+[word-order]
 text: "她每天刷牙。"
 words: "She" "brushes" "her" "teeth" "every" "day" "washes"
 answer: "She" "brushes" "her" "teeth" "every" "day"
 random_order: true
 srsWords: "brushes" "teeth"
 
-[word-bank]
+[word-order]
 text: "他吃早饭。"
 words: "He" "eats" "breakfast" "dinner" "every"
 answer: "He" "eats" "breakfast"
 random_order: true
 srsWords: "eats" "breakfast"
 
-[word-bank]
+[word-order]
 text: "他们早睡。"
 words: "They" "go" "to" "bed" "early" "late"
 answer: "They" "go" "to" "bed" "early"
 random_order: true
 srsWords: "bed" "early"
 
-[word-bank]
+[word-order]
 text: "我们看电视。"
 words: "We" "watch" "TV" "every" "evening" "read"
 answer: "We" "watch" "TV" "every" "evening"
 random_order: true
 srsWords: "watch" "TV" "evening"
 
-[word-bank]
+[word-order]
 text: "我早上洗澡。"
 words: "I" "shower" "in" "the" "morning" "evening"
 answer: "I" "shower" "in" "the" "morning"
 random_order: true
 srsWords: "shower" "morning"
 
-[word-bank]
+[word-order]
 text: "她走路上学。"
 words: "She" "walks" "to" "school" "runs"
 answer: "She" "walks" "to" "school"
 random_order: true
 srsWords: "walks" "school"
 
-[word-bank]
+[word-order]
 text: "他午饭后休息。"
 words: "He" "rests" "after" "lunch" "dinner"
 answer: "He" "rests" "after" "lunch"
 random_order: true
 srsWords: "rests" "lunch"
 
-[word-bank]
+[word-order]
 text: "他们每晚看书。"
 words: "They" "read" "every" "night" "morning"
 answer: "They" "read" "every" "night"
 random_order: true
 srsWords: "read" "every" "night"
 
-[word-bank]
+[word-order]
 text: "我们吃完饭洗碗。"
 words: "We" "wash" "the" "dishes" "after" "dinner" "lunch"
 answer: "We" "wash" "the" "dishes" "after" "dinner"
@@ -1574,70 +1574,70 @@ pairs:
   - "We are friendly" = "我们很友好"
 srsWords: "kind" "tall" "funny" "honest" "friendly"
 
-[word-bank]
+[word-order]
 text: "她很友善。"
 words: "She" "is" "kind" "tall" "funny"
 answer: "She" "is" "kind"
 random_order: true
 srsWords: "kind"
 
-[word-bank]
+[word-order]
 text: "他很高。"
 words: "He" "is" "tall" "short" "kind"
 answer: "He" "is" "tall"
 random_order: true
 srsWords: "tall"
 
-[word-bank]
+[word-order]
 text: "他们很有趣。"
 words: "They" "are" "funny" "kind" "honest"
 answer: "They" "are" "funny"
 random_order: true
 srsWords: "funny"
 
-[word-bank]
+[word-order]
 text: "我很诚实。"
 words: "I" "am" "honest" "funny" "friendly"
 answer: "I" "am" "honest"
 random_order: true
 srsWords: "honest"
 
-[word-bank]
+[word-order]
 text: "我们很友好。"
 words: "We" "are" "friendly" "honest" "funny"
 answer: "We" "are" "friendly"
 random_order: true
 srsWords: "friendly"
 
-[word-bank]
+[word-order]
 text: "她是一个好学生。"
 words: "She" "is" "a" "good" "student" "bad"
 answer: "She" "is" "a" "good" "student"
 random_order: true
 srsWords: "good" "student"
 
-[word-bank]
+[word-order]
 text: "他是一个聪明的男孩。"
 words: "He" "is" "a" "smart" "boy" "tall"
 answer: "He" "is" "a" "smart" "boy"
 random_order: true
 srsWords: "smart" "boy"
 
-[word-bank]
+[word-order]
 text: "他们是好朋友。"
 words: "They" "are" "good" "friends" "funny"
 answer: "They" "are" "good" "friends"
 random_order: true
 srsWords: "good" "friends"
 
-[word-bank]
+[word-order]
 text: "我是一个努力的人。"
 words: "I" "am" "a" "hardworking" "person" "lazy"
 answer: "I" "am" "a" "hardworking" "person"
 random_order: true
 srsWords: "hardworking" "person"
 
-[word-bank]
+[word-order]
 text: "我们是一个快乐的家庭。"
 words: "We" "are" "a" "happy" "family" "sad"
 answer: "We" "are" "a" "happy" "family"
@@ -1660,70 +1660,70 @@ pairs:
   - "We like to walk" = "我们喜欢散步"
 srsWords: "coffee" "red" "swim" "well" "walk"
 
-[word-bank]
+[word-order]
 text: "我喝咖啡。"
 words: "I" "drink" "coffee" "eat" "tea"
 answer: "I" "drink" "coffee"
 random_order: true
 srsWords: "drink" "coffee"
 
-[word-bank]
+[word-order]
 text: "她有一个红包。"
 words: "She" "has" "a" "red" "bag" "blue"
 answer: "She" "has" "a" "red" "bag"
 random_order: true
 srsWords: "red" "bag"
 
-[word-bank]
+[word-order]
 text: "他们去学校。"
 words: "They" "go" "to" "school" "home"
 answer: "They" "go" "to" "school"
 random_order: true
 srsWords: "go" "school"
 
-[word-bank]
+[word-order]
 text: "他游泳游得好。"
 words: "He" "can" "swim" "well" "fast"
 answer: "He" "can" "swim" "well"
 random_order: true
 srsWords: "swim" "well"
 
-[word-bank]
+[word-order]
 text: "我们喜欢散步。"
 words: "We" "like" "to" "walk" "run"
 answer: "We" "like" "to" "walk"
 random_order: true
 srsWords: "like" "walk"
 
-[word-bank]
+[word-order]
 text: "有一只猫在椅子上。"
 words: "There" "is" "a" "cat" "on" "the" "chair" "are"
 answer: "There" "is" "a" "cat" "on" "the" "chair"
 random_order: true
 srsWords: "cat" "chair"
 
-[word-bank]
+[word-order]
 text: "我的书包是蓝色的。"
 words: "My" "backpack" "is" "blue" "red" "your"
 answer: "My" "backpack" "is" "blue"
 random_order: true
 srsWords: "backpack" "blue"
 
-[word-bank]
+[word-order]
 text: "她每天早上刷牙。"
 words: "She" "brushes" "her" "teeth" "every" "morning" "evening"
 answer: "She" "brushes" "her" "teeth" "every" "morning"
 random_order: true
 srsWords: "brushes" "teeth" "morning"
 
-[word-bank]
+[word-order]
 text: "他们想要和平。"
 words: "They" "want" "peace" "need" "some"
 answer: "They" "want" "peace"
 random_order: true
 srsWords: "want" "peace"
 
-[word-bank]
+[word-order]
 text: "我们在公园玩游戏。"
 words: "We" "play" "games" "in" "the" "park" "at"
 answer: "We" "play" "games" "in" "the" "park"
