@@ -6,8 +6,8 @@ color: "#27AE60"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "A1"
-courseId: "a1-word-bank-course"
-questionType: "word-bank"
+courseId: "a1-word-order-course"
+questionType: "word-order"
 ---
 
 ---
