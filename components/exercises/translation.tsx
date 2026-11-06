@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useLayoutEffect, useMemo, useCallback, useRef } from "react";
-import { Volume2, ChevronLeft, ChevronRight } from "lucide-react";
+import { Volume2, ChevronLeft, ChevronRight, Lightbulb } from "lucide-react";
 import type { TranslationExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
@@ -101,6 +101,9 @@ export function Translation({
 }: Props) {
   const [analysis, setAnalysis] = useState<SentenceAnalysisData | null>(null);
   const [submitted, setSubmitted] = useState(false);
+  // Pre-submit hint toggle: reveals the Chinese gloss under every word box so
+  // the learner can check a word's meaning while still typing the answer.
+  const [showHints, setShowHints] = useState(false);
   // One entry per answer word; the user fills in each box.
   const [userInputs, setUserInputs] = useState<string[]>([]);
   const [marking, setMarking] = useState<MarkingResult | null>(null);
@@ -111,6 +114,7 @@ export function Translation({
 
   useEffect(() => {
     setSubmitted(false);
+    setShowHints(false);
     setUserInputs(
       exercise.answer.trim().split(/\s+/).filter(Boolean).map(() => ""),
     );
@@ -412,6 +416,27 @@ export function Translation({
               <Volume2 className="h-4 w-4" />
               English
             </button>
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                setShowHints((v) => !v);
+              }}
+              aria-pressed={showHints}
+              aria-label={showHints ? "隐藏提示" : "显示提示"}
+              title={showHints ? "隐藏提示" : "显示提示"}
+              className={`inline-flex h-10 items-center gap-1.5 rounded-full px-3.5 text-xs font-bold shadow-sm border-b-2 transition-all active:border-b-0 active:mt-0.5 ${
+                showHints
+                  ? "bg-amber-400 text-amber-900 border-amber-500 hover:bg-amber-400/90"
+                  : "bg-white text-amber-500 border-2 border-amber-300 hover:bg-amber-50"
+              }`}
+            >
+              <Lightbulb
+                className="h-4 w-4"
+                fill={showHints ? "currentColor" : "none"}
+              />
+              提示
+            </button>
           </div>
 
           <button
@@ -614,6 +639,18 @@ export function Translation({
                       {item.ipa && (
                         <span className="text-[9px] sm:text-[13px] font-mono text-gray-500 whitespace-nowrap">
                           {item.ipa}
+                        </span>
+                      )}
+                    </div>
+                  ) : showHints ? (
+                    // Pre-submit hint: the Chinese gloss only. The English word
+                    // and the IPA stay hidden so the answer is not given away.
+                    // min-h matches the placeholder below, so toggling the hint
+                    // never changes the height of the row (no layout shift).
+                    <div className="mt-1 flex min-h-[2.1rem] sm:min-h-[3.6rem] flex-col items-center justify-center leading-tight">
+                      {item.meaning && (
+                        <span className="text-[10px] sm:text-[14px] font-semibold text-lingo-blue whitespace-nowrap">
+                          {item.meaning}
                         </span>
                       )}
                     </div>
