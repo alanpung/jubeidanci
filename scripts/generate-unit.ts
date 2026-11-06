@@ -170,7 +170,7 @@ async function main() {
   const lessonCount = (cleaned.match(/^lessonTitle:/gm) || []).length;
   const exerciseCount = (
     cleaned.match(
-      /^\[(?:multiple-choice|fill-in-the-blank|matching-pairs|word-bank|listening|translation)\]/gm,
+      /^\[(?:multiple-choice|fill-in-the-blank|matching-pairs|word-bank|word-order|listening|translation)\]/gm,
     ) || []
   ).length;
   console.log(`  Lessons: ${lessonCount}, Exercises: ${exerciseCount}`);

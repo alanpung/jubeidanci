@@ -337,6 +337,22 @@ srsWords: "a"`;
       expect(ex.randomOrder).toBe(true);
     }
   });
+
+  test("parses [word-order] alias identically", () => {
+    const block = `[word-order]
+text: "Arrange the translation"
+words: "the" "cat" "is" "black"
+answer: "the" "cat" "is" "black"
+srsWords: "gato"`;
+    const ex = parseExercise(block);
+    expect(ex).toEqual({
+      type: "word-bank",
+      text: "Arrange the translation",
+      words: ["the", "cat", "is", "black"],
+      answer: ["the", "cat", "is", "black"],
+      srsWords: "gato",
+    });
+  });
 });
 
 describe("free-text", () => {

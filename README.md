@@ -26,7 +26,7 @@ Multiple exercise types:
 - Flashcard
 - Multiple choice
 - Fill in the blank
-- Word bank
+- Word order
 - Listening (TTS)
 - Speaking (STT)
 
