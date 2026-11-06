@@ -1,7 +1,7 @@
 import { dbBackground, isDbAvailable } from "./index";
 import { course, unit, user } from "./schema";
 import { getAllCourses, getAllUnits } from "../content/registry";
-import { eq, or, ilike, and, notInArray, like, sql, count } from "drizzle-orm";
+import { eq, or, ilike, and, notInArray, like, notLike, sql, count } from "drizzle-orm";
 import { runAfterResponse } from "../after-response";
 
 let lastSyncedAt = 0;
@@ -86,16 +86,36 @@ async function runSeedTask() {
           },
         });
 
-      // Update system course title if it was previously seeded as "A1 Word Bank"
+      // The "A1 Word Bank" course was renamed to "A1 Word Order" and its id
+      // changed from "a1-word-bank-course" to "a1-word-order-course". The
+      // filesystem units now carry the new courseId, so the old course row
+      // would survive as a second, empty course with the same title ("A1 Word
+      // Order") — the library would then show the course twice.
+      //
+      // Remove the stale row. Only units that still belong to the old course
+      // id and were derived from the filesystem (id starts with the course id)
+      // are deleted; units the owner created by hand have a UUID id and are
+      // re-pointed at the new course id so they survive the rename.
+      const staleCourseId = "a1-word-bank-course";
+      const newCourseId = "a1-word-order-course";
+
       await dbBackground
-        .update(course)
-        .set({ title: "A1 Word Order" })
+        .update(unit)
+        .set({ courseId: newCourseId })
         .where(
-          or(
-            eq(course.id, "a1-word-bank-course"),
-            ilike(course.title, "%A1 Word Bank%")
+          and(
+            eq(unit.courseId, staleCourseId),
+            notLike(unit.id, `${staleCourseId}-%`)
           )
         );
+
+      await dbBackground
+        .delete(unit)
+        .where(eq(unit.courseId, staleCourseId));
+
+      await dbBackground
+        .delete(course)
+        .where(eq(course.id, staleCourseId));
     }
 
     // 4. Delete unwanted German / test courses and units
