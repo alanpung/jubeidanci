@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 1: A1 Speaking Practice"
-description: "A1 Speaking Practice — 20 lessons x 10 questions"
+description: "A1 Speaking Practice"
 icon: "🎙️"
 color: "#E91E63"
 targetLanguage: "en"
