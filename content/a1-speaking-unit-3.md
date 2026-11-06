@@ -1,5 +1,5 @@
 ---
-unitTitle: "Unit 3: People, Relationships & Celebrations (20 Lessons)"
+unitTitle: "Unit 3: People, Relationships & Celebrations"
 description: "A1 Speaking Practice — people, relationships, and special occasions"
 icon: "🎙️"
 color: "#E91E63"

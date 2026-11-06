@@ -7,6 +7,8 @@ interface UnitCardProps {
   language?: string;
   /** 1-based position of this unit in the course; renders a "Unit N" prefix. */
   unitNumber?: number;
+  /** Distinct SRS words this unit teaches — shown in brackets after the title. */
+  srsWordCount?: number;
   onClick?: () => void;
   children?: React.ReactNode;
   action?: React.ReactNode;
@@ -26,6 +28,7 @@ export function UnitCard({
   completedLessons,
   language,
   unitNumber,
+  srsWordCount,
   onClick,
   children,
   action,
@@ -44,12 +47,20 @@ export function UnitCard({
     showNumber || compact ? stripped || title : title;
 
   // Plain text titles — no word-check links (distracting on mobile library view).
+  // The SRS-word count rides along in brackets so the reader learns how much
+  // vocabulary the unit carries without a second line of chrome.
+  const wordSuffix = srsWordCount
+    ? ` (${srsWordCount.toLocaleString("en-US")} words)`
+    : "";
   const heading = (
     <h3 className="min-w-0 flex-1 truncate text-sm font-bold text-lingo-text">
       {showNumber && (
         <span className="text-lingo-text-light">Unit {unitNumber}: </span>
       )}
       {titleWithoutLabel}
+      {wordSuffix && (
+        <span className="font-semibold text-lingo-text-light">{wordSuffix}</span>
+      )}
     </h3>
   );
 

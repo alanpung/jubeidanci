@@ -202,6 +202,11 @@ function UnitCardContent({
       <div className="flex-1 min-w-0">
         <div className="flex items-center gap-2 flex-wrap">
           <p className="font-bold text-lingo-text truncate">{unit.title}</p>
+          {unit.srsWordCount ? (
+            <span className="shrink-0 text-xs font-semibold text-lingo-text-light">
+              ({unit.srsWordCount.toLocaleString("en-US")} words)
+            </span>
+          ) : null}
           {unit.questionType && (
             <QuestionTypeBadge questionType={unit.questionType} size="xs" />
           )}

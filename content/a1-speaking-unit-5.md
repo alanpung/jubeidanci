@@ -1,5 +1,5 @@
 ---
-unitTitle: "Unit 5: Life Stories & Experiences (20 Lessons)"
+unitTitle: "Unit 5: Life Stories & Experiences"
 description: "A1 Speaking Practice — personal stories, milestones, and reflections"
 icon: "🎙️"
 color: "#E91E63"

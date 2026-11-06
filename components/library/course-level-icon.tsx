@@ -329,6 +329,7 @@ export function CourseCover({
   name,
   levelAsSymbol = false,
   showLevel = true,
+  srsWordCount,
   className = "",
   children,
 }: {
@@ -340,6 +341,8 @@ export function CourseCover({
   name?: string | null;
   levelAsSymbol?: boolean;
   showLevel?: boolean;
+  /** Distinct SRS words this course teaches — shown under the title. */
+  srsWordCount?: number;
   className?: string;
   children?: React.ReactNode;
 }) {
@@ -353,34 +356,49 @@ export function CourseCover({
 
   return (
     <div
-      className={`relative flex w-full items-center justify-center gap-2.5 rounded-2xl border-2 px-3 pt-7 pb-7 shadow-sm ${visual.light} ${visual.outline} ${className}`}
+      className={`relative flex w-full flex-col items-center justify-center gap-1.5 rounded-2xl border-2 px-3 pt-6 pb-6 shadow-sm ${visual.light} ${visual.outline} ${className}`}
     >
+      {/* Symbol + title stay a centred GROUP on the first row, so the symbol
+          sits closer to the middle of the tile (and clear of the corner
+          badges) and the title always reads to its right, inside the cover.
+          The SRS-word count sits on its own row underneath. */}
+
       {/* Symbol — grouped with the title and centred, so it never collides with
           the top-left visibility badge.
 
           A level folder wears a ROUND colour badge with its CEFR code; every
           other cover wears the solid, filled symbol tile from the legend. */}
-      {levelAsSymbol ? (
-        <span
-          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 text-white shadow-sm ${levelStyle.bg} ${levelStyle.border}`}
-        >
-          <span className="text-2xl font-black leading-none tracking-tight">
-            {cleanLevel}
+      <div className="flex w-full items-center justify-center gap-2.5">
+        {levelAsSymbol ? (
+          <span
+            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-full border-2 text-white shadow-sm ${levelStyle.bg} ${levelStyle.border}`}
+          >
+            <span className="text-2xl font-black leading-none tracking-tight">
+              {cleanLevel}
+            </span>
           </span>
-        </span>
-      ) : (
-        <span
-          className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border-2 text-white shadow-sm [&_svg]:h-6 [&_svg]:w-6 ${visual.bg} ${visual.border}`}
-        >
-          {glyph ?? <Icon className="h-6 w-6 stroke-[2.25]" />}
-        </span>
-      )}
+        ) : (
+          <span
+            className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl border-2 text-white shadow-sm [&_svg]:h-6 [&_svg]:w-6 ${visual.bg} ${visual.border}`}
+          >
+            {glyph ?? <Icon className="h-6 w-6 stroke-[2.25]" />}
+          </span>
+        )}
 
-      {/* Title — inside the cover, to the right of the symbol. Its width is
-          capped (no flex-grow) so the symbol + title stay a centred group. */}
-      {name ? (
-        <span className="line-clamp-2 min-w-0 max-w-[58%] text-[13px] font-black leading-tight text-lingo-text">
-          {name}
+        {/* Title — inside the cover, to the right of the symbol. Its width is
+            capped (no flex-grow) so the symbol + title stay a centred group. */}
+        {name ? (
+          <span className="line-clamp-2 min-w-0 max-w-[58%] text-[13px] font-black leading-tight text-lingo-text">
+            {name}
+          </span>
+        ) : null}
+      </div>
+
+      {/* How many distinct SRS words this course teaches. Hidden when the
+          count is unknown (0) rather than showing a misleading "0 words". */}
+      {srsWordCount ? (
+        <span className="text-[11px] font-bold leading-none text-lingo-text-light">
+          {srsWordCount.toLocaleString("en-US")} words
         </span>
       ) : null}
 

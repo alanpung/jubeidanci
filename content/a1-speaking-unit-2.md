@@ -1,5 +1,5 @@
 ---
-unitTitle: "Unit 2: Everyday Life & Services (20 Lessons)"
+unitTitle: "Unit 2: Everyday Life & Services"
 description: "A1 Speaking Practice — practical everyday situations and services"
 icon: "🎙️"
 color: "#E91E63"
