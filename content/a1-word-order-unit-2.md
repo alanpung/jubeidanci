@@ -970,7 +970,7 @@ pairs:
   - "No, they can't" = "不，他们不能"
   - "No, he doesn't" = "不，他不"
   - "No, we aren't" = "不，我们不是"
-srsWords: "don't" "isn't" "can't" "doesn't" "aren't"
+srsWords: "don't" "is" "can't" "do" "are"
 
 [word-order]
 text: "你吃肉吗？不，我不。"
@@ -984,7 +984,7 @@ text: "她高吗？不，她不是。"
 words: "No" "she" "isn't" "aren't" "is"
 answer: "No" "she" "isn't"
 random_order: true
-srsWords: "isn't"
+srsWords: "is"
 
 [word-order]
 text: "他们能来吗？不，他们不能。"
@@ -998,14 +998,14 @@ text: "他喜欢音乐吗？不，他不。"
 words: "No" "he" "doesn't" "don't" "isn't"
 answer: "No" "he" "doesn't"
 random_order: true
-srsWords: "doesn't"
+srsWords: "do"
 
 [word-order]
 text: "我们迟到了吗？不，我们不是。"
 words: "No" "we" "aren't" "isn't" "don't"
 answer: "No" "we" "aren't"
 random_order: true
-srsWords: "aren't"
+srsWords: "are"
 
 [word-order]
 text: "你有车吗？不，我没有。"
@@ -1026,14 +1026,14 @@ text: "他们在家吗？不，他们不在。"
 words: "No" "they" "aren't" "home" "isn't"
 answer: "No" "they" "aren't" "home"
 random_order: true
-srsWords: "aren't" "home"
+srsWords: "are" "home"
 
 [word-order]
 text: "他在工作吗？不，他不在。"
 words: "No" "he" "isn't" "working" "aren't"
 answer: "No" "he" "isn't" "working"
 random_order: true
-srsWords: "isn't" "working"
+srsWords: "is" "working"
 
 [word-order]
 text: "你想要帮助吗？不，谢谢。"

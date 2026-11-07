@@ -775,7 +775,7 @@ text: "他们不来因为他们很忙所以我们自己开始了。"
 words: "They" "couldn't" "come" "because" "they" "were" "busy" "so" "we" "started" "without" "them" "and" "waited"
 answer: "They" "couldn't" "come" "because" "they" "were" "busy" "so" "we" "started" "without" "them"
 random_order: true
-srsWords: "couldn't" "come" "busy" "started" "without"
+srsWords: "could" "come" "busy" "started" "without"
 
 [word-order]
 text: "她买了新裙子因为有大减价所以她很高兴。"
@@ -1070,7 +1070,7 @@ text: "她努力工作但不挣多少钱。"
 words: "She" "works" "hard" "but" "doesn't" "earn" "much" "and" "a" "lot"
 answer: "She" "works" "hard" "but" "doesn't" "earn" "much"
 random_order: true
-srsWords: "works" "hard" "doesn't" "earn" "much"
+srsWords: "works" "hard" "do" "earn" "much"
 
 [word-order]
 text: "他会游泳但不会潜水。"
@@ -1112,21 +1112,21 @@ text: "我们去了公园但没有游泳。"
 words: "We" "went" "to" "the" "park" "but" "we" "didn't" "swim" "and" "ran"
 answer: "We" "went" "to" "the" "park" "but" "we" "didn't" "swim"
 random_order: true
-srsWords: "went" "park" "didn't" "swim"
+srsWords: "went" "park" "did" "swim"
 
 [word-order]
 text: "他学了英语但还不够流利。"
 words: "He" "studied" "English" "but" "he" "isn't" "fluent" "yet" "and" "already"
 answer: "He" "studied" "English" "but" "he" "isn't" "fluent" "yet"
 random_order: true
-srsWords: "studied" "English" "isn't" "fluent" "yet"
+srsWords: "studied" "English" "is" "fluent" "yet"
 
 [word-order]
 text: "她做了蛋糕但没有给我们吃。"
 words: "She" "made" "a" "cake" "but" "she" "didn't" "share" "it" "and" "did" "gave"
 answer: "She" "made" "a" "cake" "but" "she" "didn't" "share" "it"
 random_order: true
-srsWords: "made" "cake" "didn't" "share"
+srsWords: "made" "cake" "did" "share"
 
 ---
 lessonTitle: "Lesson 14: Asking and answering questions"
@@ -1335,7 +1335,7 @@ text: "他考试不及格因为他没有学习。"
 words: "He" "failed" "the" "test" "because" "he" "didn't" "study" "passed" "and"
 answer: "He" "failed" "the" "test" "because" "he" "didn't" "study"
 random_order: true
-srsWords: "failed" "test" "didn't" "study"
+srsWords: "failed" "test" "did" "study"
 
 [word-order]
 text: "他们通过了因为他们一起努力。"
@@ -1507,7 +1507,7 @@ text: "他没去因为他没有钱。"
 words: "He" "didn't" "go" "because" "he" "had" "no" "money" "and" "time" "lots"
 answer: "He" "didn't" "go" "because" "he" "had" "no" "money"
 random_order: true
-srsWords: "didn't" "go" "had" "money"
+srsWords: "did" "go" "had" "money"
 
 [word-order]
 text: "他们下个月要去法国。"
@@ -1600,7 +1600,7 @@ text: "他不吃快餐因为不健康所以他在家做饭。"
 words: "He" "doesn't" "eat" "fast" "food" "because" "it" "is" "unhealthy" "so" "he" "cooks" "at" "home" "and" "healthy"
 answer: "He" "doesn't" "eat" "fast" "food" "because" "it" "is" "unhealthy" "so" "he" "cooks" "at" "home"
 random_order: true
-srsWords: "doesn't" "eat" "fast" "food" "unhealthy" "cooks" "home"
+srsWords: "do" "eat" "fast" "food" "unhealthy" "cooks" "home"
 
 [word-order]
 text: "如果你每天努力学习你会通过考试并感到骄傲。"

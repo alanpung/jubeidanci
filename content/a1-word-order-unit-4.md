@@ -417,7 +417,7 @@ text: "他很忙所以他不能来。"
 words: "He" "was" "busy" "so" "he" "couldn't" "come" "but" "went"
 answer: "He" "was" "busy" "so" "he" "couldn't" "come"
 random_order: true
-srsWords: "busy" "couldn't" "come"
+srsWords: "busy" "could" "come"
 
 [word-order]
 text: "我们有时间所以我们散步了。"

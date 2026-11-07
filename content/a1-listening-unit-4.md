@@ -406,7 +406,7 @@ choices:
   - "The station has a café and a newsagent." (correct)
   - "The airport has a café and a newsagent."
   - "The station has a restaurant and a newsagent."
-srsWords: "station" "café" "newsagent"
+srsWords: "station" "café" "news" "agent"
 
 [listening]
 text: "Passengers must show their tickets at the gate."

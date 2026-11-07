@@ -115,7 +115,7 @@ choices:
   - "cloth"
   - "placemat" (correct)
   - "mat"
-srsWords: "placemat"
+srsWords: "place" "mat"
 
 [multiple-choice]
 text: "What do you use to wipe your mouth at a restaurant?"

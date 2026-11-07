@@ -28,21 +28,6 @@ interface Word {
   _card?: SrsCard;
 }
 
-/** One course/unit that references an unrecorded word. */
-interface UnrecordedSource {
-  courseId: string;
-  unitId: string;
-  unitTitle: string;
-  count: number;
-}
-
-/** A word used by course content that the bundled dictionary does not know. */
-interface UnrecordedWord {
-  word: string;
-  sources: UnrecordedSource[];
-  occurrences: number;
-}
-
 interface SrsCard {
   word: string;
   language: string;
@@ -78,17 +63,14 @@ interface SrsStats {
 /** "all" and "remaining" read the master dictionary; the rest read only the
  *  learner's own SRS cards. "mine" is the union of the three tracked states —
  *  it is the student-facing default so a student never lands on the raw
- *  dictionary (and therefore never sees a word outside their library).
- *  "unrecorded" is owner-only: it lists the course SRS words the dictionary
- *  does not know about, and is served from a separate data source. */
+ *  dictionary (and therefore never sees a word outside their library). */
 type SrsFilter =
   | "all"
   | "mine"
   | "learned"
   | "learning"
   | "new"
-  | "remaining"
-  | "unrecorded";
+  | "remaining";
 
 /** Single source of truth for "which bucket does this card fall in". The
  *  Progress page uses the exact same rules, so the counts on /words and
@@ -159,8 +141,6 @@ function statusLabelFor(filter: SrsFilter): string {
       return "New";
     case "remaining":
       return "Remaining";
-    case "unrecorded":
-      return "Unrecorded";
     default:
       return filter;
   }
@@ -341,7 +321,6 @@ export function WordExplorer({
   language = "en",
   levelDictionaryCounts,
   remainingDictionaryCount,
-  unrecordedWordCount,
 }: {
   isAdmin?: boolean;
   words?: Word[];
@@ -353,9 +332,6 @@ export function WordExplorer({
   /** Exact size of the "Remaining" (R) filter's result set, computed on the
    *  server the same way the API filters it. */
   remainingDictionaryCount?: number;
-  /** Exact size of the "Unrecorded" (U) filter's result set — course SRS words
-   *  the bundled dictionary does not know. Owner-only. */
-  unrecordedWordCount?: number;
 }) {
   const router = useRouter();
 
@@ -481,7 +457,6 @@ export function WordExplorer({
         isAdmin={isAdmin}
         dictionaryTotal={dictionaryTotal}
         remainingDictionaryCount={remainingDictionaryCount}
-        unrecordedWordCount={unrecordedWordCount}
       />
     </div>
   );
@@ -503,7 +478,6 @@ function WordLookupSection({
   isAdmin = false,
   dictionaryTotal = 0,
   remainingDictionaryCount,
-  unrecordedWordCount,
 }: {
   selectedLevel: string;
   onSelectLevel: (lvl: string) => void;
@@ -521,8 +495,6 @@ function WordLookupSection({
   dictionaryTotal?: number;
   /** Exact size of the "Remaining" (R) filter's result set (server-computed). */
   remainingDictionaryCount?: number;
-  /** Exact size of the "Unrecorded" (U) filter's result set (server-computed). */
-  unrecordedWordCount?: number;
 }) {
   // The owner browses the whole dictionary by default; a student starts on
   // "All" (= their own new + learning + mastered, labelled "All" in the UI)
@@ -538,11 +510,6 @@ function WordLookupSection({
   const [total, setTotal] = useState(0);
   const [hasMore, setHasMore] = useState(false);
   const [loading, setLoading] = useState(false);
-  /* The "U" (unrecorded) list is served from a different source than the
-     dictionary — it is a triage list of course SRS words the dictionary does
-     not know — so it gets its own state and its own card renderer. */
-  const [unrecorded, setUnrecorded] = useState<UnrecordedWord[]>([]);
-  const [unrecordedTotal, setUnrecordedTotal] = useState(0);
 
   /* ── Bulk selection ──────────────────────────────────────────────
      Keys are normalized words, so a word keeps its selection while the
@@ -703,16 +670,6 @@ function WordLookupSection({
     return Math.max(0, dictionaryTotal - trackedWordSet.size);
   }, [dictionaryTotal, trackedWordSet, remainingDictionaryCount]);
 
-  /** Owner-only: how many course SRS words the bundled dictionary does not
-   *  know (未收录). The server computes the exact number up front so the U
-   *  badge is populated before the owner ever clicks it; the live value
-   *  returned by the API takes over once the filter has been opened. */
-  const liveUnrecordedCount = useMemo(() => {
-    if (unrecordedTotal > 0) return unrecordedTotal;
-    if (typeof unrecordedWordCount === "number") return unrecordedWordCount;
-    return 0;
-  }, [unrecordedTotal, unrecordedWordCount]);
-
   useEffect(() => {
     let cancelled = false;
 
@@ -839,29 +796,6 @@ function WordLookupSection({
         params.set("page", String(page));
         params.set("limit", "50");
 
-        // ── "U" (unrecorded) takes a completely different path ──
-        // The unrecorded list is a triage list of course SRS words that the
-        // dictionary does not know. It comes from the server's content scan,
-        // not the dictionary, so it skips every dictionary-side filter.
-        if (statusFilter === "unrecorded") {
-          params.set("unrecorded", "1");
-          const res = await fetch(`/api/words?${params.toString()}`);
-          if (res.ok) {
-            const data = await res.json();
-            if (!cancelled) {
-              const rows: UnrecordedWord[] = data.unrecorded || [];
-              setUnrecordedTotal(data.total || 0);
-              if (page === 1) {
-                setUnrecorded(rows);
-              } else {
-                setUnrecorded((prev) => [...prev, ...rows]);
-              }
-              setHasMore(!!data.hasMore);
-            }
-          }
-          return;
-        }
-
         // The "Remaining" (R) filter asks the server to drop every word the
         // learner already has in their SRS deck, so only un-studied words come
         // back. The server does the exclusion (exact + paginable); the client
@@ -972,13 +906,6 @@ function WordLookupSection({
   function handleStatusChange(status: SrsFilter) {
     setStatusFilter(status);
     setPage(1);
-    // The two lists are independent: clear whichever one we are leaving so a
-    // stale unrecorded page never bleeds into the dictionary view (and vice
-    // versa).
-    if (status !== "unrecorded") {
-      setUnrecorded([]);
-      setUnrecordedTotal(0);
-    }
   }
 
   const hasActiveFilters =
@@ -1089,7 +1016,7 @@ function WordLookupSection({
         </div>
 
         {/* Status filters.
-            Owner  : All / M / L / N / R / U   (each with a count badge)
+            Owner  : All / M / L / N / R   (each with a count badge)
             Student: All (= my own words: the three tracked states) / M / L / N
                      — "All" carries no count (it is the umbrella over M + L + N,
                      so a number there would just repeat the three next to it);
@@ -1097,8 +1024,8 @@ function WordLookupSection({
                      "all of MY words", so the part of the dictionary the student
                      does not own stays unreachable.
             Labels are single letters (M = Mastered, L = Learning, N = New,
-            R = Remaining, U = Unrecorded) so the row never truncates; the full
-            name is on the button's tooltip. */}
+            R = Remaining) so the row never truncates; the full name is on
+            the button's tooltip. */}
         <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card p-1 sm:p-1.5 shadow-xs">
           <div className="flex items-center justify-between gap-1 w-full">
             {(
@@ -1114,14 +1041,6 @@ function WordLookupSection({
                       title: "Remaining — dictionary words not yet new, learning or mastered",
                       count: liveRemainingCount,
                       tone: "R",
-                    },
-                    {
-                      key: "unrecorded" as const,
-                      label: "U",
-                      title:
-                        "Unrecorded — course SRS words the dictionary does not know (未收录). Click to review them.",
-                      count: liveUnrecordedCount,
-                      tone: "U",
                     },
                   ]
                 : [
@@ -1163,8 +1082,6 @@ function WordLookupSection({
                           ? "bg-amber-100 text-amber-900 dark:bg-amber-950/80 dark:text-amber-300"
                           : f.tone === "R"
                           ? "bg-slate-200 text-slate-700 dark:bg-slate-800 dark:text-slate-300"
-                          : f.tone === "U"
-                          ? "bg-rose-100 text-rose-800 dark:bg-rose-950/80 dark:text-rose-300"
                           : "bg-blue-100 text-blue-800 dark:bg-blue-950/80 dark:text-blue-300"
                       }`}
                     >
@@ -1219,10 +1136,7 @@ function WordLookupSection({
       </div>
 
       {/* ── BULK ACTION BAR: 1. Reset  2. Master  3. Select All ──
-          Acts on every word ticked with the round button on its row.
-          Hidden in "unrecorded" (U) mode — those rows are a read-only triage
-          list, not SRS cards, so the bulk SRS actions do not apply. */}
-      {statusFilter !== "unrecorded" && (
+          Acts on every word ticked with the round button on its row. */}
       <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card p-1.5 sm:p-2 shadow-xs flex items-center gap-1.5 sm:gap-2">
         <span
           className={`pl-1 text-[10px] sm:text-[11px] font-black shrink-0 tabular-nums ${
@@ -1302,20 +1216,9 @@ function WordLookupSection({
           </span>
         </button>
       </div>
-      )}
 
-      {/* Word Cards List (Spans full width) ──
-          In "unrecorded" (U) mode this is replaced by the read-only triage
-          list of course SRS words the dictionary does not know. */}
-      {statusFilter === "unrecorded" ? (
-        <UnrecordedTriageList
-          items={unrecorded}
-          total={unrecordedTotal}
-          loading={loading}
-          hasMore={hasMore}
-          onLoadMore={() => setPage((p) => p + 1)}
-        />
-      ) : loading && words.length === 0 ? (
+      {/* Word Cards List (Spans full width) ── */}
+      {loading && words.length === 0 ? (
         <div className="py-8 text-center text-lingo-text-light font-bold text-xs">
           Searching dictionary...
         </div>
@@ -1378,90 +1281,6 @@ function cleanZhSummary(raw?: string | null): string {
   clean = clean.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, "\"");
   clean = clean.replace(/\s+/g, " ").trim();
   return clean || raw;
-}
-
-/* ─────────────────────────────────────────────────────────────
-   UNRECORDED (U) TRIAGE LIST
-   Read-only panel shown when the owner selects the "U" (Unrecorded)
-   filter. Lists the course SRS words the dictionary cannot resolve
-   (the Course Stat 未收录 column), each with how often it appears
-   and which units use it — the context the owner needs to decide
-   what to do with the word.
-   ───────────────────────────────────────────────────────────── */
-function UnrecordedTriageCard({ item }: { item: UnrecordedWord }) {
-  return (
-    <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-card p-3 shadow-xs">
-      <div className="flex items-baseline justify-between gap-2">
-        <span className="font-black text-lingo-text text-lg break-all">{item.word}</span>
-        <span className="shrink-0 rounded-full bg-rose-100 text-rose-700 dark:bg-rose-950/60 dark:text-rose-300 px-2 py-0.5 text-[11px] font-black tabular-nums">
-          {item.occurrences}×
-        </span>
-      </div>
-      <div className="mt-1.5 flex flex-wrap gap-1.5">
-        {item.sources.map((s, i) => (
-          <span
-            key={`${s.unitId}-${i}`}
-            className="rounded-lg bg-slate-100 dark:bg-slate-800 px-2 py-0.5 text-[10px] font-bold text-lingo-text-light"
-            title={s.unitTitle}
-          >
-            {s.unitId} · {s.count}×
-          </span>
-        ))}
-      </div>
-    </div>
-  );
-}
-
-function UnrecordedTriageList({
-  items,
-  total,
-  loading,
-  hasMore,
-  onLoadMore,
-}: {
-  items: UnrecordedWord[];
-  total: number;
-  loading: boolean;
-  hasMore: boolean;
-  onLoadMore: () => void;
-}) {
-  if (loading && items.length === 0) {
-    return (
-      <div className="py-8 text-center text-lingo-text-light font-bold text-xs">
-        Scanning course content…
-      </div>
-    );
-  }
-  if (items.length === 0) {
-    return (
-      <div className="w-full rounded-2xl border-2 border-dashed border-lingo-border p-6 text-center">
-        <p className="text-xs sm:text-sm font-bold text-lingo-text-light">
-          No unrecorded words. Every course SRS word is in the dictionary.
-        </p>
-      </div>
-    );
-  }
-  return (
-    <>
-      <p className="mb-2 text-[11px] font-bold text-lingo-text-light">
-        {items.length} of {total} unrecorded words — the dictionary cannot resolve these (未收录). Review and decide what to do.
-      </p>
-      <div className="w-full space-y-2">
-        {items.map((w) => (
-          <UnrecordedTriageCard key={w.word} item={w} />
-        ))}
-      </div>
-      {hasMore && (
-        <button
-          onClick={onLoadMore}
-          disabled={loading}
-          className="mt-2.5 w-full rounded-xl border-2 border-lingo-border bg-lingo-card py-2 text-xs sm:text-sm font-bold text-lingo-text-light hover:border-lingo-gray-dark hover:text-lingo-text transition-colors disabled:opacity-50 shadow-xs"
-        >
-          {loading ? "Loading..." : "Show more words"}
-        </button>
-      )}
-    </>
-  );
 }
 
 function WordLookupCard({
