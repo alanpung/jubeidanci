@@ -51,7 +51,7 @@ srsWords: "butterflies" "colorful"
 
 [speaking]
 sentence: "Wolves hunt in packs."
-srsWords: "wolves" "packs"
+srsWords: "wolf" "packs"
 
 [speaking]
 sentence: "Nature is full of wonder."
@@ -313,11 +313,11 @@ srsWords: "sea" "blue"
 
 [speaking]
 sentence: "Seashells line the shore."
-srsWords: "seashells" "shore"
+srsWords: "sea" "shell" "shore"
 
 [speaking]
 sentence: "We build sandcastles."
-srsWords: "sandcastles"
+srsWords: "sand" "castle"
 
 [speaking]
 sentence: "The sun is bright."
@@ -685,7 +685,7 @@ srsWords: "sun" "harsh"
 
 [speaking]
 sentence: "Cacti store water."
-srsWords: "cacti" "water"
+srsWords: "cactus" "water"
 
 [speaking]
 sentence: "Mirages trick eyes."

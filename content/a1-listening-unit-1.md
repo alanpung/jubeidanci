@@ -513,7 +513,7 @@ choices:
   - "She is writing with a blue ballpoint pen." (correct)
   - "She is writing with a red ballpoint pen."
   - "She is drawing with a blue ballpoint pen."
-srsWords: "writing" "ballpoint"
+srsWords: "writing" "ball" "point"
 
 [listening]
 text: "We use a calculator in maths class."
@@ -533,7 +533,7 @@ choices:
   - "Please put your notebooks in your schoolbag."
   - "Please put your books in your schoolbag." (correct)
   - "Please take your books out of your schoolbag."
-srsWords: "put" "books" "schoolbag"
+srsWords: "put" "books" "school" "bag"
 
 [listening]
 text: "The teacher uses a marker to write on the board."

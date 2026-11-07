@@ -757,7 +757,7 @@ choices:
   - "She adds fresh herbs to make the dish tastier." (correct)
   - "She adds dried herbs to make the dish tastier."
   - "He adds fresh herbs to make the dish tastier."
-srsWords: "adds" "herbs" "dish" "tastier"
+srsWords: "adds" "herbs" "dish" "tasty"
 
 ---
 lessonTitle: "Food Preferences"

@@ -279,7 +279,7 @@ choices:
   - "Monday and Wednesday are her busiest days."
   - "Tuesday and Thursday are her busiest days." (correct)
   - "Tuesday and Thursday are his busiest days."
-srsWords: "Tuesday" "Thursday" "busiest" "days"
+srsWords: "Tuesday" "Thursday" "busy" "days"
 
 [listening]
 text: "The market is only open on Thursdays and Sundays."

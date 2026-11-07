@@ -450,7 +450,7 @@ srsWords: "train" "leave"
 
 [speaking]
 sentence: "A one-way ticket, please."
-srsWords: "oneway" "ticket"
+srsWords: "one" "way" "ticket"
 
 [speaking]
 sentence: "Is this seat taken?"
