@@ -16,9 +16,9 @@ Pre-built courses at CEFR levels A1, A2, B1, B2, C1, C2:
 
 ### Spaced Repetition (SRS)
 
-Student SRS cards move through status from New (N)→ Learning (L)→ Mastered (M). User can manually reset the L & M words to N.
-Words - Student can filter words by level, alphabet, POS and SRS Status
-Progress - Student can check and monitor their own progress in vocabulary size
+- Student SRS cards move through status from New (N)→ Learning (L)→ Mastered (M). User can manually reset the L & M words to N.
+- Words: Student can filter words by level, alphabet, POS and SRS Status.
+- Progress: Student can check and monitor their own progress in vocabulary size.
 
 ### Interactive Exercises
 
