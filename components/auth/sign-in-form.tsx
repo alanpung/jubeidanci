@@ -1,14 +1,13 @@
 "use client";
 
 import { useState, useRef, useCallback, useEffect } from "react";
-import { useRouter } from "next/navigation";
 import { signIn } from "@/lib/auth-client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Turnstile, type TurnstileRef } from "@/components/auth/turnstile";
 import Image from "next/image";
 import Link from "next/link";
-import { DEFAULT_PATH } from "@/lib/constants";
+import { safeRedirectPath } from "@/lib/safe-redirect";
 
 interface SignInFormProps {
   redirectUrl?: string;
@@ -25,7 +24,6 @@ const getErrorMessage = (errCode?: string) => {
 };
 
 export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: SignInFormProps) {
-  const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(getErrorMessage(initialError));
@@ -40,6 +38,10 @@ export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
   // the destination page renders, so the form never looks frozen.
   const [slow, setSlow] = useState(false);
   const [redirecting, setRedirecting] = useState(false);
+  // iOS Safari (and "Add to Home Screen" standalone mode) sometimes swallows a
+  // navigation issued from an async fetch callback. If we are somehow still on
+  // /sign-in a few seconds later, offer a plain, user-gesture link out.
+  const [showContinue, setShowContinue] = useState(false);
   const slowTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(
@@ -49,7 +51,13 @@ export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
     [],
   );
 
-  const destination = redirectUrl || DEFAULT_PATH;
+  useEffect(() => {
+    if (!redirecting) return;
+    const timer = setTimeout(() => setShowContinue(true), 3000);
+    return () => clearTimeout(timer);
+  }, [redirecting]);
+
+  const destination = safeRedirectPath(redirectUrl);
 
   const handleTurnstileVerify = useCallback((token: string) => {
     setTurnstileToken(token);
@@ -65,6 +73,7 @@ export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
     setLoading(true);
     setSlow(false);
     setRedirecting(false);
+    setShowContinue(false);
     slowTimerRef.current = setTimeout(() => setSlow(true), 15000);
 
     try {
@@ -103,13 +112,21 @@ export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
         setTurnstileToken(null);
         turnstileRef.current?.reset();
       } else {
-        // Keep the spinner running. The destination is server-rendered and can
-        // take several seconds; stopping here left the form sitting unchanged
-        // with no feedback, which is what made sign-in look like it hung.
+        // A full document navigation is the only reliable way off /sign-in on
+        // iOS Safari (including "Add to Home Screen" standalone mode): the
+        // destination is then rendered with the freshly-set session cookie.
+        //
+        // Do NOT call router.refresh() here. It fires an RSC request for the
+        // *current* /sign-in route that races the navigation. On iOS that
+        // response frequently wins and re-renders the login form — exactly the
+        // reported "it refreshes back to the login page", even though the
+        // session cookie was set correctly. The old 250ms delay made it worse
+        // by pushing the navigation out of the user-gesture context.
+        //
+        // `replace` keeps /sign-in out of the history stack, so Back cannot
+        // bounce a signed-in user onto the login form again.
         setRedirecting(true);
-        await new Promise((r) => setTimeout(r, 250));
-        router.refresh();
-        window.location.href = destination;
+        window.location.replace(destination);
       }
     } catch (err: unknown) {
       if (slowTimerRef.current) {
@@ -201,6 +218,14 @@ export function SignInForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
               ? "Signed in — opening your library…"
               : "Still waiting for the server… no need to click again."}
           </p>
+        )}
+        {redirecting && showContinue && (
+          <a
+            href={destination}
+            className="block rounded-xl border-b-4 border-lingo-green-dark bg-lingo-green px-4 py-2.5 text-center text-sm font-bold uppercase text-white"
+          >
+            Signed in — tap here to continue
+          </a>
         )}
         <Button
           type="submit"

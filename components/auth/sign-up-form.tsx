@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useRef, useCallback } from "react";
-import { useRouter } from "next/navigation";
 import { signIn, signUp } from "@/lib/auth-client";
+import { safeRedirectPath } from "@/lib/safe-redirect";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Turnstile, type TurnstileRef } from "@/components/auth/turnstile";
@@ -24,7 +24,6 @@ const getErrorMessage = (errCode?: string) => {
 };
 
 export function SignUpForm({ redirectUrl, initialError, hasGoogleAuth = true }: SignUpFormProps) {
-  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -34,7 +33,7 @@ export function SignUpForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
   const [turnstileToken, setTurnstileToken] = useState<string | null>(null);
   const turnstileRef = useRef<TurnstileRef>(null);
 
-  const destination = redirectUrl || "/onboarding";
+  const destination = safeRedirectPath(redirectUrl, "/onboarding");
 
   const handleTurnstileVerify = useCallback((token: string) => {
     setTurnstileToken(token);
@@ -70,7 +69,10 @@ export function SignUpForm({ redirectUrl, initialError, hasGoogleAuth = true }: 
         setTurnstileToken(null);
         turnstileRef.current?.reset();
       } else {
-        window.location.href = destination;
+        // Same full-document navigation as sign-in: guarantees the destination
+        // is rendered with the new session cookie and keeps /sign-up out of the
+        // history stack.
+        window.location.replace(destination);
       }
     } catch (err: unknown) {
       setLoading(false);
