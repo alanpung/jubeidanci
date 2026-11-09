@@ -469,3 +469,463 @@ sentence: "The teacher is very ___ to all students."
 blank: "kind"
 translation: "这位老师对所有学生都很亲切。"
 srsWords: "kind"
+
+---
+lessonTitle: "Lesson 11: City Places"
+description: "Places around town"
+icon: "🏙️"
+color: "#FF6B6B"
+---
+
+[matching-pairs]
+pairs:
+  - "bridge" = "桥"
+  - "corner" = "拐角"
+  - "station" = "车站"
+  - "building" = "建筑物"
+  - "zoo" = "动物园"
+srsWords: "bridge" "corner" "station" "building" "zoo"
+
+[fill-in-the-blank]
+sentence: "We walk over the ___."
+blank: "bridge"
+translation: "我们走过桥。"
+srsWords: "bridge"
+
+[fill-in-the-blank]
+sentence: "The shop is on the ___."
+blank: "corner"
+translation: "商店在拐角处。"
+srsWords: "corner"
+
+[fill-in-the-blank]
+sentence: "I wait at the ___."
+blank: "station"
+translation: "我在车站等。"
+srsWords: "station"
+
+[fill-in-the-blank]
+sentence: "That ___ is very tall."
+blank: "building"
+translation: "那栋楼很高。"
+srsWords: "building"
+
+[fill-in-the-blank]
+sentence: "We see animals at the ___."
+blank: "zoo"
+translation: "我们在动物园看动物。"
+srsWords: "zoo"
+
+---
+lessonTitle: "Lesson 12: Directions"
+description: "Left, right and position"
+icon: "🧭"
+color: "#FF8C42"
+---
+
+[matching-pairs]
+pairs:
+  - "left" = "左边"
+  - "right" = "右边"
+  - "front" = "前面"
+  - "behind" = "后面"
+  - "between" = "在中间"
+srsWords: "left" "right" "front" "behind" "between"
+
+[fill-in-the-blank]
+sentence: "Turn ___ at the shop."
+blank: "left"
+translation: "在商店那里左转。"
+srsWords: "left"
+
+[fill-in-the-blank]
+sentence: "The bank is on your ___."
+blank: "right"
+translation: "银行在你右边。"
+srsWords: "right"
+
+[fill-in-the-blank]
+sentence: "The car is in ___ of the house."
+blank: "front"
+translation: "车在房子前面。"
+srsWords: "front"
+
+[fill-in-the-blank]
+sentence: "The garden is ___ the house."
+blank: "behind"
+translation: "花园在房子后面。"
+srsWords: "behind"
+
+[fill-in-the-blank]
+sentence: "I sit ___ Tom and Anna."
+blank: "between"
+translation: "我坐在汤姆和安娜中间。"
+srsWords: "between"
+
+---
+lessonTitle: "Lesson 13: Weather Words"
+description: "Describing the weather"
+icon: "🌤️"
+color: "#F7B731"
+---
+
+[matching-pairs]
+pairs:
+  - "warm" = "暖和"
+  - "cool" = "凉爽"
+  - "dry" = "干的"
+  - "wet" = "湿的"
+  - "sunny" = "晴朗的"
+srsWords: "warm" "cool" "dry" "wet" "sunny"
+
+[fill-in-the-blank]
+sentence: "It is ___ in spring."
+blank: "warm"
+translation: "春天很暖和。"
+srsWords: "warm"
+
+[fill-in-the-blank]
+sentence: "The evening is ___."
+blank: "cool"
+translation: "傍晚很凉爽。"
+srsWords: "cool"
+
+[fill-in-the-blank]
+sentence: "The clothes are ___."
+blank: "dry"
+translation: "衣服干了。"
+srsWords: "dry"
+
+[fill-in-the-blank]
+sentence: "My shoes are ___."
+blank: "wet"
+translation: "我的鞋湿了。"
+srsWords: "wet"
+
+[fill-in-the-blank]
+sentence: "It is a ___ day."
+blank: "sunny"
+translation: "今天是晴天。"
+srsWords: "sunny"
+
+---
+lessonTitle: "Lesson 14: More Body"
+description: "Parts of the body"
+icon: "🖐️"
+color: "#5F27CD"
+---
+
+[matching-pairs]
+pairs:
+  - "hair" = "头发"
+  - "face" = "脸"
+  - "heart" = "心"
+  - "neck" = "脖子"
+  - "knee" = "膝盖"
+srsWords: "hair" "face" "heart" "neck" "knee"
+
+[fill-in-the-blank]
+sentence: "She has long ___."
+blank: "hair"
+translation: "她有长头发。"
+srsWords: "hair"
+
+[fill-in-the-blank]
+sentence: "Wash your ___."
+blank: "face"
+translation: "洗脸。"
+srsWords: "face"
+
+[fill-in-the-blank]
+sentence: "My ___ beats fast."
+blank: "heart"
+translation: "我的心跳得很快。"
+srsWords: "heart"
+
+[fill-in-the-blank]
+sentence: "I wear a scarf around my ___."
+blank: "neck"
+translation: "我脖子上围了围巾。"
+srsWords: "neck"
+
+[fill-in-the-blank]
+sentence: "My ___ hurts."
+blank: "knee"
+translation: "我膝盖疼。"
+srsWords: "knee"
+
+---
+lessonTitle: "Lesson 15: More Clothes"
+description: "Clothes and accessories"
+icon: "🧢"
+color: "#54A0FF"
+---
+
+[matching-pairs]
+pairs:
+  - "sock" = "袜子"
+  - "cap" = "帽子"
+  - "jacket" = "夹克"
+  - "sweater" = "毛衣"
+  - "pocket" = "口袋"
+srsWords: "sock" "cap" "jacket" "sweater" "pocket"
+
+[fill-in-the-blank]
+sentence: "I put on my ___."
+blank: "sock"
+translation: "我穿上袜子。"
+srsWords: "sock"
+
+[fill-in-the-blank]
+sentence: "He wears a blue ___."
+blank: "cap"
+translation: "他戴一顶蓝色帽子。"
+srsWords: "cap"
+
+[fill-in-the-blank]
+sentence: "Take your ___."
+blank: "jacket"
+translation: "带上你的夹克。"
+srsWords: "jacket"
+
+[fill-in-the-blank]
+sentence: "This ___ is warm."
+blank: "sweater"
+translation: "这件毛衣很暖和。"
+srsWords: "sweater"
+
+[fill-in-the-blank]
+sentence: "My keys are in my ___."
+blank: "pocket"
+translation: "我的钥匙在口袋里。"
+srsWords: "pocket"
+
+---
+lessonTitle: "Lesson 16: Time Units"
+description: "Hours, minutes and years"
+icon: "⏰"
+color: "#00D2D3"
+---
+
+[matching-pairs]
+pairs:
+  - "hour" = "小时"
+  - "minute" = "分钟"
+  - "second" = "秒"
+  - "month" = "月份"
+  - "year" = "年"
+srsWords: "hour" "minute" "second" "month" "year"
+
+[fill-in-the-blank]
+sentence: "I wait for one ___."
+blank: "hour"
+translation: "我等了一个小时。"
+srsWords: "hour"
+
+[fill-in-the-blank]
+sentence: "Please wait a ___."
+blank: "minute"
+translation: "请等一分钟。"
+srsWords: "minute"
+
+[fill-in-the-blank]
+sentence: "Just one ___, please."
+blank: "second"
+translation: "请稍等一秒。"
+srsWords: "second"
+
+[fill-in-the-blank]
+sentence: "We go there every ___."
+blank: "month"
+translation: "我们每个月去那里。"
+srsWords: "month"
+
+[fill-in-the-blank]
+sentence: "This ___ is almost over."
+blank: "year"
+translation: "这一年快结束了。"
+srsWords: "year"
+
+---
+lessonTitle: "Lesson 17: Time Expressions"
+description: "Soon, later and already"
+icon: "⌛"
+color: "#1DD1A1"
+---
+
+[matching-pairs]
+pairs:
+  - "soon" = "很快"
+  - "later" = "稍后"
+  - "ago" = "以前"
+  - "already" = "已经"
+  - "yet" = "还"
+srsWords: "soon" "later" "ago" "already" "yet"
+
+[fill-in-the-blank]
+sentence: "See you ___."
+blank: "soon"
+translation: "回头见。"
+srsWords: "soon"
+
+[fill-in-the-blank]
+sentence: "I will call you ___."
+blank: "later"
+translation: "我晚点给你打电话。"
+srsWords: "later"
+
+[fill-in-the-blank]
+sentence: "I saw him two days ___."
+blank: "ago"
+translation: "我两天前见过他。"
+srsWords: "ago"
+
+[fill-in-the-blank]
+sentence: "She is ___ here."
+blank: "already"
+translation: "她已经到了。"
+srsWords: "already"
+
+[fill-in-the-blank]
+sentence: "Is dinner ready ___?"
+blank: "yet"
+translation: "晚饭好了吗？"
+srsWords: "yet"
+
+---
+lessonTitle: "Lesson 18: Describing"
+description: "Useful adjectives"
+icon: "✨"
+color: "#EE5A6F"
+---
+
+[matching-pairs]
+pairs:
+  - "pretty" = "漂亮的"
+  - "funny" = "好笑的"
+  - "quiet" = "安静的"
+  - "careful" = "小心的"
+  - "lucky" = "幸运的"
+srsWords: "pretty" "funny" "quiet" "careful" "lucky"
+
+[fill-in-the-blank]
+sentence: "The flower is ___."
+blank: "pretty"
+translation: "这朵花很漂亮。"
+srsWords: "pretty"
+
+[fill-in-the-blank]
+sentence: "That story is ___."
+blank: "funny"
+translation: "那个故事很好笑。"
+srsWords: "funny"
+
+[fill-in-the-blank]
+sentence: "Please be ___."
+blank: "quiet"
+translation: "请安静。"
+srsWords: "quiet"
+
+[fill-in-the-blank]
+sentence: "Be ___ with the knife."
+blank: "careful"
+translation: "用刀要小心。"
+srsWords: "careful"
+
+[fill-in-the-blank]
+sentence: "I am very ___."
+blank: "lucky"
+translation: "我很幸运。"
+srsWords: "lucky"
+
+---
+lessonTitle: "Lesson 19: More Describing"
+description: "Easy, difficult and special"
+icon: "🔎"
+color: "#786FA6"
+---
+
+[matching-pairs]
+pairs:
+  - "easy" = "容易的"
+  - "difficult" = "困难的"
+  - "different" = "不同的"
+  - "important" = "重要的"
+  - "special" = "特别的"
+srsWords: "easy" "difficult" "different" "important" "special"
+
+[fill-in-the-blank]
+sentence: "This question is ___."
+blank: "easy"
+translation: "这道题很简单。"
+srsWords: "easy"
+
+[fill-in-the-blank]
+sentence: "The work is ___."
+blank: "difficult"
+translation: "这份工作很难。"
+srsWords: "difficult"
+
+[fill-in-the-blank]
+sentence: "These two bags are ___."
+blank: "different"
+translation: "这两个包不一样。"
+srsWords: "different"
+
+[fill-in-the-blank]
+sentence: "This is an ___ day."
+blank: "important"
+translation: "这是重要的一天。"
+srsWords: "important"
+
+[fill-in-the-blank]
+sentence: "Today is a ___ day."
+blank: "special"
+translation: "今天是特别的一天。"
+srsWords: "special"
+
+---
+lessonTitle: "Lesson 20: Position"
+description: "Inside, outside and beside"
+icon: "📍"
+color: "#FECA57"
+---
+
+[matching-pairs]
+pairs:
+  - "inside" = "在里面"
+  - "outside" = "在外面"
+  - "above" = "在上方"
+  - "below" = "在下方"
+  - "beside" = "在旁边"
+srsWords: "inside" "outside" "above" "below" "beside"
+
+[fill-in-the-blank]
+sentence: "Come ___ the house."
+blank: "inside"
+translation: "进屋里来。"
+srsWords: "inside"
+
+[fill-in-the-blank]
+sentence: "The children play ___."
+blank: "outside"
+translation: "孩子们在外面玩。"
+srsWords: "outside"
+
+[fill-in-the-blank]
+sentence: "The picture is ___ the bed."
+blank: "above"
+translation: "画在床的上方。"
+srsWords: "above"
+
+[fill-in-the-blank]
+sentence: "The cat is ___ the table."
+blank: "below"
+translation: "猫在桌子下面。"
+srsWords: "below"
+
+[fill-in-the-blank]
+sentence: "Sit ___ me."
+blank: "beside"
+translation: "坐在我旁边。"
+srsWords: "beside"

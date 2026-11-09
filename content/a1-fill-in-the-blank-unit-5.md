@@ -469,3 +469,463 @@ sentence: "English is an international ___."
 blank: "language"
 translation: "英语是一门国际语言。"
 srsWords: "language"
+
+---
+lessonTitle: "Lesson 11: In Nature"
+description: "Forests, lakes and hills"
+icon: "🌳"
+color: "#FF6B6B"
+---
+
+[matching-pairs]
+pairs:
+  - "forest" = "森林"
+  - "lake" = "湖"
+  - "hill" = "小山"
+  - "grass" = "草"
+  - "leaf" = "叶子"
+srsWords: "forest" "lake" "hill" "grass" "leaf"
+
+[fill-in-the-blank]
+sentence: "We walk in the ___."
+blank: "forest"
+translation: "我们在森林里散步。"
+srsWords: "forest"
+
+[fill-in-the-blank]
+sentence: "The ___ is very blue."
+blank: "lake"
+translation: "湖水很蓝。"
+srsWords: "lake"
+
+[fill-in-the-blank]
+sentence: "We climb the small ___."
+blank: "hill"
+translation: "我们爬小山。"
+srsWords: "hill"
+
+[fill-in-the-blank]
+sentence: "The ___ is green."
+blank: "grass"
+translation: "草是绿色的。"
+srsWords: "grass"
+
+[fill-in-the-blank]
+sentence: "A ___ falls from the tree."
+blank: "leaf"
+translation: "一片叶子从树上落下。"
+srsWords: "leaf"
+
+---
+lessonTitle: "Lesson 12: Party & Celebration"
+description: "Cakes, bells and drums"
+icon: "🎉"
+color: "#FF8C42"
+---
+
+[matching-pairs]
+pairs:
+  - "cake" = "蛋糕"
+  - "candy" = "糖果"
+  - "party" = "聚会"
+  - "bell" = "铃"
+  - "drum" = "鼓"
+srsWords: "cake" "candy" "party" "bell" "drum"
+
+[fill-in-the-blank]
+sentence: "We eat ___ at the party."
+blank: "cake"
+translation: "我们在聚会上吃蛋糕。"
+srsWords: "cake"
+
+[fill-in-the-blank]
+sentence: "The child likes ___."
+blank: "candy"
+translation: "这个孩子喜欢糖果。"
+srsWords: "candy"
+
+[fill-in-the-blank]
+sentence: "Come to my ___."
+blank: "party"
+translation: "来参加我的聚会。"
+srsWords: "party"
+
+[fill-in-the-blank]
+sentence: "The ___ rings at nine."
+blank: "bell"
+translation: "铃九点响。"
+srsWords: "bell"
+
+[fill-in-the-blank]
+sentence: "He plays the ___."
+blank: "drum"
+translation: "他打鼓。"
+srsWords: "drum"
+
+---
+lessonTitle: "Lesson 13: Sports"
+description: "Ball sports and games"
+icon: "⚽"
+color: "#F7B731"
+---
+
+[matching-pairs]
+pairs:
+  - "football" = "足球"
+  - "basketball" = "篮球"
+  - "baseball" = "棒球"
+  - "tennis" = "网球"
+  - "volleyball" = "排球"
+srsWords: "football" "basketball" "baseball" "tennis" "volleyball"
+
+[fill-in-the-blank]
+sentence: "They play ___ after school."
+blank: "football"
+translation: "他们放学后踢足球。"
+srsWords: "football"
+
+[fill-in-the-blank]
+sentence: "We play ___ in the park."
+blank: "basketball"
+translation: "我们在公园打篮球。"
+srsWords: "basketball"
+
+[fill-in-the-blank]
+sentence: "He likes ___."
+blank: "baseball"
+translation: "他喜欢棒球。"
+srsWords: "baseball"
+
+[fill-in-the-blank]
+sentence: "She plays ___ well."
+blank: "tennis"
+translation: "她网球打得好。"
+srsWords: "tennis"
+
+[fill-in-the-blank]
+sentence: "We watch a ___ game."
+blank: "volleyball"
+translation: "我们看一场排球比赛。"
+srsWords: "volleyball"
+
+---
+lessonTitle: "Lesson 14: At the Match"
+description: "Players, coaches and fans"
+icon: "🏆"
+color: "#5F27CD"
+---
+
+[matching-pairs]
+pairs:
+  - "player" = "运动员"
+  - "coach" = "教练"
+  - "match" = "比赛"
+  - "fan" = "球迷"
+  - "card" = "卡片"
+srsWords: "player" "coach" "match" "fan" "card"
+
+[fill-in-the-blank]
+sentence: "The ___ runs fast."
+blank: "player"
+translation: "这名运动员跑得很快。"
+srsWords: "player"
+
+[fill-in-the-blank]
+sentence: "Our ___ gives us advice."
+blank: "coach"
+translation: "教练给我们建议。"
+srsWords: "coach"
+
+[fill-in-the-blank]
+sentence: "The ___ starts at three."
+blank: "match"
+translation: "比赛三点开始。"
+srsWords: "match"
+
+[fill-in-the-blank]
+sentence: "I am a big ___ of this team."
+blank: "fan"
+translation: "我是这个队的球迷。"
+srsWords: "fan"
+
+[fill-in-the-blank]
+sentence: "The referee shows a red ___."
+blank: "card"
+translation: "裁判出示红牌。"
+srsWords: "card"
+
+---
+lessonTitle: "Lesson 15: Seasons"
+description: "Spring, summer, autumn and winter"
+icon: "🍂"
+color: "#54A0FF"
+---
+
+[matching-pairs]
+pairs:
+  - "spring" = "春天"
+  - "summer" = "夏天"
+  - "autumn" = "秋天"
+  - "winter" = "冬天"
+  - "ice" = "冰"
+srsWords: "spring" "summer" "autumn" "winter" "ice"
+
+[fill-in-the-blank]
+sentence: "Flowers open in ___."
+blank: "spring"
+translation: "花在春天开放。"
+srsWords: "spring"
+
+[fill-in-the-blank]
+sentence: "It is hot in ___."
+blank: "summer"
+translation: "夏天很热。"
+srsWords: "summer"
+
+[fill-in-the-blank]
+sentence: "Leaves fall in ___."
+blank: "autumn"
+translation: "秋天树叶落下。"
+srsWords: "autumn"
+
+[fill-in-the-blank]
+sentence: "It snows in ___."
+blank: "winter"
+translation: "冬天下雪。"
+srsWords: "winter"
+
+[fill-in-the-blank]
+sentence: "There is ___ on the lake."
+blank: "ice"
+translation: "湖上有冰。"
+srsWords: "ice"
+
+---
+lessonTitle: "Lesson 16: Classroom"
+description: "Notebooks, rulers and pages"
+icon: "📓"
+color: "#00D2D3"
+---
+
+[matching-pairs]
+pairs:
+  - "notebook" = "笔记本"
+  - "ruler" = "尺子"
+  - "classroom" = "教室"
+  - "exercise" = "练习"
+  - "page" = "页"
+srsWords: "notebook" "ruler" "classroom" "exercise" "page"
+
+[fill-in-the-blank]
+sentence: "I write in my ___."
+blank: "notebook"
+translation: "我在笔记本上写。"
+srsWords: "notebook"
+
+[fill-in-the-blank]
+sentence: "Draw a line with a ___."
+blank: "ruler"
+translation: "用尺子画一条线。"
+srsWords: "ruler"
+
+[fill-in-the-blank]
+sentence: "Our ___ is bright."
+blank: "classroom"
+translation: "我们的教室很明亮。"
+srsWords: "classroom"
+
+[fill-in-the-blank]
+sentence: "Do this ___ at home."
+blank: "exercise"
+translation: "在家做这个练习。"
+srsWords: "exercise"
+
+[fill-in-the-blank]
+sentence: "Open your book at ___ ten."
+blank: "page"
+translation: "把书翻到第十页。"
+srsWords: "page"
+
+---
+lessonTitle: "Lesson 17: House Parts"
+description: "Roofs, gates and yards"
+icon: "🏠"
+color: "#1DD1A1"
+---
+
+[matching-pairs]
+pairs:
+  - "roof" = "屋顶"
+  - "gate" = "大门"
+  - "step" = "台阶"
+  - "garage" = "车库"
+  - "yard" = "院子"
+srsWords: "roof" "gate" "step" "garage" "yard"
+
+[fill-in-the-blank]
+sentence: "The cat is on the ___."
+blank: "roof"
+translation: "猫在屋顶上。"
+srsWords: "roof"
+
+[fill-in-the-blank]
+sentence: "Please close the ___."
+blank: "gate"
+translation: "请关上大门。"
+srsWords: "gate"
+
+[fill-in-the-blank]
+sentence: "Be careful on the ___."
+blank: "step"
+translation: "台阶上小心。"
+srsWords: "step"
+
+[fill-in-the-blank]
+sentence: "The car is in the ___."
+blank: "garage"
+translation: "车在车库里。"
+srsWords: "garage"
+
+[fill-in-the-blank]
+sentence: "The children play in the ___."
+blank: "yard"
+translation: "孩子们在院子里玩。"
+srsWords: "yard"
+
+---
+lessonTitle: "Lesson 18: Materials"
+description: "Wood, glass and plastic"
+icon: "🪵"
+color: "#EE5A6F"
+---
+
+[matching-pairs]
+pairs:
+  - "wood" = "木头"
+  - "glass" = "玻璃"
+  - "metal" = "金属"
+  - "plastic" = "塑料"
+  - "box" = "盒子"
+srsWords: "wood" "glass" "metal" "plastic" "box"
+
+[fill-in-the-blank]
+sentence: "The table is made of ___."
+blank: "wood"
+translation: "这张桌子是木头做的。"
+srsWords: "wood"
+
+[fill-in-the-blank]
+sentence: "The cup is made of ___."
+blank: "glass"
+translation: "这个杯子是玻璃做的。"
+srsWords: "glass"
+
+[fill-in-the-blank]
+sentence: "The key is ___."
+blank: "metal"
+translation: "钥匙是金属的。"
+srsWords: "metal"
+
+[fill-in-the-blank]
+sentence: "This bottle is ___."
+blank: "plastic"
+translation: "这个瓶子是塑料的。"
+srsWords: "plastic"
+
+[fill-in-the-blank]
+sentence: "Put it in the ___."
+blank: "box"
+translation: "把它放进盒子里。"
+srsWords: "box"
+
+---
+lessonTitle: "Lesson 19: Food & Taste"
+description: "Sweet, fresh and hungry"
+icon: "🍎"
+color: "#786FA6"
+---
+
+[matching-pairs]
+pairs:
+  - "sweet" = "甜的"
+  - "delicious" = "美味的"
+  - "fresh" = "新鲜的"
+  - "hungry" = "饿的"
+  - "thirsty" = "渴的"
+srsWords: "sweet" "delicious" "fresh" "hungry" "thirsty"
+
+[fill-in-the-blank]
+sentence: "The apple is ___."
+blank: "sweet"
+translation: "这个苹果很甜。"
+srsWords: "sweet"
+
+[fill-in-the-blank]
+sentence: "The soup is ___."
+blank: "delicious"
+translation: "汤很好喝。"
+srsWords: "delicious"
+
+[fill-in-the-blank]
+sentence: "The bread is ___."
+blank: "fresh"
+translation: "面包很新鲜。"
+srsWords: "fresh"
+
+[fill-in-the-blank]
+sentence: "I am ___."
+blank: "hungry"
+translation: "我饿了。"
+srsWords: "hungry"
+
+[fill-in-the-blank]
+sentence: "She is ___."
+blank: "thirsty"
+translation: "她渴了。"
+srsWords: "thirsty"
+
+---
+lessonTitle: "Lesson 20: Final Mix"
+description: "Useful everyday adjectives"
+icon: "✅"
+color: "#FECA57"
+---
+
+[matching-pairs]
+pairs:
+  - "true" = "真的"
+  - "free" = "免费的"
+  - "full" = "满的"
+  - "ready" = "准备好的"
+  - "safe" = "安全的"
+srsWords: "true" "free" "full" "ready" "safe"
+
+[fill-in-the-blank]
+sentence: "The story is ___."
+blank: "true"
+translation: "这个故事是真的。"
+srsWords: "true"
+
+[fill-in-the-blank]
+sentence: "The ticket is ___."
+blank: "free"
+translation: "这张票是免费的。"
+srsWords: "free"
+
+[fill-in-the-blank]
+sentence: "The glass is ___."
+blank: "full"
+translation: "杯子是满的。"
+srsWords: "full"
+
+[fill-in-the-blank]
+sentence: "Are you ___?"
+blank: "ready"
+translation: "你准备好了吗？"
+srsWords: "ready"
+
+[fill-in-the-blank]
+sentence: "The children are ___ here."
+blank: "safe"
+translation: "孩子们在这里很安全。"
+srsWords: "safe"
