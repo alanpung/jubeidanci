@@ -469,3 +469,463 @@ sentence: "Please ___ down and rest."
 blank: "sit"
 translation: "请坐下休息。"
 srsWords: "sit"
+
+---
+lessonTitle: "Lesson 11: Kitchen Things"
+description: "Things we use in the kitchen"
+icon: "🍽️"
+color: "#FF6B6B"
+---
+
+[matching-pairs]
+pairs:
+  - "bowl" = "碗"
+  - "cup" = "杯子"
+  - "plate" = "盘子"
+  - "knife" = "刀"
+  - "spoon" = "勺子"
+srsWords: "bowl" "cup" "plate" "knife" "spoon"
+
+[fill-in-the-blank]
+sentence: "I eat rice from a ___."
+blank: "bowl"
+translation: "我用碗吃米饭。"
+srsWords: "bowl"
+
+[fill-in-the-blank]
+sentence: "She drinks a ___ of tea."
+blank: "cup"
+translation: "她喝一杯茶。"
+srsWords: "cup"
+
+[fill-in-the-blank]
+sentence: "Put the bread on the ___."
+blank: "plate"
+translation: "把面包放在盘子上。"
+srsWords: "plate"
+
+[fill-in-the-blank]
+sentence: "Cut the apple with a ___."
+blank: "knife"
+translation: "用刀切苹果。"
+srsWords: "knife"
+
+[fill-in-the-blank]
+sentence: "I eat soup with a ___."
+blank: "spoon"
+translation: "我用勺子喝汤。"
+srsWords: "spoon"
+
+---
+lessonTitle: "Lesson 12: Bathroom"
+description: "Things in the bathroom"
+icon: "🛁"
+color: "#FF8C42"
+---
+
+[matching-pairs]
+pairs:
+  - "soap" = "肥皂"
+  - "towel" = "毛巾"
+  - "brush" = "刷"
+  - "mirror" = "镜子"
+  - "comb" = "梳子"
+srsWords: "soap" "towel" "brush" "mirror" "comb"
+
+[fill-in-the-blank]
+sentence: "Wash your hands with ___."
+blank: "soap"
+translation: "用肥皂洗手。"
+srsWords: "soap"
+
+[fill-in-the-blank]
+sentence: "Dry your hands with a ___."
+blank: "towel"
+translation: "用毛巾擦干手。"
+srsWords: "towel"
+
+[fill-in-the-blank]
+sentence: "I ___ my teeth every morning."
+blank: "brush"
+translation: "我每天早上刷牙。"
+srsWords: "brush"
+
+[fill-in-the-blank]
+sentence: "Look in the ___."
+blank: "mirror"
+translation: "照照镜子。"
+srsWords: "mirror"
+
+[fill-in-the-blank]
+sentence: "I ___ my hair."
+blank: "comb"
+translation: "我梳头。"
+srsWords: "comb"
+
+---
+lessonTitle: "Lesson 13: More Food"
+description: "Everyday food words"
+icon: "🧀"
+color: "#F7B731"
+---
+
+[matching-pairs]
+pairs:
+  - "cheese" = "奶酪"
+  - "butter" = "黄油"
+  - "meat" = "肉"
+  - "soup" = "汤"
+  - "salad" = "沙拉"
+srsWords: "cheese" "butter" "meat" "soup" "salad"
+
+[fill-in-the-blank]
+sentence: "I like ___ on bread."
+blank: "cheese"
+translation: "我喜欢面包上加奶酪。"
+srsWords: "cheese"
+
+[fill-in-the-blank]
+sentence: "Put ___ on the toast."
+blank: "butter"
+translation: "在吐司上抹黄油。"
+srsWords: "butter"
+
+[fill-in-the-blank]
+sentence: "We eat ___ for dinner."
+blank: "meat"
+translation: "我们晚餐吃肉。"
+srsWords: "meat"
+
+[fill-in-the-blank]
+sentence: "The ___ is hot."
+blank: "soup"
+translation: "汤很烫。"
+srsWords: "soup"
+
+[fill-in-the-blank]
+sentence: "She makes a ___."
+blank: "salad"
+translation: "她做了一份沙拉。"
+srsWords: "salad"
+
+---
+lessonTitle: "Lesson 14: Vegetables"
+description: "Common vegetables"
+icon: "🥕"
+color: "#5F27CD"
+---
+
+[matching-pairs]
+pairs:
+  - "potato" = "土豆"
+  - "tomato" = "西红柿"
+  - "carrot" = "胡萝卜"
+  - "onion" = "洋葱"
+  - "bean" = "豆子"
+srsWords: "potato" "tomato" "carrot" "onion" "bean"
+
+[fill-in-the-blank]
+sentence: "I cook a ___ for lunch."
+blank: "potato"
+translation: "我午餐煮一个土豆。"
+srsWords: "potato"
+
+[fill-in-the-blank]
+sentence: "The ___ is red."
+blank: "tomato"
+translation: "西红柿是红色的。"
+srsWords: "tomato"
+
+[fill-in-the-blank]
+sentence: "Rabbits like ___."
+blank: "carrot"
+translation: "兔子喜欢胡萝卜。"
+srsWords: "carrot"
+
+[fill-in-the-blank]
+sentence: "Cut the ___ carefully."
+blank: "onion"
+translation: "小心切洋葱。"
+srsWords: "onion"
+
+[fill-in-the-blank]
+sentence: "I eat a green ___."
+blank: "bean"
+translation: "我吃一颗青豆。"
+srsWords: "bean"
+
+---
+lessonTitle: "Lesson 15: Farm Animals"
+description: "Animals on the farm"
+icon: "🐄"
+color: "#54A0FF"
+---
+
+[matching-pairs]
+pairs:
+  - "cow" = "奶牛"
+  - "pig" = "猪"
+  - "duck" = "鸭子"
+  - "sheep" = "羊"
+  - "chicken" = "鸡"
+srsWords: "cow" "pig" "duck" "sheep" "chicken"
+
+[fill-in-the-blank]
+sentence: "The ___ gives us milk."
+blank: "cow"
+translation: "奶牛给我们牛奶。"
+srsWords: "cow"
+
+[fill-in-the-blank]
+sentence: "The ___ is pink."
+blank: "pig"
+translation: "这头猪是粉色的。"
+srsWords: "pig"
+
+[fill-in-the-blank]
+sentence: "The ___ swims on the lake."
+blank: "duck"
+translation: "鸭子在湖上游。"
+srsWords: "duck"
+
+[fill-in-the-blank]
+sentence: "The ___ has white wool."
+blank: "sheep"
+translation: "这只羊有白色的毛。"
+srsWords: "sheep"
+
+[fill-in-the-blank]
+sentence: "The ___ lays eggs."
+blank: "chicken"
+translation: "母鸡下蛋。"
+srsWords: "chicken"
+
+---
+lessonTitle: "Lesson 16: Getting Around"
+description: "Transport and travel words"
+icon: "🚲"
+color: "#00D2D3"
+---
+
+[matching-pairs]
+pairs:
+  - "bike" = "自行车"
+  - "boat" = "船"
+  - "taxi" = "出租车"
+  - "road" = "路"
+  - "ticket" = "票"
+srsWords: "bike" "boat" "taxi" "road" "ticket"
+
+[fill-in-the-blank]
+sentence: "I ride my ___ to school."
+blank: "bike"
+translation: "我骑自行车上学。"
+srsWords: "bike"
+
+[fill-in-the-blank]
+sentence: "We cross the river by ___."
+blank: "boat"
+translation: "我们坐船过河。"
+srsWords: "boat"
+
+[fill-in-the-blank]
+sentence: "Let's take a ___."
+blank: "taxi"
+translation: "我们打车吧。"
+srsWords: "taxi"
+
+[fill-in-the-blank]
+sentence: "The ___ is very long."
+blank: "road"
+translation: "这条路很长。"
+srsWords: "road"
+
+[fill-in-the-blank]
+sentence: "I buy a bus ___."
+blank: "ticket"
+translation: "我买一张公交车票。"
+srsWords: "ticket"
+
+---
+lessonTitle: "Lesson 17: Shopping"
+description: "Paying for things"
+icon: "🛒"
+color: "#1DD1A1"
+---
+
+[matching-pairs]
+pairs:
+  - "price" = "价格"
+  - "cheap" = "便宜"
+  - "expensive" = "贵"
+  - "pay" = "付款"
+  - "dollar" = "美元"
+srsWords: "price" "cheap" "expensive" "pay" "dollar"
+
+[fill-in-the-blank]
+sentence: "What is the ___?"
+blank: "price"
+translation: "价格是多少？"
+srsWords: "price"
+
+[fill-in-the-blank]
+sentence: "This shirt is ___."
+blank: "cheap"
+translation: "这件衬衫很便宜。"
+srsWords: "cheap"
+
+[fill-in-the-blank]
+sentence: "The bag is too ___."
+blank: "expensive"
+translation: "这个包太贵了。"
+srsWords: "expensive"
+
+[fill-in-the-blank]
+sentence: "I ___ by card."
+blank: "pay"
+translation: "我用卡付款。"
+srsWords: "pay"
+
+[fill-in-the-blank]
+sentence: "It costs one ___."
+blank: "dollar"
+translation: "这个一美元。"
+srsWords: "dollar"
+
+---
+lessonTitle: "Lesson 18: Technology"
+description: "Computers and messages"
+icon: "💻"
+color: "#EE5A6F"
+---
+
+[matching-pairs]
+pairs:
+  - "screen" = "屏幕"
+  - "mouse" = "鼠标"
+  - "email" = "电子邮件"
+  - "message" = "消息"
+  - "video" = "视频"
+srsWords: "screen" "mouse" "email" "message" "video"
+
+[fill-in-the-blank]
+sentence: "Look at the ___."
+blank: "screen"
+translation: "看屏幕。"
+srsWords: "screen"
+
+[fill-in-the-blank]
+sentence: "Click with the ___."
+blank: "mouse"
+translation: "用鼠标点击。"
+srsWords: "mouse"
+
+[fill-in-the-blank]
+sentence: "I send an ___."
+blank: "email"
+translation: "我发一封电子邮件。"
+srsWords: "email"
+
+[fill-in-the-blank]
+sentence: "She writes a short ___."
+blank: "message"
+translation: "她写了一条短消息。"
+srsWords: "message"
+
+[fill-in-the-blank]
+sentence: "We watch a ___."
+blank: "video"
+translation: "我们看一个视频。"
+srsWords: "video"
+
+---
+lessonTitle: "Lesson 19: At School"
+description: "School and study words"
+icon: "🏫"
+color: "#786FA6"
+---
+
+[matching-pairs]
+pairs:
+  - "desk" = "书桌"
+  - "board" = "黑板"
+  - "exam" = "考试"
+  - "homework" = "作业"
+  - "lesson" = "课"
+srsWords: "desk" "board" "exam" "homework" "lesson"
+
+[fill-in-the-blank]
+sentence: "My books are on the ___."
+blank: "desk"
+translation: "我的书在书桌上。"
+srsWords: "desk"
+
+[fill-in-the-blank]
+sentence: "The teacher writes on the ___."
+blank: "board"
+translation: "老师在黑板上写字。"
+srsWords: "board"
+
+[fill-in-the-blank]
+sentence: "I have an ___ tomorrow."
+blank: "exam"
+translation: "我明天有考试。"
+srsWords: "exam"
+
+[fill-in-the-blank]
+sentence: "I do my ___ at night."
+blank: "homework"
+translation: "我晚上做作业。"
+srsWords: "homework"
+
+[fill-in-the-blank]
+sentence: "The ___ starts at nine."
+blank: "lesson"
+translation: "课九点开始。"
+srsWords: "lesson"
+
+---
+lessonTitle: "Lesson 20: Music & Fun"
+description: "Music, pictures and films"
+icon: "🎵"
+color: "#FECA57"
+---
+
+[matching-pairs]
+pairs:
+  - "music" = "音乐"
+  - "song" = "歌"
+  - "picture" = "画"
+  - "camera" = "相机"
+  - "film" = "电影"
+srsWords: "music" "song" "picture" "camera" "film"
+
+[fill-in-the-blank]
+sentence: "I listen to ___."
+blank: "music"
+translation: "我听音乐。"
+srsWords: "music"
+
+[fill-in-the-blank]
+sentence: "She sings a ___."
+blank: "song"
+translation: "她唱一首歌。"
+srsWords: "song"
+
+[fill-in-the-blank]
+sentence: "I draw a ___."
+blank: "picture"
+translation: "我画一幅画。"
+srsWords: "picture"
+
+[fill-in-the-blank]
+sentence: "He takes photos with a ___."
+blank: "camera"
+translation: "他用相机拍照。"
+srsWords: "camera"
+
+[fill-in-the-blank]
+sentence: "We watch a ___ tonight."
+blank: "film"
+translation: "我们今晚看电影。"
+srsWords: "film"

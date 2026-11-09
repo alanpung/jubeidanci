@@ -469,3 +469,463 @@ sentence: "I ___ the answer."
 blank: "know"
 translation: "我知道答案。"
 srsWords: "know"
+
+---
+lessonTitle: "Lesson 11: Polite Greetings"
+description: "Greetings and polite words"
+icon: "👋"
+color: "#FF6B6B"
+---
+
+[matching-pairs]
+pairs:
+  - "hi" = "嗨"
+  - "bye" = "再见"
+  - "please" = "请"
+  - "thanks" = "谢谢"
+  - "sorry" = "抱歉"
+srsWords: "hi" "bye" "please" "thanks" "sorry"
+
+[fill-in-the-blank]
+sentence: "___, my name is Anna."
+blank: "Hi"
+translation: "嗨，我叫安娜。"
+srsWords: "hi"
+
+[fill-in-the-blank]
+sentence: "I say ___ to my friends."
+blank: "bye"
+translation: "我跟朋友们说再见。"
+srsWords: "bye"
+
+[fill-in-the-blank]
+sentence: "___ pass me the water."
+blank: "Please"
+translation: "请把水递给我。"
+srsWords: "please"
+
+[fill-in-the-blank]
+sentence: "___ for your help."
+blank: "Thanks"
+translation: "谢谢你的帮助。"
+srsWords: "thanks"
+
+[fill-in-the-blank]
+sentence: "I am ___ for being late."
+blank: "sorry"
+translation: "我很抱歉迟到了。"
+srsWords: "sorry"
+
+---
+lessonTitle: "Lesson 12: Numbers 11-15"
+description: "Counting from eleven to fifteen"
+icon: "🔢"
+color: "#FF8C42"
+---
+
+[matching-pairs]
+pairs:
+  - "eleven" = "十一"
+  - "twelve" = "十二"
+  - "thirteen" = "十三"
+  - "fourteen" = "十四"
+  - "fifteen" = "十五"
+srsWords: "eleven" "twelve" "thirteen" "fourteen" "fifteen"
+
+[fill-in-the-blank]
+sentence: "There are ___ students in the class."
+blank: "eleven"
+translation: "班里有十一个学生。"
+srsWords: "eleven"
+
+[fill-in-the-blank]
+sentence: "A year has ___ months."
+blank: "twelve"
+translation: "一年有十二个月。"
+srsWords: "twelve"
+
+[fill-in-the-blank]
+sentence: "My brother is ___ years old."
+blank: "thirteen"
+translation: "我弟弟十三岁。"
+srsWords: "thirteen"
+
+[fill-in-the-blank]
+sentence: "We need ___ chairs."
+blank: "fourteen"
+translation: "我们需要十四把椅子。"
+srsWords: "fourteen"
+
+[fill-in-the-blank]
+sentence: "I have ___ apples."
+blank: "fifteen"
+translation: "我有十五个苹果。"
+srsWords: "fifteen"
+
+---
+lessonTitle: "Lesson 13: Numbers 16-20"
+description: "Counting from sixteen to twenty"
+icon: "🔢"
+color: "#F7B731"
+---
+
+[matching-pairs]
+pairs:
+  - "sixteen" = "十六"
+  - "seventeen" = "十七"
+  - "eighteen" = "十八"
+  - "nineteen" = "十九"
+  - "twenty" = "二十"
+srsWords: "sixteen" "seventeen" "eighteen" "nineteen" "twenty"
+
+[fill-in-the-blank]
+sentence: "She is ___ years old."
+blank: "sixteen"
+translation: "她十六岁。"
+srsWords: "sixteen"
+
+[fill-in-the-blank]
+sentence: "There are ___ books on the desk."
+blank: "seventeen"
+translation: "桌上有十七本书。"
+srsWords: "seventeen"
+
+[fill-in-the-blank]
+sentence: "My cousin is ___."
+blank: "eighteen"
+translation: "我表哥十八岁。"
+srsWords: "eighteen"
+
+[fill-in-the-blank]
+sentence: "We count to ___."
+blank: "nineteen"
+translation: "我们数到十九。"
+srsWords: "nineteen"
+
+[fill-in-the-blank]
+sentence: "I have ___ pens."
+blank: "twenty"
+translation: "我有二十支笔。"
+srsWords: "twenty"
+
+---
+lessonTitle: "Lesson 14: More Colors"
+description: "Everyday colour words"
+icon: "🎨"
+color: "#5F27CD"
+---
+
+[matching-pairs]
+pairs:
+  - "black" = "黑色"
+  - "white" = "白色"
+  - "brown" = "棕色"
+  - "pink" = "粉红色"
+  - "orange" = "橙色"
+srsWords: "black" "white" "brown" "pink" "orange"
+
+[fill-in-the-blank]
+sentence: "The cat is ___."
+blank: "black"
+translation: "这只猫是黑色的。"
+srsWords: "black"
+
+[fill-in-the-blank]
+sentence: "Snow is ___."
+blank: "white"
+translation: "雪是白色的。"
+srsWords: "white"
+
+[fill-in-the-blank]
+sentence: "I have a ___ bag."
+blank: "brown"
+translation: "我有一个棕色的包。"
+srsWords: "brown"
+
+[fill-in-the-blank]
+sentence: "She likes ___ flowers."
+blank: "pink"
+translation: "她喜欢粉色的花。"
+srsWords: "pink"
+
+[fill-in-the-blank]
+sentence: "My pen is ___."
+blank: "orange"
+translation: "我的笔是橙色的。"
+srsWords: "orange"
+
+---
+lessonTitle: "Lesson 15: Shapes & Lines"
+description: "Simple shapes and positions"
+icon: "⬛"
+color: "#54A0FF"
+---
+
+[matching-pairs]
+pairs:
+  - "circle" = "圆形"
+  - "square" = "正方形"
+  - "line" = "线"
+  - "point" = "点"
+  - "side" = "边"
+srsWords: "circle" "square" "line" "point" "side"
+
+[fill-in-the-blank]
+sentence: "Draw a ___ on the paper."
+blank: "circle"
+translation: "在纸上画一个圆。"
+srsWords: "circle"
+
+[fill-in-the-blank]
+sentence: "The table is a ___."
+blank: "square"
+translation: "这张桌子是正方形的。"
+srsWords: "square"
+
+[fill-in-the-blank]
+sentence: "Please draw a straight ___."
+blank: "line"
+translation: "请画一条直线。"
+srsWords: "line"
+
+[fill-in-the-blank]
+sentence: "___ to the door."
+blank: "Point"
+translation: "指向门。"
+srsWords: "point"
+
+[fill-in-the-blank]
+sentence: "Write on one ___ of the paper."
+blank: "side"
+translation: "写在纸的一面。"
+srsWords: "side"
+
+---
+lessonTitle: "Lesson 16: Feelings"
+description: "How we feel"
+icon: "😊"
+color: "#00D2D3"
+---
+
+[matching-pairs]
+pairs:
+  - "sad" = "难过的"
+  - "angry" = "生气的"
+  - "tired" = "累的"
+  - "afraid" = "害怕的"
+  - "excited" = "兴奋的"
+srsWords: "sad" "angry" "tired" "afraid" "excited"
+
+[fill-in-the-blank]
+sentence: "I feel ___ today."
+blank: "sad"
+translation: "我今天觉得难过。"
+srsWords: "sad"
+
+[fill-in-the-blank]
+sentence: "Don't be ___ with me."
+blank: "angry"
+translation: "别生我的气。"
+srsWords: "angry"
+
+[fill-in-the-blank]
+sentence: "I am ___ after work."
+blank: "tired"
+translation: "下班后我很累。"
+srsWords: "tired"
+
+[fill-in-the-blank]
+sentence: "The child is ___ of the dark."
+blank: "afraid"
+translation: "这个孩子怕黑。"
+srsWords: "afraid"
+
+[fill-in-the-blank]
+sentence: "We are ___ about the trip."
+blank: "excited"
+translation: "我们对这次旅行很兴奋。"
+srsWords: "excited"
+
+---
+lessonTitle: "Lesson 17: Polite Replies"
+description: "Useful reply words"
+icon: "🙌"
+color: "#1DD1A1"
+---
+
+[matching-pairs]
+pairs:
+  - "thank" = "感谢"
+  - "welcome" = "欢迎"
+  - "excuse" = "原谅"
+  - "sure" = "确定"
+  - "okay" = "可以"
+srsWords: "thank" "welcome" "excuse" "sure" "okay"
+
+[fill-in-the-blank]
+sentence: "I ___ you very much."
+blank: "thank"
+translation: "非常感谢你。"
+srsWords: "thank"
+
+[fill-in-the-blank]
+sentence: "You are ___ here."
+blank: "welcome"
+translation: "这里欢迎你。"
+srsWords: "welcome"
+
+[fill-in-the-blank]
+sentence: "___ me, where is the station?"
+blank: "Excuse"
+translation: "打扰一下，车站在哪里？"
+srsWords: "excuse"
+
+[fill-in-the-blank]
+sentence: "I am ___ he will come."
+blank: "sure"
+translation: "我确定他会来。"
+srsWords: "sure"
+
+[fill-in-the-blank]
+sentence: "Is it ___ to sit here?"
+blank: "okay"
+translation: "坐这里可以吗？"
+srsWords: "okay"
+
+---
+lessonTitle: "Lesson 18: Extended Family"
+description: "More family words"
+icon: "👨‍👩‍👧"
+color: "#EE5A6F"
+---
+
+[matching-pairs]
+pairs:
+  - "uncle" = "叔叔"
+  - "aunt" = "阿姨"
+  - "cousin" = "表亲"
+  - "child" = "孩子"
+  - "kid" = "小孩"
+srsWords: "uncle" "aunt" "cousin" "child" "kid"
+
+[fill-in-the-blank]
+sentence: "My ___ lives in Beijing."
+blank: "uncle"
+translation: "我叔叔住在北京。"
+srsWords: "uncle"
+
+[fill-in-the-blank]
+sentence: "My ___ makes great cakes."
+blank: "aunt"
+translation: "我阿姨做的蛋糕很好吃。"
+srsWords: "aunt"
+
+[fill-in-the-blank]
+sentence: "My ___ is my age."
+blank: "cousin"
+translation: "我表弟和我同岁。"
+srsWords: "cousin"
+
+[fill-in-the-blank]
+sentence: "The ___ is playing outside."
+blank: "child"
+translation: "那个孩子在外面玩。"
+srsWords: "child"
+
+[fill-in-the-blank]
+sentence: "That ___ is very funny."
+blank: "kid"
+translation: "那个小孩很有趣。"
+srsWords: "kid"
+
+---
+lessonTitle: "Lesson 19: Everyone"
+description: "Words for groups of people"
+icon: "👥"
+color: "#786FA6"
+---
+
+[matching-pairs]
+pairs:
+  - "people" = "人们"
+  - "everyone" = "每个人"
+  - "everybody" = "大家"
+  - "someone" = "某人"
+  - "anyone" = "任何人"
+srsWords: "people" "everyone" "everybody" "someone" "anyone"
+
+[fill-in-the-blank]
+sentence: "Many ___ are in the park."
+blank: "people"
+translation: "公园里有很多人。"
+srsWords: "people"
+
+[fill-in-the-blank]
+sentence: "___ likes this song."
+blank: "Everyone"
+translation: "每个人都喜欢这首歌。"
+srsWords: "everyone"
+
+[fill-in-the-blank]
+sentence: "___ is here today."
+blank: "Everybody"
+translation: "今天大家都到了。"
+srsWords: "everybody"
+
+[fill-in-the-blank]
+sentence: "___ is waiting for you."
+blank: "Someone"
+translation: "有人在等你。"
+srsWords: "someone"
+
+[fill-in-the-blank]
+sentence: "Is ___ at home?"
+blank: "anyone"
+translation: "有人在家吗？"
+srsWords: "anyone"
+
+---
+lessonTitle: "Lesson 20: Everyday Words"
+description: "Common abstract words"
+icon: "🌍"
+color: "#FECA57"
+---
+
+[matching-pairs]
+pairs:
+  - "world" = "世界"
+  - "life" = "生活"
+  - "thing" = "东西"
+  - "way" = "路"
+  - "part" = "部分"
+srsWords: "world" "life" "thing" "way" "part"
+
+[fill-in-the-blank]
+sentence: "The ___ is very big."
+blank: "world"
+translation: "世界很大。"
+srsWords: "world"
+
+[fill-in-the-blank]
+sentence: "I enjoy my ___ here."
+blank: "life"
+translation: "我享受这里的生活。"
+srsWords: "life"
+
+[fill-in-the-blank]
+sentence: "This ___ is mine."
+blank: "thing"
+translation: "这个东西是我的。"
+srsWords: "thing"
+
+[fill-in-the-blank]
+sentence: "Can you show me the ___?"
+blank: "way"
+translation: "你能告诉我怎么走吗？"
+srsWords: "way"
+
+[fill-in-the-blank]
+sentence: "I read one ___ of the book."
+blank: "part"
+translation: "我读了书的一部分。"
+srsWords: "part"

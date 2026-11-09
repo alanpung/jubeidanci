@@ -13,3 +13,7 @@ coverage/
 # selection + EN→ZH translation). Large, machine-specific, and re-derivable.
 scripts/.cefr-selection.json
 scripts/.cefr-translate-cache.json
+
+# Python bytecode caches from the content generator scripts.
+__pycache__/
+*.pyc

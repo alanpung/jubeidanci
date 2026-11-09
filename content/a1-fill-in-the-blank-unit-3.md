@@ -469,3 +469,463 @@ sentence: "I want to ___ new things every day."
 blank: "learn"
 translation: "我想每天学新东西。"
 srsWords: "learn"
+
+---
+lessonTitle: "Lesson 11: Move Around"
+description: "Verbs of movement"
+icon: "🏃"
+color: "#FF6B6B"
+---
+
+[matching-pairs]
+pairs:
+  - "move" = "移动"
+  - "climb" = "爬"
+  - "fly" = "飞"
+  - "swim" = "游泳"
+  - "drive" = "驾驶"
+srsWords: "move" "climb" "fly" "swim" "drive"
+
+[fill-in-the-blank]
+sentence: "Please ___ your chair."
+blank: "move"
+translation: "请挪一下你的椅子。"
+srsWords: "move"
+
+[fill-in-the-blank]
+sentence: "We ___ the hill."
+blank: "climb"
+translation: "我们爬山。"
+srsWords: "climb"
+
+[fill-in-the-blank]
+sentence: "Birds ___ in the sky."
+blank: "fly"
+translation: "鸟在天上飞。"
+srsWords: "fly"
+
+[fill-in-the-blank]
+sentence: "I ___ in the pool."
+blank: "swim"
+translation: "我在游泳池游泳。"
+srsWords: "swim"
+
+[fill-in-the-blank]
+sentence: "My father can ___ a car."
+blank: "drive"
+translation: "我爸爸会开车。"
+srsWords: "drive"
+
+---
+lessonTitle: "Lesson 12: Come & Go"
+description: "Arriving, leaving and following"
+icon: "🚶"
+color: "#FF8C42"
+---
+
+[matching-pairs]
+pairs:
+  - "arrive" = "到达"
+  - "leave" = "离开"
+  - "return" = "返回"
+  - "follow" = "跟随"
+  - "cross" = "穿过"
+srsWords: "arrive" "leave" "return" "follow" "cross"
+
+[fill-in-the-blank]
+sentence: "We ___ at six."
+blank: "arrive"
+translation: "我们六点到。"
+srsWords: "arrive"
+
+[fill-in-the-blank]
+sentence: "The train will ___ soon."
+blank: "leave"
+translation: "火车很快要开了。"
+srsWords: "leave"
+
+[fill-in-the-blank]
+sentence: "I ___ home at five."
+blank: "return"
+translation: "我五点回家。"
+srsWords: "return"
+
+[fill-in-the-blank]
+sentence: "Please ___ me."
+blank: "follow"
+translation: "请跟着我。"
+srsWords: "follow"
+
+[fill-in-the-blank]
+sentence: "___ the street carefully."
+blank: "Cross"
+translation: "小心过马路。"
+srsWords: "cross"
+
+---
+lessonTitle: "Lesson 13: Hands & Objects"
+description: "Verbs for using your hands"
+icon: "✋"
+color: "#F7B731"
+---
+
+[matching-pairs]
+pairs:
+  - "carry" = "搬运"
+  - "hold" = "握住"
+  - "drop" = "掉落"
+  - "pick" = "挑选"
+  - "throw" = "扔"
+srsWords: "carry" "hold" "drop" "pick" "throw"
+
+[fill-in-the-blank]
+sentence: "I ___ the bag."
+blank: "carry"
+translation: "我提着包。"
+srsWords: "carry"
+
+[fill-in-the-blank]
+sentence: "___ my hand, please."
+blank: "Hold"
+translation: "请握住我的手。"
+srsWords: "hold"
+
+[fill-in-the-blank]
+sentence: "Don't ___ the glass."
+blank: "drop"
+translation: "别把杯子掉了。"
+srsWords: "drop"
+
+[fill-in-the-blank]
+sentence: "___ a book from the shelf."
+blank: "Pick"
+translation: "从书架上挑一本书。"
+srsWords: "pick"
+
+[fill-in-the-blank]
+sentence: "___ the ball to me."
+blank: "Throw"
+translation: "把球扔给我。"
+srsWords: "throw"
+
+---
+lessonTitle: "Lesson 14: Make & Break"
+description: "Making, drawing and fixing"
+icon: "🔨"
+color: "#5F27CD"
+---
+
+[matching-pairs]
+pairs:
+  - "build" = "建造"
+  - "break" = "打碎"
+  - "draw" = "画"
+  - "paint" = "涂刷"
+  - "fix" = "修理"
+srsWords: "build" "break" "draw" "paint" "fix"
+
+[fill-in-the-blank]
+sentence: "They ___ a new house."
+blank: "build"
+translation: "他们盖一栋新房子。"
+srsWords: "build"
+
+[fill-in-the-blank]
+sentence: "Don't ___ the cup."
+blank: "break"
+translation: "别打碎杯子。"
+srsWords: "break"
+
+[fill-in-the-blank]
+sentence: "I ___ a cat."
+blank: "draw"
+translation: "我画一只猫。"
+srsWords: "draw"
+
+[fill-in-the-blank]
+sentence: "She ___ the wall white."
+blank: "paint"
+translation: "她把墙刷成白色。"
+srsWords: "paint"
+
+[fill-in-the-blank]
+sentence: "Can you ___ my bike?"
+blank: "fix"
+translation: "你能修我的自行车吗？"
+srsWords: "fix"
+
+---
+lessonTitle: "Lesson 15: Talking"
+description: "Ways of speaking"
+icon: "💬"
+color: "#54A0FF"
+---
+
+[matching-pairs]
+pairs:
+  - "ask" = "问"
+  - "talk" = "交谈"
+  - "call" = "打电话"
+  - "shout" = "喊叫"
+  - "reply" = "回复"
+srsWords: "ask" "talk" "call" "shout" "reply"
+
+[fill-in-the-blank]
+sentence: "I ___ a question."
+blank: "ask"
+translation: "我问一个问题。"
+srsWords: "ask"
+
+[fill-in-the-blank]
+sentence: "We ___ about the film."
+blank: "talk"
+translation: "我们聊那部电影。"
+srsWords: "talk"
+
+[fill-in-the-blank]
+sentence: "___ me tonight."
+blank: "Call"
+translation: "今晚给我打电话。"
+srsWords: "call"
+
+[fill-in-the-blank]
+sentence: "Don't ___ in class."
+blank: "shout"
+translation: "别在课堂上喊。"
+srsWords: "shout"
+
+[fill-in-the-blank]
+sentence: "Please ___ soon."
+blank: "reply"
+translation: "请尽快回复。"
+srsWords: "reply"
+
+---
+lessonTitle: "Lesson 16: Thinking"
+description: "Verbs about the mind"
+icon: "💭"
+color: "#00D2D3"
+---
+
+[matching-pairs]
+pairs:
+  - "remember" = "记得"
+  - "forget" = "忘记"
+  - "believe" = "相信"
+  - "guess" = "猜"
+  - "hope" = "希望"
+srsWords: "remember" "forget" "believe" "guess" "hope"
+
+[fill-in-the-blank]
+sentence: "I ___ your name."
+blank: "remember"
+translation: "我记得你的名字。"
+srsWords: "remember"
+
+[fill-in-the-blank]
+sentence: "Don't ___ your keys."
+blank: "forget"
+translation: "别忘了钥匙。"
+srsWords: "forget"
+
+[fill-in-the-blank]
+sentence: "I ___ you."
+blank: "believe"
+translation: "我相信你。"
+srsWords: "believe"
+
+[fill-in-the-blank]
+sentence: "Can you ___ the answer?"
+blank: "guess"
+translation: "你能猜出答案吗？"
+srsWords: "guess"
+
+[fill-in-the-blank]
+sentence: "I ___ it is sunny."
+blank: "hope"
+translation: "我希望是晴天。"
+srsWords: "hope"
+
+---
+lessonTitle: "Lesson 17: Feelings as Verbs"
+description: "Caring, missing and enjoying"
+icon: "❤️"
+color: "#1DD1A1"
+---
+
+[matching-pairs]
+pairs:
+  - "worry" = "担心"
+  - "care" = "关心"
+  - "miss" = "想念"
+  - "wish" = "希望"
+  - "enjoy" = "享受"
+srsWords: "worry" "care" "miss" "wish" "enjoy"
+
+[fill-in-the-blank]
+sentence: "Don't ___ about me."
+blank: "worry"
+translation: "别为我担心。"
+srsWords: "worry"
+
+[fill-in-the-blank]
+sentence: "I ___ about my friends."
+blank: "care"
+translation: "我关心我的朋友。"
+srsWords: "care"
+
+[fill-in-the-blank]
+sentence: "I ___ my family."
+blank: "miss"
+translation: "我想念我的家人。"
+srsWords: "miss"
+
+[fill-in-the-blank]
+sentence: "I ___ for a new bike."
+blank: "wish"
+translation: "我想要一辆新自行车。"
+srsWords: "wish"
+
+[fill-in-the-blank]
+sentence: "We ___ the party."
+blank: "enjoy"
+translation: "我们玩得很开心。"
+srsWords: "enjoy"
+
+---
+lessonTitle: "Lesson 18: Meeting People"
+description: "Seeing friends and family"
+icon: "🤝"
+color: "#EE5A6F"
+---
+
+[matching-pairs]
+pairs:
+  - "meet" = "见面"
+  - "invite" = "邀请"
+  - "wait" = "等待"
+  - "share" = "分享"
+  - "visit" = "拜访"
+srsWords: "meet" "invite" "wait" "share" "visit"
+
+[fill-in-the-blank]
+sentence: "Let's ___ at six."
+blank: "meet"
+translation: "我们六点见。"
+srsWords: "meet"
+
+[fill-in-the-blank]
+sentence: "I ___ my friends to dinner."
+blank: "invite"
+translation: "我邀请朋友来吃饭。"
+srsWords: "invite"
+
+[fill-in-the-blank]
+sentence: "Please ___ here."
+blank: "wait"
+translation: "请在这里等。"
+srsWords: "wait"
+
+[fill-in-the-blank]
+sentence: "I ___ my food with him."
+blank: "share"
+translation: "我和他分享食物。"
+srsWords: "share"
+
+[fill-in-the-blank]
+sentence: "We ___ our grandparents."
+blank: "visit"
+translation: "我们去看望祖父母。"
+srsWords: "visit"
+
+---
+lessonTitle: "Lesson 19: Change"
+description: "Things changing over time"
+icon: "🔄"
+color: "#786FA6"
+---
+
+[matching-pairs]
+pairs:
+  - "change" = "改变"
+  - "happen" = "发生"
+  - "become" = "成为"
+  - "grow" = "生长"
+  - "stay" = "停留"
+srsWords: "change" "happen" "become" "grow" "stay"
+
+[fill-in-the-blank]
+sentence: "I ___ my clothes."
+blank: "change"
+translation: "我换衣服。"
+srsWords: "change"
+
+[fill-in-the-blank]
+sentence: "What did ___?"
+blank: "happen"
+translation: "发生了什么事？"
+srsWords: "happen"
+
+[fill-in-the-blank]
+sentence: "He wants to ___ a doctor."
+blank: "become"
+translation: "他想成为医生。"
+srsWords: "become"
+
+[fill-in-the-blank]
+sentence: "Plants ___ in spring."
+blank: "grow"
+translation: "植物在春天生长。"
+srsWords: "grow"
+
+[fill-in-the-blank]
+sentence: "___ at home today."
+blank: "Stay"
+translation: "今天待在家里。"
+srsWords: "stay"
+
+---
+lessonTitle: "Lesson 20: More Actions"
+description: "Everyday action verbs"
+icon: "🎯"
+color: "#FECA57"
+---
+
+[matching-pairs]
+pairs:
+  - "bring" = "带来"
+  - "catch" = "接住"
+  - "choose" = "选择"
+  - "spend" = "花费"
+  - "lose" = "丢失"
+srsWords: "bring" "catch" "choose" "spend" "lose"
+
+[fill-in-the-blank]
+sentence: "___ your book to class."
+blank: "Bring"
+translation: "把书带到课堂上来。"
+srsWords: "bring"
+
+[fill-in-the-blank]
+sentence: "Can you ___ the ball?"
+blank: "catch"
+translation: "你能接住球吗？"
+srsWords: "catch"
+
+[fill-in-the-blank]
+sentence: "___ one of these."
+blank: "Choose"
+translation: "从这些里选一个。"
+srsWords: "choose"
+
+[fill-in-the-blank]
+sentence: "I ___ ten yuan."
+blank: "spend"
+translation: "我花了十元。"
+srsWords: "spend"
+
+[fill-in-the-blank]
+sentence: "Don't ___ your ticket."
+blank: "lose"
+translation: "别把票弄丢了。"
+srsWords: "lose"
