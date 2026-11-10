@@ -8,17 +8,19 @@ ONLY [word-order] exercises -- no [matching-pairs] hint blocks.
 Each question:
   - answer:    tokens of a real dictionary example sentence
   - words:     answer tokens + one distractor
-  - text:      a word-level Chinese hint from definition_zh (the dictionary has
-               no full-sentence Chinese translations, so we never pretend the
-               hint is a whole-sentence translation)
+  - text:      the FULL Chinese sentence translation, matching the A1 course
+               style (e.g. "我吃苹果。"). Translations come from
+               words/sentence_translations_zh.json, built by
+               scripts/translate-sentences.py.
   - srsWords:  the target lemma + one other content word from the sentence
 
 The generator is deterministic and idempotent: a level whose course file
-already exists is skipped.
+already exists is skipped unless --force is given.
 """
 
 from __future__ import annotations
 
+import argparse
 import collections
 import json
 import re
@@ -26,7 +28,11 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 DICT_PATH = ROOT / "words" / "english_merged.json"
+TRANSLATIONS_PATH = ROOT / "words" / "sentence_translations_zh.json"
 CONTENT_DIR = ROOT / "content"
+
+# English sentence -> full Chinese sentence translation.
+TRANSLATIONS: dict[str, str] = {}
 
 LEVELS = ["A2", "B1", "B2", "C1", "C2"]
 UNITS = 5
@@ -218,13 +224,20 @@ def srs_words(entry: dict, tokens: list[str]) -> list[str]:
     return out
 
 
-def render_question(entry: dict, distractor: str | None) -> str:
+def render_question(entry: dict, distractor: str | None, missing: list[str]) -> str:
     tokens = entry["tokens"]
+    sentence = " ".join(tokens)
+    hint = TRANSLATIONS.get(sentence)
+    if not hint:
+        # Should not happen once the translation cache is complete. Keeping a
+        # word-level fallback means regeneration never silently drops a hint.
+        missing.append(sentence)
+        hint = f"排列单词组成句子（提示：{entry['gloss']}）"
     words = list(tokens) + ([distractor] if distractor else [])
     return "\n".join(
         [
             "[word-order]",
-            f'text: "排列单词组成句子（提示：{entry["gloss"]}）"',
+            f'text: "{hint}"',
             "words: " + " ".join(f'"{w}"' for w in words),
             "answer: " + " ".join(f'"{w}"' for w in tokens),
             "random_order: true",
@@ -255,7 +268,7 @@ def render_course(level: str) -> str:
     )
 
 
-def render_unit(level: str, unit_no: int, entries: list[dict]) -> str:
+def render_unit(level: str, unit_no: int, entries: list[dict], missing: list[str]) -> str:
     cid = f"{level.lower()}-word-order-course"
     lines = [
         "---",
@@ -286,18 +299,33 @@ def render_unit(level: str, unit_no: int, entries: list[dict]) -> str:
         for qi, entry in enumerate(chunk):
             seed = (unit_no - 1) * WORDS_PER_UNIT + li * QUESTIONS_PER_LESSON + qi
             distractor = pick_distractor(entries, entry["tokens"], seed)
-            lines.append(render_question(entry, distractor))
+            lines.append(render_question(entry, distractor, missing))
             lines.append("")
     return "\n".join(lines).rstrip() + "\n"
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--force", action="store_true", help="overwrite existing course files"
+    )
+    args = parser.parse_args()
+
+    if not TRANSLATIONS_PATH.exists():
+        raise RuntimeError(
+            "Missing words/sentence_translations_zh.json -- run "
+            "scripts/translate-sentences.py first"
+        )
+    TRANSLATIONS.update(json.loads(TRANSLATIONS_PATH.read_text(encoding="utf-8")))
+    print(f"translations loaded: {len(TRANSLATIONS)}")
+
     data = json.loads(DICT_PATH.read_text())
     skeleton_counts = count_skeletons(data)
+    missing: list[str] = []
     for level in LEVELS:
         course_path = CONTENT_DIR / f"{level.lower()}-word-order-course.md"
-        if course_path.exists():
-            print(f"{level}: already exists, skipped")
+        if course_path.exists() and not args.force:
+            print(f"{level}: already exists, skipped (use --force to regenerate)")
             continue
         pool = build_pool(data, level, skeleton_counts)
         if len(pool) < TARGET_WORDS:
@@ -309,11 +337,18 @@ def main() -> None:
         for unit_no in range(1, UNITS + 1):
             chunk = entries[(unit_no - 1) * WORDS_PER_UNIT : unit_no * WORDS_PER_UNIT]
             unit_path = CONTENT_DIR / f"{level.lower()}-word-order-unit-{unit_no}.md"
-            unit_path.write_text(render_unit(level, unit_no, chunk))
+            unit_path.write_text(render_unit(level, unit_no, chunk, missing))
         print(
             f"{level}: wrote 1 course + {UNITS} units, "
             f"{TARGET_WORDS} word-order questions (pool={len(pool)} words)"
         )
+
+    if missing:
+        print(f"ERROR: {len(missing)} questions fell back to word-level hints")
+        for sentence in missing[:10]:
+            print(f"  {sentence}")
+        raise SystemExit(1)
+    print("all questions use full-sentence Chinese hints")
 
 
 if __name__ == "__main__":
