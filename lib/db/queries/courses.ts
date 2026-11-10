@@ -149,6 +149,70 @@ export async function getVipOwnerIds(
   }
 }
 
+// ─── Platform-owned (filesystem) VIP content helpers ───
+//
+// Filesystem courses are platform content, not courses a user created in the
+// UI. Their DB rows are written by the background seed, which takes ~45s on a
+// cold start, and `createdBy` is only filled best-effort from the owner's
+// account. Until those rows land, the access gates fall back to the markdown
+// registry — so an exact `createdBy` match cannot be the only way for the
+// platform owner (or their VIP students) to reach their own VIP courses.
+// Without these helpers the owner gets a 404 on every VIP course during that
+// window, while all the older public courses keep working.
+
+/** Visibility declared by a filesystem course, or null if it isn't one. */
+async function filesystemCourseVisibility(
+  courseId: string | null | undefined
+): Promise<CourseVisibility | null> {
+  if (!courseId) return null;
+  try {
+    const { getAllCourses } = await import("@/lib/content/registry");
+    return getAllCourses().find((c) => c.id === courseId)?.visibility ?? null;
+  } catch {
+    return null;
+  }
+}
+
+/** Whether `userId` is the platform owner (admin email on the account row). */
+async function isPlatformAdmin(userId: string): Promise<boolean> {
+  if (!(await isDbAvailable())) return false;
+  try {
+    const [u] = await db
+      .select({ email: user.email })
+      .from(user)
+      .where(eq(user.id, userId));
+    if (!u?.email) return false;
+    const { isAdminEmail } = await import("@/lib/ai/models");
+    return isAdminEmail(u.email);
+  } catch {
+    return false;
+  }
+}
+
+/**
+ * Access rule for a non-public course. `dbOwnerId` is the course row's
+ * createdBy when that row exists. For filesystem (platform) courses we also
+ * accept any VIP student and the platform admin, because their createdBy is
+ * best-effort and may be missing while the seed is still running.
+ */
+async function canOpenNonPublicCourse(
+  courseId: string,
+  userId: string | undefined,
+  dbOwnerId: string | null | undefined,
+  isFilesystemCourse: boolean
+): Promise<boolean> {
+  if (!userId) return false;
+  if (dbOwnerId && dbOwnerId === userId) return true;
+  if ((await getGrantedCourseIds(userId)).has(courseId)) return true;
+  const vipOwnerIds = await getVipOwnerIds(userId);
+  if (dbOwnerId && vipOwnerIds.has(dbOwnerId)) return true;
+  if (isFilesystemCourse) {
+    if (vipOwnerIds.size > 0) return true;
+    if (await isPlatformAdmin(userId)) return true;
+  }
+  return false;
+}
+
 /**
  * Whether `userId` may open a unit. Standalone units follow their own
  * visibility (public, owner, or explicitly granted); course units follow the
@@ -182,27 +246,35 @@ export async function canAccessUnit(
           return (await getGrantedUnitIds(userId)).has(u.id);
         }
 
-        // Course unit: access is governed by the parent course.
+        // Course unit: access is governed by the parent course. Markdown is
+        // the source of truth for filesystem courses, so it also covers the
+        // window where the course row has not been seeded/backfilled yet.
         const [c] = await db
           .select({ visibility: course.visibility, createdBy: course.createdBy })
           .from(course)
           .where(eq(course.id, u.courseId));
-        if (!c) return false;
-        if (c.visibility === "public") return true;
-        if (!userId) return false;
-        if (c.createdBy === userId) return true;
-        if ((await getVipOwnerIds(userId)).has(c.createdBy ?? "")) return true;
-        return (await getGrantedCourseIds(userId)).has(u.courseId);
+
+        const fsVis = await filesystemCourseVisibility(u.courseId);
+        const vis = c?.visibility ?? fsVis ?? "public";
+        if (vis === "public") return true;
+        if (vis === "hidden") {
+          return (
+            !!userId &&
+            (c?.createdBy === userId ||
+              (fsVis !== null && (await isPlatformAdmin(userId))))
+          );
+        }
+        return canOpenNonPublicCourse(u.courseId, userId, c?.createdBy, fsVis !== null);
       }
     } catch (err) {
       console.warn("canAccessUnit DB error:", err);
     }
   }
 
-  // Filesystem fallback: a unit inherits the visibility declared by its parent
-  // course markdown. Standalone filesystem units (no courseId) stay public.
+  // Filesystem fallback (DB row not seeded yet, or DB unavailable): a unit
+  // inherits the visibility declared by its parent course markdown.
   try {
-    const { getAllCourses, getAllUnits } = await import("@/lib/content/registry");
+    const { getAllUnits } = await import("@/lib/content/registry");
     const fsUnit = getAllUnits().find((fu) => {
       const p = fu.parsed;
       const match = p.title.match(/Unit\s+(\d+)/i);
@@ -214,12 +286,10 @@ export async function canAccessUnit(
 
     const parentCourseId = fsUnit.parsed.courseId;
     if (!parentCourseId) return true; // standalone unit, no parent visibility
-    const vis = getAllCourses().find((c) => c.id === parentCourseId)?.visibility ?? "public";
+    const vis = (await filesystemCourseVisibility(parentCourseId)) ?? "public";
     if (vis === "public") return true;
-    if (vis === "hidden") return false;
-    if (!userId) return false;
-    if ((await getVipOwnerIds(userId)).size > 0) return true;
-    return (await getGrantedCourseIds(userId)).has(parentCourseId);
+    if (vis === "hidden") return !!userId && (await isPlatformAdmin(userId));
+    return canOpenNonPublicCourse(parentCourseId, userId, null, true);
   } catch {}
 
   return false;
@@ -232,6 +302,9 @@ export async function canAccessCourse(
 ): Promise<boolean> {
   if (SYSTEM_COURSE_IDS.includes(courseId)) return true;
 
+  const fsVis = await filesystemCourseVisibility(courseId);
+  const isFs = fsVis !== null;
+
   if (await isDbAvailable()) {
     try {
       const [c] = await db
@@ -239,33 +312,29 @@ export async function canAccessCourse(
         .from(course)
         .where(eq(course.id, courseId));
       if (c) {
-        if (c.visibility === "public") return true;
-        if (!userId) return false;
-        if (c.createdBy === userId) return true;
-        if ((await getVipOwnerIds(userId)).has(c.createdBy ?? "")) return true;
-        return (await getGrantedCourseIds(userId)).has(courseId);
+        const vis = c.visibility ?? fsVis ?? "public";
+        if (vis === "public") return true;
+        if (vis === "hidden") {
+          return (
+            !!userId &&
+            (c.createdBy === userId || (isFs && (await isPlatformAdmin(userId))))
+          );
+        }
+        return canOpenNonPublicCourse(courseId, userId, c.createdBy, isFs);
       }
     } catch (err) {
       console.warn("canAccessCourse DB error:", err);
     }
   }
 
-  // Filesystem course fallback: honor the markdown visibility instead of
-  // assuming every file in content/ is public. A non-public course is only
-  // reachable by the owner's VIP students or explicitly granted students;
-  // the owner check itself lives in the DB path above.
-  try {
-    const { getAllCourses } = await import("@/lib/content/registry");
-    const fc = getAllCourses().find((c) => c.id === courseId);
-    if (!fc) return false;
-    const vis = fc.visibility ?? "public";
-    if (vis === "public") return true;
-    if (vis === "hidden") return false;
-    if (!userId) return false;
-    if ((await getVipOwnerIds(userId)).size > 0) return true;
-    return (await getGrantedCourseIds(userId)).has(courseId);
-  } catch {}
-
+  // Filesystem fallback: honor the markdown visibility. Without this branch a
+  // cold start (before the background seed finishes) would 404 every platform
+  // VIP course even for its owner.
+  if (isFs) {
+    if (fsVis === "public") return true;
+    if (fsVis === "hidden") return !!userId && (await isPlatformAdmin(userId));
+    return canOpenNonPublicCourse(courseId, userId, null, true);
+  }
   return false;
 }
 
@@ -783,6 +852,22 @@ export async function getCourseWithContent(
         ];
         if (vipOwnerIds.length)
           visibilityConds.push(inArray(course.createdBy, vipOwnerIds));
+
+        // Filesystem VIP courses may have no createdBy while the background
+        // seed is still running, which would otherwise hide them from their
+        // own VIP students and the platform owner. Scope the fallback to the
+        // platform-declared VIP course ids so other owners' private courses
+        // are never exposed.
+        const { getAllCourses } = await import("@/lib/content/registry");
+        const platformVipIds = getAllCourses()
+          .filter((c) => c.visibility !== "public")
+          .map((c) => c.id);
+        if (
+          platformVipIds.length &&
+          (vipOwnerIds.length || (await isPlatformAdmin(userId)))
+        ) {
+          visibilityConds.push(inArray(course.id, platformVipIds));
+        }
       }
       courseConditions.push(or(...visibilityConds)!);
 
