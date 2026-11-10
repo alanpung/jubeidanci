@@ -5,5 +5,5 @@ description: "C1 Multiple Choice Course by Alan P"
 sourceLanguage: "en"
 targetLanguage: "en"
 level: "C1"
-visibility: "public"
+visibility: "private"
 ---

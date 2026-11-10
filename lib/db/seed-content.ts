@@ -47,6 +47,14 @@ async function runSeedTask() {
     const courses = getAllCourses();
     const units = getAllUnits();
 
+    // Course markdown is the source of truth for the visibility of NEW rows.
+    // Unit markdown has no visibility field, so a new unit inherits its parent
+    // course's value. Existing rows keep whatever the owner chose — see the
+    // onConflictDoUpdate note below.
+    const courseVisibility = new Map(
+      courses.map((c) => [c.id, c.visibility ?? "public"] as const),
+    );
+
     // 3. Batch upsert all filesystem courses with Alan P (creatorId) as author
     if (courses.length > 0) {
       const courseValues = courses.map((c) => ({
@@ -55,7 +63,7 @@ async function runSeedTask() {
         sourceLanguage: c.sourceLanguage,
         targetLanguage: c.targetLanguage,
         level: c.level,
-        visibility: "public" as const,
+        visibility: c.visibility ?? "public",
         published: true,
         createdBy: creatorId,
       }));
@@ -70,9 +78,12 @@ async function runSeedTask() {
             // exist yet. Once a course is in the DB its title belongs to the
             // owner (edit title); the public/private visibility the owner chose
             // must never be clobbered by a re-seed. We therefore leave
-            // `visibility` out of this update entirely: new rows get "public"
-            // from the insert `values` above, and existing rows keep whatever
-            // the owner set (a private course stored as NULL stays private).
+            // `visibility` out of this update entirely: new rows get the
+            // markdown-declared value from the insert `values` above, and
+            // existing rows keep whatever the owner set (a private course
+            // stored as NULL stays private). Rows created before visibility
+            // was wired through the parser are fixed by the one-off backfill
+            // in drizzle/0012_vip_courses.sql.
             //
             // `title` is deliberately absent from this update too — a renamed
             // course must survive the next background sync, otherwise the
@@ -176,7 +187,7 @@ async function runSeedTask() {
         targetLanguage: p.targetLanguage,
         sourceLanguage: p.sourceLanguage,
         level: p.level,
-        visibility: "public" as const,
+        visibility: courseVisibility.get(p.courseId) ?? "public",
         createdBy: creatorId,
       });
     }
@@ -201,7 +212,8 @@ async function runSeedTask() {
             level: sql`excluded.level`,
             // Same rule as courses: never reset a visibility the owner chose.
             // Leave `visibility` out of the update so a private unit (NULL)
-            // survives every re-seed; new units inherit "public" from values.
+            // survives every re-seed; new units inherit their parent course's
+            // markdown visibility from values.
             createdBy: sql`coalesce(${unit.createdBy}, excluded.created_by)`,
             updatedAt: new Date(),
           },

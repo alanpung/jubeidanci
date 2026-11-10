@@ -1,5 +1,10 @@
 import matter from "gray-matter";
-import type { ParsedCourse } from "./types";
+import type { CourseVisibility, ParsedCourse } from "./types";
+
+/** Only these three values have meaning to the access-control layer. */
+function normalizeVisibility(value: unknown): CourseVisibility {
+  return value === "private" || value === "hidden" ? value : "public";
+}
 
 /**
  * Parse a course markdown file.
@@ -12,6 +17,7 @@ import type { ParsedCourse } from "./types";
  * sourceLanguage: "en"
  * targetLanguage: "de"
  * level: "B1"
+ * visibility: "public"        # optional; defaults to "public"
  * ---
  * ```
  *
@@ -32,5 +38,6 @@ export function parseCourseMarkdown(raw: string): ParsedCourse {
     sourceLanguage: fm.sourceLanguage ?? "en",
     targetLanguage: fm.targetLanguage ?? "en",
     level: fm.level ?? "A1",
+    visibility: normalizeVisibility(fm.visibility),
   };
 }

@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import { parseUnitMarkdown } from "./unit-parser";
 import { parseCourseMarkdown } from "./course-parser";
-import type { ParsedUnit, ParsedCourse, UnitLesson } from "./types";
+import type { CourseVisibility, ParsedUnit, ParsedCourse, UnitLesson } from "./types";
 
 export { parseUnitMarkdown } from "./unit-parser";
 export { parseCourseMarkdown } from "./course-parser";
@@ -76,6 +76,8 @@ export interface LoadedCourse {
   targetLanguage: string;
   level: string;
   description: string;
+  /** From course frontmatter; "public" when omitted. */
+  visibility: CourseVisibility;
 }
 
 export interface LoadedUnit {
@@ -125,6 +127,7 @@ export function loadContentDir(): { courses: LoadedCourse[]; units: LoadedUnit[]
             targetLanguage: parsed.targetLanguage,
             level: parsed.level,
             description: parsed.description,
+            visibility: parsed.visibility,
           });
         } catch {
           // skip malformed

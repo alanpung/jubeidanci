@@ -29,6 +29,7 @@ import type {
   OwnedCourseInfo,
   CourseManagementInfo,
   AvailableUnitForCourse,
+  CourseVisibility,
 } from "@/lib/content/types";
 import { getUnitLessonsSafe, getUnitLessonCountFast } from "@/lib/content/loader";
 import { getLessonsSrsWordSet } from "@/lib/content/srs-word-count";
@@ -198,17 +199,27 @@ export async function canAccessUnit(
     }
   }
 
-  // Filesystem fallback: any unit defined in content/ is public
+  // Filesystem fallback: a unit inherits the visibility declared by its parent
+  // course markdown. Standalone filesystem units (no courseId) stay public.
   try {
-    const { getAllUnits } = await import("@/lib/content/registry");
-    const isFs = getAllUnits().some((fu) => {
+    const { getAllCourses, getAllUnits } = await import("@/lib/content/registry");
+    const fsUnit = getAllUnits().find((fu) => {
       const p = fu.parsed;
       const match = p.title.match(/Unit\s+(\d+)/i);
       const unitNum = match ? parseInt(match[1], 10) : null;
       const fsUnitId = unitNum ? `${p.courseId}-unit-${unitNum}` : `${p.courseId}-${p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
       return fsUnitId === unitId;
     });
-    if (isFs) return true;
+    if (!fsUnit) return false;
+
+    const parentCourseId = fsUnit.parsed.courseId;
+    if (!parentCourseId) return true; // standalone unit, no parent visibility
+    const vis = getAllCourses().find((c) => c.id === parentCourseId)?.visibility ?? "public";
+    if (vis === "public") return true;
+    if (vis === "hidden") return false;
+    if (!userId) return false;
+    if ((await getVipOwnerIds(userId)).size > 0) return true;
+    return (await getGrantedCourseIds(userId)).has(parentCourseId);
   } catch {}
 
   return false;
@@ -239,10 +250,20 @@ export async function canAccessCourse(
     }
   }
 
-  // Filesystem course fallback: always public
+  // Filesystem course fallback: honor the markdown visibility instead of
+  // assuming every file in content/ is public. A non-public course is only
+  // reachable by the owner's VIP students or explicitly granted students;
+  // the owner check itself lives in the DB path above.
   try {
     const { getAllCourses } = await import("@/lib/content/registry");
-    if (getAllCourses().some((fc) => fc.id === courseId)) return true;
+    const fc = getAllCourses().find((c) => c.id === courseId);
+    if (!fc) return false;
+    const vis = fc.visibility ?? "public";
+    if (vis === "public") return true;
+    if (vis === "hidden") return false;
+    if (!userId) return false;
+    if ((await getVipOwnerIds(userId)).size > 0) return true;
+    return (await getGrantedCourseIds(userId)).has(courseId);
   } catch {}
 
   return false;
@@ -349,7 +370,7 @@ export async function listCourses(
             level: fc.level,
             createdBy: null,
             creatorName: "Alan P",
-            visibility: "public",
+            visibility: fc.visibility ?? "public",
             unitCount: cUnits.length,
           });
         }
@@ -389,6 +410,9 @@ export async function listCourses(
   const fsUnits = getAllUnits();
   return fsCourses
     .filter((c) => {
+      // Mirror the DB path: hidden courses are owner-only and filesystem rows
+      // carry no createdBy, so drop them here rather than leaking them.
+      if ((c.visibility ?? "public") === "hidden") return false;
       if (filters?.sourceLanguage && c.sourceLanguage !== filters.sourceLanguage) return false;
       if (filters?.targetLanguage && c.targetLanguage !== filters.targetLanguage) return false;
       if (filters?.level && c.level !== filters.level) return false;
@@ -405,6 +429,7 @@ export async function listCourses(
         level: c.level,
         createdBy: null,
         creatorName: "Alan P",
+        visibility: c.visibility ?? "public",
         unitCount: cUnits.length,
         lessonCount: lessonsCount,
       };
@@ -910,7 +935,7 @@ export async function getCourseWithContent(
     sourceLanguage: fsCourse.sourceLanguage,
     targetLanguage: fsCourse.targetLanguage,
     level: fsCourse.level,
-    visibility: "public",
+    visibility: fsCourse.visibility ?? "public",
     createdBy: null,
     creatorName: "Alan P",
     units: naturalSortUnits(mappedUnits),
@@ -1264,7 +1289,7 @@ export async function getUnitWithContent(
 
   // Fallback to filesystem registry
   try {
-    const { getAllUnits } = await import("@/lib/content/registry");
+    const { getAllCourses, getAllUnits } = await import("@/lib/content/registry");
     const fsUnit = getAllUnits().find((u) => {
       const p = u.parsed;
       if (!p.courseId) return false;
@@ -1287,7 +1312,7 @@ export async function getUnitWithContent(
         sourceLanguage: p.sourceLanguage ?? "en",
         level: p.level ?? "A1",
         courseId: p.courseId,
-        visibility: "public",
+        visibility: getAllCourses().find((c) => c.id === p.courseId)?.visibility ?? "public",
         createdBy: null,
         lessons,
         parseError: false,
@@ -1453,7 +1478,7 @@ export async function getUserOwnedCourses(
             sourceLanguage: fc.sourceLanguage,
             targetLanguage: fc.targetLanguage,
             level: fc.level,
-            visibility: "public",
+            visibility: fc.visibility ?? "public",
             createdBy: null,
             creatorName: "Alan P",
             createdAt: null,
@@ -1557,7 +1582,7 @@ export async function getCourseForManagement(
     sourceLanguage: string;
     targetLanguage: string;
     level: string;
-    visibility: "public" | "private" | null;
+    visibility: CourseVisibility | null;
     createdBy: string | null;
   } | null = null;
 
@@ -1565,7 +1590,7 @@ export async function getCourseForManagement(
     id: string;
     title: string | null;
     icon: string | null;
-    visibility: "public" | "private" | null;
+    visibility: CourseVisibility | null;
     markdown: string | null;
   }[] = [];
 
@@ -1588,7 +1613,7 @@ export async function getCourseForManagement(
         if (cr.createdBy !== userId && !isAdmin) return null;
         courseRow = {
           ...cr,
-          visibility: (cr.visibility as "public" | "private" | null) ?? null,
+          visibility: (cr.visibility as CourseVisibility | null) ?? null,
         };
         const dbUnits = await db
           .select({
@@ -1602,7 +1627,7 @@ export async function getCourseForManagement(
           .where(eq(unit.courseId, courseId));
         units = dbUnits.map((u) => ({
           ...u,
-          visibility: (u.visibility as "public" | "private" | null) ?? null,
+          visibility: (u.visibility as CourseVisibility | null) ?? null,
         }));
       }
     } catch (err) {
@@ -1622,7 +1647,7 @@ export async function getCourseForManagement(
           sourceLanguage: fc.sourceLanguage,
           targetLanguage: fc.targetLanguage,
           level: fc.level,
-          visibility: "public",
+          visibility: fc.visibility ?? "public",
           createdBy: null,
         };
       }
@@ -1656,7 +1681,7 @@ export async function getCourseForManagement(
         id: unitId,
         title: p.title,
         icon: p.icon,
-        visibility: "public",
+        visibility: courseRow.visibility ?? "public",
         lessonCount: lessons.length,
         questionType: getUnitQuestionType({ lessons, markdown: u.markdown }),
       };

@@ -61,6 +61,9 @@ export interface UnitLesson {
   exercises: Exercise[];
 }
 
+/** Visibility a course can declare in its markdown frontmatter. */
+export type CourseVisibility = "public" | "private" | "hidden";
+
 /** Parsed course metadata from a course markdown file. */
 export interface ParsedCourse {
   id: string | null;
@@ -69,6 +72,8 @@ export interface ParsedCourse {
   sourceLanguage: string;
   targetLanguage: string;
   level: string;
+  /** Defaults to "public" when the frontmatter omits or mis-states it. */
+  visibility: CourseVisibility;
 }
 
 export type Exercise =

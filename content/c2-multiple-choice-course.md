@@ -5,5 +5,5 @@ description: "C2 Multiple Choice Course by Alan P"
 sourceLanguage: "en"
 targetLanguage: "en"
 level: "C2"
-visibility: "public"
+visibility: "private"
 ---
