@@ -5,5 +5,5 @@ description: "B2 Fill in the Blank Course by Alan P"
 sourceLanguage: "en"
 targetLanguage: "en"
 level: "B2"
-visibility: "public"
+visibility: "private"
 ---
