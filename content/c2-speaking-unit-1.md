@@ -697,7 +697,7 @@ srsWords: "language" "'optimisation'"
 
 [speaking]
 sentence: "What 'rightsizing' means, in practice, is that the people at the bottom will bear the cost of the decisions made at the top."
-srsWords: "'rightsizing'" "means"
+srsWords: "rightsizing" "means"
 
 [speaking]
 sentence: "The euphemism is the linguistic form of looking away while continuing to act."
@@ -709,7 +709,7 @@ srsWords: "struck" "industry"
 
 [speaking]
 sentence: "The phrase 'pre-owned' does not change what the object is; it changes what the buyer is willing to feel about it."
-srsWords: "phrase" "'pre"
+srsWords: "phrase" "pre-owned"
 
 [speaking]
 sentence: "What the euphemism achieves, in the end, is not protection of the listener but protection of the speaker."
