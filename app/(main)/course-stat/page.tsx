@@ -8,6 +8,7 @@ import {
   type CourseSrsRow,
   type CourseSrsUnique,
 } from "@/lib/content/course-srs-report";
+import CourseStatFilters from "@/components/course-stat-filters";
 
 export const dynamic = "force-dynamic";
 
@@ -46,13 +47,32 @@ function NumCell({ value, strong }: { value: number; strong?: boolean }) {
   );
 }
 
-export default async function CoursesReportPage() {
+type PageProps = {
+  searchParams: Promise<{ level?: string; type?: string }>;
+};
+
+export default async function CoursesReportPage({
+  searchParams,
+}: PageProps) {
   const session = await getSession();
   if (!session || !isAdminEmail(session.user.email)) {
     redirect("/library");
   }
 
-  const { rows, unique } = getCourseSrsReport();
+  const sp = await searchParams;
+  const levels = (sp.level ?? "")
+    .split(",")
+    .map((s) => s.trim().toUpperCase())
+    .filter(Boolean);
+  const kinds = (sp.type ?? "")
+    .split(",")
+    .map((s) => s.trim().toLowerCase())
+    .filter(Boolean);
+
+  const { rows, unique, availableKinds, availableLevels } = getCourseSrsReport({
+    levels: levels.length ? levels : undefined,
+    kinds: kinds.length ? kinds : undefined,
+  });
 
   const totals: { byLevel: Record<Cefr, number>; unknown: number; total: number } = {
     byLevel: { A1: 0, A2: 0, B1: 0, B2: 0, C1: 0, C2: 0 },
@@ -122,6 +142,14 @@ export default async function CoursesReportPage() {
           指该词（或其词素）未出现在内置词典中；所有者可见，学生不可见。
         </p>
       </header>
+
+      <CourseStatFilters
+        availableLevels={availableLevels}
+        availableKinds={availableKinds}
+        selectedLevels={levels}
+        selectedKinds={kinds}
+        resultCount={rows.length}
+      />
 
       <div className="overflow-x-auto rounded-xl border border-lingo-border bg-white">
         <table className="w-full min-w-[760px] border-collapse text-sm">
