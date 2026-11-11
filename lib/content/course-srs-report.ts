@@ -764,7 +764,33 @@ export interface CourseSrsUnique {
   total: number;
 }
 
-export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsUnique } {
+/**
+ * Optional filter for {@link getCourseSrsReport}. Lists are OR within
+ * themselves; a course must satisfy EVERY active list to be included.
+ */
+export interface CourseSrsFilter {
+  /** Course CEFR levels to keep (e.g. ["A2","B1"]). Empty/omitted = all. */
+  levels?: string[];
+  /**
+   * Course question-type ids to keep (e.g. ["speaking","flashcard-review"]).
+   * Empty/omitted = all. A course with no recognised type never matches a
+   * non-empty `kinds` list.
+   */
+  kinds?: string[];
+}
+
+export interface CourseSrsReport {
+  rows: CourseSrsRow[];
+  unique: CourseSrsUnique;
+  /** Every distinct course type present in the data (id + Chinese label). */
+  availableKinds: { id: string; label: string }[];
+  /** Every distinct CEFR level present in the data, in CEFR order. */
+  availableLevels: string[];
+}
+
+export function getCourseSrsReport(
+  filter?: CourseSrsFilter,
+): CourseSrsReport {
   const dict = buildDictionary();
 
   const files = readdirSync(CONTENT_DIR).filter(
@@ -772,15 +798,6 @@ export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsU
   );
 
   const byCourse = new Map<string, CourseAccumulator>();
-
-  // Across all courses, the per-level / unknown / total DISTINCT (de-duplicated)
-  // word sets. A word that appears in three courses, or fifty times inside one
-  // course, is counted exactly once here — this is the "non-overlapping total".
-  const uniqueByLevel: Record<Cefr, Set<string>> = {
-    A1: new Set(), A2: new Set(), B1: new Set(), B2: new Set(), C1: new Set(), C2: new Set(),
-  };
-  const uniqueUnknown = new Set<string>();
-  const uniqueAll = new Set<string>();
 
   for (const f of files) {
     const src = readFileSync(path.join(CONTENT_DIR, f), "utf8");
@@ -833,36 +850,70 @@ export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsU
           // exercises of the same course counts exactly once.
           if (row.all.has(norm)) continue;
           row.all.add(norm);
-          uniqueAll.add(norm);
           const lvl = levelForWord(w, dict);
           if (lvl) {
             row.byLevel[lvl].add(norm);
-            uniqueByLevel[lvl].add(norm);
           } else {
             row.unknown.add(norm);
-            uniqueUnknown.add(norm);
           }
         }
       }
     }
   }
 
-  const rows: CourseSrsRow[] = Array.from(byCourse.values()).map((r) => ({
-    courseId: r.courseId,
-    level: r.level,
-    kind: r.kind,
-    kindLabel: r.kindLabel,
-    total: r.all.size,
-    byLevel: {
-      A1: r.byLevel.A1.size,
-      A2: r.byLevel.A2.size,
-      B1: r.byLevel.B1.size,
-      B2: r.byLevel.B2.size,
-      C1: r.byLevel.C1.size,
-      C2: r.byLevel.C2.size,
-    },
-    unknown: r.unknown.size,
-  }));
+  // Enumerate filter options from the FULL data set (independent of the active
+  // filter) so the controls stay stable while filtering.
+  const kindMap = new Map<string, string>();
+  const levelSet = new Set<string>();
+  for (const r of byCourse.values()) {
+    if (r.kind) kindMap.set(r.kind, r.kindLabel || r.kind);
+    if (r.level) levelSet.add(r.level);
+  }
+  const availableKinds = Array.from(kindMap, ([id, label]) => ({ id, label })).sort(
+    (a, b) => a.label.localeCompare(b.label, "zh-Hans-CN"),
+  );
+  const availableLevels = CEFR_ORDER.filter((l) => levelSet.has(l));
+
+  const levels = (filter?.levels ?? []).filter(Boolean);
+  const kinds = (filter?.kinds ?? []).filter(Boolean);
+  const passes = (r: CourseAccumulator) => {
+    if (levels.length && (!r.level || !levels.includes(r.level))) return false;
+    if (kinds.length && (!r.kind || !kinds.includes(r.kind))) return false;
+    return true;
+  };
+
+  // Per-level / unknown / total DISTINCT sets, de-duplicated across ONLY the
+  // courses that pass the filter — this is the filtered "non-overlapping total".
+  const uniqueByLevel: Record<Cefr, Set<string>> = {
+    A1: new Set(), A2: new Set(), B1: new Set(), B2: new Set(), C1: new Set(), C2: new Set(),
+  };
+  const uniqueUnknown = new Set<string>();
+  const uniqueAll = new Set<string>();
+
+  const rows: CourseSrsRow[] = [];
+  for (const r of byCourse.values()) {
+    if (!passes(r)) continue;
+    for (const w of r.all) uniqueAll.add(w);
+    for (const c of CEFR_ORDER) for (const w of r.byLevel[c]) uniqueByLevel[c].add(w);
+    for (const w of r.unknown) uniqueUnknown.add(w);
+
+    rows.push({
+      courseId: r.courseId,
+      level: r.level,
+      kind: r.kind,
+      kindLabel: r.kindLabel,
+      total: r.all.size,
+      byLevel: {
+        A1: r.byLevel.A1.size,
+        A2: r.byLevel.A2.size,
+        B1: r.byLevel.B1.size,
+        B2: r.byLevel.B2.size,
+        C1: r.byLevel.C1.size,
+        C2: r.byLevel.C2.size,
+      },
+      unknown: r.unknown.size,
+    });
+  }
   rows.sort((a, b) => {
     const la = CEFR_ORDER.indexOf(a.level as Cefr);
     const lb = CEFR_ORDER.indexOf(b.level as Cefr);
@@ -883,7 +934,7 @@ export function getCourseSrsReport(): { rows: CourseSrsRow[]; unique: CourseSrsU
     total: uniqueAll.size,
   };
 
-  return { rows, unique };
+  return { rows, unique, availableKinds, availableLevels };
 }
 
 /**
