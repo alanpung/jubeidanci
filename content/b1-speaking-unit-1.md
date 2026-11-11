@@ -885,7 +885,7 @@ srsWords: "neighbour" "someone"
 
 [speaking]
 sentence: "The café has an atmosphere that makes you want to stay."
-srsWords: "caf" "has"
+srsWords: "café" "has"
 
 [speaking]
 sentence: "He's got a dry sense of humour that took me a while to get."
