@@ -192,6 +192,40 @@ async function runSeedTask() {
       });
     }
 
+    // 5b. Batch upsert standalone (courseId-null) filesystem units.
+    // The main loop above skips units without courseId. Standalone units need
+    // their own upsert so they appear in getBrowsableUnits (which requires
+    // visibility='public') and getStandaloneUnits (courseId IS NULL).
+    //
+    // The ID must match the filesystem fallback formula used by
+    // getStandaloneUnits and srs.ts: parseUnitMarkdown never sets parsed.id,
+    // so the fallback is the title slug `title.toLowerCase().replace(...)`.
+    // Using the same formula here keeps DB and filesystem IDs in sync for FK
+    // integrity and SRS word sync.
+    for (const u of units) {
+      const p = u.parsed;
+      if (!p.targetLanguage || p.courseId) continue; // only courseId-null units
+
+      const standaloneUnitId = p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+
+      unitValues.push({
+        id: standaloneUnitId,
+        courseId: null,
+        title: p.title,
+        description: p.description,
+        icon: p.icon,
+        color: p.color,
+        markdown: u.markdown,
+        targetLanguage: p.targetLanguage,
+        sourceLanguage: p.sourceLanguage,
+        level: p.level,
+        // Hardcoded "public" in insert values only; NOT in onConflictDoUpdate
+        // .set below, so an owner who later hides a unit keeps their choice.
+        visibility: "public",
+        createdBy: creatorId,
+      });
+    }
+
     // Insert units in chunks of 5 to keep request payload safe
     for (let i = 0; i < unitValues.length; i += 5) {
       const chunk = unitValues.slice(i, i + 5);
