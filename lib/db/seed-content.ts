@@ -1,7 +1,6 @@
 import { dbBackground, isDbAvailable } from "./index";
 import { course, unit, user } from "./schema";
-import { getAllCourses, getAllUnits, invalidateCache } from "../content/registry";
-import { invalidateContentDirCache } from "../content/loader";
+import { getAllCourses, getAllUnits, invalidateAllCaches } from "../content/registry";
 import { eq, or, ilike, and, notInArray, like, notLike, sql, count, inArray } from "drizzle-orm";
 import { runAfterResponse } from "../after-response";
 import type { ParsedUnit } from "../content/types";
@@ -63,15 +62,14 @@ async function runSeedTask() {
 
     // 2. Load filesystem content.
     //
-    // Force a FRESH scan of the content directory. `loadContentDir()` keeps a
-    // 24h cache (and `registry.invalidateCache()` does NOT clear that cache),
-    // so without this a warm server that picked up newly committed
-    // `content/*.md` units via a `git pull` (without a full restart) would keep
-    // returning the stale file list — and the seeder would never discover the
-    // new units. Clearing here is cheap: it only happens inside an actual seed
-    // run, which is gated by the missing-units / routine-sync checks below.
-    invalidateCache();
-    invalidateContentDirCache();
+    // Force a FRESH scan of the content directory before reading the catalog.
+    // `loadContentDir()` keeps a 24h cache, so without this a warm server
+    // that picked up newly committed `content/*.md` units via a `git pull`
+    // (without a full restart) would keep returning the stale file list — and
+    // the seeder would never discover the new units. Clearing here is cheap:
+    // it only happens inside an actual seed run, which is gated by the
+    // missing-units / routine-sync checks below.
+    invalidateAllCaches();
     const courses = getAllCourses();
     const units = getAllUnits();
 
@@ -189,15 +187,15 @@ async function runSeedTask() {
     // 5. Track valid unit IDs for each course and batch upsert filesystem units
     const validUnitIdsByCourse = new Map<string, string[]>();
     const unitValues = [];
+    const standaloneUnitValues = [];
 
     for (const u of units) {
       const p = u.parsed;
       if (!p.targetLanguage || !p.courseId) continue;
 
-      const match = p.title.match(/Unit\s+(\d+)/i);
-      const unitNum = match ? parseInt(match[1], 10) : null;
-      
-      const unitId = unitNum ? `${p.courseId}-unit-${unitNum}` : `${p.courseId}-${p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+      // Use the SAME helper the missing-units check uses, so the id we look
+      // for and the id we write can never drift apart.
+      const unitId = deriveUnitDbId(p);
 
       if (!validUnitIdsByCourse.has(p.courseId)) {
         validUnitIdsByCourse.set(p.courseId, []);
@@ -221,9 +219,17 @@ async function runSeedTask() {
     }
 
     // 5b. Batch upsert standalone (courseId-null) filesystem units.
+    //
     // The main loop above skips units without courseId. Standalone units need
-    // their own upsert so they appear in getBrowsableUnits (which requires
-    // visibility='public') and getStandaloneUnits (courseId IS NULL).
+    // their own upsert so they appear in getStandaloneUnits (courseId IS NULL)
+    // and getBrowsableUnits (visibility='public').
+    //
+    // They are inserted in a SEPARATE pass, before the course-owned units, and
+    // each chunk is isolated: the course-owned pass writes ~200 rows across
+    // dozens of chunked INSERTs, and a single failure there used to abort
+    // `runSeedTask` before the standalone rows (which were pushed last) were
+    // ever written — leaving the whole "Standalone Units" folder empty with
+    // nothing but a swallowed console warning to show for it.
     //
     // The ID must match the filesystem fallback formula used by
     // getStandaloneUnits and srs.ts: parseUnitMarkdown never sets parsed.id,
@@ -234,9 +240,9 @@ async function runSeedTask() {
       const p = u.parsed;
       if (!p.targetLanguage || p.courseId) continue; // only courseId-null units
 
-      const standaloneUnitId = p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+      const standaloneUnitId = deriveUnitDbId(p);
 
-      unitValues.push({
+      standaloneUnitValues.push({
         id: standaloneUnitId,
         courseId: null,
         title: p.title,
@@ -254,32 +260,89 @@ async function runSeedTask() {
       });
     }
 
-    // Insert units in chunks of 5 to keep request payload safe
+    // 5c. Upsert the standalone units FIRST, in their own isolated pass.
+    //
+    // Why first and separate: the course-owned pass below writes ~200 rows in
+    // dozens of chunked INSERTs. Any one of those chunks failing used to abort
+    // the whole `runSeedTask` — and because the standalone rows used to be
+    // appended to the same array (i.e. written in the LAST chunks), they were
+    // never written at all. The failure was swallowed by the outer try/catch,
+    // so the "Standalone Units" folder simply stayed empty.
+    //
+    // Each chunk is now wrapped on its own: a bad row can no longer take the
+    // rest of the catalog down with it.
+    if (standaloneUnitValues.length > 0) {
+      for (let i = 0; i < standaloneUnitValues.length; i += 5) {
+        const chunk = standaloneUnitValues.slice(i, i + 5);
+        try {
+          await dbBackground
+            .insert(unit)
+            .values(chunk)
+            .onConflictDoUpdate({
+              target: unit.id,
+              set: {
+                courseId: sql`excluded.course_id`,
+                title: sql`excluded.title`,
+                description: sql`excluded.description`,
+                icon: sql`excluded.icon`,
+                color: sql`excluded.color`,
+                markdown: sql`excluded.markdown`,
+                targetLanguage: sql`excluded.target_language`,
+                sourceLanguage: sql`excluded.source_language`,
+                level: sql`excluded.level`,
+                // Same rule as courses: never reset a visibility the owner
+                // chose. Leave `visibility` out of the update so a private
+                // unit (NULL) survives every re-seed; new units are inserted
+                // with "public".
+                createdBy: sql`coalesce(${unit.createdBy}, excluded.created_by)`,
+                updatedAt: new Date(),
+              },
+            });
+        } catch (err) {
+          console.warn(
+            `seedContentFromFilesystem: standalone unit chunk ${i / 5} failed:`,
+            err instanceof Error ? err.message : err,
+          );
+        }
+      }
+    }
+
+    // Insert units in chunks of 5 to keep request payload safe.
+    // Each chunk is isolated: one bad row must not abort the whole catalog
+    // sync (that previously left the library half-populated with nothing but
+    // a swallowed warning to show for it).
     for (let i = 0; i < unitValues.length; i += 5) {
       const chunk = unitValues.slice(i, i + 5);
-      await dbBackground
-        .insert(unit)
-        .values(chunk)
-        .onConflictDoUpdate({
-          target: unit.id,
-          set: {
-            courseId: sql`excluded.course_id`,
-            title: sql`excluded.title`,
-            description: sql`excluded.description`,
-            icon: sql`excluded.icon`,
-            color: sql`excluded.color`,
-            markdown: sql`excluded.markdown`,
-            targetLanguage: sql`excluded.target_language`,
-            sourceLanguage: sql`excluded.source_language`,
-            level: sql`excluded.level`,
-            // Same rule as courses: never reset a visibility the owner chose.
-            // Leave `visibility` out of the update so a private unit (NULL)
-            // survives every re-seed; new units inherit their parent course's
-            // markdown visibility from values.
-            createdBy: sql`coalesce(${unit.createdBy}, excluded.created_by)`,
-            updatedAt: new Date(),
-          },
-        });
+      try {
+        await dbBackground
+          .insert(unit)
+          .values(chunk)
+          .onConflictDoUpdate({
+            target: unit.id,
+            set: {
+              courseId: sql`excluded.course_id`,
+              title: sql`excluded.title`,
+              description: sql`excluded.description`,
+              icon: sql`excluded.icon`,
+              color: sql`excluded.color`,
+              markdown: sql`excluded.markdown`,
+              targetLanguage: sql`excluded.target_language`,
+              sourceLanguage: sql`excluded.source_language`,
+              level: sql`excluded.level`,
+              // Same rule as courses: never reset a visibility the owner chose.
+              // Leave `visibility` out of the update so a private unit (NULL)
+              // survives every re-seed; new units inherit their parent course's
+              // markdown visibility from values.
+              createdBy: sql`coalesce(${unit.createdBy}, excluded.created_by)`,
+              updatedAt: new Date(),
+            },
+          });
+      } catch (err) {
+        console.warn(
+          `seedContentFromFilesystem: course unit chunk ${i / 5} failed:`,
+          err instanceof Error ? err.message : err,
+        );
+      }
     }
 
     // 6. Strict cleanup of old/ghost units in DB for known courses.
@@ -332,14 +395,13 @@ export async function seedContentFromFilesystem() {
 
   const now = Date.now();
 
-  // NOTE: we do NOT invalidate the 24h content cache here. This function runs
-  // on the hot path (every library/units/browse page load via getStandaloneUnits),
-  // and clearing the cache would force a full synchronous re-parse of all
-  // content on every request. A stale cache self-heals: runSeedTask (which does
-  // invalidate) is reached via the routine-sync branch below within 30 minutes,
-  // and a fresh deploy/restart already starts with an empty cache.
-
-  // Check if DB contains all filesystem courses and units
+  // Check if DB contains all filesystem courses and units.
+  //
+  // The catalog read here is always fresh: `getAllUnits()` delegates to
+  // `loadContentDir()`, which re-scans as soon as the content directory's
+  // signature (file names + mtimes + sizes) changes. A warm instance that
+  // picked up new `content/*.md` files therefore sees them on the very next
+  // request, and the missing-units check below notices them immediately.
   try {
     const dbCourses = await dbBackground.select({ id: course.id }).from(course);
     const dbCourseIds = new Set(dbCourses.map((c) => c.id));
