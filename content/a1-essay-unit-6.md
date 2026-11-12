@@ -1,5 +1,6 @@
 ---
 unitTitle: "Unit 6: Sports and Games"
+courseId: "a1-essay-course"
 description: "A1 Model Essays about sports and games"
 icon: "⚽"
 color: "#EF4444"

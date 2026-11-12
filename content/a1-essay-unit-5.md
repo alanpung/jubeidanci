@@ -1,5 +1,6 @@
 ---
 unitTitle: "Unit 5: Transportation"
+courseId: "a1-essay-course"
 description: "A1 Model Essays about transportation"
 icon: "🚌"
 color: "#06B6D4"
