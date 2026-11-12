@@ -1,8 +1,10 @@
 import { dbBackground, isDbAvailable } from "./index";
 import { course, unit, user } from "./schema";
-import { getAllCourses, getAllUnits } from "../content/registry";
-import { eq, or, ilike, and, notInArray, like, notLike, sql, count } from "drizzle-orm";
+import { getAllCourses, getAllUnits, invalidateCache } from "../content/registry";
+import { invalidateContentDirCache } from "../content/loader";
+import { eq, or, ilike, and, notInArray, like, notLike, sql, count, inArray } from "drizzle-orm";
 import { runAfterResponse } from "../after-response";
+import type { ParsedUnit } from "../content/types";
 
 let lastSyncedAt = 0;
 
@@ -24,6 +26,22 @@ function startSeedTask(): Promise<void> {
   return seedPromise;
 }
 
+/**
+ * Replicate the DB id `runSeedTask` assigns to a filesystem unit so the
+ * missing-units check can test for its existence by id. Must stay in lockstep
+ * with the two upsert loops in `runSeedTask`.
+ */
+function deriveUnitDbId(p: ParsedUnit): string {
+  if (p.courseId) {
+    const match = p.title.match(/Unit\s+(\d+)/i);
+    const unitNum = match ? parseInt(match[1], 10) : null;
+    return unitNum
+      ? `${p.courseId}-unit-${unitNum}`
+      : `${p.courseId}-${p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-")}`;
+  }
+  return p.title.toLowerCase().replace(/[^a-z0-9]+/g, "-");
+}
+
 async function runSeedTask() {
   try {
     // 1. Ensure Alan's user name is "Alan P"
@@ -43,7 +61,17 @@ async function runSeedTask() {
 
     const creatorId = alanUser ? alanUser.id : null;
 
-    // 2. Load filesystem content
+    // 2. Load filesystem content.
+    //
+    // Force a FRESH scan of the content directory. `loadContentDir()` keeps a
+    // 24h cache (and `registry.invalidateCache()` does NOT clear that cache),
+    // so without this a warm server that picked up newly committed
+    // `content/*.md` units via a `git pull` (without a full restart) would keep
+    // returning the stale file list — and the seeder would never discover the
+    // new units. Clearing here is cheap: it only happens inside an actual seed
+    // run, which is gated by the missing-units / routine-sync checks below.
+    invalidateCache();
+    invalidateContentDirCache();
     const courses = getAllCourses();
     const units = getAllUnits();
 
@@ -304,6 +332,13 @@ export async function seedContentFromFilesystem() {
 
   const now = Date.now();
 
+  // NOTE: we do NOT invalidate the 24h content cache here. This function runs
+  // on the hot path (every library/units/browse page load via getStandaloneUnits),
+  // and clearing the cache would force a full synchronous re-parse of all
+  // content on every request. A stale cache self-heals: runSeedTask (which does
+  // invalidate) is reached via the routine-sync branch below within 30 minutes,
+  // and a fresh deploy/restart already starts with an empty cache.
+
   // Check if DB contains all filesystem courses and units
   try {
     const dbCourses = await dbBackground.select({ id: course.id }).from(course);
@@ -311,10 +346,23 @@ export async function seedContentFromFilesystem() {
     const courses = getAllCourses();
     const hasMissingCourse = courses.some((c) => !dbCourseIds.has(c.id));
 
-    const [unitCountRow] = await dbBackground.select({ count: count() }).from(unit);
-    const totalDbUnits = Number(unitCountRow?.count ?? 0);
-    const totalFsUnits = getAllUnits().length;
-    const hasMissingUnits = totalDbUnits < totalFsUnits;
+    // Detect missing *filesystem* units by their expected DB id, not by a raw
+    // total count. The old check (`dbUnitCount < fsUnitCount`) was blind to new
+    // units whenever the DB already held MORE units than the filesystem (e.g.
+    // hand-made AI-tutor units with UUID ids) — the count comparison came out
+    // false and newly committed units (like standalone a1-essay-* units) were
+    // skipped until the 30-minute routine sync.
+    const units = getAllUnits();
+    const expectedUnitIds = units.map((u) => deriveUnitDbId(u.parsed));
+    let hasMissingUnits = false;
+    if (expectedUnitIds.length > 0) {
+      const existingRows = await dbBackground
+        .select({ id: unit.id })
+        .from(unit)
+        .where(inArray(unit.id, expectedUnitIds));
+      const existingIds = new Set(existingRows.map((r) => r.id));
+      hasMissingUnits = expectedUnitIds.some((id) => !existingIds.has(id));
+    }
 
     if (!hasMissingCourse && !hasMissingUnits && lastSyncedAt > 0 && now - lastSyncedAt < SYNC_INTERVAL_MS) {
       return;

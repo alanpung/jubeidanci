@@ -148,3 +148,17 @@ export function loadContentDir(): { courses: LoadedCourse[]; units: LoadedUnit[]
   contentDirCache = { ts: now, value };
   return value;
 }
+
+/**
+ * Force the next `loadContentDir()` call to re-scan the filesystem instead of
+ * returning the (up to 24h) cached scan.
+ *
+ * IMPORTANT: `registry.invalidateCache()` only clears the *registry's* cache,
+ * not this module's `contentDirCache`. Callers that add/remove content files
+ * at runtime (e.g. the content seeder, which must pick up newly committed
+ * `content/*.md` units on a warm server) must call THIS function too, otherwise
+ * the seeder keeps scanning the stale file list and never discovers new units.
+ */
+export function invalidateContentDirCache() {
+  contentDirCache = null;
+}
