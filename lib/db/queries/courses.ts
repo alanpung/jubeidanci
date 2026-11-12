@@ -1107,9 +1107,21 @@ export async function getStandaloneUnits(
       // List EVERY non-hidden standalone unit for everyone (same catalog model
       // as courses): the open gate is enforced per-tile in the UI. The owner
       // still sees their own hidden units so they can un-hide them.
+      //
+      // `ne(unit.visibility, "hidden")` alone is NOT enough: in SQL,
+      // `NULL <> 'hidden'` evaluates to NULL — not TRUE — so a row whose
+      // visibility is NULL would be filtered out of the result set and be
+      // invisible to everyone. Rows created before the visibility column was
+      // wired up have exactly that NULL value, which is why a whole folder of
+      // standalone units could come up empty. `or(isNull(...), ne(...))`
+      // treats "no visibility set" as "not hidden".
       const libraryCondition = and(
         isNull(unit.courseId),
-        or(ne(unit.visibility, "hidden"), eq(unit.createdBy, userId))!
+        or(
+          isNull(unit.visibility),
+          ne(unit.visibility, "hidden"),
+          eq(unit.createdBy, userId)
+        )!
       )!;
 
       rows = await db
@@ -1261,7 +1273,11 @@ export async function getBrowsableUnits(
     .where(
       and(
         isNull(unit.courseId),
-        eq(unit.visibility, "public")
+        // "public" OR "no visibility recorded". A NULL visibility is the
+        // absence of a choice, not a hidden state — `visibility = 'public'`
+        // alone would silently drop every unit created before the column was
+        // wired up (NULL <> 'public' is NULL, not TRUE).
+        or(eq(unit.visibility, "public"), isNull(unit.visibility))
       )
     );
 

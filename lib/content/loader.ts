@@ -10,7 +10,12 @@ export { parseCourseMarkdown } from "./course-parser";
 const CONTENT_DIR = path.join(process.cwd(), "content");
 
 // Cached result of loadContentDir() — see that function for why.
-let contentDirCache: { ts: number; value: { courses: LoadedCourse[]; units: LoadedUnit[] } } | null = null;
+let contentDirCache: {
+  ts: number;
+  value: { courses: LoadedCourse[]; units: LoadedUnit[] };
+  /** Signature of the content directory at scan time (file names + mtimes). */
+  signature: string;
+} | null = null;
 // 24h. The content directory is bundled at build time and only changes on
 // deploy (which gives every instance a fresh module cache anyway), so there is
 // no reason to re-scan and re-parse every markdown file every 60s. A periodic
@@ -86,6 +91,37 @@ export interface LoadedUnit {
 }
 
 /**
+ * Cheap fingerprint of the content directory: the file names plus their
+ * mtimes and sizes.
+ *
+ * `readdirSync` + `statSync` on ~250 files is orders of magnitude cheaper than
+ * re-reading and re-parsing every markdown file, so this can run on every
+ * request. It lets the cache notice that the directory changed (a deploy, a
+ * `git pull`, a new unit file landing) and re-scan immediately, instead of
+ * serving a stale file list for up to 24 hours.
+ */
+function contentDirSignature(): string {
+  try {
+    if (!fs.existsSync(CONTENT_DIR)) return "";
+    return fs
+      .readdirSync(CONTENT_DIR)
+      .filter((f) => f.endsWith(".md"))
+      .sort()
+      .map((f) => {
+        try {
+          const st = fs.statSync(path.join(CONTENT_DIR, f));
+          return `${f}:${st.mtimeMs}:${st.size}`;
+        } catch {
+          return `${f}:missing`;
+        }
+      })
+      .join("|");
+  } catch {
+    return "";
+  }
+}
+
+/**
  * Scan content directory. Files ending in `-course.md` are courses, everything
  * else is treated as a unit.
  *
@@ -100,7 +136,14 @@ export function loadContentDir(): { courses: LoadedCourse[]; units: LoadedUnit[]
   // meaningful slice of the sync's wall-clock time.
   const now = Date.now();
   if (contentDirCache && now - contentDirCache.ts < CONTENT_DIR_CACHE_TTL_MS) {
-    return contentDirCache.value;
+    // Even inside the TTL, a changed directory must invalidate the cache.
+    // Without this a warm instance that picked up new content/*.md files
+    // (deploy, git pull) kept serving the OLD file list, so the seeder never
+    // discovered the new units and the corresponding folder stayed empty.
+    const signature = contentDirSignature();
+    if (signature === contentDirCache.signature) {
+      return contentDirCache.value;
+    }
   }
 
   const value: { courses: LoadedCourse[]; units: LoadedUnit[] } = (() => {
@@ -145,19 +188,21 @@ export function loadContentDir(): { courses: LoadedCourse[]; units: LoadedUnit[]
     return { courses, units };
   })();
 
-  contentDirCache = { ts: now, value };
+  contentDirCache = { ts: now, value, signature: contentDirSignature() };
   return value;
 }
 
 /**
  * Force the next `loadContentDir()` call to re-scan the filesystem instead of
- * returning the (up to 24h) cached scan.
+ * returning the cached scan.
  *
- * IMPORTANT: `registry.invalidateCache()` only clears the *registry's* cache,
- * not this module's `contentDirCache`. Callers that add/remove content files
- * at runtime (e.g. the content seeder, which must pick up newly committed
- * `content/*.md` units on a warm server) must call THIS function too, otherwise
- * the seeder keeps scanning the stale file list and never discovers new units.
+ * Callers that add/remove content files at runtime (e.g. the content seeder,
+ * which must pick up newly committed `content/*.md` units on a warm server)
+ * call this so the seeder never scans a stale file list.
+ *
+ * Note: the cache now also invalidates ITSELF whenever the content
+ * directory's signature changes (file added, removed or modified), so this is
+ * a belt-and-braces shortcut rather than the only way out of a stale scan.
  */
 export function invalidateContentDirCache() {
   contentDirCache = null;
