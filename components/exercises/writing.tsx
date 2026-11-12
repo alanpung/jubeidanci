@@ -158,25 +158,42 @@ export function Writing({
     if (canGoPrev) onPrev();
   }, [canGoPrev, onPrev]);
 
-  // Enter advances once the result is shown (never while typing).
+  // Keyboard shortcuts (global):
+  //   - Enter  → continue, but only once the result (congratulation) page is
+  //     shown and focus is not inside a text field.
+  //   - ArrowRight / ArrowLeft → next / previous question. These also work on
+  //     the result page (the textarea is hidden there, so focus is never in a
+  //     field). While typing, arrow keys move the caret instead of navigating.
   useEffect(() => {
-    if (phase !== "result") return;
     const onKey = (e: KeyboardEvent) => {
-      if (e.key !== "Enter") return;
       const tag = (e.target as HTMLElement)?.tagName;
-      if (tag === "INPUT" || tag === "TEXTAREA") return;
-      e.preventDefault();
-      onContinue();
+      const inField = tag === "INPUT" || tag === "TEXTAREA";
+      if (inField) return;
+      if (e.key === "ArrowRight") {
+        e.preventDefault();
+        goNext();
+      } else if (e.key === "ArrowLeft") {
+        e.preventDefault();
+        goPrev();
+      } else if (e.key === "Enter" && phase === "result") {
+        e.preventDefault();
+        onContinue();
+      }
     };
     window.addEventListener("keydown", onKey);
     return () => window.removeEventListener("keydown", onKey);
-  }, [phase, onContinue]);
+  }, [phase, goNext, goPrev, onContinue]);
 
-  // Cmd/Ctrl+Enter submits from inside the textarea; Shift+Enter inserts a
-  // newline (a plain Enter must never submit — the learner needs newlines).
+  // Plain Enter submits from inside the textarea. Shift+Enter inserts a
+  // newline. While an IME is composing (e.g. typing Chinese), Enter confirms
+  // the candidate and must NOT submit.
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-      if (e.key === "Enter" && (e.metaKey || e.ctrlKey)) {
+      if (
+        e.key === "Enter" &&
+        !e.shiftKey &&
+        !e.nativeEvent.isComposing
+      ) {
         e.preventDefault();
         void handleSubmit();
       }
@@ -298,7 +315,7 @@ export function Writing({
             />
             <div className="mt-1.5 flex items-center justify-between text-[11px] font-medium text-lingo-text-light">
               <span>{wordCount} words</span>
-              <span>⌘/Ctrl + Enter to submit</span>
+              <span>Enter 提交 · Shift+Enter 换行</span>
             </div>
           </div>
         )}
