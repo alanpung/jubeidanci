@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
 import { notFound, redirect } from "next/navigation";
 import Link from "next/link";
-import { db } from "@/lib/db";
-import { userUnitLibrary } from "@/lib/db/schema";
-import { eq, and } from "drizzle-orm";
 import { getUnitWithContent, canAccessUnit } from "@/lib/db/queries/courses";
 import { getUnitProgress } from "@/lib/actions/progress";
 import { StandaloneUnitPath } from "./standalone-unit-path";
 import { PublicUnitPath } from "./public-unit-path";
-import { UnitLibraryBanner } from "./unit-library-banner";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { getLanguageName } from "@/lib/languages";
 import { getSession } from "@/lib/auth-server";
@@ -22,7 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const unit = await getUnitWithContent(unitId);
 
   if (!unit || unit.visibility !== "public") {
-    return { title: "Unit | jubeidanci" };
+    return { title: "Unit | 句背单词" };
   }
 
   const lessonCount = unit.lessons.length;
@@ -37,7 +33,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     ? `${unit.description} — ${details}`
     : unit.description;
 
-  const title = `${unit.title} | jubeidanci`;
+  const title = `${unit.title} | 句背单词`;
 
   const url = `/unit/${unitId}`;
 
@@ -49,7 +45,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       description,
       url,
       type: "website",
-      siteName: "jubeidanci",
+      siteName: "句背单词",
       images: [
         {
           url: `/unit/${unitId}/og-image`,
@@ -129,7 +125,7 @@ export default async function StandaloneUnitPage({ params }: PageProps) {
     );
   }
 
-  // Authenticated user: show full experience with progress and library addition
+  // Authenticated user: show the full experience with progress
   if (session) {
     let completions: { unitId: string; lessonIndex: number }[] = [];
     try {
@@ -137,20 +133,6 @@ export default async function StandaloneUnitPage({ params }: PageProps) {
       completions = progress.completions;
     } catch {
       // Progress may fail for units not owned by user, that's ok
-    }
-
-    let isInLibrary = false;
-    if (!isOwner) {
-      const [libRow] = await db
-        .select({ unitId: userUnitLibrary.unitId })
-        .from(userUnitLibrary)
-        .where(
-          and(
-            eq(userUnitLibrary.userId, session.user.id),
-            eq(userUnitLibrary.unitId, unitId)
-          )
-        );
-      isInLibrary = !!libRow;
     }
 
     return (
@@ -164,13 +146,6 @@ export default async function StandaloneUnitPage({ params }: PageProps) {
           ]}
           className="mb-4"
         />
-
-        {!isOwner && (
-          <UnitLibraryBanner
-            unitId={unitId}
-            initialIsInLibrary={isInLibrary}
-          />
-        )}
 
         {unit.sourceLanguage && (
           <p className="mb-4 text-sm text-lingo-text-light">

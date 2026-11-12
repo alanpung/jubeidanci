@@ -35,6 +35,19 @@ export const translationSchema = z.object({
   srsWords,
 });
 
+export const writingSchema = z.object({
+  type: z.literal("writing"),
+  text: z.string().describe("Instruction, e.g. 'Write this essay in English'"),
+  sentence: z.string().describe("The full Chinese prompt (one paragraph)"),
+  answer: z.string().describe("The model English essay, revealed after submitting"),
+  acceptAlso: z
+    .array(z.string())
+    .default([])
+    .describe("Alternative acceptable model essays"),
+  noAudio,
+  srsWords,
+});
+
 export const fillInTheBlankSchema = z.object({
   type: z.literal("fill-in-the-blank"),
   sentence: z
@@ -137,6 +150,7 @@ export const flashcardReviewSchema = z.object({
 export const exerciseSchema = z.discriminatedUnion("type", [
   multipleChoiceSchema,
   translationSchema,
+  writingSchema,
   fillInTheBlankSchema,
   matchingPairsSchema,
   wordBankSchema,

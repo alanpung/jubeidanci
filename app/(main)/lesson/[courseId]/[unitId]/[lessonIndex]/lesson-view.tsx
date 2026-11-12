@@ -9,6 +9,7 @@ import { ProgressBar } from "@/components/ui/progress-bar";
 import { Breadcrumb } from "@/components/ui/breadcrumb";
 import { MultipleChoice } from "@/components/exercises/multiple-choice";
 import { Translation } from "@/components/exercises/translation";
+import { Writing } from "@/components/exercises/writing";
 import { FillInTheBlank } from "@/components/exercises/fill-in-the-blank";
 import { MatchingPairs } from "@/components/exercises/matching-pairs";
 import { Listening } from "@/components/exercises/listening";
@@ -289,6 +290,20 @@ function ExerciseRenderer({
     case "translation":
       return (
         <Translation
+          exercise={ex}
+          onResult={onResult}
+          onContinue={onContinue}
+          onPrev={onPrev ?? (() => {})}
+          canGoPrev={canGoPrev ?? false}
+          exerciseIndex={exerciseIndex ?? 0}
+          totalExercises={totalExercises ?? 1}
+          direction={direction ?? null}
+          language={language}
+        />
+      );
+    case "writing":
+      return (
+        <Writing
           exercise={ex}
           onResult={onResult}
           onContinue={onContinue}

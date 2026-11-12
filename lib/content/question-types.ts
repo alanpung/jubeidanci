@@ -7,6 +7,7 @@ export type QuestionType =
   | "speaking"
   | "flashcard-review"
   | "translation"
+  | "writing"
   | "free-text"
   | "mix";
 
@@ -101,6 +102,15 @@ export const QUESTION_TYPES: Record<string, QuestionTypeInfo> = {
     nameEn: "Translation",
     badgeLabel: "Translation",
     color: "#6366F1",
+  },
+  "writing": {
+    id: "writing",
+    num: "9",
+    icon: "📝",
+    nameZh: "整篇写作",
+    nameEn: "Writing",
+    badgeLabel: "Writing",
+    color: "#0EA5E9",
   },
   "free-text": {
     id: "free-text",
@@ -220,6 +230,11 @@ export function normalizeQuestionType(
   }
   if (str.includes("translat") || str.includes("翻译")) {
     return QUESTION_TYPES["translation"];
+  }
+  // "writing" must be checked before the generic "write" branch below, and
+  // it must not be swallowed by the "translat" check above.
+  if (str.includes("writing") || str.includes("essay") || str.includes("作文")) {
+    return QUESTION_TYPES["writing"];
   }
   if (str.includes("free-text") || str.includes("自由表达")) {
     return QUESTION_TYPES["free-text"];
