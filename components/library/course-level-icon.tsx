@@ -197,6 +197,16 @@ const QUESTION_TYPE_VISUALS: Record<
     outline: "border-emerald-400",
     symbol: "text-emerald-600",
   },
+  writing: {
+    bg: "bg-gradient-to-br from-sky-400 to-blue-600 shadow-blue-600/30",
+    border: "border-sky-300/70",
+    label: "Writing",
+    Icon: BookOpen,
+    pill: "bg-sky-500 text-white",
+    light: "bg-sky-50",
+    outline: "border-sky-400",
+    symbol: "text-sky-600",
+  },
   mix: {
     bg: "bg-gradient-to-br from-fuchsia-500 to-purple-600 shadow-purple-600/30",
     border: "border-fuchsia-300/70",

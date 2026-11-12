@@ -172,6 +172,7 @@ export const LIBRARY_TYPE_ORDER: readonly string[] = [
   "listening",
   "word-bank",
   "speaking",
+  "writing",
 ];
 
 export function normalizeQuestionType(
