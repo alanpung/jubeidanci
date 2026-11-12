@@ -1,7 +1,7 @@
 import { dbBackground, isDbAvailable } from "./index";
 import { course, unit, user } from "./schema";
 import { getAllCourses, getAllUnits, invalidateAllCaches } from "../content/registry";
-import { eq, or, ilike, and, notInArray, like, notLike, sql, count, inArray } from "drizzle-orm";
+import { eq, or, ilike, and, notInArray, like, notLike, sql, count, inArray, isNull } from "drizzle-orm";
 import { runAfterResponse } from "../after-response";
 import type { ParsedUnit } from "../content/types";
 
@@ -272,6 +272,46 @@ async function runSeedTask() {
     // Each chunk is now wrapped on its own: a bad row can no longer take the
     // rest of the catalog down with it.
     if (standaloneUnitValues.length > 0) {
+      // Repair pass: a standalone unit may already exist in the DB under an id
+      // that is NOT the canonical title slug — e.g. it was seeded by an older
+      // id formula, or created by hand. Such a row is invisible to the
+      // filesystem-id checks and would end up duplicated under the canonical
+      // id. Re-point those rows at the canonical id instead, so the unit keeps
+      // its history (lesson completions, SRS words, library entries) and the
+      // folder shows exactly one tile per unit.
+      try {
+        const canonicalIds = standaloneUnitValues.map((v) => v.id);
+        const legacyRows = await dbBackground
+          .select({ id: unit.id, title: unit.title })
+          .from(unit)
+          .where(and(isNull(unit.courseId), notInArray(unit.id, canonicalIds)));
+
+        for (const row of legacyRows) {
+          const canonicalId = row.title
+            .toLowerCase()
+            .replace(/[^a-z0-9]+/g, "-");
+          if (!canonicalId || canonicalId === row.id) continue;
+          if (canonicalIds.includes(canonicalId)) continue; // already have it
+
+          const clash = await dbBackground
+            .select({ id: unit.id })
+            .from(unit)
+            .where(eq(unit.id, canonicalId))
+            .limit(1);
+          if (clash.length > 0) continue; // canonical id taken — leave both
+
+          await dbBackground
+            .update(unit)
+            .set({ id: canonicalId })
+            .where(eq(unit.id, row.id));
+        }
+      } catch (err) {
+        console.warn(
+          "seedContentFromFilesystem: standalone id repair skipped:",
+          err instanceof Error ? err.message : err,
+        );
+      }
+
       for (let i = 0; i < standaloneUnitValues.length; i += 5) {
         const chunk = standaloneUnitValues.slice(i, i + 5);
         try {
