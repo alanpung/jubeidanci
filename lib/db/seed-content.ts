@@ -407,6 +407,44 @@ async function runSeedTask() {
       }
     }
 
+    // 6b. Migration cleanup: units that MOVED from standalone to a course keep
+    // their old standalone row (courseId IS NULL, id = title slug) behind in the
+    // "Standalone Units" folder, because the course cleanup above only touches
+    // rows with the course id. The A1 Essay units did exactly this — they were
+    // `unit-1-my-school`…`unit-10-my-friends` standalone and are now
+    // `a1-essay-course-unit-N`. Drop any standalone row whose id is a unit's
+    // legacy title-slug id but is NOT among the ids we just (re)wrote.
+    const allCurrentIds = new Set([
+      ...unitValues.map((v) => v.id),
+      ...standaloneUnitValues.map((v) => v.id),
+    ]);
+    const legacyStandaloneIds: string[] = [];
+    for (const u of units) {
+      const legacyId = u.parsed.title
+        .toLowerCase()
+        .replace(/[^a-z0-9]+/g, "-");
+      if (legacyId && !allCurrentIds.has(legacyId)) {
+        legacyStandaloneIds.push(legacyId);
+      }
+    }
+    if (legacyStandaloneIds.length > 0) {
+      try {
+        await dbBackground
+          .delete(unit)
+          .where(
+            and(
+              isNull(unit.courseId),
+              inArray(unit.id, legacyStandaloneIds),
+            ),
+          );
+      } catch (err) {
+        console.warn(
+          "seedContentFromFilesystem: legacy standalone cleanup skipped:",
+          err instanceof Error ? err.message : err,
+        );
+      }
+    }
+
     lastSyncedAt = Date.now();
   } catch (err) {
     console.warn("seedContentFromFilesystem error:", err);

@@ -1,5 +1,6 @@
 ---
 unitTitle: "Unit 7: My Body and Health"
+courseId: "a1-essay-course"
 description: "A1 Model Essays about body and health"
 icon: "💪"
 color: "#EF4444"

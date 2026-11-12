@@ -1,5 +1,6 @@
 ---
 unitTitle: "Unit 1: My School"
+courseId: "a1-essay-course"
 description: "A1 Model Essays about school life"
 icon: "🏫"
 color: "#3B82F6"
