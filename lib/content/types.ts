@@ -79,6 +79,7 @@ export interface ParsedCourse {
 export type Exercise =
   | MultipleChoiceExercise
   | TranslationExercise
+  | WritingExercise
   | FillInTheBlankExercise
   | MatchingPairsExercise
   | ListeningExercise
@@ -99,6 +100,25 @@ export interface MultipleChoiceExercise {
 
 export interface TranslationExercise {
   type: "translation";
+  text: string;
+  sentence: string;
+  answer: string;
+  acceptAlso: string[];
+  noAudio?: string[];
+  srsWords: string | string[];
+}
+
+/**
+ * Whole-essay writing: the learner sees the complete Chinese prompt and
+ * writes the complete English answer in one textarea.
+ *
+ * Field names intentionally mirror `TranslationExercise` (`sentence` = the
+ * Chinese prompt, `answer` = the model English essay) so the generic SRS
+ * extractor (`lib/srs-words.ts`) and the lesson-completion pipeline pick the
+ * vocabulary up without any special-casing.
+ */
+export interface WritingExercise {
+  type: "writing";
   text: string;
   sentence: string;
   answer: string;

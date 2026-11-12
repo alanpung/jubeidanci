@@ -2,6 +2,7 @@ import type {
   Exercise,
   MultipleChoiceExercise,
   TranslationExercise,
+  WritingExercise,
   FillInTheBlankExercise,
   MatchingPairsExercise,
   ListeningExercise,
@@ -61,6 +62,9 @@ export function parseExercise(block: string): Exercise {
       break;
     case "translation":
       exercise = parseTranslation(lines);
+      break;
+    case "writing":
+      exercise = parseWriting(lines);
       break;
     case "fill-in-the-blank":
       exercise = parseFillInTheBlank(lines);
@@ -218,6 +222,34 @@ function parseTranslation(lines: string[]): TranslationExercise {
 
   const srsWords = parseSrsWords(lines) ?? "";
   return { type: "translation", text: rawText.text, sentence: rawSentence.text, answer, acceptAlso, srsWords, ...(noAudio.length && { noAudio }) };
+}
+
+/**
+ * Parse a [writing] block — the whole-essay writing exercise.
+ *
+ * Same field names as [translation] (see `WritingExercise`): `sentence` holds
+ * the complete Chinese prompt, `answer` the model English essay and
+ * `acceptAlso` the alternative phrasings. The difference is purely how the
+ * player presents it: one textarea for the whole essay instead of one input
+ * per word.
+ */
+function parseWriting(lines: string[]): WritingExercise {
+  const noAudio: string[] = [];
+  const rawText = stripNoAudio(getField(lines, "text"));
+  if (rawText.flagged) noAudio.push("text");
+  const rawSentence = stripNoAudio(getField(lines, "sentence"));
+  if (rawSentence.flagged) noAudio.push("sentence");
+
+  const answer = getField(lines, "answer");
+  const acceptAlsoLine = lines.find((l) => l.startsWith("acceptAlso:"));
+  const acceptAlso: string[] = [];
+  if (acceptAlsoLine) {
+    const matches = acceptAlsoLine.match(/"([^"]+)"/g);
+    if (matches) acceptAlso.push(...matches.map((m) => m.replace(/"/g, "")));
+  }
+
+  const srsWords = parseSrsWords(lines) ?? "";
+  return { type: "writing", text: rawText.text, sentence: rawSentence.text, answer, acceptAlso, srsWords, ...(noAudio.length && { noAudio }) };
 }
 
 function generateChineseTranslation(sentence: string, blank: string): string | undefined {
