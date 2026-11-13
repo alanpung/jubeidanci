@@ -10,9 +10,11 @@
  * "100% Correct" while showing eight red boxes. This module replaces both with
  * a single, self-consistent grade:
  *
- *   - one `score` (0–100) for the whole sentence, and
+ *   - one `score` (0–100) for the whole sentence,
  *   - one `slots[]` array (one entry per answer word) that *derives* the
- *     per-word colour from the very same pass through the data.
+ *     per-word colour from the very same pass through the data, and
+ *   - one `userTokens[]` array (one entry per learner word) for consumers
+ *     that need to mark the learner's own text rather than answer boxes.
  *
  * So the badge and the boxes can never disagree again.
  *
@@ -36,6 +38,9 @@ import type { Quality } from "@/lib/srs";
 
 export type SlotState = "hit" | "moved" | "typo" | "miss";
 
+/** State of a word the *learner* wrote (parallel to the input token array). */
+export type UserTokenState = "hit" | "moved" | "typo" | "extra" | "blank";
+
 export type MarkingGrade = "perfect" | "good" | "pass" | "retry";
 
 export interface MarkingDeduction {
@@ -52,6 +57,13 @@ export interface MarkingResult {
   score: number;
   /** Per-answer-word state, length === number of answer words. */
   slots: SlotState[];
+  /**
+   * Per-learner-word state, length === number of input tokens. This is the
+   * mirror image of `slots`: it says which words the learner actually wrote
+   * are wrong, so consumers can highlight them in place (see
+   * `lib/writing-errors.ts`). Derived from the same single pass as the score.
+   */
+  userTokens: { token: string; state: UserTokenState }[];
   /** 0–3 stars. */
   stars: 0 | 1 | 2 | 3;
   grade: MarkingGrade;
@@ -188,6 +200,16 @@ export function markTranslation(
 ): MarkingResult {
   const userTokens = userTokensRaw.map((t) => t.trim());
 
+  // Mirror image of `slots`: one state per word the learner actually wrote.
+  // It starts as "extra" (i.e. unaccounted for) and is upgraded to
+  // hit / moved / typo by the same single pass that computes the score, so
+  // the highlighted words can never disagree with the deduction breakdown.
+  const userState: UserTokenState[] = userTokens.map((t) =>
+    normalize(t) ? "extra" : "blank",
+  );
+  const reportUserTokens = () =>
+    userTokens.map((token, i) => ({ token, state: userState[i] }));
+
   const primary = acceptedAnswers[0] ?? "";
   const primaryTokens = tokenize(primary);
 
@@ -195,6 +217,7 @@ export function markTranslation(
     return {
       score: 0,
       slots: [],
+      userTokens: reportUserTokens(),
       ...deriveBand(0),
       deductions: [],
     };
@@ -249,6 +272,7 @@ export function markTranslation(
     }
     if (hitJ >= 0) {
       usedUser[hitJ] = true;
+      userState[hitJ] = hitJ === i ? "hit" : "moved";
       if (hitJ === i) {
         slots.push("hit");
         hitCount++;
@@ -287,6 +311,7 @@ export function markTranslation(
     }
     if (typoJ >= 0) {
       usedUser[typoJ] = true;
+      userState[typoJ] = "typo";
       slots.push("typo");
       typoCount++;
       continue;
@@ -297,10 +322,10 @@ export function markTranslation(
     missCount++;
   }
 
-  // 4. EXTRA — unused, non-blank user words (blank boxes do not count).
+  // 4. EXTRA — words still unaccounted for (blank boxes do not count).
   let extraCount = 0;
   for (let j = 0; j < userTokens.length; j++) {
-    if (!usedUser[j] && normalize(userTokens[j])) extraCount++;
+    if (userState[j] === "extra") extraCount++;
   }
 
   // Degenerate case: the learner wrote nothing at all → total fail.
@@ -309,6 +334,7 @@ export function markTranslation(
     return {
       score: 0,
       slots: primaryTokens.map(() => "miss" as SlotState),
+      userTokens: reportUserTokens(),
       ...deriveBand(0),
       deductions: [],
     };
@@ -341,6 +367,7 @@ export function markTranslation(
   return {
     score,
     slots,
+    userTokens: reportUserTokens(),
     ...deriveBand(score),
     deductions,
   };
