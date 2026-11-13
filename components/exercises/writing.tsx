@@ -11,11 +11,11 @@ import { ExerciseShell } from "./exercise-shell";
 import { Button } from "@/components/ui/button";
 
 /**
- * Whole-essay writing exercise.
+ * Whole-passage writing exercise.
  *
  * Deliberately simpler than the `Translation` exercise:
  *   - the complete Chinese prompt is shown once, as plain text;
- *   - the learner writes the complete English essay in a single textarea;
+ *   - the learner writes the complete English passage in a single textarea;
  *   - no per-word input boxes, no part-of-speech badges, no IPA and no
  *     Chinese word glosses — nothing that would hint at the answer.
  *
@@ -160,7 +160,9 @@ export function Writing({
 
   // Keyboard shortcuts (global):
   //   - Enter  → continue, but only once the result (congratulation) page is
-  //     shown and focus is not inside a text field.
+  //     shown and focus is not inside a text field. Inside the textarea a
+  //     plain Enter is left alone so it inserts a newline; submission there
+  //     is Shift+Enter (handled below).
   //   - ArrowRight / ArrowLeft → next / previous question. These also work on
   //     the result page (the textarea is hidden there, so focus is never in a
   //     field). While typing, arrow keys move the caret instead of navigating.
@@ -184,14 +186,14 @@ export function Writing({
     return () => window.removeEventListener("keydown", onKey);
   }, [phase, goNext, goPrev, onContinue]);
 
-  // Plain Enter submits from inside the textarea. Shift+Enter inserts a
-  // newline. While an IME is composing (e.g. typing Chinese), Enter confirms
-  // the candidate and must NOT submit.
+  // Shift+Enter submits from inside the textarea. Plain Enter is left to the
+  // browser so it inserts a newline. While an IME is composing (e.g. typing
+  // Chinese), Enter confirms the candidate and must NOT submit.
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
       if (
         e.key === "Enter" &&
-        !e.shiftKey &&
+        e.shiftKey &&
         !e.nativeEvent.isComposing
       ) {
         e.preventDefault();
@@ -242,7 +244,7 @@ export function Writing({
           </p>
         </div>
 
-        {/* Audio: the Chinese prompt is safe to play. The English model essay
+        {/* Audio: the Chinese prompt is safe to play. The English model passage
             stays locked until the learner has submitted their own. */}
         <div className="mb-4 flex items-center justify-center gap-2.5">
           <button
@@ -300,7 +302,7 @@ export function Writing({
           </button>
         </div>
 
-        {/* The essay textarea */}
+        {/* The writing textarea */}
         {phase !== "result" && (
           <div className="w-full px-1">
             <textarea
@@ -309,13 +311,14 @@ export function Writing({
               onChange={(e) => setEssay(e.target.value)}
               onKeyDown={handleKeyDown}
               disabled={phase === "grading"}
-              placeholder="Write your essay in English here..."
+              placeholder="Write your passage in English here..."
               className="w-full rounded-2xl border-2 border-lingo-border bg-white p-4 text-base leading-relaxed text-lingo-text placeholder:text-lingo-text-light/50 focus:border-lingo-blue focus:outline-none min-h-[240px] resize-y disabled:opacity-60"
               autoFocus
+              enterKeyHint="enter"
             />
             <div className="mt-1.5 flex items-center justify-between text-[11px] font-medium text-lingo-text-light">
               <span>{wordCount} words</span>
-              <span>Enter 提交 · Shift+Enter 换行</span>
+              <span>Shift+Enter 提交 · Enter 换行</span>
             </div>
           </div>
         )}
@@ -334,7 +337,7 @@ export function Writing({
           </div>
         )}
 
-        {/* Result: AI feedback + the model essay, revealed only after submit */}
+        {/* Result: AI feedback + the model passage, revealed only after submit */}
         {phase === "result" && grade && (
           <div className={`w-full space-y-4 px-1 ${animClass}`}>
             {/* Score */}
@@ -377,7 +380,7 @@ export function Writing({
             {/* What the learner wrote */}
             <div className="rounded-2xl border-2 border-lingo-border bg-white p-4">
               <span className="block text-[11px] font-bold uppercase tracking-wider text-lingo-text-light">
-                Your essay
+                Your writing
               </span>
               <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-lingo-text">
                 {essay.trim()}
@@ -421,10 +424,10 @@ export function Writing({
               </div>
             )}
 
-            {/* The model essay */}
+            {/* The model passage */}
             <div className="rounded-2xl border-2 border-blue-200 bg-blue-50/60 p-4">
               <span className="block text-[11px] font-bold uppercase tracking-wider text-blue-700">
-                Model essay
+                Model writing
               </span>
               <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-blue-900">
                 {exercise.answer}
@@ -474,7 +477,7 @@ export function Writing({
         {/* Hint line */}
         {phase === "writing" && !error && (
           <p className="mt-3 text-center text-[11px] font-medium text-lingo-text-light">
-            写完整的一篇英文短文，然后提交 · 满分 100，70 分及格
+            写完整的一篇英文短文，Shift+Enter 提交 · 满分 100，70 分及格
           </p>
         )}
       </div>
