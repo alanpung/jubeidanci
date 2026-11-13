@@ -7,6 +7,7 @@ import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
 import { useMobileKeyboardOpen } from "@/hooks/use-mobile-keyboard-open";
 import { detectTextLanguage } from "@/lib/language-detector";
+import { splitBySpans, type WritingErrorSpan } from "@/lib/writing-errors";
 import { ExerciseShell } from "./exercise-shell";
 import { Button } from "@/components/ui/button";
 
@@ -31,6 +32,8 @@ interface GradeResponse {
   passed: boolean;
   strengths: string[];
   corrections: string[];
+  /** Char ranges into the trimmed essay; absent on older in-flight responses. */
+  errorSpans?: WritingErrorSpan[];
   source: "ai" | "fallback";
 }
 
@@ -208,6 +211,15 @@ export function Writing({
 
   const stars = grade ? starsForScore(grade.score) : 0;
 
+  // The grader returns character ranges, not a rewritten essay, so the
+  // learner's own wording, punctuation and line breaks stay exactly as typed.
+  const writingSegments = useMemo(
+    () =>
+      grade ? splitBySpans(essay.trim(), grade.errorSpans ?? []) : [],
+    [essay, grade],
+  );
+  const hasMarkedWords = writingSegments.some((s) => s.error);
+
   return (
     <ExerciseShell
       status={status}
@@ -377,13 +389,32 @@ export function Writing({
               )}
             </div>
 
-            {/* What the learner wrote */}
+            {/* What the learner wrote, with mistakes marked in red */}
             <div className="rounded-2xl border-2 border-lingo-border bg-white p-4">
-              <span className="block text-[11px] font-bold uppercase tracking-wider text-lingo-text-light">
-                Your writing
-              </span>
+              <div className="flex items-center justify-between gap-2">
+                <span className="block text-[11px] font-bold uppercase tracking-wider text-lingo-text-light">
+                  Your writing
+                </span>
+                {hasMarkedWords && (
+                  <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-rose-500">
+                    <span className="inline-block h-2 w-2 rounded-sm bg-rose-400" />
+                    需修改的词
+                  </span>
+                )}
+              </div>
               <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-lingo-text">
-                {essay.trim()}
+                {writingSegments.map((seg, i) =>
+                  seg.error ? (
+                    <mark
+                      key={i}
+                      className="rounded bg-rose-100 px-0.5 font-semibold text-rose-600 underline decoration-rose-500 decoration-wavy underline-offset-2"
+                    >
+                      {seg.text}
+                    </mark>
+                  ) : (
+                    <span key={i}>{seg.text}</span>
+                  ),
+                )}
               </p>
             </div>
 
