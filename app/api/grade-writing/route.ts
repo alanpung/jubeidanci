@@ -66,6 +66,8 @@ interface GradeResponse {
   provider?: string;
   /** Why we fell back to local grading (only present when source === "fallback"). */
   fallbackReason?: "no_provider" | "all_failed";
+  /** Sanitized error text from the failed AI call(s), for diagnosis. */
+  fallbackError?: string;
 }
 
 /**
@@ -324,6 +326,20 @@ Return ONLY valid JSON without markdown code blocks:
 }`;
 }
 
+/**
+ * Turn a caught error into a short, safe diagnostic string. We strip any
+ * configured API key values so the message can be shown/logged without
+ * leaking secrets.
+ */
+function sanitizeError(e: unknown, providers: Provider[]): string | undefined {
+  if (!e) return undefined;
+  let msg = e instanceof Error ? e.message : String(e);
+  for (const p of providers) {
+    if (p.apiKey) msg = msg.split(p.apiKey).join("[REDACTED]");
+  }
+  return msg.slice(0, 400);
+}
+
 export async function POST(req: NextRequest) {
   let body: unknown;
   try {
@@ -355,6 +371,7 @@ export async function POST(req: NextRequest) {
   const prompt = buildPrompt(essay, promptZh, modelAnswer, level || "A1");
 
   // Try each provider in order; use the first that returns a valid grade.
+  let lastError: unknown;
   for (const p of providers) {
     try {
       const result = await gradeWithProvider(p, prompt);
@@ -370,9 +387,10 @@ export async function POST(req: NextRequest) {
         source: "ai",
         provider: p.id,
       } satisfies GradeResponse);
-    } catch {
+    } catch (e) {
       // Network error, 401, 429 (quota exhausted), timeout, etc. — fall
       // through to the next provider instead of failing the request.
+      lastError = e;
       continue;
     }
   }
@@ -382,5 +400,6 @@ export async function POST(req: NextRequest) {
   return NextResponse.json({
     ...gradeWithRules(essay, modelAnswer, acceptAlso),
     fallbackReason: "all_failed",
+    fallbackError: sanitizeError(lastError, providers),
   });
 }
