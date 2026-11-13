@@ -35,6 +35,8 @@ interface GradeResponse {
   /** Char ranges into the trimmed essay; absent on older in-flight responses. */
   errorSpans?: WritingErrorSpan[];
   source: "ai" | "fallback";
+  /** Why we fell back to local grading, when source === "fallback". */
+  fallbackReason?: "no_provider" | "all_failed";
 }
 
 interface Props {
@@ -384,7 +386,9 @@ export function Writing({
               </div>
               {grade.source === "fallback" && (
                 <p className="text-center text-[11px] font-medium text-lingo-text-light">
-                  基础评分（AI 批改暂不可用）
+                  {grade.fallbackReason === "no_provider"
+                    ? "基础评分（未配置 AI Key：请在环境变量设置 GEMINI_API_KEY 等）"
+                    : "基础评分（AI 调用失败：请检查 Key 是否有效或网络是否可访问）"}
                 </p>
               )}
             </div>
