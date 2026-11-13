@@ -116,9 +116,9 @@ function buildProviders(): Provider[] {
     {
       id: "deepseek",
       label: "DeepSeek",
-      baseURL: "https://api.deepseek.com/v1",
+      baseURL: "https://api.deepseek.com",
       apiKey: readEnv("DEEPSEEK_API_KEY") ?? "",
-      model: process.env.DEEPSEEK_MODEL || "deepseek-chat",
+      model: process.env.DEEPSEEK_MODEL || "deepseek-flash",
     },
     {
       id: "qwen",
