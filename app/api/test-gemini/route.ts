@@ -34,14 +34,14 @@ export async function GET() {
       timeout: 20_000,
     });
     const completion = await client.chat.completions.create({
-      model: process.env.GEMINI_MODEL || "gemini-2.5-flash",
+      model: process.env.GEMINI_MODEL || "gemini-3.8-flash",
       messages: [{ role: "user", content: "Reply with the single word: ok" }],
       temperature: 0.2,
     });
     const reply = completion.choices?.[0]?.message?.content?.trim() || "";
     return NextResponse.json({
       ok: true,
-      model: process.env.GEMINI_MODEL || "gemini-2.5-flash",
+      model: process.env.GEMINI_MODEL || "gemini-3.8-flash",
       reply,
     });
   } catch (e) {
