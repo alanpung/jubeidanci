@@ -65,7 +65,7 @@ export const QUESTION_TYPES: Record<string, QuestionTypeInfo> = {
     nameZh: "单词拼句",
     nameEn: "Word order",
     badgeLabel: "Word order",
-    color: "#F59E0B",
+    color: "#EAB308",
   },
   "word-order": {
     id: "word-bank",
@@ -74,7 +74,7 @@ export const QUESTION_TYPES: Record<string, QuestionTypeInfo> = {
     nameZh: "单词拼句",
     nameEn: "Word order",
     badgeLabel: "Word order",
-    color: "#F59E0B",
+    color: "#EAB308",
   },
   "speaking": {
     id: "speaking",
@@ -110,7 +110,7 @@ export const QUESTION_TYPES: Record<string, QuestionTypeInfo> = {
     nameZh: "整篇写作",
     nameEn: "Writing",
     badgeLabel: "Writing",
-    color: "#0EA5E9",
+    color: "#EC4899",
   },
   "free-text": {
     id: "free-text",
@@ -144,7 +144,7 @@ export const QUESTION_TYPES: Record<string, QuestionTypeInfo> = {
 export const QUESTION_TYPE_LIST = [
   QUESTION_TYPES["multiple-choice"],
   QUESTION_TYPES["fill-in-the-blank"],
-  QUESTION_TYPES["matching-pairs"],
+  QUESTION_TYPES["writing"],
   QUESTION_TYPES["listening"],
   QUESTION_TYPES["word-bank"],
   QUESTION_TYPES["speaking"],
