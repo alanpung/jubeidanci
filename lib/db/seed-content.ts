@@ -123,6 +123,23 @@ async function runSeedTask() {
           },
         });
 
+      // One-off: the "A1 Essay" course was renamed to "A1 Writing". Course
+      // titles are owner-owned and deliberately excluded from the upsert
+      // above, so the front-matter change alone would never reach a DB row
+      // that already exists. Apply the rename explicitly, guarded on the old
+      // title so it runs once and never clobbers a later owner edit. The
+      // course id (and therefore every unit id) stays unchanged on purpose:
+      // renaming the id would orphan existing progress / library rows.
+      await dbBackground
+        .update(course)
+        .set({ title: "A1 Writing", updatedAt: new Date() })
+        .where(
+          and(
+            eq(course.id, "a1-essay-course"),
+            ilike(course.title, "A1 Essay"),
+          ),
+        );
+
       // The "A1 Word Bank" course was renamed to "A1 Word Order" and its id
       // changed from "a1-word-bank-course" to "a1-word-order-course". The
       // filesystem units now carry the new courseId, so the old course row
@@ -410,7 +427,7 @@ async function runSeedTask() {
     // 6b. Migration cleanup: units that MOVED from standalone to a course keep
     // their old standalone row (courseId IS NULL, id = title slug) behind in the
     // "Standalone Units" folder, because the course cleanup above only touches
-    // rows with the course id. The A1 Essay units did exactly this — they were
+    // rows with the course id. The A1 Writing units did exactly this — they were
     // `unit-1-my-school`…`unit-10-my-friends` standalone and are now
     // `a1-essay-course-unit-N`. Drop any standalone row whose id is a unit's
     // legacy title-slug id but is NOT among the ids we just (re)wrote.
