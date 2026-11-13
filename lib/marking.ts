@@ -194,10 +194,31 @@ function deriveBand(score: number): {
  * Deductions are summed with independent caps; the score is 100 − Σ, clamped
  * to [0,100].
  */
-export function markTranslation(
+/**
+ * Align the learner's tokens against the accepted answer(s).
+ *
+ * Single source of truth shared by both `markTranslation` (strict, for
+ * translation drills) and `markWriting` (open, grammar-only). Returns the
+ * per-word states and the raw counts so each grader can apply its own
+ * deduction policy without re-walking the tokens.
+ */
+function alignTokens(
   userTokensRaw: string[],
   acceptedAnswers: string[],
-): MarkingResult {
+): {
+  userTokens: string[];
+  userState: UserTokenState[];
+  reportUserTokens: () => { token: string; state: UserTokenState }[];
+  slots: SlotState[];
+  primaryTokens: string[];
+  missCount: number;
+  extraCount: number;
+  typoCount: number;
+  displacedCount: number;
+  movedCount: number;
+  hitCount: number;
+  userProvided: boolean;
+} {
   const userTokens = userTokensRaw.map((t) => t.trim());
 
   // Mirror image of `slots`: one state per word the learner actually wrote.
@@ -212,16 +233,6 @@ export function markTranslation(
 
   const primary = acceptedAnswers[0] ?? "";
   const primaryTokens = tokenize(primary);
-
-  if (primaryTokens.length === 0) {
-    return {
-      score: 0,
-      slots: [],
-      userTokens: reportUserTokens(),
-      ...deriveBand(0),
-      deductions: [],
-    };
-  }
 
   // Answer words at the same length as the primary contribute alternative
   // acceptable tokens per slot (so phrasal variants like "wake up" ≈ "get up"
@@ -328,46 +339,151 @@ export function markTranslation(
     if (userState[j] === "extra") extraCount++;
   }
 
-  // Degenerate case: the learner wrote nothing at all → total fail.
   const userProvided = userTokens.some((t) => normalize(t));
-  if (!userProvided) {
+
+  return {
+    userTokens,
+    userState,
+    reportUserTokens,
+    slots,
+    primaryTokens,
+    missCount,
+    extraCount,
+    typoCount,
+    displacedCount,
+    movedCount,
+    hitCount,
+    userProvided,
+  };
+}
+
+/**
+ * Grade a learner's translation against one or more acceptable full sentences.
+ *
+ * Strict, position-aware model for translation drills: missing words, wrong
+ * words, displaced words and spelling slips all cost points. This is what the
+ * Translation exercise uses.
+ */
+export function markTranslation(
+  userTokensRaw: string[],
+  acceptedAnswers: string[],
+): MarkingResult {
+  const a = alignTokens(userTokensRaw, acceptedAnswers);
+
+  if (a.primaryTokens.length === 0) {
     return {
       score: 0,
-      slots: primaryTokens.map(() => "miss" as SlotState),
-      userTokens: reportUserTokens(),
+      slots: [],
+      userTokens: a.reportUserTokens(),
       ...deriveBand(0),
       deductions: [],
     };
   }
 
-  // 5. Deductions (independent caps). To avoid double-counting a *substitution*
-  //    (a wrong word written where a right word should be), split the unmatched
-  //    answer words (misses) and unmatched user words (extras) into:
-  //      - substitution = min(miss, extra)  → one wrong word swapped in
-  //      - omission      = miss - substitution → answer word simply absent
-  //      - insertion     = extra - substitution → a word the answer doesn't have
-  //    "错词" charges substitution + insertion; "漏词" charges omission only.
-  const substitution = Math.min(missCount, extraCount);
-  const omission = missCount - substitution;
-  const insertion = extraCount - substitution;
+  // Degenerate case: the learner wrote nothing at all → total fail.
+  if (!a.userProvided) {
+    return {
+      score: 0,
+      slots: a.primaryTokens.map(() => "miss" as SlotState),
+      userTokens: a.reportUserTokens(),
+      ...deriveBand(0),
+      deductions: [],
+    };
+  }
+
+  // Deductions (independent caps). To avoid double-counting a *substitution*
+  // (a wrong word written where a right word should be), split the unmatched
+  // answer words (misses) and unmatched user words (extras) into:
+  //   - substitution = min(miss, extra)  → one wrong word swapped in
+  //   - omission      = miss - substitution → answer word simply absent
+  //   - insertion     = extra - substitution → a word the answer doesn't have
+  // "错词" charges substitution + insertion; "漏词" charges omission only.
+  const substitution = Math.min(a.missCount, a.extraCount);
+  const omission = a.missCount - substitution;
+  const insertion = a.extraCount - substitution;
 
   const A = Math.min(MARKING_RULES.missing.cap, omission * MARKING_RULES.missing.per);
   const B = Math.min(MARKING_RULES.extra.cap, (substitution + insertion) * MARKING_RULES.extra.per);
-  const C = Math.min(MARKING_RULES.displaced.cap, displacedCount * MARKING_RULES.displaced.per);
-  const D = Math.min(MARKING_RULES.typo.cap, typoCount * MARKING_RULES.typo.per);
+  const C = Math.min(MARKING_RULES.displaced.cap, a.displacedCount * MARKING_RULES.displaced.per);
+  const D = Math.min(MARKING_RULES.typo.cap, a.typoCount * MARKING_RULES.typo.per);
 
   const score = Math.max(0, 100 - (A + B + C + D));
 
   const deductions: MarkingDeduction[] = [];
   if (A > 0) deductions.push({ kind: "missing", label: MARKING_RULES.missing.label, count: omission, points: A });
   if (B > 0) deductions.push({ kind: "extra", label: MARKING_RULES.extra.label, count: substitution + insertion, points: B });
-  if (C > 0) deductions.push({ kind: "displaced", label: MARKING_RULES.displaced.label, count: displacedCount, points: C });
-  if (D > 0) deductions.push({ kind: "typo", label: MARKING_RULES.typo.label, count: typoCount, points: D });
+  if (C > 0) deductions.push({ kind: "displaced", label: MARKING_RULES.displaced.label, count: a.displacedCount, points: C });
+  if (D > 0) deductions.push({ kind: "typo", label: MARKING_RULES.typo.label, count: a.typoCount, points: D });
 
   return {
     score,
-    slots,
-    userTokens: reportUserTokens(),
+    slots: a.slots,
+    userTokens: a.reportUserTokens(),
+    ...deriveBand(score),
+    deductions,
+  };
+}
+
+/**
+ * Open writing grader — grammar-only, deliberately lenient.
+ *
+ * Unlike `markTranslation` (used for translation drills, where the learner
+ * must reproduce the exact target sentence), free writing should reward
+ * communication. This grader therefore only deducts for genuine grammatical
+ * slips — the spelling / inflection errors the `typo` pass detects. Word
+ * choice, omitted content and word order are NOT penalized: a learner who
+ * paraphrases the prompt in correct English should score well.
+ *
+ * The returned `userTokens` remaps free-choice words ("extra") to "hit" so the
+ * client highlighter only paints actual grammar errors red, never legitimate
+ * synonyms or rephrasings.
+ */
+export function markWriting(
+  userTokensRaw: string[],
+  acceptedAnswers: string[],
+): MarkingResult {
+  const a = alignTokens(userTokensRaw, acceptedAnswers);
+
+  if (a.primaryTokens.length === 0) {
+    return {
+      score: 0,
+      slots: [],
+      userTokens: a.reportUserTokens(),
+      ...deriveBand(0),
+      deductions: [],
+    };
+  }
+
+  if (!a.userProvided) {
+    return {
+      score: 0,
+      slots: a.primaryTokens.map(() => "miss" as SlotState),
+      userTokens: a.reportUserTokens(),
+      ...deriveBand(0),
+      deductions: [],
+    };
+  }
+
+  // Grammar-only: the single `typo` deduction is the only thing that lowers the
+  // score. Open writing must not punish a different word, a paraphrase or a
+  // reordering.
+  const D = Math.min(MARKING_RULES.typo.cap, a.typoCount * MARKING_RULES.typo.per);
+  const score = Math.max(0, 100 - D);
+
+  const userTokens = a.reportUserTokens().map((u) => ({
+    token: u.token,
+    state: u.state === "extra" ? ("hit" as UserTokenState) : u.state,
+  }));
+
+  const deductions: MarkingDeduction[] =
+    D > 0
+      ? [{ kind: "typo", label: MARKING_RULES.typo.label, count: a.typoCount, points: D }]
+      : [];
+
+  return {
+    score,
+    slots: a.slots,
+    userTokens,
     ...deriveBand(score),
     deductions,
   };
