@@ -64,6 +64,8 @@ interface GradeResponse {
   source: "ai" | "fallback";
   /** Which AI actually graded it (gemini, deepseek, qwen, ...). Omitted on fallback. */
   provider?: string;
+  /** Why we fell back to local grading (only present when source === "fallback"). */
+  fallbackReason?: "no_provider" | "all_failed";
 }
 
 /**
@@ -344,7 +346,10 @@ export async function POST(req: NextRequest) {
   // No provider configured at all — go straight to the local grader.
   const providers = buildProviders();
   if (providers.length === 0) {
-    return NextResponse.json(gradeWithRules(essay, modelAnswer, acceptAlso));
+    return NextResponse.json({
+      ...gradeWithRules(essay, modelAnswer, acceptAlso),
+      fallbackReason: "no_provider",
+    });
   }
 
   const prompt = buildPrompt(essay, promptZh, modelAnswer, level || "A1");
@@ -374,5 +379,8 @@ export async function POST(req: NextRequest) {
 
   // Every provider failed — always return a local rule-based grade so the
   // learner never dead-ends on a failed request.
-  return NextResponse.json(gradeWithRules(essay, modelAnswer, acceptAlso));
+  return NextResponse.json({
+    ...gradeWithRules(essay, modelAnswer, acceptAlso),
+    fallbackReason: "all_failed",
+  });
 }
