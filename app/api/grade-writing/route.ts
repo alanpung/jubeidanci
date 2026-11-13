@@ -104,7 +104,7 @@ function buildProviders(): Provider[] {
       label: "Gemini",
       baseURL: "https://generativelanguage.googleapis.com/v1beta/openai",
       apiKey: readEnv("GEMINI_API_KEY", "GOOGLE_AI_API_KEY") ?? "",
-      model: process.env.GEMINI_MODEL || "gemini-3.8-flash",
+      model: process.env.GEMINI_MODEL || "gemini-2.5-flash-lite",
     },
     {
       id: "openai",
