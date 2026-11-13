@@ -14,9 +14,9 @@ export const dynamic = "force-dynamic";
 const FEATURED_TYPES = QUESTION_TYPE_LIST.filter((t) => t.num !== "\u2728").slice(0, 8);
 
 // The symbols follow the Library's own folder order (Flashcards → Translation
-// → Multiple Choice → …) so a learner meets the same sequence here and on the
-// shelf. A type with no folder of its own (Matching pairs) has no place in
-// that sequence, so it goes last.
+// → Multiple Choice → … → Writing) so a learner meets the same sequence here
+// and on the shelf. Every featured type now has a folder of its own, so the
+// shared order fully determines the layout.
 const FEATURED_TYPES_SORTED = [...FEATURED_TYPES].sort((a, b) => {
   const ia = LIBRARY_TYPE_ORDER.indexOf(a.id);
   const ib = LIBRARY_TYPE_ORDER.indexOf(b.id);
