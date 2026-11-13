@@ -85,8 +85,13 @@ function readEnv(...names: string[]): string | undefined {
  * model differ. A provider is only included if its API key is set, so the
  * route degrades cleanly when only some keys are configured.
  *
- * Override the order with the `AI_PROVIDER_ORDER` env var
- * (comma-separated ids, e.g. "gemini,deepseek,qwen").
+ * Override the preferred order with the `AI_PROVIDER_ORDER` env var
+ * (comma-separated ids, e.g. "gemini,deepseek,qwen"). This is a *preferred
+ * order*, not a whitelist: listed providers are tried first, but any keyed
+ * provider you omitted is still appended as a backup. This guarantees the
+ * chain is never empty as long as at least one key is configured — so a
+ * partial list like "deepseek,qwen" (with only GEMINI_API_KEY set) can no
+ * longer silently fall back to local grading.
  */
 function buildProviders(): Provider[] {
   const defs: Provider[] = [
@@ -135,17 +140,29 @@ function buildProviders(): Provider[] {
   ];
 
   // Only keep providers that have a key configured.
-  let active = defs.filter((p) => p.apiKey);
+  const keyed = defs.filter((p) => p.apiKey);
 
-  // Optional: let the deployer pin the order (and subset) of providers.
+  // Optional: let the deployer pin the *preferred* order of providers.
   const order = process.env.AI_PROVIDER_ORDER
     ?.split(",")
     .map((s) => s.trim().toLowerCase())
     .filter(Boolean);
+
+  let active: Provider[];
   if (order && order.length > 0) {
-    active = order
-      .map((id) => active.find((p) => p.id === id))
+    const ordered = order
+      .map((id) => keyed.find((p) => p.id === id))
       .filter((p): p is Provider => Boolean(p));
+    // Never drop a configured provider just because it was omitted from the
+    // order list. Append any leftover keyed providers so the chain is never
+    // empty when at least one key exists. This prevents a partial
+    // AI_PROVIDER_ORDER (e.g. "deepseek,qwen" with only GEMINI_API_KEY set)
+    // from silently falling back to local grading.
+    const orderedIds = new Set(ordered.map((p) => p.id));
+    const leftovers = keyed.filter((p) => !orderedIds.has(p.id));
+    active = [...ordered, ...leftovers];
+  } else {
+    active = keyed;
   }
 
   return active;
