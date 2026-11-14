@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 3: Pets and Animals"
-courseId: "a1-essay-course"
+courseId: "a1-writing-course"
 description: "A1 Writing about pets and animals"
 icon: "🐱"
 color: "#F59E0B"

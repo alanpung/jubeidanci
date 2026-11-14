@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 7: My Body and Health"
-courseId: "a1-essay-course"
+courseId: "a1-writing-course"
 description: "A1 Writing about body and health"
 icon: "💪"
 color: "#EF4444"

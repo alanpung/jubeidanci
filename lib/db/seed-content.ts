@@ -123,22 +123,41 @@ async function runSeedTask() {
           },
         });
 
-      // One-off: the "A1 Essay" course was renamed to "A1 Writing". Course
-      // titles are owner-owned and deliberately excluded from the upsert
-      // above, so the front-matter change alone would never reach a DB row
-      // that already exists. Apply the rename explicitly, guarded on the old
-      // title so it runs once and never clobbers a later owner edit. The
-      // course id (and therefore every unit id) stays unchanged on purpose:
-      // renaming the id would orphan existing progress / library rows.
+      // Migration: rename the "A1 Essay/Writing" course id from
+      // "a1-essay-course" to "a1-writing-course" to match its filesystem id.
+      // The filesystem units now carry the new courseId, so the old course
+      // row and its old-id units would otherwise survive as a duplicate,
+      // empty course in the library. Mirror the a1-word-bank ->
+      // a1-word-order migration below:
+      //   - re-point any hand-created units (UUID id, not derived from the
+      //     course id) at the new course id so they survive the rename;
+      //   - delete the old-id filesystem units (they are recreated with the
+      //     new id by the upsert loops above);
+      //   - drop the stale old course row.
+      // The new course row is INSERTED (not updated) by the upsert above, so
+      // its title already comes from the front-matter ("A1 writing course")
+      // and needs no separate migration. Runs once: after the first run the
+      // old id is gone, so every branch below is a no-op on later seeds.
+      const oldEssayCourseId = "a1-essay-course";
+      const newEssayCourseId = "a1-writing-course";
+
       await dbBackground
-        .update(course)
-        .set({ title: "A1 Writing", updatedAt: new Date() })
+        .update(unit)
+        .set({ courseId: newEssayCourseId })
         .where(
           and(
-            eq(course.id, "a1-essay-course"),
-            ilike(course.title, "A1 Essay"),
+            eq(unit.courseId, oldEssayCourseId),
+            notLike(unit.id, `${oldEssayCourseId}-%`),
           ),
         );
+
+      await dbBackground
+        .delete(unit)
+        .where(eq(unit.courseId, oldEssayCourseId));
+
+      await dbBackground
+        .delete(course)
+        .where(eq(course.id, oldEssayCourseId));
 
       // The "A1 Word Bank" course was renamed to "A1 Word Order" and its id
       // changed from "a1-word-bank-course" to "a1-word-order-course". The
@@ -429,7 +448,7 @@ async function runSeedTask() {
     // "Standalone Units" folder, because the course cleanup above only touches
     // rows with the course id. The A1 Writing units did exactly this — they were
     // `unit-1-my-school`…`unit-10-my-friends` standalone and are now
-    // `a1-essay-course-unit-N`. Drop any standalone row whose id is a unit's
+    // `a1-writing-course-unit-N`. Drop any standalone row whose id is a unit's
     // legacy title-slug id but is NOT among the ids we just (re)wrote.
     const allCurrentIds = new Set([
       ...unitValues.map((v) => v.id),
