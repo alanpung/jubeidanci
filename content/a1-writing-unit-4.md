@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 4: Jobs and Work"
-courseId: "a1-essay-course"
+courseId: "a1-writing-course"
 description: "A1 Writing about jobs and work"
 icon: "💼"
 color: "#6366F1"

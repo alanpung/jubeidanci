@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 1: My School"
-courseId: "a1-essay-course"
+courseId: "a1-writing-course"
 description: "A1 Writing about school life"
 icon: "🏫"
 color: "#3B82F6"

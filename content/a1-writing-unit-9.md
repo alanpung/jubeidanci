@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 9: Nature and Seasons"
-courseId: "a1-essay-course"
+courseId: "a1-writing-course"
 description: "A1 Writing about nature and seasons"
 icon: "🌳"
 color: "#22C55E"

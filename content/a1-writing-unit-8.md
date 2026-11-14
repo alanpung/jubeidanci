@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 8: Clothes and Colors"
-courseId: "a1-essay-course"
+courseId: "a1-writing-course"
 description: "A1 Writing about clothes and colors"
 icon: "👕"
 color: "#F59E0B"
