@@ -53,7 +53,28 @@ const aiResultSchema = z.object({
   errors: z.array(z.string()).default([]),
 });
 
+/** The always-present local rule-based grade, surfaced for side-by-side comparison. */
+interface InternalGradeBlock {
+  score: number;
+  passed: boolean;
+  /** Per-category deduction breakdown from the local marker. */
+  deductions: { kind: string; label: string; count: number; points: number }[];
+  /** Char ranges into the trimmed learner essay to highlight in red. */
+  errorSpans: WritingErrorSpan[];
+}
+
+/** The optional AI grade, present only when a provider actually graded it. */
+interface AiGradeBlock {
+  provider: string;
+  score: number;
+  passed: boolean;
+  strengths: string[];
+  corrections: string[];
+  errorSpans: WritingErrorSpan[];
+}
+
 interface GradeResponse {
+  /** The headline score — the AI score when available, else the local marker. */
   score: number;
   passed: boolean;
   strengths: string[];
@@ -68,6 +89,12 @@ interface GradeResponse {
   fallbackReason?: "no_provider" | "all_failed";
   /** Sanitized error text from the failed AI call(s), for diagnosis. */
   fallbackError?: string;
+  /** Always present: the local rule-based marker result. */
+  internal: InternalGradeBlock;
+  /** Present only when an AI provider actually graded the essay. */
+  ai?: AiGradeBlock;
+  /** Present only when both internal and AI graded: their rounded mean. */
+  average?: number;
 }
 
 /**
@@ -229,31 +256,26 @@ async function gradeWithProvider(
 }
 
 /**
- * Rule-based fallback: reuse the *writing* grader on the whole essay.
+ * Build the always-present local rule-based grade block from the essay.
  *
  * `markWriting` takes an array of *tokens*, not a string, so the essay is
  * split on whitespace first. It reuses the translation grader's four deduction
  * categories (missing content, extra rephrasing, word-order, spelling/
  * morphology) but with much lighter weights, so open free-writing is scored on
  * meaning coverage and correctness without harshly punishing legitimate
- * paraphrase. The client labels this mode as a basic score rather than a full
- * AI review.
+ * paraphrase.
+ *
+ * This block is returned to the client alongside the AI grade (when one is
+ * produced) so the learner / developer can compare the two graders directly.
  */
-function gradeWithRules(
+function buildInternal(
   essay: string,
   modelAnswer: string,
   acceptAlso: string[],
-): GradeResponse {
+): InternalGradeBlock {
   const accepted = [modelAnswer, ...acceptAlso].filter(Boolean);
   if (accepted.length === 0) {
-    return {
-      score: 0,
-      passed: false,
-      strengths: [],
-      corrections: [],
-      errorSpans: [],
-      source: "fallback",
-    };
+    return { score: 0, passed: false, deductions: [], errorSpans: [] };
   }
 
   const text = essay.trim();
@@ -263,12 +285,41 @@ function gradeWithRules(
   return {
     score: marking.score,
     passed: marking.passed,
+    deductions: marking.deductions.map((d) => ({
+      kind: d.kind,
+      label: d.label,
+      count: d.count,
+      points: d.points,
+    })),
+    errorSpans: spansFromMarking(text, marking, accepted),
+  };
+}
+
+/**
+ * Rule-based fallback: reuse the *writing* grader on the whole essay.
+ *
+ * Used when no provider is configured, or every provider fails. It produces a
+ * full `GradeResponse` whose headline fields mirror the internal block, and
+ * still attaches the `internal` block for parity with the AI path. The client
+ * labels this mode as a basic score rather than a full AI review.
+ */
+function gradeWithRules(
+  essay: string,
+  modelAnswer: string,
+  acceptAlso: string[],
+): GradeResponse {
+  const internal = buildInternal(essay, modelAnswer, acceptAlso);
+
+  return {
+    score: internal.score,
+    passed: internal.passed,
     strengths: [],
-    corrections: marking.deductions.map(
+    corrections: internal.deductions.map(
       (d) => `${d.label} ×${d.count}（−${d.points} 分）`,
     ),
-    errorSpans: spansFromMarking(text, marking, accepted),
+    errorSpans: internal.errorSpans,
     source: "fallback",
+    internal,
   };
 }
 
@@ -371,6 +422,10 @@ export async function POST(req: NextRequest) {
 
   const prompt = buildPrompt(essay, promptZh, modelAnswer, level || "A1");
 
+  // The local marker runs for every request so the client can always show it
+  // next to the AI score (or on its own when AI is unavailable).
+  const internal = buildInternal(essay, modelAnswer, acceptAlso);
+
   // Try each provider in order; use the first that returns a valid grade.
   let lastError: unknown;
   for (const p of providers) {
@@ -379,14 +434,27 @@ export async function POST(req: NextRequest) {
       if (!result) continue; // bad/invalid response, try the next provider
 
       const { score, passed, strengths, corrections, errors } = result;
-      return NextResponse.json({
+      const aiErrorSpans = spansFromPhrases(essay.trim(), errors);
+      const aiBlock: AiGradeBlock = {
+        provider: p.id,
         score: Math.round(score),
         passed,
         strengths,
         corrections,
-        errorSpans: spansFromPhrases(essay.trim(), errors),
+        errorSpans: aiErrorSpans,
+      };
+      const average = Math.round((internal.score + aiBlock.score) / 2);
+      return NextResponse.json({
+        score: aiBlock.score,
+        passed,
+        strengths,
+        corrections,
+        errorSpans: aiErrorSpans,
         source: "ai",
         provider: p.id,
+        internal,
+        ai: aiBlock,
+        average,
       } satisfies GradeResponse);
     } catch (e) {
       // Network error, 401, 429 (quota exhausted), timeout, etc. — fall
@@ -397,9 +465,11 @@ export async function POST(req: NextRequest) {
   }
 
   // Every provider failed — always return a local rule-based grade so the
-  // learner never dead-ends on a failed request.
+  // learner never dead-ends on a failed request. The internal block is still
+  // attached for parity with the AI path.
   return NextResponse.json({
     ...gradeWithRules(essay, modelAnswer, acceptAlso),
+    internal,
     fallbackReason: "all_failed",
     fallbackError: sanitizeError(lastError, providers),
   });

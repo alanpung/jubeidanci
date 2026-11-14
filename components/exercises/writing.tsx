@@ -27,6 +27,22 @@ import { Button } from "@/components/ui/button";
  * renders the result.
  */
 
+interface InternalGradeBlock {
+  score: number;
+  passed: boolean;
+  deductions: { kind: string; label: string; count: number; points: number }[];
+  errorSpans: WritingErrorSpan[];
+}
+
+interface AiGradeBlock {
+  provider: string;
+  score: number;
+  passed: boolean;
+  strengths: string[];
+  corrections: string[];
+  errorSpans: WritingErrorSpan[];
+}
+
 interface GradeResponse {
   score: number;
   passed: boolean;
@@ -35,8 +51,16 @@ interface GradeResponse {
   /** Char ranges into the trimmed essay; absent on older in-flight responses. */
   errorSpans?: WritingErrorSpan[];
   source: "ai" | "fallback";
+  /** Which AI actually graded it, when source === "ai". */
+  provider?: string;
   /** Why we fell back to local grading, when source === "fallback". */
   fallbackReason?: "no_provider" | "all_failed";
+  /** Always present: the local rule-based marker result. */
+  internal: InternalGradeBlock;
+  /** Present only when an AI provider actually graded the essay. */
+  ai?: AiGradeBlock;
+  /** Present only when both graded: their rounded mean. */
+  average?: number;
 }
 
 interface Props {
@@ -62,6 +86,14 @@ function starsForScore(score: number): 0 | 1 | 2 | 3 {
   if (score >= 75) return 2;
   if (score >= 70) return 1;
   return 0;
+}
+
+/** Tailwind background colour for a 0–100 score badge. */
+function scoreColorClass(score: number): string {
+  if (score >= 90) return "bg-emerald-500";
+  if (score >= 75) return "bg-sky-500";
+  if (score >= 70) return "bg-amber-500";
+  return "bg-rose-500";
 }
 
 export function Writing({
@@ -391,6 +423,139 @@ export function Writing({
                     : "基础评分（AI 调用失败：请检查 Key 是否有效或网络是否可访问）"}
                 </p>
               )}
+            </div>
+
+            {/* Three-way comparison: internal marker, AI scorer, and their
+                rounded average. The internal marker always runs; the AI scorer
+                is shown (greyed out when no provider graded) and the average
+                is computed only when both are present. */}
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3">
+              {/* Internal marker (local rule-based) */}
+              <div className="rounded-2xl border-2 border-slate-200 bg-white p-3.5">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-slate-500">
+                    本地评分
+                  </span>
+                  <span
+                    className={`rounded-full px-2.5 py-0.5 text-sm font-black tabular-nums text-white shadow-sm ${scoreColorClass(
+                      grade.internal.score,
+                    )}`}
+                  >
+                    {grade.internal.score}
+                  </span>
+                </div>
+                <p className="mt-1 text-[11px] font-semibold text-slate-400">
+                  规则扣分（拼写/词序/内容/多余）
+                </p>
+                {grade.internal.deductions.length > 0 ? (
+                  <ul className="mt-1.5 space-y-0.5">
+                    {grade.internal.deductions.map((d, i) => (
+                      <li
+                        key={i}
+                        className="flex items-center justify-between text-[11px] font-medium text-slate-600"
+                      >
+                        <span>{d.label} ×{d.count}</span>
+                        <span className="tabular-nums text-rose-500">
+                          −{d.points}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                ) : (
+                  <p className="mt-1.5 text-[11px] font-medium text-emerald-600">
+                    无扣分
+                  </p>
+                )}
+              </div>
+
+              {/* AI scorer — always shown; greyed out when no provider graded */}
+              <div
+                className={`rounded-2xl border-2 p-3.5 ${
+                  grade.ai
+                    ? "border-indigo-200 bg-indigo-50/60"
+                    : "border-slate-200 bg-slate-50 opacity-70"
+                }`}
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-indigo-600">
+                    AI 评分
+                  </span>
+                  {grade.ai ? (
+                    <span
+                      className={`rounded-full px-2.5 py-0.5 text-sm font-black tabular-nums text-white shadow-sm ${scoreColorClass(
+                        grade.ai.score,
+                      )}`}
+                    >
+                      {grade.ai.score}
+                    </span>
+                  ) : (
+                    <span className="rounded-full bg-slate-300 px-2.5 py-0.5 text-sm font-black tabular-nums text-white">
+                      —
+                    </span>
+                  )}
+                </div>
+                {grade.ai ? (
+                  <>
+                    <p className="mt-1 text-[11px] font-semibold capitalize text-indigo-400">
+                      {grade.ai.provider} · 综合评分
+                    </p>
+                    <div className="mt-1.5 flex flex-wrap gap-1">
+                      {grade.ai.strengths.slice(0, 2).map((s, i) => (
+                        <span
+                          key={i}
+                          className="rounded-md bg-emerald-100 px-1.5 py-0.5 text-[10px] font-medium text-emerald-700"
+                        >
+                          {s}
+                        </span>
+                      ))}
+                      {grade.ai.corrections.slice(0, 2).map((c, i) => (
+                        <span
+                          key={i}
+                          className="rounded-md bg-amber-100 px-1.5 py-0.5 text-[10px] font-medium text-amber-700"
+                        >
+                          {c}
+                        </span>
+                      ))}
+                    </div>
+                  </>
+                ) : (
+                  <p className="mt-1 text-[11px] font-medium text-slate-400">
+                    {grade.fallbackReason === "no_provider"
+                      ? "未配置 AI Key"
+                      : "AI 未评分"}
+                  </p>
+                )}
+              </div>
+
+              {/* Average of the two scores (only when both graded) */}
+              <div className="rounded-2xl border-2 border-emerald-200 bg-emerald-50/60 p-3.5">
+                <div className="flex items-center justify-between gap-2">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-700">
+                    平均分
+                  </span>
+                  {grade.average !== undefined ? (
+                    <span
+                      className={`rounded-full px-2.5 py-0.5 text-sm font-black tabular-nums text-white shadow-sm ${scoreColorClass(
+                        grade.average,
+                      )}`}
+                    >
+                      {grade.average}
+                    </span>
+                  ) : (
+                    <span className="rounded-full bg-emerald-300 px-2.5 py-0.5 text-sm font-black tabular-nums text-white">
+                      —
+                    </span>
+                  )}
+                </div>
+                <p className="mt-1 text-[11px] font-semibold text-emerald-500">
+                  （本地 + AI）÷ 2
+                </p>
+                <p className="mt-1.5 text-[11px] font-medium text-emerald-600">
+                  {grade.average !== undefined
+                    ? "两套打分的综合结果"
+                    : "需 AI 评分后计算"}
+                </p>
+              </div>
             </div>
 
             {/* What the learner wrote, with mistakes marked in red */}
