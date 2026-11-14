@@ -9,10 +9,13 @@ sourceLanguage: "zh"
 level: "A2"
 questionType: "writing"
 ---
+
+---
 lessonTitle: "Lesson 1: My Hobby"
 description: "Write about your hobby"
 icon: "🎨"
 color: "#14B8A6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -26,6 +29,7 @@ lessonTitle: "Lesson 2: Reading Books"
 description: "Write about reading"
 icon: "🎨"
 color: "#14B8A6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -39,6 +43,7 @@ lessonTitle: "Lesson 3: Playing an Instrument"
 description: "Write about an instrument"
 icon: "🎨"
 color: "#14B8A6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -52,6 +57,7 @@ lessonTitle: "Lesson 4: Watching Movies"
 description: "Write about watching movies"
 icon: "🎨"
 color: "#14B8A6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -65,6 +71,7 @@ lessonTitle: "Lesson 5: Gardening"
 description: "Write about gardening"
 icon: "🎨"
 color: "#14B8A6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -78,6 +85,7 @@ lessonTitle: "Lesson 6: Collecting Stamps"
 description: "Write about collecting stamps"
 icon: "🎨"
 color: "#14B8A6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -91,6 +99,7 @@ lessonTitle: "Lesson 7: Cooking as a Hobby"
 description: "Write about cooking as a hobby"
 icon: "🎨"
 color: "#14B8A6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -104,6 +113,7 @@ lessonTitle: "Lesson 8: Board Games"
 description: "Write about board games"
 icon: "🎨"
 color: "#14B8A6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -117,6 +127,7 @@ lessonTitle: "Lesson 9: Photography"
 description: "Write about photography"
 icon: "🎨"
 color: "#14B8A6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -130,6 +141,7 @@ lessonTitle: "Lesson 10: My Free Time Plan"
 description: "Write about a free time plan"
 icon: "🎨"
 color: "#14B8A6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -137,4 +149,3 @@ sentence: "我希望更好地利用空闲时间。计划是：运动、读书、
 answer: "I want to use free time better. My plan: exercise, read, learn new skills. Less phone, more going out. Keep half a day weekly for what I like. Arrange well so time means more. Free time is a gift."
 acceptAlso: "I'll use free time wisely. Plan: sport, read, learn skills. Less phone, more outside. A half day weekly for joy. Good plan makes time matter. Free time is a gift."
 srsWords: "free" "plan" "skill" "phone" "gift"
-

@@ -9,10 +9,13 @@ sourceLanguage: "zh"
 level: "A2"
 questionType: "writing"
 ---
+
+---
 lessonTitle: "Lesson 1: My Dream Job"
 description: "Write about your dream job"
 icon: "🌟"
 color: "#F43F5E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -26,6 +29,7 @@ lessonTitle: "Lesson 2: In Ten Years"
 description: "Write about ten years from now"
 icon: "🌟"
 color: "#F43F5E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -39,6 +43,7 @@ lessonTitle: "Lesson 3: Learning a New Language"
 description: "Write about learning a language"
 icon: "🌟"
 color: "#F43F5E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -52,6 +57,7 @@ lessonTitle: "Lesson 4: Helping Others"
 description: "Write about helping others"
 icon: "🌟"
 color: "#F43F5E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -65,6 +71,7 @@ lessonTitle: "Lesson 5: A Letter to Future Me"
 description: "Write about a letter to future you"
 icon: "🌟"
 color: "#F43F5E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -78,6 +85,7 @@ lessonTitle: "Lesson 6: Saving the Planet"
 description: "Write about saving the planet"
 icon: "🌟"
 color: "#F43F5E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -91,6 +99,7 @@ lessonTitle: "Lesson 7: My Study Plan"
 description: "Write about your study plan"
 icon: "🌟"
 color: "#F43F5E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -104,6 +113,7 @@ lessonTitle: "Lesson 8: If I Had a Lot of Money"
 description: "Write about having lots of money"
 icon: "🌟"
 color: "#F43F5E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -117,6 +127,7 @@ lessonTitle: "Lesson 9: Overcoming Fear"
 description: "Write about overcoming fear"
 icon: "🌟"
 color: "#F43F5E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -130,6 +141,7 @@ lessonTitle: "Lesson 10: My Promise to Myself"
 description: "Write about a promise to yourself"
 icon: "🌟"
 color: "#F43F5E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -137,4 +149,3 @@ sentence: "我向自己承诺：每天进步一点点。不与他人比，只与
 answer: "I promise myself: improve a little each day. Don't compare with others, only with yesterday's me. Don't quit at the first difficulty. Stay curious and kind. Such a me will have a good future."
 acceptAlso: "I promise: progress daily. Compare to myself, not others. Don't give up fast. Stay curious, kind. That me has a fine future."
 srsWords: "promise" "improve" "compare" "curious" "kind"
-

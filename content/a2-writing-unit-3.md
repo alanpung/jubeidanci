@@ -9,10 +9,13 @@ sourceLanguage: "zh"
 level: "A2"
 questionType: "writing"
 ---
+
+---
 lessonTitle: "Lesson 1: My Family Members"
 description: "Write about your family members"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -26,6 +29,7 @@ lessonTitle: "Lesson 2: My Father"
 description: "Write about your father"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -39,6 +43,7 @@ lessonTitle: "Lesson 3: My Mother"
 description: "Write about your mother"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -52,6 +57,7 @@ lessonTitle: "Lesson 4: My Little Sister"
 description: "Write about your sister"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -65,6 +71,7 @@ lessonTitle: "Lesson 5: A Family Dinner"
 description: "Write about a family dinner"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -78,6 +85,7 @@ lessonTitle: "Lesson 6: My Grandparents"
 description: "Write about your grandparents"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -91,6 +99,7 @@ lessonTitle: "Lesson 7: A Family Trip"
 description: "Write about a family trip"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -104,6 +113,7 @@ lessonTitle: "Lesson 8: Family Rules"
 description: "Write about rules at home"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -117,6 +127,7 @@ lessonTitle: "Lesson 9: Helping My Parents"
 description: "Write about helping your parents"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -130,6 +141,7 @@ lessonTitle: "Lesson 10: My Dream for the Family"
 description: "Write about your dream for the family"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -137,4 +149,3 @@ sentence: "我希望将来带父母去旅行。他们辛苦了一辈子，该休
 answer: "I hope to take my parents traveling in the future. They have worked hard all their lives and deserve a rest. I want to show them the sea and snowy mountains. Then we can play without rushing. My biggest wish is that my family stays healthy and safe."
 acceptAlso: "I want to travel with my parents someday. They worked hard for years and need rest. I'd like to show them the ocean and snow mountains. We can relax and enjoy. My greatest wish is our family's health and safety."
 srsWords: "future" "travel" "rest" "mountain" "wish"
-

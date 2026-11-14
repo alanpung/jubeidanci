@@ -9,10 +9,13 @@ sourceLanguage: "zh"
 level: "A2"
 questionType: "writing"
 ---
+
+---
 lessonTitle: "Lesson 1: A Trip to the Beach"
 description: "Write about a beach trip"
 icon: "✈️"
 color: "#8B5CF6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -26,6 +29,7 @@ lessonTitle: "Lesson 2: Planning a Trip"
 description: "Write about planning a trip"
 icon: "✈️"
 color: "#8B5CF6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -39,6 +43,7 @@ lessonTitle: "Lesson 3: A Train Journey"
 description: "Write about a train journey"
 icon: "✈️"
 color: "#8B5CF6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -52,6 +57,7 @@ lessonTitle: "Lesson 4: My Hometown"
 description: "Write about your hometown"
 icon: "✈️"
 color: "#8B5CF6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -65,6 +71,7 @@ lessonTitle: "Lesson 5: A Hotel Stay"
 description: "Write about a hotel stay"
 icon: "✈️"
 color: "#8B5CF6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -78,6 +85,7 @@ lessonTitle: "Lesson 6: Lost on Holiday"
 description: "Write about getting lost"
 icon: "✈️"
 color: "#8B5CF6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -91,6 +99,7 @@ lessonTitle: "Lesson 7: A Camping Night"
 description: "Write about camping"
 icon: "✈️"
 color: "#8B5CF6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -104,6 +113,7 @@ lessonTitle: "Lesson 8: Travel Photos"
 description: "Write about travel photos"
 icon: "✈️"
 color: "#8B5CF6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -117,6 +127,7 @@ lessonTitle: "Lesson 9: A Foreign City"
 description: "Write about a foreign city"
 icon: "✈️"
 color: "#8B5CF6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -130,6 +141,7 @@ lessonTitle: "Lesson 10: My Travel Tips"
 description: "Write about travel tips"
 icon: "✈️"
 color: "#8B5CF6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -137,4 +149,3 @@ sentence: "出门旅行我有些小建议。先查天气，带合适的衣服。
 answer: "I have some tips for traveling. First check the weather and pack right clothes. Keep documents and money safe. Photograph important items as backup. Keep your phone charged. Good preparation makes trips smoother."
 acceptAlso: "Here are my travel tips. Check weather first and bring proper clothes. Store papers and cash well. Snap photos of key things for backup. Keep the phone powered. Preparation makes journeys smoother."
 srsWords: "travel" "weather" "document" "backup" "prepare"
-

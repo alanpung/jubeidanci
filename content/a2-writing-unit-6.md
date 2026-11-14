@@ -9,10 +9,13 @@ sourceLanguage: "zh"
 level: "A2"
 questionType: "writing"
 ---
+
+---
 lessonTitle: "Lesson 1: Why Exercise"
 description: "Write about why exercise matters"
 icon: "🏃"
 color: "#22C55E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -26,6 +29,7 @@ lessonTitle: "Lesson 2: A Sport I Like"
 description: "Write about a sport you like"
 icon: "🏃"
 color: "#22C55E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -39,6 +43,7 @@ lessonTitle: "Lesson 3: Staying Healthy"
 description: "Write about staying healthy"
 icon: "🏃"
 color: "#22C55E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -52,6 +57,7 @@ lessonTitle: "Lesson 4: A Cold"
 description: "Write about having a cold"
 icon: "🏃"
 color: "#22C55E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -65,6 +71,7 @@ lessonTitle: "Lesson 5: Visiting the Doctor"
 description: "Write about seeing a doctor"
 icon: "🏃"
 color: "#22C55E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -78,6 +85,7 @@ lessonTitle: "Lesson 6: Teeth Care"
 description: "Write about teeth care"
 icon: "🏃"
 color: "#22C55E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -91,6 +99,7 @@ lessonTitle: "Lesson 7: Relaxation"
 description: "Write about relaxation"
 icon: "🏃"
 color: "#22C55E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -104,6 +113,7 @@ lessonTitle: "Lesson 8: A Healthy Breakfast"
 description: "Write about a healthy breakfast"
 icon: "🏃"
 color: "#22C55E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -117,6 +127,7 @@ lessonTitle: "Lesson 9: Screen Time"
 description: "Write about screen time"
 icon: "🏃"
 color: "#22C55E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -130,6 +141,7 @@ lessonTitle: "Lesson 10: My Health Goal"
 description: "Write about your health goal"
 icon: "🏃"
 color: "#22C55E"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -137,4 +149,3 @@ sentence: "今年的健康目标是每天走一万步。我戴着手环计数。
 answer: "My health goal this year is ten thousand steps a day. I wear a band to count. On weekends I hike or cycle. I also want to order less takeout. Keep exercising and my body will be great. Health is a lifelong lesson."
 acceptAlso: "This year I aim for 10,000 steps daily. A wristband counts. Weekends I climb or bike. Less takeout too. Keep moving, body improves. Health is lifelong."
 srsWords: "goal" "step" "hike" "takeout" "lifelong"
-

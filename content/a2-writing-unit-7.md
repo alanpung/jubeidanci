@@ -9,10 +9,13 @@ sourceLanguage: "zh"
 level: "A2"
 questionType: "writing"
 ---
+
+---
 lessonTitle: "Lesson 1: A New Shirt"
 description: "Write about buying a new shirt"
 icon: "🛍️"
 color: "#EAB308"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -26,6 +29,7 @@ lessonTitle: "Lesson 2: My Favorite Outfit"
 description: "Write about your favorite outfit"
 icon: "🛍️"
 color: "#EAB308"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -39,6 +43,7 @@ lessonTitle: "Lesson 3: At the Supermarket"
 description: "Write about the supermarket"
 icon: "🛍️"
 color: "#EAB308"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -52,6 +57,7 @@ lessonTitle: "Lesson 4: Online Shopping"
 description: "Write about online shopping"
 icon: "🛍️"
 color: "#EAB308"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -65,6 +71,7 @@ lessonTitle: "Lesson 5: Shoes I Need"
 description: "Write about shoes you need"
 icon: "🛍️"
 color: "#EAB308"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -78,6 +85,7 @@ lessonTitle: "Lesson 6: Comparing Prices"
 description: "Write about comparing prices"
 icon: "🛍️"
 color: "#EAB308"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -91,6 +99,7 @@ lessonTitle: "Lesson 7: A Gift for Mom"
 description: "Write about a gift for mom"
 icon: "🛍️"
 color: "#EAB308"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -104,6 +113,7 @@ lessonTitle: "Lesson 8: Size Problem"
 description: "Write about a size problem"
 icon: "🛍️"
 color: "#EAB308"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -117,6 +127,7 @@ lessonTitle: "Lesson 9: Saving Money"
 description: "Write about saving money"
 icon: "🛍️"
 color: "#EAB308"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -130,6 +141,7 @@ lessonTitle: "Lesson 10: My Shopping List"
 description: "Write about a shopping list"
 icon: "🛍️"
 color: "#EAB308"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -137,4 +149,3 @@ sentence: "去超市前我会写购物清单。这样不会乱买，也省时间
 answer: "Before the supermarket I write a shopping list. That way I don't buy randomly and save time. The list has fruit, eggs and tissues. I take items by the list and finish fast. Planned shopping is smarter. A list is a small habit with big help."
 acceptAlso: "I make a list before the market. Avoid impulse buys and save time. It has fruit, eggs, tissues. I follow it and finish quick. Planned shopping is wise. Lists help a lot."
 srsWords: "list" "fruit" "egg" "tissue" "plan"
-
