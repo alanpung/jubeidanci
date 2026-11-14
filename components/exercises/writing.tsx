@@ -495,29 +495,9 @@ export function Writing({
                   )}
                 </div>
                 {grade.ai ? (
-                  <>
-                    <p className="mt-1 text-[11px] font-semibold capitalize text-indigo-400">
-                      {grade.ai.provider} · 综合评分
-                    </p>
-                    <div className="mt-1.5 flex flex-wrap gap-1">
-                      {grade.ai.strengths.slice(0, 2).map((s, i) => (
-                        <span
-                          key={i}
-                          className="rounded-md bg-emerald-100 px-1.5 py-0.5 text-[10px] font-medium text-emerald-700"
-                        >
-                          {s}
-                        </span>
-                      ))}
-                      {grade.ai.corrections.slice(0, 2).map((c, i) => (
-                        <span
-                          key={i}
-                          className="rounded-md bg-amber-100 px-1.5 py-0.5 text-[10px] font-medium text-amber-700"
-                        >
-                          {c}
-                        </span>
-                      ))}
-                    </div>
-                  </>
+                  <p className="mt-1 text-[11px] font-semibold capitalize text-indigo-400">
+                    {grade.ai.provider} · 综合评分
+                  </p>
                 ) : (
                   <p className="mt-1 text-[11px] font-medium text-slate-400">
                     {grade.fallbackReason === "no_provider"
