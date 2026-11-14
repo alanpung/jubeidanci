@@ -232,11 +232,12 @@ async function gradeWithProvider(
  * Rule-based fallback: reuse the *writing* grader on the whole essay.
  *
  * `markWriting` takes an array of *tokens*, not a string, so the essay is
- * split on whitespace first. Unlike the translation grader it is grammar-only
- * — it only deducts for spelling / inflection slips, never for word choice,
- * omissions or reordering — which matches how open free-writing should be
- * scored. The client labels this mode as a basic score rather than a full AI
- * review.
+ * split on whitespace first. It reuses the translation grader's four deduction
+ * categories (missing content, extra rephrasing, word-order, spelling/
+ * morphology) but with much lighter weights, so open free-writing is scored on
+ * meaning coverage and correctness without harshly punishing legitimate
+ * paraphrase. The client labels this mode as a basic score rather than a full
+ * AI review.
  */
 function gradeWithRules(
   essay: string,

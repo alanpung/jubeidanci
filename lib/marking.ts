@@ -28,7 +28,7 @@
  * same-inflection equivalence) — no new dependencies.
  */
 
-import { normalize, isInflectionMismatch } from "@/lib/similarity";
+import { normalize } from "@/lib/similarity";
 import { isEquivalentToken } from "@/lib/synonyms";
 import type { Quality } from "@/lib/srs";
 
@@ -94,6 +94,64 @@ export const MARKING_RULES = {
   /** Spelling / inflection slips (close-enough match, e.g. "decide"→"decided"). */
   typo: { per: 3, cap: 12, label: "拼写/形态" },
 } as const;
+
+// ---------------------------------------------------------------------------
+// Writing-specific rules — same four categories as the translation grader, but
+// much lighter. Free writing rewards meaning + correct English, so a content
+// gap or a rephrasing costs only a little, not the harsh translation weights.
+// ---------------------------------------------------------------------------
+
+export interface DeductionRules {
+  missing: { per: number; cap: number; label: string };
+  extra: { per: number; cap: number; label: string };
+  displaced: { per: number; cap: number; label: string };
+  typo: { per: number; cap: number; label: string };
+}
+
+export const WRITING_RULES: DeductionRules = {
+  /** Content not covered (model-answer words the learner omitted). */
+  missing: { per: 4, cap: 20, label: "内容缺失" },
+  /** Free-choice words the answer doesn't have (rephrasing / off-topic). */
+  extra: { per: 2, cap: 8, label: "多余表达" },
+  /** Word-order scramble (only charged when sentence length matches exactly). */
+  displaced: { per: 2, cap: 10, label: "词序错乱" },
+  /** Spelling / morphology slips. */
+  typo: { per: 3, cap: 12, label: "拼写/形态" },
+};
+
+/**
+ * Apply a rule set to the aligned counts, producing the final score and the
+ * deduction breakdown. Shared by both graders so the substitution/omission/
+ * insertion logic lives in exactly one place.
+ *
+ *   substitution = min(miss, extra)  → one wrong word swapped in
+ *   omission      = miss − substitution → answer word simply absent
+ *   insertion     = extra − substitution → a word the answer doesn't have
+ * "错词" charges substitution + insertion; "漏词" charges omission only.
+ */
+function applyDeductions(
+  a: ReturnType<typeof alignTokens>,
+  rules: DeductionRules,
+): { score: number; deductions: MarkingDeduction[] } {
+  const substitution = Math.min(a.missCount, a.extraCount);
+  const omission = a.missCount - substitution;
+  const insertion = a.extraCount - substitution;
+
+  const A = Math.min(rules.missing.cap, omission * rules.missing.per);
+  const B = Math.min(rules.extra.cap, (substitution + insertion) * rules.extra.per);
+  const C = Math.min(rules.displaced.cap, a.displacedCount * rules.displaced.per);
+  const D = Math.min(rules.typo.cap, a.typoCount * rules.typo.per);
+
+  const score = Math.max(0, 100 - (A + B + C + D));
+
+  const deductions: MarkingDeduction[] = [];
+  if (A > 0) deductions.push({ kind: "missing", label: rules.missing.label, count: omission, points: A });
+  if (B > 0) deductions.push({ kind: "extra", label: rules.extra.label, count: substitution + insertion, points: B });
+  if (C > 0) deductions.push({ kind: "displaced", label: rules.displaced.label, count: a.displacedCount, points: C });
+  if (D > 0) deductions.push({ kind: "typo", label: rules.typo.label, count: a.typoCount, points: D });
+
+  return { score, deductions };
+}
 
 // ---------------------------------------------------------------------------
 // Tokenisation + character-level similarity helpers
@@ -303,14 +361,13 @@ function alignTokens(
       continue;
     }
 
-    // 2. TYPO — close-enough word among unused user words (excluding inflection mismatches).
+    // 2. TYPO — close-enough word among unused user words. A pure morphology
+    //    slip (e.g. "decide"→"decided") falls through to here via charSim and is
+    //    counted as a spelling/形态 error, matching the `typo` label.
     let typoJ = -1;
     for (let j = 0; j < userTokens.length; j++) {
       if (usedUser[j]) continue;
       const u = userTokens[j];
-      if (isInflectionMismatch(u, ansTok) || acceptable.some((a) => isInflectionMismatch(u, a))) {
-        continue;
-      }
       const sim = Math.max(
         charSim(u, ansTok),
         ...acceptable.map((a) => charSim(u, a)),
@@ -402,18 +459,7 @@ export function markTranslation(
   const omission = a.missCount - substitution;
   const insertion = a.extraCount - substitution;
 
-  const A = Math.min(MARKING_RULES.missing.cap, omission * MARKING_RULES.missing.per);
-  const B = Math.min(MARKING_RULES.extra.cap, (substitution + insertion) * MARKING_RULES.extra.per);
-  const C = Math.min(MARKING_RULES.displaced.cap, a.displacedCount * MARKING_RULES.displaced.per);
-  const D = Math.min(MARKING_RULES.typo.cap, a.typoCount * MARKING_RULES.typo.per);
-
-  const score = Math.max(0, 100 - (A + B + C + D));
-
-  const deductions: MarkingDeduction[] = [];
-  if (A > 0) deductions.push({ kind: "missing", label: MARKING_RULES.missing.label, count: omission, points: A });
-  if (B > 0) deductions.push({ kind: "extra", label: MARKING_RULES.extra.label, count: substitution + insertion, points: B });
-  if (C > 0) deductions.push({ kind: "displaced", label: MARKING_RULES.displaced.label, count: a.displacedCount, points: C });
-  if (D > 0) deductions.push({ kind: "typo", label: MARKING_RULES.typo.label, count: a.typoCount, points: D });
+  const { score, deductions } = applyDeductions(a, MARKING_RULES);
 
   return {
     score,
@@ -425,17 +471,19 @@ export function markTranslation(
 }
 
 /**
- * Open writing grader — grammar-only, deliberately lenient.
+ * Open writing grader — content + grammar, but deliberately lenient.
  *
- * Unlike `markTranslation` (used for translation drills, where the learner
- * must reproduce the exact target sentence), free writing should reward
- * communication. This grader therefore only deducts for genuine grammatical
- * slips — the spelling / inflection errors the `typo` pass detects. Word
- * choice, omitted content and word order are NOT penalized: a learner who
- * paraphrases the prompt in correct English should score well.
+ * Unlike `markTranslation` (a strict word-for-word drill), free writing rewards
+ * communication. This grader therefore reuses the same four deduction
+ * categories as the translation grader — missing content, extra rephrasing,
+ * word-order and spelling/morphology slips — but with much smaller `per`/cap
+ * weights (see `WRITING_RULES`). A learner who covers the model answer's
+ * meaning in correct English still scores well; one who ignores the topic or
+ * makes many grammar errors loses points proportionally rather than all at
+ * once.
  *
  * The returned `userTokens` remaps free-choice words ("extra") to "hit" so the
- * client highlighter only paints actual grammar errors red, never legitimate
+ * client highlighter only paints genuine grammar errors red, never legitimate
  * synonyms or rephrasings.
  */
 export function markWriting(
@@ -464,21 +512,21 @@ export function markWriting(
     };
   }
 
-  // Grammar-only: the single `typo` deduction is the only thing that lowers the
-  // score. Open writing must not punish a different word, a paraphrase or a
-  // reordering.
-  const D = Math.min(MARKING_RULES.typo.cap, a.typoCount * MARKING_RULES.typo.per);
-  const score = Math.max(0, 100 - D);
+  // Content + grammar, but with much lighter weights than the strict
+  // translation grader. See `WRITING_RULES` for the per/cap values.
+  const { score, deductions } = applyDeductions(a, WRITING_RULES);
 
+  // Free writing: only genuine grammar/spelling slips are painted red. Rephrased
+  // words ("extra") and reordered words ("moved") are neutralised to "hit" so
+  // the highlighter never flags legitimate rephrasing as an error — the score
+  // still reflects those lightly via the deduction breakdown.
   const userTokens = a.reportUserTokens().map((u) => ({
     token: u.token,
-    state: u.state === "extra" ? ("hit" as UserTokenState) : u.state,
+    state:
+      u.state === "extra" || u.state === "moved"
+        ? ("hit" as UserTokenState)
+        : u.state,
   }));
-
-  const deductions: MarkingDeduction[] =
-    D > 0
-      ? [{ kind: "typo", label: MARKING_RULES.typo.label, count: a.typoCount, points: D }]
-      : [];
 
   return {
     score,
