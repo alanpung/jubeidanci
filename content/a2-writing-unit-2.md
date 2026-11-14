@@ -9,10 +9,13 @@ sourceLanguage: "zh"
 level: "A2"
 questionType: "writing"
 ---
+
+---
 lessonTitle: "Lesson 1: Today's Weather"
 description: "Write about today's weather"
 icon: "🌤️"
 color: "#0EA5E9"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -26,6 +29,7 @@ lessonTitle: "Lesson 2: My Favorite Season"
 description: "Write about your favorite season"
 icon: "🌤️"
 color: "#0EA5E9"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -39,6 +43,7 @@ lessonTitle: "Lesson 3: A Rainy Day"
 description: "Write about a rainy day"
 icon: "🌤️"
 color: "#0EA5E9"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -52,6 +57,7 @@ lessonTitle: "Lesson 4: Summer Holiday"
 description: "Write about a summer holiday"
 icon: "🌤️"
 color: "#0EA5E9"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -65,6 +71,7 @@ lessonTitle: "Lesson 5: Winter Fun"
 description: "Write about winter"
 icon: "🌤️"
 color: "#0EA5E9"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -78,6 +85,7 @@ lessonTitle: "Lesson 6: Spring Morning"
 description: "Write about a spring morning"
 icon: "🌤️"
 color: "#0EA5E9"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -91,6 +99,7 @@ lessonTitle: "Lesson 7: Autumn Colors"
 description: "Write about autumn colors"
 icon: "🌤️"
 color: "#0EA5E9"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -104,6 +113,7 @@ lessonTitle: "Lesson 8: Weather and Clothes"
 description: "Write about weather and clothes"
 icon: "🌤️"
 color: "#0EA5E9"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -117,6 +127,7 @@ lessonTitle: "Lesson 9: A Storm"
 description: "Write about a storm"
 icon: "🌤️"
 color: "#0EA5E9"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -130,6 +141,7 @@ lessonTitle: "Lesson 10: Climate in My City"
 description: "Write about your city's climate"
 icon: "🌤️"
 color: "#0EA5E9"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -137,4 +149,3 @@ sentence: "我住在南方，气候温暖湿润。夏天长，冬天短。一年
 answer: "I live in the south, where the climate is warm and wet. Summers are long and winters are short. It rains a lot during the year. Compared with the north, winters here are more comfortable. I like the climate because it suits plant growth."
 acceptAlso: "I am from the south, and the climate is warm and humid. Long summers, short winters. We get plenty of rain. Winters are nicer than in the north. I like this climate since plants grow well."
 srsWords: "climate" "south" "warm" "rain" "north"
-

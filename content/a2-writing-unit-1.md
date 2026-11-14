@@ -9,10 +9,13 @@ sourceLanguage: "zh"
 level: "A2"
 questionType: "writing"
 ---
+
+---
 lessonTitle: "Lesson 1: A Weekday Morning"
 description: "Write about a weekday morning"
 icon: "🕐"
 color: "#3B82F6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -26,6 +29,7 @@ lessonTitle: "Lesson 2: My Breakfast"
 description: "Write about your breakfast"
 icon: "🕐"
 color: "#3B82F6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -39,6 +43,7 @@ lessonTitle: "Lesson 3: Going to School"
 description: "Write about the way to school"
 icon: "🕐"
 color: "#3B82F6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -52,6 +57,7 @@ lessonTitle: "Lesson 4: Afternoon Activities"
 description: "Write about your afternoon"
 icon: "🕐"
 color: "#3B82F6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -65,6 +71,7 @@ lessonTitle: "Lesson 5: Evening at Home"
 description: "Write about your evening"
 icon: "🕐"
 color: "#3B82F6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -78,6 +85,7 @@ lessonTitle: "Lesson 6: Weekend Morning"
 description: "Write about a weekend morning"
 icon: "🕐"
 color: "#3B82F6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -91,6 +99,7 @@ lessonTitle: "Lesson 7: My Study Time"
 description: "Write about your study time"
 icon: "🕐"
 color: "#3B82F6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -104,6 +113,7 @@ lessonTitle: "Lesson 8: Helping at Home"
 description: "Write about helping at home"
 icon: "🕐"
 color: "#3B82F6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -117,6 +127,7 @@ lessonTitle: "Lesson 9: A Busy Day"
 description: "Write about a busy day"
 icon: "🕐"
 color: "#3B82F6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -130,6 +141,7 @@ lessonTitle: "Lesson 10: My Ideal Day"
 description: "Write about your ideal day"
 icon: "🕐"
 color: "#3B82F6"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -137,4 +149,3 @@ sentence: "我理想的一天从运动开始。早上我去跑步，呼吸新鲜
 answer: "My ideal day starts with exercise. In the morning I go running and breathe fresh air. Then I eat a big breakfast. During the day I read my favorite books and listen to music. In the evening I walk with my family. There is no homework and no stress. A day like this makes me happy."
 acceptAlso: "My perfect day begins with sport. I run in the morning and enjoy fresh air. Then I have a nice breakfast. In the daytime I read books I like and listen to music. At night I stroll with my family. No homework, no pressure. This kind of day makes me happy."
 srsWords: "ideal" "exercise" "fresh" "music" "stress"
-

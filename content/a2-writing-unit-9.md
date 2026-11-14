@@ -9,10 +9,13 @@ sourceLanguage: "zh"
 level: "A2"
 questionType: "writing"
 ---
+
+---
 lessonTitle: "Lesson 1: My Pet Dog"
 description: "Write about your pet dog"
 icon: "🐾"
 color: "#A3E635"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -26,6 +29,7 @@ lessonTitle: "Lesson 2: A Visit to the Zoo"
 description: "Write about a zoo visit"
 icon: "🐾"
 color: "#A3E635"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -39,6 +43,7 @@ lessonTitle: "Lesson 3: Four Seasons of a Tree"
 description: "Write about a tree through seasons"
 icon: "🐾"
 color: "#A3E635"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -52,6 +57,7 @@ lessonTitle: "Lesson 4: The Ocean"
 description: "Write about the ocean"
 icon: "🐾"
 color: "#A3E635"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -65,6 +71,7 @@ lessonTitle: "Lesson 5: A Rainforest"
 description: "Write about a rainforest"
 icon: "🐾"
 color: "#A3E635"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -78,6 +85,7 @@ lessonTitle: "Lesson 6: Insects"
 description: "Write about insects"
 icon: "🐾"
 color: "#A3E635"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -91,6 +99,7 @@ lessonTitle: "Lesson 7: My Favorite Animal"
 description: "Write about your favorite animal"
 icon: "🐾"
 color: "#A3E635"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -104,6 +113,7 @@ lessonTitle: "Lesson 8: Saving Water"
 description: "Write about saving water"
 icon: "🐾"
 color: "#A3E635"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -117,6 +127,7 @@ lessonTitle: "Lesson 9: A Mountain Hike"
 description: "Write about a mountain hike"
 icon: "🐾"
 color: "#A3E635"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -130,6 +141,7 @@ lessonTitle: "Lesson 10: Nature Around Me"
 description: "Write about nature around you"
 icon: "🐾"
 color: "#A3E635"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -137,4 +149,3 @@ sentence: "我住的城市有不少公园和河。早上有人在河边跑步，
 answer: "My city has many parks and a river. In the morning people run by the river and birds sing in trees. I feel nature is not far. If we pay attention, scenery is everywhere. Caring for the small nature nearby is caring for Earth."
 acceptAlso: "The city has parks and a river. Mornings, runners by river, birds in trees. Nature is near. Notice it, scenes everywhere. Love local nature, love Earth."
 srsWords: "nature" "park" "river" "bird" "care"
-

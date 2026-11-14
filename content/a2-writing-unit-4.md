@@ -9,10 +9,13 @@ sourceLanguage: "zh"
 level: "A2"
 questionType: "writing"
 ---
+
+---
 lessonTitle: "Lesson 1: My Favorite Food"
 description: "Write about your favorite food"
 icon: "🍳"
 color: "#F97316"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -26,6 +29,7 @@ lessonTitle: "Lesson 2: A Meal I Cooked"
 description: "Write about a meal you cooked"
 icon: "🍳"
 color: "#F97316"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -39,6 +43,7 @@ lessonTitle: "Lesson 3: Eating Out"
 description: "Write about eating out"
 icon: "🍳"
 color: "#F97316"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -52,6 +57,7 @@ lessonTitle: "Lesson 4: Fruit and Vegetables"
 description: "Write about fruit and vegetables"
 icon: "🍳"
 color: "#F97316"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -65,6 +71,7 @@ lessonTitle: "Lesson 5: A Birthday Cake"
 description: "Write about a birthday cake"
 icon: "🍳"
 color: "#F97316"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -78,6 +85,7 @@ lessonTitle: "Lesson 6: Drinks I Like"
 description: "Write about drinks you like"
 icon: "🍳"
 color: "#F97316"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -91,6 +99,7 @@ lessonTitle: "Lesson 7: A Traditional Festival Meal"
 description: "Write about a festival meal"
 icon: "🍳"
 color: "#F97316"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -104,6 +113,7 @@ lessonTitle: "Lesson 8: Cooking with Friends"
 description: "Write about cooking with friends"
 icon: "🍳"
 color: "#F97316"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -117,6 +127,7 @@ lessonTitle: "Lesson 9: Healthy Eating"
 description: "Write about healthy eating"
 icon: "🍳"
 color: "#F97316"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -130,6 +141,7 @@ lessonTitle: "Lesson 10: My Dream Restaurant"
 description: "Write about a dream restaurant"
 icon: "🍳"
 color: "#F97316"
+---
 
 [writing]
 text: "Write this passage in English"
@@ -137,4 +149,3 @@ sentence: "我长大想开一家小餐馆。我想做各国简单又好吃的菜
 answer: "When I grow up I want to open a small restaurant. I want to cook simple, tasty dishes from different countries. The place should be bright, clean, and not expensive. Guests leave happy after eating. Making people happy with my cooking is my dream."
 acceptAlso: "I hope to run a small eatery when older. I'll serve easy, yummy food from many lands. It should be bright, clean and cheap. Customers leave with a smile. To cheer folks with my skill is my dream."
 srsWords: "restaurant" "cook" "bright" "price" "dream"
-
