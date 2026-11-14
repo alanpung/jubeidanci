@@ -110,13 +110,13 @@ export interface DeductionRules {
 
 export const WRITING_RULES: DeductionRules = {
   /** Content not covered (model-answer words the learner omitted). */
-  missing: { per: 4, cap: 20, label: "内容缺失" },
+  missing: { per: 3, cap: 15, label: "内容缺失" },
   /** Free-choice words the answer doesn't have (rephrasing / off-topic). */
-  extra: { per: 2, cap: 8, label: "多余表达" },
+  extra: { per: 1, cap: 4, label: "多余表达" },
   /** Word-order scramble (only charged when sentence length matches exactly). */
-  displaced: { per: 2, cap: 10, label: "词序错乱" },
+  displaced: { per: 1, cap: 5, label: "词序错乱" },
   /** Spelling / morphology slips. */
-  typo: { per: 3, cap: 12, label: "拼写/形态" },
+  typo: { per: 2, cap: 8, label: "拼写/形态" },
 };
 
 /**
