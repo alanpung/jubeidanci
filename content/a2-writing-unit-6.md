@@ -11,21 +11,21 @@ questionType: "writing"
 ---
 
 ---
-lessonTitle: "Lesson 1: Why Exercise"
-description: "Write about why exercise matters"
+lessonTitle: "My Exercise Routine"
+description: "Write about your exercise routine"
 icon: "🏃"
 color: "#22C55E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我认为运动很重要。它让我更强壮，也让我心情好。每天我至少运动三十分钟。跑步和跳绳都不错。运动后我觉得精神饱满。健康是最大的财富。"
-answer: "I think exercise is important. It makes me stronger and puts me in a good mood. I exercise at least thirty minutes every day. Running and skipping rope are both good. After exercise I feel full of energy. Health is the greatest wealth."
-acceptAlso: "Exercise matters to me. It builds strength and good mood. I work out at least half an hour daily. Running and rope jumping help. I feel energetic after. Health is true wealth."
-srsWords: "exercise" "strong" "mood" "minute" "health"
+sentence: "我每天早晨跑步二十分钟。放学后我也会做拉伸。周末我和朋友打篮球。运动让我身体更强，也让我心情更好。我打算一直坚持下去，不放弃。"
+answer: "I run for twenty minutes every morning before school because it wakes me up and clears my head. After school I also do some stretching exercises to relax my body and my tight muscles. At the weekend I play basketball with my friends in the park near our home. Sport makes my body stronger and also improves my mood when I feel down or tired. I plan to keep this routine for a long time because I can see the good results in myself, and I will not give it up easily even when I am busy with study."
+acceptAlso: "I run twenty minutes each morning to wake up. After school I stretch to relax my body. At weekends I play basketball with friends. Sport makes me strong and happy in my mood. I will keep this habit and not give it up, because I see good results in myself and want to stay healthy. A short walk clears my head quickly. Sleep is as vital as exercise. I stretch before I begin the day. Fresh air improves how I feel."
+srsWords: exercise run stretch basketball healthy
 
 ---
-lessonTitle: "Lesson 2: A Sport I Like"
+lessonTitle: "A Sport I Like"
 description: "Write about a sport you like"
 icon: "🏃"
 color: "#22C55E"
@@ -33,119 +33,119 @@ color: "#22C55E"
 
 [writing]
 text: "Write this passage in English"
-sentence: "我最喜欢的运动是篮球。放学后我经常和同学打一会儿。投篮让我很兴奋。虽然我个子不高，但我练得很认真。运动让我交到朋友。我希望以后打得更好。"
-answer: "My favorite sport is basketball. After school I often play it with classmates for a while. Shooting makes me excited. Although I am not tall, I practice seriously. Sport helps me make friends. I hope to play better later."
-acceptAlso: "I like basketball most. I play with friends after class often. Scoring excites me. I'm short but train hard. Sports bring friends. I want to improve."
-srsWords: "sport" "basketball" "shoot" "practice" "friend"
+sentence: "我最喜欢的运动是游泳。夏天我常去游泳池。游泳能锻炼全身，也不容易受伤。每次游完我都觉得很轻松。我希望以后能游得更快，也许加入校队。"
+answer: "My favourite sport is swimming because it is fun and good for the whole body when done often. In summer I often go to the swimming pool with my friends after school to cool down. Swimming trains every muscle and it is not easy to get hurt compared with other sports like football. After each swim I feel light and relaxed, as if all my stress has gone away from me. I hope that with more practice I can swim faster and maybe join a school team one day to compete and make new friends there."
+acceptAlso: "My favourite sport is swimming. In summer I go to the pool often with friends. Swimming trains the whole body and is safe from injury. After swimming I feel relaxed and free of stress. I hope to swim faster with practice and maybe join the school team one day to make new friends. A short walk clears my head quickly. Sleep is as vital as exercise. I stretch before I begin the day. Fresh air improves how I feel. I listen to my body's needs."
+srsWords: sport swim pool muscle relax
 
 ---
-lessonTitle: "Lesson 3: Staying Healthy"
-description: "Write about staying healthy"
+lessonTitle: "Eating Healthy"
+description: "Write about eating healthy"
 icon: "🏃"
 color: "#22C55E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "要保持健康，我有几个习惯。早睡早起，饮食均衡，多喝水。我很少吃零食。每周运动三次。心情好也很重要。健康的生活习惯让我少生病。"
-answer: "To stay healthy I have a few habits. Sleep early and rise early, eat balanced meals, and drink water. I seldom eat snacks. I exercise three times a week. A good mood matters too. Healthy habits keep me from getting sick."
-acceptAlso: "For health I keep habits. Early bed and rise, balanced diet, more water. Few snacks. Work out thrice weekly. Good mood counts. Healthy living means fewer illnesses."
-srsWords: "healthy" "habit" "balance" "snack" "sick"
+sentence: "为了保持健康，我注意饮食。我少吃糖和油炸食品，多吃蔬菜和鱼。我每天喝足够的水。好的饮食加上运动，让我很少生病，也更有精神。"
+answer: "To stay healthy, I pay attention to what I eat every day and try to make good choices. I eat less sugar and fried food, and I choose more vegetables and fish, which are better for my heart and body. I also drink enough water so my body works well and I do not feel dry. Good food together with regular exercise means I seldom get sick and I have energy for school and play. Exercise keeps my body and my mind healthy."
+acceptAlso: "To stay healthy I watch my diet each day. I eat less sugar and fried food and more vegetables and fish. I drink enough water daily to feel well. Good food plus exercise keeps me from getting sick and gives me energy. I believe small choices protect health, so I am careful even with snacks. A short walk clears my head quickly. Sleep is as vital as exercise. I stretch before I begin the day. Fresh air improves how I feel."
+srsWords: healthy sugar vegetable water sick
 
 ---
-lessonTitle: "Lesson 4: A Cold"
-description: "Write about having a cold"
+lessonTitle: "A Day I Was Sick"
+description: "Write about a day you were sick"
 icon: "🏃"
 color: "#22C55E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "前天我感冒了。我流鼻涕、咳嗽，还有点发烧。妈妈让我多喝水、多休息。我请了一天假。吃了药以后好多了。生病才知道健康可贵。"
-answer: "The day before yesterday I caught a cold. I had a runny nose, a cough, and a slight fever. Mom told me to drink more water and rest. I took a day off. After medicine I felt much better. Only when ill do we value health."
-acceptAlso: "I got a cold two days ago. Runny nose, cough and low fever. Mother said rest and water. I skipped a day. Medicine helped a lot. Sickness shows health's worth."
-srsWords: "cold" "cough" "fever" "rest" "medicine"
+sentence: "上周我感冒了。早上起来头疼、发烧。妈妈让我躺在床上休息，喝了好多热水。下午我睡了一觉，好了一点。生病让我知道健康多重要，要早点睡。"
+answer: "Last week I caught a cold and felt terrible for a whole day at home. When I woke up in the morning I had a headache and a fever, so I could not go to school as usual. My mother told me to lie in bed and rest, and she gave me warm water to drink often during the day. In the afternoon I slept for a long time and felt a little better when I woke up. Exercise keeps my body and my mind healthy."
+acceptAlso: "Last week I had a cold. I woke with a headache and fever and could not go to school. Mum told me to rest in bed and drink warm water often. In the afternoon I slept and felt better when I woke. Being sick showed me health is important. I promised to sleep earlier and exercise more so I don't get ill again. A short walk clears my head quickly. Sleep is as vital as exercise. I stretch before I begin the day."
+srsWords: sick headache fever rest water
 
 ---
-lessonTitle: "Lesson 5: Visiting the Doctor"
-description: "Write about seeing a doctor"
+lessonTitle: "Walking to School"
+description: "Write about walking to school"
 icon: "🏃"
 color: "#22C55E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "上周弟弟肚子疼，我们带他去看医生。医生很耐心，问他哪里不舒服。检查后说只是吃坏了肚子。开了点药。我们放心了。看病要如实说症状。"
-answer: "Last week my brother had a stomachache, so we took him to the doctor. The doctor was patient and asked what hurt. After checking he said it was just bad food. He gave some medicine. We felt relieved. Tell symptoms honestly at the clinic."
-acceptAlso: "My brother had belly pain last week; we saw a doctor. The doctor asked kindly where it hurt. Exam showed only bad food. Got medicine. We relaxed. Be honest about signs."
-srsWords: "doctor" "stomach" "patient" "medicine" "symptom"
+sentence: "我每天步行上学，大约十五分钟。走路时我能呼吸新鲜空气，还能想想一天的计划。比起坐车，走路更环保。我觉得走路是很好的运动，也很省錢。"
+answer: "I walk to school every day and it takes about fifteen minutes from my home to the gate. While walking I can breathe fresh air and think about my plan for the day ahead of me. Compared with taking a bus or car, walking is better for the environment and costs nothing at all to do. I think walking is a good form of exercise that anyone can do without special gear. It also helps me arrive at school awake and ready to learn, so I enjoy this short and useful journey very much each morning."
+acceptAlso: "I walk to school daily, about fifteen minutes from home. While walking I breathe fresh air and plan my day. Walking is greener than a car and costs nothing. I think walking is good exercise anyone can do. It helps me arrive awake and ready to learn, and I enjoy the short journey each morning. A short walk clears my head quickly. Sleep is as vital as exercise. I stretch before I begin the day. Fresh air improves how I feel."
+srsWords: walk school air plan environment
 
 ---
-lessonTitle: "Lesson 6: Teeth Care"
-description: "Write about teeth care"
+lessonTitle: "Keeping Fit"
+description: "Write about keeping fit"
 icon: "🏃"
 color: "#22C55E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "牙齿健康很重要。我每天早晚刷牙，饭后漱口。少吃糖果，保护牙齿。每半年去看一次牙医。一口好牙让我笑得更自信。"
-answer: "Dental health is important. I brush my teeth morning and night and rinse after meals. I eat less candy to protect them. I visit the dentist every six months. Good teeth make me smile with confidence."
-acceptAlso: "Teeth matter. I brush twice daily and rinse after food. Less candy protects them. See a dentist twice a year. Nice teeth boost my confident smile."
-srsWords: "tooth" "brush" "candy" "dentist" "confidence"
+sentence: "我认为保持健康需要三方面：运动、饮食和睡眠。我每周运动三次，吃得均衡，晚上十点前睡。坚持这些习惯，我的体力越来越好，也更有精神。"
+answer: "I believe keeping fit needs three things working together: exercise, diet and sleep every day. I do sport three times a week, eat a balanced diet with less fat and more veg, and try to sleep before ten at night. Holding on to these habits has made my strength better month by month and I feel more awake. When I am fit, I can study longer and feel happier with my friends. I think many people forget sleep, but it is as important as food. A simple daily routine is the secret to staying healthy for a long time."
+acceptAlso: "I think fitness needs three things: exercise, diet and sleep. I exercise three times a week, eat balanced meals, and sleep before ten. These habits make me stronger month by month. When I am fit I study longer and feel happier. Sleep matters as much as food, so I keep a simple routine to stay healthy. A short walk clears my head quickly. Sleep is as vital as exercise. I stretch before I begin the day. Fresh air improves how I feel."
+srsWords: fitness exercise sleep balanced strength
 
 ---
-lessonTitle: "Lesson 7: Relaxation"
-description: "Write about relaxation"
+lessonTitle: "My Favorite Sport"
+description: "Write about your favorite sport"
 icon: "🏃"
 color: "#22C55E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "学习很忙的时候，我也要放松。我喜欢听音乐和泡热水澡。周末去公园散步也很舒服。放松能帮我恢复精力。劳逸结合，效率更高。"
-answer: "When study is busy I still relax. I like listening to music and taking a hot bath. A park walk on weekends is also nice. Relaxing restores my energy. Work and rest together raise efficiency."
-acceptAlso: "Even busy, I relax. I enjoy music and warm baths. Weekend park walks feel good. Rest restores energy. Balance boosts efficiency."
-srsWords: "relax" "music" "bath" "walk" "energy"
+sentence: "除了游泳，我也喜欢骑自行车。周末我和爸爸骑到河边。风吹在脸上很舒服。骑车既能看风景，又能锻炼身体。它是我放松的方式，也让我更独立。"
+answer: "Besides swimming, I also love riding a bicycle in my free time after school and on days off. At the weekend my father and I ride to the river and back, which is about ten kilometres of gentle riding. The wind on my face feels comfortable and free as we go along the path. Cycling lets me see the scenery and exercise my legs at the same time without much cost. It is my favourite way to relax after a busy week of study, and it also makes me feel more independent and confident on my own."
+acceptAlso: "Besides swimming I like cycling. At weekends Dad and I ride to the river, about ten kilometres. The wind on my face feels nice and free. Cycling shows scenery and trains legs together. It is how I relax after a busy week, and it makes me feel more independent and confident when I ride. A short walk clears my head quickly. Sleep is as vital as exercise. I stretch before I begin the day. Fresh air improves how I feel."
+srsWords: bicycle river wind scenery relax
 
 ---
-lessonTitle: "Lesson 8: A Healthy Breakfast"
-description: "Write about a healthy breakfast"
+lessonTitle: "A Visit to the Doctor"
+description: "Write about a visit to the doctor"
 icon: "🏃"
 color: "#22C55E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我比以前更重视早餐。早上我吃燕麦、鸡蛋和水果。燕麦让我饱很久。不加糖的豆浆也不错。吃好早餐，上午才有精神。早餐是一天中最重要的一餐。"
-answer: "I value breakfast more than before. In the morning I eat oats, eggs and fruit. Oats keep me full long. Unsweetened soy milk is good too. A good breakfast gives me energy for the morning. It is the most important meal."
-acceptAlso: "I care more about breakfast now. I have oats, eggs and fruit. Oats last long. Sugar-free soy milk works too. Good breakfast means morning energy. It's the key meal."
-srsWords: "breakfast" "oat" "fruit" "soymilk" "important"
+sentence: "前天我肚子疼，妈妈带我去看医生。医生很温柔，问我很多问题。他给了我药，并让我多喝水、休息。吃了药我好多了。我很感谢医生，也注意饮食。"
+answer: "The day before yesterday my stomach hurt, so my mother took me to see a doctor near our home in the morning. The doctor was gentle and asked me many questions about what I had eaten and how I felt during the last days. He gave me some medicine and told me to drink more water and rest at home for a while. After taking the medicine for a day I felt much better and could eat normally again without pain."
+acceptAlso: "Two days ago my stomach hurt, so mum took me to a doctor. The doctor was kind and asked many questions about my food and feelings. He gave medicine and said drink water and rest. I felt better after a day and could eat. I thanked the doctor and became careful with food and cold drinks. A short walk clears my head quickly. Sleep is as vital as exercise. I stretch before I begin the day. Fresh air improves how I feel."
+srsWords: doctor stomach medicine water rest
 
 ---
-lessonTitle: "Lesson 9: Screen Time"
-description: "Write about screen time"
+lessonTitle: "Sleep and Rest"
+description: "Write about sleep and rest"
 icon: "🏃"
 color: "#22C55E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我控制自己看手机和电视的时间。每天不超过一小时。太多屏幕对眼睛不好。我改成看书和户外运动。少看屏幕，睡眠也变好了。自律让我更健康。"
-answer: "I limit my phone and TV time. Not more than one hour a day. Too much screen is bad for eyes. I switch to reading and outdoor sport. Less screen also improved my sleep. Self-control makes me healthier."
-acceptAlso: "I control phone and TV use. Under an hour daily. Screens hurt eyes. I read and play outside instead. Less screen bettered my sleep. Discipline keeps me healthy."
-srsWords: "screen" "hour" "eye" "outdoor" "sleep"
+sentence: "我每天睡大约九个小时。充足的睡眠让我第二天有精神。周末我也会午休半小时。我觉得休息和努力同样重要。睡得好，学得更好，情绪也更稳。"
+answer: "I sleep about nine hours every night, and enough sleep gives me energy for the next day at school and play. At the weekend I also take a short nap of half an hour after lunch to recover from the busy week. I think rest is as important as hard work, because a tired brain cannot learn well or remember things. When I sleep enough, I study better and my mood stays good with my friends and family. I try to put my phone away early so that I can fall asleep quickly and wake up fresh in the morning."
+acceptAlso: "I sleep about nine hours each night. Enough sleep gives me energy for the next day. At weekends I nap half an hour after lunch. Rest is as important as work, because a tired brain cannot learn. Good sleep helps me study better and keeps my mood steady. I put my phone away early to sleep well. A short walk clears my head quickly. Sleep is as vital as exercise. I stretch before I begin the day. Fresh air improves how I feel."
+srsWords: sleep rest energy nap study
 
 ---
-lessonTitle: "Lesson 10: My Health Goal"
-description: "Write about your health goal"
+lessonTitle: "Being Active"
+description: "Write about being active"
 icon: "🏃"
 color: "#22C55E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "今年的健康目标是每天走一万步。我戴着手环计数。周末去爬山或骑车。我也想少吃外卖。坚持运动，身体会更棒。健康是一辈子的功课。"
-answer: "My health goal this year is ten thousand steps a day. I wear a band to count. On weekends I hike or cycle. I also want to order less takeout. Keep exercising and my body will be great. Health is a lifelong lesson."
-acceptAlso: "This year I aim for 10,000 steps daily. A wristband counts. Weekends I climb or bike. Less takeout too. Keep moving, body improves. Health is lifelong."
-srsWords: "goal" "step" "hike" "takeout" "lifelong"
+sentence: "我不喜欢一直坐着。课间我会去操场走一走。周末我常去爬山或骑车。保持活跃让我更健康，也更有自信。动起来比躺着好，我鼓励朋友一起。"
+answer: "I do not like sitting for a long time, so during the school break I walk around the playground to move my body and get some fresh air. At the weekend I often go hiking or ride my bicycle outside with my friends to stay moving. Staying active keeps me healthier and also builds my confidence when I see my progress on the hill. Moving is better than lying on the sofa all day and doing nothing useful. Exercise keeps my body and my mind healthy."
+acceptAlso: "I don't like sitting long. At break I walk on the playground to move and breathe. At weekends I hike or cycle with friends. Being active makes me healthy and confident. Moving is better than lying on the sofa. I encourage friends to join me, because active time together is fun and builds a good habit. A short walk clears my head quickly. Sleep is as vital as exercise. I stretch before I begin the day. Fresh air improves how I feel."
+srsWords: active break playground hike confident

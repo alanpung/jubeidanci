@@ -11,7 +11,7 @@ questionType: "writing"
 ---
 
 ---
-lessonTitle: "Lesson 1: Today's Weather"
+lessonTitle: "Today's Weather"
 description: "Write about today's weather"
 icon: "🌤️"
 color: "#0EA5E9"
@@ -19,27 +19,13 @@ color: "#0EA5E9"
 
 [writing]
 text: "Write this passage in English"
-sentence: "今天天气晴朗，阳光明媚。天空很蓝，没有云。气温大约二十度，很舒服。风轻轻吹着。我决定去户外散步。好天气让人心情变好。"
-answer: "Today the weather is sunny and bright. The sky is blue with no clouds. The temperature is about twenty degrees, which is very comfortable. The wind blows gently. I decide to take a walk outside. Good weather improves my mood."
-acceptAlso: "It is sunny and clear today. The sky is blue and cloudless. It is around 20 degrees, so it feels nice. A light wind is blowing. I choose to walk outdoors. Nice weather makes me happy."
-srsWords: "weather" "sunny" "sky" "temperature" "wind"
+sentence: "今天天气很好。天空很蓝，太阳暖暖地照着。风很轻。我穿着薄外套去散步。小鸟在树上唱歌。这样的天气让我心情愉快。我喜欢出门活动，也喜欢在阳光下读书。"
+answer: "Today the weather is really nice and pleasant for a walk outside. The sky is blue and clear, and the warm sun shines gently on my face. The wind is light and soft, so I feel comfortable in a thin coat. I go for a walk and hear little birds singing in the trees. This kind of weather makes me happy and relaxed, so I like going outside and doing some exercise. I also enjoy reading a book in the warm sunlight when I have free time."
+acceptAlso: "The weather is good today. The sky is blue and the sun is warm on my skin. The wind is soft and gentle. I wear a light jacket and walk outside. Birds sing in the trees and the air is fresh. I feel happy in this weather. I like going out and moving, and I also like reading in the sun. The sky tells me how to dress each day. I notice the wind and the light around me. Cold and warm days both have their charm."
+srsWords: weather sky sun wind walk
 
 ---
-lessonTitle: "Lesson 2: My Favorite Season"
-description: "Write about your favorite season"
-icon: "🌤️"
-color: "#0EA5E9"
----
-
-[writing]
-text: "Write this passage in English"
-sentence: "我最喜欢的季节是秋天。秋天不冷也不热，很舒服。树叶变成黄色和红色，非常漂亮。我可以去公园骑车。而且秋天有很多水果。所以我最喜欢秋天。"
-answer: "My favorite season is autumn. It is not cold or hot, so it is comfortable. The leaves turn yellow and red, which is very beautiful. I can ride a bike in the park. Also, there is a lot of fruit in autumn. That is why I like autumn best."
-acceptAlso: "Autumn is my favorite season. It is neither cold nor hot, just nice. Leaves become yellow and red and look lovely. I go cycling in the park. Besides, autumn has many fruits. So autumn is my top choice."
-srsWords: "season" "autumn" "leaf" "yellow" "fruit"
-
----
-lessonTitle: "Lesson 3: A Rainy Day"
+lessonTitle: "A Rainy Day"
 description: "Write about a rainy day"
 icon: "🌤️"
 color: "#0EA5E9"
@@ -47,69 +33,83 @@ color: "#0EA5E9"
 
 [writing]
 text: "Write this passage in English"
-sentence: "昨天一整天都在下雨。我不能出去玩，所以待在家里。我坐在窗边听雨声。雨声让我觉得很安静。妈妈煮了热汤。下雨天虽然无聊，但也挺温馨的。"
-answer: "It rained all day yesterday. I could not go out to play, so I stayed at home. I sat by the window and listened to the rain. The sound of rain made me feel calm. Mom cooked hot soup. A rainy day is boring but also cozy."
-acceptAlso: "Yesterday it rained the whole day. I couldn't play outside, so I stayed home. I sat near the window and heard the rain. The rain sound was peaceful. Mom made warm soup. Rainy days are dull but kind of nice."
-srsWords: "rain" "window" "sound" "soup" "home"
+sentence: "昨天下了一整天的雨。我不能去外面玩，只能待在家里。我坐在窗边看雨滴落下。妈妈煮了热汤。虽然有点无聊，但听着雨声我很放松。我希望明天是晴天，可以出门。"
+answer: "Yesterday it rained the whole day and the streets were wet and empty outside. I could not go outside to play, so I stayed at home all day and read some books. I sat by the window and watched the rain drops fall slowly on the glass. My mother cooked a bowl of hot soup for me at lunch. Although I felt a little bored, listening to the rain was calm and relaxing. I hope tomorrow will be a sunny day so I can go out again and ride my bike."
+acceptAlso: "It rained all day yesterday. I could not play outside, so I stayed home and read. I sat by the window and watched the rain fall on the glass. Mum made hot soup which warmed me. I was a bit bored, but the rain sound was relaxing and quiet. I hope tomorrow is sunny so I can go out and enjoy the fresh air. The sky tells me how to dress each day. I notice the wind and the light around me."
+srsWords: rainy home window soup sunny
 
 ---
-lessonTitle: "Lesson 4: Summer Holiday"
-description: "Write about a summer holiday"
+lessonTitle: "My Favorite Season"
+description: "Write about your favorite season"
 icon: "🌤️"
 color: "#0EA5E9"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "去年夏天我和家人去了海边。我们游泳、堆沙堡、捡贝壳。天气很热，但我们玩得很开心。晚上我们吃海鲜。那是我最难忘的假期。我希望今年再去。"
-answer: "Last summer my family and I went to the seaside. We swam, built sandcastles, and collected shells. It was very hot, but we had great fun. In the evening we ate seafood. It was my most unforgettable holiday. I hope to go again this year."
-acceptAlso: "We went to the beach with my family last summer. We swam, made sandcastles and picked up shells. It was hot but we enjoyed it. At night we had seafood. That was my best holiday. I want to return this year."
-srsWords: "summer" "seaside" "swim" "shell" "seafood"
+sentence: "我最喜欢的季节是秋天。天气不冷不热，很舒服。树叶变成黄色和红色，非常漂亮。我可以去公园骑自行车。秋天的水果也很多，比如苹果和葡萄。我觉得秋天是最美的季节，也最适合散步。"
+answer: "My favourite season is autumn because the weather is not too cold and not too hot for me. The leaves on the trees turn yellow, orange and red, and they look very beautiful in the light. I can ride my bicycle in the park and enjoy the cool and clean air outside. There is also a lot of fruit in autumn, such as sweet apples and fresh grapes to eat. I think autumn is the most beautiful season of the whole year, and it is also the best time for a long walk with friends."
+acceptAlso: "My favourite season is autumn. The weather is comfortable, not cold or hot. Leaves become yellow and red and look pretty in the sun. I ride my bike in the park and breathe cool air. Autumn has much fruit like apples and grapes. I think autumn is the most beautiful season, and it is also the nicest time to take a walk. The sky tells me how to dress each day. I notice the wind and the light around me."
+srsWords: autumn season leaf bicycle fruit
 
 ---
-lessonTitle: "Lesson 5: Winter Fun"
-description: "Write about winter"
+lessonTitle: "Summer Holidays"
+description: "Write about summer holidays"
 icon: "🌤️"
 color: "#0EA5E9"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "冬天很冷，有时会下雪。我和朋友一起堆雪人、打雪仗。我们穿厚厚的棉袄和手套。虽然冷，但我们笑得很开心。回家后妈妈给我一杯热可可。冬天也有它的乐趣。"
-answer: "Winter is cold and sometimes it snows. My friends and I make snowmen and have snowball fights. We wear thick coats and gloves. Although it is cold, we laugh happily. After going home Mom gives me a cup of hot cocoa. Winter has its own fun too."
-acceptAlso: "It is cold in winter and it snows sometimes. I make snowmen and throw snowballs with friends. We put on warm coats and gloves. It is cold but we laugh a lot. At home Mom serves me hot cocoa. Winter is fun as well."
-srsWords: "winter" "snow" "coat" "glove" "cocoa"
+sentence: "去年暑假我去海边玩。我和家人住在一间小旅馆。白天我们游泳、堆沙堡。晚上我们吃海鲜。天气很热，但我很开心。我希望今年暑假还能去那里，再玩一次。"
+answer: "Last summer holiday I went to the sea with my family and we stayed in a small hotel near the beach for a week. During the day we swam in the blue water and built sandcastles together on the sand. In the evening we ate fresh seafood at a local restaurant by the water. The weather was very hot, but I was happy every day and made some new friends there. I hope we can go back to that wonderful place again this summer and play in the sea once more with my family."
+acceptAlso: "Last summer I went to the beach with my family. We stayed in a small hotel near the sea. In the day we swam and built sandcastles on the sand. At night we ate seafood together. It was hot but I was happy each day. I hope to go there again this year and enjoy the sea and the sun one more time. The sky tells me how to dress each day. I notice the wind and the light around me."
+srsWords: summer holiday beach swim seafood hotel
 
 ---
-lessonTitle: "Lesson 6: Spring Morning"
-description: "Write about a spring morning"
+lessonTitle: "Winter Morning"
+description: "Write about a winter morning"
 icon: "🌤️"
 color: "#0EA5E9"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "春天的早晨很清新。花儿开了，草变绿了。小鸟在树上唱歌。我喜欢打开窗户，呼吸新鲜空气。周末的春天早晨，我会去花园散步。春天让人充满希望。"
-answer: "Spring mornings are fresh. Flowers bloom and the grass turns green. Little birds sing in the trees. I like to open the window and breathe fresh air. On weekend spring mornings I walk in the garden. Spring fills people with hope."
-acceptAlso: "A spring morning is refreshing. The flowers open and the grass is green. Birds sing on the trees. I enjoy opening the window for fresh air. On spring weekends I stroll in the garden. Spring brings hope."
-srsWords: "spring" "flower" "grass" "bird" "hope"
+sentence: "冬天早上很冷。我穿厚外套、戴帽子和手套才出门。地上有时有霜。我呼出的气变成白雾。虽然冷，但冬天的早晨很安静、很干净。我喜欢看屋顶上的白霜，觉得像画一样。"
+answer: "Winter mornings are very cold where I live, so I must dress warm before I go out. I wear a thick coat, a warm hat and gloves to protect myself from the cold. Sometimes there is white frost on the ground and on the cars outside. When I breathe out, I can see my breath turn into white mist in the air. Although it is freezing, the winter morning is quiet and clean, and I like looking at the frost on the roofs because it looks like a beautiful picture painted by nature."
+acceptAlso: "Winter mornings are cold. I wear a thick coat, hat and gloves before I go out. Sometimes there is frost on the ground and on the cars. My breath becomes white fog when I exhale. It is cold, but winter mornings are quiet and clean. I like the frost on the roofs, which looks like a picture to me. The sky tells me how to dress each day. I notice the wind and the light around me. Cold and warm days both have their charm."
+srsWords: winter cold coat frost breath
 
 ---
-lessonTitle: "Lesson 7: Autumn Colors"
-description: "Write about autumn colors"
+lessonTitle: "Spring in the Park"
+description: "Write about spring in the park"
 icon: "🌤️"
 color: "#0EA5E9"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "秋天把山染成金色和红色。我和爸爸去爬山看风景。风把叶子吹落，像蝴蝶一样。天气凉爽，适合走路。我们拍了很多照片。秋天的颜色最美。"
-answer: "Autumn paints the mountains gold and red. Dad and I climb the hill to see the view. The wind blows the leaves down like butterflies. The weather is cool, good for walking. We take many photos. Autumn has the most beautiful colors."
-acceptAlso: "In autumn the hills turn gold and red. My dad and I hike to enjoy the scenery. Wind drops leaves like butterflies. It is cool, perfect for a walk. We take lots of pictures. Autumn colors are the best."
-srsWords: "autumn" "mountain" "leaf" "photo" "cool"
+sentence: "春天公园里开满了花。草变绿了，树长出新叶子。很多人在放风筝、散步。我也喜欢去公园骑自行车。春天的空气很清新，让我觉得充满希望，也更有活力。"
+answer: "In spring the park is full of colourful flowers and everything looks new and alive. The grass turns green and the trees grow fresh young leaves in the warm wind. Many people come to fly kites and take a walk in the sun with their children. I also like riding my bicycle there on warm afternoons when I have time. The spring air is fresh and clean, and it makes me feel full of hope for the year and gives me more energy to do the things I love."
+acceptAlso: "In spring the park is full of flowers and new life. The grass is green and trees have young leaves. People fly kites and walk in the sun. I like riding my bike in the park when it is warm. The spring air is fresh and makes me hopeful. Spring gives me more energy and a happy feeling. The sky tells me how to dress each day. I notice the wind and the light around me. Cold and warm days both have their charm."
+srsWords: spring park flower grass kite
 
 ---
-lessonTitle: "Lesson 8: Weather and Clothes"
+lessonTitle: "A Windy Day"
+description: "Write about a windy day"
+icon: "🌤️"
+color: "#0EA5E9"
+---
+
+[writing]
+text: "Write this passage in English"
+sentence: "今天风很大。我走路时风把我的帽子吹走了。树摇得很厉害。妈妈让我穿外套。虽然风大，但天空很蓝。放学后我和朋友放风筝，风帮了我们的大忙，风筝飞得很高。"
+answer: "Today the wind was very strong and it blew my hat off as I walked to school in the morning. The trees moved and shook a lot in the wind, and some dry leaves fell down to the ground. My mother told me to wear a coat so I would not catch a cold in the breeze. Although the wind was powerful, the sky stayed blue and clear above me. After school my friends and I flew a kite, and the wind helped it rise high into the air where it looked small."
+acceptAlso: "It was very windy today. The wind blew my hat away when I walked to school. Trees shook hard and leaves fell. Mum asked me to wear a coat to stay warm. The wind was strong but the sky was blue. After school I flew a kite with friends, and the wind helped a lot so our kite went very high. The sky tells me how to dress each day. I notice the wind and the light around me. Cold and warm days both have their charm."
+srsWords: windy hat tree coat kite
+
+---
+lessonTitle: "Weather and Clothes"
 description: "Write about weather and clothes"
 icon: "🌤️"
 color: "#0EA5E9"
@@ -117,35 +117,35 @@ color: "#0EA5E9"
 
 [writing]
 text: "Write this passage in English"
-sentence: "天气变化的时候，我们要穿合适的衣服。天冷要穿外套，天热要穿短袖。下雨要带伞。我总是看天气预报再出门。穿对衣服让我一整天都舒服。"
-answer: "When the weather changes, we should wear suitable clothes. When it is cold we wear coats; when it is hot we wear T-shirts. We take an umbrella if it rains. I always check the forecast before going out. Wearing right clothes keeps me comfortable all day."
-acceptAlso: "As the weather changes, we need proper clothes. Put on a coat when cold and a short sleeve when hot. Bring an umbrella on rainy days. I look at the weather report before leaving. Right clothes make the whole day comfy."
-srsWords: "weather" "clothes" "coat" "umbrella" "forecast"
+sentence: "天气决定我穿什么。热的时候我穿短袖和短裤。冷的时候我穿毛衣和外套。下雨时我带雨伞。我觉得根据天气穿衣很重要，这样才不会生病。你呢？你冬天穿什么？"
+answer: "The weather decides what I wear every single day of the week. When it is hot, I put on a T shirt and shorts because they are cool and light for me. When it is cold, I wear a sweater and a warm coat to keep myself safe from illness. If it rains, I always take an umbrella and rain boots with me. I think dressing for the weather is important so that I do not get sick, and I feel comfortable outside. What do you usually wear when the weather changes where you live in your country?"
+acceptAlso: "Weather decides my clothes. When hot, I wear a T shirt and shorts to stay cool. When cold, I wear a sweater and coat to keep warm. In rain I take an umbrella and boots. Dressing for weather is important so I don't get ill. What about you? What do you wear in winter where you live? The sky tells me how to dress each day. I notice the wind and the light around me. Cold and warm days both have their charm."
+srsWords: weather clothes coat umbrella sick
 
 ---
-lessonTitle: "Lesson 9: A Storm"
-description: "Write about a storm"
+lessonTitle: "The Four Seasons"
+description: "Write about the four seasons"
 icon: "🌤️"
 color: "#0EA5E9"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "上周晚上有一场大风暴。风很大，把树枝吹断了。电也停了。我们点起蜡烛，讲故事。虽然有点害怕，但很特别。第二天早上，外面安静了许多。"
-answer: "Last week there was a big storm at night. The wind was strong and broke tree branches. The power went out. We lit candles and told stories. Although we were a little scared, it was special. The next morning it was much quieter outside."
-acceptAlso: "A strong storm came last week at night. The wind was fierce and snapped branches. We lost electricity. We used candles and told stories. It felt scary but special. Next morning outside was calm."
-srsWords: "storm" "wind" "branch" "candle" "power"
+sentence: "一年有四季。春天温暖，夏天炎热，秋天凉爽，冬天寒冷。每个季节我都有喜欢的活动。春天看花，夏天游泳，秋天骑车，冬天堆雪人。四季让生活更有趣，也更多变化。"
+answer: "There are four seasons in a year, and each one feels different from the others. Spring is warm, summer is hot, autumn is cool, and winter is cold where I live. I have a favourite activity for every season that I enjoy doing. I watch flowers in spring, swim in summer, ride my bike in autumn, and make a snowman in winter with my friends. The four seasons make life more interesting and give me something new to enjoy every few months of the year."
+acceptAlso: "There are four seasons in a year. Spring is warm, summer hot, autumn cool, winter cold. I have favourite activities for each: see flowers in spring, swim in summer, bike in autumn, make snowmen in winter. The seasons make life interesting and full of change. I like that the year is never the same. The sky tells me how to dress each day. I notice the wind and the light around me. Cold and warm days both have their charm."
+srsWords: season spring summer autumn winter
 
 ---
-lessonTitle: "Lesson 10: Climate in My City"
-description: "Write about your city's climate"
+lessonTitle: "A Hot Day"
+description: "Write about a hot day"
 icon: "🌤️"
 color: "#0EA5E9"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我住在南方，气候温暖湿润。夏天长，冬天短。一年里雨水很多。比起北方，这里冬天更舒服。我喜欢这里的气候，因为适合植物生长。"
-answer: "I live in the south, where the climate is warm and wet. Summers are long and winters are short. It rains a lot during the year. Compared with the north, winters here are more comfortable. I like the climate because it suits plant growth."
-acceptAlso: "I am from the south, and the climate is warm and humid. Long summers, short winters. We get plenty of rain. Winters are nicer than in the north. I like this climate since plants grow well."
-srsWords: "climate" "south" "warm" "rain" "north"
+sentence: "上周日非常热。气温到了三十五度。我待在家里吹风扇，喝很多水。下午我吃了西瓜和冰淇淋。晚上稍微凉快一点，我去散步。热天要注意多喝水，也要少晒太阳。"
+answer: "Last Sunday was extremely hot and the temperature reached thirty five degrees in the afternoon. I stayed at home and turned on the fan, and I drank a lot of water to stay healthy and cool. In the afternoon I ate cold watermelon and an ice cream to bring my temperature down. In the evening it became a little cooler, so I went out for a short walk in the shade. On hot days like this I think it is important to drink enough water and not stay in the sun too long."
+acceptAlso: "Last Sunday was very hot. It was thirty five degrees outside. I stayed home with a fan and drank much water to stay cool. In the afternoon I ate watermelon and ice cream, which felt nice. In the evening it was cooler and I walked outside. On hot days we should drink more water and not stay long in the sun. The sky tells me how to dress each day. I notice the wind and the light around me. Cold and warm days both have their charm."
+srsWords: hot temperature water watermelon ice

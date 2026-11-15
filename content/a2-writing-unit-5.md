@@ -11,141 +11,141 @@ questionType: "writing"
 ---
 
 ---
-lessonTitle: "Lesson 1: A Trip to the Beach"
-description: "Write about a beach trip"
+lessonTitle: "A Trip to the Beach"
+description: "Write about a trip to the beach"
 icon: "✈️"
 color: "#8B5CF6"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "去年夏天我们去了海南。那里有蓝色的海和白色的沙滩。我们游泳、晒太阳、捡贝壳。海鲜很好吃。我买了一顶草帽作纪念。那次旅行让我放松。"
-answer: "Last summer we went to Hainan. There was a blue sea and white sandy beach. We swam, sunbathed, and collected shells. The seafood was delicious. I bought a straw hat as a souvenir. That trip relaxed me."
-acceptAlso: "We visited Hainan last summer. It had blue sea and white sand. We swam, tanned and picked shells. Seafood tasted great. I got a straw hat to remember. The trip was relaxing."
-srsWords: "beach" "sea" "swim" "shell" "souvenir"
+sentence: "上个月我和家人去了海滩。我们早上出发，下午到达。海水很蓝，沙子很软。我堆了沙堡，还捡了贝壳。那天我很放松，也晒黑了一点，很开心。"
+answer: "Last month my family and I went on a trip to the beach for a short holiday by the sea. We left home in the morning and arrived there in the afternoon by car after a long drive. The sea water was clear and blue, and the sand was soft under my feet as I walked. I built a big sandcastle and collected some pretty shells along the shore for my room. Travel helps me learn about the wider world."
+acceptAlso: "Last month my family went to the beach. We left in the morning and arrived in the afternoon by car. The sea was blue and sand soft under my feet. I built a sandcastle and found shells. I felt relaxed and a bit tanned in the sun. It was one of my happiest days and I want to go back. New places teach me more than books. I take photos to remember each trip. Local food is part of the adventure."
+srsWords: beach sea sand shell relax
 
 ---
-lessonTitle: "Lesson 2: Planning a Trip"
-description: "Write about planning a trip"
+lessonTitle: "My Last Holiday"
+description: "Write about your last holiday"
 icon: "✈️"
 color: "#8B5CF6"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "下个月我要去北京玩。我已经查了天气预报和景点。我打算看长城和故宫。我还会尝尝北京烤鸭。我订了火车票和旅馆。我越来越期待了。"
-answer: "Next month I will visit Beijing. I have already checked the weather and attractions. I plan to see the Great Wall and the Forbidden City. I will also try Beijing duck. I booked the train ticket and a hotel. I am more and more excited."
-acceptAlso: "I'm going to Beijing next month. I looked up the forecast and sights. I will visit the Great Wall and Forbidden City. I'll taste roast duck. I booked train and hotel. I can't wait."
-srsWords: "trip" "beijing" "greatwall" "duck" "hotel"
+sentence: "我上次假期去了北京。我参观了长城和故宫。那里人很多，但很壮观。我吃了北京烤鸭，很好吃。这次旅行让我学到很多历史知识，也拍了很多照片。"
+answer: "On my last holiday I travelled to Beijing with my parents and we visited the Great Wall and the Forbidden City there. There were many people everywhere we went, but the old buildings were truly amazing and grand to see. I also tasted Beijing roast duck, which was crispy and delicious in the restaurant. This trip taught me a lot about Chinese history that I had only read in books before. I took many photos and will remember the journey for a long time because it widened my view of the world."
+acceptAlso: "On my last holiday I went to Beijing with my parents. I visited the Great Wall and the Forbidden City. There were many people but it was grand and huge. I ate Beijing duck, very tasty. The trip taught me history from books. I took many photos and will remember it as it widened my view of the world. New places teach me more than books. I take photos to remember each trip. Local food is part of the adventure."
+srsWords: holiday Beijing wall duck history
 
 ---
-lessonTitle: "Lesson 3: A Train Journey"
-description: "Write about a train journey"
+lessonTitle: "Packing a Suitcase"
+description: "Write about packing a suitcase"
 icon: "✈️"
 color: "#8B5CF6"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我第一次坐高铁去外地。车厢很干净，座位很舒服。窗外风景飞快掠过。列车员送来水和零食。三个小时后我就到了。高铁又快又方便。"
-answer: "It was my first time taking a high-speed train to another city. The carriage was clean and the seat was comfortable. The scenery flew past the window. The attendant brought water and snacks. Three hours later I arrived. The train is fast and convenient."
-acceptAlso: "I rode a bullet train out of town for the first time. The car was tidy and seats comfy. Views rushed by. A worker offered water and snacks. I arrived in three hours. It's quick and handy."
-srsWords: "train" "clean" "seat" "scenery" "arrive"
+sentence: "出发前我收拾行李箱。我放了衣服、牙刷和充电器。妈妈提醒我带雨伞和药。我把东西分类放好，这样找起来方便。准备好行李让我不慌张，也更安心。"
+answer: "Before I left on my trip, I packed my suitcase carefully at home so I would not forget anything important. I put in clothes, a toothbrush and my phone charger that I use every day. My mother reminded me to bring an umbrella and some medicine just in case I needed them. I placed things in groups by type so they were easy to find later when I arrived. Being well prepared with my luggage made me feel calm and not worried at the airport, and ready for the journey ahead of me."
+acceptAlso: "Before leaving I packed my suitcase with care. I put clothes, a toothbrush and a charger inside. Mum reminded me to take an umbrella and medicine. I grouped things so they are easy to find. Good packing keeps me calm and less worried at the airport. A list helps me remember everything I need for the trip. New places teach me more than books. I take photos to remember each trip. Local food is part of the adventure. Meeting strangers widens my view."
+srsWords: suitcase clothes toothbrush umbrella medicine
 
 ---
-lessonTitle: "Lesson 4: My Hometown"
-description: "Write about your hometown"
+lessonTitle: "A Visit to a City"
+description: "Write about a visit to a city"
 icon: "✈️"
 color: "#8B5CF6"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我的家乡是一座小城。那里山清水秀，空气清新。人们很友善，生活节奏慢。我最想念家乡的面条和老朋友。每次回去都觉得很亲切。家乡永远在我心里。"
-answer: "My hometown is a small city. It has green hills and clear water and fresh air. People are friendly and life is slow. I miss the noodles and old friends most. Every time I return I feel close. Hometown is always in my heart."
-acceptAlso: "My hometown is a small town. Nice hills, clear water, fresh air. Folks are kind and life is slow. I miss its noodles and old pals. Returning feels warm. Home stays in my heart."
-srsWords: "hometown" "hill" "water" "friendly" "miss"
+sentence: "去年我参观了上海。那里有很多高楼和购物中心。我坐了地铁，很方便。晚上外滩的灯光很美。我喜欢这座现代又热闹的城市，希望再来。"
+answer: "Last year I visited Shanghai with my cousin and we were both surprised by the size of the city. There are many tall buildings and large shopping centres everywhere you look in the streets. We took the underground train, which was fast and convenient to move around without traffic. At night the lights along the Bund were beautiful and colourful by the river. I like this city because it is modern, busy and full of energy, and I hope I can visit Shanghai again and see even more of its famous places soon."
+acceptAlso: "Last year I visited Shanghai with my cousin. There are many tall buildings and malls in the city. We took the metro, very convenient and fast. At night the Bund lights were beautiful by the river. I like this modern, busy city full of energy. I hope to visit again and see more famous places there. New places teach me more than books. I take photos to remember each trip. Local food is part of the adventure. Meeting strangers widens my view."
+srsWords: city building metro light modern
 
 ---
-lessonTitle: "Lesson 5: A Hotel Stay"
-description: "Write about a hotel stay"
+lessonTitle: "Travelling by Train"
+description: "Write about travelling by train"
 icon: "✈️"
 color: "#8B5CF6"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "旅游时我们住在一家小旅馆。房间虽小但很干净。窗外能看到山。前台的人很热情，帮我们叫车。早餐是自助的，种类很多。住得舒服，玩得也开心。"
-answer: "During the trip we stayed in a small hotel. The room was small but clean. We could see the hills from the window. The receptionist was warm and helped us call a taxi. Breakfast was a buffet with many choices. We stayed well and enjoyed the trip."
-acceptAlso: "We lodged in a small inn while traveling. The room was tiny yet tidy. Hills were visible outside. The front desk was kind and booked us a cab. Buffet breakfast had variety. Comfortable stay, happy trip."
-srsWords: "hotel" "room" "mountain" "reception" "buffet"
+sentence: "我喜欢坐火车旅行。火车比汽车平稳，还能看窗外的风景。上次去外婆家，我坐了三个小时火车。我在车上看了书，吃了零食。火车让我觉得旅行很舒服，也不累。"
+answer: "I like travelling by train because it is smoother than a car and I can watch the scenery through the window as we move. Last time I visited my grandmother, I took a train for three hours and enjoyed the long ride very much. On the train I read a book and ate some snacks while the green fields passed by outside. Trains make me feel that travelling is comfortable and calm, not tiring like a long bus trip. I think the train is a good way to see the country and relax at the same time during a journey."
+acceptAlso: "I like travelling by train. It is smoother than a car and I see the view from the window. Last time to grandma I took a three hour train. I read and ate snacks on board as fields passed. Trains make travel comfortable and not tiring. I think the train is a good way to see the country and relax on a long trip. New places teach me more than books. I take photos to remember each trip. Local food is part of the adventure."
+srsWords: train travel window grandmother snack
 
 ---
-lessonTitle: "Lesson 6: Lost on Holiday"
-description: "Write about getting lost"
+lessonTitle: "A Mountain Trip"
+description: "Write about a mountain trip"
 icon: "✈️"
 color: "#8B5CF6"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "去年旅游时我走散了。人群太多，我找不到爸爸妈妈。我有点害怕，但记得妈妈的话：找穿制服的人帮忙。我找到警察，他们用广播找到了家人。我学到了要跟紧大人。"
-answer: "Last year on a trip I got separated. There were too many people and I lost Mom and Dad. I was scared but remembered Mom's words: ask someone in uniform for help. I found the police and they used a broadcast to find my family. I learned to stay close to adults."
-acceptAlso: "I was lost during travel last year. Crowds were big and I missed my parents. Afraid, yet I recalled Mom's tip: seek a uniformed person. I reached the police; they announced and found my family. I learned to stick with adults."
-srsWords: "lost" "crowd" "afraid" "police" "adult"
+sentence: "上周我们去爬山。山很高，路有点陡。我们中途休息了几次。到了山顶，风景特别美，还能看到云。虽然累，但我觉得很值得，也很有成就感。"
+answer: "Last week my friends and I went on a mountain trip and the hill was quite high for us to climb. The path was a bit steep, so we stopped to rest several times on the way up to catch our breath. When we finally reached the top, the view was amazing and we could even see clouds below us in the distance. Although I was tired and my legs hurt, I felt it was worth the effort and the climb. Standing on the summit made me proud and happy after a busy week of school."
+acceptAlso: "Last week we climbed a mountain with friends. It was high and the path steep, so we rested a few times. At the top the view was great and we saw clouds below. Tired but worth it, I felt proud. Standing on the summit gave me a happy and calm feeling after a busy week of study. New places teach me more than books. I take photos to remember each trip. Local food is part of the adventure. Meeting strangers widens my view."
+srsWords: mountain climb top cloud tired
 
 ---
-lessonTitle: "Lesson 7: A Camping Night"
-description: "Write about camping"
+lessonTitle: "Staying in a Hotel"
+description: "Write about staying in a hotel"
 icon: "✈️"
 color: "#8B5CF6"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "上周末我们去郊外露营。我们搭起帐篷，生起了火。晚上我们烤棉花糖，看星星。风有点凉，但很浪漫。第二天早上鸟叫声叫醒了我们。露营让我亲近自然。"
-answer: "Last weekend we camped in the countryside. We put up a tent and made a fire. At night we roasted marshmallows and watched stars. The wind was cool but romantic. The next morning birds woke us. Camping brings me close to nature."
-acceptAlso: "We went camping outside last weekend. We set a tent and lit a fire. We toasted marshmallows and gazed at stars. Breezy but sweet. Birds woke us next morning. Camping connects me to nature."
-srsWords: "camp" "tent" "fire" "star" "nature"
+sentence: "暑假时我们住过一家海边酒店。房间干净，还能看到海。早餐很丰富，有面包和水果。服务员很友好。住在酒店让我觉得像在度假，非常放松。"
+answer: "During the summer holiday we stayed in a hotel near the sea for a few nights with my family. Our room was clean and tidy, and from the window we could see the ocean and the beach below us. The breakfast was rich, with bread, fruit and warm milk that we liked. The staff were friendly and helped us with everything we needed during the stay. Staying in a hotel made me feel like I was really on a holiday and not at home, and it was very relaxing by the water each morning."
+acceptAlso: "In summer we stayed at a seaside hotel. The room was clean and we saw the sea from the window. Breakfast was rich with bread and fruit. The staff were friendly and helpful. The hotel felt like a holiday and not home. I was very relaxed by the sea each morning we stayed there. New places teach me more than books. I take photos to remember each trip. Local food is part of the adventure. Meeting strangers widens my view."
+srsWords: hotel room breakfast staff seaside
 
 ---
-lessonTitle: "Lesson 8: Travel Photos"
-description: "Write about travel photos"
+lessonTitle: "My Dream Holiday"
+description: "Write about your dream holiday"
 icon: "✈️"
 color: "#8B5CF6"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我喜欢旅行时拍照。每张照片都记着一段回忆。回家后我把它们贴在相册里。朋友来玩，我就给他们看。照片让我想起美好的风景和笑脸。旅行让生活更丰富。"
-answer: "I like taking photos when I travel. Each photo keeps a memory. At home I stick them in an album. When friends visit I show them. Photos remind me of nice views and smiling faces. Travel makes life richer."
-acceptAlso: "I enjoy photography on trips. Every shot holds a memory. I paste them in an album at home. I show guests when they come. Pictures bring back views and smiles. Travel enriches life."
-srsWords: "photo" "memory" "album" "friend" "view"
+sentence: "我梦想去日本看樱花。我想在春天去，穿和服拍照。我还想尝寿司和坐新干线。如果可以实现，我会非常开心。这是我最大的愿望之一，我会为此存钱。"
+answer: "My dream holiday is to go to Japan and see the cherry blossoms in spring when they are pink. I want to wear a traditional kimono and take photos under the trees with my friends. I also hope to taste fresh sushi and ride the famous bullet train between the cities there. If this trip could come true one day, I would be extremely happy and grateful for the chance. It is one of my biggest wishes, and I am saving money so that perhaps in the future I can make this beautiful dream a reality with my family."
+acceptAlso: "My dream holiday is Japan to see cherry blossoms. I want to go in spring and wear a kimono for photos under the trees. I also want sushi and the bullet train between cities. If it comes true I will be very happy. It is a big wish, and I am saving money so I can make this dream real with my family one day. New places teach me more than books. I take photos to remember each trip. Local food is part of the adventure."
+srsWords: dream Japan cherry sushi train
 
 ---
-lessonTitle: "Lesson 9: A Foreign City"
-description: "Write about a foreign city"
+lessonTitle: "A Day at the Museum"
+description: "Write about a day at the museum"
 icon: "✈️"
 color: "#8B5CF6"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我希望将来去伦敦看看。我想坐红色巴士，参观大本钟。我也想试试英式下午茶。虽然语言不太一样，但我会努力交流。见识不同的文化让我开阔眼界。"
-answer: "I hope to visit London someday. I want to ride the red bus and see Big Ben. I also want to try English afternoon tea. Although the language differs, I will try to communicate. Seeing different cultures broadens my view."
-acceptAlso: "I'd like to see London in the future. I'll take the red bus and view Big Ben. I want English afternoon tea too. The language is different, but I'll try. New cultures open my eyes."
-srsWords: "london" "bus" "bigben" "tea" "culture"
+sentence: "上周学校组织我们去博物馆。我们看到了恐龙化石和古代钱币。导游讲了很多故事。我觉得很有趣，也学到了知识。下次我还想去，带家人一起。"
+answer: "Last week our school organised a trip to the museum, and it was a great experience for all of us students. We saw dinosaur fossils and old coins from ancient times, which looked strange and interesting to touch with our eyes. A guide told us many stories about how people lived long ago in the past. I found it fun and I learned new knowledge that is not in my textbooks at school. I would like to go there again with my family next time to explore more rooms and learn even more from the past."
+acceptAlso: "Last week school took us to a museum. We saw dinosaur fossils and old coins from ancient times. The guide told many stories about the past. It was fun and I learned new things not in books. I want to go again with my family to explore more rooms and learn from history together with them. New places teach me more than books. I take photos to remember each trip. Local food is part of the adventure. Meeting strangers widens my view."
+srsWords: museum fossil coin guide knowledge
 
 ---
-lessonTitle: "Lesson 10: My Travel Tips"
-description: "Write about travel tips"
+lessonTitle: "Lost on Holiday"
+description: "Write about being lost on holiday"
 icon: "✈️"
 color: "#8B5CF6"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "出门旅行我有些小建议。先查天气，带合适的衣服。把证件和钱放好。重要的东西拍张照备份。保持手机有电。做好准备，旅行才更顺利。"
-answer: "I have some tips for traveling. First check the weather and pack right clothes. Keep documents and money safe. Photograph important items as backup. Keep your phone charged. Good preparation makes trips smoother."
-acceptAlso: "Here are my travel tips. Check weather first and bring proper clothes. Store papers and cash well. Snap photos of key things for backup. Keep the phone powered. Preparation makes journeys smoother."
-srsWords: "travel" "weather" "document" "backup" "prepare"
+sentence: "去年旅行时我走丢了。在人群里我和爸妈分开了。我很害怕，但记得他们的电话。我找了工作人员帮忙，最后团聚了。这件事让我学会了冷静，也记下号码。"
+answer: "Last year during a trip I got lost from my parents in a crowded place full of people and noise. I was separated from them among the crowd and felt very scared at first in the strange place. But I remembered their phone number by heart, so I stayed calm and did not run. I found a staff member and asked for help, and they used the phone to call my parents for me. We were reunited after a short wait, and this experience taught me to stay calm and always know my parents' contact details when travelling."
+acceptAlso: "Last year on a trip I got lost. In the crowd I was separated from my parents and felt scared. But I remembered their phone and stayed calm. I asked a worker for help and we called them. We met again after a short wait. I learned to stay calm and to keep my parents' number in mind when I travel. New places teach me more than books. I take photos to remember each trip. Local food is part of the adventure."
+srsWords: lost crowd parent phone calm

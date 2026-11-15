@@ -11,35 +11,7 @@ questionType: "writing"
 ---
 
 ---
-lessonTitle: "Lesson 1: My Family Members"
-description: "Write about your family members"
-icon: "👨‍👩‍👧"
-color: "#EC4899"
----
-
-[writing]
-text: "Write this passage in English"
-sentence: "我家有四口人：爸爸、妈妈、妹妹和我。爸爸是工程师，妈妈是老师。妹妹今年七岁，在上小学。我们住在一起，很幸福。我爱我的家。"
-answer: "My family has four people: Dad, Mom, my little sister and me. Dad is an engineer and Mom is a teacher. My sister is seven and goes to primary school. We live together and are happy. I love my family."
-acceptAlso: "There are four in my family: father, mother, sister and I. Father is an engineer, mother is a teacher. My sister is seven and in primary school. We live together happily. I love my home."
-srsWords: "family" "father" "mother" "sister" "engineer"
-
----
-lessonTitle: "Lesson 2: My Father"
-description: "Write about your father"
-icon: "👨‍👩‍👧"
-color: "#EC4899"
----
-
-[writing]
-text: "Write this passage in English"
-sentence: "我的爸爸很高也很强壮。他工作很忙，但周末常陪我踢球。他喜欢做饭，做的红烧肉很好吃。他教我要诚实。我很佩服我的爸爸。"
-answer: "My dad is tall and strong. He is busy with work, but on weekends he often plays football with me. He likes cooking, and his braised pork is delicious. He teaches me to be honest. I admire my dad a lot."
-acceptAlso: "My father is tall and strong. He works a lot, yet he plays soccer with me on weekends. He enjoys cooking; his pork dish is tasty. He tells me to be honest. I look up to my dad."
-srsWords: "father" "tall" "strong" "cooking" "honest"
-
----
-lessonTitle: "Lesson 3: My Mother"
+lessonTitle: "My Mother"
 description: "Write about your mother"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
@@ -47,13 +19,27 @@ color: "#EC4899"
 
 [writing]
 text: "Write this passage in English"
-sentence: "妈妈是最辛苦的人。她每天早起做早饭，送我上学。晚上还辅导我作业。她很温柔，也很有耐心。我想对妈妈说声谢谢。她是我心里最好的人。"
-answer: "Mom is the busiest person. She gets up early to make breakfast and takes me to school. In the evening she helps me with homework too. She is gentle and very patient. I want to say thank you to Mom. She is the best person in my heart."
-acceptAlso: "Mother works the hardest. She rises early to cook breakfast and drive me to school. At night she guides my homework. She is kind and patient. I want to thank her. She is the best to me."
-srsWords: "mother" "breakfast" "homework" "gentle" "patient"
+sentence: "我的妈妈是一位老师。她很温柔，总是微笑。她每天早起为我做早饭。她教我做功课。我很爱她。我希望长大后像她一样帮助别人，也像她一样有耐心。"
+answer: "My mother is a teacher at a primary school and she is very kind to everyone around her. She always smiles and speaks to me gently, even when I make small mistakes at home. Every day she gets up early to cook breakfast for me before school starts. In the evening she helps me with my homework and checks my writing carefully. I love her very much, and I hope that when I grow up I can help other people just like she does every day, with the same patience she shows me."
+acceptAlso: "My mother is a teacher. She is kind and always smiles at me. She wakes early to make my breakfast each day. She helps me with homework and explains things. I love her a lot. I hope to help others like her when I grow up, and to be as patient and caring as she is with me. We share both happy and hard moments together. Their smiles mean a lot to me. I can talk to them about anything."
+srsWords: mother teacher smile breakfast homework
 
 ---
-lessonTitle: "Lesson 4: My Little Sister"
+lessonTitle: "My Father"
+description: "Write about your father"
+icon: "👨‍👩‍👧"
+color: "#EC4899"
+---
+
+[writing]
+text: "Write this passage in English"
+sentence: "我的爸爸是一名司机。他工作很辛苦，但每天回家都陪我玩。周末他教我骑车。他很强壮，也很幽默。我很佩服他。他是我的榜样，我想变得像他一样可靠。"
+answer: "My father is a driver and his job is hard because he works long hours away from home. But every evening when he comes back he still plays with me and asks about my day at school. At the weekend he teaches me how to ride a bicycle in the quiet park near us. He is strong and also very funny, and he makes our family laugh together. I admire him a lot and he is my role model. I want to be as reliable and hardworking as he is when I grow up."
+acceptAlso: "My father is a driver. His work is hard but he plays with me every evening and listens to my day. At weekends he teaches me to ride a bike. He is strong and funny and makes us laugh. I admire him. He is my role model and I want to be as dependable and kind as he is. We share both happy and hard moments together. Their smiles mean a lot to me. I can talk to them about anything."
+srsWords: father driver work weekend bicycle
+
+---
+lessonTitle: "My Sister"
 description: "Write about your sister"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
@@ -61,27 +47,13 @@ color: "#EC4899"
 
 [writing]
 text: "Write this passage in English"
-sentence: "我妹妹很可爱，也很调皮。她喜欢画画和跳舞。每天放学回家，她都给我看她的新作品。有时候我们吵架，但很快又和好。有妹妹的陪伴，我很快乐。"
-answer: "My little sister is cute and also naughty. She likes drawing and dancing. Every day after school she shows me her new works. Sometimes we quarrel, but we make up soon. With my sister around, I am happy."
-acceptAlso: "My sister is lovely but mischievous. She enjoys painting and dancing. After school she shows me what she made. We fight sometimes, yet we reconcile quickly. I am glad to have her."
-srsWords: "sister" "draw" "dance" "quarrel" "happy"
+sentence: "我有一个妹妹，她八岁。她很喜欢画画，画得很好看。我们常常一起玩游戏。有时候我们会吵架，但很快就和好。我很喜欢她，因为她让我不孤单，也让我学会照顾别人。"
+answer: "I have a little sister and she is eight years old, full of energy every day. She loves drawing pictures, and her paintings are really colourful and pretty to look at. We often play games together after school, like hide and seek in the garden. Sometimes we argue about small things, but we make up quickly and laugh again soon. I like her very much because she keeps me company and I never feel lonely at home, and she also teaches me to care for other people."
+acceptAlso: "I have a sister who is eight. She likes drawing and draws well with bright colours. We often play games together after school. Sometimes we fight but soon become friends again and laugh. I like her because she stops me feeling lonely. She also helps me learn to take care of others in the family. We share both happy and hard moments together. Their smiles mean a lot to me. I can talk to them about anything. Family meals are my favourite time."
+srsWords: sister draw play argue lonely
 
 ---
-lessonTitle: "Lesson 5: A Family Dinner"
-description: "Write about a family dinner"
-icon: "👨‍👩‍👧"
-color: "#EC4899"
----
-
-[writing]
-text: "Write this passage in English"
-sentence: "每个周日我们全家一起吃晚饭。奶奶也会来。妈妈做一桌好菜。大家边吃边聊这一周的事。饭后爸爸切水果。全家团聚的时间最珍贵。"
-answer: "Every Sunday my whole family has dinner together. Grandma comes too. Mom cooks a table full of good dishes. We eat and talk about the week. After the meal Dad cuts fruit. Family time is the most precious."
-acceptAlso: "Each Sunday we eat dinner as a family. Grandma joins us. Mom makes many nice dishes. We chat about the week while eating. Dad serves fruit after. Time together is precious."
-srsWords: "sunday" "grandma" "dish" "fruit" "precious"
-
----
-lessonTitle: "Lesson 6: My Grandparents"
+lessonTitle: "My Grandparents"
 description: "Write about your grandparents"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
@@ -89,13 +61,55 @@ color: "#EC4899"
 
 [writing]
 text: "Write this passage in English"
-sentence: "我的爷爷奶奶住在乡下。他们的房子前面有一个小院子。爷爷种菜，奶奶养鸡。我放假时去那里玩。他们很疼我，给我做好吃的。我爱乡下的生活。"
-answer: "My grandparents live in the countryside. In front of their house there is a small yard. Grandpa grows vegetables and Grandma raises chickens. I visit them during holidays. They love me and cook delicious food. I love life in the countryside."
-acceptAlso: "My grandpa and grandma live in the village. They have a small yard before the house. Grandpa plants vegetables; grandma keeps chickens. I go there on vacation. They spoil me with good food. I enjoy country life."
-srsWords: "grandparents" "countryside" "yard" "vegetable" "chicken"
+sentence: "我的爷爷奶奶住乡下。他们的房子旁边有一个小花园。爷爷种菜，奶奶做饭很好吃。我每周去看他们。他们很疼我，我也爱他们，希望多陪陪他们。"
+answer: "My grandparents live in the countryside, far from the busy and noisy city where I stay. Next to their house there is a small garden with vegetables and flowers that they grow. My grandfather grows tomatoes and carrots, and my grandmother cooks very delicious meals for the whole family. I visit them every weekend by bus and spend the day there. They love me and give me treats, and I love them too. I hope I can spend more time with them and help in their garden."
+acceptAlso: "My grandparents live in the village. Their house has a small garden with vegetables. Grandpa grows tomatoes and carrots, and grandma cooks well for us. I visit them every week by bus. They love me and I love them too. I hope to visit more and help them in the garden when I can. We share both happy and hard moments together. Their smiles mean a lot to me. I can talk to them about anything. Family meals are my favourite time."
+srsWords: grandparents garden vegetable cook visit
 
 ---
-lessonTitle: "Lesson 7: A Family Trip"
+lessonTitle: "A Family Dinner"
+description: "Write about a family dinner"
+icon: "👨‍👩‍👧"
+color: "#EC4899"
+---
+
+[writing]
+text: "Write this passage in English"
+sentence: "昨天晚上我们全家一起吃晚饭。妈妈做了鱼和汤。爸爸讲了有趣的事。我们边吃边笑。吃完后我们一起收拾桌子。这样的时光让我觉得很温暖，也让我们更亲近。"
+answer: "Yesterday evening my whole family sat down and had dinner together around the table. My mother cooked fish and a warm soup, and the food smelled delicious in the kitchen. My father told us a funny story about his day, and we all laughed while we ate our meal. After the meal we cleared the table and washed the dishes together as a team. These moments make me feel warm and lucky, and I think family dinners are important because we talk and grow closer to each other."
+acceptAlso: "Last night my family ate dinner together. Mum made fish and soup that smelled good. Dad told a funny story and we laughed while eating. After the meal we cleared the table and washed up. These times feel warm to me. I think family dinners matter because we talk and become closer as a family. We share both happy and hard moments together. Their smiles mean a lot to me. I can talk to them about anything. Family meals are my favourite time."
+srsWords: family dinner fish soup story table
+
+---
+lessonTitle: "Family Weekend"
+description: "Write about a family weekend"
+icon: "👨‍👩‍👧"
+color: "#EC4899"
+---
+
+[writing]
+text: "Write this passage in English"
+sentence: "周末我们全家常去爬山或看电影。上周我们去了郊外野餐。爸爸烤肉，妈妈准备水果。我在草地上跑。和家人一起的周末总是很快乐，也让我放松。"
+answer: "At the weekend my family often goes hiking on a hill or watches a film at the cinema together. Last week we drove to the countryside and had a picnic on the green grass near a lake. My father cooked barbecue meat on the fire, and my mother prepared fresh fruit and juice for all of us. I ran and played on the field with our dog and felt free. Weekends with my family are always happy and full of energy, and they help me relax after a busy school week."
+acceptAlso: "At weekends my family often climbs hills or sees films. Last week we picnicked outside in the countryside. Dad cooked meat on a fire and mum prepared fruit. I ran on the grass and played. Family weekends are always happy and let me relax after school. We share both happy and hard moments together. Their smiles mean a lot to me. I can talk to them about anything. Family meals are my favourite time. They teach me good values every day."
+srsWords: weekend family picnic barbecue grass
+
+---
+lessonTitle: "My Family Photo"
+description: "Write about a family photo"
+icon: "👨‍👩‍👧"
+color: "#EC4899"
+---
+
+[writing]
+text: "Write this passage in English"
+sentence: "桌子上有一张全家福。照片里我们笑得很开心。那是我十岁生日拍的。后面是家里的客厅。每次看到它，我都想起那天的快乐，也想起家人对我的爱。"
+answer: "There is a family photo on my desk, and in it we are all smiling happily together at home. It was taken on my tenth birthday when we celebrated with a cake and balloons. Behind us you can see our living room where we spend most evenings. Every time I look at this picture, I remember the joy of that day and how much my family loves me through every season. A photo can keep a happy moment forever, and this one is very special and close to my heart."
+acceptAlso: "There is a family photo on my desk. In it we smile happily together. It was taken on my tenth birthday with a cake. Behind us is our living room where we relax. Every time I see it, I remember that happy day and my family's love. The photo keeps a moment forever for me. We share both happy and hard moments together. Their smiles mean a lot to me. I can talk to them about anything. Family meals are my favourite time."
+srsWords: photo family smile birthday desk
+
+---
+lessonTitle: "A Family Trip"
 description: "Write about a family trip"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
@@ -103,49 +117,35 @@ color: "#EC4899"
 
 [writing]
 text: "Write this passage in English"
-sentence: "去年暑假我们全家去了动物园。我看到了大象、长颈鹿和熊猫。妹妹最喜欢熊猫。我们拍了很多照片。中午在草地上野餐。那是一次快乐的家庭旅行。"
-answer: "Last summer holiday my family went to the zoo. I saw elephants, giraffes and pandas. My sister liked the panda best. We took many photos. At noon we had a picnic on the grass. It was a happy family trip."
-acceptAlso: "We visited the zoo as a family last summer. I saw elephants, giraffes and pandas. My sister loved the panda most. We took lots of pictures. We picnicked on the lawn at noon. A joyful family outing."
-srsWords: "zoo" "elephant" "giraffe" "panda" "picnic"
+sentence: "去年夏天我们全家去了海边。我们坐火车去，住了三天。白天游泳，晚上看星星。弟弟第一次看到大海，很兴奋。那次旅行我很难忘，也希望再去。"
+answer: "Last summer my whole family took a trip to the seaside, and we went there by train together. We stayed in a small hotel for three days near the beach and enjoyed the view. During the day we swam in the sea, and at night we looked at the stars in the dark sky above us. My little brother saw the ocean for the first time and was very excited to touch the water. That trip is unforgettable to me because we were together and had so much fun by the sea."
+acceptAlso: "Last summer my family went to the sea. We took a train and stayed three days near the beach. We swim in the day and watched stars at night. My brother saw the sea for the first time and was excited. The trip was unforgettable and I hope we can go there again as a family. We share both happy and hard moments together. Their smiles mean a lot to me. I can talk to them about anything. Family meals are my favourite time."
+srsWords: trip train seaside star brother
 
 ---
-lessonTitle: "Lesson 8: Family Rules"
-description: "Write about rules at home"
+lessonTitle: "Helping My Family"
+description: "Write about helping your family"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我家有一些规矩。比如，晚上九点半前要睡觉。吃饭时不能看手机。自己的房间要自己整理。这些规矩让我更有条理。虽然有时觉得麻烦，但我明白是为我好。"
-answer: "My family has some rules. For example, we must sleep before half past nine. No phones at the table. We tidy our own rooms. These rules make me more organized. Although they are troublesome sometimes, I know they are for my good."
-acceptAlso: "There are rules at home. We should be in bed by 9:30. No phones during meals. Keep your room tidy yourself. The rules help me stay organized. They are annoying at times, but I know they help me."
-srsWords: "rule" "sleep" "phone" "tidy" "organized"
+sentence: "我在家会帮忙做家务。我每天倒垃圾，周末擦桌子。妈妈做饭时我洗菜。爸爸说我很乖。帮忙让我觉得自己长大了，也更有责任感，愿意为家付出。"
+answer: "I help my family with housework because everyone is busy during the week with work and study. Every day I take out the rubbish, and at the weekend I wipe the tables until they shine in the kitchen. When my mother cooks, I wash the vegetables for her so dinner is ready sooner. My father says I am a good child who shares the work without being asked. Helping at home makes me feel that I am growing up and becoming more responsible for the people I love, and I am happy to do my small part."
+acceptAlso: "I help with housework at home. I take out the rubbish daily and clean tables at weekends. I wash vegetables when mum cooks so she rests. Dad says I am good and helpful. Helping makes me feel grown up and responsible. I am willing to give my small part to the family I love. We share both happy and hard moments together. Their smiles mean a lot to me. I can talk to them about anything. Family meals are my favourite time."
+srsWords: housework rubbish table vegetable responsible
 
 ---
-lessonTitle: "Lesson 9: Helping My Parents"
-description: "Write about helping your parents"
+lessonTitle: "My Family Rules"
+description: "Write about your family rules"
 icon: "👨‍👩‍👧"
 color: "#EC4899"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我渐渐长大了，应该帮父母做家务。我负责洗碗和倒垃圾。周末我和爸爸一起买菜。妈妈累的时候，我给她倒杯茶。看到他们笑，我很满足。"
-answer: "I am growing up, so I should help my parents with housework. I do the dishes and take out the trash. On weekends I go shopping for food with Dad. When Mom is tired, I pour her a cup of tea. Seeing them smile makes me content."
-acceptAlso: "As I grow, I must help parents at home. I wash dishes and throw out rubbish. At weekends I buy groceries with Dad. When Mother is tired, I make her tea. Their smiles make me happy."
-srsWords: "grow" "dish" "trash" "grocery" "content"
-
----
-lessonTitle: "Lesson 10: My Dream for the Family"
-description: "Write about your dream for the family"
-icon: "👨‍👩‍👧"
-color: "#EC4899"
----
-
-[writing]
-text: "Write this passage in English"
-sentence: "我希望将来带父母去旅行。他们辛苦了一辈子，该休息了。我想带他们看大海和雪山。那时候我们不用着急，慢慢玩。全家健康平安，就是我最大的愿望。"
-answer: "I hope to take my parents traveling in the future. They have worked hard all their lives and deserve a rest. I want to show them the sea and snowy mountains. Then we can play without rushing. My biggest wish is that my family stays healthy and safe."
-acceptAlso: "I want to travel with my parents someday. They worked hard for years and need rest. I'd like to show them the ocean and snow mountains. We can relax and enjoy. My greatest wish is our family's health and safety."
-srsWords: "future" "travel" "rest" "mountain" "wish"
+sentence: "我家有一些规矩。我必须九点前睡觉，作业要先做完。吃饭时不能看手机。虽然规矩有点多，但我知道它们对我好。它们让我更有规律，也学会自律。"
+answer: "There are some rules in my family that we all try to follow every day. I must go to bed before nine o'clock so I can rest well for school. I have to finish my homework first before I play any games or watch a screen. We are not allowed to look at our phones during dinner at the table. Although there are quite a few rules, I know they are good for me and keep me safe. They help me build a regular life and teach me to control myself and be disciplined as I grow."
+acceptAlso: "My family has some rules. I must sleep before nine and do homework first. We cannot use phones at dinner. The rules are many, but I know they are good for me. They make my life regular and teach me to be disciplined. I follow them because they help me become a better person. We share both happy and hard moments together. Their smiles mean a lot to me. I can talk to them about anything. Family meals are my favourite time."
+srsWords: rules sleep homework dinner regular

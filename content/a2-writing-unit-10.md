@@ -11,7 +11,7 @@ questionType: "writing"
 ---
 
 ---
-lessonTitle: "Lesson 1: My Dream Job"
+lessonTitle: "My Dream Job"
 description: "Write about your dream job"
 icon: "🌟"
 color: "#F43F5E"
@@ -19,41 +19,69 @@ color: "#F43F5E"
 
 [writing]
 text: "Write this passage in English"
-sentence: "我长大想当一名医生。医生能帮助病人减轻痛苦。这个工作很辛苦，但很有意义。为了实现梦想，我要努力学习。我相信只要坚持，就能做到。"
-answer: "When I grow up I want to be a doctor. Doctors help patients ease pain. The job is hard but meaningful. To reach my dream I must study hard. I believe if I persist, I can do it."
-acceptAlso: "I'll be a doctor when older. Doctors relieve patients' pain. Tiring yet meaningful. I must study hard for it. Persist and I'll make it."
-srsWords: "doctor" "patient" "pain" "meaningful" "persist"
+sentence: "我长大后想当一名医生。医生能救人，很受人尊敬。为了实现梦想，我现在要学好科学和英语。我希望将来能帮助很多病人，也回报社会。"
+answer: "When I grow up, I want to become a doctor because doctors save lives and are respected by everyone in the community. To make this dream come true, I must study science and English well from now on, since medicine needs both knowledge and clear talk with patients. I hope that in the future I can help many sick people and bring comfort to their families in hard times. Although the training will be long and hard, I am ready to work for it with patience."
+acceptAlso: "I want to be a doctor when I grow up. Doctors save lives and are respected by everyone. To reach this dream I must study science and English well. I hope to help many patients and comfort their families in the future. The training is long and hard, but I am ready to work for it. A clear goal gives my study a strong purpose each day. Step by step I move toward my aims. I set small goals I can keep."
+srsWords: dream doctor science english patient
 
 ---
-lessonTitle: "Lesson 2: In Ten Years"
-description: "Write about ten years from now"
+lessonTitle: "Next Year Plans"
+description: "Write about your plans for next year"
 icon: "🌟"
 color: "#F43F5E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "十年后我想有一份喜欢的工作。也许我会住在有自己的小花园的房子里。我会养一只狗。周末去旅行或看书。生活不必太富贵，开心就好。"
-answer: "In ten years I want a job I like. Maybe I'll live in a house with a small garden. I will keep a dog. On weekends I'll travel or read. Life need not be rich, just happy."
-acceptAlso: "A decade later I want a loved job. Perhaps a house with a garden. A dog too. Weekends travel or read. Not rich, just happy."
-srsWords: "year" "job" "garden" "dog" "happy"
+sentence: "明年我打算更努力学习，尤其是数学。我还想参加学校的足球队。暑假我计划和家人去旅行。我对明年充满期待，也会一步步行动。"
+answer: "Next year I plan to study harder, especially my maths, because it is weak now and holds me back at school. I also want to join the school football team to make new friends and exercise more with them after class. During the summer holiday I plan a trip with my family to see a new city and relax together. I am full of hope for next year and ready to improve myself step by step, not all at once."
+acceptAlso: "Next year I will study harder, especially maths which is weak. I also want to join the school football team to make friends and exercise. In summer I plan a family trip to a new city. I look forward to next year and will improve step by step. Plans give direction, but I must act daily. I will try my best and not give up when it gets hard. Step by step I move toward my aims. I set small goals I can keep."
+srsWords: plan study maths football holiday
 
 ---
-lessonTitle: "Lesson 3: Learning a New Language"
-description: "Write about learning a language"
+lessonTitle: "Learning a New Language"
+description: "Write about learning a new language"
 icon: "🌟"
 color: "#F43F5E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "除了英语，我还想学日语。日本的动漫和食物很吸引我。学外语很难，要每天练习。我会用App背单词。多一门语言，就多一扇看世界的窗。"
-answer: "Besides English I want to learn Japanese. Japan's anime and food attract me. Foreign languages are hard and need daily practice. I will use an app to memorize words. Another language is another window to the world."
-acceptAlso: "I'd learn Japanese beyond English. Anime and food draw me. Tongues are hard; practice daily. An app helps words. A language is a window."
-srsWords: "language" "japanese" "anime" "practice" "window"
+sentence: "我正在学英语，以后还想学日语。学语言能认识不同文化的人。虽然记单词很难，但每天进步一点让我开心。我想以后能流利交流，也去旅行。"
+answer: "I am learning English now, and later I want to study Japanese as a second language that I like. Learning languages lets me meet people from different cultures and understand their lives and foods better than before. Although remembering new words is hard, making small progress each day makes me happy and proud of myself. I hope that one day I can speak fluently and travel without fear of talking to locals in their towns. I think language is a bridge that connects people from many places."
+acceptAlso: "I am learning English and later want Japanese as a second language. Languages let me meet different cultures and understand their lives. Words are hard, but daily progress makes me happy. I want to speak fluently and travel without fear of talking to locals. Language is a bridge, and today's effort opens doors for my future self abroad. Step by step I move toward my aims. I set small goals I can keep. Learning new skills opens doors. I imagine the life I want."
+srsWords: language english japanese word culture
 
 ---
-lessonTitle: "Lesson 4: Helping Others"
+lessonTitle: "A Place I Want to Visit"
+description: "Write about a place you want to visit"
+icon: "🌟"
+color: "#F43F5E"
+---
+
+[writing]
+text: "Write this passage in English"
+sentence: "我想去长城。它是世界闻名的建筑，也很壮观。我想站在城墙上拍照，看远处的山。如果去成，我会非常激动，也会更爱我的国家与历史。"
+answer: "I want to visit the Great Wall because it is a world famous building and looks truly grand from far away on the mountains. I imagine standing on the wall and taking photos while looking at the hills and clouds in the distance below me. If I get the chance to go, I will be very excited and feel prouder of my country's long history and the work of ancient people. The wall shows the size of our land and the effort of those who built it."
+acceptAlso: "I want to visit the Great Wall. It is world famous and grand on the mountains. I want to stand on it and photograph the far hills and clouds. If I go I will be excited and prouder of my country's history. The wall shows our land's size and ancient effort. I hope to go with my family and walk a long part to feel its greatness. Step by step I move toward my aims. I set small goals I can keep."
+srsWords: visit great wall mountain famous country
+
+---
+lessonTitle: "My Future Home"
+description: "Write about your future home"
+icon: "🌟"
+color: "#F43F5E"
+---
+
+[writing]
+text: "Write this passage in English"
+sentence: "我希望将来住在一栋带花园的房子里。花园里种满花和树，还可以养一只狗。房子要明亮、安静。这样的家会让我感到安全和幸福，也适合生活。"
+answer: "In the future I hope to live in a house with a garden where I can plant flowers and trees and maybe keep a dog to play with. The house should be bright, quiet and warm so I can rest well after a long day of work and study. Such a home would make me feel safe and happy with the people I love around me each evening. I picture a small vegetable corner too, so we eat fresh food we grow ourselves in the garden."
+acceptAlso: "I hope to live in a house with a garden. I will plant flowers and trees and keep a dog to play with. The house should be bright and quiet so I rest well. Such a home feels safe and happy with loved ones. I picture a small vegetable corner for fresh food. To reach this I must work hard now and save money little by little for the life I imagine. Step by step I move toward my aims."
+srsWords: future home garden bright quiet safe
+
+---
+lessonTitle: "Helping Others"
 description: "Write about helping others"
 icon: "🌟"
 color: "#F43F5E"
@@ -61,91 +89,63 @@ color: "#F43F5E"
 
 [writing]
 text: "Write this passage in English"
-sentence: "将来我想做志愿者。去山区给孩子们教书，或去动物收容所帮忙。帮助别人让我快乐。哪怕一点点力量，也能带来改变。我希望世界更温暖。"
-answer: "In the future I want to be a volunteer. Teach kids in mountains or help at an animal shelter. Helping others makes me happy. Even a little power can bring change. I hope the world is warmer."
-acceptAlso: "I'll volunteer later. Teach village kids or aid animal shelters. Helping joys me. Small effort changes things. I want a warmer world."
-srsWords: "volunteer" "teach" "shelter" "help" "change"
+sentence: "我觉得帮助别人很重要。在学校我帮同学解题，在公交车上让座。看到别人开心，我自己也开心。我希望以后多做志愿工作，回馈社会。"
+answer: "I think helping others is very important in life, and I try to do it daily in small ways that I can. At school I help classmates with difficult problems, and on the bus I give my seat to old people who need it more. When I see them smile, I feel happy too, which is a nice reward for me without money. I hope to do more volunteer work in the future, such as cleaning a park or visiting the old in a home."
+acceptAlso: "I think helping others matters. At school I help classmates with problems, and on the bus I give my seat to old people. Their smile makes me happy too, a reward without money. I hope to volunteer more, like cleaning a park or visiting the old. Small kind acts warm the world. If everyone helps a little, our community becomes a better place to live in. Step by step I move toward my aims. I set small goals I can keep."
+srsWords: help others classmate smile volunteer
 
 ---
-lessonTitle: "Lesson 5: A Letter to Future Me"
-description: "Write about a letter to future you"
+lessonTitle: "Saving Money"
+description: "Write about saving money"
 icon: "🌟"
 color: "#F43F5E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我写了一封信给十年后的自己。我写下现在的梦想和害怕的事。我希望未来的我没有忘记初心。信里我鼓励自己勇敢一点。等十年后打开，一定很有意思。"
-answer: "I wrote a letter to myself in ten years. I put down my dreams and fears now. I hope the future me hasn't forgotten the original heart. In it I encourage myself to be brave. Opening it in ten years will be fun."
-acceptAlso: "I wrote to future me. I noted dreams and fears. Hope I keep my first heart. I urged bravery. Opening later will be interesting."
-srsWords: "letter" "future" "dream" "fear" "brave"
+sentence: "我开始把零花钱存起来。我有一个储蓄罐，每周放一点。妈妈教我区分想要和需要。存钱让我能买更贵的学习用品，也学会节制，为未来准备。"
+answer: "I started saving my pocket money instead of spending it all on snacks and toys each week. I have a small piggy bank and put a little in every week so it grows slowly but surely over time. My mother taught me to tell the difference between what I want and what I truly need before I buy. Saving lets me buy more expensive school supplies later and teaches me self control with money. I think saving is a good habit that prepares me for the future and gives me choice."
+acceptAlso: "I save my pocket money now instead of spending it all. I have a piggy bank and add a little weekly so it grows. Mum taught me want versus need before buying. Saving lets me buy better supplies and learn control. It is a good habit for bigger goals like my dream trip. Money kept today becomes a choice I can make tomorrow for myself. Step by step I move toward my aims. I set small goals I can keep."
+srsWords: save money bank need control
 
 ---
-lessonTitle: "Lesson 6: Saving the Planet"
-description: "Write about saving the planet"
+lessonTitle: "Getting Fitter"
+description: "Write about getting fitter"
 icon: "🌟"
 color: "#F43F5E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我有一个大梦想：让地球更健康。我会少开空调，多骑车。随手关灯，垃圾分类。虽然一个人力量小，但很多人一起就大。为了后代，我们要行动。"
-answer: "I have a big dream: make Earth healthier. I use less AC and ride more. Turn off lights, sort trash. One person is small, but many together are big. For the next generation we must act."
-acceptAlso: "My big dream: healthier Earth. Less AC, more bikes. Lights off, sort waste. Small alone, big together. Act for the young."
-srsWords: "planet" "earth" "ac" "trash" "generation"
+sentence: "我的目标是变得更健康。我计划每周运动四次，少吃零食。我也早点睡，少看屏幕。坚持一个月后，我觉得体力好了很多，精神也更足。"
+answer: "My goal is to become fitter and stronger than before by changing my daily habits a little. I plan to exercise four times a week and eat fewer snacks between meals that are bad for me. I also go to bed earlier and spend less time on screens before sleep so my eyes rest. After keeping this for one month, I felt my stamina improve a lot and I got sick less than usual. I think getting fit is not a one day thing but a daily choice we make."
+acceptAlso: "My goal is to get fitter. I plan to exercise four times a week and eat fewer snacks. I sleep earlier and use screens less before bed. After a month I feel stronger and get sick less. Getting fit is a daily choice, not one day's work. Small changes bring big results, and I am proud I started instead of only wishing for it. Step by step I move toward my aims. I set small goals I can keep. Learning new skills opens doors."
+srsWords: fitter exercise screen stamina goal
 
 ---
-lessonTitle: "Lesson 7: My Study Plan"
-description: "Write about your study plan"
+lessonTitle: "My Goals"
+description: "Write about your goals"
 icon: "🌟"
 color: "#F43F5E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "为了提高英语，我定了计划。每天听十分钟，读一篇短文。周末复习一周的内容。遇到生词就记下来。坚持一年，一定会有进步。计划让目标更清晰。"
-answer: "To improve English I made a plan. Listen ten minutes and read a short text daily. Review the week on weekends. Write down new words. Keep it a year and I will progress. A plan clarifies the goal."
-acceptAlso: "For better English I set a plan. Ten minutes listening, one text daily. Weekly review. Note new words. A year of this brings progress. Plans clarify goals."
-srsWords: "plan" "english" "listen" "review" "progress"
+sentence: "我有几个小目标。这个学期我想提高英语口语，还要学会游泳。长远看，我想考上一所好高中。把目标写下来让我更有动力，也方便检查进度。"
+answer: "I have a few small goals for myself this year that I want to reach with effort. This term I want to improve my spoken English and also learn how to swim properly in the pool. In the long run, I hope to enter a good high school after the exams and study what I like. Writing my goals down on paper gives me more motivation to act, because I can see them clearly in front of me. I review them each month to check my progress and change them if needed."
+acceptAlso: "I have a few goals. This term I want better spoken English and to learn swimming. Long term I hope for a good high school. Writing goals down gives me motivation because I see them clearly. I review each month to check progress. A person with clear goals walks faster than one without, so I keep my list where I can read it every morning. Step by step I move toward my aims. I set small goals I can keep."
+srsWords: goal english swim highschool motivation
 
 ---
-lessonTitle: "Lesson 8: If I Had a Lot of Money"
-description: "Write about having lots of money"
+lessonTitle: "When I Am 20"
+description: "Write about when you are 20"
 icon: "🌟"
 color: "#F43F5E"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "如果我有好多钱，我不会乱花。我会给父母买房子，让他们安心。剩下的用来帮助穷人和动物。钱不是最重要的，爱和善意才是。用自己的能力帮助人，才是真正的富有。"
-answer: "If I had a lot of money I wouldn't waste it. I would buy my parents a house so they feel secure. The rest would help the poor and animals. Money isn't the most important; love and kindness are. To help others with one's ability is true wealth."
-acceptAlso: "With much money I won't spend wild. I'd buy parents a home for peace. Help poor and animals with the rest. Money isn't key; love is. Helping by ability is real wealth."
-srsWords: "money" "house" "poor" "kindness" "wealth"
-
----
-lessonTitle: "Lesson 9: Overcoming Fear"
-description: "Write about overcoming fear"
-icon: "🌟"
-color: "#F43F5E"
----
-
-[writing]
-text: "Write this passage in English"
-sentence: "我以前很怕在大家面前说话。后来老师鼓励我参加演讲。我准备很久，终于敢上台。虽然手在抖，但我完成了。克服害怕让我更自信。勇敢一点，世界更大。"
-answer: "I used to fear speaking in public. Later my teacher encouraged me to join a speech. I prepared long and finally dared to go on stage. My hands shook but I finished. Overcoming fear made me more confident. Be brave and the world is bigger."
-acceptAlso: "I feared public speaking. Teacher urged a speech. I prepped and dared the stage. Hands shook, yet I finished. Beating fear built confidence. Brave, world grows."
-srsWords: "fear" "speech" "stage" "confident" "brave"
-
----
-lessonTitle: "Lesson 10: My Promise to Myself"
-description: "Write about a promise to yourself"
-icon: "🌟"
-color: "#F43F5E"
----
-
-[writing]
-text: "Write this passage in English"
-sentence: "我向自己承诺：每天进步一点点。不与他人比，只与昨天的自己比。遇到困难不立刻放弃。保持好奇，保持善良。这样的我，未来一定不差。"
-answer: "I promise myself: improve a little each day. Don't compare with others, only with yesterday's me. Don't quit at the first difficulty. Stay curious and kind. Such a me will have a good future."
-acceptAlso: "I promise: progress daily. Compare to myself, not others. Don't give up fast. Stay curious, kind. That me has a fine future."
-srsWords: "promise" "improve" "compare" "curious" "kind"
+sentence: "等我二十岁时，我希望已经上了大学。我会独立生活，自己安排时间。我想交来自各地的朋友。那时的我会更成熟、更自信，也更懂得感恩。"
+answer: "When I am twenty, I hope to be already at university studying what I love with other young people. I will live more independently and arrange my own time without my parents reminding me every step of the way. I want to make friends from different places and learn from their stories and cultures. At that age I imagine myself more mature and confident than I am now as a teenager. To get there, I must study seriously today and build good habits that last."
+acceptAlso: "When I am twenty I hope to be at university. I will live independently and manage my time without parents reminding me. I want friends from many places and learn from them. I will be more mature and confident than now. To get there I must study seriously today and build good habits. That freer future pushes me to work harder and not waste my present school years. Step by step I move toward my aims. I set small goals I can keep."
+srsWords: twenty university independent friend mature

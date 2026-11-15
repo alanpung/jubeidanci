@@ -11,91 +11,105 @@ questionType: "writing"
 ---
 
 ---
-lessonTitle: "Lesson 1: My Pet Dog"
-description: "Write about your pet dog"
+lessonTitle: "My Pet"
+description: "Write about your pet"
 icon: "🐾"
 color: "#A3E635"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我家有一只狗，叫豆豆。它很小，毛是棕色的。每天放学它都在门口等我。它喜欢追球和啃骨头。狗是人类忠实的朋友。有它陪伴，我不孤单。"
-answer: "I have a dog named Doudou. It is small with brown fur. Every day after school it waits at the door. It likes chasing balls and bones. Dogs are loyal friends. With it I am not lonely."
-acceptAlso: "My dog is Doudou. Small, brown fur. It greets me at the door daily. Loves balls and bones. Dogs are faithful pals. I'm not lonely with it."
-srsWords: "dog" "brown" "ball" "bone" "loyal"
+sentence: "我家养了一只猫，名字叫咪咪。它很可爱，喜欢在阳光下睡觉。每天我回家它都来迎接我。照顾它让我学会了责任，也让我更有爱心。"
+answer: "My family keeps a cat called Mimi, and she is very cute and friendly with everyone at home. She likes sleeping in the warm sunlight by the window and she purrs when I touch her soft fur. Every day when I come home from school, she runs to the door to greet me with a small sound. Taking care of her feeding and cleaning teaches me responsibility and care for others who depend on me. Nature is full of small wonders to notice."
+acceptAlso: "My family has a cat named Mimi. She is cute and sleeps in the sun by the window. She greets me when I come home from school. Caring for her taught me responsibility and love. A pet is more than an animal; it is a family member who gives love without words. Mimi makes my home happier and less lonely every day. A quiet park restores my energy. I watch birds and insects with interest. Clean air and water are precious."
+srsWords: pet cat cute sleep responsibility
 
 ---
-lessonTitle: "Lesson 2: A Visit to the Zoo"
-description: "Write about a zoo visit"
+lessonTitle: "A Visit to the Zoo"
+description: "Write about a visit to the zoo"
 icon: "🐾"
 color: "#A3E635"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "动物园里有各种各样的动物。猴子荡秋千，长颈鹿吃树叶，企鹅摇摇摆摆。我最喜欢大熊猫，懒洋洋地吃竹子。动物是地球的一部分。我们要保护它们。"
-answer: "The zoo has all kinds of animals. Monkeys swing, giraffes eat leaves, penguins waddle. I like the giant panda most, lazily eating bamboo. Animals are part of Earth. We must protect them."
-acceptAlso: "The zoo shows many animals. Monkeys swing, giraffes munch leaves, penguins wobble. I love pandas eating bamboo. Animals belong to Earth. Protect them."
-srsWords: "zoo" "monkey" "giraffe" "penguin" "protect"
+sentence: "上周学校组织去动物园。我们看到了大象、猴子和长颈鹿。猴子最活泼，逗得我们大笑。我觉得保护动物很重要，不该伤害它们，要给它们空间。"
+answer: "Last week our school took us to the zoo, and it was an exciting day out for all the students in my class. We saw elephants, monkeys and tall giraffes from close behind the safe glass and fences. The monkeys were the most lively and made us laugh with their funny jumps and faces. I think it is important to protect animals and never hurt them, because they share our planet with us humans. Nature is full of small wonders to notice."
+acceptAlso: "Last week school went to the zoo. We saw elephants, monkeys and giraffes up close. The monkeys were funniest and made us laugh with their jumps. We must protect animals and not hurt them, since they share our planet. Seeing them reminded me nature is wonderful. I hope zoos care for animals and wild places stay safe for free animals. A quiet park restores my energy. I watch birds and insects with interest. Clean air and water are precious. Plants teach me about patience."
+srsWords: zoo elephant monkey giraffe protect
 
 ---
-lessonTitle: "Lesson 3: Four Seasons of a Tree"
-description: "Write about a tree through seasons"
+lessonTitle: "Wild Animals"
+description: "Write about wild animals"
 icon: "🐾"
 color: "#A3E635"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "我家楼下有棵大树。春天它长新叶，夏天给我们遮阴，秋天叶子变黄落下，冬天光秃秃的。它陪我度过每年。观察一棵树，能看见时间的样子。"
-answer: "There is a big tree downstairs. In spring it grows new leaves, in summer it shades us, in autumn leaves turn yellow and fall, in winter it is bare. It stays with me each year. Watching one tree shows the shape of time."
-acceptAlso: "A big tree stands below my home. Spring new leaves, summer shade, autumn yellow fall, winter bare. It accompanies my years. A tree reveals time."
-srsWords: "tree" "leaf" "shade" "autumn" "bare"
+sentence: "野生动物生活在森林和大山里。老虎、熊和狼都是其中的成员。因为人类活动，有些动物面临危险。我们应该保护它们的家园，不乱砍树。"
+answer: "Wild animals live in forests, mountains and wide open lands far from the cities where we live. Tigers, bears and wolves are some of their members, each with a role to play in nature's balance and food chain. Because of human activity like cutting trees and building roads, some animals are now in danger of disappearing forever from the earth. I believe we should protect their homes and stop hunting them for fun or money. Nature is full of small wonders to notice."
+acceptAlso: "Wild animals live in forests and mountains far from cities. Tigers, bears and wolves are among them, each with a role in nature. Because of humans cutting trees, some are in danger of disappearing. We should protect their homes and stop hunting them. If we keep the wild safe, animals can live and balance the earth. I respect nature more after learning about them. A quiet park restores my energy. I watch birds and insects with interest. Clean air and water are precious."
+srsWords: wild forest tiger bear protect
 
 ---
-lessonTitle: "Lesson 4: The Ocean"
-description: "Write about the ocean"
+lessonTitle: "Trees and Flowers"
+description: "Write about trees and flowers"
 icon: "🐾"
 color: "#A3E635"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "大海又大又神秘。海水是咸的，波浪不停拍岸。海里住着鱼、海豚和鲸。海洋给我们氧气和食物。但污染在伤害它。保护海洋，就是保护我们自己。"
-answer: "The sea is huge and mysterious. Its water is salty and waves keep hitting the shore. Fish, dolphins and whales live there. The ocean gives us oxygen and food. But pollution hurts it. Protecting the sea is protecting ourselves."
-acceptAlso: "The ocean is vast and strange. Salty water, endless waves. Home to fish, dolphins, whales. It gives air and food. Pollution harms it. Save the sea, save us."
-srsWords: "ocean" "salty" "wave" "dolphin" "pollution"
+sentence: "春天来了，树长出新叶，花也开了。我家楼下有一棵樱花树，粉色的花很好看。植物让城市更美，也给我们氧气。我要多爱护它们，不摘花。"
+answer: "When spring comes, trees grow new leaves and many flowers open in the warm sun around the city and parks. Downstairs from my home there is a cherry tree, and its pink blossoms look beautiful for a few short weeks each year. Plants make the city prettier and give us the oxygen we breathe every single day to live. I want to take better care of them by not picking flowers and by watering the ones in our yard when it is dry. Small actions like these help nature stay green and healthy around where we live together."
+acceptAlso: "In spring trees grow new leaves and flowers bloom in the warm sun. Downstairs there is a cherry tree with pretty pink flowers for a few weeks. Plants make the city beautiful and give us oxygen to breathe. I will care for them, not pick flowers and water the yard. Small actions help nature stay green and healthy where we live. A quiet park restores my energy. I watch birds and insects with interest. Clean air and water are precious."
+srsWords: tree flower spring pink oxygen
 
 ---
-lessonTitle: "Lesson 5: A Rainforest"
-description: "Write about a rainforest"
+lessonTitle: "A Walk in the Forest"
+description: "Write about a walk in the forest"
 icon: "🐾"
 color: "#A3E635"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "雨林是地球的肺。那里雨水多，植物茂盛。很多稀有动物住在里面。可惜森林正在减少。树木被砍伐，动物失去家园。我们应该种树，保护雨林。"
-answer: "The rainforest is the Earth's lungs. It rains a lot and plants thrive. Many rare animals live there. Sadly forests are shrinking. Trees are cut and animals lose homes. We should plant trees and protect rainforests."
-acceptAlso: "Rainforests are Earth's lungs. Wet, lush plants. Rare animals inside. Forests shrink sadly. Cutting loses homes. Plant trees, save them."
-srsWords: "rainforest" "plant" "rare" "forest" "protect"
+sentence: "去年秋天我去森林散步。地上铺满落叶，踩上去沙沙响。我听见鸟叫，看见小松鼠。森林让我觉得平静，也远离城市的喧闹，很治愈。"
+answer: "Last autumn I went for a walk in the forest with my father, and it was a peaceful trip away from the noise. The ground was covered with fallen leaves that made a soft sound under my shoes as we walked slowly. I heard birds singing and saw a small squirrel jumping between the branches above us. The forest made me feel calm and far away from the noisy city life that I live in during the week. Nature is full of small wonders to notice."
+acceptAlso: "Last autumn I walked in the forest with my father. Leaves covered the ground and made a soft sound under my shoes. I heard birds and saw a squirrel jump between branches. The forest felt calm, away from city noise. Nature is the best place to rest our minds. I hope woods stay clean and safe so more people enjoy their quiet beauty. A quiet park restores my energy. I watch birds and insects with interest. Clean air and water are precious."
+srsWords: forest autumn leaf bird squirrel
 
 ---
-lessonTitle: "Lesson 6: Insects"
-description: "Write about insects"
+lessonTitle: "Birds in the Park"
+description: "Write about birds in the park"
 icon: "🐾"
 color: "#A3E635"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "夏天花园里有很多昆虫。蜜蜂采蜜，蝴蝶飞舞，蚂蚁排着队搬食物。它们虽小，却很重要。蜜蜂帮助花儿结果。观察昆虫让我觉得自然奇妙。"
-answer: "In summer the garden has many insects. Bees gather honey, butterflies dance, ants line up to carry food. They are small but important. Bees help flowers bear fruit. Watching insects makes nature feel wonderful."
-acceptAlso: "Summer gardens teem with insects. Bees, butterflies, ants in rows. Tiny yet vital. Bees fruit the flowers. Insects show nature's wonder."
-srsWords: "insect" "bee" "butterfly" "ant" "honey"
+sentence: "早晨的公园有很多鸟。它们在树上唱歌，飞来飞去。我常带面包屑喂它们。看鸟飞让我心情愉快，也让我注意自然，学会观察。"
+answer: "In the morning the park is full of birds that sing on the trees and fly from branch to branch without rest. I often bring small pieces of bread to feed them, and they are not afraid to come close to my hand on the bench. Watching birds fly freely makes me happy and reminds me to notice nature around me each day. I think these little creatures bring life to the city and deserve our care and quiet space to live."
+acceptAlso: "In the morning the park has many birds. They sing and fly among trees without rest. I bring bread crumbs to feed them and they come close. Birds make me happy and aware of nature. These creatures bring life to the city and deserve care. I never chase them, so they feel safe and return each morning to sing for us. A quiet park restores my energy. I watch birds and insects with interest. Clean air and water are precious."
+srsWords: bird park sing feed nature
 
 ---
-lessonTitle: "Lesson 7: My Favorite Animal"
+lessonTitle: "Protecting Nature"
+description: "Write about protecting nature"
+icon: "🐾"
+color: "#A3E635"
+---
+
+[writing]
+text: "Write this passage in English"
+sentence: "我认为保护环境人人有责。我们应该少开车、多植树、不乱扔垃圾。自然给我们清新的空气和水。如果我们不保护，未来会更糟，要现在行动。"
+answer: "I believe protecting nature is everyone's duty, not just the government or a few people in the world. We should drive less, plant more trees, and never throw rubbish on the street or into rivers where it harms fish. Nature gives us clean air and water that we cannot live without for long. If we do not protect it now, the future will be worse for my generation and the children after us. Nature is full of small wonders to notice."
+acceptAlso: "I think protecting nature is everyone's duty, not just the government. We should drive less, plant trees and not litter on streets or in rivers. Nature gives clean air and water we cannot live without. If we don't protect it, the future is worse for us. Small acts like recycling add up, and I do my part and hope others join, because the earth is our only home. A quiet park restores my energy. I watch birds and insects with interest."
+srsWords: nature protect tree recycle earth
+
+---
+lessonTitle: "My Favorite Animal"
 description: "Write about your favorite animal"
 icon: "🐾"
 color: "#A3E635"
@@ -103,49 +117,35 @@ color: "#A3E635"
 
 [writing]
 text: "Write this passage in English"
-sentence: "我最喜欢的动物是熊猫。它胖乎乎的，黑白相间，很可爱。它主要吃竹子，一天能吃很多。熊猫是中国国宝，数量很少。我希望它们永远平安。"
-answer: "My favorite animal is the panda. It is chubby, black and white, and cute. It mainly eats bamboo and can eat a lot a day. The panda is China's treasure with few left. I hope they stay safe forever."
-acceptAlso: "I like pandas most. Chubby, black-white, cute. They eat bamboo a lot daily. China's treasure, few remain. I wish them safety."
-srsWords: "panda" "chubby" "bamboo" "treasure" "safe"
+sentence: "我最喜欢的动物是海豚。它们聪明、友善，还会救人。我在海洋馆看过海豚表演，很精彩。我希望以后能保护它们的海洋家园，减少污染。"
+answer: "My favourite animal is the dolphin because it is smart, friendly and surprisingly gentle with people in the water. I once watched a dolphin show at the ocean park, and it was amazing how they jumped and followed the trainer's commands with joy. Dolphins are known to save people in the sea, which shows their kindness and intelligence to us. I hope that in the future I can help protect their ocean home from pollution and nets that hurt them."
+acceptAlso: "My favourite animal is the dolphin. It is smart, friendly and can save people in the sea. I saw a dolphin show at the ocean park, wonderful to watch. Dolphins show kindness and intelligence. I hope to protect their ocean home from pollution and nets. Learning about them makes me love the sea and want to keep it clean for them. A quiet park restores my energy. I watch birds and insects with interest. Clean air and water are precious."
+srsWords: dolphin ocean smart friendly protect
 
 ---
-lessonTitle: "Lesson 8: Saving Water"
-description: "Write about saving water"
+lessonTitle: "The Ocean"
+description: "Write about the ocean"
 icon: "🐾"
 color: "#A3E635"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "水是很宝贵的资源。我刷牙时关掉水龙头，洗澡时间也不太长。下雨时我用桶接水浇花。浪费水会让河流变少。每个人节约一点，地球更绿。"
-answer: "Water is precious. I turn off the tap while brushing and don't shower too long. When it rains I use a bucket to catch water for flowers. Wasting water shrinks rivers. If everyone saves a little, Earth stays greener."
-acceptAlso: "Water is valuable. I close the tap brushing, short showers. Rain buckets water flowers. Waste lowers rivers. Small saves green Earth."
-srsWords: "water" "tap" "shower" "bucket" "save"
+sentence: "海洋覆盖了地球的大部分。那里生活着很多生物，比如鱼、海龟和鲸。海洋调节气候，也给我们资源。我们要减少污染，保护海洋，留给后代。"
+answer: "The ocean covers most of our planet and is home to countless living things such as fish, sea turtles and huge whales that we rarely see. It helps control the climate and gives us food and resources we use every day in our lives. I think we must reduce pollution and plastic waste so the sea stays alive and blue for the creatures in it. When the ocean is healthy, people are healthier too, and the future is safer. Nature is full of small wonders to notice."
+acceptAlso: "The ocean covers most of the earth. It has fish, turtles and whales living in it. It controls climate and gives us food and resources. We must cut pollution and plastic so the sea stays alive and blue. When the ocean is healthy, people are too. I hope young people learn about the sea and protect it before more damage is done. A quiet park restores my energy. I watch birds and insects with interest. Clean air and water are precious."
+srsWords: ocean fish whale climate pollution
 
 ---
-lessonTitle: "Lesson 9: A Mountain Hike"
-description: "Write about a mountain hike"
+lessonTitle: "A Farm Visit"
+description: "Write about a farm visit"
 icon: "🐾"
 color: "#A3E635"
 ---
 
 [writing]
 text: "Write this passage in English"
-sentence: "上个月我和爸爸去爬山。山很高，路有点陡。我们走得很慢，但一直向上。到了山顶，看见云在脚下。风吹得很舒服。爬山让我变得更坚强。"
-answer: "Last month Dad and I climbed a mountain. It was high and the path was steep. We walked slowly but kept going up. At the top we saw clouds below our feet. The wind felt nice. Hiking made me stronger."
-acceptAlso: "I hiked with Dad last month. High, steep path. Slow but upward. Summit showed clouds below. Wind soothed. Hiking built my strength."
-srsWords: "mountain" "steep" "top" "cloud" "strong"
-
----
-lessonTitle: "Lesson 10: Nature Around Me"
-description: "Write about nature around you"
-icon: "🐾"
-color: "#A3E635"
----
-
-[writing]
-text: "Write this passage in English"
-sentence: "我住的城市有不少公园和河。早上有人在河边跑步，鸟在树上叫。我觉得自然离我们并不远。只要留心，处处有风景。爱护身边的小自然，也是爱护地球。"
-answer: "My city has many parks and a river. In the morning people run by the river and birds sing in trees. I feel nature is not far. If we pay attention, scenery is everywhere. Caring for the small nature nearby is caring for Earth."
-acceptAlso: "The city has parks and a river. Mornings, runners by river, birds in trees. Nature is near. Notice it, scenes everywhere. Love local nature, love Earth."
-srsWords: "nature" "park" "river" "bird" "care"
+sentence: "春天我和同学去农场参观。我们看了牛、羊和鸡。还尝了新鲜的牛奶和鸡蛋。农夫带我们摘草莓。农场让我明白食物的来源，也学会珍惜。"
+answer: "In spring my classmates and I visited a farm outside the city for a day of learning and fun. We saw cows, sheep and chickens moving freely in the open fields under the sun. We also tasted fresh milk and eggs that were much tastier than the shop ones we buy. The farmer took us to pick strawberries with our own hands into small baskets. The visit taught me where food really comes from and how much work farmers do for us each day."
+acceptAlso: "In spring my class visited a farm outside the city. We saw cows, sheep and chickens in the fields. We tasted fresh milk and eggs, tastier than shop ones. The farmer let us pick strawberries by hand. The farm showed me where food comes from and the work farmers do. I now waste less food and respect growers. A farm is a great place to learn about nature and life. A quiet park restores my energy. I watch birds and insects with interest."
+srsWords: farm cow chicken strawberry farmer
