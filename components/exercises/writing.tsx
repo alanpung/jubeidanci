@@ -288,45 +288,58 @@ export function Writing({
         {/* The complete Chinese prompt — plain text on purpose. No HoverableText,
             so no hover lookup, no POS, no IPA, no gloss.
 
-            MOBILE TYPING MODE: when the on-screen keyboard is open we make this
-            card STICKY at the very top of the viewport (compact + opaque) and
-            put the English textarea in its OWN block directly BELOW it — never
-            overlaid. The browser scrolls the page to keep the textarea above the
-            keyboard, and the sticky Chinese card stays pinned and fully visible
-            the whole time, so the learner can read the question while typing
-            without the English text ever covering it. */}
-        <div
-          className={`w-full rounded-2xl border-2 border-lingo-border p-4 sm:p-5 ${
-            isKeyboardOpen && phase !== "result"
-              ? "sticky top-0 z-20 bg-white shadow-md text-sm leading-snug max-h-[26vh] overflow-y-auto"
-              : "bg-lingo-gray/20 text-base leading-relaxed text-lingo-text sm:text-lg"
-          }`}
-        >
-          <p className="text-lingo-text">{exercise.sentence}</p>
-        </div>
-
-        {/* English textarea — always its own block below the prompt, never
-            overlapping it. When the keyboard is open it just grows taller. */}
-        {phase !== "result" && (
-          <textarea
-            ref={textareaRef}
-            value={essay}
-            onChange={(e) => setEssay(e.target.value)}
-            onKeyDown={handleKeyDown}
-            disabled={phase === "grading"}
-            placeholder="Write your passage in English here..."
-            className={`w-full rounded-2xl border-2 border-lingo-border p-4 text-base leading-relaxed text-lingo-text placeholder:text-lingo-text-light/50 focus:border-lingo-blue focus:outline-none resize-y disabled:opacity-60 ${
-              isKeyboardOpen
-                ? "relative mt-2 bg-white min-h-[44vh]"
-                : "relative mt-4 bg-white min-h-[240px]"
-            }`}
-            autoFocus
-            enterKeyHint="enter"
-          />
+            MOBILE TYPING MODE: when the on-screen keyboard opens we switch to a
+            full-height flex column. The Chinese essay is pinned at the TOP
+            (shrink-0, never scrolls away) and the English textarea gets its OWN
+            internal scroller (flex-1 min-h-0 overflow-y-auto). The question
+            therefore stays visible at the top the whole time and the learner
+            never has to scroll the page up to read it. */}
+        {isKeyboardOpen && phase !== "result" ? (
+          <div className="flex flex-col h-[100dvh]">
+            {/* Chinese essay — pinned at the top, fixed, with its own scroll if long */}
+            <div className="shrink-0 w-full rounded-2xl border-2 border-lingo-border bg-white p-3 text-sm leading-snug shadow-sm max-h-[30vh] overflow-y-auto">
+              <p className="text-lingo-text">{exercise.sentence}</p>
+            </div>
+            {/* English textarea — fills the rest and scrolls internally */}
+            <textarea
+              ref={textareaRef}
+              value={essay}
+              onChange={(e) => setEssay(e.target.value)}
+              onKeyDown={handleKeyDown}
+              disabled={phase === "grading"}
+              placeholder="Write your passage in English here..."
+              className="flex-1 min-h-0 mt-2 w-full rounded-2xl border-2 border-lingo-border bg-white p-4 text-base leading-relaxed text-lingo-text placeholder:text-lingo-text-light/50 focus:border-lingo-blue focus:outline-none overflow-y-auto resize-none disabled:opacity-60"
+              autoFocus
+              enterKeyHint="enter"
+            />
+            <div className="shrink-0 mt-1.5 flex items-center justify-between text-[11px] font-medium text-lingo-text-light">
+              <span>{wordCount} words</span>
+              <span>Shift+Enter 提交</span>
+            </div>
+          </div>
+        ) : (
+          <>
+            <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-gray/20 p-4 sm:p-5 text-base leading-relaxed text-lingo-text sm:text-lg">
+              <p>{exercise.sentence}</p>
+            </div>
+            {phase !== "result" && (
+              <textarea
+                ref={textareaRef}
+                value={essay}
+                onChange={(e) => setEssay(e.target.value)}
+                onKeyDown={handleKeyDown}
+                disabled={phase === "grading"}
+                placeholder="Write your passage in English here..."
+                className="relative mt-4 w-full rounded-2xl border-2 border-lingo-border bg-white p-4 text-base leading-relaxed text-lingo-text placeholder:text-lingo-text-light/50 focus:border-lingo-blue focus:outline-none min-h-[240px] resize-y disabled:opacity-60"
+                autoFocus
+                enterKeyHint="enter"
+              />
+            )}
+          </>
         )}
 
-        {/* word count + submit hint */}
-        {phase !== "result" && (
+        {/* word count + submit hint (non-keyboard layout) */}
+        {!isKeyboardOpen && phase !== "result" && (
           <div className="mt-1.5 flex items-center justify-between text-[11px] font-medium text-lingo-text-light">
             <span>{wordCount} words</span>
             <span>Shift+Enter 提交 · Enter 换行</span>
