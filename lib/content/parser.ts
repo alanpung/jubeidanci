@@ -247,9 +247,11 @@ function parseWriting(lines: string[]): WritingExercise {
     const matches = acceptAlsoLine.match(/"([^"]+)"/g);
     if (matches) acceptAlso.push(...matches.map((m) => m.replace(/"/g, "")));
   }
+  const coreLine = lines.find((l) => l.startsWith("core:"));
+  const core = coreLine ? (coreLine.match(/"([^"]+)"/)?.[1] ?? "") : "";
 
   const srsWords = parseSrsWords(lines) ?? "";
-  return { type: "writing", text: rawText.text, sentence: rawSentence.text, answer, acceptAlso, srsWords, ...(noAudio.length && { noAudio }) };
+  return { type: "writing", text: rawText.text, sentence: rawSentence.text, answer, acceptAlso, core, srsWords, ...(noAudio.length && { noAudio }) };
 }
 
 function generateChineseTranslation(sentence: string, blank: string): string | undefined {

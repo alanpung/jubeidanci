@@ -157,7 +157,8 @@ export function Writing({
           promptZh: exercise.sentence,
           modelAnswer: exercise.answer,
           acceptAlso: exercise.acceptAlso ?? [],
-          level: "A1",
+          core: exercise.core ?? "",
+          level: "A2",
         }),
       });
 

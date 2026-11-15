@@ -21,6 +21,7 @@ color: "#14B8A6"
 text: "Write this passage in English"
 sentence: "我的爱好是集邮。我收集了各国的邮票，已经有一百多张。每张邮票背后都有故事。集邮让我了解世界，也让我安静下来，远离屏幕。"
 answer: "My favourite hobby is collecting stamps from different countries around the world in my free time. So far I have more than one hundred of them in my album, and each one has a small story behind its picture. Through stamps I learn about other cultures and famous places without leaving my room at home. This hobby also helps me calm down after a busy day at school and stay away from screens for a while. Hobbies make my free time feel meaningful."
+core: "My hobby is stamp collecting. I have collected stamps from many countries, over a hundred. Behind each stamp is a story. Collecting stamps lets me learn about the world, calms me down and keeps me away from screens."
 acceptAlso: "My hobby is stamp collecting. I have over a hundred stamps from many countries in my album. Each has a story behind its picture. Stamps teach me about the world and calm me after school. A hobby gives joy and good use of free time. I plan to keep collecting and maybe trade with friends from other places. My hobby lets me meet new people. I learn patience through my hobby. Free time should refresh the mind. I practise a little every weekend."
 srsWords: hobby stamp collect country story
 
@@ -35,6 +36,7 @@ color: "#14B8A6"
 text: "Write this passage in English"
 sentence: "我喜欢读故事书，尤其是冒险小说。每天睡前我读二十分钟。读书让我想象丰富，也学会很多新词。我希望读遍图书馆的书，也写自己的故事。"
 answer: "I enjoy reading storybooks, especially adventure novels that take me to new worlds and times. Every day before sleep I read for about twenty minutes by the lamp on my desk. Reading makes my imagination rich and teaches me many new words that help my writing at school. I hope one day to read most of the books in our school library and learn from them. Hobbies make my free time feel meaningful. I love spending time on what I really enjoy."
+core: "I like reading storybooks, especially adventure novels. Every night before sleep I read for twenty minutes. Reading enriches my imagination and teaches many new words. I hope to read all the library's books and write my own stories."
 acceptAlso: "I like reading storybooks, especially adventure novels. I read twenty minutes before sleep each day by the lamp. Reading grows my imagination and vocabulary for writing. I hope to read the whole library one day. Reading is the best free time activity; it costs little but gives a lot, and a good book is a friend always there. My hobby lets me meet new people. I learn patience through my hobby. Free time should refresh the mind. I practise a little every weekend."
 srsWords: read book adventure imagination vocabulary
 
@@ -49,6 +51,7 @@ color: "#14B8A6"
 text: "Write this passage in English"
 sentence: "放学后我常和同学踢足球。我们在操场上跑、传球、射门。虽然有时摔倒，但很开心。足球让我更健康，也教会我团队合作，懂得互相帮助。"
 answer: "After school I often play football with my classmates on the playground near our building. We run, pass the ball and try to score goals together as one team in the match. Sometimes I fall down on the grass, but I get up and laugh because it is just part of the game we love. Football makes me healthier and teaches me teamwork, since we must help each other to win against the other side. Hobbies make my free time feel meaningful."
+core: "After school I often play football with classmates. We run, pass and shoot on the playground. Although we sometimes fall, we are happy. Football makes me healthier and teaches teamwork and helping each other."
 acceptAlso: "After school I play football with classmates. We run, pass and shoot to score goals together. Sometimes I fall but laugh and get up. Football makes me healthy and teaches teamwork, because we must help each other to win. Sport is the best free time with friends, and every match leaves me tired but happy all week. My hobby lets me meet new people. I learn patience through my hobby. Free time should refresh the mind. I practise a little every weekend."
 srsWords: football classmate goal teamwork healthy
 
@@ -63,6 +66,7 @@ color: "#14B8A6"
 text: "Write this passage in English"
 sentence: "周末晚上我喜欢看电影。我偏爱喜剧和动画片。和家人在沙发上看电影很放松。电影让我看到不同的生活，也让我笑出来，忘记烦恼。"
 answer: "On weekend evenings I like watching films at home with my family after a long week of school. I prefer comedies and animated movies because they are fun and easy to enjoy together on the sofa. Sitting with popcorn makes me feel relaxed and close to the people I love. Films show me different lives and places, and a good comedy can make me laugh out loud and forget my small worries for a while. Hobbies make my free time feel meaningful."
+core: "On weekend evenings I like watching films. I prefer comedies and cartoons. Watching with family on the sofa is relaxing. Films show me different lives, make me laugh and forget worries."
 acceptAlso: "On weekend nights I watch films with my family. I like comedies and cartoons that are fun together. Watching on the sofa is relaxing and brings us close. Films show different lives and make me laugh, forgetting worries. It is a nice rest, but I also try not to sit too long and go outside the next day. My hobby lets me meet new people. I learn patience through my hobby. Free time should refresh the mind. I practise a little every weekend."
 srsWords: film comedy family sofa relax
 
@@ -77,6 +81,7 @@ color: "#14B8A6"
 text: "Write this passage in English"
 sentence: "我空闲时喜欢画画。我画我的家人和风景。用彩色笔画画让我很平静。上次学校比赛我还得了奖。画画是我表达心情的方式，也让我专注。"
 answer: "In my free time I like drawing and painting pictures of my family and the scenery near my home that I see each day. Using coloured pencils to draw makes me feel peaceful and quiet inside when I am alone. Last time I joined a school art competition and even won a small prize, which encouraged me a lot to continue. Painting is my way to express my mood when I cannot say it in words to others. Hobbies make my free time feel meaningful."
+core: "In my free time I like drawing. I draw my family and scenery. Drawing with coloured pens calms me. Last time I even won a prize at the school contest. Drawing is my way to express mood and helps me focus."
 acceptAlso: "In free time I like drawing. I paint my family and the scenery I see daily. Coloured pencils calm me when I am alone. I won a prize at school last time, which encouraged me. Drawing expresses my feelings when words fail. Everyone should have a creative hobby to balance study and relax the mind after a busy day. My hobby lets me meet new people. I learn patience through my hobby. Free time should refresh the mind. I practise a little every weekend."
 srsWords: draw paint colour family prize
 
@@ -91,6 +96,7 @@ color: "#14B8A6"
 text: "Write this passage in English"
 sentence: "我每天听音乐放松。我喜欢轻音乐和流行歌。写作业时听一点音乐让我更专注。音乐能改变我的心情，让我开心起来，也让我平静。"
 answer: "Every day I listen to music to relax after study and during breaks at home. I like light music and pop songs that have simple, happy tunes I can hum along to. While doing homework I play a little music, and it helps me focus better than silence in the room. Music can change my mood quickly and cheer me up when I feel low or tired after school. I think it is a wonderful free time companion that costs nothing to enjoy. Different songs fit different moments, and I keep a list of my favourites on my phone."
+core: "Every day I listen to music to relax. I like light music and pop songs. Listening a bit while doing homework makes me more focused. Music can change my mood, cheer me up and calm me down."
 acceptAlso: "I listen to music daily to relax after study. I like light music and pop songs with happy tunes. A little music while homework helps me focus better than silence. Music changes my mood and makes me happy or calm. It is a free companion; different songs fit different moments, and I keep favourites on my phone to enjoy anywhere. My hobby lets me meet new people. I learn patience through my hobby. Free time should refresh the mind. I practise a little every weekend."
 srsWords: music pop relax focus mood
 
@@ -105,6 +111,7 @@ color: "#14B8A6"
 text: "Write this passage in English"
 sentence: "上周末我去郊外骑自行车。路边开满了野花，空气很清新。我和朋友停下来野餐。那样的活动让我远离手机，亲近自然，也让我更有活力。"
 answer: "Last weekend I went cycling in the countryside with two friends, and it was a lovely break from the city for us. Wild flowers were blooming along the road and the air was fresh and clean as we rode slowly. We stopped by a field and had a small picnic with the food we brought in our bags. Activities like this let me stay away from my phone and get close to nature, which I rarely do on busy school days at home."
+core: "Last weekend I cycled in the suburbs. Wild flowers bloomed by the road and the air was fresh. My friend and I stopped for a picnic. Such activity keeps me away from the phone, close to nature and more energetic."
 acceptAlso: "Last weekend I cycled in the countryside with friends. Wild flowers bloomed and the air was fresh as we rode. We stopped and picnicked with food we brought. Such activity keeps me off the phone and near nature, which I rarely do on school days. I came back tired but refreshed, and I will do more outdoor weekends instead of sitting inside playing games. My hobby lets me meet new people. I learn patience through my hobby. Free time should refresh the mind."
 srsWords: weekend cycle flower picnic nature
 
@@ -119,6 +126,7 @@ color: "#14B8A6"
 text: "Write this passage in English"
 sentence: "今年我开始学吉他。刚开始手指很疼，但我每天练习十五分钟。现在我能够弹简单的歌。学乐器需要耐心，但也很有成就感，让我更自信。"
 answer: "This year I started learning to play the guitar, and at first my fingers hurt a lot when I pressed the strings on the neck. But I practise for fifteen minutes every day and slowly got used to the pain and the moves. Now I can play a few simple songs that my family enjoys hearing at home in the evening. Learning an instrument needs patience and daily effort, but it also brings a strong sense of achievement when a song works."
+core: "This year I started learning guitar. At first my fingers hurt, but I practise fifteen minutes daily. Now I can play simple songs. Learning an instrument needs patience but also gives achievement and makes me more confident."
 acceptAlso: "This year I started guitar. At first my fingers hurt pressing the strings, but I practise fifteen minutes daily and got used to it. Now I play simple songs my family enjoys. An instrument needs patience but gives achievement and confidence. Music stays with you, and I hope to play a full song at the school show next year. My hobby lets me meet new people. I learn patience through my hobby. Free time should refresh the mind. I practise a little every weekend."
 srsWords: instrument guitar practise patience song
 
@@ -133,6 +141,7 @@ color: "#14B8A6"
 text: "Write this passage in English"
 sentence: "爷爷教我种花。我们在阳台放了几个花盆。我每天浇水，看着种子发芽。园艺让我学会等待，也让我亲近自然。看到花开我很满足，也很平静。"
 answer: "My grandfather taught me how to grow flowers at home, and we put a few pots on our balcony where the sun comes. I water them every day and watch the seeds slowly sprout and grow into small green plants over the weeks. Gardening teaches me to wait and to care for living things with patience and love each day. It also brings me close to nature even in a city flat high above the street. Hobbies make my free time feel meaningful."
+core: "Grandfather teaches me to grow flowers. We put several pots on the balcony. I water them daily and watch seeds sprout. Gardening teaches me to wait and brings me close to nature. Seeing flowers bloom makes me content and peaceful."
 acceptAlso: "Grandpa taught me to grow flowers. We put pots on the balcony in the sun. I water daily and watch seeds sprout and grow. Gardening teaches waiting and care for living things. It brings me near nature even in a city flat. Seeing flowers bloom makes me content and calm, and this slow hobby balances my busy school life. My hobby lets me meet new people. I learn patience through my hobby. Free time should refresh the mind. I practise a little every weekend."
 srsWords: garden flower water seed bloom
 
@@ -147,5 +156,6 @@ color: "#14B8A6"
 text: "Write this passage in English"
 sentence: "周末我喜欢和朋友在一起。我们打球、聊天、去公园。和朋友相处的时间总是过得很快。我觉得友谊让生活更有色彩，也让我更快乐。"
 answer: "At the weekend I love spending my free time with friends because we understand each other without many words. We play ball games, chat about school and life, or simply walk to the park and sit on the grass together in the sun. The time with friends always passes quickly and happily when we are together and laughing. I feel that friendship adds colour and warmth to my life, especially when I am stressed or sad about something at home."
+core: "At weekends I like being with friends. We play ball, chat and go to the park. Time with friends always passes quickly. I think friendship adds colour to life and makes me happier."
 acceptAlso: "At weekends I like being with friends. We play ball, chat and go to the park to sit on the grass. Time with friends passes fast and happy. Friendship adds colour to life and makes me happier when I am stressed. Good friends support each other, and I try to be reliable too. These simple moments are the best part of growing up for me. My hobby lets me meet new people. I learn patience through my hobby. Free time should refresh the mind."
 srsWords: friend weekend park chat friendship

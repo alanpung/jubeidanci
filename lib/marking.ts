@@ -109,10 +109,14 @@ export interface DeductionRules {
 }
 
 export const WRITING_RULES: DeductionRules = {
-  /** Content not covered (model-answer words the learner omitted). */
+  /** Content not covered — judged against the faithful `core`, NOT the padded model essay. */
   missing: { per: 3, cap: 15, label: "内容缺失" },
-  /** Free-choice words the answer doesn't have (rephrasing / off-topic). */
-  extra: { per: 1, cap: 4, label: "多余表达" },
+  /**
+   * Free-choice words the answer doesn't have (rephrasing / elaboration).
+   * Intentionally ZERO for open writing: the task *encourages* the learner to
+   * add their own words to reach 80-100, so elaboration must never be penalised.
+   */
+  extra: { per: 0, cap: 0, label: "多余表达" },
   /** Word-order scramble (only charged when sentence length matches exactly). */
   displaced: { per: 1, cap: 5, label: "词序错乱" },
   /** Spelling / morphology slips. */

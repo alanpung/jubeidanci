@@ -44,6 +44,12 @@ export const writingSchema = z.object({
     .array(z.string())
     .default([])
     .describe("Alternative acceptable model essays"),
+  // Faithful, compact translation of `sentence` — the minimal required content,
+  // free of the padding/elaboration that the full `answer` carries. This is the
+  // grading gold for content-coverage (`missing`): a learner who covers the
+  // Chinese prompt and adds their own words should never lose points for not
+  // echoing the model essay's extra detail.
+  core: z.string().optional(),
   noAudio,
   srsWords,
 });

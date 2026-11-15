@@ -123,6 +123,11 @@ export interface WritingExercise {
   sentence: string;
   answer: string;
   acceptAlso: string[];
+  /**
+   * Faithful, compact translation of `sentence` (no padding). The grading gold
+   * for content coverage — see `writingSchema.core`.
+   */
+  core?: string;
   noAudio?: string[];
   srsWords: string | string[];
 }

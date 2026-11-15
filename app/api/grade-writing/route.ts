@@ -41,6 +41,8 @@ const requestSchema = z.object({
   modelAnswer: z.string().optional(),
   /** Alternative acceptable model essays. */
   acceptAlso: z.array(z.string()).optional(),
+  /** Faithful, compact translation of the Chinese prompt — the grading gold for content coverage. */
+  core: z.string().optional(),
   level: z.string().optional(),
 });
 
@@ -272,8 +274,15 @@ function buildInternal(
   essay: string,
   modelAnswer: string,
   acceptAlso: string[],
+  core?: string,
 ): InternalGradeBlock {
-  const accepted = [modelAnswer, ...acceptAlso].filter(Boolean);
+  // The local rule-based grader judges *content coverage* (`missing`) against
+  // the faithful `core` when present — NOT the padded 80-100 model essay. This
+  // is what lets learners add their own words to reach the target length
+  // without being penalised for not echoing the model's extra detail.
+  const accepted = (core && core.trim())
+    ? [core]
+    : [modelAnswer, ...acceptAlso].filter(Boolean);
   if (accepted.length === 0) {
     return { score: 0, passed: false, deductions: [], errorSpans: [] };
   }
@@ -285,12 +294,16 @@ function buildInternal(
   return {
     score: marking.score,
     passed: marking.passed,
-    deductions: marking.deductions.map((d) => ({
-      kind: d.kind,
-      label: d.label,
-      count: d.count,
-      points: d.points,
-    })),
+    // Drop zero-point deductions (e.g. 多余表达, which is intentionally 0 for
+    // open writing) so the breakdown only shows real penalties.
+    deductions: marking.deductions
+      .filter((d) => d.points > 0)
+      .map((d) => ({
+        kind: d.kind,
+        label: d.label,
+        count: d.count,
+        points: d.points,
+      })),
     errorSpans: spansFromMarking(text, marking, accepted),
   };
 }
@@ -307,8 +320,9 @@ function gradeWithRules(
   essay: string,
   modelAnswer: string,
   acceptAlso: string[],
+  core?: string,
 ): GradeResponse {
-  const internal = buildInternal(essay, modelAnswer, acceptAlso);
+  const internal = buildInternal(essay, modelAnswer, acceptAlso, core);
 
   return {
     score: internal.score,
@@ -329,15 +343,21 @@ function buildPrompt(
   promptZh: string,
   modelAnswer: string,
   level: string,
+  core?: string,
 ): string {
-  return `You are grading an English essay written by a ${level || "A1"} level Chinese-speaking learner.
+  return `You are grading an English essay written by a ${level || "A2"} level Chinese-speaking learner.
 
 The learner was asked to write an English essay based on this Chinese prompt:
 """
 ${promptZh || "(not provided)"}
 """
 
-Here is the MODEL essay (the reference answer):
+Here is the CORE content the essay must cover (a faithful, minimal translation of the Chinese prompt — the only required content):
+"""
+${core || "(not provided)"}
+"""
+
+Here is a MODEL essay (just ONE example of a good answer; it includes extra detail and elaboration the learner is NOT required to copy):
 """
 ${modelAnswer || "(not provided)"}
 """
@@ -347,8 +367,8 @@ Here is the LEARNER's essay:
 ${essay}
 """
 
-Grade the learner's essay on a 0-100 scale, comparing it against the model essay:
-- Content coverage: does it express the same ideas as the Chinese prompt?
+Grade the learner's essay on a 0-100 scale:
+- Content coverage: does it express the same ideas as the Chinese prompt / core? The learner is ENCOURAGED to add their own words and elaboration to reach a fuller essay, so extra detail beyond the core is GOOD, not a problem.
 - Accuracy: grammar, spelling, word choice and sentence structure.
 - Fluency and completeness: does it read like natural English at this level?
 
@@ -356,8 +376,9 @@ The pass line is 70.
 
 CRITICAL OPEN-WRITING POLICY:
 - This is OPEN writing practice for a beginner. Only penalize GRAMMATICAL mistakes: spelling, verb tense/agreement, prepositions, articles, and word order that actually breaks grammar.
-- Do NOT penalize for using different words, paraphrasing, or omitting some content from the model essay. Reward clear communication and correct grammar even when the wording differs from the model.
-- Grammar errors are the ONLY thing that should lower the score. A grammatically correct but differently-worded essay should score high (80+).
+- Do NOT penalize for using different words, paraphrasing, or omitting the model essay's EXTRA detail (the model has padding the learner does not need). Reward clear communication and correct grammar even when the wording differs from the model.
+- Do NOT penalize a learner for writing MORE than the core, or for elaborating freely — that is the intended task.
+- Grammar errors are the ONLY thing that should lower the score. A grammatically correct essay that covers the Chinese prompt should score high (80+), whether or not it matches the model's wording.
 
 CRITICAL INSTRUCTIONS:
 1. Give the learner ENCOURAGING but HONEST feedback. This is a practice tool for a beginner.
@@ -408,23 +429,23 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  const { essay, promptZh = "", modelAnswer = "", acceptAlso = [], level } =
+  const { essay, promptZh = "", modelAnswer = "", acceptAlso = [], level, core = "" } =
     parsed.data;
 
   // No provider configured at all — go straight to the local grader.
   const providers = buildProviders();
   if (providers.length === 0) {
     return NextResponse.json({
-      ...gradeWithRules(essay, modelAnswer, acceptAlso),
+      ...gradeWithRules(essay, modelAnswer, acceptAlso, core),
       fallbackReason: "no_provider",
     });
   }
 
-  const prompt = buildPrompt(essay, promptZh, modelAnswer, level || "A1");
+  const prompt = buildPrompt(essay, promptZh, modelAnswer, level || "A2", core);
 
   // The local marker runs for every request so the client can always show it
   // next to the AI score (or on its own when AI is unavailable).
-  const internal = buildInternal(essay, modelAnswer, acceptAlso);
+  const internal = buildInternal(essay, modelAnswer, acceptAlso, core);
 
   // Try each provider in order; use the first that returns a valid grade.
   let lastError: unknown;
@@ -468,7 +489,7 @@ export async function POST(req: NextRequest) {
   // learner never dead-ends on a failed request. The internal block is still
   // attached for parity with the AI path.
   return NextResponse.json({
-    ...gradeWithRules(essay, modelAnswer, acceptAlso),
+    ...gradeWithRules(essay, modelAnswer, acceptAlso, core),
     internal,
     fallbackReason: "all_failed",
     fallbackError: sanitizeError(lastError, providers),
