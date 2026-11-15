@@ -278,53 +278,52 @@ export function Writing({
           </div>
         )}
 
-        {/* Instruction */}
-        <h1 className="mb-3 text-center text-lg font-black text-lingo-text sm:text-xl">
-          {exercise.text}
-        </h1>
+        {/* Instruction — hidden while the keyboard is open to save vertical space */}
+        {!isKeyboardOpen && (
+          <h1 className="mb-3 text-center text-lg font-black text-lingo-text sm:text-xl">
+            {exercise.text}
+          </h1>
+        )}
 
         {/* The complete Chinese prompt — plain text on purpose. No HoverableText,
             so no hover lookup, no POS, no IPA, no gloss.
 
-            When the on-screen keyboard opens we overlay the English textarea ON
-            TOP of this card in translucent mode, so the learner keeps the
-            Chinese question visible behind their typing instead of it scrolling
-            out of view. */}
-        <div className="relative w-full">
-          <div
-            className={`rounded-2xl border-2 border-lingo-border bg-lingo-gray/20 p-4 sm:p-5 ${
-              isKeyboardOpen && phase !== "result"
-                ? "min-h-[58vh] sm:min-h-[300px]"
-                : ""
-            }`}
-          >
-            <p className="text-base leading-relaxed text-lingo-text sm:text-lg">
-              {exercise.sentence}
-            </p>
-          </div>
-
-          {/* English textarea: when the keyboard is open it is absolutely
-              positioned over the prompt with a translucent (white/50) background
-              so the Chinese question shows through; otherwise it sits normally
-              below the prompt. */}
-          {phase !== "result" && (
-            <textarea
-              ref={textareaRef}
-              value={essay}
-              onChange={(e) => setEssay(e.target.value)}
-              onKeyDown={handleKeyDown}
-              disabled={phase === "grading"}
-              placeholder="Write your passage in English here..."
-              className={`w-full rounded-2xl border-2 border-lingo-border p-4 text-base leading-relaxed text-lingo-text placeholder:text-lingo-text-light/50 focus:border-lingo-blue focus:outline-none min-h-[240px] resize-y disabled:opacity-60 ${
-                isKeyboardOpen
-                  ? "absolute inset-0 bg-white/50 border-lingo-blue/70"
-                  : "relative mt-4 bg-white"
-              }`}
-              autoFocus
-              enterKeyHint="enter"
-            />
-          )}
+            MOBILE TYPING MODE: when the on-screen keyboard is open we make this
+            card STICKY at the very top of the viewport (compact + opaque) and
+            put the English textarea in its OWN block directly BELOW it — never
+            overlaid. The browser scrolls the page to keep the textarea above the
+            keyboard, and the sticky Chinese card stays pinned and fully visible
+            the whole time, so the learner can read the question while typing
+            without the English text ever covering it. */}
+        <div
+          className={`w-full rounded-2xl border-2 border-lingo-border p-4 sm:p-5 ${
+            isKeyboardOpen && phase !== "result"
+              ? "sticky top-0 z-20 bg-white shadow-md text-sm leading-snug max-h-[26vh] overflow-y-auto"
+              : "bg-lingo-gray/20 text-base leading-relaxed text-lingo-text sm:text-lg"
+          }`}
+        >
+          <p className="text-lingo-text">{exercise.sentence}</p>
         </div>
+
+        {/* English textarea — always its own block below the prompt, never
+            overlapping it. When the keyboard is open it just grows taller. */}
+        {phase !== "result" && (
+          <textarea
+            ref={textareaRef}
+            value={essay}
+            onChange={(e) => setEssay(e.target.value)}
+            onKeyDown={handleKeyDown}
+            disabled={phase === "grading"}
+            placeholder="Write your passage in English here..."
+            className={`w-full rounded-2xl border-2 border-lingo-border p-4 text-base leading-relaxed text-lingo-text placeholder:text-lingo-text-light/50 focus:border-lingo-blue focus:outline-none resize-y disabled:opacity-60 ${
+              isKeyboardOpen
+                ? "relative mt-2 bg-white min-h-[44vh]"
+                : "relative mt-4 bg-white min-h-[240px]"
+            }`}
+            autoFocus
+            enterKeyHint="enter"
+          />
+        )}
 
         {/* word count + submit hint */}
         {phase !== "result" && (
@@ -335,8 +334,11 @@ export function Writing({
         )}
 
         {/* Audio: the Chinese prompt is safe to play. The English model passage
-            stays locked until the learner has submitted their own. */}
-        <div className="mt-4 mb-4 flex items-center justify-center gap-2.5">
+            stays locked until the learner has submitted their own. Hidden while
+            the keyboard is open to maximise the writing area. */}
+        <div className={`mt-4 mb-4 flex items-center justify-center gap-2.5 ${
+          isKeyboardOpen ? "hidden" : ""
+        }`}>
           <button
             type="button"
             onClick={(e) => {
@@ -370,8 +372,10 @@ export function Writing({
           </button>
         </div>
 
-        {/* Navigation row */}
-        <div className="mb-4 flex w-full items-center justify-between gap-2 px-1">
+        {/* Navigation row — hidden while the keyboard is open */}
+        <div className={`mb-4 flex w-full items-center justify-between gap-2 px-1 ${
+          isKeyboardOpen ? "hidden" : ""
+        }`}>
           <button
             type="button"
             onClick={goPrev}
