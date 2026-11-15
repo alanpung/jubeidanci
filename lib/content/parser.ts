@@ -165,8 +165,11 @@ function parseSrsWords(lines: string[]): string | string[] | undefined {
       const words = matches.map((m) => m.replace(/"/g, ""));
       return words.length === 1 ? words[0] : words;
     }
-    // Unquoted single word
-    return inlineValue;
+    // Unquoted words: split on whitespace so a bare "a b c" is three words,
+    // not one giant word. (Quoted form is canonical; this is a safety net so a
+    // missing pair of quotes can never silently drop SRS words.)
+    const bare = inlineValue.split(/\s+/).filter(Boolean);
+    return bare.length === 1 ? bare[0] : bare;
   }
 
   // List format: - "word" (with optional legacy = "translation" which we ignore)
@@ -250,8 +253,11 @@ function parseWriting(lines: string[]): WritingExercise {
   const coreLine = lines.find((l) => l.startsWith("core:"));
   const core = coreLine ? (coreLine.match(/"([^"]+)"/)?.[1] ?? "") : "";
 
+  const levelLine = lines.find((l) => l.startsWith("level:"));
+  const level = levelLine ? (levelLine.split(":", 2)[1]?.trim() || undefined) : undefined;
+
   const srsWords = parseSrsWords(lines) ?? "";
-  return { type: "writing", text: rawText.text, sentence: rawSentence.text, answer, acceptAlso, core, srsWords, ...(noAudio.length && { noAudio }) };
+  return { type: "writing", text: rawText.text, sentence: rawSentence.text, answer, acceptAlso, core, srsWords, ...(level && { level }), ...(noAudio.length && { noAudio }) };
 }
 
 function generateChineseTranslation(sentence: string, blank: string): string | undefined {

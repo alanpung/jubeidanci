@@ -96,6 +96,20 @@ export function parseUnitMarkdown(raw: string): ParsedUnit {
     }
   }
 
+  // Inherit the unit's CEFR level into writing exercises that don't specify
+  // their own, so the grader can tailor its expectation (the Writing component
+  // reads `exercise.level ?? "A2"`). Without this, B1 essays would be graded
+  // against A2 expectations.
+  if (fm.level) {
+    for (const lesson of lessons) {
+      for (const ex of lesson.exercises) {
+        if (ex.type === "writing" && !("level" in ex && ex.level)) {
+          (ex as { level?: string }).level = fm.level as string;
+        }
+      }
+    }
+  }
+
   return {
     title: fm.unitTitle ?? fm.title ?? "Untitled",
     description: fm.description ?? "",

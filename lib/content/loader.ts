@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import matter from "gray-matter";
 import { parseUnitMarkdown } from "./unit-parser";
 import { parseCourseMarkdown } from "./course-parser";
 import type { CourseVisibility, ParsedUnit, ParsedCourse, UnitLesson } from "./types";
@@ -159,10 +160,23 @@ export function loadContentDir(): { courses: LoadedCourse[]; units: LoadedUnit[]
 
       const raw = fs.readFileSync(fullPath, "utf-8");
 
-      if (entry.endsWith("-course.md")) {
+      // A file is a course if it ends in `-course.md` (legacy convention) OR
+      // declares `courseTitle` in its frontmatter. The latter lets course
+      // filenames drop the redundant `-course` suffix (e.g. `a1-writing.md`)
+      // while still being detected as courses.
+      let isCourse = entry.endsWith("-course.md");
+      if (!isCourse) {
+        try {
+          isCourse = !!matter(raw).data.courseTitle;
+        } catch {
+          isCourse = false;
+        }
+      }
+
+      if (isCourse) {
         try {
           const parsed = parseCourseMarkdown(raw);
-          const id = parsed.id ?? entry.replace(/-course\.md$/, "");
+          const id = parsed.id ?? entry.replace(/\.md$/, "");
           courses.push({
             id,
             title: parsed.courseTitle,

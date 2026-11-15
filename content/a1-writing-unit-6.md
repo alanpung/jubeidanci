@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 6: Sports and Games"
-courseId: "a1-writing-course"
+courseId: "a1-writing"
 description: "A1 Writing about sports and games"
 icon: "⚽"
 color: "#EF4444"

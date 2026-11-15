@@ -130,6 +130,12 @@ export interface WritingExercise {
   core?: string;
   noAudio?: string[];
   srsWords: string | string[];
+  /**
+   * CEFR level this essay is graded against (e.g. "A2", "B1"). Inherited from
+   * the unit frontmatter `level` at parse time so the AI grader tailors its
+   * expectation to the learner's level. Falls back to "A2" in the UI.
+   */
+  level?: string;
 }
 
 export interface FillInTheBlankExercise {

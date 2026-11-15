@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 1: My Daily Routine"
-courseId: "a2-writing-course"
+courseId: "a2-writing"
 description: "A2 Writing about My Daily Routine"
 icon: "🕐"
 color: "#3B82F6"
@@ -23,7 +23,7 @@ sentence: "我每天早上六点半起床。我先刷牙洗脸，然后吃早饭
 answer: "I get up at half past six every morning and the first thing I do is brush my teeth and wash my face. Then I sit down with my family and eat a simple breakfast before the day begins. At half past seven I take the bus to school because it is cheap and safe, and the trip takes about twenty minutes. When I arrive I chat with my friends until class starts. I like the morning because I can begin a new day and feel full of hope and fresh energy."
 core: "I get up at half past six every morning. First I brush my teeth and wash my face, then I eat breakfast. At half past seven I take the bus to school. The trip takes about twenty minutes. At school I chat with my friends. I like the morning because I can start a new day and feel full of hope."
 acceptAlso: "I wake up at six thirty each morning, then I clean my teeth and wash my face before I eat breakfast. I catch the bus to school at seven thirty and the ride takes about twenty minutes. At school I talk with my friends before lessons. I love mornings because a new day starts and I feel hopeful, happy and ready to learn something new. My days feel steady when I follow this plan. Small habits make my life easier each week."
-srsWords: morning breakfast bus school friend
+srsWords: "morning" "breakfast" "bus" "school" "friend"
 
 ---
 lessonTitle: "My Breakfast"
@@ -38,7 +38,7 @@ sentence: "我通常吃简单的早饭。我喝一杯牛奶，吃两片面包和
 answer: "I usually eat a simple breakfast at home before I go to school in the morning. I drink a glass of milk and eat two pieces of bread with some fresh fruit on the side. Sometimes I also have a boiled egg because it is healthy and keeps me full. I do not like coffee because it is too bitter for my taste. Breakfast is important, so I eat it every single day, and after it I feel full of energy and ready to study well at school."
 core: "I usually eat a simple breakfast. I drink a glass of milk, eat two pieces of bread and some fruit. Sometimes I also eat an egg. I do not like coffee because it is too bitter. Breakfast is important, so I eat it every day. After breakfast I feel energetic and can study well."
 acceptAlso: "I normally have a light breakfast. I have a glass of milk and two slices of bread, and sometimes an egg as well. I don't like coffee since it is bitter. Breakfast matters, so I eat it daily. After the meal I feel energetic and able to concentrate on my lessons. A good breakfast is the start of a good day for me. My days feel steady when I follow this plan. Small habits make my life easier each week."
-srsWords: breakfast milk bread egg fruit
+srsWords: "breakfast" "milk" "bread" "egg" "fruit"
 
 ---
 lessonTitle: "Going to School"
@@ -53,7 +53,7 @@ sentence: "我每天走路去学校，因为我家离学校很近。走路只要
 answer: "I walk to school every day because my home is quite close to it and the walk takes only five minutes. On the way I see many green trees and small birds singing in them, which makes me smile. When the weather is good I really enjoy this short walk and feel calm. If it rains I use an umbrella and walk a little faster. I like walking to school because it keeps me healthy and wakes me up before class begins."
 core: "I walk to school every day because my home is close to it. The walk takes only five minutes. On the way I see many trees and small birds. When the weather is good I enjoy this walk. If it rains I use an umbrella. I like walking to school because it keeps me healthy and awake."
 acceptAlso: "I go to school on foot every day since my house is near and it is only a five minute walk. I see lots of trees and birds on the way, and I enjoy the fresh air. When it rains I take an umbrella with me. I love walking to school because it is good exercise and it helps me arrive awake and ready to learn. My days feel steady when I follow this plan. Small habits make my life easier each week."
-srsWords: walk school tree bird umbrella
+srsWords: "walk" "school" "tree" "bird" "umbrella"
 
 ---
 lessonTitle: "Afternoon Activities"
@@ -68,7 +68,7 @@ sentence: "下午我有一些课和作业。放学后我常去图书馆看书。
 answer: "In the afternoon I have some lessons at school and then I must finish my homework before I go home. After class I often go to the library to read books because I like quiet places where I can think. Sometimes I play table tennis with my classmates and we laugh a lot together. Sport makes me healthier and stronger than before. The afternoon passes quickly when I am busy, and although I am tired I am happy because I spend the time with my good friends."
 core: "In the afternoon I have some lessons and homework. After school I often go to the library to read. I like quiet places. Sometimes I play table tennis with my classmates. Sport makes me healthier. The afternoon passes quickly. I am busy but happy because I am with my friends."
 acceptAlso: "In the afternoon I have classes and then homework to do. After school I usually go to the library to read in a quiet corner. I enjoy calm places. Sometimes I play ping pong with friends, which is fun. Exercise keeps me healthy. The afternoon goes fast and I am busy but happy to be with my friends. My days feel steady when I follow this plan. Small habits make my life easier each week. I like knowing what will happen next."
-srsWords: afternoon library book sport friend
+srsWords: "afternoon" "library" "book" "sport" "friend"
 
 ---
 lessonTitle: "Evening at Home"
@@ -83,7 +83,7 @@ sentence: "晚上我在家吃晚饭，然后帮妈妈洗碗。之后我做作业
 answer: "In the evening I eat dinner at home with my parents and we talk about our day. After the meal I help my mother wash the dishes because it is only fair to share the work. Then I do my homework and review the lessons for the next day so I am prepared. At nine o'clock I take a shower and read a book for a while. I go to bed before ten. I like the quiet evening because I can relax and think about what I learned today."
 core: "In the evening I eat dinner at home, then help my mother wash the dishes. After that I do my homework and review the next day's lessons. At nine I take a shower and read for a while. Before ten I go to bed. I like the quiet evening because I can relax and think about the day."
 acceptAlso: "In the evening I have dinner with my family and then I help mum wash the plates. I do my homework and read for tomorrow's lessons. At nine I shower and read a little. I sleep before ten. I like quiet evenings because I can rest and also reflect on the day that has passed. My days feel steady when I follow this plan. Small habits make my life easier each week. I like knowing what will happen next. A calm start helps me through the whole day."
-srsWords: evening dinner help homework shower
+srsWords: "evening" "dinner" "help" "homework" "shower"
 
 ---
 lessonTitle: "Weekend Morning"
@@ -98,7 +98,7 @@ sentence: "周末早上我起得晚一点。我八点起床，吃一顿丰盛的
 answer: "At the weekend I get up a little later than on school days and I wake up at eight. I eat a big breakfast with eggs, bread and juice to start the day well. Then I help my father clean the rooms because they are messy after the week. Sometimes I go to the park and run for half an hour to stay fit. The weekend morning is relaxing because I do not need to go to school, and I really like the weekend when I can rest properly."
 core: "On weekend mornings I get up a bit later. I get up at eight and eat a big breakfast. Then I help my father clean the rooms. Sometimes I go to the park to run. Weekend mornings are relaxing because I do not have to go to school. I like the weekend and can rest well."
 acceptAlso: "On weekend mornings I wake up later. I get up at eight and eat a large breakfast with my family. Then I help dad clean the house and tidy our rooms. Sometimes I run in the park near our home. Weekend mornings are easy because there is no school. I love the weekend since I can rest and enjoy my time. My days feel steady when I follow this plan. Small habits make my life easier each week. I like knowing what will happen next."
-srsWords: weekend morning father clean park
+srsWords: "weekend" "morning" "father" "clean" "park"
 
 ---
 lessonTitle: "My Study Time"
@@ -113,7 +113,7 @@ sentence: "我每天晚上学习两个小时。我先复习英语单词，然后
 answer: "I study for two hours every evening because I want to do well at school. First I review my English words since vocabulary is important for me. Then I do my maths exercises and try to solve them alone. When I meet a difficult problem I ask my brother for help and he explains it clearly. Studying makes me smarter and I learn something new each day. Although I feel tired sometimes, I know learning is important and I hope to get good grades and enter a fine high school."
 core: "Every evening I study for two hours. First I review English words, then I do maths problems. When I meet a problem I cannot solve, I ask my brother. Studying makes me smarter. Although I am sometimes tired, I know studying is important. I hope to get good exam results and go to a good high school."
 acceptAlso: "I study two hours each night. I first review English words, then do maths problems by myself. If I cannot solve one, I ask my brother to explain it. Study makes me clever and confident. I am tired sometimes, but learning matters. I hope to do well in exams and later go to a good high school. My days feel steady when I follow this plan. Small habits make my life easier each week. I like knowing what will happen next."
-srsWords: study english maths brother grade
+srsWords: "study" "english" "maths" "brother" "grade"
 
 ---
 lessonTitle: "Helping at Home"
@@ -128,7 +128,7 @@ sentence: "我在家经常帮忙。我每天倒垃圾，周末扫地。妈妈做
 answer: "I often help at home because my parents are busy with their jobs during the week. Every day I take out the rubbish, and at the weekend I sweep the floor until it is clean. When my mother cooks I wash the vegetables for her so she can finish faster. My father says I am a good and sensible child who shares the work. Helping with housework makes me feel like a real member of the family, and although I am a bit tired I am happy to see our tidy home and I feel more responsible."
 core: "I often help at home. Every day I take out the rubbish, and at weekends I sweep the floor. When my mother cooks, I wash the vegetables. My father says I am sensible. Helping with housework makes me feel like a real member of the family. Although a bit tired, I am happy to see the clean house and feel more responsible."
 acceptAlso: "I help at home often because my parents work hard. I throw away the rubbish daily and sweep at weekends. I wash vegetables when mum cooks so she rests. Dad says I am helpful and grown up. Housework makes me feel part of the family. I am tired but happy to see the clean house, and it teaches me responsibility. My days feel steady when I follow this plan. Small habits make my life easier each week. I like knowing what will happen next."
-srsWords: home rubbish floor vegetable tidy
+srsWords: "home" "rubbish" "floor" "vegetable" "tidy"
 
 ---
 lessonTitle: "A Busy Day"
@@ -143,7 +143,7 @@ sentence: "昨天我很忙。早上我有考试，下午我有足球训练。放
 answer: "Yesterday was a very busy day for me from morning to night. In the morning I had an important exam at school and I felt a little nervous about it. In the afternoon I went to football training because I am in the school team. After school I went to the supermarket to buy food for dinner at home. In the evening I did my homework until late. Although I was very tired, I finished everything I needed to do and felt proud of myself for learning how to plan my time better."
 core: "Yesterday I was very busy. In the morning I had an exam, and in the afternoon I had football training. After school I went to the supermarket to buy things. At night I did homework until late. Although tired, I finished everything. I felt a sense of achievement and learned to manage my time better."
 acceptAlso: "Yesterday I was busy all day. I had a test in the morning and football practice in the afternoon with my team. After school I bought things at the supermarket for dinner. At night I did homework until it was late. I was tired but I finished every task. I felt good about myself and learned to manage my time in a better way. My days feel steady when I follow this plan. Small habits make my life easier each week."
-srsWords: busy exam football supermarket tired
+srsWords: "busy" "exam" "football" "supermarket" "tired"
 
 ---
 lessonTitle: "My Ideal Day"
@@ -158,4 +158,4 @@ sentence: "我理想的一天从睡懒觉开始。早上我吃喜欢的食物，
 answer: "My ideal day starts with sleeping late and feeling completely rested in the morning. I eat my favourite food for breakfast and then I play football with my friends in the warm sun. In the afternoon we watch a funny film together and eat popcorn while we laugh. In the evening my family has dinner and chats about our day with no rush. There is no homework and no stress at all. I wish I could be this happy and free every single day of my life and never worry about anything."
 core: "My ideal day starts with sleeping late. In the morning I eat my favourite food, then go to play football with friends. In the afternoon we watch a film and eat popcorn. In the evening the family eats and chats together. No homework, no stress. I hope every day can be this happy and free."
 acceptAlso: "My perfect day begins with a lie in and a rested body. I eat my favourite food, then play football with friends outside. In the afternoon we watch a movie and share popcorn. At night my family eats and talks together with no pressure. No homework, no stress. I hope every day can be this happy, free and peaceful for me. My days feel steady when I follow this plan. Small habits make my life easier each week. I like knowing what will happen next."
-srsWords: ideal day friend film family happy
+srsWords: "ideal" "day" "friend" "film" "family" "happy"

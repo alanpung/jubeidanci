@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 2: My Home"
-courseId: "a1-writing-course"
+courseId: "a1-writing"
 description: "A1 Writing about houses and home life"
 icon: "🏠"
 color: "#10B981"

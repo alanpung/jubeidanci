@@ -158,7 +158,7 @@ export function Writing({
           modelAnswer: exercise.answer,
           acceptAlso: exercise.acceptAlso ?? [],
           core: exercise.core ?? "",
-          level: "A2",
+          level: exercise.level ?? "A2",
         }),
       });
 

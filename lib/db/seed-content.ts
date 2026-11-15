@@ -159,6 +159,36 @@ async function runSeedTask() {
         .delete(course)
         .where(eq(course.id, oldEssayCourseId));
 
+      // Migration: the writing courses dropped the redundant `-course` suffix
+      // from their id/filename, so `a1-writing-course` -> `a1-writing` and
+      // `a2-writing-course` -> `a2-writing` (and the same pattern will apply to
+      // any future level). The filesystem units now carry the new courseId, so
+      // the old course rows and their old-id units would otherwise survive as
+      // duplicate, empty courses in the library. Mirror the migration above:
+      //   - re-point any hand-created units (UUID id) at the new course id;
+      //   - delete the old-id filesystem units (recreated with the new id);
+      //   - drop the stale old course row.
+      // Runs each seed but is a no-op once the old ids are gone.
+      const oldWritingCourseIds = ["a1-writing-course", "a2-writing-course"];
+      for (const oldWritingCourseId of oldWritingCourseIds) {
+        const newWritingCourseId = oldWritingCourseId.replace(/-course$/, "");
+        await dbBackground
+          .update(unit)
+          .set({ courseId: newWritingCourseId })
+          .where(
+            and(
+              eq(unit.courseId, oldWritingCourseId),
+              notLike(unit.id, `${oldWritingCourseId}-%`),
+            ),
+          );
+        await dbBackground
+          .delete(unit)
+          .where(eq(unit.courseId, oldWritingCourseId));
+        await dbBackground
+          .delete(course)
+          .where(eq(course.id, oldWritingCourseId));
+      }
+
       // The "A1 Word Bank" course was renamed to "A1 Word Order" and its id
       // changed from "a1-word-bank-course" to "a1-word-order-course". The
       // filesystem units now carry the new courseId, so the old course row

@@ -455,6 +455,19 @@ srsWords: "hund" "katze"`;
     }
   });
 
+  test("parses unquoted multiple srsWords inline as separate words", () => {
+    const block = `[multiple-choice]
+text: "What does 'hund' mean?"
+choices:
+  - "Cat"
+  - "Dog" (correct)
+srsWords: hund katze vogel`;
+    const ex = parseExercise(block);
+    if (ex.type === "multiple-choice") {
+      expect(ex.srsWords).toEqual(["hund", "katze", "vogel"]);
+    }
+  });
+
   test("parses legacy list format (ignores translations)", () => {
     const block = `[multiple-choice]
 text: "What does 'hund' mean?"

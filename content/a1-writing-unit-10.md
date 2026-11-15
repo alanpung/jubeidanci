@@ -1,6 +1,6 @@
 ---
 unitTitle: "Unit 10: My Friends"
-courseId: "a1-writing-course"
+courseId: "a1-writing"
 description: "A1 Writing about friends"
 icon: "🤝"
 color: "#8B5CF6"
