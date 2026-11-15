@@ -337,6 +337,28 @@ function gradeWithRules(
   };
 }
 
+/** Paragraph guidance is a planning tip only — never a scoring criterion. */
+function paragraphGuidance(level: string): string {
+  const upper = level.toUpperCase();
+  const expect =
+    upper === "B2"
+      ? "four short paragraphs (an opening, two body paragraphs and an ending)"
+      : upper === "B1"
+        ? "three short paragraphs (an opening, a middle, an ending)"
+        : "one short, straightforward piece (longer pieces may use a few paragraphs)";
+  const suggestion =
+    upper === "B2"
+      ? "Try writing four short parts: an opening, two body paragraphs and an ending."
+      : upper === "B1"
+        ? "Try writing three short parts: an opening, a middle and an ending."
+        : "If your piece is long, try splitting it into two or three short parts.";
+  const beginner = upper === "A1" || upper === "A2";
+  return `PARAGRAPH PLANNING (feedback only, NEVER affects the score):
+- At ${upper} the learner ${beginner ? "may write" : "is encouraged to write"} ${expect}. This is a PLANNING GUIDE, not a scoring criterion. Do NOT add or subtract ANY points for the number of paragraphs.
+- If the essay shows clear paragraph breaks, topic sentences or linking words (First, Also, However, Finally, In addition, On the other hand), mention it briefly in "strengths".
+- If the whole essay is one single block, add ONE gentle suggestion to "corrections", e.g. "${suggestion}" This is advice, not an error - never lower the score for it.`;
+}
+
 /** Build the grading prompt shared by every provider. */
 function buildPrompt(
   essay: string,
@@ -374,10 +396,7 @@ Grade the learner's essay on a 0-100 scale:
 
 The pass line is 70.
 
-PARAGRAPH PLANNING (feedback only, NEVER affects the score):
-- At B1 the learner is encouraged to write three short paragraphs (an opening, a middle, an ending). This is a PLANNING GUIDE, not a scoring criterion. Do NOT add or subtract ANY points for the number of paragraphs.
-- If the essay shows clear paragraph breaks or uses linking words (First, Also, However, Finally, In addition), mention it briefly in "strengths".
-- If the whole essay is one single block, add ONE gentle suggestion to "corrections", e.g. "Try writing three short parts: an opening, a middle and an ending." This is advice, not an error - never lower the score for it.
+${paragraphGuidance(level)}
 
 CRITICAL OPEN-WRITING POLICY:
 - This is OPEN writing practice for a beginner. Only penalize GRAMMATICAL mistakes: spelling, verb tense/agreement, prepositions, articles, and word order that actually breaks grammar.

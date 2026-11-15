@@ -1,56 +1,63 @@
-# B1 写作：三段式引导 + 范文分段（增量包）
+# B2 写作课程 + 全级别字数标注
 
-## 这次改了什么
+## 这次做了什么
 
-B1 写作原来 100 篇范文都是**单段**，评分器也**完全没有结构维度**。本次让 B1 作文默认按 **3 段**（开头 / 中间 / 结尾）来引导，但**不把它变成扣分门槛**。
+### 1. 新增 B2 writing 课程（全新）
 
-### 1. 三层引导（第 1 层）
+- `content/b2-writing.md` + `b2-writing-unit-1..10.md`：10 单元 × 10 课 = **100 篇** B2 难度写作练习。
+- 10 个主题：Society & Change、Work & Careers、Technology & Ethics、Environment & Future、Culture & Identity、Education & Learning、Health & Wellbeing、Relationships & Communication、Money & Consumerism、Imagination & Innovation。
+- **四段式**：开头 / 两个中间段 / 结尾，范文 150–200 词。
+- `scripts/_gen_b2.py` 为生成脚本，字数闸门：answer 150–200、acceptAlso 120–200、core 70–110。
 
-- **中文题干**末尾统一加了：`（请写成三段：开头点题、中间展开、结尾收束。）`
-- **英文指令**改为：`Write this passage in English in three short paragraphs: an opening, a middle and an ending`
-- **评分反馈**新增一段 `PARAGRAPH PLANNING` 规则：
-  - 三段只是**规划指引，NOT 评分标准**，段落数**不加分也不扣分**；
-  - 学生用了分段或连接词（First / Also / However / Finally / In addition）→ 写进 `strengths` 表扬；
-  - 学生通篇写成一个大块 → 只在 `corrections` 里加**一条温和建议**，不当作错误、不降分；
-  - 明确写了 `Paragraph breaks (or the lack of them) are NOT grammar errors.`
+### 2. 所有写作单元标注字数要求
 
-> 现有「语法是唯一扣分项」的初学者友好策略**保持不变**。
+中文题干末尾统一加字数提示（含段落指引）：
 
-### 2. 范文分段示范（第 2 层）
+| 课程 | 段落 | 字数标注 | 范文字数 |
+|---|---|---|---|
+| A1 writing | 单段 | `（字数50-70）` | 50–70 |
+| A2 writing | 单段 | `（字数80-100）` | 80–100 |
+| B1 writing | 三段 | `（请写成三段：开头点题、中间展开、结尾收束。字数100-150）` | 100–150 |
+| **B2 writing** | 四段 | `（请写成四段：开头点题、两个中间段展开、结尾总结。字数150-200）` | 150–200 |
 
-- 100 篇 `answer` 和 100 篇 `acceptAlso` 都按语义切成 3 段：
-  - 段 1 = 首句（点题）
-  - 段 2 = 中间句（展开）
-  - 段 3 = 末句（收束）
-- 内容文件里用单行分隔符 ` || `，避免真实换行破坏 markdown 的 `key: "value"` 字段解析。
-- `lib/content/parser.ts` 的 `parseWriting` 会把 ` || ` 还原成真实 `\n`；写作页的 `whitespace-pre-wrap` 直接渲染成段落，朗读也会在段落处自然停顿。
-- `A1` / `A2` 完全不受影响（它们的范文没有分隔符，转换是空操作）。
+- A1/A2/B1 的 300 课题干已全部更新；A2/B1 生成脚本模板也同步改好，重新生成不会丢标注。
+- B1 有一课（Is Homework Necessary?）补足了几词，使按空格口径也达到 100+。
+
+### 3. 评分器按级别动态段落引导
+
+`app/api/grade-writing/route.ts` 的段落提示不再写死 B1 三段，而是按 level 生成：
+- A1/A2 → 短文单段即可；
+- B1 → 三段；
+- B2 → 四段。
+
+**段落数永远只是规划建议，不加分也不扣分**；原有「语法是唯一扣分项」策略不变。用了段落/主题句/连接词会写进 `strengths`；通篇一段只给一条温和建议。
 
 ## 覆盖步骤
 
-把本 zip 里的文件**按原目录结构覆盖**到 `D:\AI Tools\jubeidanci`：
+把本 zip 里的内容**按原目录结构覆盖**到 `D:\AI Tools\jubeidanci`：
 
 ```
 app/api/grade-writing/route.ts
-lib/content/parser.ts
-lib/content/parser.test.ts
 scripts/_gen_b1.py
-content/b1-writing.md
-content/b1-writing-unit-1.md  ...  content/b1-writing-unit-10.md
+scripts/_gen_b2.py              ← 新增
+scripts/_gen_a2_v2.py
+content/a1-writing.md  ...  content/a1-writing-unit-1..10.md
+content/a2-writing.md  ...  content/a2-writing-unit-1..10.md
+content/b1-writing.md  ...  content/b1-writing-unit-1..10.md
+content/b2-writing.md  ...  content/b2-writing-unit-1..10.md   ← 新增 B2
 ```
 
-- 全是**覆盖/更新**，没有新增或删除文件。
-- **不需要清数据库**：生词和范文以文件系统 markdown 为准，会覆盖数据库副本。
-- 若评分器接的是外部 AI provider，改的是提示词，**无需改环境变量**。
+- **不需要清数据库**：内容以文件系统 markdown 为准，下次种子同步会自动发现 B2 课程与单元。
+- 评分器改的是提示词，**无需改环境变量**。
 
 ## 验证记录
 
 | 检查项 | 结果 |
 |---|---|
-| 字数校验（生成器） | 100/100 篇 answer 100–150 词、acceptAlso 70–150 词，全部通过 |
-| 端到端解析 | B1：100/100 课范文为 3 段、替代范文 3 段、中英文三段指令齐全；A1/A2 不受影响 |
-| 解析器单测 | 新增 2 个用例（`||` 展开、单段保持不变）；类型检查 `npx tsc --noEmit` 无报错 |
-| 段落语义抽查 | 段1 点题 / 段2 展开 / 段3 收束，切分自然 |
+| 全级别字数闸门（生成器） | A1/A2/B1/B2 全部 400 篇通过 |
+| 端到端解析 | 400/400 课：段落数、字数、题干字数标注、生词、level 全部达标 |
+| 加载器 | 46 门课程、242 单元，B2 writing 发现正常且 10 单元齐全，0 孤立单元 |
+| TypeScript | `npx tsc --noEmit` 无报错 |
 
 ## Git 提交命令
 
@@ -58,13 +65,13 @@ content/b1-writing-unit-1.md  ...  content/b1-writing-unit-10.md
 cd "D:/AI Tools/jubeidanci"
 
 git add -A
-git status                         # 应看到 M: route.ts / parser.ts / parser.test.ts / _gen_b1.py / 11 个 b1 content 文件
-git commit -m "feat(b1-writing): guide three-paragraph essays and split model answers into paragraphs"
+git status        # 应看到：新增 B2 的 11 个文件 + 修改的 A1/A2/B1 content、route.ts、3 个脚本
+git commit -m "feat(b2-writing): add B2 four-paragraph writing course and word-count hints for all levels"
 git push origin main
 ```
 
-## 说明：为什么是 3 段而不是 4 段
+## 说明：为什么 B2 是 4 段 150–200 词
 
-- CEFR B1 要求写「连贯的简单短文」；主流 B1 考试的 100 词任务，高分范文通常也就 2–3 段。
-- 我们的篇幅是 100–150 词：3 段每段约 30–50 词很自然；4 段每段仅 25–35 词，容易逼出空话。
-- 因此 **3 段 = B1 默认目标（软引导）**，4 段留给 150 词以上或 B2 进阶。
+- CEFR B2 要求写「条理清晰、细节充分的文章」，需要开头、展开、结尾的完整结构；4 段是最经典的议论文框架（开头 + 两个主体段 + 结尾）。
+- 150–200 词让每个主体段有 50–70 词空间，足以展开论据和例证，区别于 B1 的 100–150 词。
+- 段落与字数只是**给学生的写作指引**，评分仍只看语法与内容覆盖，保持对初学者友好的定位。

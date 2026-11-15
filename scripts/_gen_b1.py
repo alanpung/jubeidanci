@@ -65,7 +65,7 @@ def build_unit_file(unit_num, theme, icon, color, lessons):
         out.append("")
         out.append("[writing]")
         out.append('text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"')
-        out.append(f'sentence: "{chinese}（请写成三段：开头点题、中间展开、结尾收束。）"')
+        out.append(f'sentence: "{chinese}（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"')
         out.append(f'answer: "{split_paragraphs(answer)}"')
         out.append(f'core: "{core}"')
         out.append(f'acceptAlso: "{split_paragraphs(acceptAlso)}"')
@@ -210,7 +210,7 @@ UNITS += [[
 
     ("Is Homework Necessary?", "Give your opinion on homework",
      "我觉得作业有必要，但不该太多。适当的作业能帮我们巩固课堂知识，培养自律。可如果作业堆成山，学生只会敷衍，甚至讨厌学习。我的建议是老师精选少量高质量的题目，让作业真正起到复习的作用。",
-     "I think homework is necessary, but it should never be excessive or thoughtless. A suitable amount helps us review and strengthen what we learn in class, and it builds self-discipline that serves us later in life. However, when assignments pile up like a mountain, students only do them carelessly to finish, and may even grow to hate studying altogether. My suggestion is that teachers select a small number of high-quality tasks that truly matter, so that homework fulfils its real purpose of revision instead of becoming a meaningless burden. Quality, not quantity, should guide every assignment we give.",
+     "I think homework is necessary, but it should never be excessive or thoughtless. A suitable amount helps us review and strengthen what we learn in class, and it builds self-discipline that serves us later in life. However, when assignments pile up like a mountain, students only do them carelessly to finish, and may even grow to hate studying altogether. My suggestion is that teachers select a small number of high-quality tasks that truly matter, so that homework fulfils its real purpose of revision instead of becoming a meaningless burden. Quality, not quantity, should guide every assignment we give, so that students stay curious and willing to learn.",
      "I think homework is necessary but should not be too much. Proper homework helps us review class knowledge and build self-discipline. But if there is a mountain of it, students only do it carelessly and may hate learning. I suggest teachers pick a few high-quality tasks so homework truly helps revision.",
      "Assignments are useful yet must stay moderate in size. The right amount consolidates lessons and trains responsibility we carry forward. Sadly, endless work makes pupils rush through it and resent school entirely. I advise educators to choose fewer, better exercises so that practice actually reinforces learning rather than wearing everyone down. Homework done with care builds quiet confidence, while thoughtless drills only breed exhaustion. In short, quality should outweigh quantity, and a tired mind retains far less than a rested one.",
      "homework necessary review discipline quality"),
