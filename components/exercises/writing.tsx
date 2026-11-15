@@ -283,17 +283,60 @@ export function Writing({
           {exercise.text}
         </h1>
 
-        {/* The complete Chinese prompt — plain text on purpose. No
-            HoverableText, so no hover lookup, no POS, no IPA, no gloss. */}
-        <div className="mb-4 w-full rounded-2xl border-2 border-lingo-border bg-lingo-gray/20 p-4 sm:p-5">
-          <p className="text-base leading-relaxed text-lingo-text sm:text-lg">
-            {exercise.sentence}
-          </p>
+        {/* The complete Chinese prompt — plain text on purpose. No HoverableText,
+            so no hover lookup, no POS, no IPA, no gloss.
+
+            When the on-screen keyboard opens we overlay the English textarea ON
+            TOP of this card in translucent mode, so the learner keeps the
+            Chinese question visible behind their typing instead of it scrolling
+            out of view. */}
+        <div className="relative w-full">
+          <div
+            className={`rounded-2xl border-2 border-lingo-border bg-lingo-gray/20 p-4 sm:p-5 ${
+              isKeyboardOpen && phase !== "result"
+                ? "min-h-[58vh] sm:min-h-[300px]"
+                : ""
+            }`}
+          >
+            <p className="text-base leading-relaxed text-lingo-text sm:text-lg">
+              {exercise.sentence}
+            </p>
+          </div>
+
+          {/* English textarea: when the keyboard is open it is absolutely
+              positioned over the prompt with a translucent (white/50) background
+              so the Chinese question shows through; otherwise it sits normally
+              below the prompt. */}
+          {phase !== "result" && (
+            <textarea
+              ref={textareaRef}
+              value={essay}
+              onChange={(e) => setEssay(e.target.value)}
+              onKeyDown={handleKeyDown}
+              disabled={phase === "grading"}
+              placeholder="Write your passage in English here..."
+              className={`w-full rounded-2xl border-2 border-lingo-border p-4 text-base leading-relaxed text-lingo-text placeholder:text-lingo-text-light/50 focus:border-lingo-blue focus:outline-none min-h-[240px] resize-y disabled:opacity-60 ${
+                isKeyboardOpen
+                  ? "absolute inset-0 bg-white/50 border-lingo-blue/70"
+                  : "relative mt-4 bg-white"
+              }`}
+              autoFocus
+              enterKeyHint="enter"
+            />
+          )}
         </div>
+
+        {/* word count + submit hint */}
+        {phase !== "result" && (
+          <div className="mt-1.5 flex items-center justify-between text-[11px] font-medium text-lingo-text-light">
+            <span>{wordCount} words</span>
+            <span>Shift+Enter 提交 · Enter 换行</span>
+          </div>
+        )}
 
         {/* Audio: the Chinese prompt is safe to play. The English model passage
             stays locked until the learner has submitted their own. */}
-        <div className="mb-4 flex items-center justify-center gap-2.5">
+        <div className="mt-4 mb-4 flex items-center justify-center gap-2.5">
           <button
             type="button"
             onClick={(e) => {
@@ -348,27 +391,6 @@ export function Writing({
             <ChevronRight className="h-6 w-6 sm:h-7 sm:w-7 stroke-[3]" />
           </button>
         </div>
-
-        {/* The writing textarea */}
-        {phase !== "result" && (
-          <div className="w-full px-1">
-            <textarea
-              ref={textareaRef}
-              value={essay}
-              onChange={(e) => setEssay(e.target.value)}
-              onKeyDown={handleKeyDown}
-              disabled={phase === "grading"}
-              placeholder="Write your passage in English here..."
-              className="w-full rounded-2xl border-2 border-lingo-border bg-white p-4 text-base leading-relaxed text-lingo-text placeholder:text-lingo-text-light/50 focus:border-lingo-blue focus:outline-none min-h-[240px] resize-y disabled:opacity-60"
-              autoFocus
-              enterKeyHint="enter"
-            />
-            <div className="mt-1.5 flex items-center justify-between text-[11px] font-medium text-lingo-text-light">
-              <span>{wordCount} words</span>
-              <span>Shift+Enter 提交 · Enter 换行</span>
-            </div>
-          </div>
-        )}
 
         {error && (
           <div className="mt-3 flex w-full items-center justify-between gap-3 rounded-xl border-2 border-lingo-red/30 bg-red-50 px-4 py-2.5">
