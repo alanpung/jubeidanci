@@ -236,6 +236,13 @@ function parseTranslation(lines: string[]): TranslationExercise {
  * player presents it: one textarea for the whole essay instead of one input
  * per word.
  */
+/** Model essays keep paragraphs on one markdown line, separated by ' || '.
+ *  Expand that marker into real newlines (the writing view uses
+ *  whitespace-pre-wrap, so newlines render as paragraph breaks). */
+function expandParagraphs(s: string): string {
+  return s.replace(/\s*\|\|\s*/g, "\n");
+}
+
 function parseWriting(lines: string[]): WritingExercise {
   const noAudio: string[] = [];
   const rawText = stripNoAudio(getField(lines, "text"));
@@ -243,12 +250,12 @@ function parseWriting(lines: string[]): WritingExercise {
   const rawSentence = stripNoAudio(getField(lines, "sentence"));
   if (rawSentence.flagged) noAudio.push("sentence");
 
-  const answer = getField(lines, "answer");
+  const answer = expandParagraphs(getField(lines, "answer"));
   const acceptAlsoLine = lines.find((l) => l.startsWith("acceptAlso:"));
   const acceptAlso: string[] = [];
   if (acceptAlsoLine) {
     const matches = acceptAlsoLine.match(/"([^"]+)"/g);
-    if (matches) acceptAlso.push(...matches.map((m) => m.replace(/"/g, "")));
+    if (matches) acceptAlso.push(...matches.map((m) => expandParagraphs(m.replace(/"/g, ""))));
   }
   const coreLine = lines.find((l) => l.startsWith("core:"));
   const core = coreLine ? (coreLine.match(/"([^"]+)"/)?.[1] ?? "") : "";

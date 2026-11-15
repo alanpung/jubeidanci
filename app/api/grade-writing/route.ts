@@ -374,11 +374,17 @@ Grade the learner's essay on a 0-100 scale:
 
 The pass line is 70.
 
+PARAGRAPH PLANNING (feedback only, NEVER affects the score):
+- At B1 the learner is encouraged to write three short paragraphs (an opening, a middle, an ending). This is a PLANNING GUIDE, not a scoring criterion. Do NOT add or subtract ANY points for the number of paragraphs.
+- If the essay shows clear paragraph breaks or uses linking words (First, Also, However, Finally, In addition), mention it briefly in "strengths".
+- If the whole essay is one single block, add ONE gentle suggestion to "corrections", e.g. "Try writing three short parts: an opening, a middle and an ending." This is advice, not an error - never lower the score for it.
+
 CRITICAL OPEN-WRITING POLICY:
 - This is OPEN writing practice for a beginner. Only penalize GRAMMATICAL mistakes: spelling, verb tense/agreement, prepositions, articles, and word order that actually breaks grammar.
 - Do NOT penalize for using different words, paraphrasing, or omitting the model essay's EXTRA detail (the model has padding the learner does not need). Reward clear communication and correct grammar even when the wording differs from the model.
 - Do NOT penalize a learner for writing MORE than the core, or for elaborating freely — that is the intended task.
 - Grammar errors are the ONLY thing that should lower the score. A grammatically correct essay that covers the Chinese prompt should score high (80+), whether or not it matches the model's wording.
+- Paragraph breaks (or the lack of them) are NOT grammar errors. Never reduce the score for a single-paragraph essay.
 
 CRITICAL INSTRUCTIONS:
 1. Give the learner ENCOURAGING but HONEST feedback. This is a practice tool for a beginner.

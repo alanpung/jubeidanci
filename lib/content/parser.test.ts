@@ -428,6 +428,36 @@ sentence: "El gato"`;
   });
 });
 
+describe("writing", () => {
+  const base = `[writing]
+text: "Write this passage in English"
+sentence: "请用英语写一段话"
+srsWords: "word1" "word2"`;
+
+  test("expands || paragraph markers into real newlines in answer and acceptAlso", () => {
+    const ex = parseExercise(`${base}
+answer: "Opening sentence. || Middle sentence one. Middle sentence two. || Ending sentence."
+core: "Opening sentence. Middle sentence one. Middle sentence two. Ending sentence."
+acceptAlso: "First part. || Second part. || Third part."`);
+    if (ex.type === "writing") {
+      expect(ex.answer).toBe("Opening sentence.\nMiddle sentence one. Middle sentence two.\nEnding sentence.");
+      expect(ex.acceptAlso).toEqual(["First part.\nSecond part.\nThird part."]);
+      expect((ex.answer.match(/\n/g) ?? []).length).toBe(2);
+    }
+  });
+
+  test("leaves single-paragraph essays unchanged", () => {
+    const ex = parseExercise(`${base}
+answer: "One single paragraph with no breaks."
+core: "One single paragraph with no breaks."
+acceptAlso: "Another single paragraph."`);
+    if (ex.type === "writing") {
+      expect(ex.answer).toBe("One single paragraph with no breaks.");
+      expect(ex.acceptAlso).toEqual(["Another single paragraph."]);
+    }
+  });
+});
+
 describe("srsWords", () => {
   test("parses single srsWord inline", () => {
     const block = `[multiple-choice]

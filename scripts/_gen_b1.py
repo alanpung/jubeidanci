@@ -11,6 +11,21 @@ CONTENT_DIR = os.path.join(os.path.dirname(__file__), "..", "content")
 def wc(s: str) -> int:
     return len(re.findall(r"[A-Za-z']+", s))
 
+
+def split_paragraphs(text: str) -> str:
+    """Turn a model essay into 3 paragraphs using ' || ' as a single-line
+    separator (the markdown parser reads fields one line at a time).
+
+    Opening = first sentence, body = middle sentences, ending = last sentence.
+    Essays with fewer than 3 sentences are left untouched.
+    """
+    sents = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text.strip()) if s.strip()]
+    if len(sents) < 3:
+        return text
+    if len(sents) == 3:
+        return " || ".join(sents)
+    return " || ".join([sents[0], " ".join(sents[1:-1]), sents[-1]])
+
 PALETTE = [
     ("Personal Experiences", "🧭", "#2563EB"),
     ("Opinions & Preferences", "💡", "#7C3AED"),
@@ -49,11 +64,11 @@ def build_unit_file(unit_num, theme, icon, color, lessons):
         out.append("---")
         out.append("")
         out.append("[writing]")
-        out.append('text: "Write this passage in English"')
-        out.append(f'sentence: "{chinese}"')
-        out.append(f'answer: "{answer}"')
+        out.append('text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"')
+        out.append(f'sentence: "{chinese}（请写成三段：开头点题、中间展开、结尾收束。）"')
+        out.append(f'answer: "{split_paragraphs(answer)}"')
         out.append(f'core: "{core}"')
-        out.append(f'acceptAlso: "{acceptAlso}"')
+        out.append(f'acceptAlso: "{split_paragraphs(acceptAlso)}"')
         out.append("srsWords: " + " ".join(f'"{w}"' for w in srs.split()))
         out.append("")
     return "\n".join(out)
