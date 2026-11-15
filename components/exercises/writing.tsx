@@ -294,48 +294,44 @@ export function Writing({
             internal scroller (flex-1 min-h-0 overflow-y-auto). The question
             therefore stays visible at the top the whole time and the learner
             never has to scroll the page up to read it. */}
-        {isKeyboardOpen && phase !== "result" ? (
-          <div className="flex flex-col h-[100dvh]">
-            {/* Chinese essay — pinned at the top, fixed, with its own scroll if long */}
-            <div className="shrink-0 w-full rounded-2xl border-2 border-lingo-border bg-white p-3 text-sm leading-snug shadow-sm max-h-[30vh] overflow-y-auto">
-              <p className="text-lingo-text">{exercise.sentence}</p>
-            </div>
-            {/* English textarea — fills the rest and scrolls internally */}
-            <textarea
-              ref={textareaRef}
-              value={essay}
-              onChange={(e) => setEssay(e.target.value)}
-              onKeyDown={handleKeyDown}
-              disabled={phase === "grading"}
-              placeholder="Write your passage in English here..."
-              className="flex-1 min-h-0 mt-2 w-full rounded-2xl border-2 border-lingo-border bg-white p-4 text-base leading-relaxed text-lingo-text placeholder:text-lingo-text-light/50 focus:border-lingo-blue focus:outline-none overflow-y-auto resize-none disabled:opacity-60"
-              autoFocus
-              enterKeyHint="enter"
-            />
-            <div className="shrink-0 mt-1.5 flex items-center justify-between text-[11px] font-medium text-lingo-text-light">
-              <span>{wordCount} words</span>
-              <span>Shift+Enter 提交</span>
-            </div>
-          </div>
-        ) : (
-          <>
-            <div className="w-full rounded-2xl border-2 border-lingo-border bg-lingo-gray/20 p-4 sm:p-5 text-base leading-relaxed text-lingo-text sm:text-lg">
-              <p>{exercise.sentence}</p>
-            </div>
-            {phase !== "result" && (
-              <textarea
-                ref={textareaRef}
-                value={essay}
-                onChange={(e) => setEssay(e.target.value)}
-                onKeyDown={handleKeyDown}
-                disabled={phase === "grading"}
-                placeholder="Write your passage in English here..."
-                className="relative mt-4 w-full rounded-2xl border-2 border-lingo-border bg-white p-4 text-base leading-relaxed text-lingo-text placeholder:text-lingo-text-light/50 focus:border-lingo-blue focus:outline-none min-h-[240px] resize-y disabled:opacity-60"
-                autoFocus
-                enterKeyHint="enter"
-              />
-            )}
-          </>
+        {/* The complete Chinese prompt — plain text on purpose. No HoverableText,
+            so no hover lookup, no POS, no IPA, no gloss.
+
+            MOBILE TYPING MODE: when the on-screen keyboard opens we make this card
+            STICKY just BELOW the app's 64px top bar (top-16), with a higher
+            z-index and an opaque background. As the page scrolls to keep the
+            textarea above the keyboard, the Chinese essay stays pinned under the
+            header and remains fully visible — the learner never has to scroll up
+            to read it, and the English text (a separate block below) never
+            overlaps it. */}
+        <div
+          className={`w-full rounded-2xl border-2 border-lingo-border p-3 sm:p-4 ${
+            isKeyboardOpen && phase !== "result"
+              ? "sticky top-16 z-40 bg-white shadow-md text-sm leading-snug max-h-[30vh] overflow-y-auto"
+              : "bg-lingo-gray/20 text-base leading-relaxed text-lingo-text sm:text-lg"
+          }`}
+        >
+          <p className="text-lingo-text">{exercise.sentence}</p>
+        </div>
+
+        {/* English textarea — always its own block below the prompt, never
+            overlapping it. Grows taller when the keyboard is open. */}
+        {phase !== "result" && (
+          <textarea
+            ref={textareaRef}
+            value={essay}
+            onChange={(e) => setEssay(e.target.value)}
+            onKeyDown={handleKeyDown}
+            disabled={phase === "grading"}
+            placeholder="Write your passage in English here..."
+            className={`w-full rounded-2xl border-2 border-lingo-border p-4 text-base leading-relaxed text-lingo-text placeholder:text-lingo-text-light/50 focus:border-lingo-blue focus:outline-none resize-y disabled:opacity-60 ${
+              isKeyboardOpen
+                ? "relative mt-2 bg-white min-h-[50vh]"
+                : "relative mt-4 bg-white min-h-[240px]"
+            }`}
+            autoFocus
+            enterKeyHint="enter"
+          />
         )}
 
         {/* word count + submit hint (non-keyboard layout) */}
