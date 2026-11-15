@@ -6,7 +6,7 @@ color: "#5F27CD"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "C2"
-courseId: "c2-fill-in-the-blank-course"
+courseId: "c2-fill-in-the-blank"
 questionType: "fill-in-the-blank"
 ---
 

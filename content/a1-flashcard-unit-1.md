@@ -6,7 +6,7 @@ color: "#4CAF50"
 targetLanguage: "en"
 sourceLanguage: "en"
 level: "A1"
-courseId: "a1-flashcard-course"
+courseId: "a1-flashcard"
 questionType: "flashcard-review"
 ---
 

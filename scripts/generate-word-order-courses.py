@@ -247,7 +247,7 @@ def render_question(entry: dict, distractor: str | None, missing: list[str]) -> 
 
 
 def render_course(level: str) -> str:
-    cid = f"{level.lower()}-word-order-course"
+    cid = f"{level.lower()}-word-order"
     return (
         "\n".join(
             [
@@ -269,7 +269,7 @@ def render_course(level: str) -> str:
 
 
 def render_unit(level: str, unit_no: int, entries: list[dict], missing: list[str]) -> str:
-    cid = f"{level.lower()}-word-order-course"
+    cid = f"{level.lower()}-word-order"
     lines = [
         "---",
         f'unitTitle: "Word Order – Unit {unit_no}: {UNIT_NAMES[unit_no - 1]}"',
@@ -323,7 +323,7 @@ def main() -> None:
     skeleton_counts = count_skeletons(data)
     missing: list[str] = []
     for level in LEVELS:
-        course_path = CONTENT_DIR / f"{level.lower()}-word-order-course.md"
+        course_path = CONTENT_DIR / f"{level.lower()}-word-order.md"
         if course_path.exists() and not args.force:
             print(f"{level}: already exists, skipped (use --force to regenerate)")
             continue

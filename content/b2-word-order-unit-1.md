@@ -6,7 +6,7 @@ color: "#4A90D9"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "B2"
-courseId: "b2-word-order-course"
+courseId: "b2-word-order"
 questionType: "word-order"
 ---
 

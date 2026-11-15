@@ -257,7 +257,7 @@ def main():
     out.append('targetLanguage: "en"')
     out.append('sourceLanguage: "en"')
     out.append('level: "A1"')
-    out.append('courseId: "a1-speaking-course"')
+    out.append('courseId: "a1-speaking"')
     out.append('questionType: "speaking"')
     out.append("---")
     out.append("")

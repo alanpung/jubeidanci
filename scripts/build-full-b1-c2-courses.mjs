@@ -5,7 +5,7 @@ import path from "path";
 const LEVELS = [
   {
     level: "B1",
-    courseId: "b1-translation-course",
+    courseId: "b1-translation",
     color: "#3B82F6",
     units: [
       { id: 1, icon: "💼", title: "Work & Career", topics: ["Applying for Jobs", "Job Interviews", "Office Routine", "Business Emails", "Team Meetings", "Project Management", "Customer Service", "Salary & Promotion", "Remote Work", "Career Development"] },
@@ -22,7 +22,7 @@ const LEVELS = [
   },
   {
     level: "B2",
-    courseId: "b2-translation-course",
+    courseId: "b2-translation",
     color: "#6366F1",
     units: [
       { id: 1, icon: "👔", title: "Workplace Challenges & Management", topics: ["Handling Tight Deadlines", "Conflict Resolution", "Performance Reviews", "Delegating Tasks", "Leadership Dynamics", "Corporate Restructuring", "Negotiating Contracts", "Cross-departmental Cooperation", "Workplace Stress", "Innovation Strategy"] },
@@ -39,7 +39,7 @@ const LEVELS = [
   },
   {
     level: "C1",
-    courseId: "c1-translation-course",
+    courseId: "c1-translation",
     color: "#8B5CF6",
     units: [
       { id: 1, icon: "🏛️", title: "Politics & Governance", topics: ["Constitutional Law Principles", "Electoral Reform Debates", "Geopolitical Alliances", "Public Policy Formulations", "Diplomatic Protocol", "Legislative Procedures", "Civic Engagement & Advocacy", "Governmental Transparency", "Bureaucratic Efficiency", "Fiscal Policy Strategy"] },
@@ -56,7 +56,7 @@ const LEVELS = [
   },
   {
     level: "C2",
-    courseId: "c2-translation-course",
+    courseId: "c2-translation",
     color: "#EC4899",
     units: [
       { id: 1, icon: "⚡", title: "Nuanced Argumentation & Debate", topics: ["Socratic Irony in Discourse", "Subtle Refutation Techniques", "Dialectical Synthesis", "Deconstructing Fallacious Logic", "Incisive Counter-arguments", "Precision in Conceptual Distinction", "Elusive Premise Examination", "Handling Hostile Cross-examination", "Sophisticated Persuasion", "Pithy Aphorisms in Debate"] },

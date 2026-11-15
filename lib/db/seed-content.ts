@@ -123,102 +123,44 @@ async function runSeedTask() {
           },
         });
 
-      // Migration: rename the "A1 Essay/Writing" course id from
-      // "a1-essay-course" to "a1-writing-course" to match its filesystem id.
-      // The filesystem units now carry the new courseId, so the old course
-      // row and its old-id units would otherwise survive as a duplicate,
-      // empty course in the library. Mirror the a1-word-bank ->
-      // a1-word-order migration below:
-      //   - re-point any hand-created units (UUID id, not derived from the
-      //     course id) at the new course id so they survive the rename;
-      //   - delete the old-id filesystem units (they are recreated with the
-      //     new id by the upsert loops above);
+      // Migration: every system course dropped the redundant `-course` suffix
+      // from its id/filename (e.g. `a1-flashcard-course` -> `a1-flashcard`,
+      // `a1-writing-course` -> `a1-writing`, etc.). The filesystem units now
+      // carry the new courseId, so the old course rows and their old-id units
+      // would otherwise survive as duplicate, empty courses in the library.
+      //
+      // For each rename:
+      //   - re-point any hand-created units (UUID id, not derived from the old
+      //     course id) at the new course id so they survive;
+      //   - delete the old-id filesystem units (recreated by the upsert loops
+      //     above with the new id);
       //   - drop the stale old course row.
-      // The new course row is INSERTED (not updated) by the upsert above, so
-      // its title already comes from the front-matter ("A1 writing course")
-      // and needs no separate migration. Runs once: after the first run the
-      // old id is gone, so every branch below is a no-op on later seeds.
-      const oldEssayCourseId = "a1-essay-course";
-      const newEssayCourseId = "a1-writing-course";
-
-      await dbBackground
-        .update(unit)
-        .set({ courseId: newEssayCourseId })
-        .where(
-          and(
-            eq(unit.courseId, oldEssayCourseId),
-            notLike(unit.id, `${oldEssayCourseId}-%`),
-          ),
-        );
-
-      await dbBackground
-        .delete(unit)
-        .where(eq(unit.courseId, oldEssayCourseId));
-
-      await dbBackground
-        .delete(course)
-        .where(eq(course.id, oldEssayCourseId));
-
-      // Migration: the writing courses dropped the redundant `-course` suffix
-      // from their id/filename, so `a1-writing-course` -> `a1-writing` and
-      // `a2-writing-course` -> `a2-writing` (and the same pattern will apply to
-      // any future level). The filesystem units now carry the new courseId, so
-      // the old course rows and their old-id units would otherwise survive as
-      // duplicate, empty courses in the library. Mirror the migration above:
-      //   - re-point any hand-created units (UUID id) at the new course id;
-      //   - delete the old-id filesystem units (recreated with the new id);
-      //   - drop the stale old course row.
-      // Runs each seed but is a no-op once the old ids are gone.
-      const oldWritingCourseIds = ["a1-writing-course", "a2-writing-course"];
-      for (const oldWritingCourseId of oldWritingCourseIds) {
-        const newWritingCourseId = oldWritingCourseId.replace(/-course$/, "");
+      //
+      // Two older chains predate this change and must land on the FINAL id:
+      //   `a1-essay-course`     -> `a1-writing`
+      //   `a1-word-bank-course` -> `a1-word-order`
+      // Deriving the rest from the freshly loaded filesystem catalog keeps this
+      // in lockstep with whatever courses exist, and every statement is a no-op
+      // once the old ids are gone (so it is safe to run on every seed).
+      const courseRenames: Array<[string, string]> = [
+        ["a1-essay-course", "a1-writing"],
+        ["a1-word-bank-course", "a1-word-order"],
+        ...courses.map((c) => [`${c.id}-course`, c.id] as [string, string]),
+      ];
+      for (const [oldId, newId] of courseRenames) {
+        if (oldId === newId) continue;
         await dbBackground
           .update(unit)
-          .set({ courseId: newWritingCourseId })
+          .set({ courseId: newId })
           .where(
             and(
-              eq(unit.courseId, oldWritingCourseId),
-              notLike(unit.id, `${oldWritingCourseId}-%`),
+              eq(unit.courseId, oldId),
+              notLike(unit.id, `${oldId}-%`),
             ),
           );
-        await dbBackground
-          .delete(unit)
-          .where(eq(unit.courseId, oldWritingCourseId));
-        await dbBackground
-          .delete(course)
-          .where(eq(course.id, oldWritingCourseId));
+        await dbBackground.delete(unit).where(eq(unit.courseId, oldId));
+        await dbBackground.delete(course).where(eq(course.id, oldId));
       }
-
-      // The "A1 Word Bank" course was renamed to "A1 Word Order" and its id
-      // changed from "a1-word-bank-course" to "a1-word-order-course". The
-      // filesystem units now carry the new courseId, so the old course row
-      // would survive as a second, empty course with the same title ("A1 Word
-      // Order") — the library would then show the course twice.
-      //
-      // Remove the stale row. Only units that still belong to the old course
-      // id and were derived from the filesystem (id starts with the course id)
-      // are deleted; units the owner created by hand have a UUID id and are
-      // re-pointed at the new course id so they survive the rename.
-      const staleCourseId = "a1-word-bank-course";
-      const newCourseId = "a1-word-order-course";
-
-      await dbBackground
-        .update(unit)
-        .set({ courseId: newCourseId })
-        .where(
-          and(
-            eq(unit.courseId, staleCourseId),
-            notLike(unit.id, `${staleCourseId}-%`)
-          )
-        );
-
-      await dbBackground
-        .delete(unit)
-        .where(eq(unit.courseId, staleCourseId));
-
-      await dbBackground
-        .delete(course)
-        .where(eq(course.id, staleCourseId));
     }
 
     // 4. Delete unwanted German / test courses and units
@@ -478,7 +420,7 @@ async function runSeedTask() {
     // "Standalone Units" folder, because the course cleanup above only touches
     // rows with the course id. The A1 Writing units did exactly this — they were
     // `unit-1-my-school`…`unit-10-my-friends` standalone and are now
-    // `a1-writing-course-unit-N`. Drop any standalone row whose id is a unit's
+    // `a1-writing-unit-N`. Drop any standalone row whose id is a unit's
     // legacy title-slug id but is NOT among the ids we just (re)wrote.
     const allCurrentIds = new Set([
       ...unitValues.map((v) => v.id),

@@ -6,7 +6,7 @@ color: "#27AE60"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "C2"
-courseId: "c2-listening-course"
+courseId: "c2-listening"
 questionType: "listening"
 ---
 

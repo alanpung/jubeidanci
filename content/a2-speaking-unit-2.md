@@ -6,7 +6,7 @@ color: "#E91E63"
 targetLanguage: "en"
 sourceLanguage: "en"
 level: "A2"
-courseId: "a2-speaking-course"
+courseId: "a2-speaking"
 questionType: "speaking"
 ---
 

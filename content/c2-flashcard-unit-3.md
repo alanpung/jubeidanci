@@ -6,7 +6,7 @@ color: "#E91E63"
 targetLanguage: "en"
 sourceLanguage: "en"
 level: "C2"
-courseId: "c2-flashcard-course"
+courseId: "c2-flashcard"
 questionType: "flashcard-review"
 ---
 

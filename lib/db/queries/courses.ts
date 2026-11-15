@@ -506,19 +506,19 @@ export async function listCourses(
 }
 
 export const SYSTEM_COURSE_IDS = [
-  "a1-flashcard-course",
-  "a1-translation-course",
-  "a1-multiple-choice-course",
-  "a1-fill-in-the-blank-course",
-  "a1-listening-course",
-  "a1-word-order-course",
-  "a1-speaking-course",
-  "a2-flashcard-course",
-  "a2-translation-course",
-  "b1-flashcard-course",
-  "b2-flashcard-course",
-  "c1-flashcard-course",
-  "c2-flashcard-course",
+  "a1-flashcard",
+  "a1-translation",
+  "a1-multiple-choice",
+  "a1-fill-in-the-blank",
+  "a1-listening",
+  "a1-word-order",
+  "a1-speaking",
+  "a2-flashcard",
+  "a2-translation",
+  "b1-flashcard",
+  "b2-flashcard",
+  "c1-flashcard",
+  "c2-flashcard",
 ];
 
 // Separate query for accurate lesson counts.

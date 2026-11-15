@@ -68,7 +68,7 @@ render_unit = _realign.render_unit
 PLAN = {
     "A1": {
         "target": 1082,
-        "course": "a1-flashcard-course",
+        "course": "a1-flashcard",
         "new_units": [
             # 82 words = 8 lessons × 10 words + 1 lesson × 2 words
             {"count": 82, "lessons": [(10, 8), (2, 1)],
@@ -77,7 +77,7 @@ PLAN = {
     },
     "A2": {
         "target": 1484,
-        "course": "a2-flashcard-course",
+        "course": "a2-flashcard",
         "new_units": [
             # 4 x 100-word units (full 10 lessons × 10 words)
             {"count": 100, "lessons": [(10, 10)],
@@ -304,7 +304,7 @@ def main() -> int:
                   f"({len(picked)} words) -> {os.path.basename(path)}")
 
         # Update course description
-        course_path = os.path.join(CONTENT_DIR, f"{level.lower()}-flashcard-course.md")
+        course_path = os.path.join(CONTENT_DIR, f"{level.lower()}-flashcard.md")
         if args.write and os.path.exists(course_path):
             content = open(course_path, encoding="utf-8").read()
             course_title = {

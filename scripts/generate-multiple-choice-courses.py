@@ -2,7 +2,7 @@
 """Generate CEFR A2-C2 Multiple Choice courses mirroring a1-multiple-choice-*.
 
 Structure (identical to the hand-written A1 course):
-  - <level>-multiple-choice-course.md       (1 per level)
+  - <level>-multiple-choice.md       (1 per level)
   - <level>-multiple-choice-unit-1..5.md    (5 per level)
   - 10 lessons per unit, 20 [multiple-choice] questions per lesson
   - 5 x 10 x 20 = 1000 questions per level, 5000 across all five levels
@@ -300,7 +300,7 @@ def render_course(level):
     lid = level.lower()
     return (
         "---\n"
-        f'id: "{lid}-multiple-choice-course"\n'
+        f'id: "{lid}-multiple-choice"\n'
         f'courseTitle: "{level} Multiple Choice"\n'
         f'description: "{level} Multiple Choice Course by Alan P"\n'
         'sourceLanguage: "en"\n'
@@ -322,7 +322,7 @@ def render_unit(level, unit_no, unit_title, topics, lessons):
         'targetLanguage: "en"\n'
         'sourceLanguage: "en"\n'
         f'level: "{level}"\n'
-        f'courseId: "{lid}-multiple-choice-course"\n'
+        f'courseId: "{lid}-multiple-choice"\n'
         'questionType: "multiple-choice"\n'
         "---\n"
     ]
@@ -344,7 +344,7 @@ def main():
     data = json.loads(DICT_PATH.read_text(encoding="utf-8"))
     for level in LEVELS:
         lid = level.lower()
-        course_path = CONTENT_DIR / f"{lid}-multiple-choice-course.md"
+        course_path = CONTENT_DIR / f"{lid}-multiple-choice.md"
         if course_path.exists():
             print(f"{level}: already exists, skipped")
             continue

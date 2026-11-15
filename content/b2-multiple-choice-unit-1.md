@@ -6,7 +6,7 @@ color: "#4CAF50"
 targetLanguage: "en"
 sourceLanguage: "en"
 level: "B2"
-courseId: "b2-multiple-choice-course"
+courseId: "b2-multiple-choice"
 questionType: "multiple-choice"
 ---
 

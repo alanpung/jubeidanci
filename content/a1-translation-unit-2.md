@@ -6,7 +6,7 @@ color: "#0EA5E9"
 targetLanguage: "en"
 sourceLanguage: "zh"
 level: "A1"
-courseId: "a1-translation-course"
+courseId: "a1-translation"
 questionType: "translation"
 ---
 

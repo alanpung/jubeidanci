@@ -2,7 +2,7 @@
 """Generate CEFR A2-C2 Fill in the Blank courses mirroring a1-fill-in-the-blank-*.
 
 Structure (identical to the expanded A1 course):
-  - <level>-fill-in-the-blank-course.md       (1 per level)
+  - <level>-fill-in-the-blank.md       (1 per level)
   - <level>-fill-in-the-blank-unit-1..5.md    (5 per level)
   - 20 lessons per unit, 5 [fill-in-the-blank] questions per lesson
   - 5 x 20 x 5 = 500 questions / 500 distinct target words per level
@@ -357,7 +357,7 @@ def render_course(level):
     lid = level.lower()
     return (
         "---\n"
-        f'id: "{lid}-fill-in-the-blank-course"\n'
+        f'id: "{lid}-fill-in-the-blank"\n'
         f'courseTitle: "{level} Fill in the Blank"\n'
         f'description: "{level} Fill in the Blank Course by Alan P"\n'
         'sourceLanguage: "en"\n'
@@ -385,7 +385,7 @@ def render_unit(level, unit_index, topics, words, synonyms, allow_synonyms):
         'targetLanguage: "en"',
         'sourceLanguage: "zh"',
         f'level: "{level}"',
-        f'courseId: "{lid}-fill-in-the-blank-course"',
+        f'courseId: "{lid}-fill-in-the-blank"',
         'questionType: "fill-in-the-blank"',
         "---",
         "",
@@ -432,7 +432,7 @@ def main():
     data = json.loads(DICT_PATH.read_text(encoding="utf-8"))
     for level in LEVELS:
         lid = level.lower()
-        course_path = CONTENT_DIR / f"{lid}-fill-in-the-blank-course.md"
+        course_path = CONTENT_DIR / f"{lid}-fill-in-the-blank.md"
         if course_path.exists():
             print(f"{level}: already exists, skipped")
             continue

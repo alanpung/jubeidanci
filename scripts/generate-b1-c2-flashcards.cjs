@@ -48,7 +48,7 @@ function sanitizeYamlString(str) {
 
 const courseConfig = {
   B1: {
-    id: "b1-flashcard-course",
+    id: "b1-flashcard",
     courseTitle: "B1 Flashcard",
     description: "Comprehensive B1 Intermediate Flashcard Vocabulary Course with 10 Units (1,000 Words total) by Alan P",
     level: "B1",
@@ -66,7 +66,7 @@ const courseConfig = {
     ],
   },
   B2: {
-    id: "b2-flashcard-course",
+    id: "b2-flashcard",
     courseTitle: "B2 Flashcard",
     description: "Comprehensive B2 Upper-Intermediate Flashcard Vocabulary Course with 10 Units (1,000 Words total) by Alan P",
     level: "B2",
@@ -84,7 +84,7 @@ const courseConfig = {
     ],
   },
   C1: {
-    id: "c1-flashcard-course",
+    id: "c1-flashcard",
     courseTitle: "C1 Flashcard",
     description: "Comprehensive C1 Advanced Flashcard Vocabulary Course with 10 Units (1,000 Words total) by Alan P",
     level: "C1",
@@ -102,7 +102,7 @@ const courseConfig = {
     ],
   },
   C2: {
-    id: "c2-flashcard-course",
+    id: "c2-flashcard",
     courseTitle: "C2 Flashcard",
     description: "Comprehensive C2 Mastery Flashcard Vocabulary Course with 10 Units (1,000 Words total) by Alan P",
     level: "C2",
@@ -192,7 +192,7 @@ for (const lvl of ["B1", "B2", "C1", "C2"]) {
     "",
   ].join("\n");
 
-  fs.writeFileSync(path.join(contentDir, `${lowerLvl}-flashcard-course.md`), courseMd, "utf8");
+  fs.writeFileSync(path.join(contentDir, `${lowerLvl}-flashcard.md`), courseMd, "utf8");
 
   // Write 10 unit markdown files (100 words each: 10 lessons x 10 words)
   for (let uIdx = 0; uIdx < 10; uIdx++) {

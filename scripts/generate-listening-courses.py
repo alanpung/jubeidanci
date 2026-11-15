@@ -2,7 +2,7 @@
 """Generate CEFR A2-C2 Listening courses mirroring a1-listening-*.
 
 Structure (mirrors the hand-written A1 listening course):
-  - <level>-listening-course.md          (1 per level)
+  - <level>-listening.md          (1 per level)
   - <level>-listening-unit-1..5.md       (5 per level)
   - 20 lessons per unit, 10 [listening] questions per lesson
   - 5 x 20 x 10 = 1000 questions / 1000 distinct target words per level
@@ -349,7 +349,7 @@ def render_course(level):
     lid = level.lower()
     return (
         "---\n"
-        f'id: "{lid}-listening-course"\n'
+        f'id: "{lid}-listening"\n'
         f'courseTitle: "{level} Listening"\n'
         f'description: "{level} Listening Course (5 Units x 20 Lessons x 10 Questions) by Alan P"\n'
         'sourceLanguage: "en"\n'
@@ -379,7 +379,7 @@ def render_unit(level, unit_index, topics, words, groups, rng):
         'targetLanguage: "en"',
         'sourceLanguage: "zh"',
         f'level: "{level}"',
-        f'courseId: "{lid}-listening-course"',
+        f'courseId: "{lid}-listening"',
         'questionType: "listening"',
         "---",
         "",
@@ -413,7 +413,7 @@ def main():
     data = json.loads(DICT_PATH.read_text(encoding="utf-8"))
     for level in LEVELS:
         lid = level.lower()
-        course_path = CONTENT_DIR / f"{lid}-listening-course.md"
+        course_path = CONTENT_DIR / f"{lid}-listening.md"
         if course_path.exists():
             print(f"{level}: already exists, skipped")
             continue
