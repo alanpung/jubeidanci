@@ -18,8 +18,8 @@ color: "#A3E635"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about my pet in English. || Requirements: 1 paragraph, 50-80 words || 中文范文 (Chinese essay to translate): || 我家养了一只猫，叫咪咪。它很可爱，喜欢在太阳底下睡觉。每天我到家时它都会来迎接我。照顾它让我学会了责任心，也让我更有爱心。 || Key vocabulary hints: pet, cat, cute, sleep, responsibility"
+text: "Translate this Chinese passage into English"
+sentence: "Write about my pet in English. || Requirements: 1 paragraph, 50-80 words"
 answer: "My family keeps a cat called Mimi, and she is very cute and friendly with everyone at home. She likes sleeping in the warm sunlight by the window and she purrs when I touch her soft fur. Every day when I come home from school, she runs to the door to greet me with a small sound. Taking care of her feeding and cleaning teaches me responsibility and care for others who depend on me. Nature is full of small wonders to notice."
 chineseEssay: "我家养了一只猫，叫咪咪。它很可爱，喜欢在太阳底下睡觉。每天我到家时它都会来迎接我。照顾它让我学会了责任心，也让我更有爱心。"
 core: "My family keeps a cat named Mimi. It is cute and likes sleeping in the sun. Every day when I get home it comes to greet me. Caring for it taught me responsibility and made me more loving."
@@ -34,8 +34,8 @@ color: "#A3E635"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about a visit to the zoo in English. || Requirements: 1 paragraph, 50-80 words || 中文范文 (Chinese essay to translate): || 上周学校组织我们去动物园参观。我们看到了大象、猴子和长颈鹿。猴子最活泼，逗得我们哈哈大笑。我觉得保护动物很重要，我们不应该伤害它们，还要给它们生存的空间。 || Key vocabulary hints: zoo, elephant, monkey, giraffe, protect"
+text: "Translate this Chinese passage into English"
+sentence: "Write about a visit to the zoo in English. || Requirements: 1 paragraph, 50-80 words"
 answer: "Last week our school took us to the zoo, and it was an exciting day out for all the students in my class. We saw elephants, monkeys and tall giraffes from close behind the safe glass and fences. The monkeys were the most lively and made us laugh with their funny jumps and faces. I think it is important to protect animals and never hurt them, because they share our planet with us humans. Nature is full of small wonders to notice."
 chineseEssay: "上周学校组织我们去动物园参观。我们看到了大象、猴子和长颈鹿。猴子最活泼，逗得我们哈哈大笑。我觉得保护动物很重要，我们不应该伤害它们，还要给它们生存的空间。"
 core: "Last week school organised a trip to the zoo. We saw elephants, monkeys and giraffes. Monkeys were the liveliest and made us laugh. I think protecting animals is important; we should not harm them and should give them space."
@@ -50,8 +50,8 @@ color: "#A3E635"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about wild animals in English. || Requirements: 1 paragraph, 50-80 words || 中文范文 (Chinese essay to translate): || 野生动物生活在森林和高山里。老虎、熊和狼就是其中的代表。由于人类活动的影响，有些动物正面临危险。我们应该保护它们的家园，不要随意砍伐树木。 || Key vocabulary hints: wild, forest, tiger, bear, protect"
+text: "Translate this Chinese passage into English"
+sentence: "Write about wild animals in English. || Requirements: 1 paragraph, 50-80 words"
 answer: "Wild animals live in forests, mountains and wide open lands far from the cities where we live. Tigers, bears and wolves are some of their members, each with a role to play in nature's balance and food chain. Because of human activity like cutting trees and building roads, some animals are now in danger of disappearing forever from the earth. I believe we should protect their homes and stop hunting them for fun or money. Nature is full of small wonders to notice."
 chineseEssay: "野生动物生活在森林和高山里。老虎、熊和狼就是其中的代表。由于人类活动的影响，有些动物正面临危险。我们应该保护它们的家园，不要随意砍伐树木。"
 core: "Wild animals live in forests and mountains. Tigers, bears and wolves are among them. Because of human activity, some animals are in danger. We should protect their homes and not cut trees randomly."
@@ -66,8 +66,8 @@ color: "#A3E635"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about trees and flowers in English. || Requirements: 1 paragraph, 50-80 words || 中文范文 (Chinese essay to translate): || 春天来了，树木长出新叶，花朵绽放。楼下有一棵樱花树，开满了漂亮的粉色花朵。植物让城市更美丽，还为我们提供氧气。我会更加爱护它们，不再摘花。 || Key vocabulary hints: tree, flower, spring, pink, oxygen"
+text: "Translate this Chinese passage into English"
+sentence: "Write about trees and flowers in English. || Requirements: 1 paragraph, 50-80 words"
 answer: "When spring comes, trees grow new leaves and many flowers open in the warm sun around the city and parks. Downstairs from my home there is a cherry tree, and its pink blossoms look beautiful for a few short weeks each year. Plants make the city prettier and give us the oxygen we breathe every single day to live. I want to take better care of them by not picking flowers and by watering the ones in our yard when it is dry. Small actions like these help nature stay green and healthy around where we live together."
 chineseEssay: "春天来了，树木长出新叶，花朵绽放。楼下有一棵樱花树，开满了漂亮的粉色花朵。植物让城市更美丽，还为我们提供氧气。我会更加爱护它们，不再摘花。"
 core: "Spring comes; trees grow new leaves and flowers bloom. Downstairs there is a cherry tree with pretty pink flowers. Plants make the city more beautiful and give us oxygen. I will care for them more and not pick flowers."
@@ -82,8 +82,8 @@ color: "#A3E635"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about a walk in the forest in English. || Requirements: 1 paragraph, 50-80 words || 中文范文 (Chinese essay to translate): || 去年秋天我在森林里散步。地上铺满了落叶，踩上去沙沙作响。我听到了鸟叫声，还看到了小松鼠。森林让我心平静气，远离城市的喧嚣，有一种治愈的感觉。 || Key vocabulary hints: forest, autumn, leaf, bird, squirrel"
+text: "Translate this Chinese passage into English"
+sentence: "Write about a walk in the forest in English. || Requirements: 1 paragraph, 50-80 words"
 answer: "Last autumn I went for a walk in the forest with my father, and it was a peaceful trip away from the noise. The ground was covered with fallen leaves that made a soft sound under my shoes as we walked slowly. I heard birds singing and saw a small squirrel jumping between the branches above us. The forest made me feel calm and far away from the noisy city life that I live in during the week. Nature is full of small wonders to notice."
 chineseEssay: "去年秋天我在森林里散步。地上铺满了落叶，踩上去沙沙作响。我听到了鸟叫声，还看到了小松鼠。森林让我心平静气，远离城市的喧嚣，有一种治愈的感觉。"
 core: "Last autumn I walked in a forest. The ground was covered with fallen leaves that rustled underfoot. I heard birds and saw little squirrels. The forest made me calm, away from city noise, and was healing."
@@ -98,8 +98,8 @@ color: "#A3E635"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about birds in the park in English. || Requirements: 1 paragraph, 50-80 words || 中文范文 (Chinese essay to translate): || 早上公园里有很多鸟。它们在树上唱歌，飞来飞去。我经常带面包屑去喂它们。看着鸟儿飞翔让我很开心，也让我关注自然，学会观察。 || Key vocabulary hints: bird, park, sing, feed, nature"
+text: "Translate this Chinese passage into English"
+sentence: "Write about birds in the park in English. || Requirements: 1 paragraph, 50-80 words"
 answer: "In the morning the park is full of birds that sing on the trees and fly from branch to branch without rest. I often bring small pieces of bread to feed them, and they are not afraid to come close to my hand on the bench. Watching birds fly freely makes me happy and reminds me to notice nature around me each day. I think these little creatures bring life to the city and deserve our care and quiet space to live."
 chineseEssay: "早上公园里有很多鸟。它们在树上唱歌，飞来飞去。我经常带面包屑去喂它们。看着鸟儿飞翔让我很开心，也让我关注自然，学会观察。"
 core: "In the morning the park has many birds. They sing in the trees and flutter about. I often bring breadcrumbs to feed them. Watching birds fly makes me happy and makes me notice nature and learn to observe."
@@ -114,8 +114,8 @@ color: "#A3E635"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about protecting nature in English. || Requirements: 1 paragraph, 50-80 words || 中文范文 (Chinese essay to translate): || 我觉得保护环境是每个人的责任。我们应该少开车，多种树，不乱扔垃圾。自然为我们提供了新鲜的空气和水。如果我们不加以保护，未来会变得更糟，所以现在就行动起来吧。 || Key vocabulary hints: nature, protect, tree, recycle, earth"
+text: "Translate this Chinese passage into English"
+sentence: "Write about protecting nature in English. || Requirements: 1 paragraph, 50-80 words"
 answer: "I believe protecting nature is everyone's duty, not just the government or a few people in the world. We should drive less, plant more trees, and never throw rubbish on the street or into rivers where it harms fish. Nature gives us clean air and water that we cannot live without for long. If we do not protect it now, the future will be worse for my generation and the children after us. Nature is full of small wonders to notice."
 chineseEssay: "我觉得保护环境是每个人的责任。我们应该少开车，多种树，不乱扔垃圾。自然为我们提供了新鲜的空气和水。如果我们不加以保护，未来会变得更糟，所以现在就行动起来吧。"
 core: "I think protecting the environment is everyone's duty. We should drive less, plant more trees and not litter. Nature gives us fresh air and water. If we do not protect it, the future will be worse, so act now."
@@ -130,8 +130,8 @@ color: "#A3E635"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about my favorite animal in English. || Requirements: 1 paragraph, 50-80 words || 中文范文 (Chinese essay to translate): || 我最喜欢的动物是海豚。它们聪明、友善，还能救人。我在海洋馆看了海豚表演，非常精彩。我希望以后能保护它们的海洋家园，减少污染。 || Key vocabulary hints: dolphin, ocean, smart, friendly, protect"
+text: "Translate this Chinese passage into English"
+sentence: "Write about my favorite animal in English. || Requirements: 1 paragraph, 50-80 words"
 answer: "My favourite animal is the dolphin because it is smart, friendly and surprisingly gentle with people in the water. I once watched a dolphin show at the ocean park, and it was amazing how they jumped and followed the trainer's commands with joy. Dolphins are known to save people in the sea, which shows their kindness and intelligence to us. I hope that in the future I can help protect their ocean home from pollution and nets that hurt them."
 chineseEssay: "我最喜欢的动物是海豚。它们聪明、友善，还能救人。我在海洋馆看了海豚表演，非常精彩。我希望以后能保护它们的海洋家园，减少污染。"
 core: "My favourite animal is the dolphin. They are smart, friendly and can save people. I saw a dolphin show at the aquarium and it was wonderful. I hope to protect their ocean home and reduce pollution later."
@@ -146,8 +146,8 @@ color: "#A3E635"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about the ocean in English. || Requirements: 1 paragraph, 50-80 words || 中文范文 (Chinese essay to translate): || 海洋覆盖了地球的大部分面积。许多生物生活在那里，比如鱼类、海龟和鲸鱼。海洋调节气候，也为我们提供资源。我们必须减少污染，保护海洋，把它留给后代。 || Key vocabulary hints: ocean, fish, whale, climate, pollution"
+text: "Translate this Chinese passage into English"
+sentence: "Write about the ocean in English. || Requirements: 1 paragraph, 50-80 words"
 answer: "The ocean covers most of our planet and is home to countless living things such as fish, sea turtles and huge whales that we rarely see. It helps control the climate and gives us food and resources we use every day in our lives. I think we must reduce pollution and plastic waste so the sea stays alive and blue for the creatures in it. When the ocean is healthy, people are healthier too, and the future is safer. Nature is full of small wonders to notice."
 chineseEssay: "海洋覆盖了地球的大部分面积。许多生物生活在那里，比如鱼类、海龟和鲸鱼。海洋调节气候，也为我们提供资源。我们必须减少污染，保护海洋，把它留给后代。"
 core: "The ocean covers most of the earth. Many creatures live there, such as fish, turtles and whales. The ocean regulates climate and gives us resources. We must reduce pollution, protect the ocean and leave it for later generations."
@@ -162,8 +162,8 @@ color: "#A3E635"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about a farm visit in English. || Requirements: 1 paragraph, 50-80 words || 中文范文 (Chinese essay to translate): || 春天的时候，我和同学去参观了一个农场。我们看到了奶牛、绵羊和鸡。我们还品尝了新鲜的牛奶和鸡蛋。农民伯伯带我们去摘草莓。农场让我明白了食物的来源，也教会了我珍惜食物。 || Key vocabulary hints: farm, cow, chicken, strawberry, farmer"
+text: "Translate this Chinese passage into English"
+sentence: "Write about a farm visit in English. || Requirements: 1 paragraph, 50-80 words"
 answer: "In spring my classmates and I visited a farm outside the city for a day of learning and fun. We saw cows, sheep and chickens moving freely in the open fields under the sun. We also tasted fresh milk and eggs that were much tastier than the shop ones we buy. The farmer took us to pick strawberries with our own hands into small baskets. The visit taught me where food really comes from and how much work farmers do for us each day."
 chineseEssay: "春天的时候，我和同学去参观了一个农场。我们看到了奶牛、绵羊和鸡。我们还品尝了新鲜的牛奶和鸡蛋。农民伯伯带我们去摘草莓。农场让我明白了食物的来源，也教会了我珍惜食物。"
 core: "In spring my classmates and I visited a farm. We saw cows, sheep and chickens. We also tasted fresh milk and eggs. The farmer took us to pick strawberries. The farm showed me where food comes from and taught me to treasure it."

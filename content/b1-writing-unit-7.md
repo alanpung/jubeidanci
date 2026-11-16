@@ -18,8 +18,8 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about a teacher i admire in English. || Requirements: 3-4 paragraphs, 100-150 words || 中文结构提示 (Chinese structure guide): || 我很敬佩我的英语老师。她从不批评答错的同学，而是引导我们自己找到正确答案。她说犯错是学习的一部分，所以大家都敢于开口。她让我明白，好老师不仅传授知识，还给予勇气。她的耐心和提问至今仍在指导着我的阅读。 || Key vocabulary hints: teacher, admire, patient, mistake, courage, encourage"
+text: "Write this essay in English using the Chinese structure guide"
+sentence: "Write about a teacher i admire in English. || Requirements: 3-4 paragraphs, 100-150 words || Key vocabulary hints: teacher, admire, patient, mistake, courage, encourage"
 answer: "The teacher I admire most is my English teacher, whose patience and warmth changed the way I see learning itself. || Never once have I seen her criticise a student for giving a wrong answer; instead, she gently guides us to discover the correct one for ourselves by asking the right questions. She often says that making mistakes is a natural and necessary part of learning, and because she truly means it, everybody in her class feels brave enough to speak up without fear of embarrassment. Her lessons are lively and full of encouragement, so even the shyest students gradually find their voice. From her I have learned that a good teacher does far more than pass on knowledge from a book. || A good teacher gives students confidence, shows them respect, and helps them believe that they are capable of more than they imagined."
 chineseEssay: "我很敬佩我的英语老师。她从不批评答错的同学，而是引导我们自己找到正确答案。她说犯错是学习的一部分，所以大家都敢于开口。她让我明白，好老师不仅传授知识，还给予勇气。她的耐心和提问至今仍在指导着我的阅读。"
 core: "I admire my English teacher, who never criticises wrong answers but guides us to find them ourselves. She says mistakes are part of learning, so everyone dares to speak. She taught me that good teachers give knowledge and courage. Her patience and questions still guide my reading today."
@@ -34,8 +34,8 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about my favourite subject in English. || Requirements: 3-4 paragraphs, 100-150 words || 中文结构提示 (Chinese structure guide): || 我最喜欢的科目是历史，因为它展示了过去人们的生活和抉择。它不仅仅是背诵年代，还能解释我们当今的世界。那些故事启发着我，教会我深入思考。历史让我变得更智慧、更谦逊。它已经成为我真正的爱好。 || Key vocabulary hints: history, subject, past, dates, wiser, humble"
+text: "Write this essay in English using the Chinese structure guide"
+sentence: "Write about my favourite subject in English. || Requirements: 3-4 paragraphs, 100-150 words || Key vocabulary hints: history, subject, past, dates, wiser, humble"
 answer: "My favourite subject at school is history, and I find it endlessly fascinating because it opens a window onto how people lived, thought and made decisions long before our time. || Many students see it as nothing more than memorising dates and names, but to me it is so much richer than that. Studying history helps me understand why the world looks the way it does today, because nothing in the present appeared from nowhere. When I read about the choices ordinary people made in difficult moments, or the mistakes that led to great changes, I always come away with something useful for my own life. It teaches me to look beyond the surface of events and to question simple explanations. || In short, history makes me wiser and, at the same time, more humble about my own place in the long story of humanity."
 chineseEssay: "我最喜欢的科目是历史，因为它展示了过去人们的生活和抉择。它不仅仅是背诵年代，还能解释我们当今的世界。那些故事启发着我，教会我深入思考。历史让我变得更智慧、更谦逊。它已经成为我真正的爱好。"
 core: "My favourite subject is history because it shows how people lived and decided in the past. It is more than memorising dates; it explains our world today. The stories inspire me and teach me to think deeply. History makes me wiser and more humble. It has become a real hobby of mine."
@@ -50,8 +50,8 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about the value of homework in English. || Requirements: 3-4 paragraphs, 100-150 words || 中文结构提示 (Chinese structure guide): || 很多人讨厌作业，但我觉得适量的作业是有价值的。它能帮助我们复习课堂知识，也锻炼时间管理能力。太多就会变成负担，所以平衡很重要。认真做作业教会了我自律。适量的作业帮助我们复习功课、合理安排时间。 || Key vocabulary hints: homework, review, balance, time, self-discipline"
+text: "Write this essay in English using the Chinese structure guide"
+sentence: "Write about the value of homework in English. || Requirements: 3-4 paragraphs, 100-150 words || Key vocabulary hints: homework, review, balance, time, self-discipline"
 answer: "Many students complain about homework, and I understand why, but I believe a reasonable amount of it is genuinely valuable. || The knowledge we meet in class does not settle in our minds overnight; we need to revisit it, practise it and use it again before it truly becomes ours. Homework gives us that chance, and it also teaches us to manage our own time, since no teacher is standing over us when we sit down at home. Of course, there is a clear danger when the amount becomes excessive, because endless tasks turn learning into a burden and can make students resent school altogether. Everything depends on balance. || For my part, finishing my homework carefully and on time has been the first real step toward self-discipline, a skill that will serve me long after I have left the classroom behind."
 chineseEssay: "很多人讨厌作业，但我觉得适量的作业是有价值的。它能帮助我们复习课堂知识，也锻炼时间管理能力。太多就会变成负担，所以平衡很重要。认真做作业教会了我自律。适量的作业帮助我们复习功课、合理安排时间。"
 core: "Many hate homework, but I think a fair amount is valuable. It helps us review class knowledge and manage our time. Too much becomes a burden, so balance matters. Doing homework carefully taught me self-discipline. Fair amounts help us review our lessons and manage our time well."
@@ -66,8 +66,8 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about learning from mistakes in English. || Requirements: 3-4 paragraphs, 100-150 words || 中文结构提示 (Chinese structure guide): || 我曾经非常害怕犯错。一位老师说过，错误是最好的老师，因为它们暴露了我们的薄弱之处。我准备了一个错题本，经常翻看复习，成绩因此提高了，恐惧也消失了。现在每一次错误都让我觉得是在进步。我现在还把错题和同学分享。 || Key vocabulary hints: mistake, error, notebook, improve, fear, progress"
+text: "Write this essay in English using the Chinese structure guide"
+sentence: "Write about learning from mistakes in English. || Requirements: 3-4 paragraphs, 100-150 words || Key vocabulary hints: mistake, error, notebook, improve, fear, progress"
 answer: "I used to be terribly afraid of making mistakes, and a single wrong answer on a test could spoil my whole afternoon. || Then a teacher told me something I have never forgotten: mistakes are the best teachers we have, because they point straight at the gaps in our understanding. An honest error shows us exactly what we have not yet mastered, which is more useful than a vague feeling that we need to study harder. So I started keeping a notebook of the questions I got wrong and reviewing it again and again until the same problem no longer troubled me. Gradually my results improved, but something else changed too. || I stopped being frightened of failure, because I came to see each mistake as useful information rather than proof of stupidity, and that attitude has helped me grow in ways good grades never could."
 chineseEssay: "我曾经非常害怕犯错。一位老师说过，错误是最好的老师，因为它们暴露了我们的薄弱之处。我准备了一个错题本，经常翻看复习，成绩因此提高了，恐惧也消失了。现在每一次错误都让我觉得是在进步。我现在还把错题和同学分享。"
 core: "I once feared mistakes deeply. A teacher said errors are the best teachers since they show our weak points. I kept a notebook of wrong answers and reviewed it, so my grades rose and my fear faded. Each mistake now feels like progress. I share it with classmates now."
@@ -82,8 +82,8 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about studying abroad in English. || Requirements: 3-4 paragraphs, 100-150 words || 中文结构提示 (Chinese structure guide): || 我梦想出国留学，去体验另一种语言和文化。这会带来成长，尽管我会想家，也会面临实际困难。但正是那些困难能培养独立能力。如果有机会，我想去看看更广阔的世界，也更好地认识自己。出国前我会先准备好各种实用技能。 || Key vocabulary hints: abroad, culture, language, independent, homesick, grow"
+text: "Write this essay in English using the Chinese structure guide"
+sentence: "Write about studying abroad in English. || Requirements: 3-4 paragraphs, 100-150 words || Key vocabulary hints: abroad, culture, language, independent, homesick, grow"
 answer: "I have always been drawn to the idea of studying abroad, because living inside another language and culture seems to me one of the richest chances for personal growth anyone can have. || In a foreign country, even buying a train ticket or asking for directions becomes a small adventure that teaches patience and courage. Naturally I have worries too. I know I would miss my family terribly, and I am not entirely sure I could manage every practical problem on my own at first. Yet I believe it is precisely these challenges that force us to become independent and resourceful. || If the opportunity ever arrives, I would love to see more of the world, to learn how other people live, and in the process to discover things about myself that I could never learn by staying comfortable at home."
 chineseEssay: "我梦想出国留学，去体验另一种语言和文化。这会带来成长，尽管我会想家，也会面临实际困难。但正是那些困难能培养独立能力。如果有机会，我想去看看更广阔的世界，也更好地认识自己。出国前我会先准备好各种实用技能。"
 core: "I dream of studying abroad to experience another language and culture. It would bring growth, though I would miss home and face practical challenges. Those challenges build independence. If possible, I want to see the wider world and understand myself better. I will prepare practical skills before I go."
@@ -98,8 +98,8 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about group projects in English. || Requirements: 3-4 paragraphs, 100-150 words || 中文结构提示 (Chinese structure guide): || 我以前不喜欢小组作业，因为总有组员偷懒。但上学期我们团队明确了分工，还定期碰头，最终取得了成功。我学会了倾听不同意见，也明白了合作就是发挥每个人的长处。我还发现，沉默的队友往往对小组贡献最大。 || Key vocabulary hints: group, project, team, roles, listen, cooperation"
+text: "Write this essay in English using the Chinese structure guide"
+sentence: "Write about group projects in English. || Requirements: 3-4 paragraphs, 100-150 words || Key vocabulary hints: group, project, team, roles, listen, cooperation"
 answer: "I was never very fond of group projects, because in my experience one or two people often did very little while the rest of the team carried the weight, and that felt deeply unfair. || Last term, however, a particular project changed my mind completely. Our group agreed on clear roles from the start and held short, regular meetings to check our progress, so nobody could disappear unnoticed and every voice was heard. In the end we produced excellent work that none of us could have managed alone. Through that experience I learned to listen to opinions very different from my own and to disagree respectfully when necessary. || I also discovered that real cooperation does not mean everyone does exactly the same amount; it means each person contributes what they do best, trusting the others to do the same."
 chineseEssay: "我以前不喜欢小组作业，因为总有组员偷懒。但上学期我们团队明确了分工，还定期碰头，最终取得了成功。我学会了倾听不同意见，也明白了合作就是发挥每个人的长处。我还发现，沉默的队友往往对小组贡献最大。"
 core: "I disliked group projects because some members slacked. But last term our team set clear roles and met regularly, and we succeeded. I learned to listen to different views and that cooperation means using each person's strengths. I learned that quiet teammates often contribute the most to a group."
@@ -114,8 +114,8 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about my school library in English. || Requirements: 3-4 paragraphs, 100-150 words || 中文结构提示 (Chinese structure guide): || 学校的图书馆是我最喜欢的地方：安静、藏书丰富，还有专门的讨论室。考试前我在那里复习，空闲时在那里广泛阅读。它为我打开了课本之外的世界，就像一座容纳好奇心的家。图书管理员推荐的书常常是我自己永远找不到的。 || Key vocabulary hints: library, quiet, books, revise, curiosity, campus"
+text: "Write this essay in English using the Chinese structure guide"
+sentence: "Write about my school library in English. || Requirements: 3-4 paragraphs, 100-150 words || Key vocabulary hints: library, quiet, books, revise, curiosity, campus"
 answer: "The school library is without doubt my favourite place on campus, a quiet corner where the noise of the corridor simply disappears. || It holds an impressive range of books, from classic novels to science magazines, and there are even small rooms where we can hold discussions without disturbing other readers. Before examinations I go there to revise, surrounded by rows of silent books that somehow make concentration easier, and in my free time I use it to explore subjects that never appear in our textbooks. It was in the library that I first discovered how much more there is to learn beyond the fixed limits of the school day. To me it is far more than a room full of paper. || It is a home for curiosity, a place where a question can turn into a whole afternoon of wonderful discovery."
 chineseEssay: "学校的图书馆是我最喜欢的地方：安静、藏书丰富，还有专门的讨论室。考试前我在那里复习，空闲时在那里广泛阅读。它为我打开了课本之外的世界，就像一座容纳好奇心的家。图书管理员推荐的书常常是我自己永远找不到的。"
 core: "My school library is my favourite place: quiet, full of books, with rooms for discussion. I revise there before exams and read widely in my free time. It opened the world beyond textbooks to me and feels like a home for curiosity. Librarians suggest books I would never find."
@@ -130,8 +130,8 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about exams: how i prepare in English. || Requirements: 3-4 paragraphs, 100-150 words || 中文结构提示 (Chinese structure guide): || 我以前考试前总是通宵突击，第二天状态很差。现在我提前两周准备，分小块学习，做模拟卷，考试前好好睡觉。稳扎稳打的准备远比临时抱佛脚有效。短暂的休息和良好的饮食能让我保持头脑敏锐。 || Key vocabulary hints: exam, prepare, cram, practice, paper, sleep"
+text: "Write this essay in English using the Chinese structure guide"
+sentence: "Write about exams: how i prepare in English. || Requirements: 3-4 paragraphs, 100-150 words || Key vocabulary hints: exam, prepare, cram, practice, paper, sleep"
 answer: "In the past I always crammed for examinations, staying up for an entire night with a book and a cup of coffee, only to sit the next morning with a foggy head and a tired body. || The results were never as good as my effort deserved. These days I start preparing two weeks ahead, reviewing a little every day and breaking the material into small, manageable pieces instead of facing a mountain at the last minute. I also work through practice papers to discover which topics are still weak, so I know exactly where to focus my remaining time. Most importantly of all, I make sure to sleep well the night before, because a rested mind recalls far more than a exhausted one. || Calm, steady preparation has proved far more effective than desperate last-minute effort, and far less stressful too."
 chineseEssay: "我以前考试前总是通宵突击，第二天状态很差。现在我提前两周准备，分小块学习，做模拟卷，考试前好好睡觉。稳扎稳打的准备远比临时抱佛脚有效。短暂的休息和良好的饮食能让我保持头脑敏锐。"
 core: "I used to cram all night before exams and felt awful the next day. Now I prepare two weeks early, study in small pieces, do practice papers and sleep well before the test. Steady preparation works far better than rushing at the last moment. Short breaks and good food keep me sharp."
@@ -146,8 +146,8 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about lifelong learning in English. || Requirements: 3-4 paragraphs, 100-150 words || 中文结构提示 (Chinese structure guide): || 我认为离开学校后也应该继续学习，因为世界变化很快。我经常阅读，也尝试烹饪和编程等新事物。学习让生活保持趣味，也帮助我勇敢面对变化。我希望自己一辈子都做一个充满好奇的学生。最近我开始在网上学习摄影。 || Key vocabulary hints: lifelong, learning, read, change, curious, skill"
+text: "Write this essay in English using the Chinese structure guide"
+sentence: "Write about lifelong learning in English. || Requirements: 3-4 paragraphs, 100-150 words || Key vocabulary hints: lifelong, learning, read, change, curious, skill"
 answer: "I firmly believe that learning should not come to an end the moment we leave school or university. || The world changes so quickly that much of what we study today may be outdated within a few short years, and only those who keep learning can stay confident and useful. For my part, I hold on to the habit of reading widely, and I am always willing to try something completely new, whether it is cooking an unfamiliar dish or teaching myself a little programming. Learning keeps life interesting and gives me a reason to wake up curious each morning. || It also makes me far less afraid of change, because I know I can always pick up a new skill when I need one."
 chineseEssay: "我认为离开学校后也应该继续学习，因为世界变化很快。我经常阅读，也尝试烹饪和编程等新事物。学习让生活保持趣味，也帮助我勇敢面对变化。我希望自己一辈子都做一个充满好奇的学生。最近我开始在网上学习摄影。"
 core: "I believe learning should continue after school because the world changes fast. I read often and try new things like cooking and coding. Learning keeps life interesting and helps me face change bravely. I hope to stay a curious student all my life. I recently began learning photography online."
@@ -162,8 +162,8 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English"
-sentence: "Write about education for everyone in English. || Requirements: 3-4 paragraphs, 100-150 words || 中文结构提示 (Chinese structure guide): || 每个孩子都应享有受教育的机会，无论贫富。教育能改变一个贫困孩子的一生，但学校也需要好老师和教学资源。我支持给偏远地区提供更多帮助。公平意味着让每个人站在相近的起跑线上。每个男孩和女孩都值得拥有平等的学习机会。 || Key vocabulary hints: education, equal, access, resources, fairness, opportunity"
+text: "Write this essay in English using the Chinese structure guide"
+sentence: "Write about education for everyone in English. || Requirements: 3-4 paragraphs, 100-150 words || Key vocabulary hints: education, equal, access, resources, fairness, opportunity"
 answer: "I believe every child deserves the chance to go to school and receive a decent education, regardless of whether their family is rich or poor. || Education has a remarkable power to change a person's future, opening doors for children from difficult backgrounds that would otherwise stay firmly closed. Of course, simply building schools is not enough on its own; those schools also need good teachers, books and adequate resources to do their job properly. For this reason I strongly support directing more funding toward remote and disadvantaged areas, where the gap is widest. A truly fair society is not one where everyone ends up identical, but one where everybody starts from a roughly equal line, with a real opportunity to develop their talents. || Giving every child that start seems to me one of the most worthwhile goals any country could pursue."
 chineseEssay: "每个孩子都应享有受教育的机会，无论贫富。教育能改变一个贫困孩子的一生，但学校也需要好老师和教学资源。我支持给偏远地区提供更多帮助。公平意味着让每个人站在相近的起跑线上。每个男孩和女孩都值得拥有平等的学习机会。"
 core: "Every child deserves education regardless of wealth. It can transform a poor child's life, but schools also need good teachers and resources. I support giving more help to remote areas. Fairness means giving everyone a similar starting point. Every girl and boy deserves an equal chance to learn."

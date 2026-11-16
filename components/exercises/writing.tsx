@@ -144,13 +144,11 @@ export function Writing({
   /**
    * The Chinese prompt sent to the grader.
    *
-   * `exercise.sentence` is the full on-screen prompt card: the instruction, the
-   * requirements, the Chinese essay (中文范文) and the vocabulary hints. For
-   * grading we want just the Chinese source text, so we slice out the
-   * Chinese-only portion when a Chinese essay is available — it makes the
-   * grader's "meaning coverage" check far more precise. When there is no
-   * Chinese essay (B2 / Advanced) we fall back to the whole prompt, which
-   * still carries the topic and the hints.
+   * When a Chinese essay exists (A1 / A2 / B1) we send just that — it is the
+   * exact source text the learner translated, so the grader's "meaning
+   * coverage" check is precise. For B2 / Advanced there is no Chinese essay,
+   * so we fall back to the whole prompt (topic + requirements + hints), which
+   * still tells the grader what was asked for.
    */
   const gradingPrompt = useMemo(() => {
     const zh = exercise.chineseEssay?.trim();
@@ -159,14 +157,18 @@ export function Writing({
   }, [exercise.chineseEssay, exercise.sentence]);
 
   /**
-   * Split the rendered prompt into its instruction block and the Chinese
-   * essay, so the two can be styled differently.
+   * The prompt card is rendered in three parts when a Chinese essay is
+   * present:
    *
-   * The prompt is stored as a single string whose segments are separated by
-   * ' || ' in the markdown source; the parser turns those into newlines. The
-   * Chinese essay is the block that follows the 中文 label, so we locate it by
-   * that marker. If the marker is missing (older content, or a level without a
-   * Chinese essay) we simply show the whole prompt as one instruction block.
+   *   1. the instruction block — topic and requirements (always first);
+   *   2. the Chinese essay (中文范文 / 中文结构提示) in its own tinted panel;
+   *   3. the vocabulary hints (B1 / B2 / Advanced only).
+   *
+   * The Chinese essay itself lives in the dedicated `chineseEssay` field —
+   * it is NOT embedded in `sentence` — so it can never be rendered twice.
+   *
+   * Without a Chinese essay (B2 / Advanced) the whole `sentence` is shown as
+   * one instruction block, exactly as before.
    */
   const { chineseEssay, instructionBefore, instructionAfter, chineseLabel } = useMemo(() => {
     const zh = exercise.chineseEssay?.trim();
@@ -179,34 +181,29 @@ export function Writing({
       };
     }
 
-    // The label line is the one immediately before the Chinese essay. The
-    // parser gives us a newline-separated string, so look for the segment
-    // that mentions 中文 and take the essay from `chineseEssay` (authoritative).
-    const lines = exercise.sentence.split("\n");
-    const labelIndex = lines.findIndex((l) => l.includes("中文"));
+    // `sentence` holds "topic || requirements [|| vocabulary hints]".
+    // Everything up to the vocabulary hints is the instruction block; the
+    // hints themselves go below the Chinese essay.
+    const lines = exercise.sentence
+      .split("\n")
+      .map((l) => l.trim())
+      .filter((l) => l !== "");
 
-    if (labelIndex === -1) {
-      return {
-        chineseEssay: null,
-        instructionBefore: [],
-        instructionAfter: [],
-        chineseLabel: "",
-      };
-    }
+    const hintIndex = lines.findIndex((l) => l.startsWith("Key vocabulary"));
 
-    const label = lines[labelIndex].trim();
-    // Everything before the label (topic + requirements) stays above the
-    // essay; everything after it (the vocabulary hints) goes below.
-    const before = lines.slice(0, labelIndex).filter((l) => l.trim() !== "");
-    const after = lines.slice(labelIndex + 1).filter((l) => l.trim() !== "");
+    const before = hintIndex === -1 ? lines : lines.slice(0, hintIndex);
+    const after = hintIndex === -1 ? [] : lines.slice(hintIndex);
 
     return {
       chineseEssay: zh,
       instructionBefore: before,
       instructionAfter: after,
-      chineseLabel: label,
+      chineseLabel:
+        exercise.level === "B1"
+          ? "中文结构提示 (Chinese structure guide):"
+          : "中文范文 (Chinese essay to translate):",
     };
-  }, [exercise.chineseEssay, exercise.sentence]);
+  }, [exercise.chineseEssay, exercise.sentence, exercise.level]);
 
   const handleSubmit = useCallback(async () => {
     const trimmed = essay.trim();
