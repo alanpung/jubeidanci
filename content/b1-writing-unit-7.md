@@ -18,7 +18,7 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我最敬佩的是我的英语老师。她从不批评答错的学生，而是耐心引导我们自己找到答案。她常说，犯错是学习的一部分。在她的课上，每个人都敢开口。她让我明白，好老师不只是教知识，更给学生勇气。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "The teacher I admire most is my English teacher, whose patience and warmth changed the way I see learning itself. || Never once have I seen her criticise a student for giving a wrong answer; instead, she gently guides us to discover the correct one for ourselves by asking the right questions. She often says that making mistakes is a natural and necessary part of learning, and because she truly means it, everybody in her class feels brave enough to speak up without fear of embarrassment. Her lessons are lively and full of encouragement, so even the shyest students gradually find their voice. From her I have learned that a good teacher does far more than pass on knowledge from a book. || A good teacher gives students confidence, shows them respect, and helps them believe that they are capable of more than they imagined."
 core: "I admire my English teacher, who never criticises wrong answers but guides us to find them ourselves. She says mistakes are part of learning, so everyone dares to speak. She taught me that good teachers give knowledge and courage. Her patience and questions still guide my reading today."
@@ -33,7 +33,7 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我最喜欢的科目是历史。它像一扇窗，让我看见过去的人怎样生活、怎样选择。学历史不只是背年份，更是理解今天为什么会这样。每当我读到古人面对困难时的决定，我都会受到启发。它让我更聪明，也更谦逊。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "My favourite subject at school is history, and I find it endlessly fascinating because it opens a window onto how people lived, thought and made decisions long before our time. || Many students see it as nothing more than memorising dates and names, but to me it is so much richer than that. Studying history helps me understand why the world looks the way it does today, because nothing in the present appeared from nowhere. When I read about the choices ordinary people made in difficult moments, or the mistakes that led to great changes, I always come away with something useful for my own life. It teaches me to look beyond the surface of events and to question simple explanations. || In short, history makes me wiser and, at the same time, more humble about my own place in the long story of humanity."
 core: "My favourite subject is history because it shows how people lived and decided in the past. It is more than memorising dates; it explains our world today. The stories inspire me and teach me to think deeply. History makes me wiser and more humble. It has become a real hobby of mine."
@@ -48,7 +48,7 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "很多人讨厌作业，但我认为适量的作业很有价值。它能帮我们巩固白天学的东西，也能让我们学会自己安排时间。当然，作业太多就会变成负担，让人厌学。关键是分量合适。对我来说，认真完成作业，是学会自律的第一步。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "Many students complain about homework, and I understand why, but I believe a reasonable amount of it is genuinely valuable. || The knowledge we meet in class does not settle in our minds overnight; we need to revisit it, practise it and use it again before it truly becomes ours. Homework gives us that chance, and it also teaches us to manage our own time, since no teacher is standing over us when we sit down at home. Of course, there is a clear danger when the amount becomes excessive, because endless tasks turn learning into a burden and can make students resent school altogether. Everything depends on balance. || For my part, finishing my homework carefully and on time has been the first real step toward self-discipline, a skill that will serve me long after I have left the classroom behind."
 core: "Many hate homework, but I think a fair amount is valuable. It helps us review class knowledge and manage our time. Too much becomes a burden, so balance matters. Doing homework carefully taught me self-discipline. Fair amounts help us review our lessons and manage our time well."
@@ -63,7 +63,7 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我以前很怕犯错，考试错了就难过很久。后来老师告诉我，错误其实是最好的老师，它清楚地告诉我们哪里还没学会。我开始把错题整理起来，反复看。慢慢地，我不但成绩提高了，也不再害怕失败。因为我知道，每一次错误都在帮我进步。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "I used to be terribly afraid of making mistakes, and a single wrong answer on a test could spoil my whole afternoon. || Then a teacher told me something I have never forgotten: mistakes are the best teachers we have, because they point straight at the gaps in our understanding. An honest error shows us exactly what we have not yet mastered, which is more useful than a vague feeling that we need to study harder. So I started keeping a notebook of the questions I got wrong and reviewing it again and again until the same problem no longer troubled me. Gradually my results improved, but something else changed too. || I stopped being frightened of failure, because I came to see each mistake as useful information rather than proof of stupidity, and that attitude has helped me grow in ways good grades never could."
 core: "I once feared mistakes deeply. A teacher said errors are the best teachers since they show our weak points. I kept a notebook of wrong answers and reviewed it, so my grades rose and my fear faded. Each mistake now feels like progress. I share it with classmates now."
@@ -78,7 +78,7 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我一直向往出国留学。能在另一种语言和文化里生活，是难得的成长机会。当然，我也会想家，会担心自己照顾不好自己。但我相信，正是这些挑战让人独立。如果将来有机会，我想去看看更大的世界，也重新认识自己。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "I have always been drawn to the idea of studying abroad, because living inside another language and culture seems to me one of the richest chances for personal growth anyone can have. || In a foreign country, even buying a train ticket or asking for directions becomes a small adventure that teaches patience and courage. Naturally I have worries too. I know I would miss my family terribly, and I am not entirely sure I could manage every practical problem on my own at first. Yet I believe it is precisely these challenges that force us to become independent and resourceful. || If the opportunity ever arrives, I would love to see more of the world, to learn how other people live, and in the process to discover things about myself that I could never learn by staying comfortable at home."
 core: "I dream of studying abroad to experience another language and culture. It would bring growth, though I would miss home and face practical challenges. Those challenges build independence. If possible, I want to see the wider world and understand myself better. I will prepare practical skills before I go."
@@ -93,7 +93,7 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我不太喜欢小组作业，因为总有人偷懒，最后全压在几个人身上。但上学期的一次项目改变了我的看法。我们分工明确，定期讨论，最后做得很好。我学会了倾听不同的意见，也明白了合作不是平均做事，而是让每个人发挥所长。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "I was never very fond of group projects, because in my experience one or two people often did very little while the rest of the team carried the weight, and that felt deeply unfair. || Last term, however, a particular project changed my mind completely. Our group agreed on clear roles from the start and held short, regular meetings to check our progress, so nobody could disappear unnoticed and every voice was heard. In the end we produced excellent work that none of us could have managed alone. Through that experience I learned to listen to opinions very different from my own and to disagree respectfully when necessary. || I also discovered that real cooperation does not mean everyone does exactly the same amount; it means each person contributes what they do best, trusting the others to do the same."
 core: "I disliked group projects because some members slacked. But last term our team set clear roles and met regularly, and we succeeded. I learned to listen to different views and that cooperation means using each person's strengths. I learned that quiet teammates often contribute the most to a group."
@@ -108,7 +108,7 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "学校的图书馆是我最喜欢的地方。那里安静，有各种各样的书，还有可以让讨论的小房间。考试前我在那里复习，平时我在那里读课外书。它让我发现了课堂以外的世界。对我来说，图书馆不只是一个房间，而是好奇心的家。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "The school library is without doubt my favourite place on campus, a quiet corner where the noise of the corridor simply disappears. || It holds an impressive range of books, from classic novels to science magazines, and there are even small rooms where we can hold discussions without disturbing other readers. Before examinations I go there to revise, surrounded by rows of silent books that somehow make concentration easier, and in my free time I use it to explore subjects that never appear in our textbooks. It was in the library that I first discovered how much more there is to learn beyond the fixed limits of the school day. To me it is far more than a room full of paper. || It is a home for curiosity, a place where a question can turn into a whole afternoon of wonderful discovery."
 core: "My school library is my favourite place: quiet, full of books, with rooms for discussion. I revise there before exams and read widely in my free time. It opened the world beyond textbooks to me and feels like a home for curiosity. Librarians suggest books I would never find."
@@ -123,7 +123,7 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "面对考试，我以前总是临时抱佛脚，熬一整夜，结果考试时头脑昏沉。现在我提前两周开始，每天复习一点，把知识分成小块。我还会做模拟题，找出薄弱的地方。最重要的是，考试前一晚一定睡好。从容准备，比拼命突击更有效。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "In the past I always crammed for examinations, staying up for an entire night with a book and a cup of coffee, only to sit the next morning with a foggy head and a tired body. || The results were never as good as my effort deserved. These days I start preparing two weeks ahead, reviewing a little every day and breaking the material into small, manageable pieces instead of facing a mountain at the last minute. I also work through practice papers to discover which topics are still weak, so I know exactly where to focus my remaining time. Most importantly of all, I make sure to sleep well the night before, because a rested mind recalls far more than a exhausted one. || Calm, steady preparation has proved far more effective than desperate last-minute effort, and far less stressful too."
 core: "I used to cram all night before exams and felt awful the next day. Now I prepare two weeks early, study in small pieces, do practice papers and sleep well before the test. Steady preparation works far better than rushing at the last moment. Short breaks and good food keep me sharp."
@@ -138,7 +138,7 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我觉得学习不应该在毕业时结束。世界变化太快，今天学的知识几年后可能就过时了。我一直保持读书的习惯，也愿意尝试新东西，比如学做菜、学编程。学习让我觉得生活有趣，也让我不怕变化。我希望到自己很老的时候，仍然是个好奇的学生。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "I firmly believe that learning should not come to an end the moment we leave school or university. || The world changes so quickly that much of what we study today may be outdated within a few short years, and only those who keep learning can stay confident and useful. For my part, I hold on to the habit of reading widely, and I am always willing to try something completely new, whether it is cooking an unfamiliar dish or teaching myself a little programming. Learning keeps life interesting and gives me a reason to wake up curious each morning. || It also makes me far less afraid of change, because I know I can always pick up a new skill when I need one."
 core: "I believe learning should continue after school because the world changes fast. I read often and try new things like cooking and coding. Learning keeps life interesting and helps me face change bravely. I hope to stay a curious student all my life. I recently began learning photography online."
@@ -153,7 +153,7 @@ color: "#9333EA"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我认为每个孩子都应该有受教育的机会，不管家里有钱没钱。教育能改变命运，让贫困家庭的孩子看到出路。当然，光有学校还不够，还要有好老师和足够资源。我支持把资源多分给偏远地区。让所有人站在差不多的起点，才是真正公平的社会。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "I believe every child deserves the chance to go to school and receive a decent education, regardless of whether their family is rich or poor. || Education has a remarkable power to change a person's future, opening doors for children from difficult backgrounds that would otherwise stay firmly closed. Of course, simply building schools is not enough on its own; those schools also need good teachers, books and adequate resources to do their job properly. For this reason I strongly support directing more funding toward remote and disadvantaged areas, where the gap is widest. A truly fair society is not one where everyone ends up identical, but one where everybody starts from a roughly equal line, with a real opportunity to develop their talents. || Giving every child that start seems to me one of the most worthwhile goals any country could pursue."
 core: "Every child deserves education regardless of wealth. It can transform a poor child's life, but schools also need good teachers and resources. I support giving more help to remote areas. Fairness means giving everyone a similar starting point. Every girl and boy deserves an equal chance to learn."

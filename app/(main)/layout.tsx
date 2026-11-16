@@ -18,8 +18,15 @@ export default async function ServerMainLayout({
   const session = await getSession();
   if (!session) {
     const headersList = await headers();
-    const pathname = headersList.get("x-pathname") || "";
-    const redirectParam = pathname ? `?redirect=${encodeURIComponent(pathname)}` : "";
+    const pathname =
+      headersList.get("x-invoke-path") ||
+      headersList.get("next-url") ||
+      headersList.get("x-pathname") ||
+      "";
+    const redirectParam =
+      pathname && pathname.startsWith("/") && !pathname.startsWith("//")
+        ? `?redirect=${encodeURIComponent(pathname)}`
+        : "";
     redirect(`/sign-in${redirectParam}`);
   }
 

@@ -18,7 +18,7 @@ color: "#0891B2"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "去年春天，我和朋友搭了一趟慢火车去邻省。车窗外的梯田和油菜花一片金黄。我们在一个小站下车，误打误撞走进了个赶集的村子。那里的老人请我们喝了自家酿的茶。这次没有计划的旅行，反而成了我最难忘的回忆。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "Last spring my friend and I took a slow train to a neighbouring province, and the journey itself became the best part of the trip. || Through the window we watched terraced fields and golden rapeseed flowers stretch all the way to the horizon. At a tiny station we got off by chance and wandered into a village holding its weekly market. An old man there invited us to drink tea brewed by his own family. This unplanned journey, with no fixed schedule at all, turned out to be one of the most unforgettable memories I have ever made. || We ended up chatting with the villagers for nearly an hour before the next train came, and I realised the best parts of any trip are rarely the famous sights."
 core: "Last spring my friend and I took a slow train to a neighbouring province. We saw terraced fields and golden flowers from the window. At a small station we got off and found a village market. An old man invited us to drink his homemade tea. This unplanned trip became my most unforgettable memory."
@@ -33,7 +33,7 @@ color: "#0891B2"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我最想去的国家是新西兰。那里有壮丽的雪山、清澈的湖泊和广阔的草原。我梦想自驾环岛，在星空下露营，还能近距离看企鹅。除了风景，我也想了解当地毛利人的文化。如果将来有机会，我希望能住上至少一个月，真正体验那里的慢生活。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "The foreign country I most want to visit is New Zealand, because it offers nature in its purest form and a pace of life I crave. || There I imagine towering snow mountains, crystal-clear lakes and endless green grasslands stretching to the sea. I dream of driving around the island, camping under a sky full of stars, and watching penguins up close on a quiet beach. Beyond the scenery, I am curious about Maori culture and how local people live in harmony with the land. || If I ever get the chance, I hope to stay for at least a month and truly experience their slow, peaceful way of life, away from noise."
 core: "The country I most want to visit is New Zealand. It has snow mountains, clear lakes and wide grasslands. I dream of driving around the island and camping under the stars, and seeing penguins. I also want to learn about Maori culture. If possible, I hope to stay a month and experience the slow life there."
@@ -48,7 +48,7 @@ color: "#0891B2"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "在泰国旅行时，我鼓起勇气试了街边的冬阴功汤。第一口酸辣得我直皱眉，但越喝越上瘾。老板娘看我汗流满面，笑着递来一杯冰水。那碗汤让我明白，美食本身就是一种文化交流，舌头先旅行，心才跟上。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "While travelling in Thailand, I gathered my courage and tried tom yum soup from a street stall for the first time. || The first spoonful was so sour and spicy that I scrunched up my face, yet the more I drank the more I wanted it. The owner, a smiling woman, noticed my sweating forehead and handed me a glass of ice water without a word. That bowl taught me that food itself is a form of cultural exchange: the tongue travels first, and the heart follows only afterwards. || Years later I can still taste that broth and the warmth of her small kindness."
 core: "In Thailand I tried tom yum soup from a street stall. The first bite was very sour and spicy, but I grew to like it. The owner smiled and gave me ice water when she saw me sweating. That soup showed me food is a kind of cultural exchange; the tongue travels first and the heart follows."
@@ -63,7 +63,7 @@ color: "#0891B2"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "在日本朋友家做客时，我发现他们进屋必须脱鞋，而且吃饭前会说一句感谢的话。最让我意外的是，陌生人之间也格外礼貌，排队时安静有序。这些细节让我意识到，尊重有时候就藏在最平常的习惯里。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "When I visited a friend's home in Japan, I noticed that everyone removes their shoes at the door, and before eating they say a quiet word of thanks for the meal. || What surprised me most was how polite even strangers are, waiting in calm, orderly lines without pushing or complaining. These small details made me realise that respect is often hidden inside the most ordinary daily habits we barely notice. || To me, such quiet courtesy said more about the culture than any grand gesture ever could, and I left with a softer, more thoughtful view of what politeness really means in daily life."
 core: "At a friend's home in Japan, I saw people take off shoes at the door and say thanks before eating. I was most surprised by how polite strangers are, queuing calmly. These small details showed me respect is often in ordinary habits. Quiet courtesy says a lot about a culture."
@@ -78,7 +78,7 @@ color: "#0891B2"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "上次去北京，我坐错了反向的地铁，结果越走越远。手机又刚好没电，我急得满头大汗。最后是请一位阿姨帮忙看了纸地图，才绕回了酒店。虽然狼狈，但那次迷路让我学会了提前查路线，也遇到了热心的陌生人。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "On my last trip to Beijing I boarded a subway train going the wrong way and only realised it when I was already far from my hotel. || Worse still, my phone had just died, so I could not check the map and began to sweat with worry about the darkening sky. In the end an older woman kindly studied a paper map with me and helped me find the way back. || Though it was embarrassing at the time, that wrong turn taught me to plan routes in advance and reminded me that helpful strangers are everywhere, even in a huge, rushing city."
 core: "On a trip to Beijing I took the subway the wrong way and got far from my hotel. My phone was dead so I could not check the map and felt worried. An older woman helped me read a paper map and get back. Though embarrassing, that wrong turn taught me to plan routes and showed me strangers can be kind."
@@ -93,7 +93,7 @@ color: "#0891B2"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我出差多了，渐渐学会轻装出行。第一，只带能搭配的衣物，颜色尽量统一。第二，把重的东西穿在身上，减轻行李。第三，洗漱用品买旅行装，到了再补。轻装不仅省力，也让我在路上更自由、更安心。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "After many business trips I have slowly learned the art of packing light, and now I travel with half the case I once carried. || First, I take only clothes that mix and match, keeping the colours simple and uniform so everything works together without thought. Second, I wear my heaviest items on the plane instead of stuffing them into the bag and cursing the weight. Third, I buy travel-sized toiletries and refill them at the destination. || Travelling light does more than save my back; it also leaves me feeling freer and calmer on the road, ready for anything that comes."
 core: "After many trips I learned to pack light. First, I take only clothes that match, in simple colours. Second, I wear heavy things instead of packing them. Third, I use small toiletries and refill them later. Light packing saves effort and makes me feel freer and calmer on the trip."
@@ -108,7 +108,7 @@ color: "#0891B2"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我觉得旅行也可以很环保。我尽量坐火车而不是飞机，住民宿支持本地家庭，拒绝一次性塑料。在景区我随身带水杯和布袋。虽然麻烦一点，但想到绿水青山能留给后代，就觉得值得。负责任地看世界，才看得长久。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "I believe travel can be kind to the planet if we make small, conscious choices before we leave home. || I try to take the train instead of flying whenever the distance allows, and I prefer local guesthouses that support families rather than big chains. I refuse single-use plastic and always carry a reusable bottle and cloth bag in scenic areas, even when it draws odd looks. It takes a little extra effort, certainly, but when I think of the green hills and clear water we owe to the next generation, it feels worthwhile. || Seeing the world responsibly is the only way to keep seeing it at all."
 core: "I think travel can be environmentally friendly. I take trains instead of planes when possible, and stay in local guesthouses that help families. I avoid single-use plastic and carry a bottle and cloth bag. It is a bit more effort, but worth it for the environment and future generations. Responsible travel lasts."
@@ -123,7 +123,7 @@ color: "#0891B2"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "去年我终于去了京都。走在祇园的小巷里，仿佛穿越回了几百年前。古老的寺庙、安静的庭院和穿和服的姑娘，构成一幅安静的画。最难忘的是清晨的清水寺，没有人群，只有钟声和薄雾。京都让我懂了什么是宁静的美。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "Last year I finally made it to Kyoto, a city that had been on my list for ages and exceeded every picture I had seen. || Wandering the narrow lanes of Gion, I felt as if I had slipped back several hundred years into the past. Old temples, quiet courtyards and young women in traditional kimono formed a calm, living picture around me. The moment I will never forget is Kiyomizu Temple at dawn, with no crowds, only the sound of a bell and a thin morning mist. || Kyoto taught me what serene beauty truly means, and I left the city unwillingly when the time finally came."
 core: "Last year I visited Kyoto. Walking the small lanes of Gion felt like going back centuries. Old temples, quiet gardens and women in kimono made a peaceful scene. Most unforgettable was Kiyomizu Temple at dawn, with no crowd, only a bell and mist. Kyoto showed me the meaning of quiet beauty."
@@ -138,7 +138,7 @@ color: "#0891B2"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "在越南的一家小咖啡馆，老板娘不会说英语，却用手势和笑容教我冲当地咖啡。我们虽然语言不通，却聊得很开心。临走时她还塞给我一袋咖啡豆。那次相遇让我明白，真诚比语法更重要，陌生也能变成温暖。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "In a small cafe in Vietnam, the owner spoke no English, yet with hand gestures and a warm smile she taught me to brew the local coffee step by patient step. || Although we shared no common language, we chatted happily and laughed a lot together over the hiss of the kettle. When I left, she pressed a little bag of coffee beans into my hands as a gift I still keep. || That meeting showed me that sincerity matters far more than grammar ever does, and that a stranger can quickly become a source of unexpected warmth in a foreign place I had never visited before that happy afternoon."
 core: "In a small Vietnamese cafe, the owner spoke no English but taught me local coffee with gestures and a smile. We laughed though we shared no language. She gave me a bag of beans when I left. That meeting showed me sincerity matters more than grammar, and strangers can be warm."
@@ -153,7 +153,7 @@ color: "#0891B2"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "下一步我打算走一趟丝绸之路。从西安出发，经敦煌，一直到新疆。我想看莫高窟的壁画，也想去沙漠里看星星。这次我打算半自助，提前订好火车票，但留几天随性逛逛。旅行于我，不只是看风景，更是找回自己。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "For my next trip I plan to follow the ancient Silk Road, starting in Xi'an, passing through Dunhuang and reaching as far as Xinjiang in the far west. || I want to see the painted caves of Mogao and, if I am lucky, watch the stars from the heart of the desert where the silence is total. This time I will travel semi-independently: I will book the train tickets in advance but leave a few days completely open for wandering off the plan. || For me, travel is never only about scenery; it is also a way of finding myself again away from routine."
 core: "My next trip is the Silk Road, from Xi'an through Dunhuang to Xinjiang. I want to see the Mogao caves and the desert stars. I will book trains ahead but keep some days free to wander. Travel is not just scenery for me; it helps me find myself."

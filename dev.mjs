@@ -57,9 +57,17 @@ if (!hasHost) {
 
 const nextBin = path.resolve("./node_modules/next/dist/bin/next");
 
+const baseNodeOptions = process.env.NODE_OPTIONS ?? "";
+const boundedNodeOptions = baseNodeOptions.includes("--max-old-space-size=")
+  ? baseNodeOptions.replace(/--max-old-space-size=\d+/, "--max-old-space-size=1280")
+  : `${baseNodeOptions} --max-old-space-size=1280`.trim();
+
 const child = spawn(process.execPath, [nextBin, "dev", ...args], {
   stdio: "inherit",
-  env: process.env,
+  env: {
+    ...process.env,
+    NODE_OPTIONS: boundedNodeOptions,
+  },
 });
 
 child.on("exit", (code) => {

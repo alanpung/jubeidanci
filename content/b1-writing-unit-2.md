@@ -18,7 +18,7 @@ color: "#7C3AED"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "有人喜欢城市的方便，有人向往乡村的安静。我觉得各有利弊。城市机会多、交通快，但太拥挤、压力大。乡村空气好、人心安静，却缺少工作和娱乐。如果让我选，我希望平时住在城市工作，周末去乡村放松。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "Some people enjoy the convenience of city life, while others long for the peace of the countryside, and I believe both have clear advantages and disadvantages. || Cities offer more job opportunities and faster transport, but they are often crowded, noisy and stressful to live in. The countryside has cleaner air and a calmer atmosphere, yet it lacks the work and entertainment that many of us need. If I had to choose, I would prefer to live in the city for work during the week and escape to the village at weekends to relax and breathe. || Neither place is perfect, but a balance between them suits me best."
 core: "Some like the convenience of the city, others prefer the peace of the countryside, and both have pros and cons. Cities have more opportunities and faster transport but are crowded and stressful. The countryside has clean air and calm, but fewer jobs and entertainment. If I chose, I would live in the city for work and go to the village at weekends to relax."
@@ -33,7 +33,7 @@ color: "#7C3AED"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我认为网购利弊共存。好处是省时、选择多、价格透明，半夜也能下单。坏处是看不到实物，容易买到不合适的东西，退货也麻烦。我建议重要或贵重的物品还是去实体店，日常小东西可以网购。理性消费才不会后悔。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "In my opinion online shopping brings both benefits and drawbacks that we should weigh carefully. || Its advantages are clear: it saves time, offers a huge choice of products, and lets you order at any hour with transparent prices shown upfront. The downside is that you cannot see the real product, so it is easy to buy something unsuitable, and returning unwanted items can be troublesome and slow. My advice is to visit a physical shop for important or expensive goods, while using the internet for everyday small items. || Only by spending wisely and not chasing every discount can we avoid regret later."
 core: "In my opinion online shopping has both good and bad sides. It saves time, gives more choice, and lets you order anytime with clear prices. But you cannot see the real product, so it is easy to buy the wrong thing, and returns are troublesome. I suggest buying important or expensive items in shops, and small daily things online. Spend wisely to avoid regret."
@@ -48,7 +48,7 @@ color: "#7C3AED"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我最喜欢的书是《小王子》。它表面上写给孩子，其实讲透了成人世界的问题。我最难忘的是那句：真正重要的东西，用眼睛是看不见的。每次重读，我都会有新的感悟。这本书让我学会用心去看待人与人之间的关系。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "My favourite book is The Little Prince, written by Antoine de Saint-Exupery many decades ago. || Although it appears to be written for children, it actually reveals the problems and emptiness of the adult world with great clarity and gentleness. The line I remember most is that the essential things are invisible to the eye and can only be felt by the heart. Every time I reread it, I gain a fresh understanding of life and of myself. || This book has taught me to look at human relationships with my heart rather than with my eyes alone, and its quiet wisdom stays with me always."
 core: "My favourite book is The Little Prince. Though written for children, it reveals the problems of the adult world. The line I remember most is that the essential things are invisible to the eye. Each time I reread it I understand something new. The book taught me to see human relationships with my heart."
@@ -63,7 +63,7 @@ color: "#7C3AED"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我支持学生学一门乐器。音乐能培养耐心和专注力，还能缓解学习压力。当然，不能占用太多时间，否则会影响功课。我认为每周两三次、每次半小时就足够了。重要的是享受过程，而不是非要成为专家。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "I support the idea that students should learn a musical instrument, because the benefits reach far beyond music itself. || Playing an instrument develops patience and concentration, and it can also relieve the pressure of studying after a long day at school. Of course, it should not take up too much time, or it will harm their academic work and cause stress instead of reducing it. I believe two or three short sessions of about half an hour each week are enough to build the habit. || What matters most is enjoying the process rather than trying to become an expert overnight, which is unrealistic for most children."
 core: "I support students learning an instrument. Music builds patience and focus and relieves study pressure. But it should not take too much time, or it will hurt schoolwork. I think two or three half-hour sessions a week are enough. The key is to enjoy the process, not to become an expert."
@@ -78,7 +78,7 @@ color: "#7C3AED"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "社交媒体是一把双刃剑。它让我们随时联系远方的朋友，也能快速获取信息。但过度使用会让人焦虑，还容易浪费时间。我的做法是限定每天的使用时长，只关注真正有价值的内容。这样它才是工具，而不是主人。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "Social media is truly a double-edged sword that we must handle with care. || On one hand, it allows us to stay in touch with friends far away at any moment and to obtain information quickly when news breaks. On the other hand, overuse can cause anxiety and easily wastes our precious time on meaningless scrolling. My approach is to limit my daily screen time and to follow only content that is genuinely valuable or uplifting. || In this way the platform remains a useful tool in my hands rather than becoming my master, controlling how I think and feel each day."
 core: "Social media is a double-edged sword. It lets us contact distant friends anytime and get information fast. But overuse causes anxiety and wastes precious time. I limit my daily use and follow only valuable content that helps me grow. That way it stays a tool, not my master."
@@ -93,7 +93,7 @@ color: "#7C3AED"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "理想的假期对我来说是平衡与放松。我不喜欢把行程排得太满，那样比上班还累。我更喜欢慢旅行：在一个小镇住几天，逛逛当地市场，和居民聊聊天。再留半天什么都不做，只是看书、发呆。这样的假期才真正让我充好电。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "For me an ideal holiday means balance and real relaxation, not a race from one sight to the next. || I dislike packing the schedule too tightly, because that can be even more tiring than going to work every day. I prefer slow travel: staying a few days in a small town, wandering through local markets, and chatting with the residents about their ordinary lives. I also leave half a day with nothing planned, just to read a book and let my mind wander freely. || Only this kind of holiday truly recharges my energy and sends me home feeling refreshed rather than exhausted."
 core: "An ideal holiday means balance and relaxation for me. I hate a too-tight schedule, since that is more tiring than work. I prefer slow travel: staying some days in a small town, visiting local markets, talking with residents. I also keep half a day free just to read and do nothing. Only such a holiday really recharges me."
@@ -108,7 +108,7 @@ color: "#7C3AED"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我觉得作业有必要，但不该太多。适当的作业能帮我们巩固课堂知识，培养自律。可如果作业堆成山，学生只会敷衍，甚至讨厌学习。我的建议是老师精选少量高质量的题目，让作业真正起到复习的作用。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "I think homework is necessary, but it should never be excessive or thoughtless. || A suitable amount helps us review and strengthen what we learn in class, and it builds self-discipline that serves us later in life. However, when assignments pile up like a mountain, students only do them carelessly to finish, and may even grow to hate studying altogether. My suggestion is that teachers select a small number of high-quality tasks that truly matter, so that homework fulfils its real purpose of revision instead of becoming a meaningless burden. || Quality, not quantity, should guide every assignment we give, so that students stay curious and willing to learn."
 core: "I think homework is necessary but should not be too much. Proper homework helps us review class knowledge and build self-discipline. But if there is a mountain of it, students only do it carelessly and may hate learning. I suggest teachers pick a few high-quality tasks so homework truly helps revision."
@@ -123,7 +123,7 @@ color: "#7C3AED"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我理想的工作是做一名双语导游。我喜欢旅行，也热爱不同文化之间的交流。这份工作能让我一边看世界，一边帮助他人理解彼此。当然，它需要扎实的语言能力和耐心。我正在努力提升英语，希望将来能实现这个梦想。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "My dream job is to work as a bilingual tour guide who bridges two languages and two worlds. || I love travelling and I am passionate about the exchange between different cultures, which always teaches me something new. This career would let me see the world while helping people from different backgrounds understand one another a little better. Of course, it demands solid language skills and a great deal of patience when plans go wrong. || I am working hard to improve my English right now, and I hope to turn this dream into reality in the future by gaining experience and saving enough to start."
 core: "My dream job is to be a bilingual tour guide. I love travelling and cultural exchange. This job lets me see the world while helping people understand each other. Of course it needs good language skills and patience. I am improving my English now and hope to realise this dream."
@@ -138,7 +138,7 @@ color: "#7C3AED"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我更倾向自己做饭。在家烹饪干净、健康，还能按口味调整。虽然洗碗有点麻烦，但全家人一起准备晚饭的过程很温馨。偶尔外出就餐当作奖励也不错。关键是掌握分寸，别让做饭变成负担。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "I prefer to cook at home whenever I can, for several good reasons. || Preparing meals myself is cleaner and healthier, and I can adjust the flavours exactly to my taste and to what my body needs. Although washing the dishes afterwards is a bit of a chore, the process of the whole family preparing dinner together feels warm and happy. Eating out occasionally as a treat is fine too, and I enjoy it now and then. The key is to keep a balance so that cooking never turns into a daily burden that steals our time and energy. || For me, the kitchen is where the family reconnects and talks about the day after a long, busy routine."
 core: "I prefer cooking at home. It is cleaner and healthier, and I can adjust the taste. Washing dishes is a little troublesome, but the family preparing dinner together is warm. Eating out sometimes as a reward is also nice. The key is balance, so cooking does not become a burden."
@@ -153,7 +153,7 @@ color: "#7C3AED"
 ---
 
 [writing]
-text: "Write this passage in English in three short paragraphs: an opening, a middle and an ending"
+text: "Write this passage in English"
 sentence: "我觉得好朋友不在乎数量，而在乎质量。真正的好朋友会在你失落时陪伴，也会真诚地指出你的问题。信任和真诚是基石，再加上一点幽默感就更好了。我庆幸自己有几个这样的朋友，他们让我的生活更踏实、更有色彩。（请写成三段：开头点题、中间展开、结尾收束。字数100-150）"
 answer: "I believe good friends are measured by quality, not by quantity, and a few true ones matter more than a thousand acquaintances. || A real friend stays with you when you feel low and is honest enough to point out your faults, even when it is uncomfortable. Trust and sincerity form the foundation, and a little sense of humour on top makes the bond even better. || I feel lucky to have a few friends like this, because they make my life both steadier and more colourful than it would be alone, and they remind me who I am when I forget."
 core: "I think good friends are about quality, not number. A real friend stays with you when you are down and honestly points out your problems. Trust and sincerity are the base, and a little humour helps. I am lucky to have a few such friends; they make my life steadier and more colourful."

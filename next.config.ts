@@ -6,6 +6,9 @@ const nextConfig: NextConfig = {
     "/*": ["./content/**/*", "./words/**/*", "./drizzle/**/*"],
   },
   experimental: {
+    cpus: 1,
+    memoryBasedWorkersCount: true,
+    webpackMemoryOptimizations: true,
     staleTimes: {
       dynamic: 0,
       static: 180,
