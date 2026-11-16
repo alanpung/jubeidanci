@@ -261,11 +261,16 @@ function parseWriting(lines: string[]): WritingExercise {
   const coreLine = lines.find((l) => l.startsWith("core:"));
   const core = coreLine ? (coreLine.match(/"([^"]+)"/)?.[1] ?? "") : "";
 
+  // The Chinese model essay (中文范文) for A1/A2/B1. It is also inlined into
+  // `sentence` so it renders inside the prompt card; keeping the raw value
+  // here lets the grader and any future UI use it directly.
+  const chineseEssay = getOptionalField(lines, "chineseEssay");
+
   const levelLine = lines.find((l) => l.startsWith("level:"));
   const level = levelLine ? (levelLine.split(":", 2)[1]?.trim() || undefined) : undefined;
 
   const srsWords = parseSrsWords(lines) ?? "";
-  return { type: "writing", text: rawText.text, sentence, answer, acceptAlso, core, srsWords, ...(level && { level }), ...(noAudio.length && { noAudio }) };
+  return { type: "writing", text: rawText.text, sentence, answer, acceptAlso, core, srsWords, ...(chineseEssay && { chineseEssay }), ...(level && { level }), ...(noAudio.length && { noAudio }) };
 }
 
 function generateChineseTranslation(sentence: string, blank: string): string | undefined {

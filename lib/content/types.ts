@@ -128,6 +128,16 @@ export interface WritingExercise {
    * for content coverage — see `writingSchema.core`.
    */
   core?: string;
+  /**
+   * The Chinese model essay (中文范文) the learner translates into English.
+   * Present on A1/A2/B1 writing exercises only — B2 and Advanced deliberately
+   * ship without Chinese scaffolding so the learner writes unaided.
+   *
+   * The essay is ALSO inlined into `sentence` (the rendered prompt card) so it
+   * is visible above the textarea. This field keeps the raw text available
+   * for grading and for any future UI that wants it separately.
+   */
+  chineseEssay?: string;
   noAudio?: string[];
   srsWords: string | string[];
   /**

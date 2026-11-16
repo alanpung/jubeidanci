@@ -141,6 +141,73 @@ export function Writing({
     [essay],
   );
 
+  /**
+   * The Chinese prompt sent to the grader.
+   *
+   * `exercise.sentence` is the full on-screen prompt card: the instruction, the
+   * requirements, the Chinese essay (中文范文) and the vocabulary hints. For
+   * grading we want just the Chinese source text, so we slice out the
+   * Chinese-only portion when a Chinese essay is available — it makes the
+   * grader's "meaning coverage" check far more precise. When there is no
+   * Chinese essay (B2 / Advanced) we fall back to the whole prompt, which
+   * still carries the topic and the hints.
+   */
+  const gradingPrompt = useMemo(() => {
+    const zh = exercise.chineseEssay?.trim();
+    if (zh) return zh;
+    return exercise.sentence;
+  }, [exercise.chineseEssay, exercise.sentence]);
+
+  /**
+   * Split the rendered prompt into its instruction block and the Chinese
+   * essay, so the two can be styled differently.
+   *
+   * The prompt is stored as a single string whose segments are separated by
+   * ' || ' in the markdown source; the parser turns those into newlines. The
+   * Chinese essay is the block that follows the 中文 label, so we locate it by
+   * that marker. If the marker is missing (older content, or a level without a
+   * Chinese essay) we simply show the whole prompt as one instruction block.
+   */
+  const { chineseEssay, instructionBefore, instructionAfter, chineseLabel } = useMemo(() => {
+    const zh = exercise.chineseEssay?.trim();
+    if (!zh) {
+      return {
+        chineseEssay: null,
+        instructionBefore: [],
+        instructionAfter: [],
+        chineseLabel: "",
+      };
+    }
+
+    // The label line is the one immediately before the Chinese essay. The
+    // parser gives us a newline-separated string, so look for the segment
+    // that mentions 中文 and take the essay from `chineseEssay` (authoritative).
+    const lines = exercise.sentence.split("\n");
+    const labelIndex = lines.findIndex((l) => l.includes("中文"));
+
+    if (labelIndex === -1) {
+      return {
+        chineseEssay: null,
+        instructionBefore: [],
+        instructionAfter: [],
+        chineseLabel: "",
+      };
+    }
+
+    const label = lines[labelIndex].trim();
+    // Everything before the label (topic + requirements) stays above the
+    // essay; everything after it (the vocabulary hints) goes below.
+    const before = lines.slice(0, labelIndex).filter((l) => l.trim() !== "");
+    const after = lines.slice(labelIndex + 1).filter((l) => l.trim() !== "");
+
+    return {
+      chineseEssay: zh,
+      instructionBefore: before,
+      instructionAfter: after,
+      chineseLabel: label,
+    };
+  }, [exercise.chineseEssay, exercise.sentence]);
+
   const handleSubmit = useCallback(async () => {
     const trimmed = essay.trim();
     if (!trimmed || phase === "grading") return;
@@ -154,7 +221,7 @@ export function Writing({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           essay: trimmed,
-          promptZh: exercise.sentence,
+          promptZh: gradingPrompt,
           modelAnswer: exercise.answer,
           acceptAlso: exercise.acceptAlso ?? [],
           core: exercise.core ?? "",
@@ -182,7 +249,7 @@ export function Writing({
       // Back to writing so the learner's text is still there to retry.
       setPhase("writing");
     }
-  }, [essay, phase, exercise.sentence, exercise.answer, exercise.acceptAlso, exercise.noAudio, onResult, play]);
+  }, [essay, phase, gradingPrompt, exercise.answer, exercise.acceptAlso, exercise.noAudio, onResult, play]);
 
   const goNext = useCallback(() => {
     if (phase === "writing") {
@@ -311,7 +378,49 @@ export function Writing({
               : "bg-lingo-gray/20 text-base leading-relaxed text-lingo-text sm:text-lg"
           }`}
         >
-          <p className="whitespace-pre-wrap text-lingo-text">{exercise.sentence}</p>
+          {/*
+            The prompt card is rendered in two parts when a Chinese essay is
+            present:
+
+              1. the instruction block — topic, requirements and vocabulary
+                 hints (always English, always shown);
+              2. the Chinese essay (中文范文 / 中文结构提示) — the source text
+                 the learner translates.
+
+            Splitting them lets us style the Chinese essay distinctly (own
+            tinted panel) so the learner immediately sees "this is the text I
+            must render in English" without having to hunt for it.
+
+            Without a Chinese essay (B2 / Advanced) the whole `sentence` is
+            rendered as one instruction block, exactly as before.
+          */}
+          {chineseEssay ? (
+            <div className="space-y-2.5">
+              {/* Topic + requirements */}
+              <p className="whitespace-pre-wrap text-lingo-text">
+                {instructionBefore.join("\n")}
+              </p>
+
+              {/* The Chinese essay the learner translates */}
+              <div className="rounded-xl border border-lingo-border/70 bg-white/70 px-3 py-2.5">
+                <span className="mb-1 block text-[11px] font-bold uppercase tracking-wider text-lingo-text-light">
+                  {chineseLabel}
+                </span>
+                <p className="whitespace-pre-wrap text-lingo-text">
+                  {chineseEssay}
+                </p>
+              </div>
+
+              {/* Vocabulary hints */}
+              {instructionAfter.length > 0 && (
+                <p className="whitespace-pre-wrap text-lingo-text">
+                  {instructionAfter.join("\n")}
+                </p>
+              )}
+            </div>
+          ) : (
+            <p className="whitespace-pre-wrap text-lingo-text">{exercise.sentence}</p>
+          )}
         </div>
 
         {/* English textarea — always its own block below the prompt, never

@@ -50,6 +50,10 @@ export const writingSchema = z.object({
   // Chinese prompt and adds their own words should never lose points for not
   // echoing the model essay's extra detail.
   core: z.string().optional(),
+  // The Chinese model essay (中文范文) for A1/A2/B1. B2 and Advanced
+  // deliberately omit it so the learner writes without Chinese scaffolding.
+  // It is also inlined into `sentence` so it renders inside the prompt card.
+  chineseEssay: z.string().optional(),
   noAudio,
   srsWords,
 });
