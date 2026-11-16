@@ -311,7 +311,7 @@ export function Writing({
               : "bg-lingo-gray/20 text-base leading-relaxed text-lingo-text sm:text-lg"
           }`}
         >
-          <p className="text-lingo-text">{exercise.sentence}</p>
+          <p className="whitespace-pre-wrap text-lingo-text">{exercise.sentence}</p>
         </div>
 
         {/* English textarea — always its own block below the prompt, never

@@ -249,6 +249,7 @@ function parseWriting(lines: string[]): WritingExercise {
   if (rawText.flagged) noAudio.push("text");
   const rawSentence = stripNoAudio(getField(lines, "sentence"));
   if (rawSentence.flagged) noAudio.push("sentence");
+  const sentence = expandParagraphs(rawSentence.text);
 
   const answer = expandParagraphs(getField(lines, "answer"));
   const acceptAlsoLine = lines.find((l) => l.startsWith("acceptAlso:"));
@@ -264,7 +265,7 @@ function parseWriting(lines: string[]): WritingExercise {
   const level = levelLine ? (levelLine.split(":", 2)[1]?.trim() || undefined) : undefined;
 
   const srsWords = parseSrsWords(lines) ?? "";
-  return { type: "writing", text: rawText.text, sentence: rawSentence.text, answer, acceptAlso, core, srsWords, ...(level && { level }), ...(noAudio.length && { noAudio }) };
+  return { type: "writing", text: rawText.text, sentence, answer, acceptAlso, core, srsWords, ...(level && { level }), ...(noAudio.length && { noAudio }) };
 }
 
 function generateChineseTranslation(sentence: string, blank: string): string | undefined {

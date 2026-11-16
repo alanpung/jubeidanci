@@ -342,13 +342,13 @@ function paragraphGuidance(level: string): string {
   const upper = level.toUpperCase();
   const expect =
     upper === "B2"
-      ? "four short paragraphs (an opening, two body paragraphs and an ending)"
+      ? "four or five short paragraphs (an opening, two or three body paragraphs and an ending)"
       : upper === "B1"
         ? "three short paragraphs (an opening, a middle, an ending)"
         : "one short, straightforward piece (longer pieces may use a few paragraphs)";
   const suggestion =
     upper === "B2"
-      ? "Try writing four short parts: an opening, two body paragraphs and an ending."
+      ? "Try writing four or five short parts: an opening, two or three body paragraphs and an ending."
       : upper === "B1"
         ? "Try writing three short parts: an opening, a middle and an ending."
         : "If your piece is long, try splitting it into two or three short parts.";
