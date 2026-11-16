@@ -312,7 +312,6 @@ function ExerciseRenderer({
           exerciseIndex={exerciseIndex ?? 0}
           totalExercises={totalExercises ?? 1}
           direction={direction ?? null}
-          language={language}
         />
       );
     case "fill-in-the-blank":

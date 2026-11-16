@@ -6,7 +6,6 @@ import type { WritingExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
 import { useMobileKeyboardOpen } from "@/hooks/use-mobile-keyboard-open";
-import { detectTextLanguage } from "@/lib/language-detector";
 import { splitBySpans, type WritingErrorSpan } from "@/lib/writing-errors";
 import { ExerciseShell } from "./exercise-shell";
 import { Button } from "@/components/ui/button";
@@ -72,7 +71,6 @@ interface Props {
   exerciseIndex: number;
   totalExercises: number;
   direction: "forward" | "backward" | null;
-  language: string;
 }
 
 type Phase = "writing" | "grading" | "result";
@@ -105,7 +103,6 @@ export function Writing({
   exerciseIndex,
   totalExercises,
   direction,
-  language,
 }: Props) {
   const [phase, setPhase] = useState<Phase>("writing");
   const [essay, setEssay] = useState("");
@@ -117,11 +114,6 @@ export function Writing({
   const { status } = useExercise();
   const { play, stop, prefetch } = useAudio();
 
-  const promptLang = useMemo(
-    () => detectTextLanguage(exercise.sentence, { targetLanguage: language }),
-    [exercise.sentence, language],
-  );
-
   // Reset whenever a different exercise is shown.
   useEffect(() => {
     setPhase("writing");
@@ -130,11 +122,15 @@ export function Writing({
     setError(null);
   }, [exercise.sentence, exercise.answer]);
 
-  // Warm the TTS audio for the Chinese prompt so the button responds instantly.
+  // Warm the TTS audio for the Chinese essay so the 中文 button responds
+  // instantly. B2 / Advanced have no Chinese source text, so there is nothing
+  // to prefetch for them.
   useEffect(() => {
     if (exercise.noAudio?.includes("sentence")) return;
-    prefetch([exercise.sentence], promptLang);
-  }, [exercise.sentence, promptLang, prefetch, exercise.noAudio]);
+    const zh = exercise.chineseEssay?.trim();
+    if (!zh) return;
+    prefetch([zh], "zh");
+  }, [exercise.chineseEssay, prefetch, exercise.noAudio]);
 
   const wordCount = useMemo(
     () => essay.trim().split(/\s+/).filter(Boolean).length,
@@ -198,10 +194,7 @@ export function Writing({
       chineseEssay: zh,
       instructionBefore: before,
       instructionAfter: after,
-      chineseLabel:
-        exercise.level === "B1"
-          ? "中文结构提示 (Chinese structure guide):"
-          : "中文范文 (Chinese essay to translate):",
+      chineseLabel: exercise.level === "B1" ? "中文结构提示" : "中文范文",
     };
   }, [exercise.chineseEssay, exercise.sentence, exercise.level]);
 
@@ -448,25 +441,33 @@ export function Writing({
           </div>
         )}
 
-        {/* Audio: the Chinese prompt is safe to play. The English model passage
-            stays locked until the learner has submitted their own. Hidden while
-            the keyboard is open to maximise the writing area. */}
+        {/* Audio:
+              - 中文 button — reads the Chinese essay (A1/A2/B1 only). For B2
+                and Advanced there is no Chinese source text, so the button is
+                hidden entirely rather than showing a disabled control.
+              - English button — reads the English model answer. It stays locked
+                until the learner has submitted their own writing.
+
+            Both are hidden while the keyboard is open to maximise the writing
+            area. */}
         <div className={`mt-4 mb-4 flex items-center justify-center gap-2.5 ${
           isKeyboardOpen ? "hidden" : ""
         }`}>
-          <button
-            type="button"
-            onClick={(e) => {
-              e.stopPropagation();
-              play(exercise.sentence, promptLang);
-            }}
-            className="inline-flex h-10 items-center gap-1.5 rounded-full bg-lingo-blue px-3.5 text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold shadow-sm"
-            aria-label="播放中文音频"
-            title="中文音频"
-          >
-            <Volume2 className="h-4 w-4" />
-            中文
-          </button>
+          {chineseEssay && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                play(chineseEssay, "zh");
+              }}
+              className="inline-flex h-10 items-center gap-1.5 rounded-full bg-lingo-blue px-3.5 text-white border-b-2 border-lingo-blue-dark hover:bg-lingo-blue/90 active:border-b-0 active:mt-0.5 transition-all text-xs font-bold shadow-sm"
+              aria-label="播放中文音频"
+              title="中文音频"
+            >
+              <Volume2 className="h-4 w-4" />
+              中文
+            </button>
+          )}
           <button
             type="button"
             disabled={phase !== "result"}
