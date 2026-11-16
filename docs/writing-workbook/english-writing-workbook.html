@@ -1,0 +1,1429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English Writing Exercise Workbook</title>
+<style>
+  :root {
+    --bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --text: #2c3e50;
+    --text-light: #6c757d;
+    --primary: #2563eb;
+    --primary-light: #dbeafe;
+    --border: #e2e8f0;
+    --a1-color: #10b981;
+    --a2-color: #059669;
+    --b1-color: #f59e0b;
+    --b2-color: #ef4444;
+    --adv-color: #8b5cf6;
+    --accent-bg: #f1f5f9;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    padding: 0;
+  }
+
+  /* --- Navigation --- */
+  .sidebar {
+    position: fixed;
+    left: 0; top: 0;
+    width: 260px;
+    height: 100vh;
+    background: var(--card-bg);
+    border-right: 1px solid var(--border);
+    overflow-y: auto;
+    padding: 20px 15px;
+    z-index: 100;
+  }
+
+  .sidebar h2 {
+    font-size: 16px;
+    color: var(--primary);
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--primary);
+  }
+
+  .sidebar nav { display: flex; flex-direction: column; gap: 4px; }
+
+  .nav-section {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    padding-left: 10px;
+  }
+
+  .sidebar a {
+    display: block;
+    padding: 6px 10px;
+    font-size: 13px;
+    color: var(--text);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: background 0.15s;
+  }
+
+  .sidebar a:hover { background: var(--accent-bg); color: var(--primary); }
+
+  /* --- Main Content --- */
+  .main {
+    margin-left: 260px;
+    padding: 40px 50px;
+    max-width: 900px;
+  }
+
+  /* --- Hero --- */
+  .hero {
+    background: linear-gradient(135deg, #2563eb 0%, #8b5cf6 100%);
+    color: white;
+    padding: 50px 40px;
+    border-radius: 16px;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
+  .hero h1 { font-size: 32px; margin-bottom: 10px; }
+  .hero p { font-size: 16px; opacity: 0.9; }
+
+  /* --- Overview Table --- */
+  .overview-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .overview-card h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: var(--text);
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0;
+    font-size: 14px;
+  }
+
+  th, td {
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--border);
+  }
+
+  th {
+    background: var(--accent-bg);
+    font-weight: 700;
+    color: var(--text);
+  }
+
+  tr:hover td { background: #fafbfc; }
+
+  /* --- Level Sections --- */
+  .level-section {
+    margin-bottom: 60px;
+  }
+
+  .level-header {
+    padding: 20px 25px;
+    border-radius: 12px 12px 0 0;
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  .level-header.a1 { background: var(--a1-color); }
+  .level-header.a2 { background: var(--a2-color); }
+  .level-header.b1 { background: var(--b1-color); }
+  .level-header.b2 { background: var(--b2-color); }
+  .level-header.adv { background: var(--adv-color); }
+
+  .level-desc {
+    background: var(--card-bg);
+    padding: 15px 25px;
+    border: 1px solid var(--border);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: var(--text-light);
+  }
+
+  /* --- Exercise Cards --- */
+  .exercise {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    border-left: 4px solid var(--border);
+  }
+
+  .exercise.a1 { border-left-color: var(--a1-color); }
+  .exercise.a2 { border-left-color: var(--a2-color); }
+  .exercise.b1 { border-left-color: var(--b1-color); }
+  .exercise.b2 { border-left-color: var(--b2-color); }
+  .exercise.adv { border-left-color: var(--adv-color); }
+
+  .exercise h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: var(--text);
+  }
+
+  .req-badge {
+    display: inline-block;
+    background: var(--primary-light);
+    color: var(--primary);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin: 8px 0 15px;
+  }
+
+  .prompt-box {
+    background: var(--accent-bg);
+    padding: 12px 18px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    font-size: 15px;
+  }
+
+  .prompt-box strong { color: var(--primary); }
+
+  .section-label {
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--text);
+    margin: 20px 0 10px;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--accent-bg);
+  }
+
+  .chinese-essay {
+    background: #fffbeb;
+    border: 1px solid #fde68a;
+    border-radius: 8px;
+    padding: 18px 22px;
+    font-size: 15px;
+    line-height: 2;
+    color: #78350f;
+    margin-bottom: 20px;
+  }
+
+  .chinese-essay p {
+    margin-bottom: 10px;
+  }
+
+  .chinese-essay p:last-child {
+    margin-bottom: 0;
+  }
+
+  .chinese-essay strong {
+    color: #92400e;
+  }
+
+  .vocab-table {
+    font-size: 13px;
+  }
+
+  .vocab-table td:first-child {
+    font-weight: 600;
+    color: var(--primary);
+    white-space: nowrap;
+  }
+
+  /* --- Structural Hints --- */
+  .structure-hints {
+    background: #f0fdf4;
+    border: 1px solid #bbf7d0;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 20px;
+  }
+
+  .structure-hints p {
+    margin-bottom: 8px;
+    font-size: 14px;
+  }
+
+  .structure-hints strong {
+    color: #166534;
+  }
+
+  /* --- English Hints Box --- */
+  .english-hints {
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin-bottom: 20px;
+  }
+
+  .english-hints .structural-phrases {
+    margin-bottom: 15px;
+  }
+
+  .english-hints .structural-phrases li {
+    list-style: none;
+    padding: 4px 0;
+    font-size: 14px;
+    color: #1e3a5f;
+  }
+
+  .english-hints .structural-phrases code {
+    background: #dbeafe;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-family: "SF Mono", Consolas, monospace;
+    font-size: 13px;
+    color: #1e40af;
+  }
+
+  /* --- Paragraph Structure Suggestions --- */
+  .para-structure {
+    background: var(--accent-bg);
+    border-radius: 8px;
+    padding: 15px 22px;
+    margin-bottom: 10px;
+  }
+
+  .para-structure ol {
+    padding-left: 20px;
+  }
+
+  .para-structure li {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .para-structure li strong {
+    color: var(--primary);
+  }
+
+  /* --- Model Answers --- */
+  .model-answer {
+    background: #fdf4ff;
+    border: 1px solid #e9d5ff;
+    border-radius: 8px;
+    padding: 20px 25px;
+    margin-bottom: 25px;
+  }
+
+  .model-answer h3 {
+    color: #6b21a8;
+    margin-bottom: 12px;
+  }
+
+  .model-answer .essay-body p {
+    margin-bottom: 12px;
+    font-size: 15px;
+  }
+
+  .model-answer .word-count {
+    font-size: 13px;
+    color: var(--text-light);
+    font-style: italic;
+    margin-top: 10px;
+  }
+
+  /* --- Summary --- */
+  .summary-card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 30px;
+    margin-bottom: 30px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+
+  .footer-note {
+    text-align: center;
+    font-size: 14px;
+    color: var(--text-light);
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  /* --- Responsive --- */
+  @media (max-width: 900px) {
+    .sidebar { display: none; }
+    .main { margin-left: 0; padding: 20px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Sidebar Navigation -->
+<div class="sidebar">
+  <h2>📚 Workbook Index</h2>
+  <nav>
+    <a href="#overview">Overview</a>
+
+    <div class="nav-section">A1 — Beginner</div>
+    <a href="#a1-1">Ex 1: Best Friend</a>
+    <a href="#a1-2">Ex 2: Favorite Food</a>
+    <a href="#a1-3">Ex 3: School Day</a>
+    <a href="#a1-4">Ex 4: My Pet</a>
+    <a href="#a1-5">Ex 5: Weekend</a>
+
+    <div class="nav-section">A2 — Elementary</div>
+    <a href="#a2-1">Ex 1: Beach Trip</a>
+    <a href="#a2-2">Ex 2: My Hobby</a>
+    <a href="#a2-3">Ex 3: Favorite Season</a>
+    <a href="#a2-4">Ex 4: Dream Job</a>
+    <a href="#a2-5">Ex 5: Birthday</a>
+
+    <div class="nav-section">B1 — Intermediate</div>
+    <a href="#b1-1">Ex 1: Reading</a>
+    <a href="#b1-2">Ex 2: Favorite City</a>
+    <a href="#b1-3">Ex 3: Online vs Class</a>
+    <a href="#b1-4">Ex 4: Environment</a>
+    <a href="#b1-5">Ex 5: Inspiration</a>
+
+    <div class="nav-section">B2 — Upper-Int.</div>
+    <a href="#b2-1">Ex 1: Social Media</a>
+    <a href="#b2-2">Ex 2: Traveling</a>
+    <a href="#b2-3">Ex 3: Uniforms</a>
+    <a href="#b2-4">Ex 4: Tech in Edu</a>
+    <a href="#b2-5">Ex 5: Healthy Life</a>
+
+    <div class="nav-section">Advanced</div>
+    <a href="#adv-1">Ex 1: AI Ethics</a>
+    <a href="#adv-2">Ex 2: Globalization</a>
+    <a href="#adv-3">Ex 3: Future of Work</a>
+    <a href="#adv-4">Ex 4: Climate Change</a>
+    <a href="#adv-5">Ex 5: Arts Education</a>
+
+    <div class="nav-section">Model Answers</div>
+    <a href="#models">All Model Answers</a>
+    <a href="#summary">Summary</a>
+  </nav>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+  <!-- Hero -->
+  <div class="hero">
+    <h1>English Writing Exercise Workbook</h1>
+    <p>CEFR Levels: A1 · A2 · B1 · B2 · Advanced — Progressive scaffolding for confident English writing</p>
+  </div>
+
+  <!-- Overview -->
+  <div id="overview" class="overview-card">
+    <h2>How to Use This Workbook</h2>
+    <p style="margin-bottom: 15px; font-size: 15px;">Each level follows a <strong>progressive scaffolding</strong> approach — as your English improves, the Chinese support is gradually removed and replaced with English vocabulary hints, pushing you to write independently and closer to model-answer quality.</p>
+    <table>
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Chinese Essay Support</th>
+          <th>English Vocab Hints</th>
+          <th>Paragraphs</th>
+          <th>Word Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>A1</strong></td><td>✅ Full Chinese essay</td><td>None</td><td>1</td><td>30–50</td></tr>
+        <tr><td><strong>A2</strong></td><td>✅ Full Chinese essay</td><td>None</td><td>1</td><td>50–80</td></tr>
+        <tr><td><strong>B1</strong></td><td>✅ Simple Chinese (core structure)</td><td>Some key vocabs</td><td>3–4</td><td>100–150</td></tr>
+        <tr><td><strong>B2</strong></td><td>❌ No Chinese essay</td><td>More vocabs as hints</td><td>4–6</td><td>150–200</td></tr>
+        <tr><td><strong>Advanced</strong></td><td>❌ No Chinese essay</td><td>Extensive vocabs + phrases</td><td>4–8</td><td>200–400</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top: 15px; font-size: 14px; color: var(--text-light);"><strong>Instructions:</strong> Read the prompt and all provided support material for your level. Write your essay following the paragraph and word count requirements. Compare with the model answer at the end of each exercise.</p>
+  </div>
+
+  <!-- ==================== A1 ==================== -->
+  <div class="level-section">
+    <div class="level-header a1">Level A1 — Beginner Writing</div>
+    <div class="level-desc">Full Chinese essay provided · 1 paragraph · 30–50 words</div>
+
+    <!-- A1 Ex 1 -->
+    <div id="a1-1" class="exercise a1">
+      <h3>A1 · Exercise 1: My Best Friend</h3>
+      <span class="req-badge">Requirements: (1 paragraph, 30–50 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about your best friend. What is their name? What do they look like? What do you like to do together?</div>
+      <div class="section-label">中文范文 (Full Chinese Essay)</div>
+      <div class="chinese-essay">
+        <p>我最好的朋友叫小明。他很高，头发很短。我们每天一起打篮球。周末我们一起做作业。小明很善良，总是帮助我。我很喜欢和他在一起。</p>
+      </div>
+      <div class="section-label">Key Vocabulary</div>
+      <table class="vocab-table">
+        <tr><td>best friend</td><td>最好的朋友</td></tr>
+        <tr><td>tall</td><td>高的</td></tr>
+        <tr><td>short hair</td><td>短头发</td></tr>
+        <tr><td>play basketball</td><td>打篮球</td></tr>
+        <tr><td>together</td><td>一起</td></tr>
+        <tr><td>kind</td><td>善良的</td></tr>
+      </table>
+    </div>
+
+    <!-- A1 Ex 2 -->
+    <div id="a1-2" class="exercise a1">
+      <h3>A1 · Exercise 2: My Favorite Food</h3>
+      <span class="req-badge">Requirements: (1 paragraph, 30–50 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about your favorite food. What is it? Why do you like it? How often do you eat it?</div>
+      <div class="section-label">中文范文 (Full Chinese Essay)</div>
+      <div class="chinese-essay">
+        <p>我最喜欢的食物是面条。妈妈每天早上给我做面条。面条很热，很好吃。我喜欢加鸡蛋和青菜。我每天吃面条，永远不会觉得无聊。</p>
+      </div>
+      <div class="section-label">Key Vocabulary</div>
+      <table class="vocab-table">
+        <tr><td>favorite food</td><td>最喜欢的食物</td></tr>
+        <tr><td>noodles</td><td>面条</td></tr>
+        <tr><td>delicious</td><td>好吃的</td></tr>
+        <tr><td>hot</td><td>热的</td></tr>
+        <tr><td>egg</td><td>鸡蛋</td></tr>
+        <tr><td>vegetables</td><td>蔬菜</td></tr>
+      </table>
+    </div>
+
+    <!-- A1 Ex 3 -->
+    <div id="a1-3" class="exercise a1">
+      <h3>A1 · Exercise 3: My School Day</h3>
+      <span class="req-badge">Requirements: (1 paragraph, 30–50 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about your school day. What time do you go to school? What classes do you have? What do you do after school?</div>
+      <div class="section-label">中文范文 (Full Chinese Essay)</div>
+      <div class="chinese-essay">
+        <p>我每天早上七点去上学。我最喜欢上英语课和数学课。中午我和朋友一起吃午饭。下午放学后，我去图书馆看书。五点钟我回家做作业。</p>
+      </div>
+      <div class="section-label">Key Vocabulary</div>
+      <table class="vocab-table">
+        <tr><td>go to school</td><td>去上学</td></tr>
+        <tr><td>English class</td><td>英语课</td></tr>
+        <tr><td>math class</td><td>数学课</td></tr>
+        <tr><td>lunch</td><td>午饭</td></tr>
+        <tr><td>library</td><td>图书馆</td></tr>
+        <tr><td>homework</td><td>作业</td></tr>
+      </table>
+    </div>
+
+    <!-- A1 Ex 4 -->
+    <div id="a1-4" class="exercise a1">
+      <h3>A1 · Exercise 4: My Pet</h3>
+      <span class="req-badge">Requirements: (1 paragraph, 30–50 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about a pet you have or want to have. What animal is it? What does it look like? What does it like to do?</div>
+      <div class="section-label">中文范文 (Full Chinese Essay)</div>
+      <div class="chinese-essay">
+        <p>我有一只小猫。它的名字叫花花。花花是白色的，眼睛很大。它喜欢睡觉和玩球。每天放学回家，花花都在门口等我。我很爱我的小猫。</p>
+      </div>
+      <div class="section-label">Key Vocabulary</div>
+      <table class="vocab-table">
+        <tr><td>cat</td><td>猫</td></tr>
+        <tr><td>white</td><td>白色的</td></tr>
+        <tr><td>big eyes</td><td>大眼睛</td></tr>
+        <tr><td>sleep</td><td>睡觉</td></tr>
+        <tr><td>play with a ball</td><td>玩球</td></tr>
+        <tr><td>wait for me</td><td>等我</td></tr>
+      </table>
+    </div>
+
+    <!-- A1 Ex 5 -->
+    <div id="a1-5" class="exercise a1">
+      <h3>A1 · Exercise 5: My Weekend</h3>
+      <span class="req-badge">Requirements: (1 paragraph, 30–50 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about what you do on weekends. Do you go anywhere? Who do you spend time with?</div>
+      <div class="section-label">中文范文 (Full Chinese Essay)</div>
+      <div class="chinese-essay">
+        <p>周末我很开心。星期六上午我和爸爸去公园跑步。下午我在家看电影。星期天我和妈妈去超市买东西。晚上我读书然后早睡。我喜欢周末。</p>
+      </div>
+      <div class="section-label">Key Vocabulary</div>
+      <table class="vocab-table">
+        <tr><td>weekend</td><td>周末</td></tr>
+        <tr><td>park</td><td>公园</td></tr>
+        <tr><td>run</td><td>跑步</td></tr>
+        <tr><td>watch a movie</td><td>看电影</td></tr>
+        <tr><td>supermarket</td><td>超市</td></tr>
+        <tr><td>happy</td><td>开心的</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ==================== A2 ==================== -->
+  <div class="level-section">
+    <div class="level-header a2">Level A2 — Elementary Writing</div>
+    <div class="level-desc">Full Chinese essay provided · 1 paragraph · 50–80 words</div>
+
+    <!-- A2 Ex 1 -->
+    <div id="a2-1" class="exercise a2">
+      <h3>A2 · Exercise 1: A Trip to the Beach</h3>
+      <span class="req-badge">Requirements: (1 paragraph, 50–80 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about a trip to the beach. When did you go? Who did you go with? What did you do there? How did you feel?</div>
+      <div class="section-label">中文范文 (Full Chinese Essay)</div>
+      <div class="chinese-essay">
+        <p>去年夏天，我和家人去了海边。天气很好，太阳很大，天空是蓝色的。我们在沙滩上玩了很多游戏，还游了泳。中午我们吃了很多好吃的海鲜。下午我和妹妹一起堆了一个很大的沙堡。傍晚我们看了美丽的日落。我觉得这是最开心的一天，我希望明年还能去。</p>
+      </div>
+      <div class="section-label">Key Vocabulary</div>
+      <table class="vocab-table">
+        <tr><td>beach</td><td>海边</td></tr>
+        <tr><td>weather</td><td>天气</td></tr>
+        <tr><td>sunny</td><td>晴朗的</td></tr>
+        <tr><td>sand</td><td>沙子</td></tr>
+        <tr><td>swim</td><td>游泳</td></tr>
+        <tr><td>seafood</td><td>海鲜</td></tr>
+        <tr><td>sandcastle</td><td>沙堡</td></tr>
+        <tr><td>sunset</td><td>日落</td></tr>
+        <tr><td>happy</td><td>开心的</td></tr>
+      </table>
+    </div>
+
+    <!-- A2 Ex 2 -->
+    <div id="a2-2" class="exercise a2">
+      <h3>A2 · Exercise 2: My Hobby</h3>
+      <span class="req-badge">Requirements: (1 paragraph, 50–80 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about your hobby. What is it? When did you start? Why do you like it? How often do you do it?</div>
+      <div class="section-label">中文范文 (Full Chinese Essay)</div>
+      <div class="chinese-essay">
+        <p>我的爱好是画画。我从八岁开始学画画，已经学了三年了。每个星期六我都去画画班上课。我喜欢画风景和动物，因为它们很美很可爱。画画的时候我觉得很放松，很开心。我的画还被老师表扬过好几次。以后我想当一名画家，画出更多好看的画。</p>
+      </div>
+      <div class="section-label">Key Vocabulary</div>
+      <table class="vocab-table">
+        <tr><td>hobby</td><td>爱好</td></tr>
+        <tr><td>drawing / painting</td><td>画画</td></tr>
+        <tr><td>start</td><td>开始</td></tr>
+        <tr><td>landscape</td><td>风景</td></tr>
+        <tr><td>animals</td><td>动物</td></tr>
+        <tr><td>relax</td><td>放松</td></tr>
+        <tr><td>praise</td><td>表扬</td></tr>
+        <tr><td>painter</td><td>画家</td></tr>
+      </table>
+    </div>
+
+    <!-- A2 Ex 3 -->
+    <div id="a2-3" class="exercise a2">
+      <h3>A2 · Exercise 3: My Favorite Season</h3>
+      <span class="req-badge">Requirements: (1 paragraph, 50–80 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about your favorite season. What season is it? What is the weather like? What do you like to do in this season?</div>
+      <div class="section-label">中文范文 (Full Chinese Essay)</div>
+      <div class="chinese-essay">
+        <p>我最喜欢的季节是秋天。秋天的天气不冷也不热，非常舒服。树叶变成了黄色和红色，很漂亮。秋天有很多好吃的水果，比如苹果和柿子。周末我和家人去公园散步，踩在落叶上，发出沙沙的声音。中秋节也在秋天，我们可以吃月饼、赏月。我觉得秋天是最美的季节。</p>
+      </div>
+      <div class="section-label">Key Vocabulary</div>
+      <table class="vocab-table">
+        <tr><td>autumn / fall</td><td>秋天</td></tr>
+        <tr><td>weather</td><td>天气</td></tr>
+        <tr><td>comfortable</td><td>舒服的</td></tr>
+        <tr><td>leaves</td><td>树叶</td></tr>
+        <tr><td>yellow / red</td><td>黄色 / 红色</td></tr>
+        <tr><td>fruit</td><td>水果</td></tr>
+        <tr><td>mooncake</td><td>月饼</td></tr>
+        <tr><td>beautiful</td><td>美丽的</td></tr>
+      </table>
+    </div>
+
+    <!-- A2 Ex 4 -->
+    <div id="a2-4" class="exercise a2">
+      <h3>A2 · Exercise 4: My Dream Job</h3>
+      <span class="req-badge">Requirements: (1 paragraph, 50–80 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about your dream job. What do you want to be? Why? What do you need to do to achieve it?</div>
+      <div class="section-label">中文范文 (Full Chinese Essay)</div>
+      <div class="chinese-essay">
+        <p>我的梦想是当一名医生。因为我想帮助生病的人，让他们恢复健康。我知道当医生很难，需要学很多年，还要很努力。所以我现在好好学习，特别是科学和生物。以后我想去好的大学学医。虽然这条路不容易，但我不会放弃，因为我相信帮助别人是最有意义的事情。</p>
+      </div>
+      <div class="section-label">Key Vocabulary</div>
+      <table class="vocab-table">
+        <tr><td>dream job</td><td>梦想的工作</td></tr>
+        <tr><td>doctor</td><td>医生</td></tr>
+        <tr><td>sick people</td><td>生病的人</td></tr>
+        <tr><td>healthy</td><td>健康的</td></tr>
+        <tr><td>study hard</td><td>努力学习</td></tr>
+        <tr><td>science</td><td>科学</td></tr>
+        <tr><td>biology</td><td>生物</td></tr>
+        <tr><td>university</td><td>大学</td></tr>
+        <tr><td>give up</td><td>放弃</td></tr>
+      </table>
+    </div>
+
+    <!-- A2 Ex 5 -->
+    <div id="a2-5" class="exercise a2">
+      <h3>A2 · Exercise 5: A Memorable Birthday</h3>
+      <span class="req-badge">Requirements: (1 paragraph, 50–80 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about a memorable birthday. Whose birthday was it? What happened? Why was it special?</div>
+      <div class="section-label">中文范文 (Full Chinese Essay)</div>
+      <div class="chinese-essay">
+        <p>去年我的生日是最难忘的。那天早上，妈妈给我做了一个很大的蛋糕。放学后，我的好朋友们来我家参加生日派对。他们送了我很多礼物，还一起唱了生日歌。最让我惊喜的是，爸爸从外地赶回来陪我过生日。我们一起吃蛋糕、玩游戏、拍照。那天晚上我开心得睡不着觉，这是我最难忘的生日。</p>
+      </div>
+      <div class="section-label">Key Vocabulary</div>
+      <table class="vocab-table">
+        <tr><td>birthday</td><td>生日</td></tr>
+        <tr><td>memorable</td><td>难忘的</td></tr>
+        <tr><td>cake</td><td>蛋糕</td></tr>
+        <tr><td>party</td><td>派对</td></tr>
+        <tr><td>gift / present</td><td>礼物</td></tr>
+        <tr><td>birthday song</td><td>生日歌</td></tr>
+        <tr><td>surprise</td><td>惊喜</td></tr>
+        <tr><td>take photos</td><td>拍照</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ==================== B1 ==================== -->
+  <div class="level-section">
+    <div class="level-header b1">Level B1 — Intermediate Writing</div>
+    <div class="level-desc">Simple Chinese essay (core structure) + Some English vocab hints · 3–4 paragraphs · 100–150 words</div>
+
+    <!-- B1 Ex 1 -->
+    <div id="b1-1" class="exercise b1">
+      <h3>B1 · Exercise 1: The Importance of Reading</h3>
+      <span class="req-badge">Requirements: (3–4 paragraphs, 100–150 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write an essay about why reading is important. Discuss the benefits of reading and how it can improve our lives.</div>
+      <div class="section-label">中文结构提示 (Simple Chinese — Core Structure)</div>
+      <div class="chinese-essay">
+        <p><strong>第一段（引言）：</strong>阅读对我们的生活很重要。它不仅帮助我们学习知识，还能带来快乐。</p>
+        <p><strong>第二段（好处一）：</strong>阅读可以开阔我们的眼界。通过书本，我们可以了解不同的文化和地方，不用出门也能看到世界。</p>
+        <p><strong>第三段（好处二）：</strong>阅读还可以提高我们的语言能力。读得越多，词汇量越大，写作也会更好。</p>
+        <p><strong>第四段（结论）：</strong>总之，阅读是一种好习惯。我们应该每天花时间读书，让阅读成为生活的一部分。</p>
+      </div>
+      <div class="section-label">English Vocabulary Hints</div>
+      <table class="vocab-table">
+        <tr><td>broaden one's horizons</td><td>开阔眼界</td></tr>
+        <tr><td>acquire knowledge</td><td>获得知识</td></tr>
+        <tr><td>culture</td><td>文化</td></tr>
+        <tr><td>vocabulary</td><td>词汇量</td></tr>
+        <tr><td>improve writing skills</td><td>提高写作能力</td></tr>
+        <tr><td>develop a habit</td><td>养成习惯</td></tr>
+        <tr><td>a part of daily life</td><td>日常生活的一部分</td></tr>
+        <tr><td>in conclusion</td><td>总之</td></tr>
+        <tr><td>not only... but also...</td><td>不仅……而且……</td></tr>
+        <tr><td>the more... the more...</td><td>越……越……</td></tr>
+      </table>
+    </div>
+
+    <!-- B1 Ex 2 -->
+    <div id="b1-2" class="exercise b1">
+      <h3>B1 · Exercise 2: My Favorite City</h3>
+      <span class="req-badge">Requirements: (3–4 paragraphs, 100–150 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about your favorite city. Describe what makes it special and why you like it.</div>
+      <div class="section-label">中文结构提示 (Simple Chinese — Core Structure)</div>
+      <div class="chinese-essay">
+        <p><strong>第一段（引言）：</strong>我最喜欢的城市是北京。它是中国的首都，有很多历史和文化。</p>
+        <p><strong>第二段（特色一）：</strong>北京有很多著名的景点，比如长城和故宫。每次去都让我印象深刻。</p>
+        <p><strong>第三段（特色二）：</strong>北京的食物也很好吃，特别是北京烤鸭。街上还有很多有趣的小店。</p>
+        <p><strong>第四段（结论）：</strong>我爱北京，因为它既有古老的历史，又有现代的生活。每次去都有新的发现。</p>
+      </div>
+      <div class="section-label">English Vocabulary Hints</div>
+      <table class="vocab-table">
+        <tr><td>capital city</td><td>首都</td></tr>
+        <tr><td>historical sites</td><td>历史景点</td></tr>
+        <tr><td>the Great Wall</td><td>长城</td></tr>
+        <tr><td>the Forbidden City</td><td>故宫</td></tr>
+        <tr><td>impressive</td><td>印象深刻的</td></tr>
+        <tr><td>famous dish</td><td>著名的菜</td></tr>
+        <tr><td>Peking duck</td><td>北京烤鸭</td></tr>
+        <tr><td>both ancient and modern</td><td>既古老又现代</td></tr>
+        <tr><td>every time I visit</td><td>每次我去</td></tr>
+        <tr><td>discover something new</td><td>发现新的东西</td></tr>
+      </table>
+    </div>
+
+    <!-- B1 Ex 3 -->
+    <div id="b1-3" class="exercise b1">
+      <h3>B1 · Exercise 3: Online Learning vs. Classroom Learning</h3>
+      <span class="req-badge">Requirements: (3–4 paragraphs, 100–150 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Compare online learning and classroom learning. Which do you prefer and why?</div>
+      <div class="section-label">中文结构提示 (Simple Chinese — Core Structure)</div>
+      <div class="chinese-essay">
+        <p><strong>第一段（引言）：</strong>现在很多学生可以在网上学习，也可以在教室里学习。两种方式各有好处。</p>
+        <p><strong>第二段（网课的好处）：</strong>网课很方便，可以在家上课，时间灵活。还可以反复看录播的视频。</p>
+        <p><strong>第三段（教室的好处）：</strong>但在教室上课可以和老师同学面对面交流，有问题可以马上问。学习氛围也更好。</p>
+        <p><strong>第四段（结论）：</strong>我更喜欢教室学习，因为可以交到朋友。但网课也是好的补充。</p>
+      </div>
+      <div class="section-label">English Vocabulary Hints</div>
+      <table class="vocab-table">
+        <tr><td>online learning</td><td>网上学习</td></tr>
+        <tr><td>classroom learning</td><td>教室学习</td></tr>
+        <tr><td>each has its advantages</td><td>各有好处</td></tr>
+        <tr><td>convenient</td><td>方便的</td></tr>
+        <tr><td>flexible schedule</td><td>灵活的时间安排</td></tr>
+        <tr><td>recorded videos</td><td>录播视频</td></tr>
+        <tr><td>face-to-face communication</td><td>面对面交流</td></tr>
+        <tr><td>learning atmosphere</td><td>学习氛围</td></tr>
+        <tr><td>prefer</td><td>更喜欢</td></tr>
+        <tr><td>a good supplement</td><td>好的补充</td></tr>
+      </table>
+    </div>
+
+    <!-- B1 Ex 4 -->
+    <div id="b1-4" class="exercise b1">
+      <h3>B1 · Exercise 4: Environmental Protection</h3>
+      <span class="req-badge">Requirements: (3–4 paragraphs, 100–150 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about what we can do to protect the environment in our daily lives.</div>
+      <div class="section-label">中文结构提示 (Simple Chinese — Core Structure)</div>
+      <div class="chinese-essay">
+        <p><strong>第一段（引言）：</strong>保护环境很重要。每个人都可以从日常生活做起。</p>
+        <p><strong>第二段（做法一）：</strong>首先，我们可以减少使用塑料袋，改用环保袋。还可以节约用水和用电。</p>
+        <p><strong>第三段（做法二）：</strong>其次，出行可以选择坐公交或骑自行车，少开汽车。这样可以减少空气污染。</p>
+        <p><strong>第四段（结论）：</strong>如果每个人都做一点点，地球会变得更好。保护环境是大家的责任。</p>
+      </div>
+      <div class="section-label">English Vocabulary Hints</div>
+      <table class="vocab-table">
+        <tr><td>protect the environment</td><td>保护环境</td></tr>
+        <tr><td>daily life</td><td>日常生活</td></tr>
+        <tr><td>reduce</td><td>减少</td></tr>
+        <tr><td>plastic bags</td><td>塑料袋</td></tr>
+        <tr><td>eco-friendly bag</td><td>环保袋</td></tr>
+        <tr><td>save water and electricity</td><td>节约用水用电</td></tr>
+        <tr><td>public transport</td><td>公共交通</td></tr>
+        <tr><td>ride a bicycle</td><td>骑自行车</td></tr>
+        <tr><td>air pollution</td><td>空气污染</td></tr>
+        <tr><td>everyone's responsibility</td><td>大家的责任</td></tr>
+      </table>
+    </div>
+
+    <!-- B1 Ex 5 -->
+    <div id="b1-5" class="exercise b1">
+      <h3>B1 · Exercise 5: A Person Who Inspired Me</h3>
+      <span class="req-badge">Requirements: (3–4 paragraphs, 100–150 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write about a person who has inspired you. Who are they? What did they do? How did they change you?</div>
+      <div class="section-label">中文结构提示 (Simple Chinese — Core Structure)</div>
+      <div class="chinese-essay">
+        <p><strong>第一段（引言）：</strong>启发我的人是我的英语老师李老师。她改变了我对学习的态度。</p>
+        <p><strong>第二段（她的特点）：</strong>李老师上课很有趣，总是用游戏和故事教我们。她对我们很有耐心，从不放弃任何一个学生。</p>
+        <p><strong>第三段（对我的影响）：</strong>以前我很怕说英语，但李老师鼓励我多开口。慢慢地我变得自信了，成绩也提高了。</p>
+        <p><strong>第四段（结论）：</strong>李老师让我明白，努力就一定有进步。我想成为像她一样的人。</p>
+      </div>
+      <div class="section-label">English Vocabulary Hints</div>
+      <table class="vocab-table">
+        <tr><td>inspire</td><td>启发</td></tr>
+        <tr><td>change my attitude</td><td>改变我的态度</td></tr>
+        <tr><td>interesting lessons</td><td>有趣的课</td></tr>
+        <tr><td>patient</td><td>有耐心的</td></tr>
+        <tr><td>never give up</td><td>从不放弃</td></tr>
+        <tr><td>encourage</td><td>鼓励</td></tr>
+        <tr><td>speak up</td><td>开口说</td></tr>
+        <tr><td>become confident</td><td>变得自信</td></tr>
+        <tr><td>make progress</td><td>取得进步</td></tr>
+        <tr><td>look up to</td><td>尊敬/仰慕</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <!-- ==================== B2 ==================== -->
+  <div class="level-section">
+    <div class="level-header b2">Level B2 — Upper-Intermediate Writing</div>
+    <div class="level-desc">No Chinese essay · More English vocab hints · 4–6 paragraphs · 150–200 words</div>
+
+    <!-- B2 Ex 1 -->
+    <div id="b2-1" class="exercise b2">
+      <h3>B2 · Exercise 1: The Impact of Social Media on Young People</h3>
+      <span class="req-badge">Requirements: (4–6 paragraphs, 150–200 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write an essay discussing the impact of social media on young people. Consider both positive and negative effects, and give your own opinion.</div>
+      <div class="section-label">English Vocabulary Hints</div>
+      <div class="english-hints">
+        <p style="font-weight: 700; margin-bottom: 8px;">Structural phrases:</p>
+        <ul class="structural-phrases">
+          <li><code>In recent years, social media has become an integral part of...</code></li>
+          <li><code>On the one hand,... On the other hand,...</code></li>
+          <li><code>From my perspective,...</code></li>
+          <li><code>In conclusion,...</code></li>
+        </ul>
+        <table class="vocab-table">
+          <tr><td>integral part</td><td>不可或缺的一部分</td></tr>
+          <tr><td>stay connected</td><td>保持联系</td></tr>
+          <tr><td>share experiences</td><td>分享经历</td></tr>
+          <tr><td>information platform</td><td>信息平台</td></tr>
+          <tr><td>cyberbullying</td><td>网络欺凌</td></tr>
+          <tr><td>addiction</td><td>上瘾</td></tr>
+          <tr><td>mental health</td><td>心理健康</td></tr>
+          <tr><td>self-esteem</td><td>自尊心</td></tr>
+          <tr><td>unrealistic expectations</td><td>不切实际的期望</td></tr>
+          <tr><td>privacy concerns</td><td>隐私问题</td></tr>
+          <tr><td>spread misinformation</td><td>传播错误信息</td></tr>
+          <tr><td>strike a balance</td><td>找到平衡</td></tr>
+          <tr><td>regulate screen time</td><td>控制屏幕时间</td></tr>
+          <tr><td>critical thinking</td><td>批判性思维</td></tr>
+          <tr><td>double-edged sword</td><td>双刃剑</td></tr>
+          <tr><td>outweigh the drawbacks</td><td>利大于弊</td></tr>
+        </table>
+      </div>
+      <div class="section-label">Suggested Paragraph Structure</div>
+      <div class="para-structure">
+        <ol>
+          <li><strong>Introduction:</strong> Social media is everywhere; introduce the topic and state that it has both pros and cons.</li>
+          <li><strong>Positive effects:</strong> Staying connected with friends, sharing ideas, learning new things.</li>
+          <li><strong>Negative effects:</strong> Cyberbullying, addiction, impact on mental health.</li>
+          <li><strong>Personal opinion:</strong> Use social media wisely; balance is key.</li>
+          <li><strong>Conclusion:</strong> Summarize and give a final thought.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- B2 Ex 2 -->
+    <div id="b2-2" class="exercise b2">
+      <h3>B2 · Exercise 2: The Value of Traveling</h3>
+      <span class="req-badge">Requirements: (4–6 paragraphs, 150–200 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write an essay about the value of traveling. What can people learn from traveling? Is it worth the time and money?</div>
+      <div class="section-label">English Vocabulary Hints</div>
+      <div class="english-hints">
+        <p style="font-weight: 700; margin-bottom: 8px;">Structural phrases:</p>
+        <ul class="structural-phrases">
+          <li><code>Traveling is not just about visiting new places; it is about...</code></li>
+          <li><code>One of the most significant benefits of traveling is...</code></li>
+          <li><code>Furthermore,...</code></li>
+          <li><code>Ultimately,...</code></li>
+        </ul>
+        <table class="vocab-table">
+          <tr><td>broaden one's perspective</td><td>开阔视角</td></tr>
+          <tr><td>immerse oneself in</td><td>沉浸于</td></tr>
+          <tr><td>local culture</td><td>当地文化</td></tr>
+          <tr><td>step out of one's comfort zone</td><td>走出舒适区</td></tr>
+          <tr><td>cultural exchange</td><td>文化交流</td></tr>
+          <tr><td>adapt to new environments</td><td>适应新环境</td></tr>
+          <tr><td>gain firsthand experience</td><td>获得亲身体验</td></tr>
+          <tr><td>break stereotypes</td><td>打破刻板印象</td></tr>
+          <tr><td>lifelong memories</td><td>终身难忘的记忆</td></tr>
+          <tr><td>personal growth</td><td>个人成长</td></tr>
+          <tr><td>worthwhile investment</td><td>值得的投入</td></tr>
+          <tr><td>overcome challenges</td><td>克服挑战</td></tr>
+          <tr><td>develop independence</td><td>培养独立性</td></tr>
+          <tr><td>appreciate diversity</td><td>欣赏多样性</td></tr>
+          <tr><td>broaden horizons</td><td>开阔眼界</td></tr>
+        </table>
+      </div>
+      <div class="section-label">Suggested Paragraph Structure</div>
+      <div class="para-structure">
+        <ol>
+          <li><strong>Introduction:</strong> Traveling is more than tourism — it's a learning experience.</li>
+          <li><strong>Cultural learning:</strong> Experiencing different cultures, customs, and food.</li>
+          <li><strong>Personal development:</strong> Independence, problem-solving, stepping out of comfort zone.</li>
+          <li><strong>Breaking stereotypes:</strong> Meeting real people changes our views.</li>
+          <li><strong>Conclusion:</strong> Worth the time and money; an investment in oneself.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- B2 Ex 3 -->
+    <div id="b2-3" class="exercise b2">
+      <h3>B2 · Exercise 3: Should Students Wear School Uniforms?</h3>
+      <span class="req-badge">Requirements: (4–6 paragraphs, 150–200 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write an argumentative essay discussing whether students should wear school uniforms. Present both sides and give your opinion.</div>
+      <div class="section-label">English Vocabulary Hints</div>
+      <div class="english-hints">
+        <p style="font-weight: 700; margin-bottom: 8px;">Structural phrases:</p>
+        <ul class="structural-phrases">
+          <li><code>The debate over whether students should... has been ongoing for years.</code></li>
+          <li><code>Supporters argue that...</code></li>
+          <li><code>Opponents, however, believe that...</code></li>
+          <li><code>I am inclined to agree with the view that...</code></li>
+        </ul>
+        <table class="vocab-table">
+          <tr><td>school uniform</td><td>校服</td></tr>
+          <tr><td>sense of belonging</td><td>归属感</td></tr>
+          <tr><td>equality among students</td><td>学生之间的平等</td></tr>
+          <tr><td>reduce peer pressure</td><td>减少同龄人压力</td></tr>
+          <tr><td>eliminate competition over appearance</td><td>消除外貌上的攀比</td></tr>
+          <tr><td>self-expression</td><td>自我表达</td></tr>
+          <tr><td>individuality</td><td>个性</td></tr>
+          <tr><td>stifle creativity</td><td>压制创造力</td></tr>
+          <tr><td>financial burden</td><td>经济负担</td></tr>
+          <tr><td>cost-effective</td><td>经济实惠的</td></tr>
+          <tr><td>dress code</td><td>着装规定</td></tr>
+          <tr><td>discipline</td><td>纪律</td></tr>
+          <tr><td>focus on studies</td><td>专注学习</td></tr>
+          <tr><td>school identity</td><td>学校认同感</td></tr>
+          <tr><td>weigh the pros and cons</td><td>权衡利弊</td></tr>
+        </table>
+      </div>
+      <div class="section-label">Suggested Paragraph Structure</div>
+      <div class="para-structure">
+        <ol>
+          <li><strong>Introduction:</strong> Introduce the debate; uniforms are common in many countries.</li>
+          <li><strong>Arguments for uniforms:</strong> Equality, discipline, school identity, cost-effective.</li>
+          <li><strong>Arguments against uniforms:</strong> Limits self-expression, uncomfortable, doesn't fix real problems.</li>
+          <li><strong>Your opinion:</strong> Choose a side and justify.</li>
+          <li><strong>Conclusion:</strong> Summarize your stance.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- B2 Ex 4 -->
+    <div id="b2-4" class="exercise b2">
+      <h3>B2 · Exercise 4: The Role of Technology in Education</h3>
+      <span class="req-badge">Requirements: (4–6 paragraphs, 150–200 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write an essay about how technology has changed education. What are the advantages and potential problems?</div>
+      <div class="section-label">English Vocabulary Hints</div>
+      <div class="english-hints">
+        <p style="font-weight: 700; margin-bottom: 8px;">Structural phrases:</p>
+        <ul class="structural-phrases">
+          <li><code>Technology has revolutionized the way we learn.</code></li>
+          <li><code>There is no denying that...</code></li>
+          <li><code>However, it is important to acknowledge that...</code></li>
+          <li><code>A balanced approach is necessary.</code></li>
+        </ul>
+        <table class="vocab-table">
+          <tr><td>revolutionize</td><td>彻底改变</td></tr>
+          <tr><td>digital tools</td><td>数字工具</td></tr>
+          <tr><td>access to information</td><td>获取信息</td></tr>
+          <tr><td>interactive learning</td><td>互动学习</td></tr>
+          <tr><td>online resources</td><td>在线资源</td></tr>
+          <tr><td>personalized learning</td><td>个性化学习</td></tr>
+          <tr><td>educational apps</td><td>教育应用</td></tr>
+          <tr><td>virtual classroom</td><td>虚拟教室</td></tr>
+          <tr><td>distraction</td><td>分心</td></tr>
+          <tr><td>over-reliance on technology</td><td>过度依赖技术</td></tr>
+          <tr><td>digital divide</td><td>数字鸿沟</td></tr>
+          <tr><td>face-to-face interaction</td><td>面对面互动</td></tr>
+          <tr><td>critical thinking skills</td><td>批判性思维能力</td></tr>
+          <tr><td>traditional teaching methods</td><td>传统教学方法</td></tr>
+          <tr><td>enhance learning outcomes</td><td>提升学习效果</td></tr>
+        </table>
+      </div>
+      <div class="section-label">Suggested Paragraph Structure</div>
+      <div class="para-structure">
+        <ol>
+          <li><strong>Introduction:</strong> Technology has transformed education in recent years.</li>
+          <li><strong>Advantages:</strong> Access to information, interactive tools, personalized learning.</li>
+          <li><strong>More advantages:</strong> Flexibility, global reach, educational apps.</li>
+          <li><strong>Disadvantages:</strong> Distraction, over-reliance, digital divide.</li>
+          <li><strong>Conclusion:</strong> Technology should complement, not replace, traditional methods.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- B2 Ex 5 -->
+    <div id="b2-5" class="exercise b2">
+      <h3>B2 · Exercise 5: Healthy Lifestyle Habits</h3>
+      <span class="req-badge">Requirements: (4–6 paragraphs, 150–200 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write an essay about healthy lifestyle habits. What habits are important and how can people maintain them?</div>
+      <div class="section-label">English Vocabulary Hints</div>
+      <div class="english-hints">
+        <p style="font-weight: 700; margin-bottom: 8px;">Structural phrases:</p>
+        <ul class="structural-phrases">
+          <li><code>Maintaining a healthy lifestyle has become increasingly important in today's fast-paced world.</code></li>
+          <li><code>First and foremost,...</code></li>
+          <li><code>Equally important is...</code></li>
+          <li><code>By adopting these habits, we can...</code></li>
+        </ul>
+        <table class="vocab-table">
+          <tr><td>healthy lifestyle</td><td>健康的生活方式</td></tr>
+          <tr><td>fast-paced world</td><td>快节奏的世界</td></tr>
+          <tr><td>balanced diet</td><td>均衡饮食</td></tr>
+          <tr><td>regular exercise</td><td>经常锻炼</td></tr>
+          <tr><td>adequate sleep</td><td>充足的睡眠</td></tr>
+          <tr><td>sedentary lifestyle</td><td>久坐的生活方式</td></tr>
+          <tr><td>chronic diseases</td><td>慢性疾病</td></tr>
+          <tr><td>mental well-being</td><td>心理健康</td></tr>
+          <tr><td>stress management</td><td>压力管理</td></tr>
+          <tr><td>meditation</td><td>冥想</td></tr>
+          <tr><td>work-life balance</td><td>工作与生活的平衡</td></tr>
+          <tr><td>portion control</td><td>控制食量</td></tr>
+          <tr><td>hydration</td><td>补水</td></tr>
+          <tr><td>consistency</td><td>坚持不懈</td></tr>
+          <tr><td>long-term benefits</td><td>长期的好处</td></tr>
+          <tr><td>cultivate good habits</td><td>培养好习惯</td></tr>
+        </table>
+      </div>
+      <div class="section-label">Suggested Paragraph Structure</div>
+      <div class="para-structure">
+        <ol>
+          <li><strong>Introduction:</strong> Modern life is busy; healthy habits are essential.</li>
+          <li><strong>Diet:</strong> Balanced diet, portion control, hydration.</li>
+          <li><strong>Exercise:</strong> Regular physical activity, avoiding sedentary habits.</li>
+          <li><strong>Mental health:</strong> Sleep, stress management, work-life balance.</li>
+          <li><strong>Conclusion:</strong> Consistency is key; small changes lead to long-term benefits.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== Advanced ==================== -->
+  <div class="level-section">
+    <div class="level-header adv">Level Advanced — Proficient Writing</div>
+    <div class="level-desc">No Chinese essay · Extensive English vocab + phrase hints · 4–8 paragraphs · 200–400 words</div>
+
+    <!-- Adv Ex 1 -->
+    <div id="adv-1" class="exercise adv">
+      <h3>Advanced · Exercise 1: The Ethics of Artificial Intelligence</h3>
+      <span class="req-badge">Requirements: (4–8 paragraphs, 200–400 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write a well-structured essay examining the ethical implications of artificial intelligence. Discuss the potential benefits, the risks, and propose how society should navigate this technology.</div>
+      <div class="section-label">Extensive English Vocabulary &amp; Phrase Hints</div>
+      <div class="english-hints">
+        <p style="font-weight: 700; margin-bottom: 8px;">Structural phrases for sophisticated writing:</p>
+        <ul class="structural-phrases">
+          <li><code>The rapid advancement of artificial intelligence has sparked a global debate concerning its ethical implications.</code></li>
+          <li><code>While AI undoubtedly offers unprecedented opportunities, it also raises profound ethical questions that demand careful consideration.</code></li>
+          <li><code>It is imperative that we strike a delicate balance between innovation and regulation.</code></li>
+          <li><code>The onus lies not only on policymakers but also on technologists and society at large to...</code></li>
+          <li><code>Ultimately, the trajectory of AI development will be shaped by the ethical framework we establish today.</code></li>
+        </ul>
+        <table class="vocab-table">
+          <tr><td>unprecedented opportunities</td><td>前所未有的机会</td></tr>
+          <tr><td>ethical implications</td><td>伦理影响</td></tr>
+          <tr><td>algorithmic bias</td><td>算法偏见</td></tr>
+          <tr><td>transparency and accountability</td><td>透明度与问责制</td></tr>
+          <tr><td>data privacy</td><td>数据隐私</td></tr>
+          <tr><td>autonomous decision-making</td><td>自主决策</td></tr>
+          <tr><td>mass surveillance</td><td>大规模监控</td></tr>
+          <tr><td>job displacement</td><td>就业替代</td></tr>
+          <tr><td>socioeconomic inequality</td><td>社会经济不平等</td></tr>
+          <tr><td>informed consent</td><td>知情同意</td></tr>
+          <tr><td>moral responsibility</td><td>道德责任</td></tr>
+          <tr><td>regulatory framework</td><td>监管框架</td></tr>
+          <tr><td>harness the potential of</td><td>利用……的潜力</td></tr>
+          <tr><td>mitigate the risks</td><td>降低风险</td></tr>
+          <tr><td>safeguards</td><td>保障措施</td></tr>
+          <tr><td>ethical guidelines</td><td>伦理准则</td></tr>
+          <tr><td>human oversight</td><td>人类监督</td></tr>
+          <tr><td>unintended consequences</td><td>意想不到的后果</td></tr>
+          <tr><td>dystopian scenario</td><td>反乌托邦的场景</td></tr>
+          <tr><td>collaborative governance</td><td>协作治理</td></tr>
+          <tr><td>strike a balance</td><td>取得平衡</td></tr>
+          <tr><td>ethical dilemma</td><td>伦理困境</td></tr>
+          <tr><td>forefront of public discourse</td><td>公共讨论的前沿</td></tr>
+          <tr><td>weigh the benefits against the risks</td><td>权衡利弊</td></tr>
+          <tr><td>responsible innovation</td><td>负责任的创新</td></tr>
+          <tr><td>equitable access</td><td>公平获取</td></tr>
+        </table>
+      </div>
+      <div class="section-label">Suggested Paragraph Structure (6–7 paragraphs)</div>
+      <div class="para-structure">
+        <ol>
+          <li><strong>Introduction:</strong> AI is transforming society; introduce the ethical debate.</li>
+          <li><strong>Benefits:</strong> Medical diagnosis, efficiency, scientific research, accessibility.</li>
+          <li><strong>Risk 1 — Bias and fairness:</strong> Algorithmic bias, discrimination, unequal outcomes.</li>
+          <li><strong>Risk 2 — Privacy and surveillance:</strong> Data collection, mass surveillance, erosion of privacy.</li>
+          <li><strong>Risk 3 — Economic impact:</strong> Job displacement, widening inequality.</li>
+          <li><strong>Proposed solutions:</strong> Regulatory frameworks, ethical guidelines, human oversight, transparent algorithms.</li>
+          <li><strong>Conclusion:</strong> AI's potential is immense, but must be guided by strong ethical principles; responsible innovation is the way forward.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Adv Ex 2 -->
+    <div id="adv-2" class="exercise adv">
+      <h3>Advanced · Exercise 2: Globalization: Friend or Foe?</h3>
+      <span class="req-badge">Requirements: (4–8 paragraphs, 200–400 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write a critical essay evaluating the impact of globalization. Discuss its economic, cultural, and social dimensions, and argue whether it has ultimately been beneficial or harmful.</div>
+      <div class="section-label">Extensive English Vocabulary &amp; Phrase Hints</div>
+      <div class="english-hints">
+        <p style="font-weight: 700; margin-bottom: 8px;">Structural phrases:</p>
+        <ul class="structural-phrases">
+          <li><code>Globalization, often heralded as the defining characteristic of the modern era, has reshaped the world in profound ways.</code></li>
+          <li><code>Proponents argue that... whereas critics contend that...</code></li>
+          <li><code>A nuanced examination reveals a far more complex picture.</code></li>
+          <li><code>It would be overly simplistic to characterize globalization as either entirely beneficial or wholly detrimental.</code></li>
+        </ul>
+        <table class="vocab-table">
+          <tr><td>interconnected world</td><td>相互关联的世界</td></tr>
+          <tr><td>economic integration</td><td>经济一体化</td></tr>
+          <tr><td>free trade</td><td>自由贸易</td></tr>
+          <tr><td>cultural homogenization</td><td>文化同质化</td></tr>
+          <tr><td>cultural diversity</td><td>文化多样性</td></tr>
+          <tr><td>exploitation of labor</td><td>劳动力剥削</td></tr>
+          <tr><td>wealth disparity</td><td>贫富差距</td></tr>
+          <tr><td>multinational corporations</td><td>跨国公司</td></tr>
+          <tr><td>technological diffusion</td><td>技术扩散</td></tr>
+          <tr><td>cross-cultural exchange</td><td>跨文化交流</td></tr>
+          <tr><td>erosion of local traditions</td><td>本地传统的侵蚀</td></tr>
+          <tr><td>outsourcing</td><td>外包</td></tr>
+          <tr><td>economic liberalization</td><td>经济自由化</td></tr>
+          <tr><td>sustainable development</td><td>可持续发展</td></tr>
+          <tr><td>protectionism</td><td>保护主义</td></tr>
+          <tr><td>global supply chain</td><td>全球供应链</td></tr>
+          <tr><td>standard of living</td><td>生活水平</td></tr>
+          <tr><td>brain drain</td><td>人才流失</td></tr>
+          <tr><td>cultural imperialism</td><td>文化帝国主义</td></tr>
+          <tr><td>mutually beneficial</td><td>互利的</td></tr>
+          <tr><td>overarching narrative</td><td>总体叙事</td></tr>
+          <tr><td>give rise to</td><td>引起/导致</td></tr>
+          <tr><td>economic disparities</td><td>经济差距</td></tr>
+          <tr><td>laissez-faire approach</td><td>自由放任的做法</td></tr>
+          <tr><td>equitable distribution of wealth</td><td>财富的公平分配</td></tr>
+          <tr><td>striking a middle ground</td><td>找到中间立场</td></tr>
+        </table>
+      </div>
+      <div class="section-label">Suggested Paragraph Structure (6–8 paragraphs)</div>
+      <div class="para-structure">
+        <ol>
+          <li><strong>Introduction:</strong> Define globalization; state that it is a polarizing topic.</li>
+          <li><strong>Economic benefits:</strong> Trade, investment, job creation, technology transfer.</li>
+          <li><strong>Economic drawbacks:</strong> Wealth disparity, exploitation of labor in developing countries.</li>
+          <li><strong>Cultural dimension — positive:</strong> Cross-cultural exchange, access to diverse ideas.</li>
+          <li><strong>Cultural dimension — negative:</strong> Cultural homogenization, loss of local traditions.</li>
+          <li><strong>Social impact:</strong> Migration, brain drain, social tensions.</li>
+          <li><strong>Your argument:</strong> Globalization needs reform — not rejection but better governance.</li>
+          <li><strong>Conclusion:</strong> Summarize; the future of globalization depends on equitable policies.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Adv Ex 3 -->
+    <div id="adv-3" class="exercise adv">
+      <h3>Advanced · Exercise 3: The Future of Work in a Post-Pandemic World</h3>
+      <span class="req-badge">Requirements: (4–8 paragraphs, 200–400 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write an analytical essay exploring how the COVID-19 pandemic has permanently changed the way we work. Discuss remote work, the gig economy, and what the future of work might look like.</div>
+      <div class="section-label">Extensive English Vocabulary &amp; Phrase Hints</div>
+      <div class="english-hints">
+        <p style="font-weight: 700; margin-bottom: 8px;">Structural phrases:</p>
+        <ul class="structural-phrases">
+          <li><code>The COVID-19 pandemic served as an unprecedented catalyst, fundamentally reshaping the landscape of modern work.</code></li>
+          <li><code>What began as a temporary measure has evolved into a permanent shift in how we conceptualize employment.</code></li>
+          <li><code>This paradigm shift carries implications that extend far beyond the confines of the workplace.</code></li>
+          <li><code>As we navigate this new terrain, it is essential to consider both the opportunities and the challenges that lie ahead.</code></li>
+        </ul>
+        <table class="vocab-table">
+          <tr><td>paradigm shift</td><td>范式转变</td></tr>
+          <tr><td>remote work / telecommuting</td><td>远程工作</td></tr>
+          <tr><td>hybrid work model</td><td>混合工作模式</td></tr>
+          <tr><td>digital nomad</td><td>数字游民</td></tr>
+          <tr><td>gig economy</td><td>零工经济</td></tr>
+          <tr><td>freelance workforce</td><td>自由职业劳动力</td></tr>
+          <tr><td>work-life integration</td><td>工作与生活的融合</td></tr>
+          <tr><td>mental health and burnout</td><td>心理健康与职业倦怠</td></tr>
+          <tr><td>economic precarity</td><td>经济不稳定</td></tr>
+          <tr><td>lack of job security</td><td>缺乏工作保障</td></tr>
+          <tr><td>automation and AI</td><td>自动化与人工智能</td></tr>
+          <tr><td>reskilling and upskilling</td><td>再培训与技能提升</td></tr>
+          <tr><td>digital infrastructure</td><td>数字基础设施</td></tr>
+          <tr><td>broadband accessibility</td><td>宽带可及性</td></tr>
+          <tr><td>corporate culture</td><td>企业文化</td></tr>
+          <tr><td>team cohesion</td><td>团队凝聚力</td></tr>
+          <tr><td>productivity metrics</td><td>生产力指标</td></tr>
+          <tr><td>flexible working hours</td><td>弹性工作时间</td></tr>
+          <tr><td>asynchronous communication</td><td>异步沟通</td></tr>
+          <tr><td>blurring of boundaries</td><td>边界的模糊</td></tr>
+          <tr><td>permanent transformation</td><td>永久性的变革</td></tr>
+          <tr><td>adapt to changing circumstances</td><td>适应不断变化的环境</td></tr>
+          <tr><td>institutional level</td><td>制度层面</td></tr>
+          <tr><td>social safety net</td><td>社会保障网</td></tr>
+          <tr><td>reimagine the workplace</td><td>重新构想工作场所</td></tr>
+          <tr><td>equitable access to opportunities</td><td>公平获取机会</td></tr>
+        </table>
+      </div>
+      <div class="section-label">Suggested Paragraph Structure (5–7 paragraphs)</div>
+      <div class="para-structure">
+        <ol>
+          <li><strong>Introduction:</strong> The pandemic was a catalyst for change in the workplace.</li>
+          <li><strong>Remote work revolution:</strong> Shift from office to home; technology enabled it.</li>
+          <li><strong>Hybrid models:</strong> The new normal — combining flexibility with collaboration.</li>
+          <li><strong>The gig economy:</strong> Growth of freelance work; flexibility vs. precarity.</li>
+          <li><strong>Challenges:</strong> Burnout, blurring of work-life boundaries, digital divide, loss of team cohesion.</li>
+          <li><strong>The role of AI and automation:</strong> Reskilling, future skill demands.</li>
+          <li><strong>Conclusion:</strong> The future of work is flexible but requires new policies, social safety nets, and a focus on well-being.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Adv Ex 4 -->
+    <div id="adv-4" class="exercise adv">
+      <h3>Advanced · Exercise 4: Climate Change — Individual Action vs. Systemic Change</h3>
+      <span class="req-badge">Requirements: (4–8 paragraphs, 200–400 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write a persuasive essay arguing whether individual actions or systemic/governmental changes are more effective in combating climate change. Consider both perspectives and make a compelling argument.</div>
+      <div class="section-label">Extensive English Vocabulary &amp; Phrase Hints</div>
+      <div class="english-hints">
+        <p style="font-weight: 700; margin-bottom: 8px;">Structural phrases:</p>
+        <ul class="structural-phrases">
+          <li><code>Climate change stands as the most pressing existential threat of our time, demanding urgent and multifaceted action.</code></li>
+          <li><code>A persistent debate centers on whether the primary responsibility lies with individuals or with systemic actors.</code></li>
+          <li><code>While individual efforts are commendable, they are insufficient without the scaffolding of robust systemic change.</code></li>
+          <li><code>The most effective strategy, therefore, is one that integrates both approaches in a complementary fashion.</code></li>
+        </ul>
+        <table class="vocab-table">
+          <tr><td>existential threat</td><td>生存威胁</td></tr>
+          <tr><td>greenhouse gas emissions</td><td>温室气体排放</td></tr>
+          <tr><td>carbon footprint</td><td>碳足迹</td></tr>
+          <tr><td>renewable energy</td><td>可再生能源</td></tr>
+          <tr><td>fossil fuel dependency</td><td>对化石燃料的依赖</td></tr>
+          <tr><td>legislative measures</td><td>立法措施</td></tr>
+          <tr><td>carbon pricing / carbon tax</td><td>碳定价/碳税</td></tr>
+          <tr><td>international climate agreements</td><td>国际气候协议</td></tr>
+          <tr><td>Paris Agreement</td><td>巴黎协定</td></tr>
+          <tr><td>corporate accountability</td><td>企业问责制</td></tr>
+          <tr><td>greenwashing</td><td>漂绿/伪环保</td></tr>
+          <tr><td>sustainable practices</td><td>可持续的做法</td></tr>
+          <tr><td>collective action</td><td>集体行动</td></tr>
+          <tr><td>grassroots movement</td><td>草根运动</td></tr>
+          <tr><td>environmental policy</td><td>环境政策</td></tr>
+          <tr><td>tipping point</td><td>临界点</td></tr>
+          <tr><td>catastrophic consequences</td><td>灾难性后果</td></tr>
+          <tr><td>intergenerational equity</td><td>代际公平</td></tr>
+          <tr><td>moral imperative</td><td>道德责任</td></tr>
+          <tr><td>policy-level interventions</td><td>政策层面的干预</td></tr>
+          <tr><td>individual behavioral change</td><td>个人行为改变</td></tr>
+          <tr><td>complement each other</td><td>互相补充</td></tr>
+          <tr><td>top-down approach</td><td>自上而下的方法</td></tr>
+          <tr><td>bottom-up approach</td><td>自下而上的方法</td></tr>
+          <tr><td>disproportionately affect</td><td>不成比例地影响</td></tr>
+          <tr><td>vulnerable communities</td><td>脆弱社区</td></tr>
+        </table>
+      </div>
+      <div class="section-label">Suggested Paragraph Structure (6–7 paragraphs)</div>
+      <div class="para-structure">
+        <ol>
+          <li><strong>Introduction:</strong> Climate change is the defining crisis of our era; introduce the individual vs. systemic debate.</li>
+          <li><strong>Individual action — importance:</strong> Lifestyle changes, consumer choices, raising awareness.</li>
+          <li><strong>Limitations of individual action:</strong> Small impact, shifting blame to consumers, greenwashing by corporations.</li>
+          <li><strong>Systemic change — necessity:</strong> Government policy, carbon pricing, renewable energy investment, international agreements.</li>
+          <li><strong>Corporate responsibility:</strong> Holding industries accountable; they are the largest emitters.</li>
+          <li><strong>The synergy argument:</strong> Individual actions drive political will; systemic changes enable individual choices; both are needed.</li>
+          <li><strong>Conclusion:</strong> The climate crisis requires both top-down and bottom-up approaches; time is running out.</li>
+        </ol>
+      </div>
+    </div>
+
+    <!-- Adv Ex 5 -->
+    <div id="adv-5" class="exercise adv">
+      <h3>Advanced · Exercise 5: The Role of Arts Education in Schools</h3>
+      <span class="req-badge">Requirements: (4–8 paragraphs, 200–400 words)</span>
+      <div class="prompt-box"><strong>Prompt:</strong> Write a discursive essay examining the role of arts education in schools. Should arts be given the same importance as STEM subjects? Argue your position with supporting reasoning.</div>
+      <div class="section-label">Extensive English Vocabulary &amp; Phrase Hints</div>
+      <div class="english-hints">
+        <p style="font-weight: 700; margin-bottom: 8px;">Structural phrases:</p>
+        <ul class="structural-phrases">
+          <li><code>In an era increasingly dominated by science, technology, engineering, and mathematics, the role of arts education has become a subject of contentious debate.</code></li>
+          <li><code>Advocates of a well-rounded education contend that the arts are not a luxury but a necessity.</code></li>
+          <li><code>Conversely, pragmatists argue that in a competitive global economy, STEM subjects should take precedence.</code></li>
+          <li><code>A compelling body of evidence suggests that this dichotomy is, in fact, a false one.</code></li>
+        </ul>
+        <table class="vocab-table">
+          <tr><td>STEM subjects</td><td>STEM学科 (科学、技术、工程、数学)</td></tr>
+          <tr><td>well-rounded education</td><td>全面发展的教育</td></tr>
+          <tr><td>creative expression</td><td>创意表达</td></tr>
+          <tr><td>cognitive development</td><td>认知发展</td></tr>
+          <tr><td>emotional intelligence</td><td>情商</td></tr>
+          <tr><td>critical thinking</td><td>批判性思维</td></tr>
+          <tr><td>cultural awareness</td><td>文化意识</td></tr>
+          <tr><td>aesthetic appreciation</td><td>审美能力</td></tr>
+          <tr><td>interdisciplinary learning</td><td>跨学科学习</td></tr>
+          <tr><td>innovation and creativity</td><td>创新与创造力</td></tr>
+          <tr><td>problem-solving skills</td><td>解决问题的能力</td></tr>
+          <tr><td>holistic development</td><td>全面发展</td></tr>
+          <tr><td>marginalization of the arts</td><td>艺术的边缘化</td></tr>
+          <tr><td>budget cuts</td><td>预算削减</td></tr>
+          <tr><td>standardized testing</td><td>标准化考试</td></tr>
+          <tr><td>instrumental value</td><td>工具性价值</td></tr>
+          <tr><td>intrinsic value</td><td>内在价值</td></tr>
+          <tr><td>creative industries</td><td>创意产业</td></tr>
+          <tr><td>cultural capital</td><td>文化资本</td></tr>
+          <tr><td>intellectual curiosity</td><td>求知欲</td></tr>
+          <tr><td>nurturing talent</td><td>培养天赋</td></tr>
+          <tr><td>false dichotomy</td><td>虚假的二元对立</td></tr>
+          <tr><td>complementary disciplines</td><td>互补的学科</td></tr>
+          <tr><td>cognitive benefits</td><td>认知方面的好处</td></tr>
+          <tr><td>diminished emphasis</td><td>重视程度的降低</td></tr>
+          <tr><td>produce well-rounded citizens</td><td>培养全面发展的公民</td></tr>
+        </table>
+      </div>
+      <div class="section-label">Suggested Paragraph Structure (6–7 paragraphs)</div>
+      <div class="para-structure">
+        <ol>
+          <li><strong>Introduction:</strong> The debate between STEM and arts education in modern schools.</li>
+          <li><strong>The case for STEM:</strong> Economic competitiveness, technological advancement, job market demands.</li>
+          <li><strong>The case for arts — cognitive benefits:</strong> Creativity, critical thinking, problem-solving, emotional intelligence.</li>
+          <li><strong>The case for arts — cultural and social benefits:</strong> Cultural awareness, empathy, self-expression, well-being.</li>
+          <li><strong>The false dichotomy:</strong> Arts and STEM are complementary; innovation requires both analytical and creative thinking.</li>
+          <li><strong>The consequences of cutting arts:</strong> Narrow education, loss of cultural capital, diminished well-being.</li>
+          <li><strong>Conclusion:</strong> Arts education is essential for producing well-rounded citizens; schools should give equal importance to both.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== Model Answers ==================== -->
+  <div class="level-section">
+    <div class="level-header adv" id="models">Model Answers</div>
+    <div class="level-desc">Compare your writing with these model answers to identify areas for improvement.</div>
+
+    <div class="model-answer">
+      <h3>Model Answer: A1 · Exercise 1 (My Best Friend)</h3>
+      <div class="essay-body">
+        <p>My best friend's name is Xiaoming. He is tall and has short hair. We play basketball every day. On weekends, we do our homework together. Xiaoming is very kind and always helps me. I like being with him.</p>
+      </div>
+      <p class="word-count">(1 paragraph, 38 words)</p>
+    </div>
+
+    <div class="model-answer">
+      <h3>Model Answer: A2 · Exercise 1 (A Trip to the Beach)</h3>
+      <div class="essay-body">
+        <p>Last summer, my family and I went to the beach. The weather was sunny and the sky was blue. We played games on the sand and swam in the sea. At noon, we ate delicious seafood. In the afternoon, my sister and I built a big sandcastle. In the evening, we watched a beautiful sunset. It was the happiest day, and I hope we can go again next year.</p>
+      </div>
+      <p class="word-count">(1 paragraph, 73 words)</p>
+    </div>
+
+    <div class="model-answer">
+      <h3>Model Answer: B1 · Exercise 1 (The Importance of Reading)</h3>
+      <div class="essay-body">
+        <p>Reading is very important in our lives. It not only helps us acquire knowledge but also brings us joy.</p>
+        <p>First, reading can broaden our horizons. Through books, we can learn about different cultures and places around the world without even leaving home. We can travel to different countries and times through stories.</p>
+        <p>Second, reading improves our language skills. The more we read, the larger our vocabulary becomes. This also helps us write better. Good readers usually become good writers.</p>
+        <p>In conclusion, reading is a wonderful habit. We should spend time reading every day and make it a part of our daily life.</p>
+      </div>
+      <p class="word-count">(4 paragraphs, 113 words)</p>
+    </div>
+
+    <div class="model-answer">
+      <h3>Model Answer: B2 · Exercise 1 (The Impact of Social Media on Young People)</h3>
+      <div class="essay-body">
+        <p>In recent years, social media has become an integral part of young people's daily lives. While it offers numerous benefits, it also brings significant challenges that cannot be ignored.</p>
+        <p>On the one hand, social media allows young people to stay connected with friends and family, regardless of distance. It serves as a powerful platform for sharing experiences, discovering new ideas, and accessing information quickly. Many young people also use it to develop their creativity by sharing artwork, videos, and writing.</p>
+        <p>On the other hand, social media can have negative effects. Cyberbullying has become a serious problem, and excessive use can lead to addiction and poor mental health. Many young people develop unrealistic expectations by comparing themselves to others online, which can damage their self-esteem.</p>
+        <p>From my perspective, social media is a double-edged sword. The key is to strike a balance. Young people should regulate their screen time and develop critical thinking to evaluate the information they see.</p>
+        <p>In conclusion, social media's benefits can outweigh the drawbacks if used wisely. Education and awareness are essential to help young people navigate the digital world responsibly.</p>
+      </div>
+      <p class="word-count">(5 paragraphs, 189 words)</p>
+    </div>
+
+    <div class="model-answer">
+      <h3>Model Answer: Advanced · Exercise 1 (The Ethics of Artificial Intelligence)</h3>
+      <div class="essay-body">
+        <p>The rapid advancement of artificial intelligence has sparked a global debate concerning its ethical implications. While AI undoubtedly offers unprecedented opportunities to improve human life, it also raises profound ethical questions that demand careful consideration.</p>
+        <p>One of the most significant benefits of AI lies in its potential to revolutionize healthcare, scientific research, and education. AI-powered diagnostic tools can detect diseases earlier and more accurately than traditional methods. In education, personalized learning platforms can adapt to individual students' needs, making quality education more accessible. These applications demonstrate AI's capacity to serve the greater good.</p>
+        <p>However, the risks are equally substantial. Algorithmic bias is a pressing concern: AI systems trained on biased data can perpetuate and even amplify existing social inequalities, leading to discriminatory outcomes in hiring, lending, and criminal justice. Furthermore, the mass collection of data required to train AI models raises serious privacy concerns. The potential for surveillance and the erosion of personal privacy represent a dystopian scenario that society must actively prevent.</p>
+        <p>The economic impact of AI also cannot be overlooked. While automation creates new industries, it also threatens to displace millions of workers, potentially widening socioeconomic inequality. Without adequate reskilling programs and social safety nets, entire communities could be left behind.</p>
+        <p>To navigate these challenges, it is imperative that society establishes a robust regulatory framework. This includes mandating transparency and accountability in AI systems, ensuring human oversight in autonomous decision-making, and developing ethical guidelines that prioritize human dignity. Governments, technologists, and civil society must engage in collaborative governance to ensure that AI development serves the public interest.</p>
+        <p>Ultimately, the trajectory of AI development will be shaped by the ethical framework we establish today. By weighing the benefits against the risks and implementing responsible innovation, we can harness the potential of AI while mitigating its unintended consequences. The onus lies not only on policymakers but also on technologists and society at large to ensure that AI serves humanity rather than the other way around.</p>
+      </div>
+      <p class="word-count">(7 paragraphs, 316 words)</p>
+    </div>
+  </div>
+
+  <!-- ==================== Summary ==================== -->
+  <div id="summary" class="summary-card">
+    <h2 style="margin-bottom: 20px;">Workbook Summary</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Level</th>
+          <th>Exercises</th>
+          <th>Chinese Support</th>
+          <th>Vocab Hints</th>
+          <th>Paragraphs</th>
+          <th>Word Count</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>A1</strong></td><td>5</td><td>Full essay</td><td>Basic vocab table</td><td>1</td><td>30–50</td></tr>
+        <tr><td><strong>A2</strong></td><td>5</td><td>Full essay</td><td>Basic vocab table</td><td>1</td><td>50–80</td></tr>
+        <tr><td><strong>B1</strong></td><td>5</td><td>Simple (core structure)</td><td>Vocab + structural hints</td><td>3–4</td><td>100–150</td></tr>
+        <tr><td><strong>B2</strong></td><td>5</td><td>None</td><td>Extensive vocab + structure</td><td>4–6</td><td>150–200</td></tr>
+        <tr><td><strong>Advanced</strong></td><td>5</td><td>None</td><td>Extensive vocab + phrases + structure</td><td>4–8</td><td>200–400</td></tr>
+        <tr style="font-weight: 700; background: var(--accent-bg);"><td colspan="1">Total</td><td>25</td><td colspan="4">+ 5 model answers across all levels</td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top: 20px; font-size: 14px; color: var(--text-light);">This workbook is designed for progressive skill development. Start at your current CEFR level and work upward. Each level reduces Chinese-language scaffolding and increases English vocabulary support, helping you build the skills needed to write independently and approach model-answer quality.</p>
+  </div>
+
+  <div class="footer-note">
+    English Writing Exercise Workbook · CEFR A1 → Advanced · 25 Exercises + 5 Model Answers
+  </div>
+
+</div>
+
+</body>
+</html>
