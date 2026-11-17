@@ -1,5 +1,5 @@
 ---
-unitTitle: "Unit 14: Media Literacy & Information Integrity"
+unitTitle: "Unit 14: Plastic Pollution & Circular Economy"
 courseId: "advanced-writing"
 sourceLanguage: "zh"
 targetLanguage: "en"
@@ -8,152 +8,32 @@ questionType: "writing"
 ---
 
 ---
-lessonTitle: "Media Ethics: Advanced Topic 1"
-description: "Examine complex dimensions of media literacy & information integrity (Perspective 1)"
-icon: "📰"
-color: "#DC2626"
+lessonTitle: "Should single-use plastics be banned entirely,..."
+description: "Should single-use plastics be banned entirely, or are targeted restrictions and ..."
+icon: "♻️"
+color: "#16A34A"
 ---
 
 [writing]
 text: "English Essay"
-sentence: "Write about media ethics: advanced topic 1 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: deepfakes, disinformation, journalistic integrity, epistemic trust, algorithmic curation, media literacy, fact-checking, information warfare, digital manipulation, source verification, propaganda, echo chambers, filter bubbles, press freedom, information integrity, citizen journalism, source triangulation, media literacy education, narrative manipulation, trust in institutions"
-answer: "The contemporary discourse surrounding media literacy & information integrity has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of media literacy & information integrity requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding media literacy & information integrity are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of media literacy & information integrity reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
+sentence: "Should single-use plastics be banned entirely, or are targeted restrictions and economic incentives more effective? || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: single-use plastics, plastic waste, recycling infrastructure, circular economy, waste management, extended producer responsibility, plastic ban, marine pollution, microplastics, packaging waste, material recovery, product lifecycle, waste reduction, deposit scheme, biodegradable alternatives, plastic levy, recycling rates, waste hierarchy, resource efficiency, sustainable packaging"
+answer: "The question of whether plastic pollution & circular economy merits serious attention has become increasingly pressing in contemporary discourse. At its core, the issue revolves around should single-use plastics be banned entirely, or are targeted restrictions and economic incentives more effective. || On one side of the debate, proponents argue that the existing plastics framework provides adequate safeguards. They contend that banned can be managed through voluntary guidelines and market forces, without the need for heavy-handed intervention. Moreover, they point to the restrictions benefits that current approaches have delivered, suggesting that disruption could produce unintended consequences. || Conversely, critics maintain that reliance on self-regulation is insufficient. They highlight cases where the absence of meaningful incentives has led to demonstrable harm, particularly among vulnerable populations. Furthermore, they argue that the pace of change has outstripped the capacity of existing institutions to respond effectively, creating a dangerous governance gap that demands immediate action. || A balanced resolution requires acknowledging the legitimacy of both perspectives. Rather than choosing between unfettered progress and paralytic caution, policymakers should pursue proportionate effective measures that address identified risks without stifling innovation. This means establishing clear thresholds for intervention, mandating transparency, and creating mechanisms for ongoing review and adjustment. || In conclusion, navigating the complexities of plastic pollution & circular economy demands neither blind optimism nor reflexive resistance. What is required is a commitment to evidence-based policymaking, inclusive stakeholder dialogue, and the willingness to adapt as circumstances evolve."
+acceptAlso: "While some argue that existing plastics arrangements are adequate, I believe that meaningful reform is necessary. The evidence of harm is sufficient to warrant precautionary incentives, and the costs of inaction are likely to exceed the costs of measured intervention over time."
+core: "The debate around plastic pollution & circular economy requires balancing the benefits of plastics against legitimate concerns about incentives and effective. A proportionate response demands targeted regulation, meaningful stakeholder engagement, and ongoing empirical review rather than either unfettered progress or reflexive caution."
+srsWords: "plastics" "banned" "restrictions" "incentives" "effective"
 
 ---
-lessonTitle: "Media Ethics: Advanced Topic 2"
-description: "Examine complex dimensions of media literacy & information integrity (Perspective 2)"
-icon: "📰"
-color: "#DC2626"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about media ethics: advanced topic 2 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: deepfakes, disinformation, journalistic integrity, epistemic trust, algorithmic curation, media literacy, fact-checking, information warfare, digital manipulation, source verification, propaganda, echo chambers, filter bubbles, press freedom, information integrity, citizen journalism, source triangulation, media literacy education, narrative manipulation, trust in institutions"
-answer: "The contemporary discourse surrounding media literacy & information integrity has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of media literacy & information integrity requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding media literacy & information integrity are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of media literacy & information integrity reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Media Ethics: Advanced Topic 3"
-description: "Examine complex dimensions of media literacy & information integrity (Perspective 3)"
-icon: "📰"
-color: "#DC2626"
+lessonTitle: "How can the circular economy model..."
+description: "How can the circular economy model be scaled from aspiration to standard practic..."
+icon: "♻️"
+color: "#16A34A"
 ---
 
 [writing]
 text: "English Essay"
-sentence: "Write about media ethics: advanced topic 3 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: deepfakes, disinformation, journalistic integrity, epistemic trust, algorithmic curation, media literacy, fact-checking, information warfare, digital manipulation, source verification, propaganda, echo chambers, filter bubbles, press freedom, information integrity, citizen journalism, source triangulation, media literacy education, narrative manipulation, trust in institutions"
-answer: "The contemporary discourse surrounding media literacy & information integrity has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of media literacy & information integrity requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding media literacy & information integrity are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of media literacy & information integrity reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Media Ethics: Advanced Topic 4"
-description: "Examine complex dimensions of media literacy & information integrity (Perspective 4)"
-icon: "📰"
-color: "#DC2626"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about media ethics: advanced topic 4 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: deepfakes, disinformation, journalistic integrity, epistemic trust, algorithmic curation, media literacy, fact-checking, information warfare, digital manipulation, source verification, propaganda, echo chambers, filter bubbles, press freedom, information integrity, citizen journalism, source triangulation, media literacy education, narrative manipulation, trust in institutions"
-answer: "The contemporary discourse surrounding media literacy & information integrity has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of media literacy & information integrity requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding media literacy & information integrity are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of media literacy & information integrity reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Media Ethics: Advanced Topic 5"
-description: "Examine complex dimensions of media literacy & information integrity (Perspective 5)"
-icon: "📰"
-color: "#DC2626"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about media ethics: advanced topic 5 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: deepfakes, disinformation, journalistic integrity, epistemic trust, algorithmic curation, media literacy, fact-checking, information warfare, digital manipulation, source verification, propaganda, echo chambers, filter bubbles, press freedom, information integrity, citizen journalism, source triangulation, media literacy education, narrative manipulation, trust in institutions"
-answer: "The contemporary discourse surrounding media literacy & information integrity has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of media literacy & information integrity requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding media literacy & information integrity are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of media literacy & information integrity reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Media Ethics: Advanced Topic 6"
-description: "Examine complex dimensions of media literacy & information integrity (Perspective 6)"
-icon: "📰"
-color: "#DC2626"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about media ethics: advanced topic 6 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: deepfakes, disinformation, journalistic integrity, epistemic trust, algorithmic curation, media literacy, fact-checking, information warfare, digital manipulation, source verification, propaganda, echo chambers, filter bubbles, press freedom, information integrity, citizen journalism, source triangulation, media literacy education, narrative manipulation, trust in institutions"
-answer: "The contemporary discourse surrounding media literacy & information integrity has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of media literacy & information integrity requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding media literacy & information integrity are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of media literacy & information integrity reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Media Ethics: Advanced Topic 7"
-description: "Examine complex dimensions of media literacy & information integrity (Perspective 7)"
-icon: "📰"
-color: "#DC2626"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about media ethics: advanced topic 7 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: deepfakes, disinformation, journalistic integrity, epistemic trust, algorithmic curation, media literacy, fact-checking, information warfare, digital manipulation, source verification, propaganda, echo chambers, filter bubbles, press freedom, information integrity, citizen journalism, source triangulation, media literacy education, narrative manipulation, trust in institutions"
-answer: "The contemporary discourse surrounding media literacy & information integrity has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of media literacy & information integrity requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding media literacy & information integrity are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of media literacy & information integrity reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Media Ethics: Advanced Topic 8"
-description: "Examine complex dimensions of media literacy & information integrity (Perspective 8)"
-icon: "📰"
-color: "#DC2626"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about media ethics: advanced topic 8 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: deepfakes, disinformation, journalistic integrity, epistemic trust, algorithmic curation, media literacy, fact-checking, information warfare, digital manipulation, source verification, propaganda, echo chambers, filter bubbles, press freedom, information integrity, citizen journalism, source triangulation, media literacy education, narrative manipulation, trust in institutions"
-answer: "The contemporary discourse surrounding media literacy & information integrity has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of media literacy & information integrity requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding media literacy & information integrity are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of media literacy & information integrity reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Media Ethics: Advanced Topic 9"
-description: "Examine complex dimensions of media literacy & information integrity (Perspective 9)"
-icon: "📰"
-color: "#DC2626"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about media ethics: advanced topic 9 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: deepfakes, disinformation, journalistic integrity, epistemic trust, algorithmic curation, media literacy, fact-checking, information warfare, digital manipulation, source verification, propaganda, echo chambers, filter bubbles, press freedom, information integrity, citizen journalism, source triangulation, media literacy education, narrative manipulation, trust in institutions"
-answer: "The contemporary discourse surrounding media literacy & information integrity has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of media literacy & information integrity requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding media literacy & information integrity are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of media literacy & information integrity reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Media Ethics: Advanced Topic 10"
-description: "Examine complex dimensions of media literacy & information integrity (Perspective 10)"
-icon: "📰"
-color: "#DC2626"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about media ethics: advanced topic 10 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: deepfakes, disinformation, journalistic integrity, epistemic trust, algorithmic curation, media literacy, fact-checking, information warfare, digital manipulation, source verification, propaganda, echo chambers, filter bubbles, press freedom, information integrity, citizen journalism, source triangulation, media literacy education, narrative manipulation, trust in institutions"
-answer: "The contemporary discourse surrounding media literacy & information integrity has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of media literacy & information integrity requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding media literacy & information integrity are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of media literacy & information integrity reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
+sentence: "How can the circular economy model be scaled from aspiration to standard practice in manufacturing? || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: single-use plastics, plastic waste, recycling infrastructure, circular economy, waste management, extended producer responsibility, plastic ban, marine pollution, microplastics, packaging waste, material recovery, product lifecycle, waste reduction, deposit scheme, biodegradable alternatives, plastic levy, recycling rates, waste hierarchy, resource efficiency, sustainable packaging"
+answer: "The challenges surrounding plastic pollution & circular economy represent one of the most consequential policy dilemmas of our time. How can the circular economy model be scaled from aspiration to standard practice in manufacturing? || The root of the problem lies in the tension between rapid technological and economic transformation and the slower pace of institutional adaptation. As circular accelerates, existing regulatory and social structures frequently fail to keep pace, leaving significant gaps in economy. These gaps manifest in concrete harms: marginalised groups bear disproportionate burdens, public trust erodes, and the benefits of progress are distributed unevenly. || Addressing these challenges requires a multi-pronged strategy. First, governments must invest in robust manufacturing mechanisms that can anticipate and respond to emerging risks. Second, meaningful scaled must be embedded into decision-making processes at every level, ensuring that those most affected have a voice in shaping outcomes. Third, ongoing research and empirical monitoring are essential to distinguish genuine threats from speculative fears. || Equally important is the role of international cooperation. Given that many of these challenges transcend national borders, fragmented responses are inherently inadequate. A coordinated framework for standard would enable knowledge sharing, harmonised standards, and collective action against threats that no single nation can address alone. || Ultimately, the goal should not be to halt progress but to channel it in directions that serve the broad public interest. With foresight, political will, and sustained commitment to equitable outcomes, it is possible to navigate the complexities ahead."
+acceptAlso: "Although concerns about plastic pollution & circular economy are sometimes overstated, I maintain that proactive manufacturing is justified. The asymmetry between reversible costs of caution and potentially irreversible harms makes a precautionary approach the rational choice."
+core: "Addressing plastic pollution & circular economy demands multi-pronged strategies: investing in manufacturing mechanisms, ensuring scaled in decision-making, and strengthening international cooperation on standard. Progress is possible with foresight, political will, and sustained commitment to equitable outcomes."
+srsWords: "circular" "economy" "manufacturing" "scaled" "standard"
 

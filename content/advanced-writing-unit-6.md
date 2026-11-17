@@ -1,5 +1,5 @@
 ---
-unitTitle: "Unit 6: Higher Education & Knowledge Economy"
+unitTitle: "Unit 6: Digital Divide & Tech Equity"
 courseId: "advanced-writing"
 sourceLanguage: "zh"
 targetLanguage: "en"
@@ -8,152 +8,32 @@ questionType: "writing"
 ---
 
 ---
-lessonTitle: "Education: Advanced Topic 1"
-description: "Examine complex dimensions of higher education & knowledge economy (Perspective 1)"
-icon: "🎓"
-color: "#8B5CF6"
+lessonTitle: "How can governments bridge the digital..."
+description: "How can governments bridge the digital divide between urban and rural communitie..."
+icon: "🌐"
+color: "#0891B2"
 ---
 
 [writing]
 text: "English Essay"
-sentence: "Write about education: advanced topic 1 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: knowledge economy, academic rigor, tuition inflation, critical inquiry, lifelong learning, higher education reform, research commercialization, academic-industry collaboration, student debt, digital literacy, meritocracy, pedagogical innovation, accessible education, intellectual property, academic freedom, mooc, microcredential, university-industry partnership, student mobility, curriculum design"
-answer: "The contemporary discourse surrounding higher education & knowledge economy has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of higher education & knowledge economy requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding higher education & knowledge economy are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of higher education & knowledge economy reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
+sentence: "How can governments bridge the digital divide between urban and rural communities in access to broadband and digital services? || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: digital inclusion, broadband access, technology gap, digital literacy, internet affordability, remote learning, telehealth access, e-government, connectivity, rural broadband, digital skills, device access, online participation, digital exclusion, tech empowerment, infrastructure investment, digital divide, information access, technological equity, digital citizenship"
+answer: "The question of whether digital divide & tech equity merits serious attention has become increasingly pressing in contemporary discourse. At its core, the issue revolves around how can governments bridge the digital divide between urban and rural communities in access to broadband and digital services. || On one side of the debate, proponents argue that the existing digital framework provides adequate safeguards. They contend that divide can be managed through voluntary guidelines and market forces, without the need for heavy-handed intervention. Moreover, they point to the broadband benefits that current approaches have delivered, suggesting that disruption could produce unintended consequences. || Conversely, critics maintain that reliance on self-regulation is insufficient. They highlight cases where the absence of meaningful rural has led to demonstrable harm, particularly among vulnerable populations. Furthermore, they argue that the pace of change has outstripped the capacity of existing institutions to respond effectively, creating a dangerous governance gap that demands immediate action. || A balanced resolution requires acknowledging the legitimacy of both perspectives. Rather than choosing between unfettered progress and paralytic caution, policymakers should pursue proportionate communities measures that address identified risks without stifling innovation. This means establishing clear thresholds for intervention, mandating transparency, and creating mechanisms for ongoing review and adjustment. || In conclusion, navigating the complexities of digital divide & tech equity demands neither blind optimism nor reflexive resistance. What is required is a commitment to evidence-based policymaking, inclusive stakeholder dialogue, and the willingness to adapt as circumstances evolve."
+acceptAlso: "While some argue that existing digital arrangements are adequate, I believe that meaningful reform is necessary. The evidence of harm is sufficient to warrant precautionary rural, and the costs of inaction are likely to exceed the costs of measured intervention over time."
+core: "The debate around digital divide & tech equity requires balancing the benefits of digital against legitimate concerns about rural and communities. A proportionate response demands targeted regulation, meaningful stakeholder engagement, and ongoing empirical review rather than either unfettered progress or reflexive caution."
+srsWords: "digital" "divide" "broadband" "rural" "communities"
 
 ---
-lessonTitle: "Education: Advanced Topic 2"
-description: "Examine complex dimensions of higher education & knowledge economy (Perspective 2)"
-icon: "🎓"
-color: "#8B5CF6"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about education: advanced topic 2 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: knowledge economy, academic rigor, tuition inflation, critical inquiry, lifelong learning, higher education reform, research commercialization, academic-industry collaboration, student debt, digital literacy, meritocracy, pedagogical innovation, accessible education, intellectual property, academic freedom, mooc, microcredential, university-industry partnership, student mobility, curriculum design"
-answer: "The contemporary discourse surrounding higher education & knowledge economy has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of higher education & knowledge economy requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding higher education & knowledge economy are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of higher education & knowledge economy reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Education: Advanced Topic 3"
-description: "Examine complex dimensions of higher education & knowledge economy (Perspective 3)"
-icon: "🎓"
-color: "#8B5CF6"
+lessonTitle: "Should internet access be considered a..."
+description: "Should internet access be considered a fundamental right, and what obligations d..."
+icon: "🌐"
+color: "#0891B2"
 ---
 
 [writing]
 text: "English Essay"
-sentence: "Write about education: advanced topic 3 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: knowledge economy, academic rigor, tuition inflation, critical inquiry, lifelong learning, higher education reform, research commercialization, academic-industry collaboration, student debt, digital literacy, meritocracy, pedagogical innovation, accessible education, intellectual property, academic freedom, mooc, microcredential, university-industry partnership, student mobility, curriculum design"
-answer: "The contemporary discourse surrounding higher education & knowledge economy has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of higher education & knowledge economy requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding higher education & knowledge economy are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of higher education & knowledge economy reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Education: Advanced Topic 4"
-description: "Examine complex dimensions of higher education & knowledge economy (Perspective 4)"
-icon: "🎓"
-color: "#8B5CF6"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about education: advanced topic 4 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: knowledge economy, academic rigor, tuition inflation, critical inquiry, lifelong learning, higher education reform, research commercialization, academic-industry collaboration, student debt, digital literacy, meritocracy, pedagogical innovation, accessible education, intellectual property, academic freedom, mooc, microcredential, university-industry partnership, student mobility, curriculum design"
-answer: "The contemporary discourse surrounding higher education & knowledge economy has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of higher education & knowledge economy requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding higher education & knowledge economy are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of higher education & knowledge economy reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Education: Advanced Topic 5"
-description: "Examine complex dimensions of higher education & knowledge economy (Perspective 5)"
-icon: "🎓"
-color: "#8B5CF6"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about education: advanced topic 5 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: knowledge economy, academic rigor, tuition inflation, critical inquiry, lifelong learning, higher education reform, research commercialization, academic-industry collaboration, student debt, digital literacy, meritocracy, pedagogical innovation, accessible education, intellectual property, academic freedom, mooc, microcredential, university-industry partnership, student mobility, curriculum design"
-answer: "The contemporary discourse surrounding higher education & knowledge economy has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of higher education & knowledge economy requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding higher education & knowledge economy are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of higher education & knowledge economy reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Education: Advanced Topic 6"
-description: "Examine complex dimensions of higher education & knowledge economy (Perspective 6)"
-icon: "🎓"
-color: "#8B5CF6"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about education: advanced topic 6 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: knowledge economy, academic rigor, tuition inflation, critical inquiry, lifelong learning, higher education reform, research commercialization, academic-industry collaboration, student debt, digital literacy, meritocracy, pedagogical innovation, accessible education, intellectual property, academic freedom, mooc, microcredential, university-industry partnership, student mobility, curriculum design"
-answer: "The contemporary discourse surrounding higher education & knowledge economy has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of higher education & knowledge economy requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding higher education & knowledge economy are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of higher education & knowledge economy reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Education: Advanced Topic 7"
-description: "Examine complex dimensions of higher education & knowledge economy (Perspective 7)"
-icon: "🎓"
-color: "#8B5CF6"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about education: advanced topic 7 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: knowledge economy, academic rigor, tuition inflation, critical inquiry, lifelong learning, higher education reform, research commercialization, academic-industry collaboration, student debt, digital literacy, meritocracy, pedagogical innovation, accessible education, intellectual property, academic freedom, mooc, microcredential, university-industry partnership, student mobility, curriculum design"
-answer: "The contemporary discourse surrounding higher education & knowledge economy has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of higher education & knowledge economy requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding higher education & knowledge economy are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of higher education & knowledge economy reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Education: Advanced Topic 8"
-description: "Examine complex dimensions of higher education & knowledge economy (Perspective 8)"
-icon: "🎓"
-color: "#8B5CF6"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about education: advanced topic 8 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: knowledge economy, academic rigor, tuition inflation, critical inquiry, lifelong learning, higher education reform, research commercialization, academic-industry collaboration, student debt, digital literacy, meritocracy, pedagogical innovation, accessible education, intellectual property, academic freedom, mooc, microcredential, university-industry partnership, student mobility, curriculum design"
-answer: "The contemporary discourse surrounding higher education & knowledge economy has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of higher education & knowledge economy requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding higher education & knowledge economy are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of higher education & knowledge economy reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Education: Advanced Topic 9"
-description: "Examine complex dimensions of higher education & knowledge economy (Perspective 9)"
-icon: "🎓"
-color: "#8B5CF6"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about education: advanced topic 9 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: knowledge economy, academic rigor, tuition inflation, critical inquiry, lifelong learning, higher education reform, research commercialization, academic-industry collaboration, student debt, digital literacy, meritocracy, pedagogical innovation, accessible education, intellectual property, academic freedom, mooc, microcredential, university-industry partnership, student mobility, curriculum design"
-answer: "The contemporary discourse surrounding higher education & knowledge economy has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of higher education & knowledge economy requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding higher education & knowledge economy are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of higher education & knowledge economy reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
-
----
-lessonTitle: "Education: Advanced Topic 10"
-description: "Examine complex dimensions of higher education & knowledge economy (Perspective 10)"
-icon: "🎓"
-color: "#8B5CF6"
----
-
-[writing]
-text: "English Essay"
-sentence: "Write about education: advanced topic 10 in English. || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: knowledge economy, academic rigor, tuition inflation, critical inquiry, lifelong learning, higher education reform, research commercialization, academic-industry collaboration, student debt, digital literacy, meritocracy, pedagogical innovation, accessible education, intellectual property, academic freedom, mooc, microcredential, university-industry partnership, student mobility, curriculum design"
-answer: "The contemporary discourse surrounding higher education & knowledge economy has ignited profound theoretical and practical debates across global societies. || On one hand, rapid structural evolution brings unprecedented opportunities for efficiency and innovation, yet it simultaneously exacerbates socioeconomic disparities and institutional friction. When traditional frameworks fail to adapt to modern realities, systemic vulnerabilities emerge, affecting vulnerable populations disproportionately. On the other hand, proactive policy interventions and collaborative stakeholder engagement can harness these technological and economic forces for collective benefit. || To address these multifaceted challenges effectively, policymakers must implement robust regulatory safeguards, invest heavily in transparent public infrastructure, and foster continuous cross-sector dialogue. Furthermore, empowering local communities ensures that modernization aligns with fundamental human values and ecological sustainability. || Ultimately, navigating the complexities of higher education & knowledge economy requires unwavering commitment to distributive justice, foresight, and collaborative governance."
-acceptAlso: "While criticisms regarding higher education & knowledge economy are prevalent, I maintain that its overarching trajectory offers significant potential for human advancement when properly regulated."
-core: "Comprehensive analysis of higher education & knowledge economy reveals complex challenges requiring multi-dimensional policy responses, institutional reform, and unwavering commitment to social justice."
-srsWords: "sophisticated" "framework" "implications" "governance" "sustainability"
+sentence: "Should internet access be considered a fundamental right, and what obligations does that place on governments and providers? || Requirements: 4-8 paragraphs, 200-400 words || Key vocabulary & phrases: digital inclusion, broadband access, technology gap, digital literacy, internet affordability, remote learning, telehealth access, e-government, connectivity, rural broadband, digital skills, device access, online participation, digital exclusion, tech empowerment, infrastructure investment, digital divide, information access, technological equity, digital citizenship"
+answer: "The challenges surrounding digital divide & tech equity represent one of the most consequential policy dilemmas of our time. Should internet access be considered a fundamental right, and what obligations does that place on governments and providers? || The root of the problem lies in the tension between rapid technological and economic transformation and the slower pace of institutional adaptation. As internet accelerates, existing regulatory and social structures frequently fail to keep pace, leaving significant gaps in access. These gaps manifest in concrete harms: marginalised groups bear disproportionate burdens, public trust erodes, and the benefits of progress are distributed unevenly. || Addressing these challenges requires a multi-pronged strategy. First, governments must invest in robust fundamental mechanisms that can anticipate and respond to emerging risks. Second, meaningful right must be embedded into decision-making processes at every level, ensuring that those most affected have a voice in shaping outcomes. Third, ongoing research and empirical monitoring are essential to distinguish genuine threats from speculative fears. || Equally important is the role of international cooperation. Given that many of these challenges transcend national borders, fragmented responses are inherently inadequate. A coordinated framework for obligations would enable knowledge sharing, harmonised standards, and collective action against threats that no single nation can address alone. || Ultimately, the goal should not be to halt progress but to channel it in directions that serve the broad public interest. With foresight, political will, and sustained commitment to equitable outcomes, it is possible to navigate the complexities ahead."
+acceptAlso: "Although concerns about digital divide & tech equity are sometimes overstated, I maintain that proactive fundamental is justified. The asymmetry between reversible costs of caution and potentially irreversible harms makes a precautionary approach the rational choice."
+core: "Addressing digital divide & tech equity demands multi-pronged strategies: investing in fundamental mechanisms, ensuring right in decision-making, and strengthening international cooperation on obligations. Progress is possible with foresight, political will, and sustained commitment to equitable outcomes."
+srsWords: "internet" "access" "fundamental" "right" "obligations"
 
