@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
-import { Volume2, ChevronLeft, ChevronRight, Check, RotateCcw } from "lucide-react";
+import { Volume2, ChevronLeft, ChevronRight, Check, RotateCcw, Eye } from "lucide-react";
 import type { WritingExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
@@ -92,6 +92,46 @@ function scoreColorClass(score: number): string {
   if (score >= 75) return "bg-sky-500";
   if (score >= 70) return "bg-amber-500";
   return "bg-rose-500";
+}
+
+/** The model passage, shared by the graded result and the instant-reveal view. */
+function ModelAnswerPanel({ exercise }: { exercise: WritingExercise }) {
+  return (
+    <div className="rounded-2xl border-2 border-blue-200 bg-blue-50/60 p-4">
+      <span className="block text-[11px] font-bold uppercase tracking-wider text-blue-700">
+        Model writing
+      </span>
+      <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-blue-900">
+        {exercise.answer}
+      </p>
+      {(exercise.acceptAlso ?? []).length > 0 && (
+        <>
+          <span className="mt-3 block text-[11px] font-bold uppercase tracking-wider text-blue-600">
+            Another way to write it
+          </span>
+          {(exercise.acceptAlso ?? []).map((alt, i) => (
+            <p
+              key={i}
+              className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-blue-800"
+            >
+              {alt}
+            </p>
+          ))}
+        </>
+      )}
+      {/* Chinese translation of the model essay, shown below it. */}
+      {exercise.modelAnswerZh?.trim() && (
+        <div className="mt-3 border-t border-blue-200 pt-3">
+          <span className="block text-[11px] font-bold uppercase tracking-wider text-blue-600">
+            中文翻译
+          </span>
+          <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-blue-800">
+            {exercise.modelAnswerZh}
+          </p>
+        </div>
+      )}
+    </div>
+  );
 }
 
 export function Writing({
@@ -252,6 +292,25 @@ export function Writing({
   const goPrev = useCallback(() => {
     if (canGoPrev) onPrev();
   }, [canGoPrev, onPrev]);
+
+  /**
+   * Instant reveal — skips grading entirely and jumps straight to the model
+   * answer (plus its Chinese translation). It is recorded as an incorrect
+   * result because the learner did not produce the answer themselves, which
+   * keeps the lesson's mistake count honest. Continue / Next then works just
+   * like it does after a graded submission.
+   */
+  const handleReveal = useCallback(() => {
+    if (phase !== "writing") return;
+    setGrade(null);
+    setError(null);
+    setPhase("result");
+    onResult(false, exercise.answer);
+
+    if (!exercise.noAudio?.includes("answer")) {
+      play(exercise.answer, "en");
+    }
+  }, [phase, exercise.answer, exercise.noAudio, onResult, play]);
 
   // Keyboard shortcuts (global):
   //   - Enter  → continue, but only once the result (congratulation) page is
@@ -441,16 +500,20 @@ export function Writing({
           </div>
         )}
 
-        {/* Audio:
+        {/* Audio + instant reveal:
               - 中文 button — reads the Chinese essay (A1/A2/B1 only). For B2
                 and Advanced there is no Chinese source text, so the button is
                 hidden entirely rather than showing a disabled control.
               - English button — reads the English model answer. It stays locked
-                until the learner has submitted their own writing.
+                until the learner has submitted their own writing or revealed
+                the answer directly.
+              - Reveal answer button — skips grading and shows the model answer
+                (and its Chinese translation) immediately. Only shown while the
+                learner is still writing.
 
-            Both are hidden while the keyboard is open to maximise the writing
+            All are hidden while the keyboard is open to maximise the writing
             area. */}
-        <div className={`mt-4 mb-4 flex items-center justify-center gap-2.5 ${
+        <div className={`mt-4 mb-4 flex flex-wrap items-center justify-center gap-2.5 ${
           isKeyboardOpen ? "hidden" : ""
         }`}>
           {chineseEssay && (
@@ -481,11 +544,26 @@ export function Writing({
                 : "cursor-not-allowed border-lingo-border bg-lingo-gray/40 text-lingo-text-light"
             }`}
             aria-label="播放英文范文音频"
-            title={phase === "result" ? "英文范文音频" : "提交后可播放范文"}
+            title={phase === "result" ? "英文范文音频" : "提交或显示答案后可播放范文"}
           >
             <Volume2 className="h-4 w-4" />
             English
           </button>
+          {phase === "writing" && (
+            <button
+              type="button"
+              onClick={(e) => {
+                e.stopPropagation();
+                handleReveal();
+              }}
+              className="inline-flex h-10 items-center gap-1.5 rounded-full border-b-2 border-amber-400 bg-amber-100 px-3.5 text-xs font-bold text-amber-800 shadow-sm transition-all hover:bg-amber-200 active:border-b-0 active:mt-0.5"
+              aria-label="直接显示答案"
+              title="跳过评分，直接显示范文和中文翻译"
+            >
+              <Eye className="h-4 w-4" />
+              Reveal answer
+            </button>
+          )}
         </div>
 
         {/* Navigation row — hidden while the keyboard is open */}
@@ -748,46 +826,33 @@ export function Writing({
             )}
 
             {/* The model passage */}
-            <div className="rounded-2xl border-2 border-blue-200 bg-blue-50/60 p-4">
-              <span className="block text-[11px] font-bold uppercase tracking-wider text-blue-700">
-                Model writing
-              </span>
-              <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-blue-900">
-                {exercise.answer}
-              </p>
-              {(exercise.acceptAlso ?? []).length > 0 && (
-                <>
-                  <span className="mt-3 block text-[11px] font-bold uppercase tracking-wider text-blue-600">
-                    Another way to write it
-                  </span>
-                  {(exercise.acceptAlso ?? []).map((alt, i) => (
-                    <p
-                      key={i}
-                      className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-blue-800"
-                    >
-                      {alt}
-                    </p>
-                  ))}
-                </>
-              )}
-              {/* Chinese translation of the model essay, shown below it. */}
-              {exercise.modelAnswerZh?.trim() && (
-                <div className="mt-3 border-t border-blue-200 pt-3">
-                  <span className="block text-[11px] font-bold uppercase tracking-wider text-blue-600">
-                    中文翻译
-                  </span>
-                  <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-blue-800">
-                    {exercise.modelAnswerZh}
-                  </p>
-                </div>
-              )}
-            </div>
+            <ModelAnswerPanel exercise={exercise} />
 
             <Button
               onClick={onContinue}
               variant={grade.passed ? "primary" : "danger"}
               className="w-full"
             >
+              <Check className="h-4 w-4" />
+              Continue
+            </Button>
+          </div>
+        )}
+
+        {/* Instant reveal — no grading took place, so instead of the score and
+            feedback panels we show the model answer directly. */}
+        {phase === "result" && !grade && (
+          <div className={`w-full space-y-4 px-1 ${animClass}`}>
+            <div className="flex flex-col items-center gap-1">
+              <span className="rounded-full bg-amber-100 px-3 py-1 text-xs font-black text-amber-700">
+                Answer revealed
+              </span>
+              <p className="text-center text-[11px] font-medium text-lingo-text-light">
+                未评分 — 直接显示范文和中文翻译
+              </p>
+            </div>
+            <ModelAnswerPanel exercise={exercise} />
+            <Button onClick={onContinue} variant="primary" className="w-full">
               <Check className="h-4 w-4" />
               Continue
             </Button>
