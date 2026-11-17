@@ -96,6 +96,8 @@ function scoreColorClass(score: number): string {
 
 /** The model passage, shared by the graded result and the instant-reveal view. */
 function ModelAnswerPanel({ exercise }: { exercise: WritingExercise }) {
+  const modelWordCount =
+    exercise.answer.trim().split(/\s+/).filter(Boolean).length;
   return (
     <div className="rounded-2xl border-2 border-blue-200 bg-blue-50/60 p-4">
       <span className="block text-[11px] font-bold uppercase tracking-wider text-blue-700">
@@ -104,6 +106,9 @@ function ModelAnswerPanel({ exercise }: { exercise: WritingExercise }) {
       <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-blue-900">
         {exercise.answer}
       </p>
+      <span className="mt-1 block text-[11px] font-medium italic text-blue-600">
+        ({modelWordCount} words)
+      </span>
       {(exercise.acceptAlso ?? []).length > 0 && (
         <>
           <span className="mt-3 block text-[11px] font-bold uppercase tracking-wider text-blue-600">
