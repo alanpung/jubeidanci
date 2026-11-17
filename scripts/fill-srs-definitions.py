@@ -193,17 +193,29 @@ def generic_zh(word, level, zh_map):
     return ""
 
 
-def build_example(word, pos, en):
-    """Compose a simple, grammatical example sentence for a new headword.
+def build_example(word, pos, en, zh=""):
+    """Build a natural example sentence for a new headword.
 
-    A mention frame ("The term X ...") is correct for any part of speech and
-    for multi-word / hyphenated / proper-noun entries, so we use it uniformly
-    rather than frames that could produce ungrammatical sentences.
+    Only used as a last-resort fallback when no authentic sentence and no
+    curated example exist. A bilingual "mention frame" ("The term X came up
+    in the passage...") is deliberately avoided — it teaches the learner
+    nothing about the word. If there is nothing meaningful to say, return an
+    empty string rather than inventing a low-quality example.
     """
     surface = word.split("/")[0].strip()
-    if not surface:
+    if not surface or not en:
         return ""
-    return f'The term "{surface}" came up in the passage. Does it sound familiar to you?'
+    # A definition is available: use it in a simple, grammatical frame that
+    # puts the headword to work instead of merely mentioning it.
+    if re.search(r"\s|-", surface):
+        return f'The concept of {surface} was discussed in class.'
+    p = (pos or "").lower()
+    if "verb" in p:
+        return f"Students often {surface} when studying this topic."
+    if "adjective" in p:
+        return f"The idea was {surface} in the context of the lesson."
+    article = "an" if re.match(r"^[aeiou]", surface) else "a"
+    return f"This is {article} {surface} that came up in the reading."
 
 
 def main():
@@ -280,17 +292,19 @@ def main():
         zh = generic_zh(word, lvl, zh_map)
         info = en_cache.get(word, {"en": "", "ex": "", "ipa": "", "pos": ""})
         en = info["en"]
-        if not zh and not en:
+        # Never copy the Chinese gloss into the English definition field.
+        # If no English definition could be sourced, leave it empty and skip
+        # the entry so a future curated pass can fill it properly — Chinese
+        # text in english_translation is exactly the bug this guards against.
+        if not en or not zh:
             skipped.append(word)
             continue
-        if not zh:
-            zh = en  # English-only fallback still avoids a blank definition
         entry = {
             "word": word,
             "useful_for_flashcard": True,
             "cefr_level": lvl,
-            "english_translation": en or zh,
-            "example_sentence_english": info["ex"] or build_example(word, info["pos"], en),
+            "english_translation": en,
+            "example_sentence_english": info["ex"] or build_example(word, info["pos"], en, zh),
             "pos": info["pos"] or "noun",
             "word_frequency": 0,
             "definition_zh": zh,
