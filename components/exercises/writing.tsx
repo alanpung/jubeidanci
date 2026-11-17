@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useMemo, useCallback, useRef } from "react";
-import { Volume2, ChevronLeft, ChevronRight, Check, RotateCcw, Eye } from "lucide-react";
+import { Volume2, ChevronLeft, ChevronRight, Check, RotateCcw, Eye, Languages } from "lucide-react";
 import type { WritingExercise } from "@/lib/content/types";
 import { useExercise } from "@/hooks/use-exercise";
 import { useAudio } from "@/hooks/use-audio";
@@ -148,6 +148,9 @@ export function Writing({
   const [essay, setEssay] = useState("");
   const [grade, setGrade] = useState<GradeResponse | null>(null);
   const [error, setError] = useState<string | null>(null);
+  // B2 / Advanced only: the Chinese model essay is shown above the textarea
+  // as a writing hint, independent of the graded/ungraded result view.
+  const [showChineseModel, setShowChineseModel] = useState(false);
   const isKeyboardOpen = useMobileKeyboardOpen();
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -160,6 +163,7 @@ export function Writing({
     setEssay("");
     setGrade(null);
     setError(null);
+    setShowChineseModel(false);
   }, [exercise.sentence, exercise.answer]);
 
   // Warm the TTS audio for the Chinese essay so the 中文 button responds
@@ -176,6 +180,13 @@ export function Writing({
     () => essay.trim().split(/\s+/).filter(Boolean).length,
     [essay],
   );
+
+  // B2 ("B2") and Advanced ("C1") have no Chinese source text in the prompt,
+  // so their Chinese model essay is offered separately as a writing hint.
+  // Other levels already show a Chinese essay in the prompt card and keep the
+  // single "Reveal answer" button.
+  const hasSplitModelButtons = exercise.level === "B2" || exercise.level === "C1";
+  const chineseModel = exercise.modelAnswerZh?.trim() ?? "";
 
   /**
    * The Chinese prompt sent to the grader.
@@ -472,6 +483,26 @@ export function Writing({
           )}
         </div>
 
+        {/* B2 / Advanced only: the Chinese model essay, toggled by the
+            "Chinese Model" button. It sits directly above the textarea so it
+            works as a hint while the learner types the English passage. It is
+            independent of grading — submitting still grades the learner's own
+            writing. */}
+        {hasSplitModelButtons && showChineseModel && chineseModel && phase !== "result" && (
+          <div
+            className={`w-full rounded-2xl border-2 border-emerald-300 bg-emerald-50 p-3 sm:p-4 ${
+              isKeyboardOpen
+                ? "relative mt-2 max-h-[22vh] overflow-y-auto text-sm leading-snug"
+                : "relative mt-4 text-base leading-relaxed"
+            }`}
+          >
+            <span className="mb-1 block text-[11px] font-bold uppercase tracking-wider text-emerald-700">
+              中文范文（写作提示）
+            </span>
+            <p className="whitespace-pre-wrap text-emerald-900">{chineseModel}</p>
+          </div>
+        )}
+
         {/* English textarea — always its own block below the prompt, never
             overlapping it. Grows taller when the keyboard is open. */}
         {phase !== "result" && (
@@ -500,16 +531,18 @@ export function Writing({
           </div>
         )}
 
-        {/* Audio + instant reveal:
+        {/* Audio + model buttons:
               - 中文 button — reads the Chinese essay (A1/A2/B1 only). For B2
                 and Advanced there is no Chinese source text, so the button is
                 hidden entirely rather than showing a disabled control.
               - English button — reads the English model answer. It stays locked
                 until the learner has submitted their own writing or revealed
                 the answer directly.
-              - Reveal answer button — skips grading and shows the model answer
-                (and its Chinese translation) immediately. Only shown while the
-                learner is still writing.
+              - B2 / Advanced: two buttons replace the single reveal button.
+                "English Model" skips grading and shows the model answer in the
+                result view; "Chinese Model" toggles the Chinese essay as a
+                writing hint above the textarea without ending the exercise.
+              - Other levels keep the single "Reveal answer" button.
 
             All are hidden while the keyboard is open to maximise the writing
             area. */}
@@ -549,7 +582,44 @@ export function Writing({
             <Volume2 className="h-4 w-4" />
             English
           </button>
-          {phase === "writing" && (
+          {phase === "writing" && hasSplitModelButtons && (
+            <>
+              <button
+                type="button"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleReveal();
+                }}
+                className="inline-flex h-10 items-center gap-1.5 rounded-full border-b-2 border-amber-400 bg-amber-100 px-3.5 text-xs font-bold text-amber-800 shadow-sm transition-all hover:bg-amber-200 active:border-b-0 active:mt-0.5"
+                aria-label="显示英文范文"
+                title="跳过评分，直接显示英文范文"
+              >
+                <Eye className="h-4 w-4" />
+                English Model
+              </button>
+              {chineseModel && (
+                <button
+                  type="button"
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setShowChineseModel((shown) => !shown);
+                  }}
+                  aria-pressed={showChineseModel}
+                  className={`inline-flex h-10 items-center gap-1.5 rounded-full border-b-2 px-3.5 text-xs font-bold shadow-sm transition-all active:border-b-0 active:mt-0.5 ${
+                    showChineseModel
+                      ? "border-emerald-500 bg-emerald-200 text-emerald-900 hover:bg-emerald-300"
+                      : "border-emerald-400 bg-emerald-100 text-emerald-800 hover:bg-emerald-200"
+                  }`}
+                  aria-label="显示中文范文提示"
+                  title={showChineseModel ? "隐藏中文范文提示" : "在输入区上方显示中文范文作为写作提示"}
+                >
+                  <Languages className="h-4 w-4" />
+                  Chinese Model
+                </button>
+              )}
+            </>
+          )}
+          {phase === "writing" && !hasSplitModelButtons && (
             <button
               type="button"
               onClick={(e) => {
