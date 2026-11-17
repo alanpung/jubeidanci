@@ -181,12 +181,16 @@ export function Writing({
     [essay],
   );
 
+  const chineseModel = exercise.modelAnswerZh?.trim() ?? "";
   // B2 ("B2") and Advanced ("C1") have no Chinese source text in the prompt,
   // so their Chinese model essay is offered separately as a writing hint.
   // Other levels already show a Chinese essay in the prompt card and keep the
-  // single "Reveal answer" button.
-  const hasSplitModelButtons = exercise.level === "B2" || exercise.level === "C1";
-  const chineseModel = exercise.modelAnswerZh?.trim() ?? "";
+  // single "Reveal answer" button. The field-based fallback also covers stored
+  // content whose unit frontmatter has no level.
+  const hasSplitModelButtons =
+    exercise.level === "B2" ||
+    exercise.level === "C1" ||
+    (!!chineseModel && !exercise.chineseEssay?.trim());
 
   /**
    * The Chinese prompt sent to the grader.

@@ -55,8 +55,11 @@ export const writingSchema = z.object({
   // It is also inlined into `sentence` so it renders inside the prompt card.
   chineseEssay: z.string().optional(),
   // Chinese translation of the model answer, revealed after submit below the
-  // English essay. Advanced writing only; display-only, not used in grading.
+  // English essay. B2 / Advanced only; display-only, not used in grading.
   modelAnswerZh: z.string().optional(),
+  // CEFR level inherited from the unit frontmatter. Without declaring it here,
+  // z.object() strips it and the grader falls back to A2 expectations.
+  level: z.string().optional(),
   noAudio,
   srsWords,
 });
