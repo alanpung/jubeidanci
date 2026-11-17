@@ -224,15 +224,15 @@ export function getEnLevelCounts(): Record<string, number> {
     console.error("Failed to dynamically count words by level from english_merged.json:", err);
   }
 
-  // Last-known counts from words/english_merged.json after
-  // scripts/rebuild-cefr-levels.py. Only used if the file cannot be read.
+  // Last-known counts from words/english_merged.json (including the enriched
+  // SRS inflected forms). Only used if the file cannot be read.
   return {
-    A1: 1163,
-    A2: 1642,
-    B1: 3989,
-    B2: 6069,
-    C1: 4412,
-    C2: 5049,
+    A1: 1980,
+    A2: 2106,
+    B1: 4514,
+    B2: 6322,
+    C1: 4505,
+    C2: 5775,
   };
 }
 

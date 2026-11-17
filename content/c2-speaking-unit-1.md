@@ -313,7 +313,7 @@ srsWords: "distinguish" "contingent"
 
 [speaking]
 sentence: "The word 'significant' is doing a great deal of unexamined work in that sentence."
-srsWords: "word" "'significant'"
+srsWords: "word" "significant"
 
 [speaking]
 sentence: "I'd press for greater precision: 'adequate' and 'sufficient' are not interchangeable in this context."
@@ -325,11 +325,11 @@ srsWords: "described" "less"
 
 [speaking]
 sentence: "The distinction between 'compromise' and 'capitulation' is one the framing conspicuously elides."
-srsWords: "distinction" "'compromise'"
+srsWords: "distinction" "compromise"
 
 [speaking]
 sentence: "To call it 'reform' is to stretch the word past the point of useful deformation."
-srsWords: "call" "'reform'"
+srsWords: "call" "reform"
 
 [speaking]
 sentence: "One notes the slide from 'some' to 'all' — a small move rhetorically, a vast one logically."
@@ -337,7 +337,7 @@ srsWords: "notes" "slide"
 
 [speaking]
 sentence: "The term 'inevitable' is doing no argumentative work here; it is merely foreclosing the debate."
-srsWords: "term" "'inevitable'"
+srsWords: "term" "inevitable"
 
 ---
 lessonTitle: "Lesson 8: Complex Subordination & Embedding"
@@ -677,11 +677,11 @@ color: "#FF9600"
 
 [speaking]
 sentence: "The phrase 'collateral damage' does not soften the reality so much as it anaesthetises the conscience."
-srsWords: "phrase" "'collateral"
+srsWords: "phrase" "collateral"
 
 [speaking]
 sentence: "What we call 'downsizing' is, in plain terms, the dismissal of people from their livelihoods."
-srsWords: "call" "'downsizing'"
+srsWords: "call" "downsizing"
 
 [speaking]
 sentence: "The euphemism does not hide the truth; it licenses the speaker to proceed without reckoning with it."
@@ -689,11 +689,11 @@ srsWords: "euphemism" "does"
 
 [speaking]
 sentence: "One notices how 'enhanced interrogation' manages to make torture sound like a customer-service upgrade."
-srsWords: "notices" "'enhanced"
+srsWords: "notices" "enhanced"
 
 [speaking]
 sentence: "The language of 'optimisation' is, more often than not, the language of someone else's loss."
-srsWords: "language" "'optimisation'"
+srsWords: "language" "optimisation"
 
 [speaking]
 sentence: "What 'rightsizing' means, in practice, is that the people at the bottom will bear the cost of the decisions made at the top."

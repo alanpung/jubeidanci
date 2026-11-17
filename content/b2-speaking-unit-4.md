@@ -697,7 +697,7 @@ srsWords: "argue" "ecological"
 
 [speaking]
 sentence: "What I notice is how 'ecotourism' often launders the harm."
-srsWords: "notice" "'ecotourism'"
+srsWords: "notice" "ecotourism"
 
 [speaking]
 sentence: "Unless the money reaches the locals, the label is hollow."
