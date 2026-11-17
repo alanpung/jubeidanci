@@ -54,6 +54,9 @@ export const writingSchema = z.object({
   // deliberately omit it so the learner writes without Chinese scaffolding.
   // It is also inlined into `sentence` so it renders inside the prompt card.
   chineseEssay: z.string().optional(),
+  // Chinese translation of the model answer, revealed after submit below the
+  // English essay. Advanced writing only; display-only, not used in grading.
+  modelAnswerZh: z.string().optional(),
   noAudio,
   srsWords,
 });

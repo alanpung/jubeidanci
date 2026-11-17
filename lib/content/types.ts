@@ -138,6 +138,13 @@ export interface WritingExercise {
    * for grading and for any future UI that wants it separately.
    */
   chineseEssay?: string;
+  /**
+   * Faithful Chinese translation of `answer` (the model English essay), shown
+   * to the learner AFTER they submit, directly below the model answer.
+   * Advanced writing only. Unlike `chineseEssay` this is never shown before
+   * submission and never affects grading — it is a pure reading aid.
+   */
+  modelAnswerZh?: string;
   noAudio?: string[];
   srsWords: string | string[];
   /**

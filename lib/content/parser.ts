@@ -266,11 +266,16 @@ function parseWriting(lines: string[]): WritingExercise {
   // here lets the grader and any future UI use it directly.
   const chineseEssay = getOptionalField(lines, "chineseEssay");
 
+  // Chinese translation of the model answer. Paragraphs are separated by
+  // ' || ' on one markdown line, so expand it the same way as `answer`.
+  const modelAnswerZhRaw = getOptionalField(lines, "modelAnswerZh");
+  const modelAnswerZh = modelAnswerZhRaw ? expandParagraphs(modelAnswerZhRaw) : undefined;
+
   const levelLine = lines.find((l) => l.startsWith("level:"));
   const level = levelLine ? (levelLine.split(":", 2)[1]?.trim() || undefined) : undefined;
 
   const srsWords = parseSrsWords(lines) ?? "";
-  return { type: "writing", text: rawText.text, sentence, answer, acceptAlso, core, srsWords, ...(chineseEssay && { chineseEssay }), ...(level && { level }), ...(noAudio.length && { noAudio }) };
+  return { type: "writing", text: rawText.text, sentence, answer, acceptAlso, core, srsWords, ...(chineseEssay && { chineseEssay }), ...(modelAnswerZh && { modelAnswerZh }), ...(level && { level }), ...(noAudio.length && { noAudio }) };
 }
 
 function generateChineseTranslation(sentence: string, blank: string): string | undefined {

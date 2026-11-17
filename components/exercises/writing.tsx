@@ -770,6 +770,17 @@ export function Writing({
                   ))}
                 </>
               )}
+              {/* Chinese translation of the model essay, shown below it. */}
+              {exercise.modelAnswerZh?.trim() && (
+                <div className="mt-3 border-t border-blue-200 pt-3">
+                  <span className="block text-[11px] font-bold uppercase tracking-wider text-blue-600">
+                    中文翻译
+                  </span>
+                  <p className="mt-1 whitespace-pre-wrap text-sm leading-relaxed text-blue-800">
+                    {exercise.modelAnswerZh}
+                  </p>
+                </div>
+              )}
             </div>
 
             <Button
