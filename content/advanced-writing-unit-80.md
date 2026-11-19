@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 80: Neurotechnology & Brain-Computer Interfaces"
-courseId: "advanced-writing"
+unitTitle: "Unit 30: Neurotechnology & Brain-Computer Interfaces"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

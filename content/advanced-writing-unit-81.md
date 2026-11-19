@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 81: Global Poverty & Foreign Aid"
-courseId: "advanced-writing"
+unitTitle: "Unit 31: Global Poverty & Foreign Aid"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 72: Scientific Integrity & Research Ethics"
-courseId: "advanced-writing"
+unitTitle: "Unit 22: Scientific Integrity & Research Ethics"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

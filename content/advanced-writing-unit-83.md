@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 83: Nuclear Proliferation & Disarmament"
-courseId: "advanced-writing"
+unitTitle: "Unit 33: Nuclear Proliferation & Disarmament"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

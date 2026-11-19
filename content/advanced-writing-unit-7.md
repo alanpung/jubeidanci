@@ -3,7 +3,7 @@ unitTitle: "Unit 7: Deepfakes & Synthetic Media"
 courseId: "advanced-writing"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

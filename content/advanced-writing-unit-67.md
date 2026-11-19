@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 67: Gene Editing & Human Enhancement"
-courseId: "advanced-writing"
+unitTitle: "Unit 17: Gene Editing & Human Enhancement"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

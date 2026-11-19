@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 86: Indigenous Rights & Land Justice"
-courseId: "advanced-writing"
+unitTitle: "Unit 36: Indigenous Rights & Land Justice"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

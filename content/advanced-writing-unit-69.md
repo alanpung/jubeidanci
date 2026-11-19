@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 69: Cancel Culture & Free Speech"
-courseId: "advanced-writing"
+unitTitle: "Unit 19: Cancel Culture & Free Speech"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

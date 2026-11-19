@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 54: Surveillance & Civil Liberties"
-courseId: "advanced-writing"
+unitTitle: "Unit 4: Surveillance & Civil Liberties"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

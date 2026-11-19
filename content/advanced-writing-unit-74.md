@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 74: Nuclear Energy & Policy"
-courseId: "advanced-writing"
+unitTitle: "Unit 24: Nuclear Energy & Policy"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

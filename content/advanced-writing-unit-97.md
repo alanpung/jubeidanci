@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 97: Post-Work Society & Meaning"
-courseId: "advanced-writing"
+unitTitle: "Unit 47: Post-Work Society & Meaning"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

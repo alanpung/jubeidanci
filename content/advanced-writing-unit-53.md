@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 53: Freedom of the Press"
-courseId: "advanced-writing"
+unitTitle: "Unit 3: Freedom of the Press"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

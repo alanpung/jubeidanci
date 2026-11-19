@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 96: Intergenerational Ethics & Legacy"
-courseId: "advanced-writing"
+unitTitle: "Unit 46: Intergenerational Ethics & Legacy"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

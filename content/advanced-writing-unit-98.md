@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 98: The Anthropocene & Planetary Boundaries"
-courseId: "advanced-writing"
+unitTitle: "Unit 48: The Anthropocene & Planetary Boundaries"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

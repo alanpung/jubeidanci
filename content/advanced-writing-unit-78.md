@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 78: Quantum Computing & Cryptography"
-courseId: "advanced-writing"
+unitTitle: "Unit 28: Quantum Computing & Cryptography"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

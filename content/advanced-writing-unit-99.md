@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 99: Digital Authoritarianism & Freedom"
-courseId: "advanced-writing"
+unitTitle: "Unit 49: Digital Authoritarianism & Freedom"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

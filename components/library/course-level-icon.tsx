@@ -82,6 +82,16 @@ const LEVEL_STYLES: Record<
     outline: "border-rose-400",
     symbol: "text-rose-600",
   },
+  /** Combined C1/C2 courses — a purple→rose gradient bridging both levels. */
+  "C1/C2": {
+    bg: "bg-gradient-to-br from-purple-500 via-fuchsia-500 to-rose-500 shadow-fuchsia-600/30",
+    border: "border-fuchsia-300/60",
+    text: "text-white",
+    pill: "bg-gradient-to-r from-purple-600 to-rose-500 text-white",
+    light: "bg-fuchsia-50",
+    outline: "border-fuchsia-400",
+    symbol: "text-fuchsia-600",
+  },
 };
 
 const DEFAULT_STYLE = {
@@ -313,6 +323,7 @@ export const LEVEL_LABELS: Record<string, string> = {
   B2: "Upper Intermediate",
   C1: "Advanced",
   C2: "Mastery",
+  "C1/C2": "Advanced / Mastery",
 };
 
 /** A light "book" cover — ONE anatomy for every surface on /library.

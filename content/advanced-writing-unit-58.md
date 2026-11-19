@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 58: Gun Control & Public Safety"
-courseId: "advanced-writing"
+unitTitle: "Unit 8: Gun Control & Public Safety"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

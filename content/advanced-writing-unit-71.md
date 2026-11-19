@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 71: Space Exploration & Ethics"
-courseId: "advanced-writing"
+unitTitle: "Unit 21: Space Exploration & Ethics"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

@@ -3,7 +3,7 @@ unitTitle: "Unit 45: Academic Freedom & Campus Speech"
 courseId: "advanced-writing"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

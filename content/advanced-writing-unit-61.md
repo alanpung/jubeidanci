@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 61: Cultural Preservation & Globalisation"
-courseId: "advanced-writing"
+unitTitle: "Unit 11: Cultural Preservation & Globalisation"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

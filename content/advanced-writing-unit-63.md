@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 63: Cultural Appropriation vs Appreciation"
-courseId: "advanced-writing"
+unitTitle: "Unit 13: Cultural Appropriation vs Appreciation"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

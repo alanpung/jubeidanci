@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 70: Death Penalty & Justice"
-courseId: "advanced-writing"
+unitTitle: "Unit 20: Death Penalty & Justice"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

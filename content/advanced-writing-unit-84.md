@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 84: Human Trafficking & Modern Slavery"
-courseId: "advanced-writing"
+unitTitle: "Unit 34: Human Trafficking & Modern Slavery"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

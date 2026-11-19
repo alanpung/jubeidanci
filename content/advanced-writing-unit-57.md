@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 57: Immigration & Border Policy"
-courseId: "advanced-writing"
+unitTitle: "Unit 7: Immigration & Border Policy"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

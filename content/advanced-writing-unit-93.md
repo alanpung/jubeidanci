@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 93: The Future of National Identity"
-courseId: "advanced-writing"
+unitTitle: "Unit 43: The Future of National Identity"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

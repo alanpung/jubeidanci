@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 52: Campaign Finance & Political Corruption"
-courseId: "advanced-writing"
+unitTitle: "Unit 2: Campaign Finance & Political Corruption"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

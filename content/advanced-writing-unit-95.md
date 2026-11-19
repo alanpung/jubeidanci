@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 95: The Ethics of Artificial Consciousness"
-courseId: "advanced-writing"
+unitTitle: "Unit 45: The Ethics of Artificial Consciousness"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

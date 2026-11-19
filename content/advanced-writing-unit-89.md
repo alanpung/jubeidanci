@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 89: Women's Rights & Gender Equality"
-courseId: "advanced-writing"
+unitTitle: "Unit 39: Women's Rights & Gender Equality"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

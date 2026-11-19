@@ -3,7 +3,7 @@ unitTitle: "Unit 12: Biodiversity Loss & Conservation"
 courseId: "advanced-writing"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 64: The Ethics of Animal Testing"
-courseId: "advanced-writing"
+unitTitle: "Unit 14: The Ethics of Animal Testing"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

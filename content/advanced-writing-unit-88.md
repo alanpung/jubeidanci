@@ -1,9 +1,9 @@
 ---
-unitTitle: "Unit 88: Drug Policy & Decriminalisation"
-courseId: "advanced-writing"
+unitTitle: "Unit 38: Drug Policy & Decriminalisation"
+courseId: "advanced-writing-2"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

@@ -3,7 +3,7 @@ unitTitle: "Unit 48: Education in Conflict Zones"
 courseId: "advanced-writing"
 sourceLanguage: "zh"
 targetLanguage: "en"
-level: "C1"
+level: "C1/C2"
 questionType: "writing"
 ---
 

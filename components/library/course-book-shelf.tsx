@@ -165,9 +165,14 @@ export function CourseBookShelf({
     activeKey === STANDALONE_KEY
       ? unitEntries
       : groupBy === "level"
-        ? courseEntries.filter(
-            (e) => (e.level || "").toUpperCase() === activeKey,
-          )
+        ? courseEntries.filter((e) => {
+            const lv = (e.level || "").toUpperCase();
+            // A combined C1/C2 course belongs in BOTH the C1 and C2 folders.
+            return (
+              lv === activeKey ||
+              (lv === "C1/C2" && (activeKey === "C1" || activeKey === "C2"))
+            );
+          })
         : courseEntries.filter((e) => typeLabelOf(e.course!) === activeKey);
 
   // Sort the window's entries by CEFR level (A1 → C2), then by title. Without

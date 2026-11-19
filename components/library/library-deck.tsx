@@ -17,8 +17,11 @@ export function normalizeLevel(level?: string | null): LevelKey | null {
 
 /** Sort rank for a CEFR level. Unlevelled items sink to the bottom. */
 export function levelRank(level?: string | null): number {
-  const key = normalizeLevel(level);
-  return key ? LEVEL_ORDER.indexOf(key) : LEVEL_ORDER.length;
+  const key = (level || "").toUpperCase().trim();
+  // A combined C1/C2 course sorts between C1 and C2.
+  if (key === "C1/C2") return LEVEL_ORDER.indexOf("C1") + 0.5;
+  const normalized = normalizeLevel(level);
+  return normalized ? LEVEL_ORDER.indexOf(normalized) : LEVEL_ORDER.length;
 }
 
 /**
