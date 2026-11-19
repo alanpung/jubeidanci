@@ -166,13 +166,13 @@ export const QUESTION_TYPE_LIST = [
  */
 export const LIBRARY_TYPE_ORDER: readonly string[] = [
   "flashcard-review",
-  "translation",
-  "multiple-choice",
   "fill-in-the-blank",
-  "listening",
-  "word-bank",
-  "speaking",
+  "translation",
   "writing",
+  "multiple-choice",
+  "word-bank",
+  "listening",
+  "speaking",
 ];
 
 export function normalizeQuestionType(
