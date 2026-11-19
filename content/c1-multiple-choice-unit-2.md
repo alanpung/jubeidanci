@@ -36,7 +36,7 @@ choices:
 srsWords: "brighten"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Her eyes were ___ from crying all night.'"
+text: "'Her eyes were ___ from crying all night.'"
 choices:
   - "watery"
   - "puffy" (correct)
@@ -72,7 +72,7 @@ choices:
 srsWords: "perceptive"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: '___ can be a symptom of certain sleep disorders.'"
+text: "'___ can be a symptom of certain sleep disorders.'"
 choices:
   - "sleepwalking" (correct)
   - "crumb"
@@ -144,7 +144,7 @@ choices:
 srsWords: "lifeline"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: '___ is a staple of Korean cuisine.'"
+text: "'___ is a staple of Korean cuisine.'"
 choices:
   - "brig"
   - "biff"
@@ -153,7 +153,7 @@ choices:
 srsWords: "kimchi"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Many herbs have ___ uses.'"
+text: "'Many herbs have ___ uses.'"
 choices:
   - "tertiary"
   - "medicinal" (correct)
@@ -277,7 +277,7 @@ choices:
 srsWords: "yorker"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The speaker tried to calm the angry ___.'"
+text: "'The speaker tried to calm the angry ___.'"
 choices:
   - "hairdo"
   - "deformation"
@@ -322,7 +322,7 @@ choices:
 srsWords: "newt"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The ___ visit attracted millions of pilgrims.'"
+text: "'The ___ visit attracted millions of pilgrims.'"
 choices:
   - "inflatable"
   - "vicious"
@@ -340,7 +340,7 @@ choices:
 srsWords: "stairway"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'There was an ___ noise coming from the attic.'"
+text: "'There was an ___ noise coming from the attic.'"
 choices:
   - "unexplained" (correct)
   - "dun"
@@ -358,7 +358,7 @@ choices:
 srsWords: "sulfur"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The old house is undergoing a major ___.'"
+text: "'The old house is undergoing a major ___.'"
 choices:
   - "renovation" (correct)
   - "grit"
@@ -419,7 +419,7 @@ choices:
 srsWords: "superiority"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The weather forecast is ___ for our picnic.'"
+text: "'The weather forecast is ___ for our picnic.'"
 choices:
   - "favorable" (correct)
   - "astronomical"
@@ -437,7 +437,7 @@ choices:
 srsWords: "bot"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The team had to ___ the old machinery.'"
+text: "'The team had to ___ the old machinery.'"
 choices:
   - "dismantle" (correct)
   - "venerate"
@@ -491,7 +491,7 @@ choices:
 srsWords: "digestive"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The farmer used a ___ to prepare the field for planting.'"
+text: "'The farmer used a ___ to prepare the field for planting.'"
 choices:
   - "sandman"
   - "forerunner"
@@ -518,7 +518,7 @@ choices:
 srsWords: "stylize"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The police officer kept his pistol in a leather ___.'"
+text: "'The police officer kept his pistol in a leather ___.'"
 choices:
   - "bazaar"
   - "kebab"
@@ -554,7 +554,7 @@ choices:
 srsWords: "bloodthirsty"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'I hit a terrible shot, so I'll take a ___.'"
+text: "'I hit a terrible shot, so I'll take a ___.'"
 choices:
   - "seatbelt"
   - "mulligan" (correct)
@@ -588,7 +588,7 @@ choices:
 srsWords: "dildo"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The land ___ worked to protect the local wetlands.'"
+text: "'The land ___ worked to protect the local wetlands.'"
 choices:
   - "springtime"
   - "jive"
@@ -624,7 +624,7 @@ choices:
 srsWords: "plunder"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'My favorite ___ is about a group of friends living in New York.'"
+text: "'My favorite ___ is about a group of friends living in New York.'"
 choices:
   - "sitcom" (correct)
   - "uproar"
@@ -687,7 +687,7 @@ choices:
 srsWords: "eucharist"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Ancient ___ texts describe early Indian philosophy.'"
+text: "'Ancient ___ texts describe early Indian philosophy.'"
 choices:
   - "pelvic"
   - "macroeconomic"
@@ -714,7 +714,7 @@ choices:
 srsWords: "tock"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'It takes a lot of ___ to stick to a diet.'"
+text: "'It takes a lot of ___ to stick to a diet.'"
 choices:
   - "consort"
   - "contraband"
@@ -723,7 +723,7 @@ choices:
 srsWords: "willpower"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The room looked ___ after the cleanup.'"
+text: "'The room looked ___ after the cleanup.'"
 choices:
   - "unsettling" (correct)
   - "limitless"
@@ -793,7 +793,7 @@ choices:
 srsWords: "insistent"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The constitution ___ the rights of citizens.'"
+text: "'The constitution ___ the rights of citizens.'"
 choices:
   - "enshrine" (correct)
   - "flabbergast"
@@ -811,7 +811,7 @@ choices:
 srsWords: "satanic"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The ___ rides at the fair were very popular.'"
+text: "'The ___ rides at the fair were very popular.'"
 choices:
   - "kiddie" (correct)
   - "progesterone"
@@ -829,7 +829,7 @@ choices:
 srsWords: "oblivious"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The explorers ventured deep into the dark ___.'"
+text: "'The explorers ventured deep into the dark ___.'"
 choices:
   - "bondage"
   - "pansy"
@@ -838,7 +838,7 @@ choices:
 srsWords: "cavern"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'A ___ built its nest on top of the chimney.'"
+text: "'A ___ built its nest on top of the chimney.'"
 choices:
   - "seagull"
   - "bondage"
@@ -874,7 +874,7 @@ choices:
 srsWords: "hefty"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'She wore a ___ dress to the party.'"
+text: "'She wore a ___ dress to the party.'"
 choices:
   - "aesthetic"
   - "irrelevant"
@@ -901,7 +901,7 @@ choices:
 srsWords: "jigsaw"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The car was in ___ condition, as if it had just left the factory.'"
+text: "'The car was in ___ condition, as if it had just left the factory.'"
 choices:
   - "stuffy"
   - "pristine" (correct)
@@ -953,7 +953,7 @@ color: "#00695C"
 ---
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The band's ___ includes ten studio albums.'"
+text: "'The band's ___ includes ten studio albums.'"
 choices:
   - "discography" (correct)
   - "roe"
@@ -1115,7 +1115,7 @@ choices:
 srsWords: "enforceable"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Free coffee is a nice ___ of working here.'"
+text: "'Free coffee is a nice ___ of working here.'"
 choices:
   - "protestantism"
   - "extinguisher"
@@ -1140,7 +1140,7 @@ color: "#AD1457"
 ---
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The tribe carved a tall ___ pole.'"
+text: "'The tribe carved a tall ___ pole.'"
 choices:
   - "aftermarket"
   - "totem" (correct)
@@ -1149,7 +1149,7 @@ choices:
 srsWords: "totem"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The hunter used a ___ to shoot the target.'"
+text: "'The hunter used a ___ to shoot the target.'"
 choices:
   - "metre"
   - "crossbow" (correct)
@@ -1266,7 +1266,7 @@ choices:
 srsWords: "walrus"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The accident was ___.'"
+text: "'The accident was ___.'"
 choices:
   - "unavoidable" (correct)
   - "consultative"
@@ -1311,7 +1311,7 @@ choices:
 srsWords: "tout"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'She was in a very ___ mood after her coffee.'"
+text: "'She was in a very ___ mood after her coffee.'"
 choices:
   - "chatty" (correct)
   - "orthogonal"
@@ -1336,7 +1336,7 @@ choices:
 srsWords: "courtship"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Can you ___ these trousers for me?'"
+text: "'Can you ___ these trousers for me?'"
 choices:
   - "surpass"
   - "shorten" (correct)
@@ -1372,7 +1372,7 @@ choices:
 srsWords: "ravioli"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The agreement was entirely ___.'"
+text: "'The agreement was entirely ___.'"
 choices:
   - "sensory"
   - "consensual" (correct)
@@ -1408,7 +1408,7 @@ choices:
 srsWords: "hyper"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'She cooked a delicious chili with ___ beans.'"
+text: "'She cooked a delicious chili with ___ beans.'"
 choices:
   - "amalgamation"
   - "telepathy"
@@ -1532,7 +1532,7 @@ choices:
 srsWords: "incriminate"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'All ___ nations must abide by the terms of the treaty.'"
+text: "'All ___ nations must abide by the terms of the treaty.'"
 choices:
   - "gimmick"
   - "quail"
@@ -1541,7 +1541,7 @@ choices:
 srsWords: "signatory"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'My aunt has a tiny ___ that barks a lot.'"
+text: "'My aunt has a tiny ___ that barks a lot.'"
 choices:
   - "stardust"
   - "fahrenheit"
@@ -1604,7 +1604,7 @@ choices:
 srsWords: "deactivate"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: '___ research aims to bridge the gap between basic science and clinical application.'"
+text: "'___ research aims to bridge the gap between basic science and clinical application.'"
 choices:
   - "translational" (correct)
   - "antisemitic"
@@ -1640,7 +1640,7 @@ choices:
 srsWords: "portage"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The crew lowered the ___ as the ship began to sink.'"
+text: "'The crew lowered the ___ as the ship began to sink.'"
 choices:
   - "songwriter"
   - "heiress"
@@ -1755,7 +1755,7 @@ choices:
 srsWords: "spineless"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The ___ leader of the group denied the accusations.'"
+text: "'The ___ leader of the group denied the accusations.'"
 choices:
   - "viciously"
   - "tediously"
@@ -1764,7 +1764,7 @@ choices:
 srsWords: "purported"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The intricate carving was clearly the ___ of a master craftsman.'"
+text: "'The intricate carving was clearly the ___ of a master craftsman.'"
 choices:
   - "handiwork" (correct)
   - "raisin"
@@ -1773,7 +1773,7 @@ choices:
 srsWords: "handiwork"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The employee was fired for gross ___.'"
+text: "'The employee was fired for gross ___.'"
 choices:
   - "scat"
   - "insubordination" (correct)
@@ -1836,7 +1836,7 @@ choices:
 srsWords: "tranquility"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The ___ of unemployment loomed over the town.'"
+text: "'The ___ of unemployment loomed over the town.'"
 choices:
   - "excrement"
   - "specter" (correct)
@@ -1863,7 +1863,7 @@ choices:
 srsWords: "blatant"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Light ___ will be served after the meeting.'"
+text: "'Light ___ will be served after the meeting.'"
 choices:
   - "neanderthal"
   - "coloration"

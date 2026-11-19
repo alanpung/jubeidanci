@@ -27,7 +27,7 @@ choices:
 srsWords: "wold"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'He was a proud ___ for many years.'"
+text: "'He was a proud ___ for many years.'"
 choices:
   - "freemason" (correct)
   - "hypoglycemia"
@@ -36,7 +36,7 @@ choices:
 srsWords: "freemason"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'His actions were a clear ___ of the company policy.'"
+text: "'His actions were a clear ___ of the company policy.'"
 choices:
   - "contravention" (correct)
   - "physicality"
@@ -81,7 +81,7 @@ choices:
 srsWords: "hew"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'She told her best friend, who was her closest ___, everything.'"
+text: "'She told her best friend, who was her closest ___, everything.'"
 choices:
   - "confidant" (correct)
   - "cynic"
@@ -108,7 +108,7 @@ choices:
 srsWords: "carcinogen"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The doctor monitored the blood ___ to the brain.'"
+text: "'The doctor monitored the blood ___ to the brain.'"
 choices:
   - "verandah"
   - "tedium"
@@ -223,7 +223,7 @@ choices:
 srsWords: "claustrophobia"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The gaucho used a ___ to catch the runaway cattle.'"
+text: "'The gaucho used a ___ to catch the runaway cattle.'"
 choices:
   - "instigation"
   - "dolomite"
@@ -277,7 +277,7 @@ choices:
 srsWords: "extrude"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Effective ___ requires careful consideration of all stakeholders.'"
+text: "'Effective ___ requires careful consideration of all stakeholders.'"
 choices:
   - "oba"
   - "predisposition"
@@ -286,7 +286,7 @@ choices:
 srsWords: "policymaking"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'His actions were considered ___ by many.'"
+text: "'His actions were considered ___ by many.'"
 choices:
   - "astral"
   - "latent"
@@ -331,7 +331,7 @@ choices:
 srsWords: "disobedient"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'High levels of low-density ___ can be a risk factor for heart disease.'"
+text: "'High levels of low-density ___ can be a risk factor for heart disease.'"
 choices:
   - "histone"
   - "permutation"
@@ -349,7 +349,7 @@ choices:
 srsWords: "gestalt"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: '___ law governs many aspects of life in some Islamic countries.'"
+text: "'___ law governs many aspects of life in some Islamic countries.'"
 choices:
   - "shariah" (correct)
   - "vim"
@@ -419,7 +419,7 @@ choices:
 srsWords: "mimicry"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'He delved into the ___ of ancient magic.'"
+text: "'He delved into the ___ of ancient magic.'"
 choices:
   - "arcana" (correct)
   - "dualism"
@@ -437,7 +437,7 @@ choices:
 srsWords: "gallium"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'His ___ view of the economy prevented him from seeing the long-term consequences.'"
+text: "'His ___ view of the economy prevented him from seeing the long-term consequences.'"
 choices:
   - "speculative"
   - "indefensible"
@@ -588,7 +588,7 @@ choices:
 srsWords: "extrinsic"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The ___ of the issue made it a priority for discussion.'"
+text: "'The ___ of the issue made it a priority for discussion.'"
 choices:
   - "majlis"
   - "masque"
@@ -660,7 +660,7 @@ choices:
 srsWords: "foreshore"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The two countries sought a ___ after years of tension.'"
+text: "'The two countries sought a ___ after years of tension.'"
 choices:
   - "bola"
   - "rapprochement" (correct)
@@ -723,7 +723,7 @@ choices:
 srsWords: "attestation"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'He offered a ___ solution to a complex problem.'"
+text: "'He offered a ___ solution to a complex problem.'"
 choices:
   - "mythological"
   - "contemporaneous"
@@ -741,7 +741,7 @@ choices:
 srsWords: "metabolize"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The political debate often pitted the ___ against the libertarian.'"
+text: "'The political debate often pitted the ___ against the libertarian.'"
 choices:
   - "stratification"
   - "statist" (correct)
@@ -775,7 +775,7 @@ choices:
 srsWords: "scantily"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Copper ___ is used as a fungicide.'"
+text: "'Copper ___ is used as a fungicide.'"
 choices:
   - "sulphate" (correct)
   - "exuberance"
@@ -793,7 +793,7 @@ choices:
 srsWords: "geospatial"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The engineers focused on improving the ___ of the spacecraft in extreme conditions.'"
+text: "'The engineers focused on improving the ___ of the spacecraft in extreme conditions.'"
 choices:
   - "bioengineering"
   - "survivability" (correct)
@@ -865,7 +865,7 @@ choices:
 srsWords: "statin"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The ___ delivered a powerful sermon.'"
+text: "'The ___ delivered a powerful sermon.'"
 choices:
   - "curation"
   - "listeria"
@@ -883,7 +883,7 @@ choices:
 srsWords: "rococo"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The doctor ordered a ___ to check for bone fractures.'"
+text: "'The doctor ordered a ___ to check for bone fractures.'"
 choices:
   - "workpiece"
   - "radiography" (correct)
@@ -928,7 +928,7 @@ choices:
 srsWords: "colloidal"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Verbs in English do not ___ as much as in other languages.'"
+text: "'Verbs in English do not ___ as much as in other languages.'"
 choices:
   - "confer"
   - "inflect" (correct)
@@ -953,7 +953,7 @@ color: "#00695C"
 ---
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'His speech was a powerful ___ to action.'"
+text: "'His speech was a powerful ___ to action.'"
 choices:
   - "whorl"
   - "speciation"
@@ -1007,7 +1007,7 @@ choices:
 srsWords: "lessee"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Her musical taste is very ___, ranging from classical to rock.'"
+text: "'Her musical taste is very ___, ranging from classical to rock.'"
 choices:
   - "platitude"
   - "eclectic" (correct)
@@ -1043,7 +1043,7 @@ choices:
 srsWords: "eucharistic"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Many countries have chosen to ___ certain drugs.'"
+text: "'Many countries have chosen to ___ certain drugs.'"
 choices:
   - "criminalize" (correct)
   - "comprise"
@@ -1079,7 +1079,7 @@ choices:
 srsWords: "cytotoxic"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The ___ wind can be very strong in the Rhône Valley.'"
+text: "'The ___ wind can be very strong in the Rhône Valley.'"
 choices:
   - "ideation"
   - "tupelo"
@@ -1097,7 +1097,7 @@ choices:
 srsWords: "reputedly"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'Many bands combine elements of ___ with other genres.'"
+text: "'Many bands combine elements of ___ with other genres.'"
 choices:
   - "infraction"
   - "acoustics"
@@ -1115,7 +1115,7 @@ choices:
 srsWords: "magnetically"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: '___ encompasses geology, oceanography, and meteorology.'"
+text: "'___ encompasses geology, oceanography, and meteorology.'"
 choices:
   - "porosity"
   - "strontium"
@@ -1124,7 +1124,7 @@ choices:
 srsWords: "geoscience"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'In English, the ___ case is often shown with an apostrophe 's'.'"
+text: "'In English, the ___ case is often shown with an apostrophe 's'.'"
 choices:
   - "magnetite"
   - "genitive" (correct)
@@ -1158,7 +1158,7 @@ choices:
 srsWords: "repudiation"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'In geometry, a ___ is a surface of revolution generated by revolving a circle in three-dimensional space about an axis coplanar with the circle.'"
+text: "'In geometry, a ___ is a surface of revolution generated by revolving a circle in three-dimensional space about an axis coplanar with the circle.'"
 choices:
   - "torus" (correct)
   - "rockabilly"
@@ -1194,7 +1194,7 @@ choices:
 srsWords: "infrastructural"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'This face wash contains ___ acid to help with acne.'"
+text: "'This face wash contains ___ acid to help with acne.'"
 choices:
   - "lustful"
   - "undaunted"
@@ -1221,7 +1221,7 @@ choices:
 srsWords: "sectarianism"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The speaker approached the ___ to deliver his powerful speech.'"
+text: "'The speaker approached the ___ to deliver his powerful speech.'"
 choices:
   - "gastroenterology"
   - "rostrum" (correct)
@@ -1275,7 +1275,7 @@ choices:
 srsWords: "maxillary"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'He was seen as a rigid ___, unwilling to compromise his beliefs.'"
+text: "'He was seen as a rigid ___, unwilling to compromise his beliefs.'"
 choices:
   - "lisle"
   - "internationalization"
@@ -1284,7 +1284,7 @@ choices:
 srsWords: "ideologue"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The artist created a beautiful ___ of the city skyline.'"
+text: "'The artist created a beautiful ___ of the city skyline.'"
 choices:
   - "impurity"
   - "lithograph" (correct)
@@ -1345,7 +1345,7 @@ choices:
 srsWords: "indiscriminate"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'She arranged the flowers ___ in the vase.'"
+text: "'She arranged the flowers ___ in the vase.'"
 choices:
   - "perceptively"
   - "uphill"
@@ -1372,7 +1372,7 @@ choices:
 srsWords: "exuberant"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The urgency of the situation helped to ___ the team into action.'"
+text: "'The urgency of the situation helped to ___ the team into action.'"
 choices:
   - "smelt"
   - "contemplate"
@@ -1480,7 +1480,7 @@ choices:
 srsWords: "gush"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The company announced a new ___ manager for the marketing department.'"
+text: "'The company announced a new ___ manager for the marketing department.'"
 choices:
   - "divisional" (correct)
   - "washy"
@@ -1498,7 +1498,7 @@ choices:
 srsWords: "repute"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'His ___ that he was innocent was not believed.'"
+text: "'His ___ that he was innocent was not believed.'"
 choices:
   - "policymaking"
   - "cilium"
@@ -1514,7 +1514,7 @@ color: "#0277BD"
 ---
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The room looked ___ after the cleanup.'"
+text: "'The room looked ___ after the cleanup.'"
 choices:
   - "immutable"
   - "beguiling" (correct)
@@ -1532,7 +1532,7 @@ choices:
 srsWords: "chiselled"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'She always carries a ___ to draw new ideas.'"
+text: "'She always carries a ___ to draw new ideas.'"
 choices:
   - "wold"
   - "depiction"
@@ -1550,7 +1550,7 @@ choices:
 srsWords: "versatility"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'This ___ comes up often in everyday English.'"
+text: "'This ___ comes up often in everyday English.'"
 choices:
   - "holocene"
   - "fissure"
@@ -1559,7 +1559,7 @@ choices:
 srsWords: "settee"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'They worked ___ on the project.'"
+text: "'They worked ___ on the project.'"
 choices:
   - "dominantly"
   - "animatedly" (correct)
@@ -1568,7 +1568,7 @@ choices:
 srsWords: "animatedly"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'The ___ of the normal word order can create emphasis.'"
+text: "'The ___ of the normal word order can create emphasis.'"
 choices:
   - "abstraction"
   - "wold"
@@ -1658,7 +1658,7 @@ choices:
 srsWords: "infuse"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'He has a genetic ___ to heart disease.'"
+text: "'He has a genetic ___ to heart disease.'"
 choices:
   - "cenotaph"
   - "dualism"
@@ -1728,7 +1728,7 @@ choices:
 srsWords: "refreshingly"
 
 [multiple-choice]
-text: "Choose the word that best completes the sentence: 'She explained the ___ to me clearly.'"
+text: "'She explained the ___ to me clearly.'"
 choices:
   - "entitlement"
   - "confucianism"
