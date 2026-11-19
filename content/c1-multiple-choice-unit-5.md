@@ -117,7 +117,7 @@ choices:
 srsWords: "perfusion"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Producing at a rate that barely covers production costs'?"
+text: "'Producing at a rate that barely covers production costs'?"
 choices:
   - "sacramental"
   - "marginal" (correct)
@@ -126,7 +126,7 @@ choices:
 srsWords: "marginal"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The rise of ___ can lead to conflict.'"
+text: "'The rise of ___ can lead to conflict.'"
 choices:
   - "tribalism" (correct)
   - "eclectic"
@@ -153,7 +153,7 @@ choices:
 srsWords: "godhead"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'American ___ is a belief that the United States is unique.'"
+text: "'American ___ is a belief that the United States is unique.'"
 choices:
   - "intifada"
   - "tritium"
@@ -171,7 +171,7 @@ choices:
 srsWords: "camber"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'We had ___ weather this week.'"
+text: "'We had ___ weather this week.'"
 choices:
   - "bearish"
   - "oceanographic"
@@ -232,7 +232,7 @@ choices:
 srsWords: "bola"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He sighed in ___ at the repeated delays.'"
+text: "'He sighed in ___ at the repeated delays.'"
 choices:
   - "intensification"
   - "furtherance"
@@ -295,7 +295,7 @@ choices:
 srsWords: "traitorous"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: '___ is used in some self-powered lighting.'"
+text: "'___ is used in some self-powered lighting.'"
 choices:
   - "tritium" (correct)
   - "predisposition"
@@ -401,7 +401,7 @@ choices:
 srsWords: "curation"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The report highlighted the growing ___ in wealth distribution.'"
+text: "'The report highlighted the growing ___ in wealth distribution.'"
 choices:
   - "naivety"
   - "disulfide"
@@ -455,7 +455,7 @@ choices:
 srsWords: "wrest"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The ___ signs of a cold were starting to appear.'"
+text: "'The ___ signs of a cold were starting to appear.'"
 choices:
   - "gnarly"
   - "unspoken"
@@ -473,7 +473,7 @@ choices:
 srsWords: "mammography"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'They had to ___ out a living from their small farm.'"
+text: "'They had to ___ out a living from their small farm.'"
 choices:
   - "revere"
   - "frisk"
@@ -491,7 +491,7 @@ choices:
 srsWords: "entente"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The government is concerned about the ___ of young people.'"
+text: "'The government is concerned about the ___ of young people.'"
 choices:
   - "fatality"
   - "encoder"
@@ -518,7 +518,7 @@ choices:
 srsWords: "nematode"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Capable of being anticipated'?"
+text: "'Capable of being anticipated'?"
 choices:
   - "unpalatable"
   - "obese"
@@ -554,7 +554,7 @@ choices:
 srsWords: "lyricism"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'It was ___ experience for everyone.'"
+text: "'It was ___ experience for everyone.'"
 choices:
   - "carcinogenic"
   - "adoptive"
@@ -563,7 +563,7 @@ choices:
 srsWords: "fiendish"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She was diagnosed with ___ after years of unexplained pain.'"
+text: "'She was diagnosed with ___ after years of unexplained pain.'"
 choices:
   - "abolitionist"
   - "detritus"
@@ -579,7 +579,7 @@ color: "#F57F17"
 ---
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Not forming an essential part of a thing or arising or originating from the outside'?"
+text: "'Not forming an essential part of a thing or arising or originating from the outside'?"
 choices:
   - "extrinsic" (correct)
   - "febrile"
@@ -615,7 +615,7 @@ choices:
 srsWords: "telemedicine"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: '___ emphasizes a holistic approach to health.'"
+text: "'___ emphasizes a holistic approach to health.'"
 choices:
   - "diffuser"
   - "ayurveda" (correct)
@@ -633,7 +633,7 @@ choices:
 srsWords: "raster"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'A ___ of quail suddenly flew out from the bushes.'"
+text: "'A ___ of quail suddenly flew out from the bushes.'"
 choices:
   - "virtualization"
   - "zircon"
@@ -696,7 +696,7 @@ choices:
 srsWords: "forebear"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She decided to specialize in ___ after medical school.'"
+text: "'She decided to specialize in ___ after medical school.'"
 choices:
   - "nanotube"
   - "hematology" (correct)
@@ -714,7 +714,7 @@ choices:
 srsWords: "nsaid"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'The action of bearing witness'?"
+text: "'The action of bearing witness'?"
 choices:
   - "attestation" (correct)
   - "ubiquity"
@@ -750,7 +750,7 @@ choices:
 srsWords: "statist"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The plant's ___ wrapped around the fence.'"
+text: "'The plant's ___ wrapped around the fence.'"
 choices:
   - "wrangler"
   - "tendril" (correct)
@@ -766,7 +766,7 @@ color: "#6A1B9A"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She was ___ dressed for the cold weather.'"
+text: "'She was ___ dressed for the cold weather.'"
 choices:
   - "reportedly"
   - "scantily" (correct)
@@ -784,7 +784,7 @@ choices:
 srsWords: "sulphate"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: '___ data is crucial for mapping and navigation systems.'"
+text: "'___ data is crucial for mapping and navigation systems.'"
 choices:
   - "oppressive"
   - "geospatial" (correct)
@@ -811,7 +811,7 @@ choices:
 srsWords: "subfamily"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He suffered from a ___ infection.'"
+text: "'He suffered from a ___ infection.'"
 choices:
   - "bronchial" (correct)
   - "insolvent"
@@ -874,7 +874,7 @@ choices:
 srsWords: "shaykh"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The palace was decorated in the ___ style.'"
+text: "'The palace was decorated in the ___ style.'"
 choices:
   - "rococo" (correct)
   - "blankness"
@@ -998,7 +998,7 @@ choices:
 srsWords: "inexplicably"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The ___ is responsible for maintaining the property during the lease term.'"
+text: "'The ___ is responsible for maintaining the property during the lease term.'"
 choices:
   - "subjugation"
   - "anglophone"
@@ -1025,7 +1025,7 @@ choices:
 srsWords: "instinctual"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Monotypic genus of Madagascar civets closely related to palm civets'?"
+text: "'Monotypic genus of Madagascar civets closely related to palm civets'?"
 choices:
   - "tonk"
   - "geoscience"
@@ -1061,7 +1061,7 @@ choices:
 srsWords: "staid"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'In English, the ___ case is used for the subject of a sentence.'"
+text: "'In English, the ___ case is used for the subject of a sentence.'"
 choices:
   - "nominative" (correct)
   - "strident"
@@ -1088,7 +1088,7 @@ choices:
 srsWords: "mistral"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'By repute'?"
+text: "'By repute'?"
 choices:
   - "ecstatically"
   - "reputedly" (correct)
@@ -1167,7 +1167,7 @@ choices:
 srsWords: "torus"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Interpret in the wrong way'?"
+text: "'Interpret in the wrong way'?"
 choices:
   - "encrust"
   - "misconstrue" (correct)
@@ -1176,7 +1176,7 @@ choices:
 srsWords: "misconstrue"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The complex instructions left him completely ___.'"
+text: "'The complex instructions left him completely ___.'"
 choices:
   - "seethe"
   - "sever"
@@ -1203,7 +1203,7 @@ choices:
 srsWords: "salicylic"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The ___ monkey is often used in scientific research.'"
+text: "'The ___ monkey is often used in scientific research.'"
 choices:
   - "hypothyroidism"
   - "entitlement"
@@ -1212,7 +1212,7 @@ choices:
 srsWords: "rhesus"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A narrow-minded adherence to a particular sect or party or denomination'?"
+text: "'A narrow-minded adherence to a particular sect or party or denomination'?"
 choices:
   - "histone"
   - "exhibitionist"
@@ -1248,7 +1248,7 @@ choices:
 srsWords: "meiosis"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Remove a monarch from the throne'?"
+text: "'Remove a monarch from the throne'?"
 choices:
   - "vilify"
   - "glean"
@@ -1293,7 +1293,7 @@ choices:
 srsWords: "lithograph"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Marked by strong resentment or cynicism'?"
+text: "'Marked by strong resentment or cynicism'?"
 choices:
   - "nimble"
   - "prismatic"
@@ -1311,7 +1311,7 @@ choices:
 srsWords: "bidirectional"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The museum displayed an impressive collection of ancient ___.'"
+text: "'The museum displayed an impressive collection of ancient ___.'"
 choices:
   - "midline"
   - "disulfide"
@@ -1381,7 +1381,7 @@ choices:
 srsWords: "galvanise"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He answered the question ___.'"
+text: "'He answered the question ___.'"
 choices:
   - "insensitively"
   - "fabulously" (correct)
@@ -1390,7 +1390,7 @@ choices:
 srsWords: "fabulously"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Please put the cooking ___ in the drawer.'"
+text: "'Please put the cooking ___ in the drawer.'"
 choices:
   - "exemplar"
   - "imperium"
@@ -1444,7 +1444,7 @@ choices:
 srsWords: "transatlantic"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The strong winds threatened to ___ the roof tiles.'"
+text: "'The strong winds threatened to ___ the roof tiles.'"
 choices:
   - "dislodge" (correct)
   - "opine"
@@ -1453,7 +1453,7 @@ choices:
 srsWords: "dislodge"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The artist achieved international ___ for her sculptures.'"
+text: "'The artist achieved international ___ for her sculptures.'"
 choices:
   - "renown" (correct)
   - "alkaloid"
@@ -1489,7 +1489,7 @@ choices:
 srsWords: "divisional"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He is ___ to be the best doctor in the city.'"
+text: "'He is ___ to be the best doctor in the city.'"
 choices:
   - "covey"
   - "folktale"
@@ -1523,7 +1523,7 @@ choices:
 srsWords: "beguiling"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Everyone was ___ by the news.'"
+text: "'Everyone was ___ by the news.'"
 choices:
   - "inimitable"
   - "supple"
@@ -1667,7 +1667,7 @@ choices:
 srsWords: "predisposition"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'We planted the tomato ___ in the garden.'"
+text: "'We planted the tomato ___ in the garden.'"
 choices:
   - "springbok"
   - "sunnah"
@@ -1685,7 +1685,7 @@ choices:
 srsWords: "naivety"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She completed the task ___.'"
+text: "'She completed the task ___.'"
 choices:
   - "interchangeably"
   - "meaninglessly"
@@ -1701,7 +1701,7 @@ color: "#00838F"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'They worked ___ on the project.'"
+text: "'They worked ___ on the project.'"
 choices:
   - "voraciously"
   - "dismally"
@@ -1719,7 +1719,7 @@ choices:
 srsWords: "popularization"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She spoke ___ during the meeting.'"
+text: "'She spoke ___ during the meeting.'"
 choices:
   - "gruesomely"
   - "crudely"
@@ -1746,7 +1746,7 @@ choices:
 srsWords: "eclectically"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The room looked ___ after the cleanup.'"
+text: "'The room looked ___ after the cleanup.'"
 choices:
   - "variegated"
   - "maternalistic" (correct)
@@ -1755,7 +1755,7 @@ choices:
 srsWords: "maternalistic"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He answered the question ___.'"
+text: "'He answered the question ___.'"
 choices:
   - "insensitively"
   - "aptly"
@@ -1782,7 +1782,7 @@ choices:
 srsWords: "raunchily"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'It was ___ experience for everyone.'"
+text: "'It was ___ experience for everyone.'"
 choices:
   - "unscathing" (correct)
   - "indefinite"
@@ -1791,7 +1791,7 @@ choices:
 srsWords: "unscathing"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A woman poet'?"
+text: "'A woman poet'?"
 choices:
   - "perfectionism"
   - "poetess" (correct)
@@ -1800,7 +1800,7 @@ choices:
 srsWords: "poetess"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She completed the task ___.'"
+text: "'She completed the task ___.'"
 choices:
   - "afoul"
   - "cynically"
@@ -1818,7 +1818,7 @@ choices:
 srsWords: "dutifully"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He answered the question ___.'"
+text: "'He answered the question ___.'"
 choices:
   - "conscientiously"
   - "retroactively"
@@ -1827,7 +1827,7 @@ choices:
 srsWords: "linearly"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The team performed ___ in the final.'"
+text: "'The team performed ___ in the final.'"
 choices:
   - "perceptively" (correct)
   - "sedately"
@@ -1836,7 +1836,7 @@ choices:
 srsWords: "perceptively"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'They worked ___ on the project.'"
+text: "'They worked ___ on the project.'"
 choices:
   - "primitively" (correct)
   - "purported"
@@ -1872,7 +1872,7 @@ choices:
 srsWords: "startlingly"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'They worked ___ on the project.'"
+text: "'They worked ___ on the project.'"
 choices:
   - "ecstatically" (correct)
   - "erroneously"

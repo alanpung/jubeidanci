@@ -18,7 +18,7 @@ color: "#1565C0"
 ---
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Any of various trees of the genus Ulmus: important timber or shade trees'?"
+text: "'Any of various trees of the genus Ulmus: important timber or shade trees'?"
 choices:
   - "shroud"
   - "elm" (correct)
@@ -81,7 +81,7 @@ choices:
 srsWords: "sleepwalking"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'The pilot who positions his aircraft outside and behind (on the wing of) the leader of…'?"
+text: "'The pilot who positions his aircraft outside and behind (on the wing of) the leader of…'?"
 choices:
   - "kebab"
   - "wingman" (correct)
@@ -99,7 +99,7 @@ choices:
 srsWords: "mutually"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The ___ leaves trembled in the breeze.'"
+text: "'The ___ leaves trembled in the breeze.'"
 choices:
   - "odyssey"
   - "aspen" (correct)
@@ -126,7 +126,7 @@ choices:
 srsWords: "amalgamation"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He ___ the sword with great skill.'"
+text: "'He ___ the sword with great skill.'"
 choices:
   - "munch"
   - "wield" (correct)
@@ -171,7 +171,7 @@ choices:
 srsWords: "heirloom"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Force somebody to do something'?"
+text: "'Force somebody to do something'?"
 choices:
   - "plaster"
   - "compel" (correct)
@@ -180,7 +180,7 @@ choices:
 srsWords: "compel"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She smoothed out the ___ in her dress.'"
+text: "'She smoothed out the ___ in her dress.'"
 choices:
   - "uniformity"
   - "eulogy"
@@ -189,7 +189,7 @@ choices:
 srsWords: "wrinkle"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The speaker stood on the ___ to address the crowd.'"
+text: "'The speaker stood on the ___ to address the crowd.'"
 choices:
   - "cheerleading"
   - "podium" (correct)
@@ -214,7 +214,7 @@ choices:
 srsWords: "larceny"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He fashioned a ___ out of a toothbrush.'"
+text: "'He fashioned a ___ out of a toothbrush.'"
 choices:
   - "veto"
   - "homosexuality"
@@ -250,7 +250,7 @@ choices:
 srsWords: "bane"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The result was ___ and everyone was pleased.'"
+text: "'The result was ___ and everyone was pleased.'"
 choices:
   - "degrading" (correct)
   - "titular"
@@ -268,7 +268,7 @@ choices:
 srsWords: "appetizer"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The bowler delivered a perfect ___.'"
+text: "'The bowler delivered a perfect ___.'"
 choices:
   - "yorker" (correct)
   - "nicotine"
@@ -295,7 +295,7 @@ choices:
 srsWords: "domino"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Scientists are studying a vaccine for ___.'"
+text: "'Scientists are studying a vaccine for ___.'"
 choices:
   - "anthrax" (correct)
   - "junkyard"
@@ -331,7 +331,7 @@ choices:
 srsWords: "papal"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The old house had a grand ___.'"
+text: "'The old house had a grand ___.'"
 choices:
   - "grasshopper"
   - "sequel"
@@ -367,7 +367,7 @@ choices:
 srsWords: "renovation"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'We need to see ___ results from this project.'"
+text: "'We need to see ___ results from this project.'"
 choices:
   - "inflationary"
   - "unprotected"
@@ -376,7 +376,7 @@ choices:
 srsWords: "tangible"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A book written by Sir Thomas More (1516) describing the perfect society on an…'?"
+text: "'A book written by Sir Thomas More (1516) describing the perfect society on an…'?"
 choices:
   - "conservatory"
   - "utopia" (correct)
@@ -392,7 +392,7 @@ color: "#2E7D32"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The ___ of the contract was clearly defined.'"
+text: "'The ___ of the contract was clearly defined.'"
 choices:
   - "fuzz"
   - "terminator" (correct)
@@ -401,7 +401,7 @@ choices:
 srsWords: "terminator"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Load anew'?"
+text: "'Load anew'?"
 choices:
   - "recharge" (correct)
   - "apprentice"
@@ -446,7 +446,7 @@ choices:
 srsWords: "dismantle"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'They share a ___ kitchen in the dormitory.'"
+text: "'They share a ___ kitchen in the dormitory.'"
 choices:
   - "storied"
   - "crunchy"
@@ -455,7 +455,7 @@ choices:
 srsWords: "communal"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'A thick mist acted as a ___, obscuring the mountain peaks.'"
+text: "'A thick mist acted as a ___, obscuring the mountain peaks.'"
 choices:
   - "shroud" (correct)
   - "arraignment"
@@ -509,7 +509,7 @@ choices:
 srsWords: "relapse"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The artist chose to ___ the figures in her painting.'"
+text: "'The artist chose to ___ the figures in her painting.'"
 choices:
   - "perpetrate"
   - "stylize" (correct)
@@ -536,7 +536,7 @@ choices:
 srsWords: "unitary"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The explorers were ___ in the uncharted territory.'"
+text: "'The explorers were ___ in the uncharted territory.'"
 choices:
   - "excitation"
   - "scourge"
@@ -597,7 +597,7 @@ choices:
 srsWords: "conservancy"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A slight push or shake'?"
+text: "'A slight push or shake'?"
 choices:
   - "lancet"
   - "nudge" (correct)
@@ -606,7 +606,7 @@ choices:
 srsWords: "nudge"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: '___ is becoming an important source of seafood.'"
+text: "'___ is becoming an important source of seafood.'"
 choices:
   - "lacrosse"
   - "ponytail"
@@ -642,7 +642,7 @@ choices:
 srsWords: "pamphlet"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The ___ stood guard at the gate all night.'"
+text: "'The ___ stood guard at the gate all night.'"
 choices:
   - "condor"
   - "sentry" (correct)
@@ -660,7 +660,7 @@ choices:
 srsWords: "arabian"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'A ___ flew into the room and everyone ducked.'"
+text: "'A ___ flew into the room and everyone ducked.'"
 choices:
   - "stronghold"
   - "hornet" (correct)
@@ -678,7 +678,7 @@ choices:
 srsWords: "compendium"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Catholics receive the ___ during Mass.'"
+text: "'Catholics receive the ___ during Mass.'"
 choices:
   - "ptsd"
   - "eucharist" (correct)
@@ -705,7 +705,7 @@ choices:
 srsWords: "liturgical"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The old grandfather clock made a steady tick-___ sound.'"
+text: "'The old grandfather clock made a steady tick-___ sound.'"
 choices:
   - "airlock"
   - "tock" (correct)
@@ -732,7 +732,7 @@ choices:
 srsWords: "unsettling"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The news of his resignation was a complete ___.'"
+text: "'The news of his resignation was a complete ___.'"
 choices:
   - "bombshell" (correct)
   - "hoof"
@@ -741,7 +741,7 @@ choices:
 srsWords: "bombshell"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Rice is a ___ food in many Asian countries.'"
+text: "'Rice is a ___ food in many Asian countries.'"
 choices:
   - "staple" (correct)
   - "caterer"
@@ -750,7 +750,7 @@ choices:
 srsWords: "staple"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The old man used to make ___ in the woods.'"
+text: "'The old man used to make ___ in the woods.'"
 choices:
   - "commie"
   - "moonshine" (correct)
@@ -784,7 +784,7 @@ choices:
 srsWords: "intuitively"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Her ___ knocking eventually woke him up.'"
+text: "'Her ___ knocking eventually woke him up.'"
 choices:
   - "disjointed"
   - "insistent" (correct)
@@ -820,7 +820,7 @@ choices:
 srsWords: "kiddie"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He seemed ___ to the danger.'"
+text: "'He seemed ___ to the danger.'"
 choices:
   - "unitary"
   - "reformist"
@@ -865,7 +865,7 @@ choices:
 srsWords: "bloodline"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He carried a ___ bag of groceries.'"
+text: "'He carried a ___ bag of groceries.'"
 choices:
   - "self-reflexive"
   - "intrepid"
@@ -937,7 +937,7 @@ choices:
 srsWords: "militant"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The overripe bananas were quite ___.'"
+text: "'The overripe bananas were quite ___.'"
 choices:
   - "amiss"
   - "versatile"
@@ -962,7 +962,7 @@ choices:
 srsWords: "discography"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The child had a heightened ___ perception, noticing every small detail.'"
+text: "'The child had a heightened ___ perception, noticing every small detail.'"
 choices:
   - "immersive"
   - "sensory" (correct)
@@ -971,7 +971,7 @@ choices:
 srsWords: "sensory"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Can you give me a quick ___ of what happened?'"
+text: "'Can you give me a quick ___ of what happened?'"
 choices:
   - "rundown" (correct)
   - "fascia"
@@ -980,7 +980,7 @@ choices:
 srsWords: "rundown"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A condition in which everything is regular and unvarying'?"
+text: "'A condition in which everything is regular and unvarying'?"
 choices:
   - "anesthetic"
   - "spruce"
@@ -998,7 +998,7 @@ choices:
 srsWords: "strut"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Difficult to understand'?"
+text: "'Difficult to understand'?"
 choices:
   - "aero"
   - "incomprehensible" (correct)
@@ -1007,7 +1007,7 @@ choices:
 srsWords: "incomprehensible"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The crowd was in an ___ after the controversial decision.'"
+text: "'The crowd was in an ___ after the controversial decision.'"
 choices:
   - "spaniard"
   - "spout"
@@ -1025,7 +1025,7 @@ choices:
 srsWords: "agar"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'An executioner who hangs the condemned person'?"
+text: "'An executioner who hangs the condemned person'?"
 choices:
   - "hangman" (correct)
   - "dichotomy"
@@ -1034,7 +1034,7 @@ choices:
 srsWords: "hangman"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He handled the delicate negotiation with great ___.'"
+text: "'He handled the delicate negotiation with great ___.'"
 choices:
   - "alfa"
   - "plough"
@@ -1052,7 +1052,7 @@ choices:
 srsWords: "gentrification"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The hot air balloon began to ___ slowly.'"
+text: "'The hot air balloon began to ___ slowly.'"
 choices:
   - "orient"
   - "ascend" (correct)
@@ -1061,7 +1061,7 @@ choices:
 srsWords: "ascend"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The knight set out to ___ the dragon.'"
+text: "'The knight set out to ___ the dragon.'"
 choices:
   - "vanquish" (correct)
   - "urinate"
@@ -1079,7 +1079,7 @@ choices:
 srsWords: "wring"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Bright-colored'?"
+text: "'Bright-colored'?"
 choices:
   - "buoy" (correct)
   - "prude"
@@ -1088,7 +1088,7 @@ choices:
 srsWords: "buoy"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The political party conducted a door-to-door ___.'"
+text: "'The political party conducted a door-to-door ___.'"
 choices:
   - "canvass" (correct)
   - "intestine"
@@ -1097,7 +1097,7 @@ choices:
 srsWords: "canvass"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'They danced a lively Irish ___.'"
+text: "'They danced a lively Irish ___.'"
 choices:
   - "jig" (correct)
   - "scat"
@@ -1124,7 +1124,7 @@ choices:
 srsWords: "perk"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The local ___ owned most of the land.'"
+text: "'The local ___ owned most of the land.'"
 choices:
   - "antics"
   - "bead"
@@ -1158,7 +1158,7 @@ choices:
 srsWords: "crossbow"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The sheep grazed peacefully on the ___.'"
+text: "'The sheep grazed peacefully on the ___.'"
 choices:
   - "warhead"
   - "hillside" (correct)
@@ -1176,7 +1176,7 @@ choices:
 srsWords: "populism"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He refused to ___ the source of his information.'"
+text: "'He refused to ___ the source of his information.'"
 choices:
   - "clutter"
   - "formulate"
@@ -1185,7 +1185,7 @@ choices:
 srsWords: "divulge"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The firefighters returned to the ___ after the call.'"
+text: "'The firefighters returned to the ___ after the call.'"
 choices:
   - "piccolo"
   - "firehouse" (correct)
@@ -1203,7 +1203,7 @@ choices:
 srsWords: "dal"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Breathing is an ___ action of the body.'"
+text: "'Breathing is an ___ action of the body.'"
 choices:
   - "programmatic"
   - "involuntary" (correct)
@@ -1221,7 +1221,7 @@ choices:
 srsWords: "boa"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Do one's shopping at'?"
+text: "'Do one's shopping at'?"
 choices:
   - "patronize" (correct)
   - "suffice"
@@ -1248,7 +1248,7 @@ choices:
 srsWords: "lenient"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'The region around the south pole: Antarctica and surrounding waters'?"
+text: "'The region around the south pole: Antarctica and surrounding waters'?"
 choices:
   - "diplomatic"
   - "pleasurable"
@@ -1257,7 +1257,7 @@ choices:
 srsWords: "antarctic"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'A ___ can weigh over a ton.'"
+text: "'A ___ can weigh over a ton.'"
 choices:
   - "jigsaw"
   - "mower"
@@ -1293,7 +1293,7 @@ choices:
 srsWords: "misdemeanor"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A form of carbon consisting of a single layer of atoms arranged in a two-dimensional…'?"
+text: "'A form of carbon consisting of a single layer of atoms arranged in a two-dimensional…'?"
 choices:
   - "graphene" (correct)
   - "madhouse"
@@ -1302,7 +1302,7 @@ choices:
 srsWords: "graphene"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The company continued to ___ its new product as revolutionary.'"
+text: "'The company continued to ___ its new product as revolutionary.'"
 choices:
   - "tout" (correct)
   - "repel"
@@ -1327,7 +1327,7 @@ color: "#4527A0"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Their ___ lasted for two years before they got married.'"
+text: "'Their ___ lasted for two years before they got married.'"
 choices:
   - "equator"
   - "mousse"
@@ -1354,7 +1354,7 @@ choices:
 srsWords: "standpoint"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The morning was ___, making it difficult to see the mountains.'"
+text: "'The morning was ___, making it difficult to see the mountains.'"
 choices:
   - "hazy" (correct)
   - "enzymatic"
@@ -1381,7 +1381,7 @@ choices:
 srsWords: "consensual"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Lifting device consisting of a horizontal cylinder turned by a crank on which a cable…'?"
+text: "'Lifting device consisting of a horizontal cylinder turned by a crank on which a cable…'?"
 choices:
   - "winch" (correct)
   - "deadbeat"
@@ -1390,7 +1390,7 @@ choices:
 srsWords: "winch"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He was ___ and refused to admit he was wrong.'"
+text: "'He was ___ and refused to admit he was wrong.'"
 choices:
   - "obstinate" (correct)
   - "hostile"
@@ -1399,7 +1399,7 @@ choices:
 srsWords: "obstinate"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Extremely active or energetic'?"
+text: "'Extremely active or energetic'?"
 choices:
   - "undefeated"
   - "coercive"
@@ -1417,7 +1417,7 @@ choices:
 srsWords: "pinto"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'A stone thrown into the pond created ___.'"
+text: "'A stone thrown into the pond created ___.'"
 choices:
   - "continuum"
   - "ripple" (correct)
@@ -1435,7 +1435,7 @@ choices:
 srsWords: "colorectal"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Consumers organized a ___ of the company's products.'"
+text: "'Consumers organized a ___ of the company's products.'"
 choices:
   - "dysfunction"
   - "boycott" (correct)
@@ -1462,7 +1462,7 @@ choices:
 srsWords: "saki"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The government adopted a ___ economic policy.'"
+text: "'The government adopted a ___ economic policy.'"
 choices:
   - "soggy"
   - "hostile"
@@ -1471,7 +1471,7 @@ choices:
 srsWords: "neoliberal"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A male monarch or emperor (especially of Russia prior to 1917)'?"
+text: "'A male monarch or emperor (especially of Russia prior to 1917)'?"
 choices:
   - "sovereignty"
   - "czar" (correct)
@@ -1489,7 +1489,7 @@ choices:
 srsWords: "incest"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He felt like a ___ after making such a silly mistake.'"
+text: "'He felt like a ___ after making such a silly mistake.'"
 choices:
   - "staple"
   - "muppet" (correct)
@@ -1559,7 +1559,7 @@ choices:
 srsWords: "hashtag"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The company had a ___ structure, making change difficult.'"
+text: "'The company had a ___ structure, making change difficult.'"
 choices:
   - "intergovernmental"
   - "telepathic"
@@ -1613,7 +1613,7 @@ choices:
 srsWords: "translational"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The teacher wanted to ___ the importance of reading.'"
+text: "'The teacher wanted to ___ the importance of reading.'"
 choices:
   - "emphasize" (correct)
   - "withhold"
@@ -1631,7 +1631,7 @@ choices:
 srsWords: "fiercely"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The explorers had to make a long ___ around the rapids.'"
+text: "'The explorers had to make a long ___ around the rapids.'"
 choices:
   - "portage" (correct)
   - "wavelength"
@@ -1658,7 +1658,7 @@ choices:
 srsWords: "speciality"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'German physicist who invented the mercury thermometer and developed the scale of…'?"
+text: "'German physicist who invented the mercury thermometer and developed the scale of…'?"
 choices:
   - "spinster"
   - "fahrenheit" (correct)
@@ -1676,7 +1676,7 @@ choices:
 srsWords: "forerunner"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The evidence seemed to ___ him in the robbery.'"
+text: "'The evidence seemed to ___ him in the robbery.'"
 choices:
   - "sprawl"
   - "stylize"
@@ -1719,7 +1719,7 @@ choices:
 srsWords: "conscientious"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'American silversmith remembered for his midnight ride (celebrated in a poem by…'?"
+text: "'American silversmith remembered for his midnight ride (celebrated in a poem by…'?"
 choices:
   - "envisage"
   - "revere" (correct)
@@ -1728,7 +1728,7 @@ choices:
 srsWords: "revere"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A woman sorcerer'?"
+text: "'A woman sorcerer'?"
 choices:
   - "celsius"
   - "sorceress" (correct)
@@ -1737,7 +1737,7 @@ choices:
 srsWords: "sorceress"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'My feet are very ___.'"
+text: "'My feet are very ___.'"
 choices:
   - "coy"
   - "ineligible"
@@ -1800,7 +1800,7 @@ choices:
 srsWords: "courteous"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'There is a clear ___ between the two political parties on this issue.'"
+text: "'There is a clear ___ between the two political parties on this issue.'"
 choices:
   - "airspace"
   - "dermatology"
@@ -1818,7 +1818,7 @@ choices:
 srsWords: "introspection"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The priest will ___ the baby next Sunday.'"
+text: "'The priest will ___ the baby next Sunday.'"
 choices:
   - "disenchant"
   - "baptize" (correct)
@@ -1827,7 +1827,7 @@ choices:
 srsWords: "baptize"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She sought the ___ of the countryside.'"
+text: "'She sought the ___ of the countryside.'"
 choices:
   - "phobia"
   - "colliery"

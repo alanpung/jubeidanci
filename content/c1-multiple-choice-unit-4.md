@@ -18,7 +18,7 @@ color: "#1565C0"
 ---
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A small nonrigid airship used for observation or as a barrage balloon'?"
+text: "'A small nonrigid airship used for observation or as a barrage balloon'?"
 choices:
   - "blimp" (correct)
   - "precedence"
@@ -54,7 +54,7 @@ choices:
 srsWords: "haywire"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The play covered the whole ___ of human emotions.'"
+text: "'The play covered the whole ___ of human emotions.'"
 choices:
   - "firstborn"
   - "layman"
@@ -99,7 +99,7 @@ choices:
 srsWords: "flirty"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The car developed a ___ at high speeds.'"
+text: "'The car developed a ___ at high speeds.'"
 choices:
   - "domestication"
   - "gramophone"
@@ -117,7 +117,7 @@ choices:
 srsWords: "exclamation"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The broken glass had ___ edges.'"
+text: "'The broken glass had ___ edges.'"
 choices:
   - "psychosocial"
   - "jagged" (correct)
@@ -126,7 +126,7 @@ choices:
 srsWords: "jagged"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'It's important to ___ with your colleagues outside of work.'"
+text: "'It's important to ___ with your colleagues outside of work.'"
 choices:
   - "eschew"
   - "socialize" (correct)
@@ -135,7 +135,7 @@ choices:
 srsWords: "socialize"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'That was a ___ wave to surf!'"
+text: "'That was a ___ wave to surf!'"
 choices:
   - "gnarly" (correct)
   - "apical"
@@ -153,7 +153,7 @@ choices:
 srsWords: "sardine"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She is learning Scottish ___.'"
+text: "'She is learning Scottish ___.'"
 choices:
   - "denominational"
   - "insightful"
@@ -189,7 +189,7 @@ choices:
 srsWords: "grange"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'We need to ___ the error before it causes further problems.'"
+text: "'We need to ___ the error before it causes further problems.'"
 choices:
   - "isolate"
   - "rectify" (correct)
@@ -214,7 +214,7 @@ choices:
 srsWords: "hyperactivity"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The army launched a swift ___ against the invaders.'"
+text: "'The army launched a swift ___ against the invaders.'"
 choices:
   - "duress"
   - "devotee"
@@ -223,7 +223,7 @@ choices:
 srsWords: "counterattack"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'We had baked ___ with our dinner.'"
+text: "'We had baked ___ with our dinner.'"
 choices:
   - "spud" (correct)
   - "raptor"
@@ -232,7 +232,7 @@ choices:
 srsWords: "spud"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He didn't ___ when the loud noise occurred.'"
+text: "'He didn't ___ when the loud noise occurred.'"
 choices:
   - "radicalize"
   - "flinch" (correct)
@@ -250,7 +250,7 @@ choices:
 srsWords: "scaffolding"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She enjoyed eating ___ ice cream.'"
+text: "'She enjoyed eating ___ ice cream.'"
 choices:
   - "pistachio" (correct)
   - "cuss"
@@ -259,7 +259,7 @@ choices:
 srsWords: "pistachio"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'This lake is home to many ___ fish.'"
+text: "'This lake is home to many ___ fish.'"
 choices:
   - "impersonal"
   - "headstrong"
@@ -277,7 +277,7 @@ choices:
 srsWords: "internalize"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Something that incites or provokes'?"
+text: "'Something that incites or provokes'?"
 choices:
   - "antibiotic"
   - "incitement" (correct)
@@ -286,7 +286,7 @@ choices:
 srsWords: "incitement"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The company was declared ___ and had to close down.'"
+text: "'The company was declared ___ and had to close down.'"
 choices:
   - "asynchronous"
   - "insolvent" (correct)
@@ -313,7 +313,7 @@ choices:
 srsWords: "darken"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The climber reached the ___ of the mountain.'"
+text: "'The climber reached the ___ of the mountain.'"
 choices:
   - "catacomb"
   - "ballast"
@@ -358,7 +358,7 @@ choices:
 srsWords: "proton"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The young ___ performed a perfect routine.'"
+text: "'The young ___ performed a perfect routine.'"
 choices:
   - "impediment"
   - "astrologer"
@@ -410,7 +410,7 @@ choices:
 srsWords: "prism"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He woke up feeling completely ___ after the party.'"
+text: "'He woke up feeling completely ___ after the party.'"
 choices:
   - "hungover" (correct)
   - "causative"
@@ -419,7 +419,7 @@ choices:
 srsWords: "hungover"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'We took the ___ to get downtown and avoid traffic.'"
+text: "'We took the ___ to get downtown and avoid traffic.'"
 choices:
   - "invisibility"
   - "resin"
@@ -509,7 +509,7 @@ choices:
 srsWords: "cadmium"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The photograph was a ___ reminder of their lost youth.'"
+text: "'The photograph was a ___ reminder of their lost youth.'"
 choices:
   - "hydrographic"
   - "inventive"
@@ -554,7 +554,7 @@ choices:
 srsWords: "conformation"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The ___ voted on the new proposal.'"
+text: "'The ___ voted on the new proposal.'"
 choices:
   - "devotee"
   - "amity"
@@ -579,7 +579,7 @@ color: "#F57F17"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She pushed the baby in the ___ through the park.'"
+text: "'She pushed the baby in the ___ through the park.'"
 choices:
   - "eocene"
   - "overseer"
@@ -588,7 +588,7 @@ choices:
 srsWords: "pram"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Possessing muscular strength'?"
+text: "'Possessing muscular strength'?"
 choices:
   - "revitalization"
   - "excretion"
@@ -597,7 +597,7 @@ choices:
 srsWords: "brawn"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'New shoes often cause a ___ on the heel.'"
+text: "'New shoes often cause a ___ on the heel.'"
 choices:
   - "strut"
   - "fathom"
@@ -651,7 +651,7 @@ choices:
 srsWords: "whisk"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A limitation imposed on the variables of a proposition (as by the quantifiers `some'…'?"
+text: "'A limitation imposed on the variables of a proposition (as by the quantifiers `some'…'?"
 choices:
   - "metastasis"
   - "apex"
@@ -678,7 +678,7 @@ choices:
 srsWords: "adversarial"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A point asserted as part of an argument'?"
+text: "'A point asserted as part of an argument'?"
 choices:
   - "elaboration"
   - "contention" (correct)
@@ -775,7 +775,7 @@ choices:
 srsWords: "uncontested"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The rise of ___ in the 20th century led to widespread conflict.'"
+text: "'The rise of ___ in the 20th century led to widespread conflict.'"
 choices:
   - "praxis"
   - "shimmy"
@@ -793,7 +793,7 @@ choices:
 srsWords: "clutter"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The team showed great ___ and determination.'"
+text: "'The team showed great ___ and determination.'"
 choices:
   - "torque"
   - "esprit" (correct)
@@ -820,7 +820,7 @@ choices:
 srsWords: "discourse"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Her ___ temperament made her difficult to work with.'"
+text: "'Her ___ temperament made her difficult to work with.'"
 choices:
   - "empathic"
   - "homophobic"
@@ -838,7 +838,7 @@ choices:
 srsWords: "alleviate"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The result was ___ and everyone was pleased.'"
+text: "'The result was ___ and everyone was pleased.'"
 choices:
   - "strapping" (correct)
   - "staid"
@@ -847,7 +847,7 @@ choices:
 srsWords: "strapping"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'His ___ comments often shocked the more traditional members of the audience.'"
+text: "'His ___ comments often shocked the more traditional members of the audience.'"
 choices:
   - "undaunted"
   - "prototypical"
@@ -856,7 +856,7 @@ choices:
 srsWords: "irreverent"
 
 [multiple-choice]
-text: "Which word best matches this definition: '(genetics) the act of mixing different species or varieties of animals or plants and…'?"
+text: "'(genetics) the act of mixing different species or varieties of animals or plants and…'?"
 choices:
   - "biennale"
   - "hibernation"
@@ -865,7 +865,7 @@ choices:
 srsWords: "hybridization"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Relating to oceanography'?"
+text: "'Relating to oceanography'?"
 choices:
   - "syntactic"
   - "riveting"
@@ -874,7 +874,7 @@ choices:
 srsWords: "oceanographic"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Written or relating to writing'?"
+text: "'Written or relating to writing'?"
 choices:
   - "ornamental"
   - "projective"
@@ -901,7 +901,7 @@ choices:
 srsWords: "temperamental"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The school's guiding ___ emphasized respect and integrity.'"
+text: "'The school's guiding ___ emphasized respect and integrity.'"
 choices:
   - "hypothyroidism"
   - "precept" (correct)
@@ -910,7 +910,7 @@ choices:
 srsWords: "precept"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'They explored the ancient ___ beneath the city.'"
+text: "'They explored the ancient ___ beneath the city.'"
 choices:
   - "catacomb" (correct)
   - "atonement"
@@ -919,7 +919,7 @@ choices:
 srsWords: "catacomb"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She gave him an ___ look when he told her the story.'"
+text: "'She gave him an ___ look when he told her the story.'"
 choices:
   - "savvy"
   - "melancholic"
@@ -980,7 +980,7 @@ choices:
 srsWords: "unrivalled"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She felt a strong sense of ___ about the job offer.'"
+text: "'She felt a strong sense of ___ about the job offer.'"
 choices:
   - "thorium"
   - "naturalism"
@@ -1007,7 +1007,7 @@ choices:
 srsWords: "naturalism"
 
 [multiple-choice]
-text: "Which word best matches this definition: '(astronomy) the disappearance of a celestial body prior to an eclipse'?"
+text: "'(astronomy) the disappearance of a celestial body prior to an eclipse'?"
 choices:
   - "polyp"
   - "distiller"
@@ -1106,7 +1106,7 @@ choices:
 srsWords: "euclidean"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: '___ exercises involve holding a position without movement.'"
+text: "'___ exercises involve holding a position without movement.'"
 choices:
   - "antarctic"
   - "rustic"
@@ -1124,7 +1124,7 @@ choices:
 srsWords: "predispose"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Take as a given'?"
+text: "'Take as a given'?"
 choices:
   - "perpetuate"
   - "loom"
@@ -1158,7 +1158,7 @@ choices:
 srsWords: "apprehensive"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Lack of an intervening or mediating agency'?"
+text: "'Lack of an intervening or mediating agency'?"
 choices:
   - "desertion"
   - "decentralization"
@@ -1185,7 +1185,7 @@ choices:
 srsWords: "realist"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The old building was the last ___ of the ancient civilization.'"
+text: "'The old building was the last ___ of the ancient civilization.'"
 choices:
   - "fray"
   - "vestige" (correct)
@@ -1221,7 +1221,7 @@ choices:
 srsWords: "hypersensitivity"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Social ___ is a key concept in sociology.'"
+text: "'Social ___ is a key concept in sociology.'"
 choices:
   - "stratification" (correct)
   - "velodrome"
@@ -1257,7 +1257,7 @@ choices:
 srsWords: "virtualization"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The critics ___ the play as amateurish and poorly written.'"
+text: "'The critics ___ the play as amateurish and poorly written.'"
 choices:
   - "abound"
   - "alleviate"
@@ -1284,7 +1284,7 @@ choices:
 srsWords: "algorithmic"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Obtaining ___ is a crucial step for medical professionals.'"
+text: "'Obtaining ___ is a crucial step for medical professionals.'"
 choices:
   - "corollary"
   - "proviso"
@@ -1302,7 +1302,7 @@ choices:
 srsWords: "reminisce"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The patient underwent surgery for an ___ tumor.'"
+text: "'The patient underwent surgery for an ___ tumor.'"
 choices:
   - "algal"
   - "esophageal" (correct)
@@ -1345,7 +1345,7 @@ choices:
 srsWords: "platitude"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The ___ of the enzyme was crucial for the experiment.'"
+text: "'The ___ of the enzyme was crucial for the experiment.'"
 choices:
   - "urea"
   - "palisade"
@@ -1354,7 +1354,7 @@ choices:
 srsWords: "inactivation"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The magician's trick ___ the audience.'"
+text: "'The magician's trick ___ the audience.'"
 choices:
   - "federate"
   - "ostracize"
@@ -1363,7 +1363,7 @@ choices:
 srsWords: "dumbfound"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: '___ helps companies improve their performance.'"
+text: "'___ helps companies improve their performance.'"
 choices:
   - "escarpment"
   - "antecedent"
@@ -1390,7 +1390,7 @@ choices:
 srsWords: "gutsy"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Not relating to or responsive to individual persons'?"
+text: "'Not relating to or responsive to individual persons'?"
 choices:
   - "impersonal" (correct)
   - "murky"
@@ -1399,7 +1399,7 @@ choices:
 srsWords: "impersonal"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The program aims to foster ___ understanding.'"
+text: "'The program aims to foster ___ understanding.'"
 choices:
   - "destitute"
   - "unrivalled"
@@ -1444,7 +1444,7 @@ choices:
 srsWords: "monetization"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She needed treatment for ___ disease.'"
+text: "'She needed treatment for ___ disease.'"
 choices:
   - "periodontal" (correct)
   - "compressive"
@@ -1462,7 +1462,7 @@ choices:
 srsWords: "autonomic"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The organization aims to combat ___ attitudes in society.'"
+text: "'The organization aims to combat ___ attitudes in society.'"
 choices:
   - "predatory"
   - "freshwater"
@@ -1480,7 +1480,7 @@ choices:
 srsWords: "acidification"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She is an ___ reader of historical novels.'"
+text: "'She is an ___ reader of historical novels.'"
 choices:
   - "exclusionary"
   - "multifaceted"
@@ -1514,7 +1514,7 @@ color: "#0277BD"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The artist used ___ to create the intricate print.'"
+text: "'The artist used ___ to create the intricate print.'"
 choices:
   - "bishopric"
   - "lithography" (correct)
@@ -1541,7 +1541,7 @@ choices:
 srsWords: "glyph"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The chief offered the ___ as a sign of peace.'"
+text: "'The chief offered the ___ as a sign of peace.'"
 choices:
   - "axon"
   - "calumet" (correct)
@@ -1550,7 +1550,7 @@ choices:
 srsWords: "calumet"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The political ___ led to widespread protests.'"
+text: "'The political ___ led to widespread protests.'"
 choices:
   - "globalist"
   - "fissure"
@@ -1586,7 +1586,7 @@ choices:
 srsWords: "polyp"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Spread negative information about'?"
+text: "'Spread negative information about'?"
 choices:
   - "metabolize"
   - "brainwash"
@@ -1622,7 +1622,7 @@ choices:
 srsWords: "bauxite"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The sugar began to ___ at the bottom of the pan.'"
+text: "'The sugar began to ___ at the bottom of the pan.'"
 choices:
   - "heighten"
   - "crystallize" (correct)
@@ -1640,7 +1640,7 @@ choices:
 srsWords: "algal"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He studied ancient ___ texts.'"
+text: "'He studied ancient ___ texts.'"
 choices:
   - "rabbinic" (correct)
   - "dainty"
@@ -1701,7 +1701,7 @@ color: "#00838F"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The presence of a smartphone in a historical drama would be ___.'"
+text: "'The presence of a smartphone in a historical drama would be ___.'"
 choices:
   - "prototypical"
   - "convoluted"
@@ -1728,7 +1728,7 @@ choices:
 srsWords: "perturb"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Impossible to reconcile'?"
+text: "'Impossible to reconcile'?"
 choices:
   - "freshwater"
   - "irreconcilable" (correct)
@@ -1737,7 +1737,7 @@ choices:
 srsWords: "irreconcilable"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: '___ are commonly used in detergents and soaps.'"
+text: "'___ are commonly used in detergents and soaps.'"
 choices:
   - "matriculation"
   - "calumet"
@@ -1773,7 +1773,7 @@ choices:
 srsWords: "postcolonial"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'The proprietor of a restaurant'?"
+text: "'The proprietor of a restaurant'?"
 choices:
   - "goldeneye"
   - "restaurateur" (correct)
@@ -1791,7 +1791,7 @@ choices:
 srsWords: "vim"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The new software offers improved ___ for large enterprises.'"
+text: "'The new software offers improved ___ for large enterprises.'"
 choices:
   - "oppo"
   - "scalability" (correct)
@@ -1872,7 +1872,7 @@ choices:
 srsWords: "ophthalmic"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The old bronze statue had a beautiful green ___.'"
+text: "'The old bronze statue had a beautiful green ___.'"
 choices:
   - "solenoid"
   - "closeness"

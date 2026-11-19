@@ -27,7 +27,7 @@ choices:
 srsWords: "treadmill"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Many people in Andhra Pradesh and Telangana speak ___.'"
+text: "'Many people in Andhra Pradesh and Telangana speak ___.'"
 choices:
   - "boomerang"
   - "colliery"
@@ -72,7 +72,7 @@ choices:
 srsWords: "rupee"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He slid down the ___, much to his mother's dismay.'"
+text: "'He slid down the ___, much to his mother's dismay.'"
 choices:
   - "stroller"
   - "hernia"
@@ -81,7 +81,7 @@ choices:
 srsWords: "bannister"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The sculptor used a ___ to carve the intricate details into the stone.'"
+text: "'The sculptor used a ___ to carve the intricate details into the stone.'"
 choices:
   - "chisel" (correct)
   - "flinch"
@@ -162,7 +162,7 @@ choices:
 srsWords: "crutch"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: '___ is one of the major branches of Christianity.'"
+text: "'___ is one of the major branches of Christianity.'"
 choices:
   - "protestantism" (correct)
   - "groupie"
@@ -189,7 +189,7 @@ choices:
 srsWords: "senatorial"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She is very ___ in the face of adversity.'"
+text: "'She is very ___ in the face of adversity.'"
 choices:
   - "sketchy"
   - "candid"
@@ -205,7 +205,7 @@ color: "#E53935"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The ___ kitten chased its tail around the room.'"
+text: "'The ___ kitten chased its tail around the room.'"
 choices:
   - "bloodborne"
   - "asymmetric"
@@ -241,7 +241,7 @@ choices:
 srsWords: "circulate"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Don't be such a ___; it's just a scratch.'"
+text: "'Don't be such a ___; it's just a scratch.'"
 choices:
   - "swindle"
   - "crybaby" (correct)
@@ -250,7 +250,7 @@ choices:
 srsWords: "crybaby"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The priest raised the ___ during the ceremony.'"
+text: "'The priest raised the ___ during the ceremony.'"
 choices:
   - "chalice" (correct)
   - "hippy"
@@ -277,7 +277,7 @@ choices:
 srsWords: "amalgamate"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Gymnastic apparatus consisting of a strong canvas sheet attached with springs to a…'?"
+text: "'Gymnastic apparatus consisting of a strong canvas sheet attached with springs to a…'?"
 choices:
   - "narc"
   - "doctorate"
@@ -286,7 +286,7 @@ choices:
 srsWords: "trampoline"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The community ___ quickly to help the flood victims.'"
+text: "'The community ___ quickly to help the flood victims.'"
 choices:
   - "socialize"
   - "mobilize" (correct)
@@ -295,7 +295,7 @@ choices:
 srsWords: "mobilize"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The ___ father denied paternity.'"
+text: "'The ___ father denied paternity.'"
 choices:
   - "putative" (correct)
   - "lacy"
@@ -313,7 +313,7 @@ choices:
 srsWords: "plasticity"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She wore a fur ___ to keep her hands warm.'"
+text: "'She wore a fur ___ to keep her hands warm.'"
 choices:
   - "maturation"
   - "jugular"
@@ -392,7 +392,7 @@ color: "#2E7D32"
 ---
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A hospital for recuperation or for the treatment of chronic diseases'?"
+text: "'A hospital for recuperation or for the treatment of chronic diseases'?"
 choices:
   - "courtship"
   - "sanatorium" (correct)
@@ -401,7 +401,7 @@ choices:
 srsWords: "sanatorium"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He used an ___ to play old console games on his PC.'"
+text: "'He used an ___ to play old console games on his PC.'"
 choices:
   - "inning"
   - "shambles"
@@ -410,7 +410,7 @@ choices:
 srsWords: "emulator"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The experienced ___ guided the debate through complex rules.'"
+text: "'The experienced ___ guided the debate through complex rules.'"
 choices:
   - "parliamentarian" (correct)
   - "ethylene"
@@ -437,7 +437,7 @@ choices:
 srsWords: "hue"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'We had to call an ___ to deal with the ant problem.'"
+text: "'We had to call an ___ to deal with the ant problem.'"
 choices:
   - "trotter"
   - "lingo"
@@ -446,7 +446,7 @@ choices:
 srsWords: "exterminator"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Enter into a league for a common purpose'?"
+text: "'Enter into a league for a common purpose'?"
 choices:
   - "retrace"
   - "federate" (correct)
@@ -597,7 +597,7 @@ choices:
 srsWords: "pornographic"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'I ordered a chocolate fudge ___ for dessert.'"
+text: "'I ordered a chocolate fudge ___ for dessert.'"
 choices:
   - "bebop"
   - "maven"
@@ -615,7 +615,7 @@ choices:
 srsWords: "devoid"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She lived a ___ lifestyle, traveling and creating art.'"
+text: "'She lived a ___ lifestyle, traveling and creating art.'"
 choices:
   - "chilean"
   - "bohemian" (correct)
@@ -624,7 +624,7 @@ choices:
 srsWords: "bohemian"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The real estate ___ bought several properties.'"
+text: "'The real estate ___ bought several properties.'"
 choices:
   - "speculator" (correct)
   - "parsley"
@@ -633,7 +633,7 @@ choices:
 srsWords: "speculator"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She had a small ___ on her chin.'"
+text: "'She had a small ___ on her chin.'"
 choices:
   - "grocer"
   - "scat"
@@ -642,7 +642,7 @@ choices:
 srsWords: "pimple"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A cut of meat (beef or veal or mutton or lamb) from the upper part of the leg'?"
+text: "'A cut of meat (beef or veal or mutton or lamb) from the upper part of the leg'?"
 choices:
   - "shank" (correct)
   - "splat"
@@ -651,7 +651,7 @@ choices:
 srsWords: "shank"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Her contribution to the team was ___.'"
+text: "'Her contribution to the team was ___.'"
 choices:
   - "erstwhile"
   - "irreplaceable" (correct)
@@ -660,7 +660,7 @@ choices:
 srsWords: "irreplaceable"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The protest was a ___ of public anger.'"
+text: "'The protest was a ___ of public anger.'"
 choices:
   - "matchmaker"
   - "manifestation" (correct)
@@ -705,7 +705,7 @@ choices:
 srsWords: "ontology"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'His bad behavior led to his ___ from school.'"
+text: "'His bad behavior led to his ___ from school.'"
 choices:
   - "midterm"
   - "expulsion" (correct)
@@ -714,7 +714,7 @@ choices:
 srsWords: "expulsion"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Eating slowly aids ___.'"
+text: "'Eating slowly aids ___.'"
 choices:
   - "flannel"
   - "fulfillment"
@@ -732,7 +732,7 @@ choices:
 srsWords: "pricey"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She used ___ cards to predict the future.'"
+text: "'She used ___ cards to predict the future.'"
 choices:
   - "detox"
   - "clarinet"
@@ -811,7 +811,7 @@ choices:
 srsWords: "murky"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The doctor warned him that he was becoming ___.'"
+text: "'The doctor warned him that he was becoming ___.'"
 choices:
   - "illustrative"
   - "obese" (correct)
@@ -928,7 +928,7 @@ choices:
 srsWords: "naturalistic"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He kept the ticket ___ as a souvenir.'"
+text: "'He kept the ticket ___ as a souvenir.'"
 choices:
   - "treadmill"
   - "trapeze"
@@ -937,7 +937,7 @@ choices:
 srsWords: "stub"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Switzerland is divided into 26 ___.'"
+text: "'Switzerland is divided into 26 ___.'"
 choices:
   - "canton" (correct)
   - "banshee"
@@ -962,7 +962,7 @@ choices:
 srsWords: "encapsulate"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The pay raise was made ___ to January 1st.'"
+text: "'The pay raise was made ___ to January 1st.'"
 choices:
   - "monotonous"
   - "retroactive" (correct)
@@ -1034,7 +1034,7 @@ choices:
 srsWords: "impartiality"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The artist decided to ___ a new image onto the existing background.'"
+text: "'The artist decided to ___ a new image onto the existing background.'"
 choices:
   - "serrate"
   - "resonate"
@@ -1140,7 +1140,7 @@ color: "#AD1457"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Laws were passed to prevent attempts to ___ minority voters.'"
+text: "'Laws were passed to prevent attempts to ___ minority voters.'"
 choices:
   - "prune"
   - "revoke"
@@ -1149,7 +1149,7 @@ choices:
 srsWords: "disenfranchise"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A trodden path'?"
+text: "'A trodden path'?"
 choices:
   - "boardroom"
   - "symmetry"
@@ -1212,7 +1212,7 @@ choices:
 srsWords: "weatherman"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Sluggish tailless Australian arboreal marsupial with grey furry ears and coat'?"
+text: "'Sluggish tailless Australian arboreal marsupial with grey furry ears and coat'?"
 choices:
   - "catapult"
   - "rhubarb"
@@ -1230,7 +1230,7 @@ choices:
 srsWords: "croc"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She made a delicious apple ___ for the baby.'"
+text: "'She made a delicious apple ___ for the baby.'"
 choices:
   - "impartiality"
   - "puree" (correct)
@@ -1239,7 +1239,7 @@ choices:
 srsWords: "puree"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The candy was very sweet and ___.'"
+text: "'The candy was very sweet and ___.'"
 choices:
   - "gummy" (correct)
   - "bohemian"
@@ -1327,7 +1327,7 @@ color: "#4527A0"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The crowd cheered as the rocket began its ___.'"
+text: "'The crowd cheered as the rocket began its ___.'"
 choices:
   - "muff"
   - "laceration"
@@ -1390,7 +1390,7 @@ choices:
 srsWords: "lewd"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She decided to ___ in a language course.'"
+text: "'She decided to ___ in a language course.'"
 choices:
   - "galvanise"
   - "beguile"
@@ -1399,7 +1399,7 @@ choices:
 srsWords: "enroll"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She is a valuable ___ on this research project.'"
+text: "'She is a valuable ___ on this research project.'"
 choices:
   - "libel"
   - "hairline"
@@ -1408,7 +1408,7 @@ choices:
 srsWords: "collaborator"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A legislative act is referred for final approval to a popular vote by the electorate'?"
+text: "'A legislative act is referred for final approval to a popular vote by the electorate'?"
 choices:
   - "meringue"
   - "referendum" (correct)
@@ -1426,7 +1426,7 @@ choices:
 srsWords: "brainiac"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He spent a lot of time in ___ thought, reflecting on his life.'"
+text: "'He spent a lot of time in ___ thought, reflecting on his life.'"
 choices:
   - "introspective" (correct)
   - "preclinical"
@@ -1444,7 +1444,7 @@ choices:
 srsWords: "fulfillment"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Stone post at side of a road to show distances'?"
+text: "'Stone post at side of a road to show distances'?"
 choices:
   - "vita"
   - "milestone" (correct)
@@ -1498,7 +1498,7 @@ choices:
 srsWords: "vitality"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The company's ___ issued a statement.'"
+text: "'The company's ___ issued a statement.'"
 choices:
   - "seniority"
   - "fondue"
@@ -1532,7 +1532,7 @@ choices:
 srsWords: "urinate"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Be similar, be in line with'?"
+text: "'Be similar, be in line with'?"
 choices:
   - "sculpt"
   - "euthanize"
@@ -1586,7 +1586,7 @@ choices:
 srsWords: "runny"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The political ___ behind the coup were complex.'"
+text: "'The political ___ behind the coup were complex.'"
 choices:
   - "centurion"
   - "expatriate"
@@ -1604,7 +1604,7 @@ choices:
 srsWords: "serenade"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Geologists study the ___ layers of the Earth to understand its structure.'"
+text: "'Geologists study the ___ layers of the Earth to understand its structure.'"
 choices:
   - "rune"
   - "subsurface" (correct)
@@ -1613,7 +1613,7 @@ choices:
 srsWords: "subsurface"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She tried ___ to relieve her back pain.'"
+text: "'She tried ___ to relieve her back pain.'"
 choices:
   - "wildfire"
   - "brainwashing"
@@ -1640,7 +1640,7 @@ choices:
 srsWords: "circumcise"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He had a small ___ on his finger.'"
+text: "'He had a small ___ on his finger.'"
 choices:
   - "wart" (correct)
   - "playbook"
@@ -1649,7 +1649,7 @@ choices:
 srsWords: "wart"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The cake was moist and ___.'"
+text: "'The cake was moist and ___.'"
 choices:
   - "staid"
   - "luscious" (correct)
@@ -1728,7 +1728,7 @@ choices:
 srsWords: "airship"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The summer ___ marks the longest day of the year.'"
+text: "'The summer ___ marks the longest day of the year.'"
 choices:
   - "digestion"
   - "firecracker"
@@ -1737,7 +1737,7 @@ choices:
 srsWords: "solstice"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The students had to ___ a frog in biology class.'"
+text: "'The students had to ___ a frog in biology class.'"
 choices:
   - "dissect" (correct)
   - "flourish"
@@ -1791,7 +1791,7 @@ choices:
 srsWords: "vane"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The damage to the environment is ___.'"
+text: "'The damage to the environment is ___.'"
 choices:
   - "irreversible" (correct)
   - "illusory"
@@ -1818,7 +1818,7 @@ choices:
 srsWords: "feral"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He was diagnosed with ulcerative ___.'"
+text: "'He was diagnosed with ulcerative ___.'"
 choices:
   - "colitis" (correct)
   - "calamari"
@@ -1836,7 +1836,7 @@ choices:
 srsWords: "calligraphy"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'A ___ landed on the fence post, its feathers a vibrant color.'"
+text: "'A ___ landed on the fence post, its feathers a vibrant color.'"
 choices:
   - "cossack"
   - "vaudeville"

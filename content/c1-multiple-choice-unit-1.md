@@ -18,7 +18,7 @@ color: "#1565C0"
 ---
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A state of extreme happiness'?"
+text: "'A state of extreme happiness'?"
 choices:
   - "itinerary"
   - "fender"
@@ -27,7 +27,7 @@ choices:
 srsWords: "bliss"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He loves buying the latest tech ___.'"
+text: "'He loves buying the latest tech ___.'"
 choices:
   - "gadget" (correct)
   - "linden"
@@ -36,7 +36,7 @@ choices:
 srsWords: "gadget"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Become plastic or fluid or liquefied from heat'?"
+text: "'Become plastic or fluid or liquefied from heat'?"
 choices:
   - "crave"
   - "fuse" (correct)
@@ -45,7 +45,7 @@ choices:
 srsWords: "fuse"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Press the ___ to open the door.'"
+text: "'Press the ___ to open the door.'"
 choices:
   - "buzzer" (correct)
   - "morphology"
@@ -108,7 +108,7 @@ choices:
 srsWords: "saloon"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Instinctive knowing (without the use of rational processes)'?"
+text: "'Instinctive knowing (without the use of rational processes)'?"
 choices:
   - "burr"
   - "hypocrite"
@@ -117,7 +117,7 @@ choices:
 srsWords: "intuition"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She kept the old teddy bear for ___ reasons.'"
+text: "'She kept the old teddy bear for ___ reasons.'"
 choices:
   - "illegitimate"
   - "defiant"
@@ -205,7 +205,7 @@ color: "#E53935"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Rust is a common example of iron ___.'"
+text: "'Rust is a common example of iron ___.'"
 choices:
   - "machete"
   - "haze"
@@ -232,7 +232,7 @@ choices:
 srsWords: "formulation"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The two properties ___ each other.'"
+text: "'The two properties ___ each other.'"
 choices:
   - "invigorate"
   - "commend"
@@ -322,7 +322,7 @@ choices:
 srsWords: "quarry"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Her performance was absolutely ___.'"
+text: "'Her performance was absolutely ___.'"
 choices:
   - "analogous"
   - "plump"
@@ -367,7 +367,7 @@ choices:
 srsWords: "ingenious"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The accident was a ___ experience for everyone involved.'"
+text: "'The accident was a ___ experience for everyone involved.'"
 choices:
   - "traumatic" (correct)
   - "candid"
@@ -376,7 +376,7 @@ choices:
 srsWords: "traumatic"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The driver had to ___ his horn to warn the pedestrian.'"
+text: "'The driver had to ___ his horn to warn the pedestrian.'"
 choices:
   - "canopy"
   - "pika"
@@ -410,7 +410,7 @@ choices:
 srsWords: "elongate"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The company decided to ___ its operations.'"
+text: "'The company decided to ___ its operations.'"
 choices:
   - "sprain"
   - "evict"
@@ -518,7 +518,7 @@ choices:
 srsWords: "amplitude"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'He took a refreshing ___ into the cold lake.'"
+text: "'He took a refreshing ___ into the cold lake.'"
 choices:
   - "traction"
   - "plunge" (correct)
@@ -554,7 +554,7 @@ choices:
 srsWords: "hedgehog"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The document ___ to be a will.'"
+text: "'The document ___ to be a will.'"
 choices:
   - "endear"
   - "indict"
@@ -579,7 +579,7 @@ color: "#F57F17"
 ---
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Conforming to your own liking or feelings or nature'?"
+text: "'Conforming to your own liking or feelings or nature'?"
 choices:
   - "agreeable" (correct)
   - "readable"
@@ -588,7 +588,7 @@ choices:
 srsWords: "agreeable"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The old wall began to ___.'"
+text: "'The old wall began to ___.'"
 choices:
   - "crumble" (correct)
   - "disinfect"
@@ -615,7 +615,7 @@ choices:
 srsWords: "homogeneous"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The report lacked ___ in its recommendations.'"
+text: "'The report lacked ___ in its recommendations.'"
 choices:
   - "accession"
   - "constellation"
@@ -642,7 +642,7 @@ choices:
 srsWords: "antigen"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The country demanded ___ for the damage caused during the war.'"
+text: "'The country demanded ___ for the damage caused during the war.'"
 choices:
   - "saloon"
   - "reparation" (correct)
@@ -687,7 +687,7 @@ choices:
 srsWords: "immersive"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Feed, care for, and rear young birds for flight'?"
+text: "'Feed, care for, and rear young birds for flight'?"
 choices:
   - "inundate"
   - "impoverish"
@@ -732,7 +732,7 @@ choices:
 srsWords: "indefinitely"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The group was led by a white ___.'"
+text: "'The group was led by a white ___.'"
 choices:
   - "damnation"
   - "supremacist" (correct)
@@ -766,7 +766,7 @@ color: "#6A1B9A"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The two systems achieved ___ in terms of performance.'"
+text: "'The two systems achieved ___ in terms of performance.'"
 choices:
   - "formulation"
   - "equivalence" (correct)
@@ -793,7 +793,7 @@ choices:
 srsWords: "parlour"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The new machine increased the factory's ___.'"
+text: "'The new machine increased the factory's ___.'"
 choices:
   - "pew"
   - "throughput" (correct)
@@ -856,7 +856,7 @@ choices:
 srsWords: "cholera"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The old ___ is now a museum.'"
+text: "'The old ___ is now a museum.'"
 choices:
   - "junkyard"
   - "plaque"
@@ -865,7 +865,7 @@ choices:
 srsWords: "battleship"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'A strong ___ is expected to hit the coast.'"
+text: "'A strong ___ is expected to hit the coast.'"
 choices:
   - "carp"
   - "reptile"
@@ -980,7 +980,7 @@ choices:
 srsWords: "commend"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Lacking taste or flavor or tang'?"
+text: "'Lacking taste or flavor or tang'?"
 choices:
   - "metastatic"
   - "bland" (correct)
@@ -998,7 +998,7 @@ choices:
 srsWords: "schizophrenic"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'We will ___ the best applicants by Friday.'"
+text: "'We will ___ the best applicants by Friday.'"
 choices:
   - "gunpoint"
   - "occult"
@@ -1097,7 +1097,7 @@ choices:
 srsWords: "outgoing"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The company received a lot of ___ for its controversial advertising campaign.'"
+text: "'The company received a lot of ___ for its controversial advertising campaign.'"
 choices:
   - "kimchi"
   - "caterer"
@@ -1124,7 +1124,7 @@ choices:
 srsWords: "carcinoma"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A salt or ester of acetic acid'?"
+text: "'A salt or ester of acetic acid'?"
 choices:
   - "lancet"
   - "modernist"
@@ -1167,7 +1167,7 @@ choices:
 srsWords: "lurch"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'My ___ left big shoes to fill.'"
+text: "'My ___ left big shoes to fill.'"
 choices:
   - "hypocrite"
   - "predecessor" (correct)
@@ -1221,7 +1221,7 @@ choices:
 srsWords: "gladiator"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The forecast predicts ___ and freezing rain tonight.'"
+text: "'The forecast predicts ___ and freezing rain tonight.'"
 choices:
   - "stampede"
   - "haystack"
@@ -1266,7 +1266,7 @@ choices:
 srsWords: "foxy"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A vertical spar for supporting sails'?"
+text: "'A vertical spar for supporting sails'?"
 choices:
   - "fallout"
   - "weaponry"
@@ -1293,7 +1293,7 @@ choices:
 srsWords: "doomsday"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Investors were ___ about the company's future prospects.'"
+text: "'Investors were ___ about the company's future prospects.'"
 choices:
   - "bullish" (correct)
   - "rustic"
@@ -1302,7 +1302,7 @@ choices:
 srsWords: "bullish"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The idea of flying to the moon in a cardboard box is ___.'"
+text: "'The idea of flying to the moon in a cardboard box is ___.'"
 choices:
   - "heterosexual"
   - "medicinal"
@@ -1327,7 +1327,7 @@ color: "#4527A0"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The old ___ warmed himself by the fire.'"
+text: "'The old ___ warmed himself by the fire.'"
 choices:
   - "plough"
   - "malt"
@@ -1426,7 +1426,7 @@ choices:
 srsWords: "conclusive"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The antidote was used to ___ the poison.'"
+text: "'The antidote was used to ___ the poison.'"
 choices:
   - "collate"
   - "neutralize" (correct)
@@ -1435,7 +1435,7 @@ choices:
 srsWords: "neutralize"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Snakes are a type of ___.'"
+text: "'Snakes are a type of ___.'"
 choices:
   - "craving"
   - "caterer"
@@ -1514,7 +1514,7 @@ color: "#0277BD"
 ---
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'She used a ___ to pour the oil into the bottle.'"
+text: "'She used a ___ to pour the oil into the bottle.'"
 choices:
   - "din"
   - "funnel" (correct)
@@ -1532,7 +1532,7 @@ choices:
 srsWords: "increment"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'We sat around the ___, telling stories and roasting marshmallows.'"
+text: "'We sat around the ___, telling stories and roasting marshmallows.'"
 choices:
   - "extinguisher"
   - "campfire" (correct)
@@ -1541,7 +1541,7 @@ choices:
 srsWords: "campfire"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A of or relating to neurons'?"
+text: "'A of or relating to neurons'?"
 choices:
   - "photovoltaic"
   - "neuronal" (correct)
@@ -1568,7 +1568,7 @@ choices:
 srsWords: "canopy"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Impose something unpleasant'?"
+text: "'Impose something unpleasant'?"
 choices:
   - "sprinkle"
   - "supercharge"
@@ -1595,7 +1595,7 @@ choices:
 srsWords: "snag"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'I made a ___ on the exam and lost points.'"
+text: "'I made a ___ on the exam and lost points.'"
 choices:
   - "lug"
   - "goof" (correct)
@@ -1622,7 +1622,7 @@ choices:
 srsWords: "fiat"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Don't be a ___ and tell on your friends.'"
+text: "'Don't be a ___ and tell on your friends.'"
 choices:
   - "fink" (correct)
   - "citadel"
@@ -1658,7 +1658,7 @@ choices:
 srsWords: "sharpen"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The room looked ___ after the cleanup.'"
+text: "'The room looked ___ after the cleanup.'"
 choices:
   - "sacrificial"
   - "chromatic"
@@ -1710,7 +1710,7 @@ choices:
 srsWords: "sever"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Relating to or conducted between two or more governments'?"
+text: "'Relating to or conducted between two or more governments'?"
 choices:
   - "regrettable"
   - "intergovernmental" (correct)
@@ -1755,7 +1755,7 @@ choices:
 srsWords: "shrewd"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'The office was a ___ before the deadline.'"
+text: "'The office was a ___ before the deadline.'"
 choices:
   - "madhouse" (correct)
   - "buddhism"
@@ -1764,7 +1764,7 @@ choices:
 srsWords: "madhouse"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Frothy drink of milk and flavoring and sometimes fruit or ice cream'?"
+text: "'Frothy drink of milk and flavoring and sometimes fruit or ice cream'?"
 choices:
   - "parasite"
   - "hemorrhage"
@@ -1782,7 +1782,7 @@ choices:
 srsWords: "chilli"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Mice and rats are common types of ___.'"
+text: "'Mice and rats are common types of ___.'"
 choices:
   - "saber"
   - "grit"
@@ -1818,7 +1818,7 @@ choices:
 srsWords: "mammal"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'A policy for establishing and developing a national homeland for Jews in Palestine'?"
+text: "'A policy for establishing and developing a national homeland for Jews in Palestine'?"
 choices:
   - "citadel"
   - "seduction"
@@ -1827,7 +1827,7 @@ choices:
 srsWords: "zionism"
 
 [multiple-choice]
-text: "Complete the sentence with the right word: 'Limestone is a common type of ___ rock.'"
+text: "'Limestone is a common type of ___ rock.'"
 choices:
   - "craven"
   - "negligent"
@@ -1845,7 +1845,7 @@ choices:
 srsWords: "beige"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Full of or showing high spirits'?"
+text: "'Full of or showing high spirits'?"
 choices:
   - "marvelous"
   - "irreplaceable"
@@ -1872,7 +1872,7 @@ choices:
 srsWords: "chameleon"
 
 [multiple-choice]
-text: "Which word best matches this definition: 'Imagine'?"
+text: "'Imagine'?"
 choices:
   - "nibble"
   - "reek"
