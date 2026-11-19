@@ -33,16 +33,23 @@ export function MultipleChoice({ exercise, onResult, onContinue, language, autop
   const { status, checkAnswer } = useExercise();
   const { play, stop, prefetch, loading: audioLoading } = useAudio();
 
+  // The full sentence with the answer filled in — played ONLY after the
+  // student checks, so the audio never leaks the correct answer upfront.
   const ttsText = exercise.text.replace("___", exercise.choices[exercise.correctIndex]);
+  // The question as the student sees it: blank stripped out so the audio
+  // reads the prompt without revealing the answer.
+  const ttsQuestion = exercise.text.replace(/___/g, "");
 
-  // Prefetch full sentence and choices
+  // Prefetch full sentence, question, and choices
   useEffect(() => {
-    const toFetch = [ttsText, ...exercise.choices];
+    const toFetch = [ttsText, ttsQuestion, ...exercise.choices];
     prefetch(toFetch, language);
-  }, [ttsText, exercise.choices, language, prefetch]);
+  }, [ttsText, ttsQuestion, exercise.choices, language, prefetch]);
 
+  // Auto-play the QUESTION (with blank removed) — never the answer-filled
+  // sentence, so the student can read and pick on their own.
   useEffect(() => {
-    if (autoplayAudio && !exercise.noAudio?.includes("text")) play(ttsText, language);
+    if (autoplayAudio && !exercise.noAudio?.includes("text")) play(ttsQuestion, language);
     return stop;
   }, []); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -82,6 +89,15 @@ export function MultipleChoice({ exercise, onResult, onContinue, language, autop
     onResult(correct, choices[selected]);
   }
 
+  // After the student checks, play the FULL sentence (answer filled in) so
+  // they hear the complete correct sentence as feedback.
+  useEffect(() => {
+    if (status === "correct" || status === "incorrect") {
+      if (!exercise.noAudio?.includes("text")) play(ttsText, language);
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [status]);
+
   return (
     <ExerciseShell
       status={status}
@@ -96,7 +112,7 @@ export function MultipleChoice({ exercise, onResult, onContinue, language, autop
           <HoverableText text={exercise.text} language={language} noAudio={exercise.noAudio?.includes("text")} />
         </h2>
         {!exercise.noAudio?.includes("text") && (
-          <ReplayButton onPlay={() => play(ttsText, language)} />
+          <ReplayButton onPlay={() => play(status === "answering" ? ttsQuestion : ttsText, language)} />
         )}
       </div>
       <AudioSpinner loading={audioLoading} />
