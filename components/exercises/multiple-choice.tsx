@@ -89,15 +89,6 @@ export function MultipleChoice({ exercise, onResult, onContinue, language, autop
     onResult(correct, choices[selected]);
   }
 
-  // After the student checks, play the FULL sentence (answer filled in) so
-  // they hear the complete correct sentence as feedback.
-  useEffect(() => {
-    if (status === "correct" || status === "incorrect") {
-      if (!exercise.noAudio?.includes("text")) play(ttsText, language);
-    }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [status]);
-
   return (
     <ExerciseShell
       status={status}
