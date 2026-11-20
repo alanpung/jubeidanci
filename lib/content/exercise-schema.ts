@@ -2,7 +2,11 @@ import { z } from "zod";
 
 const noAudio = z.array(z.string()).optional().describe("Words to skip TTS for");
 
-const srsWords = z.union([z.string().min(1), z.array(z.string()).min(1)]).describe("Target-language word(s) to track in SRS for this exercise");
+// Empty is allowed: grammar/structure exercises (e.g. KET grammar standalone
+// units) test a form rather than a vocabulary item, so they carry no SRS word.
+// Downstream extractSrsWords() falls back to the sentence text, and the SRS
+// report skips empty lists.
+const srsWords = z.union([z.string(), z.array(z.string())]).describe("Target-language word(s) to track in SRS for this exercise");
 
 export const multipleChoiceSchema = z.object({
   type: z.literal("multiple-choice"),
