@@ -1,8 +1,6 @@
 # 句背单词 (jubeidanci)
 
-AI-powered Chinese ↔ English sentence translation and vocabulary learning platform.
-
-Practice through interactive translation exercises, spaced-repetition flashcards, and structured courses (A1–C2). Built for learners who want to master sentences, not just isolated words.
+AI-powered English learning platform.
 
 ## Features
 
@@ -16,18 +14,17 @@ Pre-built courses at CEFR levels A1, A2, B1, B2, C1, C2:
 
 ### Spaced Repetition (SRS)
 
-- Student SRS cards move through status from New (N)→ Learning (L)→ Mastered (M). User can manually reset the L & M words to N.
+- SRS cards progress from New (N)→ Learning (L)→ Mastered (M).
 - Words: Student can filter words by level, alphabet, POS and SRS Status.
 - Progress: Student can check and monitor their own progress in vocabulary size.
 
 ### Interactive Exercises
 
-Multiple exercise types:
-
-- Translation
 - Flashcard
-- Multiple choice
 - Fill in the blank
+- Translation
+- Writing
+- Multiple choice
 - Word order
 - Listening (TTS)
 - Speaking (STT)
