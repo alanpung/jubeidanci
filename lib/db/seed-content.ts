@@ -453,26 +453,28 @@ async function runSeedTask() {
       }
     }
 
-    // 6c. One-time migration for the A2 grammar content, which went through
-    // three layouts: 12 `a2-ket-grammar-*` standalone units, an `a2-grammar`
-    // course holding 3 units, then those 3 as standalone units in the Grammar
-    // folder, and finally the 3 units under the `a1-grammar` course. Drop
-    // leftovers from the earlier layouts — 6b already removes the standalone
-    // title-slug rows, so this covers the `a2-ket-grammar-*` ids and the old
-    // `a2-grammar` course (none match the current `a1-grammar-*` unit ids).
+    // 6c. One-time migration for the grammar content, which moved through
+    // several layouts: 12 `a2-ket-grammar-*` standalone units, an `a2-grammar`
+    // course, those 3 as standalone units in the Grammar folder, an
+    // `a1-grammar` course, and finally the CURRENT `a2-grammar` course with
+    // the same 3 units. Only retired layouts are cleared here; the current
+    // `a2-grammar` course and its units must survive. 6b already removes the
+    // standalone title-slug rows, and the per-course cleanup (6) prunes the
+    // old `a2-grammar-unit-N` rows, so this covers the `a2-ket-grammar-*`
+    // ids and the whole `a1-grammar` course.
     try {
       await dbBackground
         .delete(unit)
         .where(
           or(
             and(isNull(unit.courseId), like(unit.id, "a2-ket-grammar-%")),
-            eq(unit.courseId, "a2-grammar"),
+            eq(unit.courseId, "a1-grammar"),
           ),
         );
-      await dbBackground.delete(course).where(eq(course.id, "a2-grammar"));
+      await dbBackground.delete(course).where(eq(course.id, "a1-grammar"));
     } catch (err) {
       console.warn(
-        "seedContentFromFilesystem: A2 grammar migration cleanup skipped:",
+        "seedContentFromFilesystem: grammar migration cleanup skipped:",
         err instanceof Error ? err.message : err,
       );
     }

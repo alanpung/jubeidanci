@@ -6,7 +6,7 @@ color: "#22C55E"
 sourceLanguage: "zh"
 targetLanguage: "en"
 level: "A2"
-courseId: "a1-grammar"
+courseId: "a2-grammar"
 questionType: "mix"
 ---
 
