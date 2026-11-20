@@ -118,18 +118,20 @@ const QUESTION_TYPE_VISUALS: Record<
     symbol: string;
   }
 > = {
+  // Each library folder owns one distinct colour family. Gradients stay
+  // within a single family so neighbouring folders never blur together.
   "flashcard-review": {
-    bg: "bg-gradient-to-br from-amber-400 to-orange-500 shadow-orange-500/30",
-    border: "border-amber-300/70",
+    bg: "bg-gradient-to-br from-orange-400 to-orange-600 shadow-orange-600/30",
+    border: "border-orange-300/70",
     label: "Flashcards",
     Icon: Layers,
-    pill: "bg-amber-500 text-white",
-    light: "bg-amber-50",
-    outline: "border-amber-400",
-    symbol: "text-amber-600",
+    pill: "bg-orange-500 text-white",
+    light: "bg-orange-50",
+    outline: "border-orange-400",
+    symbol: "text-orange-600",
   },
   translation: {
-    bg: "bg-gradient-to-br from-indigo-500 to-violet-600 shadow-indigo-600/30",
+    bg: "bg-gradient-to-br from-indigo-400 to-indigo-600 shadow-indigo-600/30",
     border: "border-indigo-300/70",
     label: "Translation",
     Icon: Languages,
@@ -149,27 +151,27 @@ const QUESTION_TYPE_VISUALS: Record<
     symbol: "text-blue-600",
   },
   "fill-in-the-blank": {
-    bg: "bg-gradient-to-br from-purple-400 to-purple-600 shadow-purple-600/30",
-    border: "border-purple-300/70",
+    bg: "bg-gradient-to-br from-violet-400 to-violet-600 shadow-violet-600/30",
+    border: "border-violet-300/70",
     label: "Fill in Blank",
     Icon: PenLine,
-    pill: "bg-purple-500 text-white",
-    light: "bg-purple-50",
-    outline: "border-purple-400",
-    symbol: "text-purple-600",
+    pill: "bg-violet-500 text-white",
+    light: "bg-violet-50",
+    outline: "border-violet-400",
+    symbol: "text-violet-600",
   },
   "matching-pairs": {
-    bg: "bg-gradient-to-br from-pink-400 to-rose-500 shadow-rose-500/30",
-    border: "border-pink-300/70",
+    bg: "bg-gradient-to-br from-fuchsia-400 to-fuchsia-600 shadow-fuchsia-600/30",
+    border: "border-fuchsia-300/70",
     label: "Matching Pairs",
     Icon: Puzzle,
-    pill: "bg-rose-500 text-white",
-    light: "bg-rose-50",
-    outline: "border-rose-400",
-    symbol: "text-rose-600",
+    pill: "bg-fuchsia-500 text-white",
+    light: "bg-fuchsia-50",
+    outline: "border-fuchsia-400",
+    symbol: "text-fuchsia-600",
   },
   listening: {
-    bg: "bg-gradient-to-br from-cyan-400 to-teal-600 shadow-teal-600/30",
+    bg: "bg-gradient-to-br from-cyan-400 to-cyan-600 shadow-cyan-600/30",
     border: "border-cyan-300/70",
     label: "Listening",
     Icon: Headphones,
@@ -199,7 +201,7 @@ const QUESTION_TYPE_VISUALS: Record<
     symbol: "text-yellow-600",
   },
   speaking: {
-    bg: "bg-gradient-to-br from-emerald-400 to-green-600 shadow-green-600/30",
+    bg: "bg-gradient-to-br from-emerald-400 to-emerald-600 shadow-emerald-600/30",
     border: "border-emerald-300/70",
     label: "Speaking",
     Icon: Mic,
@@ -219,24 +221,24 @@ const QUESTION_TYPE_VISUALS: Record<
     symbol: "text-pink-600",
   },
   grammar: {
-    bg: "bg-gradient-to-br from-sky-400 to-blue-600 shadow-blue-600/30",
-    border: "border-sky-300/70",
+    bg: "bg-gradient-to-br from-rose-400 to-rose-600 shadow-rose-600/30",
+    border: "border-rose-300/70",
     label: "Grammar",
     Icon: GraduationCap,
-    pill: "bg-sky-500 text-white",
-    light: "bg-sky-50",
-    outline: "border-sky-400",
-    symbol: "text-sky-600",
+    pill: "bg-rose-500 text-white",
+    light: "bg-rose-50",
+    outline: "border-rose-400",
+    symbol: "text-rose-600",
   },
   mix: {
-    bg: "bg-gradient-to-br from-fuchsia-500 to-purple-600 shadow-purple-600/30",
-    border: "border-fuchsia-300/70",
+    bg: "bg-gradient-to-br from-slate-500 to-slate-700 shadow-slate-700/30",
+    border: "border-slate-300/70",
     label: "Mixed Practice",
     Icon: Shuffle,
-    pill: "bg-fuchsia-500 text-white",
-    light: "bg-fuchsia-50",
-    outline: "border-fuchsia-400",
-    symbol: "text-fuchsia-600",
+    pill: "bg-slate-600 text-white",
+    light: "bg-slate-50",
+    outline: "border-slate-500",
+    symbol: "text-slate-600",
   },
 };
 
@@ -344,7 +346,7 @@ export const LEVEL_LABELS: Record<string, string> = {
  *  always reads to its right, inside the cover.
  *
  *  The SYMBOL is a solid, fully-coloured tile with a white glyph — exactly the
- *  symbols shown in the legend (blue Multiple Choice, purple Translation, …).
+ *  symbols shown in the legend (blue Multiple Choice, indigo Translation, …).
  *  A *level* folder instead wears a round colour badge carrying its CEFR code
  *  (A1–C2), so a level tile and a type tile are told apart at a glance.
  *

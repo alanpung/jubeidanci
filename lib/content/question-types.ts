@@ -48,7 +48,7 @@ export const QUESTION_TYPES: Record<string, QuestionTypeInfo> = {
     nameZh: "单词配对",
     nameEn: "Matching pairs",
     badgeLabel: "Matching pairs",
-    color: "#EC4899",
+    color: "#D946EF",
   },
   "listening": {
     id: "listening",
@@ -129,7 +129,7 @@ export const QUESTION_TYPES: Record<string, QuestionTypeInfo> = {
     nameZh: "语法",
     nameEn: "Grammar",
     badgeLabel: "Grammar",
-    color: "#0EA5E9",
+    color: "#F43F5E",
   },
   "mix": {
     id: "mix",
@@ -138,7 +138,7 @@ export const QUESTION_TYPES: Record<string, QuestionTypeInfo> = {
     nameZh: "综合练习",
     nameEn: "Mixed",
     badgeLabel: "Mixed",
-    color: "#8B5CF6",
+    color: "#64748B",
   },
   "mixed": {
     id: "mixed",
