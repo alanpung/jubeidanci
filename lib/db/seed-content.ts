@@ -454,10 +454,12 @@ async function runSeedTask() {
     }
 
     // 6c. One-time migration for the A2 grammar content, which went through
-    // two layouts: 12 `a2-ket-grammar-*` standalone units, then an
-    // `a2-grammar` course holding 3 units, and finally the 3 units as
-    // standalone units in the Grammar folder. Drop every leftover from the
-    // earlier layouts (none matches the current title-slug unit ids).
+    // three layouts: 12 `a2-ket-grammar-*` standalone units, an `a2-grammar`
+    // course holding 3 units, then those 3 as standalone units in the Grammar
+    // folder, and finally the 3 units under the `a1-grammar` course. Drop
+    // leftovers from the earlier layouts — 6b already removes the standalone
+    // title-slug rows, so this covers the `a2-ket-grammar-*` ids and the old
+    // `a2-grammar` course (none match the current `a1-grammar-*` unit ids).
     try {
       await dbBackground
         .delete(unit)
