@@ -1,12 +1,11 @@
 ---
-unitTitle: "Unit 1: Verb Tenses"
+unitTitle: "A2 Grammar: Verb Tenses"
 description: "A2 (KET) grammar - verb tenses: present simple, present continuous, past simple and future forms. Multiple choice and fill-in-the-blank exercises, English only."
 icon: "⏰"
 color: "#22C55E"
 sourceLanguage: "zh"
 targetLanguage: "en"
 level: "A2"
-courseId: "a2-grammar"
 questionType: "mix"
 ---
 

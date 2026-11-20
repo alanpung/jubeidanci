@@ -9,8 +9,8 @@ import {
 } from "@/components/library/course-level-icon";
 import { LIBRARY_TYPE_ORDER } from "@/lib/content/question-types";
 
-/** Key of the always-present folder that holds the units the AI tutor made. */
-export const STANDALONE_KEY = "standalone-units";
+/** Key of the always-present folder that holds grammar units. */
+export const GRAMMAR_KEY = "grammar";
 
 /** One folder tile. A type folder carries a `typeId` (the exercise type that
  *  decides its colour + symbol); a level folder carries its CEFR code, which
@@ -30,9 +30,9 @@ interface FolderItem {
  *   - "By Type"   → eight exercise-type folders (Flashcards, Translation, …)  [DEFAULT]
  *   - "By Level"  → six CEFR folders (A1–C2)
  *
- * Below either grid sits the "Standalone Units" folder: the units the AI tutor
- * created. They belong to no course, so they belong to no CEFR level and no
- * exercise type — hence their own folder, always visible in both groupings.
+ * Below either grid sits the "Grammar" folder: the grammar units. They belong
+ * to no course, so they belong to no CEFR level and no exercise type — hence
+ * their own folder, always visible in both groupings.
  *
  * Tapping a folder does NOT navigate — it opens the browser window
  * (`TypeBrowserWindow` in course-book-shelf) listing every course of that
@@ -57,7 +57,7 @@ interface LibraryFoldersProps {
   activeKey: string | null;
   /** Open/close the folder with this key. */
   onOpenKey: (key: string | null) => void;
-  /** How many standalone units the folder holds. */
+  /** How many grammar units the folder holds. */
   standaloneCount: number;
   /** The browser window, rendered inside the Library section. */
   children?: ReactNode;
@@ -103,7 +103,7 @@ export function LibraryFolders({
   // one row of four + a pair on desktop; 8 types fill two tidy rows.
   const gridClass = "grid grid-cols-2 gap-2.5 min-[480px]:grid-cols-4";
 
-  const standaloneActive = activeKey === STANDALONE_KEY;
+  const grammarActive = activeKey === GRAMMAR_KEY;
 
   return (
     <section className={showTitle ? "mt-8" : "mt-2"}>
@@ -182,32 +182,32 @@ export function LibraryFolders({
               );
             })}
 
-            {/* Standalone units — the AI tutor's own units. Always listed
-                because they belong to no CEFR level and no exercise type.
-                Same-size tile as every other folder, wearing the "mix"
-                symbol; the title lives inside the cover, no description. */}
+            {/* Grammar — standalone grammar units. Always listed because
+                they belong to no CEFR level and no exercise type. Same-size
+                tile as every other folder, wearing the "mix" symbol; the
+                title lives inside the cover, no description. */}
             <button
               type="button"
               onClick={() =>
-                onOpenKey(standaloneActive ? null : STANDALONE_KEY)
+                onOpenKey(grammarActive ? null : GRAMMAR_KEY)
               }
-              aria-expanded={standaloneActive}
-              aria-label="Standalone Units"
+              aria-expanded={grammarActive}
+              aria-label="Grammar"
               className={`group flex flex-col items-center gap-1.5 transition-transform active:translate-y-0 ${
-                standaloneActive ? "" : "hover:-translate-y-0.5"
+                grammarActive ? "" : "hover:-translate-y-0.5"
               }`}
             >
               <span
                 className={`block w-full transition-transform ${
-                  standaloneActive ? "scale-[1.04]" : "group-hover:scale-[1.04]"
+                  grammarActive ? "scale-[1.04]" : "group-hover:scale-[1.04]"
                 }`}
               >
                 <CourseCover
                   questionType="mix"
-                  name="Standalone unit"
+                  name="Grammar"
                   showLevel={false}
                   className={
-                    standaloneActive
+                    grammarActive
                       ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
                       : ""
                   }

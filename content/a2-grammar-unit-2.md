@@ -1,12 +1,11 @@
 ---
-unitTitle: "Unit 2: Parts of Speech"
+unitTitle: "A2 Grammar: Parts of Speech"
 description: "A2 (KET) grammar - parts of speech: nouns, articles, adjectives and adverbs, pronouns, prepositions and modals. Multiple choice and fill-in-the-blank exercises, English only."
 icon: "🧩"
 color: "#22C55E"
 sourceLanguage: "zh"
 targetLanguage: "en"
 level: "A2"
-courseId: "a2-grammar"
 questionType: "mix"
 ---
 

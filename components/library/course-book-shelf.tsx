@@ -18,7 +18,7 @@ import { normalizeQuestionType } from "@/lib/content/question-types";
 import { deleteCourse, deleteUnit } from "@/lib/actions/units";
 import {
   LibraryFolders,
-  STANDALONE_KEY,
+  GRAMMAR_KEY,
   type GroupBy,
 } from "@/components/library/library-folders";
 import { levelRank } from "@/components/library/library-deck";
@@ -162,7 +162,7 @@ export function CourseBookShelf({
 
   // The window deliberately lists *every* entry of this folder.
   const openEntries: BrowseEntry[] =
-    activeKey === STANDALONE_KEY
+    activeKey === GRAMMAR_KEY
       ? unitEntries
       : groupBy === "level"
         ? courseEntries.filter((e) => {
@@ -254,7 +254,7 @@ export function CourseBookShelf({
       >
         {activeKey && (
           <TypeBrowserWindow
-            title={activeKey === STANDALONE_KEY ? "Standalone Units" : activeKey}
+            title={activeKey === GRAMMAR_KEY ? "Grammar" : activeKey}
             entries={sortedOpenEntries}
             pendingId={pendingId}
             pendingUnitId={pendingUnitId}
@@ -269,7 +269,7 @@ export function CourseBookShelf({
 /** How many card slots the browse window reserves.
  *
  *  The Library's own folder grid shows EIGHT tiles (seven exercise-type
- *  folders + Standalone Units), so the window that replaces it is sized to
+ *  folders + Grammar), so the window that replaces it is sized to
  *  hold the same eight slots. Fewer entries leave empty slots — invisible,
  *  but part of the window, so tapping one closes the popup. More entries
  *  simply grow the window with the content. */

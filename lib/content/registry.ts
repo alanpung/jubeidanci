@@ -15,7 +15,7 @@ export type { LoadedCourse, LoadedUnit };
  * loader could notice that the content directory changed and re-scan, but the
  * registry kept handing out the OLD result. The seeder reads the catalog
  * through the registry, so a newly committed `content/*.md` unit stayed
- * invisible to it — the "Standalone Units" folder simply never filled up.
+ * invisible to it — the "Grammar" folder simply never filled up.
  *
  * `loadContentDir()` already caches intelligently (24h TTL + a cheap
  * directory-signature check that invalidates the moment a file is added,

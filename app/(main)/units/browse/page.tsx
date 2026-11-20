@@ -51,7 +51,7 @@ export default async function BrowsePage() {
         )}
       </section>
 
-      {/* Standalone Units Section */}
+      {/* Grammar Section */}
       <section className="mb-8">
         <BrowseUnits units={browsableUnits} />
       </section>

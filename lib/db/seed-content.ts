@@ -236,7 +236,7 @@ async function runSeedTask() {
     // each chunk is isolated: the course-owned pass writes ~200 rows across
     // dozens of chunked INSERTs, and a single failure there used to abort
     // `runSeedTask` before the standalone rows (which were pushed last) were
-    // ever written — leaving the whole "Standalone Units" folder empty with
+    // ever written — leaving the whole "Grammar" folder empty with
     // nothing but a swallowed console warning to show for it.
     //
     // The ID must match the filesystem fallback formula used by
@@ -275,7 +275,7 @@ async function runSeedTask() {
     // the whole `runSeedTask` — and because the standalone rows used to be
     // appended to the same array (i.e. written in the LAST chunks), they were
     // never written at all. The failure was swallowed by the outer try/catch,
-    // so the "Standalone Units" folder simply stayed empty.
+    // so the "Grammar" folder simply stayed empty.
     //
     // Each chunk is now wrapped on its own: a bad row can no longer take the
     // rest of the catalog down with it.
@@ -417,7 +417,7 @@ async function runSeedTask() {
 
     // 6b. Migration cleanup: units that MOVED from standalone to a course keep
     // their old standalone row (courseId IS NULL, id = title slug) behind in the
-    // "Standalone Units" folder, because the course cleanup above only touches
+    // "Grammar" folder, because the course cleanup above only touches
     // rows with the course id. The A1 Writing units did exactly this — they were
     // `unit-1-my-school`…`unit-10-my-friends` standalone and are now
     // `a1-writing-unit-N`. Drop any standalone row whose id is a unit's
@@ -453,18 +453,24 @@ async function runSeedTask() {
       }
     }
 
-    // 6c. One-time migration: the 12 standalone A2 KET grammar units were
-    // consolidated into the A2 Grammar course (a2-grammar). Their old rows
-    // keep `a2-ket-grammar-*` ids and courseId NULL; neither the per-course
-    // cleanup (6) nor the title-slug sweep (6b) matches them, so drop them
-    // explicitly or they keep showing up in the Standalone Units folder.
+    // 6c. One-time migration for the A2 grammar content, which went through
+    // two layouts: 12 `a2-ket-grammar-*` standalone units, then an
+    // `a2-grammar` course holding 3 units, and finally the 3 units as
+    // standalone units in the Grammar folder. Drop every leftover from the
+    // earlier layouts (none matches the current title-slug unit ids).
     try {
       await dbBackground
         .delete(unit)
-        .where(and(isNull(unit.courseId), like(unit.id, "a2-ket-grammar-%")));
+        .where(
+          or(
+            and(isNull(unit.courseId), like(unit.id, "a2-ket-grammar-%")),
+            eq(unit.courseId, "a2-grammar"),
+          ),
+        );
+      await dbBackground.delete(course).where(eq(course.id, "a2-grammar"));
     } catch (err) {
       console.warn(
-        "seedContentFromFilesystem: A2 grammar standalone cleanup skipped:",
+        "seedContentFromFilesystem: A2 grammar migration cleanup skipped:",
         err instanceof Error ? err.message : err,
       );
     }

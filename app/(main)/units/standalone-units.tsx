@@ -21,10 +21,10 @@ export function StandaloneUnits({ units, isAdmin }: StandaloneUnitsProps) {
     if (!isAdmin) return null;
     return (
       <section className="mb-8">
-        <h2 className="mb-3 text-lg font-bold text-lingo-text">Standalone Units</h2>
+        <h2 className="mb-3 text-lg font-bold text-lingo-text">Grammar</h2>
         <div className="rounded-2xl border-2 border-dashed border-lingo-border p-6 text-center">
           <p className="text-sm font-medium text-lingo-text-light">
-            No standalone units yet. Click{" "}
+            No grammar units yet. Click{" "}
             <span className="font-bold text-lingo-text">+ New Unit</span> above to create one.
           </p>
         </div>
@@ -35,7 +35,7 @@ export function StandaloneUnits({ units, isAdmin }: StandaloneUnitsProps) {
   return (
     <section className="mb-8">
       <h2 className="mb-3 text-lg font-bold text-lingo-text">
-        Standalone Units
+        Grammar
       </h2>
       <div className="grid min-w-0 gap-3">
         {units.map((unit, i) => (

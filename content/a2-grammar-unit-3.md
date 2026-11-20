@@ -1,12 +1,11 @@
 ---
-unitTitle: "Unit 3: Sentence Structure"
+unitTitle: "A2 Grammar: Sentence Structure"
 description: "A2 (KET) grammar - sentence structure: questions, there be and conjunctions. Multiple choice and fill-in-the-blank exercises, English only."
 icon: "🏗️"
 color: "#22C55E"
 sourceLanguage: "zh"
 targetLanguage: "en"
 level: "A2"
-courseId: "a2-grammar"
 questionType: "mix"
 ---
 

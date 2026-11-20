@@ -103,7 +103,7 @@ export default async function LearnPage() {
       ) : (
         <>
           {/* The AI tutor's units are not a section of their own any more —
-              they live in the "Standalone Units" folder inside My Books. */}
+              they live in the "Grammar" folder inside My Books. */}
           <CourseBookShelf
             courses={allCourses}
             units={standaloneUnits}

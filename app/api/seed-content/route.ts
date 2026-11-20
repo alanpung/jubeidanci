@@ -13,7 +13,7 @@ export const dynamic = "force-dynamic";
  * The response deliberately separates "the filesystem knows about it" from
  * "the database has the row" — those two used to drift apart silently
  * (a newly committed `content/*.md` unit could sit on disk while the
- * "Standalone Units" folder stayed empty), and this endpoint makes the
+ * "Grammar" folder stayed empty), and this endpoint makes the
  * difference visible in one request.
  */
 export async function GET() {
