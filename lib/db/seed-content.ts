@@ -453,6 +453,22 @@ async function runSeedTask() {
       }
     }
 
+    // 6c. One-time migration: the 12 standalone A2 KET grammar units were
+    // consolidated into the A2 Grammar course (a2-grammar). Their old rows
+    // keep `a2-ket-grammar-*` ids and courseId NULL; neither the per-course
+    // cleanup (6) nor the title-slug sweep (6b) matches them, so drop them
+    // explicitly or they keep showing up in the Standalone Units folder.
+    try {
+      await dbBackground
+        .delete(unit)
+        .where(and(isNull(unit.courseId), like(unit.id, "a2-ket-grammar-%")));
+    } catch (err) {
+      console.warn(
+        "seedContentFromFilesystem: A2 grammar standalone cleanup skipped:",
+        err instanceof Error ? err.message : err,
+      );
+    }
+
     lastSyncedAt = Date.now();
   } catch (err) {
     console.warn("seedContentFromFilesystem error:", err);
