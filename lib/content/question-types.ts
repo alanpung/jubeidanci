@@ -9,6 +9,7 @@ export type QuestionType =
   | "translation"
   | "writing"
   | "free-text"
+  | "grammar"
   | "mix";
 
 export interface QuestionTypeInfo {
@@ -121,6 +122,15 @@ export const QUESTION_TYPES: Record<string, QuestionTypeInfo> = {
     badgeLabel: "Free text",
     color: "#8B5CF6",
   },
+  "grammar": {
+    id: "grammar",
+    num: "📖",
+    icon: "📖",
+    nameZh: "语法",
+    nameEn: "Grammar",
+    badgeLabel: "Grammar",
+    color: "#0EA5E9",
+  },
   "mix": {
     id: "mix",
     num: "✨",
@@ -173,6 +183,7 @@ export const LIBRARY_TYPE_ORDER: readonly string[] = [
   "word-bank",
   "listening",
   "speaking",
+  "grammar",
 ];
 
 export function normalizeQuestionType(
@@ -208,6 +219,9 @@ export function normalizeQuestionType(
   if (str === "9") return QUESTION_TYPES["free-text"];
 
   // Exact or keyword matching
+  if (str.includes("grammar") || str.includes("语法")) {
+    return QUESTION_TYPES["grammar"];
+  }
   if (str.includes("multiple") || str.includes("choice") || str.includes("多选") || str.includes("选择")) {
     return QUESTION_TYPES["multiple-choice"];
   }

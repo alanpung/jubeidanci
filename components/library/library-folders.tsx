@@ -9,9 +9,6 @@ import {
 } from "@/components/library/course-level-icon";
 import { LIBRARY_TYPE_ORDER } from "@/lib/content/question-types";
 
-/** Key of the always-present folder that holds grammar units. */
-export const GRAMMAR_KEY = "grammar";
-
 /** One folder tile. A type folder carries a `typeId` (the exercise type that
  *  decides its colour + symbol); a level folder carries its CEFR code, which
  *  is both the key and the glyph drawn inside the cover. */
@@ -30,13 +27,10 @@ interface FolderItem {
  *   - "By Type"   → eight exercise-type folders (Flashcards, Translation, …)  [DEFAULT]
  *   - "By Level"  → six CEFR folders (A1–C2)
  *
- * Below either grid sits the "Grammar" folder: the grammar units. They belong
- * to no course, so they belong to no CEFR level and no exercise type — hence
- * their own folder, always visible in both groupings.
- *
  * Tapping a folder does NOT navigate — it opens the browser window
  * (`TypeBrowserWindow` in course-book-shelf) listing every course of that
- * level/type, where a +/× toggle adds to / removes from My Books.
+ * level/type, where a +/× toggle adds to / removes from My Books. Grammar is
+ * just another type folder here — no special hard-wired folder.
  */
 
 // The folder grid reads the SAME shared order the landing page teaches, so
@@ -57,8 +51,6 @@ interface LibraryFoldersProps {
   activeKey: string | null;
   /** Open/close the folder with this key. */
   onOpenKey: (key: string | null) => void;
-  /** How many grammar units the folder holds. */
-  standaloneCount: number;
   /** The browser window, rendered inside the Library section. */
   children?: ReactNode;
   /** Show the section heading. */
@@ -100,10 +92,8 @@ export function LibraryFolders({
   // Every folder — CEFR level or exercise type — uses the *same* 2-up / 4-up
   // grid as the course covers, so a folder tile is exactly as wide as the book
   // cover you tap inside it. 6 levels pad to two rows of three on phones and
-  // one row of four + a pair on desktop; 8 types fill two tidy rows.
+  // one row of four + a pair on desktop; 9 types fill three tidy rows.
   const gridClass = "grid grid-cols-2 gap-2.5 min-[480px]:grid-cols-4";
-
-  const grammarActive = activeKey === GRAMMAR_KEY;
 
   return (
     <section className={showTitle ? "mt-8" : "mt-2"}>
@@ -182,38 +172,6 @@ export function LibraryFolders({
               );
             })}
 
-            {/* Grammar — standalone grammar units. Always listed because
-                they belong to no CEFR level and no exercise type. Same-size
-                tile as every other folder, wearing the "mix" symbol; the
-                title lives inside the cover, no description. */}
-            <button
-              type="button"
-              onClick={() =>
-                onOpenKey(grammarActive ? null : GRAMMAR_KEY)
-              }
-              aria-expanded={grammarActive}
-              aria-label="Grammar"
-              className={`group flex flex-col items-center gap-1.5 transition-transform active:translate-y-0 ${
-                grammarActive ? "" : "hover:-translate-y-0.5"
-              }`}
-            >
-              <span
-                className={`block w-full transition-transform ${
-                  grammarActive ? "scale-[1.04]" : "group-hover:scale-[1.04]"
-                }`}
-              >
-                <CourseCover
-                  questionType="mix"
-                  name="Grammar"
-                  showLevel={false}
-                  className={
-                    grammarActive
-                      ? "ring-2 ring-lingo-green ring-offset-2 ring-offset-lingo-bg"
-                      : ""
-                  }
-                />
-              </span>
-            </button>
           </div>
         );
 

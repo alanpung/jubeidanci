@@ -10,6 +10,7 @@ import {
   Mic,
   Shuffle,
   BookOpen,
+  GraduationCap,
 } from "lucide-react";
 import { normalizeQuestionType } from "@/lib/content/question-types";
 
@@ -216,6 +217,16 @@ const QUESTION_TYPE_VISUALS: Record<
     light: "bg-pink-50",
     outline: "border-pink-400",
     symbol: "text-pink-600",
+  },
+  grammar: {
+    bg: "bg-gradient-to-br from-sky-400 to-blue-600 shadow-blue-600/30",
+    border: "border-sky-300/70",
+    label: "Grammar",
+    Icon: GraduationCap,
+    pill: "bg-sky-500 text-white",
+    light: "bg-sky-50",
+    outline: "border-sky-400",
+    symbol: "text-sky-600",
   },
   mix: {
     bg: "bg-gradient-to-br from-fuchsia-500 to-purple-600 shadow-purple-600/30",

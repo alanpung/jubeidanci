@@ -16,11 +16,7 @@ import {
 } from "@/components/library/course-level-icon";
 import { normalizeQuestionType } from "@/lib/content/question-types";
 import { deleteCourse, deleteUnit } from "@/lib/actions/units";
-import {
-  LibraryFolders,
-  GRAMMAR_KEY,
-  type GroupBy,
-} from "@/components/library/library-folders";
+import { LibraryFolders, type GroupBy } from "@/components/library/library-folders";
 import { levelRank } from "@/components/library/library-deck";
 import {
   VisibilityBadge,
@@ -160,20 +156,25 @@ export function CourseBookShelf({
   const typeLabelOf = (c: CourseListItem) =>
     resolveCourseQuestionType(c.title, c.id)?.label ?? "Other";
 
-  // The window deliberately lists *every* entry of this folder.
+  // The window deliberately lists *every* entry of this folder. In "By Type"
+  // mode, the Grammar folder also gathers standalone (course-less) units —
+  // they have no course to classify, and Grammar is their natural home. The
+  // A2 Grammar course itself lands here through the normal "grammar" type.
+  const GRAMMAR_LABEL = "Grammar";
   const openEntries: BrowseEntry[] =
-    activeKey === GRAMMAR_KEY
-      ? unitEntries
-      : groupBy === "level"
-        ? courseEntries.filter((e) => {
-            const lv = (e.level || "").toUpperCase();
-            // A combined C1/C2 course belongs in BOTH the C1 and C2 folders.
-            return (
-              lv === activeKey ||
-              (lv === "C1/C2" && (activeKey === "C1" || activeKey === "C2"))
-            );
-          })
-        : courseEntries.filter((e) => typeLabelOf(e.course!) === activeKey);
+    groupBy === "level"
+      ? courseEntries.filter((e) => {
+          const lv = (e.level || "").toUpperCase();
+          // A combined C1/C2 course belongs in BOTH the C1 and C2 folders.
+          return (
+            lv === activeKey ||
+            (lv === "C1/C2" && (activeKey === "C1" || activeKey === "C2"))
+          );
+        })
+      : [
+          ...courseEntries.filter((e) => typeLabelOf(e.course!) === activeKey),
+          ...(activeKey === GRAMMAR_LABEL ? unitEntries : []),
+        ];
 
   // Sort the window's entries by CEFR level (A1 → C2), then by title. Without
   // this the grid keeps the raw catalog order, which is title-ordered from the
@@ -247,14 +248,13 @@ export function CourseBookShelf({
         onGroupBy={handleGroupBy}
         activeKey={activeKey}
         onOpenKey={(key) => setActiveKey((cur) => (cur === key ? null : key))}
-        standaloneCount={units.length}
         showTitle
         title="My Books"
         isLargeViewport={isLargeViewport}
       >
         {activeKey && (
           <TypeBrowserWindow
-            title={activeKey === GRAMMAR_KEY ? "Grammar" : activeKey}
+            title={activeKey}
             entries={sortedOpenEntries}
             pendingId={pendingId}
             pendingUnitId={pendingUnitId}
@@ -268,12 +268,12 @@ export function CourseBookShelf({
 
 /** How many card slots the browse window reserves.
  *
- *  The Library's own folder grid shows EIGHT tiles (seven exercise-type
+ *  The Library's own folder grid shows NINE tiles (eight exercise-type
  *  folders + Grammar), so the window that replaces it is sized to
- *  hold the same eight slots. Fewer entries leave empty slots — invisible,
+ *  hold the same nine slots. Fewer entries leave empty slots — invisible,
  *  but part of the window, so tapping one closes the popup. More entries
  *  simply grow the window with the content. */
-const WINDOW_SLOTS = 8;
+const WINDOW_SLOTS = 9;
 
 /** The browser window opened from a Library folder.
  *
@@ -309,7 +309,7 @@ function TypeBrowserWindow({
   // Empty slots pad the grid out to WINDOW_SLOTS. They are rendered as
   // invisible copies of a real cover so the reserved rows are exactly as tall
   // as the cards above them — no measuring, no resize listeners, and the
-  // window keeps the same footprint as the eight-tile folder grid it replaced.
+  // window keeps the same footprint as the nine-tile folder grid it replaced.
   const ghostCount = Math.max(0, WINDOW_SLOTS - entries.length);
   const ghostProps = entries[entries.length - 1];
 
