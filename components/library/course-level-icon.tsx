@@ -428,13 +428,15 @@ export function CourseCover({
         ) : null}
       </div>
 
-      {/* How many distinct SRS words this course teaches. Hidden when the
-          count is unknown (0) rather than showing a misleading "0 words". */}
-      {srsWordCount ? (
-        <span className="text-[11px] font-bold leading-none text-lingo-text-light">
-          {srsWordCount.toLocaleString("en-US")} words
-        </span>
-      ) : null}
+      {/* How many distinct SRS words this course teaches. The row is always
+          reserved — even when there is no count — so every cover is exactly
+          the same height. Grammar courses have no SRS words and would
+          otherwise render one row shorter than every other course box. */}
+      <span className="min-h-[11px] text-[11px] font-bold leading-none text-lingo-text-light">
+        {srsWordCount
+          ? `${srsWordCount.toLocaleString("en-US")} words`
+          : ""}
+      </span>
 
       {/* CEFR level — a small round badge in the UPPER-RIGHT corner. */}
       {showLevel && cleanLevel && !levelAsSymbol ? (
