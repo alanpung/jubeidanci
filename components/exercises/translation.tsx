@@ -329,6 +329,32 @@ export function Translation({
     return () => window.removeEventListener("keydown", onKey);
   }, [submitted, goNext]);
 
+  // ArrowUp mirrors ArrowLeft (previous question) and ArrowDown mirrors
+  // ArrowRight (submit / next question) when focus is not inside a word box.
+  // While typing, the per-box onKeyDown below handles Up/Down instead.
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key !== "ArrowUp" && e.key !== "ArrowDown") return;
+      const target = e.target as HTMLElement | null;
+      const tag = target?.tagName;
+      if (
+        tag === "INPUT" ||
+        tag === "TEXTAREA" ||
+        target?.isContentEditable === true
+      ) {
+        return;
+      }
+      e.preventDefault();
+      if (e.key === "ArrowUp") {
+        goPrev();
+      } else {
+        handleSwipeLeft();
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, [goPrev, handleSwipeLeft]);
+
   const animClass =
     direction === "backward" ? "animate-slide-in-left" : "animate-slide-in-right";
 
@@ -581,13 +607,19 @@ export function Translation({
                         e.preventDefault();
                         if (!lastBox) focusBox(idx + 1);
                         else handleSubmit();
-                      } else if (e.key === "ArrowRight") {
-                        // Right arrow jumps to the next word's box (not the next
-                        // question) — unless this is already the last box.
+                      } else if (
+                        e.key === "ArrowRight" ||
+                        e.key === "ArrowDown"
+                      ) {
+                        // Right/Down arrow jumps to the next word's box (not the
+                        // next question) — unless this is already the last box.
                         e.preventDefault();
                         if (!lastBox) focusBox(idx + 1);
-                      } else if (e.key === "ArrowLeft") {
-                        // Left arrow jumps to the previous word's box.
+                      } else if (
+                        e.key === "ArrowLeft" ||
+                        e.key === "ArrowUp"
+                      ) {
+                        // Left/Up arrow jumps to the previous word's box.
                         e.preventDefault();
                         if (idx > 0) focusBox(idx - 1);
                       }

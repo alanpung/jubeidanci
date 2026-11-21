@@ -524,16 +524,29 @@ export function FlashcardReview({
     }, 120);
   }, [exercise, language, activeTranslation, activeMeaning, onResult, onContinue, rated]);
 
-  // Keyboard shortcuts
+  // Keyboard shortcuts. ArrowUp mirrors ArrowLeft (No) and ArrowDown mirrors
+  // ArrowRight (Yes), so either key pair produces the same result.
   useEffect(() => {
     function handleKeyDown(e: KeyboardEvent) {
       if (e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement) {
         return;
       }
-      if (e.key === "ArrowLeft" || e.key === "1" || e.key === "n" || e.key === "N") {
+      if (
+        e.key === "ArrowLeft" ||
+        e.key === "ArrowUp" ||
+        e.key === "1" ||
+        e.key === "n" ||
+        e.key === "N"
+      ) {
         e.preventDefault();
         handleNo();
-      } else if (e.key === "ArrowRight" || e.key === "3" || e.key === "y" || e.key === "Y") {
+      } else if (
+        e.key === "ArrowRight" ||
+        e.key === "ArrowDown" ||
+        e.key === "3" ||
+        e.key === "y" ||
+        e.key === "Y"
+      ) {
         e.preventDefault();
         handleYes();
       } else if (e.key === "r" || e.key === "R" || e.key === "a" || e.key === "A") {
